@@ -9,14 +9,17 @@ def slope(times, values):
 
 
 class PopulationForecast:
-    def __init__(self, x, stages, cutoff):
+    def __init__(self, x, stages, cutoff, allowed_features=None):
         rows = np.flatnonzero(stages <= cutoff)
         if len(np.unique(stages[rows])) < 3:
             raise ValueError('Three past stages required')
         variance = np.zeros(x.shape[1])
         for start in range(0, x.shape[1], 512):
             variance[start:start+512] = np.asarray(x[rows, start:start+512], dtype=float).var(0)
-        self.features = np.sort(np.argsort(-variance, kind='stable')[:384])
+        eligible = np.arange(x.shape[1]) if allowed_features is None else np.asarray(allowed_features, dtype=int)
+        if len(eligible) < 2 or len(np.unique(eligible)) != len(eligible) or (eligible < 0).any() or (eligible >= x.shape[1]).any():
+            raise ValueError('Invalid eligible features')
+        self.features = np.sort(eligible[np.argsort(-variance[eligible], kind='stable')[:384]])
         values = np.asarray(x[np.ix_(rows, self.features)], dtype=float)
         self.center = values.mean(0)
         self.scale = np.maximum(values.std(0), .1)

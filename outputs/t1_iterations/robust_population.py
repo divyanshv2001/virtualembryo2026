@@ -19,8 +19,8 @@ def covariance_change(a, b):
 
 
 class RobustPopulation(PopulationForecast):
-    def __init__(self, x, stages, cutoff, states=4, donor_cap=1000):
-        super().__init__(x, stages, cutoff)
+    def __init__(self, x, stages, cutoff, states=4, donor_cap=1000, allowed_features=None):
+        super().__init__(x, stages, cutoff, allowed_features=allowed_features)
         rows = np.flatnonzero(stages <= cutoff)
         recent = np.unique(stages[rows])[-3:]
         values = np.asarray(x[np.ix_(rows, self.features)], dtype=float)
