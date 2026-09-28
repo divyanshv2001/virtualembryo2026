@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-28T14:45:00.388266+00:00",
+  "updated_utc": "2026-09-28T14:51:07.942629+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -188,7 +188,19 @@
           },
           "non_primary_budget_passed": true
         }
-      ]
+      ],
+      "stability_result": {
+        "report_sha256": "f2417e6a9bcf0df4cc593180fc018bb167c401673675d20c4df185ff94b87f92",
+        "replicates": 16,
+        "candidate_mean": 55.1453586270116,
+        "candidate_lower_tail": 52.53372420433347,
+        "control_mean": 55.28130592055242,
+        "paired_mean_change": -0.13594729354081414,
+        "paired_lower_tail_change": -0.35756029404969336,
+        "paired_upper_tail_change": 0.0510446126818751,
+        "positive_replicates": 1,
+        "decision": "Do not promote reliability variant; retain unit_k16. Local >72 gate remains unmet."
+      }
     },
     {
       "id": "de_empirical_bayes",
@@ -255,14 +267,14 @@
         {
           "title": "TrajectoryNet",
           "url": "https://proceedings.mlr.press/v119/tong20a.html",
-          "coverage": "abstract and introduction"
+          "coverage": "abstract, introduction and selected Section 4 methods (energy/density/velocity regularization and architecture)"
         }
       ],
       "hypothesis_and_limits": "Population transport with continuous nonlinear dynamics; interpolation success does not establish extrapolation.",
       "implementation": null,
       "run": null,
       "declared_experiment_and_result": null,
-      "next_action": "Review regularizers, implement past-only rolling temporal folds and compare with linear baseline.",
+      "next_action": "Review author implementation and runtime. Method uses a three-layer 64-node time-conditioned vector field; pilot energy/density penalties with past-only folds. No spliced/unspliced velocity prior is currently established. Interpolation is not proof of one-day extrapolation.",
       "research_family_exhausted": false,
       "constraints": [
         "All learner inputs <= fold cutoff; challenge calibration <=E8.5",

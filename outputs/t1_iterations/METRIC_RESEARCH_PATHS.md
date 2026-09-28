@@ -125,3 +125,5 @@ Current best three-panel point mean: reliability expression blend .5, 55.3744. T
 Both implemented population-weighting branches failed to improve the unchanged unit_k16 control. The queue now contains complete four-metric results and report hashes for each. Six variants plus two controls across three panels per branch consumed 48 local evaluations, zero submissions and zero Jev calls. These failures do not exhaust nonlinear generative models, empirical Bayes gene calibration or covariance dynamics.
 
 A 16-replicate paired stability pilot is running for reliability expression blend .5 against its unchanged control. Its .0621 point gain must not be treated as confirmed.
+
+The completed reliability pilot rejected promotion: mean 55.1454 versus incumbent 55.2813. Retain unit_k16. Its apparent three-panel point improvement was not robust.

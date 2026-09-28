@@ -1,26 +1,26 @@
 {
-  "updated_utc": "2026-09-28T13:39:48.224671+00:00",
+  "updated_utc": "2026-09-28T14:51:07.951525+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
-  "mean_score": null,
-  "lower_tail_score": null,
+  "mean_score": 55.28130592055242,
+  "lower_tail_score": 52.60162180056054,
   "point_development_mean": 55.312268380984996,
   "metric_skills": {
-    "de_score": 0.5221308652604392,
-    "de_direction": 0.581040145423201,
-    "mmd_u": 0.5700298059903902,
-    "variogram": 0.531604946709115
+    "de_score": 0.5234924062524453,
+    "de_direction": 0.5977253951660038,
+    "mmd_u": 0.5604160713593873,
+    "variogram": 0.5219189372154789
   },
   "temporal_gate_passed": false,
-  "completed_replicates": 0,
+  "completed_replicates": 16,
   "required_final_replicates": 64,
-  "run_path": "outputs/t1_iterations/private/state_search_01",
-  "report_sha256": "5ea63a67e250dddcf41d92b437eb28099f9d8b2a5da8720ab743a668a241529e",
-  "plan_sha256": "8077d5b8790ef76475303ac8e0c447c6cc9a7a29fab232ca4be10d3190139806",
-  "pilot_completed": false,
+  "run_path": "outputs/t1_iterations/private/monte_carlo_states_01",
+  "report_sha256": "cb32e940341bda2cf9b572dea6a613d46a477463ac832660f6cc387de427934a",
+  "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
+  "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": true,
+  "local_process_running": false,
   "quota_reset_evidence": {
     "limit_observed": false,
     "remaining_quota": null,
@@ -29,19 +29,17 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/monte_carlo_forecast.py --round monte_carlo_states_01 --replicates 16 --source-run state_search_01 --candidates unit_k16 standard_k16 --resume",
+  "resume_command": null,
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Complete stability check for unit_k16 versus standard_k16. Use component/Pareto evidence for the next specialist batch: gene-wise past-fold reliability for DE/direction, or explicitly learned residual covariance for MMD/variogram. Existing simple cell mixtures and larger factor caps did not beat the 55.31 joint incumbent. Final >72 remains unmet.",
+  "next_experiment": "Review author implementation and CPU dependencies for nonlinear population dynamics, then declare past-only temporal pilots. Existing reweighting and reliability branches failed; do not rerun frozen predictors hoping to train via Monte Carlo.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "monte_carlo_states_01"
-  ],
-  "active_run_path": "outputs/t1_iterations/private/monte_carlo_states_01",
-  "completed_batches_this_turn": 8,
-  "development_evaluations_this_turn": 153,
-  "stability_replicates_this_turn": 16,
+  "active_jobs": [],
+  "active_run_path": null,
+  "completed_batches_this_turn": 11,
+  "development_evaluations_this_turn": 225,
+  "stability_replicates_this_turn": 32,
   "previous_verified_stability": {
     "candidate": "joint_e1.0_cov0.4",
     "mean_score": 51.252953907232836,
@@ -57,5 +55,18 @@
     "required": "Actual official score above 71.7",
     "local_readiness_threshold": 72
   },
-  "active_plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48"
+  "best_point_candidate": "reliability_expression_0.5",
+  "best_point_mean": 55.3743946010149,
+  "reliability_stability": {
+    "report_sha256": "f2417e6a9bcf0df4cc593180fc018bb167c401673675d20c4df185ff94b87f92",
+    "replicates": 16,
+    "candidate_mean": 55.1453586270116,
+    "candidate_lower_tail": 52.53372420433347,
+    "control_mean": 55.28130592055242,
+    "paired_mean_change": -0.13594729354081414,
+    "paired_lower_tail_change": -0.35756029404969336,
+    "paired_upper_tail_change": 0.0510446126818751,
+    "positive_replicates": 1,
+    "decision": "Do not promote reliability variant; retain unit_k16. Local >72 gate remains unmet."
+  }
 }
