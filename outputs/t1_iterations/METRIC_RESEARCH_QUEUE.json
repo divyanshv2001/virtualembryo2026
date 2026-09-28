@@ -4354,6 +4354,33 @@
       "result_report": "outputs/t1_iterations/COHORT_BATCH_RESULTS.json",
       "result_report_sha256": "0bc092d874a2ac227f11978fb1c542fb294a9e2f29eddd47993d096409786073",
       "importance_ablation": "Observed E8.5 state-ratio sampling also failed; best new mean 51.629 versus incumbent 55.312."
+    },
+    {
+      "id": "positive_quantile_temporal",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "status": "implemented_evaluated",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/1302.7149v2",
+          "read": "Methods sections4.1-4.3 and experiment section5.4; marginal/rank separation and limits."
+        }
+      ],
+      "implementation": [
+        "positive_quantile_forecast.py",
+        "state_quantile_forecast.py"
+      ],
+      "scope": "Adaptation, not faithful ECC. Three positive-quantile strengths, global and four-state conditional, two one-day associated-cohort folds.",
+      "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
+      "results_report_sha256": "6414656190169ec13d72b960329047408f4965ced57776bcbea6cf251afca345",
+      "research_family_exhausted": false,
+      "submissions_used": 0,
+      "jev_requests_used": 0,
+      "next_action": "Implement annotation-conditioned abundance/detection trends on the two declared one-day atlas folds before any challenge refit. Eleven exact challenge labels are shared, but correspondence and changing label granularity need explicit checks. See CHALLENGE_LABEL_ALIGNMENT.json."
     }
   ]
 }

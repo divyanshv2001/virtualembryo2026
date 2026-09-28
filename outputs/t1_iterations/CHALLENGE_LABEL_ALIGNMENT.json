@@ -1,0 +1,63 @@
+{
+  "scope": "Observed challenge metadata only; no hidden E10.5 or model training.",
+  "counts": {
+    "E8.5": {
+      "Foregut": 2405,
+      "pSHF": 2192,
+      "Surface Ectoderm": 1423,
+      "OFT/RV-CM": 1176,
+      "Endothelium": 1139,
+      "JCF": 1119,
+      "IFT-CM": 949,
+      "Paraxial Mesoderm": 934,
+      "EXEM": 863,
+      "aSHF": 822,
+      "Neural Tube": 773,
+      "Pericardium": 745,
+      "AVC-CM": 598,
+      "RV-CM": 442,
+      "LV-CM": 344,
+      "SV-CM": 310,
+      "NCC": 287,
+      "Blood": 266
+    },
+    "E9.5": {
+      "OFT/RV-CM": 1830,
+      "Endocardium": 1555,
+      "SV-CM": 1273,
+      "pPHM": 1194,
+      "Hepatocyte": 1190,
+      "V-CM": 1144,
+      "pSHF": 1110,
+      "aSHF": 1050,
+      "Pericardium": 897,
+      "Proepicardium": 883,
+      "ST": 879,
+      "Foregut": 871,
+      "IFT-CM": 690,
+      "NCC-derived": 621,
+      "Surface Ectoderm": 554,
+      "AVC-CM": 326,
+      "BEC": 271,
+      "Epithelium": 233,
+      "aPHM": 226,
+      "Blood": 213,
+      "NCC": 47
+    }
+  },
+  "shared_exact_labels": [
+    "AVC-CM",
+    "Blood",
+    "Foregut",
+    "IFT-CM",
+    "NCC",
+    "OFT/RV-CM",
+    "Pericardium",
+    "SV-CM",
+    "Surface Ectoderm",
+    "aSHF",
+    "pSHF"
+  ],
+  "limits": "Matching strings do not establish identical annotation granularity or biological populations. Counts reflect capture, not growth.",
+  "next_experiment": "Test within-type expression trends with a separate same-horizon earlier fold and matched controls; do not extrapolate capture counts as proliferation."
+}

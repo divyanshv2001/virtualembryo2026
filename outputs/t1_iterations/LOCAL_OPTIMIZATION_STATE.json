@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-28T16:29:33.829729+00:00",
+  "updated_utc": "2026-09-28T16:44:36.810407+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,7 +31,7 @@
   },
   "resume_command": null,
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Require a same-horizon, tissue-matched past-only validation test and diagnose biological trajectory transfer before another prospective export. Keep official quota unused.",
+  "next_experiment": "Implement annotation-conditioned abundance/detection trends on the two declared one-day atlas folds before any challenge refit. Eleven exact challenge labels are shared, but correspondence and changing label granularity need explicit checks. See CHALLENGE_LABEL_ALIGNMENT.json.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -145,5 +145,11 @@
     "report_sha256": "1b467c0e99eb73debda8104b2c8fb5477c31d1ad077e76afb689d242e2273d95",
     "status": "rejected_for_official_use"
   },
-  "candidate_role": "Local control only; official progress export failed"
+  "candidate_role": "Local control only; official progress export failed",
+  "horizon_batch": {
+    "status": "completed",
+    "running": [],
+    "report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
+    "report_sha256": "6414656190169ec13d72b960329047408f4965ced57776bcbea6cf251afca345"
+  }
 }

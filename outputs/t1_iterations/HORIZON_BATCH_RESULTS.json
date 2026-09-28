@@ -1,0 +1,2067 @@
+{
+  "updated_utc": "2026-09-28T16:44:36.794939+00:00",
+  "status": "completed",
+  "runs": {
+    "matched_horizon_audit_01": {
+      "report_sha256": "e993ec02b71ca8b00e638c7b7641a950ca72abf524e2432c323a277d4a6ed18a",
+      "plan_sha256": "34e1e8c6f9e4a72b233b9578d4fde546e20c0e8131194d6185b7fca7186754f6",
+      "folds": [
+        {
+          "cutoff": 8.0,
+          "target": 9.0,
+          "floor": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.26304274797439575,
+            "variogram": 0.009573637507855892
+          },
+          "ceiling": {
+            "de_score": 0.9358816276202219,
+            "de_direction": 0.8673063060165137,
+            "mmd_u": 0.007752883248031139,
+            "variogram": 0.00011852615716634318
+          },
+          "results": [
+            {
+              "candidate": "copy",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.26304274797439575,
+                "variogram": 0.009573637507855892
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit16",
+              "raw_metrics": {
+                "de_score": -0.2392108508014796,
+                "de_direction": -0.1276339315604888,
+                "mmd_u": 0.2767234444618225,
+                "variogram": 0.009945238940417767
+              },
+              "local_score": 47.142658332960416,
+              "skills": {
+                "de_score": 0.4433411214953271,
+                "de_direction": 0.46573119386378403,
+                "mmd_u": 0.48695238491166565,
+                "variogram": 0.4903639450816336
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "expression_only",
+              "raw_metrics": {
+                "de_score": -0.17755856966707764,
+                "de_direction": 0.023107751374642636,
+                "mmd_u": 0.2612297236919403,
+                "variogram": 0.009605624713003635
+              },
+              "local_score": 49.122302071270276,
+              "skills": {
+                "de_score": 0.4566787003610108,
+                "de_direction": 0.5067507115830666,
+                "mmd_u": 0.5017817835405018,
+                "variogram": 0.4991556633226643
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "population_only",
+              "raw_metrics": {
+                "de_score": -0.24044389642416764,
+                "de_direction": -0.11360684652683287,
+                "mmd_u": 0.27668076753616333,
+                "variogram": 0.009885068982839584
+              },
+              "local_score": 47.25644413899795,
+              "skills": {
+                "de_score": 0.44308231173380036,
+                "de_direction": 0.46926586666949294,
+                "mmd_u": 0.48699202803853325,
+                "variogram": 0.49189894188798106
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "population_detection",
+              "raw_metrics": {
+                "de_score": -0.24537607891491983,
+                "de_direction": -0.12515461772498832,
+                "mmd_u": 0.2773376405239105,
+                "variogram": 0.009910604916512966
+              },
+              "local_score": 47.12645742836714,
+              "skills": {
+                "de_score": 0.44205008736167734,
+                "de_direction": 0.4663520746783798,
+                "mmd_u": 0.4863825645684831,
+                "variogram": 0.49124632201556095
+              },
+              "calibration_valid": true
+            }
+          ],
+          "generation": {
+            "copy": {
+              "audit": {
+                "method": "persistence"
+              },
+              "prediction_sha256": "53908b256a2f04ded456a9239a8231ce0c0f551e3bd9de2c1424524db824cd4d"
+            },
+            "unit16": {
+              "audit": {
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "guard_applied": true,
+                "population_mix": 1.0,
+                "expression_strength_used": 1.0,
+                "trusted_donor_fraction": 0.986,
+                "effective_sample_size": 1397.1175173673855,
+                "unique_donors": 1302,
+                "covariance_change_vs_reference": 0.11251184088826895,
+                "state_support": [
+                  143,
+                  1,
+                  82,
+                  73,
+                  166,
+                  73,
+                  0,
+                  165,
+                  92,
+                  24,
+                  36,
+                  37,
+                  5,
+                  19,
+                  66,
+                  1
+                ],
+                "alignment": "identity",
+                "covariance_limit": 0.4,
+                "feature_scaling": "unit",
+                "expression_factor_cap": 1.25,
+                "detection_strength": 0.5,
+                "maximum_probability_change": 0.02,
+                "attempted_additions": 8631,
+                "attempted_deletions": 16757,
+                "detection_candidate_covariance_change": 0.11372150904451062,
+                "detection_guard_rejected": false,
+                "actual_additions": 8631,
+                "actual_deletions": 16757
+              },
+              "prediction_sha256": "5a511aa567339d7d5cd9b2604d845633d450567a782672fcaf6edded2483f967"
+            },
+            "expression_only": {
+              "audit": {
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "guard_applied": true,
+                "population_mix": 1.0,
+                "expression_strength_used": 1.0,
+                "trusted_donor_fraction": 0.986,
+                "effective_sample_size": 1500.0000000000002,
+                "unique_donors": 1500,
+                "covariance_change_vs_reference": 0.06837888918795869,
+                "state_support": [
+                  143,
+                  1,
+                  82,
+                  73,
+                  166,
+                  73,
+                  0,
+                  165,
+                  92,
+                  24,
+                  36,
+                  37,
+                  5,
+                  19,
+                  66,
+                  1
+                ],
+                "alignment": "identity",
+                "covariance_limit": 0.4,
+                "feature_scaling": "unit",
+                "expression_factor_cap": 1.25
+              },
+              "prediction_sha256": "f548262648572ac50246db3e259b238cb9e1240c21c5803543ea15e5fd19aef2"
+            },
+            "population_only": {
+              "audit": {
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "guard_applied": true,
+                "population_mix": 1.0,
+                "expression_strength_used": 0.0,
+                "trusted_donor_fraction": 0.986,
+                "effective_sample_size": 1397.1175173673855,
+                "unique_donors": 1302,
+                "covariance_change_vs_reference": 0.09485383557068615,
+                "state_support": [
+                  143,
+                  1,
+                  82,
+                  73,
+                  166,
+                  73,
+                  0,
+                  165,
+                  92,
+                  24,
+                  36,
+                  37,
+                  5,
+                  19,
+                  66,
+                  1
+                ],
+                "alignment": "identity",
+                "covariance_limit": 0.4,
+                "feature_scaling": "unit",
+                "expression_factor_cap": 1.25
+              },
+              "prediction_sha256": "ea414c354031d56f733896eae4f3f143aaab202d22ff4d89b79838cfcc37907a"
+            },
+            "population_detection": {
+              "audit": {
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "guard_applied": true,
+                "population_mix": 1.0,
+                "expression_strength_used": 0.0,
+                "trusted_donor_fraction": 0.986,
+                "effective_sample_size": 1397.1175173673855,
+                "unique_donors": 1302,
+                "covariance_change_vs_reference": 0.09485383557068615,
+                "state_support": [
+                  143,
+                  1,
+                  82,
+                  73,
+                  166,
+                  73,
+                  0,
+                  165,
+                  92,
+                  24,
+                  36,
+                  37,
+                  5,
+                  19,
+                  66,
+                  1
+                ],
+                "alignment": "identity",
+                "covariance_limit": 0.4,
+                "feature_scaling": "unit",
+                "expression_factor_cap": 1.25,
+                "detection_strength": 0.5,
+                "maximum_probability_change": 0.02,
+                "attempted_additions": 8631,
+                "attempted_deletions": 16757,
+                "detection_candidate_covariance_change": 0.09450650993146499,
+                "detection_guard_rejected": false,
+                "actual_additions": 8631,
+                "actual_deletions": 16757
+              },
+              "prediction_sha256": "fe992007359fb0ccf71e7fd243ff5d6960c99537b59d87f0bfc980585e470c93"
+            }
+          }
+        },
+        {
+          "cutoff": 8.25,
+          "target": 9.25,
+          "floor": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.2375742495059967,
+            "variogram": 0.008673261851072311
+          },
+          "ceiling": {
+            "de_score": 0.9165247018739352,
+            "de_direction": 0.8566698563410718,
+            "mmd_u": 0.002615219447761774,
+            "variogram": 0.00012109167437301949
+          },
+          "results": [
+            {
+              "candidate": "copy",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.2375742495059967,
+                "variogram": 0.008673261851072311
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit16",
+              "raw_metrics": {
+                "de_score": -0.3287904599659284,
+                "de_direction": -0.07611305688343999,
+                "mmd_u": 0.2259478121995926,
+                "variogram": 0.008606153540313244
+              },
+              "local_score": 47.98714389154627,
+              "skills": {
+                "de_score": 0.4239558707643814,
+                "de_direction": 0.4787328678973971,
+                "mmd_u": 0.5126845405062341,
+                "variogram": 0.5019694604907392
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "expression_only",
+              "raw_metrics": {
+                "de_score": -0.3390119250425894,
+                "de_direction": -0.15949310210577355,
+                "mmd_u": 0.23377874493598938,
+                "variogram": 0.008789319545030594
+              },
+              "local_score": 47.039247151229155,
+              "skills": {
+                "de_score": 0.42196078431372547,
+                "de_direction": 0.4574192899530557,
+                "mmd_u": 0.5040713590501511,
+                "variogram": 0.4966302261527545
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "population_only",
+              "raw_metrics": {
+                "de_score": -0.3475298126064735,
+                "de_direction": 0.06626118355863457,
+                "mmd_u": 0.22997382283210754,
+                "variogram": 0.008428419008851051
+              },
+              "local_score": 48.90250456523588,
+              "skills": {
+                "de_score": 0.4203125,
+                "de_direction": 0.520114761496495,
+                "mmd_u": 0.5082199186491047,
+                "variogram": 0.5072612734175185
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "population_detection",
+              "raw_metrics": {
+                "de_score": -0.3662691652470187,
+                "de_direction": -0.013426782937497427,
+                "mmd_u": 0.23050299286842346,
+                "variogram": 0.008499953895807266
+              },
+              "local_score": 48.152611748941204,
+              "skills": {
+                "de_score": 0.4167312161115414,
+                "de_direction": 0.4961121602221384,
+                "mmd_u": 0.5076388737962794,
+                "variogram": 0.5051180563355413
+              },
+              "calibration_valid": true
+            }
+          ],
+          "generation": {
+            "copy": {
+              "audit": {
+                "method": "persistence"
+              },
+              "prediction_sha256": "f991bb722bc73fe1b4135b16a6a7a3db7132c306103559448dc13289eb73ae4e"
+            },
+            "unit16": {
+              "audit": {
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "guard_applied": true,
+                "population_mix": 1.0,
+                "expression_strength_used": 1.0,
+                "trusted_donor_fraction": 0.99,
+                "effective_sample_size": 1423.0487179949341,
+                "unique_donors": 1334,
+                "covariance_change_vs_reference": 0.1709030360203553,
+                "state_support": [
+                  136,
+                  65,
+                  203,
+                  10,
+                  86,
+                  55,
+                  113,
+                  25,
+                  10,
+                  106,
+                  85,
+                  193,
+                  90,
+                  37,
+                  172,
+                  40
+                ],
+                "alignment": "identity",
+                "covariance_limit": 0.4,
+                "feature_scaling": "unit",
+                "expression_factor_cap": 1.25,
+                "detection_strength": 0.5,
+                "maximum_probability_change": 0.02,
+                "attempted_additions": 22466,
+                "attempted_deletions": 24091,
+                "detection_candidate_covariance_change": 0.17236713534616505,
+                "detection_guard_rejected": false,
+                "actual_additions": 22466,
+                "actual_deletions": 24091
+              },
+              "prediction_sha256": "20ec068eb5979bde5541166183dc3cad964eb9e57ce7682f8fc60ea7d36a3d43"
+            },
+            "expression_only": {
+              "audit": {
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "guard_applied": true,
+                "population_mix": 1.0,
+                "expression_strength_used": 1.0,
+                "trusted_donor_fraction": 0.99,
+                "effective_sample_size": 1500.0000000000002,
+                "unique_donors": 1500,
+                "covariance_change_vs_reference": 0.0753020330548983,
+                "state_support": [
+                  136,
+                  65,
+                  203,
+                  10,
+                  86,
+                  55,
+                  113,
+                  25,
+                  10,
+                  106,
+                  85,
+                  193,
+                  90,
+                  37,
+                  172,
+                  40
+                ],
+                "alignment": "identity",
+                "covariance_limit": 0.4,
+                "feature_scaling": "unit",
+                "expression_factor_cap": 1.25
+              },
+              "prediction_sha256": "928191b37bac5366d0d1c3748a488876fffb3b3d2d42100399e9051eeab75800"
+            },
+            "population_only": {
+              "audit": {
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "guard_applied": true,
+                "population_mix": 1.0,
+                "expression_strength_used": 0.0,
+                "trusted_donor_fraction": 0.99,
+                "effective_sample_size": 1423.0487179949341,
+                "unique_donors": 1334,
+                "covariance_change_vs_reference": 0.11162155863740922,
+                "state_support": [
+                  136,
+                  65,
+                  203,
+                  10,
+                  86,
+                  55,
+                  113,
+                  25,
+                  10,
+                  106,
+                  85,
+                  193,
+                  90,
+                  37,
+                  172,
+                  40
+                ],
+                "alignment": "identity",
+                "covariance_limit": 0.4,
+                "feature_scaling": "unit",
+                "expression_factor_cap": 1.25
+              },
+              "prediction_sha256": "aa69a83eba15885bdcd55c9dbdd405edda72abdff4fc4e8da883e9dbc9f66b9b"
+            },
+            "population_detection": {
+              "audit": {
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "guard_applied": true,
+                "population_mix": 1.0,
+                "expression_strength_used": 0.0,
+                "trusted_donor_fraction": 0.99,
+                "effective_sample_size": 1423.0487179949341,
+                "unique_donors": 1334,
+                "covariance_change_vs_reference": 0.11162155863740922,
+                "state_support": [
+                  136,
+                  65,
+                  203,
+                  10,
+                  86,
+                  55,
+                  113,
+                  25,
+                  10,
+                  106,
+                  85,
+                  193,
+                  90,
+                  37,
+                  172,
+                  40
+                ],
+                "alignment": "identity",
+                "covariance_limit": 0.4,
+                "feature_scaling": "unit",
+                "expression_factor_cap": 1.25,
+                "detection_strength": 0.5,
+                "maximum_probability_change": 0.02,
+                "attempted_additions": 22466,
+                "attempted_deletions": 24091,
+                "detection_candidate_covariance_change": 0.1125338711839984,
+                "detection_guard_rejected": false,
+                "actual_additions": 22466,
+                "actual_deletions": 24091
+              },
+              "prediction_sha256": "dac66a3b49bbdf5f4d8bd88c47f3d1d1c0d894f6eb9186190dbc0e205a0f6d61"
+            }
+          }
+        }
+      ],
+      "summaries": [
+        {
+          "candidate": "copy",
+          "all_calibrations_valid": true,
+          "scores": [
+            50.0,
+            50.0
+          ],
+          "mean_score": 50.0,
+          "mean_skills_percent": {
+            "de_score": 50.0,
+            "de_direction": 50.0,
+            "mmd_u": 50.0,
+            "variogram": 50.0
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": true
+        },
+        {
+          "candidate": "unit16",
+          "all_calibrations_valid": true,
+          "scores": [
+            47.142658332960416,
+            47.98714389154627
+          ],
+          "mean_score": 47.56490111225334,
+          "mean_skills_percent": {
+            "de_score": 43.364849612985424,
+            "de_direction": 47.22320308805906,
+            "mmd_u": 49.98184627089499,
+            "variogram": 49.61667027861864
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "expression_only",
+          "all_calibrations_valid": true,
+          "scores": [
+            49.122302071270276,
+            47.039247151229155
+          ],
+          "mean_score": 48.080774611249716,
+          "mean_skills_percent": {
+            "de_score": 43.93197423373682,
+            "de_direction": 48.20850007680612,
+            "mmd_u": 50.29265712953265,
+            "variogram": 49.78929447377094
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "population_only",
+          "all_calibrations_valid": true,
+          "scores": [
+            47.25644413899795,
+            48.90250456523588
+          ],
+          "mean_score": 48.07947435211692,
+          "mean_skills_percent": {
+            "de_score": 43.16974058669002,
+            "de_direction": 49.4690314082994,
+            "mmd_u": 49.7605973343819,
+            "variogram": 49.95801076527498
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "population_detection",
+          "all_calibrations_valid": true,
+          "scores": [
+            47.12645742836714,
+            48.152611748941204
+          ],
+          "mean_score": 47.63953458865417,
+          "mean_skills_percent": {
+            "de_score": 42.93906517366094,
+            "de_direction": 48.123211745025905,
+            "mmd_u": 49.70107191823813,
+            "variogram": 49.818218917555114
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        }
+      ],
+      "scope": "One-day source-cohort development, not independent challenge tissue replication. Atlas donor/target missing or ambiguous official genes are zero placeholders, not observed zeros. Labels select cohort only; annotations may reflect joint atlas processing."
+    },
+    "quantile_horizon_pilot_01": {
+      "report_sha256": "62b810827e98153434d273c194312f07fa32ab91883d185768cf44757e7ae140",
+      "plan_sha256": "688b85bc006859b493bec25c92a63e6578b967987c4853a1b632993c87a8e0fc",
+      "folds": [
+        {
+          "cutoff": 8.0,
+          "target": 9.0,
+          "floor": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.26304274797439575,
+            "variogram": 0.009573637507855892
+          },
+          "ceiling": {
+            "de_score": 0.9358816276202219,
+            "de_direction": 0.8673063060165137,
+            "mmd_u": 0.007752883248031139,
+            "variogram": 0.00011852615716634318
+          },
+          "results": [
+            {
+              "candidate": "copy",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.26304274797439575,
+                "variogram": 0.009573637507855892
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit16",
+              "raw_metrics": {
+                "de_score": -0.2392108508014796,
+                "de_direction": -0.1276339315604888,
+                "mmd_u": 0.2767234444618225,
+                "variogram": 0.009945238940417767
+              },
+              "local_score": 47.142658332960416,
+              "skills": {
+                "de_score": 0.4433411214953271,
+                "de_direction": 0.46573119386378403,
+                "mmd_u": 0.48695238491166565,
+                "variogram": 0.4903639450816336
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "quantile_0.25",
+              "raw_metrics": {
+                "de_score": -0.05795314426633784,
+                "de_direction": 0.1608923957572816,
+                "mmd_u": 0.2603374123573303,
+                "variogram": 0.009587838314473629
+              },
+              "local_score": 50.974960593272066,
+              "skills": {
+                "de_score": 0.48498402555910547,
+                "de_direction": 0.5511184879285715,
+                "mmd_u": 0.5026633904464386,
+                "variogram": 0.4996248021343494
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "quantile_0.5",
+              "raw_metrics": {
+                "de_score": -0.06288532675709001,
+                "de_direction": 0.15214862346871602,
+                "mmd_u": 0.26046156883239746,
+                "variogram": 0.009606660343706608
+              },
+              "local_score": 50.85430709498257,
+              "skills": {
+                "de_score": 0.4837476099426386,
+                "de_direction": 0.5480733288618949,
+                "mmd_u": 0.5025405379015545,
+                "variogram": 0.4991283743911302
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "quantile_1.0",
+              "raw_metrics": {
+                "de_score": -0.07151664611590626,
+                "de_direction": 0.15370307413319323,
+                "mmd_u": 0.2592133581638336,
+                "variogram": 0.009588382206857204
+              },
+              "local_score": 50.86084059151841,
+              "skills": {
+                "de_score": 0.4815989847715736,
+                "de_direction": 0.5486122293680955,
+                "mmd_u": 0.5037783791257705,
+                "variogram": 0.4996104432126785
+              },
+              "calibration_valid": true
+            }
+          ],
+          "generation": {
+            "copy": {
+              "audit": {
+                "method": "persistence"
+              },
+              "prediction_sha256": "53908b256a2f04ded456a9239a8231ce0c0f551e3bd9de2c1424524db824cd4d"
+            },
+            "unit16": {
+              "audit": {
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "guard_applied": true,
+                "population_mix": 1.0,
+                "expression_strength_used": 1.0,
+                "trusted_donor_fraction": 0.986,
+                "effective_sample_size": 1397.1175173673855,
+                "unique_donors": 1302,
+                "covariance_change_vs_reference": 0.11251184088826895,
+                "state_support": [
+                  143,
+                  1,
+                  82,
+                  73,
+                  166,
+                  73,
+                  0,
+                  165,
+                  92,
+                  24,
+                  36,
+                  37,
+                  5,
+                  19,
+                  66,
+                  1
+                ],
+                "alignment": "identity",
+                "covariance_limit": 0.4,
+                "feature_scaling": "unit",
+                "expression_factor_cap": 1.25,
+                "detection_strength": 0.5,
+                "maximum_probability_change": 0.02,
+                "attempted_additions": 8631,
+                "attempted_deletions": 16757,
+                "detection_candidate_covariance_change": 0.11372150904451062,
+                "detection_guard_rejected": false,
+                "actual_additions": 8631,
+                "actual_deletions": 16757
+              },
+              "prediction_sha256": "5a511aa567339d7d5cd9b2604d845633d450567a782672fcaf6edded2483f967"
+            },
+            "quantile_0.25": {
+              "audit": {
+                "method": "positive_quantile_drift",
+                "requested_strength": 0.25,
+                "guard_mix": 1.0,
+                "factor_cap_before_mass_normalization": 1.25,
+                "covariance_change_vs_reference": 0.08670311564562469,
+                "eligible_genes": 11576,
+                "zero_mask_preserved": true,
+                "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+              },
+              "prediction_sha256": "1b9a667456310449f47101a0599e8d2c4c89929494f735f643e379d00682765d"
+            },
+            "quantile_0.5": {
+              "audit": {
+                "method": "positive_quantile_drift",
+                "requested_strength": 0.5,
+                "guard_mix": 1.0,
+                "factor_cap_before_mass_normalization": 1.25,
+                "covariance_change_vs_reference": 0.09838273952676493,
+                "eligible_genes": 11576,
+                "zero_mask_preserved": true,
+                "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+              },
+              "prediction_sha256": "21fbc13122b14b9454c89246fced4e8fc5e5301d3c9869730f588593ed570efb"
+            },
+            "quantile_1.0": {
+              "audit": {
+                "method": "positive_quantile_drift",
+                "requested_strength": 1.0,
+                "guard_mix": 1.0,
+                "factor_cap_before_mass_normalization": 1.25,
+                "covariance_change_vs_reference": 0.10134516729007921,
+                "eligible_genes": 11576,
+                "zero_mask_preserved": true,
+                "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+              },
+              "prediction_sha256": "a7cf9f5ed4c572c388012d9726965045ed6f790811203a04b0c9fd7ac3e2d923"
+            }
+          }
+        },
+        {
+          "cutoff": 8.25,
+          "target": 9.25,
+          "floor": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.2375742495059967,
+            "variogram": 0.008673261851072311
+          },
+          "ceiling": {
+            "de_score": 0.9165247018739352,
+            "de_direction": 0.8566698563410718,
+            "mmd_u": 0.002615219447761774,
+            "variogram": 0.00012109167437301949
+          },
+          "results": [
+            {
+              "candidate": "copy",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.2375742495059967,
+                "variogram": 0.008673261851072311
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit16",
+              "raw_metrics": {
+                "de_score": -0.3287904599659284,
+                "de_direction": -0.07611305688343999,
+                "mmd_u": 0.2259478121995926,
+                "variogram": 0.008606153540313244
+              },
+              "local_score": 47.98714389154627,
+              "skills": {
+                "de_score": 0.4239558707643814,
+                "de_direction": 0.4787328678973971,
+                "mmd_u": 0.5126845405062341,
+                "variogram": 0.5019694604907392
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "quantile_0.25",
+              "raw_metrics": {
+                "de_score": -0.17546848381601363,
+                "de_direction": 0.000638174360388822,
+                "mmd_u": 0.23167502880096436,
+                "variogram": 0.008693655021488667
+              },
+              "local_score": 49.09142173430075,
+              "skills": {
+                "de_score": 0.4563189143341815,
+                "de_direction": 0.500186306354642,
+                "mmd_u": 0.5063566607688978,
+                "variogram": 0.4994045697006615
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "quantile_0.5",
+              "raw_metrics": {
+                "de_score": -0.21294718909710392,
+                "de_direction": 0.013748502169702219,
+                "mmd_u": 0.2307441681623459,
+                "variogram": 0.008745094761252403
+              },
+              "local_score": 48.979530715947504,
+              "skills": {
+                "de_score": 0.4479600333055787,
+                "de_direction": 0.504044649703018,
+                "mmd_u": 0.507374496485258,
+                "variogram": 0.49790893730874236
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "quantile_1.0",
+              "raw_metrics": {
+                "de_score": -0.2640545144804088,
+                "de_direction": 0.02693017521554197,
+                "mmd_u": 0.23086842894554138,
+                "variogram": 0.008813205175101757
+              },
+              "local_score": 48.7616863353881,
+              "skills": {
+                "de_score": 0.43704305442729485,
+                "de_direction": 0.5079844707401256,
+                "mmd_u": 0.507238388785757,
+                "variogram": 0.4959423271314939
+              },
+              "calibration_valid": true
+            }
+          ],
+          "generation": {
+            "copy": {
+              "audit": {
+                "method": "persistence"
+              },
+              "prediction_sha256": "f991bb722bc73fe1b4135b16a6a7a3db7132c306103559448dc13289eb73ae4e"
+            },
+            "unit16": {
+              "audit": {
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "guard_applied": true,
+                "population_mix": 1.0,
+                "expression_strength_used": 1.0,
+                "trusted_donor_fraction": 0.99,
+                "effective_sample_size": 1423.0487179949341,
+                "unique_donors": 1334,
+                "covariance_change_vs_reference": 0.1709030360203553,
+                "state_support": [
+                  136,
+                  65,
+                  203,
+                  10,
+                  86,
+                  55,
+                  113,
+                  25,
+                  10,
+                  106,
+                  85,
+                  193,
+                  90,
+                  37,
+                  172,
+                  40
+                ],
+                "alignment": "identity",
+                "covariance_limit": 0.4,
+                "feature_scaling": "unit",
+                "expression_factor_cap": 1.25,
+                "detection_strength": 0.5,
+                "maximum_probability_change": 0.02,
+                "attempted_additions": 22466,
+                "attempted_deletions": 24091,
+                "detection_candidate_covariance_change": 0.17236713534616505,
+                "detection_guard_rejected": false,
+                "actual_additions": 22466,
+                "actual_deletions": 24091
+              },
+              "prediction_sha256": "20ec068eb5979bde5541166183dc3cad964eb9e57ce7682f8fc60ea7d36a3d43"
+            },
+            "quantile_0.25": {
+              "audit": {
+                "method": "positive_quantile_drift",
+                "requested_strength": 0.25,
+                "guard_mix": 1.0,
+                "factor_cap_before_mass_normalization": 1.25,
+                "covariance_change_vs_reference": 0.07858333945310246,
+                "eligible_genes": 12035,
+                "zero_mask_preserved": true,
+                "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+              },
+              "prediction_sha256": "a8abe7d38db34d86635137e90153744ae8af8bd7952bf9b3647fdc153c27b0af"
+            },
+            "quantile_0.5": {
+              "audit": {
+                "method": "positive_quantile_drift",
+                "requested_strength": 0.5,
+                "guard_mix": 1.0,
+                "factor_cap_before_mass_normalization": 1.25,
+                "covariance_change_vs_reference": 0.09715388083198348,
+                "eligible_genes": 12035,
+                "zero_mask_preserved": true,
+                "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+              },
+              "prediction_sha256": "32c34027422da53ce6091f776f07f565f1d7b59ff84f99d55917ec9eb8130e8d"
+            },
+            "quantile_1.0": {
+              "audit": {
+                "method": "positive_quantile_drift",
+                "requested_strength": 1.0,
+                "guard_mix": 1.0,
+                "factor_cap_before_mass_normalization": 1.25,
+                "covariance_change_vs_reference": 0.10252609684628554,
+                "eligible_genes": 12035,
+                "zero_mask_preserved": true,
+                "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+              },
+              "prediction_sha256": "518b760c54ff1df5c1024ceddc4f8d3fa88c2537175a025ba0954f917a8a61f4"
+            }
+          }
+        }
+      ],
+      "summaries": [
+        {
+          "candidate": "copy",
+          "all_calibrations_valid": true,
+          "scores": [
+            50.0,
+            50.0
+          ],
+          "mean_score": 50.0,
+          "mean_skills_percent": {
+            "de_score": 50.0,
+            "de_direction": 50.0,
+            "mmd_u": 50.0,
+            "variogram": 50.0
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": true
+        },
+        {
+          "candidate": "unit16",
+          "all_calibrations_valid": true,
+          "scores": [
+            47.142658332960416,
+            47.98714389154627
+          ],
+          "mean_score": 47.56490111225334,
+          "mean_skills_percent": {
+            "de_score": 43.364849612985424,
+            "de_direction": 47.22320308805906,
+            "mmd_u": 49.98184627089499,
+            "variogram": 49.61667027861864
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "quantile_0.25",
+          "all_calibrations_valid": true,
+          "scores": [
+            50.974960593272066,
+            49.09142173430075
+          ],
+          "mean_score": 50.03319116378641,
+          "mean_skills_percent": {
+            "de_score": 47.065146994664346,
+            "de_direction": 52.56523971416067,
+            "mmd_u": 50.451002560766824,
+            "variogram": 49.95146859175055
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "quantile_0.5",
+          "all_calibrations_valid": true,
+          "scores": [
+            50.85430709498257,
+            48.979530715947504
+          ],
+          "mean_score": 49.91691890546504,
+          "mean_skills_percent": {
+            "de_score": 46.585382162410866,
+            "de_direction": 52.605898928245644,
+            "mmd_u": 50.49575171934062,
+            "variogram": 49.851865584993625
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "quantile_1.0",
+          "all_calibrations_valid": true,
+          "scores": [
+            50.86084059151841,
+            48.7616863353881
+          ],
+          "mean_score": 49.81126346345326,
+          "mean_skills_percent": {
+            "de_score": 45.932101959943424,
+            "de_direction": 52.829835005411056,
+            "mmd_u": 50.55083839557637,
+            "variogram": 49.77763851720862
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        }
+      ],
+      "scope": "One-day source-cohort development, not independent challenge tissue replication. Atlas donor/target missing or ambiguous official genes are zero placeholders, not observed zeros. Labels select cohort only; annotations may reflect joint atlas processing."
+    },
+    "state_quantile_horizon_pilot_01": {
+      "report_sha256": "704998758584404b1c2b757287922d3548b2374b57c28dd8b72537a7af6e9fb6",
+      "plan_sha256": "151ec7d8243ef19bc72bc1c416e0b2b6bdedbc1adefe72d9a5dadff40eda019a",
+      "folds": [
+        {
+          "cutoff": 8.0,
+          "target": 9.0,
+          "floor": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.26304274797439575,
+            "variogram": 0.009573637507855892
+          },
+          "ceiling": {
+            "de_score": 0.9358816276202219,
+            "de_direction": 0.8673063060165137,
+            "mmd_u": 0.007752883248031139,
+            "variogram": 0.00011852615716634318
+          },
+          "results": [
+            {
+              "candidate": "copy",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.26304274797439575,
+                "variogram": 0.009573637507855892
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit16",
+              "raw_metrics": {
+                "de_score": -0.2392108508014796,
+                "de_direction": -0.1276339315604888,
+                "mmd_u": 0.2767234444618225,
+                "variogram": 0.009945238940417767
+              },
+              "local_score": 47.142658332960416,
+              "skills": {
+                "de_score": 0.4433411214953271,
+                "de_direction": 0.46573119386378403,
+                "mmd_u": 0.48695238491166565,
+                "variogram": 0.4903639450816336
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "quantile_0.25",
+              "raw_metrics": {
+                "de_score": -0.03945745992601724,
+                "de_direction": 0.08757162524509099,
+                "mmd_u": 0.25746163725852966,
+                "variogram": 0.009537150152027607
+              },
+              "local_score": 50.591657129703606,
+              "skills": {
+                "de_score": 0.4896774193548387,
+                "de_direction": 0.5265845312738311,
+                "mmd_u": 0.5055258673081383,
+                "variogram": 0.5009666172371355
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "quantile_0.5",
+              "raw_metrics": {
+                "de_score": -0.04438964241676941,
+                "de_direction": 0.08057602140767502,
+                "mmd_u": 0.25471532344818115,
+                "variogram": 0.009528260678052902
+              },
+              "local_score": 50.592115478864166,
+              "skills": {
+                "de_score": 0.4884169884169884,
+                "de_direction": 0.5243573878184917,
+                "mmd_u": 0.5082900809459032,
+                "variogram": 0.5012026822300033
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "quantile_1.0",
+              "raw_metrics": {
+                "de_score": -0.06165228113440193,
+                "de_direction": 0.0870188878516894,
+                "mmd_u": 0.2527463734149933,
+                "variogram": 0.009524638764560223
+              },
+              "local_score": 50.5962947013868,
+              "skills": {
+                "de_score": 0.4840561224489796,
+                "de_direction": 0.5264078718480576,
+                "mmd_u": 0.5102905428080832,
+                "variogram": 0.5012989279859187
+              },
+              "calibration_valid": true
+            }
+          ],
+          "generation": {
+            "copy": {
+              "audit": {
+                "method": "persistence"
+              },
+              "prediction_sha256": "53908b256a2f04ded456a9239a8231ce0c0f551e3bd9de2c1424524db824cd4d"
+            },
+            "unit16": {
+              "audit": {
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "guard_applied": true,
+                "population_mix": 1.0,
+                "expression_strength_used": 1.0,
+                "trusted_donor_fraction": 0.986,
+                "effective_sample_size": 1397.1175173673855,
+                "unique_donors": 1302,
+                "covariance_change_vs_reference": 0.11251184088826895,
+                "state_support": [
+                  143,
+                  1,
+                  82,
+                  73,
+                  166,
+                  73,
+                  0,
+                  165,
+                  92,
+                  24,
+                  36,
+                  37,
+                  5,
+                  19,
+                  66,
+                  1
+                ],
+                "alignment": "identity",
+                "covariance_limit": 0.4,
+                "feature_scaling": "unit",
+                "expression_factor_cap": 1.25,
+                "detection_strength": 0.5,
+                "maximum_probability_change": 0.02,
+                "attempted_additions": 8631,
+                "attempted_deletions": 16757,
+                "detection_candidate_covariance_change": 0.11372150904451062,
+                "detection_guard_rejected": false,
+                "actual_additions": 8631,
+                "actual_deletions": 16757
+              },
+              "prediction_sha256": "5a511aa567339d7d5cd9b2604d845633d450567a782672fcaf6edded2483f967"
+            },
+            "quantile_0.25": {
+              "audit": {
+                "method": "state_positive_quantile_drift",
+                "states": 4,
+                "strength": 0.25,
+                "state_audits": [
+                  {
+                    "state": 0,
+                    "anchors": 591,
+                    "audit": {
+                      "method": "positive_quantile_drift",
+                      "requested_strength": 0.25,
+                      "guard_mix": 1.0,
+                      "factor_cap_before_mass_normalization": 1.25,
+                      "covariance_change_vs_reference": 0.022111565544368633,
+                      "eligible_genes": 1684,
+                      "zero_mask_preserved": true,
+                      "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                      "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                      "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+                    }
+                  },
+                  {
+                    "state": 1,
+                    "anchors": 427,
+                    "audit": {
+                      "method": "positive_quantile_drift",
+                      "requested_strength": 0.25,
+                      "guard_mix": 1.0,
+                      "factor_cap_before_mass_normalization": 1.25,
+                      "covariance_change_vs_reference": 0.06424966452183901,
+                      "eligible_genes": 9393,
+                      "zero_mask_preserved": true,
+                      "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                      "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                      "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+                    }
+                  },
+                  {
+                    "state": 2,
+                    "anchors": 143,
+                    "audit": {
+                      "method": "positive_quantile_drift",
+                      "requested_strength": 0.25,
+                      "guard_mix": 1.0,
+                      "factor_cap_before_mass_normalization": 1.25,
+                      "covariance_change_vs_reference": 0.09695814981042541,
+                      "eligible_genes": 7929,
+                      "zero_mask_preserved": true,
+                      "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                      "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                      "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+                    }
+                  },
+                  {
+                    "state": 3,
+                    "anchors": 329,
+                    "audit": {
+                      "method": "positive_quantile_drift",
+                      "requested_strength": 0.25,
+                      "guard_mix": 1.0,
+                      "factor_cap_before_mass_normalization": 1.25,
+                      "covariance_change_vs_reference": 0.06859996797891053,
+                      "eligible_genes": 9727,
+                      "zero_mask_preserved": true,
+                      "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                      "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                      "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+                    }
+                  }
+                ],
+                "skipped_states": [],
+                "trusted_anchor_fraction": 0.9933333333333333,
+                "covariance_change_before_global_guard": 0.07492021003191733,
+                "global_guard_rejected": false,
+                "covariance_change_vs_reference": 0.07492021003191733,
+                "fixed_cell_counts": true,
+                "zero_mask_preserved": true
+              },
+              "prediction_sha256": "6b9d42dca4b2c86de88b74fa70b04dfe7b7e991543a192601208c3d813ef52be"
+            },
+            "quantile_0.5": {
+              "audit": {
+                "method": "state_positive_quantile_drift",
+                "states": 4,
+                "strength": 0.5,
+                "state_audits": [
+                  {
+                    "state": 0,
+                    "anchors": 591,
+                    "audit": {
+                      "method": "positive_quantile_drift",
+                      "requested_strength": 0.5,
+                      "guard_mix": 1.0,
+                      "factor_cap_before_mass_normalization": 1.25,
+                      "covariance_change_vs_reference": 0.04080387981405349,
+                      "eligible_genes": 1684,
+                      "zero_mask_preserved": true,
+                      "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                      "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                      "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+                    }
+                  },
+                  {
+                    "state": 1,
+                    "anchors": 427,
+                    "audit": {
+                      "method": "positive_quantile_drift",
+                      "requested_strength": 0.5,
+                      "guard_mix": 1.0,
+                      "factor_cap_before_mass_normalization": 1.25,
+                      "covariance_change_vs_reference": 0.08748168943366277,
+                      "eligible_genes": 9393,
+                      "zero_mask_preserved": true,
+                      "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                      "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                      "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+                    }
+                  },
+                  {
+                    "state": 2,
+                    "anchors": 143,
+                    "audit": {
+                      "method": "positive_quantile_drift",
+                      "requested_strength": 0.5,
+                      "guard_mix": 1.0,
+                      "factor_cap_before_mass_normalization": 1.25,
+                      "covariance_change_vs_reference": 0.12221709914939101,
+                      "eligible_genes": 7929,
+                      "zero_mask_preserved": true,
+                      "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                      "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                      "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+                    }
+                  },
+                  {
+                    "state": 3,
+                    "anchors": 329,
+                    "audit": {
+                      "method": "positive_quantile_drift",
+                      "requested_strength": 0.5,
+                      "guard_mix": 1.0,
+                      "factor_cap_before_mass_normalization": 1.25,
+                      "covariance_change_vs_reference": 0.09586419626772905,
+                      "eligible_genes": 9727,
+                      "zero_mask_preserved": true,
+                      "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                      "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                      "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+                    }
+                  }
+                ],
+                "skipped_states": [],
+                "trusted_anchor_fraction": 0.9933333333333333,
+                "covariance_change_before_global_guard": 0.10053378897485729,
+                "global_guard_rejected": false,
+                "covariance_change_vs_reference": 0.10053378897485729,
+                "fixed_cell_counts": true,
+                "zero_mask_preserved": true
+              },
+              "prediction_sha256": "78fdc8e3311c43d05dcd9349a5d25f763ed5ad92ecb22037f904e1dc72139874"
+            },
+            "quantile_1.0": {
+              "audit": {
+                "method": "state_positive_quantile_drift",
+                "states": 4,
+                "strength": 1.0,
+                "state_audits": [
+                  {
+                    "state": 0,
+                    "anchors": 591,
+                    "audit": {
+                      "method": "positive_quantile_drift",
+                      "requested_strength": 1.0,
+                      "guard_mix": 1.0,
+                      "factor_cap_before_mass_normalization": 1.25,
+                      "covariance_change_vs_reference": 0.06420082939239122,
+                      "eligible_genes": 1684,
+                      "zero_mask_preserved": true,
+                      "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                      "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                      "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+                    }
+                  },
+                  {
+                    "state": 1,
+                    "anchors": 427,
+                    "audit": {
+                      "method": "positive_quantile_drift",
+                      "requested_strength": 1.0,
+                      "guard_mix": 1.0,
+                      "factor_cap_before_mass_normalization": 1.25,
+                      "covariance_change_vs_reference": 0.09709662996470171,
+                      "eligible_genes": 9393,
+                      "zero_mask_preserved": true,
+                      "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                      "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                      "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+                    }
+                  },
+                  {
+                    "state": 2,
+                    "anchors": 143,
+                    "audit": {
+                      "method": "positive_quantile_drift",
+                      "requested_strength": 1.0,
+                      "guard_mix": 1.0,
+                      "factor_cap_before_mass_normalization": 1.25,
+                      "covariance_change_vs_reference": 0.13328931487990764,
+                      "eligible_genes": 7929,
+                      "zero_mask_preserved": true,
+                      "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                      "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                      "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+                    }
+                  },
+                  {
+                    "state": 3,
+                    "anchors": 329,
+                    "audit": {
+                      "method": "positive_quantile_drift",
+                      "requested_strength": 1.0,
+                      "guard_mix": 1.0,
+                      "factor_cap_before_mass_normalization": 1.25,
+                      "covariance_change_vs_reference": 0.10710101098990656,
+                      "eligible_genes": 9727,
+                      "zero_mask_preserved": true,
+                      "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                      "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                      "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+                    }
+                  }
+                ],
+                "skipped_states": [],
+                "trusted_anchor_fraction": 0.9933333333333333,
+                "covariance_change_before_global_guard": 0.11319161915602889,
+                "global_guard_rejected": false,
+                "covariance_change_vs_reference": 0.11319161915602889,
+                "fixed_cell_counts": true,
+                "zero_mask_preserved": true
+              },
+              "prediction_sha256": "0cfa9ed7c6375eb02c95460db9b655403e74f7a77f24b7c87b0c8f332f488463"
+            }
+          }
+        },
+        {
+          "cutoff": 8.25,
+          "target": 9.25,
+          "floor": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.2375742495059967,
+            "variogram": 0.008673261851072311
+          },
+          "ceiling": {
+            "de_score": 0.9165247018739352,
+            "de_direction": 0.8566698563410718,
+            "mmd_u": 0.002615219447761774,
+            "variogram": 0.00012109167437301949
+          },
+          "results": [
+            {
+              "candidate": "copy",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.2375742495059967,
+                "variogram": 0.008673261851072311
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit16",
+              "raw_metrics": {
+                "de_score": -0.3287904599659284,
+                "de_direction": -0.07611305688343999,
+                "mmd_u": 0.2259478121995926,
+                "variogram": 0.008606153540313244
+              },
+              "local_score": 47.98714389154627,
+              "skills": {
+                "de_score": 0.4239558707643814,
+                "de_direction": 0.4787328678973971,
+                "mmd_u": 0.5126845405062341,
+                "variogram": 0.5019694604907392
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "quantile_0.25",
+              "raw_metrics": {
+                "de_score": -0.231686541737649,
+                "de_direction": -0.0777489279762345,
+                "mmd_u": 0.23264995217323303,
+                "variogram": 0.008690561167895794
+              },
+              "local_score": 48.20349695687037,
+              "skills": {
+                "de_score": 0.4438943894389439,
+                "de_direction": 0.4782956225026208,
+                "mmd_u": 0.5052950143925417,
+                "variogram": 0.4994948113277501
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "quantile_0.5",
+              "raw_metrics": {
+                "de_score": -0.26746166950596245,
+                "de_direction": -0.07138289545114346,
+                "mmd_u": 0.23145692050457,
+                "variogram": 0.008731881156563759
+              },
+              "local_score": 48.07208459717916,
+              "skills": {
+                "de_score": 0.43633414436334145,
+                "de_direction": 0.48000168341964194,
+                "mmd_u": 0.5065947815419779,
+                "variogram": 0.4982922728172619
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "quantile_1.0",
+              "raw_metrics": {
+                "de_score": -0.29982964224872233,
+                "de_direction": -0.057690787945836174,
+                "mmd_u": 0.23101341724395752,
+                "variogram": 0.00877830758690834
+              },
+              "local_score": 47.986978045341566,
+              "skills": {
+                "de_score": 0.42971246006389774,
+                "de_direction": 0.4837126498032135,
+                "mmd_u": 0.507079669710149,
+                "variogram": 0.496948010367966
+              },
+              "calibration_valid": true
+            }
+          ],
+          "generation": {
+            "copy": {
+              "audit": {
+                "method": "persistence"
+              },
+              "prediction_sha256": "f991bb722bc73fe1b4135b16a6a7a3db7132c306103559448dc13289eb73ae4e"
+            },
+            "unit16": {
+              "audit": {
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "guard_applied": true,
+                "population_mix": 1.0,
+                "expression_strength_used": 1.0,
+                "trusted_donor_fraction": 0.99,
+                "effective_sample_size": 1423.0487179949341,
+                "unique_donors": 1334,
+                "covariance_change_vs_reference": 0.1709030360203553,
+                "state_support": [
+                  136,
+                  65,
+                  203,
+                  10,
+                  86,
+                  55,
+                  113,
+                  25,
+                  10,
+                  106,
+                  85,
+                  193,
+                  90,
+                  37,
+                  172,
+                  40
+                ],
+                "alignment": "identity",
+                "covariance_limit": 0.4,
+                "feature_scaling": "unit",
+                "expression_factor_cap": 1.25,
+                "detection_strength": 0.5,
+                "maximum_probability_change": 0.02,
+                "attempted_additions": 22466,
+                "attempted_deletions": 24091,
+                "detection_candidate_covariance_change": 0.17236713534616505,
+                "detection_guard_rejected": false,
+                "actual_additions": 22466,
+                "actual_deletions": 24091
+              },
+              "prediction_sha256": "20ec068eb5979bde5541166183dc3cad964eb9e57ce7682f8fc60ea7d36a3d43"
+            },
+            "quantile_0.25": {
+              "audit": {
+                "method": "state_positive_quantile_drift",
+                "states": 4,
+                "strength": 0.25,
+                "state_audits": [
+                  {
+                    "state": 0,
+                    "anchors": 324,
+                    "audit": {
+                      "method": "positive_quantile_drift",
+                      "requested_strength": 0.25,
+                      "guard_mix": 1.0,
+                      "factor_cap_before_mass_normalization": 1.25,
+                      "covariance_change_vs_reference": 0.0755929508625687,
+                      "eligible_genes": 9477,
+                      "zero_mask_preserved": true,
+                      "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                      "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                      "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+                    }
+                  },
+                  {
+                    "state": 1,
+                    "anchors": 389,
+                    "audit": {
+                      "method": "positive_quantile_drift",
+                      "requested_strength": 0.25,
+                      "guard_mix": 1.0,
+                      "factor_cap_before_mass_normalization": 1.25,
+                      "covariance_change_vs_reference": 0.055259066927528425,
+                      "eligible_genes": 8019,
+                      "zero_mask_preserved": true,
+                      "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                      "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                      "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+                    }
+                  },
+                  {
+                    "state": 2,
+                    "anchors": 39,
+                    "audit": {
+                      "method": "positive_quantile_drift",
+                      "requested_strength": 0.25,
+                      "guard_mix": 1.0,
+                      "factor_cap_before_mass_normalization": 1.25,
+                      "covariance_change_vs_reference": 0.05818187560438373,
+                      "eligible_genes": 4939,
+                      "zero_mask_preserved": true,
+                      "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                      "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                      "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+                    }
+                  },
+                  {
+                    "state": 3,
+                    "anchors": 729,
+                    "audit": {
+                      "method": "positive_quantile_drift",
+                      "requested_strength": 0.25,
+                      "guard_mix": 1.0,
+                      "factor_cap_before_mass_normalization": 1.25,
+                      "covariance_change_vs_reference": 0.06592028530514396,
+                      "eligible_genes": 10791,
+                      "zero_mask_preserved": true,
+                      "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                      "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                      "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+                    }
+                  }
+                ],
+                "skipped_states": [],
+                "trusted_anchor_fraction": 0.9873333333333333,
+                "covariance_change_before_global_guard": 0.06923512242807263,
+                "global_guard_rejected": false,
+                "covariance_change_vs_reference": 0.06923512242807263,
+                "fixed_cell_counts": true,
+                "zero_mask_preserved": true
+              },
+              "prediction_sha256": "5d1691243a54dc62c21aa2517593ba3b2dcdb2969603e50dda1cf7920ec92db4"
+            },
+            "quantile_0.5": {
+              "audit": {
+                "method": "state_positive_quantile_drift",
+                "states": 4,
+                "strength": 0.5,
+                "state_audits": [
+                  {
+                    "state": 0,
+                    "anchors": 324,
+                    "audit": {
+                      "method": "positive_quantile_drift",
+                      "requested_strength": 0.5,
+                      "guard_mix": 1.0,
+                      "factor_cap_before_mass_normalization": 1.25,
+                      "covariance_change_vs_reference": 0.08513618198816975,
+                      "eligible_genes": 9477,
+                      "zero_mask_preserved": true,
+                      "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                      "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                      "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+                    }
+                  },
+                  {
+                    "state": 1,
+                    "anchors": 389,
+                    "audit": {
+                      "method": "positive_quantile_drift",
+                      "requested_strength": 0.5,
+                      "guard_mix": 1.0,
+                      "factor_cap_before_mass_normalization": 1.25,
+                      "covariance_change_vs_reference": 0.06394183275428633,
+                      "eligible_genes": 8019,
+                      "zero_mask_preserved": true,
+                      "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                      "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                      "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+                    }
+                  },
+                  {
+                    "state": 2,
+                    "anchors": 39,
+                    "audit": {
+                      "method": "positive_quantile_drift",
+                      "requested_strength": 0.5,
+                      "guard_mix": 1.0,
+                      "factor_cap_before_mass_normalization": 1.25,
+                      "covariance_change_vs_reference": 0.08471569613355773,
+                      "eligible_genes": 4939,
+                      "zero_mask_preserved": true,
+                      "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                      "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                      "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+                    }
+                  },
+                  {
+                    "state": 3,
+                    "anchors": 729,
+                    "audit": {
+                      "method": "positive_quantile_drift",
+                      "requested_strength": 0.5,
+                      "guard_mix": 1.0,
+                      "factor_cap_before_mass_normalization": 1.25,
+                      "covariance_change_vs_reference": 0.08486510946360853,
+                      "eligible_genes": 10791,
+                      "zero_mask_preserved": true,
+                      "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                      "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                      "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+                    }
+                  }
+                ],
+                "skipped_states": [],
+                "trusted_anchor_fraction": 0.9873333333333333,
+                "covariance_change_before_global_guard": 0.09188211879641286,
+                "global_guard_rejected": false,
+                "covariance_change_vs_reference": 0.09188211879641286,
+                "fixed_cell_counts": true,
+                "zero_mask_preserved": true
+              },
+              "prediction_sha256": "1ecbb4a3a7012e12126e8c3f0acbf43a9e97d581f96b541bb4ee14bd87b94342"
+            },
+            "quantile_1.0": {
+              "audit": {
+                "method": "state_positive_quantile_drift",
+                "states": 4,
+                "strength": 1.0,
+                "state_audits": [
+                  {
+                    "state": 0,
+                    "anchors": 324,
+                    "audit": {
+                      "method": "positive_quantile_drift",
+                      "requested_strength": 1.0,
+                      "guard_mix": 1.0,
+                      "factor_cap_before_mass_normalization": 1.25,
+                      "covariance_change_vs_reference": 0.09096030914409425,
+                      "eligible_genes": 9477,
+                      "zero_mask_preserved": true,
+                      "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                      "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                      "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+                    }
+                  },
+                  {
+                    "state": 1,
+                    "anchors": 389,
+                    "audit": {
+                      "method": "positive_quantile_drift",
+                      "requested_strength": 1.0,
+                      "guard_mix": 1.0,
+                      "factor_cap_before_mass_normalization": 1.25,
+                      "covariance_change_vs_reference": 0.0715164738842566,
+                      "eligible_genes": 8019,
+                      "zero_mask_preserved": true,
+                      "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                      "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                      "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+                    }
+                  },
+                  {
+                    "state": 2,
+                    "anchors": 39,
+                    "audit": {
+                      "method": "positive_quantile_drift",
+                      "requested_strength": 1.0,
+                      "guard_mix": 1.0,
+                      "factor_cap_before_mass_normalization": 1.25,
+                      "covariance_change_vs_reference": 0.10418697486639246,
+                      "eligible_genes": 4939,
+                      "zero_mask_preserved": true,
+                      "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                      "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                      "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+                    }
+                  },
+                  {
+                    "state": 3,
+                    "anchors": 729,
+                    "audit": {
+                      "method": "positive_quantile_drift",
+                      "requested_strength": 1.0,
+                      "guard_mix": 1.0,
+                      "factor_cap_before_mass_normalization": 1.25,
+                      "covariance_change_vs_reference": 0.09361688762465442,
+                      "eligible_genes": 10791,
+                      "zero_mask_preserved": true,
+                      "rank_scope": "Monotone positive-gene proposal; per-cell mass conservation can subsequently alter cross-cell ranks.",
+                      "assumption": "Historical positive-marginal quantile drift persists; no population or detection dynamics.",
+                      "literature_scope": "Adaptation inspired by marginal/rank separation in ECC; no calibrated weather ensemble or faithful ECC implementation."
+                    }
+                  }
+                ],
+                "skipped_states": [],
+                "trusted_anchor_fraction": 0.9873333333333333,
+                "covariance_change_before_global_guard": 0.10426657748150553,
+                "global_guard_rejected": false,
+                "covariance_change_vs_reference": 0.10426657748150553,
+                "fixed_cell_counts": true,
+                "zero_mask_preserved": true
+              },
+              "prediction_sha256": "1097ad3b1835bffad7aff97e056c90f63fe43e13e60648d2d332c38c57212d44"
+            }
+          }
+        }
+      ],
+      "summaries": [
+        {
+          "candidate": "copy",
+          "all_calibrations_valid": true,
+          "scores": [
+            50.0,
+            50.0
+          ],
+          "mean_score": 50.0,
+          "mean_skills_percent": {
+            "de_score": 50.0,
+            "de_direction": 50.0,
+            "mmd_u": 50.0,
+            "variogram": 50.0
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": true
+        },
+        {
+          "candidate": "unit16",
+          "all_calibrations_valid": true,
+          "scores": [
+            47.142658332960416,
+            47.98714389154627
+          ],
+          "mean_score": 47.56490111225334,
+          "mean_skills_percent": {
+            "de_score": 43.364849612985424,
+            "de_direction": 47.22320308805906,
+            "mmd_u": 49.98184627089499,
+            "variogram": 49.61667027861864
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "quantile_0.25",
+          "all_calibrations_valid": true,
+          "scores": [
+            50.591657129703606,
+            48.20349695687037
+          ],
+          "mean_score": 49.39757704328699,
+          "mean_skills_percent": {
+            "de_score": 46.678590439689124,
+            "de_direction": 50.2440076888226,
+            "mmd_u": 50.541044085033995,
+            "variogram": 50.02307142824428
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "quantile_0.5",
+          "all_calibrations_valid": true,
+          "scores": [
+            50.592115478864166,
+            48.07208459717916
+          ],
+          "mean_score": 49.332100038021665,
+          "mean_skills_percent": {
+            "de_score": 46.23755663901649,
+            "de_direction": 50.21795356190668,
+            "mmd_u": 50.74424312439405,
+            "variogram": 49.97474775236326
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "quantile_1.0",
+          "all_calibrations_valid": true,
+          "scores": [
+            50.5962947013868,
+            47.986978045341566
+          ],
+          "mean_score": 49.291636373364184,
+          "mean_skills_percent": {
+            "de_score": 45.68842912564387,
+            "de_direction": 50.50602608256356,
+            "mmd_u": 50.8685106259116,
+            "variogram": 49.91234691769424
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        }
+      ],
+      "scope": "One-day source-cohort development, not independent challenge tissue replication. Atlas donor/target missing or ambiguous official genes are zero placeholders, not observed zeros. Labels select cohort only; annotations may reflect joint atlas processing."
+    }
+  },
+  "running": [],
+  "local_72_gate_passed": false,
+  "official_score_of_new_model": null,
+  "submissions_used": 0,
+  "jev_requests_used": 0
+}
