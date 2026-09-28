@@ -1,6 +1,6 @@
 # Controlled T1 development iterations
 
-The user reported 48.1 for the full exploratory per-celltype mean-shift artifact. This is the first measured leaderboard observation; component scores are not yet supplied. It does not establish which metric failed, and no local metric can replace E10.5 assessment.
+The best user-reported result remains 48.1 for the full exploratory per-celltype mean-shift artifact. No local diagnostic replaces E10.5 assessment. See [OPTIMIZATION.md](OPTIMIZATION.md) for the confirmed feedback and prioritized experiments.
 
 Round 1 freezes a small training-only candidate set before execution:
 
@@ -41,3 +41,16 @@ Optional `--metrics-json PATH` records numeric component scores. A duplicate art
 Diagnostics measure clipping, changes to zero support and output magnitude only. They do not rank future accuracy. T1 has just two supplied stages, so a stage holdout cannot validate a two-stage trend. Each official feedback cycle can select parameters without supporting a new biological mechanism.
 
 Jev usage is zero for known deterministic steps. Ambiguous future routing can use compact, separately approved bounded requests; the exhausted three-call audit approval is not extended by this loop. A batch plan is not the complete prompt/model/tools/permissions/budget configuration lock required for Agent Team eligibility. This remains development work; a later eligible autonomous entry needs a properly locked run with matching actual evidence.
+
+## Round 3: expression-state transport
+
+`local_transport.py` fits a label-free, training-only PCA representation using 768 pooled high-variance genes and 24 dimensions. This is a nearest-neighbor transport heuristic, not an optimal-transport solver. It ignores the supplied Harmony embedding. For each of the original 2,000 donor cells, it finds local E8.5/E9.5 neighbors in two disjoint reference halves, excluding donors from E9.5 reference pools. Feature selection and representation are fitted on all training cells; these halves assess conditional neighborhood-estimator stability, not end-to-end held-out generalization.
+
+Local means and standard errors are computed in expm1(X) space, assuming natural-log-normalized input as required by the submission contract; these values are not raw counts. Mean differences determine signal-to-noise shrinkage. A half-strength log abundance ratio is capped at a factor of two, applied only where the two estimates agree in sign, and discounted for distant earlier-stage matches. Mapping back with log1p retains every donor zero. Neighborhood changes can differ across cells and apply to labels without exact earlier-stage matches. Expression similarity does not identify ancestry, correct dissection effects, or prove extrapolation.
+
+```powershell
+outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/local_transport.py --round round_03_transport
+outputs/research_workflow/.venv/Scripts/python.exe -m unittest discover -s outputs/t1_iterations -p test_transport.py
+```
+
+The executed candidate passed local format checks: 2,000 × 32,285, float32, exact panel, finite nonnegative values and no coordinates. Median sign agreement among active genes was 0.635; median distance-based matching trust was 0.755. Neither statistic measures prediction accuracy. Its unchanged zero support also prevents new gene activation, a deliberate limitation to test rather than a biological assertion. Actual plan, representation, execution events and checksum-linked report are private artifacts. No official score exists yet.

@@ -1,0 +1,31 @@
+# T1 leaderboard optimization decisions
+
+Updated 2026-09-28. All scores below are user-provided portal feedback, not an authenticated programmatic query. The latest filename was explicitly confirmed by the user. Do not treat multiple observations of one file as independent submissions.
+
+| Prediction | Total | de_score | de_direction | mmd_u | variogram |
+|---|---:|---:|---:|---:|---:|
+| Full per-type mean shift | 48.1 | 43.7 | 54.8 | 51.8 | 39.6 |
+| 25% zero-preserving shift | ~47.0* | 38.4 | 51.5 | 49.5 | 48.3 |
+| Composition trend | 47.05 | 38.5 | 52.1 | 48.6 | 49.0 |
+
+*46.985 from displayed components, rounded to 47.0; a separate portal headline was not supplied. The composition headline is 47.05 as displayed, while weighting its rounded components gives 47.03. Preserve the displayed headline instead of overwriting it with rounding arithmetic.
+
+The [official evaluation](https://virtualembryo.ai/challenge/evaluation?section=scoring) weights DE recovery 25%, direction 25%, MMD 30% and variogram 20%. A gain of ten skill points contributes respectively 2.5, 2.5, 3 and 2 headline points. These are sensitivities of the published weighted aggregation, not derivatives of raw metric losses or target information. From the full shift to composition, the displayed component changes contribute -1.30, -0.675, -0.96 and +1.88, respectively: the covariance improvement did not pay for the other losses.
+
+The user-supplied 71.7 benchmark is 23.6 above our best displayed score. Even taking one of the full-shift components to 100 would add at most 14.46 points. A single-component fix cannot close that gap under the published weights. Multiple properties of the predicted distribution must improve. No leading team's algorithm has been recovered, and its Human track result does not certify our Agent Team eligibility.
+
+## Ordered experiment priorities
+
+1. **Score a matched persistence control.** Use `outputs/t1_run/T1_val__sampled_copy_last.h5ad`: the same 2,000 source donors as full shift and local transport. It distinguishes deterioration caused by model changes from sampling relative to the baked reference. The official [copy_last](https://virtualembryo.ai/challenge/baselines) uses every final-stage cell, so our bounded empirical subsample is not guaranteed an exact score of 50. Do not call it floor parity.
+2. **Test local expression-state changes.** The completed `private/round_03_transport/T1_val__local_state_transport.h5ad` replaces annotation-wise constant shifts with uncertainty-regularized neighborhood changes. This tests alignment and state-specific drift while retaining donor heterogeneity. Its support-preserving limitation is explicit; passing stability checks is not evidence it beats 48.1. Submit this as the next distinct model hypothesis rather than sweeping tiny shift strengths or random seeds.
+3. **If alignment helps, test distribution-aware dynamics and gene activation.** A sparse support-aware decoder or distribution transport model should predict both local state changes and detection probabilities. Include moment/distribution matching and residual sampling so it does not collapse to average cells. Separate errors in state matching from reconstruction errors before adding a neural dynamics model. Full-panel reconstruction must cover all 32,285 genes; a 2,000-HVG output is not a valid submission.
+4. **Evaluate an extrapolation model as a separate branch.** [scNODE's original paper](https://doi.org/10.1093/bioinformatics/btae393) and [author code](https://github.com/rsinghlab/scNODE) combine VAE and neural ODE dynamics with dynamic regularization and distributional objectives. The paper's reported datasets have more than ten timepoints, so their results do not transfer directly to our two snapshots. [scFM's May 2026 preprint](https://arxiv.org/abs/2605.22340) uses soft entropic-OT couplings, bidirectional flow consistency and distributional regularization. It motivates a candidate architecture, not a demonstrated Virtual Embryo advantage. Both need independent reconstruction checks and conservative dynamics regularization with this limited time series.
+5. **Consider eligible external developmental priors only with provenance.** Check the exact stage window, licence, gene/assay compatibility and inherited pretraining exposure against the [current rules](https://virtualembryo.ai/challenge/rules) before using an atlas or pretrained model. No external dataset has been downloaded or used for these candidates. Independent eligible stages could constrain curvature better than arbitrarily increasing network size, but neither compatibility nor score improvement is established.
+
+## Feedback and compute policy
+
+For each scored candidate, record its filename, checksum, headline and all four components. Keep the best observed artifact and all negative results. Select the next experiment from component tradeoffs; never invert scores or public anchors to reconstruct hidden target properties. Verify the live daily quota before uploading. Avoid random-seed searches and repeated parameter changes without a distinct hypothesis. An ensemble of prediction rows preserves a population but may dilute a winning state shift; reserve it for complementary scored models rather than averaging every candidate.
+
+We have no E10.5 truth, independent embryo IDs or locally runnable official scorer. Cell splits diagnose reconstruction or estimator stability; they cannot validate an E9.5→E10.5 extrapolation. The linked baseline notebook currently requires sign-in through the available web reader; no local scorer parity is claimed. Larger sample sizes may reduce sampling variation but do not fix biased dynamics, and should be tested separately from a model change.
+
+Known deterministic modeling steps use zero additional Jev requests. The prior three-request external-routing authorization has been exhausted. Keep compact code/configuration and scalar diagnostics for future routing; no raw expression matrix or credentials are needed. Local predictions, training data and raw execution logs remain ignored by Git. This is iterative development; complete autonomous Agent Team eligibility requires a genuinely prospective configuration lock and matching actual framework evidence.
