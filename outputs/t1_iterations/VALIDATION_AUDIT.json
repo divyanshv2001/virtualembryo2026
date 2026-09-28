@@ -1,0 +1,39 @@
+{
+  "updated_utc": "2026-09-28T14:58:18.659815+00:00",
+  "scope": "Audit of past source and anchor only; no E9.5 expression used",
+  "official_panel_genes": 32285,
+  "unique_exact_shared_genes": 26775,
+  "protected_genes": 5510,
+  "encoder_features": 384,
+  "fit_cutoff": 8.5,
+  "trusted_anchor_fraction": 0.8333333333333334,
+  "past_feature_mean_absolute_source_anchor_difference": 0.3868004315652717,
+  "challenge_anchor_library_quantiles": [
+    9999.999576036242,
+    10000.000008776378,
+    10000.000537377728
+  ],
+  "source_cutoff_library_quantiles": [
+    9999.999449573806,
+    10000.000000151973,
+    10000.000436017137
+  ],
+  "source_stage_counts": {
+    "7.5": 1963,
+    "7.75": 3000,
+    "8.0": 3000,
+    "8.25": 3000,
+    "8.5": 3000
+  },
+  "source_selection": "Cardiac and 18 associated cell types; atlas annotations can reflect joint atlas processing. They are selection metadata, not learner features.",
+  "validation_limits": [
+    "No independent embryo identity established; sample is not embryo",
+    "Three-point E9.5 development is reused, not blind",
+    "Earlier three-past-stage folds in this subset support quarter-day and half-day horizons, not a full day",
+    "Local calibration is not official E10.5 calibration",
+    "Normalization is per-cell 10000 log1p; similar library mass alone does not establish domain alignment"
+  ],
+  "panel_sha256": "2aeae4cd284933956242bbc9c5ab4f565c1d2acc7cc3fd3037977e4bce8be4bf",
+  "encoder_sha256": "fe74291b4705abbeb9d2e9f0d269967110e83020d994237e075187e464fcc227",
+  "existing_whole_atlas_prepared": "private/extended_prepared_02 includes E6.5-E9.5, 1000 cells/stage; may support one-day mechanism checks under a different cohort"
+}

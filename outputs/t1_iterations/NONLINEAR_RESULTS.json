@@ -1,0 +1,397 @@
+{
+  "status": "completed_no_promotion",
+  "first_pilot_results": [
+    {
+      "candidate": "copy_0.0",
+      "scores": [
+        50.0,
+        50.0
+      ],
+      "full_metric_skills": [
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        }
+      ],
+      "valid": true
+    },
+    {
+      "candidate": "incumbent_0.0",
+      "scores": [
+        45.73150013116399,
+        50.75351044908
+      ],
+      "full_metric_skills": [
+        {
+          "de_score": 0.495049504950495,
+          "de_direction": 0.43872673997322104,
+          "mmd_u": 0.44932036424459637,
+          "variogram": 0.44537415403665975
+        },
+        {
+          "de_score": 0.5070422535211268,
+          "de_direction": 0.5041394285301498,
+          "mmd_u": 0.5132724078107238,
+          "variogram": 0.5037898081738185
+        }
+      ],
+      "valid": true
+    },
+    {
+      "candidate": "mlp_0.25",
+      "scores": [
+        44.987942408126344,
+        49.24084471164201
+      ],
+      "full_metric_skills": [
+        {
+          "de_score": 0.495049504950495,
+          "de_direction": 0.44398970640092483,
+          "mmd_u": 0.42000297943341075,
+          "variogram": 0.44559363706692645
+        },
+        {
+          "de_score": 0.4931506849315068,
+          "de_direction": 0.48063198181512773,
+          "mmd_u": 0.49702321616534995,
+          "variogram": 0.49927907790078246
+        }
+      ],
+      "valid": true
+    },
+    {
+      "candidate": "mlp_0.5",
+      "scores": [
+        44.74405133768373,
+        48.363729569095675
+      ],
+      "full_metric_skills": [
+        {
+          "de_score": 0.5050505050505051,
+          "de_direction": 0.44974280006927353,
+          "mmd_u": 0.39780487691329813,
+          "variogram": 0.44700362011451605
+        },
+        {
+          "de_score": 0.4893203883495145,
+          "de_direction": 0.469863146564164,
+          "mmd_u": 0.48312470149704445,
+          "variogram": 0.49452000756711906
+        }
+      ],
+      "valid": true
+    },
+    {
+      "candidate": "mlp_1.0",
+      "scores": [
+        44.47544200650294,
+        47.494839329773306
+      ],
+      "full_metric_skills": [
+        {
+          "de_score": 0.5102040816326531,
+          "de_direction": 0.4616137367586173,
+          "mmd_u": 0.37185387535981146,
+          "variogram": 0.4512190142963419
+        },
+        {
+          "de_score": 0.49218749999999994,
+          "de_direction": 0.4622288254136961,
+          "mmd_u": 0.4638579321709786,
+          "variogram": 0.48593466146507736
+        }
+      ],
+      "valid": true
+    },
+    {
+      "candidate": "ridge_0.5",
+      "scores": [
+        44.86800586474562,
+        48.34491564268381
+      ],
+      "full_metric_skills": [
+        {
+          "de_score": 0.5,
+          "de_direction": 0.44763934867862243,
+          "mmd_u": 0.40689559451776525,
+          "variogram": 0.4485077156123549
+        },
+        {
+          "de_score": 0.4893203883495145,
+          "de_direction": 0.4692945687942674,
+          "mmd_u": 0.4822434469193479,
+          "variogram": 0.4956119153254409
+        }
+      ],
+      "valid": true
+    }
+  ],
+  "first_report_sha256": "bf30c30f27bc9d6a7be48cde4568f95fc2f98b51d57fbef654480f6f71018e9a",
+  "initial_training_iteration_limit": 250,
+  "first_pilot_iterations": [
+    250,
+    250
+  ],
+  "submissions_used": 0,
+  "jev_requests_used": 0,
+  "one_day_forecast_certified": false,
+  "standalone_results": [
+    {
+      "candidate": "copy_0.0",
+      "scores": [
+        50.0,
+        50.0
+      ],
+      "full_metric_skills": [
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "incumbent_0.0",
+      "scores": [
+        45.73150013116399,
+        50.75351044908
+      ],
+      "full_metric_skills": [
+        {
+          "de_score": 0.495049504950495,
+          "de_direction": 0.43872673997322104,
+          "mmd_u": 0.44932036424459637,
+          "variogram": 0.44537415403665975
+        },
+        {
+          "de_score": 0.5070422535211268,
+          "de_direction": 0.5041394285301498,
+          "mmd_u": 0.5132724078107238,
+          "variogram": 0.5037898081738185
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "mlp_0.25",
+      "scores": [
+        49.83016634965525,
+        48.358110312432835
+      ],
+      "full_metric_skills": [
+        {
+          "de_score": 0.5319148936170213,
+          "de_direction": 0.5057345299873555,
+          "mmd_u": 0.46232943877119187,
+          "variogram": 0.5009523798205039
+        },
+        {
+          "de_score": 0.48091603053435117,
+          "de_direction": 0.47392788897982696,
+          "mmd_u": 0.4853669229750882,
+          "variogram": 0.4963002317662869
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "mlp_0.5",
+      "scores": [
+        49.19321469308808,
+        47.82280057613363
+      ],
+      "full_metric_skills": [
+        {
+          "de_score": 0.5376344086021506,
+          "de_direction": 0.5064718057101756,
+          "mmd_u": 0.43447699865070477,
+          "variogram": 0.5028124687879391
+        },
+        {
+          "de_score": 0.4818355640535373,
+          "de_direction": 0.46964452205512863,
+          "mmd_u": 0.4730486083548231,
+          "variogram": 0.4922170086386143
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "mlp_1.0",
+      "scores": [
+        48.51455143970059,
+        46.91157107206118
+      ],
+      "full_metric_skills": [
+        {
+          "de_score": 0.5434782608695652,
+          "de_direction": 0.5080276729683951,
+          "mmd_u": 0.40249498890084495,
+          "variogram": 0.507602671336312
+        },
+        {
+          "de_score": 0.4790874524714829,
+          "de_direction": 0.4625801923231809,
+          "mmd_u": 0.4559903494430693,
+          "variogram": 0.484508473445125
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "ridge_0.5",
+      "scores": [
+        49.777098690746854,
+        47.74601630654262
+      ],
+      "full_metric_skills": [
+        {
+          "de_score": 0.5319148936170213,
+          "de_direction": 0.5220567897811251,
+          "mmd_u": 0.4448131854480838,
+          "variogram": 0.5041705521175343
+        },
+        {
+          "de_score": 0.4772727272727273,
+          "de_direction": 0.4749622653559635,
+          "mmd_u": 0.4697073399593122,
+          "variogram": 0.4924460646022993
+        }
+      ],
+      "all_calibrations_valid": true
+    }
+  ],
+  "standalone_report_sha256": "1f0d72f6acaa409611052b8f0317aa988686d9f759ee4629ed38e1da534f0a02",
+  "standalone_training_iterations": [
+    279,
+    397
+  ],
+  "standalone_iteration_limit_reached": [
+    false,
+    false
+  ],
+  "one_day_results": [
+    {
+      "candidate": "copy_0.0",
+      "raw_metrics": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.24985814094543457,
+        "variogram": 0.006257481873035431
+      },
+      "local_score": 50.0,
+      "skills": {
+        "de_score": 0.5,
+        "de_direction": 0.5,
+        "mmd_u": 0.5,
+        "variogram": 0.5
+      },
+      "calibration_valid": true
+    },
+    {
+      "candidate": "incumbent_0.0",
+      "raw_metrics": {
+        "de_score": 0.03389830508474575,
+        "de_direction": 0.10981011169985787,
+        "mmd_u": 0.23976483941078186,
+        "variogram": 0.0061050644144415855
+      },
+      "local_score": 51.57661564220653,
+      "skills": {
+        "de_score": 0.5099403578528827,
+        "de_direction": 0.5350256780023435,
+        "mmd_u": 0.5108015490092639,
+        "variogram": 0.5064209137773978
+      },
+      "calibration_valid": true
+    },
+    {
+      "candidate": "mlp_0.25",
+      "raw_metrics": {
+        "de_score": 0.011864406779661012,
+        "de_direction": 0.16431911799020335,
+        "mmd_u": 0.2722471356391907,
+        "variogram": 0.006275538355112076
+      },
+      "local_score": 50.75630393909167,
+      "skills": {
+        "de_score": 0.5034347399411188,
+        "de_direction": 0.5543003791756885,
+        "mmd_u": 0.4775974635766255,
+        "variogram": 0.4992501026936361
+      },
+      "calibration_valid": true
+    },
+    {
+      "candidate": "mlp_0.5",
+      "raw_metrics": {
+        "de_score": -0.008474576271186429,
+        "de_direction": 0.16096559252362178,
+        "mmd_u": 0.2854233682155609,
+        "variogram": 0.006306303199380636
+      },
+      "local_score": 50.18562031038499,
+      "skills": {
+        "de_score": 0.49757516973811833,
+        "de_direction": 0.5530745497395597,
+        "mmd_u": 0.4653275194842234,
+        "variogram": 0.4979775869458169
+      },
+      "calibration_valid": true
+    },
+    {
+      "candidate": "mlp_1.0",
+      "raw_metrics": {
+        "de_score": -0.016949152542372888,
+        "de_direction": 0.12458566524466357,
+        "mmd_u": 0.2948986291885376,
+        "variogram": 0.006338523700833321
+      },
+      "local_score": 49.52189573527431,
+      "skills": {
+        "de_score": 0.4951737451737452,
+        "de_direction": 0.5401167071620222,
+        "mmd_u": 0.45688661595895236,
+        "variogram": 0.4966517974055778
+      },
+      "calibration_valid": true
+    },
+    {
+      "candidate": "ridge_0.5",
+      "raw_metrics": {
+        "de_score": -0.003389830508474585,
+        "de_direction": 0.13076152065355565,
+        "mmd_u": 0.2841237187385559,
+        "variogram": 0.006331097334623337
+      },
+      "local_score": 49.966943031536424,
+      "skills": {
+        "de_score": 0.4990272373540856,
+        "de_direction": 0.5422734714154561,
+        "mmd_u": 0.46650967936261833,
+        "variogram": 0.4969567465709666
+      },
+      "calibration_valid": true
+    }
+  ],
+  "one_day_report_sha256": "8da6653a6fe5ae9ed511117373f78bc72b4f390033f41af39fd71db4f9f2b523",
+  "one_day_training_iterations": 271,
+  "decision": "No nonlinear candidate beats the corresponding state-based control. Retain unit_k16 challenge incumbent; >72 gate remains unmet.",
+  "local_evaluations": 30
+}

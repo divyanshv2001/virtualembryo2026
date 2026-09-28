@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-28T14:51:07.951525+00:00",
+  "updated_utc": "2026-09-28T15:04:35.306170+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,7 +31,7 @@
   },
   "resume_command": null,
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Review author implementation and CPU dependencies for nonlinear population dynamics, then declare past-only temporal pilots. Existing reweighting and reliability branches failed; do not rerun frozen predictors hoping to train via Monte Carlo.",
+  "next_experiment": "Specify conditional generator with past-only distribution loss and dependence-preserving decoder; contrast with failed barycentric-velocity MLP. No new official submissions until readiness gate passes.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -68,5 +68,34 @@
     "paired_upper_tail_change": 0.0510446126818751,
     "positive_replicates": 1,
     "decision": "Do not promote reliability variant; retain unit_k16. Local >72 gate remains unmet."
+  },
+  "active_job_replay": "Runner preserves prior history and intentionally refuses overwriting; inspect partial report before scheduling a new round.",
+  "agent_leaderboard_reference": {
+    "reported_overall": 68.3,
+    "metric_reference": {
+      "DES": 57.1,
+      "DCS": 65.8,
+      "MMD": 74.7,
+      "CSS": 75.9
+    },
+    "one_point_margin_targets": {
+      "DES": 58.1,
+      "DCS": 66.8,
+      "MMD": 75.7,
+      "CSS": 76.9
+    },
+    "local_readiness_threshold": 72,
+    "source": "User screenshot; local anchors differ from official"
+  },
+  "nonlinear_pilot_result": {
+    "runs": [
+      "nonlinear_temporal_01",
+      "nonlinear_standalone_temporal_01",
+      "nonlinear_oneday_temporal_01"
+    ],
+    "evaluations": 30,
+    "promoted": false,
+    "one_day_best_nonlinear": 50.75630393909167,
+    "one_day_state_control": 51.57661564220653
   }
 }
