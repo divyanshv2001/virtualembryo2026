@@ -127,3 +127,7 @@ Both implemented population-weighting branches failed to improve the unchanged u
 A 16-replicate paired stability pilot is running for reliability expression blend .5 against its unchanged control. Its .0621 point gain must not be treated as confirmed.
 
 The completed reliability pilot rejected promotion: mean 55.1454 versus incumbent 55.2813. Retain unit_k16. Its apparent three-panel point improvement was not robust.
+
+## Completed conditional moment-matching adaptation
+
+Squared and square-root objective pilots are complete: 36 temporal evaluations. The square-root objective reached 57.5974 on one short fold but 46.1006 on the next at the same strength. Both objectives lost to the one-day state control. No challenge evaluation or promotion followed. See DISTRIBUTION_RESULTS.md and the queue for all four-metric vectors, training audits and report hashes. Stage conditioning and count-aware decoding remain open hypotheses.

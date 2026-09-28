@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-28T15:04:35.306170+00:00",
+  "updated_utc": "2026-09-28T15:32:14.461908+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,7 +31,7 @@
   },
   "resume_command": null,
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Specify conditional generator with past-only distribution loss and dependence-preserving decoder; contrast with failed barycentric-velocity MLP. No new official submissions until readiness gate passes.",
+  "next_experiment": "Test explicitly stage-conditioned transitions with historical sign reliability and a count-aware decoder; autonomous transitions are not reliable across stages. Larger batches, wider networks and full published architectures remain untested.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -96,6 +96,19 @@
     "evaluations": 30,
     "promoted": false,
     "one_day_best_nonlinear": 50.75630393909167,
+    "one_day_state_control": 51.57661564220653
+  },
+  "distribution_pilot_result": {
+    "evaluations": 36,
+    "runs": [
+      "distribution_temporal_01",
+      "distribution_oneday_temporal_01",
+      "distribution_sqrt_temporal_01",
+      "distribution_sqrt_oneday_temporal_01"
+    ],
+    "promoted": false,
+    "challenge_evaluations": 0,
+    "one_day_sqrt_best": 49.128697225910514,
     "one_day_state_control": 51.57661564220653
   }
 }
