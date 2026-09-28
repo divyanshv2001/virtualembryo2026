@@ -1,24 +1,24 @@
 {
-  "updated_utc": "2026-09-28T13:25:59.445140+00:00",
+  "updated_utc": "2026-09-28T13:39:48.224671+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
-  "candidate": "joint_e1.0_cov0.4",
-  "mean_score": 51.252953907232836,
-  "lower_tail_score": 50.9660195129321,
-  "point_development_mean": 51.432807641783576,
+  "candidate": "unit_k16",
+  "mean_score": null,
+  "lower_tail_score": null,
+  "point_development_mean": 55.312268380984996,
   "metric_skills": {
-    "de_score": 0.5072539265917184,
-    "de_direction": 0.5249976218834388,
-    "mmd_u": 0.5106859953812923,
-    "variogram": 0.5063042666957571
+    "de_score": 0.5221308652604392,
+    "de_direction": 0.581040145423201,
+    "mmd_u": 0.5700298059903902,
+    "variogram": 0.531604946709115
   },
   "temporal_gate_passed": false,
-  "completed_replicates": 16,
+  "completed_replicates": 0,
   "required_final_replicates": 64,
-  "run_path": "outputs/t1_iterations/private/monte_carlo_detection_01",
-  "report_sha256": "beb1fcd7cec061728f4c467c27b3b798c3bf8538b389cb65f14dc32858ec9979",
-  "plan_sha256": "793d00ffac6bcd1c55aee40015a557226d441632dd83797431d4b7d23a4e5951",
-  "pilot_completed": true,
+  "run_path": "outputs/t1_iterations/private/state_search_01",
+  "report_sha256": "5ea63a67e250dddcf41d92b437eb28099f9d8b2a5da8720ab743a668a241529e",
+  "plan_sha256": "8077d5b8790ef76475303ac8e0c447c6cc9a7a29fab232ca4be10d3190139806",
+  "pilot_completed": false,
   "resume_verified_without_repeating_trials": false,
   "local_process_running": true,
   "quota_reset_evidence": {
@@ -29,17 +29,33 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/state_search.py --round state_search_01 --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/monte_carlo_forecast.py --round monte_carlo_states_01 --replicates 16 --source-run state_search_01 --candidates unit_k16 standard_k16 --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Complete the frozen eight-model state-count/feature-scaling search. Read its actual checkpoint/report before advancing. Best verified pilot remains joint model mean 51.253, lower tail 50.966; threshold not met.",
+  "next_experiment": "Complete stability check for unit_k16 versus standard_k16. Use component/Pareto evidence for the next specialist batch: gene-wise past-fold reliability for DE/direction, or explicitly learned residual covariance for MMD/variogram. Existing simple cell mixtures and larger factor caps did not beat the 55.31 joint incumbent. Final >72 remains unmet.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "state_search_01"
+    "monte_carlo_states_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/state_search_01",
-  "completed_batches_this_turn": 5,
-  "development_evaluations_this_turn": 81,
-  "stability_replicates_this_turn": 16
+  "active_run_path": "outputs/t1_iterations/private/monte_carlo_states_01",
+  "completed_batches_this_turn": 8,
+  "development_evaluations_this_turn": 153,
+  "stability_replicates_this_turn": 16,
+  "previous_verified_stability": {
+    "candidate": "joint_e1.0_cov0.4",
+    "mean_score": 51.252953907232836,
+    "lower_tail_score": 50.9660195129321,
+    "completed_replicates": 16,
+    "run_path": "outputs/t1_iterations/private/monte_carlo_detection_01",
+    "report_sha256": "beb1fcd7cec061728f4c467c27b3b798c3bf8538b389cb65f14dc32858ec9979",
+    "plan_sha256": "793d00ffac6bcd1c55aee40015a557226d441632dd83797431d4b7d23a4e5951"
+  },
+  "official_leaderboard_goal": {
+    "team": "CellVR",
+    "reported_overall": 71.7,
+    "required": "Actual official score above 71.7",
+    "local_readiness_threshold": 72
+  },
+  "active_plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48"
 }

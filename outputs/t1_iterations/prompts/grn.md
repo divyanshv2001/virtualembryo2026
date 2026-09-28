@@ -139,3 +139,6 @@ Require the complete 32285-gene panel and all four metrics. Local >72 does not c
 Preserve submission quota. Jev's prior three-call approval is exhausted; this prompt grants no new API calls or agent spawning.
 Checkpoint on Codex limits, record the actual exposed reset time, and resume when execution is available; never invent reset times or auto-wake capability.
 Historical Human/Agent track labels and source premises above are not verified eligibility or performance claims.
+## Current strategy: metric specialists and integration
+Optimize separate DE/direction/MMD/variogram specialists, retain complete metric vectors and Pareto candidates, then test frozen whole-cell mixtures against each constituent. Never add best specialist scores; the joint >72 stability/temporal gate remains required.
+Read the metric-specialist section of LOCAL_OPTIMIZATION_PROMPT.md. These prompts are prepared, not executed; they authorize no new agents or API calls.

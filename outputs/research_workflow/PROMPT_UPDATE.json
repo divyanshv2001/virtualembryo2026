@@ -2,16 +2,35 @@
   "source": "Neurl IPS 2026/agenticprompt",
   "canonical": "outputs/research_workflow/AGENTICPROMPT_UPDATED.md",
   "source_before_sha256": "5d385a14f0edeb362dfdb90331bd4e189e72a049705fcfbf3cd36d89f091086e",
-  "updated_sha256": "837163f3dc2f3c67093e5add280b1c29038d5268344f457122a6f849e885cbd0",
+  "updated_sha256": "ebdccfd3331c68212494ec85f055d6f7cf1f822d969399548f52cb5cc78ffcd1",
   "historical_content_preserved": true,
   "mandate": "outputs/t1_iterations/LOCAL_OPTIMIZATION_PROMPT.md",
   "generator_source": "Neurl IPS 2026/orchestration/diverge.py",
   "generator_snapshot": "outputs/research_workflow/diverge.updated.py.txt",
-  "generator_sha256": "cbf168e2df4e1bbd3ec94e535eece6363c9d3b793c07bea9749c98285489cc2f",
+  "generator_sha256": "7e508b1075d0c11751510ca7eea6e0d68b4ce32ad7a48e6220e10aeb4b996d39",
   "generated_prompts": 16,
-  "maximum_prompt_bytes": 7605,
+  "maximum_prompt_bytes": 8084,
   "prompts_are_unexecuted": true,
   "generator_before_sha256": "df4294ceb2eab426731fafa6a3fbdbb5052fd4d1ae21a3af5b3be09414cab27c",
   "source_before_normalized_sha256": "5d385a14f0edeb362dfdb90331bd4e189e72a049705fcfbf3cd36d89f091086e",
-  "checksum_convention": "Updated snapshots and generator hashes normalize CRLF to LF; original raw hash retained. One trailing space in the original first line removed; historical instructions preserved."
+  "checksum_convention": "Updated snapshots and generator hashes normalize CRLF to LF; original raw hash retained. One trailing space in the original first line removed; historical instructions preserved.",
+  "previous_updated_sha256": [
+    "837163f3dc2f3c67093e5add280b1c29038d5268344f457122a6f849e885cbd0"
+  ],
+  "previous_generator_sha256": [
+    "cbf168e2df4e1bbd3ec94e535eece6363c9d3b793c07bea9749c98285489cc2f"
+  ],
+  "metric_specialization_adopted_utc": "2026-09-28T13:30:22.436841+00:00",
+  "leaderboard_reference": {
+    "source": "User-provided screenshot; not independently refreshed",
+    "team": "CellVR",
+    "overall": 71.7,
+    "DES": 60.3,
+    "DCS": 70.6,
+    "MMD": 77.6,
+    "CSS": 78.3,
+    "official_goal": "Actual official overall score above 71.7",
+    "local_readiness_threshold": 72,
+    "reference_is_not_calibration": true
+  }
 }

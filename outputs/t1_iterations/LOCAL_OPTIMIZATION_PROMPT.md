@@ -4,7 +4,7 @@ User instruction adopted 2026-09-28: improve the score locally until it crosses 
 
 ## Objective and stopping rule
 
-Continue the local research-and-training loop until a candidate satisfies the locked, reproducible local >72 gate. Do not treat one completed batch, a plausible proposal, or a favorable random seed as completion of the optimization objective. Current challenge-data development best is 51.0759; the objective is unfinished. A local >72 result does not certify hidden E10.5 leaderboard performance.
+Continue the local research-and-training loop until a candidate satisfies the locked, reproducible local >72 gate. Do not treat one completed batch, a plausible proposal, or a favorable random seed as completion of the optimization objective. Current challenge-data development best is 55.3123; the objective is unfinished. A local >72 result does not certify hidden E10.5 leaderboard performance.
 
 Before each batch, freeze datasets, temporal splits, complete 32,285-gene panel, scorer source/version, four metrics/weights, normalization, candidate configurations, seeds, evaluation sample sizes and compute limits. Do not change anchors or discard unsuccessful metrics/replicates after seeing outcomes. Preserve all failures and compare against measured persistence under identical evaluation conditions. Existing exposed E9.5 and earlier atlas stages are development data, not fresh blind tests.
 
@@ -20,6 +20,22 @@ The final local gate requires: valid calibration on every declared replicate; me
 6. For a promising candidate, expand to >=64 stability replicates and rolling temporal checks. Reject calibration failures, target leakage, incomplete gene outputs or threshold inflation. Keep protected/missing/ambiguous genes explicit and validate finite nonnegative float32 predictions, exact panel order, cell bounds and library conventions.
 7. Once the full local gate passes, record the actual evidence, refit through E9.5 for E10.5, and validate a prospective full-panel artifact. Keep official submissions unused until the user authorizes the specific prospective submission; never upload an observed E9.5 backtest. Hidden E10.5 values and score-derived target reconstruction are prohibited.
 8. Commit code, prompts, small summaries and state updates periodically. Never commit secrets, raw biological datasets, prediction matrices, checkpoints or private framework trajectories. Jev's previous three-call approval is exhausted; deterministic local steps use zero Jev calls. No new external routing or agent spawning follows merely from this prompt.
+
+## Metric specialists and integrated optimization
+
+User update, 2026-09-28: optimize DE recovery, DE direction, MMD and variogram separately where useful, then test integrated predictions. Adopt this as the current search strategy; the joint >72 gate remains unchanged.
+
+Official ambition: exceed the user-provided CellVR leaderboard result (overall 71.7; DES 60.3, DCS 70.6, MMD 77.6, CSS 78.3). Treat these as reference goals, not calibration anchors, hidden target measurements or values to copy into local reports. The local scorer uses DE recovery, direction, MMD and variogram; retain its audited definitions and do not assume its local anchors match the official board. Beating each displayed component is not required if a legitimate integrated official score beats 71.7; the stricter local readiness gate remains >72. Official success is established only by an actual official result.
+
+Maintain four explicit specialist objectives on the same full panel, temporal splits, scorer, calibration and declared seeds. DE recovery targets signed differential-gene recovery; direction targets correct temporal changes; MMD targets the whole cell distribution; variogram targets gene-pair structure. Keep their full four-metric vectors, failed trials and matched persistence results. A specialist is a candidate predictor, not permission to train on future expression. Use past-only training and rolling development selection; label reused E9.5 selection as development.
+
+For each bounded batch, freeze which metric is primary and the allowed regressions in the other three before fitting. Preserve Pareto candidates that cannot be improved in every metric by another candidate. Use mean/lower-tail metric evidence rather than a lucky seed or single headline maximum. Share small metric-vector summaries and candidate hashes rather than full contexts; this does not authorize new agents or Jev calls.
+
+Integrate actual predictions, never the individual best scores or post-hoc per-metric score outputs. First test frozen mixtures of complete predicted cells from complementary specialists; these retain each selected cell's gene covariance and provenance. Compare each constituent, persistence and the joint incumbent using identical evaluator panels. Freeze mixture weights and row-selection seeds before the ensemble is scored. Cell mixtures can still worsen gene means or population balance, so improvement must be measured. Avoid assuming arithmetic averaging of cell expression preserves sparsity or covariance.
+
+Next, if justified by evidence, test shared models with separate mean/detection and residual/covariance objectives, or state-conditioned mixtures learned on earlier stages. Any gating/ensemble weights fitted on targets are development parameters and must be evaluated on a separate declared temporal check; never present reused stages as untouched validation. Do not reconstruct hidden targets from official scores.
+
+Promote an integrated candidate only after measuring all four scores together, satisfying the unchanged complete-panel calibration/format checks, and passing the joint >72 Monte Carlo and temporal gate above. Improving individual components does not imply their best scores can coexist in one forecast or guarantee leaderboard success.
 
 ## Compute, interruption and Codex-limit recovery
 

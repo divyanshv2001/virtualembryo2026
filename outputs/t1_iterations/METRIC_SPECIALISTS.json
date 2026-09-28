@@ -1,0 +1,982 @@
+{
+  "specialists": {
+    "de_score": {
+      "run": "specialist_integration_01",
+      "candidate": "mixture_de_0.75",
+      "mean_score": 54.81278263229143,
+      "minimum_score": 53.885238693426416,
+      "mean_skills": {
+        "de_score": 0.5312148169291026,
+        "de_direction": 0.5661987396073472,
+        "mmd_u": 0.5611980616994467,
+        "variogram": 0.527075093394839
+      }
+    },
+    "de_direction": {
+      "run": "state_search_01",
+      "candidate": "unit_k16",
+      "mean_score": 55.312268380984996,
+      "minimum_score": 54.198976902958385,
+      "mean_skills": {
+        "de_score": 0.5221308652604392,
+        "de_direction": 0.581040145423201,
+        "mmd_u": 0.5700298059903902,
+        "variogram": 0.531604946709115
+      }
+    },
+    "mmd_u": {
+      "run": "de_specialist_search_01",
+      "candidate": "unit_cap2.0",
+      "mean_score": 55.051275782571814,
+      "minimum_score": 53.875118841731705,
+      "mean_skills": {
+        "de_score": 0.5168304306711505,
+        "de_direction": 0.574989156267216,
+        "mmd_u": 0.571389974083304,
+        "variogram": 0.5307043443306764
+      }
+    },
+    "variogram": {
+      "run": "state_search_01",
+      "candidate": "unit_k16",
+      "mean_score": 55.312268380984996,
+      "minimum_score": 54.198976902958385,
+      "mean_skills": {
+        "de_score": 0.5221308652604392,
+        "de_direction": 0.581040145423201,
+        "mmd_u": 0.5700298059903902,
+        "variogram": 0.531604946709115
+      }
+    }
+  },
+  "pareto_front": [
+    {
+      "run": "state_search_01",
+      "candidate": "unit_k16",
+      "mean_score": 55.312268380984996,
+      "minimum_score": 54.198976902958385,
+      "mean_skills": {
+        "de_score": 0.5221308652604392,
+        "de_direction": 0.581040145423201,
+        "mmd_u": 0.5700298059903902,
+        "variogram": 0.531604946709115
+      }
+    },
+    {
+      "run": "specialist_integration_01",
+      "candidate": "joint_specialist",
+      "mean_score": 55.312268380984996,
+      "minimum_score": 54.198976902958385,
+      "mean_skills": {
+        "de_score": 0.5221308652604392,
+        "de_direction": 0.581040145423201,
+        "mmd_u": 0.5700298059903902,
+        "variogram": 0.531604946709115
+      }
+    },
+    {
+      "run": "specialist_integration_01",
+      "candidate": "mixture_de_0.1",
+      "mean_score": 54.682463465689494,
+      "minimum_score": 53.57824274982854,
+      "mean_skills": {
+        "de_score": 0.5258241758241758,
+        "de_direction": 0.5668249554873745,
+        "mmd_u": 0.5596835301967825,
+        "variogram": 0.5287864638498632
+      }
+    },
+    {
+      "run": "specialist_integration_01",
+      "candidate": "mixture_de_0.75",
+      "mean_score": 54.81278263229143,
+      "minimum_score": 53.885238693426416,
+      "mean_skills": {
+        "de_score": 0.5312148169291026,
+        "de_direction": 0.5661987396073472,
+        "mmd_u": 0.5611980616994467,
+        "variogram": 0.527075093394839
+      }
+    },
+    {
+      "run": "de_specialist_search_01",
+      "candidate": "joint_incumbent",
+      "mean_score": 55.312268380984996,
+      "minimum_score": 54.198976902958385,
+      "mean_skills": {
+        "de_score": 0.5221308652604392,
+        "de_direction": 0.581040145423201,
+        "mmd_u": 0.5700298059903902,
+        "variogram": 0.531604946709115
+      }
+    },
+    {
+      "run": "de_specialist_search_01",
+      "candidate": "unit_cap1.5",
+      "mean_score": 55.14583924965288,
+      "minimum_score": 53.9605530263749,
+      "mean_skills": {
+        "de_score": 0.5185776642180348,
+        "de_direction": 0.5772925484152118,
+        "mmd_u": 0.5710061856638656,
+        "variogram": 0.5309449181952878
+      }
+    },
+    {
+      "run": "de_specialist_search_01",
+      "candidate": "unit_cap2.0",
+      "mean_score": 55.051275782571814,
+      "minimum_score": 53.875118841731705,
+      "mean_skills": {
+        "de_score": 0.5168304306711505,
+        "de_direction": 0.574989156267216,
+        "mmd_u": 0.571389974083304,
+        "variogram": 0.5307043443306764
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "run": "challenge_backtest_01",
+      "candidate": "copy_last",
+      "mean_score": 50.0,
+      "minimum_score": 50.0,
+      "mean_skills": {
+        "de_score": 0.5,
+        "de_direction": 0.5,
+        "mmd_u": 0.5,
+        "variogram": 0.5
+      }
+    },
+    {
+      "run": "challenge_backtest_01",
+      "candidate": "incumbent_global",
+      "mean_score": 48.10213034530028,
+      "minimum_score": 47.701015150479876,
+      "mean_skills": {
+        "de_score": 0.5083625234141712,
+        "de_direction": 0.4894862646595784,
+        "mmd_u": 0.464472288639134,
+        "variogram": 0.461087099214126
+      }
+    },
+    {
+      "run": "challenge_backtest_01",
+      "candidate": "global_population_only",
+      "mean_score": 49.22370943314857,
+      "minimum_score": 48.90171675408157,
+      "mean_skills": {
+        "de_score": 0.5083603534871892,
+        "de_direction": 0.4883088701735232,
+        "mmd_u": 0.48632872363582025,
+        "variogram": 0.48585585662780767
+      }
+    },
+    {
+      "run": "challenge_backtest_01",
+      "candidate": "global_expression_0.1",
+      "mean_score": 49.35493870028922,
+      "minimum_score": 48.98638711285513,
+      "mean_skills": {
+        "de_score": 0.5134934744672658,
+        "de_direction": 0.4890788137893624,
+        "mmd_u": 0.48798021667941294,
+        "variogram": 0.48256124967455616
+      }
+    },
+    {
+      "run": "challenge_backtest_01",
+      "candidate": "global_expression_0.25",
+      "mean_score": 47.49441320993369,
+      "minimum_score": 47.069074849457095,
+      "mean_skills": {
+        "de_score": 0.5033333333333333,
+        "de_direction": 0.49332963045885947,
+        "mmd_u": 0.4562881753063139,
+        "variogram": 0.44445969279697223
+      }
+    },
+    {
+      "run": "challenge_backtest_01",
+      "candidate": "state_k4_e0.0",
+      "mean_score": 48.51462693557335,
+      "minimum_score": 48.3145211569871,
+      "mean_skills": {
+        "de_score": 0.5034045509814139,
+        "de_direction": 0.45965845332800886,
+        "mmd_u": 0.4881056275548261,
+        "variogram": 0.4897441500596497
+      }
+    },
+    {
+      "run": "challenge_backtest_01",
+      "candidate": "state_k4_e0.25",
+      "mean_score": 48.97901352858373,
+      "minimum_score": 48.760614439040474,
+      "mean_skills": {
+        "de_score": 0.5083625234141712,
+        "de_direction": 0.4669620551997073,
+        "mmd_u": 0.4924495727698663,
+        "variogram": 0.4911205940070393
+      }
+    },
+    {
+      "run": "challenge_backtest_01",
+      "candidate": "state_k8_e0.0",
+      "mean_score": 49.61657769061958,
+      "minimum_score": 49.27070355108322,
+      "mean_skills": {
+        "de_score": 0.5085571070533477,
+        "de_direction": 0.4840289069464343,
+        "mmd_u": 0.4953542514202615,
+        "variogram": 0.4970649899008594
+      }
+    },
+    {
+      "run": "challenge_backtest_01",
+      "candidate": "state_k8_e0.25",
+      "mean_score": 50.72166441284932,
+      "minimum_score": 50.598262777935346,
+      "mean_skills": {
+        "de_score": 0.5169409699363616,
+        "de_direction": 0.5059231087657757,
+        "mmd_u": 0.5045233668033925,
+        "variogram": 0.5007180720597052
+      }
+    },
+    {
+      "run": "challenge_identity_01",
+      "candidate": "copy_last",
+      "mean_score": 50.0,
+      "minimum_score": 50.0,
+      "mean_skills": {
+        "de_score": 0.5,
+        "de_direction": 0.5,
+        "mmd_u": 0.5,
+        "variogram": 0.5
+      }
+    },
+    {
+      "run": "challenge_identity_01",
+      "candidate": "incumbent_global",
+      "mean_score": 48.52917351403033,
+      "minimum_score": 48.10534236846986,
+      "mean_skills": {
+        "de_score": 0.5134934744672658,
+        "de_direction": 0.49355816884542225,
+        "mmd_u": 0.46845282588475295,
+        "variogram": 0.4649648827335271
+      }
+    },
+    {
+      "run": "challenge_identity_01",
+      "candidate": "global_population_only",
+      "mean_score": 49.88615175228344,
+      "minimum_score": 49.58455717114358,
+      "mean_skills": {
+        "de_score": 0.516899069344781,
+        "de_direction": 0.49627087812027576,
+        "mmd_u": 0.4917734399782148,
+        "variogram": 0.4901849933155285
+      }
+    },
+    {
+      "run": "challenge_identity_01",
+      "candidate": "global_expression_0.1",
+      "mean_score": 49.39230434837057,
+      "minimum_score": 49.0261060403704,
+      "mean_skills": {
+        "de_score": 0.5134934744672658,
+        "de_direction": 0.4895432999250697,
+        "mmd_u": 0.48840411557112606,
+        "variogram": 0.48321307607141994
+      }
+    },
+    {
+      "run": "challenge_identity_01",
+      "candidate": "global_expression_0.25",
+      "mean_score": 47.58371668043103,
+      "minimum_score": 47.160112840394106,
+      "mean_skills": {
+        "de_score": 0.5033333333333333,
+        "de_direction": 0.4937217095977772,
+        "mmd_u": 0.45770125960819,
+        "variogram": 0.44631514094537894
+      }
+    },
+    {
+      "run": "challenge_identity_01",
+      "candidate": "state_k4_e0.0",
+      "mean_score": 49.77179836957302,
+      "minimum_score": 49.56099628879532,
+      "mean_skills": {
+        "de_score": 0.5119844815352804,
+        "de_direction": 0.47840129058669395,
+        "mmd_u": 0.5025647040899787,
+        "variogram": 0.49676064719121477
+      }
+    },
+    {
+      "run": "challenge_identity_01",
+      "candidate": "state_k4_e0.25",
+      "mean_score": 49.73359819218564,
+      "minimum_score": 49.51513926410212,
+      "mean_skills": {
+        "de_score": 0.5119844815352804,
+        "de_direction": 0.47619817093320815,
+        "mmd_u": 0.5031575480164548,
+        "variogram": 0.49671527199898896
+      }
+    },
+    {
+      "run": "challenge_identity_01",
+      "candidate": "state_k8_e0.0",
+      "mean_score": 50.0,
+      "minimum_score": 50.0,
+      "mean_skills": {
+        "de_score": 0.5,
+        "de_direction": 0.5,
+        "mmd_u": 0.5,
+        "variogram": 0.5
+      }
+    },
+    {
+      "run": "challenge_identity_01",
+      "candidate": "state_k8_e0.25",
+      "mean_score": 51.07590233649745,
+      "minimum_score": 50.66419721981279,
+      "mean_skills": {
+        "de_score": 0.5168304306711505,
+        "de_direction": 0.5146112056385103,
+        "mmd_u": 0.5076843018760971,
+        "variogram": 0.5029666186236502
+      }
+    },
+    {
+      "run": "detection_backtest_01",
+      "candidate": "copy_last",
+      "mean_score": 50.0,
+      "minimum_score": 50.0,
+      "mean_skills": {
+        "de_score": 0.5,
+        "de_direction": 0.5,
+        "mmd_u": 0.5,
+        "variogram": 0.5
+      }
+    },
+    {
+      "run": "detection_backtest_01",
+      "candidate": "zero_preserving_k8",
+      "mean_score": 51.07590233649745,
+      "minimum_score": 50.66419721981279,
+      "mean_skills": {
+        "de_score": 0.5168304306711505,
+        "de_direction": 0.5146112056385103,
+        "mmd_u": 0.5076843018760971,
+        "variogram": 0.5029666186236502
+      }
+    },
+    {
+      "run": "detection_backtest_01",
+      "candidate": "detection_0.25_cap0.02",
+      "mean_score": 51.1958381568027,
+      "minimum_score": 50.81569887525021,
+      "mean_skills": {
+        "de_score": 0.5151171239892546,
+        "de_direction": 0.519022275978864,
+        "mmd_u": 0.5084999368454055,
+        "variogram": 0.5043677526118785
+      }
+    },
+    {
+      "run": "detection_backtest_01",
+      "candidate": "detection_0.5_cap0.02",
+      "mean_score": 51.226559363485826,
+      "minimum_score": 50.85203692278512,
+      "mean_skills": {
+        "de_score": 0.5151171239892546,
+        "de_direction": 0.5200984383614844,
+        "mmd_u": 0.5085393352949475,
+        "variogram": 0.5044995122934463
+      }
+    },
+    {
+      "run": "detection_backtest_01",
+      "candidate": "detection_1.0_cap0.05",
+      "mean_score": 51.07590233649745,
+      "minimum_score": 50.66419721981279,
+      "mean_skills": {
+        "de_score": 0.5168304306711505,
+        "de_direction": 0.5146112056385103,
+        "mmd_u": 0.5076843018760971,
+        "variogram": 0.5029666186236502
+      }
+    },
+    {
+      "run": "hurdle_backtest_01",
+      "candidate": "copy_last",
+      "mean_score": 50.0,
+      "minimum_score": 50.0,
+      "mean_skills": {
+        "de_score": 0.5,
+        "de_direction": 0.5,
+        "mmd_u": 0.5,
+        "variogram": 0.5
+      }
+    },
+    {
+      "run": "hurdle_backtest_01",
+      "candidate": "detection_incumbent",
+      "mean_score": 51.226559363485826,
+      "minimum_score": 50.85203692278512,
+      "mean_skills": {
+        "de_score": 0.5151171239892546,
+        "de_direction": 0.5200984383614844,
+        "mmd_u": 0.5085393352949475,
+        "variogram": 0.5044995122934463
+      }
+    },
+    {
+      "run": "hurdle_backtest_01",
+      "candidate": "positive_abundance_0.25",
+      "mean_score": 51.06888618077169,
+      "minimum_score": 50.84457265775737,
+      "mean_skills": {
+        "de_score": 0.5149700475108449,
+        "de_direction": 0.5186463748261363,
+        "mmd_u": 0.5057079156999502,
+        "variogram": 0.5028619075674325
+      }
+    },
+    {
+      "run": "hurdle_backtest_01",
+      "candidate": "positive_abundance_0.5",
+      "mean_score": 51.06888618077169,
+      "minimum_score": 50.84457265775737,
+      "mean_skills": {
+        "de_score": 0.5149700475108449,
+        "de_direction": 0.5186463748261363,
+        "mmd_u": 0.5057079156999502,
+        "variogram": 0.5028619075674325
+      }
+    },
+    {
+      "run": "hurdle_backtest_01",
+      "candidate": "positive_abundance_1.0",
+      "mean_score": 51.06888618077169,
+      "minimum_score": 50.84457265775737,
+      "mean_skills": {
+        "de_score": 0.5149700475108449,
+        "de_direction": 0.5186463748261363,
+        "mmd_u": 0.5057079156999502,
+        "variogram": 0.5028619075674325
+      }
+    },
+    {
+      "run": "guard_backtest_01",
+      "candidate": "copy_last",
+      "mean_score": 50.0,
+      "minimum_score": 50.0,
+      "mean_skills": {
+        "de_score": 0.5,
+        "de_direction": 0.5,
+        "mmd_u": 0.5,
+        "variogram": 0.5
+      }
+    },
+    {
+      "run": "guard_backtest_01",
+      "candidate": "detection_incumbent",
+      "mean_score": 51.226559363485826,
+      "minimum_score": 50.85203692278512,
+      "mean_skills": {
+        "de_score": 0.5151171239892546,
+        "de_direction": 0.5200984383614844,
+        "mmd_u": 0.5085393352949475,
+        "variogram": 0.5044995122934463
+      }
+    },
+    {
+      "run": "guard_backtest_01",
+      "candidate": "positive_e0.5_cov0.2",
+      "mean_score": 51.130937868070674,
+      "minimum_score": 50.83841195708607,
+      "mean_skills": {
+        "de_score": 0.5168002923060863,
+        "de_direction": 0.5162053329173548,
+        "mmd_u": 0.5078202285230901,
+        "variogram": 0.5035595190895973
+      }
+    },
+    {
+      "run": "guard_backtest_01",
+      "candidate": "positive_e1.0_cov0.4",
+      "mean_score": 51.06847022526409,
+      "minimum_score": 50.72219708559359,
+      "mean_skills": {
+        "de_score": 0.5132868791940132,
+        "de_direction": 0.515157731678059,
+        "mmd_u": 0.5091017035030615,
+        "variogram": 0.5042151924185223
+      }
+    },
+    {
+      "run": "guard_backtest_01",
+      "candidate": "joint_e0.5_cov0.2",
+      "mean_score": 51.35384269023009,
+      "minimum_score": 50.94528555859716,
+      "mean_skills": {
+        "de_score": 0.5151171239892546,
+        "de_direction": 0.5227541451883639,
+        "mmd_u": 0.5099836162872435,
+        "variogram": 0.5053776236086164
+      }
+    },
+    {
+      "run": "guard_backtest_01",
+      "candidate": "joint_e1.0_cov0.4",
+      "mean_score": 51.432807641783576,
+      "minimum_score": 51.038968083784894,
+      "mean_skills": {
+        "de_score": 0.5132868791940132,
+        "de_direction": 0.5267713415902819,
+        "mmd_u": 0.5104583279189607,
+        "variogram": 0.505880114230369
+      }
+    },
+    {
+      "run": "neighborhood_backtest_01",
+      "candidate": "copy_last",
+      "mean_score": 50.0,
+      "minimum_score": 50.0,
+      "mean_skills": {
+        "de_score": 0.5,
+        "de_direction": 0.5,
+        "mmd_u": 0.5,
+        "variogram": 0.5
+      }
+    },
+    {
+      "run": "neighborhood_backtest_01",
+      "candidate": "zero_preserving_k8",
+      "mean_score": 51.07590233649745,
+      "minimum_score": 50.66419721981279,
+      "mean_skills": {
+        "de_score": 0.5168304306711505,
+        "de_direction": 0.5146112056385103,
+        "mmd_u": 0.5076843018760971,
+        "variogram": 0.5029666186236502
+      }
+    },
+    {
+      "run": "neighborhood_backtest_01",
+      "candidate": "neighborhood_s0.25_a0",
+      "mean_score": 47.88658043812428,
+      "minimum_score": 47.778078330021735,
+      "mean_skills": {
+        "de_score": 0.5016151202749141,
+        "de_direction": 0.48806204314503715,
+        "mmd_u": 0.47640621914184544,
+        "variogram": 0.442623238918507
+      }
+    },
+    {
+      "run": "neighborhood_backtest_01",
+      "candidate": "neighborhood_s0.25_a32",
+      "mean_score": 47.43970778245316,
+      "minimum_score": 47.303899376015714,
+      "mean_skills": {
+        "de_score": 0.5016151202749141,
+        "de_direction": 0.4879576374886165,
+        "mmd_u": 0.47351561173878487,
+        "variogram": 0.4247460243100676
+      }
+    },
+    {
+      "run": "neighborhood_backtest_01",
+      "candidate": "neighborhood_s0.5_a64",
+      "mean_score": 43.811034250231366,
+      "minimum_score": 43.58304469715897,
+      "mean_skills": {
+        "de_score": 0.5016151202749141,
+        "de_direction": 0.4895987580547312,
+        "mmd_u": 0.41700621279640554,
+        "variogram": 0.3260250454049037
+      }
+    },
+    {
+      "run": "neighborhood_backtest_01",
+      "candidate": "neighborhood_s1.0_a256",
+      "mean_score": 39.94405301585467,
+      "minimum_score": 39.552764749150654,
+      "mean_skills": {
+        "de_score": 0.49993195195808243,
+        "de_direction": 0.4936767850299038,
+        "mmd_u": 0.35852444526390886,
+        "variogram": 0.21740506166188736
+      }
+    },
+    {
+      "run": "window_backtest_01",
+      "candidate": "copy_last",
+      "mean_score": 50.0,
+      "minimum_score": 50.0,
+      "mean_skills": {
+        "de_score": 0.5,
+        "de_direction": 0.5,
+        "mmd_u": 0.5,
+        "variogram": 0.5
+      }
+    },
+    {
+      "run": "window_backtest_01",
+      "candidate": "joint_incumbent",
+      "mean_score": 51.432807641783576,
+      "minimum_score": 51.038968083784894,
+      "mean_skills": {
+        "de_score": 0.5132868791940132,
+        "de_direction": 0.5267713415902819,
+        "mmd_u": 0.5104583279189607,
+        "variogram": 0.505880114230369
+      }
+    },
+    {
+      "run": "window_backtest_01",
+      "candidate": "window_tilt_0.25",
+      "mean_score": 50.138018803271365,
+      "minimum_score": 50.02497354127448,
+      "mean_skills": {
+        "de_score": 0.49356833642547926,
+        "de_direction": 0.5131185674469786,
+        "mmd_u": 0.4987187896623295,
+        "variogram": 0.500464125829502
+      }
+    },
+    {
+      "run": "window_backtest_01",
+      "candidate": "window_tilt_0.5",
+      "mean_score": 50.138018803271365,
+      "minimum_score": 50.02497354127448,
+      "mean_skills": {
+        "de_score": 0.49356833642547926,
+        "de_direction": 0.5131185674469786,
+        "mmd_u": 0.4987187896623295,
+        "variogram": 0.500464125829502
+      }
+    },
+    {
+      "run": "window_backtest_01",
+      "candidate": "window_tilt_1.0",
+      "mean_score": 50.138018803271365,
+      "minimum_score": 50.02497354127448,
+      "mean_skills": {
+        "de_score": 0.49356833642547926,
+        "de_direction": 0.5131185674469786,
+        "mmd_u": 0.4987187896623295,
+        "variogram": 0.500464125829502
+      }
+    },
+    {
+      "run": "state_search_01",
+      "candidate": "copy_last",
+      "mean_score": 50.0,
+      "minimum_score": 50.0,
+      "mean_skills": {
+        "de_score": 0.5,
+        "de_direction": 0.5,
+        "mmd_u": 0.5,
+        "variogram": 0.5
+      }
+    },
+    {
+      "run": "state_search_01",
+      "candidate": "standard_k4",
+      "mean_score": 49.70769286119176,
+      "minimum_score": 49.48835168415846,
+      "mean_skills": {
+        "de_score": 0.510154236740039,
+        "de_direction": 0.47674002451698066,
+        "mmd_u": 0.5035697371606119,
+        "variogram": 0.49641221074739555
+      }
+    },
+    {
+      "run": "state_search_01",
+      "candidate": "standard_k8",
+      "mean_score": 51.432807641783576,
+      "minimum_score": 51.038968083784894,
+      "mean_skills": {
+        "de_score": 0.5132868791940132,
+        "de_direction": 0.5267713415902819,
+        "mmd_u": 0.5104583279189607,
+        "variogram": 0.505880114230369
+      }
+    },
+    {
+      "run": "state_search_01",
+      "candidate": "standard_k16",
+      "mean_score": 53.10719450048021,
+      "minimum_score": 52.341001191018535,
+      "mean_skills": {
+        "de_score": 0.5258241758241758,
+        "de_direction": 0.5595236868906502,
+        "mmd_u": 0.524203647399932,
+        "variogram": 0.5123694255305804
+      }
+    },
+    {
+      "run": "state_search_01",
+      "candidate": "standard_k32",
+      "mean_score": 50.0,
+      "minimum_score": 50.0,
+      "mean_skills": {
+        "de_score": 0.5,
+        "de_direction": 0.5,
+        "mmd_u": 0.5,
+        "variogram": 0.5
+      }
+    },
+    {
+      "run": "state_search_01",
+      "candidate": "unit_k4",
+      "mean_score": 44.682406047972584,
+      "minimum_score": 44.27279354238732,
+      "mean_skills": {
+        "de_score": 0.4967197524845164,
+        "de_direction": 0.49156062311877563,
+        "mmd_u": 0.4042135665473676,
+        "variogram": 0.39244948307346283
+      }
+    },
+    {
+      "run": "state_search_01",
+      "candidate": "unit_k8",
+      "mean_score": 51.65260459485015,
+      "minimum_score": 51.38688599374998,
+      "mean_skills": {
+        "de_score": 0.5132896890343699,
+        "de_direction": 0.5300542102515928,
+        "mmd_u": 0.514120992813114,
+        "variogram": 0.5072688664153833
+      }
+    },
+    {
+      "run": "state_search_01",
+      "candidate": "unit_k16",
+      "mean_score": 55.312268380984996,
+      "minimum_score": 54.198976902958385,
+      "mean_skills": {
+        "de_score": 0.5221308652604392,
+        "de_direction": 0.581040145423201,
+        "mmd_u": 0.5700298059903902,
+        "variogram": 0.531604946709115
+      }
+    },
+    {
+      "run": "state_search_01",
+      "candidate": "unit_k32",
+      "mean_score": 50.0,
+      "minimum_score": 50.0,
+      "mean_skills": {
+        "de_score": 0.5,
+        "de_direction": 0.5,
+        "mmd_u": 0.5,
+        "variogram": 0.5
+      }
+    },
+    {
+      "run": "specialist_integration_01",
+      "candidate": "copy_last",
+      "mean_score": 50.0,
+      "minimum_score": 50.0,
+      "mean_skills": {
+        "de_score": 0.5,
+        "de_direction": 0.5,
+        "mmd_u": 0.5,
+        "variogram": 0.5
+      }
+    },
+    {
+      "run": "specialist_integration_01",
+      "candidate": "de_specialist",
+      "mean_score": 53.10719450048021,
+      "minimum_score": 52.341001191018535,
+      "mean_skills": {
+        "de_score": 0.5258241758241758,
+        "de_direction": 0.5595236868906502,
+        "mmd_u": 0.524203647399932,
+        "variogram": 0.5123694255305804
+      }
+    },
+    {
+      "run": "specialist_integration_01",
+      "candidate": "joint_specialist",
+      "mean_score": 55.312268380984996,
+      "minimum_score": 54.198976902958385,
+      "mean_skills": {
+        "de_score": 0.5221308652604392,
+        "de_direction": 0.581040145423201,
+        "mmd_u": 0.5700298059903902,
+        "variogram": 0.531604946709115
+      }
+    },
+    {
+      "run": "specialist_integration_01",
+      "candidate": "mixture_de_0.1",
+      "mean_score": 54.682463465689494,
+      "minimum_score": 53.57824274982854,
+      "mean_skills": {
+        "de_score": 0.5258241758241758,
+        "de_direction": 0.5668249554873745,
+        "mmd_u": 0.5596835301967825,
+        "variogram": 0.5287864638498632
+      }
+    },
+    {
+      "run": "specialist_integration_01",
+      "candidate": "mixture_de_0.25",
+      "mean_score": 54.43315966677361,
+      "minimum_score": 53.444942152676475,
+      "mean_skills": {
+        "de_score": 0.5275413475413475,
+        "de_direction": 0.557735635411148,
+        "mmd_u": 0.5601215200675049,
+        "variogram": 0.5248794745468044
+      }
+    },
+    {
+      "run": "specialist_integration_01",
+      "candidate": "mixture_de_0.5",
+      "mean_score": 54.1696764567516,
+      "minimum_score": 53.16373780496942,
+      "mean_skills": {
+        "de_score": 0.5293595293595293,
+        "de_direction": 0.5497586175104995,
+        "mmd_u": 0.5582797231055364,
+        "variogram": 0.5221665545917396
+      }
+    },
+    {
+      "run": "specialist_integration_01",
+      "candidate": "mixture_de_0.75",
+      "mean_score": 54.81278263229143,
+      "minimum_score": 53.885238693426416,
+      "mean_skills": {
+        "de_score": 0.5312148169291026,
+        "de_direction": 0.5661987396073472,
+        "mmd_u": 0.5611980616994467,
+        "variogram": 0.527075093394839
+      }
+    },
+    {
+      "run": "de_specialist_search_01",
+      "candidate": "copy_last",
+      "mean_score": 50.0,
+      "minimum_score": 50.0,
+      "mean_skills": {
+        "de_score": 0.5,
+        "de_direction": 0.5,
+        "mmd_u": 0.5,
+        "variogram": 0.5
+      }
+    },
+    {
+      "run": "de_specialist_search_01",
+      "candidate": "joint_incumbent",
+      "mean_score": 55.312268380984996,
+      "minimum_score": 54.198976902958385,
+      "mean_skills": {
+        "de_score": 0.5221308652604392,
+        "de_direction": 0.581040145423201,
+        "mmd_u": 0.5700298059903902,
+        "variogram": 0.531604946709115
+      }
+    },
+    {
+      "run": "de_specialist_search_01",
+      "candidate": "standard_cap1.5",
+      "mean_score": 53.034012111298445,
+      "minimum_score": 52.355808916970915,
+      "mean_skills": {
+        "de_score": 0.5221308652604392,
+        "de_direction": 0.5593518771693781,
+        "mmd_u": 0.5248796149708773,
+        "variogram": 0.5125277550713347
+      }
+    },
+    {
+      "run": "de_specialist_search_01",
+      "candidate": "standard_cap2.0",
+      "mean_score": 53.02165460486395,
+      "minimum_score": 52.339365305408215,
+      "mean_skills": {
+        "de_score": 0.5221308652604392,
+        "de_direction": 0.5585476571818674,
+        "mmd_u": 0.5251282437806316,
+        "variogram": 0.5125422115193669
+      }
+    },
+    {
+      "run": "de_specialist_search_01",
+      "candidate": "standard_cap4.0",
+      "mean_score": 53.02760347755452,
+      "minimum_score": 52.35133164633628,
+      "mean_skills": {
+        "de_score": 0.5221308652604392,
+        "de_direction": 0.5587727316356645,
+        "mmd_u": 0.5251424988672163,
+        "variogram": 0.5125369294567722
+      }
+    },
+    {
+      "run": "de_specialist_search_01",
+      "candidate": "unit_cap1.5",
+      "mean_score": 55.14583924965288,
+      "minimum_score": 53.9605530263749,
+      "mean_skills": {
+        "de_score": 0.5185776642180348,
+        "de_direction": 0.5772925484152118,
+        "mmd_u": 0.5710061856638656,
+        "variogram": 0.5309449181952878
+      }
+    },
+    {
+      "run": "de_specialist_search_01",
+      "candidate": "unit_cap2.0",
+      "mean_score": 55.051275782571814,
+      "minimum_score": 53.875118841731705,
+      "mean_skills": {
+        "de_score": 0.5168304306711505,
+        "de_direction": 0.574989156267216,
+        "mmd_u": 0.571389974083304,
+        "variogram": 0.5307043443306764
+      }
+    },
+    {
+      "run": "de_specialist_search_01",
+      "candidate": "unit_cap4.0",
+      "mean_score": 54.909313599938876,
+      "minimum_score": 53.61595191835132,
+      "mean_skills": {
+        "de_score": 0.5151802656546489,
+        "de_direction": 0.5729638919735388,
+        "mmd_u": 0.5698285524436204,
+        "variogram": 0.5305426542962784
+      }
+    }
+  ],
+  "source_report_sha256": {
+    "challenge_backtest_01": "53c91b1544399b00db0fbcf02c1bbbcaf6e09a63dcff4cd6dae259cf54c3656c",
+    "challenge_identity_01": "8dcc87f084eb86cff5433c2a131a8d0819b6e9954ce67a026636cac5facaad39",
+    "detection_backtest_01": "56312bd40befca5bbc3604fac89c568cc8bef5db9dbcabd8771f80cbb296e6ca",
+    "hurdle_backtest_01": "32ec2c899e9d51d6fc3007ac02a8f52f5aeb4bad6afc883c2c9f1a142796f093",
+    "guard_backtest_01": "23f35bb3c98e7fe291bc6a3c62ab2ae4091da462eceffc9c908d657a798fecbe",
+    "neighborhood_backtest_01": "bebc838edb0e4a5cb5d4d7111deb5ac4dc7dd8bb8bcb591012554c4693ce7ddf",
+    "window_backtest_01": "bf23022c37e6a21005714ee107860aa21e5f6f5d83de613bb3ad4706f98e0b97",
+    "state_search_01": "5ea63a67e250dddcf41d92b437eb28099f9d8b2a5da8720ab743a668a241529e",
+    "specialist_integration_01": "8fd419d544c764a4e201a8fc25a4b16eb6081d97be17ff272f6e6f0c2b6d54b8",
+    "de_specialist_search_01": "c97c7b7557eb36cac93d8650ad0f1d460ec884ba8980c5abd81ac29ad27b53b6"
+  },
+  "selection_scope": "Reused E9.5 development evidence. Specialist best scores cannot be combined without scoring integrated predictions.",
+  "official_72_verified": false
+}

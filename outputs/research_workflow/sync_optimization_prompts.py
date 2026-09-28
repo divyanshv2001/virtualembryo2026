@@ -23,7 +23,8 @@ def main():
         target = root/relative; payload = canonical.read_bytes()
         if sha(payload) != after: raise ValueError('Canonical prompt checksum mismatch')
         current = sha(target.read_bytes())
-        if current not in [before, after]: raise ValueError('Unrecognized local changes: '+relative)
+        previous = record.get('previous_updated_sha256' if relative.endswith('agenticprompt') else 'previous_generator_sha256', [])
+        if current not in [before, after]+previous: raise ValueError('Unrecognized local changes: '+relative)
         checked.append((target, payload, current != after))
     if args.apply:
         for target, payload, changed in checked:

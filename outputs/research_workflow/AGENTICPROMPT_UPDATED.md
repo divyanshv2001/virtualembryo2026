@@ -1098,3 +1098,9 @@ Do not jump directly to the research proposal.
 User update, 2026-09-28: the ongoing T1 implementation objective is to improve the full-panel challenge-data local score until a defensible score above 72 is reached. Completing the original two critic loops or another experiment batch does not complete this objective. Continue evidence-led training, Monte Carlo stability checks and self-correction; checkpoint on resource/usage limits, observe the actual reset time, and retry from the checkpoint when execution is available. Do not invent account reset times or claim automatic wake-up if none is installed.
 
 Read and apply ../outputs/t1_iterations/LOCAL_OPTIMIZATION_PROMPT.md for the exact stopping rule, Monte Carlo protocol, quota conservation, token/compute policy and Codex-limit recovery instructions. That updated mandate supersedes conflicting historical development/upload instructions in this document for the current T1 loop. Preserve all previous experimental history. Local success does not certify the hidden official score.
+
+---
+
+# 21. METRIC SPECIALISTS AND INTEGRATION
+
+User update, 2026-09-28: use separate DE recovery, direction, MMD and variogram specialist objectives, retain complete four-metric/Pareto evidence, and test integrated predictions under the unchanged joint >72 gate. Individual best scores cannot simply be added. Freeze specialist and ensemble designs before scoring, train only on permitted past stages, preserve matched persistence, and evaluate full-panel cell mixtures before promotion. Read the metric-specialist section of ../outputs/t1_iterations/LOCAL_OPTIMIZATION_PROMPT.md. No new agent or Jev authorization is granted by this prompt.

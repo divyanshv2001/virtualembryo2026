@@ -206,6 +206,7 @@ def build_prompt(
         lines.append("Continue evidence-led local model improvement until the locked >72 gate passes; a completed review/batch is not success.")
         lines.append("Use fixed-seed Monte Carlo stability checks and rolling past-only forecasts; never pick a lucky seed or alter calibration.")
         lines.append("Require the complete 32285-gene panel and all four metrics. Local >72 does not certify hidden E10.5 performance.")
+        lines.append("Optimize separate DE/direction/MMD/variogram specialists, retain complete metric vectors and Pareto candidates, then test frozen whole-cell mixtures against each constituent. Never add best specialist scores; the joint >72 stability/temporal gate remains required.")
         lines.append("Preserve submission quota. Jev's prior three-call approval is exhausted; this prompt grants no new API calls or agent spawning.")
         lines.append("Checkpoint on Codex limits, record the actual exposed reset time, and resume when execution is available; never invent reset times or auto-wake capability.")
         lines.append("Historical Human/Agent track labels and source premises above are not verified eligibility or performance claims.")

@@ -6,9 +6,11 @@ from transfer_genes import apply_unique_factors
 
 
 class ChallengeTransfer:
-    def __init__(self, x, stages, cutoff, donors, official_symbols, atlas_symbols, states=4, alignment='moments', covariance_limit=.1, feature_scaling='standard'):
+    def __init__(self, x, stages, cutoff, donors, official_symbols, atlas_symbols, states=4, alignment='moments', covariance_limit=.1, feature_scaling='standard', expression_factor_cap=1.25):
         if not .1 <= covariance_limit <= .4: raise ValueError('Covariance limit must be within declared experimental bounds')
         self.covariance_limit = float(covariance_limit)
+        if not 1 <= expression_factor_cap <= 4: raise ValueError('Expression factor cap outside experimental bounds')
+        self.expression_factor_cap = float(expression_factor_cap)
         if donors.dtype != np.float32 or donors.shape[1] != len(official_symbols):
             raise ValueError('Require full-panel float32 donors')
         counts = Counter(atlas_symbols)
@@ -62,7 +64,7 @@ class ChallengeTransfer:
             strength = expression*multiplier
             local = np.broadcast_to(model.abundance_slope, (len(donor), len(model.abundance_slope))) if method == 'global' else model.state_slope[self.labels[indices]]
             local = local*self.trusted[indices, None]
-            factors = np.exp(np.clip(horizon*strength*local, -np.log(1.25), np.log(1.25)))
+            factors = np.exp(np.clip(horizon*strength*local, -np.log(self.expression_factor_cap), np.log(self.expression_factor_cap)))
             candidate, mapping = apply_unique_factors(donor, self.official_symbols, self.atlas_symbols, factors)
             if method != 'state' or covariance_change(original, candidate[:, self.official_features]) <= self.covariance_limit:
                 prediction = candidate; used_strength = strength; break
@@ -71,7 +73,8 @@ class ChallengeTransfer:
             'effective_sample_size':float(1/np.sum(weights**2)), 'unique_donors':int(len(np.unique(indices))),
             'covariance_change_vs_reference':covariance_change(original, prediction[:, self.official_features]),
             'state_support':model.state_support.tolist(), 'alignment':self.alignment,
-            'covariance_limit':self.covariance_limit, 'feature_scaling':model.feature_scaling}
+            'covariance_limit':self.covariance_limit, 'feature_scaling':model.feature_scaling,
+            'expression_factor_cap':self.expression_factor_cap}
         return prediction, indices, audit
 
     def save(self, path):
@@ -84,4 +87,4 @@ class ChallengeTransfer:
             source_mean=self.source_mean, anchor_mean=self.anchor_mean, alignment_ratio=self.alignment_ratio,
             anchor_latent=self.z, anchor_labels=self.labels, trusted=self.trusted, distance_cap=np.array(self.distance_cap),
             cutoff=np.array(m.cutoff), alignment=np.array(self.alignment), covariance_limit=np.array(self.covariance_limit),
-            feature_scaling=np.array(m.feature_scaling))
+            feature_scaling=np.array(m.feature_scaling), expression_factor_cap=np.array(self.expression_factor_cap))
