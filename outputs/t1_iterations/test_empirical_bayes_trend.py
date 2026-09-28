@@ -1,11 +1,13 @@
 import numpy as np
+import pytest
 from empirical_bayes_trend import shrink_normal_effects,EmpiricalBayesTrend
 
 
-def test_normal_mixture_preserves_strong_sign_and_rejects_uncertainty():
+@pytest.mark.parametrize('solver',['em','polished'])
+def test_normal_mixture_preserves_strong_sign_and_rejects_uncertainty(solver):
     effects=np.r_[np.zeros(200),np.ones(100),-np.ones(100),.1]
     errors=np.r_[np.full(400,.02),1.]
-    mean,risk,audit=shrink_normal_effects(effects,errors)
+    mean,risk,audit=shrink_normal_effects(effects,errors,solver=solver)
     assert audit['converged'] and audit['penalized_objective_monotone']
     assert mean[201]>.9 and mean[301]<-.9 and risk[201]<.01
     assert abs(mean[-1])<.1 and risk[-1]>.25

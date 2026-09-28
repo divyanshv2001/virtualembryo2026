@@ -1,5 +1,5 @@
 {
-  "records": 1007,
+  "records": 1073,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -77,6 +77,16 @@
       "outcomes_indexed": 16
     },
     {
+      "path": "private/copula_horizon_01/report.json",
+      "sha256": "cdd92bd01a5deefcfad3ec237610c10b016f75ba32a6352d73838a72cb0a5ba6",
+      "outcomes_indexed": 12
+    },
+    {
+      "path": "private/covariance_horizon_01/report.json",
+      "sha256": "38c6a504f6342c248156bfb8d51805a0c21a0b6b56e9f518eeb6a67cb1fa896a",
+      "outcomes_indexed": 18
+    },
+    {
       "path": "private/de_specialist_search_01/report.json",
       "sha256": "c97c7b7557eb36cac93d8650ad0f1d460ec884ba8980c5abd81ac29ad27b53b6",
       "outcomes_indexed": 24
@@ -105,6 +115,16 @@
       "path": "private/distribution_temporal_01/report.json",
       "sha256": "284c1cbfbe0ac11805c802f9a5a16ecbe2a9091f3e869c064a35381875909bf3",
       "outcomes_indexed": 12
+    },
+    {
+      "path": "private/empirical_bayes_horizon_01/report.json",
+      "sha256": "a817b7d6d6e1586e621eb2d2d960f497e276b076095f8bf31c379d8eeb03815e",
+      "outcomes_indexed": 18
+    },
+    {
+      "path": "private/empirical_bayes_repair_01/report.json",
+      "sha256": "f891c376a37e12fac40c7d9565a5f8f26a37311e08bd3448ee6c66a45a56a88b",
+      "outcomes_indexed": 18
     },
     {
       "path": "private/extended_prepared_02/report.json",
@@ -264,5 +284,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "9d9217c74ff431a60b8c6a54a25ff5dec6885c4921a90bd0fbfa753d63f955cf"
+  "ledger_sha256": "70c178136b9a962c209e0fdc3a8ee15b348bffec879e62b5cf64835b2b14eb70"
 }

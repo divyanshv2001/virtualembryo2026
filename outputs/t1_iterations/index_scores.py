@@ -16,11 +16,14 @@ def outcomes(value,context=None,pointer=''):
         if isinstance(value.get('generation'),dict):
             context['generation']=value['generation']
         if 'local_score' in value:
+            if pointer.endswith('/persistence'):
+                context['candidate']='persistence'
             generation=context.pop('generation',{})
             entry=generation.get(context.get('candidate',''),{})
             yield {**context,'prediction_sha256':value.get('prediction_sha256',entry.get('prediction_sha256')),
                 'json_pointer':pointer,'local_score':value['local_score'],
-                'raw_metrics':value.get('raw_metrics',value.get('raw')),
+                'raw_metrics':value.get('raw_metrics',value.get('raw',context.get('floor') if pointer.endswith('/persistence') else None)),
+                'diagnostics':entry.get('audit'),
                 'skills':value.get('skills'),'calibration_valid':value.get('calibration_valid'),
                 'invalid_calibration_metrics':value.get('invalid_calibration_metrics'),
                 'scope':'Local development; not an official leaderboard score'}
@@ -51,7 +54,7 @@ def main():
                     plan_sha256=hashlib.sha256(plan.read_bytes()).hexdigest() if plan.exists() else None,
                     source_sha256=plan_record.get('source_sha256'),
                     scorer_manifest_sha256=report.get('scorer_manifest_sha256'),
-                    diagnostics=entry.get('audit'),
+                    diagnostics=row.get('diagnostics') or entry.get('audit'),
                     report_status=report.get('status','unspecified'))
             records.extend(rows)
             sources.append({'path':path.relative_to(HERE).as_posix(),'sha256':sha,'outcomes_indexed':len(rows)})

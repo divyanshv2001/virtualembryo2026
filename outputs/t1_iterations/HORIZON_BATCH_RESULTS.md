@@ -14,6 +14,12 @@ Shared temporal-profile pilots project gene slopes onto past-only SVD ranks2/4/8
 
 The initial16-factor cell-level fit hit the200-iteration budget. A separate frozen optimizer repair raises only that budget to800 for rank16, retaining source cells, genes, random seeds, tolerance, decoder and evaluator panels. Higher iteration count is not assumed to improve forecast accuracy.
 
+The2048-gene coverage ablation converged but regressed. Empirical Bayes pilots tested normal-mixture slope shrinkage with error inflation1/2 and sign gates none/.1/.25. Initial EM fits hit1000 iterations; a separate100-step EM plus convex-simplex SLSQP repair converged with scientific settings unchanged. Neither produced meaningful forecast gains.
+
+Covariance pilots used8 past-fitted PCA dimensions and compared OAS with empirical covariance at three strengths. Positive-margin rank coupling used those covariance proposals, fixed zero masks and exact per-type margins before factor clipping and per-cell mass conservation. Projection changes final margins; all actual metrics remain required. Neither branch meaningfully exceeded persistence.
+
+Sources: [Stephens supplement](https://stephenslab.uchicago.edu/assets/papers/Stephens2017-supplement.pdf), sectionsS.1-S.2; [Chen et al.](https://arxiv.org/html/0907.4698v1), Gaussian assumptions, OAS derivationIII-C and simulationIV; [sklearn covariance documentation](https://scikit-learn.org/stable/modules/covariance.html). These motivate estimator adaptations and do not establish developmental forecasting accuracy.
+
 Literature: [Schefzik, Thorarinsdottir and Gneiting (2013)](https://arxiv.org/html/1302.7149v2), methods 4.1–4.3 and experiments 5.4 read. ECC separates marginal calibration from rank dependence. Its weather experiments found benefits dependent on the dependence structure. This implementation adapts that separation to historical positive scRNA margins; it is neither faithful ECC nor evidence that ECC improves this challenge.
 
 The [muscat paper](https://www.nature.com/articles/s41467-020-19894-4) motivates separating within-subpopulation state changes from differential abundance. Introduction, simulation results (20–400 cells) and simulation-preprocessing methods were read. It found sizable detection gains between20 and100 cells per subpopulation/sample. It uses replicated samples and count-based inference; our normalized-abundance trend forecast does not reproduce those methods, biological replication or their inferential guarantees.
@@ -73,6 +79,39 @@ The [muscat paper](https://www.nature.com/articles/s41467-020-19894-4) motivates
 | cell_program_feature_pilot_01 | saved384_d0.5 | 49.175 | 50.160 | 49.668 |
 | cell_program_feature_pilot_01 | genes2048_d0.0 | 47.825 | 50.039 | 48.932 |
 | cell_program_feature_pilot_01 | genes2048_d0.5 | 48.422 | 46.247 | 47.334 |
+| empirical_bayes_horizon_01 | copy | 50.000 | 50.000 | 50.000 |
+| empirical_bayes_horizon_01 | unit16 | 47.143 | 47.987 | 47.565 |
+| empirical_bayes_horizon_01 | saved384_d0.0 | 49.200 | 51.366 | 50.283 |
+| empirical_bayes_horizon_01 | eb_e1.0_qnone | 49.176 | 46.694 | 47.935 |
+| empirical_bayes_horizon_01 | eb_e1.0_q0.1 | 49.289 | 48.723 | 49.006 |
+| empirical_bayes_horizon_01 | eb_e1.0_q0.25 | 49.211 | 47.784 | 48.497 |
+| empirical_bayes_horizon_01 | eb_e2.0_qnone | 49.325 | 50.009 | 49.667 |
+| empirical_bayes_horizon_01 | eb_e2.0_q0.1 | 50.005 | 50.008 | 50.007 |
+| empirical_bayes_horizon_01 | eb_e2.0_q0.25 | 50.004 | 50.008 | 50.006 |
+| covariance_horizon_01 | copy | 50.000 | 50.000 | 50.000 |
+| covariance_horizon_01 | unit16 | 47.143 | 47.987 | 47.565 |
+| covariance_horizon_01 | saved384_d0.0 | 49.200 | 51.366 | 50.283 |
+| covariance_horizon_01 | cov_oas_s0.25 | 50.007 | 50.000 | 50.003 |
+| covariance_horizon_01 | cov_oas_s0.5 | 50.014 | 50.006 | 50.010 |
+| covariance_horizon_01 | cov_oas_s1.0 | 50.031 | 50.020 | 50.026 |
+| covariance_horizon_01 | cov_empirical_s0.25 | 50.007 | 50.000 | 50.003 |
+| covariance_horizon_01 | cov_empirical_s0.5 | 50.014 | 50.006 | 50.010 |
+| covariance_horizon_01 | cov_empirical_s1.0 | 50.031 | 50.021 | 50.026 |
+| empirical_bayes_repair_01 | copy | 50.000 | 50.000 | 50.000 |
+| empirical_bayes_repair_01 | unit16 | 47.143 | 47.987 | 47.565 |
+| empirical_bayes_repair_01 | saved384_d0.0 | 49.200 | 51.366 | 50.283 |
+| empirical_bayes_repair_01 | eb_e1.0_qnone | 49.176 | 46.693 | 47.935 |
+| empirical_bayes_repair_01 | eb_e1.0_q0.1 | 49.287 | 48.839 | 49.063 |
+| empirical_bayes_repair_01 | eb_e1.0_q0.25 | 49.211 | 48.187 | 48.699 |
+| empirical_bayes_repair_01 | eb_e2.0_qnone | 49.088 | 50.010 | 49.549 |
+| empirical_bayes_repair_01 | eb_e2.0_q0.1 | 50.005 | 50.008 | 50.007 |
+| empirical_bayes_repair_01 | eb_e2.0_q0.25 | 50.004 | 50.008 | 50.006 |
+| copula_horizon_01 | copy | 50.000 | 50.000 | 50.000 |
+| copula_horizon_01 | unit16 | 47.143 | 47.987 | 47.565 |
+| copula_horizon_01 | saved384_d0.0 | 49.200 | 51.366 | 50.283 |
+| copula_horizon_01 | copula_oas_s0.25 | 50.003 | 49.998 | 50.000 |
+| copula_horizon_01 | copula_oas_s0.5 | 50.007 | 49.997 | 50.002 |
+| copula_horizon_01 | copula_oas_s1.0 | 50.016 | 49.996 | 50.006 |
 
-Status: running. Full four-metric vectors, raw metrics, model audits and provenance hashes are in HORIZON_BATCH_RESULTS.json.
+Status: completed. Full four-metric vectors, raw metrics, model audits and provenance hashes are in HORIZON_BATCH_RESULTS.json.
 No new prospective export or official submission. The >72 objective remains unfinished.

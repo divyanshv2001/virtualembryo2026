@@ -1,10 +1,12 @@
 """Normal-mixture slope shrinkage adaptation; not ashr or embryo inference."""
 import numpy as np
 from scipy.special import logsumexp, ndtr
+from scipy.optimize import minimize
 from annotation_trend import AnnotationTrend
 
 
-def shrink_normal_effects(effect,se):
+def shrink_normal_effects(effect,se,solver='em'):
+    if solver not in ['em','polished']:raise ValueError('Unknown mixture optimizer')
     effect=np.asarray(effect,float);se=np.asarray(se,float)
     if effect.shape!=se.shape or not np.isfinite(effect).all() or not np.isfinite(se).all() or (se<=0).any():
         raise ValueError('Finite effects and strictly positive standard errors required')
@@ -13,7 +15,7 @@ def shrink_normal_effects(effect,se):
     loglik=-.5*(np.log(2*np.pi*variance)+effect[:,None]**2/variance)
     pi=np.ones(len(scales))/len(scales);history=[];converged=False
     penalty=np.array([9.,0.,0.,0.,0.,0.,0.])
-    for iteration in range(1000):
+    for iteration in range(1000 if solver=='em' else 100):
         lp=loglik+np.log(np.maximum(pi,1e-300))
         normalizer=logsumexp(lp,axis=1)
         weights=np.exp(lp-normalizer[:,None])
@@ -23,6 +25,22 @@ def shrink_normal_effects(effect,se):
         if np.max(np.abs(updated-pi))<1e-7:
             pi=updated;converged=True;break
         pi=updated
+    optimizer_audit={}
+    if solver=='polished':
+        maximum=loglik.max(1);likelihood=np.exp(loglik-maximum[:,None])
+        def objective(weights):
+            denominator=np.maximum(likelihood@weights,1e-300)
+            loss=-(np.log(denominator)+maximum).mean()-9/len(effect)*np.log(weights[0])
+            gradient=-(likelihood/denominator[:,None]).mean(0)
+            gradient[0]-=9/len(effect)/weights[0]
+            return loss,gradient
+        result=minimize(objective,pi,method='SLSQP',jac=True,bounds=[(1e-12,1.)]*len(pi),
+            constraints=[{'type':'eq','fun':lambda weights:weights.sum()-1,'jac':lambda weights:np.ones(len(weights))}],
+            options={'maxiter':500,'ftol':1e-10})
+        pi=result.x/result.x.sum()
+        converged=bool(result.success)
+        optimizer_audit={'polish_success':bool(result.success),'polish_iterations':int(result.nit),
+            'polish_message':str(result.message),'penalized_mean_negative_loglikelihood':float(result.fun)}
     lp=loglik+np.log(np.maximum(pi,1e-300));weights=np.exp(lp-logsumexp(lp,axis=1)[:,None])
     shrink=scales[None,:]**2/variance
     means=effect[:,None]*shrink
@@ -34,11 +52,11 @@ def shrink_normal_effects(effect,se):
     return (weights*means).sum(1),np.minimum(p_le_zero,p_ge_zero),{
         'mixture_scales':scales.tolist(),'mixture_weights':pi.tolist(),'iterations':iteration+1,
         'converged':converged,'penalized_objective_monotone':bool(np.all(np.diff(history)>=-1e-6)),
-        'null_penalty':9,'scope':'Fixed normal-mixture grid and penalized EM; conditional cell-based uncertainty, not calibrated embryo false-sign probabilities.'}
+        'null_penalty':9,'solver':solver,**optimizer_audit,'scope':'Fixed normal-mixture grid and penalized EM; conditional cell-based uncertainty, not calibrated embryo false-sign probabilities.'}
 
 
 class EmpiricalBayesTrend(AnnotationTrend):
-    def __init__(self,x,stages,source_labels,cutoff,donors,donor_labels,panel,symbols,features,error_multiplier=1.):
+    def __init__(self,x,stages,source_labels,cutoff,donors,donor_labels,panel,symbols,features,error_multiplier=1.,solver='em'):
         super().__init__(x,stages,source_labels,cutoff,donors,donor_labels,panel,symbols,features)
         if error_multiplier not in [1.,2.]:raise ValueError('Outside declared uncertainty ablation')
         recent=np.unique(stages[stages<=cutoff])[-3:];center=recent-recent.mean();denom=(center*center).sum()
@@ -64,7 +82,7 @@ class EmpiricalBayesTrend(AnnotationTrend):
                 valid[k,start:start+len(genes)]=np.min(np.stack(counts),axis=0)>=10
         self.positive_slope[:]=0;self.sign_risk=np.ones_like(effects)
         if valid.any():
-            shrunk,risk,audit=shrink_normal_effects(effects[valid],errors[valid])
+            shrunk,risk,audit=shrink_normal_effects(effects[valid],errors[valid],solver=solver)
             self.positive_slope[valid]=shrunk;self.sign_risk[valid]=risk
         else:audit={'converged':True,'no_supported_effects':True}
         self.fit_audit={**audit,'supported_effects':int(valid.sum()),'error_multiplier':error_multiplier,

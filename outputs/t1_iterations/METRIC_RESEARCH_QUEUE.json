@@ -208,7 +208,7 @@
         "de_score",
         "de_direction"
       ],
-      "status": "running",
+      "status": "implemented_evaluated_repaired_no_meaningful_gain",
       "sources": [
         {
           "title": "Stephens2017 supplement",
@@ -220,14 +220,17 @@
       "implementation": "empirical_bayes_trend.py and empirical_bayes_horizon.py",
       "run": "empirical_bayes_horizon_01",
       "declared_experiment_and_result": null,
-      "next_action": "Finish all6 candidates across2 matched one-day folds; compare full four-metric vectors to archived controls.",
+      "next_action": "Optimizer repair complete; sign-gated variants remain near-persistence and ungated variants regress. Preserve both histories. Further uncertainty/model alternatives remain open.",
       "research_family_exhausted": false,
       "constraints": [
         "All learner inputs <= fold cutoff; challenge calibration <=E8.5",
         "Full official 32285-gene evaluator unchanged",
         "No official submissions or new Jev calls",
         "Cell resampling uncertainty is not independent embryo uncertainty"
-      ]
+      ],
+      "report": "private/empirical_bayes_horizon_01/report.json",
+      "repair_run": "empirical_bayes_repair_01",
+      "repair_report": "private/empirical_bayes_repair_01/report.json"
     },
     {
       "id": "direction_neural_ode",
@@ -235,7 +238,7 @@
         "de_direction",
         "de_score"
       ],
-      "status": "queued_method_review",
+      "status": "author_code_reviewed_dependencies_verified",
       "sources": [
         {
           "title": "scNODE",
@@ -247,14 +250,16 @@
       "implementation": null,
       "run": null,
       "declared_experiment_and_result": null,
-      "next_action": "Read full methods and author code; assess CPU runtime and count/log likelihood. Earlier linear latent failure does not exhaust neural ODEs.",
+      "next_action": "Implement and test NEXT_NEURAL_ODE_EXPERIMENT.json, then freeze actual hashes before any training. CPU torch/torchdiffeq/geomloss imports and gradient/solver checks passed.",
       "research_family_exhausted": false,
       "constraints": [
         "All learner inputs <= fold cutoff; challenge calibration <=E8.5",
         "Full official 32285-gene evaluator unchanged",
         "No official submissions or new Jev calls",
         "Cell resampling uncertainty is not independent embryo uncertainty"
-      ]
+      ],
+      "method_specification": "NEXT_NEURAL_ODE_EXPERIMENT.json",
+      "paper_access": "Full methods fetch blocked this turn; author model, solver, training, losses and benchmark read."
     },
     {
       "id": "distribution_dynamic_ot",
@@ -1993,31 +1998,26 @@
       "metrics": [
         "variogram"
       ],
-      "status": "queued_method_review",
+      "status": "implemented_evaluated_no_meaningful_gain",
       "sources": [
         {
-          "title": "Ledoit-Wolf covariance",
-          "url": "https://www.ledoit.net/Well-conditioned2004.pdf",
-          "coverage": "abstract"
-        },
-        {
-          "title": "Variogram scoring rules",
-          "url": "https://repository.library.noaa.gov/view/noaa/22327/noaa_22327_DS1.pdf",
-          "coverage": "abstract and correlation experiment discussion"
+          "url": "https://arxiv.org/html/0907.4698v1",
+          "coverage": "Gaussian iid assumptions, OAS derivation III-C and simulations IV; sklearn shrinkage documentation also read."
         }
       ],
       "hypothesis_and_limits": "Regularize historical covariance and forecast joint dependence. Static covariance estimation alone does not forecast development.",
-      "implementation": null,
-      "run": null,
+      "implementation": "covariance_trend.py and covariance_horizon.py",
+      "run": "covariance_horizon_01",
       "declared_experiment_and_result": null,
-      "next_action": "Review shrinkage formula; implement low-rank PSD covariance dynamics with zero/protected-gene guards and rolling folds.",
+      "next_action": "Six variants evaluated on two folds; max mean about50.03, second-fold variogram worsens. No promotion; broader covariance family remains open.",
       "research_family_exhausted": false,
       "constraints": [
         "All learner inputs <= fold cutoff; challenge calibration <=E8.5",
         "Full official 32285-gene evaluator unchanged",
         "No official submissions or new Jev calls",
         "Cell resampling uncertainty is not independent embryo uncertainty"
-      ]
+      ],
+      "report": "private/covariance_horizon_01/report.json"
     },
     {
       "id": "css_direct_variogram",
@@ -2206,26 +2206,26 @@
         "variogram",
         "mmd_u"
       ],
-      "status": "queued_method_review",
+      "status": "implemented_evaluated_no_meaningful_gain",
       "sources": [
         {
-          "title": "Ensemble copula coupling",
-          "url": "https://arxiv.org/abs/1302.7149",
-          "coverage": "abstract"
+          "url": "https://arxiv.org/html/1302.7149v2",
+          "coverage": "Sections4.1-4.3 rank coupling and5.4 experiments, read again for positive-only stable-tie adaptation."
         }
       ],
       "hypothesis_and_limits": "Separate marginal calibration and joint rank dependence, adapting ensemble methods to gene expression.",
-      "implementation": null,
-      "run": null,
+      "implementation": "copula_trend.py and copula_horizon.py",
+      "run": "copula_horizon_01",
       "declared_experiment_and_result": null,
-      "next_action": "Review full method, handle zero ties, conserved mapped mass and protected genes; do not import future ranks.",
+      "next_action": "Three rank-coupling strengths evaluated on both folds. No meaningful gain; projection limits are explicit. Broader copula family remains open.",
       "research_family_exhausted": false,
       "constraints": [
         "All learner inputs <= fold cutoff; challenge calibration <=E8.5",
         "Full official 32285-gene evaluator unchanged",
         "No official submissions or new Jev calls",
         "Cell resampling uncertainty is not independent embryo uncertainty"
-      ]
+      ],
+      "report": "private/copula_horizon_01/report.json"
     },
     {
       "id": "integration_whole_cells",
@@ -4363,7 +4363,7 @@
         "mmd_u",
         "variogram"
       ],
-      "status": "running",
+      "status": "implemented_evaluated",
       "sources": [
         {
           "url": "https://arxiv.org/html/1302.7149v2",
@@ -4376,11 +4376,11 @@
       ],
       "scope": "Adaptation, not faithful ECC. Three positive-quantile strengths, global and four-state conditional, two one-day associated-cohort folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "975290e4f2df51b17bf989f0fa086a3c7d6ffa211f83a2906b420cae473f8130",
+      "results_report_sha256": "80c788648c064565daf652d4cc4487efc2c05793fb73543a5a34d729cb74cc9e",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Complete the empirical Bayes slope/sign-gate batch, preserve all four scores, and proceed to the next declared viable method. Keep official quota unused."
+      "next_action": "Implement and freeze NEXT_NEURAL_ODE_EXPERIMENT.json after CPU dependency checks; continue remaining neural/transport/growth paths and meaningful ablations. Covariance, copula and repaired empirical Bayes pilots are recorded; no candidate is ready for official use."
     },
     {
       "id": "annotation_conditioned_temporal",
@@ -4404,7 +4404,7 @@
       ],
       "scope": "Heuristic adaptation to normalized abundance; not muscat replication. Observed annotations group past cells. Four expression/detection ablations, source support20 vs100, two one-day folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "975290e4f2df51b17bf989f0fa086a3c7d6ffa211f83a2906b420cae473f8130",
+      "results_report_sha256": "80c788648c064565daf652d4cc4487efc2c05793fb73543a5a34d729cb74cc9e",
       "limitations": [
         "Published annotation may derive from joint stages; retrospective diagnostic only.",
         "Capture IDs do not establish independent embryos; cell-based errors are shrinkage heuristics.",
@@ -4413,7 +4413,7 @@
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Complete the empirical Bayes slope/sign-gate batch, preserve all four scores, and proceed to the next declared viable method. Keep official quota unused."
+      "next_action": "Implement and freeze NEXT_NEURAL_ODE_EXPERIMENT.json after CPU dependency checks; continue remaining neural/transport/growth paths and meaningful ablations. Covariance, copula and repaired empirical Bayes pilots are recorded; no candidate is ready for official use."
     },
     {
       "id": "shared_gene_program_dynamics",
@@ -4440,11 +4440,11 @@
       "scope": "Shared SVD profile directions versus cell-level NMF median consensus usage dynamics. Neither is a faithful cNMF reproduction or certified biological-program recovery.",
       "frozen_trials": "SVD ranks2/4/8 with detection0/.5; NMF ranks8/16 with detection0/.5,3 fixed seeds and200 iterations. Rank16 optimizer repair800 iterations. Two matched one-day development folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "975290e4f2df51b17bf989f0fa086a3c7d6ffa211f83a2906b420cae473f8130",
+      "results_report_sha256": "80c788648c064565daf652d4cc4487efc2c05793fb73543a5a34d729cb74cc9e",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Complete the empirical Bayes slope/sign-gate batch, preserve all four scores, and proceed to the next declared viable method. Keep official quota unused."
+      "next_action": "Implement and freeze NEXT_NEURAL_ODE_EXPERIMENT.json after CPU dependency checks; continue remaining neural/transport/growth paths and meaningful ablations. Covariance, copula and repaired empirical Bayes pilots are recorded; no candidate is ready for official use."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

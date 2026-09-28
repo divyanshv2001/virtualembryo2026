@@ -1,0 +1,65 @@
+{
+  "status": "specified_not_implemented_or_executed",
+  "method": "scNODE-inspired VAE plus neural ODE with Sinkhorn observation/dynamic losses",
+  "source_review": {
+    "paper": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11373355/",
+    "paper_access": "Full PMC and journal fetch blocked; abstract and author implementation reviewed. Do not claim full paper review.",
+    "author_code": [
+      "https://github.com/rsinghlab/scNODE",
+      "https://raw.githubusercontent.com/rsinghlab/scNODE/main/model/dynamic_model.py",
+      "https://raw.githubusercontent.com/rsinghlab/scNODE/main/model/diff_solver.py",
+      "https://raw.githubusercontent.com/rsinghlab/scNODE/main/model/layer.py",
+      "https://raw.githubusercontent.com/rsinghlab/scNODE/main/optim/running.py",
+      "https://raw.githubusercontent.com/rsinghlab/scNODE/main/optim/loss_func.py",
+      "https://raw.githubusercontent.com/rsinghlab/scNODE/main/benchmark/1_SingleCell_scNODE.py"
+    ]
+  },
+  "implementation_required": "Implement tested CPU adaptation; capture exact author reference commit/source hashes before claiming reproducibility. Preserve source license if vendoring code. Do not execute author benchmark unchanged because it loads its own datasets and plots.",
+  "inputs": "associated_prepared_01; same full-panel source-cohort diagnostic with explicit missing-gene placeholders",
+  "folds": [
+    [
+      8.0,
+      9.0
+    ],
+    [
+      8.25,
+      9.25
+    ]
+  ],
+  "proposed_feature_budget": 384,
+  "latent_dimensions": 16,
+  "encoder_hidden": [
+    128
+  ],
+  "decoder_hidden": [
+    128
+  ],
+  "drift_hidden": [
+    64
+  ],
+  "candidate_regularization": [
+    0.0,
+    1.0
+  ],
+  "proposed_pretrain_steps": 200,
+  "proposed_joint_steps": 1000,
+  "proposed_batch_size": 32,
+  "past_truth_batch_size": 200,
+  "ode_solver": "Euler fixed physical quarter-day grid",
+  "forecast_strengths": [
+    0.25,
+    0.5,
+    1.0
+  ],
+  "past_only_rule": "Fit feature selection, normalization, stochastic encoder, dynamics and full-gene decoder on all permitted prepared rows only. No3000-cell training fit cap for this pilot; note prepared cohort is a sampled subset of the430339-cell raw atlas. Predictions freeze before target scoring.",
+  "full_panel_adapter": "Past-only ridge full-gene positive-log decoder; donor-relative changes, protected genes, fixed donor row count and cov/mass/finite guards. This is an adaptation, not scNODE reproduction.",
+  "controls": [
+    "matched persistence",
+    "archived failed unit16",
+    "archived384-gene rank8 NMF"
+  ],
+  "validity": "Complete four actual metrics with unchanged anchors. Save every outcome and failures; require consistent meaningful gains on both folds before Monte Carlo promotion.",
+  "freeze_requirement": "This is a method specification. Freeze actual code/data/dependency hashes, configuration and resource budget before any scored training run.",
+  "submissions_allowed": 0,
+  "jev_requests_allowed": 0
+}

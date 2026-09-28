@@ -9,7 +9,7 @@ def main():
     runs={};running=[]
     for name in ['matched_horizon_audit_01','quantile_horizon_pilot_01','state_quantile_horizon_pilot_01',
                  'annotation_horizon_pilot_01','annotation_support_pilot_01',
-                 'program_horizon_pilot_01','cell_program_horizon_pilot_01','cell_program_repair_01','cell_program_feature_pilot_01','empirical_bayes_horizon_01']:
+                 'program_horizon_pilot_01','cell_program_horizon_pilot_01','cell_program_repair_01','cell_program_feature_pilot_01','empirical_bayes_horizon_01','covariance_horizon_01','empirical_bayes_repair_01','copula_horizon_01']:
         folder=HERE/'private'/name;path=folder/'report.json'
         if not path.exists():
             running.append(name);continue
@@ -56,6 +56,9 @@ def main():
         'The initial16-factor cell-level fit hit the200-iteration budget. A separate frozen optimizer repair '
         'raises only that budget to800 for rank16, retaining source cells, genes, random seeds, tolerance, '
         'decoder and evaluator panels. Higher iteration count is not assumed to improve forecast accuracy.','',
+        'The2048-gene coverage ablation converged but regressed. Empirical Bayes pilots tested normal-mixture slope shrinkage with error inflation1/2 and sign gates none/.1/.25. Initial EM fits hit1000 iterations; a separate100-step EM plus convex-simplex SLSQP repair converged with scientific settings unchanged. Neither produced meaningful forecast gains.','',
+        'Covariance pilots used8 past-fitted PCA dimensions and compared OAS with empirical covariance at three strengths. Positive-margin rank coupling used those covariance proposals, fixed zero masks and exact per-type margins before factor clipping and per-cell mass conservation. Projection changes final margins; all actual metrics remain required. Neither branch meaningfully exceeded persistence.','',
+        'Sources: [Stephens supplement](https://stephenslab.uchicago.edu/assets/papers/Stephens2017-supplement.pdf), sectionsS.1-S.2; [Chen et al.](https://arxiv.org/html/0907.4698v1), Gaussian assumptions, OAS derivationIII-C and simulationIV; [sklearn covariance documentation](https://scikit-learn.org/stable/modules/covariance.html). These motivate estimator adaptations and do not establish developmental forecasting accuracy.','',
         'Literature: [Schefzik, Thorarinsdottir and Gneiting (2013)](https://arxiv.org/html/1302.7149v2), '
         'methods 4.1–4.3 and experiments 5.4 read. ECC separates marginal calibration from rank dependence. '
         'Its weather experiments found benefits dependent on the dependence structure. This implementation adapts that separation '
@@ -81,7 +84,7 @@ def main():
     state.update(updated_utc=now(),local_process_running=bool(running))
     state['horizon_batch']={'status':status,'running':running,'report':'outputs/t1_iterations/HORIZON_BATCH_RESULTS.json',
         'report_sha256':digest(HERE/'HORIZON_BATCH_RESULTS.json')}
-    state['next_experiment']='Complete the empirical Bayes slope/sign-gate batch, preserve all four scores, and proceed to the next declared viable method. Keep official quota unused.' if running else 'Continue queue coverage: low-rank covariance dynamics and remaining neural/transport/copula paths require method review and frozen experiments. No candidate is ready for official use.'
+    state['next_experiment']='Complete the current positive-margin copula batch, preserve all four scores, and proceed to the next declared viable method. Keep official quota unused.' if running else 'Implement and freeze NEXT_NEURAL_ODE_EXPERIMENT.json after CPU dependency checks; continue remaining neural/transport/growth paths and meaningful ablations. Covariance, copula and repaired empirical Bayes pilots are recorded; no candidate is ready for official use.'
     path.write_text(json.dumps(state,indent=2))
     path=HERE/'METRIC_RESEARCH_QUEUE.json';queue=json.loads(path.read_text())
     entry={'id':'positive_quantile_temporal','metrics':['de_score','de_direction','mmd_u','variogram'],
