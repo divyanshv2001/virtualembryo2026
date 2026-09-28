@@ -58,3 +58,7 @@ outputs/research_workflow/.venv/Scripts/python.exe -m unittest discover -s outpu
 ```
 
 The executed candidate passed local format checks: 2,000 × 32,285, float32, exact panel, finite nonnegative values and no coordinates. Median sign agreement among active genes was 0.635; median distance-based matching trust was 0.755. Neither statistic measures prediction accuracy. Its unchanged zero support also prevents new gene activation, a deliberate limitation to test rather than a biological assertion. Actual plan, representation, execution events and checksum-linked report are private artifacts. The user subsequently supplied scores of 39.6 DE recovery, 52.4 direction, 49.9 MMD and 47.7 variogram: a derived weighted total of 47.51, below the best reported 48.1. A portal headline was not supplied. See OPTIMIZATION.md for the resulting priorities.
+
+## Distribution constraints and rolling forecasts
+
+The latest [distribution audit and rolling results](CONSTRAINED_RESULTS.md) supersede historical upload suggestions above. Two whole-atlas batches completed five time splits each, preserving donor zero support and constraining expression changes. No model passed promotion; submission quota remains unused. Code and results are reproducible, with actual execution histories retained privately.

@@ -1,5 +1,6 @@
 """Decode the author-linked UCSC count matrix into a bounded staged sample."""
 import json
+import argparse
 import struct
 import sys
 import zlib
@@ -28,19 +29,35 @@ def decode_record(compressed, cells):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--round', default='extended_prepared_02')
+    parser.add_argument('--domain', choices=['whole', 'cardiac'], default='whole')
+    args = parser.parse_args()
+    if not args.round.replace('_', '').isalnum(): raise ValueError('Invalid round')
+    OUT = HERE/'private'/args.round
     if OUT.exists(): raise SystemExit('Prepared dataset exists; preserve it.')
     manifest = json.loads((SOURCE/'manifest.json').read_text())
     for record in manifest['files']:
         if digest(SOURCE/record['file'])!=record['sha256']: raise ValueError('Source changed')
     OUT.mkdir(parents=True)
     events = OUT/'events.jsonl'
-    stage_values = np.arange(6.5,9.51,.25)
+    stage_values = np.arange(7.5 if args.domain == 'cardiac' else 6.5,9.51,.25)
     plan = {'created_before_execution_utc':now(),'seed':20260928,'cells_per_stage':1000,
         'allowed_stages':stage_values.tolist(),'ambiguous_stage_policy':'Exclude mixed/unknown staging before sample selection.',
         'sample_selection':'Uniform seeded sample within each declared stage; metadata labels and supplied embeddings are not model inputs.',
         'normalization':'Require count-valued source; log1p(10000 * counts / full indexed-gene library sum).',
         'development_training_max_stage':7.5,'development_target':8.5,'final_training_max_stage':8.5,'final_target':9.5,
         'source_manifest':manifest,'code_sha256':digest(Path(__file__)),'submissions_used':0}
+    cardiac_labels = ['Anterior cardiopharyngeal progenitors', 'Cardiomyocytes FHF 1',
+        'Cardiomyocytes FHF 2', 'Cardiomyocytes SHF 1', 'Cardiomyocytes SHF 2',
+        'Cardiopharyngeal progenitors', 'Cardiopharyngeal progenitors FHF',
+        'Cardiopharyngeal progenitors SHF', 'Endocardium', 'Epicardium']
+    plan['domain'] = args.domain
+    if args.domain == 'cardiac':
+        plan.update(domain_labels=cardiac_labels,
+            sample_selection='Uniform seeded sample of up to 1000 cells per stage within the fixed cardiac annotation set. All smaller stage pools retained. Labels restrict the cohort only; not learner features.',
+            annotation_caveat='Published annotations may have used a jointly analyzed atlas; this is cohort selection, not a fully independent dissection replica.',
+            development_training_max_stage=8., development_target=9.)
     (OUT/'plan.json').write_text(json.dumps(plan,indent=2),encoding='utf-8')
     (OUT/'executed_source.py').write_bytes(Path(__file__).read_bytes())
     append_event(events,'preparation_plan_frozen',sha256=digest(OUT/'plan.json'))
@@ -48,16 +65,17 @@ def main():
     if metadata.cellId.duplicated().any(): raise ValueError('Duplicate cells')
     numerical = pd.to_numeric(metadata.stage.astype(str).str.replace('E','',regex=False),errors='coerce')
     known = numerical.notna().to_numpy()
-    if not np.isin(numerical[known],stage_values).all(): raise ValueError('Unexpected/protected stage; do not fit')
+    if not np.isin(numerical[known],np.arange(6.5,9.51,.25)).all(): raise ValueError('Unexpected/protected stage; do not fit')
     index = json.loads((SOURCE/'exprMatrix.json').read_text())
     genes = sorted([(k,int(v[0]),int(v[1])) for k,v in index.items() if '|' in k],key=lambda r:r[1])
     if set(k for k in index if '|' not in k)!={'_range'} or index['_range']!=[0,0]:
         raise ValueError('Unexpected index metadata')
     rng = np.random.default_rng(plan['seed']); rows = []
     for stage in stage_values:
-        pool = np.flatnonzero(numerical.to_numpy()==stage)
-        if len(pool)<plan['cells_per_stage']: raise ValueError('Insufficient cells at declared stage')
-        rows.extend(rng.choice(pool,plan['cells_per_stage'],replace=False).tolist())
+        domain = metadata.celltype_extended_atlas.isin(cardiac_labels).to_numpy() if args.domain == 'cardiac' else np.ones(len(metadata), dtype=bool)
+        pool = np.flatnonzero((numerical.to_numpy()==stage) & domain)
+        if not len(pool) or (args.domain == 'whole' and len(pool)<plan['cells_per_stage']): raise ValueError('Insufficient cells at declared stage')
+        rows.extend(rng.choice(pool,min(len(pool),plan['cells_per_stage']),replace=False).tolist())
     rows = np.asarray(rows,dtype=np.int64)
     selected = metadata.iloc[rows].copy()
     selected['numeric_stage'] = numerical.iloc[rows].to_numpy()
@@ -83,6 +101,8 @@ def main():
     matrix.flush(); del matrix
     np.save(OUT/'raw_library_sizes.npy',libraries)
     report = {'shape':[len(rows),len(genes)],'stages':stage_values.tolist(),
+        'domain':args.domain, 'domain_labels':cardiac_labels if args.domain == 'cardiac' else None,
+        'selected_stage_counts':selected.numeric_stage.value_counts().sort_index().to_dict(),
         'excluded_ambiguous_stage_cells':int((~known).sum()),'source_stage_counts':metadata.stage.value_counts().to_dict(),
         'raw_library_median':float(np.median(libraries)),'normalization_target':10000,
         'expression_sha256':digest(OUT/'expression.npy'),'metadata_sha256':digest(OUT/'selected_metadata.csv'),
