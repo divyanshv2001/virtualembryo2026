@@ -1,0 +1,13 @@
+# Broad source-cohort coverage experiment
+
+Status: completed; best broad-cohort mean 51.596, below incumbent 55.312. Variant rejected. The >72 readiness gate remains unmet.
+
+Past E8.5 annotations reveal a substantial cohort mismatch. Challenge Blood is 266/16,787 (1.58%), while Erythroid alone is 1,121/3,000 (37.37%) in the prior associated source sample. Challenge Foregut is 2,405/16,787 (14.33%), while the source Foregut annotation is 40/3,000 (1.33%). Labels differ across datasets; these are warning signs, not a validated one-to-one phenotype comparison. Many neural and somitic source labels were excluded by the original cohort list.
+
+The new preparation uses ten fixed broad source tissue proxies, with equal caps of 300 per group per stage and all smaller pools retained. It adds neural/somitic/extraembryonic classes and reduces erythroid dominance without learning sample weights from challenge or future target counts. Source labels restrict sampling only and may come from jointly processed atlas annotations. Equal caps change capture composition; they do not measure proliferation or guarantee correct biological composition. It is a coverage/reweighting ablation, not a matched heart dissection.
+
+The prepared matrix has 24,210 cells and 27,669 atlas genes across E7.5-E9.5. Actual group counts, input hashes and the frozen sampling plan are in BALANCED_COHORT_RESULTS.json. Learners use only rows at or before E8.5; later atlas rows are excluded. Gene mapping protects 5,510 missing/ambiguous official genes. Per-cell normalization remains log1p abundance at library target 10,000. The raw source was already downloaded and verified; no additional API or download was needed.
+
+A legacy display field in the first preparation report incorrectly listed only cardiac labels. repair_balanced_metadata.py corrected that field from the actual frozen proxy_groups plan. The original report, executed source, plan and events remain preserved; expression, genes and sample rows were unchanged. The learner freezes the corrected report hash and all matrix/metadata/gene hashes before fitting.
+
+The frozen grid repeats 4/8/16/32 states with standard/unit feature scaling, identity alignment, bounded expression/detection and covariance guards, plus measured persistence. Three unchanged full-panel challenge panels assessed all four metrics; floor/ceiling calibration anchors match exactly. This is reused E9.5 development, not a fresh blind test. The comparison with the prior incumbent uses verified identical calibration panels. No final E10.5 refit/export, submissions or Jev calls. Earlier same-configuration temporal and stability evidence are required before promotion.

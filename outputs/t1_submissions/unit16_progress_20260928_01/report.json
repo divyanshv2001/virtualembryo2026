@@ -1,0 +1,81 @@
+{
+  "plan_sha256": "706f9cd3ed533a8db9f073c26147355637f0ffe059430eaa6485b35589231d76",
+  "artifact": "T1_val__unit16_progress_20260928_01.h5ad",
+  "format_validation": {
+    "passed": true,
+    "shape": [
+      1500,
+      32285
+    ],
+    "dtype": "float32",
+    "panel_exact_order": true,
+    "finite_nonnegative": true,
+    "coordinates_absent": true,
+    "obs_columns": [],
+    "sha256": "e7f296fd4f352493cbb88546360869b36cc915398b1941945ea3015fecb05e4a",
+    "bytes": 17010705,
+    "scope": "Local format validation only; not official predictive score or competition eligibility"
+  },
+  "forecast_audit": {
+    "mapping": {
+      "mapped_genes": 26775,
+      "protected_genes": 5510,
+      "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+    },
+    "guard_applied": true,
+    "population_mix": 1.0,
+    "expression_strength_used": 1.0,
+    "trusted_donor_fraction": 0.388,
+    "effective_sample_size": 1500.0000000000002,
+    "unique_donors": 1500,
+    "covariance_change_vs_reference": 0.0371310883110232,
+    "state_support": [
+      237,
+      0,
+      0,
+      152,
+      528,
+      0,
+      53,
+      0,
+      387,
+      407,
+      0,
+      48,
+      0,
+      151,
+      0,
+      10
+    ],
+    "alignment": "identity",
+    "covariance_limit": 0.4,
+    "feature_scaling": "unit",
+    "expression_factor_cap": 1.25,
+    "detection_strength": 0.5,
+    "maximum_probability_change": 0.02,
+    "attempted_additions": 6846,
+    "attempted_deletions": 7423,
+    "detection_candidate_covariance_change": 0.039761085058490034,
+    "detection_guard_rejected": false,
+    "actual_additions": 6846,
+    "actual_deletions": 7423
+  },
+  "protected_gene_count": 5510,
+  "protected_genes_exact": true,
+  "mapped_mass_max_relative_error": 4.503351275358295e-08,
+  "local_development_mean": 55.312268380984996,
+  "local_stability_pilot": {
+    "replicates": 16,
+    "mean": 55.28130592055242,
+    "empirical_2_5_percentile": 52.60162180056054
+  },
+  "readiness_gate_passed": false,
+  "official_score": null,
+  "uploaded": false,
+  "evidence_scope": "Trajectory records this export run only, not the complete historical Agent Team research workflow.",
+  "limitations": [
+    "Repeated local development and no independent embryo interval.",
+    "No same-configuration temporal promotion or >72 stability pass.",
+    "E10.5 extrapolation remains unverified by hidden ground truth."
+  ]
+}

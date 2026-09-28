@@ -1,0 +1,45 @@
+{
+  "created_before_training_utc": "2026-09-28T16:18:21.834182+00:00",
+  "purpose": "User-requested progress submission",
+  "authorization": "User asked to generate a submission file after the experimental batch.",
+  "readiness_gate_passed": false,
+  "official_score": null,
+  "upload_authorized": false,
+  "gate_override": "Export only; does not waive local >72, temporal or stability promotion gates.",
+  "source_dataset": "associated_prepared_01",
+  "source_max_stage": 9.5,
+  "observed_challenge_stage": 9.5,
+  "forecast_target_stage": 10.5,
+  "config": {
+    "states": 16,
+    "alignment": "identity",
+    "feature_scaling": "unit",
+    "covariance_limit": 0.4,
+    "expression_factor_cap": 1.25,
+    "detection": 0.5,
+    "expression": 1.0,
+    "detection_cap": 0.02
+  },
+  "donor_count": 1500,
+  "donor_seed": 20260928,
+  "selection": "Retain previous incumbent: broadened source and importance variants underperformed on identical local panels.",
+  "input_sha256": {
+    "observed_E9.5": "0296e0043842f944a663f3c11ac1542d1bbee733c1cd657bd56f75af65958361",
+    "panel_file": "2aeae4cd284933956242bbc9c5ab4f565c1d2acc7cc3fd3037977e4bce8be4bf",
+    "index": "26830523bcba077fe27481ee53cddcf49c6b35cf5bdd7acabc5f6b7c94ea7f78",
+    "prepared_report": "1acd8a635f76c9f9ac89a1186f116db91309b007f448a8d11ec612627ab5bca4"
+  },
+  "validation_report_sha256": "5ea63a67e250dddcf41d92b437eb28099f9d8b2a5da8720ab743a668a241529e",
+  "stability_report_sha256": "cb32e940341bda2cf9b572dea6a613d46a477463ac832660f6cc387de427934a",
+  "source_sha256": {
+    "export_progress_submission.py": "d7395beb6dd373988405b377c47b4a909dbb63e11ea8cd60ae63fbc05c44ee88",
+    "state_search.py": "3b40c7701d820768849b7a779c8dfcd87360ec0860048c9e2f6f4b74e1bdf4e9",
+    "detection_transfer.py": "fc6871e88f75a7fc9cbc2f266d2cb2185761caf3e1b56c1d02235e594df43b84",
+    "challenge_transfer.py": "5b56e82e96eefc1171fca0d9da6384c281bb1059fa00162b4d0abf689dfac24b",
+    "robust_population.py": "86ae5926124b3704ed46596781a487735405291531c38d956cd7db359c8d56e6",
+    "constrained_forecast.py": "657fc87b9cf296218e320ad9de85d66cc96ffd7d58dd7dc3cc7f085a81042e4d",
+    "transfer_genes.py": "94a405564d769d317fd5d0813c0e677107df289683d123105eca4dba746a0efd"
+  },
+  "fit_scope": "Atlas <=E9.5 and observed challenge E9.5 only; no E10.5 truth or hidden scoring anchors.",
+  "score_scope": "Earlier reused E8.5-to-E9.5 local development; not an official E10.5 estimate."
+}

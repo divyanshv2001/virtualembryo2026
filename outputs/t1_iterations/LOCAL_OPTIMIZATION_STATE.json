@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-28T15:32:14.461908+00:00",
+  "updated_utc": "2026-09-28T16:20:37.906763+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,12 +31,14 @@
   },
   "resume_command": null,
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Test explicitly stage-conditioned transitions with historical sign reliability and a count-aware decoder; autonomous transitions are not reliable across stages. Larger batches, wider networks and full published architectures remain untested.",
+  "next_experiment": "Develop a past-only continuous time and tissue-adaptation mechanism; these source-coverage and importance ablations are rejected.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
-  "active_run_path": null,
+  "active_jobs": [
+    "balanced_proxy_state_search_01"
+  ],
+  "active_run_path": "outputs/t1_iterations/private/balanced_proxy_state_search_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -110,5 +112,27 @@
     "challenge_evaluations": 0,
     "one_day_sqrt_best": 49.128697225910514,
     "one_day_state_control": 51.57661564220653
+  },
+  "cohort_coverage_audit": "outputs/t1_iterations/COHORT_COVERAGE_AUDIT.json",
+  "conditioned_pilot_result": {
+    "evaluations": 24,
+    "promoted": false,
+    "one_day_best_new": 50.26251853509057,
+    "one_day_control": 51.57661564220653
+  },
+  "cohort_batch_result": {
+    "report": "outputs/t1_iterations/COHORT_BATCH_RESULTS.json",
+    "report_sha256": "0bc092d874a2ac227f11978fb1c542fb294a9e2f29eddd47993d096409786073",
+    "evaluations": 51,
+    "promoted": false
+  },
+  "progress_export": {
+    "report": "outputs/t1_submissions/unit16_progress_20260928_01/report.json",
+    "report_sha256": "12fd6646ad922c247530490bde05fa9b31ff939c22a1dbbb05471f808b9f7331",
+    "purpose": "User-requested progress; readiness unmet",
+    "future_refit_performed": true,
+    "future_submission_exported": true,
+    "uploaded": false,
+    "artifact_sha256": "e7f296fd4f352493cbb88546360869b36cc915398b1941945ea3015fecb05e4a"
   }
 }

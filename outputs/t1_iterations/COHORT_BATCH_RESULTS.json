@@ -1,0 +1,1256 @@
+{
+  "runs": {
+    "balanced_proxy_state_search_01": {
+      "report_sha256": "30a6659756808ace07f2dfac93f7f0a5332acb03eaa1ad7606051290532c54b9",
+      "identical_calibration_panels": true,
+      "evaluations": 27,
+      "best_development": {
+        "candidate": "unit_k8",
+        "scores": [
+          51.66738296878667,
+          51.75799051070407,
+          51.36253995713482
+        ],
+        "all_calibrations_valid": true,
+        "mean_score": 51.59597114554185,
+        "minimum_score": 51.36253995713482,
+        "development_72_gate": false
+      },
+      "candidates": {
+        "copy_last": {
+          "candidate": "copy_last",
+          "scores": [
+            50.0,
+            50.0,
+            50.0
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 50.0,
+          "minimum_score": 50.0,
+          "development_72_gate": false,
+          "mean_metric_skills_percent": {
+            "de_score": 50.0,
+            "de_direction": 50.0,
+            "mmd_u": 50.0,
+            "variogram": 50.0
+          },
+          "raw_results": [
+            {
+              "candidate": "copy_last",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.028085237368941307,
+                "variogram": 0.001146468217484653
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "copy_last",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.03033139742910862,
+                "variogram": 0.0012352676130831242
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "copy_last",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.02585575543344021,
+                "variogram": 0.0010369947412982583
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            }
+          ]
+        },
+        "standard_k4": {
+          "candidate": "standard_k4",
+          "scores": [
+            50.02651883340885,
+            50.02668063860659,
+            50.02700039437131
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 50.02673328879558,
+          "minimum_score": 50.02651883340885,
+          "development_72_gate": false,
+          "mean_metric_skills_percent": {
+            "de_score": 50.0,
+            "de_direction": 50.0,
+            "mmd_u": 50.08717137327937,
+            "variogram": 50.002909384058874
+          },
+          "raw_results": [
+            {
+              "candidate": "standard_k4",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.028005268424749374,
+                "variogram": 0.0011461916146799922
+              },
+              "local_score": 50.02651883340885,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5008364347248936,
+                "variogram": 0.5000712895831022
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "standard_k4",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.03024623915553093,
+                "variogram": 0.0012352806515991688
+              },
+              "local_score": 50.02668063860659,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5008914831816226,
+                "variogram": 0.49999680715789585
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "standard_k4",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.025780370458960533,
+                "variogram": 0.0010369295487180352
+              },
+              "local_score": 50.02700039437131,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.500887223291865,
+                "variogram": 0.5000191847807682
+              },
+              "calibration_valid": true
+            }
+          ]
+        },
+        "standard_k8": {
+          "candidate": "standard_k8",
+          "scores": [
+            51.518468893197024,
+            51.66610235823915,
+            51.22182729462567
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 51.46879951535394,
+          "minimum_score": 51.22182729462567,
+          "development_72_gate": false,
+          "mean_metric_skills_percent": {
+            "de_score": 51.851746402325794,
+            "de_direction": 52.007694370906165,
+            "mmd_u": 51.235199893234864,
+            "variogram": 50.66689677037749
+          },
+          "raw_results": [
+            {
+              "candidate": "standard_k8",
+              "raw_metrics": {
+                "de_score": 0.04918032786885246,
+                "de_direction": 0.05911826716169453,
+                "mmd_u": 0.026809195056557655,
+                "variogram": 0.0011176900006830692
+              },
+              "local_score": 51.518468893197024,
+              "skills": {
+                "de_score": 0.5161290322580645,
+                "de_direction": 0.5221604527048828,
+                "mmd_u": 0.5136892718527094,
+                "variogram": 0.507527680677103
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "standard_k8",
+              "raw_metrics": {
+                "de_score": 0.0735294117647059,
+                "de_direction": 0.05377078879407172,
+                "mmd_u": 0.02900860644876957,
+                "variogram": 0.0012093842960894108
+              },
+              "local_score": 51.66610235823915,
+              "skills": {
+                "de_score": 0.5242718446601942,
+                "de_direction": 0.5201772326084264,
+                "mmd_u": 0.5142160691658343,
+                "variogram": 0.5064196675774304
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "standard_k8",
+              "raw_metrics": {
+                "de_score": 0.05263157894736842,
+                "de_direction": 0.048084153445902326,
+                "mmd_u": 0.025090867653489113,
+                "variogram": 0.0010166493011638522
+              },
+              "local_score": 51.22182729462567,
+              "skills": {
+                "de_score": 0.5151515151515151,
+                "de_direction": 0.5178931458138759,
+                "mmd_u": 0.509150655778502,
+                "variogram": 0.5060595548567913
+              },
+              "calibration_valid": true
+            }
+          ]
+        },
+        "standard_k16": {
+          "candidate": "standard_k16",
+          "scores": [
+            51.08031631605295,
+            50.95421582998066,
+            50.637236390906956
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 50.89058951231352,
+          "minimum_score": 50.637236390906956,
+          "development_72_gate": false,
+          "mean_metric_skills_percent": {
+            "de_score": 51.17884138644279,
+            "de_direction": 51.87686906307357,
+            "mmd_u": 50.29167939323597,
+            "variogram": 50.19579040981824
+          },
+          "raw_results": [
+            {
+              "candidate": "standard_k16",
+              "raw_metrics": {
+                "de_score": 0.04918032786885246,
+                "de_direction": 0.05735378511906277,
+                "mmd_u": 0.027778908610343933,
+                "variogram": 0.0011380172800272703
+              },
+              "local_score": 51.08031631605295,
+              "skills": {
+                "de_score": 0.5161290322580645,
+                "de_direction": 0.5214706354892706,
+                "mmd_u": 0.5032192879704465,
+                "variogram": 0.5021872991628089
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "standard_k16",
+              "raw_metrics": {
+                "de_score": 0.04411764705882353,
+                "de_direction": 0.04918503430874694,
+                "mmd_u": 0.03001318871974945,
+                "variogram": 0.0012277774512767792
+              },
+              "local_score": 50.95421582998066,
+              "skills": {
+                "de_score": 0.5142857142857142,
+                "de_direction": 0.5183931488416279,
+                "mmd_u": 0.50334751591499,
+                "variogram": 0.5018409387173705
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "standard_k16",
+              "raw_metrics": {
+                "de_score": 0.017543859649122806,
+                "de_direction": 0.04430940108099832,
+                "mmd_u": 0.025670701637864113,
+                "variogram": 0.0010307463817298412
+              },
+              "local_score": 50.637236390906956,
+              "skills": {
+                "de_score": 0.504950495049505,
+                "de_direction": 0.5164422875613084,
+                "mmd_u": 0.5021835779116424,
+                "variogram": 0.5018454744143676
+              },
+              "calibration_valid": true
+            }
+          ]
+        },
+        "standard_k32": {
+          "candidate": "standard_k32",
+          "scores": [
+            50.0,
+            50.0,
+            50.0
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 50.0,
+          "minimum_score": 50.0,
+          "development_72_gate": false,
+          "mean_metric_skills_percent": {
+            "de_score": 50.0,
+            "de_direction": 50.0,
+            "mmd_u": 50.0,
+            "variogram": 50.0
+          },
+          "raw_results": [
+            {
+              "candidate": "standard_k32",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.028085237368941307,
+                "variogram": 0.001146468217484653
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "standard_k32",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.03033139742910862,
+                "variogram": 0.0012352676130831242
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "standard_k32",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.02585575543344021,
+                "variogram": 0.0010369947412982583
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            }
+          ]
+        },
+        "unit_k4": {
+          "candidate": "unit_k4",
+          "scores": [
+            49.93685360139101,
+            49.956959709539994,
+            50.19151352089924
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 50.028442277276746,
+          "minimum_score": 49.93685360139101,
+          "development_72_gate": false,
+          "mean_metric_skills_percent": {
+            "de_score": 50.161512027491405,
+            "de_direction": 49.8043007030584,
+            "mmd_u": 50.13509384953229,
+            "variogram": 49.982304698898055
+          },
+          "raw_results": [
+            {
+              "candidate": "unit_k4",
+              "raw_metrics": {
+                "de_score": -0.016393442622950817,
+                "de_direction": 0.0030232074861097314,
+                "mmd_u": 0.027959052473306656,
+                "variogram": 0.0011466819560155272
+              },
+              "local_score": 49.93685360139101,
+              "skills": {
+                "de_score": 0.4948453608247423,
+                "de_direction": 0.5010875130843686,
+                "mmd_u": 0.501321107445496,
+                "variogram": 0.4999449265149179
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit_k4",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": -0.00873274397356173,
+                "mmd_u": 0.030201662331819534,
+                "variogram": 0.0012364055728539824
+              },
+              "local_score": 49.956959709539994,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.4968699067548203,
+                "mmd_u": 0.5013594063931271,
+                "variogram": 0.4997214924437837
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit_k4",
+              "raw_metrics": {
+                "de_score": 0.03508771929824561,
+                "de_direction": -0.010738427728013963,
+                "mmd_u": 0.025739267468452454,
+                "variogram": 0.0010376654099673033
+              },
+              "local_score": 50.19151352089924,
+              "skills": {
+                "de_score": 0.51,
+                "de_direction": 0.49617160125256315,
+                "mmd_u": 0.5013723016473457,
+                "variogram": 0.49980272200823994
+              },
+              "calibration_valid": true
+            }
+          ]
+        },
+        "unit_k8": {
+          "candidate": "unit_k8",
+          "scores": [
+            51.66738296878667,
+            51.75799051070407,
+            51.36253995713482
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 51.59597114554185,
+          "minimum_score": 51.36253995713482,
+          "development_72_gate": false,
+          "mean_metric_skills_percent": {
+            "de_score": 51.851746402325794,
+            "de_direction": 52.7107570113616,
+            "mmd_u": 51.09149540418411,
+            "variogram": 50.639483354323865
+          },
+          "raw_results": [
+            {
+              "candidate": "unit_k8",
+              "raw_metrics": {
+                "de_score": 0.04918032786885246,
+                "de_direction": 0.07978030543518533,
+                "mmd_u": 0.026962850242853165,
+                "variogram": 0.0011187902418896556
+              },
+              "local_score": 51.66738296878667,
+              "skills": {
+                "de_score": 0.5161290322580645,
+                "de_direction": 0.530376143211054,
+                "mmd_u": 0.5120013063719451,
+                "variogram": 0.5072357195450176
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit_k8",
+              "raw_metrics": {
+                "de_score": 0.0735294117647059,
+                "de_direction": 0.06977291266362062,
+                "mmd_u": 0.029178272932767868,
+                "variogram": 0.0012114031706005335
+              },
+              "local_score": 51.75799051070407,
+              "skills": {
+                "de_score": 0.5242718446601942,
+                "de_direction": 0.5265002061183199,
+                "mmd_u": 0.5123476294519641,
+                "variogram": 0.5059130178841144
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit_k8",
+              "raw_metrics": {
+                "de_score": 0.05263157894736842,
+                "de_direction": 0.06487368701357671,
+                "mmd_u": 0.025152912363409996,
+                "variogram": 0.0010167282307520509
+              },
+              "local_score": 51.36253995713482,
+              "skills": {
+                "de_score": 0.5151515151515151,
+                "de_direction": 0.5244463610114741,
+                "mmd_u": 0.5083959263016138,
+                "variogram": 0.5060357632005841
+              },
+              "calibration_valid": true
+            }
+          ]
+        },
+        "unit_k16": {
+          "candidate": "unit_k16",
+          "scores": [
+            51.4924008997544,
+            51.19317692762383,
+            51.11180595943811
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 51.26579459560545,
+          "minimum_score": 51.11180595943811,
+          "development_72_gate": false,
+          "mean_metric_skills_percent": {
+            "de_score": 51.7058786624004,
+            "de_direction": 52.46758518422383,
+            "mmd_u": 50.51966904074008,
+            "variogram": 50.33263960863681
+          },
+          "raw_results": [
+            {
+              "candidate": "unit_k16",
+              "raw_metrics": {
+                "de_score": 0.06557377049180327,
+                "de_direction": 0.07449201840613745,
+                "mmd_u": 0.02755011059343815,
+                "variogram": 0.0011323740473017097
+              },
+              "local_score": 51.4924008997544,
+              "skills": {
+                "de_score": 0.5217391304347826,
+                "de_direction": 0.5282488833799376,
+                "mmd_u": 0.5056509608112534,
+                "variogram": 0.5036585865024394
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit_k16",
+              "raw_metrics": {
+                "de_score": 0.04411764705882353,
+                "de_direction": 0.06313354989672004,
+                "mmd_u": 0.02977309748530388,
+                "variogram": 0.0012225881218910217
+              },
+              "local_score": 51.19317692762383,
+              "skills": {
+                "de_score": 0.5142857142857142,
+                "de_direction": 0.5238582077442064,
+                "mmd_u": 0.5059030648355766,
+                "variogram": 0.5031243465904258
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit_k16",
+              "raw_metrics": {
+                "de_score": 0.05263157894736842,
+                "de_direction": 0.0584521999986948,
+                "mmd_u": 0.025514965876936913,
+                "variogram": 0.001026201993227005
+              },
+              "local_score": 51.11180595943811,
+              "skills": {
+                "de_score": 0.5151515151515151,
+                "de_direction": 0.5219204644025709,
+                "mmd_u": 0.5040360455753725,
+                "variogram": 0.5031962551662389
+              },
+              "calibration_valid": true
+            }
+          ]
+        },
+        "unit_k32": {
+          "candidate": "unit_k32",
+          "scores": [
+            50.0,
+            50.0,
+            50.0
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 50.0,
+          "minimum_score": 50.0,
+          "development_72_gate": false,
+          "mean_metric_skills_percent": {
+            "de_score": 50.0,
+            "de_direction": 50.0,
+            "mmd_u": 50.0,
+            "variogram": 50.0
+          },
+          "raw_results": [
+            {
+              "candidate": "unit_k32",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.028085237368941307,
+                "variogram": 0.001146468217484653
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit_k32",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.03033139742910862,
+                "variogram": 0.0012352676130831242
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit_k32",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.02585575543344021,
+                "variogram": 0.0010369947412982583
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            }
+          ]
+        }
+      },
+      "promoted": false
+    },
+    "importance_backtest_01": {
+      "report_sha256": "d6d0fe60a071fc5a9514792a6a5c753bb20380c9ba47802b84b08370fb9c78c9",
+      "identical_calibration_panels": true,
+      "evaluations": 24,
+      "best_development": {
+        "candidate": "previous_incumbent",
+        "scores": [
+          55.479838365606724,
+          56.2579898743899,
+          54.198976902958385
+        ],
+        "all_calibrations_valid": true,
+        "mean_score": 55.312268380984996,
+        "minimum_score": 54.198976902958385,
+        "development_72_gate": false
+      },
+      "candidates": {
+        "copy_last": {
+          "candidate": "copy_last",
+          "scores": [
+            50.0,
+            50.0,
+            50.0
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 50.0,
+          "minimum_score": 50.0,
+          "development_72_gate": false,
+          "mean_metric_skills_percent": {
+            "de_score": 50.0,
+            "de_direction": 50.0,
+            "mmd_u": 50.0,
+            "variogram": 50.0
+          },
+          "raw_results": [
+            {
+              "candidate": "copy_last",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.028085237368941307,
+                "variogram": 0.001146468217484653
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "copy_last",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.03033139742910862,
+                "variogram": 0.0012352676130831242
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "copy_last",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.02585575543344021,
+                "variogram": 0.0010369947412982583
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            }
+          ]
+        },
+        "previous_incumbent": {
+          "candidate": "previous_incumbent",
+          "scores": [
+            55.479838365606724,
+            56.2579898743899,
+            54.198976902958385
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 55.312268380984996,
+          "minimum_score": 54.198976902958385,
+          "development_72_gate": false,
+          "mean_metric_skills_percent": {
+            "de_score": 52.2130865260439,
+            "de_direction": 58.1040145423201,
+            "mmd_u": 57.00298059903903,
+            "variogram": 53.1604946709115
+          },
+          "raw_results": [
+            {
+              "candidate": "previous_incumbent",
+              "raw_metrics": {
+                "de_score": 0.06557377049180327,
+                "de_direction": 0.19722199586121206,
+                "mmd_u": 0.02210228703916073,
+                "variogram": 0.0010139853693544865
+              },
+              "local_score": 55.479838365606724,
+              "skills": {
+                "de_score": 0.5217391304347826,
+                "de_direction": 0.5824668749742264,
+                "mmd_u": 0.5713947768378664,
+                "variogram": 0.5366422462622755
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "previous_incumbent",
+              "raw_metrics": {
+                "de_score": 0.10294117647058823,
+                "de_direction": 0.21143935708602699,
+                "mmd_u": 0.02359524928033352,
+                "variogram": 0.0011045265709981322
+              },
+              "local_score": 56.2579898743899,
+              "skills": {
+                "de_score": 0.5346534653465347,
+                "de_direction": 0.5899900200083374,
+                "mmd_u": 0.5819260656879752,
+                "variogram": 0.5342060384939422
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "previous_incumbent",
+              "raw_metrics": {
+                "de_score": 0.03508771929824561,
+                "de_direction": 0.1723338965425362,
+                "mmd_u": 0.021516401320695877,
+                "variogram": 0.0009592752321623266
+              },
+              "local_score": 54.198976902958385,
+              "skills": {
+                "de_score": 0.51,
+                "de_direction": 0.5706635412870391,
+                "mmd_u": 0.5567685754453291,
+                "variogram": 0.523966555371127
+              },
+              "calibration_valid": true
+            }
+          ]
+        },
+        "weighted_m0.25_k8": {
+          "candidate": "weighted_m0.25_k8",
+          "scores": [
+            51.717475049369924,
+            51.74896708325997,
+            51.42027399820792
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 51.62890537694594,
+          "minimum_score": 51.42027399820792,
+          "development_72_gate": false,
+          "mean_metric_skills_percent": {
+            "de_score": 51.500686075154164,
+            "de_direction": 52.67896501824475,
+            "mmd_u": 51.44345724832859,
+            "variogram": 50.75477714548816
+          },
+          "raw_results": [
+            {
+              "candidate": "weighted_m0.25_k8",
+              "raw_metrics": {
+                "de_score": 0.032786885245901634,
+                "de_direction": 0.08412082898333953,
+                "mmd_u": 0.026630425825715065,
+                "variogram": 0.0011125116143375635
+              },
+              "local_score": 51.717475049369924,
+              "skills": {
+                "de_score": 0.5106382978723404,
+                "de_direction": 0.5321350016032319,
+                "mmd_u": 0.5156671864549764,
+                "variogram": 0.5089063484415661
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "weighted_m0.25_k8",
+              "raw_metrics": {
+                "de_score": 0.05882352941176471,
+                "de_direction": 0.06635858294097026,
+                "mmd_u": 0.028801564127206802,
+                "variogram": 0.0012062226887792349
+              },
+              "local_score": 51.74896708325997,
+              "skills": {
+                "de_score": 0.5192307692307693,
+                "de_direction": 0.5251382237538011,
+                "mmd_u": 0.5165146515421655,
+                "variogram": 0.5072151356190372
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "weighted_m0.25_k8",
+              "raw_metrics": {
+                "de_score": 0.05263157894736842,
+                "de_direction": 0.06144773356549535,
+                "mmd_u": 0.024929681792855263,
+                "variogram": 0.001015117159113288
+              },
+              "local_score": 51.42027399820792,
+              "skills": {
+                "de_score": 0.5151515151515151,
+                "de_direction": 0.5230957251903097,
+                "mmd_u": 0.5111218794527157,
+                "variogram": 0.5065218303040417
+              },
+              "calibration_valid": true
+            }
+          ]
+        },
+        "weighted_m0.25_k16": {
+          "candidate": "weighted_m0.25_k16",
+          "scores": [
+            51.267839972564225,
+            51.26161852284542,
+            50.77809482658419
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 51.10251777399794,
+          "minimum_score": 50.77809482658419,
+          "development_72_gate": false,
+          "mean_metric_skills_percent": {
+            "de_score": 51.867032503165895,
+            "de_direction": 51.976786664760425,
+            "mmd_u": 50.33922183909976,
+            "variogram": 50.198982151432176
+          },
+          "raw_results": [
+            {
+              "candidate": "weighted_m0.25_k16",
+              "raw_metrics": {
+                "de_score": 0.06557377049180327,
+                "de_direction": 0.06051659497651732,
+                "mmd_u": 0.02773495391011238,
+                "variogram": 0.0011375622125342488
+              },
+              "local_score": 51.267839972564225,
+              "skills": {
+                "de_score": 0.5217391304347826,
+                "de_direction": 0.52270842098724,
+                "mmd_u": 0.5036846233430392,
+                "variogram": 0.5023056243361238
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "weighted_m0.25_k16",
+              "raw_metrics": {
+                "de_score": 0.0735294117647059,
+                "de_direction": 0.053496890192620265,
+                "mmd_u": 0.029966160655021667,
+                "variogram": 0.0012276023626327515
+              },
+              "local_score": 51.26161852284542,
+              "skills": {
+                "de_score": 0.5242718446601942,
+                "de_direction": 0.5200703278393304,
+                "mmd_u": 0.5038460507961542,
+                "variogram": 0.5018841343236341
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "weighted_m0.25_k16",
+              "raw_metrics": {
+                "de_score": 0.03508771929824561,
+                "de_direction": 0.04452477881710891,
+                "mmd_u": 0.025631720200181007,
+                "variogram": 0.0010309682693332434
+              },
+              "local_score": 50.77809482658419,
+              "skills": {
+                "de_score": 0.51,
+                "de_direction": 0.5165248511162424,
+                "mmd_u": 0.5026459810337994,
+                "variogram": 0.5017797058832074
+              },
+              "calibration_valid": true
+            }
+          ]
+        },
+        "weighted_m0.5_k8": {
+          "candidate": "weighted_m0.5_k8",
+          "scores": [
+            51.64893679477329,
+            51.72415565516677,
+            51.25030847520399
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 51.54113364171468,
+          "minimum_score": 51.25030847520399,
+          "development_72_gate": false,
+          "mean_metric_skills_percent": {
+            "de_score": 52.21008034307267,
+            "de_direction": 52.26917783580871,
+            "mmd_u": 51.01237377358962,
+            "variogram": 50.588034824587254
+          },
+          "raw_results": [
+            {
+              "candidate": "weighted_m0.5_k8",
+              "raw_metrics": {
+                "de_score": 0.06557377049180327,
+                "de_direction": 0.06752490540565471,
+                "mmd_u": 0.02704312838613987,
+                "variogram": 0.001120635075494647
+              },
+              "local_score": 51.64893679477329,
+              "skills": {
+                "de_score": 0.5217391304347826,
+                "de_direction": 0.5254722141324517,
+                "mmd_u": 0.5111238222152836,
+                "variogram": 0.506746925706696
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "weighted_m0.5_k8",
+              "raw_metrics": {
+                "de_score": 0.08823529411764706,
+                "de_direction": 0.05683256827463061,
+                "mmd_u": 0.029258256778120995,
+                "variogram": 0.0012129851384088397
+              },
+              "local_score": 51.72415565516677,
+              "skills": {
+                "de_score": 0.5294117647058824,
+                "de_direction": 0.5213752676551934,
+                "mmd_u": 0.5114715144506461,
+                "variogram": 0.5055167206310249
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "weighted_m0.5_k8",
+              "raw_metrics": {
+                "de_score": 0.05263157894736842,
+                "de_direction": 0.05668052948513987,
+                "mmd_u": 0.025204023346304893,
+                "variogram": 0.0010189153254032135
+              },
+              "local_score": 51.25030847520399,
+              "skills": {
+                "de_score": 0.5151515151515151,
+                "de_direction": 0.5212278532866162,
+                "mmd_u": 0.507775876541759,
+                "variogram": 0.5053773983998967
+              },
+              "calibration_valid": true
+            }
+          ]
+        },
+        "weighted_m0.5_k16": {
+          "candidate": "weighted_m0.5_k16",
+          "scores": [
+            51.30753809056505,
+            51.13554533034552,
+            50.8292092974983
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 51.09076423946962,
+          "minimum_score": 50.8292092974983,
+          "development_72_gate": false,
+          "mean_metric_skills_percent": {
+            "de_score": 51.69899665551839,
+            "de_direction": 52.16663690566244,
+            "mmd_u": 50.2933419694549,
+            "variogram": 50.18176629168975
+          },
+          "raw_results": [
+            {
+              "candidate": "weighted_m0.5_k16",
+              "raw_metrics": {
+                "de_score": 0.06557377049180327,
+                "de_direction": 0.06669420089387078,
+                "mmd_u": 0.027780722826719284,
+                "variogram": 0.0011388382408767939
+              },
+              "local_score": 51.30753809056505,
+              "skills": {
+                "de_score": 0.5217391304347826,
+                "de_direction": 0.525143092116558,
+                "mmd_u": 0.503200099875766,
+                "variogram": 0.5019739765254282
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "weighted_m0.5_k16",
+              "raw_metrics": {
+                "de_score": 0.05882352941176471,
+                "de_direction": 0.055502766938777696,
+                "mmd_u": 0.0300174318253994,
+                "variogram": 0.0012282795505598187
+              },
+              "local_score": 51.13554533034552,
+              "skills": {
+                "de_score": 0.5192307692307693,
+                "de_direction": 0.5208542562178042,
+                "mmd_u": 0.5033025841385128,
+                "variogram": 0.5017171084987903
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "weighted_m0.5_k16",
+              "raw_metrics": {
+                "de_score": 0.03508771929824561,
+                "de_direction": 0.0509542494464292,
+                "mmd_u": 0.025661084800958633,
+                "variogram": 0.001031028339639306
+              },
+              "local_score": 50.8292092974983,
+              "skills": {
+                "de_score": 0.51,
+                "de_direction": 0.5190017588355109,
+                "mmd_u": 0.5022975750693682,
+                "variogram": 0.501761903726474
+              },
+              "calibration_valid": true
+            }
+          ]
+        },
+        "weighted_m1.0_k8": {
+          "candidate": "weighted_m1.0_k8",
+          "scores": [
+            51.63080313414624,
+            51.731745962624686,
+            51.32408675654207
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 51.56221195110433,
+          "minimum_score": 51.32408675654207,
+          "development_72_gate": false,
+          "mean_metric_skills_percent": {
+            "de_score": 51.851746402325794,
+            "de_direction": 52.56520915931418,
+            "mmd_u": 51.12639582776427,
+            "variogram": 50.600271561825274
+          },
+          "raw_results": [
+            {
+              "candidate": "weighted_m1.0_k8",
+              "raw_metrics": {
+                "de_score": 0.04918032786885246,
+                "de_direction": 0.07567883572567129,
+                "mmd_u": 0.02693011797964573,
+                "variogram": 0.0011199326254427433
+              },
+              "local_score": 51.63080313414624,
+              "skills": {
+                "de_score": 0.5161290322580645,
+                "de_direction": 0.5287248046340719,
+                "mmd_u": 0.5123599532492218,
+                "variogram": 0.5069329307183087
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "weighted_m1.0_k8",
+              "raw_metrics": {
+                "de_score": 0.0735294117647059,
+                "de_direction": 0.0662530973558048,
+                "mmd_u": 0.029130514711141586,
+                "variogram": 0.0012127767549827695
+              },
+              "local_score": 51.731745962624686,
+              "skills": {
+                "de_score": 0.5242718446601942,
+                "de_direction": 0.5250962575660425,
+                "mmd_u": 0.5128721888612907,
+                "variogram": 0.5055688870565022
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "weighted_m1.0_k8",
+              "raw_metrics": {
+                "de_score": 0.05263157894736842,
+                "de_direction": 0.061548146286182624,
+                "mmd_u": 0.025139430537819862,
+                "variogram": 0.001018486567772925
+              },
+              "local_score": 51.32408675654207,
+              "skills": {
+                "de_score": 0.5151515151515151,
+                "de_direction": 0.5231352125793112,
+                "mmd_u": 0.5085597327224158,
+                "variogram": 0.5055063290799472
+              },
+              "calibration_valid": true
+            }
+          ]
+        },
+        "weighted_m1.0_k16": {
+          "candidate": "weighted_m1.0_k16",
+          "scores": [
+            51.13422891944588,
+            51.37387926676751,
+            50.918981398028116
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 51.14236319474717,
+          "minimum_score": 50.918981398028116,
+          "development_72_gate": false,
+          "mean_metric_skills_percent": {
+            "de_score": 51.49700475108448,
+            "de_direction": 52.093791025670775,
+            "mmd_u": 50.5869947348097,
+            "variogram": 50.34282915057721
+          },
+          "raw_results": [
+            {
+              "candidate": "weighted_m1.0_k16",
+              "raw_metrics": {
+                "de_score": 0.032786885245901634,
+                "de_direction": 0.0638110021642899,
+                "mmd_u": 0.027480151504278183,
+                "variogram": 0.0011317958123981953
+              },
+              "local_score": 51.13422891944588,
+              "skills": {
+                "de_score": 0.5106382978723404,
+                "de_direction": 0.5240039713606622,
+                "mmd_u": 0.506399186742481,
+                "variogram": 0.503809829317319
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "weighted_m1.0_k16",
+              "raw_metrics": {
+                "de_score": 0.0735294117647059,
+                "de_direction": 0.053230618229515594,
+                "mmd_u": 0.0296982079744339,
+                "variogram": 0.0012217274634167552
+              },
+              "local_score": 51.37387926676751,
+              "skills": {
+                "de_score": 0.5242718446601942,
+                "de_direction": 0.5199664419215169,
+                "mmd_u": 0.5067055122604548,
+                "variogram": 0.5033378367205545
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "weighted_m1.0_k16",
+              "raw_metrics": {
+                "de_score": 0.03508771929824561,
+                "de_direction": 0.05054481072604535,
+                "mmd_u": 0.02547571063041687,
+                "variogram": 0.0010264001321047544
+              },
+              "local_score": 50.918981398028116,
+              "skills": {
+                "de_score": 0.51,
+                "de_direction": 0.5188433174879443,
+                "mmd_u": 0.5045051430413552,
+                "variogram": 0.5031372084794429
+              },
+              "calibration_valid": true
+            }
+          ]
+        }
+      },
+      "promoted": false
+    }
+  },
+  "decision": "Retain unit_k16; new coverage and importance variants underperform.",
+  "gate_72_passed": false,
+  "official_score": null,
+  "submissions_used": 0,
+  "jev_requests_used": 0
+}

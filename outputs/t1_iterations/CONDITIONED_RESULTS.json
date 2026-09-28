@@ -1,0 +1,1985 @@
+{
+  "status": "completed_no_promotion",
+  "runs": {
+    "conditioned_temporal_01": {
+      "report_sha256": "c70b186f8fd035c4b44fec843709507e9aefb1ea0d5069c1fee9d73c88b2129a",
+      "folds": [
+        {
+          "cutoff": 8.0,
+          "target": 8.25,
+          "results": [
+            {
+              "candidate": "copy",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.04499426484107971,
+                "variogram": 0.0008883322007022798
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true,
+              "actual_max_gene_detection_change": 0.0,
+              "mean_absolute_gene_detection_change": 0.0
+            },
+            {
+              "candidate": "incumbent",
+              "raw_metrics": {
+                "de_score": -0.017241379310344827,
+                "de_direction": -0.19283461931496235,
+                "mmd_u": 0.05420365184545517,
+                "variogram": 0.0010824301280081272
+              },
+              "local_score": 45.73150013116399,
+              "skills": {
+                "de_score": 0.495049504950495,
+                "de_direction": 0.43872673997322104,
+                "mmd_u": 0.44932036424459637,
+                "variogram": 0.44537415403665975
+              },
+              "calibration_valid": true,
+              "actual_max_gene_detection_change": 0.066,
+              "mean_absolute_gene_detection_change": 0.0020852614733364305
+            },
+            {
+              "candidate": "freeze_legacy_gateFalse",
+              "raw_metrics": {
+                "de_score": 0.18965517241379312,
+                "de_direction": 0.20754876860415156,
+                "mmd_u": 0.0439443364739418,
+                "variogram": 0.0008397864294238389
+              },
+              "local_score": 54.268205164401685,
+              "skills": {
+                "de_score": 0.5617977528089888,
+                "de_direction": 0.5884556973436363,
+                "mmd_u": 0.5065132407504779,
+                "variogram": 0.5158235844035857
+              },
+              "calibration_valid": true,
+              "actual_max_gene_detection_change": 0.0,
+              "mean_absolute_gene_detection_change": 0.0
+            },
+            {
+              "candidate": "extrapolate_legacy_gateFalse",
+              "raw_metrics": {
+                "de_score": 0.18965517241379312,
+                "de_direction": 0.2892892822744795,
+                "mmd_u": 0.04365278407931328,
+                "variogram": 0.0008382087689824402
+              },
+              "local_score": 55.43576437776906,
+              "skills": {
+                "de_score": 0.5617977528089888,
+                "de_direction": 0.6325265842813558,
+                "mmd_u": 0.5083521008647091,
+                "variogram": 0.5163546462284584
+              },
+              "calibration_valid": true,
+              "actual_max_gene_detection_change": 0.0,
+              "mean_absolute_gene_detection_change": 0.0
+            },
+            {
+              "candidate": "freeze_legacy_gateTrue",
+              "raw_metrics": {
+                "de_score": -0.017241379310344827,
+                "de_direction": 0.07450507911476854,
+                "mmd_u": 0.04531063511967659,
+                "variogram": 0.0009050073567777872
+              },
+              "local_score": 50.4270504230386,
+              "skills": {
+                "de_score": 0.495049504950495,
+                "de_direction": 0.5285192824584177,
+                "mmd_u": 0.49807010884938324,
+                "variogram": 0.4947863736167141
+              },
+              "calibration_valid": true,
+              "actual_max_gene_detection_change": 0.0,
+              "mean_absolute_gene_detection_change": 0.0
+            },
+            {
+              "candidate": "freeze_hurdle_gateFalse",
+              "raw_metrics": {
+                "de_score": 0.1206896551724138,
+                "de_direction": 0.0680365063661019,
+                "mmd_u": 0.04450206086039543,
+                "variogram": 0.000873832730576396
+              },
+              "local_score": 51.77217491345759,
+              "skills": {
+                "de_score": 0.5376344086021506,
+                "de_direction": 0.5259148887190483,
+                "mmd_u": 0.5030324087900494,
+                "variogram": 0.5046235108363065
+              },
+              "calibration_valid": true,
+              "actual_max_gene_detection_change": 0.020666666666666667,
+              "mean_absolute_gene_detection_change": 0.0012049558618553507
+            },
+            {
+              "candidate": "freeze_hurdle_gateTrue",
+              "raw_metrics": {
+                "de_score": -0.017241379310344827,
+                "de_direction": -0.01854002862627171,
+                "mmd_u": 0.04558282345533371,
+                "variogram": 0.0009334529167972505
+              },
+              "local_score": 49.326047137308095,
+              "skills": {
+                "de_score": 0.495049504950495,
+                "de_direction": 0.49337509731715934,
+                "mmd_u": 0.4964216150171674,
+                "variogram": 0.48613918150508545
+              },
+              "calibration_valid": true,
+              "actual_max_gene_detection_change": 0.020666666666666667,
+              "mean_absolute_gene_detection_change": 0.0005874967735274378
+            },
+            {
+              "candidate": "extrapolate_hurdle_gateTrue",
+              "raw_metrics": {
+                "de_score": -0.017241379310344827,
+                "de_direction": -0.060088692350602727,
+                "mmd_u": 0.045394234359264374,
+                "variogram": 0.0009240629151463509
+              },
+              "local_score": 49.06100984590341,
+              "skills": {
+                "de_score": 0.495049504950495,
+                "de_direction": 0.47914769659732465,
+                "mmd_u": 0.4975626308535688,
+                "variogram": 0.48896004408004307
+              },
+              "calibration_valid": true,
+              "actual_max_gene_detection_change": 0.018666666666666665,
+              "mean_absolute_gene_detection_change": 0.0004864591399514737
+            }
+          ],
+          "audits": {
+            "copy": {
+              "method": "persistence",
+              "prediction_sha256": "53908b256a2f04ded456a9239a8231ce0c0f551e3bd9de2c1424524db824cd4d"
+            },
+            "incumbent": {
+              "mapping": {
+                "mapped_genes": 26775,
+                "protected_genes": 5510,
+                "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+              },
+              "guard_applied": true,
+              "population_mix": 1.0,
+              "expression_strength_used": 1.0,
+              "trusted_donor_fraction": 0.986,
+              "effective_sample_size": 1422.038330163032,
+              "unique_donors": 1323,
+              "covariance_change_vs_reference": 0.08609104500168062,
+              "state_support": [
+                143,
+                1,
+                82,
+                73,
+                166,
+                73,
+                0,
+                165,
+                92,
+                24,
+                36,
+                37,
+                5,
+                19,
+                66,
+                1
+              ],
+              "alignment": "identity",
+              "covariance_limit": 0.4,
+              "feature_scaling": "unit",
+              "expression_factor_cap": 1.25,
+              "detection_strength": 0.5,
+              "maximum_probability_change": 0.02,
+              "attempted_additions": 2383,
+              "attempted_deletions": 5214,
+              "detection_candidate_covariance_change": 0.08628111468802852,
+              "detection_guard_rejected": false,
+              "actual_additions": 2383,
+              "actual_deletions": 5214,
+              "prediction_sha256": "89a3305017a24095cd9047618f80eb9b681ad5d789c02fbbe66cfc8829b1a053"
+            },
+            "freeze_legacy_gateFalse": {
+              "method": "Stage-conditioned noisy residual network trained on past adjacent-stage MMD; no faithful paper reproduction",
+              "fit_max_stage": 8.0,
+              "past_stages": [
+                7.5,
+                7.75,
+                8.0
+              ],
+              "training_steps": 800,
+              "batch_size": 64,
+              "training_objective": "sqrt",
+              "initial_past_validation_mmd": 0.052037269064199976,
+              "selected_past_validation_mmd": 0.013841047716069033,
+              "training_history": [
+                {
+                  "step": 0,
+                  "past_validation_mmd": 0.052037269064199976
+                },
+                {
+                  "step": 100,
+                  "past_validation_mmd": 0.01787394966370566
+                },
+                {
+                  "step": 200,
+                  "past_validation_mmd": 0.015860254285480154
+                },
+                {
+                  "step": 300,
+                  "past_validation_mmd": 0.015235857452765043
+                },
+                {
+                  "step": 400,
+                  "past_validation_mmd": 0.014933727773517405
+                },
+                {
+                  "step": 500,
+                  "past_validation_mmd": 0.014507896472641772
+                },
+                {
+                  "step": 600,
+                  "past_validation_mmd": 0.01477632742342352
+                },
+                {
+                  "step": 700,
+                  "past_validation_mmd": 0.014329433365773983
+                },
+                {
+                  "step": 800,
+                  "past_validation_mmd": 0.013841047716069033
+                }
+              ],
+              "validation_scope": "Fixed cell groups from observed past stages, not an independent temporal holdout",
+              "past_bandwidth": 29.765053004345383,
+              "future_representation_used": false,
+              "surrogate_is_final_score": false,
+              "time_mode": "freeze",
+              "decoder": "legacy",
+              "direction_gate": false,
+              "requested_strength": 0.5,
+              "used_strength": 0.5,
+              "covariance_change_vs_reference": 0.04944110958214772,
+              "mapping": {
+                "mapped_genes": 26775,
+                "protected_genes": 5510,
+                "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+              },
+              "activated_values": 0,
+              "deleted_values": 0,
+              "detection_cap": 0.01,
+              "guard_applied": true,
+              "direction_gate_scope": "Proposal signs before mapped mass conservation; actual metric determines final direction.",
+              "hurdle_scope": "Ridge detection and positive-log moment models on normalized abundance; not a raw-count likelihood or MAST reproduction.",
+              "prediction_sha256": "3a75921670790f71025fde09eebd224d5a6aaa24168e4e19d7623f467dfce9f0"
+            },
+            "extrapolate_legacy_gateFalse": {
+              "method": "Stage-conditioned noisy residual network trained on past adjacent-stage MMD; no faithful paper reproduction",
+              "fit_max_stage": 8.0,
+              "past_stages": [
+                7.5,
+                7.75,
+                8.0
+              ],
+              "training_steps": 800,
+              "batch_size": 64,
+              "training_objective": "sqrt",
+              "initial_past_validation_mmd": 0.052037269064199976,
+              "selected_past_validation_mmd": 0.013841047716069033,
+              "training_history": [
+                {
+                  "step": 0,
+                  "past_validation_mmd": 0.052037269064199976
+                },
+                {
+                  "step": 100,
+                  "past_validation_mmd": 0.01787394966370566
+                },
+                {
+                  "step": 200,
+                  "past_validation_mmd": 0.015860254285480154
+                },
+                {
+                  "step": 300,
+                  "past_validation_mmd": 0.015235857452765043
+                },
+                {
+                  "step": 400,
+                  "past_validation_mmd": 0.014933727773517405
+                },
+                {
+                  "step": 500,
+                  "past_validation_mmd": 0.014507896472641772
+                },
+                {
+                  "step": 600,
+                  "past_validation_mmd": 0.01477632742342352
+                },
+                {
+                  "step": 700,
+                  "past_validation_mmd": 0.014329433365773983
+                },
+                {
+                  "step": 800,
+                  "past_validation_mmd": 0.013841047716069033
+                }
+              ],
+              "validation_scope": "Fixed cell groups from observed past stages, not an independent temporal holdout",
+              "past_bandwidth": 29.765053004345383,
+              "future_representation_used": false,
+              "surrogate_is_final_score": false,
+              "time_mode": "extrapolate",
+              "decoder": "legacy",
+              "direction_gate": false,
+              "requested_strength": 0.5,
+              "used_strength": 0.5,
+              "covariance_change_vs_reference": 0.05056558783946004,
+              "mapping": {
+                "mapped_genes": 26775,
+                "protected_genes": 5510,
+                "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+              },
+              "activated_values": 0,
+              "deleted_values": 0,
+              "detection_cap": 0.01,
+              "guard_applied": true,
+              "direction_gate_scope": "Proposal signs before mapped mass conservation; actual metric determines final direction.",
+              "hurdle_scope": "Ridge detection and positive-log moment models on normalized abundance; not a raw-count likelihood or MAST reproduction.",
+              "prediction_sha256": "dfc445fa0cb7ef165f04b9101bb663f012ba13cbb8bb89d110d09f6fe97fbf82"
+            },
+            "freeze_legacy_gateTrue": {
+              "method": "Stage-conditioned noisy residual network trained on past adjacent-stage MMD; no faithful paper reproduction",
+              "fit_max_stage": 8.0,
+              "past_stages": [
+                7.5,
+                7.75,
+                8.0
+              ],
+              "training_steps": 800,
+              "batch_size": 64,
+              "training_objective": "sqrt",
+              "initial_past_validation_mmd": 0.052037269064199976,
+              "selected_past_validation_mmd": 0.013841047716069033,
+              "training_history": [
+                {
+                  "step": 0,
+                  "past_validation_mmd": 0.052037269064199976
+                },
+                {
+                  "step": 100,
+                  "past_validation_mmd": 0.01787394966370566
+                },
+                {
+                  "step": 200,
+                  "past_validation_mmd": 0.015860254285480154
+                },
+                {
+                  "step": 300,
+                  "past_validation_mmd": 0.015235857452765043
+                },
+                {
+                  "step": 400,
+                  "past_validation_mmd": 0.014933727773517405
+                },
+                {
+                  "step": 500,
+                  "past_validation_mmd": 0.014507896472641772
+                },
+                {
+                  "step": 600,
+                  "past_validation_mmd": 0.01477632742342352
+                },
+                {
+                  "step": 700,
+                  "past_validation_mmd": 0.014329433365773983
+                },
+                {
+                  "step": 800,
+                  "past_validation_mmd": 0.013841047716069033
+                }
+              ],
+              "validation_scope": "Fixed cell groups from observed past stages, not an independent temporal holdout",
+              "past_bandwidth": 29.765053004345383,
+              "future_representation_used": false,
+              "surrogate_is_final_score": false,
+              "time_mode": "freeze",
+              "decoder": "legacy",
+              "direction_gate": true,
+              "requested_strength": 0.5,
+              "used_strength": 0.5,
+              "covariance_change_vs_reference": 0.03471899562432004,
+              "mapping": {
+                "mapped_genes": 26775,
+                "protected_genes": 5510,
+                "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+              },
+              "activated_values": 0,
+              "deleted_values": 0,
+              "detection_cap": 0.01,
+              "guard_applied": true,
+              "direction_gate_scope": "Proposal signs before mapped mass conservation; actual metric determines final direction.",
+              "hurdle_scope": "Ridge detection and positive-log moment models on normalized abundance; not a raw-count likelihood or MAST reproduction.",
+              "prediction_sha256": "f8110c10561cbd1d61c9b08b336d92aea12a57d2fc7dc245709eeee19fc6379d"
+            },
+            "freeze_hurdle_gateFalse": {
+              "method": "Stage-conditioned noisy residual network trained on past adjacent-stage MMD; no faithful paper reproduction",
+              "fit_max_stage": 8.0,
+              "past_stages": [
+                7.5,
+                7.75,
+                8.0
+              ],
+              "training_steps": 800,
+              "batch_size": 64,
+              "training_objective": "sqrt",
+              "initial_past_validation_mmd": 0.052037269064199976,
+              "selected_past_validation_mmd": 0.013841047716069033,
+              "training_history": [
+                {
+                  "step": 0,
+                  "past_validation_mmd": 0.052037269064199976
+                },
+                {
+                  "step": 100,
+                  "past_validation_mmd": 0.01787394966370566
+                },
+                {
+                  "step": 200,
+                  "past_validation_mmd": 0.015860254285480154
+                },
+                {
+                  "step": 300,
+                  "past_validation_mmd": 0.015235857452765043
+                },
+                {
+                  "step": 400,
+                  "past_validation_mmd": 0.014933727773517405
+                },
+                {
+                  "step": 500,
+                  "past_validation_mmd": 0.014507896472641772
+                },
+                {
+                  "step": 600,
+                  "past_validation_mmd": 0.01477632742342352
+                },
+                {
+                  "step": 700,
+                  "past_validation_mmd": 0.014329433365773983
+                },
+                {
+                  "step": 800,
+                  "past_validation_mmd": 0.013841047716069033
+                }
+              ],
+              "validation_scope": "Fixed cell groups from observed past stages, not an independent temporal holdout",
+              "past_bandwidth": 29.765053004345383,
+              "future_representation_used": false,
+              "surrogate_is_final_score": false,
+              "time_mode": "freeze",
+              "decoder": "hurdle",
+              "direction_gate": false,
+              "requested_strength": 0.5,
+              "used_strength": 0.5,
+              "covariance_change_vs_reference": 0.04634976524502313,
+              "mapping": {
+                "mapped_genes": 26775,
+                "protected_genes": 5510
+              },
+              "activated_values": 31840,
+              "deleted_values": 50849,
+              "detection_cap": 0.01,
+              "guard_applied": true,
+              "direction_gate_scope": "Proposal signs before mapped mass conservation; actual metric determines final direction.",
+              "hurdle_scope": "Ridge detection and positive-log moment models on normalized abundance; not a raw-count likelihood or MAST reproduction.",
+              "prediction_sha256": "2ce8d6330e2f39da0ef960ec9b0662c1858d6e7d28d7213fa5fda88466d005c7"
+            },
+            "freeze_hurdle_gateTrue": {
+              "method": "Stage-conditioned noisy residual network trained on past adjacent-stage MMD; no faithful paper reproduction",
+              "fit_max_stage": 8.0,
+              "past_stages": [
+                7.5,
+                7.75,
+                8.0
+              ],
+              "training_steps": 800,
+              "batch_size": 64,
+              "training_objective": "sqrt",
+              "initial_past_validation_mmd": 0.052037269064199976,
+              "selected_past_validation_mmd": 0.013841047716069033,
+              "training_history": [
+                {
+                  "step": 0,
+                  "past_validation_mmd": 0.052037269064199976
+                },
+                {
+                  "step": 100,
+                  "past_validation_mmd": 0.01787394966370566
+                },
+                {
+                  "step": 200,
+                  "past_validation_mmd": 0.015860254285480154
+                },
+                {
+                  "step": 300,
+                  "past_validation_mmd": 0.015235857452765043
+                },
+                {
+                  "step": 400,
+                  "past_validation_mmd": 0.014933727773517405
+                },
+                {
+                  "step": 500,
+                  "past_validation_mmd": 0.014507896472641772
+                },
+                {
+                  "step": 600,
+                  "past_validation_mmd": 0.01477632742342352
+                },
+                {
+                  "step": 700,
+                  "past_validation_mmd": 0.014329433365773983
+                },
+                {
+                  "step": 800,
+                  "past_validation_mmd": 0.013841047716069033
+                }
+              ],
+              "validation_scope": "Fixed cell groups from observed past stages, not an independent temporal holdout",
+              "past_bandwidth": 29.765053004345383,
+              "future_representation_used": false,
+              "surrogate_is_final_score": false,
+              "time_mode": "freeze",
+              "decoder": "hurdle",
+              "direction_gate": true,
+              "requested_strength": 0.5,
+              "used_strength": 0.5,
+              "covariance_change_vs_reference": 0.02269611863365448,
+              "mapping": {
+                "mapped_genes": 26775,
+                "protected_genes": 5510
+              },
+              "activated_values": 5062,
+              "deleted_values": 23389,
+              "detection_cap": 0.01,
+              "guard_applied": true,
+              "direction_gate_scope": "Proposal signs before mapped mass conservation; actual metric determines final direction.",
+              "hurdle_scope": "Ridge detection and positive-log moment models on normalized abundance; not a raw-count likelihood or MAST reproduction.",
+              "prediction_sha256": "fbd5b91deda240befa6a30ced67aa311ac107effe81ecfc0c210478bc9b1397c"
+            },
+            "extrapolate_hurdle_gateTrue": {
+              "method": "Stage-conditioned noisy residual network trained on past adjacent-stage MMD; no faithful paper reproduction",
+              "fit_max_stage": 8.0,
+              "past_stages": [
+                7.5,
+                7.75,
+                8.0
+              ],
+              "training_steps": 800,
+              "batch_size": 64,
+              "training_objective": "sqrt",
+              "initial_past_validation_mmd": 0.052037269064199976,
+              "selected_past_validation_mmd": 0.013841047716069033,
+              "training_history": [
+                {
+                  "step": 0,
+                  "past_validation_mmd": 0.052037269064199976
+                },
+                {
+                  "step": 100,
+                  "past_validation_mmd": 0.01787394966370566
+                },
+                {
+                  "step": 200,
+                  "past_validation_mmd": 0.015860254285480154
+                },
+                {
+                  "step": 300,
+                  "past_validation_mmd": 0.015235857452765043
+                },
+                {
+                  "step": 400,
+                  "past_validation_mmd": 0.014933727773517405
+                },
+                {
+                  "step": 500,
+                  "past_validation_mmd": 0.014507896472641772
+                },
+                {
+                  "step": 600,
+                  "past_validation_mmd": 0.01477632742342352
+                },
+                {
+                  "step": 700,
+                  "past_validation_mmd": 0.014329433365773983
+                },
+                {
+                  "step": 800,
+                  "past_validation_mmd": 0.013841047716069033
+                }
+              ],
+              "validation_scope": "Fixed cell groups from observed past stages, not an independent temporal holdout",
+              "past_bandwidth": 29.765053004345383,
+              "future_representation_used": false,
+              "surrogate_is_final_score": false,
+              "time_mode": "extrapolate",
+              "decoder": "hurdle",
+              "direction_gate": true,
+              "requested_strength": 0.5,
+              "used_strength": 0.5,
+              "covariance_change_vs_reference": 0.017077607768496046,
+              "mapping": {
+                "mapped_genes": 26775,
+                "protected_genes": 5510
+              },
+              "activated_values": 4092,
+              "deleted_values": 19466,
+              "detection_cap": 0.01,
+              "guard_applied": true,
+              "direction_gate_scope": "Proposal signs before mapped mass conservation; actual metric determines final direction.",
+              "hurdle_scope": "Ridge detection and positive-log moment models on normalized abundance; not a raw-count likelihood or MAST reproduction.",
+              "prediction_sha256": "0acf7a1c5d32a736217c2250a8526592c7c30a219929f7ae55db530634c1234c"
+            }
+          }
+        },
+        {
+          "cutoff": 8.25,
+          "target": 8.5,
+          "results": [
+            {
+              "candidate": "copy",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.1464974731206894,
+                "variogram": 0.0029827698599547148
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true,
+              "actual_max_gene_detection_change": 0.0,
+              "mean_absolute_gene_detection_change": 0.0
+            },
+            {
+              "candidate": "incumbent",
+              "raw_metrics": {
+                "de_score": 0.025000000000000022,
+                "de_direction": 0.012884533036831756,
+                "mmd_u": 0.1390332579612732,
+                "variogram": 0.0029397178441286087
+              },
+              "local_score": 50.75351044908,
+              "skills": {
+                "de_score": 0.5070422535211268,
+                "de_direction": 0.5041394285301498,
+                "mmd_u": 0.5132724078107238,
+                "variogram": 0.5037898081738185
+              },
+              "calibration_valid": true,
+              "actual_max_gene_detection_change": 0.04466666666666669,
+              "mean_absolute_gene_detection_change": 0.0016824944504671932
+            },
+            {
+              "candidate": "freeze_legacy_gateFalse",
+              "raw_metrics": {
+                "de_score": -0.08214285714285714,
+                "de_direction": -0.36617142494200483,
+                "mmd_u": 0.14970603585243225,
+                "variogram": 0.0031228279694914818
+              },
+              "local_score": 46.685687015111235,
+              "skills": {
+                "de_score": 0.47817836812144215,
+                "de_direction": 0.40540033582655866,
+                "mmd_u": 0.4945033582843171,
+                "variogram": 0.48805593339408515
+              },
+              "calibration_valid": true,
+              "actual_max_gene_detection_change": 0.0,
+              "mean_absolute_gene_detection_change": 0.0
+            },
+            {
+              "candidate": "extrapolate_legacy_gateFalse",
+              "raw_metrics": {
+                "de_score": -0.09285714285714285,
+                "de_direction": -0.3615386707217382,
+                "mmd_u": 0.149900883436203,
+                "variogram": 0.003133476944640279
+              },
+              "local_score": 46.614744962621614,
+              "skills": {
+                "de_score": 0.47547169811320755,
+                "de_direction": 0.4063730815560432,
+                "mmd_u": 0.4941734514403792,
+                "variogram": 0.48717109638394845
+              },
+              "calibration_valid": true,
+              "actual_max_gene_detection_change": 0.0,
+              "mean_absolute_gene_detection_change": 0.0
+            },
+            {
+              "candidate": "freeze_legacy_gateTrue",
+              "raw_metrics": {
+                "de_score": -0.09285714285714285,
+                "de_direction": -0.141366669088025,
+                "mmd_u": 0.14593079686164856,
+                "variogram": 0.003011723980307579
+              },
+              "local_score": 48.33292159475254,
+              "skills": {
+                "de_score": 0.47547169811320755,
+                "de_direction": 0.45867846762753733,
+                "mmd_u": 0.500983503916192,
+                "variogram": 0.49748311668740797
+              },
+              "calibration_valid": true,
+              "actual_max_gene_detection_change": 0.0,
+              "mean_absolute_gene_detection_change": 0.0
+            },
+            {
+              "candidate": "freeze_hurdle_gateFalse",
+              "raw_metrics": {
+                "de_score": -0.09999999999999999,
+                "de_direction": -0.2815415762506534,
+                "mmd_u": 0.15292125940322876,
+                "variogram": 0.003202745458111167
+              },
+              "local_score": 46.74387610304313,
+              "skills": {
+                "de_score": 0.4736842105263158,
+                "de_direction": 0.42393826965137515,
+                "mmd_u": 0.4891152137572954,
+                "variogram": 0.4814928842940993
+              },
+              "calibration_valid": true,
+              "actual_max_gene_detection_change": 0.016000000000000014,
+              "mean_absolute_gene_detection_change": 0.0010845697176191213
+            },
+            {
+              "candidate": "freeze_hurdle_gateTrue",
+              "raw_metrics": {
+                "de_score": -0.09642857142857142,
+                "de_direction": -0.13362952601286393,
+                "mmd_u": 0.1468389630317688,
+                "variogram": 0.0030296894256025553
+              },
+              "local_score": 48.2844291493772,
+              "skills": {
+                "de_score": 0.4745762711864407,
+                "de_direction": 0.46076256113469377,
+                "mmd_u": 0.49940918426692144,
+                "variogram": 0.49593414066706
+              },
+              "calibration_valid": true,
+              "actual_max_gene_detection_change": 0.01533333333333331,
+              "mean_absolute_gene_detection_change": 0.00035170099633472716
+            },
+            {
+              "candidate": "extrapolate_hurdle_gateTrue",
+              "raw_metrics": {
+                "de_score": -0.10714285714285714,
+                "de_direction": -0.133138973300759,
+                "mmd_u": 0.14705443382263184,
+                "variogram": 0.003034256398677826
+              },
+              "local_score": 48.20208789830638,
+              "skills": {
+                "de_score": 0.4719101123595506,
+                "de_direction": 0.4608953361054118,
+                "mmd_u": 0.49903711360989983,
+                "variogram": 0.4955419139192664
+              },
+              "calibration_valid": true,
+              "actual_max_gene_detection_change": 0.016000000000000014,
+              "mean_absolute_gene_detection_change": 0.0003481286459139952
+            }
+          ],
+          "audits": {
+            "copy": {
+              "method": "persistence",
+              "prediction_sha256": "f991bb722bc73fe1b4135b16a6a7a3db7132c306103559448dc13289eb73ae4e"
+            },
+            "incumbent": {
+              "mapping": {
+                "mapped_genes": 26775,
+                "protected_genes": 5510,
+                "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+              },
+              "guard_applied": true,
+              "population_mix": 1.0,
+              "expression_strength_used": 1.0,
+              "trusted_donor_fraction": 0.99,
+              "effective_sample_size": 1461.901828883829,
+              "unique_donors": 1396,
+              "covariance_change_vs_reference": 0.13004943729386148,
+              "state_support": [
+                136,
+                65,
+                203,
+                10,
+                86,
+                55,
+                113,
+                25,
+                10,
+                106,
+                85,
+                193,
+                90,
+                37,
+                172,
+                40
+              ],
+              "alignment": "identity",
+              "covariance_limit": 0.4,
+              "feature_scaling": "unit",
+              "expression_factor_cap": 1.25,
+              "detection_strength": 0.5,
+              "maximum_probability_change": 0.02,
+              "attempted_additions": 6810,
+              "attempted_deletions": 6690,
+              "detection_candidate_covariance_change": 0.1301160746724443,
+              "detection_guard_rejected": false,
+              "actual_additions": 6810,
+              "actual_deletions": 6690,
+              "prediction_sha256": "f8caa6fa0dffc02d70254fd28fca544697f215d4633342850420a8ab03155523"
+            },
+            "freeze_legacy_gateFalse": {
+              "method": "Stage-conditioned noisy residual network trained on past adjacent-stage MMD; no faithful paper reproduction",
+              "fit_max_stage": 8.25,
+              "past_stages": [
+                7.5,
+                7.75,
+                8.0,
+                8.25
+              ],
+              "training_steps": 800,
+              "batch_size": 64,
+              "training_objective": "sqrt",
+              "initial_past_validation_mmd": 0.05357245936141241,
+              "selected_past_validation_mmd": 0.016079766683470106,
+              "training_history": [
+                {
+                  "step": 0,
+                  "past_validation_mmd": 0.05357245936141241
+                },
+                {
+                  "step": 100,
+                  "past_validation_mmd": 0.030457101799838484
+                },
+                {
+                  "step": 200,
+                  "past_validation_mmd": 0.01850085110333557
+                },
+                {
+                  "step": 300,
+                  "past_validation_mmd": 0.017993888664390976
+                },
+                {
+                  "step": 400,
+                  "past_validation_mmd": 0.017573451614057482
+                },
+                {
+                  "step": 500,
+                  "past_validation_mmd": 0.017552801137701857
+                },
+                {
+                  "step": 600,
+                  "past_validation_mmd": 0.01707066350824513
+                },
+                {
+                  "step": 700,
+                  "past_validation_mmd": 0.016373729560966194
+                },
+                {
+                  "step": 800,
+                  "past_validation_mmd": 0.016079766683470106
+                }
+              ],
+              "validation_scope": "Fixed cell groups from observed past stages, not an independent temporal holdout",
+              "past_bandwidth": 27.505545275518802,
+              "future_representation_used": false,
+              "surrogate_is_final_score": false,
+              "time_mode": "freeze",
+              "decoder": "legacy",
+              "direction_gate": false,
+              "requested_strength": 0.5,
+              "used_strength": 0.5,
+              "covariance_change_vs_reference": 0.10063445378937602,
+              "mapping": {
+                "mapped_genes": 26775,
+                "protected_genes": 5510,
+                "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+              },
+              "activated_values": 0,
+              "deleted_values": 0,
+              "detection_cap": 0.01,
+              "guard_applied": true,
+              "direction_gate_scope": "Proposal signs before mapped mass conservation; actual metric determines final direction.",
+              "hurdle_scope": "Ridge detection and positive-log moment models on normalized abundance; not a raw-count likelihood or MAST reproduction.",
+              "prediction_sha256": "a883c2c9d7bf5518c42ff241203b066935da2f7f4576f4878302a0527a96b31c"
+            },
+            "extrapolate_legacy_gateFalse": {
+              "method": "Stage-conditioned noisy residual network trained on past adjacent-stage MMD; no faithful paper reproduction",
+              "fit_max_stage": 8.25,
+              "past_stages": [
+                7.5,
+                7.75,
+                8.0,
+                8.25
+              ],
+              "training_steps": 800,
+              "batch_size": 64,
+              "training_objective": "sqrt",
+              "initial_past_validation_mmd": 0.05357245936141241,
+              "selected_past_validation_mmd": 0.016079766683470106,
+              "training_history": [
+                {
+                  "step": 0,
+                  "past_validation_mmd": 0.05357245936141241
+                },
+                {
+                  "step": 100,
+                  "past_validation_mmd": 0.030457101799838484
+                },
+                {
+                  "step": 200,
+                  "past_validation_mmd": 0.01850085110333557
+                },
+                {
+                  "step": 300,
+                  "past_validation_mmd": 0.017993888664390976
+                },
+                {
+                  "step": 400,
+                  "past_validation_mmd": 0.017573451614057482
+                },
+                {
+                  "step": 500,
+                  "past_validation_mmd": 0.017552801137701857
+                },
+                {
+                  "step": 600,
+                  "past_validation_mmd": 0.01707066350824513
+                },
+                {
+                  "step": 700,
+                  "past_validation_mmd": 0.016373729560966194
+                },
+                {
+                  "step": 800,
+                  "past_validation_mmd": 0.016079766683470106
+                }
+              ],
+              "validation_scope": "Fixed cell groups from observed past stages, not an independent temporal holdout",
+              "past_bandwidth": 27.505545275518802,
+              "future_representation_used": false,
+              "surrogate_is_final_score": false,
+              "time_mode": "extrapolate",
+              "decoder": "legacy",
+              "direction_gate": false,
+              "requested_strength": 0.5,
+              "used_strength": 0.5,
+              "covariance_change_vs_reference": 0.10354482197775247,
+              "mapping": {
+                "mapped_genes": 26775,
+                "protected_genes": 5510,
+                "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+              },
+              "activated_values": 0,
+              "deleted_values": 0,
+              "detection_cap": 0.01,
+              "guard_applied": true,
+              "direction_gate_scope": "Proposal signs before mapped mass conservation; actual metric determines final direction.",
+              "hurdle_scope": "Ridge detection and positive-log moment models on normalized abundance; not a raw-count likelihood or MAST reproduction.",
+              "prediction_sha256": "c76a349b6a78b3de0a5966e6171e65a66dbbeddf4c5e521c77a1407bf53515a6"
+            },
+            "freeze_legacy_gateTrue": {
+              "method": "Stage-conditioned noisy residual network trained on past adjacent-stage MMD; no faithful paper reproduction",
+              "fit_max_stage": 8.25,
+              "past_stages": [
+                7.5,
+                7.75,
+                8.0,
+                8.25
+              ],
+              "training_steps": 800,
+              "batch_size": 64,
+              "training_objective": "sqrt",
+              "initial_past_validation_mmd": 0.05357245936141241,
+              "selected_past_validation_mmd": 0.016079766683470106,
+              "training_history": [
+                {
+                  "step": 0,
+                  "past_validation_mmd": 0.05357245936141241
+                },
+                {
+                  "step": 100,
+                  "past_validation_mmd": 0.030457101799838484
+                },
+                {
+                  "step": 200,
+                  "past_validation_mmd": 0.01850085110333557
+                },
+                {
+                  "step": 300,
+                  "past_validation_mmd": 0.017993888664390976
+                },
+                {
+                  "step": 400,
+                  "past_validation_mmd": 0.017573451614057482
+                },
+                {
+                  "step": 500,
+                  "past_validation_mmd": 0.017552801137701857
+                },
+                {
+                  "step": 600,
+                  "past_validation_mmd": 0.01707066350824513
+                },
+                {
+                  "step": 700,
+                  "past_validation_mmd": 0.016373729560966194
+                },
+                {
+                  "step": 800,
+                  "past_validation_mmd": 0.016079766683470106
+                }
+              ],
+              "validation_scope": "Fixed cell groups from observed past stages, not an independent temporal holdout",
+              "past_bandwidth": 27.505545275518802,
+              "future_representation_used": false,
+              "surrogate_is_final_score": false,
+              "time_mode": "freeze",
+              "decoder": "legacy",
+              "direction_gate": true,
+              "requested_strength": 0.5,
+              "used_strength": 0.5,
+              "covariance_change_vs_reference": 0.05874137658747244,
+              "mapping": {
+                "mapped_genes": 26775,
+                "protected_genes": 5510,
+                "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+              },
+              "activated_values": 0,
+              "deleted_values": 0,
+              "detection_cap": 0.01,
+              "guard_applied": true,
+              "direction_gate_scope": "Proposal signs before mapped mass conservation; actual metric determines final direction.",
+              "hurdle_scope": "Ridge detection and positive-log moment models on normalized abundance; not a raw-count likelihood or MAST reproduction.",
+              "prediction_sha256": "e18d162fb46d0cea72a6f35262d53fa6dc3853a7cc151dc60a390a7bbb97bce9"
+            },
+            "freeze_hurdle_gateFalse": {
+              "method": "Stage-conditioned noisy residual network trained on past adjacent-stage MMD; no faithful paper reproduction",
+              "fit_max_stage": 8.25,
+              "past_stages": [
+                7.5,
+                7.75,
+                8.0,
+                8.25
+              ],
+              "training_steps": 800,
+              "batch_size": 64,
+              "training_objective": "sqrt",
+              "initial_past_validation_mmd": 0.05357245936141241,
+              "selected_past_validation_mmd": 0.016079766683470106,
+              "training_history": [
+                {
+                  "step": 0,
+                  "past_validation_mmd": 0.05357245936141241
+                },
+                {
+                  "step": 100,
+                  "past_validation_mmd": 0.030457101799838484
+                },
+                {
+                  "step": 200,
+                  "past_validation_mmd": 0.01850085110333557
+                },
+                {
+                  "step": 300,
+                  "past_validation_mmd": 0.017993888664390976
+                },
+                {
+                  "step": 400,
+                  "past_validation_mmd": 0.017573451614057482
+                },
+                {
+                  "step": 500,
+                  "past_validation_mmd": 0.017552801137701857
+                },
+                {
+                  "step": 600,
+                  "past_validation_mmd": 0.01707066350824513
+                },
+                {
+                  "step": 700,
+                  "past_validation_mmd": 0.016373729560966194
+                },
+                {
+                  "step": 800,
+                  "past_validation_mmd": 0.016079766683470106
+                }
+              ],
+              "validation_scope": "Fixed cell groups from observed past stages, not an independent temporal holdout",
+              "past_bandwidth": 27.505545275518802,
+              "future_representation_used": false,
+              "surrogate_is_final_score": false,
+              "time_mode": "freeze",
+              "decoder": "hurdle",
+              "direction_gate": false,
+              "requested_strength": 0.5,
+              "used_strength": 0.5,
+              "covariance_change_vs_reference": 0.078227305691622,
+              "mapping": {
+                "mapped_genes": 26775,
+                "protected_genes": 5510
+              },
+              "activated_values": 49338,
+              "deleted_values": 37079,
+              "detection_cap": 0.01,
+              "guard_applied": true,
+              "direction_gate_scope": "Proposal signs before mapped mass conservation; actual metric determines final direction.",
+              "hurdle_scope": "Ridge detection and positive-log moment models on normalized abundance; not a raw-count likelihood or MAST reproduction.",
+              "prediction_sha256": "44e2017cd9a5304a10bd9557b073c79c74ace7001fb5e8e98a85c73f0787a384"
+            },
+            "freeze_hurdle_gateTrue": {
+              "method": "Stage-conditioned noisy residual network trained on past adjacent-stage MMD; no faithful paper reproduction",
+              "fit_max_stage": 8.25,
+              "past_stages": [
+                7.5,
+                7.75,
+                8.0,
+                8.25
+              ],
+              "training_steps": 800,
+              "batch_size": 64,
+              "training_objective": "sqrt",
+              "initial_past_validation_mmd": 0.05357245936141241,
+              "selected_past_validation_mmd": 0.016079766683470106,
+              "training_history": [
+                {
+                  "step": 0,
+                  "past_validation_mmd": 0.05357245936141241
+                },
+                {
+                  "step": 100,
+                  "past_validation_mmd": 0.030457101799838484
+                },
+                {
+                  "step": 200,
+                  "past_validation_mmd": 0.01850085110333557
+                },
+                {
+                  "step": 300,
+                  "past_validation_mmd": 0.017993888664390976
+                },
+                {
+                  "step": 400,
+                  "past_validation_mmd": 0.017573451614057482
+                },
+                {
+                  "step": 500,
+                  "past_validation_mmd": 0.017552801137701857
+                },
+                {
+                  "step": 600,
+                  "past_validation_mmd": 0.01707066350824513
+                },
+                {
+                  "step": 700,
+                  "past_validation_mmd": 0.016373729560966194
+                },
+                {
+                  "step": 800,
+                  "past_validation_mmd": 0.016079766683470106
+                }
+              ],
+              "validation_scope": "Fixed cell groups from observed past stages, not an independent temporal holdout",
+              "past_bandwidth": 27.505545275518802,
+              "future_representation_used": false,
+              "surrogate_is_final_score": false,
+              "time_mode": "freeze",
+              "decoder": "hurdle",
+              "direction_gate": true,
+              "requested_strength": 0.5,
+              "used_strength": 0.5,
+              "covariance_change_vs_reference": 0.045612463852433824,
+              "mapping": {
+                "mapped_genes": 26775,
+                "protected_genes": 5510
+              },
+              "activated_values": 9159,
+              "deleted_values": 7873,
+              "detection_cap": 0.01,
+              "guard_applied": true,
+              "direction_gate_scope": "Proposal signs before mapped mass conservation; actual metric determines final direction.",
+              "hurdle_scope": "Ridge detection and positive-log moment models on normalized abundance; not a raw-count likelihood or MAST reproduction.",
+              "prediction_sha256": "6488417b5f9325224ef022cd531a8332db348358f8b3fcb69f13d7ce2d6bfb19"
+            },
+            "extrapolate_hurdle_gateTrue": {
+              "method": "Stage-conditioned noisy residual network trained on past adjacent-stage MMD; no faithful paper reproduction",
+              "fit_max_stage": 8.25,
+              "past_stages": [
+                7.5,
+                7.75,
+                8.0,
+                8.25
+              ],
+              "training_steps": 800,
+              "batch_size": 64,
+              "training_objective": "sqrt",
+              "initial_past_validation_mmd": 0.05357245936141241,
+              "selected_past_validation_mmd": 0.016079766683470106,
+              "training_history": [
+                {
+                  "step": 0,
+                  "past_validation_mmd": 0.05357245936141241
+                },
+                {
+                  "step": 100,
+                  "past_validation_mmd": 0.030457101799838484
+                },
+                {
+                  "step": 200,
+                  "past_validation_mmd": 0.01850085110333557
+                },
+                {
+                  "step": 300,
+                  "past_validation_mmd": 0.017993888664390976
+                },
+                {
+                  "step": 400,
+                  "past_validation_mmd": 0.017573451614057482
+                },
+                {
+                  "step": 500,
+                  "past_validation_mmd": 0.017552801137701857
+                },
+                {
+                  "step": 600,
+                  "past_validation_mmd": 0.01707066350824513
+                },
+                {
+                  "step": 700,
+                  "past_validation_mmd": 0.016373729560966194
+                },
+                {
+                  "step": 800,
+                  "past_validation_mmd": 0.016079766683470106
+                }
+              ],
+              "validation_scope": "Fixed cell groups from observed past stages, not an independent temporal holdout",
+              "past_bandwidth": 27.505545275518802,
+              "future_representation_used": false,
+              "surrogate_is_final_score": false,
+              "time_mode": "extrapolate",
+              "decoder": "hurdle",
+              "direction_gate": true,
+              "requested_strength": 0.5,
+              "used_strength": 0.5,
+              "covariance_change_vs_reference": 0.044336838614628886,
+              "mapping": {
+                "mapped_genes": 26775,
+                "protected_genes": 5510
+              },
+              "activated_values": 8975,
+              "deleted_values": 7884,
+              "detection_cap": 0.01,
+              "guard_applied": true,
+              "direction_gate_scope": "Proposal signs before mapped mass conservation; actual metric determines final direction.",
+              "hurdle_scope": "Ridge detection and positive-log moment models on normalized abundance; not a raw-count likelihood or MAST reproduction.",
+              "prediction_sha256": "8c4a1bfd1443485004cb4ba11b0112a60020a4e7265b5144380ba4b1d0dddd89"
+            }
+          }
+        }
+      ]
+    },
+    "conditioned_oneday_temporal_01": {
+      "report_sha256": "1d02aed5472fdab86ba57d75682435f9b8f60282676d85f8638262b4c37a9c54",
+      "folds": [
+        {
+          "cutoff": 7.5,
+          "target": 8.5,
+          "floor": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.24985814094543457,
+            "variogram": 0.006257481873035431
+          },
+          "ceiling": {
+            "de_score": 0.8694915254237289,
+            "de_direction": 0.8386879685783476,
+            "mmd_u": 0.011203756555914879,
+            "variogram": 0.00024685851531103253
+          },
+          "results": [
+            {
+              "candidate": "copy",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.24985814094543457,
+                "variogram": 0.006257481873035431
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "incumbent",
+              "raw_metrics": {
+                "de_score": 0.03389830508474575,
+                "de_direction": 0.10981011169985787,
+                "mmd_u": 0.23976483941078186,
+                "variogram": 0.0061050644144415855
+              },
+              "local_score": 51.57661564220653,
+              "skills": {
+                "de_score": 0.5099403578528827,
+                "de_direction": 0.5350256780023435,
+                "mmd_u": 0.5108015490092639,
+                "variogram": 0.5064209137773978
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "freeze_legacy_gateFalse",
+              "raw_metrics": {
+                "de_score": -0.045762711864406794,
+                "de_direction": -0.17013217931654226,
+                "mmd_u": 0.24621975421905518,
+                "variogram": 0.006409767083823681
+              },
+              "local_score": 48.518518551389214,
+              "skills": {
+                "de_score": 0.48717948717948717,
+                "de_direction": 0.4539563107194049,
+                "mmd_u": 0.5038406314435498,
+                "variogram": 0.49374523303052104
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "extrapolate_legacy_gateFalse",
+              "raw_metrics": {
+                "de_score": -0.1288135593220339,
+                "de_direction": -0.027936344675294746,
+                "mmd_u": 0.2485627681016922,
+                "variogram": 0.006434310227632523
+              },
+              "local_score": 48.8290119063054,
+              "skills": {
+                "de_score": 0.46551724137931033,
+                "de_direction": 0.49180902378616453,
+                "mmd_u": 0.5013606474679112,
+                "variogram": 0.49275179265655944
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "freeze_legacy_gateTrue",
+              "raw_metrics": {
+                "de_score": -0.06779661016949153,
+                "de_direction": 0.0493019329993591,
+                "mmd_u": 0.24682700634002686,
+                "variogram": 0.006219570990651846
+              },
+              "local_score": 50.036988588845574,
+              "skills": {
+                "de_score": 0.4812382739212007,
+                "de_direction": 0.5151411830400415,
+                "mmd_u": 0.503195527668819,
+                "variogram": 0.5015818167374972
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "freeze_hurdle_gateFalse",
+              "raw_metrics": {
+                "de_score": -0.06610169491525425,
+                "de_direction": -0.05877483448747233,
+                "mmd_u": 0.24989059567451477,
+                "variogram": 0.006396800745278597
+              },
+              "local_score": 49.00349840821169,
+              "skills": {
+                "de_score": 0.48169014084507045,
+                "de_direction": 0.48307323435054794,
+                "mmd_u": 0.49996600468649904,
+                "variogram": 0.49427169438631313
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "freeze_hurdle_gateTrue",
+              "raw_metrics": {
+                "de_score": -0.0728813559322034,
+                "de_direction": 0.08407682124240436,
+                "mmd_u": 0.24778179824352264,
+                "variogram": 0.0062093790620565414
+              },
+              "local_score": 50.26251853509057,
+              "skills": {
+                "de_score": 0.47988774555659497,
+                "de_direction": 0.5263845063373923,
+                "mmd_u": 0.5021845549545634,
+                "variogram": 0.5020087794551994
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "extrapolate_hurdle_gateTrue",
+              "raw_metrics": {
+                "de_score": -0.07796610169491526,
+                "de_direction": 0.07590879239481112,
+                "mmd_u": 0.24767284095287323,
+                "variogram": 0.006223898380994797
+              },
+              "local_score": 50.15312013172332,
+              "skills": {
+                "de_score": 0.47854477611940294,
+                "de_direction": 0.5236997657563863,
+                "mmd_u": 0.5022997180060825,
+                "variogram": 0.5014007522323056
+              },
+              "calibration_valid": true
+            }
+          ],
+          "audits": {
+            "copy": {
+              "method": "persistence",
+              "prediction_sha256": "6f9a43352757d99023c515adebfffaa8bc89c74bc77bca50a69d304002e71439"
+            },
+            "incumbent": {
+              "mapping": {
+                "mapped_genes": 26775,
+                "protected_genes": 5510,
+                "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+              },
+              "guard_applied": true,
+              "population_mix": 1.0,
+              "expression_strength_used": 1.0,
+              "trusted_donor_fraction": 0.9893333333333333,
+              "effective_sample_size": 723.3320060445253,
+              "unique_donors": 678,
+              "covariance_change_vs_reference": 0.11234453608610809,
+              "state_support": [
+                1,
+                5,
+                3,
+                26,
+                18,
+                93,
+                32,
+                76,
+                0,
+                16,
+                36,
+                3,
+                16,
+                2,
+                3,
+                72
+              ],
+              "alignment": "identity",
+              "covariance_limit": 0.4,
+              "feature_scaling": "unit",
+              "expression_factor_cap": 1.25,
+              "detection_strength": 0.5,
+              "maximum_probability_change": 0.02,
+              "attempted_additions": 11405,
+              "attempted_deletions": 5734,
+              "detection_candidate_covariance_change": 0.114062562080102,
+              "detection_guard_rejected": false,
+              "actual_additions": 11405,
+              "actual_deletions": 5734,
+              "prediction_sha256": "ff127907bafcdf1a5ba643f7ee50d922453f42d78d170ab04df2fb5442f58431"
+            },
+            "freeze_legacy_gateFalse": {
+              "method": "Stage-conditioned noisy residual network trained on past adjacent-stage MMD; no faithful paper reproduction",
+              "fit_max_stage": 7.5,
+              "past_stages": [
+                6.5,
+                6.75,
+                7.0,
+                7.25,
+                7.5
+              ],
+              "training_steps": 800,
+              "batch_size": 64,
+              "training_objective": "sqrt",
+              "initial_past_validation_mmd": 0.07152110148427165,
+              "selected_past_validation_mmd": 0.015486217243683945,
+              "training_history": [
+                {
+                  "step": 0,
+                  "past_validation_mmd": 0.07152110148427165
+                },
+                {
+                  "step": 100,
+                  "past_validation_mmd": 0.04500191111456611
+                },
+                {
+                  "step": 200,
+                  "past_validation_mmd": 0.02396821629034622
+                },
+                {
+                  "step": 300,
+                  "past_validation_mmd": 0.017356636660664455
+                },
+                {
+                  "step": 400,
+                  "past_validation_mmd": 0.016194596598858017
+                },
+                {
+                  "step": 500,
+                  "past_validation_mmd": 0.015486217243683945
+                },
+                {
+                  "step": 600,
+                  "past_validation_mmd": 0.015593309714120825
+                },
+                {
+                  "step": 700,
+                  "past_validation_mmd": 0.015604222549214992
+                },
+                {
+                  "step": 800,
+                  "past_validation_mmd": 0.015784089899898213
+                }
+              ],
+              "validation_scope": "Fixed cell groups from observed past stages, not an independent temporal holdout",
+              "past_bandwidth": 28.317880172480844,
+              "future_representation_used": false,
+              "surrogate_is_final_score": false,
+              "time_mode": "freeze",
+              "decoder": "legacy",
+              "direction_gate": false,
+              "requested_strength": 0.5,
+              "used_strength": 0.5,
+              "covariance_change_vs_reference": 0.1474142749096799,
+              "mapping": {
+                "mapped_genes": 26775,
+                "protected_genes": 5510,
+                "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+              },
+              "activated_values": 0,
+              "deleted_values": 0,
+              "detection_cap": 0.01,
+              "guard_applied": true,
+              "direction_gate_scope": "Proposal signs before mapped mass conservation; actual metric determines final direction.",
+              "hurdle_scope": "Ridge detection and positive-log moment models on normalized abundance; not a raw-count likelihood or MAST reproduction.",
+              "prediction_sha256": "8a7f49dca3f8b39eddaa68f8085100878026af2af5ea73a68f3d41ea68e3d930"
+            },
+            "extrapolate_legacy_gateFalse": {
+              "method": "Stage-conditioned noisy residual network trained on past adjacent-stage MMD; no faithful paper reproduction",
+              "fit_max_stage": 7.5,
+              "past_stages": [
+                6.5,
+                6.75,
+                7.0,
+                7.25,
+                7.5
+              ],
+              "training_steps": 800,
+              "batch_size": 64,
+              "training_objective": "sqrt",
+              "initial_past_validation_mmd": 0.07152110148427165,
+              "selected_past_validation_mmd": 0.015486217243683945,
+              "training_history": [
+                {
+                  "step": 0,
+                  "past_validation_mmd": 0.07152110148427165
+                },
+                {
+                  "step": 100,
+                  "past_validation_mmd": 0.04500191111456611
+                },
+                {
+                  "step": 200,
+                  "past_validation_mmd": 0.02396821629034622
+                },
+                {
+                  "step": 300,
+                  "past_validation_mmd": 0.017356636660664455
+                },
+                {
+                  "step": 400,
+                  "past_validation_mmd": 0.016194596598858017
+                },
+                {
+                  "step": 500,
+                  "past_validation_mmd": 0.015486217243683945
+                },
+                {
+                  "step": 600,
+                  "past_validation_mmd": 0.015593309714120825
+                },
+                {
+                  "step": 700,
+                  "past_validation_mmd": 0.015604222549214992
+                },
+                {
+                  "step": 800,
+                  "past_validation_mmd": 0.015784089899898213
+                }
+              ],
+              "validation_scope": "Fixed cell groups from observed past stages, not an independent temporal holdout",
+              "past_bandwidth": 28.317880172480844,
+              "future_representation_used": false,
+              "surrogate_is_final_score": false,
+              "time_mode": "extrapolate",
+              "decoder": "legacy",
+              "direction_gate": false,
+              "requested_strength": 0.5,
+              "used_strength": 0.5,
+              "covariance_change_vs_reference": 0.13243564527312993,
+              "mapping": {
+                "mapped_genes": 26775,
+                "protected_genes": 5510,
+                "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+              },
+              "activated_values": 0,
+              "deleted_values": 0,
+              "detection_cap": 0.01,
+              "guard_applied": true,
+              "direction_gate_scope": "Proposal signs before mapped mass conservation; actual metric determines final direction.",
+              "hurdle_scope": "Ridge detection and positive-log moment models on normalized abundance; not a raw-count likelihood or MAST reproduction.",
+              "prediction_sha256": "7ddebbbad384b43cb34d48dd856a913fe508d1d4da59214ece961264e9e8d70f"
+            },
+            "freeze_legacy_gateTrue": {
+              "method": "Stage-conditioned noisy residual network trained on past adjacent-stage MMD; no faithful paper reproduction",
+              "fit_max_stage": 7.5,
+              "past_stages": [
+                6.5,
+                6.75,
+                7.0,
+                7.25,
+                7.5
+              ],
+              "training_steps": 800,
+              "batch_size": 64,
+              "training_objective": "sqrt",
+              "initial_past_validation_mmd": 0.07152110148427165,
+              "selected_past_validation_mmd": 0.015486217243683945,
+              "training_history": [
+                {
+                  "step": 0,
+                  "past_validation_mmd": 0.07152110148427165
+                },
+                {
+                  "step": 100,
+                  "past_validation_mmd": 0.04500191111456611
+                },
+                {
+                  "step": 200,
+                  "past_validation_mmd": 0.02396821629034622
+                },
+                {
+                  "step": 300,
+                  "past_validation_mmd": 0.017356636660664455
+                },
+                {
+                  "step": 400,
+                  "past_validation_mmd": 0.016194596598858017
+                },
+                {
+                  "step": 500,
+                  "past_validation_mmd": 0.015486217243683945
+                },
+                {
+                  "step": 600,
+                  "past_validation_mmd": 0.015593309714120825
+                },
+                {
+                  "step": 700,
+                  "past_validation_mmd": 0.015604222549214992
+                },
+                {
+                  "step": 800,
+                  "past_validation_mmd": 0.015784089899898213
+                }
+              ],
+              "validation_scope": "Fixed cell groups from observed past stages, not an independent temporal holdout",
+              "past_bandwidth": 28.317880172480844,
+              "future_representation_used": false,
+              "surrogate_is_final_score": false,
+              "time_mode": "freeze",
+              "decoder": "legacy",
+              "direction_gate": true,
+              "requested_strength": 0.5,
+              "used_strength": 0.5,
+              "covariance_change_vs_reference": 0.060312780478598955,
+              "mapping": {
+                "mapped_genes": 26775,
+                "protected_genes": 5510,
+                "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+              },
+              "activated_values": 0,
+              "deleted_values": 0,
+              "detection_cap": 0.01,
+              "guard_applied": true,
+              "direction_gate_scope": "Proposal signs before mapped mass conservation; actual metric determines final direction.",
+              "hurdle_scope": "Ridge detection and positive-log moment models on normalized abundance; not a raw-count likelihood or MAST reproduction.",
+              "prediction_sha256": "3ab2bf09ad0df99a3aca92270e620c1f53168cb726409bfd209989d34c872ee0"
+            },
+            "freeze_hurdle_gateFalse": {
+              "method": "Stage-conditioned noisy residual network trained on past adjacent-stage MMD; no faithful paper reproduction",
+              "fit_max_stage": 7.5,
+              "past_stages": [
+                6.5,
+                6.75,
+                7.0,
+                7.25,
+                7.5
+              ],
+              "training_steps": 800,
+              "batch_size": 64,
+              "training_objective": "sqrt",
+              "initial_past_validation_mmd": 0.07152110148427165,
+              "selected_past_validation_mmd": 0.015486217243683945,
+              "training_history": [
+                {
+                  "step": 0,
+                  "past_validation_mmd": 0.07152110148427165
+                },
+                {
+                  "step": 100,
+                  "past_validation_mmd": 0.04500191111456611
+                },
+                {
+                  "step": 200,
+                  "past_validation_mmd": 0.02396821629034622
+                },
+                {
+                  "step": 300,
+                  "past_validation_mmd": 0.017356636660664455
+                },
+                {
+                  "step": 400,
+                  "past_validation_mmd": 0.016194596598858017
+                },
+                {
+                  "step": 500,
+                  "past_validation_mmd": 0.015486217243683945
+                },
+                {
+                  "step": 600,
+                  "past_validation_mmd": 0.015593309714120825
+                },
+                {
+                  "step": 700,
+                  "past_validation_mmd": 0.015604222549214992
+                },
+                {
+                  "step": 800,
+                  "past_validation_mmd": 0.015784089899898213
+                }
+              ],
+              "validation_scope": "Fixed cell groups from observed past stages, not an independent temporal holdout",
+              "past_bandwidth": 28.317880172480844,
+              "future_representation_used": false,
+              "surrogate_is_final_score": false,
+              "time_mode": "freeze",
+              "decoder": "hurdle",
+              "direction_gate": false,
+              "requested_strength": 0.5,
+              "used_strength": 0.5,
+              "covariance_change_vs_reference": 0.1264718384850854,
+              "mapping": {
+                "mapped_genes": 26775,
+                "protected_genes": 5510
+              },
+              "activated_values": 41527,
+              "deleted_values": 17156,
+              "detection_cap": 0.01,
+              "guard_applied": true,
+              "direction_gate_scope": "Proposal signs before mapped mass conservation; actual metric determines final direction.",
+              "hurdle_scope": "Ridge detection and positive-log moment models on normalized abundance; not a raw-count likelihood or MAST reproduction.",
+              "prediction_sha256": "dd92cc719a323ba91794376425746a15b4f8d6444088000ab85fd3217b43ce7b"
+            },
+            "freeze_hurdle_gateTrue": {
+              "method": "Stage-conditioned noisy residual network trained on past adjacent-stage MMD; no faithful paper reproduction",
+              "fit_max_stage": 7.5,
+              "past_stages": [
+                6.5,
+                6.75,
+                7.0,
+                7.25,
+                7.5
+              ],
+              "training_steps": 800,
+              "batch_size": 64,
+              "training_objective": "sqrt",
+              "initial_past_validation_mmd": 0.07152110148427165,
+              "selected_past_validation_mmd": 0.015486217243683945,
+              "training_history": [
+                {
+                  "step": 0,
+                  "past_validation_mmd": 0.07152110148427165
+                },
+                {
+                  "step": 100,
+                  "past_validation_mmd": 0.04500191111456611
+                },
+                {
+                  "step": 200,
+                  "past_validation_mmd": 0.02396821629034622
+                },
+                {
+                  "step": 300,
+                  "past_validation_mmd": 0.017356636660664455
+                },
+                {
+                  "step": 400,
+                  "past_validation_mmd": 0.016194596598858017
+                },
+                {
+                  "step": 500,
+                  "past_validation_mmd": 0.015486217243683945
+                },
+                {
+                  "step": 600,
+                  "past_validation_mmd": 0.015593309714120825
+                },
+                {
+                  "step": 700,
+                  "past_validation_mmd": 0.015604222549214992
+                },
+                {
+                  "step": 800,
+                  "past_validation_mmd": 0.015784089899898213
+                }
+              ],
+              "validation_scope": "Fixed cell groups from observed past stages, not an independent temporal holdout",
+              "past_bandwidth": 28.317880172480844,
+              "future_representation_used": false,
+              "surrogate_is_final_score": false,
+              "time_mode": "freeze",
+              "decoder": "hurdle",
+              "direction_gate": true,
+              "requested_strength": 0.5,
+              "used_strength": 0.5,
+              "covariance_change_vs_reference": 0.05210779042653586,
+              "mapping": {
+                "mapped_genes": 26775,
+                "protected_genes": 5510
+              },
+              "activated_values": 7527,
+              "deleted_values": 2784,
+              "detection_cap": 0.01,
+              "guard_applied": true,
+              "direction_gate_scope": "Proposal signs before mapped mass conservation; actual metric determines final direction.",
+              "hurdle_scope": "Ridge detection and positive-log moment models on normalized abundance; not a raw-count likelihood or MAST reproduction.",
+              "prediction_sha256": "c80a31c5dc4ff7b6dca5d9badda8d46834c599dde7a6ee17cb421af21197026e"
+            },
+            "extrapolate_hurdle_gateTrue": {
+              "method": "Stage-conditioned noisy residual network trained on past adjacent-stage MMD; no faithful paper reproduction",
+              "fit_max_stage": 7.5,
+              "past_stages": [
+                6.5,
+                6.75,
+                7.0,
+                7.25,
+                7.5
+              ],
+              "training_steps": 800,
+              "batch_size": 64,
+              "training_objective": "sqrt",
+              "initial_past_validation_mmd": 0.07152110148427165,
+              "selected_past_validation_mmd": 0.015486217243683945,
+              "training_history": [
+                {
+                  "step": 0,
+                  "past_validation_mmd": 0.07152110148427165
+                },
+                {
+                  "step": 100,
+                  "past_validation_mmd": 0.04500191111456611
+                },
+                {
+                  "step": 200,
+                  "past_validation_mmd": 0.02396821629034622
+                },
+                {
+                  "step": 300,
+                  "past_validation_mmd": 0.017356636660664455
+                },
+                {
+                  "step": 400,
+                  "past_validation_mmd": 0.016194596598858017
+                },
+                {
+                  "step": 500,
+                  "past_validation_mmd": 0.015486217243683945
+                },
+                {
+                  "step": 600,
+                  "past_validation_mmd": 0.015593309714120825
+                },
+                {
+                  "step": 700,
+                  "past_validation_mmd": 0.015604222549214992
+                },
+                {
+                  "step": 800,
+                  "past_validation_mmd": 0.015784089899898213
+                }
+              ],
+              "validation_scope": "Fixed cell groups from observed past stages, not an independent temporal holdout",
+              "past_bandwidth": 28.317880172480844,
+              "future_representation_used": false,
+              "surrogate_is_final_score": false,
+              "time_mode": "extrapolate",
+              "decoder": "hurdle",
+              "direction_gate": true,
+              "requested_strength": 0.5,
+              "used_strength": 0.5,
+              "covariance_change_vs_reference": 0.04289663989215561,
+              "mapping": {
+                "mapped_genes": 26775,
+                "protected_genes": 5510
+              },
+              "activated_values": 3828,
+              "deleted_values": 3479,
+              "detection_cap": 0.01,
+              "guard_applied": true,
+              "direction_gate_scope": "Proposal signs before mapped mass conservation; actual metric determines final direction.",
+              "hurdle_scope": "Ridge detection and positive-log moment models on normalized abundance; not a raw-count likelihood or MAST reproduction.",
+              "prediction_sha256": "7b86cb1ab358811399b8986f6a24b32d234dfac8315a93e5a1886817bd26e380"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "submissions_used": 0,
+  "jev_requests_used": 0,
+  "matched_autonomous_panel_calibration": true,
+  "official_72_verified": false,
+  "local_evaluations": 24,
+  "decision": "No variant improves both short folds or beats the one-day state control. Retain challenge unit_k16. Source cohort mismatch now prioritized."
+}
