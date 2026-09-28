@@ -208,19 +208,19 @@
         "de_score",
         "de_direction"
       ],
-      "status": "queued_method_review",
+      "status": "running",
       "sources": [
         {
-          "title": "Adaptive shrinkage",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5379932/",
-          "coverage": "article and sign-error method discussion"
+          "title": "Stephens2017 supplement",
+          "url": "https://stephenslab.uchicago.edu/assets/papers/Stephens2017-supplement.pdf",
+          "coverage": "S.1-S.2, normal mixtures, null penalty, EM and posteriors; main PMC access blocked this turn"
         }
       ],
       "hypothesis_and_limits": "Estimate effect uncertainty and false-sign risk, using historical folds only. Challenge log expression is not raw count input for DESeq2.",
-      "implementation": null,
-      "run": null,
+      "implementation": "empirical_bayes_trend.py and empirical_bayes_horizon.py",
+      "run": "empirical_bayes_horizon_01",
       "declared_experiment_and_result": null,
-      "next_action": "Specify historical uncertainty estimator, mixture prior and frozen sign thresholds before implementing.",
+      "next_action": "Finish all6 candidates across2 matched one-day folds; compare full four-metric vectors to archived controls.",
       "research_family_exhausted": false,
       "constraints": [
         "All learner inputs <= fold cutoff; challenge calibration <=E8.5",
@@ -4363,7 +4363,7 @@
         "mmd_u",
         "variogram"
       ],
-      "status": "implemented_evaluated",
+      "status": "running",
       "sources": [
         {
           "url": "https://arxiv.org/html/1302.7149v2",
@@ -4376,11 +4376,11 @@
       ],
       "scope": "Adaptation, not faithful ECC. Three positive-quantile strengths, global and four-state conditional, two one-day associated-cohort folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "833fc778e93e9b2d10da2b9f38328e15450a45b570a472e592c4477101284921",
+      "results_report_sha256": "975290e4f2df51b17bf989f0fa086a3c7d6ffa211f83a2906b420cae473f8130",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Implement and freeze the 2048-gene coverage ablation in NEXT_PROGRAM_EXPERIMENT.json. Convergence repair is complete; no new model passes both one-day folds. Keep official quota unused."
+      "next_action": "Complete the empirical Bayes slope/sign-gate batch, preserve all four scores, and proceed to the next declared viable method. Keep official quota unused."
     },
     {
       "id": "annotation_conditioned_temporal",
@@ -4404,7 +4404,7 @@
       ],
       "scope": "Heuristic adaptation to normalized abundance; not muscat replication. Observed annotations group past cells. Four expression/detection ablations, source support20 vs100, two one-day folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "833fc778e93e9b2d10da2b9f38328e15450a45b570a472e592c4477101284921",
+      "results_report_sha256": "975290e4f2df51b17bf989f0fa086a3c7d6ffa211f83a2906b420cae473f8130",
       "limitations": [
         "Published annotation may derive from joint stages; retrospective diagnostic only.",
         "Capture IDs do not establish independent embryos; cell-based errors are shrinkage heuristics.",
@@ -4413,7 +4413,7 @@
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Implement and freeze the 2048-gene coverage ablation in NEXT_PROGRAM_EXPERIMENT.json. Convergence repair is complete; no new model passes both one-day folds. Keep official quota unused."
+      "next_action": "Complete the empirical Bayes slope/sign-gate batch, preserve all four scores, and proceed to the next declared viable method. Keep official quota unused."
     },
     {
       "id": "shared_gene_program_dynamics",
@@ -4440,11 +4440,12 @@
       "scope": "Shared SVD profile directions versus cell-level NMF median consensus usage dynamics. Neither is a faithful cNMF reproduction or certified biological-program recovery.",
       "frozen_trials": "SVD ranks2/4/8 with detection0/.5; NMF ranks8/16 with detection0/.5,3 fixed seeds and200 iterations. Rank16 optimizer repair800 iterations. Two matched one-day development folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "833fc778e93e9b2d10da2b9f38328e15450a45b570a472e592c4477101284921",
+      "results_report_sha256": "975290e4f2df51b17bf989f0fa086a3c7d6ffa211f83a2906b420cae473f8130",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Implement and freeze the 2048-gene coverage ablation in NEXT_PROGRAM_EXPERIMENT.json. Convergence repair is complete; no new model passes both one-day folds. Keep official quota unused."
+      "next_action": "Complete the empirical Bayes slope/sign-gate batch, preserve all four scores, and proceed to the next declared viable method. Keep official quota unused."
     }
-  ]
+  ],
+  "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."
 }

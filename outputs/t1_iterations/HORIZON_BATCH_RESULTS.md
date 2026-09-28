@@ -67,6 +67,12 @@ The [muscat paper](https://www.nature.com/articles/s41467-020-19894-4) motivates
 | cell_program_repair_01 | unit16 | 47.143 | 47.987 | 47.565 |
 | cell_program_repair_01 | cell_r16_d0.0 | 50.403 | 47.206 | 48.804 |
 | cell_program_repair_01 | cell_r16_d0.5 | 49.893 | 46.482 | 48.187 |
+| cell_program_feature_pilot_01 | copy | 50.000 | 50.000 | 50.000 |
+| cell_program_feature_pilot_01 | unit16 | 47.143 | 47.987 | 47.565 |
+| cell_program_feature_pilot_01 | saved384_d0.0 | 49.200 | 51.366 | 50.283 |
+| cell_program_feature_pilot_01 | saved384_d0.5 | 49.175 | 50.160 | 49.668 |
+| cell_program_feature_pilot_01 | genes2048_d0.0 | 47.825 | 50.039 | 48.932 |
+| cell_program_feature_pilot_01 | genes2048_d0.5 | 48.422 | 46.247 | 47.334 |
 
-Status: completed. Full four-metric vectors, raw metrics, model audits and provenance hashes are in HORIZON_BATCH_RESULTS.json.
+Status: running. Full four-metric vectors, raw metrics, model audits and provenance hashes are in HORIZON_BATCH_RESULTS.json.
 No new prospective export or official submission. The >72 objective remains unfinished.

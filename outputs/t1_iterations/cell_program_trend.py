@@ -9,14 +9,22 @@ from robust_population import stable_slope
 
 
 class CellProgramTrend(AnnotationTrend):
-    def __init__(self,x,stages,source_labels,cutoff,donors,donor_labels,panel,symbols,features,rank=8,nmf_max_iter=200):
+    def __init__(self,x,stages,source_labels,cutoff,donors,donor_labels,panel,symbols,features,rank=8,nmf_max_iter=200,gene_budget=384):
         super().__init__(x,stages,source_labels,cutoff,donors,donor_labels,panel,symbols,features)
         if rank not in [8,16]:raise ValueError('Rank outside frozen pilot')
         if not 100<=nmf_max_iter<=1000:raise ValueError('Iteration budget outside bounded pilot')
+        if gene_budget not in [384,2048]:raise ValueError('Gene budget outside frozen coverage pilot')
         past=np.flatnonzero(stages<=cutoff)
         fitrows=np.sort(np.random.default_rng(20260928).choice(past,min(3000,len(past)),replace=False))
         lookup={int(o):int(a) for o,a in zip(self.mapped,self.atlas)}
         self.nmf_features=np.array([lookup[int(g)] for g in self.features])
+        if gene_budget!=384:
+            # Same logged-expression variance and stable atlas-order ties as PopulationForecast.
+            eligible=np.sort(self.atlas);variance=np.zeros(len(eligible))
+            for start in range(0,len(eligible),512):
+                block=eligible[start:start+512]
+                variance[start:start+len(block)]=np.asarray(x[np.ix_(past,block)],dtype=float).var(0)
+            self.nmf_features=np.sort(eligible[np.argsort(-variance,kind='stable')[:gene_budget]])
         raw=np.expm1(np.asarray(x[np.ix_(fitrows,self.nmf_features)],dtype=float))
         self.nmf_scale=np.maximum(raw.std(0),.1);training=raw/self.nmf_scale
         rank=min(rank,training.shape[1],training.shape[0]-1)
@@ -67,10 +75,11 @@ class CellProgramTrend(AnnotationTrend):
             self.usage_slope[k]=stable_slope(recent,means,errors)*n/(n+64)
         self.positive_slope=self.usage_slope@self.decoder
         self.fit_audit={'rank':rank,'fit_cells':len(fitrows),'features':len(self.nmf_features),
+            'requested_gene_budget':gene_budget,'feature_selection':'Past-only logged-expression variance; unique exact-mapped genes; covariance guard retains its original features.',
             'nmf_max_iter':nmf_max_iter,'nmf_tolerance':1e-3,
             'replicate_iterations':iterations,'usage_iterations':usage_iterations,'convergence_warnings':warning_count,
             'consensus_cluster_sizes':self.cluster_sizes.tolist(),'consensus_dispersion':self.consensus_dispersion.tolist(),
-            'adaptation':'Three NMF replicas, median consensus, fixed-component multiplicative usage fitting; normalized abundance instead of raw counts, 384 guard features instead of2000 v-score genes, no component outlier filter. Ridge1 full-panel log-abundance decoder and within-type usage slopes are added forecasting hypotheses, not cNMF reproduction.',
+            'adaptation':'Three NMF replicas, median consensus, fixed-component multiplicative usage fitting; normalized abundance instead of raw counts, variance-selected genes instead of paper v-score selection, no component outlier filter. Ridge1 full-panel log-abundance decoder and within-type usage slopes are added forecasting hypotheses, not cNMF reproduction.',
             'scope':'Cell-level factors are not validated biological activity programs; convergence and consensus with three replicas do not establish recovery or temporal accuracy.'}
 
     def predict_cell_program(self,target,detection=0.):

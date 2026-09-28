@@ -2,7 +2,7 @@
   "source": "Neurl IPS 2026/agenticprompt",
   "canonical": "outputs/research_workflow/AGENTICPROMPT_UPDATED.md",
   "source_before_sha256": "5d385a14f0edeb362dfdb90331bd4e189e72a049705fcfbf3cd36d89f091086e",
-  "updated_sha256": "2df889b63b3b4d42f74034d6555bd5576e41c031c4d6f929036b6b07a2296d4d",
+  "updated_sha256": "f954d9a743c6b4109381c60f154e1c266745a9bc115cfee7cda64d2de3306ac6",
   "historical_content_preserved": true,
   "mandate": "outputs/t1_iterations/LOCAL_OPTIMIZATION_PROMPT.md",
   "generator_source": "Neurl IPS 2026/orchestration/diverge.py",
@@ -16,7 +16,8 @@
   "checksum_convention": "Updated snapshots and generator hashes normalize CRLF to LF; original raw hash retained. One trailing space in the original first line removed; historical instructions preserved.",
   "previous_updated_sha256": [
     "837163f3dc2f3c67093e5add280b1c29038d5268344f457122a6f849e885cbd0",
-    "ebdccfd3331c68212494ec85f055d6f7cf1f822d969399548f52cb5cc78ffcd1"
+    "ebdccfd3331c68212494ec85f055d6f7cf1f822d969399548f52cb5cc78ffcd1",
+    "2df889b63b3b4d42f74034d6555bd5576e41c031c4d6f929036b6b07a2296d4d"
   ],
   "previous_generator_sha256": [
     "cbf168e2df4e1bbd3ec94e535eece6363c9d3b793c07bea9749c98285489cc2f",
@@ -35,5 +36,6 @@
     "local_readiness_threshold": 72,
     "reference_is_not_calibration": true
   },
-  "literature_coverage_adopted_utc": "2026-09-28T14:32:57.586272+00:00"
+  "literature_coverage_adopted_utc": "2026-09-28T14:32:57.586272+00:00",
+  "complete_score_storage_adopted": "2026-09-28"
 }

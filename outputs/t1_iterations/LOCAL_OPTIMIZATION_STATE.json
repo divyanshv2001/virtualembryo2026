@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-28T17:53:49.745260+00:00",
+  "updated_utc": "2026-09-28T18:09:32.517807+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": false,
+  "local_process_running": true,
   "quota_reset_evidence": {
     "limit_observed": false,
     "remaining_quota": null,
@@ -31,7 +31,7 @@
   },
   "resume_command": null,
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement and freeze the 2048-gene coverage ablation in NEXT_PROGRAM_EXPERIMENT.json. Convergence repair is complete; no new model passes both one-day folds. Keep official quota unused.",
+  "next_experiment": "Complete the empirical Bayes slope/sign-gate batch, preserve all four scores, and proceed to the next declared viable method. Keep official quota unused.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -147,9 +147,11 @@
   },
   "candidate_role": "Local control only; official progress export failed",
   "horizon_batch": {
-    "status": "completed",
-    "running": [],
+    "status": "running",
+    "running": [
+      "empirical_bayes_horizon_01"
+    ],
     "report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-    "report_sha256": "833fc778e93e9b2d10da2b9f38328e15450a45b570a472e592c4477101284921"
+    "report_sha256": "975290e4f2df51b17bf989f0fa086a3c7d6ffa211f83a2906b420cae473f8130"
   }
 }

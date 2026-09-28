@@ -1,5 +1,13 @@
 # Persistent local T1 optimization mandate
 
+## Mandatory continuation and complete score storage
+
+User update, 2026-09-28: continue testing until all declared viable approaches and their meaningful ablations have been evaluated. A weak result or a completed batch is a checkpoint, not a reason to end research. Passing >72 does not cancel this coverage instruction; finish the declared coverage unless the user changes scope. Process the next executable queue item without requesting routine permission. Preserve input-blocked and resource-blocked paths with exact reasons; never call a broad research family exhausted after one configuration. Define a finite experimental scope, controls, rejection rules and compute budget for each path before training. Update that scope with evidence rather than pursuing an endless random search.
+
+Store every candidate/fold/replicate outcome, including invalid calibration and execution failures: headline score, all four raw metrics, all four calibrated skills, floor/ceiling values, candidate/configuration, seed, temporal split, prediction hash, source/report/plan hashes and diagnostics. Keep local scores explicitly separate from official feedback. Maintain SCORE_LEDGER.jsonl as a deterministic index of preserved local reports, with report paths and hashes; retain original private reports and event logs. Never discard unfavorable trials, average incompatible calibrations, invent unmeasured scores or infer biological replication from cell resampling. Refresh this index after each completed or partial batch. Report coverage as evaluated, open or blocked, not as universal scientific exhaustion.
+
+While execution is available, proceed from one bounded batch to the next and self-correct from recorded failures. On an actual interruption, save the next executable command and remaining queue; do not describe a stopped process as running or promise an unscheduled restart. Preserve the unchanged scorer, past-only fitting, >72 readiness gate and zero official submission budget for research trials.
+
 User instruction adopted 2026-09-28: improve the score locally until it crosses 72; use Monte Carlo simulations or other justified methods, self-correct, conserve submission quota, commit relevant work periodically, and checkpoint/retry if Codex usage limits interrupt execution.
 
 ## Objective and stopping rule
