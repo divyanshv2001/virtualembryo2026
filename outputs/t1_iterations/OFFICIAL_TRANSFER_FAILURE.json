@@ -1,0 +1,69 @@
+{
+  "created_utc": "2026-09-28T16:29:33.795504+00:00",
+  "scope": "Observed E8.5/E9.5 and saved models only; no hidden E10.5 expression or score-derived reconstruction.",
+  "official_result_sha256": "96ae9b4563837cf6c22cc9b80b3ea17697273b53199d951ff6426a5c0fe31c08",
+  "source_report_sha256": "5ea63a67e250dddcf41d92b437eb28099f9d8b2a5da8720ab743a668a241529e",
+  "fit_support_shift": {
+    "local_E8_5_trusted_fraction": 0.8333333333333334,
+    "final_E9_5_trusted_fraction": 0.388,
+    "local_state_support": [
+      9,
+      20,
+      83,
+      3,
+      112,
+      147,
+      0,
+      44,
+      23,
+      0,
+      17,
+      3,
+      25,
+      8,
+      2,
+      228
+    ],
+    "final_state_support": [
+      237,
+      0,
+      0,
+      152,
+      528,
+      0,
+      53,
+      0,
+      387,
+      407,
+      0,
+      48,
+      0,
+      151,
+      0,
+      10
+    ],
+    "interpretation": "Fewer anchor cells satisfy the same source-distance guard at final cutoff. Supports domain/support mismatch as a concern, not proof of why hidden score fell."
+  },
+  "local_DE_diagnostic": {
+    "truth_de_count": 63,
+    "protected_truth_de_count": 3,
+    "protected_gene_count": 5510,
+    "signed_overlap": 0.09523809523809523,
+    "predicted_vs_true_delta_std_ratio": 0.31029012799263,
+    "full_panel_delta_spearman": 0.2007055047506828
+  },
+  "official_skill_minus_50": {
+    "de_score": -11.799999999999997,
+    "de_direction": 1.2999999999999972,
+    "mmd_u": -1.3999999999999986,
+    "variogram": -1.7999999999999972
+  },
+  "remaining_uncertainties": [
+    "Official hidden target raw metrics and expression are unavailable.",
+    "One local later stage does not establish that earlier temporal changes persist into E10.5.",
+    "Cell-level resampling cannot measure uncertainty from independent embryos.",
+    "Protected-gene limitations, state coverage and temporal extrapolation need separate mechanism tests."
+  ],
+  "next_action": "Require a same-horizon, tissue-matched past-only validation test and diagnose biological trajectory transfer before another prospective export. Keep official quota unused.",
+  "no_training_performed": true
+}

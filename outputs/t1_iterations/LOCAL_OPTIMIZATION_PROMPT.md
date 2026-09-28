@@ -63,4 +63,8 @@ Official behavior references: [Codex usage/status and reset information](https:/
 
 ## Required checkpoint and progress report
 
+Confirmed official feedback, 2026-09-28: the user-requested `T1_val__unit16_progress_20260928_01.h5ad` scored **46.59** (DE 38.2, direction 51.3, MMD 48.6, variogram 48.2). Read `OFFICIAL_TRANSFER_FAILURE.json` before further experimentation. The model remains a local control only and is rejected for official use. Preserve its 55.31 local result as development evidence, never an estimate of official performance. The earlier progress export did not pass the >72 gate.
+
+Do not resubmit this model unchanged. Prioritize testing whether the validation task matches the one-day forecast horizon, tissue domain, source support and gene-program direction. Existing quarter-day checks and different-cohort one-day pilots cannot certify transfer. Record official score feedback as feedback, not as a source of hidden target gene values; never reconstruct hidden expression from it. An actual official failure overrides any suggestion that local gains alone make a candidate ready.
+
 Record `objective_status`, `threshold`, `candidate`, `mean_score`, `lower_tail_score`, metric skills, temporal checks, scorer/data hashes, run path, completed/required replicate count, actual quota/reset evidence, resume command and next experiment. Report honestly: `threshold_not_met`, `resource_interrupted`, or `local_gate_passed`; never label the official leaderboard threshold verified unless an actual official result establishes it. If a turn ends before 72, leave a concrete checkpoint and next executable step. Say whether any process is actually still running.

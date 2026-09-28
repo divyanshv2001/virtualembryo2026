@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-28T16:20:37.906763+00:00",
+  "updated_utc": "2026-09-28T16:29:33.829729+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,7 +31,7 @@
   },
   "resume_command": null,
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Develop a past-only continuous time and tissue-adaptation mechanism; these source-coverage and importance ablations are rejected.",
+  "next_experiment": "Require a same-horizon, tissue-matched past-only validation test and diagnose biological trajectory transfer before another prospective export. Keep official quota unused.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -132,7 +132,18 @@
     "purpose": "User-requested progress; readiness unmet",
     "future_refit_performed": true,
     "future_submission_exported": true,
-    "uploaded": false,
-    "artifact_sha256": "e7f296fd4f352493cbb88546360869b36cc915398b1941945ea3015fecb05e4a"
-  }
+    "uploaded": true,
+    "artifact_sha256": "e7f296fd4f352493cbb88546360869b36cc915398b1941945ea3015fecb05e4a",
+    "official_score": 46.59,
+    "result_source": "User screenshot and explicit confirmation",
+    "official_result_sha256": "96ae9b4563837cf6c22cc9b80b3ea17697273b53199d951ff6426a5c0fe31c08"
+  },
+  "official_transfer_failure": {
+    "score": 46.59,
+    "candidate": "unit16_progress_20260928_01",
+    "report": "outputs/t1_iterations/OFFICIAL_TRANSFER_FAILURE.json",
+    "report_sha256": "1b467c0e99eb73debda8104b2c8fb5477c31d1ad077e76afb689d242e2273d95",
+    "status": "rejected_for_official_use"
+  },
+  "candidate_role": "Local control only; official progress export failed"
 }
