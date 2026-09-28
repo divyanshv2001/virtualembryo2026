@@ -4376,11 +4376,11 @@
       ],
       "scope": "Adaptation, not faithful ECC. Three positive-quantile strengths, global and four-state conditional, two one-day associated-cohort folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "5297ecc70bff7a1d2045967858603089b9f1e2f0287ed728b4672e58e89fb120",
+      "results_report_sha256": "833fc778e93e9b2d10da2b9f38328e15450a45b570a472e592c4477101284921",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Review paired one-day failures and replace marginal trend extrapolation with a past-only gene-program dynamics mechanism. No current new variant qualifies for challenge promotion; covariance dynamics literature remains queued."
+      "next_action": "Implement and freeze the 2048-gene coverage ablation in NEXT_PROGRAM_EXPERIMENT.json. Convergence repair is complete; no new model passes both one-day folds. Keep official quota unused."
     },
     {
       "id": "annotation_conditioned_temporal",
@@ -4404,7 +4404,7 @@
       ],
       "scope": "Heuristic adaptation to normalized abundance; not muscat replication. Observed annotations group past cells. Four expression/detection ablations, source support20 vs100, two one-day folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "5297ecc70bff7a1d2045967858603089b9f1e2f0287ed728b4672e58e89fb120",
+      "results_report_sha256": "833fc778e93e9b2d10da2b9f38328e15450a45b570a472e592c4477101284921",
       "limitations": [
         "Published annotation may derive from joint stages; retrospective diagnostic only.",
         "Capture IDs do not establish independent embryos; cell-based errors are shrinkage heuristics.",
@@ -4413,7 +4413,38 @@
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Review paired one-day failures and replace marginal trend extrapolation with a past-only gene-program dynamics mechanism. No current new variant qualifies for challenge promotion; covariance dynamics literature remains queued."
+      "next_action": "Implement and freeze the 2048-gene coverage ablation in NEXT_PROGRAM_EXPERIMENT.json. Convergence repair is complete; no new model passes both one-day folds. Keep official quota unused."
+    },
+    {
+      "id": "shared_gene_program_dynamics",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "status": "implemented_evaluated",
+      "sources": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6639075/",
+          "read": "Introduction, simulation benchmarks, count/TPM variance scaling, consensus methods and limitations."
+        }
+      ],
+      "implementation": [
+        "program_trend.py",
+        "cell_program_trend.py",
+        "program_horizon_pilot.py",
+        "cell_program_horizon_pilot.py",
+        "cell_program_repair.py"
+      ],
+      "scope": "Shared SVD profile directions versus cell-level NMF median consensus usage dynamics. Neither is a faithful cNMF reproduction or certified biological-program recovery.",
+      "frozen_trials": "SVD ranks2/4/8 with detection0/.5; NMF ranks8/16 with detection0/.5,3 fixed seeds and200 iterations. Rank16 optimizer repair800 iterations. Two matched one-day development folds.",
+      "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
+      "results_report_sha256": "833fc778e93e9b2d10da2b9f38328e15450a45b570a472e592c4477101284921",
+      "research_family_exhausted": false,
+      "submissions_used": 0,
+      "jev_requests_used": 0,
+      "next_action": "Implement and freeze the 2048-gene coverage ablation in NEXT_PROGRAM_EXPERIMENT.json. Convergence repair is complete; no new model passes both one-day folds. Keep official quota unused."
     }
   ]
 }

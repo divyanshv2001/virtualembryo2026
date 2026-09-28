@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-28T16:57:04.386914+00:00",
+  "updated_utc": "2026-09-28T17:53:49.731347+00:00",
   "status": "completed",
   "runs": {
     "matched_horizon_audit_01": {
@@ -3701,6 +3701,3499 @@
             "de_direction": 49.124538970628095,
             "mmd_u": 50.4692171871003,
             "variogram": 49.91585780079399
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        }
+      ],
+      "scope": "One-day source-cohort development, not independent challenge tissue replication. Atlas donor/target missing or ambiguous official genes are zero placeholders, not observed zeros. This experiment also uses observed annotation strings as learner grouping features. Labels may reflect joint atlas processing, so this is retrospective annotation-conditioned development, not a clean independently annotated holdout. Later-stage label values never enter fitting or prediction."
+    },
+    "program_horizon_pilot_01": {
+      "report_sha256": "b082b360dd82d13ee8c6b4b05d4d835d0927e8ffe803a4efcdc5039612e6fe04",
+      "plan_sha256": "8d1d386bad13e8c25b2f1f5cafef00d95d7770cd44511fbd2298cf6a2fed67f7",
+      "folds": [
+        {
+          "cutoff": 8.0,
+          "target": 9.0,
+          "floor": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.26304274797439575,
+            "variogram": 0.009573637507855892
+          },
+          "ceiling": {
+            "de_score": 0.9358816276202219,
+            "de_direction": 0.8673063060165137,
+            "mmd_u": 0.007752883248031139,
+            "variogram": 0.00011852615716634318
+          },
+          "results": [
+            {
+              "candidate": "copy",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.26304274797439575,
+                "variogram": 0.009573637507855892
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit16",
+              "raw_metrics": {
+                "de_score": -0.2392108508014796,
+                "de_direction": -0.1276339315604888,
+                "mmd_u": 0.2767234444618225,
+                "variogram": 0.009945238940417767
+              },
+              "local_score": 47.142658332960416,
+              "skills": {
+                "de_score": 0.4433411214953271,
+                "de_direction": 0.46573119386378403,
+                "mmd_u": 0.48695238491166565,
+                "variogram": 0.4903639450816336
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "program_r2_d0.0",
+              "raw_metrics": {
+                "de_score": -0.04069050554870528,
+                "de_direction": 0.024687777143525543,
+                "mmd_u": 0.26016783714294434,
+                "variogram": 0.009562416933476925
+              },
+              "local_score": 50.00539227282221,
+              "skills": {
+                "de_score": 0.4893617021276596,
+                "de_direction": 0.5072189656059124,
+                "mmd_u": 0.5028312818058912,
+                "variogram": 0.5002968562653087
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "program_r2_d0.5",
+              "raw_metrics": {
+                "de_score": -0.06411837237977804,
+                "de_direction": 0.02679707469793714,
+                "mmd_u": 0.26064246892929077,
+                "variogram": 0.009581607766449451
+              },
+              "local_score": 49.848759207362086,
+              "skills": {
+                "de_score": 0.4834394904458599,
+                "de_direction": 0.5078454242018877,
+                "mmd_u": 0.5023616451267162,
+                "variogram": 0.4997893493683455
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "program_r4_d0.0",
+              "raw_metrics": {
+                "de_score": -0.0690505548705302,
+                "de_direction": 0.014188561641578386,
+                "mmd_u": 0.2605467438697815,
+                "variogram": 0.00958770141005516
+              },
+              "local_score": 49.72461941577499,
+              "skills": {
+                "de_score": 0.48221092757306233,
+                "de_direction": 0.5041235652449609,
+                "mmd_u": 0.502456292122823,
+                "variogram": 0.499628416581986
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "program_r4_d0.5",
+              "raw_metrics": {
+                "de_score": -0.07644882860665843,
+                "de_direction": 0.018162745745996824,
+                "mmd_u": 0.2609981596469879,
+                "variogram": 0.009607581421732903
+              },
+              "local_score": 49.6841536794554,
+              "skills": {
+                "de_score": 0.4803797468354431,
+                "de_direction": 0.5052907883016956,
+                "mmd_u": 0.502010272409969,
+                "variogram": 0.4991041064363931
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "program_r8_d0.0",
+              "raw_metrics": {
+                "de_score": -0.056720098643649804,
+                "de_direction": 0.02585825490566711,
+                "mmd_u": 0.2590217590332031,
+                "variogram": 0.009573890827596188
+              },
+              "local_score": 49.94044690660631,
+              "skills": {
+                "de_score": 0.4852941176470588,
+                "de_direction": 0.5075664049656435,
+                "mmd_u": 0.5039689266215525,
+                "variogram": 0.49999330213210885
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "program_r8_d0.5",
+              "raw_metrics": {
+                "de_score": -0.07274969173859429,
+                "de_direction": 0.025953015005313596,
+                "mmd_u": 0.2594394087791443,
+                "variogram": 0.009593980386853218
+              },
+              "local_score": 49.8180703187089,
+              "skills": {
+                "de_score": 0.4812935954343691,
+                "de_direction": 0.5075945539563468,
+                "mmd_u": 0.5035537544395523,
+                "variogram": 0.4994626975377214
+              },
+              "calibration_valid": true
+            }
+          ],
+          "generation": {
+            "copy": {
+              "audit": {
+                "method": "persistence"
+              },
+              "prediction_sha256": "53908b256a2f04ded456a9239a8231ce0c0f551e3bd9de2c1424524db824cd4d"
+            },
+            "unit16": {
+              "audit": {
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "guard_applied": true,
+                "population_mix": 1.0,
+                "expression_strength_used": 1.0,
+                "trusted_donor_fraction": 0.986,
+                "effective_sample_size": 1397.1175173673855,
+                "unique_donors": 1302,
+                "covariance_change_vs_reference": 0.11251184088826895,
+                "state_support": [
+                  143,
+                  1,
+                  82,
+                  73,
+                  166,
+                  73,
+                  0,
+                  165,
+                  92,
+                  24,
+                  36,
+                  37,
+                  5,
+                  19,
+                  66,
+                  1
+                ],
+                "alignment": "identity",
+                "covariance_limit": 0.4,
+                "feature_scaling": "unit",
+                "expression_factor_cap": 1.25,
+                "detection_strength": 0.5,
+                "maximum_probability_change": 0.02,
+                "attempted_additions": 8631,
+                "attempted_deletions": 16757,
+                "detection_candidate_covariance_change": 0.11372150904451062,
+                "detection_guard_rejected": false,
+                "actual_additions": 8631,
+                "actual_deletions": 16757
+              },
+              "prediction_sha256": "5a511aa567339d7d5cd9b2604d845633d450567a782672fcaf6edded2483f967"
+            },
+            "program_r2_d0.0": {
+              "audit": {
+                "attempted_additions": 0,
+                "attempted_deletions": 0,
+                "method": "shared_low_rank_temporal_projection",
+                "requested_expression": 1.0,
+                "requested_detection": 0.0,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.07424195370217718,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 0,
+                  "Blood progenitors": 286,
+                  "Cardiomyocytes FHF 1": 31,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 0,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors FHF": 37,
+                  "Cardiopharyngeal progenitors SHF": 0,
+                  "EMP": 1,
+                  "Embryo proper endothelium": 32,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 0,
+                  "Epicardium": 0,
+                  "Erythroid": 1,
+                  "Foregut": 0,
+                  "Gut tube": 146,
+                  "Haematoendothelial progenitors": 46,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 235,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 154,
+                  "Pharyngeal endoderm": 0,
+                  "Pharyngeal mesoderm": 1,
+                  "Surface ectoderm": 0,
+                  "Venous endothelium": 2
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.6713333333333333,
+                "actual_additions": 0,
+                "actual_deletions": 0,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "rank_requested": 2,
+                "rank_used": 2,
+                "singular_values": [
+                  19.738473077899876,
+                  13.038124881518229,
+                  10.092260990421005,
+                  7.844169564690117,
+                  7.518262348704941,
+                  7.353857354037404,
+                  7.157164685069778,
+                  6.639764045566802,
+                  6.510606013948559,
+                  6.298907023636435,
+                  6.197439928160111,
+                  5.799213514247168,
+                  5.66816626698127,
+                  5.2276981525635735,
+                  4.698907051300538,
+                  4.563047684725662,
+                  4.084065645427086,
+                  3.856721280746346
+                ],
+                "slope_relative_projection_error": 0.8170142158390414,
+                "program_scope": "SVD of within-type centered positive-abundance profiles. Not cNMF, a single-cell activity decomposition or biologically validated programs.",
+                "projection_assumption": "Past temporal directions share a low-rank gene subspace; projection can change individual gene signs."
+              },
+              "prediction_sha256": "dfa17f41323e2906137363f9d98812ebe26d6a2560e993fa39879b9d2dc4243d"
+            },
+            "program_r2_d0.5": {
+              "audit": {
+                "attempted_additions": 19014,
+                "attempted_deletions": 26865,
+                "method": "shared_low_rank_temporal_projection",
+                "requested_expression": 1.0,
+                "requested_detection": 0.5,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.07851528834751152,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 0,
+                  "Blood progenitors": 286,
+                  "Cardiomyocytes FHF 1": 31,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 0,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors FHF": 37,
+                  "Cardiopharyngeal progenitors SHF": 0,
+                  "EMP": 1,
+                  "Embryo proper endothelium": 32,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 0,
+                  "Epicardium": 0,
+                  "Erythroid": 1,
+                  "Foregut": 0,
+                  "Gut tube": 146,
+                  "Haematoendothelial progenitors": 46,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 235,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 154,
+                  "Pharyngeal endoderm": 0,
+                  "Pharyngeal mesoderm": 1,
+                  "Surface ectoderm": 0,
+                  "Venous endothelium": 2
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.6713333333333333,
+                "actual_additions": 19014,
+                "actual_deletions": 26865,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "rank_requested": 2,
+                "rank_used": 2,
+                "singular_values": [
+                  19.738473077899876,
+                  13.038124881518229,
+                  10.092260990421005,
+                  7.844169564690117,
+                  7.518262348704941,
+                  7.353857354037404,
+                  7.157164685069778,
+                  6.639764045566802,
+                  6.510606013948559,
+                  6.298907023636435,
+                  6.197439928160111,
+                  5.799213514247168,
+                  5.66816626698127,
+                  5.2276981525635735,
+                  4.698907051300538,
+                  4.563047684725662,
+                  4.084065645427086,
+                  3.856721280746346
+                ],
+                "slope_relative_projection_error": 0.8170142158390414,
+                "program_scope": "SVD of within-type centered positive-abundance profiles. Not cNMF, a single-cell activity decomposition or biologically validated programs.",
+                "projection_assumption": "Past temporal directions share a low-rank gene subspace; projection can change individual gene signs."
+              },
+              "prediction_sha256": "37dbc4e00b7b52ec63f6d71a91745f87236c2b804255be1690f3a62d16557677"
+            },
+            "program_r4_d0.0": {
+              "audit": {
+                "attempted_additions": 0,
+                "attempted_deletions": 0,
+                "method": "shared_low_rank_temporal_projection",
+                "requested_expression": 1.0,
+                "requested_detection": 0.0,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.06923414517537663,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 0,
+                  "Blood progenitors": 286,
+                  "Cardiomyocytes FHF 1": 31,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 0,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors FHF": 37,
+                  "Cardiopharyngeal progenitors SHF": 0,
+                  "EMP": 1,
+                  "Embryo proper endothelium": 32,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 0,
+                  "Epicardium": 0,
+                  "Erythroid": 1,
+                  "Foregut": 0,
+                  "Gut tube": 146,
+                  "Haematoendothelial progenitors": 46,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 235,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 154,
+                  "Pharyngeal endoderm": 0,
+                  "Pharyngeal mesoderm": 1,
+                  "Surface ectoderm": 0,
+                  "Venous endothelium": 2
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.6713333333333333,
+                "actual_additions": 0,
+                "actual_deletions": 0,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "rank_requested": 4,
+                "rank_used": 4,
+                "singular_values": [
+                  19.738473077899876,
+                  13.038124881518229,
+                  10.092260990421005,
+                  7.844169564690117,
+                  7.518262348704941,
+                  7.353857354037404,
+                  7.157164685069778,
+                  6.639764045566802,
+                  6.510606013948559,
+                  6.298907023636435,
+                  6.197439928160111,
+                  5.799213514247168,
+                  5.66816626698127,
+                  5.2276981525635735,
+                  4.698907051300538,
+                  4.563047684725662,
+                  4.084065645427086,
+                  3.856721280746346
+                ],
+                "slope_relative_projection_error": 0.7403145760383143,
+                "program_scope": "SVD of within-type centered positive-abundance profiles. Not cNMF, a single-cell activity decomposition or biologically validated programs.",
+                "projection_assumption": "Past temporal directions share a low-rank gene subspace; projection can change individual gene signs."
+              },
+              "prediction_sha256": "201a663ff6d9bd70d2a93b3ffa5779e885184effa6fdb0a03326a31560a40843"
+            },
+            "program_r4_d0.5": {
+              "audit": {
+                "attempted_additions": 19014,
+                "attempted_deletions": 26865,
+                "method": "shared_low_rank_temporal_projection",
+                "requested_expression": 1.0,
+                "requested_detection": 0.5,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.07372367409707488,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 0,
+                  "Blood progenitors": 286,
+                  "Cardiomyocytes FHF 1": 31,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 0,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors FHF": 37,
+                  "Cardiopharyngeal progenitors SHF": 0,
+                  "EMP": 1,
+                  "Embryo proper endothelium": 32,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 0,
+                  "Epicardium": 0,
+                  "Erythroid": 1,
+                  "Foregut": 0,
+                  "Gut tube": 146,
+                  "Haematoendothelial progenitors": 46,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 235,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 154,
+                  "Pharyngeal endoderm": 0,
+                  "Pharyngeal mesoderm": 1,
+                  "Surface ectoderm": 0,
+                  "Venous endothelium": 2
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.6713333333333333,
+                "actual_additions": 19014,
+                "actual_deletions": 26865,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "rank_requested": 4,
+                "rank_used": 4,
+                "singular_values": [
+                  19.738473077899876,
+                  13.038124881518229,
+                  10.092260990421005,
+                  7.844169564690117,
+                  7.518262348704941,
+                  7.353857354037404,
+                  7.157164685069778,
+                  6.639764045566802,
+                  6.510606013948559,
+                  6.298907023636435,
+                  6.197439928160111,
+                  5.799213514247168,
+                  5.66816626698127,
+                  5.2276981525635735,
+                  4.698907051300538,
+                  4.563047684725662,
+                  4.084065645427086,
+                  3.856721280746346
+                ],
+                "slope_relative_projection_error": 0.7403145760383143,
+                "program_scope": "SVD of within-type centered positive-abundance profiles. Not cNMF, a single-cell activity decomposition or biologically validated programs.",
+                "projection_assumption": "Past temporal directions share a low-rank gene subspace; projection can change individual gene signs."
+              },
+              "prediction_sha256": "1c680cffe72d06d05a55eb44489aaf85aecc52e75495dfe2bc5186b02a441439"
+            },
+            "program_r8_d0.0": {
+              "audit": {
+                "attempted_additions": 0,
+                "attempted_deletions": 0,
+                "method": "shared_low_rank_temporal_projection",
+                "requested_expression": 1.0,
+                "requested_detection": 0.0,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.07376331852998831,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 0,
+                  "Blood progenitors": 286,
+                  "Cardiomyocytes FHF 1": 31,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 0,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors FHF": 37,
+                  "Cardiopharyngeal progenitors SHF": 0,
+                  "EMP": 1,
+                  "Embryo proper endothelium": 32,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 0,
+                  "Epicardium": 0,
+                  "Erythroid": 1,
+                  "Foregut": 0,
+                  "Gut tube": 146,
+                  "Haematoendothelial progenitors": 46,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 235,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 154,
+                  "Pharyngeal endoderm": 0,
+                  "Pharyngeal mesoderm": 1,
+                  "Surface ectoderm": 0,
+                  "Venous endothelium": 2
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.6713333333333333,
+                "actual_additions": 0,
+                "actual_deletions": 0,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "rank_requested": 8,
+                "rank_used": 8,
+                "singular_values": [
+                  19.738473077899876,
+                  13.038124881518229,
+                  10.092260990421005,
+                  7.844169564690117,
+                  7.518262348704941,
+                  7.353857354037404,
+                  7.157164685069778,
+                  6.639764045566802,
+                  6.510606013948559,
+                  6.298907023636435,
+                  6.197439928160111,
+                  5.799213514247168,
+                  5.66816626698127,
+                  5.2276981525635735,
+                  4.698907051300538,
+                  4.563047684725662,
+                  4.084065645427086,
+                  3.856721280746346
+                ],
+                "slope_relative_projection_error": 0.6472377330661894,
+                "program_scope": "SVD of within-type centered positive-abundance profiles. Not cNMF, a single-cell activity decomposition or biologically validated programs.",
+                "projection_assumption": "Past temporal directions share a low-rank gene subspace; projection can change individual gene signs."
+              },
+              "prediction_sha256": "9a8c12e9ded06c1bba4ea9360ba7972801bc57711db949bc288aec5919ba4b36"
+            },
+            "program_r8_d0.5": {
+              "audit": {
+                "attempted_additions": 19014,
+                "attempted_deletions": 26865,
+                "method": "shared_low_rank_temporal_projection",
+                "requested_expression": 1.0,
+                "requested_detection": 0.5,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.07853049695035835,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 0,
+                  "Blood progenitors": 286,
+                  "Cardiomyocytes FHF 1": 31,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 0,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors FHF": 37,
+                  "Cardiopharyngeal progenitors SHF": 0,
+                  "EMP": 1,
+                  "Embryo proper endothelium": 32,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 0,
+                  "Epicardium": 0,
+                  "Erythroid": 1,
+                  "Foregut": 0,
+                  "Gut tube": 146,
+                  "Haematoendothelial progenitors": 46,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 235,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 154,
+                  "Pharyngeal endoderm": 0,
+                  "Pharyngeal mesoderm": 1,
+                  "Surface ectoderm": 0,
+                  "Venous endothelium": 2
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.6713333333333333,
+                "actual_additions": 19014,
+                "actual_deletions": 26865,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "rank_requested": 8,
+                "rank_used": 8,
+                "singular_values": [
+                  19.738473077899876,
+                  13.038124881518229,
+                  10.092260990421005,
+                  7.844169564690117,
+                  7.518262348704941,
+                  7.353857354037404,
+                  7.157164685069778,
+                  6.639764045566802,
+                  6.510606013948559,
+                  6.298907023636435,
+                  6.197439928160111,
+                  5.799213514247168,
+                  5.66816626698127,
+                  5.2276981525635735,
+                  4.698907051300538,
+                  4.563047684725662,
+                  4.084065645427086,
+                  3.856721280746346
+                ],
+                "slope_relative_projection_error": 0.6472377330661894,
+                "program_scope": "SVD of within-type centered positive-abundance profiles. Not cNMF, a single-cell activity decomposition or biologically validated programs.",
+                "projection_assumption": "Past temporal directions share a low-rank gene subspace; projection can change individual gene signs."
+              },
+              "prediction_sha256": "0240fc9e934d98be63e8f1c4d155997c25e155a70dc36abe2c2410220723f923"
+            }
+          }
+        },
+        {
+          "cutoff": 8.25,
+          "target": 9.25,
+          "floor": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.2375742495059967,
+            "variogram": 0.008673261851072311
+          },
+          "ceiling": {
+            "de_score": 0.9165247018739352,
+            "de_direction": 0.8566698563410718,
+            "mmd_u": 0.002615219447761774,
+            "variogram": 0.00012109167437301949
+          },
+          "results": [
+            {
+              "candidate": "copy",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.2375742495059967,
+                "variogram": 0.008673261851072311
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit16",
+              "raw_metrics": {
+                "de_score": -0.3287904599659284,
+                "de_direction": -0.07611305688343999,
+                "mmd_u": 0.2259478121995926,
+                "variogram": 0.008606153540313244
+              },
+              "local_score": 47.98714389154627,
+              "skills": {
+                "de_score": 0.4239558707643814,
+                "de_direction": 0.4787328678973971,
+                "mmd_u": 0.5126845405062341,
+                "variogram": 0.5019694604907392
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "program_r2_d0.0",
+              "raw_metrics": {
+                "de_score": -0.5502555366269165,
+                "de_direction": -0.15793774836591817,
+                "mmd_u": 0.23900079727172852,
+                "variogram": 0.008830288425087929
+              },
+              "local_score": 45.92262891558836,
+              "skills": {
+                "de_score": 0.38456040028591854,
+                "de_direction": 0.45779948413490196,
+                "mmd_u": 0.49848672527289384,
+                "variogram": 0.4954515023440516
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "program_r2_d0.5",
+              "raw_metrics": {
+                "de_score": -0.5758091993185689,
+                "de_direction": -0.21008696748895261,
+                "mmd_u": 0.2389286458492279,
+                "variogram": 0.00888269767165184
+              },
+              "local_score": 45.48263211033809,
+              "skills": {
+                "de_score": 0.38048090523338046,
+                "de_direction": 0.44538732106225526,
+                "mmd_u": 0.49856304317739497,
+                "variogram": 0.49395175788126733
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "program_r4_d0.0",
+              "raw_metrics": {
+                "de_score": -0.43441226575809194,
+                "de_direction": -0.15232856454138013,
+                "mmd_u": 0.23665015399456024,
+                "variogram": 0.008809318765997887
+              },
+              "local_score": 46.53521901734439,
+              "skills": {
+                "de_score": 0.4042073628850489,
+                "de_direction": 0.4591758710803416,
+                "mmd_u": 0.500985189129475,
+                "variogram": 0.49605412471626875
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "program_r4_d0.5",
+              "raw_metrics": {
+                "de_score": -0.46507666098807493,
+                "de_direction": -0.1977719303951517,
+                "mmd_u": 0.23657569289207458,
+                "variogram": 0.008862319402396679
+              },
+              "local_score": 46.09940108011833,
+              "skills": {
+                "de_score": 0.39881393624907335,
+                "de_direction": 0.4482573581947581,
+                "mmd_u": 0.5010647420361741,
+                "variogram": 0.4945338228968659
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "program_r8_d0.0",
+              "raw_metrics": {
+                "de_score": -0.39011925042589435,
+                "de_direction": -0.16522715146587144,
+                "mmd_u": 0.2340049296617508,
+                "variogram": 0.008785038255155087
+              },
+              "local_score": 46.75697143640517,
+              "skills": {
+                "de_score": 0.41226053639846744,
+                "de_direction": 0.4560230847729749,
+                "mmd_u": 0.5038268784023758,
+                "variogram": 0.4967537277523922
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "program_r8_d0.5",
+              "raw_metrics": {
+                "de_score": -0.4275979557069846,
+                "de_direction": -0.19561020191926773,
+                "mmd_u": 0.2339291125535965,
+                "variogram": 0.00883826706558466
+              },
+              "local_score": 46.37648464320914,
+              "skills": {
+                "de_score": 0.40542577241899025,
+                "de_direction": 0.4487649727153499,
+                "mmd_u": 0.5039088018747312,
+                "variogram": 0.4952225979304348
+              },
+              "calibration_valid": true
+            }
+          ],
+          "generation": {
+            "copy": {
+              "audit": {
+                "method": "persistence"
+              },
+              "prediction_sha256": "f991bb722bc73fe1b4135b16a6a7a3db7132c306103559448dc13289eb73ae4e"
+            },
+            "unit16": {
+              "audit": {
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "guard_applied": true,
+                "population_mix": 1.0,
+                "expression_strength_used": 1.0,
+                "trusted_donor_fraction": 0.99,
+                "effective_sample_size": 1423.0487179949341,
+                "unique_donors": 1334,
+                "covariance_change_vs_reference": 0.1709030360203553,
+                "state_support": [
+                  136,
+                  65,
+                  203,
+                  10,
+                  86,
+                  55,
+                  113,
+                  25,
+                  10,
+                  106,
+                  85,
+                  193,
+                  90,
+                  37,
+                  172,
+                  40
+                ],
+                "alignment": "identity",
+                "covariance_limit": 0.4,
+                "feature_scaling": "unit",
+                "expression_factor_cap": 1.25,
+                "detection_strength": 0.5,
+                "maximum_probability_change": 0.02,
+                "attempted_additions": 22466,
+                "attempted_deletions": 24091,
+                "detection_candidate_covariance_change": 0.17236713534616505,
+                "detection_guard_rejected": false,
+                "actual_additions": 22466,
+                "actual_deletions": 24091
+              },
+              "prediction_sha256": "20ec068eb5979bde5541166183dc3cad964eb9e57ce7682f8fc60ea7d36a3d43"
+            },
+            "program_r2_d0.0": {
+              "audit": {
+                "attempted_additions": 0,
+                "attempted_deletions": 0,
+                "method": "shared_low_rank_temporal_projection",
+                "requested_expression": 1.0,
+                "requested_detection": 0.0,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.030508739878775514,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 15,
+                  "Blood progenitors": 119,
+                  "Cardiomyocytes FHF 1": 117,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 56,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors": 0,
+                  "Cardiopharyngeal progenitors FHF": 97,
+                  "Cardiopharyngeal progenitors SHF": 4,
+                  "EMP": 17,
+                  "Embryo proper endothelium": 67,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 1,
+                  "Epicardium": 6,
+                  "Erythroid": 396,
+                  "Foregut": 2,
+                  "Gut tube": 59,
+                  "Haematoendothelial progenitors": 9,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 299,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 258,
+                  "Pharyngeal endoderm": 5,
+                  "Pharyngeal mesoderm": 11,
+                  "Surface ectoderm": 1,
+                  "Venous endothelium": 49
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.7906666666666666,
+                "actual_additions": 0,
+                "actual_deletions": 0,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "rank_requested": 2,
+                "rank_used": 2,
+                "singular_values": [
+                  24.894093038145193,
+                  11.702561818192251,
+                  10.581429638793855,
+                  9.177232021871317,
+                  8.574297065789729,
+                  7.704390595591491,
+                  7.446941412837153,
+                  7.150188420446452,
+                  7.0244112699684775,
+                  6.9154660452524785,
+                  6.844606277384388,
+                  6.601436690331376,
+                  6.565787420290478,
+                  6.310932430232981,
+                  6.28214765314014,
+                  6.133368921160576,
+                  6.053059232201604,
+                  5.884057780814961,
+                  5.644691140393307,
+                  5.499210038494132,
+                  5.173904801162347,
+                  4.170796878794581
+                ],
+                "slope_relative_projection_error": 0.930606775862092,
+                "program_scope": "SVD of within-type centered positive-abundance profiles. Not cNMF, a single-cell activity decomposition or biologically validated programs.",
+                "projection_assumption": "Past temporal directions share a low-rank gene subspace; projection can change individual gene signs."
+              },
+              "prediction_sha256": "50be1760b0647cdd46611c9fda0f19c93260f990843dc0b32fe8652c698c20fc"
+            },
+            "program_r2_d0.5": {
+              "audit": {
+                "attempted_additions": 20796,
+                "attempted_deletions": 26376,
+                "method": "shared_low_rank_temporal_projection",
+                "requested_expression": 1.0,
+                "requested_detection": 0.5,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.03423576336342878,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 15,
+                  "Blood progenitors": 119,
+                  "Cardiomyocytes FHF 1": 117,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 56,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors": 0,
+                  "Cardiopharyngeal progenitors FHF": 97,
+                  "Cardiopharyngeal progenitors SHF": 4,
+                  "EMP": 17,
+                  "Embryo proper endothelium": 67,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 1,
+                  "Epicardium": 6,
+                  "Erythroid": 396,
+                  "Foregut": 2,
+                  "Gut tube": 59,
+                  "Haematoendothelial progenitors": 9,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 299,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 258,
+                  "Pharyngeal endoderm": 5,
+                  "Pharyngeal mesoderm": 11,
+                  "Surface ectoderm": 1,
+                  "Venous endothelium": 49
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.7906666666666666,
+                "actual_additions": 20796,
+                "actual_deletions": 26376,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "rank_requested": 2,
+                "rank_used": 2,
+                "singular_values": [
+                  24.894093038145193,
+                  11.702561818192251,
+                  10.581429638793855,
+                  9.177232021871317,
+                  8.574297065789729,
+                  7.704390595591491,
+                  7.446941412837153,
+                  7.150188420446452,
+                  7.0244112699684775,
+                  6.9154660452524785,
+                  6.844606277384388,
+                  6.601436690331376,
+                  6.565787420290478,
+                  6.310932430232981,
+                  6.28214765314014,
+                  6.133368921160576,
+                  6.053059232201604,
+                  5.884057780814961,
+                  5.644691140393307,
+                  5.499210038494132,
+                  5.173904801162347,
+                  4.170796878794581
+                ],
+                "slope_relative_projection_error": 0.930606775862092,
+                "program_scope": "SVD of within-type centered positive-abundance profiles. Not cNMF, a single-cell activity decomposition or biologically validated programs.",
+                "projection_assumption": "Past temporal directions share a low-rank gene subspace; projection can change individual gene signs."
+              },
+              "prediction_sha256": "70f42d5c8a50c5061218a5791f7d0bc2dcc219b00bad5a256bc53855e977ff20"
+            },
+            "program_r4_d0.0": {
+              "audit": {
+                "attempted_additions": 0,
+                "attempted_deletions": 0,
+                "method": "shared_low_rank_temporal_projection",
+                "requested_expression": 1.0,
+                "requested_detection": 0.0,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.05083556527706454,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 15,
+                  "Blood progenitors": 119,
+                  "Cardiomyocytes FHF 1": 117,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 56,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors": 0,
+                  "Cardiopharyngeal progenitors FHF": 97,
+                  "Cardiopharyngeal progenitors SHF": 4,
+                  "EMP": 17,
+                  "Embryo proper endothelium": 67,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 1,
+                  "Epicardium": 6,
+                  "Erythroid": 396,
+                  "Foregut": 2,
+                  "Gut tube": 59,
+                  "Haematoendothelial progenitors": 9,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 299,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 258,
+                  "Pharyngeal endoderm": 5,
+                  "Pharyngeal mesoderm": 11,
+                  "Surface ectoderm": 1,
+                  "Venous endothelium": 49
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.7906666666666666,
+                "actual_additions": 0,
+                "actual_deletions": 0,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "rank_requested": 4,
+                "rank_used": 4,
+                "singular_values": [
+                  24.894093038145193,
+                  11.702561818192251,
+                  10.581429638793855,
+                  9.177232021871317,
+                  8.574297065789729,
+                  7.704390595591491,
+                  7.446941412837153,
+                  7.150188420446452,
+                  7.0244112699684775,
+                  6.9154660452524785,
+                  6.844606277384388,
+                  6.601436690331376,
+                  6.565787420290478,
+                  6.310932430232981,
+                  6.28214765314014,
+                  6.133368921160576,
+                  6.053059232201604,
+                  5.884057780814961,
+                  5.644691140393307,
+                  5.499210038494132,
+                  5.173904801162347,
+                  4.170796878794581
+                ],
+                "slope_relative_projection_error": 0.8763392816020901,
+                "program_scope": "SVD of within-type centered positive-abundance profiles. Not cNMF, a single-cell activity decomposition or biologically validated programs.",
+                "projection_assumption": "Past temporal directions share a low-rank gene subspace; projection can change individual gene signs."
+              },
+              "prediction_sha256": "7e78b96d3b41fc278aaa42fe859b14b3f2cb795e5fc2835898e2343dd494b6d1"
+            },
+            "program_r4_d0.5": {
+              "audit": {
+                "attempted_additions": 20796,
+                "attempted_deletions": 26376,
+                "method": "shared_low_rank_temporal_projection",
+                "requested_expression": 1.0,
+                "requested_detection": 0.5,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.054998171859941124,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 15,
+                  "Blood progenitors": 119,
+                  "Cardiomyocytes FHF 1": 117,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 56,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors": 0,
+                  "Cardiopharyngeal progenitors FHF": 97,
+                  "Cardiopharyngeal progenitors SHF": 4,
+                  "EMP": 17,
+                  "Embryo proper endothelium": 67,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 1,
+                  "Epicardium": 6,
+                  "Erythroid": 396,
+                  "Foregut": 2,
+                  "Gut tube": 59,
+                  "Haematoendothelial progenitors": 9,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 299,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 258,
+                  "Pharyngeal endoderm": 5,
+                  "Pharyngeal mesoderm": 11,
+                  "Surface ectoderm": 1,
+                  "Venous endothelium": 49
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.7906666666666666,
+                "actual_additions": 20796,
+                "actual_deletions": 26376,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "rank_requested": 4,
+                "rank_used": 4,
+                "singular_values": [
+                  24.894093038145193,
+                  11.702561818192251,
+                  10.581429638793855,
+                  9.177232021871317,
+                  8.574297065789729,
+                  7.704390595591491,
+                  7.446941412837153,
+                  7.150188420446452,
+                  7.0244112699684775,
+                  6.9154660452524785,
+                  6.844606277384388,
+                  6.601436690331376,
+                  6.565787420290478,
+                  6.310932430232981,
+                  6.28214765314014,
+                  6.133368921160576,
+                  6.053059232201604,
+                  5.884057780814961,
+                  5.644691140393307,
+                  5.499210038494132,
+                  5.173904801162347,
+                  4.170796878794581
+                ],
+                "slope_relative_projection_error": 0.8763392816020901,
+                "program_scope": "SVD of within-type centered positive-abundance profiles. Not cNMF, a single-cell activity decomposition or biologically validated programs.",
+                "projection_assumption": "Past temporal directions share a low-rank gene subspace; projection can change individual gene signs."
+              },
+              "prediction_sha256": "cdb84d85a18c77102a721c3c4c4b6560ad774db546799ba140e02e84a2c01b46"
+            },
+            "program_r8_d0.0": {
+              "audit": {
+                "attempted_additions": 0,
+                "attempted_deletions": 0,
+                "method": "shared_low_rank_temporal_projection",
+                "requested_expression": 1.0,
+                "requested_detection": 0.0,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.06948919529711785,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 15,
+                  "Blood progenitors": 119,
+                  "Cardiomyocytes FHF 1": 117,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 56,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors": 0,
+                  "Cardiopharyngeal progenitors FHF": 97,
+                  "Cardiopharyngeal progenitors SHF": 4,
+                  "EMP": 17,
+                  "Embryo proper endothelium": 67,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 1,
+                  "Epicardium": 6,
+                  "Erythroid": 396,
+                  "Foregut": 2,
+                  "Gut tube": 59,
+                  "Haematoendothelial progenitors": 9,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 299,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 258,
+                  "Pharyngeal endoderm": 5,
+                  "Pharyngeal mesoderm": 11,
+                  "Surface ectoderm": 1,
+                  "Venous endothelium": 49
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.7906666666666666,
+                "actual_additions": 0,
+                "actual_deletions": 0,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "rank_requested": 8,
+                "rank_used": 8,
+                "singular_values": [
+                  24.894093038145193,
+                  11.702561818192251,
+                  10.581429638793855,
+                  9.177232021871317,
+                  8.574297065789729,
+                  7.704390595591491,
+                  7.446941412837153,
+                  7.150188420446452,
+                  7.0244112699684775,
+                  6.9154660452524785,
+                  6.844606277384388,
+                  6.601436690331376,
+                  6.565787420290478,
+                  6.310932430232981,
+                  6.28214765314014,
+                  6.133368921160576,
+                  6.053059232201604,
+                  5.884057780814961,
+                  5.644691140393307,
+                  5.499210038494132,
+                  5.173904801162347,
+                  4.170796878794581
+                ],
+                "slope_relative_projection_error": 0.8247758660471319,
+                "program_scope": "SVD of within-type centered positive-abundance profiles. Not cNMF, a single-cell activity decomposition or biologically validated programs.",
+                "projection_assumption": "Past temporal directions share a low-rank gene subspace; projection can change individual gene signs."
+              },
+              "prediction_sha256": "9f0aea8ab3e7ce07a32de09120a3725bec92378ea99a85a11db08d6f6ab58dce"
+            },
+            "program_r8_d0.5": {
+              "audit": {
+                "attempted_additions": 20796,
+                "attempted_deletions": 26376,
+                "method": "shared_low_rank_temporal_projection",
+                "requested_expression": 1.0,
+                "requested_detection": 0.5,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.07331869104940113,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 15,
+                  "Blood progenitors": 119,
+                  "Cardiomyocytes FHF 1": 117,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 56,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors": 0,
+                  "Cardiopharyngeal progenitors FHF": 97,
+                  "Cardiopharyngeal progenitors SHF": 4,
+                  "EMP": 17,
+                  "Embryo proper endothelium": 67,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 1,
+                  "Epicardium": 6,
+                  "Erythroid": 396,
+                  "Foregut": 2,
+                  "Gut tube": 59,
+                  "Haematoendothelial progenitors": 9,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 299,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 258,
+                  "Pharyngeal endoderm": 5,
+                  "Pharyngeal mesoderm": 11,
+                  "Surface ectoderm": 1,
+                  "Venous endothelium": 49
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.7906666666666666,
+                "actual_additions": 20796,
+                "actual_deletions": 26376,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "rank_requested": 8,
+                "rank_used": 8,
+                "singular_values": [
+                  24.894093038145193,
+                  11.702561818192251,
+                  10.581429638793855,
+                  9.177232021871317,
+                  8.574297065789729,
+                  7.704390595591491,
+                  7.446941412837153,
+                  7.150188420446452,
+                  7.0244112699684775,
+                  6.9154660452524785,
+                  6.844606277384388,
+                  6.601436690331376,
+                  6.565787420290478,
+                  6.310932430232981,
+                  6.28214765314014,
+                  6.133368921160576,
+                  6.053059232201604,
+                  5.884057780814961,
+                  5.644691140393307,
+                  5.499210038494132,
+                  5.173904801162347,
+                  4.170796878794581
+                ],
+                "slope_relative_projection_error": 0.8247758660471319,
+                "program_scope": "SVD of within-type centered positive-abundance profiles. Not cNMF, a single-cell activity decomposition or biologically validated programs.",
+                "projection_assumption": "Past temporal directions share a low-rank gene subspace; projection can change individual gene signs."
+              },
+              "prediction_sha256": "14ed7f04f5d86eb35619d920161da91e9ad24aad44fd8210e0d89b22bae214b8"
+            }
+          }
+        }
+      ],
+      "summaries": [
+        {
+          "candidate": "copy",
+          "all_calibrations_valid": true,
+          "scores": [
+            50.0,
+            50.0
+          ],
+          "mean_score": 50.0,
+          "mean_skills_percent": {
+            "de_score": 50.0,
+            "de_direction": 50.0,
+            "mmd_u": 50.0,
+            "variogram": 50.0
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": true
+        },
+        {
+          "candidate": "unit16",
+          "all_calibrations_valid": true,
+          "scores": [
+            47.142658332960416,
+            47.98714389154627
+          ],
+          "mean_score": 47.56490111225334,
+          "mean_skills_percent": {
+            "de_score": 43.364849612985424,
+            "de_direction": 47.22320308805906,
+            "mmd_u": 49.98184627089499,
+            "variogram": 49.61667027861864
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "program_r2_d0.0",
+          "all_calibrations_valid": true,
+          "scores": [
+            50.00539227282221,
+            45.92262891558836
+          ],
+          "mean_score": 47.96401059420529,
+          "mean_skills_percent": {
+            "de_score": 43.69610512067891,
+            "de_direction": 48.25092248704072,
+            "mmd_u": 50.065900353939256,
+            "variogram": 49.78741793046802
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "program_r2_d0.5",
+          "all_calibrations_valid": true,
+          "scores": [
+            49.848759207362086,
+            45.48263211033809
+          ],
+          "mean_score": 47.66569565885008,
+          "mean_skills_percent": {
+            "de_score": 43.196019783962015,
+            "de_direction": 47.66163726320715,
+            "mmd_u": 50.04623441520556,
+            "variogram": 49.68705536248064
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "program_r4_d0.0",
+          "all_calibrations_valid": true,
+          "scores": [
+            49.72461941577499,
+            46.53521901734439
+          ],
+          "mean_score": 48.129919216559685,
+          "mean_skills_percent": {
+            "de_score": 44.32091452290556,
+            "de_direction": 48.16497181626512,
+            "mmd_u": 50.172074062614904,
+            "variogram": 49.78412706491274
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "program_r4_d0.5",
+          "all_calibrations_valid": true,
+          "scores": [
+            49.6841536794554,
+            46.09940108011833
+          ],
+          "mean_score": 47.89177737978686,
+          "mean_skills_percent": {
+            "de_score": 43.95968415422582,
+            "de_direction": 47.67740732482268,
+            "mmd_u": 50.15375072230716,
+            "variogram": 49.68189646666295
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "program_r8_d0.0",
+          "all_calibrations_valid": true,
+          "scores": [
+            49.94044690660631,
+            46.75697143640517
+          ],
+          "mean_score": 48.348709171505746,
+          "mean_skills_percent": {
+            "de_score": 44.87773270227631,
+            "de_direction": 48.179474486930914,
+            "mmd_u": 50.38979025119641,
+            "variogram": 49.837351494225054
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "program_r8_d0.5",
+          "all_calibrations_valid": true,
+          "scores": [
+            49.8180703187089,
+            46.37648464320914
+          ],
+          "mean_score": 48.09727748095902,
+          "mean_skills_percent": {
+            "de_score": 44.335968392667965,
+            "de_direction": 47.81797633358483,
+            "mmd_u": 50.37312781571417,
+            "variogram": 49.73426477340781
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        }
+      ],
+      "scope": "One-day source-cohort development, not independent challenge tissue replication. Atlas donor/target missing or ambiguous official genes are zero placeholders, not observed zeros. This experiment also uses observed annotation strings as learner grouping features. Labels may reflect joint atlas processing, so this is retrospective annotation-conditioned development, not a clean independently annotated holdout. Later-stage label values never enter fitting or prediction."
+    },
+    "cell_program_horizon_pilot_01": {
+      "report_sha256": "86bab6c007d21800745b5ee668c2a760606704396c546e6a99ec128f3a480a5d",
+      "plan_sha256": "8118e7987ddb02d3ad08c05bf0c4afdc5c411c94f1142dd467aeb8f66ce13b78",
+      "folds": [
+        {
+          "cutoff": 8.0,
+          "target": 9.0,
+          "floor": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.26304274797439575,
+            "variogram": 0.009573637507855892
+          },
+          "ceiling": {
+            "de_score": 0.9358816276202219,
+            "de_direction": 0.8673063060165137,
+            "mmd_u": 0.007752883248031139,
+            "variogram": 0.00011852615716634318
+          },
+          "results": [
+            {
+              "candidate": "copy",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.26304274797439575,
+                "variogram": 0.009573637507855892
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit16",
+              "raw_metrics": {
+                "de_score": -0.2392108508014796,
+                "de_direction": -0.1276339315604888,
+                "mmd_u": 0.2767234444618225,
+                "variogram": 0.009945238940417767
+              },
+              "local_score": 47.142658332960416,
+              "skills": {
+                "de_score": 0.4433411214953271,
+                "de_direction": 0.46573119386378403,
+                "mmd_u": 0.48695238491166565,
+                "variogram": 0.4903639450816336
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "cell_r8_d0.0",
+              "raw_metrics": {
+                "de_score": -0.11220715166461158,
+                "de_direction": 0.0012039346574039623,
+                "mmd_u": 0.2659091651439667,
+                "variogram": 0.009607630781829357
+              },
+              "local_score": 49.200036578447445,
+              "skills": {
+                "de_score": 0.47172156619018024,
+                "de_direction": 0.500347273748285,
+                "mmd_u": 0.4972086486689718,
+                "variogram": 0.4991028059958329
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "cell_r8_d0.5",
+              "raw_metrics": {
+                "de_score": -0.12577065351418001,
+                "de_direction": 0.011770158916828092,
+                "mmd_u": 0.2662990689277649,
+                "variogram": 0.009626563638448715
+              },
+              "local_score": 49.17539164803929,
+              "skills": {
+                "de_score": 0.4685185185185185,
+                "de_direction": 0.5034159127247935,
+                "mmd_u": 0.4968313619190444,
+                "variogram": 0.4986045004692578
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "cell_r16_d0.0",
+              "raw_metrics": {
+                "de_score": -0.10357583230579527,
+                "de_direction": 0.11211314956139593,
+                "mmd_u": 0.26364439725875854,
+                "variogram": 0.00957169383764267
+              },
+              "local_score": 50.1916805197635,
+              "skills": {
+                "de_score": 0.4737827715355805,
+                "de_direction": 0.5345495182447113,
+                "mmd_u": 0.49941151095346115,
+                "variogram": 0.5000513973326186
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "cell_r16_d0.5",
+              "raw_metrics": {
+                "de_score": -0.11713933415536373,
+                "de_direction": 0.06381093876418195,
+                "mmd_u": 0.26400822401046753,
+                "variogram": 0.00959287490695715
+              },
+              "local_score": 49.70271853239198,
+              "skills": {
+                "de_score": 0.4705517668939863,
+                "de_direction": 0.5190959046142618,
+                "mmd_u": 0.49905631406011397,
+                "variogram": 0.4994918661441176
+              },
+              "calibration_valid": true
+            }
+          ],
+          "generation": {
+            "copy": {
+              "audit": {
+                "method": "persistence"
+              },
+              "prediction_sha256": "53908b256a2f04ded456a9239a8231ce0c0f551e3bd9de2c1424524db824cd4d"
+            },
+            "unit16": {
+              "audit": {
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "guard_applied": true,
+                "population_mix": 1.0,
+                "expression_strength_used": 1.0,
+                "trusted_donor_fraction": 0.986,
+                "effective_sample_size": 1397.1175173673855,
+                "unique_donors": 1302,
+                "covariance_change_vs_reference": 0.11251184088826895,
+                "state_support": [
+                  143,
+                  1,
+                  82,
+                  73,
+                  166,
+                  73,
+                  0,
+                  165,
+                  92,
+                  24,
+                  36,
+                  37,
+                  5,
+                  19,
+                  66,
+                  1
+                ],
+                "alignment": "identity",
+                "covariance_limit": 0.4,
+                "feature_scaling": "unit",
+                "expression_factor_cap": 1.25,
+                "detection_strength": 0.5,
+                "maximum_probability_change": 0.02,
+                "attempted_additions": 8631,
+                "attempted_deletions": 16757,
+                "detection_candidate_covariance_change": 0.11372150904451062,
+                "detection_guard_rejected": false,
+                "actual_additions": 8631,
+                "actual_deletions": 16757
+              },
+              "prediction_sha256": "5a511aa567339d7d5cd9b2604d845633d450567a782672fcaf6edded2483f967"
+            },
+            "cell_r8_d0.0": {
+              "audit": {
+                "attempted_additions": 0,
+                "attempted_deletions": 0,
+                "method": "cell_nmf_consensus_usage_drift",
+                "requested_expression": 1.0,
+                "requested_detection": 0.0,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.05594341256359671,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 0,
+                  "Blood progenitors": 286,
+                  "Cardiomyocytes FHF 1": 31,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 0,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors FHF": 37,
+                  "Cardiopharyngeal progenitors SHF": 0,
+                  "EMP": 1,
+                  "Embryo proper endothelium": 32,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 0,
+                  "Epicardium": 0,
+                  "Erythroid": 1,
+                  "Foregut": 0,
+                  "Gut tube": 146,
+                  "Haematoendothelial progenitors": 46,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 235,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 154,
+                  "Pharyngeal endoderm": 0,
+                  "Pharyngeal mesoderm": 1,
+                  "Surface ectoderm": 0,
+                  "Venous endothelium": 2
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.6713333333333333,
+                "actual_additions": 0,
+                "actual_deletions": 0,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "fit_audit": {
+                  "rank": 8,
+                  "fit_cells": 3000,
+                  "features": 384,
+                  "replicate_iterations": [
+                    159,
+                    126,
+                    125
+                  ],
+                  "usage_iterations": [
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40
+                  ],
+                  "convergence_warnings": 0,
+                  "consensus_cluster_sizes": [
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3
+                  ],
+                  "consensus_dispersion": [
+                    0.008059101860016732,
+                    0.006262875167234888,
+                    0.0106354333646103,
+                    0.026826587971851907,
+                    0.014192102725697299,
+                    0.03477137496681977,
+                    0.03251563013903399,
+                    0.011814020930998663
+                  ],
+                  "adaptation": "Three NMF replicas, median consensus, fixed-component multiplicative usage fitting; normalized abundance instead of raw counts, 384 guard features instead of2000 v-score genes, no component outlier filter. Ridge1 full-panel log-abundance decoder and within-type usage slopes are added forecasting hypotheses, not cNMF reproduction.",
+                  "scope": "Cell-level factors are not validated biological activity programs; convergence and consensus with three replicas do not establish recovery or temporal accuracy."
+                }
+              },
+              "prediction_sha256": "0e6ee1508993d3631afe14efcca3497593fa179c7f2c1ad72f29a58603ccf3c0"
+            },
+            "cell_r8_d0.5": {
+              "audit": {
+                "attempted_additions": 19014,
+                "attempted_deletions": 26865,
+                "method": "cell_nmf_consensus_usage_drift",
+                "requested_expression": 1.0,
+                "requested_detection": 0.5,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.06002481353912564,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 0,
+                  "Blood progenitors": 286,
+                  "Cardiomyocytes FHF 1": 31,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 0,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors FHF": 37,
+                  "Cardiopharyngeal progenitors SHF": 0,
+                  "EMP": 1,
+                  "Embryo proper endothelium": 32,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 0,
+                  "Epicardium": 0,
+                  "Erythroid": 1,
+                  "Foregut": 0,
+                  "Gut tube": 146,
+                  "Haematoendothelial progenitors": 46,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 235,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 154,
+                  "Pharyngeal endoderm": 0,
+                  "Pharyngeal mesoderm": 1,
+                  "Surface ectoderm": 0,
+                  "Venous endothelium": 2
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.6713333333333333,
+                "actual_additions": 19014,
+                "actual_deletions": 26865,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "fit_audit": {
+                  "rank": 8,
+                  "fit_cells": 3000,
+                  "features": 384,
+                  "replicate_iterations": [
+                    159,
+                    126,
+                    125
+                  ],
+                  "usage_iterations": [
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40
+                  ],
+                  "convergence_warnings": 0,
+                  "consensus_cluster_sizes": [
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3
+                  ],
+                  "consensus_dispersion": [
+                    0.008059101860016732,
+                    0.006262875167234888,
+                    0.0106354333646103,
+                    0.026826587971851907,
+                    0.014192102725697299,
+                    0.03477137496681977,
+                    0.03251563013903399,
+                    0.011814020930998663
+                  ],
+                  "adaptation": "Three NMF replicas, median consensus, fixed-component multiplicative usage fitting; normalized abundance instead of raw counts, 384 guard features instead of2000 v-score genes, no component outlier filter. Ridge1 full-panel log-abundance decoder and within-type usage slopes are added forecasting hypotheses, not cNMF reproduction.",
+                  "scope": "Cell-level factors are not validated biological activity programs; convergence and consensus with three replicas do not establish recovery or temporal accuracy."
+                }
+              },
+              "prediction_sha256": "bfe60f47af35a3433778f9a98b52dd48921def92db5681be1b24aa2f4fd4153a"
+            },
+            "cell_r16_d0.0": {
+              "audit": {
+                "attempted_additions": 0,
+                "attempted_deletions": 0,
+                "method": "cell_nmf_consensus_usage_drift",
+                "requested_expression": 1.0,
+                "requested_detection": 0.0,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.08846472364814334,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 0,
+                  "Blood progenitors": 286,
+                  "Cardiomyocytes FHF 1": 31,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 0,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors FHF": 37,
+                  "Cardiopharyngeal progenitors SHF": 0,
+                  "EMP": 1,
+                  "Embryo proper endothelium": 32,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 0,
+                  "Epicardium": 0,
+                  "Erythroid": 1,
+                  "Foregut": 0,
+                  "Gut tube": 146,
+                  "Haematoendothelial progenitors": 46,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 235,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 154,
+                  "Pharyngeal endoderm": 0,
+                  "Pharyngeal mesoderm": 1,
+                  "Surface ectoderm": 0,
+                  "Venous endothelium": 2
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.6713333333333333,
+                "actual_additions": 0,
+                "actual_deletions": 0,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "fit_audit": {
+                  "rank": 16,
+                  "fit_cells": 3000,
+                  "features": 384,
+                  "replicate_iterations": [
+                    200,
+                    200,
+                    200
+                  ],
+                  "usage_iterations": [
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40
+                  ],
+                  "convergence_warnings": 3,
+                  "consensus_cluster_sizes": [
+                    3,
+                    3,
+                    3,
+                    4,
+                    3,
+                    4,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    2,
+                    3,
+                    3,
+                    2
+                  ],
+                  "consensus_dispersion": [
+                    0.1917391710845451,
+                    0.08300202154316184,
+                    0.3474015585006638,
+                    0.29442689501421737,
+                    0.13368889393685793,
+                    0.44482294837320707,
+                    0.02848012768216161,
+                    0.1047791316621522,
+                    0.10308088806620387,
+                    0.0945513230546305,
+                    0.18419167985974302,
+                    0.05327559383585046,
+                    0.1586830671083991,
+                    0.3290814047268497,
+                    0.06603443757249634,
+                    0.09714138155064936
+                  ],
+                  "adaptation": "Three NMF replicas, median consensus, fixed-component multiplicative usage fitting; normalized abundance instead of raw counts, 384 guard features instead of2000 v-score genes, no component outlier filter. Ridge1 full-panel log-abundance decoder and within-type usage slopes are added forecasting hypotheses, not cNMF reproduction.",
+                  "scope": "Cell-level factors are not validated biological activity programs; convergence and consensus with three replicas do not establish recovery or temporal accuracy."
+                }
+              },
+              "prediction_sha256": "2b54b06e24ee1b36bd0ea7a96a1dea181afddc74e52ae4ad72ec2fe130d1ccc2"
+            },
+            "cell_r16_d0.5": {
+              "audit": {
+                "attempted_additions": 19014,
+                "attempted_deletions": 26865,
+                "method": "cell_nmf_consensus_usage_drift",
+                "requested_expression": 1.0,
+                "requested_detection": 0.5,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.09280071113890846,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 0,
+                  "Blood progenitors": 286,
+                  "Cardiomyocytes FHF 1": 31,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 0,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors FHF": 37,
+                  "Cardiopharyngeal progenitors SHF": 0,
+                  "EMP": 1,
+                  "Embryo proper endothelium": 32,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 0,
+                  "Epicardium": 0,
+                  "Erythroid": 1,
+                  "Foregut": 0,
+                  "Gut tube": 146,
+                  "Haematoendothelial progenitors": 46,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 235,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 154,
+                  "Pharyngeal endoderm": 0,
+                  "Pharyngeal mesoderm": 1,
+                  "Surface ectoderm": 0,
+                  "Venous endothelium": 2
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.6713333333333333,
+                "actual_additions": 19014,
+                "actual_deletions": 26865,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "fit_audit": {
+                  "rank": 16,
+                  "fit_cells": 3000,
+                  "features": 384,
+                  "replicate_iterations": [
+                    200,
+                    200,
+                    200
+                  ],
+                  "usage_iterations": [
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40
+                  ],
+                  "convergence_warnings": 3,
+                  "consensus_cluster_sizes": [
+                    3,
+                    3,
+                    3,
+                    4,
+                    3,
+                    4,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    2,
+                    3,
+                    3,
+                    2
+                  ],
+                  "consensus_dispersion": [
+                    0.1917391710845451,
+                    0.08300202154316184,
+                    0.3474015585006638,
+                    0.29442689501421737,
+                    0.13368889393685793,
+                    0.44482294837320707,
+                    0.02848012768216161,
+                    0.1047791316621522,
+                    0.10308088806620387,
+                    0.0945513230546305,
+                    0.18419167985974302,
+                    0.05327559383585046,
+                    0.1586830671083991,
+                    0.3290814047268497,
+                    0.06603443757249634,
+                    0.09714138155064936
+                  ],
+                  "adaptation": "Three NMF replicas, median consensus, fixed-component multiplicative usage fitting; normalized abundance instead of raw counts, 384 guard features instead of2000 v-score genes, no component outlier filter. Ridge1 full-panel log-abundance decoder and within-type usage slopes are added forecasting hypotheses, not cNMF reproduction.",
+                  "scope": "Cell-level factors are not validated biological activity programs; convergence and consensus with three replicas do not establish recovery or temporal accuracy."
+                }
+              },
+              "prediction_sha256": "30e6d0ea66d4e63c51a7a23549bb0dd82cbe8e23984aa5329699b3edcf2aded7"
+            }
+          }
+        },
+        {
+          "cutoff": 8.25,
+          "target": 9.25,
+          "floor": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.2375742495059967,
+            "variogram": 0.008673261851072311
+          },
+          "ceiling": {
+            "de_score": 0.9165247018739352,
+            "de_direction": 0.8566698563410718,
+            "mmd_u": 0.002615219447761774,
+            "variogram": 0.00012109167437301949
+          },
+          "results": [
+            {
+              "candidate": "copy",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.2375742495059967,
+                "variogram": 0.008673261851072311
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit16",
+              "raw_metrics": {
+                "de_score": -0.3287904599659284,
+                "de_direction": -0.07611305688343999,
+                "mmd_u": 0.2259478121995926,
+                "variogram": 0.008606153540313244
+              },
+              "local_score": 47.98714389154627,
+              "skills": {
+                "de_score": 0.4239558707643814,
+                "de_direction": 0.4787328678973971,
+                "mmd_u": 0.5126845405062341,
+                "variogram": 0.5019694604907392
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "cell_r8_d0.0",
+              "raw_metrics": {
+                "de_score": -0.005110732538330506,
+                "de_direction": 0.09910054820824371,
+                "mmd_u": 0.22197532653808594,
+                "variogram": 0.008473003283143044
+              },
+              "local_score": 51.36612769509718,
+              "skills": {
+                "de_score": 0.49860982391102876,
+                "de_direction": 0.5306957452121235,
+                "mmd_u": 0.5171673628650272,
+                "variogram": 0.5059233790533778
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "cell_r8_d0.5",
+              "raw_metrics": {
+                "de_score": -0.06984667802385004,
+                "de_direction": 0.001968569374441444,
+                "mmd_u": 0.2219049483537674,
+                "variogram": 0.008525403216481209
+              },
+              "local_score": 50.16018389901219,
+              "skills": {
+                "de_score": 0.4816472694717995,
+                "de_direction": 0.5005751439078949,
+                "mmd_u": 0.517247489225901,
+                "variogram": 0.5043599443871397
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "cell_r16_d0.0",
+              "raw_metrics": {
+                "de_score": -0.352640545144804,
+                "de_direction": -0.1280313750138912,
+                "mmd_u": 0.23558473587036133,
+                "variogram": 0.008692927658557892
+              },
+              "local_score": 47.166403526283496,
+              "skills": {
+                "de_score": 0.4193296960249416,
+                "de_direction": 0.4652347710167191,
+                "mmd_u": 0.5021258733310865,
+                "variogram": 0.4994257825154694
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "cell_r16_d0.5",
+              "raw_metrics": {
+                "de_score": -0.48040885860306637,
+                "de_direction": -0.13940075308923155,
+                "mmd_u": 0.23549716174602509,
+                "variogram": 0.008744471706449986
+              },
+              "local_score": 46.488903146584406,
+              "skills": {
+                "de_score": 0.3961708394698085,
+                "de_direction": 0.4623798487525362,
+                "mmd_u": 0.5022198651707539,
+                "variogram": 0.4979269992951583
+              },
+              "calibration_valid": true
+            }
+          ],
+          "generation": {
+            "copy": {
+              "audit": {
+                "method": "persistence"
+              },
+              "prediction_sha256": "f991bb722bc73fe1b4135b16a6a7a3db7132c306103559448dc13289eb73ae4e"
+            },
+            "unit16": {
+              "audit": {
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "guard_applied": true,
+                "population_mix": 1.0,
+                "expression_strength_used": 1.0,
+                "trusted_donor_fraction": 0.99,
+                "effective_sample_size": 1423.0487179949341,
+                "unique_donors": 1334,
+                "covariance_change_vs_reference": 0.1709030360203553,
+                "state_support": [
+                  136,
+                  65,
+                  203,
+                  10,
+                  86,
+                  55,
+                  113,
+                  25,
+                  10,
+                  106,
+                  85,
+                  193,
+                  90,
+                  37,
+                  172,
+                  40
+                ],
+                "alignment": "identity",
+                "covariance_limit": 0.4,
+                "feature_scaling": "unit",
+                "expression_factor_cap": 1.25,
+                "detection_strength": 0.5,
+                "maximum_probability_change": 0.02,
+                "attempted_additions": 22466,
+                "attempted_deletions": 24091,
+                "detection_candidate_covariance_change": 0.17236713534616505,
+                "detection_guard_rejected": false,
+                "actual_additions": 22466,
+                "actual_deletions": 24091
+              },
+              "prediction_sha256": "20ec068eb5979bde5541166183dc3cad964eb9e57ce7682f8fc60ea7d36a3d43"
+            },
+            "cell_r8_d0.0": {
+              "audit": {
+                "attempted_additions": 0,
+                "attempted_deletions": 0,
+                "method": "cell_nmf_consensus_usage_drift",
+                "requested_expression": 1.0,
+                "requested_detection": 0.0,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.14015833267277958,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 15,
+                  "Blood progenitors": 119,
+                  "Cardiomyocytes FHF 1": 117,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 56,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors": 0,
+                  "Cardiopharyngeal progenitors FHF": 97,
+                  "Cardiopharyngeal progenitors SHF": 4,
+                  "EMP": 17,
+                  "Embryo proper endothelium": 67,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 1,
+                  "Epicardium": 6,
+                  "Erythroid": 396,
+                  "Foregut": 2,
+                  "Gut tube": 59,
+                  "Haematoendothelial progenitors": 9,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 299,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 258,
+                  "Pharyngeal endoderm": 5,
+                  "Pharyngeal mesoderm": 11,
+                  "Surface ectoderm": 1,
+                  "Venous endothelium": 49
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.7906666666666666,
+                "actual_additions": 0,
+                "actual_deletions": 0,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "fit_audit": {
+                  "rank": 8,
+                  "fit_cells": 3000,
+                  "features": 384,
+                  "replicate_iterations": [
+                    95,
+                    200,
+                    84
+                  ],
+                  "usage_iterations": [
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40
+                  ],
+                  "convergence_warnings": 1,
+                  "consensus_cluster_sizes": [
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3
+                  ],
+                  "consensus_dispersion": [
+                    0.028002244782035595,
+                    0.013356682045371762,
+                    0.06924512910488885,
+                    0.009123007990364073,
+                    0.06738493024228102,
+                    0.010704869308864565,
+                    0.04563401786047869,
+                    0.020261331845189745
+                  ],
+                  "adaptation": "Three NMF replicas, median consensus, fixed-component multiplicative usage fitting; normalized abundance instead of raw counts, 384 guard features instead of2000 v-score genes, no component outlier filter. Ridge1 full-panel log-abundance decoder and within-type usage slopes are added forecasting hypotheses, not cNMF reproduction.",
+                  "scope": "Cell-level factors are not validated biological activity programs; convergence and consensus with three replicas do not establish recovery or temporal accuracy."
+                }
+              },
+              "prediction_sha256": "ae65a35c555d8d166d5beefb6ec5c97e9a1d4833f1c4c1f20f6a278a377f3dbb"
+            },
+            "cell_r8_d0.5": {
+              "audit": {
+                "attempted_additions": 20796,
+                "attempted_deletions": 26376,
+                "method": "cell_nmf_consensus_usage_drift",
+                "requested_expression": 1.0,
+                "requested_detection": 0.5,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.14392631996391844,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 15,
+                  "Blood progenitors": 119,
+                  "Cardiomyocytes FHF 1": 117,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 56,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors": 0,
+                  "Cardiopharyngeal progenitors FHF": 97,
+                  "Cardiopharyngeal progenitors SHF": 4,
+                  "EMP": 17,
+                  "Embryo proper endothelium": 67,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 1,
+                  "Epicardium": 6,
+                  "Erythroid": 396,
+                  "Foregut": 2,
+                  "Gut tube": 59,
+                  "Haematoendothelial progenitors": 9,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 299,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 258,
+                  "Pharyngeal endoderm": 5,
+                  "Pharyngeal mesoderm": 11,
+                  "Surface ectoderm": 1,
+                  "Venous endothelium": 49
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.7906666666666666,
+                "actual_additions": 20796,
+                "actual_deletions": 26376,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "fit_audit": {
+                  "rank": 8,
+                  "fit_cells": 3000,
+                  "features": 384,
+                  "replicate_iterations": [
+                    95,
+                    200,
+                    84
+                  ],
+                  "usage_iterations": [
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40
+                  ],
+                  "convergence_warnings": 1,
+                  "consensus_cluster_sizes": [
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3
+                  ],
+                  "consensus_dispersion": [
+                    0.028002244782035595,
+                    0.013356682045371762,
+                    0.06924512910488885,
+                    0.009123007990364073,
+                    0.06738493024228102,
+                    0.010704869308864565,
+                    0.04563401786047869,
+                    0.020261331845189745
+                  ],
+                  "adaptation": "Three NMF replicas, median consensus, fixed-component multiplicative usage fitting; normalized abundance instead of raw counts, 384 guard features instead of2000 v-score genes, no component outlier filter. Ridge1 full-panel log-abundance decoder and within-type usage slopes are added forecasting hypotheses, not cNMF reproduction.",
+                  "scope": "Cell-level factors are not validated biological activity programs; convergence and consensus with three replicas do not establish recovery or temporal accuracy."
+                }
+              },
+              "prediction_sha256": "52795f65a08215e026d876629dab65835952d4362313c27340b0371bfe9fc94f"
+            },
+            "cell_r16_d0.0": {
+              "audit": {
+                "attempted_additions": 0,
+                "attempted_deletions": 0,
+                "method": "cell_nmf_consensus_usage_drift",
+                "requested_expression": 1.0,
+                "requested_detection": 0.0,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.036242754372527136,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 15,
+                  "Blood progenitors": 119,
+                  "Cardiomyocytes FHF 1": 117,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 56,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors": 0,
+                  "Cardiopharyngeal progenitors FHF": 97,
+                  "Cardiopharyngeal progenitors SHF": 4,
+                  "EMP": 17,
+                  "Embryo proper endothelium": 67,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 1,
+                  "Epicardium": 6,
+                  "Erythroid": 396,
+                  "Foregut": 2,
+                  "Gut tube": 59,
+                  "Haematoendothelial progenitors": 9,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 299,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 258,
+                  "Pharyngeal endoderm": 5,
+                  "Pharyngeal mesoderm": 11,
+                  "Surface ectoderm": 1,
+                  "Venous endothelium": 49
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.7906666666666666,
+                "actual_additions": 0,
+                "actual_deletions": 0,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "fit_audit": {
+                  "rank": 16,
+                  "fit_cells": 3000,
+                  "features": 384,
+                  "replicate_iterations": [
+                    200,
+                    150,
+                    174
+                  ],
+                  "usage_iterations": [
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40
+                  ],
+                  "convergence_warnings": 1,
+                  "consensus_cluster_sizes": [
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    4,
+                    3,
+                    2
+                  ],
+                  "consensus_dispersion": [
+                    0.25091270212704014,
+                    0.04728899391186695,
+                    0.09847748761765013,
+                    0.11463345204070587,
+                    0.03925163437831392,
+                    0.14236222903883852,
+                    0.10724792832228834,
+                    0.12173608931523484,
+                    0.01599816101902648,
+                    0.05861603638948288,
+                    0.22999848774986129,
+                    0.03772817017132168,
+                    0.032880441883285906,
+                    0.32584642293692306,
+                    0.2803324152124868,
+                    0.02419285149020607
+                  ],
+                  "adaptation": "Three NMF replicas, median consensus, fixed-component multiplicative usage fitting; normalized abundance instead of raw counts, 384 guard features instead of2000 v-score genes, no component outlier filter. Ridge1 full-panel log-abundance decoder and within-type usage slopes are added forecasting hypotheses, not cNMF reproduction.",
+                  "scope": "Cell-level factors are not validated biological activity programs; convergence and consensus with three replicas do not establish recovery or temporal accuracy."
+                }
+              },
+              "prediction_sha256": "b180e37a5e760fe040db97a7836464b1cdd379143dbaa9c945197355bd6823b5"
+            },
+            "cell_r16_d0.5": {
+              "audit": {
+                "attempted_additions": 20796,
+                "attempted_deletions": 26376,
+                "method": "cell_nmf_consensus_usage_drift",
+                "requested_expression": 1.0,
+                "requested_detection": 0.5,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.04057052431752574,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 15,
+                  "Blood progenitors": 119,
+                  "Cardiomyocytes FHF 1": 117,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 56,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors": 0,
+                  "Cardiopharyngeal progenitors FHF": 97,
+                  "Cardiopharyngeal progenitors SHF": 4,
+                  "EMP": 17,
+                  "Embryo proper endothelium": 67,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 1,
+                  "Epicardium": 6,
+                  "Erythroid": 396,
+                  "Foregut": 2,
+                  "Gut tube": 59,
+                  "Haematoendothelial progenitors": 9,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 299,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 258,
+                  "Pharyngeal endoderm": 5,
+                  "Pharyngeal mesoderm": 11,
+                  "Surface ectoderm": 1,
+                  "Venous endothelium": 49
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.7906666666666666,
+                "actual_additions": 20796,
+                "actual_deletions": 26376,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "fit_audit": {
+                  "rank": 16,
+                  "fit_cells": 3000,
+                  "features": 384,
+                  "replicate_iterations": [
+                    200,
+                    150,
+                    174
+                  ],
+                  "usage_iterations": [
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40
+                  ],
+                  "convergence_warnings": 1,
+                  "consensus_cluster_sizes": [
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    4,
+                    3,
+                    2
+                  ],
+                  "consensus_dispersion": [
+                    0.25091270212704014,
+                    0.04728899391186695,
+                    0.09847748761765013,
+                    0.11463345204070587,
+                    0.03925163437831392,
+                    0.14236222903883852,
+                    0.10724792832228834,
+                    0.12173608931523484,
+                    0.01599816101902648,
+                    0.05861603638948288,
+                    0.22999848774986129,
+                    0.03772817017132168,
+                    0.032880441883285906,
+                    0.32584642293692306,
+                    0.2803324152124868,
+                    0.02419285149020607
+                  ],
+                  "adaptation": "Three NMF replicas, median consensus, fixed-component multiplicative usage fitting; normalized abundance instead of raw counts, 384 guard features instead of2000 v-score genes, no component outlier filter. Ridge1 full-panel log-abundance decoder and within-type usage slopes are added forecasting hypotheses, not cNMF reproduction.",
+                  "scope": "Cell-level factors are not validated biological activity programs; convergence and consensus with three replicas do not establish recovery or temporal accuracy."
+                }
+              },
+              "prediction_sha256": "78c331e4ad144d254668f806dc1f3b2486010362e9a4a9d414e4111215bf1691"
+            }
+          }
+        }
+      ],
+      "summaries": [
+        {
+          "candidate": "copy",
+          "all_calibrations_valid": true,
+          "scores": [
+            50.0,
+            50.0
+          ],
+          "mean_score": 50.0,
+          "mean_skills_percent": {
+            "de_score": 50.0,
+            "de_direction": 50.0,
+            "mmd_u": 50.0,
+            "variogram": 50.0
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": true
+        },
+        {
+          "candidate": "unit16",
+          "all_calibrations_valid": true,
+          "scores": [
+            47.142658332960416,
+            47.98714389154627
+          ],
+          "mean_score": 47.56490111225334,
+          "mean_skills_percent": {
+            "de_score": 43.364849612985424,
+            "de_direction": 47.22320308805906,
+            "mmd_u": 49.98184627089499,
+            "variogram": 49.61667027861864
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "cell_r8_d0.0",
+          "all_calibrations_valid": true,
+          "scores": [
+            49.200036578447445,
+            51.36612769509718
+          ],
+          "mean_score": 50.28308213677231,
+          "mean_skills_percent": {
+            "de_score": 48.516569505060446,
+            "de_direction": 51.552150948020426,
+            "mmd_u": 50.71880057669995,
+            "variogram": 50.25130925246053
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "cell_r8_d0.5",
+          "all_calibrations_valid": true,
+          "scores": [
+            49.17539164803929,
+            50.16018389901219
+          ],
+          "mean_score": 49.66778777352574,
+          "mean_skills_percent": {
+            "de_score": 47.5082893995159,
+            "de_direction": 50.19955283163442,
+            "mmd_u": 50.703942557247274,
+            "variogram": 50.14822224281987
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "cell_r16_d0.0",
+          "all_calibrations_valid": true,
+          "scores": [
+            50.1916805197635,
+            47.166403526283496
+          ],
+          "mean_score": 48.6790420230235,
+          "mean_skills_percent": {
+            "de_score": 44.65562337802611,
+            "de_direction": 49.98921446307152,
+            "mmd_u": 50.07686921422738,
+            "variogram": 49.973858992404395
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "cell_r16_d0.5",
+          "all_calibrations_valid": true,
+          "scores": [
+            49.70271853239198,
+            46.488903146584406
+          ],
+          "mean_score": 48.095810839488195,
+          "mean_skills_percent": {
+            "de_score": 43.33613031818974,
+            "de_direction": 49.0737876683399,
+            "mmd_u": 50.06380896154339,
+            "variogram": 49.870943271963796
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        }
+      ],
+      "scope": "One-day source-cohort development, not independent challenge tissue replication. Atlas donor/target missing or ambiguous official genes are zero placeholders, not observed zeros. This experiment also uses observed annotation strings as learner grouping features. Labels may reflect joint atlas processing, so this is retrospective annotation-conditioned development, not a clean independently annotated holdout. Later-stage label values never enter fitting or prediction."
+    },
+    "cell_program_repair_01": {
+      "report_sha256": "91acced75b2d3e3c460fdefedb983ab2689a33fc29ba33ca8820ff389caf151d",
+      "plan_sha256": "b58160759beb974bcb22a2a6f89209e5dd2304d6c6ba76dfb3af16025ad54eae",
+      "folds": [
+        {
+          "cutoff": 8.0,
+          "target": 9.0,
+          "floor": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.26304274797439575,
+            "variogram": 0.009573637507855892
+          },
+          "ceiling": {
+            "de_score": 0.9358816276202219,
+            "de_direction": 0.8673063060165137,
+            "mmd_u": 0.007752883248031139,
+            "variogram": 0.00011852615716634318
+          },
+          "results": [
+            {
+              "candidate": "copy",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.26304274797439575,
+                "variogram": 0.009573637507855892
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit16",
+              "raw_metrics": {
+                "de_score": -0.2392108508014796,
+                "de_direction": -0.1276339315604888,
+                "mmd_u": 0.2767234444618225,
+                "variogram": 0.009945238940417767
+              },
+              "local_score": 47.142658332960416,
+              "skills": {
+                "de_score": 0.4433411214953271,
+                "de_direction": 0.46573119386378403,
+                "mmd_u": 0.48695238491166565,
+                "variogram": 0.4903639450816336
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "cell_r16_d0.0",
+              "raw_metrics": {
+                "de_score": -0.09371146732429099,
+                "de_direction": 0.1201778264764329,
+                "mmd_u": 0.2610785961151123,
+                "variogram": 0.00955395307391882
+              },
+              "local_score": 50.402856322370624,
+              "skills": {
+                "de_score": 0.4761606022584693,
+                "de_direction": 0.5372197835278308,
+                "mmd_u": 0.5019308805567625,
+                "variogram": 0.5005210130505121
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "cell_r16_d0.5",
+              "raw_metrics": {
+                "de_score": -0.10604192355117138,
+                "de_direction": 0.06880051872859211,
+                "mmd_u": 0.2614392638206482,
+                "variogram": 0.009574735537171364
+              },
+              "local_score": 49.89274464160868,
+              "skills": {
+                "de_score": 0.47319201995012466,
+                "de_direction": 0.5206507441641014,
+                "mmd_u": 0.5015752052954904,
+                "variogram": 0.4999709689944159
+              },
+              "calibration_valid": true
+            }
+          ],
+          "generation": {
+            "copy": {
+              "audit": {
+                "method": "persistence"
+              },
+              "prediction_sha256": "53908b256a2f04ded456a9239a8231ce0c0f551e3bd9de2c1424524db824cd4d"
+            },
+            "unit16": {
+              "audit": {
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "guard_applied": true,
+                "population_mix": 1.0,
+                "expression_strength_used": 1.0,
+                "trusted_donor_fraction": 0.986,
+                "effective_sample_size": 1397.1175173673855,
+                "unique_donors": 1302,
+                "covariance_change_vs_reference": 0.11251184088826895,
+                "state_support": [
+                  143,
+                  1,
+                  82,
+                  73,
+                  166,
+                  73,
+                  0,
+                  165,
+                  92,
+                  24,
+                  36,
+                  37,
+                  5,
+                  19,
+                  66,
+                  1
+                ],
+                "alignment": "identity",
+                "covariance_limit": 0.4,
+                "feature_scaling": "unit",
+                "expression_factor_cap": 1.25,
+                "detection_strength": 0.5,
+                "maximum_probability_change": 0.02,
+                "attempted_additions": 8631,
+                "attempted_deletions": 16757,
+                "detection_candidate_covariance_change": 0.11372150904451062,
+                "detection_guard_rejected": false,
+                "actual_additions": 8631,
+                "actual_deletions": 16757
+              },
+              "prediction_sha256": "5a511aa567339d7d5cd9b2604d845633d450567a782672fcaf6edded2483f967"
+            },
+            "cell_r16_d0.0": {
+              "audit": {
+                "attempted_additions": 0,
+                "attempted_deletions": 0,
+                "method": "cell_nmf_consensus_usage_drift",
+                "requested_expression": 1.0,
+                "requested_detection": 0.0,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.09334943160180861,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 0,
+                  "Blood progenitors": 286,
+                  "Cardiomyocytes FHF 1": 31,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 0,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors FHF": 37,
+                  "Cardiopharyngeal progenitors SHF": 0,
+                  "EMP": 1,
+                  "Embryo proper endothelium": 32,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 0,
+                  "Epicardium": 0,
+                  "Erythroid": 1,
+                  "Foregut": 0,
+                  "Gut tube": 146,
+                  "Haematoendothelial progenitors": 46,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 235,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 154,
+                  "Pharyngeal endoderm": 0,
+                  "Pharyngeal mesoderm": 1,
+                  "Surface ectoderm": 0,
+                  "Venous endothelium": 2
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.6713333333333333,
+                "actual_additions": 0,
+                "actual_deletions": 0,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "fit_audit": {
+                  "rank": 16,
+                  "fit_cells": 3000,
+                  "features": 384,
+                  "nmf_max_iter": 800,
+                  "nmf_tolerance": 0.001,
+                  "replicate_iterations": [
+                    211,
+                    382,
+                    225
+                  ],
+                  "usage_iterations": [
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40
+                  ],
+                  "convergence_warnings": 0,
+                  "consensus_cluster_sizes": [
+                    3,
+                    3,
+                    4,
+                    4,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    2,
+                    2,
+                    3
+                  ],
+                  "consensus_dispersion": [
+                    0.1974098835057021,
+                    0.09382700407998784,
+                    0.39113319543077946,
+                    0.29162545763581305,
+                    0.04965137109995468,
+                    0.13575124761443438,
+                    0.02948693097425185,
+                    0.22976452534333747,
+                    0.08949184283149918,
+                    0.23133714051684162,
+                    0.10011074593532417,
+                    0.17271553975077245,
+                    0.10698628963984552,
+                    0.08971706083075937,
+                    0.11541437309226951,
+                    0.06820123804425378
+                  ],
+                  "adaptation": "Three NMF replicas, median consensus, fixed-component multiplicative usage fitting; normalized abundance instead of raw counts, 384 guard features instead of2000 v-score genes, no component outlier filter. Ridge1 full-panel log-abundance decoder and within-type usage slopes are added forecasting hypotheses, not cNMF reproduction.",
+                  "scope": "Cell-level factors are not validated biological activity programs; convergence and consensus with three replicas do not establish recovery or temporal accuracy."
+                }
+              },
+              "prediction_sha256": "0e11ec92d68922279349e0c469e983db7d8efe2924507f692f627e3d08aea232"
+            },
+            "cell_r16_d0.5": {
+              "audit": {
+                "attempted_additions": 19014,
+                "attempted_deletions": 26865,
+                "method": "cell_nmf_consensus_usage_drift",
+                "requested_expression": 1.0,
+                "requested_detection": 0.5,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.09794821706318499,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 0,
+                  "Blood progenitors": 286,
+                  "Cardiomyocytes FHF 1": 31,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 0,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors FHF": 37,
+                  "Cardiopharyngeal progenitors SHF": 0,
+                  "EMP": 1,
+                  "Embryo proper endothelium": 32,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 0,
+                  "Epicardium": 0,
+                  "Erythroid": 1,
+                  "Foregut": 0,
+                  "Gut tube": 146,
+                  "Haematoendothelial progenitors": 46,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 235,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 154,
+                  "Pharyngeal endoderm": 0,
+                  "Pharyngeal mesoderm": 1,
+                  "Surface ectoderm": 0,
+                  "Venous endothelium": 2
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.6713333333333333,
+                "actual_additions": 19014,
+                "actual_deletions": 26865,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "fit_audit": {
+                  "rank": 16,
+                  "fit_cells": 3000,
+                  "features": 384,
+                  "nmf_max_iter": 800,
+                  "nmf_tolerance": 0.001,
+                  "replicate_iterations": [
+                    211,
+                    382,
+                    225
+                  ],
+                  "usage_iterations": [
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40
+                  ],
+                  "convergence_warnings": 0,
+                  "consensus_cluster_sizes": [
+                    3,
+                    3,
+                    4,
+                    4,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    2,
+                    2,
+                    3
+                  ],
+                  "consensus_dispersion": [
+                    0.1974098835057021,
+                    0.09382700407998784,
+                    0.39113319543077946,
+                    0.29162545763581305,
+                    0.04965137109995468,
+                    0.13575124761443438,
+                    0.02948693097425185,
+                    0.22976452534333747,
+                    0.08949184283149918,
+                    0.23133714051684162,
+                    0.10011074593532417,
+                    0.17271553975077245,
+                    0.10698628963984552,
+                    0.08971706083075937,
+                    0.11541437309226951,
+                    0.06820123804425378
+                  ],
+                  "adaptation": "Three NMF replicas, median consensus, fixed-component multiplicative usage fitting; normalized abundance instead of raw counts, 384 guard features instead of2000 v-score genes, no component outlier filter. Ridge1 full-panel log-abundance decoder and within-type usage slopes are added forecasting hypotheses, not cNMF reproduction.",
+                  "scope": "Cell-level factors are not validated biological activity programs; convergence and consensus with three replicas do not establish recovery or temporal accuracy."
+                }
+              },
+              "prediction_sha256": "2fce7c378bdd9b2eea9699b4f2315af6277db622551bd551e7a0313d4aed6ae7"
+            }
+          }
+        },
+        {
+          "cutoff": 8.25,
+          "target": 9.25,
+          "floor": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.2375742495059967,
+            "variogram": 0.008673261851072311
+          },
+          "ceiling": {
+            "de_score": 0.9165247018739352,
+            "de_direction": 0.8566698563410718,
+            "mmd_u": 0.002615219447761774,
+            "variogram": 0.00012109167437301949
+          },
+          "results": [
+            {
+              "candidate": "copy",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.2375742495059967,
+                "variogram": 0.008673261851072311
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit16",
+              "raw_metrics": {
+                "de_score": -0.3287904599659284,
+                "de_direction": -0.07611305688343999,
+                "mmd_u": 0.2259478121995926,
+                "variogram": 0.008606153540313244
+              },
+              "local_score": 47.98714389154627,
+              "skills": {
+                "de_score": 0.4239558707643814,
+                "de_direction": 0.4787328678973971,
+                "mmd_u": 0.5126845405062341,
+                "variogram": 0.5019694604907392
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "cell_r16_d0.0",
+              "raw_metrics": {
+                "de_score": -0.3560477001703577,
+                "de_direction": -0.11684939223311476,
+                "mmd_u": 0.23590350151062012,
+                "variogram": 0.008701110258698463
+              },
+              "local_score": 47.20612326489494,
+              "skills": {
+                "de_score": 0.41867704280155643,
+                "de_direction": 0.4680772353197553,
+                "mmd_u": 0.5017840444057312,
+                "variogram": 0.4991872489845108
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "cell_r16_d0.5",
+              "raw_metrics": {
+                "de_score": -0.473594548551959,
+                "de_direction": -0.14276881451182116,
+                "mmd_u": 0.23581628501415253,
+                "variogram": 0.008752655237913132
+              },
+              "local_score": 46.48217395115755,
+              "skills": {
+                "de_score": 0.397341211225997,
+                "de_direction": 0.4615408225273183,
+                "mmd_u": 0.5018775249196524,
+                "variogram": 0.49768986798675474
+              },
+              "calibration_valid": true
+            }
+          ],
+          "generation": {
+            "copy": {
+              "audit": {
+                "method": "persistence"
+              },
+              "prediction_sha256": "f991bb722bc73fe1b4135b16a6a7a3db7132c306103559448dc13289eb73ae4e"
+            },
+            "unit16": {
+              "audit": {
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "guard_applied": true,
+                "population_mix": 1.0,
+                "expression_strength_used": 1.0,
+                "trusted_donor_fraction": 0.99,
+                "effective_sample_size": 1423.0487179949341,
+                "unique_donors": 1334,
+                "covariance_change_vs_reference": 0.1709030360203553,
+                "state_support": [
+                  136,
+                  65,
+                  203,
+                  10,
+                  86,
+                  55,
+                  113,
+                  25,
+                  10,
+                  106,
+                  85,
+                  193,
+                  90,
+                  37,
+                  172,
+                  40
+                ],
+                "alignment": "identity",
+                "covariance_limit": 0.4,
+                "feature_scaling": "unit",
+                "expression_factor_cap": 1.25,
+                "detection_strength": 0.5,
+                "maximum_probability_change": 0.02,
+                "attempted_additions": 22466,
+                "attempted_deletions": 24091,
+                "detection_candidate_covariance_change": 0.17236713534616505,
+                "detection_guard_rejected": false,
+                "actual_additions": 22466,
+                "actual_deletions": 24091
+              },
+              "prediction_sha256": "20ec068eb5979bde5541166183dc3cad964eb9e57ce7682f8fc60ea7d36a3d43"
+            },
+            "cell_r16_d0.0": {
+              "audit": {
+                "attempted_additions": 0,
+                "attempted_deletions": 0,
+                "method": "cell_nmf_consensus_usage_drift",
+                "requested_expression": 1.0,
+                "requested_detection": 0.0,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.03613010683947374,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 15,
+                  "Blood progenitors": 119,
+                  "Cardiomyocytes FHF 1": 117,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 56,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors": 0,
+                  "Cardiopharyngeal progenitors FHF": 97,
+                  "Cardiopharyngeal progenitors SHF": 4,
+                  "EMP": 17,
+                  "Embryo proper endothelium": 67,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 1,
+                  "Epicardium": 6,
+                  "Erythroid": 396,
+                  "Foregut": 2,
+                  "Gut tube": 59,
+                  "Haematoendothelial progenitors": 9,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 299,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 258,
+                  "Pharyngeal endoderm": 5,
+                  "Pharyngeal mesoderm": 11,
+                  "Surface ectoderm": 1,
+                  "Venous endothelium": 49
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.7906666666666666,
+                "actual_additions": 0,
+                "actual_deletions": 0,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "fit_audit": {
+                  "rank": 16,
+                  "fit_cells": 3000,
+                  "features": 384,
+                  "nmf_max_iter": 800,
+                  "nmf_tolerance": 0.001,
+                  "replicate_iterations": [
+                    267,
+                    150,
+                    174
+                  ],
+                  "usage_iterations": [
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40
+                  ],
+                  "convergence_warnings": 0,
+                  "consensus_cluster_sizes": [
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    4,
+                    3,
+                    3,
+                    4,
+                    2,
+                    2
+                  ],
+                  "consensus_dispersion": [
+                    0.19415250576736287,
+                    0.042820209255854974,
+                    0.08181570838680678,
+                    0.10707530511723584,
+                    0.032767534633006155,
+                    0.13640293588339894,
+                    0.10049440189945608,
+                    0.08706525253613168,
+                    0.01327991091061966,
+                    0.05613198759020019,
+                    0.38774150934686735,
+                    0.03533692279734473,
+                    0.025648273969910082,
+                    0.32144294755332453,
+                    0.019965441214704484,
+                    0.007432452846713969
+                  ],
+                  "adaptation": "Three NMF replicas, median consensus, fixed-component multiplicative usage fitting; normalized abundance instead of raw counts, 384 guard features instead of2000 v-score genes, no component outlier filter. Ridge1 full-panel log-abundance decoder and within-type usage slopes are added forecasting hypotheses, not cNMF reproduction.",
+                  "scope": "Cell-level factors are not validated biological activity programs; convergence and consensus with three replicas do not establish recovery or temporal accuracy."
+                }
+              },
+              "prediction_sha256": "9e9010116f73b877fbb2c265fd0b810ff9189f3da53b45452e8f463cf434a758"
+            },
+            "cell_r16_d0.5": {
+              "audit": {
+                "attempted_additions": 20796,
+                "attempted_deletions": 26376,
+                "method": "cell_nmf_consensus_usage_drift",
+                "requested_expression": 1.0,
+                "requested_detection": 0.5,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.040376285785458585,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 15,
+                  "Blood progenitors": 119,
+                  "Cardiomyocytes FHF 1": 117,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 56,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors": 0,
+                  "Cardiopharyngeal progenitors FHF": 97,
+                  "Cardiopharyngeal progenitors SHF": 4,
+                  "EMP": 17,
+                  "Embryo proper endothelium": 67,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 1,
+                  "Epicardium": 6,
+                  "Erythroid": 396,
+                  "Foregut": 2,
+                  "Gut tube": 59,
+                  "Haematoendothelial progenitors": 9,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 299,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 258,
+                  "Pharyngeal endoderm": 5,
+                  "Pharyngeal mesoderm": 11,
+                  "Surface ectoderm": 1,
+                  "Venous endothelium": 49
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.7906666666666666,
+                "actual_additions": 20796,
+                "actual_deletions": 26376,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "fit_audit": {
+                  "rank": 16,
+                  "fit_cells": 3000,
+                  "features": 384,
+                  "nmf_max_iter": 800,
+                  "nmf_tolerance": 0.001,
+                  "replicate_iterations": [
+                    267,
+                    150,
+                    174
+                  ],
+                  "usage_iterations": [
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40
+                  ],
+                  "convergence_warnings": 0,
+                  "consensus_cluster_sizes": [
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    4,
+                    3,
+                    3,
+                    4,
+                    2,
+                    2
+                  ],
+                  "consensus_dispersion": [
+                    0.19415250576736287,
+                    0.042820209255854974,
+                    0.08181570838680678,
+                    0.10707530511723584,
+                    0.032767534633006155,
+                    0.13640293588339894,
+                    0.10049440189945608,
+                    0.08706525253613168,
+                    0.01327991091061966,
+                    0.05613198759020019,
+                    0.38774150934686735,
+                    0.03533692279734473,
+                    0.025648273969910082,
+                    0.32144294755332453,
+                    0.019965441214704484,
+                    0.007432452846713969
+                  ],
+                  "adaptation": "Three NMF replicas, median consensus, fixed-component multiplicative usage fitting; normalized abundance instead of raw counts, 384 guard features instead of2000 v-score genes, no component outlier filter. Ridge1 full-panel log-abundance decoder and within-type usage slopes are added forecasting hypotheses, not cNMF reproduction.",
+                  "scope": "Cell-level factors are not validated biological activity programs; convergence and consensus with three replicas do not establish recovery or temporal accuracy."
+                }
+              },
+              "prediction_sha256": "230d770c8d056253eb5509f85cc573e3f74bf8bb058ba6ed97402485f3c9213e"
+            }
+          }
+        }
+      ],
+      "summaries": [
+        {
+          "candidate": "copy",
+          "all_calibrations_valid": true,
+          "scores": [
+            50.0,
+            50.0
+          ],
+          "mean_score": 50.0,
+          "mean_skills_percent": {
+            "de_score": 50.0,
+            "de_direction": 50.0,
+            "mmd_u": 50.0,
+            "variogram": 50.0
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": true
+        },
+        {
+          "candidate": "unit16",
+          "all_calibrations_valid": true,
+          "scores": [
+            47.142658332960416,
+            47.98714389154627
+          ],
+          "mean_score": 47.56490111225334,
+          "mean_skills_percent": {
+            "de_score": 43.364849612985424,
+            "de_direction": 47.22320308805906,
+            "mmd_u": 49.98184627089499,
+            "variogram": 49.61667027861864
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "cell_r16_d0.0",
+          "all_calibrations_valid": true,
+          "scores": [
+            50.402856322370624,
+            47.20612326489494
+          ],
+          "mean_score": 48.80448979363278,
+          "mean_skills_percent": {
+            "de_score": 44.741882253001286,
+            "de_direction": 50.26485094237931,
+            "mmd_u": 50.18574624812469,
+            "variogram": 49.98541310175114
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "cell_r16_d0.5",
+          "all_calibrations_valid": true,
+          "scores": [
+            49.89274464160868,
+            46.48217395115755
+          ],
+          "mean_score": 48.18745929638311,
+          "mean_skills_percent": {
+            "de_score": 43.52666155880608,
+            "de_direction": 49.10957833457098,
+            "mmd_u": 50.172636510757144,
+            "variogram": 49.88304184905853
           },
           "beats_persistence_on_every_fold": false,
           "all_metrics_at_least_50_on_every_fold": false

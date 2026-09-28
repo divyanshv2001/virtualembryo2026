@@ -8,7 +8,8 @@ from iterate import now
 def main():
     runs={};running=[]
     for name in ['matched_horizon_audit_01','quantile_horizon_pilot_01','state_quantile_horizon_pilot_01',
-                 'annotation_horizon_pilot_01','annotation_support_pilot_01']:
+                 'annotation_horizon_pilot_01','annotation_support_pilot_01',
+                 'program_horizon_pilot_01','cell_program_horizon_pilot_01','cell_program_repair_01']:
         folder=HERE/'private'/name;path=folder/'report.json'
         if not path.exists():
             running.append(name);continue
@@ -46,6 +47,15 @@ def main():
         'Four ablations compare expression, detection and their combination. A second frozen pilot raises the source support requirement '
         'from 20 to 100 cells per type per past stage and the positive-expression minimum from10 to20. Donor counts stay fixed. '
         'Annotations now enter learner grouping; joint atlas annotation is a limitation, and later-stage label values are excluded from fitting.','',
+        'Shared temporal-profile pilots project gene slopes onto past-only SVD ranks2/4/8 with detection0/.5. '
+        'These orthogonal factors are denoising statistics, not biologically validated gene programs. '
+        'A separate cell-level pilot uses NMF ranks8/16, three fixed replicas, 3000 past fit cells, '
+        '384 past-selected genes, scaled normalized abundance, median consensus and fixed-component usage fitting. '
+        'A ridge1 full-panel decoder transfers within-type usage slopes to bounded gene factors. '
+        'Convergence warnings and consensus dispersion are retained in every model audit.','',
+        'The initial16-factor cell-level fit hit the200-iteration budget. A separate frozen optimizer repair '
+        'raises only that budget to800 for rank16, retaining source cells, genes, random seeds, tolerance, '
+        'decoder and evaluator panels. Higher iteration count is not assumed to improve forecast accuracy.','',
         'Literature: [Schefzik, Thorarinsdottir and Gneiting (2013)](https://arxiv.org/html/1302.7149v2), '
         'methods 4.1–4.3 and experiments 5.4 read. ECC separates marginal calibration from rank dependence. '
         'Its weather experiments found benefits dependent on the dependence structure. This implementation adapts that separation '
@@ -54,6 +64,11 @@ def main():
         'from differential abundance. Introduction, simulation results (20–400 cells) and simulation-preprocessing methods were read. '
         'It found sizable detection gains between20 and100 cells per subpopulation/sample. It uses replicated samples and count-based '
         'inference; our normalized-abundance trend forecast does not reproduce those methods, biological replication or their inferential guarantees.','',
+        '[Kotliar et al. (2019)](https://pmc.ncbi.nlm.nih.gov/articles/PMC6639075/) distinguishes identity and activity programs '
+        'and warns that type averages can miss activity and statistical factors need not be biological programs. '
+        'Introduction, simulation benchmark, preprocessing and consensus methods were read. '
+        'The cell-level adaptation uses fewer genes/replicas, normalized abundance, no component outlier filtering, '
+        'and added ridge decoding and temporal extrapolation; it is not cNMF reproduction or a test of the paper\'s biological claims.','',
         '| Run | Candidate | Fold 1 | Fold 2 | Mean |','| --- | --- | ---: | ---: | ---: |']
     for name,r in runs.items():
         for s in r['summaries']:
@@ -66,7 +81,7 @@ def main():
     state.update(updated_utc=now(),local_process_running=bool(running))
     state['horizon_batch']={'status':status,'running':running,'report':'outputs/t1_iterations/HORIZON_BATCH_RESULTS.json',
         'report_sha256':digest(HERE/'HORIZON_BATCH_RESULTS.json')}
-    state['next_experiment']='Finish annotation-support ablation; do not export or consume official quota.' if running else 'Review paired one-day failures and replace marginal trend extrapolation with a past-only gene-program dynamics mechanism. No current new variant qualifies for challenge promotion; covariance dynamics literature remains queued.'
+    state['next_experiment']='Finish cell-program pilot and resolve flagged NMF convergence before judging the larger model. Do not export or consume official quota.' if running else 'Implement and freeze the 2048-gene coverage ablation in NEXT_PROGRAM_EXPERIMENT.json. Convergence repair is complete; no new model passes both one-day folds. Keep official quota unused.'
     path.write_text(json.dumps(state,indent=2))
     path=HERE/'METRIC_RESEARCH_QUEUE.json';queue=json.loads(path.read_text())
     entry={'id':'positive_quantile_temporal','metrics':['de_score','de_direction','mmd_u','variogram'],
@@ -101,6 +116,21 @@ def main():
             previous=next((i for i,v in enumerate(value) if v.get('id')==annotated['id']),None)
             if previous is None:value.append(annotated)
             else:value[previous]=annotated
+            programs={'id':'shared_gene_program_dynamics','metrics':['de_score','de_direction','mmd_u','variogram'],
+                'status':'running' if any('program' in r for r in running) else 'implemented_evaluated',
+                'sources':[{'url':'https://pmc.ncbi.nlm.nih.gov/articles/PMC6639075/',
+                    'read':'Introduction, simulation benchmarks, count/TPM variance scaling, consensus methods and limitations.'}],
+                'implementation':['program_trend.py','cell_program_trend.py','program_horizon_pilot.py',
+                    'cell_program_horizon_pilot.py','cell_program_repair.py'],
+                'scope':'Shared SVD profile directions versus cell-level NMF median consensus usage dynamics. Neither is a faithful cNMF reproduction or certified biological-program recovery.',
+                'frozen_trials':'SVD ranks2/4/8 with detection0/.5; NMF ranks8/16 with detection0/.5,3 fixed seeds and200 iterations. Rank16 optimizer repair800 iterations. Two matched one-day development folds.',
+                'results_report':'outputs/t1_iterations/HORIZON_BATCH_RESULTS.json',
+                'results_report_sha256':digest(HERE/'HORIZON_BATCH_RESULTS.json'),
+                'research_family_exhausted':False,'submissions_used':0,'jev_requests_used':0,
+                'next_action':state['next_experiment']}
+            previous=next((i for i,v in enumerate(value) if v.get('id')==programs['id']),None)
+            if previous is None:value.append(programs)
+            else:value[previous]=programs
             break
     path.write_text(json.dumps(queue,indent=2))
     print(json.dumps({'status':status,'running':running,'means':{

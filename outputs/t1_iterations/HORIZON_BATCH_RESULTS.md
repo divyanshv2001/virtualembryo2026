@@ -10,9 +10,15 @@ A second pilot conditions those margins on four broad past-fitted states. It ret
 
 The annotation pilots group cells by observed published type strings and estimate positive-abundance and detection trends separately. Four ablations compare expression, detection and their combination. A second frozen pilot raises the source support requirement from 20 to 100 cells per type per past stage and the positive-expression minimum from10 to20. Donor counts stay fixed. Annotations now enter learner grouping; joint atlas annotation is a limitation, and later-stage label values are excluded from fitting.
 
+Shared temporal-profile pilots project gene slopes onto past-only SVD ranks2/4/8 with detection0/.5. These orthogonal factors are denoising statistics, not biologically validated gene programs. A separate cell-level pilot uses NMF ranks8/16, three fixed replicas, 3000 past fit cells, 384 past-selected genes, scaled normalized abundance, median consensus and fixed-component usage fitting. A ridge1 full-panel decoder transfers within-type usage slopes to bounded gene factors. Convergence warnings and consensus dispersion are retained in every model audit.
+
+The initial16-factor cell-level fit hit the200-iteration budget. A separate frozen optimizer repair raises only that budget to800 for rank16, retaining source cells, genes, random seeds, tolerance, decoder and evaluator panels. Higher iteration count is not assumed to improve forecast accuracy.
+
 Literature: [Schefzik, Thorarinsdottir and Gneiting (2013)](https://arxiv.org/html/1302.7149v2), methods 4.1–4.3 and experiments 5.4 read. ECC separates marginal calibration from rank dependence. Its weather experiments found benefits dependent on the dependence structure. This implementation adapts that separation to historical positive scRNA margins; it is neither faithful ECC nor evidence that ECC improves this challenge.
 
 The [muscat paper](https://www.nature.com/articles/s41467-020-19894-4) motivates separating within-subpopulation state changes from differential abundance. Introduction, simulation results (20–400 cells) and simulation-preprocessing methods were read. It found sizable detection gains between20 and100 cells per subpopulation/sample. It uses replicated samples and count-based inference; our normalized-abundance trend forecast does not reproduce those methods, biological replication or their inferential guarantees.
+
+[Kotliar et al. (2019)](https://pmc.ncbi.nlm.nih.gov/articles/PMC6639075/) distinguishes identity and activity programs and warns that type averages can miss activity and statistical factors need not be biological programs. Introduction, simulation benchmark, preprocessing and consensus methods were read. The cell-level adaptation uses fewer genes/replicas, normalized abundance, no component outlier filtering, and added ridge decoding and temporal extrapolation; it is not cNMF reproduction or a test of the paper's biological claims.
 
 | Run | Candidate | Fold 1 | Fold 2 | Mean |
 | --- | --- | ---: | ---: | ---: |
@@ -43,6 +49,24 @@ The [muscat paper](https://www.nature.com/articles/s41467-020-19894-4) motivates
 | annotation_support_pilot_01 | annotation_detection | 48.895 | 45.923 | 47.409 |
 | annotation_support_pilot_01 | annotation_combined | 49.345 | 46.998 | 48.172 |
 | annotation_support_pilot_01 | annotation_detection_full | 49.448 | 47.122 | 48.285 |
+| program_horizon_pilot_01 | copy | 50.000 | 50.000 | 50.000 |
+| program_horizon_pilot_01 | unit16 | 47.143 | 47.987 | 47.565 |
+| program_horizon_pilot_01 | program_r2_d0.0 | 50.005 | 45.923 | 47.964 |
+| program_horizon_pilot_01 | program_r2_d0.5 | 49.849 | 45.483 | 47.666 |
+| program_horizon_pilot_01 | program_r4_d0.0 | 49.725 | 46.535 | 48.130 |
+| program_horizon_pilot_01 | program_r4_d0.5 | 49.684 | 46.099 | 47.892 |
+| program_horizon_pilot_01 | program_r8_d0.0 | 49.940 | 46.757 | 48.349 |
+| program_horizon_pilot_01 | program_r8_d0.5 | 49.818 | 46.376 | 48.097 |
+| cell_program_horizon_pilot_01 | copy | 50.000 | 50.000 | 50.000 |
+| cell_program_horizon_pilot_01 | unit16 | 47.143 | 47.987 | 47.565 |
+| cell_program_horizon_pilot_01 | cell_r8_d0.0 | 49.200 | 51.366 | 50.283 |
+| cell_program_horizon_pilot_01 | cell_r8_d0.5 | 49.175 | 50.160 | 49.668 |
+| cell_program_horizon_pilot_01 | cell_r16_d0.0 | 50.192 | 47.166 | 48.679 |
+| cell_program_horizon_pilot_01 | cell_r16_d0.5 | 49.703 | 46.489 | 48.096 |
+| cell_program_repair_01 | copy | 50.000 | 50.000 | 50.000 |
+| cell_program_repair_01 | unit16 | 47.143 | 47.987 | 47.565 |
+| cell_program_repair_01 | cell_r16_d0.0 | 50.403 | 47.206 | 48.804 |
+| cell_program_repair_01 | cell_r16_d0.5 | 49.893 | 46.482 | 48.187 |
 
 Status: completed. Full four-metric vectors, raw metrics, model audits and provenance hashes are in HORIZON_BATCH_RESULTS.json.
 No new prospective export or official submission. The >72 objective remains unfinished.

@@ -1,0 +1,28 @@
+{
+  "status": "specified_not_implemented_or_executed",
+  "hypothesis": "The 384-gene identity-dominated factor input may omit temporal activity genes; broader past-only coverage may improve usage dynamics.",
+  "implementation_required": "Extend CellProgramTrend with an explicit feature budget and past-only selection. Create a separate feature-coverage runner; preserve all completed histories.",
+  "source": "associated_prepared_01",
+  "folds": [[8.0, 9.0], [8.25, 9.25]],
+  "proposed_program_gene_budget": 2048,
+  "feature_selection_requirement": "Use only unique exact-mapped source genes and permitted past rows. Start with the same variance definition as the 384-gene control to isolate coverage. Do not call it the paper's v-score selection.",
+  "rank": 8,
+  "replicate_seeds": [20260928, 20260929, 20260930],
+  "fit_cell_cap": 3000,
+  "maximum_nmf_iterations": 800,
+  "nmf_tolerance": 0.001,
+  "decoder_ridge": 1,
+  "detection_strengths": [0.0, 0.5],
+  "controls": ["persistence", "saved 384-gene rank8 cell-program forecast", "failed unit16 local control"],
+  "comparison_requirements": [
+    "Verify identical donors, floor/ceiling metric panels and gene order before comparing.",
+    "Require valid four-metric calibration and convergence audits.",
+    "Retain raw metrics, all failures and projection/support diagnostics.",
+    "Advance only after consistent paired gains on both folds; no official export from a weak mean-only gain."
+  ],
+  "literature": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6639075/",
+  "adaptation_limits": "The paper uses about2000 overdispersed genes and a fuller consensus procedure. This specified coverage ablation remains an adaptation, not faithful cNMF or independent embryo validation.",
+  "freeze_requirement": "Write actual source/data hashes and candidate configurations before training; this specification is not an executed run plan.",
+  "submissions_allowed": 0,
+  "jev_requests_allowed": 0
+}
