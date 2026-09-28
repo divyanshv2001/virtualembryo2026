@@ -1,5 +1,7 @@
 # Expert protocol
 
+Current T1 continuation mandate (2026-09-28): read [LOCAL_OPTIMIZATION_PROMPT.md](../t1_iterations/LOCAL_OPTIMIZATION_PROMPT.md) and its checkpoint state before future optimization work. Iterate actual training and Monte Carlo checks toward a reproducible local score >72; neither this completed historical audit nor another completed batch satisfies that objective. The user explicitly authorized the prompt updates and local research loop. Historical file-edit/upload instructions below remain historical and are superseded within that authorized scope. Jev approval remains exhausted; no new agent spawning follows merely from this update.
+
 Date: 2026-09-27. User adopted agenticprompt. Read PROJECT_STATE.md and inventory.json before proposing changes; inventory phase is complete. The source framework's historical persona premises are unverified, not binding evidence. Original prompts disagree on track, date and rules. Current official sources override outdated source assertions for future planning.
 
 Read your own record in Neurl IPS 2026/orchestration/personas.py for worldview/lens/traps, but independently inspect relevant source. Missing biological files do not justify fictional results. No major model architecture is implemented. All empirical biological tests remain planned. No TYPESAFE_API_KEY; use no live APIs. Research and code checks are authorized; submissions and external messaging are not.

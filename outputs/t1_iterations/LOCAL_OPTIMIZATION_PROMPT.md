@@ -1,0 +1,38 @@
+# Persistent local T1 optimization mandate
+
+User instruction adopted 2026-09-28: improve the score locally until it crosses 72; use Monte Carlo simulations or other justified methods, self-correct, conserve submission quota, commit relevant work periodically, and checkpoint/retry if Codex usage limits interrupt execution.
+
+## Objective and stopping rule
+
+Continue the local research-and-training loop until a candidate satisfies the locked, reproducible local >72 gate. Do not treat one completed batch, a plausible proposal, or a favorable random seed as completion of the optimization objective. Current challenge-data development best is 51.0759; the objective is unfinished. A local >72 result does not certify hidden E10.5 leaderboard performance.
+
+Before each batch, freeze datasets, temporal splits, complete 32,285-gene panel, scorer source/version, four metrics/weights, normalization, candidate configurations, seeds, evaluation sample sizes and compute limits. Do not change anchors or discard unsuccessful metrics/replicates after seeing outcomes. Preserve all failures and compare against measured persistence under identical evaluation conditions. Existing exposed E9.5 and earlier atlas stages are development data, not fresh blind tests.
+
+The final local gate requires: valid calibration on every declared replicate; mean score >72; empirical 2.5th-percentile score >72 over at least 64 predeclared Monte Carlo replicates; positive empirical lower-tail paired gain over persistence; mean skill >=50 in each of DE recovery, direction, MMD and variogram; and consistent gains on declared rolling temporal development folds without future-stage fitting. A 16-replicate pilot can reject weak models but cannot satisfy the final gate. Cell-based perturbation intervals are sampling-stability summaries, not independent-embryo confidence intervals. Disclose missing biological replication and any reused development stages.
+
+## Execute, diagnose, self-correct
+
+1. Resume from `LOCAL_OPTIMIZATION_STATE.json` and the latest actual private report/events. Inspect previous negative findings before choosing another hypothesis; do not restart acquisition or reread the entire research audit by default.
+2. Diagnose which metric, population, reconstruction or temporal assumption causes failure. Change one scientific mechanism at a time, retaining an incumbent and matched persistence control. Randomized hyperparameter trials are allowed only as a frozen development search, not repeated evaluation-seed searches for a lucky result.
+3. Fit features, scalers, representations, domain adaptation and dynamics only on permitted past-stage rows. The primary task-like development test forecasts challenge E9.5 from challenge E8.5 anchors and atlas stages <=E8.5. Future expression may enter scoring and error analysis only after forecasts are frozen.
+4. Run the inexpensive pilot first. Monte Carlo should perturb donor sampling, reference sampling, target sampling and, in separate declared experiments, model-training seeds. Assess the full prediction distribution and all four metrics. Simulation assesses uncertainty; it does not improve a frozen predictor by itself.
+5. If a mechanism fails, preserve the complete report and revise it or replace it with another justified mechanism. Do not keep sampling the same predictor until its maximum score exceeds 72. Use successive halving or other bounded development searches to reserve compute for genuinely stronger models. Independent validation seeds must be frozen after choosing the configuration and before evaluating it; using the same biological stage still is not fresh biological validation.
+6. For a promising candidate, expand to >=64 stability replicates and rolling temporal checks. Reject calibration failures, target leakage, incomplete gene outputs or threshold inflation. Keep protected/missing/ambiguous genes explicit and validate finite nonnegative float32 predictions, exact panel order, cell bounds and library conventions.
+7. Once the full local gate passes, record the actual evidence, refit through E9.5 for E10.5, and validate a prospective full-panel artifact. Keep official submissions unused until the user authorizes the specific prospective submission; never upload an observed E9.5 backtest. Hidden E10.5 values and score-derived target reconstruction are prohibited.
+8. Commit code, prompts, small summaries and state updates periodically. Never commit secrets, raw biological datasets, prediction matrices, checkpoints or private framework trajectories. Jev's previous three-call approval is exhausted; deterministic local steps use zero Jev calls. No new external routing or agent spawning follows merely from this prompt.
+
+## Compute, interruption and Codex-limit recovery
+
+Use bounded resumable batches, normally two BLAS threads, and avoid oversubscribed duplicate training. Checkpoint after every trial/replicate with the frozen-plan hash, completed work, best measured candidate, remaining steps and exact resume command. Do not overwrite run histories. Stop a batch early only according to a predeclared futility/compute rule and report it; this leaves the overall >72 objective unfinished.
+
+If Codex reports a usage limit, save the optimization checkpoint first where execution remains available. Read the actual reset time from the exposed limit message/status or authorized usage dashboard; `/status` is a Codex CLI session command, not a PowerShell command. Record the observed reset timestamp in UTC, its source, and the next permitted retry. If no reset is exposed, record `unknown` rather than assuming a five-hour reset from the current time. Subscription limits, API temporary rate limits and billing/quota exhaustion are different conditions.
+
+For temporary API rate limits, honor `Retry-After` or applicable reset headers when available; use bounded exponential backoff with jitter and avoid nested retry loops. Billing/credit exhaustion requires user action, not an endless retry. Do not switch billing modes, purchase credits, use another account or expose credentials to bypass a limit.
+
+At the reported reset, retry from the checkpoint if the active runtime supports waiting/re-entry. Use short interruptible waits and maintain progress updates while active. If the host stops invoking the agent, preserve a resume-ready checkpoint and state that automated wake-up is not installed; do not claim an automatic restart occurred. Independent already-started local Python work can continue without consuming another Codex model turn, subject to actual process availability. A resource interruption does not mean the >72 objective was achieved, and an unknown reset does not justify guessing a retry time.
+
+Official behavior references: [Codex usage/status and reset information](https://learn.chatgpt.com/docs/pricing), [API rate-limit retry guidance](https://developers.openai.com/api/docs/guides/rate-limits). These references do not expose this account's current quota to the agent.
+
+## Required checkpoint and progress report
+
+Record `objective_status`, `threshold`, `candidate`, `mean_score`, `lower_tail_score`, metric skills, temporal checks, scorer/data hashes, run path, completed/required replicate count, actual quota/reset evidence, resume command and next experiment. Report honestly: `threshold_not_met`, `resource_interrupted`, or `local_gate_passed`; never label the official leaderboard threshold verified unless an actual official result establishes it. If a turn ends before 72, leave a concrete checkpoint and next executable step. Say whether any process is actually still running.

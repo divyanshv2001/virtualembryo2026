@@ -1,5 +1,9 @@
 # Controlled T1 development iterations
 
+**Persistent objective:** [LOCAL_OPTIMIZATION_PROMPT.md](LOCAL_OPTIMIZATION_PROMPT.md) governs the user-requested local >72 loop, Monte Carlo checks and checkpoint/reset recovery. Read `LOCAL_OPTIMIZATION_STATE.json` to resume. A completed experiment below does not mean the threshold has been achieved. The current prompt generator includes a compact pointer to this mandate rather than duplicating the full research history across experts.
+
+The [prompt update and Monte Carlo pilot](MONTE_CARLO_RESULTS.md) completed 16 fixed-seed resampling replicates. Best frozen candidate mean: 50.92; empirical lower tail: 50.55. The objective remains unmet. Local jobs are finished, and reset timing is unknown because no account-specific limit event/status is exposed to this session.
+
 **Current policy:** preserve the user's four remaining daily submissions. The older upload sequence below is superseded. The executed offline backtest and its limitations are documented in [LOCAL_VALIDATION.md](LOCAL_VALIDATION.md); no local or official score above 72 has been established.
 
 The larger E6.5–E9.5 atlas acquisition and prospective training workflow are described in [EXTENDED_ATLAS.md](EXTENDED_ATLAS.md). Its local gene panel and calibration differ from the official board.

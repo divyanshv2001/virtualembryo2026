@@ -1,0 +1,38 @@
+{
+  "updated_utc": "2026-09-28T12:19:20.864668+00:00",
+  "objective_status": "threshold_not_met",
+  "threshold": 72,
+  "candidate": "state_k8_e0.25 (identity projection)",
+  "mean_score": 50.922947137841575,
+  "lower_tail_score": 50.550826524671876,
+  "point_development_mean": 51.07590233649745,
+  "metric_skills": {
+    "de_score": 0.5121246674384305,
+    "de_direction": 0.5129027742132407,
+    "mmd_u": 0.5078525516866731,
+    "variogram": 0.5030842272974804
+  },
+  "temporal_gate_passed": false,
+  "completed_replicates": 16,
+  "required_final_replicates": 64,
+  "run_path": "outputs/t1_iterations/private/monte_carlo_pilot_01",
+  "report_sha256": "e8425174127c07a10e648f6ab730d0f700911cb276aaedf3fef915f3af3749a4",
+  "plan_sha256": "d3480d6a13690081ab4cf0fb1608fceab25ad7c08ea6007328bade7d7a8fdcb4",
+  "pilot_completed": true,
+  "resume_verified_without_repeating_trials": true,
+  "local_process_running": false,
+  "quota_reset_evidence": {
+    "limit_observed": false,
+    "remaining_quota": null,
+    "reset_at_utc": null,
+    "source": null,
+    "status": "not_exposed_to_session",
+    "automatic_wakeup_installed": false
+  },
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/monte_carlo_stability.py --round monte_carlo_pilot_01 --replicates 16 --resume",
+  "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
+  "next_experiment": "Test past-only state-conditioned detection/abundance reconstruction to relax the blanket zero-support restriction, with a matched persistence/zero-preserving control and full-panel challenge E9.5 development evaluation. Freeze every design choice before scoring; do not imply it is already implemented or will reach 72.",
+  "submissions_used_by_this_batch": 0,
+  "jev_requests_used": 0,
+  "official_72_verified": false
+}

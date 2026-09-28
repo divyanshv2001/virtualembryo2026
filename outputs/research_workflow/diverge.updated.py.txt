@@ -1,0 +1,268 @@
+"""DIVERGE - turn the shared briefing into 16 independent expert task bundles.
+
+This module does not call a model. It writes the exact prompt each expert agent
+receives and defines the JSON contract that agent must return, so the generative
+half of the loop is reproducible, auditable and diffable between rounds.
+
+Token economy lives here as much as in jev.py:
+
+- one shared briefing, written once by perceive.py, not re-derived per agent;
+- MAX_PROPOSALS_PER_EXPERT caps the fan-out at 16 x 3 = 48 proposals per round;
+- the round-2 packet carries a *digest* of peers' claims and the critic's flaw
+  list, not the peers' full round-1 transcripts;
+- the output contract is strict JSON with length caps on every free-text field,
+  which is what makes the CONVERGE stage cheap enough to run on Jev.
+"""
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+from personas import EXPERTS, Persona
+
+ROOT = Path(__file__).resolve().parents[2]
+OUT = ROOT / "outputs" / "orchestration"
+
+MAX_PROPOSALS_PER_EXPERT = 3
+MAX_SEARCHES_PER_EXPERT = 6
+
+PROPOSAL_SCHEMA = {
+    "expert": "<your expert id>",
+    "round": 0,
+    "searches_run": ["<query string>  (max %d)" % MAX_SEARCHES_PER_EXPERT],
+    "proposals": [
+        {
+            "id": "<expert_id>-r<round>-<n>",
+            "board": "one of T1:val | T2:embryo:val_interp | T2:heart:val_interp | "
+                     "T2:heart:val_extrap | T3:gata4 | PROCESS",
+            "title": "<= 90 chars",
+            "claim": "<= 320 chars. ONE falsifiable claim. Not a research direction.",
+            "mechanism": "<= 480 chars. Name the SPECIFIC metric (de_score, de_direction, "
+                         "mmd_u, variogram, severity_slope, d2_shape, occupancy_dice, "
+                         "scale_log_ratio, neighborhood_mmd) this moves, and why.",
+            "cost": "free | compute-only | 1-submission | multi-submission",
+            "falsifier": "<= 280 chars. The CHEAPEST test that would kill this claim. "
+                         "If you cannot name one, do not submit the proposal.",
+            "local_ground_truth": "yes | no  (is there data on disk that can test this "
+                                  "before a submission slot is spent?)",
+            "evidence": [
+                {
+                    "kind": "repo | literature",
+                    "ref": "file path with line, or paper title + venue + year + identifier",
+                    "says": "<= 200 chars, what it actually states",
+                    "verified": "read-directly | abstract-only | search-snippet-only",
+                }
+            ],
+            "confidence": 0.0,
+            "novelty": "identical | incremental | combination | adaptation | genuinely_new",
+        }
+    ],
+    "peer_responses": [
+        {
+            "peer": "<peer expert id you were assigned to cross-examine>",
+            "stance": "endorse | refute | refine",
+            "on": "<= 140 chars, which of their claims",
+            "because": "<= 280 chars, your reason, citing evidence",
+        }
+    ],
+    "self_correction": "<= 400 chars. What you got wrong last round, or 'n/a (round 1)'.",
+    "declined": "<= 300 chars. A proposal you considered and dropped, and why. Required.",
+}
+
+
+def _venue_line(p: Persona) -> str:
+    return ", ".join(p.venues)
+
+
+def build_prompt(
+    persona: Persona,
+    round_no: int,
+    briefing_path: Path,
+    peer_digest: str = "",
+    critic_flaws: str = "",
+) -> str:
+    """The full task given to one expert agent for one round."""
+    lines: list[str] = []
+    lines.append("# ROLE: " + persona.title + " (expert id: `" + persona.id + "`)")
+    lines.append("")
+    lines.append(persona.persona)
+    lines.append("")
+    lines.append("**Your lens:** " + persona.lens)
+    lines.append("")
+    lines.append("You are one of 16 experts on a panel analysing the NeurIPS 2026 Virtual")
+    lines.append("Embryo Challenge (human track). Your job is not to be agreeable and not to")
+    lines.append("be comprehensive. It is to produce, from your discipline, claims that are")
+    lines.append("specific enough to be wrong.")
+    lines.append("")
+
+    lines.append("## Step 1 - read the shared briefing (required, first)")
+    lines.append("")
+    lines.append("Read `" + str(briefing_path.relative_to(ROOT)).replace("\\", "/") + "`.")
+    lines.append("Every number in it was read off the repository at run time. If it")
+    lines.append("contradicts your prior belief about this project, the briefing wins.")
+    lines.append("")
+
+    lines.append("## Step 2 - read your mandate in the repository (required)")
+    lines.append("")
+    lines.append("Repository root: `" + str(ROOT).replace("\\", "/") + "`")
+    lines.append("")
+    lines.append("Read these before proposing anything: " + persona.repo_mandate)
+    lines.append("")
+    lines.append("Read them with Read/Grep. Do not reason about code you have not opened.")
+    lines.append("A proposal whose `evidence` cites a repo file you did not actually read")
+    lines.append("is the single failure the critic punishes hardest.")
+    lines.append("")
+
+    lines.append("## Step 3 - search the literature (required, " + str(MAX_SEARCHES_PER_EXPERT) + " queries max)")
+    lines.append("")
+    lines.append("Use WebSearch/WebFetch against the surfaces your field publishes in:")
+    lines.append(_venue_line(persona) + ".")
+    lines.append("")
+    lines.append("Today is 2026-09-19; prioritise 2025-2026 work. For each paper you cite,")
+    lines.append("record honestly whether you read it, read only the abstract, or saw only a")
+    lines.append("search snippet. **Do not invent a citation.** A fabricated reference is a")
+    lines.append("hard fail and the critic checks for it. If a search returns nothing useful,")
+    lines.append("say so in `searches_run` and proceed with repo evidence alone.")
+    lines.append("")
+
+    lines.append("## Step 4 - respect what is already closed")
+    lines.append("")
+    lines.append("Discipline-specific dead ends you may NOT re-propose without new evidence")
+    lines.append("that directly defeats the cited check:")
+    lines.append("")
+    for t in persona.traps:
+        lines.append("- " + t)
+    lines.append("")
+    lines.append("The briefing's 'Closed findings' table applies to you too.")
+    lines.append("")
+
+    lines.append("## Step 5 - cross-examine your assigned peers")
+    lines.append("")
+    lines.append("You are assigned to cross-examine: " + ", ".join("`" + c + "`" for c in persona.cross_examine) + ".")
+    if round_no == 1:
+        lines.append("")
+        lines.append("In round 1 you have not seen their output yet. State, in `peer_responses`,")
+        lines.append("the specific claim you EXPECT each of them to make and why you would")
+        lines.append("challenge it. Round 2 will show you what they actually said, and you will")
+        lines.append("be scored on whether you updated.")
+    else:
+        lines.append("")
+        lines.append("Their actual round-1 claims are in the peer digest below. You must respond")
+        lines.append("to at least one claim from each assigned peer, with a real stance. Blanket")
+        lines.append("endorsement without a reason is scored as a non-response.")
+    lines.append("")
+
+    if peer_digest:
+        lines.append("## Peer digest - what the other 15 experts claimed last round")
+        lines.append("")
+        lines.append(peer_digest)
+        lines.append("")
+
+    if critic_flaws:
+        lines.append("## The critic's verdict on YOUR last round")
+        lines.append("")
+        lines.append("The critic is hostile by design and verifies claims against the actual")
+        lines.append("code, data and cited papers. Address every flaw listed below: either fix")
+        lines.append("the proposal, withdraw it, or rebut the critic with evidence. Repeating a")
+        lines.append("flagged proposal unchanged is scored as a non-response and pruned.")
+        lines.append("")
+        lines.append(critic_flaws)
+        lines.append("")
+
+    lines.append("## Step 6 - output")
+    lines.append("")
+    lines.append("Write ONE file and nothing else:")
+    lines.append("")
+    lines.append("`outputs/orchestration/round_" + str(round_no) + "/proposals/" + persona.id + ".json`")
+    lines.append("")
+    lines.append("It must be valid JSON matching this schema exactly. At most")
+    lines.append(str(MAX_PROPOSALS_PER_EXPERT) + " proposals. Respect every length cap - the")
+    lines.append("scoring stage is token-budgeted and over-long fields are truncated, not read.")
+    lines.append("")
+    lines.append("```json")
+    lines.append(json.dumps(PROPOSAL_SCHEMA, indent=2))
+    lines.append("```")
+    lines.append("")
+    lines.append("Boards in scope for you: " + ", ".join(persona.boards) + " (plus PROCESS).")
+    lines.append("")
+    lines.append("Rules on content:")
+    lines.append("")
+    lines.append("1. Every proposal needs a named falsifier. No falsifier, no proposal.")
+    lines.append("2. Prefer proposals with `local_ground_truth: yes`. This project has")
+    lines.append("   spent real submissions on internally-validated fixes that lost.")
+    lines.append("3. `confidence` is a calibrated probability the claim survives the critic's")
+    lines.append("   verification, not enthusiasm. The loop tracks your calibration.")
+    lines.append("4. `declined` is mandatory. An expert who never drops anything is not filtering.")
+    lines.append("5. State uncertainty as uncertainty. 'I could not verify X' beats a guess.")
+    lines.append("")
+    lines.append("Your final message back to the orchestrator: the file path you wrote, the")
+    lines.append("titles of your proposals, and at most 5 lines of commentary. Nothing else -")
+    lines.append("the orchestrator reads the JSON, not your prose.")
+    optimization_mandate = ROOT / "outputs" / "t1_iterations" / "LOCAL_OPTIMIZATION_PROMPT.md"
+    if optimization_mandate.exists():
+        lines.append("")
+        lines.append("## Current user mandate: persistent local T1 optimization")
+        lines.append("Read outputs/t1_iterations/LOCAL_OPTIMIZATION_PROMPT.md and outputs/t1_iterations/LOCAL_OPTIMIZATION_STATE.json.")
+        lines.append("Continue evidence-led local model improvement until the locked >72 gate passes; a completed review/batch is not success.")
+        lines.append("Use fixed-seed Monte Carlo stability checks and rolling past-only forecasts; never pick a lucky seed or alter calibration.")
+        lines.append("Require the complete 32285-gene panel and all four metrics. Local >72 does not certify hidden E10.5 performance.")
+        lines.append("Preserve submission quota. Jev's prior three-call approval is exhausted; this prompt grants no new API calls or agent spawning.")
+        lines.append("Checkpoint on Codex limits, record the actual exposed reset time, and resume when execution is available; never invent reset times or auto-wake capability.")
+        lines.append("Historical Human/Agent track labels and source premises above are not verified eligibility or performance claims.")
+    return "\n".join(lines)
+
+
+def peer_digest(proposals_dir: Path, exclude: str = "") -> str:
+    """One compact line per claim, so round 2 costs a digest, not 15 transcripts."""
+    rows: list[str] = []
+    for path in sorted(proposals_dir.glob("*.json")):
+        if path.stem == exclude:
+            continue
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        for p in data.get("proposals", []):
+            rows.append(
+                "- `" + str(data.get("expert", path.stem)) + "` [" + str(p.get("board", "?"))
+                + ", " + str(p.get("cost", "?")) + ", conf " + str(p.get("confidence", "?"))
+                + "] " + str(p.get("claim", ""))[:220]
+            )
+    return "\n".join(rows) if rows else "(no peer proposals available)"
+
+
+def build_round(round_no: int, critic_flaws_by_expert: dict[str, str] | None = None) -> list[Path]:
+    """Write one prompt file per expert for this round; return the paths."""
+    critic_flaws_by_expert = critic_flaws_by_expert or {}
+    round_dir = OUT / ("round_" + str(round_no))
+    prompts_dir = round_dir / "prompts"
+    prompts_dir.mkdir(parents=True, exist_ok=True)
+    (round_dir / "proposals").mkdir(parents=True, exist_ok=True)
+
+    prev_proposals = OUT / ("round_" + str(round_no - 1)) / "proposals"
+    written: list[Path] = []
+    for persona in EXPERTS:
+        digest = ""
+        if round_no > 1 and prev_proposals.exists():
+            digest = peer_digest(prev_proposals, exclude=persona.id)
+        prompt = build_prompt(
+            persona,
+            round_no,
+            OUT / "briefing.md",
+            peer_digest=digest,
+            critic_flaws=critic_flaws_by_expert.get(persona.id, ""),
+        )
+        path = prompts_dir / (persona.id + ".md")
+        path.write_text(prompt, encoding="utf-8")
+        written.append(path)
+    return written
+
+
+if __name__ == "__main__":
+    import sys
+
+    rnd = int(sys.argv[1]) if len(sys.argv) > 1 else 1
+    paths = build_round(rnd)
+    print("wrote " + str(len(paths)) + " expert prompts for round " + str(rnd))
+    total = sum(p.stat().st_size for p in paths)
+    print("total prompt bytes: " + str(total) + " (mean " + str(total // len(paths)) + "/expert)")

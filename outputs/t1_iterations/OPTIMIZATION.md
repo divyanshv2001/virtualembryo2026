@@ -1,5 +1,7 @@
 # T1 leaderboard optimization decisions
 
+The current user mandate is [LOCAL_OPTIMIZATION_PROMPT.md](LOCAL_OPTIMIZATION_PROMPT.md): continue actual local modeling/self-correction until a reproducible local >72 gate passes, using bounded Monte Carlo stability checks, preserving quota and checkpointing through Codex-limit interruptions. Earlier proposals and missing-data/scorer statements below describe historical phases; the acquired atlas, full-panel challenge backtest and Monte Carlo reports are the current empirical record. Local >72 still does not certify hidden E10.5 performance.
+
 **Current submission policy:** The user reports four of eight daily attempts used and requests local evaluation before another submission. Preserve the remaining four. Earlier submission recommendations below are historical development priorities, superseded by this policy. See [LOCAL_VALIDATION.md](LOCAL_VALIDATION.md) for the executed offline loop, rejected calibration and limits on certifying a hidden score above 72.
 
 Updated 2026-09-28. All scores below are user-provided portal feedback, not an authenticated programmatic query. The latest filename was explicitly confirmed by the user. Do not treat multiple observations of one file as independent submissions.
