@@ -62,3 +62,5 @@ The executed candidate passed local format checks: 2,000 × 32,285, float32, exa
 ## Distribution constraints and rolling forecasts
 
 The latest [distribution audit and rolling results](CONSTRAINED_RESULTS.md) supersede historical upload suggestions above. Two whole-atlas batches completed five time splits each, preserving donor zero support and constraining expression changes. No model passed promotion; submission quota remains unused. Code and results are reproducible, with actual execution histories retained privately.
+
+The subsequent [weak-fold diagnosis and robust forecast results](ROBUST_RESULTS.md) expand the cohort to 25,963 cells and test coarser states, uncertainty shrinkage and covariance bounds. Another 96 model/fold evaluations completed. No model passes the 72 promotion gate; the explicit gene-transfer helper is tested but no challenge file is promoted.
