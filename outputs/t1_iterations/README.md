@@ -13,6 +13,19 @@ Round 1 freezes a small training-only candidate set before execution:
 
 These are declared hypotheses, not predicted leaderboard winners. All candidates use identical donor rows/panel/annotations; no target cells, external atlas or score-derived target reconstruction is used. The zero-preserving variant tests support changes introduced by dense additive shifts; real biology need not preserve zeros. No library normalization is inferred. Unmatched annotation labels stay unchanged. Current labels are not biologically harmonized.
 
+## Round 2: empirical distribution reweighting
+
+`composition.py` builds stratified persistence and a capped composition-trend candidate. For exact shared labels, weights are proportional to p_E9.5 × clip((p_E9.5/p_E8.5)^0.5, 0.5, 2); unmatched last-stage labels have multiplier 1. Allocate exact cell quotas by largest remainder, sample without replacement within labels and retain every selected expression row unchanged. Shared RNG settings make this a declared distributional comparison, although donor sets differ when quotas differ. Zero-strength composition weights reproduce empirical proportions up to integer rounding; they are not an official floor-parity claim.
+
+This avoids dense gene shifts while testing whether population weights help. It cannot distinguish dissection/capture changes from real developmental abundance, harmonize labels or generate an unseen future population. The screenshot's leading 71.7 is a user-supplied benchmark target; its method has not been recovered or reproduced. No candidate is claimed to beat it until scored.
+
+```powershell
+outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/composition.py --round round_02_composition
+outputs/research_workflow/.venv/Scripts/python.exe -m unittest discover -s outputs/t1_iterations -p test_composition.py
+```
+
+Keep at least one matched persistence result and the full-shift result for interpretation. Prioritize distinct hypotheses over an indiscriminate parameter sweep. New score feedback must name its artifact before it enters the ledger; ambiguous component lists remain unassigned. More elaborate density-ratio/latent-state models require appropriate training-only validation or eligible independent data, and their superiority cannot be inferred from architectures or local fit alone.
+
 Submit the persistence control first. Obtain its aggregate and DES/DCS/MMD/CSS breakdown. Then test one smaller-shift candidate, retaining negative/ambiguous results and updating the checksum-linked score ledger. Comparing ordinary parameter candidates is permitted; recovering hidden-target properties from returned scores is prohibited by [rules §10](https://virtualembryo.ai/challenge/rules). The screenshot showed 1/8 T1 attempts for that day; recheck actual remaining quota before each upload. This code does not upload.
 
 ## Execute and record feedback
