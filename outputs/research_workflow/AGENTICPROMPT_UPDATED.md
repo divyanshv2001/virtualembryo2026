@@ -1104,3 +1104,9 @@ Read and apply ../outputs/t1_iterations/LOCAL_OPTIMIZATION_PROMPT.md for the exa
 # 21. METRIC SPECIALISTS AND INTEGRATION
 
 User update, 2026-09-28: use separate DE recovery, direction, MMD and variogram specialist objectives, retain complete four-metric/Pareto evidence, and test integrated predictions under the unchanged joint >72 gate. Individual best scores cannot simply be added. Freeze specialist and ensemble designs before scoring, train only on permitted past stages, preserve matched persistence, and evaluate full-panel cell mixtures before promotion. Read the metric-specialist section of ../outputs/t1_iterations/LOCAL_OPTIMIZATION_PROMPT.md. No new agent or Jev authorization is granted by this prompt.
+
+---
+
+# 22. PER-METRIC LITERATURE, IMPLEMENTATION AND PATH COVERAGE
+
+User update, 2026-09-28: investigate literature and experiments for every scored metric, map applicable methods to this temporal full-panel T1 problem, implement them, systematically explore each viable research path and its decisive ablations, preserve failures/blocked requirements, and integrate useful specialist results. Read the literature/coverage section of ../outputs/t1_iterations/LOCAL_OPTIMIZATION_PROMPT.md and its per-metric research queue. A paper review or a single failed configuration does not exhaust a method family. Keep the unchanged joint >72 gate, past-only fitting, complete metrics and submission conservation; the ultimate objective is to beat CellVR's reported official 71.7.

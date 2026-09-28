@@ -13,15 +13,15 @@
       }
     },
     "de_direction": {
-      "run": "state_search_01",
-      "candidate": "unit_k16",
-      "mean_score": 55.312268380984996,
-      "minimum_score": 54.198976902958385,
+      "run": "reliability_backtest_01",
+      "candidate": "reliability_expression_1.0",
+      "mean_score": 55.261436887292405,
+      "minimum_score": 54.157341757309794,
       "mean_skills": {
-        "de_score": 0.5221308652604392,
-        "de_direction": 0.581040145423201,
-        "mmd_u": 0.5700298059903902,
-        "variogram": 0.531604946709115
+        "de_score": 0.5220430107526882,
+        "de_direction": 0.584113882998763,
+        "mmd_u": 0.5659823687508027,
+        "variogram": 0.5314021740491023
       }
     },
     "mmd_u": {
@@ -37,15 +37,15 @@
       }
     },
     "variogram": {
-      "run": "state_search_01",
-      "candidate": "unit_k16",
-      "mean_score": 55.312268380984996,
-      "minimum_score": 54.198976902958385,
+      "run": "reliability_backtest_01",
+      "candidate": "reliability_both_0.5",
+      "mean_score": 55.34892392416245,
+      "minimum_score": 54.17329934396361,
       "mean_skills": {
-        "de_score": 0.5221308652604392,
-        "de_direction": 0.581040145423201,
-        "mmd_u": 0.5700298059903902,
-        "variogram": 0.531604946709115
+        "de_score": 0.523913043478261,
+        "de_direction": 0.5812116355991798,
+        "mmd_u": 0.5694909350891834,
+        "variogram": 0.5318039447275469
       }
     }
   },
@@ -132,6 +132,102 @@
         "de_direction": 0.574989156267216,
         "mmd_u": 0.571389974083304,
         "variogram": 0.5307043443306764
+      }
+    },
+    {
+      "run": "reliability_backtest_01",
+      "candidate": "joint_incumbent",
+      "mean_score": 55.312268380984996,
+      "minimum_score": 54.198976902958385,
+      "mean_skills": {
+        "de_score": 0.5221308652604392,
+        "de_direction": 0.581040145423201,
+        "mmd_u": 0.5700298059903902,
+        "variogram": 0.531604946709115
+      }
+    },
+    {
+      "run": "reliability_backtest_01",
+      "candidate": "reliability_expression_0.5",
+      "mean_score": 55.3743946010149,
+      "minimum_score": 54.21523005227117,
+      "mean_skills": {
+        "de_score": 0.523913043478261,
+        "de_direction": 0.5825777418390424,
+        "mmd_u": 0.5692767338768421,
+        "variogram": 0.5316911475888522
+      }
+    },
+    {
+      "run": "reliability_backtest_01",
+      "candidate": "reliability_expression_1.0",
+      "mean_score": 55.261436887292405,
+      "minimum_score": 54.157341757309794,
+      "mean_skills": {
+        "de_score": 0.5220430107526882,
+        "de_direction": 0.584113882998763,
+        "mmd_u": 0.5659823687508027,
+        "variogram": 0.5314021740491023
+      }
+    },
+    {
+      "run": "reliability_backtest_01",
+      "candidate": "reliability_both_0.25",
+      "mean_score": 55.32389870951575,
+      "minimum_score": 54.202091030413,
+      "mean_skills": {
+        "de_score": 0.5221308652604392,
+        "de_direction": 0.5818532211592666,
+        "mmd_u": 0.5697525488992242,
+        "variogram": 0.5315860041023189
+      }
+    },
+    {
+      "run": "reliability_backtest_01",
+      "candidate": "reliability_both_0.5",
+      "mean_score": 55.34892392416245,
+      "minimum_score": 54.17329934396361,
+      "mean_skills": {
+        "de_score": 0.523913043478261,
+        "de_direction": 0.5812116355991798,
+        "mmd_u": 0.5694909350891834,
+        "variogram": 0.5318039447275469
+      }
+    },
+    {
+      "run": "reliability_backtest_01",
+      "candidate": "reliability_both_1.0",
+      "mean_score": 55.252205839201565,
+      "minimum_score": 54.12238763009252,
+      "mean_skills": {
+        "de_score": 0.5220430107526882,
+        "de_direction": 0.5834433371372513,
+        "mmd_u": 0.5664509994437338,
+        "variogram": 0.5310758579320529
+      }
+    },
+    {
+      "run": "kernel_backtest_01",
+      "candidate": "joint_incumbent",
+      "mean_score": 55.312268380984996,
+      "minimum_score": 54.198976902958385,
+      "mean_skills": {
+        "de_score": 0.5221308652604392,
+        "de_direction": 0.581040145423201,
+        "mmd_u": 0.5700298059903902,
+        "variogram": 0.531604946709115
+      }
+    },
+    {
+      "run": "variogram_backtest_01",
+      "candidate": "joint_incumbent",
+      "mean_score": 55.312268380984996,
+      "minimum_score": 54.198976902958385,
+      "mean_skills": {
+        "de_score": 0.5221308652604392,
+        "de_direction": 0.581040145423201,
+        "mmd_u": 0.5700298059903902,
+        "variogram": 0.531604946709115
       }
     }
   ],
@@ -963,6 +1059,294 @@
         "mmd_u": 0.5698285524436204,
         "variogram": 0.5305426542962784
       }
+    },
+    {
+      "run": "reliability_backtest_01",
+      "candidate": "copy_last",
+      "mean_score": 50.0,
+      "minimum_score": 50.0,
+      "mean_skills": {
+        "de_score": 0.5,
+        "de_direction": 0.5,
+        "mmd_u": 0.5,
+        "variogram": 0.5
+      }
+    },
+    {
+      "run": "reliability_backtest_01",
+      "candidate": "joint_incumbent",
+      "mean_score": 55.312268380984996,
+      "minimum_score": 54.198976902958385,
+      "mean_skills": {
+        "de_score": 0.5221308652604392,
+        "de_direction": 0.581040145423201,
+        "mmd_u": 0.5700298059903902,
+        "variogram": 0.531604946709115
+      }
+    },
+    {
+      "run": "reliability_backtest_01",
+      "candidate": "reliability_expression_0.25",
+      "mean_score": 55.317452441086125,
+      "minimum_score": 54.20305148587361,
+      "mean_skills": {
+        "de_score": 0.5221308652604392,
+        "de_direction": 0.5817149574375587,
+        "mmd_u": 0.5696572033144935,
+        "variogram": 0.5315795387100691
+      }
+    },
+    {
+      "run": "reliability_backtest_01",
+      "candidate": "reliability_expression_0.5",
+      "mean_score": 55.3743946010149,
+      "minimum_score": 54.21523005227117,
+      "mean_skills": {
+        "de_score": 0.523913043478261,
+        "de_direction": 0.5825777418390424,
+        "mmd_u": 0.5692767338768421,
+        "variogram": 0.5316911475888522
+      }
+    },
+    {
+      "run": "reliability_backtest_01",
+      "candidate": "reliability_expression_1.0",
+      "mean_score": 55.261436887292405,
+      "minimum_score": 54.157341757309794,
+      "mean_skills": {
+        "de_score": 0.5220430107526882,
+        "de_direction": 0.584113882998763,
+        "mmd_u": 0.5659823687508027,
+        "variogram": 0.5314021740491023
+      }
+    },
+    {
+      "run": "reliability_backtest_01",
+      "candidate": "reliability_both_0.25",
+      "mean_score": 55.32389870951575,
+      "minimum_score": 54.202091030413,
+      "mean_skills": {
+        "de_score": 0.5221308652604392,
+        "de_direction": 0.5818532211592666,
+        "mmd_u": 0.5697525488992242,
+        "variogram": 0.5315860041023189
+      }
+    },
+    {
+      "run": "reliability_backtest_01",
+      "candidate": "reliability_both_0.5",
+      "mean_score": 55.34892392416245,
+      "minimum_score": 54.17329934396361,
+      "mean_skills": {
+        "de_score": 0.523913043478261,
+        "de_direction": 0.5812116355991798,
+        "mmd_u": 0.5694909350891834,
+        "variogram": 0.5318039447275469
+      }
+    },
+    {
+      "run": "reliability_backtest_01",
+      "candidate": "reliability_both_1.0",
+      "mean_score": 55.252205839201565,
+      "minimum_score": 54.12238763009252,
+      "mean_skills": {
+        "de_score": 0.5220430107526882,
+        "de_direction": 0.5834433371372513,
+        "mmd_u": 0.5664509994437338,
+        "variogram": 0.5310758579320529
+      }
+    },
+    {
+      "run": "kernel_backtest_01",
+      "candidate": "copy_last",
+      "mean_score": 50.0,
+      "minimum_score": 50.0,
+      "mean_skills": {
+        "de_score": 0.5,
+        "de_direction": 0.5,
+        "mmd_u": 0.5,
+        "variogram": 0.5
+      }
+    },
+    {
+      "run": "kernel_backtest_01",
+      "candidate": "joint_incumbent",
+      "mean_score": 55.312268380984996,
+      "minimum_score": 54.198976902958385,
+      "mean_skills": {
+        "de_score": 0.5221308652604392,
+        "de_direction": 0.581040145423201,
+        "mmd_u": 0.5700298059903902,
+        "variogram": 0.531604946709115
+      }
+    },
+    {
+      "run": "kernel_backtest_01",
+      "candidate": "kernel_s0.25_p0.01_w5",
+      "mean_score": 49.76313428342911,
+      "minimum_score": 49.65235406688941,
+      "mean_skills": {
+        "de_score": 0.5115667957773221,
+        "de_direction": 0.4948836497223103,
+        "mmd_u": 0.4940784258681883,
+        "variogram": 0.4889760184946328
+      }
+    },
+    {
+      "run": "kernel_backtest_01",
+      "candidate": "kernel_s0.5_p0.01_w5",
+      "mean_score": 48.31474101345313,
+      "minimum_score": 48.175130753425435,
+      "mean_skills": {
+        "de_score": 0.5083625234141712,
+        "de_direction": 0.48662071535925766,
+        "mmd_u": 0.47163051938825046,
+        "variogram": 0.46456222312349477
+      }
+    },
+    {
+      "run": "kernel_backtest_01",
+      "candidate": "kernel_s1.0_p0.01_w5",
+      "mean_score": 51.44137979068685,
+      "minimum_score": 50.78300658216139,
+      "mean_skills": {
+        "de_score": 0.5201477594567967,
+        "de_direction": 0.5176511231166948,
+        "mmd_u": 0.5202216533814416,
+        "variogram": 0.49448790624531597
+      }
+    },
+    {
+      "run": "kernel_backtest_01",
+      "candidate": "kernel_s0.5_p0.001_w5",
+      "mean_score": 52.06721388167869,
+      "minimum_score": 51.288779429163334,
+      "mean_skills": {
+        "de_score": 0.5256302151954326,
+        "de_direction": 0.524598988575428,
+        "mmd_u": 0.5256960741038416,
+        "variogram": 0.5020300782145961
+      }
+    },
+    {
+      "run": "kernel_backtest_01",
+      "candidate": "kernel_s0.5_p0.01_w3",
+      "mean_score": 49.959622146057946,
+      "minimum_score": 49.685374317716324,
+      "mean_skills": {
+        "de_score": 0.5219829867430843,
+        "de_direction": 0.5003350615376894,
+        "mmd_u": 0.48928068425566135,
+        "variogram": 0.4861625205684383
+      }
+    },
+    {
+      "run": "kernel_backtest_01",
+      "candidate": "kernel_s0.5_p0.001_w3",
+      "mean_score": 48.68320543172098,
+      "minimum_score": 48.57199326185891,
+      "mean_skills": {
+        "de_score": 0.5099495451034676,
+        "de_direction": 0.4893880522550143,
+        "mmd_u": 0.4747975142567041,
+        "variogram": 0.4727920035028907
+      }
+    },
+    {
+      "run": "variogram_backtest_01",
+      "candidate": "copy_last",
+      "mean_score": 50.0,
+      "minimum_score": 50.0,
+      "mean_skills": {
+        "de_score": 0.5,
+        "de_direction": 0.5,
+        "mmd_u": 0.5,
+        "variogram": 0.5
+      }
+    },
+    {
+      "run": "variogram_backtest_01",
+      "candidate": "joint_incumbent",
+      "mean_score": 55.312268380984996,
+      "minimum_score": 54.198976902958385,
+      "mean_skills": {
+        "de_score": 0.5221308652604392,
+        "de_direction": 0.581040145423201,
+        "mmd_u": 0.5700298059903902,
+        "variogram": 0.531604946709115
+      }
+    },
+    {
+      "run": "variogram_backtest_01",
+      "candidate": "kernel_s0.25_p0.01_w5",
+      "mean_score": 51.298699781142545,
+      "minimum_score": 50.636525526779664,
+      "mean_skills": {
+        "de_score": 0.5134669589727529,
+        "de_direction": 0.5104499891753301,
+        "mmd_u": 0.52320182852638,
+        "variogram": 0.5002360610824538
+      }
+    },
+    {
+      "run": "variogram_backtest_01",
+      "candidate": "kernel_s0.5_p0.01_w5",
+      "mean_score": 50.888761052083005,
+      "minimum_score": 50.4810962814905,
+      "mean_skills": {
+        "de_score": 0.522139712786761,
+        "de_direction": 0.5018615872334107,
+        "mmd_u": 0.5205937262278252,
+        "variogram": 0.48354583823719827
+      }
+    },
+    {
+      "run": "variogram_backtest_01",
+      "candidate": "kernel_s1.0_p0.01_w5",
+      "mean_score": 51.47656085342834,
+      "minimum_score": 50.75214600159895,
+      "mean_skills": {
+        "de_score": 0.5149700475108449,
+        "de_direction": 0.5109390162971951,
+        "mmd_u": 0.5354329163430004,
+        "variogram": 0.4882923383968664
+      }
+    },
+    {
+      "run": "variogram_backtest_01",
+      "candidate": "kernel_s0.5_p0.001_w5",
+      "mean_score": 51.427227254971626,
+      "minimum_score": 50.68234863482763,
+      "mean_skills": {
+        "de_score": 0.5151802656546489,
+        "de_direction": 0.5105242306723182,
+        "mmd_u": 0.5326106386345115,
+        "variogram": 0.4903147843881055
+      }
+    },
+    {
+      "run": "variogram_backtest_01",
+      "candidate": "kernel_s0.5_p0.01_w3",
+      "mean_score": 50.5888430253649,
+      "minimum_score": 50.145105299426795,
+      "mean_skills": {
+        "de_score": 0.5081664557433186,
+        "de_direction": 0.5001917051624599,
+        "mmd_u": 0.5211631626803678,
+        "variogram": 0.4872497061154702
+      }
+    },
+    {
+      "run": "variogram_backtest_01",
+      "candidate": "kernel_s0.5_p0.001_w3",
+      "mean_score": 49.62742356327936,
+      "minimum_score": 49.27805768612631,
+      "mean_skills": {
+        "de_score": 0.5150068607515416,
+        "de_direction": 0.49424961866325656,
+        "mmd_u": 0.5009892331669001,
+        "variogram": 0.46831672914512007
+      }
     }
   ],
   "source_report_sha256": {
@@ -975,7 +1359,10 @@
     "window_backtest_01": "bf23022c37e6a21005714ee107860aa21e5f6f5d83de613bb3ad4706f98e0b97",
     "state_search_01": "5ea63a67e250dddcf41d92b437eb28099f9d8b2a5da8720ab743a668a241529e",
     "specialist_integration_01": "8fd419d544c764a4e201a8fc25a4b16eb6081d97be17ff272f6e6f0c2b6d54b8",
-    "de_specialist_search_01": "c97c7b7557eb36cac93d8650ad0f1d460ec884ba8980c5abd81ac29ad27b53b6"
+    "de_specialist_search_01": "c97c7b7557eb36cac93d8650ad0f1d460ec884ba8980c5abd81ac29ad27b53b6",
+    "reliability_backtest_01": "8c59c1632c2fd0b8e3ec6d8e1d52179e66ef7abdf77e253cabe506a4ceec133f",
+    "kernel_backtest_01": "693e84e9b3ffce86940429972d89bdadbd8dcd009e8494b5f864798a90429dab",
+    "variogram_backtest_01": "e8bb3db811e3c69ae6118e23e6a09361e95a8f3d04b72191b8b42823d84f64be"
   },
   "selection_scope": "Reused E9.5 development evidence. Specialist best scores cannot be combined without scoring integrated predictions.",
   "official_72_verified": false

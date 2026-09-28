@@ -7,7 +7,7 @@ from run_t1 import digest
 
 
 RUNS = ['challenge_backtest_01','challenge_identity_01','detection_backtest_01',
-    'hurdle_backtest_01','guard_backtest_01','neighborhood_backtest_01','window_backtest_01','state_search_01','specialist_integration_01','de_specialist_search_01']
+    'hurdle_backtest_01','guard_backtest_01','neighborhood_backtest_01','window_backtest_01','state_search_01','specialist_integration_01','de_specialist_search_01','reliability_backtest_01','kernel_backtest_01','variogram_backtest_01']
 
 
 def analyze():

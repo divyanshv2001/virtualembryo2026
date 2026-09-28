@@ -1,0 +1,873 @@
+{
+  "updated_utc": "2026-09-28T14:45:00.388266+00:00",
+  "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
+  "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
+  "paths": [
+    {
+      "id": "de_reliability",
+      "metrics": [
+        "de_score",
+        "de_direction"
+      ],
+      "status": "implemented_evaluated",
+      "sources": [
+        {
+          "title": "DESeq2",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4302049/",
+          "coverage": "abstract and selected methods"
+        },
+        {
+          "title": "Adaptive shrinkage",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5379932/",
+          "coverage": "article and sign-error method discussion"
+        }
+      ],
+      "hypothesis_and_limits": "Regularize unreliable gene effects learned from two historical forecasts. This ridge gain implementation is an adaptation, not DESeq2 or adaptive-shrinkage reproduction.",
+      "implementation": "gene_reliability.py",
+      "run": "reliability_backtest_01",
+      "declared_experiment_and_result": "Six blends .25/.5/1 for expression or expression+detection. Best mean 55.3744; gain .0621; one panel regresses.",
+      "next_action": "Test sign-aware empirical Bayes estimator and historical fold transfer; current bounded ridge ablation is complete, family remains open.",
+      "research_family_exhausted": false,
+      "constraints": [
+        "All learner inputs <= fold cutoff; challenge calibration <=E8.5",
+        "Full official 32285-gene evaluator unchanged",
+        "No official submissions or new Jev calls",
+        "Cell resampling uncertainty is not independent embryo uncertainty"
+      ],
+      "report_sha256": "8c59c1632c2fd0b8e3ec6d8e1d52179e66ef7abdf77e253cabe506a4ceec133f",
+      "full_results": [
+        {
+          "candidate": "copy_last",
+          "scores": [
+            50.0,
+            50.0,
+            50.0
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 50.0,
+          "minimum_score": 50.0,
+          "development_72_gate": false,
+          "mean_skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "non_primary_budget_passed": true
+        },
+        {
+          "candidate": "joint_incumbent",
+          "scores": [
+            55.479838365606724,
+            56.2579898743899,
+            54.198976902958385
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 55.312268380984996,
+          "minimum_score": 54.198976902958385,
+          "development_72_gate": false,
+          "mean_skills": {
+            "de_score": 0.5221308652604392,
+            "de_direction": 0.581040145423201,
+            "mmd_u": 0.5700298059903902,
+            "variogram": 0.531604946709115
+          },
+          "non_primary_budget_passed": true
+        },
+        {
+          "candidate": "reliability_expression_0.25",
+          "scores": [
+            55.47316288442546,
+            56.27614295295932,
+            54.20305148587361
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 55.317452441086125,
+          "minimum_score": 54.20305148587361,
+          "development_72_gate": false,
+          "mean_skills": {
+            "de_score": 0.5221308652604392,
+            "de_direction": 0.5817149574375587,
+            "mmd_u": 0.5696572033144935,
+            "variogram": 0.5315795387100691
+          },
+          "non_primary_budget_passed": true
+        },
+        {
+          "candidate": "reliability_expression_0.5",
+          "scores": [
+            55.463073478645654,
+            56.444880272127854,
+            54.21523005227117
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 55.3743946010149,
+          "minimum_score": 54.21523005227117,
+          "development_72_gate": false,
+          "mean_skills": {
+            "de_score": 0.523913043478261,
+            "de_direction": 0.5825777418390424,
+            "mmd_u": 0.5692767338768421,
+            "variogram": 0.5316911475888522
+          },
+          "non_primary_budget_passed": true
+        },
+        {
+          "candidate": "reliability_expression_1.0",
+          "scores": [
+            55.190965172059315,
+            56.43600373250812,
+            54.157341757309794
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 55.261436887292405,
+          "minimum_score": 54.157341757309794,
+          "development_72_gate": false,
+          "mean_skills": {
+            "de_score": 0.5220430107526882,
+            "de_direction": 0.584113882998763,
+            "mmd_u": 0.5659823687508027,
+            "variogram": 0.5314021740491023
+          },
+          "non_primary_budget_passed": true
+        },
+        {
+          "candidate": "reliability_both_0.25",
+          "scores": [
+            55.47732127837802,
+            56.292283819756214,
+            54.202091030413
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 55.32389870951575,
+          "minimum_score": 54.202091030413,
+          "development_72_gate": false,
+          "mean_skills": {
+            "de_score": 0.5221308652604392,
+            "de_direction": 0.5818532211592666,
+            "mmd_u": 0.5697525488992242,
+            "variogram": 0.5315860041023189
+          },
+          "non_primary_budget_passed": true
+        },
+        {
+          "candidate": "reliability_both_0.5",
+          "scores": [
+            55.42859301590708,
+            56.444879412616665,
+            54.17329934396361
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 55.34892392416245,
+          "minimum_score": 54.17329934396361,
+          "development_72_gate": false,
+          "mean_skills": {
+            "de_score": 0.523913043478261,
+            "de_direction": 0.5812116355991798,
+            "mmd_u": 0.5694909350891834,
+            "variogram": 0.5318039447275469
+          },
+          "non_primary_budget_passed": true
+        },
+        {
+          "candidate": "reliability_both_1.0",
+          "scores": [
+            55.15912549557387,
+            56.47510439193829,
+            54.12238763009252
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 55.252205839201565,
+          "minimum_score": 54.12238763009252,
+          "development_72_gate": false,
+          "mean_skills": {
+            "de_score": 0.5220430107526882,
+            "de_direction": 0.5834433371372513,
+            "mmd_u": 0.5664509994437338,
+            "variogram": 0.5310758579320529
+          },
+          "non_primary_budget_passed": true
+        }
+      ]
+    },
+    {
+      "id": "de_empirical_bayes",
+      "metrics": [
+        "de_score",
+        "de_direction"
+      ],
+      "status": "queued_method_review",
+      "sources": [
+        {
+          "title": "Adaptive shrinkage",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5379932/",
+          "coverage": "article and sign-error method discussion"
+        }
+      ],
+      "hypothesis_and_limits": "Estimate effect uncertainty and false-sign risk, using historical folds only. Challenge log expression is not raw count input for DESeq2.",
+      "implementation": null,
+      "run": null,
+      "declared_experiment_and_result": null,
+      "next_action": "Specify historical uncertainty estimator, mixture prior and frozen sign thresholds before implementing.",
+      "research_family_exhausted": false,
+      "constraints": [
+        "All learner inputs <= fold cutoff; challenge calibration <=E8.5",
+        "Full official 32285-gene evaluator unchanged",
+        "No official submissions or new Jev calls",
+        "Cell resampling uncertainty is not independent embryo uncertainty"
+      ]
+    },
+    {
+      "id": "direction_neural_ode",
+      "metrics": [
+        "de_direction",
+        "de_score"
+      ],
+      "status": "queued_method_review",
+      "sources": [
+        {
+          "title": "scNODE",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39230694/",
+          "coverage": "abstract; full PMC access blocked"
+        }
+      ],
+      "hypothesis_and_limits": "Nonlinear latent dynamics with a decoder may capture curved development; out-of-range forecasting is a separate assumption.",
+      "implementation": null,
+      "run": null,
+      "declared_experiment_and_result": null,
+      "next_action": "Read full methods and author code; assess CPU runtime and count/log likelihood. Earlier linear latent failure does not exhaust neural ODEs.",
+      "research_family_exhausted": false,
+      "constraints": [
+        "All learner inputs <= fold cutoff; challenge calibration <=E8.5",
+        "Full official 32285-gene evaluator unchanged",
+        "No official submissions or new Jev calls",
+        "Cell resampling uncertainty is not independent embryo uncertainty"
+      ]
+    },
+    {
+      "id": "distribution_dynamic_ot",
+      "metrics": [
+        "mmd_u",
+        "de_direction"
+      ],
+      "status": "queued_method_review",
+      "sources": [
+        {
+          "title": "TrajectoryNet",
+          "url": "https://proceedings.mlr.press/v119/tong20a.html",
+          "coverage": "abstract and introduction"
+        }
+      ],
+      "hypothesis_and_limits": "Population transport with continuous nonlinear dynamics; interpolation success does not establish extrapolation.",
+      "implementation": null,
+      "run": null,
+      "declared_experiment_and_result": null,
+      "next_action": "Review regularizers, implement past-only rolling temporal folds and compare with linear baseline.",
+      "research_family_exhausted": false,
+      "constraints": [
+        "All learner inputs <= fold cutoff; challenge calibration <=E8.5",
+        "Full official 32285-gene evaluator unchanged",
+        "No official submissions or new Jev calls",
+        "Cell resampling uncertainty is not independent embryo uncertainty"
+      ]
+    },
+    {
+      "id": "growth_unbalanced_ot",
+      "metrics": [
+        "mmd_u",
+        "variogram"
+      ],
+      "status": "queued_with_input_assumptions",
+      "sources": [
+        {
+          "title": "Waddington-OT",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6402800/",
+          "coverage": "abstract and stability snippets"
+        },
+        {
+          "title": "TIGON",
+          "url": "https://www.nature.com/articles/s42256-023-00763-w",
+          "coverage": "abstract and method snippets"
+        }
+      ],
+      "hypothesis_and_limits": "Growth-aware population evolution can change composition, but captured cell counts do not measure proliferation.",
+      "implementation": null,
+      "run": null,
+      "declared_experiment_and_result": null,
+      "next_action": "Determine defensible growth priors or measurements; do not equate sampled cell counts with biological growth.",
+      "research_family_exhausted": false,
+      "constraints": [
+        "All learner inputs <= fold cutoff; challenge calibration <=E8.5",
+        "Full official 32285-gene evaluator unchanged",
+        "No official submissions or new Jev calls",
+        "Cell resampling uncertainty is not independent embryo uncertainty"
+      ]
+    },
+    {
+      "id": "mmd_kernel_matching",
+      "metrics": [
+        "mmd_u"
+      ],
+      "status": "implemented_evaluated_no_joint_gain",
+      "sources": [
+        {
+          "title": "Kernel two-sample test",
+          "url": "https://www.jmlr.org/papers/volume13/gretton12a/gretton12a.pdf",
+          "coverage": "abstract and kernel formulation"
+        },
+        {
+          "title": "Kernel mean matching",
+          "url": "https://papers.nips.cc/paper_files/paper/2006/file/a2186aa7c086b46ad4e8bf81e2a3a19b-Paper.pdf",
+          "coverage": "quadratic program method"
+        },
+        {
+          "title": "Random Fourier features",
+          "url": "https://people.eecs.berkeley.edu/~brecht/papers/07.rah.rec.nips.pdf",
+          "coverage": "abstract"
+        }
+      ],
+      "hypothesis_and_limits": "Forecast past kernel-embedding drift, then entropy-regularized whole-cell resampling. Original KMM uses observed target covariates; this uses an extrapolated target and is an adaptation.",
+      "implementation": "kernel_population.py",
+      "run": "kernel_backtest_01",
+      "declared_experiment_and_result": "Six configurations plus two controls, three panels (24 evaluations). Best variant kernel_s0.5_p0.001_w5, mean 52.0672, below unit_k16 55.3123. All calibrations valid; no >72 gate passed.",
+      "next_action": "This bounded whole-cell reweighting branch failed. Review extrapolation horizon and source/anchor mismatch; generative dependence models remain untested.",
+      "research_family_exhausted": false,
+      "constraints": [
+        "All learner inputs <= fold cutoff; challenge calibration <=E8.5",
+        "Full official 32285-gene evaluator unchanged",
+        "No official submissions or new Jev calls",
+        "Cell resampling uncertainty is not independent embryo uncertainty"
+      ],
+      "report_sha256": "693e84e9b3ffce86940429972d89bdadbd8dcd009e8494b5f864798a90429dab",
+      "full_results": [
+        {
+          "candidate": "copy_last",
+          "scores": [
+            50.0,
+            50.0,
+            50.0
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 50.0,
+          "minimum_score": 50.0,
+          "development_72_gate": false,
+          "mean_skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "non_primary_budget_passed": true
+        },
+        {
+          "candidate": "joint_incumbent",
+          "scores": [
+            55.479838365606724,
+            56.2579898743899,
+            54.198976902958385
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 55.312268380984996,
+          "minimum_score": 54.198976902958385,
+          "development_72_gate": false,
+          "mean_skills": {
+            "de_score": 0.5221308652604392,
+            "de_direction": 0.581040145423201,
+            "mmd_u": 0.5700298059903902,
+            "variogram": 0.531604946709115
+          },
+          "non_primary_budget_passed": true
+        },
+        {
+          "candidate": "kernel_s0.25_p0.01_w5",
+          "scores": [
+            49.865986285300856,
+            49.77106249809707,
+            49.65235406688941
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 49.76313428342911,
+          "minimum_score": 49.65235406688941,
+          "development_72_gate": false,
+          "mean_skills": {
+            "de_score": 0.5115667957773221,
+            "de_direction": 0.4948836497223103,
+            "mmd_u": 0.4940784258681883,
+            "variogram": 0.4889760184946328
+          },
+          "non_primary_budget_passed": false
+        },
+        {
+          "candidate": "kernel_s0.5_p0.01_w5",
+          "scores": [
+            48.482176685876794,
+            48.175130753425435,
+            48.28691560105717
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 48.31474101345313,
+          "minimum_score": 48.175130753425435,
+          "development_72_gate": false,
+          "mean_skills": {
+            "de_score": 0.5083625234141712,
+            "de_direction": 0.48662071535925766,
+            "mmd_u": 0.47163051938825046,
+            "variogram": 0.46456222312349477
+          },
+          "non_primary_budget_passed": false
+        },
+        {
+          "candidate": "kernel_s1.0_p0.01_w5",
+          "scores": [
+            51.53374737177732,
+            52.00738541812184,
+            50.78300658216139
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 51.44137979068685,
+          "minimum_score": 50.78300658216139,
+          "development_72_gate": false,
+          "mean_skills": {
+            "de_score": 0.5201477594567967,
+            "de_direction": 0.5176511231166948,
+            "mmd_u": 0.5202216533814416,
+            "variogram": 0.49448790624531597
+          },
+          "non_primary_budget_passed": false
+        },
+        {
+          "candidate": "kernel_s0.5_p0.001_w5",
+          "scores": [
+            52.24576967571352,
+            52.6670925401592,
+            51.288779429163334
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 52.06721388167869,
+          "minimum_score": 51.288779429163334,
+          "development_72_gate": false,
+          "mean_skills": {
+            "de_score": 0.5256302151954326,
+            "de_direction": 0.524598988575428,
+            "mmd_u": 0.5256960741038416,
+            "variogram": 0.5020300782145961
+          },
+          "non_primary_budget_passed": true
+        },
+        {
+          "candidate": "kernel_s0.5_p0.01_w3",
+          "scores": [
+            50.084802129651564,
+            50.108689990805956,
+            49.685374317716324
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 49.959622146057946,
+          "minimum_score": 49.685374317716324,
+          "development_72_gate": false,
+          "mean_skills": {
+            "de_score": 0.5219829867430843,
+            "de_direction": 0.5003350615376894,
+            "mmd_u": 0.48928068425566135,
+            "variogram": 0.4861625205684383
+          },
+          "non_primary_budget_passed": false
+        },
+        {
+          "candidate": "kernel_s0.5_p0.001_w3",
+          "scores": [
+            48.85166146478062,
+            48.62596156852342,
+            48.57199326185891
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 48.68320543172098,
+          "minimum_score": 48.57199326185891,
+          "development_72_gate": false,
+          "mean_skills": {
+            "de_score": 0.5099495451034676,
+            "de_direction": 0.4893880522550143,
+            "mmd_u": 0.4747975142567041,
+            "variogram": 0.4727920035028907
+          },
+          "non_primary_budget_passed": false
+        }
+      ]
+    },
+    {
+      "id": "mmd_generative_moments",
+      "metrics": [
+        "mmd_u"
+      ],
+      "status": "queued_method_review",
+      "sources": [
+        {
+          "title": "Generative moment matching networks",
+          "url": "https://proceedings.mlr.press/v37/li15.html",
+          "coverage": "abstract and introduction"
+        }
+      ],
+      "hypothesis_and_limits": "Train a conditional generator using kernel discrepancies between past timepoint populations.",
+      "implementation": null,
+      "run": null,
+      "declared_experiment_and_result": null,
+      "next_action": "Read full training method, choose past-only conditional time model and check compute dependencies; T1 adaptation needs separate validation.",
+      "research_family_exhausted": false,
+      "constraints": [
+        "All learner inputs <= fold cutoff; challenge calibration <=E8.5",
+        "Full official 32285-gene evaluator unchanged",
+        "No official submissions or new Jev calls",
+        "Cell resampling uncertainty is not independent embryo uncertainty"
+      ]
+    },
+    {
+      "id": "css_covariance_shrinkage",
+      "metrics": [
+        "variogram"
+      ],
+      "status": "queued_method_review",
+      "sources": [
+        {
+          "title": "Ledoit-Wolf covariance",
+          "url": "https://www.ledoit.net/Well-conditioned2004.pdf",
+          "coverage": "abstract"
+        },
+        {
+          "title": "Variogram scoring rules",
+          "url": "https://repository.library.noaa.gov/view/noaa/22327/noaa_22327_DS1.pdf",
+          "coverage": "abstract and correlation experiment discussion"
+        }
+      ],
+      "hypothesis_and_limits": "Regularize historical covariance and forecast joint dependence. Static covariance estimation alone does not forecast development.",
+      "implementation": null,
+      "run": null,
+      "declared_experiment_and_result": null,
+      "next_action": "Review shrinkage formula; implement low-rank PSD covariance dynamics with zero/protected-gene guards and rolling folds.",
+      "research_family_exhausted": false,
+      "constraints": [
+        "All learner inputs <= fold cutoff; challenge calibration <=E8.5",
+        "Full official 32285-gene evaluator unchanged",
+        "No official submissions or new Jev calls",
+        "Cell resampling uncertainty is not independent embryo uncertainty"
+      ]
+    },
+    {
+      "id": "css_direct_variogram",
+      "metrics": [
+        "variogram"
+      ],
+      "status": "implemented_evaluated_no_joint_gain",
+      "sources": [
+        {
+          "title": "Variogram scoring rules",
+          "url": "https://repository.library.noaa.gov/view/noaa/22327/noaa_22327_DS1.pdf",
+          "coverage": "abstract and correlation experiment discussion"
+        }
+      ],
+      "hypothesis_and_limits": "Optimize historical expected absolute gene-pair differences to power .5; covariance alone misses non-Gaussian dependence.",
+      "implementation": "variogram_population.py",
+      "run": "variogram_backtest_01",
+      "declared_experiment_and_result": "Six configurations plus two controls, three panels (24 evaluations). Best variant kernel_s1.0_p0.01_w5, mean 51.4766, below unit_k16 55.3123. All calibrations valid; no >72 gate passed.",
+      "next_action": "This bounded whole-cell reweighting branch failed. Review extrapolation horizon and source/anchor mismatch; generative dependence models remain untested.",
+      "research_family_exhausted": false,
+      "constraints": [
+        "All learner inputs <= fold cutoff; challenge calibration <=E8.5",
+        "Full official 32285-gene evaluator unchanged",
+        "No official submissions or new Jev calls",
+        "Cell resampling uncertainty is not independent embryo uncertainty"
+      ],
+      "report_sha256": "e8bb3db811e3c69ae6118e23e6a09361e95a8f3d04b72191b8b42823d84f64be",
+      "full_results": [
+        {
+          "candidate": "copy_last",
+          "scores": [
+            50.0,
+            50.0,
+            50.0
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 50.0,
+          "minimum_score": 50.0,
+          "development_72_gate": false,
+          "mean_skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "non_primary_budget_passed": true
+        },
+        {
+          "candidate": "joint_incumbent",
+          "scores": [
+            55.479838365606724,
+            56.2579898743899,
+            54.198976902958385
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 55.312268380984996,
+          "minimum_score": 54.198976902958385,
+          "development_72_gate": false,
+          "mean_skills": {
+            "de_score": 0.5221308652604392,
+            "de_direction": 0.581040145423201,
+            "mmd_u": 0.5700298059903902,
+            "variogram": 0.531604946709115
+          },
+          "non_primary_budget_passed": true
+        },
+        {
+          "candidate": "kernel_s0.25_p0.01_w5",
+          "scores": [
+            51.67181691755005,
+            51.58775689909794,
+            50.636525526779664
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 51.298699781142545,
+          "minimum_score": 50.636525526779664,
+          "development_72_gate": false,
+          "mean_skills": {
+            "de_score": 0.5134669589727529,
+            "de_direction": 0.5104499891753301,
+            "mmd_u": 0.52320182852638,
+            "variogram": 0.5002360610824538
+          },
+          "non_primary_budget_passed": true
+        },
+        {
+          "candidate": "kernel_s0.5_p0.01_w5",
+          "scores": [
+            51.26931225936223,
+            50.915874615396284,
+            50.4810962814905
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 50.888761052083005,
+          "minimum_score": 50.4810962814905,
+          "development_72_gate": false,
+          "mean_skills": {
+            "de_score": 0.522139712786761,
+            "de_direction": 0.5018615872334107,
+            "mmd_u": 0.5205937262278252,
+            "variogram": 0.48354583823719827
+          },
+          "non_primary_budget_passed": false
+        },
+        {
+          "candidate": "kernel_s1.0_p0.01_w5",
+          "scores": [
+            51.8483820897103,
+            51.82915446897576,
+            50.75214600159895
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 51.47656085342834,
+          "minimum_score": 50.75214600159895,
+          "development_72_gate": false,
+          "mean_skills": {
+            "de_score": 0.5149700475108449,
+            "de_direction": 0.5109390162971951,
+            "mmd_u": 0.5354329163430004,
+            "variogram": 0.4882923383968664
+          },
+          "non_primary_budget_passed": false
+        },
+        {
+          "candidate": "kernel_s0.5_p0.001_w5",
+          "scores": [
+            51.77564186842177,
+            51.82369126166548,
+            50.68234863482763
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 51.427227254971626,
+          "minimum_score": 50.68234863482763,
+          "development_72_gate": false,
+          "mean_skills": {
+            "de_score": 0.5151802656546489,
+            "de_direction": 0.5105242306723182,
+            "mmd_u": 0.5326106386345115,
+            "variogram": 0.4903147843881055
+          },
+          "non_primary_budget_passed": false
+        },
+        {
+          "candidate": "kernel_s0.5_p0.01_w3",
+          "scores": [
+            50.971619500357676,
+            50.64980427631023,
+            50.145105299426795
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 50.5888430253649,
+          "minimum_score": 50.145105299426795,
+          "development_72_gate": false,
+          "mean_skills": {
+            "de_score": 0.5081664557433186,
+            "de_direction": 0.5001917051624599,
+            "mmd_u": 0.5211631626803678,
+            "variogram": 0.4872497061154702
+          },
+          "non_primary_budget_passed": false
+        },
+        {
+          "candidate": "kernel_s0.5_p0.001_w3",
+          "scores": [
+            50.063679312207896,
+            49.54053369150387,
+            49.27805768612631
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 49.62742356327936,
+          "minimum_score": 49.27805768612631,
+          "development_72_gate": false,
+          "mean_skills": {
+            "de_score": 0.5150068607515416,
+            "de_direction": 0.49424961866325656,
+            "mmd_u": 0.5009892331669001,
+            "variogram": 0.46831672914512007
+          },
+          "non_primary_budget_passed": false
+        }
+      ]
+    },
+    {
+      "id": "css_copula",
+      "metrics": [
+        "variogram",
+        "mmd_u"
+      ],
+      "status": "queued_method_review",
+      "sources": [
+        {
+          "title": "Ensemble copula coupling",
+          "url": "https://arxiv.org/abs/1302.7149",
+          "coverage": "abstract"
+        }
+      ],
+      "hypothesis_and_limits": "Separate marginal calibration and joint rank dependence, adapting ensemble methods to gene expression.",
+      "implementation": null,
+      "run": null,
+      "declared_experiment_and_result": null,
+      "next_action": "Review full method, handle zero ties, conserved mapped mass and protected genes; do not import future ranks.",
+      "research_family_exhausted": false,
+      "constraints": [
+        "All learner inputs <= fold cutoff; challenge calibration <=E8.5",
+        "Full official 32285-gene evaluator unchanged",
+        "No official submissions or new Jev calls",
+        "Cell resampling uncertainty is not independent embryo uncertainty"
+      ]
+    },
+    {
+      "id": "integration_whole_cells",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "status": "implemented_evaluated",
+      "sources": [],
+      "hypothesis_and_limits": "Combine whole-cell specialist forecasts; scores must be evaluated jointly, not added across models.",
+      "implementation": "cell_mixture.py",
+      "run": "specialist_integration_01",
+      "declared_experiment_and_result": "DE mixture weights .1/.25/.5/.75 tested; .75 raises DE but reduces overall to 54.8128.",
+      "next_action": "Revisit integration only when new specialists improve the Pareto frontier; other mixtures remain untested.",
+      "research_family_exhausted": false,
+      "constraints": [
+        "All learner inputs <= fold cutoff; challenge calibration <=E8.5",
+        "Full official 32285-gene evaluator unchanged",
+        "No official submissions or new Jev calls",
+        "Cell resampling uncertainty is not independent embryo uncertainty"
+      ],
+      "report_sha256": "8fd419d544c764a4e201a8fc25a4b16eb6081d97be17ff272f6e6f0c2b6d54b8",
+      "full_results": [
+        {
+          "candidate": "copy_last",
+          "scores": [
+            50.0,
+            50.0,
+            50.0
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 50.0,
+          "minimum_score": 50.0,
+          "development_72_gate": false
+        },
+        {
+          "candidate": "de_specialist",
+          "scores": [
+            53.14432197892282,
+            53.8362603314993,
+            52.341001191018535
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 53.10719450048021,
+          "minimum_score": 52.341001191018535,
+          "development_72_gate": false
+        },
+        {
+          "candidate": "joint_specialist",
+          "scores": [
+            55.479838365606724,
+            56.2579898743899,
+            54.198976902958385
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 55.312268380984996,
+          "minimum_score": 54.198976902958385,
+          "development_72_gate": false
+        },
+        {
+          "candidate": "mixture_de_0.1",
+          "scores": [
+            54.83026619291784,
+            55.638881454322096,
+            53.57824274982854
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 54.682463465689494,
+          "minimum_score": 53.57824274982854,
+          "development_72_gate": false
+        },
+        {
+          "candidate": "mixture_de_0.25",
+          "scores": [
+            54.615412565060005,
+            55.23912428258437,
+            53.444942152676475
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 54.43315966677361,
+          "minimum_score": 53.444942152676475,
+          "development_72_gate": false
+        },
+        {
+          "candidate": "mixture_de_0.5",
+          "scores": [
+            54.334671874259485,
+            55.010619691025894,
+            53.16373780496942
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 54.1696764567516,
+          "minimum_score": 53.16373780496942,
+          "development_72_gate": false
+        },
+        {
+          "candidate": "mixture_de_0.75",
+          "scores": [
+            54.81913802776652,
+            55.733971175681354,
+            53.885238693426416
+          ],
+          "all_calibrations_valid": true,
+          "mean_score": 54.81278263229143,
+          "minimum_score": 53.885238693426416,
+          "development_72_gate": false
+        }
+      ]
+    }
+  ]
+}

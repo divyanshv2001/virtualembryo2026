@@ -142,3 +142,7 @@ Historical Human/Agent track labels and source premises above are not verified e
 ## Current strategy: metric specialists and integration
 Optimize separate DE/direction/MMD/variogram specialists, retain complete metric vectors and Pareto candidates, then test frozen whole-cell mixtures against each constituent. Never add best specialist scores; the joint >72 stability/temporal gate remains required.
 Read the metric-specialist section of LOCAL_OPTIMIZATION_PROMPT.md. These prompts are prepared, not executed; they authorize no new agents or API calls.
+
+## Literature-driven path coverage
+For each metric, search primary literature/experiments, verify T1 applicability, implement viable paths and decisive ablations, maintain METRIC_RESEARCH_QUEUE.json with measured results/blocked requirements, then integrate useful specialists. Do not call literature-only proposals or one failed default an exhausted method family.
+Read the current mandate for required evidence, scope, controls and the unchanged >72 stopping gate.
