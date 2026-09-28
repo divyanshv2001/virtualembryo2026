@@ -5,6 +5,19 @@ from challenge_transfer import ChallengeTransfer
 
 
 class TransferForecastTests(unittest.TestCase):
+    def test_unit_scaling_remains_past_only(self):
+        rng = np.random.default_rng(19)
+        stages = np.repeat([8., 8.25, 8.5, 9.5], 60)
+        x = np.log1p(rng.poisson(2, (240, 40))).astype(np.float32)
+        changed = x.copy(); changed[stages > 8.5] = 100
+        symbols = [f'G{i}' for i in range(40)]
+        donors = x[stages == 8.5]
+        with threadpool_limits(limits=2):
+            a = ChallengeTransfer(x, stages, 8.5, donors, symbols, symbols, feature_scaling='unit')
+            b = ChallengeTransfer(changed, stages, 8.5, donors, symbols, symbols, feature_scaling='unit')
+            np.testing.assert_array_equal(a.model.scale, np.ones(len(a.model.features)))
+            np.testing.assert_array_equal(a.predict(9.5, 'state', .5, .25)[0], b.predict(9.5, 'state', .5, .25)[0])
+
     def test_identity_alignment_projects_measured_anchor_features_directly(self):
         rng = np.random.default_rng(12)
         x = np.log1p(rng.poisson(2, (180, 40))).astype(np.float32)

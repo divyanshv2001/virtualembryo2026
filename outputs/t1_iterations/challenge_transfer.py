@@ -6,7 +6,7 @@ from transfer_genes import apply_unique_factors
 
 
 class ChallengeTransfer:
-    def __init__(self, x, stages, cutoff, donors, official_symbols, atlas_symbols, states=4, alignment='moments', covariance_limit=.1):
+    def __init__(self, x, stages, cutoff, donors, official_symbols, atlas_symbols, states=4, alignment='moments', covariance_limit=.1, feature_scaling='standard'):
         if not .1 <= covariance_limit <= .4: raise ValueError('Covariance limit must be within declared experimental bounds')
         self.covariance_limit = float(covariance_limit)
         if donors.dtype != np.float32 or donors.shape[1] != len(official_symbols):
@@ -15,7 +15,7 @@ class ChallengeTransfer:
         lookup = {s:i for i, s in enumerate(official_symbols)}
         if len(lookup) != len(official_symbols): raise ValueError('Official panel must be unique')
         allowed = [i for i, s in enumerate(atlas_symbols) if s and counts[s] == 1 and s in lookup]
-        self.model = RobustPopulation(x, stages, cutoff, states=states, allowed_features=allowed)
+        self.model = RobustPopulation(x, stages, cutoff, states=states, allowed_features=allowed, feature_scaling=feature_scaling)
         self.donors = donors; self.official_symbols = official_symbols; self.atlas_symbols = atlas_symbols
         model = self.model
         self.official_features = np.array([lookup[atlas_symbols[g]] for g in model.features])
@@ -71,7 +71,7 @@ class ChallengeTransfer:
             'effective_sample_size':float(1/np.sum(weights**2)), 'unique_donors':int(len(np.unique(indices))),
             'covariance_change_vs_reference':covariance_change(original, prediction[:, self.official_features]),
             'state_support':model.state_support.tolist(), 'alignment':self.alignment,
-            'covariance_limit':self.covariance_limit}
+            'covariance_limit':self.covariance_limit, 'feature_scaling':model.feature_scaling}
         return prediction, indices, audit
 
     def save(self, path):
@@ -83,4 +83,5 @@ class ChallengeTransfer:
             population_slope=m.population_slope, state_support=m.state_support,
             source_mean=self.source_mean, anchor_mean=self.anchor_mean, alignment_ratio=self.alignment_ratio,
             anchor_latent=self.z, anchor_labels=self.labels, trusted=self.trusted, distance_cap=np.array(self.distance_cap),
-            cutoff=np.array(m.cutoff), alignment=np.array(self.alignment), covariance_limit=np.array(self.covariance_limit))
+            cutoff=np.array(m.cutoff), alignment=np.array(self.alignment), covariance_limit=np.array(self.covariance_limit),
+            feature_scaling=np.array(m.feature_scaling))

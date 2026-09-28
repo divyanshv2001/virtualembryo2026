@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-28T13:22:47.491818+00:00",
+  "updated_utc": "2026-09-28T13:25:59.445140+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "joint_e1.0_cov0.4",
@@ -29,13 +29,17 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/monte_carlo_forecast.py --round monte_carlo_detection_01 --replicates 16 --source-run guard_backtest_01 --candidates joint_e1.0_cov0.4 detection_incumbent --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/state_search.py --round state_search_01 --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Complete frozen stability pilot and five-stage composition-window ablation; reject models that do not improve all-panel evidence. No candidate is near 72.",
+  "next_experiment": "Complete the frozen eight-model state-count/feature-scaling search. Read its actual checkpoint/report before advancing. Best verified pilot remains joint model mean 51.253, lower tail 50.966; threshold not met.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "window_backtest_01"
-  ]
+    "state_search_01"
+  ],
+  "active_run_path": "outputs/t1_iterations/private/state_search_01",
+  "completed_batches_this_turn": 5,
+  "development_evaluations_this_turn": 81,
+  "stability_replicates_this_turn": 16
 }

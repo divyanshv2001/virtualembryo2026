@@ -9,7 +9,9 @@ def slope(times, values):
 
 
 class PopulationForecast:
-    def __init__(self, x, stages, cutoff, allowed_features=None):
+    def __init__(self, x, stages, cutoff, allowed_features=None, feature_scaling='standard'):
+        if feature_scaling not in ['standard', 'unit']: raise ValueError('Unknown feature scaling')
+        self.feature_scaling = feature_scaling
         rows = np.flatnonzero(stages <= cutoff)
         if len(np.unique(stages[rows])) < 3:
             raise ValueError('Three past stages required')
@@ -22,7 +24,7 @@ class PopulationForecast:
         self.features = np.sort(eligible[np.argsort(-variance[eligible], kind='stable')[:384]])
         values = np.asarray(x[np.ix_(rows, self.features)], dtype=float)
         self.center = values.mean(0)
-        self.scale = np.maximum(values.std(0), .1)
+        self.scale = np.maximum(values.std(0), .1) if feature_scaling == 'standard' else np.ones(values.shape[1])
         self.pca = PCA(n_components=min(16, len(self.features), len(rows)-1), random_state=20260928)
         z = self.pca.fit_transform(np.clip((values-self.center)/self.scale, -10, 10))
         recent = np.unique(stages[rows])[-3:]
