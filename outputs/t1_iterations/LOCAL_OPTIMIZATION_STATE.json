@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-28T16:44:36.810407+00:00",
+  "updated_utc": "2026-09-28T16:57:04.397541+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,7 +31,7 @@
   },
   "resume_command": null,
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement annotation-conditioned abundance/detection trends on the two declared one-day atlas folds before any challenge refit. Eleven exact challenge labels are shared, but correspondence and changing label granularity need explicit checks. See CHALLENGE_LABEL_ALIGNMENT.json.",
+  "next_experiment": "Review paired one-day failures and replace marginal trend extrapolation with a past-only gene-program dynamics mechanism. No current new variant qualifies for challenge promotion; covariance dynamics literature remains queued.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -150,6 +150,6 @@
     "status": "completed",
     "running": [],
     "report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-    "report_sha256": "6414656190169ec13d72b960329047408f4965ced57776bcbea6cf251afca345"
+    "report_sha256": "5297ecc70bff7a1d2045967858603089b9f1e2f0287ed728b4672e58e89fb120"
   }
 }

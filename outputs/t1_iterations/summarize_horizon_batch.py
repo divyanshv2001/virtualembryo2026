@@ -7,7 +7,8 @@ from iterate import now
 
 def main():
     runs={};running=[]
-    for name in ['matched_horizon_audit_01','quantile_horizon_pilot_01','state_quantile_horizon_pilot_01']:
+    for name in ['matched_horizon_audit_01','quantile_horizon_pilot_01','state_quantile_horizon_pilot_01',
+                 'annotation_horizon_pilot_01','annotation_support_pilot_01']:
         folder=HERE/'private'/name;path=folder/'report.json'
         if not path.exists():
             running.append(name);continue
@@ -41,10 +42,18 @@ def main():
         'A second pilot conditions those margins on four broad past-fitted states. It retains fixed donor counts, '
         'changes only trusted anchors, requires 20 anchors and 20 source cells at every recent stage, '
         'and applies both within-state and overall covariance guards. It tests composition confounding, not inferred cell proliferation.','',
+        'The annotation pilots group cells by observed published type strings and estimate positive-abundance and detection trends separately. '
+        'Four ablations compare expression, detection and their combination. A second frozen pilot raises the source support requirement '
+        'from 20 to 100 cells per type per past stage and the positive-expression minimum from10 to20. Donor counts stay fixed. '
+        'Annotations now enter learner grouping; joint atlas annotation is a limitation, and later-stage label values are excluded from fitting.','',
         'Literature: [Schefzik, Thorarinsdottir and Gneiting (2013)](https://arxiv.org/html/1302.7149v2), '
         'methods 4.1–4.3 and experiments 5.4 read. ECC separates marginal calibration from rank dependence. '
         'Its weather experiments found benefits dependent on the dependence structure. This implementation adapts that separation '
         'to historical positive scRNA margins; it is neither faithful ECC nor evidence that ECC improves this challenge.','',
+        'The [muscat paper](https://www.nature.com/articles/s41467-020-19894-4) motivates separating within-subpopulation state changes '
+        'from differential abundance. Introduction, simulation results (20–400 cells) and simulation-preprocessing methods were read. '
+        'It found sizable detection gains between20 and100 cells per subpopulation/sample. It uses replicated samples and count-based '
+        'inference; our normalized-abundance trend forecast does not reproduce those methods, biological replication or their inferential guarantees.','',
         '| Run | Candidate | Fold 1 | Fold 2 | Mean |','| --- | --- | ---: | ---: | ---: |']
     for name,r in runs.items():
         for s in r['summaries']:
@@ -57,7 +66,7 @@ def main():
     state.update(updated_utc=now(),local_process_running=bool(running))
     state['horizon_batch']={'status':status,'running':running,'report':'outputs/t1_iterations/HORIZON_BATCH_RESULTS.json',
         'report_sha256':digest(HERE/'HORIZON_BATCH_RESULTS.json')}
-    state['next_experiment']='Finish positive-quantile one-day pilot; advance to challenge development only if it beats persistence on both folds without metric regressions.' if running else 'Implement annotation-conditioned abundance/detection trends on the two declared one-day atlas folds before any challenge refit. Eleven exact challenge labels are shared, but correspondence and changing label granularity need explicit checks. See CHALLENGE_LABEL_ALIGNMENT.json.'
+    state['next_experiment']='Finish annotation-support ablation; do not export or consume official quota.' if running else 'Review paired one-day failures and replace marginal trend extrapolation with a past-only gene-program dynamics mechanism. No current new variant qualifies for challenge promotion; covariance dynamics literature remains queued.'
     path.write_text(json.dumps(state,indent=2))
     path=HERE/'METRIC_RESEARCH_QUEUE.json';queue=json.loads(path.read_text())
     entry={'id':'positive_quantile_temporal','metrics':['de_score','de_direction','mmd_u','variogram'],
@@ -75,6 +84,23 @@ def main():
             previous=next((i for i,v in enumerate(value) if v.get('id')==entry['id']),None)
             if previous is None:value.append(entry)
             else:value[previous]=entry
+            annotated={'id':'annotation_conditioned_temporal',
+                'metrics':['de_score','de_direction','mmd_u','variogram'],
+                'status':'running' if 'annotation_support_pilot_01' in running else 'implemented_evaluated',
+                'sources':[{'url':'https://www.nature.com/articles/s41467-020-19894-4',
+                    'read':'Introduction, simulation results20-400 cells and preprocessing methods; separates differential state and abundance.'}],
+                'implementation':['annotation_trend.py','annotation_horizon_pilot.py','annotation_support_pilot.py'],
+                'scope':'Heuristic adaptation to normalized abundance; not muscat replication. Observed annotations group past cells. Four expression/detection ablations, source support20 vs100, two one-day folds.',
+                'results_report':'outputs/t1_iterations/HORIZON_BATCH_RESULTS.json',
+                'results_report_sha256':digest(HERE/'HORIZON_BATCH_RESULTS.json'),
+                'limitations':['Published annotation may derive from joint stages; retrospective diagnostic only.',
+                    'Capture IDs do not establish independent embryos; cell-based errors are shrinkage heuristics.',
+                    'Missing official genes are atlas zero placeholders, not measured zeros.'],
+                'research_family_exhausted':False,'submissions_used':0,'jev_requests_used':0,
+                'next_action':state['next_experiment']}
+            previous=next((i for i,v in enumerate(value) if v.get('id')==annotated['id']),None)
+            if previous is None:value.append(annotated)
+            else:value[previous]=annotated
             break
     path.write_text(json.dumps(queue,indent=2))
     print(json.dumps({'status':status,'running':running,'means':{
