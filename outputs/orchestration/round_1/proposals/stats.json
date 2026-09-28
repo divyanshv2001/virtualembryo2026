@@ -1,0 +1,79 @@
+{
+  "expert": "stats",
+  "round": 1,
+  "searches_run": [
+    "Zimmerman Espeland Langefeld 2021 practical solution pseudoreplication bias single cell studies Nature Communications",
+    "Gretton Borgwardt Rasch Scholkopf Smola 2012 kernel two sample test JMLR",
+    "Cawley Talbot 2010 over fitting model selection selection bias performance evaluation JMLR"
+  ],
+  "proposals": [
+    {
+      "id": "stats-r1-1",
+      "board": "PROCESS",
+      "title": "Separate embryo effects from sampling and refit variability",
+      "claim": "An uncertainty report indexed by biological target embryo prevents repeated sampling seeds from being counted as independent biological evidence.",
+      "mechanism": "Record paired model differences for mmd_u within each target embryo; separate cell-sampling and refit seed ranges from between-embryo uncertainty. Replace first-row diagnostic selection with prespecified whole-cloud paired sampling once eligible data exist.",
+      "cost": "compute-only",
+      "falsifier": "Audit the report schema on synthetic metadata: reject the design if five seeds from one embryo yield n=5 biological replicates or a population confidence interval.",
+      "local_ground_truth": "no",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/agent_orchestrator.py:175\u2013185",
+          "says": "Diagnostic scorer caps at 150 and selects contiguous first rows for predictions, truth and coordinates.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "literature",
+          "ref": "Zimmerman et al., Nature Communications 2021, doi:10.1038/s41467-021-21038-1, https://www.nature.com/articles/s41467-021-21038-1",
+          "says": "Cells within an individual are dependent subsamples; individual-level variation is required for population inference.",
+          "verified": "read-directly"
+        }
+      ],
+      "confidence": 0.95,
+      "novelty": "adaptation"
+    },
+    {
+      "id": "stats-r1-2",
+      "board": "PROCESS",
+      "title": "Freeze a primary contrast and distinguish critique from experiment",
+      "claim": "A frozen tuning and endpoint ledger distinguishes held-out empirical validation from selection on that target and from expert acceptance.",
+      "mechanism": "Prespecify combined-versus-composition mmd_u improvement and margins for de_direction, variogram and neighborhood_mmd guardrails. Record all official components; store critic status separately from measured outcomes and uncertainty.",
+      "cost": "free",
+      "falsifier": "Reject the ledger if changing a model after reading outer-target metrics preserves its test status, or critic acceptance alone sets an empirical-supported flag.",
+      "local_ground_truth": "no",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/orchestration/memory/update.py:86\u2013122",
+          "says": "Verdict statuses set supported/falsified lifecycle and contribute binary sustained counts to calibration without experiments.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "literature",
+          "ref": "Cawley and Talbot, JMLR 2010, 11:2079\u20132107, https://jmlr.org/papers/volume11/cawley10a/cawley10a.pdf",
+          "says": "Optimizing finite-sample selection criteria can cause overfitting and biased subsequent performance evaluation.",
+          "verified": "read-directly"
+        }
+      ],
+      "confidence": 0.9,
+      "novelty": "adaptation"
+    }
+  ],
+  "peer_responses": [
+    {
+      "peer": "benchdesign",
+      "stance": "endorse",
+      "on": "benchdesign-r1-1: whole-cloud measurement contract and same-split comparisons",
+      "because": "First-row slices at Neurl IPS 2026/agent_orchestrator.py:175\u2013185 motivate the contract. Treat seeds as conditional variability; require target-embryo and litter/batch identifiers before population uncertainty."
+    },
+    {
+      "peer": "benchdesign",
+      "stance": "refine",
+      "on": "benchdesign-r1-2: independent residual selection and matched controls",
+      "because": "Freeze primary margin and secondary loss tolerances before assessment. Target residual selection consumes that holdout; no independent test remains without fresh eligible data. Power against a positive threshold depends on anticipated effect minus threshold."
+    }
+  ],
+  "self_correction": "n/a (initial review)",
+  "declined": "Increase seeds until every bootstrap comparison wins: seeds characterize conditional numerical variability and cannot repair embryo-stage confounding, selection bias or absent biological replication."
+}

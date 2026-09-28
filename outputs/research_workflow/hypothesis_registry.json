@@ -1,0 +1,1383 @@
+[
+  {
+    "id": "benchdesign-r1-1",
+    "hypothesis": "A predeclared seeded whole-cloud sampling contract will prevent row-order-dependent proxy comparisons and prohibit unsupported proxy-minus-real improvement claims.",
+    "rationale": "Record scorer hash, panels, preprocessing, sampling seeds and raw mmd_u/de_score/variogram components; compare candidates only on identical local splits. Remove interpretation of proxy-minus-hardcoded-board differences as gains.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/agent_orchestrator.py:175-185",
+        "says": "Proxy scores use first-row subsets capped at 150 cells.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/agent_orchestrator.py:188-195",
+        "says": "Real-board score constants have no accompanying biological artifacts in the audited workspace.",
+        "verified": "read-directly"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "Permute identical synthetic rows across repeated evaluations; kill the contract if results depend on row order beyond prespecified Monte Carlo tolerance or if mixed-split deltas are admitted as evidence.",
+    "experiment_required": "Permute identical synthetic rows across repeated evaluations; kill the contract if results depend on row order beyond prespecified Monte Carlo tolerance or if mixed-split deltas are admitted as evidence.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.95,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "benchdesign",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "benchdesign-r1-2",
+    "hypothesis": "Separating architecture-selection diagnostics from final assessment will expose whether a selected model beats matched simple controls without reusing the target to choose it.",
+    "rationale": "Freeze training-only selection rules and candidate budgets before assessment; compare composition, shrunk affine and generic-shift controls on mmd_u, de_direction and severity_slope. Do not claim unseen-gene generalization from one KO.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/agent_orchestrator.py:150-159",
+        "says": "Board names route to fixed stage proxy tuples; these do not themselves establish valid interpolation or trend assessment.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "literature",
+        "ref": "Systema, Nature Biotechnology, online 2025 / volume 2026, https://www.nature.com/articles/s41587-025-02777-8?error=cookies_not_supported",
+        "says": "Shared perturbation effects can inflate standard prediction metrics; perturbation-specific evaluation and simple controls are necessary.",
+        "verified": "read-directly"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "Audit the query ledger: fail if final-target residuals chose architecture, priors or tuning; with independent eligible data, reject benefit if it vanishes against a matched generic-effect baseline.",
+    "experiment_required": "Audit the query ledger: fail if final-target residuals chose architecture, priors or tuning; with independent eligible data, reject benefit if it vanishes against a matched generic-effect baseline.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.9,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "benchdesign",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "biovalid-r1-1",
+    "hypothesis": "A pooled expression match cannot certify within-compartment state accuracy without independent composition measurements and embryo-level replication.",
+    "rationale": "Treat de_score and de_direction as predictive diagnostics, separating frozen-state composition reweighting from within-state changes; independent embryo contrasts and abundance assays reveal composition-driven matches. This is a validation requirement, not a promised metric gain.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/prompts.md:1037",
+        "says": "Warns that cells sharing an embryo/sample are not independent biological replicates.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/agent_orchestrator.py:175",
+        "says": "Proxy selects the first at most 150 candidate and target rows rather than a sample-balanced cloud.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "literature",
+        "ref": "Squair et al., Confronting false discoveries in single-cell differential expression, Nature Communications, 2021, doi:10.1038/s41467-021-25960-2",
+        "says": "Publisher-indexed excerpts report false discoveries when biological replicate variability is ignored.",
+        "verified": "search-snippet-only"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "With eligible data, compare composition-only and state-changing predictions against blinded compartment counts and replicate-aware within-compartment readouts. If these endpoints agree for both, the proposed decomposition does not distinguish their biological validity.",
+    "experiment_required": "With eligible data, compare composition-only and state-changing predictions against blinded compartment counts and replicate-aware within-compartment readouts. If these endpoints agree for both, the proposed decomposition does not distinguish their biological validity.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.86,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "biovalid",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "biovalid-r1-2",
+    "hypothesis": "Transcriptomic trajectories alone cannot validate ancestry or direct regulatory effects; claims need independent lineage or timed perturbation observations.",
+    "rationale": "de_direction and neighborhood_mmd can improve without correct ancestry or direct regulation. Require lineage recording for ancestry and timed restricted perturbation plus functional rescue for mechanism; report anatomy separately from scored expression diagnostics.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/agenticprompt:910",
+        "says": "Explicitly distinguishes biologically plausible stories from biological validation.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "literature",
+        "ref": "Raj et al., Simultaneous single-cell profiling of lineages and cell types in the vertebrate brain, Nature Biotechnology, 2018, doi:10.1038/nbt.4103",
+        "says": "scGESTALT combines heritable lineage recording with transcriptome-based cell identification in zebrafish.",
+        "verified": "abstract-only"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "Audit every claimed lineage/regulatory conclusion: suspend it if only transcriptomic similarity or transport is supplied. Eligible future assays must contradict or corroborate a preregistered observation, with protected-target assays quarantined post-competition.",
+    "experiment_required": "Audit every claimed lineage/regulatory conclusion: suspend it if only transcriptomic similarity or transport is supplied. Eligible future assays must contradict or corroborate a preregistered observation, with protected-target assays quarantined post-competition.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.9,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "biovalid",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "causal-r1-1",
+    "hypothesis": "Two SCMs can fit the same WT and Mab21l2 intervention distributions while predicting different Gata4 responses; therefore this design alone does not identify the Gata4 intervention.",
+    "rationale": "Construct a small synthetic pair of SCMs and an assumption ledger before mechanism claims. de_score, de_direction and severity_slope measure response agreement, not identification of regulatory edges. This is a validation guard, with no claimed biological score gain.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/prompts.md:633-635",
+        "says": "Prediction is distinct from causal understanding; causal claims require intervention assumptions.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/agenticprompt:171-188",
+        "says": "Causal review covers estimands, interventions, confounding, selection and identifiability.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "literature",
+        "ref": "Zhang et al., Identifiability Guarantees for Causal Disentanglement from Soft Interventions, NeurIPS 2023; https://papers.neurips.cc/paper_files/paper/2023/file/9d3a4cdf6f70559e8c6fe02170fba568-Paper-Conference.pdf",
+        "says": "Setup assumes at least one intervention per latent node; guarantees need restricted mixing and faithfulness and cover unseen intervention combinations.",
+        "verified": "read-directly"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "Attempt the two-SCM construction under explicitly stated minimal assumptions. Reject the objection only if a valid uniqueness argument forces the same Gata4 interventional distribution, or new permitted identifying evidence is supplied.",
+    "experiment_required": "Attempt the two-SCM construction under explicitly stated minimal assumptions. Reject the objection only if a valid uniqueness argument forces the same Gata4 interventional distribution, or new permitted identifying evidence is supplied.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.95,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "causal",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "devbio-r1-1",
+    "hypothesis": "Training-only temporal reweighting of shared broad cell states, with frozen within-state expression, reduces held-out-stage mmd_u versus nearest-stage resampling.",
+    "rationale": "Changing population weights changes the aggregate expression distribution and may lower mmd_u. Compare de_direction under frozen and evolving conditional expression to diagnose whether aggregate shifts require within-state changes; neither establishes lineage.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/prompts.md:329",
+        "says": "Separately names abundance and conditioned expression as prediction targets; lineage is also listed but lacks tracing evidence.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/agent_orchestrator.py:175",
+        "says": "The diagnostic proxy takes at most 150 leading cells; no randomized or embryo-aware sampling appears here.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "literature",
+        "ref": "Schiebinger et al., Cell 2019, DOI 10.1016/j.cell.2019.01.006; https://www.broadinstitute.org/files/publications/2019/03/1-s2.0-S009286741930039X-main.pdf",
+        "says": "Temporal coupling needs assumptions; growth and death change mass, and expression snapshots do not directly observe joint ancestry.",
+        "verified": "read-directly"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "On the first eligible held-out-stage embryo split, reject if the paired mean mmd_u improvement is nonpositive under matched cell counts and repeated random sampling; no target labels enter fitting.",
+    "experiment_required": "On the first eligible held-out-stage embryo split, reject if the paired mean mmd_u improvement is nonpositive under matched cell counts and repeated random sampling; no target labels enter fitting.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.4,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "devbio",
+    "board": "T1:val",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": true,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "diffusion-r1-1",
+    "hypothesis": "A matched temporal benchmark will distinguish a conditional flow's incremental distributional value from gains obtainable by composition-aware simple models.",
+    "rationale": "Compare copy-last, whole-cell mixture resampling, covariance-preserving conditional-state residual resampling, linear latent trend and flow. Match composition, permitted inputs and tuning budgets; report de_score, de_direction, mmd_u and variogram. Enumerate feasible embryo-held-out interpolation/extrapolation splits first.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/agenticprompt:206-222",
+        "says": "Diffusion expert must challenge fashionable use and assess conditional generation and transport.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/agent_orchestrator.py:150-186",
+        "says": "Existing evaluator consumes supplied h5ad candidates and uses a small proxy; it does not train biological models.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "literature",
+        "ref": "TrajectoryNet, ICML/PMLR 119, 2020, https://pmc.ncbi.nlm.nih.gov/articles/PMC8320749/",
+        "says": "Regularized dynamic transport uses biological priors and evaluates held-out intermediate distributions.",
+        "verified": "read-directly"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "Once data are available, reject escalation if flow fails to improve preregistered distribution metrics beyond embryo-level uncertainty versus the strongest simple comparator, or if gains disappear under matched composition and sampling.",
+    "experiment_required": "Once data are available, reject escalation if flow fails to improve preregistered distribution metrics beyond embryo-level uncertainty versus the strongest simple comparator, or if gains disappear under matched composition and sampling.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.8,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "diffusion",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "diffusion-r1-2",
+    "hypothesis": "An evidence audit will find that the available source does not substantiate the asserted project-wide falsification of transport methods.",
+    "rationale": "Record the missing stationarity artifact as unverified, then require method-specific stage-conditioning and growth-prior ablations before interpreting changes in mmd_u, variogram or neighborhood_mmd as rejection of a transport family.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/orchestration/personas.py:254-280",
+        "says": "Persona asserts blanket transport falsification but points to artifacts absent from this supplied workspace.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "literature",
+        "ref": "Joint Velocity-Growth Flow Matching for Single-Cell Dynamics Modeling, NeurIPS 38, 2025, DOI 10.52202/085713-5363, https://proceedings.nips.cc/paper_files/paper/2025/hash/eb1bad7a84ef68a64f1afd6577725d45-Abstract-Conference.html",
+        "says": "Models state transitions and population mass jointly using semi-relaxed OT; abstract establishes a distinct growth-aware formulation.",
+        "verified": "abstract-only"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "Locate the actual test, data provenance and executable analysis showing that each named method and its relevant assumptions were tested with adequate uncertainty; revise the evidence status if found.",
+    "experiment_required": "Locate the actual test, data provenance and executable analysis showing that each named method and its relevant assumptions were tested with adequate uncertainty; revise the evidence status if found.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.95,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "diffusion",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "genmodel-r1-1",
+    "hypothesis": "A factorial baseline evaluation can distinguish an apparent mmd_u gain caused by mixture proportions from a gain caused by within-type expression changes, before selecting a conditional generator.",
+    "rationale": "Hold preprocessing, sample size and scorer fixed; compare last-stage resampling, training-estimated composition reweighting, within-type expression shifts, and their combination. Measure mmd_u and de_score plus conditional expression diagnostics; improve attribution, not assert a score gain.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/prompts.md:788-813",
+        "says": "Requires strong baselines before VAE, diffusion and related generative experiments; asks whether complexity improves biological metrics.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/agent_orchestrator.py:150-185",
+        "says": "Defines stage proxies and evaluates contiguous slices of at most 150 cells through an imported scoring module.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "literature",
+        "ref": "Lopez et al., Deep generative modeling for single-cell transcriptomics, Nature Methods 2018, doi:10.1038/s41592-018-0229-2; https://www.nature.com/articles/s41592-018-0229-2",
+        "says": "Probabilistic expression modelling explicitly accounts for technical nuisance; it does not establish developmental extrapolation here.",
+        "verified": "abstract-only"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "On permitted held-out embryos, cross composition-only and state-only edits. Kill the attribution claim if annotation instability or sampling variability prevents distinguishing these interventions. No biological test can run until data and scorer exist.",
+    "experiment_required": "On permitted held-out embryos, cross composition-only and state-only edits. Kill the attribution claim if annotation instability or sampling variability prevents distinguishing these interventions. No biological test can run until data and scorer exist.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.72,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "genmodel",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "gnn-r1-1",
+    "hypothesis": "A matched ablation suite can falsify attribution of future predictive gains to biological graph topology when feature-only or fixed-smoothing controls reproduce them.",
+    "rationale": "Compare neighborhood_mmd, mmd_u and de_direction under whole-embryo splits with equal sampling: MLP, coordinate MLP, fixed smoothing, shallow GNN and rewired edges. Improvement only over an unmatched MLP cannot establish useful topology.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/prompts.md:367-386",
+        "says": "Requests graph variants and comparison of absent versus known biological prior; reports no executed outcome.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "literature",
+        "ref": "Wu et al., Simplifying Graph Convolutional Networks, ICML 2019, https://proceedings.mlr.press/v97/wu19e.html",
+        "says": "A fixed low-pass filter plus linear classifier can retain performance in studied applications; motivates a smoothing control.",
+        "verified": "abstract-only"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "Once lawful data exist, matched controls reproduce the GNN metric delta within embryo-level uncertainty; decline topology-benefit attribution. No empirical biological comparison is possible now.",
+    "experiment_required": "Once lawful data exist, matched controls reproduce the GNN metric delta within embryo-level uncertainty; decline topology-benefit attribution. No empirical biological comparison is possible now.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.87,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "gnn",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "gnn-r1-2",
+    "hypothesis": "An edge provenance audit plus hollow-shell synthetic check will expose target-derived graph inputs and Euclidean kNN cavity shortcuts before biological model training.",
+    "rationale": "Record split-specific inputs and graph rules; prohibit truth-derived preprocessing or edges entering prediction. Test ordinary versus radius-limited mutual kNN on a shell. This protects interpretation of neighborhood_mmd rather than asserting a score gain.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/agenticprompt:243-257",
+        "says": "GNN review explicitly covers graph construction, spatial graphs, graph leakage, oversmoothing and topology sensitivity.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/prompts.md:167-180",
+        "says": "Lists sample, animal, spatial-neighborhood, normalization, PCA and external-dataset leakage risks.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "literature",
+        "ref": "Roohani et al., GEARS, Nature Biotechnology online 2023 / volume 2024, https://www.nature.com/articles/s41587-023-01905-6",
+        "says": "Uses distinct coexpression and GO graphs; poorly connected unseen perturbation genes limit predictions.",
+        "verified": "read-directly"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "An intentionally injected held-out-derived edge source passes the audit, or a known cavity-crossing edge is not detected by the synthetic diagnostic; then the proposed gate is inadequate.",
+    "experiment_required": "An intentionally injected held-out-derived edge source passes the audit, or a known cavity-crossing edge is not detected by the synthetic diagnostic; then the proposed gate is inadequate.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.83,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "gnn",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "grn-r1-1",
+    "hypothesis": "On independent-embryo perturbation validation, an eligible biological prior will exceed degree-preserving randomized priors by a prespecified practical margin in de_direction. This is an untested hypothesis, not a causal-edge claim.",
+    "rationale": "Biological edge identities may transfer response information to measured targets, raising de_direction and de_score; mmd_u and severity_slope guard against a benefit driven by wrong composition or magnitude. Match architecture, graph degree, tuning budget and training-only preprocessing.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/prompts.md:2040-2054",
+        "says": "Requests no, known, learned and randomized prior controls; warns random-prior gains may be regularization.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "literature",
+        "ref": "Roohani et al., GEARS, Nature Biotechnology, online 2023 / volume 2024, doi:10.1038/s41587-023-01905-6; https://www.nature.com/articles/s41587-023-01905-6",
+        "says": "Uses coexpression and GO graphs with large perturbation screens; discussion requires matching cell type or condition for reliable prediction.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "literature",
+        "ref": "Pratapa et al., BEELINE, Nature Methods 2020, doi:10.1038/s41592-019-0690-6; https://www.nature.com/articles/s41592-019-0690-6",
+        "says": "Reports moderate precision in benchmarked GRN inference; does not validate this project's edges.",
+        "verified": "abstract-only"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "After data acquisition, run true/no/coexpression graphs and repeated degree-preserving randomized priors on identical embryo splits. Kill the claim if the true-minus-random de_direction interval fails to exceed the preregistered practical margin.",
+    "experiment_required": "After data acquisition, run true/no/coexpression graphs and repeated degree-preserving randomized priors on identical embryo splits. Kill the claim if the true-minus-random de_direction interval fails to exceed the preregistered practical margin.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.3,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "grn",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "neuralode-r1-1",
+    "hypothesis": "A negative cosine between consecutive population displacements does not by itself falsify autonomous state-dependent dynamics or every transport method; a synthetic counterexample can demonstrate the limitation before data arrive.",
+    "rationale": "Validation affects interpretation of mmd_u: forecast distribution errors may reflect mixture change or an incorrect constant-displacement assumption. Audit the statistic on curved autonomous flows and changing mixtures before using it as an architecture gate; no score gain is claimed.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/orchestration/personas.py:267-274",
+        "says": "Persona asserts a stationarity experiment excludes four method families; named experiment files are absent from inspected inventory.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/orchestration/personas.py:298-301",
+        "says": "Neural ODE persona treats negative displacement cosine as field reversal; no underlying measurements are provided.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "literature",
+        "ref": "Tong et al., TrajectoryNet, ICML/PMLR 119, 2020, https://pmc.ncbi.nlm.nih.gov/articles/PMC8320749/",
+        "says": "Uses time-varying fields and explicit energy, density, velocity and growth priors; these are more specific than constant centroid displacement.",
+        "verified": "read-directly"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "Try an autonomous rotational field sampled at three times and a fixed-state mixture with changing weights. Kill the audit claim if the exact proposed statistic cannot report reversal in either construction under declared sampling.",
+    "experiment_required": "Try an autonomous rotational field sampled at three times and a fixed-state mixture with changing weights. Kill the audit claim if the exact proposed statistic cannot report reversal in either construction under declared sampling.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.88,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "neuralode",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "neuralode-r1-2",
+    "hypothesis": "For a fixed trained dynamics model, solver convergence and later-time predictive validity are distinct checks; recording both prevents a numerically converged forecast being counted as biological validation.",
+    "rationale": "Record mmd_u and de_direction separately for interior versus future holdouts, plus prediction sensitivity to solver tolerance at fixed parameters. Numerical agreement tests integration error; held-out embryo metrics test marginal forecast utility, not lineage or growth. No improvement is asserted.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/prompts.md:290-315",
+        "says": "Requests error versus temporal distance and testing recursive accumulation of biological errors.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/prompts.md:1163-1166",
+        "says": "Distinguishes random-split success, temporal holdout, interpolation and extrapolation.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "literature",
+        "ref": "Chen et al., Neural Ordinary Differential Equations, 2018 preprint, arXiv:1806.07366, https://arxiv.org/abs/1806.07366",
+        "says": "Outputs use a differential equation solver with a numerical precision/speed tradeoff; this is an architectural property.",
+        "verified": "abstract-only"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "Reject the protocol if it cannot separate fixed-parameter numerical sensitivity from held-out biological error, or if preprocessing/time splits use future information. Empirical execution awaits biological data.",
+    "experiment_required": "Reject the protocol if it cannot separate fixed-parameter numerical sensitivity from held-out biological error, or if preprocessing/time splits use future information. Empirical execution awaits biological data.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.82,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "neuralode",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "replearn-r1-1",
+    "hypothesis": "A representation audit can flag every candidate with unknown protected-stage provenance or preprocessing fitted beyond its training fold before model selection.",
+    "rationale": "Protects interpretation of mmd_u and de_score by separating learned training features from the fixed evaluator space; candidate-specific scorer refits can change comparisons without improving prediction.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/prompts.md:1576\u20131600",
+        "says": "Lists PCA, embedding, feature-selection leakage and pretrained contamination as audit targets.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "literature",
+        "ref": "Virtual Embryo Challenge rules \u00a710, 2026, https://virtualembryo.ai/challenge/rules",
+        "says": "Allows disclosed external resources; excludes protected data even through pretraining.",
+        "verified": "read-directly"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "Run synthetic manifests covering contaminated, unknown and clean corpora plus validation-fitted PCA; any unflagged case kills the completeness claim.",
+    "experiment_required": "Run synthetic manifests covering contaminated, unknown and clean corpora plus validation-fitted PCA; any unflagged case kills the completeness claim.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.87,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "replearn",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "replearn-r1-2",
+    "hypothesis": "A matched raw-expression/PCA/AE/pretrained bake-off can reject a claimed latent benefit when reconstruction improves but held-out forecast metrics and rare-state support do not.",
+    "rationale": "Evaluate mmd_u and de_score in the same official space with matched predictors and sampling; support diagnostics expose collapsed rare programs hidden by mean reconstruction error.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/prompts.md:263\u2013290",
+        "says": "Proposes raw, PCA and learned representation comparisons, smoothness and reconstruction measures.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/orchestration/personas.py:365\u2013382",
+        "says": "Poses downstream benefit question; cited historical experiments are absent, so their numerical claims are not adopted.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "literature",
+        "ref": "Kedzierska et al., Genome Biology 2025, doi:10.1186/s13059-025-03574-x",
+        "says": "Zero-shot scGPT/Geneformer embeddings have limitations versus simple and established baselines; does not test this task.",
+        "verified": "read-directly"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "Use a released-stage holdout with equal predictors; reject the latent-benefit claim if paired forecast improvement is absent or rare-state recall materially declines.",
+    "experiment_required": "Use a released-stage holdout with equal predictors; reject the latent-benefit claim if paired forecast improvement is absent or rare-state recall materially declines.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.82,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "replearn",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "scgenomics-r1-1",
+    "hypothesis": "A loader contract that records assay, panel and expression transformation will detect representation-invalid artifacts before any model score is interpreted.",
+    "rationale": "de_score and mmd_u can change under expression transformation alone. Check supplied normalized .X, panel order and scorer preprocessing; reject unsupported raw-count reconstruction. This is a validation gate, not an asserted score gain.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/agent_orchestrator.py:121",
+        "says": "_dense reads .X directly; validation checks finite nonnegative entries and panel order at line 128.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "literature",
+        "ref": "Hafemeister and Satija, Genome Biology 2019, doi:10.1186/s13059-019-1874-1; https://pmc.ncbi.nlm.nih.gov/articles/PMC6927181/",
+        "says": "Regularized UMI depth models address technical variation; unconstrained count models can overfit biological variance.",
+        "verified": "read-directly"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "On genuine released files plus deliberately centered and panel-reordered copies, kill the gate if it misses either invalid copy or rejects a documented valid representation.",
+    "experiment_required": "On genuine released files plus deliberately centered and panel-reordered copies, kill the gate if it misses either invalid copy or rejects a documented valid representation.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.85,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "scgenomics",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "scgenomics-r1-2",
+    "hypothesis": "A proportion-only versus within-type-state-only baseline comparison will distinguish mixture-driven from conditional-expression-driven improvements in released-stage proxies.",
+    "rationale": "de_direction and mmd_u can reflect cell mixture as well as cell state. Hold one component fixed, evaluate pooled and conditional discrepancies, and repeat sample-balanced draws instead of taking the first 150 rows.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/agent_orchestrator.py:176",
+        "says": "Proxy score uses at most 150 cells selected from initial rows of candidate, truth and reference.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/prompts.md:1037",
+        "says": "Cells sharing an embryo/sample must not be treated as independent biological replicates.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "literature",
+        "ref": "Squair et al., Nature Communications 2021, doi:10.1038/s41467-021-25960-2; https://www.nature.com/articles/s41467-021-25960-2.pdf",
+        "says": "Accounting for biological replicates prevents false differential-expression discoveries in examined datasets.",
+        "verified": "read-directly"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "With released data, kill the diagnostic if controlled proportion-only and state-only changes are indistinguishable under its conditional reports across repeated sample-balanced draws.",
+    "experiment_required": "With released data, kill the diagnostic if controlled proportion-only and state-only changes are indistinguishable under its conditional reports across repeated sample-balanced draws.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.7,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "scgenomics",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "sciml-r1-1",
+    "hypothesis": "A capture/panel/normalization/frame contract will distinguish numerical mass normalization from a testable cell-growth or tissue conservation claim.",
+    "rationale": "PROCESS checks for mmd_u, scale_log_ratio and neighborhood_mmd: expose capture/abundance nonidentifiability and document preprocessing/units; abstain on latent cause without calibrated auxiliary measurements. No score gain asserted.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/agent_orchestrator.py:128-147",
+        "says": "Validator checks file shape, gene order, finite nonnegative expression and finite coordinates, not capture or physical conservation.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "literature",
+        "ref": "Schiebinger et al., Cell 2019, DOI 10.1016/j.cell.2019.01.006; https://www.broadinstitute.org/files/publications/2019/03/1-s2.0-S009286741930039X-main.pdf",
+        "says": "Independent snapshots lose temporal coupling; OT adds transition assumptions and modifies mass constraints for proliferation and death.",
+        "verified": "read-directly"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "Reject the contract if it assigns different abundance/capture causes to observationally equivalent synthetic worlds without auxiliary evidence, or fails declared unit checks. Synthetic checks establish measurement behavior only.",
+    "experiment_required": "Reject the contract if it assigns different abundance/capture causes to observationally equivalent synthetic worlds without auxiliary evidence, or fails declared unit checks. Synthetic checks establish measurement behavior only.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.86,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "sciml",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "sciml-r1-2",
+    "hypothesis": "A real graph prior must outperform matched-capacity no-prior and randomized-prior controls preserving degree and, where feasible, evidence density, state specificity and expression support before biological-information attribution.",
+    "rationale": "PROCESS validation of mmd_u and de_direction: freeze training-only graph construction and equal tuning budgets; compare independent-stage/embryo effects rather than solver convergence or training reconstruction.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/prompts.md:2042-2055",
+        "says": "Requests no, known, learned and randomized-prior comparisons; randomized benefit can indicate regularization rather than biological knowledge.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/agenticprompt:315-329",
+        "says": "SciML remit includes mechanistic constraints, scientific priors, conservation laws and model identifiability.",
+        "verified": "read-directly"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "Reject biological-information attribution if the real prior fails the prespecified practical margin over randomized priors or the gain disappears with training-only preprocessing.",
+    "experiment_required": "Reject biological-information attribution if the real prior fails the prespecified practical margin over randomized priors or the gain disappears with training-only preprocessing.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.82,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "sciml",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "spatial3d-r1-1",
+    "hypothesis": "An asymmetric synthetic-cloud suite will determine which scorer terms respond to frame, size and expression-coordinate pairing changes, without needing biological targets.",
+    "rationale": "Translate/rotate/scale/reflect clouds and permute rows jointly or expression alone. Compare d2_shape, occupancy_dice, scale_log_ratio and neighborhood_mmd with fixed sampling. Inspect axis degeneracy separately; do not assume website mirror-equivalence from proper sign flips alone.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/agent_orchestrator.py:27",
+        "says": "Imports common and scoring, which the audited source tree does not supply; local scorer equivalence is not established.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/orchestration/personas.py:348",
+        "says": "Mandates absent geometry/scoring artifacts; historical numbers here are not directly verified experiments.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "literature",
+        "ref": "Virtual Embryo Challenge official T2 scoring, 2026, https://virtualembryo.ai/challenge/evaluation?section=scoring&task=2",
+        "says": "Documents coordinate invariances, separate size scoring and coupling-independent neighbourhood profile comparison.",
+        "verified": "read-directly"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "Once the official scorer is available, run frozen transformations. Any reproducible deviation from the documented invariance kills the asserted conformance and blocks relying on it until implementation is understood.",
+    "experiment_required": "Once the official scorer is available, run frozen transformations. Any reproducible deviation from the documented invariance kills the asserted conformance and blocks relying on it until implementation is understood.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.88,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "spatial3d",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "spatial3d-r1-2",
+    "hypothesis": "A provenance gate will prevent an undocumented physical-unit conversion or coverage difference from being labelled validated biological growth.",
+    "rationale": "Record units, per-axis spacing, frame handedness, section coverage and exclusions before interpreting scale_log_ratio. Preserve calibrated raw coordinates separately from RMS-normalised shape coordinates. Flag rather than silently correct unidentified distortions.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/agent_orchestrator.py:144",
+        "says": "Coordinate validation checks array shape and finite values, without verifying physical units or acquisition coverage.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "literature",
+        "ref": "Clifton et al., STalign, Nature Communications 14:8123, 2023, https://doi.org/10.1038/s41467-023-43915-7",
+        "says": "Models partially matched sections and nonlinear distortions, assessing correspondence with independent landmarks and expression.",
+        "verified": "read-directly"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "Supply two identical biological clouds under different documented unit conversions and a cropped version. If the audit labels their raw RMS differences as validated growth, the proposed gate fails.",
+    "experiment_required": "Supply two identical biological clouds under different documented unit conversions and a cropped version. If the audit labels their raw RMS differences as validated growth, the proposed gate fails.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.84,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "spatial3d",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "spatialtx-r1-1",
+    "hypothesis": "First-row proxy sampling can change neighborhood_mmd rankings solely through acquisition ordering; a seeded whole-cloud sampling audit will detect such dependence.",
+    "rationale": "The proxy uses at most 150 leading rows. Spatially ordered storage can select a localized region, changing neighborhood_mmd through local mixture and neighbor density without changing the full embryo.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/agent_orchestrator.py:175-185",
+        "says": "Proxy selects candidate[:n] and true[:n], with n at most 150, and passes paired expression and coordinates to score_t2.",
+        "verified": "read-directly"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "When authorized data and scorer exist, permute row order while preserving X-coordinate pairing. Reject material order dependence if component rankings remain stable across matched samples and embryos.",
+    "experiment_required": "When authorized data and scorer exist, permute row order while preserving X-coordinate pairing. Reject material order dependence if component rankings remain stable across matched samples and embryos.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.7,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "spatialtx",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "spatialtx-r1-2",
+    "hypothesis": "A metric contract suite can distinguish expression-position coupling errors from coordinate-frame effects before any biological model is trained.",
+    "rationale": "Check neighborhood_mmd under expression-row permutation at fixed coordinates, rigid transforms, and isotropic scaling; separately inspect d2_shape, occupancy_dice, scale_log_ratio and mmd_u responses.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/agent_orchestrator.py:128-147",
+        "says": "Validation checks exact panel, bounds, expression values and coordinate shape/finite values, without a joint expression-position diagnostic.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "literature",
+        "ref": "Jones et al. Alignment of spatial genomics data using deep Gaussian processes. Nature Methods 2023. https://doi.org/10.1038/s41592-023-01972-2",
+        "says": "GPSA separates mapping observed locations to common coordinates from mapping coordinates to phenotypic readouts; this motivates auditing frame and expression effects separately.",
+        "verified": "abstract-only"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "On a synthetic cloud with separated expression domains, reject the suite if it misses destroyed pairing or mislabels rigid-motion and uniform-scale effects; verify actual scorer tolerances when available.",
+    "experiment_required": "On a synthetic cloud with separated expression domains, reject the suite if it misses destroyed pairing or mislabels rigid-motion and uniform-scale effects; verify actual scorer tolerances when available.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.85,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "spatialtx",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "stats-r1-1",
+    "hypothesis": "An uncertainty report indexed by biological target embryo prevents repeated sampling seeds from being counted as independent biological evidence.",
+    "rationale": "Record paired model differences for mmd_u within each target embryo; separate cell-sampling and refit seed ranges from between-embryo uncertainty. Replace first-row diagnostic selection with prespecified whole-cloud paired sampling once eligible data exist.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/agent_orchestrator.py:175\u2013185",
+        "says": "Diagnostic scorer caps at 150 and selects contiguous first rows for predictions, truth and coordinates.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "literature",
+        "ref": "Zimmerman et al., Nature Communications 2021, doi:10.1038/s41467-021-21038-1, https://www.nature.com/articles/s41467-021-21038-1",
+        "says": "Cells within an individual are dependent subsamples; individual-level variation is required for population inference.",
+        "verified": "read-directly"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "Audit the report schema on synthetic metadata: reject the design if five seeds from one embryo yield n=5 biological replicates or a population confidence interval.",
+    "experiment_required": "Audit the report schema on synthetic metadata: reject the design if five seeds from one embryo yield n=5 biological replicates or a population confidence interval.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.95,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "stats",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "stats-r1-2",
+    "hypothesis": "A frozen tuning and endpoint ledger distinguishes held-out empirical validation from selection on that target and from expert acceptance.",
+    "rationale": "Prespecify combined-versus-composition mmd_u improvement and margins for de_direction, variogram and neighborhood_mmd guardrails. Record all official components; store critic status separately from measured outcomes and uncertainty.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/orchestration/memory/update.py:86\u2013122",
+        "says": "Verdict statuses set supported/falsified lifecycle and contribute binary sustained counts to calibration without experiments.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "literature",
+        "ref": "Cawley and Talbot, JMLR 2010, 11:2079\u20132107, https://jmlr.org/papers/volume11/cawley10a/cawley10a.pdf",
+        "says": "Optimizing finite-sample selection criteria can cause overfitting and biased subsequent performance evaluation.",
+        "verified": "read-directly"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "Reject the ledger if changing a model after reading outer-target metrics preserves its test status, or critic acceptance alone sets an empirical-supported flag.",
+    "experiment_required": "Reject the ledger if changing a model after reading outer-target metrics preserves its test status, or critic acceptance alone sets an empirical-supported flag.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.9,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "stats",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  },
+  {
+    "id": "sysbio-r1-1",
+    "hypothesis": "An evidence lifecycle requiring an executed experiment artifact will keep unsupported PLAUSIBLE and UNPROVEN judgments open instead of labeling them empirically supported or falsified.",
+    "rationale": "This changes claim provenance, not de_score, de_direction, severity_slope or mmd_u directly. Preserve critic_status separately; require measured evidence for support and an executed falsifier for empirical rejection so a judge's opinion cannot become a biological result.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/orchestration/memory/update.py:34-35,86-103",
+        "says": "PLAUSIBLE enters SUSTAINED; UNPROVEN enters REJECTED; these map to supported and falsified. This is inspectable code ground truth, not biological data.",
+        "verified": "read-directly"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "Use isolated fixtures with PLAUSIBLE and UNPROVEN verdicts but no experiment artifacts. Kill the claim if either lifecycle becomes empirically supported or falsified, or verified experimental evidence cannot be represented distinctly.",
+    "experiment_required": "Use isolated fixtures with PLAUSIBLE and UNPROVEN verdicts but no experiment artifacts. Kill the claim if either lifecycle becomes empirically supported or falsified, or verified experimental evidence cannot be represented distinctly.",
+    "local_ground_truth": "yes",
+    "current_confidence": 0.9,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "sysbio",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0,
+    "critic_disposition": {
+      "status": "refine",
+      "issue": "C2-6",
+      "basis": "Separate observed legacy defect from proposed repair effectiveness; no empirical calibration."
+    },
+    "evidence_findings": [
+      {
+        "finding_id": "sysbio-legacy-verdict-contract",
+        "status": "observed code finding",
+        "evidence_kind": "source inspection and executed synthetic contract check",
+        "claim": "Legacy source maps PLAUSIBLE to supported and UNPROVEN to falsified; a synthetic UNPROVEN fixture produced falsified and repeated ingestion increased history from one to two.",
+        "evidence_ledger_ids": [
+          "E070",
+          "E003"
+        ],
+        "artifacts": [
+          {
+            "path": "Neurl IPS 2026/orchestration/memory/update.py",
+            "lines": "34-35,86-103",
+            "sha256": "39d3277b27f016abfb72e9dcfc1add22403fc69ce1f038ae25efc67907560785",
+            "verification": "source inspected; PLAUSIBLE mapping not independently executed in the recorded fixture"
+          },
+          {
+            "path": "outputs/research_workflow/audit_check_results.json",
+            "sha256": "80333005bc3bb92e17a7d0823f9c458ac000c322c7d2f0fedd43bd9b3ebea3e8",
+            "verification": "recorded synthetic UNPROVEN and repeated-ingestion observation"
+          }
+        ],
+        "scope": "Legacy code contract; not biological support, falsification or repair validation.",
+        "calibration_effect": "none",
+        "independent_biological_replicates": 0
+      }
+    ]
+  },
+  {
+    "id": "sysbio-r1-2",
+    "hypothesis": "A planned mixture decomposition with an explicit interaction term will distinguish known composition-only and within-state-only synthetic mean shifts before being used to interpret biological predictions.",
+    "rationale": "Pseudobulk changes used by de_score, de_direction and severity_slope combine state proportions and conditional means; mmd_u also responds to their distributions. Compare unchanged, composition-only, expression-only and joint predictors with fixed sampling, and report interaction rather than naming all shifts regulation.",
+    "supporting_evidence": [
+      {
+        "kind": "repo",
+        "ref": "Neurl IPS 2026/agent_orchestrator.py:163-184",
+        "says": "Proxy scoring uses first-cell slices, up to 150 cells; population ordering can change sampled mixture. Required data and scoring imports are absent locally.",
+        "verified": "read-directly"
+      },
+      {
+        "kind": "literature",
+        "ref": "B\u00fcttner et al., scCODA, Nature Communications, 2021, doi:10.1038/s41467-021-27150-6; https://www.nature.com/articles/s41467-021-27150-6",
+        "says": "Joint composition modeling addresses constrained relative abundances; developmental continua complicate fixed cell-type definitions. Published full text inspected.",
+        "verified": "read-directly"
+      }
+    ],
+    "contradictory_evidence": [],
+    "falsification_criterion": "Inject proportion-only and mean-only changes into a small two-state simulation. Reject this diagnostic if exact decomposition fails or assigns a nonzero conditional-expression component to a pure proportion shift under the fixed true state map.",
+    "experiment_required": "Inject proportion-only and mean-only changes into a small two-state simulation. Reject this diagnostic if exact decomposition fails or assigns a nonzero conditional-expression component to a pure proportion shift under the fixed true state map.",
+    "local_ground_truth": "no",
+    "current_confidence": 0.78,
+    "confidence_type": "expert expectation; not empirically calibrated",
+    "status": "untested",
+    "empirical_biological_claim": null,
+    "expert": "sysbio",
+    "board": "PROCESS",
+    "status_basis": "No executed repair or diagnostic experiment adjudicates this proposal as written; observed prerequisite defects are separate evidence.",
+    "claim_scope_review": "Individual scope review required; board is routing metadata and supplies no biological scope verdict.",
+    "semantic_correction_history": [
+      {
+        "correction_id": "C2-6-registry",
+        "date": "2026-09-28",
+        "original_status": "untested",
+        "original_empirical_biological_claim": false,
+        "original_status_basis": "No measured biological prediction experiment supplied or executed.",
+        "note": "Archived scope classification was board-derived, not reviewed scientific scope."
+      }
+    ],
+    "proposal_status": "untested",
+    "status_semantics": "Proposed intervention or diagnostic remains untested; evidence findings have independent statuses.",
+    "empirical_biological_scope": "unknown/requires_review",
+    "measured_predictive_evidence_status": "untested",
+    "independent_biological_replicates": 0
+  }
+]

@@ -1,0 +1,66 @@
+{
+  "expert": "spatialtx",
+  "round": 1,
+  "searches_run": [
+    "site.nature.com spatial transcriptomics PASTE partial overlap alignment 2023",
+    "site.nature.com MERFISH mouse embryo spatial transcriptomics whole embryo 2025"
+  ],
+  "proposals": [
+    {
+      "id": "spatialtx-r1-1",
+      "board": "PROCESS",
+      "title": "Audit proxy sampling before interpreting spatial rankings",
+      "claim": "First-row proxy sampling can change neighborhood_mmd rankings solely through acquisition ordering; a seeded whole-cloud sampling audit will detect such dependence.",
+      "mechanism": "The proxy uses at most 150 leading rows. Spatially ordered storage can select a localized region, changing neighborhood_mmd through local mixture and neighbor density without changing the full embryo.",
+      "cost": "compute-only",
+      "falsifier": "When authorized data and scorer exist, permute row order while preserving X-coordinate pairing. Reject material order dependence if component rankings remain stable across matched samples and embryos.",
+      "local_ground_truth": "no",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/agent_orchestrator.py:175-185",
+          "says": "Proxy selects candidate[:n] and true[:n], with n at most 150, and passes paired expression and coordinates to score_t2.",
+          "verified": "read-directly"
+        }
+      ],
+      "confidence": 0.7,
+      "novelty": "adaptation"
+    },
+    {
+      "id": "spatialtx-r1-2",
+      "board": "PROCESS",
+      "title": "Verify expression-position sensitivity independently of geometry",
+      "claim": "A metric contract suite can distinguish expression-position coupling errors from coordinate-frame effects before any biological model is trained.",
+      "mechanism": "Check neighborhood_mmd under expression-row permutation at fixed coordinates, rigid transforms, and isotropic scaling; separately inspect d2_shape, occupancy_dice, scale_log_ratio and mmd_u responses.",
+      "cost": "compute-only",
+      "falsifier": "On a synthetic cloud with separated expression domains, reject the suite if it misses destroyed pairing or mislabels rigid-motion and uniform-scale effects; verify actual scorer tolerances when available.",
+      "local_ground_truth": "no",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/agent_orchestrator.py:128-147",
+          "says": "Validation checks exact panel, bounds, expression values and coordinate shape/finite values, without a joint expression-position diagnostic.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "literature",
+          "ref": "Jones et al. Alignment of spatial genomics data using deep Gaussian processes. Nature Methods 2023. https://doi.org/10.1038/s41592-023-01972-2",
+          "says": "GPSA separates mapping observed locations to common coordinates from mapping coordinates to phenotypic readouts; this motivates auditing frame and expression effects separately.",
+          "verified": "abstract-only"
+        }
+      ],
+      "confidence": 0.85,
+      "novelty": "adaptation"
+    }
+  ],
+  "peer_responses": [
+    {
+      "peer": "scgenomics",
+      "stance": "refine",
+      "on": "Actual challenge to sampling and pairing controls in spatialtx-r1-1 and spatialtx-r1-2",
+      "because": "agent_orchestrator.py:175-185 samples before absent scoring. Separate storage-order effects from subset-rebuilt neighbors; freeze type mixture for within-type shuffles, perturb segmentation separately, and require imaging provenance for correction."
+    }
+  ],
+  "self_correction": "Seeded whole-cloud sampling does not preserve full-cloud neighborhoods when the scorer rebuilds neighbors after thinning. Add fixed-neighborhood versus rebuilt-neighborhood diagnostics; transformation controls establish sensitivity, not biological causes.",
+  "declined": "Default nonlinear expression-guided registration could erase real developmental deformation. Anchor inversion could recover forbidden target properties. Neither is a justified preprocessing strategy."
+}

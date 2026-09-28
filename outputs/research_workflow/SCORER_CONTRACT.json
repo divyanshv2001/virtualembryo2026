@@ -1,0 +1,23 @@
+{
+  "status": "UNRESOLVED — official implementation and biological files absent",
+  "exact_parity_claim_allowed": false,
+  "required_before_numerical_assessment": {
+    "scorer_source_version_and_hash": null,
+    "board_panel_order_and_hash": null,
+    "normalization_recipe_and_representation": null,
+    "reference_stage_and_target_manifest": null,
+    "MMD_estimator": "Verify unbiased U-statistic implementation",
+    "kernel_and_bandwidth": "Verify exact RBF bandwidths/median convention, fit source and subsampling",
+    "evaluation_PCA": "Verify fit source, dimensions and seeds; target-derived evaluation objects never enter fitting/selection",
+    "sampling_order": "Verify full-cloud versus subset neighborhoods and sample sizes",
+    "coordinate_units_and_axis_spacing": null,
+    "neighborhood_builder": "Verify k, ties, distance, self exclusion, subsampling order",
+    "shape_aggregation": "Resolve webpage/baseline structure-gating discrepancy against versioned code",
+    "metric_nan_degenerate_policy": null,
+    "probe_fit_and_application": "Evaluation-only objects isolated from learner"
+  },
+  "local_proxy_policy": "Use a declared local raw endpoint. Official target anchors do not calibrate a different released-stage proxy. Any local calibration is explicitly a local proxy, never an official score.",
+  "planned_contract_checks": ["copy-last", "joint row permutation", "rigid motion", "uniform/anisotropic scale", "expression-only permutation", "subset order/support", "degenerate input behavior"],
+  "biological_endpoint_limits": ["No unique topology", "No lineage", "No absolute abundance from sampled cell count", "Laterality may be unscored", "No causal edges from predictive score"],
+  "note": "Public specifications motivate tests; no actual metric implementation conformance has been measured."
+}

@@ -1,0 +1,48 @@
+{
+  "scope": "Executed mathematical checks on arbitrary illustrative values; no biological data or metric validation.",
+  "capture_abundance": {
+    "observed_a": [
+      0.3333333333333333,
+      0.6666666666666666
+    ],
+    "observed_b": [
+      0.3333333333333333,
+      0.6666666666666666
+    ],
+    "observationally_equivalent": true,
+    "conclusion": "Recovered proportions cannot uniquely identify physical abundance and capture."
+  },
+  "autonomous_rotation": {
+    "points": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        -0.4999999999999998,
+        0.8660254037844387
+      ],
+      [
+        -0.5000000000000004,
+        -0.8660254037844385
+      ]
+    ],
+    "displacement_cosine": -0.4999999999999998,
+    "conclusion": "Negative consecutive displacement cosine does not falsify all autonomous dynamics."
+  },
+  "unobserved_intervention": {
+    "worlds": [
+      {
+        "wt": 0,
+        "do_A": 1,
+        "do_B": -1
+      },
+      {
+        "wt": 0,
+        "do_A": 1,
+        "do_B": 1
+      }
+    ],
+    "conclusion": "Agreement on WT and intervention A does not identify intervention B without additional assumptions."
+  }
+}

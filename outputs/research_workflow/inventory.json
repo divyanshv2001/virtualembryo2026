@@ -1,0 +1,1071 @@
+{
+  "scope": "D:\\Neurl IPS 2026-20260927T150309Z-1-001\\virtualembryo",
+  "source_files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 66,
+      "sha256": "1a1dbe176bc233b499d35a57db7513f2941c99ab9759f177830c9149be99005b"
+    },
+    {
+      "path": "Neurl IPS 2026/.DS_Store",
+      "bytes": 6148,
+      "sha256": "931d37ba07c89aa6f122833ce33c9365e1788278afda33278115c633e76449e3"
+    },
+    {
+      "path": "Neurl IPS 2026/agent_orchestrator.py",
+      "bytes": 11516,
+      "sha256": "8e8cee9bb647ca8c25982166bd332eef614d21ef74a25e3a6e7257b55fcf5002",
+      "functions_classes": [
+        {
+          "name": "Proposal",
+          "line": 35,
+          "kind": "ClassDef"
+        },
+        {
+          "name": "Critique",
+          "line": 46,
+          "kind": "ClassDef"
+        },
+        {
+          "name": "_board_from_name",
+          "line": 58,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "discover_proposals",
+          "line": 72,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "_dense",
+          "line": 121,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "_validate_streaming",
+          "line": 128,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "_proxy_spec",
+          "line": 150,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "_proxy_score",
+          "line": 163,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "_known_real_score",
+          "line": 188,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "critique",
+          "line": 199,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "select",
+          "line": 251,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "run",
+          "line": 270,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "main",
+          "line": 292,
+          "kind": "FunctionDef"
+        }
+      ],
+      "imports": [
+        {
+          "module": "__future__",
+          "line": 15
+        },
+        {
+          "modules": [
+            "argparse"
+          ],
+          "line": 17
+        },
+        {
+          "modules": [
+            "json"
+          ],
+          "line": 18
+        },
+        {
+          "modules": [
+            "re"
+          ],
+          "line": 19
+        },
+        {
+          "modules": [
+            "sys"
+          ],
+          "line": 20
+        },
+        {
+          "module": "dataclasses",
+          "line": 21
+        },
+        {
+          "module": "pathlib",
+          "line": 22
+        },
+        {
+          "module": "typing",
+          "line": 23
+        },
+        {
+          "modules": [
+            "numpy"
+          ],
+          "line": 25
+        },
+        {
+          "modules": [
+            "common"
+          ],
+          "line": 27
+        },
+        {
+          "modules": [
+            "scoring"
+          ],
+          "line": 28
+        },
+        {
+          "modules": [
+            "anndata"
+          ],
+          "line": 169
+        },
+        {
+          "modules": [
+            "anndata"
+          ],
+          "line": 206
+        }
+      ]
+    },
+    {
+      "path": "Neurl IPS 2026/agenticprompt",
+      "bytes": 23979,
+      "sha256": "5d385a14f0edeb362dfdb90331bd4e189e72a049705fcfbf3cd36d89f091086e"
+    },
+    {
+      "path": "Neurl IPS 2026/orchestration/__init__.py",
+      "bytes": 79,
+      "sha256": "3714015a0ffc628fbf836839d123eb9bdfefa11e1f6db2610caedf0f2365cfe8",
+      "functions_classes": [],
+      "imports": []
+    },
+    {
+      "path": "Neurl IPS 2026/orchestration/act.py",
+      "bytes": 6861,
+      "sha256": "bdf4d00076c805b76232513eea8b213688bf29d0ab763c4a65ad27086a1497a8",
+      "functions_classes": [
+        {
+          "name": "_load",
+          "line": 46,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "build_queue",
+          "line": 55,
+          "kind": "FunctionDef"
+        }
+      ],
+      "imports": [
+        {
+          "module": "__future__",
+          "line": 17
+        },
+        {
+          "modules": [
+            "json"
+          ],
+          "line": 19
+        },
+        {
+          "module": "datetime",
+          "line": 20
+        },
+        {
+          "module": "pathlib",
+          "line": 21
+        },
+        {
+          "modules": [
+            "sys"
+          ],
+          "line": 158
+        }
+      ]
+    },
+    {
+      "path": "Neurl IPS 2026/orchestration/critic.py",
+      "bytes": 17304,
+      "sha256": "b6524c120a789212ca574522984b12e9a58b5d21976ffe016fdbfc8ecea6308b",
+      "functions_classes": [
+        {
+          "name": "_flaw",
+          "line": 75,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "machine_flaws",
+          "line": 87,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "_trap_key",
+          "line": 231,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "_overlap",
+          "line": 239,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "build_packet",
+          "line": 247,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "ingest_verdict",
+          "line": 307,
+          "kind": "FunctionDef"
+        }
+      ],
+      "imports": [
+        {
+          "module": "__future__",
+          "line": 25
+        },
+        {
+          "modules": [
+            "json"
+          ],
+          "line": 27
+        },
+        {
+          "modules": [
+            "re"
+          ],
+          "line": 28
+        },
+        {
+          "module": "pathlib",
+          "line": 29
+        },
+        {
+          "module": "personas",
+          "line": 31
+        },
+        {
+          "modules": [
+            "sys"
+          ],
+          "line": 350
+        }
+      ]
+    },
+    {
+      "path": "Neurl IPS 2026/orchestration/diverge.py",
+      "bytes": 12083,
+      "sha256": "df4294ceb2eab426731fafa6a3fbdbb5052fd4d1ae21a3af5b3be09414cab27c",
+      "functions_classes": [
+        {
+          "name": "_venue_line",
+          "line": 73,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "build_prompt",
+          "line": 77,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "peer_digest",
+          "line": 204,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "build_round",
+          "line": 223,
+          "kind": "FunctionDef"
+        }
+      ],
+      "imports": [
+        {
+          "module": "__future__",
+          "line": 16
+        },
+        {
+          "modules": [
+            "json"
+          ],
+          "line": 18
+        },
+        {
+          "module": "pathlib",
+          "line": 19
+        },
+        {
+          "module": "personas",
+          "line": 21
+        },
+        {
+          "modules": [
+            "sys"
+          ],
+          "line": 251
+        }
+      ]
+    },
+    {
+      "path": "Neurl IPS 2026/orchestration/jev.py",
+      "bytes": 8926,
+      "sha256": "8bd73e17ad0e15d17cc61b7cd7938f9e6d6d5ceb0e12a5a9d5b7f9ac73234443",
+      "functions_classes": [
+        {
+          "name": "noul",
+          "line": 41,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "choice",
+          "line": 49,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "score",
+          "line": 53,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "Usage",
+          "line": 58,
+          "kind": "ClassDef"
+        },
+        {
+          "name": "JevClient",
+          "line": 76,
+          "kind": "ClassDef"
+        },
+        {
+          "name": "_text_of",
+          "line": 196,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "_local_fallback",
+          "line": 200,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "as_dict",
+          "line": 65,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "__post_init__",
+          "line": 85,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "live",
+          "line": 91,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "ask",
+          "line": 95,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "_post",
+          "line": 122,
+          "kind": "FunctionDef"
+        }
+      ],
+      "imports": [
+        {
+          "module": "__future__",
+          "line": 25
+        },
+        {
+          "modules": [
+            "hashlib"
+          ],
+          "line": 27
+        },
+        {
+          "modules": [
+            "json"
+          ],
+          "line": 28
+        },
+        {
+          "modules": [
+            "os"
+          ],
+          "line": 29
+        },
+        {
+          "modules": [
+            "time"
+          ],
+          "line": 30
+        },
+        {
+          "module": "dataclasses",
+          "line": 31
+        },
+        {
+          "module": "pathlib",
+          "line": 32
+        },
+        {
+          "module": "typing",
+          "line": 33
+        },
+        {
+          "modules": [
+            "requests"
+          ],
+          "line": 123
+        }
+      ]
+    },
+    {
+      "path": "Neurl IPS 2026/orchestration/memory/__init__.py",
+      "bytes": 77,
+      "sha256": "87f8fc046fdb86708d7a017ada50ef156364c7cc9657912592dcb1f0b0ad7536",
+      "functions_classes": [],
+      "imports": []
+    },
+    {
+      "path": "Neurl IPS 2026/orchestration/memory/update.py",
+      "bytes": 8514,
+      "sha256": "39d3277b27f016abfb72e9dcfc1add22403fc69ce1f038ae25efc67907560785",
+      "functions_classes": [
+        {
+          "name": "_load",
+          "line": 38,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "_save",
+          "line": 47,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "update",
+          "line": 52,
+          "kind": "FunctionDef"
+        }
+      ],
+      "imports": [
+        {
+          "module": "__future__",
+          "line": 24
+        },
+        {
+          "modules": [
+            "json"
+          ],
+          "line": 26
+        },
+        {
+          "module": "datetime",
+          "line": 27
+        },
+        {
+          "module": "pathlib",
+          "line": 28
+        },
+        {
+          "modules": [
+            "sys"
+          ],
+          "line": 143
+        },
+        {
+          "modules": [
+            "rank"
+          ],
+          "line": 146
+        },
+        {
+          "modules": [
+            "sys"
+          ],
+          "line": 202
+        }
+      ]
+    },
+    {
+      "path": "Neurl IPS 2026/orchestration/perceive.py",
+      "bytes": 16843,
+      "sha256": "a128ac4ecf1142f5a0d55c7f30d05e4126afac43152955b5ced32b1e3d7449cf",
+      "functions_classes": [
+        {
+          "name": "State",
+          "line": 40,
+          "kind": "ClassDef"
+        },
+        {
+          "name": "_read",
+          "line": 63,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "_parse_board_table",
+          "line": 70,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "_parse_experiments_standing",
+          "line": 107,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "_parse_gap_table",
+          "line": 150,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "_board_of_artifact",
+          "line": 166,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "_submitted",
+          "line": 180,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "_closed_findings",
+          "line": 192,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "_open_questions",
+          "line": 213,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "perceive",
+          "line": 245,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "_diff",
+          "line": 320,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "briefing",
+          "line": 343,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "run",
+          "line": 407,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "as_dict",
+          "line": 50,
+          "kind": "FunctionDef"
+        }
+      ],
+      "imports": [
+        {
+          "module": "__future__",
+          "line": 15
+        },
+        {
+          "modules": [
+            "hashlib"
+          ],
+          "line": 17
+        },
+        {
+          "modules": [
+            "json"
+          ],
+          "line": 18
+        },
+        {
+          "modules": [
+            "re"
+          ],
+          "line": 19
+        },
+        {
+          "module": "dataclasses",
+          "line": 20
+        },
+        {
+          "module": "pathlib",
+          "line": 21
+        }
+      ]
+    },
+    {
+      "path": "Neurl IPS 2026/orchestration/personas.py",
+      "bytes": 25535,
+      "sha256": "2e88d3cc79ac54d3b942caed3faba339fdc85560f3347d50597500b8fdbaf7ff",
+      "functions_classes": [
+        {
+          "name": "Persona",
+          "line": 29,
+          "kind": "ClassDef"
+        },
+        {
+          "name": "as_dict",
+          "line": 41,
+          "kind": "FunctionDef"
+        }
+      ],
+      "imports": [
+        {
+          "module": "__future__",
+          "line": 23
+        },
+        {
+          "module": "dataclasses",
+          "line": 25
+        }
+      ]
+    },
+    {
+      "path": "Neurl IPS 2026/orchestration/rank.py",
+      "bytes": 6638,
+      "sha256": "ae44a769448431fc17dbe79234d57727e29a06dfc448b51ebdbac8f1c6049b78",
+      "functions_classes": [
+        {
+          "name": "_tokens",
+          "line": 50,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "_jaccard",
+          "line": 54,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "composite",
+          "line": 60,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "gate_status",
+          "line": 73,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "dedupe",
+          "line": 89,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "rank_round",
+          "line": 116,
+          "kind": "FunctionDef"
+        }
+      ],
+      "imports": [
+        {
+          "module": "__future__",
+          "line": 15
+        },
+        {
+          "modules": [
+            "json"
+          ],
+          "line": 17
+        },
+        {
+          "modules": [
+            "re"
+          ],
+          "line": 18
+        },
+        {
+          "module": "pathlib",
+          "line": 19
+        },
+        {
+          "modules": [
+            "sys"
+          ],
+          "line": 176
+        }
+      ]
+    },
+    {
+      "path": "Neurl IPS 2026/orchestration/run.py",
+      "bytes": 7166,
+      "sha256": "a2992253a2275bc2c70187c0e351b62cb493b22d29f37c2c8a0e4ebfa3370d1d",
+      "functions_classes": [
+        {
+          "name": "stage_perceive",
+          "line": 48,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "stage_diverge",
+          "line": 61,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "stage_converge",
+          "line": 78,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "stage_close",
+          "line": 104,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "final_report",
+          "line": 122,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "main",
+          "line": 144,
+          "kind": "FunctionDef"
+        }
+      ],
+      "imports": [
+        {
+          "module": "__future__",
+          "line": 25
+        },
+        {
+          "modules": [
+            "argparse"
+          ],
+          "line": 27
+        },
+        {
+          "modules": [
+            "json"
+          ],
+          "line": 28
+        },
+        {
+          "modules": [
+            "sys"
+          ],
+          "line": 29
+        },
+        {
+          "module": "pathlib",
+          "line": 30
+        },
+        {
+          "modules": [
+            "act"
+          ],
+          "line": 36
+        },
+        {
+          "modules": [
+            "critic"
+          ],
+          "line": 37
+        },
+        {
+          "modules": [
+            "diverge"
+          ],
+          "line": 38
+        },
+        {
+          "modules": [
+            "jev"
+          ],
+          "line": 39
+        },
+        {
+          "modules": [
+            "perceive"
+          ],
+          "line": 40
+        },
+        {
+          "modules": [
+            "rank"
+          ],
+          "line": 41
+        },
+        {
+          "modules": [
+            "scorer"
+          ],
+          "line": 42
+        },
+        {
+          "module": "memory",
+          "line": 43
+        }
+      ]
+    },
+    {
+      "path": "Neurl IPS 2026/orchestration/scorer.py",
+      "bytes": 12445,
+      "sha256": "b1aa29b9509150afff35105cfeb92b226ae44885fffd16bdc7ba9154a63187a2",
+      "functions_classes": [
+        {
+          "name": "_clip",
+          "line": 35,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "proposal_state",
+          "line": 40,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "briefing_facts",
+          "line": 189,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "score_proposal",
+          "line": 201,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "score_round",
+          "line": 233,
+          "kind": "FunctionDef"
+        }
+      ],
+      "imports": [
+        {
+          "module": "__future__",
+          "line": 22
+        },
+        {
+          "modules": [
+            "json"
+          ],
+          "line": 24
+        },
+        {
+          "module": "pathlib",
+          "line": 25
+        },
+        {
+          "modules": [
+            "jev"
+          ],
+          "line": 27
+        },
+        {
+          "module": "personas",
+          "line": 234
+        },
+        {
+          "modules": [
+            "sys"
+          ],
+          "line": 271
+        }
+      ]
+    },
+    {
+      "path": "Neurl IPS 2026/orchestration/test_orchestration.py",
+      "bytes": 9677,
+      "sha256": "351ec3301c729fdbf649073347605889269177476d91a12593461d30da996dfa",
+      "functions_classes": [
+        {
+          "name": "test_panel_is_sixteen_distinct_disciplines",
+          "line": 34,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "test_every_expert_has_grounded_mandate_traps_and_peers",
+          "line": 40,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "test_discussion_graph_is_connected_and_symmetric_enough",
+          "line": 49,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "test_briefing_stays_under_its_cap",
+          "line": 58,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "test_perceive_reads_real_boards_off_disk",
+          "line": 67,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "test_no_api_key_never_produces_an_authoritative_judgment",
+          "line": 77,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "test_degraded_gates_defer_instead_of_pruning",
+          "line": 87,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "test_fallback_answers_are_not_cached",
+          "line": 97,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "test_prompts_stay_small_enough_to_multiply_by_sixteen",
+          "line": 105,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "test_peer_digest_is_one_line_per_claim",
+          "line": 112,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "planted_round",
+          "line": 130,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "_codes",
+          "line": 191,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "test_machine_critic_catches_each_planted_defect",
+          "line": 195,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "test_machine_critic_costs_no_tokens",
+          "line": 210,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "test_missing_repo_citation_is_blocking",
+          "line": 217,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "test_gate_trip_is_not_compensating",
+          "line": 225,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "test_ambiguous_gate_escalates_rather_than_prunes",
+          "line": 235,
+          "kind": "FunctionDef"
+        },
+        {
+          "name": "test_dedupe_keeps_the_better_scoring_twin",
+          "line": 242,
+          "kind": "FunctionDef"
+        }
+      ],
+      "imports": [
+        {
+          "module": "__future__",
+          "line": 10
+        },
+        {
+          "modules": [
+            "json"
+          ],
+          "line": 12
+        },
+        {
+          "modules": [
+            "sys"
+          ],
+          "line": 13
+        },
+        {
+          "module": "pathlib",
+          "line": 14
+        },
+        {
+          "modules": [
+            "pytest"
+          ],
+          "line": 16
+        },
+        {
+          "modules": [
+            "critic"
+          ],
+          "line": 22
+        },
+        {
+          "modules": [
+            "diverge"
+          ],
+          "line": 23
+        },
+        {
+          "modules": [
+            "jev"
+          ],
+          "line": 24
+        },
+        {
+          "modules": [
+            "perceive"
+          ],
+          "line": 25
+        },
+        {
+          "modules": [
+            "rank"
+          ],
+          "line": 26
+        },
+        {
+          "module": "personas",
+          "line": 27
+        }
+      ]
+    },
+    {
+      "path": "Neurl IPS 2026/prompts.md",
+      "bytes": 51034,
+      "sha256": "0a831e035777cda2ad207f395b2d7dad7c162e289bf64f04b867ad1188eb4413"
+    }
+  ],
+  "absent_expected_paths": [
+    "PLAN.md",
+    "EXPERIMENTS.md",
+    "MULTI_AGENT_AUDIT.md",
+    "experiments/registry.json",
+    "src/common.py",
+    "src/scoring.py",
+    "outputs/baselines",
+    "requirements.txt",
+    "pyproject.toml"
+  ],
+  "data_files": [],
+  "note": "Nested Git metadata, bytecode and macOS metadata are not scientific results. No historical results reconstructed."
+}

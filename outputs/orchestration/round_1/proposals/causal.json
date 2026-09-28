@@ -1,0 +1,52 @@
+{
+  "expert": "causal",
+  "round": 1,
+  "searches_run": [
+    "single cell perturbation causal identifiability unseen perturbations observational data causal structure",
+    "Gata4 null mouse embryo ventral morphogenesis heart development Molkentin 1997"
+  ],
+  "proposals": [
+    {
+      "id": "causal-r1-1",
+      "board": "PROCESS",
+      "title": "Require an estimand and a constructive nonidentifiability check",
+      "claim": "Two SCMs can fit the same WT and Mab21l2 intervention distributions while predicting different Gata4 responses; therefore this design alone does not identify the Gata4 intervention.",
+      "mechanism": "Construct a small synthetic pair of SCMs and an assumption ledger before mechanism claims. de_score, de_direction and severity_slope measure response agreement, not identification of regulatory edges. This is a validation guard, with no claimed biological score gain.",
+      "cost": "compute-only",
+      "falsifier": "Attempt the two-SCM construction under explicitly stated minimal assumptions. Reject the objection only if a valid uniqueness argument forces the same Gata4 interventional distribution, or new permitted identifying evidence is supplied.",
+      "local_ground_truth": "no",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/prompts.md:633-635",
+          "says": "Prediction is distinct from causal understanding; causal claims require intervention assumptions.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/agenticprompt:171-188",
+          "says": "Causal review covers estimands, interventions, confounding, selection and identifiability.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "literature",
+          "ref": "Zhang et al., Identifiability Guarantees for Causal Disentanglement from Soft Interventions, NeurIPS 2023; https://papers.neurips.cc/paper_files/paper/2023/file/9d3a4cdf6f70559e8c6fe02170fba568-Paper-Conference.pdf",
+          "says": "Setup assumes at least one intervention per latent node; guarantees need restricted mixing and faithfulness and cover unseen intervention combinations.",
+          "verified": "read-directly"
+        }
+      ],
+      "confidence": 0.95,
+      "novelty": "adaptation"
+    }
+  ],
+  "peer_responses": [
+    {
+      "peer": "grn",
+      "stance": "refine",
+      "on": "Eligible priors can support prediction; randomized graphs do not identify direct edges.",
+      "because": "Agree: matched held-out gains support prediction only. Randomization tests graph identity information; balanced randomized interventions test total effects. Target-measured Gata4 literature is quarantined (debate/causal.md; official rules section 10)."
+    }
+  ],
+  "self_correction": "n/a (initial review)",
+  "declined": "Declined claiming the Mab21l2 response identifies Gata4 effects, and declined reviving the persona's historical decoy finding as a measured result: no dataset or result artifact exists here. Target-only suppression remains a planned baseline, not mechanistic evidence."
+}

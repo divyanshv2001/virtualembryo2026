@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "interpolation_weight": true,
+    "mixture_sums_to_one": true,
+    "donor_stage_probabilities": true,
+    "unseen_training_stratum_has_zero_support": true,
+    "known_transform_round_trip": true,
+    "clipped_output_nonnegative_normalized": true,
+    "zero_row_flag_required": true,
+    "paired_coordinate_identity": true,
+    "output_map_changes_pairwise_distance": true,
+    "overflow_rejected": true,
+    "halved_power_headroom_quadruples_n": true,
+    "assessed_target_cannot_be_reused_confirmatorily": true
+  },
+  "passed": true,
+  "scope": "arbitrary synthetic arithmetic and ledger checks only; no data fitting, official score, spatial fidelity or biological validation",
+  "seed": "fixed donor list; not PCG64 estimator implementation"
+}

@@ -1,0 +1,52 @@
+{
+  "expert": "devbio",
+  "round": 1,
+  "searches_run": [
+    "Schiebinger 2019 optimal transport analysis single cell gene expression identifies developmental trajectories Cell",
+    "Weinreb 2020 lineage tracing on transcriptional landscapes links state to fate Science"
+  ],
+  "proposals": [
+    {
+      "id": "devbio-r1-1",
+      "board": "T1:val",
+      "title": "Test temporal population reweighting before expression dynamics",
+      "claim": "Training-only temporal reweighting of shared broad cell states, with frozen within-state expression, reduces held-out-stage mmd_u versus nearest-stage resampling.",
+      "mechanism": "Changing population weights changes the aggregate expression distribution and may lower mmd_u. Compare de_direction under frozen and evolving conditional expression to diagnose whether aggregate shifts require within-state changes; neither establishes lineage.",
+      "cost": "compute-only",
+      "falsifier": "On the first eligible held-out-stage embryo split, reject if the paired mean mmd_u improvement is nonpositive under matched cell counts and repeated random sampling; no target labels enter fitting.",
+      "local_ground_truth": "no",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/prompts.md:329",
+          "says": "Separately names abundance and conditioned expression as prediction targets; lineage is also listed but lacks tracing evidence.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/agent_orchestrator.py:175",
+          "says": "The diagnostic proxy takes at most 150 leading cells; no randomized or embryo-aware sampling appears here.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "literature",
+          "ref": "Schiebinger et al., Cell 2019, DOI 10.1016/j.cell.2019.01.006; https://www.broadinstitute.org/files/publications/2019/03/1-s2.0-S009286741930039X-main.pdf",
+          "says": "Temporal coupling needs assumptions; growth and death change mass, and expression snapshots do not directly observe joint ancestry.",
+          "verified": "read-directly"
+        }
+      ],
+      "confidence": 0.4,
+      "novelty": "adaptation"
+    }
+  ],
+  "peer_responses": [
+    {
+      "peer": "neuralode",
+      "stance": "refine",
+      "on": "neuralode-r1-2: distinguish solver convergence and temporal predictive validity",
+      "because": "Endorse the distinction; mmd_u/de_direction validate marginals, not ancestry. Schiebinger 2019 requires coupling assumptions; Weinreb 2020 finds fate biases hidden from expression. Add independent clonal fate and growth/death tests before lineage claims."
+    }
+  ],
+  "self_correction": "n/a (initial review)",
+  "declined": "Hard lineage-tree constraints: unpaired expression snapshots do not identify ancestry; a plausible movie or improved marginal score cannot validate a developmental mechanism."
+}

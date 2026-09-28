@@ -1,0 +1,21 @@
+{
+  "boards": {},
+  "artifacts": [],
+  "experiments": {
+    "count": 0,
+    "recent": []
+  },
+  "closed_findings": [],
+  "open_questions": [],
+  "constraints": [
+    "T1 is the ONLY task where external training data is permitted, and only if disclosed. T2 and T3 forbid it entirely.",
+    "Anything measured at, or biologically closer to, a held-out stage/genotype than to the nearest released stage counts as using the answer -- including a merely pretrained model, and including the Virtual Embryo atlas on the challenge's own site.",
+    "Validation and test targets are never distributed. A submission returns a number, not data.",
+    "No agent in this loop may upload a submission or overwrite an existing artifact. Promotion means 'queued for human review'.",
+    "Precomputed embeddings shipped inside the h5ad files have unaudited provenance under the external-data rule; recompute from raw .X instead.",
+    "obs_names are not unique (2811 duplicated barcodes in the Mab21l2 KO file). Never join on them.",
+    "Spatial coordinates are per-embryo in scale AND origin; re-centre per file before pooling."
+  ],
+  "content_hash": "75db6c8c14a41b3f",
+  "changes": []
+}

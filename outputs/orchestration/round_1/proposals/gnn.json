@@ -1,0 +1,79 @@
+{
+  "expert": "gnn",
+  "round": 1,
+  "searches_run": [
+    "site.arxiv.org Graph Convolutional Networks simple scalable graph convolution Wu 2019",
+    "site.nature.com GEARS predicting transcriptional outcomes novel multigene perturbations 2023",
+    "site.arxiv.org deeper insights graph convolutional networks semi supervised learning oversmoothing 2018"
+  ],
+  "proposals": [
+    {
+      "id": "gnn-r1-1",
+      "board": "PROCESS",
+      "title": "Separate graph topology gains from smoothing and model capacity",
+      "claim": "A matched ablation suite can falsify attribution of future predictive gains to biological graph topology when feature-only or fixed-smoothing controls reproduce them.",
+      "mechanism": "Compare neighborhood_mmd, mmd_u and de_direction under whole-embryo splits with equal sampling: MLP, coordinate MLP, fixed smoothing, shallow GNN and rewired edges. Improvement only over an unmatched MLP cannot establish useful topology.",
+      "cost": "compute-only",
+      "falsifier": "Once lawful data exist, matched controls reproduce the GNN metric delta within embryo-level uncertainty; decline topology-benefit attribution. No empirical biological comparison is possible now.",
+      "local_ground_truth": "no",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/prompts.md:367-386",
+          "says": "Requests graph variants and comparison of absent versus known biological prior; reports no executed outcome.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "literature",
+          "ref": "Wu et al., Simplifying Graph Convolutional Networks, ICML 2019, https://proceedings.mlr.press/v97/wu19e.html",
+          "says": "A fixed low-pass filter plus linear classifier can retain performance in studied applications; motivates a smoothing control.",
+          "verified": "abstract-only"
+        }
+      ],
+      "confidence": 0.87,
+      "novelty": "adaptation"
+    },
+    {
+      "id": "gnn-r1-2",
+      "board": "PROCESS",
+      "title": "Make edge provenance and cavity shortcuts explicit validation gates",
+      "claim": "An edge provenance audit plus hollow-shell synthetic check will expose target-derived graph inputs and Euclidean kNN cavity shortcuts before biological model training.",
+      "mechanism": "Record split-specific inputs and graph rules; prohibit truth-derived preprocessing or edges entering prediction. Test ordinary versus radius-limited mutual kNN on a shell. This protects interpretation of neighborhood_mmd rather than asserting a score gain.",
+      "cost": "compute-only",
+      "falsifier": "An intentionally injected held-out-derived edge source passes the audit, or a known cavity-crossing edge is not detected by the synthetic diagnostic; then the proposed gate is inadequate.",
+      "local_ground_truth": "no",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/agenticprompt:243-257",
+          "says": "GNN review explicitly covers graph construction, spatial graphs, graph leakage, oversmoothing and topology sensitivity.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/prompts.md:167-180",
+          "says": "Lists sample, animal, spatial-neighborhood, normalization, PCA and external-dataset leakage risks.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "literature",
+          "ref": "Roohani et al., GEARS, Nature Biotechnology online 2023 / volume 2024, https://www.nature.com/articles/s41587-023-01905-6",
+          "says": "Uses distinct coexpression and GO graphs; poorly connected unseen perturbation genes limit predictions.",
+          "verified": "read-directly"
+        }
+      ],
+      "confidence": 0.83,
+      "novelty": "adaptation"
+    }
+  ],
+  "peer_responses": [
+    {
+      "peer": "spatial3d",
+      "stance": "refine",
+      "on": "spatial3d-r1-1 scorer conformance and spatial3d-r1-2 provenance gates",
+      "because": "Endorse gates, but descriptor invariance cannot establish cavity or laterality preservation. Missing scorer imports (Neurl IPS 2026/agent_orchestrator.py:27-28) require separate labelled shell, coverage and boundary diagnostics before anatomical attribution."
+    }
+  ],
+  "self_correction": "n/a (initial review)",
+  "declined": "Immediate deep spatial GNN or GEARS adoption: no data or implementation supports benefit; cavity shortcuts, oversmoothing, sparse perturbation supervision and prior exposure must be audited first. Historical killed-kNN assertions are unverified."
+}

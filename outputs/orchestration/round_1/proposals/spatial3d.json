@@ -1,0 +1,79 @@
+{
+  "expert": "spatial3d",
+  "round": 1,
+  "searches_run": [
+    "\"Spatial alignment of spatial transcriptomics\" PASTE2 partial overlap",
+    "\"A spatiotemporal molecular atlas of the developing mouse embryo\" MERFISH 2025",
+    "STalign alignment spatial transcriptomics diffeomorphic metric mapping 2023 Nature Communications"
+  ],
+  "proposals": [
+    {
+      "id": "spatial3d-r1-1",
+      "board": "PROCESS",
+      "title": "Verify scorer invariances and expression-coordinate pairing before geometry modelling",
+      "claim": "An asymmetric synthetic-cloud suite will determine which scorer terms respond to frame, size and expression-coordinate pairing changes, without needing biological targets.",
+      "mechanism": "Translate/rotate/scale/reflect clouds and permute rows jointly or expression alone. Compare d2_shape, occupancy_dice, scale_log_ratio and neighborhood_mmd with fixed sampling. Inspect axis degeneracy separately; do not assume website mirror-equivalence from proper sign flips alone.",
+      "cost": "compute-only",
+      "falsifier": "Once the official scorer is available, run frozen transformations. Any reproducible deviation from the documented invariance kills the asserted conformance and blocks relying on it until implementation is understood.",
+      "local_ground_truth": "no",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/agent_orchestrator.py:27",
+          "says": "Imports common and scoring, which the audited source tree does not supply; local scorer equivalence is not established.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/orchestration/personas.py:348",
+          "says": "Mandates absent geometry/scoring artifacts; historical numbers here are not directly verified experiments.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "literature",
+          "ref": "Virtual Embryo Challenge official T2 scoring, 2026, https://virtualembryo.ai/challenge/evaluation?section=scoring&task=2",
+          "says": "Documents coordinate invariances, separate size scoring and coupling-independent neighbourhood profile comparison.",
+          "verified": "read-directly"
+        }
+      ],
+      "confidence": 0.88,
+      "novelty": "adaptation"
+    },
+    {
+      "id": "spatial3d-r1-2",
+      "board": "PROCESS",
+      "title": "Require coordinate provenance before interpreting scale as biological growth",
+      "claim": "A provenance gate will prevent an undocumented physical-unit conversion or coverage difference from being labelled validated biological growth.",
+      "mechanism": "Record units, per-axis spacing, frame handedness, section coverage and exclusions before interpreting scale_log_ratio. Preserve calibrated raw coordinates separately from RMS-normalised shape coordinates. Flag rather than silently correct unidentified distortions.",
+      "cost": "free",
+      "falsifier": "Supply two identical biological clouds under different documented unit conversions and a cropped version. If the audit labels their raw RMS differences as validated growth, the proposed gate fails.",
+      "local_ground_truth": "no",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/agent_orchestrator.py:144",
+          "says": "Coordinate validation checks array shape and finite values, without verifying physical units or acquisition coverage.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "literature",
+          "ref": "Clifton et al., STalign, Nature Communications 14:8123, 2023, https://doi.org/10.1038/s41467-023-43915-7",
+          "says": "Models partially matched sections and nonlinear distortions, assessing correspondence with independent landmarks and expression.",
+          "verified": "read-directly"
+        }
+      ],
+      "confidence": 0.84,
+      "novelty": "adaptation"
+    }
+  ],
+  "peer_responses": [
+    {
+      "peer": "gnn",
+      "stance": "refine",
+      "on": "Scorer conformance and unit provenance do not establish anatomical topology or boundary-aware graphs.",
+      "because": "Accepted. Need registered structural segmentation, coverage masks and handed landmarks; synthetic cavity/density/coverage controls distinguish graph shortcuts. Neurl IPS 2026/agent_orchestrator.py:144 checks only finite coordinates."
+    }
+  ],
+  "self_correction": "n/a (initial review)",
+  "declined": "Reject anchor-derived target rescaling: anchors are evaluation calibration, not justified target anatomy. Reject unconditional diffeomorphic developmental interpolation because new structures and uncertain correspondence are not identified by sparse snapshots."
+}

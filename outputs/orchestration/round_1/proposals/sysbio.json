@@ -1,0 +1,73 @@
+{
+  "expert": "sysbio",
+  "round": 1,
+  "searches_run": [
+    "single cell differential expression differential abundance compositional scCODA B\u00fcttner 2021 Nature Communications",
+    "Waddington OT Schiebinger 2019 optimal transport growth death developmental trajectories single cell",
+    "Gata4 Gata6 redundancy cardiac differentiation knockout mouse embryo primary paper 2008"
+  ],
+  "proposals": [
+    {
+      "id": "sysbio-r1-1",
+      "board": "PROCESS",
+      "title": "Separate critic judgments from empirical evidence lifecycle",
+      "claim": "An evidence lifecycle requiring an executed experiment artifact will keep unsupported PLAUSIBLE and UNPROVEN judgments open instead of labeling them empirically supported or falsified.",
+      "mechanism": "This changes claim provenance, not de_score, de_direction, severity_slope or mmd_u directly. Preserve critic_status separately; require measured evidence for support and an executed falsifier for empirical rejection so a judge's opinion cannot become a biological result.",
+      "cost": "compute-only",
+      "falsifier": "Use isolated fixtures with PLAUSIBLE and UNPROVEN verdicts but no experiment artifacts. Kill the claim if either lifecycle becomes empirically supported or falsified, or verified experimental evidence cannot be represented distinctly.",
+      "local_ground_truth": "yes",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/orchestration/memory/update.py:34-35,86-103",
+          "says": "PLAUSIBLE enters SUSTAINED; UNPROVEN enters REJECTED; these map to supported and falsified. This is inspectable code ground truth, not biological data.",
+          "verified": "read-directly"
+        }
+      ],
+      "confidence": 0.9,
+      "novelty": "incremental"
+    },
+    {
+      "id": "sysbio-r1-2",
+      "board": "PROCESS",
+      "title": "Validate composition and conditional-expression attribution before mechanism claims",
+      "claim": "A planned mixture decomposition with an explicit interaction term will distinguish known composition-only and within-state-only synthetic mean shifts before being used to interpret biological predictions.",
+      "mechanism": "Pseudobulk changes used by de_score, de_direction and severity_slope combine state proportions and conditional means; mmd_u also responds to their distributions. Compare unchanged, composition-only, expression-only and joint predictors with fixed sampling, and report interaction rather than naming all shifts regulation.",
+      "cost": "compute-only",
+      "falsifier": "Inject proportion-only and mean-only changes into a small two-state simulation. Reject this diagnostic if exact decomposition fails or assigns a nonzero conditional-expression component to a pure proportion shift under the fixed true state map.",
+      "local_ground_truth": "no",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/agent_orchestrator.py:163-184",
+          "says": "Proxy scoring uses first-cell slices, up to 150 cells; population ordering can change sampled mixture. Required data and scoring imports are absent locally.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "literature",
+          "ref": "B\u00fcttner et al., scCODA, Nature Communications, 2021, doi:10.1038/s41467-021-27150-6; https://www.nature.com/articles/s41467-021-27150-6",
+          "says": "Joint composition modeling addresses constrained relative abundances; developmental continua complicate fixed cell-type definitions. Published full text inspected.",
+          "verified": "read-directly"
+        }
+      ],
+      "confidence": 0.78,
+      "novelty": "adaptation"
+    }
+  ],
+  "peer_responses": [
+    {
+      "peer": "sciml",
+      "stance": "refine",
+      "on": "sciml-r1-1 observation operator distinguishes capture from biological conservation",
+      "because": "Observed state fractions depend on capture times physical abundance; either factor can produce identical rows. Add an abstention test for observationally equivalent systems. Neurl IPS 2026/agent_orchestrator.py:128-147 checks file structure only."
+    },
+    {
+      "peer": "sciml",
+      "stance": "refine",
+      "on": "sciml-r1-2 degree-preserving randomized-prior controls",
+      "because": "Endorse matched-budget controls, but randomization should also assess evidence density, expression support and state specificity. Degree alone leaves alternative information channels changed; passing forecasts does not identify feedback."
+    }
+  ],
+  "self_correction": "n/a (initial review)",
+  "declined": "Declined fixed GATA6 compensation coefficients and Axin2-dependent beta-catenin rules. Literature supports context-dependent redundancy, not induced feedback in this project; no panel or perturbation observations are available to verify either rule."
+}

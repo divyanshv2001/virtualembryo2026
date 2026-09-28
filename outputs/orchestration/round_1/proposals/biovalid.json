@@ -1,0 +1,85 @@
+{
+  "expert": "biovalid",
+  "round": 1,
+  "searches_run": [
+    "site.nature.com Gata4 visceral endoderm rescue tetraploid complementation 1997 embryogenesis [quarantined target-oriented search; no findings used in competition proposals]",
+    "site.nature.com single cell differential expression biological replicates pseudoreplication Squair 2021",
+    "site.nature.com simultaneous lineage tracing single cell transcriptomics zebrafish embryogenesis scGESTALT 2018"
+  ],
+  "proposals": [
+    {
+      "id": "biovalid-r1-1",
+      "board": "PROCESS",
+      "title": "Require embryo provenance and composition/state decomposition before biological claims",
+      "claim": "A pooled expression match cannot certify within-compartment state accuracy without independent composition measurements and embryo-level replication.",
+      "mechanism": "Treat de_score and de_direction as predictive diagnostics, separating frozen-state composition reweighting from within-state changes; independent embryo contrasts and abundance assays reveal composition-driven matches. This is a validation requirement, not a promised metric gain.",
+      "cost": "free",
+      "falsifier": "With eligible data, compare composition-only and state-changing predictions against blinded compartment counts and replicate-aware within-compartment readouts. If these endpoints agree for both, the proposed decomposition does not distinguish their biological validity.",
+      "local_ground_truth": "no",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/prompts.md:1037",
+          "says": "Warns that cells sharing an embryo/sample are not independent biological replicates.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/agent_orchestrator.py:175",
+          "says": "Proxy selects the first at most 150 candidate and target rows rather than a sample-balanced cloud.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "literature",
+          "ref": "Squair et al., Confronting false discoveries in single-cell differential expression, Nature Communications, 2021, doi:10.1038/s41467-021-25960-2",
+          "says": "Publisher-indexed excerpts report false discoveries when biological replicate variability is ignored.",
+          "verified": "search-snippet-only"
+        }
+      ],
+      "confidence": 0.86,
+      "novelty": "adaptation"
+    },
+    {
+      "id": "biovalid-r1-2",
+      "board": "PROCESS",
+      "title": "Attach an orthogonal observation requirement to each mechanistic claim",
+      "claim": "Transcriptomic trajectories alone cannot validate ancestry or direct regulatory effects; claims need independent lineage or timed perturbation observations.",
+      "mechanism": "de_direction and neighborhood_mmd can improve without correct ancestry or direct regulation. Require lineage recording for ancestry and timed restricted perturbation plus functional rescue for mechanism; report anatomy separately from scored expression diagnostics.",
+      "cost": "free",
+      "falsifier": "Audit every claimed lineage/regulatory conclusion: suspend it if only transcriptomic similarity or transport is supplied. Eligible future assays must contradict or corroborate a preregistered observation, with protected-target assays quarantined post-competition.",
+      "local_ground_truth": "no",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/agenticprompt:910",
+          "says": "Explicitly distinguishes biologically plausible stories from biological validation.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "literature",
+          "ref": "Raj et al., Simultaneous single-cell profiling of lineages and cell types in the vertebrate brain, Nature Biotechnology, 2018, doi:10.1038/nbt.4103",
+          "says": "scGESTALT combines heritable lineage recording with transcriptome-based cell identification in zebrafish.",
+          "verified": "abstract-only"
+        }
+      ],
+      "confidence": 0.9,
+      "novelty": "adaptation"
+    }
+  ],
+  "peer_responses": [
+    {
+      "peer": "replearn",
+      "stance": "refine",
+      "on": "replearn-r1-2: attribute matched forecast benefit to representation",
+      "because": "Matched heads alone do not control differing decoders. Cross encoder/decoder choices or share output mapping; independent protein localization plus counts separates state from mixture accuracy. Neurl IPS 2026/prompts.md:263\u2013290 supplies no result."
+    },
+    {
+      "peer": "replearn",
+      "stance": "endorse",
+      "on": "Panel markers are correlated validation; unknown-state support needs a withheld population",
+      "because": "Freeze abstention thresholds, retain unassigned mass and test a genuinely withheld eligible population. Independent embryo readouts are unavailable; claim stays planned. Neurl IPS 2026/prompts.md:1037 rejects cells as independent replicates."
+    }
+  ],
+  "self_correction": "n/a (initial review)",
+  "declined": "Declined protected-target literature edits and decorative PRDM1 validation: no local assay exists, hidden response measurements must remain quarantined, and expression plausibility does not establish mechanism."
+}

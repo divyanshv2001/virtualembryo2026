@@ -1,0 +1,109 @@
+{
+  "status": "provisional_template_not_registered_not_executed",
+  "scope": "Research audit; no competition eligibility certification and no biological outcome",
+  "primary": {
+    "task": "T2 embryo released-stage interpolation proxy",
+    "fitting_stages": ["E6.75", "E8.0"],
+    "assessment_stage": "E7.25",
+    "distance_from_earlier_stage_days": 0.5,
+    "distance_from_later_stage_days": 0.75,
+    "estimator": "shrunk_endpoint_recentering; exact implementation and real normalization contract pending",
+    "comparator": "endpoint_mixture; matched preprocessing, training-derived strata and endpoint sampling",
+    "effect": "D = mmd_u(endpoint_mixture,target) - mmd_u(shrunk_endpoint_recentering,target)",
+    "permissible_conditional_claim": "Predictive usefulness of this frozen recentering transformation over endpoint mixture on this released-stage proxy only",
+    "attribution_excluded": "Neither isolated composition/state attribution nor causal dynamics: both estimators use endpoint conditional expression, and recentering changes between-endpoint variance",
+    "persistence": "secondary comparator; no superiority claim without separate preregistration",
+    "other_tasks": "secondary or exploratory; no official interpolation, extrapolation or unseen-gene generalization claim"
+  },
+  "freeze_gate": {
+    "confirmatory_claim_allowed_now": false,
+    "analysis_owner": null,
+    "immutable_lock_timestamp": null,
+    "manifest_path_and_hash": null,
+    "exact_fit_development_assessment_sample_ids": null,
+    "embryo_litter_batch_identifiers": null,
+    "independent_biological_replication_count": null,
+    "target_population_and_embryo_weighting": null,
+    "eligibility_provenance_packet": null,
+    "gene_panel_order_and_hash": null,
+    "normalization_and_state_construction_recipe": null,
+    "estimator_code_hash_and_hyperparameters": null,
+    "selection_rule_and_candidate_budget": null,
+    "scorer_version_commit_hash": null,
+    "mmd_estimator_kernel_bandwidth_representation": null,
+    "cell_sampling_counts_seeds_and_refit_policy": null,
+    "coordinate_units_frame_and_neighborhood_policy": null,
+    "truth_fitted_evaluator_operations": "Evaluation only; unavailable for predictor fitting or subsequent confirmatory selection",
+    "primary_practical_margin_delta_star": null,
+    "margin_justification_from_eligible_pilot_or_scientific_tolerance": null,
+    "guardrail_loss_margins_eta_j": null,
+    "one_sided_alpha": null,
+    "simultaneous_guardrail_claim_method": null,
+    "anticipated_pilot_alternative_mu_A": null,
+    "paired_variance_and_cluster_aware_planning": null,
+    "policy": "Resolve required fields for the requested analysis mode before target access. Nulls never imply defaults. Numerical guardrail margins and simultaneous procedures are conditionally required only for a registered noninferiority claim. Descriptive secondary analyses do not require them. Access enforcement is specified only, not implemented or tested."
+  },
+  "readiness": {
+    "descriptive_expression": {
+      "ready_now": false,
+      "requires": ["eligible real samples and exact split manifest", "verified annotation and measured-space normalization contracts", "frozen endpoint-mixture/recentering implementation", "specified expression scorer and sampling procedure", "actual access-enforcement implementation and tests before execution"],
+      "not_required": ["positive practical margin", "biological replication sufficient for population inference", "noninferiority tolerances", "spatial frame contract"],
+      "permitted_scope": "Descriptive D and conditional sampling/refit sensitivity, with available embryo identities and dependence limitations reported"
+    },
+    "confirmatory_expression": {
+      "ready_now": false,
+      "requires": ["all descriptive-expression requirements", "untouched exact assessment and completed immutable selection lock", "independent embryo/litter/batch manifest and sufficient replication", "prespecified population weighting and inferential procedure", "justified delta_star and one-sided alpha", "documented planning or sample-size justification"],
+      "conditional_requirements": "eta_j and simultaneous_guardrail_claim_method required only if noninferiority/no-degradation claim registered",
+      "permitted_scope": "Frozen recentering-versus-mixture contrast on the stated proxy; no decomposition or generalization claim"
+    },
+    "spatial": {
+      "ready_now": false,
+      "independent_of_expression_readiness": true,
+      "requires": ["training-derived documented common coordinate frame", "verified physical units and comparable capture coverage", "predeclared pooled or per-embryo spatial estimand", "specified spatial scorer and neighborhood construction"],
+      "if_unavailable": "Copied donor coordinates are serialization placeholders only; exclude pooled anatomical, joint-distribution and neighborhood interpretation. Never register using E7.25 truth."
+    }
+  },
+  "success_rule": {
+    "primary": "Prespecified one-sided lower confidence bound for across-independent-embryo mean D exceeds delta_star > 0",
+    "secondary_analysis_mode": "descriptive; no noninferiority or no-degradation claim registered",
+    "guardrail_field_applicability_now": "not_applicable to descriptive secondary analysis; numerical inputs remain null",
+    "guardrails_if_future_claim_registered": "Each prespecified simultaneous upper bound for deterioration-oriented G_j is below eta_j; nonsignificance is insufficient. Requires new preregistration before untouched assessment access.",
+    "guardrail_components": ["direction", "co-expression", "T2 shape", "T2 scale", "T2 neighborhood"],
+    "if_guardrails_not_registered": "Report components descriptively and drop no-degradation claim",
+    "planning": "Record mu_A > delta_star separately; distance to threshold is mu_A - delta_star, with small-sample and litter/batch sensitivity",
+    "insufficient_data": "No confirmatory inference; descriptive D and conditional sampling/refit variability only"
+  },
+  "data_roles": {
+    "fitting": "Eligible E6.75/E8.0 samples; fit normalization, states, weights and predictor without E7.25 values",
+    "selection": "Training-only evidence or separately eligible development samples disjoint from assessment; freeze estimator and hyperparameters before access",
+    "assessment": "Exact manifest-locked independent E7.25 embryos; score locked predictions once under frozen procedure",
+    "exploration": "After assessment, residuals may inform research hypotheses; any resulting model requires fresh eligible untouched assessment",
+    "legacy_proxy": "Neurl IPS 2026/agent_orchestrator.py::_proxy_score is explicitly not an implementation of this plan"
+  },
+  "target_access_policy": {
+    "policy_specified": true,
+    "illustrative_event_sequence_present": true,
+    "enforcement_implemented": false,
+    "enforcement_tested": false,
+    "clean_context_isolation_implemented": false,
+    "clean_context_isolation_tested": false,
+    "execution_gated": true,
+    "ledger_append_only_requirement": true,
+    "future_operational_verification": "Implement durable ledger and immutable model/data/config hashes; actually call repeat-assessment, change-lock and excluded-artifact retrieval operations and verify refusal. Current illustrative events and boolean assertions do not test enforcement.",
+    "event_fields": ["event_id", "timestamp", "actor", "sample_ids", "data_hash", "purpose", "model_hash", "configuration_lock_hash", "observed_outputs", "decision", "assessment_consumed", "followup_requires_fresh_target"],
+    "before_first_access": "Assess only if freeze gate passed and target untouched",
+    "on_assessment_access": "Irrevocably mark this assessment consumed; completion cannot reset status",
+    "on_residual_access_or_model_change": "Mark follow-up exploratory; original target cannot assess revised model confirmatorily",
+    "reuse_prohibition": "No E7.25 residual-guided architecture, prior, preprocessing or hyperparameter selection followed by confirmatory reuse of the same E7.25 assessment"
+  },
+  "synthetic_ledger_policy_illustration": {
+    "label": "Hand-written policy illustration only; no evaluator call, actual refusal, durable ledger, isolated launch or biological target access occurred",
+    "initial_state": "untouched",
+    "events": [
+      {"event_id": "synthetic-1", "action": "lock model and complete hypothetical freeze gate", "state_after": "untouched", "decision": "assessment permitted"},
+      {"event_id": "synthetic-2", "action": "assess locked model on fictional target A", "state_after": "consumed", "decision": "record hypothetical assessment; no outcome supplied"},
+      {"event_id": "synthetic-3", "action": "inspect fictional target A residual and change architecture", "state_after": "consumed", "decision": "exploratory; require fresh eligible target"},
+      {"event_id": "synthetic-4", "action": "illustrate request for confirmatory assessment of revised model on fictional target A", "state_after": "consumed", "decision": "policy would require rejection: target already consumed; not an actual refusal"}
+    ]
+  }
+}

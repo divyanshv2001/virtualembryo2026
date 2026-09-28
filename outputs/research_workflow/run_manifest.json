@@ -1,0 +1,486 @@
+{
+  "started": "2026-09-27",
+  "finalized": "2026-09-28",
+  "workflow": "agenticprompt adopted by user",
+  "experts_completed": 16,
+  "paired_discussions": 8,
+  "critic_loops_completed": 2,
+  "critic_revisions_completed": 2,
+  "biological_experiments_executed": 0,
+  "original_source_modified": false,
+  "live_jev_requests": 3,
+  "jev_usage": {
+    "input_tokens": 9094,
+    "output_tokens": 316
+  },
+  "scientific_contribution": "source-grounded audit and prospective falsifiable protocol",
+  "competition_eligibility": "unresolved; current contexts exposed",
+  "access_enforcement": "not implemented or tested",
+  "source_inventory": "inventory.json",
+  "final_report": "REPORT.md",
+  "final_synthesis": "SYNTHESIS_2.md",
+  "proposal_count": 28,
+  "evidence_entries": 74,
+  "readiness": {
+    "descriptive_expression": false,
+    "confirmatory_expression": false,
+    "spatial": false
+  },
+  "scope_note": "Historical synthesized design files are preserved; SYNTHESIS_2, final design/template/report control interpretation.",
+  "artifact_hashes": [
+    {
+      "path": "outputs/research_workflow/.gitignore",
+      "sha256": "8e69a9d983eadb7e86862ee8f718b8e9d8a36e7990a2855262a3060a192099ae"
+    },
+    {
+      "path": "outputs/research_workflow/amend_loop1.py",
+      "sha256": "414d77736f4c640dd4d019a2881e49d5da979b27d9af322a1d75913825f322dc"
+    },
+    {
+      "path": "outputs/research_workflow/audit_check_results.json",
+      "sha256": "80333005bc3bb92e17a7d0823f9c458ac000c322c7d2f0fedd43bd9b3ebea3e8"
+    },
+    {
+      "path": "outputs/research_workflow/audit_checks.py",
+      "sha256": "6c450d24eaa9d89aded33d501bcf22cbed2e919b766e87bdb3b29be21ccafe7f"
+    },
+    {
+      "path": "outputs/research_workflow/baseline_contract_checks.py",
+      "sha256": "edc40f105bb5c2bdaf97691ff1249ce28cdab5204cd46a7275ab0476f4f3fadd"
+    },
+    {
+      "path": "outputs/research_workflow/baseline_contract_results.json",
+      "sha256": "77740387fd7a8e828fa1ae25554df11a12aaee7ba88f812c8b5cfdd2c860f407"
+    },
+    {
+      "path": "outputs/research_workflow/build_discussions.py",
+      "sha256": "5b900a1be630d282701c059217b9f16c1b15594b621445406d7700ed68e60dc3"
+    },
+    {
+      "path": "outputs/research_workflow/build_registries.py",
+      "sha256": "3cbd6899ff5bc942b28a5947c4eafc9728a6337669f999ba2753ebc57232019c"
+    },
+    {
+      "path": "outputs/research_workflow/check_git_content.py",
+      "sha256": "7a0b3e020063d71c4dcc9f3cf10aad599c6a024bb6f281379999bacd13b58a42"
+    },
+    {
+      "path": "outputs/research_workflow/CLOSEST_WORK.md",
+      "sha256": "c37c5c68b0bb2d9b8d76a35eb9d34eec02939e360ada0c0967f202d90a4197e3"
+    },
+    {
+      "path": "outputs/research_workflow/CODE_AUDIT.md",
+      "sha256": "592ad0b4ba0feab3d09e985c071596cf37bb0bd22f7000a2e39de30cd91c2860"
+    },
+    {
+      "path": "outputs/research_workflow/corrections/loop1_benchdesign.md",
+      "sha256": "7e05a5af5d0b423c1a767299af4f3cf05ddaf0a7ca7f1ce11955bcc55a3572da"
+    },
+    {
+      "path": "outputs/research_workflow/corrections/loop1_causal.md",
+      "sha256": "7e5cf4349e2e69d5f7ef2ca20022146a89da3a561d2de4e0a70135882c599fc8"
+    },
+    {
+      "path": "outputs/research_workflow/corrections/loop1_genmodel.md",
+      "sha256": "5158046c9f757a2ea8753e1138406bf0306922d7647a68a50148462b22dd2338"
+    },
+    {
+      "path": "outputs/research_workflow/corrections/loop1_spatial3d.md",
+      "sha256": "befea5183ff179982168a3083356980b3a4784cf2ff56e73caf1bb14d93ae4ed"
+    },
+    {
+      "path": "outputs/research_workflow/corrections/loop1_stats.md",
+      "sha256": "88ac3e7ca906ce752d9e9b1c94f118db852f124c09c9091b0e4d3f4b2cbfc20d"
+    },
+    {
+      "path": "outputs/research_workflow/corrections/loop1_sysbio.md",
+      "sha256": "278995d7eb2b839cd75e0039ee7d271adb80a6d8ac4c49a7680536a6460adce3"
+    },
+    {
+      "path": "outputs/research_workflow/corrections/loop2_benchdesign.md",
+      "sha256": "e4cb7ee803a9360fa30e70b8c517eaf5aeff54402cb987d0b3433d109fda610b"
+    },
+    {
+      "path": "outputs/research_workflow/corrections/loop2_genmodel.md",
+      "sha256": "1eb1e7eaec58137f9e9ad898b623efaf1d2031890a68bd9d92c4fe6d595c96fc"
+    },
+    {
+      "path": "outputs/research_workflow/corrections/loop2_registry_patch.py",
+      "sha256": "f8e257b25b870c37b41465579c42b8c11cab60fe6e06cab49544b3dfb64d9e79"
+    },
+    {
+      "path": "outputs/research_workflow/corrections/loop2_spatial3d.md",
+      "sha256": "ad8ed91acb45da9035a78fb5627eb907dc7fa470d32903e81bafbb421b1faa8e"
+    },
+    {
+      "path": "outputs/research_workflow/corrections/loop2_sysbio.md",
+      "sha256": "ab48765ea32d1632a432a4ed4820ff2adfaa7ebca0a11196daf684ceb64c07c1"
+    },
+    {
+      "path": "outputs/research_workflow/critics/issues_1.json",
+      "sha256": "41f7e2d8c38e8dee5533008d3402f876d169b5bf7076d82eb5ea55c8d0aa3cf8"
+    },
+    {
+      "path": "outputs/research_workflow/critics/issues_2.json",
+      "sha256": "5c4b909ac9d4fcde2ed8c36dbf79724a9a04b03cbcc3cbbb7cc7d14c0ec427a7"
+    },
+    {
+      "path": "outputs/research_workflow/critics/loop_1.md",
+      "sha256": "b89e511c62b02d4a811dfce30b163fb790a62ab0ed4f5187285e0bd5bc26f023"
+    },
+    {
+      "path": "outputs/research_workflow/critics/loop_2.md",
+      "sha256": "624148f16cec06488681b261b728f147bef52b0a44f75fd8dcb9b1c904968d91"
+    },
+    {
+      "path": "outputs/research_workflow/critics/resolution_1.md",
+      "sha256": "6a5cb7f8ff7c9d6f6f5aebbc0a14ca65f1f2635a5c1ea7b1c41221a6f4357e9f"
+    },
+    {
+      "path": "outputs/research_workflow/critics/resolution_2.md",
+      "sha256": "02d3f298345169e7a57c69b64d92641e95b4006bcd6c8ba9ec19ac6d64733451"
+    },
+    {
+      "path": "outputs/research_workflow/debate/benchdesign.md",
+      "sha256": "4ee815dc63131f2282a2696ba0855da380e965ae58d39188e1fc443c8d8bf5a4"
+    },
+    {
+      "path": "outputs/research_workflow/debate/biovalid.md",
+      "sha256": "88943069cf97edfd5ca6278753bc6b25408cc41666cbf71f064a0a0a5d92760c"
+    },
+    {
+      "path": "outputs/research_workflow/debate/causal.md",
+      "sha256": "b2102e9b59fdd932dbfcddedf2f082f27a59ab8aac360acd7037502fefed01c1"
+    },
+    {
+      "path": "outputs/research_workflow/debate/devbio.md",
+      "sha256": "153707d57bcde2473d58549d784c4732bf483dce121508ab18bd63d25e3d76b5"
+    },
+    {
+      "path": "outputs/research_workflow/debate/diffusion.md",
+      "sha256": "deb62f01c34a9133502e850880ad98b56ca79db989bb5371cd8453e055333ccb"
+    },
+    {
+      "path": "outputs/research_workflow/debate/genmodel.md",
+      "sha256": "f4711dd405962bc8187245f316568507ee9e48d915f9463f8b7925c54351fcf7"
+    },
+    {
+      "path": "outputs/research_workflow/debate/gnn.md",
+      "sha256": "c3105f0fd9eaf0daac8f3ce977b54a0a54e2b2e35ff37c8cab8c067a218bbf5a"
+    },
+    {
+      "path": "outputs/research_workflow/debate/grn.md",
+      "sha256": "83a2915ce531cf2e523f6c364fdc391449d4cff6a3d8482c36ae46674999fb86"
+    },
+    {
+      "path": "outputs/research_workflow/debate/neuralode.md",
+      "sha256": "e5470fd152d978f24fe85975c833311faf0fceaf478fd6c8875b405ac6d6812e"
+    },
+    {
+      "path": "outputs/research_workflow/debate/replearn.md",
+      "sha256": "65f2744731e47f1f8f00e3139fe55b9f3f6f18485af0624be9362f85c3cf0265"
+    },
+    {
+      "path": "outputs/research_workflow/debate/scgenomics.md",
+      "sha256": "18e3279d703937b32d940f8dd9034d2961074638f10c85fcfaa4f3259a39b2bd"
+    },
+    {
+      "path": "outputs/research_workflow/debate/sciml.md",
+      "sha256": "d3c8b0b16a5f9037d84bc11b062c97d1652e06e0a34017550b140a8dc930bda6"
+    },
+    {
+      "path": "outputs/research_workflow/debate/spatial3d.md",
+      "sha256": "f0ecceea8e240d9ea227c08b0970989a4320718c557acd1154bf43c7b8a0c8aa"
+    },
+    {
+      "path": "outputs/research_workflow/debate/spatialtx.md",
+      "sha256": "a7c47f78e59604e685390641994745d38d860bbea3004db34bcd6f59c596aaac"
+    },
+    {
+      "path": "outputs/research_workflow/debate/stats.md",
+      "sha256": "14ee5066fcfeb385f5ed4a4a7253274a448aa2b4af93521651dfb294bf8b1772"
+    },
+    {
+      "path": "outputs/research_workflow/debate/sysbio.md",
+      "sha256": "6dd3db84d4fbf1668b02deed14dfd3a2aa2560b226ced24cc249d18e5cb4311e"
+    },
+    {
+      "path": "outputs/research_workflow/DEBATE_PROTOCOL.md",
+      "sha256": "8274be25bce1409ff07b1749ed0662b02c409f47bff6350bcd1cc1a5c6a1ac80"
+    },
+    {
+      "path": "outputs/research_workflow/decision_layer.py",
+      "sha256": "c2cb876d212722e1c6fca90545373cc6d3f7710c1a4faec20df1e1459c7a1dae"
+    },
+    {
+      "path": "outputs/research_workflow/DECISION_LOG.md",
+      "sha256": "871132052204bdaadb61f3c5d357b806f5af313a32c9e36b192cc29997f48e47"
+    },
+    {
+      "path": "outputs/research_workflow/disagreement_registry.json",
+      "sha256": "5269659bed860f7fff7572f1af3579dde495fcb0749edf9a1462c2e192d41e25"
+    },
+    {
+      "path": "outputs/research_workflow/evidence_ledger.json",
+      "sha256": "6a9e140846298f4cbc349e69e8f0d75a474e4d1cc6ca482debfdbb9954d8e570"
+    },
+    {
+      "path": "outputs/research_workflow/EXPERIMENT_DESIGN.md",
+      "sha256": "c1f9bc423526d614993464d712481625ff3775d65262d22f9515cc99a1a7b4de"
+    },
+    {
+      "path": "outputs/research_workflow/EXPERIMENT_DESIGN_REV1.md",
+      "sha256": "6880755bb7cd131be9a8e65334fe319c535b5aaf115ed54b33603cfcbc68db09"
+    },
+    {
+      "path": "outputs/research_workflow/EXPERT_PROTOCOL.md",
+      "sha256": "a4574069196bf74f77c3595915f7f0723f84e5dc4335f0abf933a6b3d0b1cd82"
+    },
+    {
+      "path": "outputs/research_workflow/experts/benchdesign.md",
+      "sha256": "bd6d8da12e9b68e575358c8668814fd53a2f8bd4391a366f304b202c45b4fdfd"
+    },
+    {
+      "path": "outputs/research_workflow/experts/biovalid.md",
+      "sha256": "160966696d1e2effaf9516d6194936a6da8f606ae33607a4120ac4f9503a227c"
+    },
+    {
+      "path": "outputs/research_workflow/experts/causal.md",
+      "sha256": "cdc15cdd41b7f8a8027a521abd20afbca176cb05987d1732862672c8ee15d8de"
+    },
+    {
+      "path": "outputs/research_workflow/experts/devbio.md",
+      "sha256": "a32bc89e1301839e7e0019310f93754da78f093fbd78fa635e1439852dd07226"
+    },
+    {
+      "path": "outputs/research_workflow/experts/diffusion.md",
+      "sha256": "11119361533127256909d17d855409707d31df1e126fee860c874d7d7df78b1c"
+    },
+    {
+      "path": "outputs/research_workflow/experts/genmodel.md",
+      "sha256": "770f818e660b8098767986408789c7e8b23dd9e1446bad9b56ef2716077df85a"
+    },
+    {
+      "path": "outputs/research_workflow/experts/gnn.md",
+      "sha256": "3daa80733c86dab61efba49403ad4787f35586da89ec5669710d28b1bf67217d"
+    },
+    {
+      "path": "outputs/research_workflow/experts/grn.md",
+      "sha256": "e90c5b79224c23c304d27f612bc5c496c7053d4dc70dcecb170afd55f70acef4"
+    },
+    {
+      "path": "outputs/research_workflow/experts/neuralode.md",
+      "sha256": "4dd82a1df59bcff5b56908f372cc8280942af18030d7d100662335da16b14399"
+    },
+    {
+      "path": "outputs/research_workflow/experts/replearn.md",
+      "sha256": "da49851f924718f8108db555fe03832d9b9e088a0605ba8fe60a1c0801f2c3dd"
+    },
+    {
+      "path": "outputs/research_workflow/experts/scgenomics.md",
+      "sha256": "9440b248523f11aa049ff8d7b2f5e8693718c630a0882443b94b7d54dbf3568c"
+    },
+    {
+      "path": "outputs/research_workflow/experts/sciml.md",
+      "sha256": "a6c4ab198d5e93941e121786149da5d9d6f9d06c040f8c204076b4a7ef7d4ef0"
+    },
+    {
+      "path": "outputs/research_workflow/experts/spatial3d.md",
+      "sha256": "9959e993798f15b641897ca283528cbe6ac9cf8ae66826a664f14786ef675b1b"
+    },
+    {
+      "path": "outputs/research_workflow/experts/spatialtx.md",
+      "sha256": "0da31a21d7b9ac591c21beca47d4a4a6255daee30f82bae0ddb4b5bf9fedad93"
+    },
+    {
+      "path": "outputs/research_workflow/experts/stats.md",
+      "sha256": "351b2373d2640ea6da322e4b0a0ce5665a1aa0a95337a8ee64f968b8a2ce2f09"
+    },
+    {
+      "path": "outputs/research_workflow/experts/sysbio.md",
+      "sha256": "5181b6eb13975883b2775b80d785b770a49c171fd3e4846038a06626554dece8"
+    },
+    {
+      "path": "outputs/research_workflow/EXPOSURE_REGISTER.md",
+      "sha256": "57a36aa8ed284c03104bbd69c6c7de61261fba724977efa67e60798821fd4d0f"
+    },
+    {
+      "path": "outputs/research_workflow/final_contract_checks.py",
+      "sha256": "142f80febd4503dd0cf7c912aec735349d516d9f991f91d9046f80079d885ce5"
+    },
+    {
+      "path": "outputs/research_workflow/final_contract_results.json",
+      "sha256": "f5a17d54e2281fac30694f6510510401fc78b15500add6d04298683de6de8415"
+    },
+    {
+      "path": "outputs/research_workflow/finalize_artifacts.py",
+      "sha256": "06577b7b32b0a8dba2842e0011183185b25ca5901f4c4c3731291d0a3e0d88d0"
+    },
+    {
+      "path": "outputs/research_workflow/hypothesis_registry.json",
+      "sha256": "e12e1964ee161d652d4c83555989e829ff340db4c8913586df6d69c0559232d3"
+    },
+    {
+      "path": "outputs/research_workflow/inventory.json",
+      "sha256": "597ccedefe5abbc171b31fd3320963ae69000f3a9af62610399d279de82eb636"
+    },
+    {
+      "path": "outputs/research_workflow/inventory.py",
+      "sha256": "39424728f1af66c634db9028d0964b40f0ecf8e95aa44b18f39ea9d02fa3b6f1"
+    },
+    {
+      "path": "outputs/research_workflow/jev_inventory.json",
+      "sha256": "1c7554a14f315034db3884e09c66eb04c58dd366354456ecad22d220a6ed15e3"
+    },
+    {
+      "path": "outputs/research_workflow/jev_loop1.json",
+      "sha256": "e6dbd348b793b66a05abeee69882d5f1f0cc5a4610e47b52c81daa954bbdd1fe"
+    },
+    {
+      "path": "outputs/research_workflow/jev_loop2.json",
+      "sha256": "bb2d99396d0b30ca7f8e71fe7e60650c3d2b2038cfd8e83156310fc7fcfd5ea3"
+    },
+    {
+      "path": "outputs/research_workflow/LITERATURE_NOTES.md",
+      "sha256": "3fc387dc77d73c56058f3cc65d84a6842b88dce6f07e9d8d3038c2e406804d50"
+    },
+    {
+      "path": "outputs/research_workflow/logical_check_results.json",
+      "sha256": "b0730066f7dd88e41a27e0cec803c7aeb3749956de2c071fed0d0e14757109e0"
+    },
+    {
+      "path": "outputs/research_workflow/logical_checks.py",
+      "sha256": "893286886ef812f7258efc418fcbb9266bee7dc3e7fb406b81c3dd25b0d072ee"
+    },
+    {
+      "path": "outputs/research_workflow/preregistration_template.json",
+      "sha256": "adaf6e27c8823267b53393f14f8d2f6dbca45652c18b6f06cb7bef3ded0a94e1"
+    },
+    {
+      "path": "outputs/research_workflow/PROJECT_STATE.md",
+      "sha256": "70bd316dc5ba887b81271e5a74f0f2ebb7a2a3f21b262e4f3e9580be812661fa"
+    },
+    {
+      "path": "outputs/research_workflow/proposal_contract_check.json",
+      "sha256": "9510558472bfcefc088b8396f82691549ac475f9ec67d854a07873361fd1aebc"
+    },
+    {
+      "path": "outputs/research_workflow/proposal_contract_check_initial.json",
+      "sha256": "93300f122b48544859b059cd5d4f9c3121469fead3cfc903f671135a26bc1ab1"
+    },
+    {
+      "path": "outputs/research_workflow/REPORT.md",
+      "sha256": "3402fb090bcbbeb44a0676a347c86dd76495c696fa9ca354e979df638def5246"
+    },
+    {
+      "path": "outputs/research_workflow/research_queue.json",
+      "sha256": "ad6978f902f4c1f3c0216db517dbd4f77e3dee38be2d21aa8fa707903a2c3151"
+    },
+    {
+      "path": "outputs/research_workflow/SCORER_CONTRACT.json",
+      "sha256": "bfdca0b9a3e21a225d0161b4dc102194b24511633b47edd557876ade515c178a"
+    },
+    {
+      "path": "outputs/research_workflow/search_log.json",
+      "sha256": "68962adc1be7eae652d0ac64a856fab14a8908a838d73fef09d069f947e6406a"
+    },
+    {
+      "path": "outputs/research_workflow/SYNTHESIS_0.md",
+      "sha256": "4269ae1d89b283cc888cd79a3ea8c8d74511ed2ec6269b6264918f8974cf7740"
+    },
+    {
+      "path": "outputs/research_workflow/SYNTHESIS_1.md",
+      "sha256": "34bc15f74c42a499d24ce1da6e75ed28b63ba2d32c84ffebbf3566ea6e0e6c1a"
+    },
+    {
+      "path": "outputs/research_workflow/SYNTHESIS_2.md",
+      "sha256": "3d9f966f6197af94da2e050364660f26af4d1ff04545e3750ec2b6b32a9fac79"
+    },
+    {
+      "path": "outputs/research_workflow/TASK_SPECIFICATION.md",
+      "sha256": "4bc1db5fbed5686daa167eb5f043e28c16aa98c35827f5b9e79cf3d4e23ed44f"
+    },
+    {
+      "path": "outputs/research_workflow/tidy_generated.py",
+      "sha256": "ef8c278a7ab8c0c175095e8a45acfeca1a8b41d6df381e54f7b5c5c65081ffd1"
+    },
+    {
+      "path": "outputs/research_workflow/validate_workflow.py",
+      "sha256": "7906ed8bc8d3e453453fd6b8d353f9aaa98fc4c6a0273316c9d6551e984b4985"
+    },
+    {
+      "path": "outputs/research_workflow/verification.json",
+      "sha256": "bc5aef639680976fc92e8ae1934074760f62f6358a1588f295b5062b00e5ed7b"
+    },
+    {
+      "path": "outputs/orchestration/round_1/proposals/benchdesign.json",
+      "sha256": "55f3b4acefcfacb8e05e9f79dd395e5200f8432b8b46cdd9ab9a5ae633b58a3a"
+    },
+    {
+      "path": "outputs/orchestration/round_1/proposals/biovalid.json",
+      "sha256": "6f515a16020704c3ca918ff4ecbd7c3f93c8fd038cfe3a845f885ebeedf60cb8"
+    },
+    {
+      "path": "outputs/orchestration/round_1/proposals/causal.json",
+      "sha256": "08cbf0eba354140fdd181cf9ad6ca5d8a61a5ec9ff97a11bdee6558dad81a540"
+    },
+    {
+      "path": "outputs/orchestration/round_1/proposals/devbio.json",
+      "sha256": "2374ee316e78937ffe31aa2e61125d94e949429b93ff51515b0e07f1514e2618"
+    },
+    {
+      "path": "outputs/orchestration/round_1/proposals/diffusion.json",
+      "sha256": "e08df0e6a0688d6fc3bfce580c924bea9d155ee8bb9ac72c399f238d35233a5b"
+    },
+    {
+      "path": "outputs/orchestration/round_1/proposals/genmodel.json",
+      "sha256": "6cb9b43fb9dc661efb14a5aa247266a772e080807ee666e75c447cafb1951f4f"
+    },
+    {
+      "path": "outputs/orchestration/round_1/proposals/gnn.json",
+      "sha256": "41c8f553f052099f58e96c6d34be63abf9570d4bf6c8c11b6ea6c58920af7845"
+    },
+    {
+      "path": "outputs/orchestration/round_1/proposals/grn.json",
+      "sha256": "3505f8d363582297c927f71b8a6e2402cb0f5af03ee462da49f152c661904b2d"
+    },
+    {
+      "path": "outputs/orchestration/round_1/proposals/neuralode.json",
+      "sha256": "ae01e31119f52dfde34528444035fa48c0be1c48fb84dd36bbbf3b5c7a4eaf29"
+    },
+    {
+      "path": "outputs/orchestration/round_1/proposals/replearn.json",
+      "sha256": "cbaa01fa5a509d9571341d4c5c82c57ef5fc9de40fc4508d97996981153db0dc"
+    },
+    {
+      "path": "outputs/orchestration/round_1/proposals/scgenomics.json",
+      "sha256": "9b5fc24ec8f49f3d2cf155555364fe9a368fdfda663206373f8effdb501be8e1"
+    },
+    {
+      "path": "outputs/orchestration/round_1/proposals/sciml.json",
+      "sha256": "3c12e712ec5e6013cff7accee1b7c5f2a9b018fd16114060fb19cdb1d811f756"
+    },
+    {
+      "path": "outputs/orchestration/round_1/proposals/spatial3d.json",
+      "sha256": "eeb19073062c9f1ff632e240165a5bf60421831ee37f28e92a52e5f5b99f769c"
+    },
+    {
+      "path": "outputs/orchestration/round_1/proposals/spatialtx.json",
+      "sha256": "d4a6b2c7bd85c59e968916f37751c3a5a502b2af7172cb2dd00f8fcac3e860a0"
+    },
+    {
+      "path": "outputs/orchestration/round_1/proposals/stats.json",
+      "sha256": "71931bd8a0d09b9eb03fcd36e6eef314bfadff026981b0da4382c003a5adfa5f"
+    },
+    {
+      "path": "outputs/orchestration/round_1/proposals/sysbio.json",
+      "sha256": "f84ff8cdde00c19f04f48fee601799be9a988f8ae4bf73941e37787fcce70ccb"
+    }
+  ],
+  "original_source_repository": {
+    "url": "https://github.com/divyansh469/virtualembryo2026",
+    "commit": "78caa1b",
+    "local_directory": "Neurl IPS 2026",
+    "note": "Separate existing Git repository; preserved, not added as an unconfigured gitlink."
+  }
+}

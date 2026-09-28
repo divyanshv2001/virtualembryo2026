@@ -1,0 +1,33 @@
+{
+  "synthetic_only": true,
+  "observations": [
+    {
+      "check": "empty API answers",
+      "authoritative": true,
+      "gates": {},
+      "finding": "Empty answers incorrectly satisfy all(authoritative)."
+    },
+    {
+      "check": "gated duplicate representative",
+      "clean_duplicate_of": "invalid",
+      "invalid_gates": [
+        "violates_data_rules"
+      ],
+      "finding": "A clean duplicate is merged into a representative that trips a hard gate."
+    },
+    {
+      "check": "no critic verdict",
+      "queued": 1,
+      "status": "UNREVIEWED",
+      "finding": "Missing critic review still enters the action queue."
+    },
+    {
+      "check": "UNPROVEN and missing engine metadata",
+      "lifecycle": "falsified",
+      "authoritative": true,
+      "history_after_first": 1,
+      "history_after_repeat": 2,
+      "finding": "Unproven becomes falsified; missing engine becomes authoritative; rerun duplicates history."
+    }
+  ]
+}

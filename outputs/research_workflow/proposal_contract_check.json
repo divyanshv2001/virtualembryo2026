@@ -1,0 +1,200 @@
+[
+  {
+    "code": "F12_non_response",
+    "label": "Repeats a previously-flagged proposal unchanged, or endorses a peer with no reason.",
+    "proposal_id": "-",
+    "expert": "benchdesign",
+    "detail": "did not cross-examine assigned peer(s): scgenomics, biovalid",
+    "severity": "major",
+    "source": "machine"
+  },
+  {
+    "code": "F12_non_response",
+    "label": "Repeats a previously-flagged proposal unchanged, or endorses a peer with no reason.",
+    "proposal_id": "-",
+    "expert": "biovalid",
+    "detail": "did not cross-examine assigned peer(s): sysbio, devbio, stats",
+    "severity": "major",
+    "source": "machine"
+  },
+  {
+    "code": "F12_non_response",
+    "label": "Repeats a previously-flagged proposal unchanged, or endorses a peer with no reason.",
+    "proposal_id": "-",
+    "expert": "causal",
+    "detail": "did not cross-examine assigned peer(s): stats, sysbio, benchdesign",
+    "severity": "major",
+    "source": "machine"
+  },
+  {
+    "code": "F12_non_response",
+    "label": "Repeats a previously-flagged proposal unchanged, or endorses a peer with no reason.",
+    "proposal_id": "-",
+    "expert": "devbio",
+    "detail": "did not cross-examine assigned peer(s): sysbio, diffusion, spatial3d",
+    "severity": "major",
+    "source": "machine"
+  },
+  {
+    "code": "F12_non_response",
+    "label": "Repeats a previously-flagged proposal unchanged, or endorses a peer with no reason.",
+    "proposal_id": "-",
+    "expert": "diffusion",
+    "detail": "did not cross-examine assigned peer(s): neuralode, sciml",
+    "severity": "major",
+    "source": "machine"
+  },
+  {
+    "code": "F12_non_response",
+    "label": "Repeats a previously-flagged proposal unchanged, or endorses a peer with no reason.",
+    "proposal_id": "-",
+    "expert": "genmodel",
+    "detail": "did not cross-examine assigned peer(s): neuralode, replearn",
+    "severity": "major",
+    "source": "machine"
+  },
+  {
+    "code": "F12_non_response",
+    "label": "Repeats a previously-flagged proposal unchanged, or endorses a peer with no reason.",
+    "proposal_id": "-",
+    "expert": "gnn",
+    "detail": "did not cross-examine assigned peer(s): spatialtx, grn, replearn",
+    "severity": "major",
+    "source": "machine"
+  },
+  {
+    "code": "F12_non_response",
+    "label": "Repeats a previously-flagged proposal unchanged, or endorses a peer with no reason.",
+    "proposal_id": "-",
+    "expert": "grn",
+    "detail": "did not cross-examine assigned peer(s): sysbio, gnn",
+    "severity": "major",
+    "source": "machine"
+  },
+  {
+    "code": "F12_non_response",
+    "label": "Repeats a previously-flagged proposal unchanged, or endorses a peer with no reason.",
+    "proposal_id": "-",
+    "expert": "neuralode",
+    "detail": "did not cross-examine assigned peer(s): diffusion, sciml",
+    "severity": "major",
+    "source": "machine"
+  },
+  {
+    "code": "F12_non_response",
+    "label": "Repeats a previously-flagged proposal unchanged, or endorses a peer with no reason.",
+    "proposal_id": "-",
+    "expert": "replearn",
+    "detail": "did not cross-examine assigned peer(s): genmodel, scgenomics, gnn",
+    "severity": "major",
+    "source": "machine"
+  },
+  {
+    "code": "F12_non_response",
+    "label": "Repeats a previously-flagged proposal unchanged, or endorses a peer with no reason.",
+    "proposal_id": "-",
+    "expert": "scgenomics",
+    "detail": "did not cross-examine assigned peer(s): stats, benchdesign, replearn",
+    "severity": "major",
+    "source": "machine"
+  },
+  {
+    "code": "F12_non_response",
+    "label": "Repeats a previously-flagged proposal unchanged, or endorses a peer with no reason.",
+    "proposal_id": "-",
+    "expert": "sciml",
+    "detail": "did not cross-examine assigned peer(s): spatial3d, diffusion, neuralode",
+    "severity": "major",
+    "source": "machine"
+  },
+  {
+    "code": "F12_non_response",
+    "label": "Repeats a previously-flagged proposal unchanged, or endorses a peer with no reason.",
+    "proposal_id": "-",
+    "expert": "spatial3d",
+    "detail": "did not cross-examine assigned peer(s): spatialtx, devbio, sciml",
+    "severity": "major",
+    "source": "machine"
+  },
+  {
+    "code": "F6_structurally_impossible",
+    "label": "Targets a metric that cannot respond to the proposed change.",
+    "proposal_id": "spatial3d-r1-1",
+    "expert": "spatial3d",
+    "detail": "d2_shape consumes coordinates only; the stated mechanism edits expression, which cannot reach it",
+    "severity": "blocking",
+    "source": "machine"
+  },
+  {
+    "code": "F6_structurally_impossible",
+    "label": "Targets a metric that cannot respond to the proposed change.",
+    "proposal_id": "spatial3d-r1-1",
+    "expert": "spatial3d",
+    "detail": "occupancy_dice consumes coordinates only; the stated mechanism edits expression, which cannot reach it",
+    "severity": "blocking",
+    "source": "machine"
+  },
+  {
+    "code": "F12_non_response",
+    "label": "Repeats a previously-flagged proposal unchanged, or endorses a peer with no reason.",
+    "proposal_id": "-",
+    "expert": "spatialtx",
+    "detail": "did not cross-examine assigned peer(s): spatial3d, gnn",
+    "severity": "major",
+    "source": "machine"
+  },
+  {
+    "code": "F9_proxy_transfer_fallacy",
+    "label": "Treats an internal proxy gain as evidence of a real-board gain.",
+    "proposal_id": "spatialtx-r1-1",
+    "expert": "spatialtx",
+    "detail": "leans on internal proxy evidence; this project has three real-board losses from proxy-validated fixes on T2:heart:val_interp alone",
+    "severity": "major",
+    "source": "machine"
+  },
+  {
+    "code": "F6_structurally_impossible",
+    "label": "Targets a metric that cannot respond to the proposed change.",
+    "proposal_id": "spatialtx-r1-2",
+    "expert": "spatialtx",
+    "detail": "d2_shape consumes coordinates only; the stated mechanism edits expression, which cannot reach it",
+    "severity": "blocking",
+    "source": "machine"
+  },
+  {
+    "code": "F6_structurally_impossible",
+    "label": "Targets a metric that cannot respond to the proposed change.",
+    "proposal_id": "spatialtx-r1-2",
+    "expert": "spatialtx",
+    "detail": "occupancy_dice consumes coordinates only; the stated mechanism edits expression, which cannot reach it",
+    "severity": "blocking",
+    "source": "machine"
+  },
+  {
+    "code": "F3_relitigates_closed",
+    "label": "Re-opens a closed finding without new evidence that defeats the cited check.",
+    "proposal_id": "spatialtx-r1-2",
+    "expert": "spatialtx",
+    "detail": "touches a trap on this expert's own list: canonicalize() strips rotation, translation and ISOTROPIC scale only -- confirmed in code twice. No expression change can move d2_shape or occupancy_d",
+    "severity": "major",
+    "source": "machine"
+  },
+  {
+    "code": "F12_non_response",
+    "label": "Repeats a previously-flagged proposal unchanged, or endorses a peer with no reason.",
+    "proposal_id": "-",
+    "expert": "stats",
+    "detail": "did not cross-examine assigned peer(s): causal, scgenomics",
+    "severity": "major",
+    "source": "machine"
+  },
+  {
+    "code": "F12_non_response",
+    "label": "Repeats a previously-flagged proposal unchanged, or endorses a peer with no reason.",
+    "proposal_id": "-",
+    "expert": "sysbio",
+    "detail": "did not cross-examine assigned peer(s): grn, devbio, causal",
+    "severity": "major",
+    "source": "machine"
+  }
+]

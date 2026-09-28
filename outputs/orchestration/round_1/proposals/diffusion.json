@@ -1,0 +1,79 @@
+{
+  "expert": "diffusion",
+  "round": 1,
+  "searches_run": [
+    "2025 single cell flow matching unbalanced optimal transport population dynamics paper",
+    "TrajectoryNet dynamic optimal transport single cell 2020 Schiebinger Waddington OT 2019",
+    "Simulation-Free Schr\u00f6dinger Bridges via Score and Flow Matching AISTATS 2024 Tong"
+  ],
+  "proposals": [
+    {
+      "id": "diffusion-r1-1",
+      "board": "PROCESS",
+      "title": "Require a conditioned simple-model benchmark before flow escalation",
+      "claim": "A matched temporal benchmark will distinguish a conditional flow's incremental distributional value from gains obtainable by composition-aware simple models.",
+      "mechanism": "Compare copy-last, whole-cell mixture resampling, covariance-preserving conditional-state residual resampling, linear latent trend and flow. Match composition, permitted inputs and tuning budgets; report de_score, de_direction, mmd_u and variogram. Enumerate feasible embryo-held-out interpolation/extrapolation splits first.",
+      "cost": "compute-only",
+      "falsifier": "Once data are available, reject escalation if flow fails to improve preregistered distribution metrics beyond embryo-level uncertainty versus the strongest simple comparator, or if gains disappear under matched composition and sampling.",
+      "local_ground_truth": "no",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/agenticprompt:206-222",
+          "says": "Diffusion expert must challenge fashionable use and assess conditional generation and transport.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/agent_orchestrator.py:150-186",
+          "says": "Existing evaluator consumes supplied h5ad candidates and uses a small proxy; it does not train biological models.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "literature",
+          "ref": "TrajectoryNet, ICML/PMLR 119, 2020, https://pmc.ncbi.nlm.nih.gov/articles/PMC8320749/",
+          "says": "Regularized dynamic transport uses biological priors and evaluates held-out intermediate distributions.",
+          "verified": "read-directly"
+        }
+      ],
+      "confidence": 0.8,
+      "novelty": "adaptation"
+    },
+    {
+      "id": "diffusion-r1-2",
+      "board": "PROCESS",
+      "title": "Separate missing stationarity evidence from transport falsification",
+      "claim": "An evidence audit will find that the available source does not substantiate the asserted project-wide falsification of transport methods.",
+      "mechanism": "Record the missing stationarity artifact as unverified, then require method-specific stage-conditioning and growth-prior ablations before interpreting changes in mmd_u, variogram or neighborhood_mmd as rejection of a transport family.",
+      "cost": "free",
+      "falsifier": "Locate the actual test, data provenance and executable analysis showing that each named method and its relevant assumptions were tested with adequate uncertainty; revise the evidence status if found.",
+      "local_ground_truth": "no",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/orchestration/personas.py:254-280",
+          "says": "Persona asserts blanket transport falsification but points to artifacts absent from this supplied workspace.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "literature",
+          "ref": "Joint Velocity-Growth Flow Matching for Single-Cell Dynamics Modeling, NeurIPS 38, 2025, DOI 10.52202/085713-5363, https://proceedings.nips.cc/paper_files/paper/2025/hash/eb1bad7a84ef68a64f1afd6577725d45-Abstract-Conference.html",
+          "says": "Models state transitions and population mass jointly using semi-relaxed OT; abstract establishes a distinct growth-aware formulation.",
+          "verified": "abstract-only"
+        }
+      ],
+      "confidence": 0.95,
+      "novelty": "incremental"
+    }
+  ],
+  "peer_responses": [
+    {
+      "peer": "genmodel",
+      "stance": "refine",
+      "on": "diffusion-r1-1 comparator fairness and sparse temporal validation",
+      "because": "Accepted whole-vector residual sampling and split-feasibility audit. Neurl IPS 2026/prompts.md:788-843 supports baselines/conditioning, not input availability. Marginal gains cannot identify paths; SF2M AISTATS 2024 demonstrates shared ODE/SDE marginals."
+    }
+  ],
+  "self_correction": "Initial comparator omitted an explicit covariance-preserving conditional-state residual sampler and overpromised rolling-origin feasibility. Added it, matched composition, and require stage/embryo enumeration before choosing temporal tests. Retain PROCESS; defer architecture escalation.",
+  "declined": "Immediate high-dimensional score-SDE training: no biological data or demonstrated failure of simpler conditioned models exists. Also declined the inherited conclusion that all transport methods were falsified by an absent test."
+}

@@ -1,0 +1,58 @@
+{
+  "expert": "genmodel",
+  "round": 1,
+  "searches_run": [
+    "Lopez scVI deep generative modeling single-cell transcriptomics 2018 Nature Methods negative binomial",
+    "Lotfollahi scGen predicts single-cell perturbation responses 2019 Nature Methods"
+  ],
+  "proposals": [
+    {
+      "id": "genmodel-r1-1",
+      "board": "PROCESS",
+      "title": "Require composition and within-type ablations before conditional generation",
+      "claim": "A factorial baseline evaluation can distinguish an apparent mmd_u gain caused by mixture proportions from a gain caused by within-type expression changes, before selecting a conditional generator.",
+      "mechanism": "Hold preprocessing, sample size and scorer fixed; compare last-stage resampling, training-estimated composition reweighting, within-type expression shifts, and their combination. Measure mmd_u and de_score plus conditional expression diagnostics; improve attribution, not assert a score gain.",
+      "cost": "compute-only",
+      "falsifier": "On permitted held-out embryos, cross composition-only and state-only edits. Kill the attribution claim if annotation instability or sampling variability prevents distinguishing these interventions. No biological test can run until data and scorer exist.",
+      "local_ground_truth": "no",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/prompts.md:788-813",
+          "says": "Requires strong baselines before VAE, diffusion and related generative experiments; asks whether complexity improves biological metrics.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/agent_orchestrator.py:150-185",
+          "says": "Defines stage proxies and evaluates contiguous slices of at most 150 cells through an imported scoring module.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "literature",
+          "ref": "Lopez et al., Deep generative modeling for single-cell transcriptomics, Nature Methods 2018, doi:10.1038/s41592-018-0229-2; https://www.nature.com/articles/s41592-018-0229-2",
+          "says": "Probabilistic expression modelling explicitly accounts for technical nuisance; it does not establish developmental extrapolation here.",
+          "verified": "abstract-only"
+        }
+      ],
+      "confidence": 0.72,
+      "novelty": "adaptation"
+    }
+  ],
+  "peer_responses": [
+    {
+      "peer": "diffusion",
+      "stance": "refine",
+      "on": "diffusion-r1-1 matched benchmark distinguishes flow value from composition-aware simple models",
+      "because": "Add covariance-preserving within-type residual resampling; mean-only trends are weak comparators. Audit likelihood/support, coupling sensitivity and feasible temporal splits before flow escalation (Neurl IPS 2026/prompts.md:788-843)."
+    },
+    {
+      "peer": "diffusion",
+      "stance": "endorse",
+      "on": "diffusion-r1-2 missing stationarity evidence does not substantiate blanket transport falsification",
+      "because": "The persona cites absent experiments; source assertions establish neither tested failure nor success (Neurl IPS 2026/orchestration/personas.py:239-248). Retain unverified status and require method-specific tests."
+    }
+  ],
+  "self_correction": "n/a (initial review)",
+  "declined": "Latent diffusion as the first model: observation likelihood, unseen-population support and baseline attribution are unresolved. Historical stationarity failures are absent evidence, so I neither certify them nor claim transport has been falsified here."
+}

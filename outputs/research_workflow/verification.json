@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-27",
+  "python": "3.13.0",
+  "pytest": "9.1.1 (project-local virtual environment)",
+  "existing_suite": {
+    "command": "outputs/research_workflow/.venv/Scripts/python.exe -m pytest \"Neurl IPS 2026/orchestration/test_orchestration.py\" -q",
+    "passed": 15,
+    "failed": 1,
+    "failure": "test_perceive_reads_real_boards_off_disk: board table was not parsed out of PLAN.md",
+    "interpretation": "Orchestration plumbing partly validated; missing research inputs remain. No biological validation."
+  },
+  "driver_smoke": {
+    "command": "python \"Neurl IPS 2026/orchestration/run.py\" --stage diverge --round 1",
+    "exit_code": 0,
+    "boards": 0,
+    "artifacts": 0,
+    "closed_findings": 0,
+    "open_questions": 0,
+    "expert_prompts_written": 16,
+    "note": "Generated prompts are supplementary historical harness artifacts; EXPERT_PROTOCOL.md supplies corrected context."
+  },
+  "jev": {
+    "replacement_file_present": true,
+    "live_requests": 3,
+    "returned_model": "jev-1.13.0",
+    "usage": {
+      "input_tokens": 9094,
+      "output_tokens": 316
+    },
+    "scope": "explicitly approved advisory routing only; no scientific evidence"
+  },
+  "git_status": "ownership protection; no global Git configuration changed",
+  "dependency_install": "Sandbox network denied pip initially; elevated installation approved and completed in local .venv",
+  "scientific_experiments_executed": 0,
+  "initial_configuration_snapshot": {
+    "api_key_present": false,
+    "live_requests": 0
+  },
+  "final_contract_checks": {
+    "file": "final_contract_results.json",
+    "passed": 11,
+    "biological_experiments": 0,
+    "operational_access_enforcement_tested": false
+  }
+}

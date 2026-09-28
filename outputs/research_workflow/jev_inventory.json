@@ -1,0 +1,59 @@
+{
+  "phase": "inventory",
+  "engine": "live-typesafe",
+  "returned_model": "jev-1.13.0",
+  "answers": {
+    "biological_performance_demonstrated": {
+      "noul": 0.03
+    },
+    "claims_need_empirical_test": {
+      "noul": 0.94
+    },
+    "next_action": {
+      "choice": "expert_review",
+      "confidence": 0.49
+    }
+  },
+  "usage": {
+    "input_tokens": 613,
+    "output_tokens": 104
+  },
+  "live_requests": 1,
+  "scope": "Validated routing/status judgment, not scientific evidence or calibrated biological confidence",
+  "input": {
+    "model": "jev-latest",
+    "state": {
+      "date": "2026-09-27",
+      "phase": "inventory",
+      "observations": [
+        "Recursive inventory contains only orchestration source and prompts, no biological datasets or results.",
+        "Existing suite: 15 passed, 1 failed due to absent PLAN board table.",
+        "Synthetic contract checks reproduce missing-answer authority, unreviewed queue and evidence-lifecycle bugs.",
+        "Biological models and all validation experiments remain prospective.",
+        "Current official rules supersede outdated hardcoded source constraints.",
+        "Expert agreement is not independent biological replication."
+      ],
+      "scope": "Complete a research audit, literature synthesis and two adversarial critic/revision loops; empirical validation needs missing data."
+    },
+    "questions": {
+      "biological_performance_demonstrated": {
+        "type": "noul",
+        "instructions": "Does the supplied evidence contain an executed biological prediction experiment demonstrating model performance?"
+      },
+      "claims_need_empirical_test": {
+        "type": "noul",
+        "instructions": "Do proposed biological score improvements still require empirical testing on data absent from the supplied folder?"
+      },
+      "next_action": {
+        "type": "choice",
+        "instructions": "Choose the next action within the explicitly requested research-audit scope, using the phase and completed artifacts.",
+        "criteria": {
+          "expert_review": "Inventory stage: continue domain reviews before synthesis.",
+          "expert_correction": "Loop 1 critic completed: route substantive criticisms to relevant experts and revise.",
+          "final_risk_review": "Loop 2 critic completed: correct substantive issues and finalize unresolved risks.",
+          "claim_empirical_success": "Executed biological data establish model performance."
+        }
+      }
+    }
+  }
+}

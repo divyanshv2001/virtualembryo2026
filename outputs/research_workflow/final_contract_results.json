@@ -1,0 +1,23 @@
+{
+  "checks": {
+    "unequal_capture_and_absent_strata_row_mass_identity": true,
+    "mixture_stratum_mass_identity": true,
+    "zero_stratum_excluded_from_conditional_draw": true,
+    "conditional_mean_uses_proportion_weights": true,
+    "equal_proportion_mean_unchanged": true,
+    "between_endpoint_variance_quartered": true,
+    "unequal_proportion_mean_changes": true,
+    "pairing_does_not_validate_pooled_frame": true,
+    "nonclosed_panel_fails_roundtrip_gate": true,
+    "reserved_token_collision_requires_refusal": true,
+    "annotation_provenance_mismatch_requires_refusal": true
+  },
+  "passed": true,
+  "scope": "Deterministic arithmetic/counterexample checks. No assay validity, scorer conformance, biological result, durable access refusal or clean-context isolation tested.",
+  "counterexample": {
+    "conditional_mean_A": 1.4,
+    "equal_proportion_mean": 4.0,
+    "unequal_proportion_baseline_mean": 2.35,
+    "unequal_proportion_recentered_mean": 2.515
+  }
+}

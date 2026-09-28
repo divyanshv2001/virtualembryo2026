@@ -1,0 +1,79 @@
+{
+  "expert": "scgenomics",
+  "round": 1,
+  "searches_run": [
+    "site.nature.com single cell differential expression biological replicates pseudoreplication Squair 2021",
+    "site.nature.com molecular spatial single cell RNA sequencing dissociation MERFISH normalization counts imaging 2023 mouse embryo atlas",
+    "site.genomebiology.biomedcentral.com sctransform Hafemeister Satija 2019 normalization variance stabilization"
+  ],
+  "proposals": [
+    {
+      "id": "scgenomics-r1-1",
+      "board": "PROCESS",
+      "title": "Require an assay and expression transformation contract before model comparison",
+      "claim": "A loader contract that records assay, panel and expression transformation will detect representation-invalid artifacts before any model score is interpreted.",
+      "mechanism": "de_score and mmd_u can change under expression transformation alone. Check supplied normalized .X, panel order and scorer preprocessing; reject unsupported raw-count reconstruction. This is a validation gate, not an asserted score gain.",
+      "cost": "compute-only",
+      "falsifier": "On genuine released files plus deliberately centered and panel-reordered copies, kill the gate if it misses either invalid copy or rejects a documented valid representation.",
+      "local_ground_truth": "no",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/agent_orchestrator.py:121",
+          "says": "_dense reads .X directly; validation checks finite nonnegative entries and panel order at line 128.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "literature",
+          "ref": "Hafemeister and Satija, Genome Biology 2019, doi:10.1186/s13059-019-1874-1; https://pmc.ncbi.nlm.nih.gov/articles/PMC6927181/",
+          "says": "Regularized UMI depth models address technical variation; unconstrained count models can overfit biological variance.",
+          "verified": "read-directly"
+        }
+      ],
+      "confidence": 0.85,
+      "novelty": "adaptation"
+    },
+    {
+      "id": "scgenomics-r1-2",
+      "board": "PROCESS",
+      "title": "Diagnose mixture and state errors using independent sample-aware baselines",
+      "claim": "A proportion-only versus within-type-state-only baseline comparison will distinguish mixture-driven from conditional-expression-driven improvements in released-stage proxies.",
+      "mechanism": "de_direction and mmd_u can reflect cell mixture as well as cell state. Hold one component fixed, evaluate pooled and conditional discrepancies, and repeat sample-balanced draws instead of taking the first 150 rows.",
+      "cost": "compute-only",
+      "falsifier": "With released data, kill the diagnostic if controlled proportion-only and state-only changes are indistinguishable under its conditional reports across repeated sample-balanced draws.",
+      "local_ground_truth": "no",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/agent_orchestrator.py:176",
+          "says": "Proxy score uses at most 150 cells selected from initial rows of candidate, truth and reference.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/prompts.md:1037",
+          "says": "Cells sharing an embryo/sample must not be treated as independent biological replicates.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "literature",
+          "ref": "Squair et al., Nature Communications 2021, doi:10.1038/s41467-021-25960-2; https://www.nature.com/articles/s41467-021-25960-2.pdf",
+          "says": "Accounting for biological replicates prevents false differential-expression discoveries in examined datasets.",
+          "verified": "read-directly"
+        }
+      ],
+      "confidence": 0.7,
+      "novelty": "combination"
+    }
+  ],
+  "peer_responses": [
+    {
+      "peer": "spatialtx",
+      "stance": "refine",
+      "on": "spatialtx-r1-1 sampling and spatialtx-r1-2 expression-position diagnostic",
+      "because": "At Neurl IPS 2026/agent_orchestrator.py:176-185, leading paired rows are scored. Seeded draws address ordering, but rebuilding neighbors changes radius. Add fixed-mixture within-type shuffles and separately specified merge/split controls; correction needs segmentation provenance."
+    }
+  ],
+  "self_correction": "n/a (initial review)",
+  "declined": "Global pseudobulk calibration shared between dissociated RNA and MERFISH: mixture and assay differences can masquerade as a correction. Also decline sctransform on normalized .X without raw UMI evidence."
+}

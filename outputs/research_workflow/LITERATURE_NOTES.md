@@ -1,0 +1,11 @@
+# Literature inspected by the orchestrator
+
+Search date: 2026-09-27. These notes supplement discipline-specific references in experts/*.md. Search coverage is focused, not a systematic review. No source licenses or training-set eligibility have been certified. Availability of a paper does not permit all of its data in a competition model.
+
+| Source | Status and verification | What it supports | What it does not establish |
+|---|---|---|---|
+| Klein et al., Mapping cells through time and space with moscot, Nature 638 (2025), DOI 10.1038/s41586-024-08453-2; https://pubmed.ncbi.nlm.nih.gov/39843746/ | Peer-reviewed, PubMed abstract/figure descriptions inspected; publisher full-text open failed and PMC presented captcha | Multimodal optimal transport has existing temporal/spatial applications, including embryogenesis | Novelty of adding OT here, performance on the challenge, identifiable ancestry or eligibility of pretrained artifacts |
+| Ahlmann-Eltze, Huber & Anders, Deep-learning-based gene perturbation effect prediction does not yet outperform simple linear baselines, Nature Methods 22 (2025), DOI 10.1038/s41592-025-02772-6; https://pubmed.ncbi.nlm.nih.gov/40759747/ | Peer-reviewed, abstract and figure captions inspected; publisher opening failed | Simple baselines are mandatory comparisons; tested deep models did not outperform those baselines in the paper's setting | Universal failure of deep learning, embryonic perturbation performance, or guaranteed gains from a linear model |
+| Wei et al., Benchmarking algorithms for generalizable single-cell perturbation response prediction, Nature Methods 23 (2026), DOI 10.1038/s41592-025-02980-0; https://pubmed.ncbi.nlm.nih.gov/41381899/ | Peer-reviewed, abstract inspected; online 2025-12-11, issue 2026-02 | A recent comparison covers 27 methods, 29 datasets, six metrics and multiple generalization scenarios | A single universal winning method or transfer to the sparse embryo challenge |
+
+The gap is not absence of temporal/spatial transport, generative models, or perturbation predictors. The defensible question is whether a model adds conditional state/geometry information beyond simple composition and persistence under genuinely held-out embryos/stages. This is an experimental question. Architecture novelty and a causal mechanism remain unestablished.

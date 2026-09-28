@@ -1,0 +1,84 @@
+{
+  "expert": "replearn",
+  "round": 1,
+  "searches_run": [
+    "single cell foundation models zero shot benchmark PCA scGPT Geneformer Nature Methods 2025 2026",
+    "scGPT foundation model single cell multi omics Nature Methods 2024 gene expression pretraining"
+  ],
+  "proposals": [
+    {
+      "id": "replearn-r1-1",
+      "board": "PROCESS",
+      "title": "Require provenance and fold-fitted transforms for representation candidates",
+      "claim": "A representation audit can flag every candidate with unknown protected-stage provenance or preprocessing fitted beyond its training fold before model selection.",
+      "mechanism": "Protects interpretation of mmd_u and de_score by separating learned training features from the fixed evaluator space; candidate-specific scorer refits can change comparisons without improving prediction.",
+      "cost": "compute-only",
+      "falsifier": "Run synthetic manifests covering contaminated, unknown and clean corpora plus validation-fitted PCA; any unflagged case kills the completeness claim.",
+      "local_ground_truth": "no",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/prompts.md:1576\u20131600",
+          "says": "Lists PCA, embedding, feature-selection leakage and pretrained contamination as audit targets.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "literature",
+          "ref": "Virtual Embryo Challenge rules \u00a710, 2026, https://virtualembryo.ai/challenge/rules",
+          "says": "Allows disclosed external resources; excludes protected data even through pretraining.",
+          "verified": "read-directly"
+        }
+      ],
+      "confidence": 0.87,
+      "novelty": "adaptation"
+    },
+    {
+      "id": "replearn-r1-2",
+      "board": "PROCESS",
+      "title": "Compare representations through matched forecasts and support diagnostics",
+      "claim": "A matched raw-expression/PCA/AE/pretrained bake-off can reject a claimed latent benefit when reconstruction improves but held-out forecast metrics and rare-state support do not.",
+      "mechanism": "Evaluate mmd_u and de_score in the same official space with matched predictors and sampling; support diagnostics expose collapsed rare programs hidden by mean reconstruction error.",
+      "cost": "compute-only",
+      "falsifier": "Use a released-stage holdout with equal predictors; reject the latent-benefit claim if paired forecast improvement is absent or rare-state recall materially declines.",
+      "local_ground_truth": "no",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/prompts.md:263\u2013290",
+          "says": "Proposes raw, PCA and learned representation comparisons, smoothness and reconstruction measures.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/orchestration/personas.py:365\u2013382",
+          "says": "Poses downstream benefit question; cited historical experiments are absent, so their numerical claims are not adopted.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "literature",
+          "ref": "Kedzierska et al., Genome Biology 2025, doi:10.1186/s13059-025-03574-x",
+          "says": "Zero-shot scGPT/Geneformer embeddings have limitations versus simple and established baselines; does not test this task.",
+          "verified": "read-directly"
+        }
+      ],
+      "confidence": 0.82,
+      "novelty": "adaptation"
+    }
+  ],
+  "peer_responses": [
+    {
+      "peer": "biovalid",
+      "stance": "refine",
+      "on": "biovalid-r1-1: composition/state validation of representation gains",
+      "because": "Endorse decomposition; panel-derived markers and frozen labels remain correlated validation. Require eligible embryo holdouts, matched prediction heads and unknown-state handling. Neurl IPS 2026/prompts.md:263\u2013290 supplies no downstream result."
+    },
+    {
+      "peer": "biovalid",
+      "stance": "endorse",
+      "on": "biovalid-r1-2: ancestry/regulation requires orthogonal observations",
+      "because": "A representation's expression accuracy cannot establish lineage or direct regulation. Separate marker prediction from independent assay corroboration and keep protected-target observations outside selection, per official rules \u00a710."
+    }
+  ],
+  "self_correction": "n/a (initial review)",
+  "declined": "Adopting a unified pretrained latent on reconstruction or smoothness alone: neither establishes forecast gains, future-state support, assay compatibility or admissible corpus provenance."
+}

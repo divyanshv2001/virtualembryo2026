@@ -1,0 +1,72 @@
+{
+  "expert": "sciml",
+  "round": 1,
+  "searches_run": [
+    "Schiebinger optimal transport reconstructing developmental trajectories 2019 unbalanced growth Cell",
+    "Brouwer moscot mapping cells optimal transport 2025 Nature observation spatial temporal"
+  ],
+  "proposals": [
+    {
+      "id": "sciml-r1-1",
+      "board": "PROCESS",
+      "title": "Define the observation operator before enforcing biological conservation",
+      "claim": "A capture/panel/normalization/frame contract will distinguish numerical mass normalization from a testable cell-growth or tissue conservation claim.",
+      "mechanism": "PROCESS checks for mmd_u, scale_log_ratio and neighborhood_mmd: expose capture/abundance nonidentifiability and document preprocessing/units; abstain on latent cause without calibrated auxiliary measurements. No score gain asserted.",
+      "cost": "compute-only",
+      "falsifier": "Reject the contract if it assigns different abundance/capture causes to observationally equivalent synthetic worlds without auxiliary evidence, or fails declared unit checks. Synthetic checks establish measurement behavior only.",
+      "local_ground_truth": "no",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/agent_orchestrator.py:128-147",
+          "says": "Validator checks file shape, gene order, finite nonnegative expression and finite coordinates, not capture or physical conservation.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "literature",
+          "ref": "Schiebinger et al., Cell 2019, DOI 10.1016/j.cell.2019.01.006; https://www.broadinstitute.org/files/publications/2019/03/1-s2.0-S009286741930039X-main.pdf",
+          "says": "Independent snapshots lose temporal coupling; OT adds transition assumptions and modifies mass constraints for proliferation and death.",
+          "verified": "read-directly"
+        }
+      ],
+      "confidence": 0.86,
+      "novelty": "adaptation"
+    },
+    {
+      "id": "sciml-r1-2",
+      "board": "PROCESS",
+      "title": "Require matched randomized-prior controls before attributing benefit to biology",
+      "claim": "A real graph prior must outperform matched-capacity no-prior and randomized-prior controls preserving degree and, where feasible, evidence density, state specificity and expression support before biological-information attribution.",
+      "mechanism": "PROCESS validation of mmd_u and de_direction: freeze training-only graph construction and equal tuning budgets; compare independent-stage/embryo effects rather than solver convergence or training reconstruction.",
+      "cost": "compute-only",
+      "falsifier": "Reject biological-information attribution if the real prior fails the prespecified practical margin over randomized priors or the gain disappears with training-only preprocessing.",
+      "local_ground_truth": "no",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/prompts.md:2042-2055",
+          "says": "Requests no, known, learned and randomized-prior comparisons; randomized benefit can indicate regularization rather than biological knowledge.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/agenticprompt:315-329",
+          "says": "SciML remit includes mechanistic constraints, scientific priors, conservation laws and model identifiability.",
+          "verified": "read-directly"
+        }
+      ],
+      "confidence": 0.82,
+      "novelty": "adaptation"
+    }
+  ],
+  "peer_responses": [
+    {
+      "peer": "sysbio",
+      "stance": "refine",
+      "on": "Capture versus abundance ambiguity and richer randomized-prior controls",
+      "because": "Accept: c_s*N_s products can match across distinct latent worlds. agent_orchestrator.py:128-147 validates shape, not capture. Require abstention; preserve evidence density/state specificity/support where feasible and disclose unmatched channels."
+    }
+  ],
+  "self_correction": "Initial r1-1 mechanism/falsifier overstated capture identifiability. Documentation exposes ambiguity; observationally equivalent worlds require abstention absent calibrated auxiliary measurements. Graph nulls now match additional evidence channels where feasible.",
+  "declined": "Hard mass conservation and universal latent/spatial smoothness: recovered row counts do not establish cell-number conservation, and developing tissues can contain sharp boundaries."
+}

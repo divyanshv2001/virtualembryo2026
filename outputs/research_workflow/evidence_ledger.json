@@ -1,0 +1,1176 @@
+[
+  {
+    "id": "E001",
+    "claim": "No biological data, predictions or experiment results are supplied locally.",
+    "evidence": "Complete source inventory; zero h5ad files.",
+    "source": "inventory.json",
+    "source_type": "local filesystem observation",
+    "date": "2026-09-27",
+    "confidence": "high",
+    "supporting_experts": [
+      "orchestrator"
+    ],
+    "contradicting_experts": [],
+    "status": "observed"
+  },
+  {
+    "id": "E002",
+    "claim": "Existing suite reports 15 passing checks and one missing-board failure.",
+    "evidence": "pytest exit 1: missing PLAN.md board table.",
+    "source": "verification.json",
+    "source_type": "executed code check",
+    "date": "2026-09-27",
+    "confidence": "high",
+    "supporting_experts": [
+      "orchestrator"
+    ],
+    "contradicting_experts": [],
+    "status": "observed"
+  },
+  {
+    "id": "E003",
+    "claim": "Empty answers become authoritative; UNPROVEN becomes falsified; repeated LEARN duplicates evidence.",
+    "evidence": "Synthetic contract reproductions against unchanged code.",
+    "source": "audit_check_results.json",
+    "source_type": "executed synthetic code check",
+    "date": "2026-09-27",
+    "confidence": "high",
+    "supporting_experts": [
+      "orchestrator",
+      "sysbio"
+    ],
+    "contradicting_experts": [],
+    "status": "observed"
+  },
+  {
+    "id": "E004",
+    "claim": "Current official external-data restrictions differ from local blanket T2/T3 prohibition.",
+    "evidence": "Official rules section 10 permits disclosed resources subject to stage/genotype exclusions.",
+    "source": "https://virtualembryo.ai/challenge/rules",
+    "source_type": "official rules",
+    "date": "2026-09-27",
+    "confidence": "high for inspected version",
+    "supporting_experts": [
+      "orchestrator"
+    ],
+    "contradicting_experts": [],
+    "status": "verified public specification"
+  },
+  {
+    "id": "E005",
+    "claim": "Embedded project score gains and barcode counts are not verified by this checkout.",
+    "evidence": "Referenced result files and data absent; code assertions are not measured records.",
+    "source": "PROJECT_STATE.md; CODE_AUDIT.md",
+    "source_type": "local audit",
+    "date": "2026-09-27",
+    "confidence": "high about missing evidence",
+    "supporting_experts": [
+      "orchestrator"
+    ],
+    "contradicting_experts": [],
+    "status": "UNVERIFIED historical assertions"
+  },
+  {
+    "id": "E006",
+    "claim": "Capture/abundance ambiguity, autonomous reversal and unseen-intervention ambiguity have constructive examples.",
+    "evidence": "Three executed illustrative mathematical checks; negative displacement cosine -0.5 in an autonomous rotation.",
+    "source": "logical_check_results.json",
+    "source_type": "executed mathematical counterexample",
+    "date": "2026-09-27",
+    "confidence": "high for logical scope; no biological implication",
+    "supporting_experts": [
+      "orchestrator",
+      "sciml",
+      "neuralode",
+      "causal"
+    ],
+    "contradicting_experts": [],
+    "status": "verified logical example; not biological validation"
+  },
+  {
+    "id": "E007",
+    "claim": "Proxy scores use first-row subsets capped at 150 cells.",
+    "evidence": "Proxy scores use first-row subsets capped at 150 cells.",
+    "source": "Neurl IPS 2026/agent_orchestrator.py:175-185",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "benchdesign"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "benchdesign-r1-1"
+  },
+  {
+    "id": "E008",
+    "claim": "Real-board score constants have no accompanying biological artifacts in the audited workspace.",
+    "evidence": "Real-board score constants have no accompanying biological artifacts in the audited workspace.",
+    "source": "Neurl IPS 2026/agent_orchestrator.py:188-195",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "benchdesign"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "benchdesign-r1-1"
+  },
+  {
+    "id": "E009",
+    "claim": "Board names route to fixed stage proxy tuples; these do not themselves establish valid interpolation or trend assessment.",
+    "evidence": "Board names route to fixed stage proxy tuples; these do not themselves establish valid interpolation or trend assessment.",
+    "source": "Neurl IPS 2026/agent_orchestrator.py:150-159",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "benchdesign"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "benchdesign-r1-2"
+  },
+  {
+    "id": "E010",
+    "claim": "Shared perturbation effects can inflate standard prediction metrics; perturbation-specific evaluation and simple controls are necessary.",
+    "evidence": "Shared perturbation effects can inflate standard prediction metrics; perturbation-specific evaluation and simple controls are necessary.",
+    "source": "Systema, Nature Biotechnology, online 2025 / volume 2026, https://www.nature.com/articles/s41587-025-02777-8?error=cookies_not_supported",
+    "source_type": "literature",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "benchdesign"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "benchdesign-r1-2"
+  },
+  {
+    "id": "E011",
+    "claim": "Warns that cells sharing an embryo/sample are not independent biological replicates.",
+    "evidence": "Warns that cells sharing an embryo/sample are not independent biological replicates.",
+    "source": "Neurl IPS 2026/prompts.md:1037",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "biovalid"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "biovalid-r1-1"
+  },
+  {
+    "id": "E012",
+    "claim": "Proxy selects the first at most 150 candidate and target rows rather than a sample-balanced cloud.",
+    "evidence": "Proxy selects the first at most 150 candidate and target rows rather than a sample-balanced cloud.",
+    "source": "Neurl IPS 2026/agent_orchestrator.py:175",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "biovalid"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "biovalid-r1-1"
+  },
+  {
+    "id": "E013",
+    "claim": "Publisher-indexed excerpts report false discoveries when biological replicate variability is ignored.",
+    "evidence": "Publisher-indexed excerpts report false discoveries when biological replicate variability is ignored.",
+    "source": "Squair et al., Confronting false discoveries in single-cell differential expression, Nature Communications, 2021, doi:10.1038/s41467-021-25960-2",
+    "source_type": "literature",
+    "verification": "search-snippet-only",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "biovalid"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "biovalid-r1-1"
+  },
+  {
+    "id": "E014",
+    "claim": "Explicitly distinguishes biologically plausible stories from biological validation.",
+    "evidence": "Explicitly distinguishes biologically plausible stories from biological validation.",
+    "source": "Neurl IPS 2026/agenticprompt:910",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "biovalid"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "biovalid-r1-2"
+  },
+  {
+    "id": "E015",
+    "claim": "scGESTALT combines heritable lineage recording with transcriptome-based cell identification in zebrafish.",
+    "evidence": "scGESTALT combines heritable lineage recording with transcriptome-based cell identification in zebrafish.",
+    "source": "Raj et al., Simultaneous single-cell profiling of lineages and cell types in the vertebrate brain, Nature Biotechnology, 2018, doi:10.1038/nbt.4103",
+    "source_type": "literature",
+    "verification": "abstract-only",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "biovalid"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "biovalid-r1-2"
+  },
+  {
+    "id": "E016",
+    "claim": "Prediction is distinct from causal understanding; causal claims require intervention assumptions.",
+    "evidence": "Prediction is distinct from causal understanding; causal claims require intervention assumptions.",
+    "source": "Neurl IPS 2026/prompts.md:633-635",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "causal"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "causal-r1-1"
+  },
+  {
+    "id": "E017",
+    "claim": "Causal review covers estimands, interventions, confounding, selection and identifiability.",
+    "evidence": "Causal review covers estimands, interventions, confounding, selection and identifiability.",
+    "source": "Neurl IPS 2026/agenticprompt:171-188",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "causal"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "causal-r1-1"
+  },
+  {
+    "id": "E018",
+    "claim": "Setup assumes at least one intervention per latent node; guarantees need restricted mixing and faithfulness and cover unseen intervention combinations.",
+    "evidence": "Setup assumes at least one intervention per latent node; guarantees need restricted mixing and faithfulness and cover unseen intervention combinations.",
+    "source": "Zhang et al., Identifiability Guarantees for Causal Disentanglement from Soft Interventions, NeurIPS 2023; https://papers.neurips.cc/paper_files/paper/2023/file/9d3a4cdf6f70559e8c6fe02170fba568-Paper-Conference.pdf",
+    "source_type": "literature",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "causal"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "causal-r1-1"
+  },
+  {
+    "id": "E019",
+    "claim": "Separately names abundance and conditioned expression as prediction targets; lineage is also listed but lacks tracing evidence.",
+    "evidence": "Separately names abundance and conditioned expression as prediction targets; lineage is also listed but lacks tracing evidence.",
+    "source": "Neurl IPS 2026/prompts.md:329",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "devbio"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "devbio-r1-1"
+  },
+  {
+    "id": "E020",
+    "claim": "The diagnostic proxy takes at most 150 leading cells; no randomized or embryo-aware sampling appears here.",
+    "evidence": "The diagnostic proxy takes at most 150 leading cells; no randomized or embryo-aware sampling appears here.",
+    "source": "Neurl IPS 2026/agent_orchestrator.py:175",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "devbio"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "devbio-r1-1"
+  },
+  {
+    "id": "E021",
+    "claim": "Temporal coupling needs assumptions; growth and death change mass, and expression snapshots do not directly observe joint ancestry.",
+    "evidence": "Temporal coupling needs assumptions; growth and death change mass, and expression snapshots do not directly observe joint ancestry.",
+    "source": "Schiebinger et al., Cell 2019, DOI 10.1016/j.cell.2019.01.006; https://www.broadinstitute.org/files/publications/2019/03/1-s2.0-S009286741930039X-main.pdf",
+    "source_type": "literature",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "devbio"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "devbio-r1-1"
+  },
+  {
+    "id": "E022",
+    "claim": "Diffusion expert must challenge fashionable use and assess conditional generation and transport.",
+    "evidence": "Diffusion expert must challenge fashionable use and assess conditional generation and transport.",
+    "source": "Neurl IPS 2026/agenticprompt:206-222",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "diffusion"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "diffusion-r1-1"
+  },
+  {
+    "id": "E023",
+    "claim": "Existing evaluator consumes supplied h5ad candidates and uses a small proxy; it does not train biological models.",
+    "evidence": "Existing evaluator consumes supplied h5ad candidates and uses a small proxy; it does not train biological models.",
+    "source": "Neurl IPS 2026/agent_orchestrator.py:150-186",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "diffusion"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "diffusion-r1-1"
+  },
+  {
+    "id": "E024",
+    "claim": "Regularized dynamic transport uses biological priors and evaluates held-out intermediate distributions.",
+    "evidence": "Regularized dynamic transport uses biological priors and evaluates held-out intermediate distributions.",
+    "source": "TrajectoryNet, ICML/PMLR 119, 2020, https://pmc.ncbi.nlm.nih.gov/articles/PMC8320749/",
+    "source_type": "literature",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "diffusion"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "diffusion-r1-1"
+  },
+  {
+    "id": "E025",
+    "claim": "Persona asserts blanket transport falsification but points to artifacts absent from this supplied workspace.",
+    "evidence": "Persona asserts blanket transport falsification but points to artifacts absent from this supplied workspace.",
+    "source": "Neurl IPS 2026/orchestration/personas.py:254-280",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "diffusion"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "diffusion-r1-2"
+  },
+  {
+    "id": "E026",
+    "claim": "Models state transitions and population mass jointly using semi-relaxed OT; abstract establishes a distinct growth-aware formulation.",
+    "evidence": "Models state transitions and population mass jointly using semi-relaxed OT; abstract establishes a distinct growth-aware formulation.",
+    "source": "Joint Velocity-Growth Flow Matching for Single-Cell Dynamics Modeling, NeurIPS 38, 2025, DOI 10.52202/085713-5363, https://proceedings.nips.cc/paper_files/paper/2025/hash/eb1bad7a84ef68a64f1afd6577725d45-Abstract-Conference.html",
+    "source_type": "literature",
+    "verification": "abstract-only",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "diffusion"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "diffusion-r1-2"
+  },
+  {
+    "id": "E027",
+    "claim": "Requires strong baselines before VAE, diffusion and related generative experiments; asks whether complexity improves biological metrics.",
+    "evidence": "Requires strong baselines before VAE, diffusion and related generative experiments; asks whether complexity improves biological metrics.",
+    "source": "Neurl IPS 2026/prompts.md:788-813",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "genmodel"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "genmodel-r1-1"
+  },
+  {
+    "id": "E028",
+    "claim": "Defines stage proxies and evaluates contiguous slices of at most 150 cells through an imported scoring module.",
+    "evidence": "Defines stage proxies and evaluates contiguous slices of at most 150 cells through an imported scoring module.",
+    "source": "Neurl IPS 2026/agent_orchestrator.py:150-185",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "genmodel"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "genmodel-r1-1"
+  },
+  {
+    "id": "E029",
+    "claim": "Probabilistic expression modelling explicitly accounts for technical nuisance; it does not establish developmental extrapolation here.",
+    "evidence": "Probabilistic expression modelling explicitly accounts for technical nuisance; it does not establish developmental extrapolation here.",
+    "source": "Lopez et al., Deep generative modeling for single-cell transcriptomics, Nature Methods 2018, doi:10.1038/s41592-018-0229-2; https://www.nature.com/articles/s41592-018-0229-2",
+    "source_type": "literature",
+    "verification": "abstract-only",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "genmodel"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "genmodel-r1-1"
+  },
+  {
+    "id": "E030",
+    "claim": "Requests graph variants and comparison of absent versus known biological prior; reports no executed outcome.",
+    "evidence": "Requests graph variants and comparison of absent versus known biological prior; reports no executed outcome.",
+    "source": "Neurl IPS 2026/prompts.md:367-386",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "gnn"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "gnn-r1-1"
+  },
+  {
+    "id": "E031",
+    "claim": "A fixed low-pass filter plus linear classifier can retain performance in studied applications; motivates a smoothing control.",
+    "evidence": "A fixed low-pass filter plus linear classifier can retain performance in studied applications; motivates a smoothing control.",
+    "source": "Wu et al., Simplifying Graph Convolutional Networks, ICML 2019, https://proceedings.mlr.press/v97/wu19e.html",
+    "source_type": "literature",
+    "verification": "abstract-only",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "gnn"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "gnn-r1-1"
+  },
+  {
+    "id": "E032",
+    "claim": "GNN review explicitly covers graph construction, spatial graphs, graph leakage, oversmoothing and topology sensitivity.",
+    "evidence": "GNN review explicitly covers graph construction, spatial graphs, graph leakage, oversmoothing and topology sensitivity.",
+    "source": "Neurl IPS 2026/agenticprompt:243-257",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "gnn"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "gnn-r1-2"
+  },
+  {
+    "id": "E033",
+    "claim": "Lists sample, animal, spatial-neighborhood, normalization, PCA and external-dataset leakage risks.",
+    "evidence": "Lists sample, animal, spatial-neighborhood, normalization, PCA and external-dataset leakage risks.",
+    "source": "Neurl IPS 2026/prompts.md:167-180",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "gnn"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "gnn-r1-2"
+  },
+  {
+    "id": "E034",
+    "claim": "Uses distinct coexpression and GO graphs; poorly connected unseen perturbation genes limit predictions.",
+    "evidence": "Uses distinct coexpression and GO graphs; poorly connected unseen perturbation genes limit predictions.",
+    "source": "Roohani et al., GEARS, Nature Biotechnology online 2023 / volume 2024, https://www.nature.com/articles/s41587-023-01905-6",
+    "source_type": "literature",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "gnn"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "gnn-r1-2"
+  },
+  {
+    "id": "E035",
+    "claim": "Requests no, known, learned and randomized prior controls; warns random-prior gains may be regularization.",
+    "evidence": "Requests no, known, learned and randomized prior controls; warns random-prior gains may be regularization.",
+    "source": "Neurl IPS 2026/prompts.md:2040-2054",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "grn"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "grn-r1-1"
+  },
+  {
+    "id": "E036",
+    "claim": "Uses coexpression and GO graphs with large perturbation screens; discussion requires matching cell type or condition for reliable prediction.",
+    "evidence": "Uses coexpression and GO graphs with large perturbation screens; discussion requires matching cell type or condition for reliable prediction.",
+    "source": "Roohani et al., GEARS, Nature Biotechnology, online 2023 / volume 2024, doi:10.1038/s41587-023-01905-6; https://www.nature.com/articles/s41587-023-01905-6",
+    "source_type": "literature",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "grn"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "grn-r1-1"
+  },
+  {
+    "id": "E037",
+    "claim": "Reports moderate precision in benchmarked GRN inference; does not validate this project's edges.",
+    "evidence": "Reports moderate precision in benchmarked GRN inference; does not validate this project's edges.",
+    "source": "Pratapa et al., BEELINE, Nature Methods 2020, doi:10.1038/s41592-019-0690-6; https://www.nature.com/articles/s41592-019-0690-6",
+    "source_type": "literature",
+    "verification": "abstract-only",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "grn"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "grn-r1-1"
+  },
+  {
+    "id": "E038",
+    "claim": "Persona asserts a stationarity experiment excludes four method families; named experiment files are absent from inspected inventory.",
+    "evidence": "Persona asserts a stationarity experiment excludes four method families; named experiment files are absent from inspected inventory.",
+    "source": "Neurl IPS 2026/orchestration/personas.py:267-274",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "neuralode"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "neuralode-r1-1"
+  },
+  {
+    "id": "E039",
+    "claim": "Neural ODE persona treats negative displacement cosine as field reversal; no underlying measurements are provided.",
+    "evidence": "Neural ODE persona treats negative displacement cosine as field reversal; no underlying measurements are provided.",
+    "source": "Neurl IPS 2026/orchestration/personas.py:298-301",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "neuralode"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "neuralode-r1-1"
+  },
+  {
+    "id": "E040",
+    "claim": "Uses time-varying fields and explicit energy, density, velocity and growth priors; these are more specific than constant centroid displacement.",
+    "evidence": "Uses time-varying fields and explicit energy, density, velocity and growth priors; these are more specific than constant centroid displacement.",
+    "source": "Tong et al., TrajectoryNet, ICML/PMLR 119, 2020, https://pmc.ncbi.nlm.nih.gov/articles/PMC8320749/",
+    "source_type": "literature",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "neuralode"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "neuralode-r1-1"
+  },
+  {
+    "id": "E041",
+    "claim": "Requests error versus temporal distance and testing recursive accumulation of biological errors.",
+    "evidence": "Requests error versus temporal distance and testing recursive accumulation of biological errors.",
+    "source": "Neurl IPS 2026/prompts.md:290-315",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "neuralode"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "neuralode-r1-2"
+  },
+  {
+    "id": "E042",
+    "claim": "Distinguishes random-split success, temporal holdout, interpolation and extrapolation.",
+    "evidence": "Distinguishes random-split success, temporal holdout, interpolation and extrapolation.",
+    "source": "Neurl IPS 2026/prompts.md:1163-1166",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "neuralode"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "neuralode-r1-2"
+  },
+  {
+    "id": "E043",
+    "claim": "Outputs use a differential equation solver with a numerical precision/speed tradeoff; this is an architectural property.",
+    "evidence": "Outputs use a differential equation solver with a numerical precision/speed tradeoff; this is an architectural property.",
+    "source": "Chen et al., Neural Ordinary Differential Equations, 2018 preprint, arXiv:1806.07366, https://arxiv.org/abs/1806.07366",
+    "source_type": "literature",
+    "verification": "abstract-only",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "neuralode"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "neuralode-r1-2"
+  },
+  {
+    "id": "E044",
+    "claim": "Lists PCA, embedding, feature-selection leakage and pretrained contamination as audit targets.",
+    "evidence": "Lists PCA, embedding, feature-selection leakage and pretrained contamination as audit targets.",
+    "source": "Neurl IPS 2026/prompts.md:1576\u20131600",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "replearn"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "replearn-r1-1"
+  },
+  {
+    "id": "E045",
+    "claim": "Allows disclosed external resources; excludes protected data even through pretraining.",
+    "evidence": "Allows disclosed external resources; excludes protected data even through pretraining.",
+    "source": "Virtual Embryo Challenge rules \u00a710, 2026, https://virtualembryo.ai/challenge/rules",
+    "source_type": "literature",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "replearn"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "replearn-r1-1"
+  },
+  {
+    "id": "E046",
+    "claim": "Proposes raw, PCA and learned representation comparisons, smoothness and reconstruction measures.",
+    "evidence": "Proposes raw, PCA and learned representation comparisons, smoothness and reconstruction measures.",
+    "source": "Neurl IPS 2026/prompts.md:263\u2013290",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "replearn"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "replearn-r1-2"
+  },
+  {
+    "id": "E047",
+    "claim": "Poses downstream benefit question; cited historical experiments are absent, so their numerical claims are not adopted.",
+    "evidence": "Poses downstream benefit question; cited historical experiments are absent, so their numerical claims are not adopted.",
+    "source": "Neurl IPS 2026/orchestration/personas.py:365\u2013382",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "replearn"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "replearn-r1-2"
+  },
+  {
+    "id": "E048",
+    "claim": "Zero-shot scGPT/Geneformer embeddings have limitations versus simple and established baselines; does not test this task.",
+    "evidence": "Zero-shot scGPT/Geneformer embeddings have limitations versus simple and established baselines; does not test this task.",
+    "source": "Kedzierska et al., Genome Biology 2025, doi:10.1186/s13059-025-03574-x",
+    "source_type": "literature",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "replearn"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "replearn-r1-2"
+  },
+  {
+    "id": "E049",
+    "claim": "_dense reads .X directly; validation checks finite nonnegative entries and panel order at line 128.",
+    "evidence": "_dense reads .X directly; validation checks finite nonnegative entries and panel order at line 128.",
+    "source": "Neurl IPS 2026/agent_orchestrator.py:121",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "scgenomics"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "scgenomics-r1-1"
+  },
+  {
+    "id": "E050",
+    "claim": "Regularized UMI depth models address technical variation; unconstrained count models can overfit biological variance.",
+    "evidence": "Regularized UMI depth models address technical variation; unconstrained count models can overfit biological variance.",
+    "source": "Hafemeister and Satija, Genome Biology 2019, doi:10.1186/s13059-019-1874-1; https://pmc.ncbi.nlm.nih.gov/articles/PMC6927181/",
+    "source_type": "literature",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "scgenomics"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "scgenomics-r1-1"
+  },
+  {
+    "id": "E051",
+    "claim": "Proxy score uses at most 150 cells selected from initial rows of candidate, truth and reference.",
+    "evidence": "Proxy score uses at most 150 cells selected from initial rows of candidate, truth and reference.",
+    "source": "Neurl IPS 2026/agent_orchestrator.py:176",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "scgenomics"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "scgenomics-r1-2"
+  },
+  {
+    "id": "E052",
+    "claim": "Cells sharing an embryo/sample must not be treated as independent biological replicates.",
+    "evidence": "Cells sharing an embryo/sample must not be treated as independent biological replicates.",
+    "source": "Neurl IPS 2026/prompts.md:1037",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "scgenomics"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "scgenomics-r1-2"
+  },
+  {
+    "id": "E053",
+    "claim": "Accounting for biological replicates prevents false differential-expression discoveries in examined datasets.",
+    "evidence": "Accounting for biological replicates prevents false differential-expression discoveries in examined datasets.",
+    "source": "Squair et al., Nature Communications 2021, doi:10.1038/s41467-021-25960-2; https://www.nature.com/articles/s41467-021-25960-2.pdf",
+    "source_type": "literature",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "scgenomics"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "scgenomics-r1-2"
+  },
+  {
+    "id": "E054",
+    "claim": "Validator checks file shape, gene order, finite nonnegative expression and finite coordinates, not capture or physical conservation.",
+    "evidence": "Validator checks file shape, gene order, finite nonnegative expression and finite coordinates, not capture or physical conservation.",
+    "source": "Neurl IPS 2026/agent_orchestrator.py:128-147",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "sciml"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "sciml-r1-1"
+  },
+  {
+    "id": "E055",
+    "claim": "Independent snapshots lose temporal coupling; OT adds transition assumptions and modifies mass constraints for proliferation and death.",
+    "evidence": "Independent snapshots lose temporal coupling; OT adds transition assumptions and modifies mass constraints for proliferation and death.",
+    "source": "Schiebinger et al., Cell 2019, DOI 10.1016/j.cell.2019.01.006; https://www.broadinstitute.org/files/publications/2019/03/1-s2.0-S009286741930039X-main.pdf",
+    "source_type": "literature",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "sciml"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "sciml-r1-1"
+  },
+  {
+    "id": "E056",
+    "claim": "Requests no, known, learned and randomized-prior comparisons; randomized benefit can indicate regularization rather than biological knowledge.",
+    "evidence": "Requests no, known, learned and randomized-prior comparisons; randomized benefit can indicate regularization rather than biological knowledge.",
+    "source": "Neurl IPS 2026/prompts.md:2042-2055",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "sciml"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "sciml-r1-2"
+  },
+  {
+    "id": "E057",
+    "claim": "SciML remit includes mechanistic constraints, scientific priors, conservation laws and model identifiability.",
+    "evidence": "SciML remit includes mechanistic constraints, scientific priors, conservation laws and model identifiability.",
+    "source": "Neurl IPS 2026/agenticprompt:315-329",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "sciml"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "sciml-r1-2"
+  },
+  {
+    "id": "E058",
+    "claim": "Imports common and scoring, which the audited source tree does not supply; local scorer equivalence is not established.",
+    "evidence": "Imports common and scoring, which the audited source tree does not supply; local scorer equivalence is not established.",
+    "source": "Neurl IPS 2026/agent_orchestrator.py:27",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "spatial3d"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "spatial3d-r1-1"
+  },
+  {
+    "id": "E059",
+    "claim": "Mandates absent geometry/scoring artifacts; historical numbers here are not directly verified experiments.",
+    "evidence": "Mandates absent geometry/scoring artifacts; historical numbers here are not directly verified experiments.",
+    "source": "Neurl IPS 2026/orchestration/personas.py:348",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "spatial3d"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "spatial3d-r1-1"
+  },
+  {
+    "id": "E060",
+    "claim": "Documents coordinate invariances, separate size scoring and coupling-independent neighbourhood profile comparison.",
+    "evidence": "Documents coordinate invariances, separate size scoring and coupling-independent neighbourhood profile comparison.",
+    "source": "Virtual Embryo Challenge official T2 scoring, 2026, https://virtualembryo.ai/challenge/evaluation?section=scoring&task=2",
+    "source_type": "literature",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "spatial3d"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "spatial3d-r1-1"
+  },
+  {
+    "id": "E061",
+    "claim": "Coordinate validation checks array shape and finite values, without verifying physical units or acquisition coverage.",
+    "evidence": "Coordinate validation checks array shape and finite values, without verifying physical units or acquisition coverage.",
+    "source": "Neurl IPS 2026/agent_orchestrator.py:144",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "spatial3d"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "spatial3d-r1-2"
+  },
+  {
+    "id": "E062",
+    "claim": "Models partially matched sections and nonlinear distortions, assessing correspondence with independent landmarks and expression.",
+    "evidence": "Models partially matched sections and nonlinear distortions, assessing correspondence with independent landmarks and expression.",
+    "source": "Clifton et al., STalign, Nature Communications 14:8123, 2023, https://doi.org/10.1038/s41467-023-43915-7",
+    "source_type": "literature",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "spatial3d"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "spatial3d-r1-2"
+  },
+  {
+    "id": "E063",
+    "claim": "Proxy selects candidate[:n] and true[:n], with n at most 150, and passes paired expression and coordinates to score_t2.",
+    "evidence": "Proxy selects candidate[:n] and true[:n], with n at most 150, and passes paired expression and coordinates to score_t2.",
+    "source": "Neurl IPS 2026/agent_orchestrator.py:175-185",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "spatialtx"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "spatialtx-r1-1"
+  },
+  {
+    "id": "E064",
+    "claim": "Validation checks exact panel, bounds, expression values and coordinate shape/finite values, without a joint expression-position diagnostic.",
+    "evidence": "Validation checks exact panel, bounds, expression values and coordinate shape/finite values, without a joint expression-position diagnostic.",
+    "source": "Neurl IPS 2026/agent_orchestrator.py:128-147",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "spatialtx"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "spatialtx-r1-2"
+  },
+  {
+    "id": "E065",
+    "claim": "GPSA separates mapping observed locations to common coordinates from mapping coordinates to phenotypic readouts; this motivates auditing frame and expression effects separately.",
+    "evidence": "GPSA separates mapping observed locations to common coordinates from mapping coordinates to phenotypic readouts; this motivates auditing frame and expression effects separately.",
+    "source": "Jones et al. Alignment of spatial genomics data using deep Gaussian processes. Nature Methods 2023. https://doi.org/10.1038/s41592-023-01972-2",
+    "source_type": "literature",
+    "verification": "abstract-only",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "spatialtx"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "spatialtx-r1-2"
+  },
+  {
+    "id": "E066",
+    "claim": "Diagnostic scorer caps at 150 and selects contiguous first rows for predictions, truth and coordinates.",
+    "evidence": "Diagnostic scorer caps at 150 and selects contiguous first rows for predictions, truth and coordinates.",
+    "source": "Neurl IPS 2026/agent_orchestrator.py:175\u2013185",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "stats"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "stats-r1-1"
+  },
+  {
+    "id": "E067",
+    "claim": "Cells within an individual are dependent subsamples; individual-level variation is required for population inference.",
+    "evidence": "Cells within an individual are dependent subsamples; individual-level variation is required for population inference.",
+    "source": "Zimmerman et al., Nature Communications 2021, doi:10.1038/s41467-021-21038-1, https://www.nature.com/articles/s41467-021-21038-1",
+    "source_type": "literature",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "stats"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "stats-r1-1"
+  },
+  {
+    "id": "E068",
+    "claim": "Verdict statuses set supported/falsified lifecycle and contribute binary sustained counts to calibration without experiments.",
+    "evidence": "Verdict statuses set supported/falsified lifecycle and contribute binary sustained counts to calibration without experiments.",
+    "source": "Neurl IPS 2026/orchestration/memory/update.py:86\u2013122",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "stats"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "stats-r1-2"
+  },
+  {
+    "id": "E069",
+    "claim": "Optimizing finite-sample selection criteria can cause overfitting and biased subsequent performance evaluation.",
+    "evidence": "Optimizing finite-sample selection criteria can cause overfitting and biased subsequent performance evaluation.",
+    "source": "Cawley and Talbot, JMLR 2010, 11:2079\u20132107, https://jmlr.org/papers/volume11/cawley10a/cawley10a.pdf",
+    "source_type": "literature",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "stats"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "stats-r1-2"
+  },
+  {
+    "id": "E070",
+    "claim": "PLAUSIBLE enters SUSTAINED; UNPROVEN enters REJECTED; these map to supported and falsified. This is inspectable code ground truth, not biological data.",
+    "evidence": "PLAUSIBLE enters SUSTAINED; UNPROVEN enters REJECTED; these map to supported and falsified. This is inspectable code ground truth, not biological data.",
+    "source": "Neurl IPS 2026/orchestration/memory/update.py:34-35,86-103",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "sysbio"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "sysbio-r1-1"
+  },
+  {
+    "id": "E071",
+    "claim": "Proxy scoring uses first-cell slices, up to 150 cells; population ordering can change sampled mixture. Required data and scoring imports are absent locally.",
+    "evidence": "Proxy scoring uses first-cell slices, up to 150 cells; population ordering can change sampled mixture. Required data and scoring imports are absent locally.",
+    "source": "Neurl IPS 2026/agent_orchestrator.py:163-184",
+    "source_type": "repo",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "sysbio"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "sysbio-r1-2"
+  },
+  {
+    "id": "E072",
+    "claim": "Joint composition modeling addresses constrained relative abundances; developmental continua complicate fixed cell-type definitions. Published full text inspected.",
+    "evidence": "Joint composition modeling addresses constrained relative abundances; developmental continua complicate fixed cell-type definitions. Published full text inspected.",
+    "source": "B\u00fcttner et al., scCODA, Nature Communications, 2021, doi:10.1038/s41467-021-27150-6; https://www.nature.com/articles/s41467-021-27150-6",
+    "source_type": "literature",
+    "verification": "read-directly",
+    "date": "2026-09-27",
+    "confidence": "limited to inspected content; transfer not established",
+    "supporting_experts": [
+      "sysbio"
+    ],
+    "contradicting_experts": [],
+    "status": "source support as reported by expert; not project-performance evidence",
+    "associated_hypothesis": "sysbio-r1-2"
+  },
+  {
+    "id": "E073",
+    "claim": "First-loop arithmetic and policy illustrations pass; they are not access enforcement.",
+    "evidence": "baseline_contract_results.json",
+    "source": "baseline_contract_results.json",
+    "source_type": "executed arbitrary synthetic arithmetic/counterexample",
+    "date": "2026-09-28",
+    "confidence": "high for narrow arithmetic scope",
+    "supporting_experts": [
+      "orchestrator",
+      "genmodel"
+    ],
+    "contradicting_experts": [],
+    "status": "observed synthetic checks; not biological or operational evidence"
+  },
+  {
+    "id": "E074",
+    "claim": "Final corrected sampling/variance/frame/domain counterexamples pass; biological validity is untested.",
+    "evidence": "final_contract_results.json",
+    "source": "final_contract_results.json",
+    "source_type": "executed arbitrary synthetic arithmetic/counterexample",
+    "date": "2026-09-28",
+    "confidence": "high for narrow arithmetic scope",
+    "supporting_experts": [
+      "orchestrator",
+      "genmodel"
+    ],
+    "contradicting_experts": [],
+    "status": "observed synthetic checks; not biological or operational evidence"
+  }
+]

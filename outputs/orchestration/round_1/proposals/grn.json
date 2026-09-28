@@ -1,0 +1,53 @@
+{
+  "expert": "grn",
+  "round": 1,
+  "searches_run": [
+    "BEELINE benchmarking algorithms gene regulatory network inference single cell transcriptomic data Nature Methods 2020",
+    "GEARS predicting transcriptional outcomes novel multigene perturbations Nature Biotechnology 2023",
+    "GATA4 beta catenin embryonic cardiogenesis transcription chromatin perturbation primary study"
+  ],
+  "proposals": [
+    {
+      "id": "grn-r1-1",
+      "board": "PROCESS",
+      "title": "Test whether eligible graph identities improve perturbation prediction",
+      "claim": "On independent-embryo perturbation validation, an eligible biological prior will exceed degree-preserving randomized priors by a prespecified practical margin in de_direction. This is an untested hypothesis, not a causal-edge claim.",
+      "mechanism": "Biological edge identities may transfer response information to measured targets, raising de_direction and de_score; mmd_u and severity_slope guard against a benefit driven by wrong composition or magnitude. Match architecture, graph degree, tuning budget and training-only preprocessing.",
+      "cost": "compute-only",
+      "falsifier": "After data acquisition, run true/no/coexpression graphs and repeated degree-preserving randomized priors on identical embryo splits. Kill the claim if the true-minus-random de_direction interval fails to exceed the preregistered practical margin.",
+      "local_ground_truth": "no",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/prompts.md:2040-2054",
+          "says": "Requests no, known, learned and randomized prior controls; warns random-prior gains may be regularization.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "literature",
+          "ref": "Roohani et al., GEARS, Nature Biotechnology, online 2023 / volume 2024, doi:10.1038/s41587-023-01905-6; https://www.nature.com/articles/s41587-023-01905-6",
+          "says": "Uses coexpression and GO graphs with large perturbation screens; discussion requires matching cell type or condition for reliable prediction.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "literature",
+          "ref": "Pratapa et al., BEELINE, Nature Methods 2020, doi:10.1038/s41592-019-0690-6; https://www.nature.com/articles/s41592-019-0690-6",
+          "says": "Reports moderate precision in benchmarked GRN inference; does not validate this project's edges.",
+          "verified": "abstract-only"
+        }
+      ],
+      "confidence": 0.3,
+      "novelty": "adaptation"
+    }
+  ],
+  "peer_responses": [
+    {
+      "peer": "causal",
+      "stance": "refine",
+      "on": "causal-r1-1: WT plus Mab21l2 does not identify Gata4 responses",
+      "because": "Endorse nonidentifiability; eligible priors can still predict. Randomized controls test graph identities, not direction or direct regulation. GEARS uses coexpression/GO. Gata4 measured-paper exposure needs separate stage/allele provenance before predictive use."
+    }
+  ],
+  "self_correction": "n/a (initial review)",
+  "declined": "Decline attention-as-causality and scaling Mab21l2 deltas into held-out knockouts. One perturbation does not identify unrelated interventions; absent data prevent testing panel coverage or historical gene rankings."
+}

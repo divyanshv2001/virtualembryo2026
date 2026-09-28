@@ -1,0 +1,72 @@
+{
+  "expert": "benchdesign",
+  "round": 1,
+  "searches_run": [
+    "site.nature.com perturbation prediction benchmark simple baselines 2025 single cell",
+    "site.virtualembryo.ai/challenge evaluation task 1 scoring rules"
+  ],
+  "proposals": [
+    {
+      "id": "benchdesign-r1-1",
+      "board": "PROCESS",
+      "title": "Require a versioned proxy measurement contract before candidate comparison",
+      "claim": "A predeclared seeded whole-cloud sampling contract will prevent row-order-dependent proxy comparisons and prohibit unsupported proxy-minus-real improvement claims.",
+      "mechanism": "Record scorer hash, panels, preprocessing, sampling seeds and raw mmd_u/de_score/variogram components; compare candidates only on identical local splits. Remove interpretation of proxy-minus-hardcoded-board differences as gains.",
+      "cost": "compute-only",
+      "falsifier": "Permute identical synthetic rows across repeated evaluations; kill the contract if results depend on row order beyond prespecified Monte Carlo tolerance or if mixed-split deltas are admitted as evidence.",
+      "local_ground_truth": "no",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/agent_orchestrator.py:175-185",
+          "says": "Proxy scores use first-row subsets capped at 150 cells.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/agent_orchestrator.py:188-195",
+          "says": "Real-board score constants have no accompanying biological artifacts in the audited workspace.",
+          "verified": "read-directly"
+        }
+      ],
+      "confidence": 0.95,
+      "novelty": "adaptation"
+    },
+    {
+      "id": "benchdesign-r1-2",
+      "board": "PROCESS",
+      "title": "Freeze residual-based model selection and add matched generic-effect controls",
+      "claim": "Separating architecture-selection diagnostics from final assessment will expose whether a selected model beats matched simple controls without reusing the target to choose it.",
+      "mechanism": "Freeze training-only selection rules and candidate budgets before assessment; compare composition, shrunk affine and generic-shift controls on mmd_u, de_direction and severity_slope. Do not claim unseen-gene generalization from one KO.",
+      "cost": "compute-only",
+      "falsifier": "Audit the query ledger: fail if final-target residuals chose architecture, priors or tuning; with independent eligible data, reject benefit if it vanishes against a matched generic-effect baseline.",
+      "local_ground_truth": "no",
+      "evidence": [
+        {
+          "kind": "repo",
+          "ref": "Neurl IPS 2026/agent_orchestrator.py:150-159",
+          "says": "Board names route to fixed stage proxy tuples; these do not themselves establish valid interpolation or trend assessment.",
+          "verified": "read-directly"
+        },
+        {
+          "kind": "literature",
+          "ref": "Systema, Nature Biotechnology, online 2025 / volume 2026, https://www.nature.com/articles/s41587-025-02777-8?error=cookies_not_supported",
+          "says": "Shared perturbation effects can inflate standard prediction metrics; perturbation-specific evaluation and simple controls are necessary.",
+          "verified": "read-directly"
+        }
+      ],
+      "confidence": 0.9,
+      "novelty": "adaptation"
+    }
+  ],
+  "peer_responses": [
+    {
+      "peer": "stats",
+      "stance": "refine",
+      "on": "Independent selection contract and explicit primary/guardrail success rules",
+      "because": "Read stats review and debate: freeze T2 E7.25 proxy, D orientation, positive practical margin and simultaneous guardrails before outcomes. Independent embryo n needs a manifest; residual-guided selection leaves no untouched assessment without fresh eligible data."
+    }
+  ],
+  "self_correction": "Initial proposal omitted joint success criteria. Provisional primary is T2 embryo E7.25 interpolation proxy from E6.75/E8.0; persistence stays secondary. Freeze superiority and guardrail tolerances before outcomes; numerical margins remain unavailable. Seeds/refits cannot establish embryo replication.",
+  "declined": "Declined recovering hidden response amplitudes from metric anchors or score differences: rules prohibit target recovery. Declined treating one KO or a two-stage cell split as evidence of broad gene or temporal generalization."
+}
