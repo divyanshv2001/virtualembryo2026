@@ -1,5 +1,7 @@
 # T1 leaderboard optimization decisions
 
+**Current submission policy:** The user reports four of eight daily attempts used and requests local evaluation before another submission. Preserve the remaining four. Earlier submission recommendations below are historical development priorities, superseded by this policy. See [LOCAL_VALIDATION.md](LOCAL_VALIDATION.md) for the executed offline loop, rejected calibration and limits on certifying a hidden score above 72.
+
 Updated 2026-09-28. All scores below are user-provided portal feedback, not an authenticated programmatic query. The latest filename was explicitly confirmed by the user. Do not treat multiple observations of one file as independent submissions.
 
 | Prediction | Total | de_score | de_direction | mmd_u | variogram |

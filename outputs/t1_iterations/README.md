@@ -1,5 +1,7 @@
 # Controlled T1 development iterations
 
+**Current policy:** preserve the user's four remaining daily submissions. The older upload sequence below is superseded. The executed offline backtest and its limitations are documented in [LOCAL_VALIDATION.md](LOCAL_VALIDATION.md); no local or official score above 72 has been established.
+
 The best user-reported result remains 48.1 for the full exploratory per-celltype mean-shift artifact. No local diagnostic replaces E10.5 assessment. See [OPTIMIZATION.md](OPTIMIZATION.md) for the confirmed feedback and prioritized experiments.
 
 Round 1 freezes a small training-only candidate set before execution:
