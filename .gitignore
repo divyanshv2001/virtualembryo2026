@@ -6,3 +6,9 @@
 *.pyc
 # Separately versioned source; its remote and commit are pinned in run_manifest.json.
 /Neurl IPS 2026/
+# Local biological data and generated prediction matrices stay out of Git.
+/data/
+*.h5ad
+/outputs/t1_run/donor_rows.npy
+/outputs/t1_run/input_inspection.json
+/outputs/t1_run/run_report.json
