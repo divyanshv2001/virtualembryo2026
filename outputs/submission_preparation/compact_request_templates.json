@@ -1,0 +1,235 @@
+[
+  {
+    "phase": "inventory",
+    "payload": {
+      "model": "jev-1.13.0",
+      "state": {
+        "phase": "inventory",
+        "biological_experiments": 0,
+        "data_present": false,
+        "original_suite": {
+          "passed": 15,
+          "failed": 1
+        },
+        "issues": [],
+        "critic_loops_completed_at_decision": 0,
+        "scope": "research audit/prospective protocol; no prediction or eligibility claim",
+        "facts_version": "2026-09-28-audit-final",
+        "review_required": "Scientific interpretation uses full linked artifacts, never this routing summary."
+      },
+      "questions": {
+        "biological_performance_demonstrated": {
+          "type": "noul",
+          "instructions": "Does the supplied evidence contain an executed biological prediction experiment demonstrating model performance?"
+        },
+        "claims_need_empirical_test": {
+          "type": "noul",
+          "instructions": "Do proposed biological score improvements still require empirical testing on data absent from the supplied folder?"
+        },
+        "next_action": {
+          "type": "choice",
+          "instructions": "Choose the next action within the explicitly requested research-audit scope, using the phase and completed artifacts.",
+          "criteria": {
+            "expert_review": "Inventory stage: continue domain reviews before synthesis.",
+            "expert_correction": "Loop 1 critic completed: route substantive criticisms to relevant experts and revise.",
+            "final_risk_review": "Loop 2 critic completed: correct substantive issues and finalize unresolved risks.",
+            "claim_empirical_success": "Executed biological data establish model performance."
+          }
+        }
+      }
+    },
+    "semantic_cache_key": "9c2d4e355737e0debdda665c6ce7e24843cf7486db67df1c987b64d0c9cea8f0",
+    "original_payload_bytes": 1650,
+    "compact_payload_bytes": 1345,
+    "historical_actual_input_tokens": 613,
+    "optimized_actual_tokens": null,
+    "live_call_needed_for_current_known_state": false,
+    "deterministic_action": "expert_review",
+    "reason": "Known executed counts and explicit workflow phase resolve these questions without a model.",
+    "scope": "Counterfactual routing template only. Does not reproduce substantive critic judgments or contain a new Jev answer."
+  },
+  {
+    "phase": "loop1",
+    "payload": {
+      "model": "jev-1.13.0",
+      "state": {
+        "phase": "loop1",
+        "biological_experiments": 0,
+        "data_present": false,
+        "original_suite": {
+          "passed": 15,
+          "failed": 1
+        },
+        "issues": [
+          {
+            "id": "C1-1",
+            "severity": "Major",
+            "owner": "benchdesign",
+            "disposition": "design_corrected_empirical_or_operational_risk_open"
+          },
+          {
+            "id": "C1-2",
+            "severity": "Major",
+            "owner": "stats",
+            "disposition": "design_corrected_empirical_or_operational_risk_open"
+          },
+          {
+            "id": "C1-3",
+            "severity": "Major",
+            "owner": "benchdesign",
+            "disposition": "design_corrected_empirical_or_operational_risk_open"
+          },
+          {
+            "id": "C1-4",
+            "severity": "Major",
+            "owner": "genmodel",
+            "disposition": "design_corrected_empirical_or_operational_risk_open"
+          },
+          {
+            "id": "C1-5",
+            "severity": "Critical",
+            "owner": "causal",
+            "disposition": "design_corrected_empirical_or_operational_risk_open"
+          },
+          {
+            "id": "C1-6",
+            "severity": "Major",
+            "owner": "panel",
+            "disposition": "design_corrected_empirical_or_operational_risk_open"
+          },
+          {
+            "id": "C1-7",
+            "severity": "Major",
+            "owner": "sysbio",
+            "disposition": "design_corrected_empirical_or_operational_risk_open"
+          },
+          {
+            "id": "C1-8",
+            "severity": "Major",
+            "owner": "spatial3d",
+            "disposition": "design_corrected_empirical_or_operational_risk_open"
+          }
+        ],
+        "critic_loops_completed_at_decision": 1,
+        "scope": "research audit/prospective protocol; no prediction or eligibility claim",
+        "facts_version": "2026-09-28-audit-final",
+        "review_required": "Scientific interpretation uses full linked artifacts, never this routing summary."
+      },
+      "questions": {
+        "biological_performance_demonstrated": {
+          "type": "noul",
+          "instructions": "Does the supplied evidence contain an executed biological prediction experiment demonstrating model performance?"
+        },
+        "claims_need_empirical_test": {
+          "type": "noul",
+          "instructions": "Do proposed biological score improvements still require empirical testing on data absent from the supplied folder?"
+        },
+        "next_action": {
+          "type": "choice",
+          "instructions": "Choose the next action within the explicitly requested research-audit scope, using the phase and completed artifacts.",
+          "criteria": {
+            "expert_review": "Inventory stage: continue domain reviews before synthesis.",
+            "expert_correction": "Loop 1 critic completed: route substantive criticisms to relevant experts and revise.",
+            "final_risk_review": "Loop 2 critic completed: correct substantive issues and finalize unresolved risks.",
+            "claim_empirical_success": "Executed biological data establish model performance."
+          }
+        }
+      }
+    },
+    "semantic_cache_key": "258430887268c4a74b8caa5a3f9d25d8b411876eec7d225aebfeb4eb88241f8c",
+    "original_payload_bytes": 21014,
+    "compact_payload_bytes": 2300,
+    "historical_actual_input_tokens": 4473,
+    "optimized_actual_tokens": null,
+    "live_call_needed_for_current_known_state": false,
+    "deterministic_action": "expert_correction",
+    "reason": "Known executed counts and explicit workflow phase resolve these questions without a model.",
+    "scope": "Counterfactual routing template only. Does not reproduce substantive critic judgments or contain a new Jev answer."
+  },
+  {
+    "phase": "loop2",
+    "payload": {
+      "model": "jev-1.13.0",
+      "state": {
+        "phase": "loop2",
+        "biological_experiments": 0,
+        "data_present": false,
+        "original_suite": {
+          "passed": 15,
+          "failed": 1
+        },
+        "issues": [
+          {
+            "id": "C2-1",
+            "severity": "Major",
+            "owner": "genmodel",
+            "disposition": "documentary_or_arithmetic_corrected_empirical_operational_risk_open"
+          },
+          {
+            "id": "C2-2",
+            "severity": "Major",
+            "owner": "benchdesign/genmodel",
+            "disposition": "documentary_or_arithmetic_corrected_empirical_operational_risk_open"
+          },
+          {
+            "id": "C2-3",
+            "severity": "Major",
+            "owner": "spatial3d/genmodel",
+            "disposition": "documentary_or_arithmetic_corrected_empirical_operational_risk_open"
+          },
+          {
+            "id": "C2-4",
+            "severity": "Moderate",
+            "owner": "genmodel",
+            "disposition": "documentary_or_arithmetic_corrected_empirical_operational_risk_open"
+          },
+          {
+            "id": "C2-5",
+            "severity": "Major",
+            "owner": "benchdesign/causal",
+            "disposition": "documentary_or_arithmetic_corrected_empirical_operational_risk_open"
+          },
+          {
+            "id": "C2-6",
+            "severity": "Moderate",
+            "owner": "sysbio/orchestrator",
+            "disposition": "documentary_or_arithmetic_corrected_empirical_operational_risk_open"
+          }
+        ],
+        "critic_loops_completed_at_decision": 2,
+        "scope": "research audit/prospective protocol; no prediction or eligibility claim",
+        "facts_version": "2026-09-28-audit-final",
+        "review_required": "Scientific interpretation uses full linked artifacts, never this routing summary."
+      },
+      "questions": {
+        "biological_performance_demonstrated": {
+          "type": "noul",
+          "instructions": "Does the supplied evidence contain an executed biological prediction experiment demonstrating model performance?"
+        },
+        "claims_need_empirical_test": {
+          "type": "noul",
+          "instructions": "Do proposed biological score improvements still require empirical testing on data absent from the supplied folder?"
+        },
+        "next_action": {
+          "type": "choice",
+          "instructions": "Choose the next action within the explicitly requested research-audit scope, using the phase and completed artifacts.",
+          "criteria": {
+            "expert_review": "Inventory stage: continue domain reviews before synthesis.",
+            "expert_correction": "Loop 1 critic completed: route substantive criticisms to relevant experts and revise.",
+            "final_risk_review": "Loop 2 critic completed: correct substantive issues and finalize unresolved risks.",
+            "claim_empirical_success": "Executed biological data establish model performance."
+          }
+        }
+      }
+    },
+    "semantic_cache_key": "2db09628dac99ea4026b9b14cb4d708cbd307df96e2ffa867ef0e74f3e4b16d4",
+    "original_payload_bytes": 18877,
+    "compact_payload_bytes": 2205,
+    "historical_actual_input_tokens": 4008,
+    "optimized_actual_tokens": null,
+    "live_call_needed_for_current_known_state": false,
+    "deterministic_action": "final_risk_review",
+    "reason": "Known executed counts and explicit workflow phase resolve these questions without a model.",
+    "scope": "Counterfactual routing template only. Does not reproduce substantive critic judgments or contain a new Jev answer."
+  }
+]
