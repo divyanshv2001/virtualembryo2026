@@ -1,0 +1,11 @@
+{
+  "updated_utc": "2026-09-29T12:53:04.122433+00:00",
+  "tests_passed": 125,
+  "command": "pytest outputs/t1_iterations -q -p no:cacheprovider --basetemp outputs/t1_iterations/private/pytest_tmp_56",
+  "checks": [
+    "Zero-duration inverse flow exactly equals frozenbase negative loglikelihood, zero energy and zero parameter gradients with nonzero field",
+    "Existing mixture likelihood/futureinvariance/checkpoint compatibility tests pass",
+    "Runner enforces exact equality to previously frozen priors/coordinates/heads; origincomparison explicit"
+  ],
+  "limitations": "Earliest snapshot cannot trainfield atzero duration; calendar-time originshift and fewerinformative updates partofmechanism. Predictiveaccuracy not established."
+}

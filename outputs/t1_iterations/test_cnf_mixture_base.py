@@ -36,3 +36,19 @@ def test_default_base_replay_and_prior_checkpoint_guard(tmp_path):
     other=MixtureBaseDensityFlowNet(np.eye(2),np.zeros(2),7.75,7.25,changed)
     with pytest.raises(ValueError,match='Checkpoint configuration'):
         train_manifold_density(other,z,stages,.1,path,lambda *a,**kw:None,resume=True,steps=2,density_weight=10.)
+
+
+def test_observed_origin_zero_duration_equals_frozen_base_density():
+    z=np.random.default_rng(6).normal(size=(24,2)).astype(np.float32);stages=np.repeat([7.5,7.75],12)
+    prior,_=fit_earliest_prior(z,stages,7.75,1)
+    net=MixtureBaseDensityFlowNet(np.eye(2),np.zeros(2),7.75,7.5,prior)
+    with torch.no_grad():net.field[-1].weight.normal_(0,.03)
+    values=torch.tensor(z[:4])
+    expected=-net.log_base(values)
+    nll,energy=inverse_density(net.velocity,values.clone(),0.,noise=torch.ones_like(values),log_base=net.log_base)
+    torch.testing.assert_close(nll,expected,rtol=0,atol=0)
+    torch.testing.assert_close(energy,torch.zeros(4),rtol=0,atol=0)
+    (nll.mean()+.1*energy.mean()).backward()
+    for parameter in net.field.parameters():
+        assert parameter.grad is not None
+        torch.testing.assert_close(parameter.grad,torch.zeros_like(parameter),rtol=0,atol=0)

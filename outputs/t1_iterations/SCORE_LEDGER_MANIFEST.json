@@ -1,5 +1,5 @@
 {
-  "records": 2393,
+  "records": 2426,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -190,6 +190,11 @@
       "path": "private/cnf_matched_mixture_01/report.json",
       "sha256": "cb150f5635f03b00ba8080cbcd1ed732f55b41039bc3c0fd2997d46835570853",
       "outcomes_indexed": 39
+    },
+    {
+      "path": "private/cnf_mixture_base_challenge_01/report.json",
+      "sha256": "daaf10b073cca10f5730069053196cd3fe761b9b16742c9d03c7e75caa54865f",
+      "outcomes_indexed": 33
     },
     {
       "path": "private/cnf_noise_challenge_01/report.json",
@@ -559,5 +564,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "6e60b940a5fc79ea8249ce56b0486531b4d9d5fe8d8fe5998a12e9fb2b83487c"
+  "ledger_sha256": "5ce06dc908397be1b132340b33c93e2c5705ee926d8135ff8b7c08cced023e6d"
 }

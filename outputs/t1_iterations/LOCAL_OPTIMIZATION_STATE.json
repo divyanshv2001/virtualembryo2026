@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T12:45:31.058370+00:00",
+  "updated_utc": "2026-09-29T12:53:04.122433+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_mixture_base_challenge.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_observed_base_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Earliest7.5observedsource Gaussian1/8 bases, fixedvirtualorigin7.25,batch64,800updates, matchedstandardbasecontrols;33scores.",
+  "next_experiment": "Observed7.5flow originwithsameGaussian1/8priors, originaldecoder,timeconditionedfield;45full-panel scores includingvirtualorigincontrols.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_mixture_base_challenge_01"
+    "cnf_observed_base_challenge_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_mixture_base_challenge_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_observed_base_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -794,14 +794,28 @@
     "results_report": "CNF_AUTONOMOUS_RESULTS.json"
   },
   "cnf_mixture_base_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_mixture_base_challenge_01",
     "evaluations_planned": 33,
-    "pending_evaluations": 33,
-    "decision": "Testfixedpastempiricalbasedensity; virtualoriginapproximation explicit, no72promotion.",
+    "pending_evaluations": 0,
+    "decision": "Virtual-origin fittedGaussian1/GMM8 jointmeans45.8512/49.9755 andabundance48.9218/49.2368; no promotion, preserve33outcomes. Next observed7.5origin matchesfittedpriorstage, priorvirtualmodels ascontrols; isolate pre-observationoriginassumption.",
     "tests_passed": 124,
     "process_id": 2436,
     "worker_process_id": 10980,
-    "plan_sha256": "6b42eaaf060d306aafe580d7953e56f9b9a02ea40cf77073c3d096c5f7fd6c75"
+    "plan_sha256": "6b42eaaf060d306aafe580d7953e56f9b9a02ea40cf77073c3d096c5f7fd6c75",
+    "evaluations": 33,
+    "report_sha256": "daaf10b073cca10f5730069053196cd3fe761b9b16742c9d03c7e75caa54865f",
+    "results_report": "CNF_MIXTURE_BASE_RESULTS.json"
+  },
+  "cnf_observed_base_job": {
+    "status": "running",
+    "run": "cnf_observed_base_challenge_01",
+    "evaluations_planned": 45,
+    "pending_evaluations": 45,
+    "decision": "Match observedprior andfloworigin; earlieststage gradientzeroverified, no72promotion.",
+    "tests_passed": 125,
+    "process_id": 15312,
+    "worker_process_id": 23096,
+    "plan_sha256": "43261ebebc3a46c893da626fa87e6c0695577e10edf8d18e9ed37bbaacaf51aa"
   }
 }

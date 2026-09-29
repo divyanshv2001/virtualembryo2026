@@ -5402,7 +5402,7 @@
     {
       "id": "continuous_flow_earliest_mixture_base",
       "run": "cnf_mixture_base_challenge_01",
-      "status": "implemented_running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_mixture_base_challenge.py",
         "cnf_mixture_base.py",
@@ -5414,7 +5414,24 @@
       "limitations": "Observed7.5population approximates virtual7.25, notmeasuredstage. Mixturemayoverfit sampledsourcecohort, domain/tissuebias remains; no independentembryos/growth/velocity. ExposedE9.5development, no promotion withoutoriginalgate.",
       "research_family_exhausted": false,
       "tests_passed": 124,
-      "validation_report": "CNF_MIXTURE_BASE_VALIDATION.json"
+      "validation_report": "CNF_MIXTURE_BASE_VALIDATION.json",
+      "results_report": "CNF_MIXTURE_BASE_RESULTS.json",
+      "decision": "Virtual-origin fittedGaussian1/GMM8 jointmeans45.8512/49.9755 andabundance48.9218/49.2368; no promotion, preserve33outcomes. Next observed7.5origin matchesfittedpriorstage, priorvirtualmodels ascontrols; isolate pre-observationoriginassumption."
+    },
+    {
+      "id": "continuous_flow_observed_base_origin",
+      "run": "cnf_observed_base_challenge_01",
+      "status": "implemented_running",
+      "implementation": [
+        "cnf_observed_base_challenge.py",
+        "cnf_mixture_base.py"
+      ],
+      "primary_reference": "CNF_MIXTURE_BASE_REFERENCE.json",
+      "trial_scope": "Observed7.5origin matches earliestprior7.5,components1/8, samepastcoords/head/init/stage-sampling,800updates,batch64; fourforecasts/elevencontrols x3fixedpanels=45scores.",
+      "limitations": "Earliestzero-duration likelihood cannottrainfield, effectively fewerinformativeupdates; equalstagestochasticdraws retained. Calendar-time coordinate shiftswithorigin; assessedasobserved-originmechanism. Sampledsourcecohort anddomainmismatch remain, noindependentembryos or targetlearning.",
+      "research_family_exhausted": false,
+      "tests_passed": 125,
+      "validation_report": "CNF_OBSERVED_BASE_VALIDATION.json"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."
