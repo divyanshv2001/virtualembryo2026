@@ -1,5 +1,5 @@
 {
-  "status": "literature_reviewed_not_implemented",
+  "status": "marker_scores_audited_composition_pilot_running_transport_not_implemented",
   "reviewed_utc": "2026-09-28T18:50:13.226973+00:00",
   "sources": [
     {
@@ -26,5 +26,9 @@
     "This is an unresolved research path, not a proven improvement or executed experiment."
   ],
   "submissions_allowed": 0,
-  "jev_requests_allowed": 0
+  "jev_requests_allowed": 0,
+  "marker_reference": "GROWTH_MARKER_REFERENCE.json",
+  "input_audit": "GROWTH_PRIOR_AUDIT.json",
+  "composition_pilot": "private/growth_composition_horizon_01",
+  "next_unimplemented": "Historical balanced/unbalanced coupling solver and explicit one-day extrapolation. Preliminary growth-proxy composition alone does not implement transport."
 }

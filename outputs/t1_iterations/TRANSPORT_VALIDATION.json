@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "tests_passed": 72,
+  "command": "outputs/research_workflow/.venv/Scripts/python.exe -m pytest outputs/t1_iterations -q -p no:cacheprovider --basetemp outputs/t1_iterations/private/test_temp_transport_20260929_02",
+  "checks": "Closed-form entropy unbalanced transport, balanced marginals, future-expression invariance, existing hurdle mass/protected guards and full research regression suite. These tests establish implementation properties, not forecasting quality.",
+  "run": "private/transport_hurdle_horizon_01",
+  "plan_sha256": "a621075ed0a37277adedb97f221ca4c80093623e1dc397000669cce93708d7ec"
+}

@@ -1,0 +1,58 @@
+{
+  "status": "completed_not_promoted",
+  "evaluations": 20,
+  "report_sha256": "d2f032413afa5f4f378fc1c5ca3c4323ab1ae307686465e723377cc4a7dec4ab",
+  "results": [
+    {
+      "candidate": "growth_net_p0.5",
+      "scores": [
+        48.02332427162676,
+        47.70549054843579
+      ],
+      "mean_score": 47.864407410031276
+    },
+    {
+      "candidate": "growth_net_p1.0",
+      "scores": [
+        48.28328580240739,
+        47.6825512194257
+      ],
+      "mean_score": 47.98291851091655
+    },
+    {
+      "candidate": "growth_proliferation_p0.5",
+      "scores": [
+        48.430709080581316,
+        47.86055344096825
+      ],
+      "mean_score": 48.145631260774785
+    },
+    {
+      "candidate": "growth_proliferation_p1.0",
+      "scores": [
+        48.0027199058456,
+        47.84853393389751
+      ],
+      "mean_score": 47.925626919871554
+    },
+    {
+      "candidate": "growth_p53_p0.5",
+      "scores": [
+        48.29689854354932,
+        47.137434006504954
+      ],
+      "mean_score": 47.71716627502714
+    },
+    {
+      "candidate": "growth_p53_p1.0",
+      "scores": [
+        48.670999789760025,
+        47.96196525782362
+      ],
+      "mean_score": 48.31648252379182
+    }
+  ],
+  "decision": "All six growth-proxy composition variants fail persistence on both folds. Do not infer biological growth from these scores. Historical balanced/unbalanced transport still unimplemented.",
+  "research_family_exhausted": false,
+  "submissions_used": 0
+}

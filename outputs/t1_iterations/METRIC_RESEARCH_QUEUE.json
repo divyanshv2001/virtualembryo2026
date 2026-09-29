@@ -672,7 +672,7 @@
         "mmd_u",
         "variogram"
       ],
-      "status": "literature_reviewed_prior_validation_required",
+      "status": "input_audit_and_composition_pilot_evaluated_transport_open",
       "sources": [
         {
           "title": "Waddington-OT",
@@ -686,10 +686,14 @@
         }
       ],
       "hypothesis_and_limits": "Growth-aware population evolution can change composition, but captured cell counts do not measure proliferation.",
-      "implementation": null,
+      "implementation": [
+        "growth_prior_audit.py",
+        "growth_proxy_forecast.py",
+        "growth_composition_horizon.py"
+      ],
       "run": null,
       "declared_experiment_and_result": null,
-      "next_action": "Use NEXT_GROWTH_TRANSPORT_EXPERIMENT.json: validate authoritative mouse marker overlap and past-only growth proxies before bounded neutral/growth transport ablations.",
+      "next_action": "Implement and test past-only PCA transport flow with balanced, unbalanced-neutral and bounded growth priors; use unchanged hurdle heads and matched full-panel one-day scoring.",
       "research_family_exhausted": false,
       "constraints": [
         "All learner inputs <= fold cutoff; challenge calibration <=E8.5",
@@ -706,7 +710,23 @@
           "url": "https://moscot.readthedocs.io/en/stable/notebooks/examples/problems/TemporalProblem/800_score_genes_for_marginals.html",
           "scope": "Marginal scoring and prior growth sections, lines719-815, including species-specific marker availability and rate sensitivity."
         }
-      ]
+      ],
+      "input_audit": {
+        "status": "completed",
+        "unique_marker_overlap": {
+          "proliferation": 94,
+          "p53_proxy": 187
+        },
+        "report": "GROWTH_PRIOR_AUDIT.json",
+        "failed_original_audit": "private/growth_prior_audit_01/failure.json",
+        "repair": "Retain zero-expression controls for low-expression-marker bins; original failure preserved."
+      },
+      "composition_pilot": {
+        "run": "growth_composition_horizon_01",
+        "status": "completed_not_promoted",
+        "scope": "Growth-proxy weights only; not unbalanced OT. Solver/dynamics path remains open.",
+        "results_report": "GROWTH_COMPOSITION_RESULTS.json"
+      }
     },
     {
       "id": "mmd_kernel_matching",
@@ -4377,7 +4397,7 @@
         "mmd_u",
         "variogram"
       ],
-      "status": "implemented_evaluated",
+      "status": "running",
       "sources": [
         {
           "url": "https://arxiv.org/html/1302.7149v2",
@@ -4390,11 +4410,11 @@
       ],
       "scope": "Adaptation, not faithful ECC. Three positive-quantile strengths, global and four-state conditional, two one-day associated-cohort folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "77d0ec16a6dc4ec26f293db4fd1d690ef9b59d948d375461a5afc648aaeaddf8",
+      "results_report_sha256": "19ee77576ea05d6932e7800abfb111ea17172e421e80a0b69cc794acbd762f8c",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Inspect neural hurdle outcomes and drift/detection diagnostics before freezing further ablations; continue validated growth-prior and remaining transport paths. No candidate is ready for official use."
+      "next_action": "Complete the frozen growth-composition pilot, preserve all four scores, and inspect both one-day folds. Keep official quota unused."
     },
     {
       "id": "annotation_conditioned_temporal",
@@ -4418,7 +4438,7 @@
       ],
       "scope": "Heuristic adaptation to normalized abundance; not muscat replication. Observed annotations group past cells. Four expression/detection ablations, source support20 vs100, two one-day folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "77d0ec16a6dc4ec26f293db4fd1d690ef9b59d948d375461a5afc648aaeaddf8",
+      "results_report_sha256": "19ee77576ea05d6932e7800abfb111ea17172e421e80a0b69cc794acbd762f8c",
       "limitations": [
         "Published annotation may derive from joint stages; retrospective diagnostic only.",
         "Capture IDs do not establish independent embryos; cell-based errors are shrinkage heuristics.",
@@ -4427,7 +4447,7 @@
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Inspect neural hurdle outcomes and drift/detection diagnostics before freezing further ablations; continue validated growth-prior and remaining transport paths. No candidate is ready for official use."
+      "next_action": "Complete the frozen growth-composition pilot, preserve all four scores, and inspect both one-day folds. Keep official quota unused."
     },
     {
       "id": "shared_gene_program_dynamics",
@@ -4454,11 +4474,11 @@
       "scope": "Shared SVD profile directions versus cell-level NMF median consensus usage dynamics. Neither is a faithful cNMF reproduction or certified biological-program recovery.",
       "frozen_trials": "SVD ranks2/4/8 with detection0/.5; NMF ranks8/16 with detection0/.5,3 fixed seeds and200 iterations. Rank16 optimizer repair800 iterations. Two matched one-day development folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "77d0ec16a6dc4ec26f293db4fd1d690ef9b59d948d375461a5afc648aaeaddf8",
+      "results_report_sha256": "19ee77576ea05d6932e7800abfb111ea17172e421e80a0b69cc794acbd762f8c",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Inspect neural hurdle outcomes and drift/detection diagnostics before freezing further ablations; continue validated growth-prior and remaining transport paths. No candidate is ready for official use."
+      "next_action": "Complete the frozen growth-composition pilot, preserve all four scores, and inspect both one-day folds. Keep official quota unused."
     },
     {
       "id": "neural_latent_hurdle",
@@ -4480,8 +4500,57 @@
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Freeze systematic detection sampling versus independent Bernoulli to test gene-mean Monte Carlo noise, preserving the same frozen dynamics, fitted heads and evaluation anchors.",
-      "results_report": "NEURAL_HURDLE_RESULTS.json"
+      "next_action": "Current sampling ablation adds only small gains and stays below persistence; retain all outcomes, continue growth-proxy sensitivity path.",
+      "results_report": "NEURAL_HURDLE_RESULTS.json",
+      "sampling_ablation": {
+        "status": "completed_not_promoted",
+        "run": "neural_sampling_horizon_01",
+        "scope": "Four systematic variants, hash-verified independent forecasts replayed; per-gene expected switch count controlled. Heads recomputed from permitted past rows and verified bit-identical to archived arrays. Numerical hypothesis, not a published biological-model reproduction.",
+        "tests_passed": 68,
+        "results": {
+          "systematic_detection_s0.5": [
+            48.692171435339795,
+            48.50785817445939
+          ],
+          "systematic_detection_s1.0": [
+            48.663149474410886,
+            48.623668477278756
+          ],
+          "systematic_joint_s0.5": [
+            49.93516627525191,
+            49.942944180291725
+          ],
+          "systematic_joint_s1.0": [
+            49.91041281279499,
+            49.942944180291725
+          ]
+        }
+      }
+    },
+    {
+      "id": "historical_transport_hurdle",
+      "status": "running",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "implementation": [
+        "transport_latent_flow.py",
+        "transport_hurdle_horizon.py"
+      ],
+      "run": "transport_hurdle_horizon_01",
+      "scope": "Past-only PCA16,256 cells per stage transport, bounded growth proxies and affine ridge velocity extrapolation; all-past hurdle heads. Balanced, neutral-unbalanced, growth.5/1, forecast strengths.5/1. Reused development folds, no blind challenge validation.",
+      "sources": [
+        {
+          "url": "https://pythonot.github.io/_modules/ot/unbalanced/_sinkhorn.html",
+          "read": "Generalized scaling updates and entropy/KL convention in official author implementation; own log-domain adaptation, not a faithful solver reproduction."
+        }
+      ],
+      "research_family_exhausted": false,
+      "submissions_used": 0,
+      "jev_requests_used": 0
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

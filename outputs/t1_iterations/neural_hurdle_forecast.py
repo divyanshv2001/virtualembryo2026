@@ -6,6 +6,21 @@ from neural_ode_forecast import LatentModel
 from robust_population import covariance_change
 
 
+def systematic_bernoulli(probabilities,rng):
+    """Each gene's realized count differs from its expected count by less than one.
+
+    Marginal probabilities are preserved over random offsets; draws within a gene
+    are dependent. A random cell order avoids preferring the input row order.
+    """
+    p=np.asarray(probabilities,float)
+    if p.ndim!=2 or not np.isfinite(p).all() or (p<0).any() or (p>1).any():raise ValueError('Invalid transition probabilities')
+    order=rng.permutation(len(p));cumulative=np.cumsum(p[order],axis=0)
+    offset=rng.random(p.shape[1]);previous=np.vstack([np.zeros((1,p.shape[1])),cumulative[:-1]])
+    selected=np.floor(cumulative+offset)>np.floor(previous+offset)
+    result=np.empty_like(selected);result[order]=selected
+    return result
+
+
 class NeuralHurdleForecast:
     def __init__(self,x,stages,cutoff,donors,panel,symbols,net,center,scale,features):
         self.cutoff=cutoff;self.donors=donors;self.net=net;self.features=np.asarray(features,int)
@@ -38,8 +53,8 @@ class NeuralHurdleForecast:
             'method':'Frozen VAE/neural ODE plus ridge1 detection probability and diagonal-shrunken positive-log abundance heads',
             'scope':'Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.'}
 
-    def predict(self,target,mode,strength=1.,seed=20260928):
-        if target<=self.cutoff or mode not in ['abundance','detection','joint'] or strength not in [.5,1.]:raise ValueError('Invalid hurdle forecast')
+    def predict(self,target,mode,strength=1.,seed=20260928,sampling='independent'):
+        if target<=self.cutoff or mode not in ['abundance','detection','joint'] or strength not in [.5,1.] or sampling not in ['independent','systematic']:raise ValueError('Invalid hurdle forecast')
         with torch.no_grad():
             z0=self.net.encode(torch.tensor((self.donors[:,self.features]-self.center)/self.scale))[0]
             z1=self.net.trajectory(z0,torch.tensor([0.,target-self.cutoff]))[-1]
@@ -59,9 +74,15 @@ class NeuralHurdleForecast:
                     p0=np.clip(self.pmean[sl]+h0@self.detection[:,sl],1e-4,1-1e-4)
                     p1=np.clip(self.pmean[sl]+h1@self.detection[:,sl],1e-4,1-1e-4)
                     change=np.clip(strength*backoff*(p1-p0),-.25,.25)*active
-                    uniforms=rng.random(original.shape,dtype=np.float32)
-                    added=(~positive)&(change>0)&(uniforms<change/(1-p0))
-                    removed=positive&(change<0)&(uniforms<(-change)/p0)
+                    if sampling=='independent':
+                        uniforms=rng.random(original.shape,dtype=np.float32)
+                        added=(~positive)&(change>0)&(uniforms<change/(1-p0))
+                        removed=positive&(change<0)&(uniforms<(-change)/p0)
+                    else:
+                        add_probability=np.where((~positive)&(change>0),np.clip(change/(1-p0),0,1),0)
+                        remove_probability=np.where(positive&(change<0),np.clip((-change)/p0,0,1),0)
+                        added=systematic_bernoulli(add_probability,rng)
+                        removed=systematic_bernoulli(remove_probability,rng)
                     # Subtract each gene's positive-cell latent centroid for its conditional intercept.
                     log_positive=self.positive_mean[sl]+h1@self.positive_coef[:,sl]-(self.positive_center[:,sl]*self.positive_coef[:,sl]).sum(0)
                     imputed=np.exp(np.clip(log_positive,-8.,np.log(10000.)))
@@ -79,8 +100,8 @@ class NeuralHurdleForecast:
             if np.isfinite(result).all() and change<=.4:break
         if not np.isfinite(result).all() or (result<0).any():raise ValueError('Invalid hurdle output')
         return result,np.arange(len(result)),{**self.audit,'mode':mode,'strength':strength,'backoff':backoff,
-            'seed':seed,'covariance_change_vs_reference':change,'newly_detected_entries':int(((self.donors==0)&(result>0)).sum()),
+            'seed':seed,'sampling':sampling,'covariance_change_vs_reference':change,'newly_detected_entries':int(((self.donors==0)&(result>0)).sum()),
             'removed_detection_entries':int(((self.donors>0)&(result==0)).sum()),
             'abundance_factor_cap':2.,'detection_probability_delta_cap':.25,
-            'common_uniform_policy':'Fixed seed reset across modes/strengths/backoffs; no seed selection.',
+            'common_uniform_policy':'Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.',
             'mapped_mass_conserved':True,'protected_genes_unchanged':True}

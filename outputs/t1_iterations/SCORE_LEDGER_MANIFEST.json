@@ -1,5 +1,5 @@
 {
-  "records": 1111,
+  "records": 1155,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -137,6 +137,16 @@
       "outcomes_indexed": 10
     },
     {
+      "path": "private/growth_composition_horizon_01/report.json",
+      "sha256": "d2f032413afa5f4f378fc1c5ca3c4323ab1ae307686465e723377cc4a7dec4ab",
+      "outcomes_indexed": 20
+    },
+    {
+      "path": "private/growth_prior_audit_repair_01/report.json",
+      "sha256": "e438a099178f5ef2fa4416b629f803019c63293eec4ca14d50a5d5cdf3d69e55",
+      "outcomes_indexed": 0
+    },
+    {
       "path": "private/guard_backtest_01/report.json",
       "sha256": "23f35bb3c98e7fe291bc6a3c62ab2ae4091da462eceffc9c908d657a798fecbe",
       "outcomes_indexed": 18
@@ -195,6 +205,11 @@
       "path": "private/neural_ode_horizon_01/report.json",
       "sha256": "6e321a4e516d5003b515f0d2e4e37f51e09cf227573665788e3bc28008b78a60",
       "outcomes_indexed": 18
+    },
+    {
+      "path": "private/neural_sampling_horizon_01/report.json",
+      "sha256": "5eee77fb8f5b74e5493d633427571188cd7d46e7c116f9489086f0db3460affb",
+      "outcomes_indexed": 24
     },
     {
       "path": "private/nonlinear_oneday_temporal_01/report.json",
@@ -294,5 +309,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "1f1cafa01add3030ea99fe0ed3b09a56cefded7794740cff998a56fb7e72a68d"
+  "ledger_sha256": "389e0145fec5f7653691150cdabb1e87e5ae1493dc8ef03b0ca30d30abbdf9c0"
 }

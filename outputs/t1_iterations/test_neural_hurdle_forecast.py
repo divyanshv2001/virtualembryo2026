@@ -1,6 +1,14 @@
 import numpy as np
 from neural_ode_forecast import NeuralODEForecast
-from neural_hurdle_forecast import NeuralHurdleForecast
+from neural_hurdle_forecast import NeuralHurdleForecast,systematic_bernoulli
+
+
+def test_systematic_detection_preserves_marginals_and_controls_count_noise():
+    probabilities=np.array([[0.,.2,.3],[1.,.4,.6],[.2,.7,.9],[.9,.3,.1]])
+    rng=np.random.default_rng(181);draws=np.array([systematic_bernoulli(probabilities,rng) for _ in range(4000)])
+    np.testing.assert_allclose(draws.mean(0),probabilities,atol=.025)
+    assert (np.abs(draws.sum(1)-probabilities.sum(0))<1.000001).all()
+    assert not draws[:,0,0].any() and draws[:,1,0].all()
 
 
 def test_hurdle_heads_are_past_only_and_changes_are_reproducible():
@@ -25,3 +33,7 @@ def test_hurdle_heads_are_past_only_and_changes_are_reproducible():
     assert audit['covariance_change_vs_reference']<=.4
     abundance=model.predict(9.,'abundance')[0]
     np.testing.assert_array_equal(abundance==0,donors==0)
+    systematic=model.predict(9.,'joint',sampling='systematic')[0]
+    np.testing.assert_array_equal(systematic,other.predict(9.,'joint',sampling='systematic')[0])
+    np.testing.assert_array_equal(systematic[:,8],donors[:,8])
+    np.testing.assert_allclose(np.expm1(systematic[:,:8]).sum(1),np.expm1(donors[:,:8]).sum(1),rtol=1e-6)

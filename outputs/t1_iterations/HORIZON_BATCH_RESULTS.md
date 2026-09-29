@@ -24,6 +24,10 @@ Author implementation: [scNODE](https://github.com/rsinghlab/scNODE), architectu
 
 A subsequent ablation fits separate detection and positive-abundance heads on frozen beta0 neural latent means, with abundance-only, detection-only and joint forecasts at two strengths. It permits zero-mask changes with common fixed random uniforms, conserves mapped mass and retains protected genes. Clipped linear probability estimates and diagonal-shrunken conditional abundance coefficients are heuristic adaptations. No additional neural dynamics training or target-selected checkpoint is used. These are reused development folds, not fresh blind validation.
 
+A numerical sampling ablation keeps those fitted heads exactly unchanged, verifying every recomputed head array against its archive. Random-order systematic Bernoulli draws constrain each gene's switch count to within one of its expectation before final projection. Within-gene switches become dependent; improved scores or biological covariance are not guaranteed. Independent-draw forecasts are replayed with verified hashes as matched controls. The frozen plan's abundance-only-control phrase refers to the preceding head pilot; the sampling trial directly compares independent and systematic detection-only/joint forecasts.
+
+The growth-proxy branch pins the author mouse marker files and fits historical expression-matched scores. All94 proliferation and187 P53-proxy genes map uniquely. The first audit failed because its expressed-only control filter left insufficient controls for low-expression markers. A separate repair retains zero-expression controls and preserves that failure. The preliminary forecast test resamples complete donor cells using bounded proliferation, negative-P53 or net weights at two strengths, with exact neutral-growth identity and unchanged calibration. This tests composition sensitivity, not an unbalanced transport solver or measured embryonic birth/death rates. Source: [moscot marker implementation](https://github.com/theislab/moscot/blob/440093ccbb8e70de209157d91da839c55b897821/src/moscot/utils/data.py) identifies its mouse apoptosis list as a P53-pathway proxy; [author marginal tutorial](https://moscot.readthedocs.io/en/stable/notebooks/examples/problems/TemporalProblem/800_score_genes_for_marginals.html) discusses prior-growth sensitivity.
+
 Sources: [Stephens supplement](https://stephenslab.uchicago.edu/assets/papers/Stephens2017-supplement.pdf), sectionsS.1-S.2; [Chen et al.](https://arxiv.org/html/0907.4698v1), Gaussian assumptions, OAS derivationIII-C and simulationIV; [sklearn covariance documentation](https://scikit-learn.org/stable/modules/covariance.html). These motivate estimator adaptations and do not establish developmental forecasting accuracy.
 
 Literature: [Schefzik, Thorarinsdottir and Gneiting (2013)](https://arxiv.org/html/1302.7149v2), methods 4.1–4.3 and experiments 5.4 read. ECC separates marginal calibration from rank dependence. Its weather experiments found benefits dependent on the dependence structure. This implementation adapts that separation to historical positive scRNA margins; it is neither faithful ECC nor evidence that ECC improves this challenge.
@@ -137,6 +141,28 @@ The [muscat paper](https://www.nature.com/articles/s41467-020-19894-4) motivates
 | neural_hurdle_horizon_01 | hurdle_detection_s1.0 | 48.623 | 48.386 | 48.504 |
 | neural_hurdle_horizon_01 | hurdle_joint_s0.5 | 49.948 | 49.924 | 49.936 |
 | neural_hurdle_horizon_01 | hurdle_joint_s1.0 | 49.858 | 49.924 | 49.891 |
+| neural_sampling_horizon_01 | copy | 50.000 | 50.000 | 50.000 |
+| neural_sampling_horizon_01 | unit16 | 47.143 | 47.987 | 47.565 |
+| neural_sampling_horizon_01 | saved384_d0.0 | 49.200 | 51.366 | 50.283 |
+| neural_sampling_horizon_01 | saved_ode | 48.438 | 51.342 | 49.890 |
+| neural_sampling_horizon_01 | independent_detection_s0.5 | 48.639 | 48.404 | 48.521 |
+| neural_sampling_horizon_01 | independent_detection_s1.0 | 48.623 | 48.386 | 48.504 |
+| neural_sampling_horizon_01 | independent_joint_s0.5 | 49.948 | 49.924 | 49.936 |
+| neural_sampling_horizon_01 | independent_joint_s1.0 | 49.858 | 49.924 | 49.891 |
+| neural_sampling_horizon_01 | systematic_detection_s0.5 | 48.692 | 48.508 | 48.600 |
+| neural_sampling_horizon_01 | systematic_detection_s1.0 | 48.663 | 48.624 | 48.643 |
+| neural_sampling_horizon_01 | systematic_joint_s0.5 | 49.935 | 49.943 | 49.939 |
+| neural_sampling_horizon_01 | systematic_joint_s1.0 | 49.910 | 49.943 | 49.927 |
+| growth_composition_horizon_01 | copy | 50.000 | 50.000 | 50.000 |
+| growth_composition_horizon_01 | neutral | 50.000 | 50.000 | 50.000 |
+| growth_composition_horizon_01 | unit16 | 47.143 | 47.987 | 47.565 |
+| growth_composition_horizon_01 | saved384_d0.0 | 49.200 | 51.366 | 50.283 |
+| growth_composition_horizon_01 | growth_net_p0.5 | 48.023 | 47.705 | 47.864 |
+| growth_composition_horizon_01 | growth_net_p1.0 | 48.283 | 47.683 | 47.983 |
+| growth_composition_horizon_01 | growth_proliferation_p0.5 | 48.431 | 47.861 | 48.146 |
+| growth_composition_horizon_01 | growth_proliferation_p1.0 | 48.003 | 47.849 | 47.926 |
+| growth_composition_horizon_01 | growth_p53_p0.5 | 48.297 | 47.137 | 47.717 |
+| growth_composition_horizon_01 | growth_p53_p1.0 | 48.671 | 47.962 | 48.316 |
 
-Status: completed. Full four-metric vectors, raw metrics, model audits and provenance hashes are in HORIZON_BATCH_RESULTS.json.
+Status: running. Full four-metric vectors, raw metrics, model audits and provenance hashes are in HORIZON_BATCH_RESULTS.json.
 No new prospective export or official submission. The >72 objective remains unfinished.
