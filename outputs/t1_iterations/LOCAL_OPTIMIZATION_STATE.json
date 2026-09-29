@@ -988,12 +988,13 @@
     "results_report": "CNF_LATENT_DISPERSION_RESULTS.json"
   },
   "research_storage": {
-    "D_free_observed_bytes": 111404761088,
+    "D_free_observed_bytes": 111404548096,
     "E_free_observed_bytes": 277806256128,
     "new_bulky_private_run_root": "E:/virtualembryo-research-storage",
     "policy": "Use verifiedempty localjunctions fornewruns. Keep failedoriginalD arrays/events. No data deleted or committed.",
     "cleanup_report": "STORAGE_CLEANUP_RESULTS.json",
-    "archive_policy": "Hardlinked archived arrays are immutable; new experiments must write new paths."
+    "archive_policy": "Hardlinked archived arrays are immutable; new experiments must write new paths.",
+    "temporary_cleanup_status": "TEST_TEMP_CLEANUP_STATUS.json"
   },
   "cnf_latent_population_scale_job": {
     "status": "running",

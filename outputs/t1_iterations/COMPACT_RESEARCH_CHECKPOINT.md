@@ -1,6 +1,6 @@
 # T1 compact research checkpoint
 
-Updated: 2026-09-29T16:29:25.142845+00:00
+Updated: 2026-09-29T16:31:32.594762+00:00
 
 Official best reported: **51.87**. Latest export: `T1_val__anchorslope_progress_20260929_01.h5ad`. Local>72 gate remains unmet.
 Official metrics: DE44.9, direction57.0, MMD53.5, variogram51.7. Latest screenshot shows S2WISH2 / Codex / AGENT, rank29 on that view; scoring-page rank131/270 is a different view.
@@ -31,7 +31,7 @@ Latest: validated; 1903 payload bytes; actual usage {'input_tokens': 820, 'outpu
 
 ## Storage
 
-{"D_free_observed_bytes":111404761088,"E_free_observed_bytes":277806256128,"new_bulky_private_run_root":"E:/virtualembryo-research-storage","policy":"Use verifiedempty localjunctions fornewruns. Keep failedoriginalD arrays/events. No data deleted or committed.","cleanup_report":"STORAGE_CLEANUP_RESULTS.json","archive_policy":"Hardlinked archived arrays are immutable; new experiments must write new paths."}
+{"D_free_observed_bytes":111404548096,"E_free_observed_bytes":277806256128,"new_bulky_private_run_root":"E:/virtualembryo-research-storage","policy":"Use verifiedempty localjunctions fornewruns. Keep failedoriginalD arrays/events. No data deleted or committed.","cleanup_report":"STORAGE_CLEANUP_RESULTS.json","archive_policy":"Hardlinked archived arrays are immutable; new experiments must write new paths.","temporary_cleanup_status":"TEST_TEMP_CLEANUP_STATUS.json"}
 
 ## Evidence links
 

@@ -57,3 +57,7 @@ Implemented next24-score batch: terminal population factors.75/1.25 xabundance/j
 ## 2026-09-29T16:29:25.142845+00:00
 
 New24-score population-scale run02 is actually running: launcher10536/worker21644; plan frozen andfourcontrols saved. Run01 startup failed before scientific work because launcherlogs populated the empty output folder. Originalfailure/logs/source preserved, public CNF_LATENT_POPULATION_SCALE_STARTUP_FAILURE.json records no score; repaired launch writes logs outside fresh run02. No duplicate worker launched. Original dispersion30scores indexed:2708records/122reports, zero indexerrors. Cleanup111.4GB recovered;72objective unfinished, officialbest remains51.87.
+
+## 2026-09-29T16:31:32.594762+00:00
+
+User requested storage cleanup first. Additional audit identifies completed-test temporary fixture directories totalling59952870bytes. Attempted nativePowerShell recursive deletion was rejected by automatic tool approval with reason blockedby policy, before execution; actualdeleted0, no workaround attempted. TEST_TEMP_CLEANUP_STATUS.json preserves status and privatecandidateaudit. Original111383323600byte duplicate consolidation succeeded. Raw1.564GB exprMatrix.bin is still referenced by atlaspreparation; retain biologicalinputs/uniqueevidence. No further experiment launched during cleanup.

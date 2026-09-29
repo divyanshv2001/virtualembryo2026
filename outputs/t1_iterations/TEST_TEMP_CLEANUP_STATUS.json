@@ -1,0 +1,12 @@
+{
+  "timestamp_utc": "2026-09-29T16:31:32.571838+00:00",
+  "status": "deletion_blocked_by_tool_policy",
+  "proposed_directories": 51,
+  "proposed_bytes": 59952870,
+  "actual_deleted_files": 0,
+  "actual_deleted_bytes": 0,
+  "rejection_reason": "blocked by policy",
+  "action": "Native PowerShell recursive removal of verified workspace test fixture directories",
+  "next": "Do not circumvent tool rejection; retained proposed files. Prior duplicate-consolidation cleanup succeeded,111383323600bytes reclaimed.",
+  "retained_large_inputs_reason": "exprMatrix.bin is used by prepare_extended_atlas.py and prepare_balanced_atlas.py; E8.5/E9.5 inputs and unique frozen predictions remain required."
+}
