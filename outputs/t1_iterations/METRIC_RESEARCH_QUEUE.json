@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T13:59:57.335779+00:00",
+  "updated_utc": "2026-09-29T14:04:10.539465+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5545,7 +5545,7 @@
     {
       "id": "continuous_flow_terminal_latent_dispersion",
       "run": "cnf_latent_dispersion_challenge_01",
-      "status": "prepared",
+      "status": "resource_interrupted",
       "implementation": [
         "cnf_latent_dispersion_challenge.py",
         "latent_dispersion.py"
@@ -5554,6 +5554,20 @@
       "trial_scope": "Fixedantitheticseed2026092917, whitenedlatent terminal sigma.025/.05/.1 xabundance/joint,6variants+4controls=30scores. Zeroexactreplay, no temporal-rate/learneddiffusionclaim.",
       "limitations": "Reuseddevelopment, sampledcohort; terminalGaussian sensitivity is neither learned diffusion model nor measuredbiologicalvariance. Smallgrid doesnotexhaust family.",
       "tests_passed": 1,
+      "research_family_exhausted": false,
+      "failure_report": "CNF_LATENT_DISPERSION_FAILURE.json",
+      "next_action": "Identicalboundedgrid innewE-stored repairrun; originalfailedrun preserved."
+    },
+    {
+      "id": "continuous_flow_terminal_latent_dispersion_storage_repair",
+      "run": "cnf_latent_dispersion_challenge_repair_01",
+      "status": "prepared",
+      "implementation": [
+        "cnf_latent_dispersion_challenge_repair.py",
+        "latent_dispersion.py"
+      ],
+      "trial_scope": "Same30-score scientificgrid, fixedseeds, fullpanel andmatchedcontrols; newoutput onE viajunction, retain originalDfailure.",
+      "limitations": "Not diffusionmodelreproduction/biologicalrate; reuseddevelopment. Storage interruption providesno model-performance evidence.",
       "research_family_exhausted": false
     }
   ],

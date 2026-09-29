@@ -1,0 +1,35 @@
+{
+  "status": "execution_failed",
+  "reason": "D drive24.6MBfree; attempted193710128byte prediction array save failed after writing128byte header.",
+  "observed_error": {
+    "status": "execution_failed",
+    "type": "OSError",
+    "error": "48427500 requested and 0 written",
+    "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge.py --resume"
+  },
+  "results": [
+    {
+      "candidate": "dispersion_abundance_0.05",
+      "seed": 2026092917,
+      "cutoff": 8.5,
+      "target": 9.5,
+      "local_score": null,
+      "raw_metrics": {
+        "de_score": null,
+        "de_direction": null,
+        "mmd_u": null,
+        "variogram": null
+      },
+      "skills": {
+        "de_score": null,
+        "de_direction": null,
+        "mmd_u": null,
+        "variogram": null
+      },
+      "calibration_valid": null,
+      "outcome": "generation_failed_before_scoring"
+    }
+  ],
+  "recorded_utc": "2026-09-29T14:04:10.539465+00:00",
+  "scope": "No score was computed; null is unavailable, not zero. Originalfailedarray/events/plan/code retained; repair uses a new run."
+}

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T13:59:57.335779+00:00",
+  "updated_utc": "2026-09-29T14:04:10.539465+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,20 +29,20 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "Inspect active process and frozen partial report; resume comparison repair pending after active run completes.",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Run30-score fixedterminal latent dispersion .025/.05/.1, abundance/jointalpha.5; zeroexactreplay andunchangedscorer.",
+  "next_experiment": "Run30score dispersion storage repair onE; originalDfailure retained, no biologicalfamily exhaustion.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
     {
-      "script": "cnf_latent_dispersion_challenge.py",
-      "process_id": 1796,
-      "worker_process_id": 19544
+      "script": "cnf_latent_dispersion_challenge_repair.py",
+      "process_id": 23280,
+      "worker_process_id": 2012
     }
   ],
-  "active_run_path": "outputs\\t1_iterations\\private\\cnf_latent_dispersion_challenge_01",
+  "active_run_path": "outputs\\t1_iterations\\private\\cnf_latent_dispersion_challenge_repair_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -956,7 +956,7 @@
     "results_report": "CNF_LOG1P_POSITIVE_TEMPORAL_RESULTS.json"
   },
   "cnf_latent_dispersion_job": {
-    "status": "running",
+    "status": "resource_interrupted",
     "run": "cnf_latent_dispersion_challenge_01",
     "evaluations_planned": 30,
     "pending_evaluations": 30,
@@ -966,6 +966,28 @@
     "worker_process_id": 19544,
     "runner_syntax_verified": true,
     "resume_audit": "Legacy anchor_strengths key remains in resume comparison. Current fresh execution is unaffected. After active frozen run completes, repair resume-key declaration before advertising resume support; do not mutate live source now.",
-    "plan_sha256": "aa4ca3576e3dc8eea1bc50a70e4f7e55a6b5a86b0e1b60ab8e288c5637718dc0"
+    "plan_sha256": "aa4ca3576e3dc8eea1bc50a70e4f7e55a6b5a86b0e1b60ab8e288c5637718dc0",
+    "evaluations": 0,
+    "failure_report": "CNF_LATENT_DISPERSION_FAILURE.json",
+    "failure": "D storage24.6MBfree, prediction save OSError; no scores generated. Originalarrays/trajectory preserved."
+  },
+  "cnf_latent_dispersion_repair_job": {
+    "status": "running",
+    "run": "cnf_latent_dispersion_challenge_repair_01",
+    "evaluations_planned": 30,
+    "pending_evaluations": 30,
+    "tests_passed": 1,
+    "storage": "E:/virtualembryo-research-storage/cnf_latent_dispersion_challenge_repair_01 via Dprivate junction",
+    "decision": "Identicalscientificconfig, freshprovenance andcorrectedresume keys; no promotion.",
+    "process_id": 23280,
+    "worker_process_id": 2012,
+    "runner_syntax_verified": true,
+    "plan_sha256": "681961126da14e5081a413e5db8adb6eaba2efe17a3f7ff6c0a0ce30d321cff5"
+  },
+  "research_storage": {
+    "D_free_observed_bytes": 24604672,
+    "E_free_observed_bytes": 279750828032,
+    "new_bulky_private_run_root": "E:/virtualembryo-research-storage",
+    "policy": "Use verifiedempty localjunctions fornewruns. Keep failedoriginalD arrays/events. No data deleted or committed."
   }
 }

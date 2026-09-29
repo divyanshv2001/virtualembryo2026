@@ -1,13 +1,13 @@
 # T1 compact research checkpoint
 
-Updated: 2026-09-29T14:00:56.226438+00:00
+Updated: 2026-09-29T14:05:11.440606+00:00
 
 Official best reported: **51.87**. Latest export: `T1_val__anchorslope_progress_20260929_01.h5ad`. Local>72 gate remains unmet.
 Official metrics: DE44.9, direction57.0, MMD53.5, variogram51.7. Latest screenshot shows S2WISH2 / Codex / AGENT, rank29 on that view; scoring-page rank131/270 is a different view.
 
-Next: Run30-score fixedterminal latent dispersion .025/.05/.1, abundance/jointalpha.5; zeroexactreplay andunchangedscorer.
+Next: Run30score dispersion storage repair onE; originalDfailure retained, no biologicalfamily exhaustion.
 
-Active jobs: [{"script":"cnf_latent_dispersion_challenge.py","process_id":1796,"worker_process_id":19544}]
+Active jobs: [{"script":"cnf_latent_dispersion_challenge_repair.py","process_id":23280,"worker_process_id":2012}]
 
 ## Latest measured decisions
 
@@ -27,7 +27,11 @@ Latest: validated; 1903 payload bytes; actual usage {'input_tokens': 820, 'outpu
 
 ## Current experiment
 
-`cnf_latent_dispersion_challenge_01`: running; planned 30, completed 0.
+`cnf_latent_dispersion_challenge_repair_01`: running; planned 30, completed 0.
+
+## Storage
+
+{"D_free_observed_bytes":24604672,"E_free_observed_bytes":279750828032,"new_bulky_private_run_root":"E:/virtualembryo-research-storage","policy":"Use verifiedempty localjunctions fornewruns. Keep failedoriginalD arrays/events. No data deleted or committed."}
 
 ## Evidence links
 

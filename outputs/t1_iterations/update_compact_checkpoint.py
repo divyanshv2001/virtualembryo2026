@@ -35,6 +35,8 @@ def refresh(update=None):
                     means=[f"{row['candidate']}={row.get('mean_score')}" for row in result.get('summaries',[])]
                     lines.append('; '.join(means));lines.append(f'Full metrics: [{report}]({report}).')
                 break
+    if s.get('research_storage'):
+        lines+=['','## Storage','',json.dumps(s['research_storage'],separators=(',',':'))]
     lines+=['','## Evidence links','',
        '- [State](LOCAL_OPTIMIZATION_STATE.json), [queue](METRIC_RESEARCH_QUEUE.json), [mandate](LOCAL_OPTIMIZATION_PROMPT.md).',
        '- [Slope results](CNF_ANCHOR_SLOPE_RESULTS.json), [temporal](CNF_ANCHOR_SLOPE_TEMPORAL_RESULTS.json), [kernel](CNF_KERNEL_POPULATION_RESULTS.json).',
