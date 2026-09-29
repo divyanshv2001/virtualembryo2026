@@ -16,7 +16,7 @@ def kernel_mmd(x,y,bandwidth):
 
 
 def train_transition_mmd(net,z,stages,initial,checkpoint,emit,weight=1.,updates=200,resume=False):
-    if weight not in [0.,1.,10.] or updates not in [2,200]:raise ValueError('Undeclared transition ablation')
+    if weight not in [0.,1.,10.,100.,1000.] or updates not in [2,200]:raise ValueError('Undeclared transition ablation')
     optimizer=torch.optim.Adam(net.parameters(),lr=.001)
     saved=torch.load(checkpoint if resume and checkpoint.exists() else initial,weights_only=False,map_location='cpu')
     if saved['energy_weight']!=.1 or saved['density_weight']!=10.:raise ValueError('Initial learner mismatch')

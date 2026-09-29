@@ -1,0 +1,11 @@
+{
+  "updated_utc": "2026-09-29T09:13:09.670730+00:00",
+  "tests_passed": 105,
+  "command": "pytest outputs/t1_iterations -q -p no:cacheprovider",
+  "checks": [
+    "Zero MMD reproduces ordinary continuation",
+    "Strong weights 100/1000 produce finite training and gradients",
+    "Transition targets remain at or before the training cutoff"
+  ],
+  "limitations": "Tests establish implementation behavior, not forecast accuracy or leaderboard readiness."
+}

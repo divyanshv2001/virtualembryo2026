@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T09:02:48.983528+00:00",
+  "updated_utc": "2026-09-29T09:13:09.670730+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_feature_challenge.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_strong_mmd_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Finish past-transition MMD weights0/1/10 with matched continuation control; diagnose training convergence and all scored metrics before temporal assessment or new mechanism.",
+  "next_experiment": "Strong transitionMMD100/1000 with same200updates/initialization, archivedzeroMMD continuation,33scores.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_transition_mmd_challenge_01"
+    "cnf_strong_mmd_challenge_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_transition_mmd_challenge_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_strong_mmd_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -553,12 +553,26 @@
     "decision": "Aligned joint still failsfirst rollingfold: strengths.25/1 scores49.1761/49.0897(first),51.6523/51.6853(second). Abundancealignment beats persistence but gains only+.024/+.044 mean. No temporal readiness or independent-domain confirmation; preserve22 outcomes. Next direct past-transition MMD fine-tuning with matched zero-loss continuation."
   },
   "cnf_transition_mmd_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_transition_mmd_challenge_01",
     "tests_passed": 103,
     "evaluations_planned": 33,
-    "pending_evaluations": 33,
+    "pending_evaluations": 0,
     "process_id": 20032,
-    "plan_sha256": "0957c8b3f99e73e7501e8037cecee3962d6445fb245fd90600c1eac8396ec9f6"
+    "plan_sha256": "0957c8b3f99e73e7501e8037cecee3962d6445fb245fd90600c1eac8396ec9f6",
+    "evaluations": 33,
+    "report_sha256": "145130a3154f986317351f8407254eb30f729de6f75c59835b10d5d31056987d",
+    "results_report": "CNF_TRANSITION_MMD_RESULTS.json",
+    "decision": "TransitionMMD weights1/10 joint means53.3712/53.3345 versuszero200-update continuation53.3626 and original800-update joint53.5953. Weight1 gain+.0086 negligible; all beloworiginal. Preserve33 outcomes; next boundedstrongweight100/1000 to test dominant transition matching before judging this range."
+  },
+  "cnf_strong_mmd_job": {
+    "status": "running",
+    "run": "cnf_strong_mmd_challenge_01",
+    "tests_passed": 105,
+    "evaluations_planned": 33,
+    "pending_evaluations": 33,
+    "process_id": 27316,
+    "plan_sha256": "61c94469791a12edeb9dcdd1a6c80e7d3ba96173f8f56ab6a841d691e127efb8",
+    "decision": "Weights100/1000 test stronger transition matching against archived zero-loss continuation. No promotion; local72 gate unmet."
   }
 }

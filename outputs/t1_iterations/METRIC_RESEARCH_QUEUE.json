@@ -5073,7 +5073,7 @@
     {
       "id": "continuous_flow_past_transition_mmd",
       "run": "cnf_transition_mmd_challenge_01",
-      "status": "running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_transition_mmd_challenge.py",
         "cnf_transition_mmd_flow.py"
@@ -5081,7 +5081,24 @@
       "primary_reference": "TRANSITION_MMD_REFERENCE.json",
       "trial_scope": "Same800-update initialization/optimizer/main RNG,200warm-start updates with transitionMMD0/1/10; two decoder modes and fivearchivecontrols,33 scores. Separate past-transition RNG and frozen past-only bandwidth.",
       "limitations": "Latent biased MMD surrogate does not guarantee fullpanel unbiased MMD/other metrics or long-horizon extrapolation. Reused development, no independent embryo validation. Zero-losscontrol must reproduce ordinary training continuation.",
-      "research_family_exhausted": false
+      "research_family_exhausted": false,
+      "results_report": "CNF_TRANSITION_MMD_RESULTS.json",
+      "decision": "TransitionMMD weights1/10 joint means53.3712/53.3345 versuszero200-update continuation53.3626 and original800-update joint53.5953. Weight1 gain+.0086 negligible; all beloworiginal. Preserve33 outcomes; next boundedstrongweight100/1000 to test dominant transition matching before judging this range."
+    },
+    {
+      "id": "continuous_flow_strong_transition_mmd",
+      "run": "cnf_strong_mmd_challenge_01",
+      "status": "implemented_running",
+      "implementation": [
+        "cnf_strong_mmd_challenge.py",
+        "cnf_transition_mmd_flow.py"
+      ],
+      "primary_reference": "TRANSITION_MMD_REFERENCE.json",
+      "trial_scope": "Weights100/1000; same800-update initialization and200additionalupdates, pastbandwidth/main/transition RNG fixed. Fournewpredictions plus sevenarchives includingzeroMMD continuation=33scores. No duplicatecontroltraining.",
+      "limitations": "Stronger biased latent loss may degrade decoder/scored metrics or extrapolation; finite/clipped gradients tested. Boundedweight range, not fullfamily exhaustion. Reused development only.",
+      "research_family_exhausted": false,
+      "tests_passed": 105,
+      "validation_report": "CNF_STRONG_MMD_VALIDATION.json"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

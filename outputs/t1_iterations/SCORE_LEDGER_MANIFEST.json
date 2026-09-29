@@ -1,5 +1,5 @@
 {
-  "records": 1867,
+  "records": 1900,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -165,6 +165,11 @@
       "path": "private/cnf_temporal_horizon_01/report.json",
       "sha256": "aebf48d596db250e3a4726e2522a410d0920432361f75eea09874a24785f17d0",
       "outcomes_indexed": 14
+    },
+    {
+      "path": "private/cnf_transition_mmd_challenge_01/report.json",
+      "sha256": "145130a3154f986317351f8407254eb30f729de6f75c59835b10d5d31056987d",
+      "outcomes_indexed": 33
     },
     {
       "path": "private/conditioned_oneday_temporal_01/report.json",
@@ -464,5 +469,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "80e450702a1341b552fe5fce169510644526dfe71b028fe5d92de513b00b8372"
+  "ledger_sha256": "23a6284e47ebb6d29b486dedb0c98132b8b15325a5f8a89b3204347ff252a799"
 }

@@ -1,6 +1,7 @@
 import copy
 import numpy as np
 import torch
+import pytest
 from cnf_density_flow import DensityFlowNet
 from cnf_manifold_flow import train_manifold_density
 from cnf_transition_mmd_flow import kernel_mmd,train_transition_mmd
@@ -22,3 +23,14 @@ def test_zero_mmd_weight_replays_unmodified_training_continuation(tmp_path):
     saved=torch.load(tmp_path/'initial.pt',weights_only=False);saved['steps']=4;torch.save(saved,tmp_path/'base.pt')
     train_manifold_density(base,z,stages,.1,tmp_path/'base.pt',lambda *a,**k:None,steps=4,density_weight=10.,resume=True)
     for key,value in base.state_dict().items():torch.testing.assert_close(value,adapted.state_dict()[key],rtol=0,atol=0)
+
+
+@pytest.mark.parametrize('weight',[100.,1000.])
+def test_stronger_transition_loss_has_finite_clipped_training_gradients(tmp_path,weight):
+    torch.manual_seed(533);net=DensityFlowNet(np.eye(2),np.zeros(2),8.,7.25)
+    z=np.random.default_rng(533).normal(size=(48,2)).astype(np.float32);stages=np.repeat([7.5,7.75,8.],16)
+    train_manifold_density(net,z,stages,.1,tmp_path/'initial.pt',lambda *a,**k:None,steps=2,density_weight=10.)
+    history=train_transition_mmd(net,z,stages,tmp_path/'initial.pt',tmp_path/'strong.pt',lambda *a,**k:None,weight=weight,updates=2)
+    assert history[-1]['transition_mmd']>0 and history[-1]['transition_mmd_weight']==weight
+    assert all(torch.isfinite(v).all() for v in net.parameters())
+    assert history[-1]['transition_target_stage']<=8.
