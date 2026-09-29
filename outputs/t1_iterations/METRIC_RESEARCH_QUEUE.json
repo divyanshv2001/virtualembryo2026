@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T08:02:05.525887+00:00",
+  "updated_utc": "2026-09-29T08:20:00.258024+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -4999,7 +4999,7 @@
     {
       "id": "continuous_flow_logistic_detection",
       "run": "cnf_logistic_challenge_01",
-      "status": "running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_logistic_challenge.py",
         "logistic_detection_head.py",
@@ -5008,6 +5008,21 @@
       "primary_reference": "LOGISTIC_DETECTION_REFERENCE.json",
       "trial_scope": "L2ridge.1/1 x detection/joint, systematic strength1 fixed,80 gradient steps per gene block;27 scores with five archives. Full panel/scoring/protection unchanged.",
       "limitations": "MAST-inspired logistic link only; no CDR, Bayesian inference, measured technical-noise or full paper reproduction. Frozen CNF and development panels reused; no72 promotion.",
+      "research_family_exhausted": false,
+      "results_report": "CNF_LOGISTIC_RESULTS.json",
+      "decision": "Logistic joint ridge.1/1 means53.5603/53.3622 do not beat linear joint53.5953; per-panel tradeoffs retained. Detection-only52.0006/51.3897. Bounded logistic-link/ridge test not promoted, no72 gate. Next recent-stage detection fits with positive heads/flow fixed."
+    },
+    {
+      "id": "continuous_flow_recent_detection",
+      "run": "cnf_recent_detection_challenge_01",
+      "status": "running",
+      "implementation": [
+        "cnf_recent_detection_challenge.py",
+        "recent_detection_head.py",
+        "windowed_positive_head.py"
+      ],
+      "trial_scope": "Last1/2/3 actual past stages for detection only; fixed global abundance coefficients/centering,4096-gene8D flow, systematic strength1,33 full-panel scores with five archives. Exact abundance replay required.",
+      "limitations": "Own local-stationarity adaptation, not new published reproduction. Earlier affine positive-window experiments failed; this changes detection only in CNF context. Reused development, no guarantee or72 promotion.",
       "research_family_exhausted": false
     }
   ],
