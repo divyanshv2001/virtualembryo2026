@@ -1,0 +1,52 @@
+{
+  "checked_utc": "2026-09-29T16:54:00.391063+00:00",
+  "status": "user_deleted_verified_forecasts",
+  "verified_plan_files": 106,
+  "observed_missing_forecast_files": 106,
+  "remaining_verified_forecasts": 0,
+  "removed_logical_forecast_bytes": 20533273568,
+  "previous_D_free_observed_bytes": 111400456192,
+  "D_free_now_bytes": 112175013888,
+  "observed_free_change_bytes": 774557696,
+  "additional_loss": "Both cutoff folders in all five runs were emptied, including small donor row/index arrays, two neural_sampling heads.npz and four stage_transport *_heads.npz. Original report, plan and events preserved. Ten generation.json files reconstructed from corresponding immutable report.fold.generation; original standalone hashes unavailable, so label reconstructed.",
+  "restored_generation_json_paths": [
+    "covariance_horizon_01\\cutoff_8.0\\generation.json",
+    "covariance_horizon_01\\cutoff_8.25\\generation.json",
+    "empirical_bayes_repair_01\\cutoff_8.0\\generation.json",
+    "empirical_bayes_repair_01\\cutoff_8.25\\generation.json",
+    "growth_composition_horizon_01\\cutoff_8.0\\generation.json",
+    "growth_composition_horizon_01\\cutoff_8.25\\generation.json",
+    "neural_sampling_horizon_01\\cutoff_8.0\\generation.json",
+    "neural_sampling_horizon_01\\cutoff_8.25\\generation.json",
+    "stage_transport_horizon_01\\cutoff_8.0\\generation.json",
+    "stage_transport_horizon_01\\cutoff_8.25\\generation.json"
+  ],
+  "reports": {
+    "covariance_horizon_01": {
+      "report_ledger_sha256_match": true,
+      "generation_json_restored": 2,
+      "fold_folders_only_generation_json": true
+    },
+    "empirical_bayes_repair_01": {
+      "report_ledger_sha256_match": true,
+      "generation_json_restored": 2,
+      "fold_folders_only_generation_json": true
+    },
+    "growth_composition_horizon_01": {
+      "report_ledger_sha256_match": true,
+      "generation_json_restored": 2,
+      "fold_folders_only_generation_json": true
+    },
+    "neural_sampling_horizon_01": {
+      "report_ledger_sha256_match": true,
+      "generation_json_restored": 2,
+      "fold_folders_only_generation_json": true
+    },
+    "stage_transport_horizon_01": {
+      "report_ledger_sha256_match": true,
+      "generation_json_restored": 2,
+      "fold_folders_only_generation_json": true
+    }
+  },
+  "interpretation": "Logical deleted bytes are not the physical reclaimed bytes because of hard links and filesystem allocation. Free-space change is observational, not exact attribution."
+}

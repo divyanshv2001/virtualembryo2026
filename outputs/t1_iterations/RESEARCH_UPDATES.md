@@ -85,3 +85,7 @@ Storage priority audit: Dprivate243487320867 logicalbytes but132103997267 distin
 ## 2026-09-29T16:46:21.247838+00:00
 
 User explicitly authorized deletion of completed-run forecast arrays. SHA256 checked all106 arrays (20533273568 logical bytes) against their archived generation records; private verified plan preserved with SHA256 in FORECAST_STORAGE_AUDIT.json. NativePowerShell deletion command was again rejected by automaticapprovalreview as blockedby policy beforeexecution. Confirmed all106paths remain andactualfreed0; do not attempt alternate tool/shell/UI workaround. Earlier111383323600byte hardlinkdedup remains effective. Storage priority unresolved due policy, not missing user consent.
+
+## 2026-09-29T16:54:00.408038+00:00
+
+Post-user-deletion check: all106forecastarrays from verifiedplan absent,0remain;20,533,273,568logicalbytes removed. Observed Dfree rose774,795,264bytes from prior snapshot (hardlinks/filesystem allocation, notexact attribution). Allfive originalreport.json plan.json events.jsonl intact; report hashes match SCORE_LEDGER_MANIFEST. User also emptiedboth cutoff folders inclsmall donor/indexarrays and6small .npz headfiles. Restored10 tiny generation.json files from report.fold.generation, clearly labeled reconstructed; original standalone generation files absent. FORECAST_STORAGE_POSTDELETE_CHECK.json has exactprovenance; no otherfiles recreated or deleted. Research processes none observed. Do not reread deletedpredictions in future runners.
