@@ -1,0 +1,15 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "official": {"headline":51.87,"DE":44.9,"direction":57.0,"MMD":53.5,"variogram":51.7},
+    "local": {"slope_joint":54.9083,"original_joint":53.5953,"slope_temporal":[49.7722,51.2691],"original_temporal":[49.1752,51.6250]},
+    "rejected": "All8 past-only kernel population integrations scored46.50-49.93, below frozen54.91 slope control.",
+    "prepared": "Test conditional positive response in log1p scoring units versus current log raw abundance; fixed flow/detection/guards. Four variants plus3controls across3panels,21scores. Future-exclusion/mass/protected tests passed.",
+    "constraints": "No official upload. No hidden expression. Past-only fit, unchanged full32285gene scorer. Local>72 mean/lower-tail64MC plus temporal readiness required; current gains do not pass. Reused development; no independent embryos.",
+    "purpose": "Advisory narrow routing, not scientific evidence or score prediction. No datasets/source/key supplied."
+  },
+  "questions": {
+    "next_action": {"type":"choice","instructions":"Select the next bounded research action given measured failures and the prepared executable test.","criteria":{"run_log1p_decoder":"Run the21score response-scale ablation with matched controls before any promotion.","expand_kernel_search":"Expand the failed kernel weight family immediately.","run_64_mc":"Spend64MonteCarlo repeats on unchanged54.91 predictor now."}},
+    "checkpoint_policy": {"type":"choice","instructions":"Select the continuation context policy that preserves research integrity while reducing repeated model context.","criteria":{"compact_md_and_sources":"Read short MD checkpoint first, expand only referenced active plans/results; retain full raw ledgers and private genuine evidence.","full_history_every_turn":"Load entire historical conversation and all result JSONs every turn.","summary_only_delete_evidence":"Keep only summaries and discard original metrics/trajectories."}}
+  }
+}

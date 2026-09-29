@@ -1,5 +1,11 @@
 # Persistent local T1 optimization mandate
 
+## Compact continuation context — user update 2026-09-29
+
+Read COMPACT_RESEARCH_CHECKPOINT.md first. Write every meaningful progress update, experiment decision, failure and next action to RESEARCH_UPDATES.md; refresh the compact checkpoint after each batch. Read referenced full reports only when needed, and retain every original raw metric, skill, calibration and provenance in source reports/ledgers. Do not replace evidence with summaries or claim unmeasured token savings.
+
+The user renewed Jev use to optimize token usage. One compact advisory routing request was executed in this turn; its actual usage is stored in JEV_ROUTE_20260929_01.json. Reuse validated identical packets by canonical hash; use deterministic routing for unchanged/routine state. Send summaries only, never biological matrices/full sources/secrets. Enforce3000byte packets and bounded attempts; no retries or further automatic calls under the completed one-request turn budget. Earlier audit authorization covered3calls separately. Unattended heartbeat no-Jev restriction remains unless updated explicitly. API documentation: https://docs.typesafe.ai/api .
+
 ## Mandatory continuation and complete score storage
 
 User update, 2026-09-28: continue testing until all declared viable approaches and their meaningful ablations have been evaluated. A weak result or a completed batch is a checkpoint, not a reason to end research. Passing >72 does not cancel this coverage instruction; finish the declared coverage unless the user changes scope. Process the next executable queue item without requesting routine permission. Preserve input-blocked and resource-blocked paths with exact reasons; never call a broad research family exhausted after one configuration. Define a finite experimental scope, controls, rejection rules and compute budget for each path before training. Update that scope with evidence rather than pursuing an endless random search.

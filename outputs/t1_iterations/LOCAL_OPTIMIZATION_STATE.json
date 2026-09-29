@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T13:37:54.057024+00:00",
+  "updated_utc": "2026-09-29T13:44:02.965718+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,20 +29,20 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_anchor_slope_temporal.py --resume",
+  "resume_command": "Inspect existing partial report; this runner preserves prior run and has no automatic replay.",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Execute33score kernel population integration batch, unchanged panels and scorer; DE skill44.9 remains official weakness.",
+  "next_experiment": "Run21-score fixedflow log1p positive response decoder batch; no official submissions.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
     {
-      "script": "cnf_kernel_population_challenge.py",
-      "process_id": 18568,
-      "worker_process_id": 23996
+      "script": "cnf_log1p_positive_challenge.py",
+      "process_id": 14956,
+      "worker_process_id": 18892
     }
   ],
-  "active_run_path": "outputs\\t1_iterations\\private\\cnf_kernel_population_challenge_01",
+  "active_run_path": "outputs\\t1_iterations\\private\\cnf_log1p_positive_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -884,14 +884,43 @@
   },
   "best_reported_official_score": 51.87,
   "cnf_kernel_population_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_kernel_population_challenge_01",
     "evaluations_planned": 33,
-    "pending_evaluations": 33,
+    "pending_evaluations": 0,
     "tests_passed": 2,
-    "decision": "Past-only kernel population integration on copy and fixed slope forecast; no promotion.",
+    "decision": "All eight kernelpopulation variants regress:copy46.50-47.82; slope47.19-49.93 vsfixed54.9083. Preserve33 outcomes; rejectthis bounded population integration, not entirefamily. Next conditional positive log1p response decoding to assess scoring-scale mismatch.",
     "process_id": 18568,
     "worker_process_id": 23996,
-    "plan_sha256": "a3b8e0019c1d52f6517ed949fb26fe7e666316ad26e4040039e41ca3a99151a8"
+    "plan_sha256": "a3b8e0019c1d52f6517ed949fb26fe7e666316ad26e4040039e41ca3a99151a8",
+    "evaluations": 33,
+    "results_report": "CNF_KERNEL_POPULATION_RESULTS.json",
+    "report_sha256": "0675e05e94f4b10d2bc73afd193f5b92795823d7b4157983c37ac179df14dc43"
+  },
+  "cnf_log1p_positive_job": {
+    "status": "running",
+    "run": "cnf_log1p_positive_challenge_01",
+    "evaluations_planned": 21,
+    "pending_evaluations": 21,
+    "tests_passed": 1,
+    "decision": "Own response-scale adaptation, no promotion.",
+    "process_id": 14956,
+    "worker_process_id": 18892,
+    "plan_sha256": "ce63ed2c9b083d54c954294834e0aa15b93eceef10d89a81f52a4de91b66db8a"
+  },
+  "reported_leaderboard_entry": {
+    "team": "S2WISH2",
+    "displayed_score": 51.9,
+    "rank_in_user_view": 29,
+    "model": "Codex",
+    "team_kind": "AGENT",
+    "source": "Latest user screenshot; rankview distinct from scoring-page131of270."
+  },
+  "token_continuation": {
+    "checkpoint": "COMPACT_RESEARCH_CHECKPOINT.md",
+    "updates": "RESEARCH_UPDATES.md",
+    "jev_record": "JEV_ROUTE_20260929_01.json",
+    "new_live_requests_this_turn": 1,
+    "remaining_attempt_budget_this_turn": 0
   }
 }

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T13:37:54.057024+00:00",
+  "updated_utc": "2026-09-29T13:44:02.965718+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5487,7 +5487,7 @@
     {
       "id": "continuous_flow_kernel_population_integration",
       "run": "cnf_kernel_population_challenge_01",
-      "status": "prepared",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_kernel_population_challenge.py",
         "kernel_population.py"
@@ -5495,7 +5495,22 @@
       "trial_scope": "Copy/slopeboth.5 bases xstrength.5/1 xentropy.01/.1, lastfive past stages500RFF; eightforecasts plus threecontrols=33scores. ESS>=.6N/covariance<=.4.",
       "limitations": "Wholecell reweighting may duplicate or omit donor cells; fixed projector clips10 unlike flow, sampled cohort only; repeated development, not biological growth inference.",
       "research_family_exhausted": false,
-      "tests_passed": 2
+      "tests_passed": 2,
+      "results_report": "CNF_KERNEL_POPULATION_RESULTS.json",
+      "decision": "All eight kernelpopulation variants regress:copy46.50-47.82; slope47.19-49.93 vsfixed54.9083. Preserve33 outcomes; rejectthis bounded population integration, not entirefamily. Next conditional positive log1p response decoding to assess scoring-scale mismatch."
+    },
+    {
+      "id": "continuous_flow_log1p_positive_response",
+      "run": "cnf_log1p_positive_challenge_01",
+      "status": "prepared",
+      "implementation": [
+        "cnf_log1p_positive_challenge.py",
+        "log1p_positive_forecast.py"
+      ],
+      "trial_scope": "Fixedfield/detection .5 anchorcorrection; positive response log1p conditionalridge1, positiveanchoralpha0/.5 crossedabundance/joint;21scores incl3controls.",
+      "limitations": "Own metric-scale adaptation, not a publishedmethod reproduction or DE guarantee. Conditionalpositives stillomit zeros; repeateddevelopment and sampledcohort only.",
+      "tests_passed": 1,
+      "research_family_exhausted": false
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."
