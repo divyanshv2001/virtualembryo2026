@@ -4864,7 +4864,7 @@
     {
       "id": "continuous_flow_training_duration",
       "run": "cnf_duration_repair_01",
-      "status": "running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_duration_challenge.py",
         "cnf_manifold_flow.py"
@@ -4873,7 +4873,21 @@
       "limitations": "Bounded duration test, not scientific-family exhaustion or new blind validation.",
       "research_family_exhausted": false,
       "failed_run": "cnf_duration_challenge_01",
-      "repair": "Plan tuple key corrected before training; failed source/diagnostic preserved. All plan assignment keys statically validated as strings."
+      "repair": "Plan tuple key corrected before training; failed source/diagnostic preserved. All plan assignment keys statically validated as strings.",
+      "results_report": "CNF_DURATION_RESULTS.json",
+      "decision": "800-update strength1 mean52.8369, all panels improve over400-update51.7282. First400 training states replayed bit-identically. No72/official promotion; next predeclared1600-update duration check with400/800 lineage verification."
+    },
+    {
+      "id": "continuous_flow_extended_duration",
+      "run": "cnf_extended_challenge_01",
+      "status": "running",
+      "implementation": [
+        "cnf_extended_challenge.py",
+        "cnf_manifold_flow.py"
+      ],
+      "trial_scope": "Fixed density10/energy.1,1600 updates versus archived400/800. Exact training lineage checks at400 and800. Two strengths,24 unchanged panel scores.",
+      "limitations": "Reused development panels, no fresh validation, no72 or official readiness.",
+      "research_family_exhausted": false
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

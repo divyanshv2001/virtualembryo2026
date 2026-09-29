@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T06:33:02.943562+00:00",
+  "updated_utc": "2026-09-29T06:38:09.158446+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_duration_challenge.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_extended_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Train density10/energy.1 for800 updates with first400 bit-identical verification; score18 unchanged challenge outcomes. No official or Monte Carlo promotion.",
+  "next_experiment": "Train fixed density10/energy.1 for1600 updates; verify first400/800 archived states exactly; evaluate24 unchanged challenge outcomes.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_duration_repair_01"
+    "cnf_extended_challenge_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_duration_repair_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_extended_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -372,12 +372,24 @@
     "decision": "All four whole-cell mixtures underperform state control55.4202; best DE-flow fraction.1 mean54.9155. Preserve all27 outcomes and provenance. Next evaluate density10/energy.1 flow at800 versus400 updates; no72/official promotion."
   },
   "cnf_duration_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_duration_repair_01",
     "evaluations_planned": 18,
-    "pending_evaluations": 18,
+    "pending_evaluations": 0,
     "failed_run": "cnf_duration_challenge_01",
     "process_id": 12436,
-    "plan_sha256": "e98c8748933c8453a5cda06d09ec252085dc59b707ac21b34ef77e69fb0398d0"
+    "plan_sha256": "e98c8748933c8453a5cda06d09ec252085dc59b707ac21b34ef77e69fb0398d0",
+    "evaluations": 18,
+    "report_sha256": "4de9ee5ad8679e84b7cc4c352f86c2098240d4c9cd92a44842caf8ca652836e9",
+    "results_report": "CNF_DURATION_RESULTS.json",
+    "decision": "800-update strength1 mean52.8369, all panels improve over400-update51.7282. First400 training states replayed bit-identically. No72/official promotion; next predeclared1600-update duration check with400/800 lineage verification."
+  },
+  "cnf_extended_job": {
+    "status": "running",
+    "run": "cnf_extended_challenge_01",
+    "evaluations_planned": 24,
+    "pending_evaluations": 24,
+    "process_id": 25016,
+    "plan_sha256": "77cbbfc7152cb7c0bfaea3f6cc0fc87e02b3b78ec22a5738d3a18431ecebba1f"
   }
 }
