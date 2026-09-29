@@ -21,7 +21,7 @@ from offline_backtest import load_core,Panel
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--resume',action='store_true');args=parser.parse_args()
-    root=HERE.parents[1];data=HERE/'private/associated_prepared_01';out=HERE/'private/cnf_extended_challenge_01'
+    root=HERE.parents[1];data=HERE/'private/associated_prepared_01';out=HERE/'private/cnf_extended_repair_01'
     if out.exists() and not args.resume:raise ValueError('Preserve prior run; use --resume')
     prepared=json.loads((data/'report.json').read_text())
     for f,k in [('expression.npy','expression_sha256'),('selected_metadata.csv','metadata_sha256'),('genes.csv','genes_sha256')]:
@@ -47,6 +47,8 @@ def main():
     plan['past_encoder_sha256']=digest(encoder_root/'neutral_d8_flow.npz')
     plan['author_reference_sha256']=digest(HERE/'CNF_AUTHOR_REFERENCE.json')
     plan['manifold_reference_sha256']=digest(HERE/'CNF_MANIFOLD_REFERENCE.json')
+    failed_checkpoint=HERE/'private/cnf_extended_challenge_01/cnf_m10.0.pt'
+    plan['recovered_checkpoint_sha256']=digest(failed_checkpoint)
     plan['step800_checkpoint_sha256']=digest(old/'cnf_m10.0.pt')
     plan['duration_comparison']='Only total updates400/800→1600; density10 and energy.1 fixed. Fresh800-step training must reproduce archived first400 steps bit-identically.'
     plan['reference_checkpoint_sha256']=digest(old/'verified_step400.pt')
@@ -96,7 +98,7 @@ def main():
             def record_training(kind,**kw):
                 if kw['step']==400:
                     current=torch.load(out/f'cnf_m{manifold}.pt',weights_only=False,map_location='cpu')
-                    if digest(old/'verified_step400.pt')!=plan['reference_checkpoint_sha256','step800_checkpoint_sha256']:raise ValueError('Reference checkpoint changed')
+                    if digest(old/'verified_step400.pt')!=plan['reference_checkpoint_sha256']:raise ValueError('Reference checkpoint changed')
                     previous=torch.load(old/'verified_step400.pt',weights_only=False,map_location='cpu')
                     for key,value in current['net'].items():torch.testing.assert_close(value,previous['net'][key],rtol=0,atol=0)
                     torch.save(current,out/'verified_step400.pt')
@@ -109,7 +111,15 @@ def main():
                     torch.save(current,out/'verified_step800.pt')
                     append_event(events,'first800_updates_bit_identical')
                 append_event(events,kind,energy_weight=energy,density_weight=manifold,**kw)
-            history=train_manifold_density(net,coordinates,stages[past],energy,out/f'cnf_m{manifold}.pt',record_training,resume=args.resume,steps=1600,density_weight=manifold)
+            restored=out/f'cnf_m{manifold}.pt'
+            if not restored.exists():
+                if digest(failed_checkpoint)!=plan['recovered_checkpoint_sha256']:raise ValueError('Recovery checkpoint changed')
+                recovered=torch.load(failed_checkpoint,weights_only=False,map_location='cpu')
+                reference=torch.load(old/'verified_step400.pt',weights_only=False,map_location='cpu')
+                for key,value in recovered['net'].items():torch.testing.assert_close(value,reference['net'][key],rtol=0,atol=0)
+                restored.write_bytes(failed_checkpoint.read_bytes())
+                append_event(events,'failed_run_checkpoint_recovered',step=recovered['step'],first400_verified=True)
+            history=train_manifold_density(net,coordinates,stages[past],energy,out/f'cnf_m{manifold}.pt',record_training,resume=True,steps=1600,density_weight=manifold)
             with torch.no_grad():
                 z0=net.encode(torch.tensor((donors[:256,features]-center)/scale))[0]
                 coarse=net.trajectory(z0,torch.tensor([0.,1.]),step=.125)[-1]
@@ -158,7 +168,7 @@ def main():
     p=HERE/'LOCAL_OPTIMIZATION_STATE.json';state=json.loads(p.read_text());state['cnf_extended_job'].update(status='completed_not_promoted',evaluations=24,pending_evaluations=0,report_sha256=public['report_sha256'],results_report='CNF_EXTENDED_RESULTS.json');state['local_process_running']=False;state['active_jobs']=[];p.write_text(json.dumps(state,indent=2))
     p=HERE/'METRIC_RESEARCH_QUEUE.json';queue=json.loads(p.read_text())
     for entry in queue['paths']:
-        if entry.get('run')=='cnf_extended_challenge_01':entry.update(status='implemented_evaluated_not_promoted',results_report='CNF_EXTENDED_RESULTS.json')
+        if entry.get('run')=='cnf_extended_repair_01':entry.update(status='implemented_evaluated_not_promoted',results_report='CNF_EXTENDED_RESULTS.json')
     p.write_text(json.dumps(queue,indent=2))
     from index_scores import main as index_scores
     index_scores();append_event(events,'challenge_transport_completed',evaluations=24)
@@ -169,6 +179,6 @@ if __name__=='__main__':
         torch.set_num_threads(2)
         with threadpool_limits(limits=2):main()
     except Exception as exc:
-        folder=HERE/'private/cnf_extended_challenge_01'
+        folder=HERE/'private/cnf_extended_repair_01'
         if folder.exists():(folder/'failure.json').write_text(json.dumps({'status':'execution_failed','type':type(exc).__name__,'error':str(exc),'resume_command':'outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_extended_challenge.py --resume'},indent=2))
         raise

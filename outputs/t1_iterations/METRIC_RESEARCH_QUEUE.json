@@ -4879,7 +4879,7 @@
     },
     {
       "id": "continuous_flow_extended_duration",
-      "run": "cnf_extended_challenge_01",
+      "run": "cnf_extended_repair_01",
       "status": "running",
       "implementation": [
         "cnf_extended_challenge.py",
@@ -4887,7 +4887,9 @@
       ],
       "trial_scope": "Fixed density10/energy.1,1600 updates versus archived400/800. Exact training lineage checks at400 and800. Two strengths,24 unchanged panel scores.",
       "limitations": "Reused development panels, no fresh validation, no72 or official readiness.",
-      "research_family_exhausted": false
+      "research_family_exhausted": false,
+      "failed_run": "cnf_extended_challenge_01",
+      "repair": "Tuple lookup corrected; recover genuine400-step checkpoint and verify against archived400 states, then continue. All plan subscript accesses statically checked for tuple keys."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."
