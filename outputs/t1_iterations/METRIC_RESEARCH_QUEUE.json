@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T09:37:58.080852+00:00",
+  "updated_utc": "2026-09-29T09:49:40.325825+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -4411,11 +4411,11 @@
       ],
       "scope": "Adaptation, not faithful ECC. Three positive-quantile strengths, global and four-state conditional, two one-day associated-cohort folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "79a92d862be5e1b03ab418c117ab5a10b847e048cf7e105caaba65bf2191a6d5",
+      "results_report_sha256": "d62fbc6a1b0aafebc518a07a3ed6b2734812974b0613630e35a0659ac12af516",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Finish same-cohort covariance alignment rolling checks; assess full paired metrics and limitations. Independent challenge-domain earlier-stage validation remains input-blocked."
+      "next_action": "Latest1/2 positive decoder rolling checks on exact archived cutoffs8/8.25 flows;22 outcomes with sevencontrols."
     },
     {
       "id": "annotation_conditioned_temporal",
@@ -4439,7 +4439,7 @@
       ],
       "scope": "Heuristic adaptation to normalized abundance; not muscat replication. Observed annotations group past cells. Four expression/detection ablations, source support20 vs100, two one-day folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "79a92d862be5e1b03ab418c117ab5a10b847e048cf7e105caaba65bf2191a6d5",
+      "results_report_sha256": "d62fbc6a1b0aafebc518a07a3ed6b2734812974b0613630e35a0659ac12af516",
       "limitations": [
         "Published annotation may derive from joint stages; retrospective diagnostic only.",
         "Capture IDs do not establish independent embryos; cell-based errors are shrinkage heuristics.",
@@ -4448,7 +4448,7 @@
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Finish same-cohort covariance alignment rolling checks; assess full paired metrics and limitations. Independent challenge-domain earlier-stage validation remains input-blocked."
+      "next_action": "Latest1/2 positive decoder rolling checks on exact archived cutoffs8/8.25 flows;22 outcomes with sevencontrols."
     },
     {
       "id": "shared_gene_program_dynamics",
@@ -4475,11 +4475,11 @@
       "scope": "Shared SVD profile directions versus cell-level NMF median consensus usage dynamics. Neither is a faithful cNMF reproduction or certified biological-program recovery.",
       "frozen_trials": "SVD ranks2/4/8 with detection0/.5; NMF ranks8/16 with detection0/.5,3 fixed seeds and200 iterations. Rank16 optimizer repair800 iterations. Two matched one-day development folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "79a92d862be5e1b03ab418c117ab5a10b847e048cf7e105caaba65bf2191a6d5",
+      "results_report_sha256": "d62fbc6a1b0aafebc518a07a3ed6b2734812974b0613630e35a0659ac12af516",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Finish same-cohort covariance alignment rolling checks; assess full paired metrics and limitations. Independent challenge-domain earlier-stage validation remains input-blocked."
+      "next_action": "Latest1/2 positive decoder rolling checks on exact archived cutoffs8/8.25 flows;22 outcomes with sevencontrols."
     },
     {
       "id": "neural_latent_hurdle",
@@ -5139,7 +5139,7 @@
     {
       "id": "continuous_flow_recent_positive_temporal",
       "run": "cnf_recent_positive_temporal_01",
-      "status": "implemented_running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_recent_positive_temporal.py",
         "recent_positive_forecast.py"
@@ -5148,7 +5148,26 @@
       "limitations": "Reused source-cohort folds, missing gene placeholders and no independent embryos. Earlier challenge files unavailable; same-cohort validation cannot establish domain transfer.",
       "research_family_exhausted": false,
       "tests_passed": 108,
-      "validation_report": "CNF_RECENT_POSITIVE_TEMPORAL_VALIDATION.json"
+      "validation_report": "CNF_RECENT_POSITIVE_TEMPORAL_VALIDATION.json",
+      "results_report": "CNF_RECENT_POSITIVE_TEMPORAL_RESULTS.json",
+      "decision": "Recent1 rolling abundance50.3974/51.6127 belowglobal50.6146/52.0392; joint49.4130/51.2893 failsfirst and regressessecond. Recent2 abundance49.8149/51.2411 andjoint48.9614/51.3135 alsofailfirst. Challenge54.2995 gain not temporally robust; preserve22outcomes, no promotion. Next explicit stage-conditioned positive regression."
+    },
+    {
+      "id": "continuous_flow_stage_positive_decoder",
+      "run": "cnf_stage_positive_challenge_01",
+      "status": "implemented_running",
+      "implementation": [
+        "cnf_stage_positive_challenge.py",
+        "stage_positive_forecast.py",
+        "feature_panel_forecast.py"
+      ],
+      "trial_scope": "Additive stage and stage-by-state positive ridge1 regressions x abundance/joint, frozen800-update field and global detection. Fourforecasts/fivearchives=27outcomes.",
+      "hypothesis": "Allow gene response to developmental stage conditional on latent state; own regression extension to separated hurdle heads, not published-method reproduction.",
+      "literature_context": "LOGISTIC_DETECTION_REFERENCE.json covers MAST separated positive/detection components; stage-interaction design is our hypothesis and does not reproduce MAST inference.",
+      "limitations": "Time extrapolation, collinearity and latent/domain confounding can harm generalization. Past-only stage normalization; reused development, no independent embryos. Temporal checks required for a gain.",
+      "research_family_exhausted": false,
+      "tests_passed": 109,
+      "validation_report": "CNF_STAGE_POSITIVE_VALIDATION.json"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T09:39:02.475186+00:00",
+  "updated_utc": "2026-09-29T09:50:49.287589+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_recent_positive_temporal.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_stage_positive_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Latest1/2 positive decoder rolling checks on exact archived cutoffs8/8.25 flows;22 outcomes with sevencontrols.",
+  "next_experiment": "Additive stage and stage-state interaction positive conditional heads, frozenfield/detection,27scores.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_recent_positive_temporal_01"
+    "cnf_stage_positive_challenge_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_recent_positive_temporal_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_stage_positive_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -150,7 +150,7 @@
     "status": "completed",
     "running": [],
     "report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-    "report_sha256": "79a92d862be5e1b03ab418c117ab5a10b847e048cf7e105caaba65bf2191a6d5"
+    "report_sha256": "d62fbc6a1b0aafebc518a07a3ed6b2734812974b0613630e35a0659ac12af516"
   },
   "continuation_automation": {
     "id": "continue-t1-local-research",
@@ -605,13 +605,26 @@
     "results_report": "CNF_RECENT_POSITIVE_RESULTS.json"
   },
   "cnf_recent_positive_temporal_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_recent_positive_temporal_01",
     "tests_passed": 108,
     "evaluations_planned": 22,
-    "pending_evaluations": 22,
+    "pending_evaluations": 0,
     "process_id": 12808,
     "plan_sha256": "12f66ed1e90536288efe57ea21eb83932bcafdb01fe11443fe262e0f472019d3",
-    "decision": "Rolling checks of latest1/2 positive heads with global detection and archived past-only fields fixed. No promotion; local72 gate unmet."
+    "decision": "Recent1 rolling abundance50.3974/51.6127 belowglobal50.6146/52.0392; joint49.4130/51.2893 failsfirst and regressessecond. Recent2 abundance49.8149/51.2411 andjoint48.9614/51.3135 alsofailfirst. Challenge54.2995 gain not temporally robust; preserve22outcomes, no promotion. Next explicit stage-conditioned positive regression.",
+    "report_sha256": "d43e8d325c2cc59233981f53b3032e0ce24c6a5c130676c1d04f09abd6551b12",
+    "results_report": "CNF_RECENT_POSITIVE_TEMPORAL_RESULTS.json",
+    "evaluations": 22
+  },
+  "cnf_stage_positive_job": {
+    "status": "running",
+    "run": "cnf_stage_positive_challenge_01",
+    "tests_passed": 109,
+    "evaluations_planned": 27,
+    "pending_evaluations": 27,
+    "process_id": 17200,
+    "plan_sha256": "1b30c48de2975efe000752a280bfc828c5e297c81511e5c5266b74242c6720e4",
+    "decision": "Additive and interaction stage-positive decoders with global detection and original field fixed. No promotion; local72 gate unmet."
   }
 }

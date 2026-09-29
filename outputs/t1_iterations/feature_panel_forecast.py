@@ -15,6 +15,12 @@ class FeaturePanelForecast(RidgeConditionalPositiveForecast):
     def detection_probability(self,h,sl):
         return np.clip(self.pmean[sl]+h@self.detection[:,sl],1e-4,1-1e-4)
 
+    def positive_log_change(self,h0,h1,sl,target):
+        return (h1-h0)@self.positive_coef[:,sl]
+
+    def positive_log_value(self,h1,sl,target):
+        return self.positive_mean[sl]+h1@self.positive_coef[:,sl]-(self.positive_center[:,sl]*self.positive_coef[:,sl]).sum(0)
+
     def predict(self,target,mode,strength=1.,seed=20260928,sampling='independent'):
         if target<=self.cutoff or mode not in ['abundance','detection','joint'] or strength not in [.5,1.] or sampling not in ['independent','systematic']:raise ValueError('Invalid hurdle forecast')
         with torch.no_grad():
@@ -30,7 +36,7 @@ class FeaturePanelForecast(RidgeConditionalPositiveForecast):
                 original=np.expm1(self.donors[:,genes].astype(float));positive=original>0
                 updated=original.copy();active=self.support[sl]
                 if mode in ['abundance','joint']:
-                    change=(h1-h0)@self.positive_coef[:,sl]
+                    change=self.positive_log_change(h0,h1,sl,target)
                     updated*=np.exp(np.clip(strength*backoff*change,-np.log(2.),np.log(2.)))
                 if mode in ['detection','joint']:
                     p0=self.detection_probability(h0,sl)
@@ -46,7 +52,7 @@ class FeaturePanelForecast(RidgeConditionalPositiveForecast):
                         added=systematic_bernoulli(add_probability,rng)
                         removed=systematic_bernoulli(remove_probability,rng)
                     # Subtract each gene's positive-cell latent centroid for its conditional intercept.
-                    log_positive=self.positive_mean[sl]+h1@self.positive_coef[:,sl]-(self.positive_center[:,sl]*self.positive_coef[:,sl]).sum(0)
+                    log_positive=self.positive_log_value(h1,sl,target)
                     imputed=np.exp(np.clip(log_positive,-8.,np.log(10000.)))
                     updated[added]=imputed[added];updated[removed]=0
                 updated[empty]=0

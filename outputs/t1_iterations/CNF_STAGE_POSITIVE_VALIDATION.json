@@ -1,0 +1,11 @@
+{
+  "updated_utc": "2026-09-29T09:50:49.287589+00:00",
+  "tests_passed": 109,
+  "command": "pytest outputs/t1_iterations -q -p no:cacheprovider",
+  "checks": [
+    "Stage design agrees with independent conditional ridge fit",
+    "Global detection coefficients and support remain unchanged",
+    "Future expression invariance, mapped mass and protected genes verified"
+  ],
+  "limitations": "Tests establish implementation behavior, not forecast accuracy or leaderboard readiness."
+}
