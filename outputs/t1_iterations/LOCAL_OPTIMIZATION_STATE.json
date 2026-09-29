@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T07:20:22.283500+00:00",
+  "updated_utc": "2026-09-29T07:30:52.559696+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,14 +31,14 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_feature_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Finish latent16/24 capacity tests with matched4096-gene8D controls, diagnose all metric vectors and assess temporal consistency for meaningful gains.",
+  "next_experiment": "Finish sequential all-past-stage likelihood400/800 tests and diagnose matched stochastic controls across all metric vectors; then temporal consistency for meaningful gains.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_dimension_challenge_01"
+    "cnf_sequential_challenge_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_dimension_challenge_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_sequential_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -436,12 +436,25 @@
     "decision": "4096-gene encoder mean52.8811 versus384-gene52.8369: tiny+.0442 and one panel regresses.1024 genes regress to52.1756. No reliable improvement or72 promotion; next fixed4096-gene latent16/24 capacity test."
   },
   "cnf_dimension_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_dimension_challenge_01",
     "tests_passed": 92,
     "evaluations_planned": 30,
-    "pending_evaluations": 30,
+    "pending_evaluations": 0,
     "process_id": 11180,
-    "plan_sha256": "a9bc25de61ec6c6612ac87231662c4172b65cfc40a40f268db168039d6abc300"
+    "plan_sha256": "a9bc25de61ec6c6612ac87231662c4172b65cfc40a40f268db168039d6abc300",
+    "evaluations": 30,
+    "report_sha256": "4a183c39619268129095da227da912d8a0ca89e5e272e3b50027d9ed56bb13d2",
+    "results_report": "CNF_DIMENSION_RESULTS.json",
+    "decision": "Latent16/24 mean52.3570/50.8636 regress on all panels versus matched8D4096-gene52.8811. Preserve30 outcomes. Larger rank does not help this bounded range; next sequential all-past-stage likelihood with shared backward paths."
+  },
+  "cnf_sequential_job": {
+    "status": "running",
+    "run": "cnf_sequential_challenge_01",
+    "tests_passed": 94,
+    "evaluations_planned": 30,
+    "pending_evaluations": 30,
+    "process_id": 22880,
+    "plan_sha256": "eabcbb4c742870b3410f9f9bad35ecb97798ce8fc2597a8fb5edaf199a4ea293"
   }
 }

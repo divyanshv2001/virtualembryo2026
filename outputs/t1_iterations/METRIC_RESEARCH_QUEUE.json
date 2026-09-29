@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T06:29:55.101093+00:00",
+  "updated_utc": "2026-09-29T07:30:52.559696+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -4939,13 +4939,28 @@
     {
       "id": "continuous_flow_latent_capacity",
       "run": "cnf_dimension_challenge_01",
-      "status": "running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_dimension_challenge.py",
         "feature_panel_forecast.py"
       ],
       "trial_scope": "4096 fixed past-variable encoder genes, latent16/24 versus8,800 updates/density10/energy.1, strengths.5/1;30 scores with six archived controls including matched4096-gene8D and three unchanged panels.",
       "limitations": "Own latent-capacity adaptation; latent distance geometry changes with rank. Reused development, no independent biological replication or72 guarantee. Full conditional decoder remains mapped-gene complete.",
+      "research_family_exhausted": false,
+      "results_report": "CNF_DIMENSION_RESULTS.json",
+      "decision": "Latent16/24 mean52.3570/50.8636 regress on all panels versus matched8D4096-gene52.8811. Preserve30 outcomes. Larger rank does not help this bounded range; next sequential all-past-stage likelihood with shared backward paths."
+    },
+    {
+      "id": "continuous_flow_sequential_likelihood",
+      "run": "cnf_sequential_challenge_01",
+      "status": "running",
+      "implementation": [
+        "cnf_sequential_flow.py",
+        "cnf_sequential_challenge.py"
+      ],
+      "primary_reference": "CNF_SEQUENTIAL_REFERENCE.json",
+      "trial_scope": "Equal-stage backward shared likelihood,64 total sampled past cells,4096 genes/8 latent,400/800 updates, strengths.5/1 and six archived controls;30 full-panel scores.",
+      "limitations": "Own numerical/representation adaptation, not full author replication; exposed development and no biological growth/velocity inputs. No guarantee or72 promotion.",
       "research_family_exhausted": false
     }
   ],

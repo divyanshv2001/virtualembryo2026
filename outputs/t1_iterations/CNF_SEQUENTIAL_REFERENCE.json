@@ -1,0 +1,8 @@
+{
+  "author_code": "https://github.com/KrishnaswamyLab/TrajectoryNet",
+  "commit": "810c89b081f95405bc0ad42bfb3cb41038e13700",
+  "file": "TrajectoryNet/main.py",
+  "file_sha256": "550c3a7e372f12b470586cb05f65dd195f25a8dcb4e2aa868046ff459be4999c",
+  "read": "compute_loss lines85-163 reread: backward concatenation of later-stage positions with earlier observations, accumulated log-density and equal-stage mean negative likelihood. Author uses mean of stage losses.",
+  "adaptation": "Shared backward likelihood with RK4.125 and fixed per-cell Rademacher trace across intervals,64 total cells partitioned over five stages; author samples batch_size at every stage. Own8D4096-gene PCA and full-gene conditional decoder, fixed Gaussian virtual7.25 base; no growth/velocity/straightline penalty. Existing midpoint density10/energy.1 retained;400/800 updates. Not complete TrajectoryNet reproduction or extrapolation guarantee."
+}
