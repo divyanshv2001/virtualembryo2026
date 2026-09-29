@@ -1,5 +1,5 @@
 {
-  "records": 2015,
+  "records": 2042,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -175,6 +175,11 @@
       "path": "private/cnf_sequential_challenge_01/report.json",
       "sha256": "fd5d4805e92dfcf4954e25f67e1ecd3a64500c6cc023fac0e8e466ad73fcabf2",
       "outcomes_indexed": 30
+    },
+    {
+      "path": "private/cnf_stage_positive_challenge_01/report.json",
+      "sha256": "1b83ba7335aeee00f1c37f60b50fa6c2f1e29e4bd8ab47da194dc6cf6eca58c3",
+      "outcomes_indexed": 27
     },
     {
       "path": "private/cnf_strong_mmd_challenge_01/report.json",
@@ -489,5 +494,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "cebe0a551412f2c3fd6eb52cbc36e2d8fceb89c721e3959caecdbfbf589b5412"
+  "ledger_sha256": "971d774409c2c4cb7255e509c436c92c56286f055b339f26526d42831259df67"
 }

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T09:50:49.287589+00:00",
+  "updated_utc": "2026-09-29T10:00:29.127188+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_stage_positive_challenge.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_cdr_detection_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Additive stage and stage-state interaction positive conditional heads, frozenfield/detection,27scores.",
+  "next_experiment": "CDR nuisance-adjusted detection heads, latent ridge1 and CDRridge.1/1; positive head/flow fixed,27scores.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_stage_positive_challenge_01"
+    "cnf_cdr_detection_challenge_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_stage_positive_challenge_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_cdr_detection_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -618,13 +618,26 @@
     "evaluations": 22
   },
   "cnf_stage_positive_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_stage_positive_challenge_01",
     "tests_passed": 109,
     "evaluations_planned": 27,
-    "pending_evaluations": 27,
+    "pending_evaluations": 0,
     "process_id": 17200,
     "plan_sha256": "1b30c48de2975efe000752a280bfc828c5e297c81511e5c5266b74242c6720e4",
-    "decision": "Additive and interaction stage-positive decoders with global detection and original field fixed. No promotion; local72 gate unmet."
+    "decision": "Stage-positive additive/interaction joint means52.1380/50.3070 and abundance51.4083/50.0167 regress versus global53.5953/52.8811. Preserve27 outcomes, no promotion. Next declared MAST-inspired CDR nuisance adjustment in detection only.",
+    "evaluations": 27,
+    "report_sha256": "1b83ba7335aeee00f1c37f60b50fa6c2f1e29e4bd8ab47da194dc6cf6eca58c3",
+    "results_report": "CNF_STAGE_POSITIVE_RESULTS.json"
+  },
+  "cnf_cdr_detection_job": {
+    "status": "running",
+    "run": "cnf_cdr_detection_challenge_01",
+    "tests_passed": 110,
+    "evaluations_planned": 27,
+    "pending_evaluations": 27,
+    "process_id": 8764,
+    "plan_sha256": "9978998879b37fce930444b49f94a2e69472cfe048f96f75633f2137983ef560",
+    "decision": "CDR-adjusted detection with global positive head and original field fixed. No promotion; local72 gate unmet."
   }
 }

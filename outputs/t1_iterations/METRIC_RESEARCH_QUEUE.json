@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T09:49:40.325825+00:00",
+  "updated_utc": "2026-09-29T09:59:30.247433+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5155,7 +5155,7 @@
     {
       "id": "continuous_flow_stage_positive_decoder",
       "run": "cnf_stage_positive_challenge_01",
-      "status": "implemented_running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_stage_positive_challenge.py",
         "stage_positive_forecast.py",
@@ -5167,7 +5167,24 @@
       "limitations": "Time extrapolation, collinearity and latent/domain confounding can harm generalization. Past-only stage normalization; reused development, no independent embryos. Temporal checks required for a gain.",
       "research_family_exhausted": false,
       "tests_passed": 109,
-      "validation_report": "CNF_STAGE_POSITIVE_VALIDATION.json"
+      "validation_report": "CNF_STAGE_POSITIVE_VALIDATION.json",
+      "results_report": "CNF_STAGE_POSITIVE_RESULTS.json",
+      "decision": "Stage-positive additive/interaction joint means52.1380/50.3070 and abundance51.4083/50.0167 regress versus global53.5953/52.8811. Preserve27 outcomes, no promotion. Next declared MAST-inspired CDR nuisance adjustment in detection only."
+    },
+    {
+      "id": "continuous_flow_cdr_detection",
+      "run": "cnf_cdr_detection_challenge_01",
+      "status": "implemented_running",
+      "implementation": [
+        "cnf_cdr_detection_challenge.py",
+        "cdr_detection_forecast.py"
+      ],
+      "primary_reference": "CDR_DETECTION_REFERENCE.json",
+      "trial_scope": "CDR nuisance ridge.1/1, latent ridge1 fixed x detection/joint; originalpositiveheads/800-updatefield fixed. Fourforecasts/fivearchives=27outcomes.",
+      "limitations": "Own linear-ridge adaptation, not MAST inference. CDR can represent true biology and response-gene dependence. Fixed observed donor nuisance, past-only fit/normalization. Reused development; temporal checks needed for gains.",
+      "research_family_exhausted": false,
+      "tests_passed": 110,
+      "validation_report": "CNF_CDR_DETECTION_VALIDATION.json"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."
