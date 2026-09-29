@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T07:10:07.458179+00:00",
+  "updated_utc": "2026-09-29T07:20:22.283500+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,14 +31,14 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_feature_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Evaluate1024/4096 encoder feature panels with8D CNF,800 updates and unchanged original384 covariance guard; preserve24 full-panel challenge outcomes.",
+  "next_experiment": "Finish latent16/24 capacity tests with matched4096-gene8D controls, diagnose all metric vectors and assess temporal consistency for meaningful gains.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_feature_challenge_01"
+    "cnf_dimension_challenge_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_feature_challenge_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_dimension_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -423,12 +423,25 @@
     "decision": "Both observation-noise levels regress on every panel versus zero-noise800-update baseline52.8369; best noisy mean52.4979 at.05/strength1. Zero-noise training replay verified exactly. All24 outcomes preserved; this bounded jitter range does not help. Next test encoder gene coverage1024/4096 with original384 covariance guard."
   },
   "cnf_feature_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_feature_challenge_01",
     "tests_passed": 90,
     "evaluations_planned": 24,
-    "pending_evaluations": 24,
+    "pending_evaluations": 0,
     "process_id": 17420,
-    "plan_sha256": "f01d1a0d2e30be11b40bb6bd3df54133a5762b641cdc8be6c45231aff88a22cf"
+    "plan_sha256": "f01d1a0d2e30be11b40bb6bd3df54133a5762b641cdc8be6c45231aff88a22cf",
+    "evaluations": 24,
+    "report_sha256": "8c9d3fab379e7945380735ffa01ed9aa19b496c655a74f9e0d7e111908787748",
+    "results_report": "CNF_FEATURE_RESULTS.json",
+    "decision": "4096-gene encoder mean52.8811 versus384-gene52.8369: tiny+.0442 and one panel regresses.1024 genes regress to52.1756. No reliable improvement or72 promotion; next fixed4096-gene latent16/24 capacity test."
+  },
+  "cnf_dimension_job": {
+    "status": "running",
+    "run": "cnf_dimension_challenge_01",
+    "tests_passed": 92,
+    "evaluations_planned": 30,
+    "pending_evaluations": 30,
+    "process_id": 11180,
+    "plan_sha256": "a9bc25de61ec6c6612ac87231662c4172b65cfc40a40f268db168039d6abc300"
   }
 }

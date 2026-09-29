@@ -4925,13 +4925,27 @@
     {
       "id": "continuous_flow_gene_coverage",
       "run": "cnf_feature_challenge_01",
-      "status": "running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_feature_challenge.py",
         "feature_panel_forecast.py"
       ],
       "trial_scope": "Past-variance mapped1024/4096 genes,8D PCA with3000 fixed sampled past rows,800 updates/density10/energy.1; two strengths,24 scores. Original384 covariance guard and full32285-gene scorer unchanged.",
       "limitations": "All permitted prepared past rows, not full430339 atlas. More genes can add noise; no blind validation or guarantee. Full-gene decoder already fit all mapped genes; this varies only encoder input coverage.",
+      "research_family_exhausted": false,
+      "results_report": "CNF_FEATURE_RESULTS.json",
+      "decision": "4096-gene encoder mean52.8811 versus384-gene52.8369: tiny+.0442 and one panel regresses.1024 genes regress to52.1756. No reliable improvement or72 promotion; next fixed4096-gene latent16/24 capacity test."
+    },
+    {
+      "id": "continuous_flow_latent_capacity",
+      "run": "cnf_dimension_challenge_01",
+      "status": "running",
+      "implementation": [
+        "cnf_dimension_challenge.py",
+        "feature_panel_forecast.py"
+      ],
+      "trial_scope": "4096 fixed past-variable encoder genes, latent16/24 versus8,800 updates/density10/energy.1, strengths.5/1;30 scores with six archived controls including matched4096-gene8D and three unchanged panels.",
+      "limitations": "Own latent-capacity adaptation; latent distance geometry changes with rank. Reused development, no independent biological replication or72 guarantee. Full conditional decoder remains mapped-gene complete.",
       "research_family_exhausted": false
     }
   ],
