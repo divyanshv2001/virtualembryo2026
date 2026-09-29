@@ -1,0 +1,8 @@
+{
+  "retrieved_utc": "2026-09-29T13:03:44.506433+00:00",
+  "primary_context": "https://academic.oup.com/biostatistics/article-abstract/8/1/118/252073",
+  "doi": "10.1093/biostatistics/kxj037",
+  "read": "Publisher abstract only; batch-effect motivation and empirical-Bayes microarray context, no fulltext reproduction claimed.",
+  "adaptation": "Own bounded past-anchor decoder-intercept calibration, not ComBat/Bayesian shrinkage. Source conditional slopes and temporal flow fixed. Separate positive-log intercept and detection intercept ablations with >=20 anchorpositive cells and original source support.",
+  "limitations": "Atlas-challenge differences can reflect tissue/state composition or biology; adjustments cannot be labelled measured technical batch effects. 1500fixedchallengeE8.5 anchors only, no targetlearning or wholechallenge/atlas training."
+}

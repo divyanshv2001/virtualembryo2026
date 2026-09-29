@@ -1,0 +1,12 @@
+{
+  "updated_utc": "2026-09-29T13:05:11.932288+00:00",
+  "tests_passed": 126,
+  "command": "pytest outputs/t1_iterations -q -p no:cacheprovider --basetemp outputs/t1_iterations/private/pytest_tmp_57",
+  "checks": [
+    "Zero correction exactly reproduces original full forecast in fixture; runtime archive replay enforced",
+    "Future expression cannot change offsets/source slopes",
+    "Positive/detection/both variants conserve mapped mass and protectedgenes; abundance-only forecast unchanged",
+    "Offsetcaps enforced and source slopes fixed"
+  ],
+  "limitations": "1500pastanchors, not fullchallenge/atlastraining. Atlas-anchor differences may be biological; score and temporalreadiness remain unmeasured for newcorrection."
+}

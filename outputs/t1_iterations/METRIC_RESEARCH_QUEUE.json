@@ -5421,7 +5421,7 @@
     {
       "id": "continuous_flow_observed_base_origin",
       "run": "cnf_observed_base_challenge_01",
-      "status": "implemented_running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_observed_base_challenge.py",
         "cnf_mixture_base.py"
@@ -5431,7 +5431,24 @@
       "limitations": "Earliestzero-duration likelihood cannottrainfield, effectively fewerinformativeupdates; equalstagestochasticdraws retained. Calendar-time coordinate shiftswithorigin; assessedasobserved-originmechanism. Sampledsourcecohort anddomainmismatch remain, noindependentembryos or targetlearning.",
       "research_family_exhausted": false,
       "tests_passed": 125,
-      "validation_report": "CNF_OBSERVED_BASE_VALIDATION.json"
+      "validation_report": "CNF_OBSERVED_BASE_VALIDATION.json",
+      "results_report": "CNF_OBSERVED_BASE_RESULTS.json",
+      "decision": "Observed-originGaussian1/GMM8 joint49.5090/49.2413 andabundance48.1613/48.1939 failpersistence; preserve45outcomes, no promotion. Origin/base density evaluatedrange fails; next pastchallenge-anchor decoderintercept calibration, retain atlassignal slopes/dynamics."
+    },
+    {
+      "id": "continuous_flow_anchor_head_calibration",
+      "run": "cnf_anchor_head_challenge_01",
+      "status": "implemented_running",
+      "implementation": [
+        "cnf_anchor_head_challenge.py",
+        "anchor_head_calibration.py"
+      ],
+      "primary_reference": "ANCHOR_HEAD_CALIBRATION_REFERENCE.json",
+      "trial_scope": "1500fixedobservedE8.5anchors calibrate decoderintercepts, >=20positiveanchorcells andsourcesupport, positivecaplog2/detectcap.25, positive/detection/both x.5/1;6forecasts/7controls x3panels=39scores. Originalfield/slopes fixed, zero-correction exactreplay mandatory.",
+      "limitations": "Anchorfit uses sampled1500pastcells, notfullchallengeatlas. Biological/tissue differences cannotbeclassifiedastechnicalbatch effects. SameexposedE9.5development, noindependentembryos or targetlearning; alloriginalreadinessrequirements remain.",
+      "research_family_exhausted": false,
+      "tests_passed": 126,
+      "validation_report": "CNF_ANCHOR_HEAD_VALIDATION.json"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

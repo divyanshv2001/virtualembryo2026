@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T12:53:04.122433+00:00",
+  "updated_utc": "2026-09-29T13:05:11.932288+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_observed_base_challenge.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_anchor_head_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Observed7.5flow originwithsameGaussian1/8priors, originaldecoder,timeconditionedfield;45full-panel scores includingvirtualorigincontrols.",
+  "next_experiment": "Past E8.5anchor positive/detection intercept calibration .5/1,separate/both, originalsourceheadslope/fieldfrozen;39scores.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_observed_base_challenge_01"
+    "cnf_anchor_head_challenge_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_observed_base_challenge_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_anchor_head_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -808,14 +808,28 @@
     "results_report": "CNF_MIXTURE_BASE_RESULTS.json"
   },
   "cnf_observed_base_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_observed_base_challenge_01",
     "evaluations_planned": 45,
-    "pending_evaluations": 45,
-    "decision": "Match observedprior andfloworigin; earlieststage gradientzeroverified, no72promotion.",
+    "pending_evaluations": 0,
+    "decision": "Observed-originGaussian1/GMM8 joint49.5090/49.2413 andabundance48.1613/48.1939 failpersistence; preserve45outcomes, no promotion. Origin/base density evaluatedrange fails; next pastchallenge-anchor decoderintercept calibration, retain atlassignal slopes/dynamics.",
     "tests_passed": 125,
     "process_id": 15312,
     "worker_process_id": 23096,
-    "plan_sha256": "43261ebebc3a46c893da626fa87e6c0695577e10edf8d18e9ed37bbaacaf51aa"
+    "plan_sha256": "43261ebebc3a46c893da626fa87e6c0695577e10edf8d18e9ed37bbaacaf51aa",
+    "evaluations": 45,
+    "report_sha256": "9922d2690c9704276105646da6b863c1815c1d3294eb1aba66b90c4206650eec",
+    "results_report": "CNF_OBSERVED_BASE_RESULTS.json"
+  },
+  "cnf_anchor_head_job": {
+    "status": "running",
+    "run": "cnf_anchor_head_challenge_01",
+    "evaluations_planned": 39,
+    "pending_evaluations": 39,
+    "decision": "Testsource-to-anchor decoderlevel mismatch; notverifiedtechnicalbatch correction, no72promotion.",
+    "tests_passed": 126,
+    "process_id": 16544,
+    "worker_process_id": 6280,
+    "plan_sha256": "e7c12e4253f087ff5e08d23bd9c6a045039b1f149c48b197b3b7cfd60cd4ba83"
   }
 }
