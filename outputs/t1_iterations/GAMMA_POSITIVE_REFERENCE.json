@@ -1,0 +1,7 @@
+{
+  "primary_documentation": "https://www.statsmodels.org/stable/generated/statsmodels.genmod.families.family.Gamma.html",
+  "read": "Gamma family, available log link and variance proportional to squared mean, reviewed 2026-09-29.",
+  "implementation": "Own fixed-shape Gamma positive conditional mean objective y/exp(eta)+eta, L2 slopes ridge.1/1 and unpenalized intercept; positive observed rows only, atmost12 Newton/backtracking steps. Fractional normalized expression is continuous.",
+  "controls": "Same frozen dynamics/global detection, archived log-positive regression and quasi-Poisson ridge.1/1 joint predictions, unchanged full-panel scorer.",
+  "limitations": "Only conditional mean fitting; no shape/dispersion estimation, sampling of Gamma observations, or calibrated biological uncertainty. Positivity support and constraints unchanged. Not a full generative model or published forecasting reproduction."
+}

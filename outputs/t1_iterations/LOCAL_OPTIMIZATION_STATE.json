@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T10:51:49.830403+00:00",
+  "updated_utc": "2026-09-29T11:20:39.714599+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_poisson_positive_challenge.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_gamma_positive_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Positive quasi-Poisson conditional means ridge.1/1, frozenfield/globaldetection,27scores.",
+  "next_experiment": "Gamma log-link positive means ridge.1/1 with matched quasi-Poisson controls, frozenfield/detection,33scores.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_poisson_positive_challenge_01"
+    "cnf_gamma_positive_challenge_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_poisson_positive_challenge_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_gamma_positive_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -671,13 +671,26 @@
     "local_score": null
   },
   "cnf_poisson_positive_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_poisson_positive_challenge_01",
     "tests_passed": 114,
     "evaluations_planned": 27,
-    "pending_evaluations": 27,
+    "pending_evaluations": 0,
     "process_id": 14192,
     "plan_sha256": "18f75b2b94e6d7fe19f258ef0ed06416ef245d180f9eaaba2185e1c9e3a17d41",
-    "decision": "Positive quasi-Poisson ridge.1/1 with global detection and original field fixed. No promotion; local72 gate unmet."
+    "decision": "Quasi-Poisson joint ridge.1/1 means53.1047/53.4266 below global53.5953. Abundance53.0928/52.9206 onlysmall gains over52.8811. Preserve27outcomes, no promotion. Next Gamma positive continuous mean weighting with matched Poisson controls.",
+    "evaluations": 27,
+    "report_sha256": "27da3c08e6d36854c14067e51483994fa72968661f12f97a266f6472a6bdac64",
+    "results_report": "CNF_POISSON_POSITIVE_RESULTS.json"
+  },
+  "cnf_gamma_positive_job": {
+    "status": "running",
+    "run": "cnf_gamma_positive_challenge_01",
+    "tests_passed": 116,
+    "evaluations_planned": 33,
+    "pending_evaluations": 33,
+    "process_id": 5916,
+    "plan_sha256": "e24e00e775cce1750c2a556be862370fe45ea7f86aa8313ed958fadcdd1c2abb",
+    "decision": "Positive Gamma ridge.1/1 with matched Poisson controls, global detection and original field fixed. No promotion; local72 gate unmet."
   }
 }

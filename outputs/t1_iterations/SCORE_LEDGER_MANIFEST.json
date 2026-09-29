@@ -1,5 +1,5 @@
 {
-  "records": 2104,
+  "records": 2131,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -170,6 +170,11 @@
       "path": "private/cnf_noise_challenge_01/report.json",
       "sha256": "c71a60366cfdbc7e6fe8a1f638aa29d9cfd1fe30be3877ae003bffcfdf77cdd1",
       "outcomes_indexed": 24
+    },
+    {
+      "path": "private/cnf_poisson_positive_challenge_01/report.json",
+      "sha256": "27da3c08e6d36854c14067e51483994fa72968661f12f97a266f6472a6bdac64",
+      "outcomes_indexed": 27
     },
     {
       "path": "private/cnf_recent_detection_challenge_01/report.json",
@@ -514,5 +519,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "4fa44739cd60730873e905abe9e550bb871f5807c9d7f9685e45303a2090a32f"
+  "ledger_sha256": "c3768f073e82b71d9031e166ebbf6a2174170aad98ae68b9b3420610712bb076"
 }

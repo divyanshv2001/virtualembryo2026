@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T10:50:39.533241+00:00",
+  "updated_utc": "2026-09-29T11:19:32.612963+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5246,7 +5246,7 @@
     {
       "id": "continuous_flow_poisson_positive",
       "run": "cnf_poisson_positive_challenge_01",
-      "status": "implemented_running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_poisson_positive_challenge.py",
         "poisson_positive_forecast.py"
@@ -5256,7 +5256,24 @@
       "limitations": "Fractional library-normalized expression; no raw UMI/zero-truncated likelihood or scVI architecture claimed. Positive-only objective can distort conditional mean and tails. Reused development, no independent embryos.",
       "research_family_exhausted": false,
       "tests_passed": 114,
-      "validation_report": "CNF_POISSON_POSITIVE_VALIDATION.json"
+      "validation_report": "CNF_POISSON_POSITIVE_VALIDATION.json",
+      "results_report": "CNF_POISSON_POSITIVE_RESULTS.json",
+      "decision": "Quasi-Poisson joint ridge.1/1 means53.1047/53.4266 below global53.5953. Abundance53.0928/52.9206 onlysmall gains over52.8811. Preserve27outcomes, no promotion. Next Gamma positive continuous mean weighting with matched Poisson controls."
+    },
+    {
+      "id": "continuous_flow_gamma_positive",
+      "run": "cnf_gamma_positive_challenge_01",
+      "status": "implemented_running",
+      "implementation": [
+        "cnf_gamma_positive_challenge.py",
+        "poisson_positive_forecast.py"
+      ],
+      "primary_reference": "GAMMA_POSITIVE_REFERENCE.json",
+      "trial_scope": "Positive Gamma fixedshape mean ridge.1/1 x abundance/joint, global detection and800-updatefield fixed; fourforecasts/sevenarchives=33outcomes. MatchedquasiPoissonjoint controls retained.",
+      "limitations": "Continuous normalized expression; no dispersion inference, generative observation sampling or uncertainty calibration. Reused development, no independent embryos.",
+      "research_family_exhausted": false,
+      "tests_passed": 116,
+      "validation_report": "CNF_GAMMA_POSITIVE_VALIDATION.json"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

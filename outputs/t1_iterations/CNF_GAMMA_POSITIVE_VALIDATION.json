@@ -1,0 +1,11 @@
+{
+  "updated_utc": "2026-09-29T11:20:39.714599+00:00",
+  "tests_passed": 116,
+  "command": "pytest outputs/t1_iterations -q -p no:cacheprovider",
+  "checks": [
+    "Gamma log-link solver matches independent BFGS optimum",
+    "Global detection coefficients and support remain unchanged",
+    "Future expression invariance, mapped mass and protected genes verified"
+  ],
+  "limitations": "Tests establish implementation behavior, not forecast accuracy or leaderboard readiness."
+}
