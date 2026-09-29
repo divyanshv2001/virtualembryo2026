@@ -1,5 +1,5 @@
 {
-  "records": 2197,
+  "records": 2230,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -229,6 +229,11 @@
     {
       "path": "private/cnf_transition_mmd_challenge_01/report.json",
       "sha256": "145130a3154f986317351f8407254eb30f729de6f75c59835b10d5d31056987d",
+      "outcomes_indexed": 33
+    },
+    {
+      "path": "private/cnf_width_challenge_01/report.json",
+      "sha256": "59995f7590f25ba3dfa909f6f2162d116fa9edd2d6d6c47ef3187b1c1b7cd9c6",
       "outcomes_indexed": 33
     },
     {
@@ -529,5 +534,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "d411ed25a97e27e777f9c95ec9190b730b12897c5561bf2f14b1bfc0a75a04f0"
+  "ledger_sha256": "105626c5cad65b6ab2beedcade6b37f047daabac03b2cdf9b91b590a181ebbef"
 }

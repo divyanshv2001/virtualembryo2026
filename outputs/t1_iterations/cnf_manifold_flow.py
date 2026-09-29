@@ -20,18 +20,19 @@ def manifold_penalty(points,reference):
     return torch.clamp(neighbors-.1,min=0.).mean()
 
 
-def train_manifold_density(net,z,stages,energy_weight,checkpoint,emit,resume=False,steps=400,density_weight=0.):
+def train_manifold_density(net,z,stages,energy_weight,checkpoint,emit,resume=False,steps=400,density_weight=0.,batch_size=64):
+    if batch_size not in [64,256,512]:raise ValueError('Undeclared batch size')
     if density_weight not in [0.,1.,10.]:raise ValueError('Undeclared density weight')
     if energy_weight not in [0.,.1]:raise ValueError('Undeclared energy weight')
     torch.manual_seed(20260928);optimizer=torch.optim.Adam(net.parameters(),lr=.001);start=0;history=[]
     if resume and checkpoint.exists():
         saved=torch.load(checkpoint,weights_only=False,map_location='cpu')
-        if saved['energy_weight']!=energy_weight or saved['steps']!=steps or saved['density_weight']!=density_weight:raise ValueError('Checkpoint configuration mismatch')
+        if saved['energy_weight']!=energy_weight or saved['steps']!=steps or saved['density_weight']!=density_weight or saved.get('batch_size',64)!=batch_size:raise ValueError('Checkpoint configuration mismatch')
         net.load_state_dict(saved['net']);optimizer.load_state_dict(saved['optimizer']);torch.set_rng_state(saved['rng']);start=saved['step'];history=saved['history']
     groups=[torch.tensor(z[stages==t],dtype=torch.float32) for t in np.unique(stages)];times=np.unique(stages)-net.origin
     reference=torch.tensor(z,dtype=torch.float32)
     for step in range(start,steps):
-        group=int(torch.randint(len(groups),(1,)));source=groups[group][torch.randint(len(groups[group]),(64,))].clone()
+        group=int(torch.randint(len(groups),(1,)));source=groups[group][torch.randint(len(groups[group]),(batch_size,))].clone()
         noise=torch.randint(0,2,source.shape).float()*2-1
         nll,energy=inverse_density(net.velocity,source,float(times[group]),noise=noise)
         density=torch.tensor(0.)
@@ -45,6 +46,6 @@ def train_manifold_density(net,z,stages,energy_weight,checkpoint,emit,resume=Fal
         optimizer.step()
         if (step+1)%50==0 or step+1==steps:
             record={'step':step+1,'loss':float(loss.detach()),'negative_log_likelihood':float(nll.mean().detach()),'energy':float(energy.mean().detach()),'manifold_density':float(density.detach()),'sampled_past_stage':float(times[group]+net.origin)};history.append(record)
-            torch.save({'net':net.state_dict(),'optimizer':optimizer.state_dict(),'rng':torch.get_rng_state(),'step':step+1,'steps':steps,'energy_weight':energy_weight,'density_weight':density_weight,'history':history},checkpoint)
+            torch.save({'net':net.state_dict(),'optimizer':optimizer.state_dict(),'rng':torch.get_rng_state(),'step':step+1,'steps':steps,'energy_weight':energy_weight,'density_weight':density_weight,'batch_size':batch_size,'history':history},checkpoint)
             emit('cnf_training_checkpoint',**record)
     net.eval();return history

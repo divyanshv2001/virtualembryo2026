@@ -5297,7 +5297,7 @@
     {
       "id": "continuous_flow_field_width",
       "run": "cnf_width_challenge_01",
-      "status": "implemented_running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_width_challenge.py",
         "cnf_density_flow.py",
@@ -5308,7 +5308,24 @@
       "limitations": "Architecture-width hypothesis only; larger model can overfit same sampled pastcohort. Reconstructedcoordinates not assumed bitidentical to archive; matchednew64control required. Reused development, no independent embryos.",
       "research_family_exhausted": false,
       "tests_passed": 118,
-      "validation_report": "CNF_WIDTH_VALIDATION.json"
+      "validation_report": "CNF_WIDTH_VALIDATION.json",
+      "results_report": "CNF_WIDTH_RESULTS.json",
+      "decision": "Widths64/128/256 joint means53.5952/52.7158/47.4617; abundance52.8811/52.4033/49.4403. Wider fields regress despite similar training NLL and higher energy; preserve33 outcomes, no promotion. Next fixedwidth64 batch64/256/512,800updates matched stochastic-gradient ablation."
+    },
+    {
+      "id": "continuous_flow_training_batch",
+      "run": "cnf_batch_challenge_01",
+      "status": "implemented_running",
+      "implementation": [
+        "cnf_batch_challenge.py",
+        "cnf_manifold_flow.py"
+      ],
+      "primary_reference": "CNF_AUTHOR_REFERENCE.json",
+      "trial_scope": "Fixedwidth64, batches64/256/512,800Adamupdates each, energy.1/density10, seed20260928; sixforecasts/fivearchives across3fixedfull-panel development replicates=33scores. Checkpoint50updates, reject nonfinite loss/gradient.",
+      "limitations": "Larger batches change both gradient variance and total example exposure; not an equal-example or equal-compute comparison. Sampled atlas13963pastrows, no independent embryos; reused E9.5 development cannot certify leaderboard readiness.",
+      "research_family_exhausted": false,
+      "tests_passed": 119,
+      "validation_report": "CNF_BATCH_VALIDATION.json"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

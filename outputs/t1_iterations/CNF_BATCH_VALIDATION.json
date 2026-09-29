@@ -1,0 +1,11 @@
+{
+  "updated_utc": "2026-09-29T11:52:44.727031+00:00",
+  "tests_passed": 119,
+  "command": "pytest outputs/t1_iterations -q -p no:cacheprovider --basetemp outputs/t1_iterations/private/pytest_tmp_50",
+  "checks": [
+    "Default64 and explicit64 produce bit-exact trained parameters;256batch produces finite objective",
+    "Checkpoint rejects mismatched batch resume; undeclared batches rejected",
+    "Existing future-invariance/protected-gene/mass/scorer checks pass"
+  ],
+  "limitations": "Implementation checks do not establish forecast accuracy or >72 readiness."
+}

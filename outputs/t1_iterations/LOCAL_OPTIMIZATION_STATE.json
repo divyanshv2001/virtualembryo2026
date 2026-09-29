@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T11:40:34.095808+00:00",
+  "updated_utc": "2026-09-29T11:52:44.727031+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_width_challenge.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_batch_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Retrain widths64/128/256 on identical reconstructed pastcoordinates,800updates and originalheads;33scores.",
+  "next_experiment": "Fixed width64 batches64/256/512,800updates, original full-panel decoder and matched controls;33development scores.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_width_challenge_01"
+    "cnf_batch_challenge_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_width_challenge_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_batch_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -710,13 +710,27 @@
     "results_report": "CNF_NONLINEAR_POSITIVE_RESULTS.json"
   },
   "cnf_width_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_width_challenge_01",
     "tests_passed": 118,
     "evaluations_planned": 33,
-    "pending_evaluations": 33,
+    "pending_evaluations": 0,
     "process_id": 11788,
     "plan_sha256": "212887a50159a9a80567c10750d86f5e1f7e2f83733ed6552f8e2edbea02aab2",
-    "decision": "Matched widths64/128/256,800updates, decoder/encoder fixed. No promotion; local72 gate unmet."
+    "decision": "Widths64/128/256 joint means53.5952/52.7158/47.4617; abundance52.8811/52.4033/49.4403. Wider fields regress despite similar training NLL and higher energy; preserve33 outcomes, no promotion. Next fixedwidth64 batch64/256/512,800updates matched stochastic-gradient ablation.",
+    "evaluations": 33,
+    "report_sha256": "59995f7590f25ba3dfa909f6f2162d116fa9edd2d6d6c47ef3187b1c1b7cd9c6",
+    "results_report": "CNF_WIDTH_RESULTS.json"
+  },
+  "cnf_batch_job": {
+    "status": "running",
+    "run": "cnf_batch_challenge_01",
+    "evaluations_planned": 33,
+    "pending_evaluations": 33,
+    "decision": "Batch variance/sample exposure hypothesis; no promotion or official submission.",
+    "tests_passed": 119,
+    "process_id": 16640,
+    "worker_process_id": 12680,
+    "plan_sha256": "e3ecbcd05af958fd39d19503b8155387067c4ccd575446b23412bccf70ec3078"
   }
 }
