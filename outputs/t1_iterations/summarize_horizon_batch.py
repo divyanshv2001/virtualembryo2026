@@ -1,18 +1,35 @@
 """Checkpoint completed horizon audits and publish complete metric vectors."""
 import json
+import os
+import subprocess
 from train_extended_atlas import HERE
 from run_t1 import digest
 from iterate import now
 
 
 def main():
-    runs={};running=[]
+    runs={};running=[];unfinished=[];process_probe_error=None
+    commands=[]
+    if os.name=='nt':
+        try:
+            probe=subprocess.run(['powershell','-NoProfile','-Command',"Get-CimInstance Win32_Process | Where-Object { $_.Name -match '^python' } | Select-Object -ExpandProperty CommandLine | ConvertTo-Json -Compress"],capture_output=True,text=True,timeout=15,check=True)
+            parsed=json.loads(probe.stdout or '[]');commands=[parsed] if isinstance(parsed,str) else parsed
+        except (OSError,ValueError,subprocess.SubprocessError) as exc:process_probe_error=type(exc).__name__
+    else:process_probe_error='Process probe unavailable on this platform'
+
     for name in ['matched_horizon_audit_01','quantile_horizon_pilot_01','state_quantile_horizon_pilot_01',
                  'annotation_horizon_pilot_01','annotation_support_pilot_01',
-                 'program_horizon_pilot_01','cell_program_horizon_pilot_01','cell_program_repair_01','cell_program_feature_pilot_01','empirical_bayes_horizon_01','covariance_horizon_01','empirical_bayes_repair_01','copula_horizon_01','neural_ode_horizon_01','neural_hurdle_horizon_01','neural_sampling_horizon_01','growth_composition_horizon_01','transport_hurdle_horizon_01','transport_decoder_horizon_01','transport_conditional_horizon_01']:
+                 'program_horizon_pilot_01','cell_program_horizon_pilot_01','cell_program_repair_01','cell_program_feature_pilot_01','empirical_bayes_horizon_01','covariance_horizon_01','empirical_bayes_repair_01','copula_horizon_01','neural_ode_horizon_01','neural_hurdle_horizon_01','neural_sampling_horizon_01','growth_composition_horizon_01','transport_hurdle_horizon_01','transport_decoder_horizon_01','transport_conditional_horizon_01','stage_transport_horizon_01','resolution_transport_horizon_01']:
         folder=HERE/'private'/name;path=folder/'report.json'
         if not path.exists():
-            running.append(name);continue
+            if folder.exists():
+                unfinished.append(name)
+                planpath=folder/'plan.json'
+                if planpath.exists():
+                    planned=json.loads(planpath.read_text())
+                    main_script=next(iter(planned.get('source_sha256',{})),None)
+                    if main_script and any(main_script in (command or '') for command in commands):running.append(name)
+            continue
         r=json.loads(path.read_text());summaries=[]
         for candidate in r['plan']['configs']:
             results=[next(v for v in f['results'] if v['candidate']==candidate) for f in r['folds']]
@@ -26,8 +43,8 @@ def main():
                 'all_metrics_at_least_50_on_every_fold':valid and all(min(v['skills'].values())>=.5 for v in results)})
         runs[name]={'report_sha256':digest(path),'plan_sha256':digest(folder/'plan.json'),
             'folds':r['folds'],'summaries':summaries,'scope':r['plan']['scope']}
-    status='running' if running else 'completed'
-    output={'updated_utc':now(),'status':status,'runs':runs,'running':running,
+    status='running' if running else 'incomplete' if unfinished else 'completed'
+    output={'updated_utc':now(),'status':status,'runs':runs,'running':running,'unfinished':unfinished,'process_probe_error':process_probe_error,
         'local_72_gate_passed':False,'official_score_of_new_model':None,'submissions_used':0,'jev_requests_used':0}
     (HERE/'HORIZON_BATCH_RESULTS.json').write_text(json.dumps(output,indent=2))
     lines=['# One-day source-cohort audits','',
@@ -91,7 +108,7 @@ def main():
     state.update(updated_utc=now(),local_process_running=bool(running))
     state['horizon_batch']={'status':status,'running':running,'report':'outputs/t1_iterations/HORIZON_BATCH_RESULTS.json',
         'report_sha256':digest(HERE/'HORIZON_BATCH_RESULTS.json')}
-    state['next_experiment']='Finish frozen batches: '+', '.join(running)+'. Preserve paired controls and all four metrics.' if running else 'Inspect completed transport metrics and test frozen-flow decoder mechanisms before any readiness assessment.'
+    if running:state['next_experiment']='Finish frozen batches: '+', '.join(running)+'. Preserve paired controls and all four metrics.'
     path.write_text(json.dumps(state,indent=2))
     path=HERE/'METRIC_RESEARCH_QUEUE.json';queue=json.loads(path.read_text())
     entry={'id':'positive_quantile_temporal','metrics':['de_score','de_direction','mmd_u','variogram'],

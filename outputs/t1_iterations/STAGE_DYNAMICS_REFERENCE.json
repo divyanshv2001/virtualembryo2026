@@ -1,0 +1,7 @@
+{
+  "paper": "TrajectoryNet: A Dynamic Optimal Transport Network for Modeling Cellular Dynamics",
+  "url": "https://proceedings.mlr.press/v119/tong20a/tong20a.pdf",
+  "read": "Parsed primary PDF sections3.2,3.3,4.1-4.3,5.1-5.2: time-dependent fields, CNF likelihood, energy and biological priors, architecture and held-out intermediate-time experiments. PMC mirror blocked by browser challenge.",
+  "assessment": "Time/state dynamics motivate a temporal mechanism test. Published synthetic and single-cell evaluations concern interpolation, not a one-day future guarantee. Our affine regression of historical transport velocities with explicit stage and ridge regularization is a statistical adaptation, not a CNF or TrajectoryNet reproduction. No density likelihood, full energy loss or RNA-velocity supervision is claimed.",
+  "adaptation": "Historical interval-midpoint stage feature relative to cutoff; time ridge1/10; future solver evaluates actual evolving midpoint time. Fixed PCA, transport, full conditional positive heads and existing projection bounds. Future-stage features extrapolate outside observed support."
+}

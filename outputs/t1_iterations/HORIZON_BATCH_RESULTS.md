@@ -194,6 +194,31 @@ A frozen-flow decoder ablation verifies every archived head array, then separate
 | transport_decoder_horizon_01 | decoder_growth1_abundance | 51.702 | 48.353 | 50.028 |
 | transport_decoder_horizon_01 | decoder_growth1_detection | 48.586 | 46.320 | 47.453 |
 | transport_decoder_horizon_01 | decoder_growth1_systematic | 50.099 | 47.498 | 48.799 |
+| transport_conditional_horizon_01 | copy | 50.000 | 50.000 | 50.000 |
+| transport_conditional_horizon_01 | unit16 | 47.143 | 47.987 | 47.565 |
+| transport_conditional_horizon_01 | saved384_d0.0 | 49.200 | 51.366 | 50.283 |
+| transport_conditional_horizon_01 | decoder_balanced_abundance | 51.523 | 47.252 | 49.387 |
+| transport_conditional_horizon_01 | decoder_neutral_abundance | 51.519 | 48.105 | 49.812 |
+| transport_conditional_horizon_01 | decoder_growth1_abundance | 51.702 | 48.353 | 50.028 |
+| transport_conditional_horizon_01 | conditional_balanced_s0.5 | 51.747 | 47.309 | 49.528 |
+| transport_conditional_horizon_01 | conditional_balanced_s1.0 | 51.531 | 47.130 | 49.330 |
+| transport_conditional_horizon_01 | conditional_neutral_s0.5 | 51.780 | 48.109 | 49.944 |
+| transport_conditional_horizon_01 | conditional_neutral_s1.0 | 51.644 | 48.027 | 49.835 |
+| transport_conditional_horizon_01 | conditional_growth1_s0.5 | 51.928 | 48.416 | 50.172 |
+| transport_conditional_horizon_01 | conditional_growth1_s1.0 | 51.824 | 48.372 | 50.098 |
+| stage_transport_horizon_01 | copy | 50.000 | 50.000 | 50.000 |
+| stage_transport_horizon_01 | unit16 | 47.143 | 47.987 | 47.565 |
+| stage_transport_horizon_01 | saved384_d0.0 | 49.200 | 51.366 | 50.283 |
+| stage_transport_horizon_01 | conditional_neutral_s0.5 | 51.780 | 48.109 | 49.944 |
+| stage_transport_horizon_01 | conditional_growth1_s0.5 | 51.928 | 48.416 | 50.172 |
+| stage_transport_horizon_01 | stage_neutral_r1.0_s0.5 | 48.328 | 47.362 | 47.845 |
+| stage_transport_horizon_01 | stage_neutral_r1.0_s1.0 | 48.024 | 47.169 | 47.597 |
+| stage_transport_horizon_01 | stage_neutral_r10.0_s0.5 | 51.286 | 47.983 | 49.634 |
+| stage_transport_horizon_01 | stage_neutral_r10.0_s1.0 | 51.154 | 47.886 | 49.520 |
+| stage_transport_horizon_01 | stage_growth1_r1.0_s0.5 | 48.550 | 47.562 | 48.056 |
+| stage_transport_horizon_01 | stage_growth1_r1.0_s1.0 | 48.275 | 47.400 | 47.838 |
+| stage_transport_horizon_01 | stage_growth1_r10.0_s0.5 | 51.402 | 48.240 | 49.821 |
+| stage_transport_horizon_01 | stage_growth1_r10.0_s1.0 | 51.275 | 48.163 | 49.719 |
 
 Status: running. Full four-metric vectors, raw metrics, model audits and provenance hashes are in HORIZON_BATCH_RESULTS.json.
 No new prospective export or official submission. The >72 objective remains unfinished.

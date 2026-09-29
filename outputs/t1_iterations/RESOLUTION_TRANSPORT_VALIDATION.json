@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "tests_passed": 77,
+  "checks": "Default budget coefficients match original transport exactly; all-past PCA includes every permitted prepared row and excludes changed future rows; PCA-all retains exactly the baseline transport-stage sample indices. Full existing research suite passes.",
+  "command": "outputs/research_workflow/.venv/Scripts/python.exe -m pytest outputs/t1_iterations -q -p no:cacheprovider --basetemp outputs/t1_iterations/private/test_temp_resolution_20260929_05",
+  "limitation": "Implementation checks do not establish future score improvement."
+}

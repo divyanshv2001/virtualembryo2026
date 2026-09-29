@@ -1,5 +1,5 @@
 {
-  "records": 1209,
+  "records": 1259,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -282,6 +282,11 @@
       "outcomes_indexed": 21
     },
     {
+      "path": "private/stage_transport_horizon_01/report.json",
+      "sha256": "fc07a2039f4ce2ccf19a002947ab61c3b78208f1cd099cb0a860eae2aaa0bf07",
+      "outcomes_indexed": 26
+    },
+    {
       "path": "private/state_quantile_horizon_pilot_01/report.json",
       "sha256": "704998758584404b1c2b757287922d3548b2374b57c28dd8b72537a7af6e9fb6",
       "outcomes_indexed": 10
@@ -290,6 +295,11 @@
       "path": "private/state_search_01/report.json",
       "sha256": "5ea63a67e250dddcf41d92b437eb28099f9d8b2a5da8720ab743a668a241529e",
       "outcomes_indexed": 27
+    },
+    {
+      "path": "private/transport_conditional_horizon_01/report.json",
+      "sha256": "7234e31b154990092ad170c0157f3ce9dd0a974d248db0c39d8166ebf0915b70",
+      "outcomes_indexed": 24
     },
     {
       "path": "private/transport_decoder_horizon_01/report.json",
@@ -319,5 +329,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "a9e45473031fbd744b8f604b6520765d3a2afb1f896e772d378ea4e6cea0fade"
+  "ledger_sha256": "cc2f3b9163474f8f581dda468b4d3dd45e843a1f95c696e78fd575bf024a271b"
 }

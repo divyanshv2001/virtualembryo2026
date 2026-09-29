@@ -664,7 +664,8 @@
           "calibration_valid": true
         }
       ],
-      "one_day_report_sha256": "8da6653a6fe5ae9ed511117373f78bc72b4f390033f41af39fd71db4f9f2b523"
+      "one_day_report_sha256": "8da6653a6fe5ae9ed511117373f78bc72b4f390033f41af39fd71db4f9f2b523",
+      "additional_primary_review": "STAGE_DYNAMICS_REFERENCE.json: expanded review of primary PDF time-dependent formulation, training and interpolation experiments; own temporal affine adaptation does not close the full CNF path."
     },
     {
       "id": "growth_unbalanced_ot",
@@ -4410,11 +4411,11 @@
       ],
       "scope": "Adaptation, not faithful ECC. Three positive-quantile strengths, global and four-state conditional, two one-day associated-cohort folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "93129c5f7d556e05b49b0325c79d44be9f6f501983422704bc08a9ae5c372d3f",
+      "results_report_sha256": "722d8b77022cf281f908e8016b294a954d4d885d5c2fd396239fefa82e4b905d",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Finish frozen batches: transport_conditional_horizon_01. Preserve paired controls and all four metrics."
+      "next_action": "Finish frozen batches: resolution_transport_horizon_01. Preserve paired controls and all four metrics."
     },
     {
       "id": "annotation_conditioned_temporal",
@@ -4438,7 +4439,7 @@
       ],
       "scope": "Heuristic adaptation to normalized abundance; not muscat replication. Observed annotations group past cells. Four expression/detection ablations, source support20 vs100, two one-day folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "93129c5f7d556e05b49b0325c79d44be9f6f501983422704bc08a9ae5c372d3f",
+      "results_report_sha256": "722d8b77022cf281f908e8016b294a954d4d885d5c2fd396239fefa82e4b905d",
       "limitations": [
         "Published annotation may derive from joint stages; retrospective diagnostic only.",
         "Capture IDs do not establish independent embryos; cell-based errors are shrinkage heuristics.",
@@ -4447,7 +4448,7 @@
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Finish frozen batches: transport_conditional_horizon_01. Preserve paired controls and all four metrics."
+      "next_action": "Finish frozen batches: resolution_transport_horizon_01. Preserve paired controls and all four metrics."
     },
     {
       "id": "shared_gene_program_dynamics",
@@ -4474,11 +4475,11 @@
       "scope": "Shared SVD profile directions versus cell-level NMF median consensus usage dynamics. Neither is a faithful cNMF reproduction or certified biological-program recovery.",
       "frozen_trials": "SVD ranks2/4/8 with detection0/.5; NMF ranks8/16 with detection0/.5,3 fixed seeds and200 iterations. Rank16 optimizer repair800 iterations. Two matched one-day development folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "93129c5f7d556e05b49b0325c79d44be9f6f501983422704bc08a9ae5c372d3f",
+      "results_report_sha256": "722d8b77022cf281f908e8016b294a954d4d885d5c2fd396239fefa82e4b905d",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Finish frozen batches: transport_conditional_horizon_01. Preserve paired controls and all four metrics."
+      "next_action": "Finish frozen batches: resolution_transport_horizon_01. Preserve paired controls and all four metrics."
     },
     {
       "id": "neural_latent_hurdle",
@@ -4577,7 +4578,7 @@
     },
     {
       "id": "full_conditional_positive_head",
-      "status": "running",
+      "status": "implemented_evaluated_not_promoted",
       "metrics": [
         "de_score",
         "de_direction",
@@ -4592,6 +4593,53 @@
       ],
       "hypothesis": "Conditional latent correlations may bias diagonal positive abundance coefficients. Replace diagonal covariance by full conditional ridge1 covariance; freeze transport, verify archived diagonal heads, exclude future fitting.",
       "scope": "Own statistical mechanism ablation, not a biological model reproduction. Three frozen flows, strengths.5/1; controls diagonal abundance.5 and persistence. Reused development folds; no blind transfer claim.",
+      "research_family_exhausted": false,
+      "submissions_used": 0,
+      "jev_requests_used": 0,
+      "results_report": "TRANSPORT_CONDITIONAL_RESULTS.json",
+      "next_action": "Stage-conditioned affine transport, temporal ridge1/10 with neutral/growth1 priors, full conditional positive heads and stationary controls."
+    },
+    {
+      "id": "stage_conditioned_transport",
+      "status": "implemented_evaluated_not_promoted",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "run": "stage_transport_horizon_01",
+      "implementation": [
+        "stage_transport_flow.py",
+        "stage_transport_horizon.py"
+      ],
+      "primary_reference": "STAGE_DYNAMICS_REFERENCE.json",
+      "hypothesis": "Historical velocity may change with developmental stage; explicit midpoint-stage term tests stationary-field misspecification.",
+      "trial_scope": "Two priors neutral/growth1, temporal ridge1/10, forecast strengths.5/1, full conditional positive ridge decoder; fixed guards and paired stationary controls.26 evaluations across two exposed one-day folds.",
+      "limitations": "Only2/3 historical interval groups; extrapolated time features. Not a CNF/TrajectoryNet reproduction or fresh validation. Sampled representations/couplings and missing-gene placeholders unchanged.",
+      "research_family_exhausted": false,
+      "submissions_used": 0,
+      "jev_requests_used": 0,
+      "results_report": "STAGE_TRANSPORT_RESULTS.json",
+      "decision": "Explicit developmental-time affine terms did not beat the stationary control; best new mean remains below50 and every new candidate fails the second fold. This closes the declared ridge1/10 pilot, not the full time-dependent CNF family. Next: separate transport-resolution and PCA-coverage ablations."
+    },
+    {
+      "id": "transport_resolution_coverage",
+      "status": "running",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "run": "resolution_transport_horizon_01",
+      "implementation": [
+        "resolution_transport_flow.py",
+        "resolution_transport_horizon.py"
+      ],
+      "hypothesis": "Fixed256-cell transport or3000-cell PCA may restrict drift estimates; test sample-resolution and representation coverage separately. More data are not assumed to improve extrapolation.",
+      "trial_scope": "Six variants: neutral/growth1 crossed with512-cell couplings,1024-cell couplings,all-past PCA with256-cell couplings. Strength.5 fixed. Two development folds,22 actual evaluations including controls. No sampling-seed search.",
+      "limitations": "All-past PCA covers the sampled prepared cohort and384 features, not430339 raw atlas cells. PCA-all preserves old coupling sampling stream; larger coupling samples necessarily contain different selected cells. No independent embryo or challenge transfer certification.",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0

@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "tests_passed": 76,
+  "checks": "Time-disabled fit matches the stationary transport coefficients exactly. Time-varying integration matches analytic linear acceleration and respects elapsed time across split intervals. Future-expression invariance and complete existing regression suite passed.",
+  "command": "outputs/research_workflow/.venv/Scripts/python.exe -m pytest outputs/t1_iterations -q -p no:cacheprovider --basetemp outputs/t1_iterations/private/test_temp_stage_transport_20260929_04",
+  "limitation": "Tests establish implementation properties, not forecast accuracy."
+}
