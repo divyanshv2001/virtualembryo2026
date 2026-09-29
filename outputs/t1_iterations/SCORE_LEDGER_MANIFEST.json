@@ -1,5 +1,5 @@
 {
-  "records": 1548,
+  "records": 1562,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -105,6 +105,11 @@
       "path": "private/cnf_manifold_challenge_01/report.json",
       "sha256": "504e1ba3c005037c6842009b57a9144b8abddd90c6dad7a3856a5ff1b195ce87",
       "outcomes_indexed": 27
+    },
+    {
+      "path": "private/cnf_temporal_horizon_01/report.json",
+      "sha256": "aebf48d596db250e3a4726e2522a410d0920432361f75eea09874a24785f17d0",
+      "outcomes_indexed": 14
     },
     {
       "path": "private/conditioned_oneday_temporal_01/report.json",
@@ -404,5 +409,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "62043acd2f07f29d5873d384339e5978c16f12cbdfec26e3ba2c62f0815b8c6f"
+  "ledger_sha256": "6b96b39223ba5d2a798cd984a1a36867b95c788cb5cb01b7d47bde29509abfc9"
 }

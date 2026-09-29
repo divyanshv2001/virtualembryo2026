@@ -1,0 +1,6 @@
+{
+  "source": "https://github.com/KrishnaswamyLab/TrajectoryNet/blob/810c89b081f95405bc0ad42bfb3cb41038e13700/TrajectoryNet/main.py",
+  "read": "compute_loss adds Gaussian observation noise when training_noise>0.",
+  "adaptation": "Own whitened8D past-latent jitter0/.05/.1, separate seeded observation RNG, no perturbation of decoder-fit expressions or evaluation panels. This is a smoothing sensitivity test, not measured assay noise or full reproduction.",
+  "controls": "Zero-noise800-step training must reproduce prior density10/energy.1 checkpoint bit-identically."
+}

@@ -1,0 +1,6 @@
+{
+  "updated_utc": "2026-09-29T06:59:52.798155+00:00",
+  "tests_passed": 89,
+  "scope": "Full suite. New test verifies zero-jitter exact training control, finite noisy training and checkpoint restoration of model and observation RNG.",
+  "command": "python -m pytest outputs/t1_iterations -q -p no:cacheprovider --basetemp outputs/t1_iterations/private/test_temp_noise_20260929_21"
+}

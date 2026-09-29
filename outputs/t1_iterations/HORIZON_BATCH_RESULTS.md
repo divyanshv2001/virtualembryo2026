@@ -263,6 +263,13 @@ A frozen-flow decoder ablation verifies every archived head array, then separate
 | ridge_transport_horizon_01 | ridge_growth1_r0.1 | 52.860 | 50.514 | 51.687 |
 | ridge_transport_horizon_01 | ridge_growth1_r0.3 | 52.796 | 50.521 | 51.658 |
 | ridge_transport_horizon_01 | ridge_growth1_r3.0 | 52.576 | 50.458 | 51.517 |
+| cnf_temporal_horizon_01 | copy | 50.000 | 50.000 | 50.000 |
+| cnf_temporal_horizon_01 | unit16 | 47.143 | 47.987 | 47.565 |
+| cnf_temporal_horizon_01 | saved384_d0.0 | 49.200 | 51.366 | 50.283 |
+| cnf_temporal_horizon_01 | dimension_neutral_d8 | 52.929 | 50.495 | 51.712 |
+| cnf_temporal_horizon_01 | dimension_growth1_d8 | 52.766 | 50.476 | 51.621 |
+| cnf_temporal_horizon_01 | cnf800_s0.5 | 50.061 | 51.661 | 50.861 |
+| cnf_temporal_horizon_01 | cnf800_s1.0 | 50.199 | 52.553 | 51.376 |
 
 Status: completed. Full four-metric vectors, raw metrics, model audits and provenance hashes are in HORIZON_BATCH_RESULTS.json.
 No new prospective export or official submission. The >72 objective remains unfinished.

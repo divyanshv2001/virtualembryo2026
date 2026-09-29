@@ -4411,11 +4411,11 @@
       ],
       "scope": "Adaptation, not faithful ECC. Three positive-quantile strengths, global and four-state conditional, two one-day associated-cohort folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "1317237816b970531fc09955ae24abccd6ae782d3d72cd11ece0e585aae363d1",
+      "results_report_sha256": "b36687301815d6c28e1c420f01a80ba346da3bf8426aa6eab4b0567db4f12f0c",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Finish frozen batches: ridge_transport_horizon_01. Preserve paired controls and all four metrics."
+      "next_action": "Fit fixed800-update density10/energy.1 flow separately atE8.0/E8.25; assess one-dayE9.0/E9.25 temporal consistency under unchanged matched calibration."
     },
     {
       "id": "annotation_conditioned_temporal",
@@ -4439,7 +4439,7 @@
       ],
       "scope": "Heuristic adaptation to normalized abundance; not muscat replication. Observed annotations group past cells. Four expression/detection ablations, source support20 vs100, two one-day folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "1317237816b970531fc09955ae24abccd6ae782d3d72cd11ece0e585aae363d1",
+      "results_report_sha256": "b36687301815d6c28e1c420f01a80ba346da3bf8426aa6eab4b0567db4f12f0c",
       "limitations": [
         "Published annotation may derive from joint stages; retrospective diagnostic only.",
         "Capture IDs do not establish independent embryos; cell-based errors are shrinkage heuristics.",
@@ -4448,7 +4448,7 @@
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Finish frozen batches: ridge_transport_horizon_01. Preserve paired controls and all four metrics."
+      "next_action": "Fit fixed800-update density10/energy.1 flow separately atE8.0/E8.25; assess one-dayE9.0/E9.25 temporal consistency under unchanged matched calibration."
     },
     {
       "id": "shared_gene_program_dynamics",
@@ -4475,11 +4475,11 @@
       "scope": "Shared SVD profile directions versus cell-level NMF median consensus usage dynamics. Neither is a faithful cNMF reproduction or certified biological-program recovery.",
       "frozen_trials": "SVD ranks2/4/8 with detection0/.5; NMF ranks8/16 with detection0/.5,3 fixed seeds and200 iterations. Rank16 optimizer repair800 iterations. Two matched one-day development folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "1317237816b970531fc09955ae24abccd6ae782d3d72cd11ece0e585aae363d1",
+      "results_report_sha256": "b36687301815d6c28e1c420f01a80ba346da3bf8426aa6eab4b0567db4f12f0c",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Finish frozen batches: ridge_transport_horizon_01. Preserve paired controls and all four metrics."
+      "next_action": "Fit fixed800-update density10/energy.1 flow separately atE8.0/E8.25; assess one-dayE9.0/E9.25 temporal consistency under unchanged matched calibration."
     },
     {
       "id": "neural_latent_hurdle",
@@ -4896,13 +4896,28 @@
     {
       "id": "continuous_flow_rolling_consistency",
       "run": "cnf_temporal_horizon_01",
-      "status": "running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_temporal_horizon.py",
         "cnf_manifold_flow.py"
       ],
       "trial_scope": "Two800-update source-cohort fits atcutoffs8.0/8.25, strengths.5/1,14 scores including five frozen controls. Full-panel/calibration/seed unchanged.",
       "limitations": "Reused development folds and source missing-gene placeholders; no blind or independent embryo validation. Local>72 gate remains required.",
+      "research_family_exhausted": false,
+      "results_report": "CNF_TEMPORAL_RESULTS.json",
+      "decision": "Fixed800-update flow passes persistence on both source-cohort one-day folds:50.1993/52.5533 atstrength1, mean51.3763. First gain is small; earlier atlas8Dcontrolmean51.7123 still higher. Temporal diagnostic is positive but far below72, uses missing-gene placeholders and exposed stages; no promotion. Next test past-observation jitter0/.05/.1 with fixed likelihood/manifold training."
+    },
+    {
+      "id": "continuous_flow_observation_noise",
+      "run": "cnf_noise_challenge_01",
+      "status": "running",
+      "implementation": [
+        "cnf_noise_challenge.py",
+        "cnf_noise_flow.py"
+      ],
+      "primary_reference": "CNF_NOISE_REFERENCE.json",
+      "trial_scope": "Noise0/.05/.1 on whitened past latent training snapshots, separate observation RNG.800 updates, density10/energy.1, strengths.5/1;24 scored outcomes with frozen controls/panels. Zero-noise checkpoint must match baseline exactly.",
+      "limitations": "Own smoothing adaptation; no measured assay-noise claim or full paper reproduction. Reused development selection, not blind biological validation.",
       "research_family_exhausted": false
     }
   ],

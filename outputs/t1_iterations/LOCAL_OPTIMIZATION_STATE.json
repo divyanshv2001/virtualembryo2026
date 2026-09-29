@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T06:49:59.721328+00:00",
+  "updated_utc": "2026-09-29T06:59:52.798155+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_temporal_horizon.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_noise_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Fit fixed800-update density10/energy.1 flow separately atE8.0/E8.25; assess one-dayE9.0/E9.25 temporal consistency under unchanged matched calibration.",
+  "next_experiment": "Train observation-noise.05/.1 variants with fixed800-update density10/energy.1; verify zero-noise replay and score24 unchanged challenge outcomes.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_temporal_horizon_01"
+    "cnf_noise_challenge_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_temporal_horizon_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_noise_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -150,7 +150,7 @@
     "status": "completed",
     "running": [],
     "report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-    "report_sha256": "1317237816b970531fc09955ae24abccd6ae782d3d72cd11ece0e585aae363d1"
+    "report_sha256": "b36687301815d6c28e1c420f01a80ba346da3bf8426aa6eab4b0567db4f12f0c"
   },
   "continuation_automation": {
     "id": "continue-t1-local-research",
@@ -398,11 +398,24 @@
     "decision": "1600 updates regress to51.8346 versus800-update52.8369 on every challenge panel. First400 and800 states verified exactly; all24 outcomes preserved. More updates do not reliably improve this learner. Next assess fixed800-update learner on earlier rolling one-day folds before another mechanism or stability promotion."
   },
   "cnf_temporal_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_temporal_horizon_01",
     "evaluations_planned": 14,
-    "pending_evaluations": 14,
+    "pending_evaluations": 0,
     "process_id": 3156,
-    "plan_sha256": "859259efc365a233d4b16badf562c18c10017488cdc8fe5fdd3159301c656ad8"
+    "plan_sha256": "859259efc365a233d4b16badf562c18c10017488cdc8fe5fdd3159301c656ad8",
+    "report_sha256": "aebf48d596db250e3a4726e2522a410d0920432361f75eea09874a24785f17d0",
+    "results_report": "CNF_TEMPORAL_RESULTS.json",
+    "evaluations": 14,
+    "decision": "Fixed800-update flow passes persistence on both source-cohort one-day folds:50.1993/52.5533 atstrength1, mean51.3763. First gain is small; earlier atlas8Dcontrolmean51.7123 still higher. Temporal diagnostic is positive but far below72, uses missing-gene placeholders and exposed stages; no promotion. Next test past-observation jitter0/.05/.1 with fixed likelihood/manifold training."
+  },
+  "cnf_noise_job": {
+    "status": "running",
+    "run": "cnf_noise_challenge_01",
+    "tests_passed": 89,
+    "evaluations_planned": 24,
+    "pending_evaluations": 24,
+    "process_id": 23084,
+    "plan_sha256": "2117a4966ba7134ccc7ab50c3d3efc39ba051e89507a291eea3f460e3faf3bd6"
   }
 }
