@@ -31,12 +31,12 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Full E8.5 anchor calibration completed at 55.1173 mean versus matched 54.9755; DE unchanged, MMD/variogram lower, below unit16 55.42. Next: freeze a past-only gene-rank mechanism targeting DE overlap, with unchanged scorer and matched controls; no promotion from reused E9.5 panels.",
+  "next_experiment": "Direct global past-gene trend ranking failed (best 55.3338 below unit16 55.4202; selected top64 overlaps only 3-4 true DE genes on reused development and 1-2 signs wrong). Next: test anchor-composition-weighted source temporal gene trends on historical source folds first; use E9.5 only after forecasts frozen, with unit16/persistence controls. Do not tune from the post-scoring DE diagnostic.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [],
-  "active_run_path": "private/cnf_full_anchor_challenge_01",
+  "active_run_path": "private/de_rank_trend_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -1085,7 +1085,19 @@
     "storage": "D-only temporary forecast cache; no retained full matrices",
     "plan_sha256": "bc1d723f792ef87b0a77fd3719bd0db95df3ca6fc9f0547879cf2b443d2c50b2",
     "report_sha256": "42a37b53f162aed10a901e627da662d81c6185df44e863df8563720a28467560",
-    "results_report": "CNF_FULL_ANCHOR_RESULTS.json"
-    ,"decision": "Not promoted: p0.25/d0.75 mean 55.1173 versus matched log1p 54.9755 (+0.1418); DE skill 0.52385 unchanged, direction 0.59151 versus 0.57765, MMD 0.55489 versus 0.56006, variogram 0.52933 versus 0.53181. Still below archived unit16 55.42 and far below >72 gate. Reused E9.5 development only."
+    "results_report": "CNF_FULL_ANCHOR_RESULTS.json",
+    "decision": "Not promoted: p0.25/d0.75 mean 55.1173 versus matched log1p 54.9755 (+0.1418); DE skill 0.52385 unchanged, direction 0.59151 versus 0.57765, MMD 0.55489 versus 0.56006, variogram 0.52933 versus 0.53181. Still below archived unit16 55.42 and far below >72 gate. Reused E9.5 development only."
+  },
+  "de_rank_trend_job": {
+    "status": "completed_not_promoted",
+    "run": "de_rank_trend_challenge_01",
+    "evaluations_planned": 18,
+    "evaluations": 18,
+    "pending_evaluations": 0,
+    "plan_sha256": "68ffde332edd176c92abc5ea3b65c8270f390d162e1f0904fd1f0fd5eb5bc3cd",
+    "storage": "D-only temporary cache; no retained full forecast matrices",
+    "report_sha256": "085ca19d99bd4211a670d6681e89c157b6343fc7a9088ce1ed1a7ba4b77f4d5f",
+    "results_report": "DE_RANK_TREND_RESULTS.json"
+    ,"decision": "Not promoted: 18 valid scores, best trend_k64_s1.0 mean55.3338 vs unit16 55.4202. DE skill .52210 vs .52573; no joint gain. Post-scoring E9.5 diagnostic: top64 overlaps 3/4/3 truth DE genes and sign correct 2/2/2 across three reused panels. D-only cache closed; no official score claim."
   }
 }

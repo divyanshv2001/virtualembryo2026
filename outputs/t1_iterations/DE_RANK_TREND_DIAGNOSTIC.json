@@ -1,0 +1,65 @@
+{
+  "created_utc": "2026-09-29T17:45:33.165829+00:00",
+  "scope": "Post-scoring E9.5 development diagnosis only; no candidate or model fitted from target labels.",
+  "source_report_sha256": "085ca19d99bd4211a670d6681e89c157b6343fc7a9088ce1ed1a7ba4b77f4d5f",
+  "panels": [
+    {
+      "seed": 20260928,
+      "n_up": 34,
+      "n_down": 29,
+      "selected_overlap": {
+        "64": {
+          "selected": 64,
+          "true_DE_overlap": 3,
+          "directionally_correct_DE": 2,
+          "directionally_wrong_DE": 1
+        },
+        "256": {
+          "selected": 256,
+          "true_DE_overlap": 7,
+          "directionally_correct_DE": 3,
+          "directionally_wrong_DE": 4
+        }
+      }
+    },
+    {
+      "seed": 20260929,
+      "n_up": 39,
+      "n_down": 31,
+      "selected_overlap": {
+        "64": {
+          "selected": 64,
+          "true_DE_overlap": 4,
+          "directionally_correct_DE": 2,
+          "directionally_wrong_DE": 2
+        },
+        "256": {
+          "selected": 256,
+          "true_DE_overlap": 11,
+          "directionally_correct_DE": 5,
+          "directionally_wrong_DE": 6
+        }
+      }
+    },
+    {
+      "seed": 20260930,
+      "n_up": 32,
+      "n_down": 25,
+      "selected_overlap": {
+        "64": {
+          "selected": 64,
+          "true_DE_overlap": 3,
+          "directionally_correct_DE": 2,
+          "directionally_wrong_DE": 1
+        },
+        "256": {
+          "selected": 256,
+          "true_DE_overlap": 6,
+          "directionally_correct_DE": 4,
+          "directionally_wrong_DE": 2
+        }
+      }
+    }
+  ],
+  "not_independent_validation": true
+}

@@ -125,3 +125,15 @@ Full E8.5 anchor slope trial complete on three reused development panels; all ra
 ## 2026-09-29T17:28:26.091106+00:00
 
 Full E8.5 anchor calibration:12/12 valid local scores, best p.25/d.75 mean55.1173 vs matched log1p54.9755 and previous unit16 55.42. DE skill unchanged .52385; direction .59151 vs .57765, MMD .55489 vs .56006, variogram .52933 vs .53181. Not promoted. Full forecasts closed from D-only cache; no official submission. Next target is DE gene-ranking mechanism using past-only temporal information, frozen matched controls and unchanged scorer.
+
+## 2026-09-29T17:41:00+00:00
+
+Started `de_rank_trend_challenge_01`: a bounded past-only signed gene-rank prior. It takes the strongest 64 or 256 genes whose log1p pseudobulk changes keep the same sign from sampled source E8.0→8.25 and E8.25→8.5, requires anchor detection support, and applies a capped ±0.15 log-unit positive-entry correction to the archived unit16 forecast at strengths .5/1. The unit16 and persistence forecasts are matched controls; 18 unchanged full-panel scores across the three frozen E9.5 development panels are planned. Target expression is read only after all six forecasts are frozen to D-only temporary handles. The prior is our own extrapolation, not a published DE method or independent challenge validation. No official submission, Jev call, agent, or full forecast retention. Model test and syntax passed; results pending.
+
+## 2026-09-29T17:46:00+00:00
+
+`de_rank_trend_challenge_01` completed 18/18 valid full-panel scores; no candidate beat matched unit16 (55.42023). Best top64/full-strength was 55.33384, with mean DE skill .52210 versus unit16 .52573; top256/full fell to 55.04669. All four raw metrics, skills, calibrations, seeds, plan/prediction hashes and genuine events are in the report and score ledger (2794 records, zero indexing errors). D-only temporary forecasts closed, no full arrays persisted. Post-scoring diagnostic on the same reused E9.5 development panels found selected top64 genes overlapped only 3/4/3 truth DE genes, with just 2 correct directions per panel; top256 overlapped 7/11/6, with 3/5/4 correct directions. This diagnosis explains the weak transfer but is **not** used to fit or retune the trial. Next falsifiable path: anchor-composition-weighted source temporal effects, checked on historical source folds before challenge scoring. >72/temporal gate remains unmet; no official submission.
+
+## 2026-09-29T17:44:06.867677+00:00
+
+Completed 18 full-panel past gene-rank trend scores with matched controls; inspect raw DE/MMD/variogram and paired outcomes before any promotion.

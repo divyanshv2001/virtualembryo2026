@@ -5660,8 +5660,30 @@
       "trial_scope": "Three reused E9.5 development panels, unchanged 32,285-gene scorer, original floor/ceiling and seeds. Cross-sectional slope adaptation is not a temporal velocity estimate or independent validation.",
       "limitations": "Reused development panels; cross-sectional associations not temporal velocities. Bounded trial does not exhaust family.",
       "research_family_exhausted": false,
-      "results_report": "CNF_FULL_ANCHOR_RESULTS.json"
-      ,"decision": "Mean 55.1173 versus matched 54.9755 (+0.1418); DE overlap unchanged, direction gain offset by MMD/variogram declines. Below unit16 55.42; not promoted or family exhaustion."
+      "results_report": "CNF_FULL_ANCHOR_RESULTS.json",
+      "decision": "Mean 55.1173 versus matched 54.9755 (+0.1418); DE overlap unchanged, direction gain offset by MMD/variogram declines. Below unit16 55.42; not promoted or family exhaustion."
+    },
+    {
+      "id": "de_consistent_past_gene_rank_prior",
+      "run": "de_rank_trend_challenge_01",
+      "status": "implemented_evaluated_not_promoted",
+      "implementation": [
+        "past_gene_rank_correction.py",
+        "de_rank_trend_challenge.py"
+      ],
+      "metric_objective": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "hypothesis": "Consistent signed gene trends over permitted atlas E8.0,8.25,8.5 may improve the true changed-gene ranking missed by broad latent forecasts.",
+      "trial_scope": "Unchanged 32,285-gene scorer and original floor/ceiling; source atlas sample and reused E9.5 panels are development evidence only. Top-k is chosen before target read, not optimized from target DE labels.",
+      "limitations": "Own bounded trend prior, not DESeq2/ashr reproduction; source-stage associations and reused development do not establish hidden transfer.",
+      "research_family_exhausted": false,
+      "results_report": "DE_RANK_TREND_RESULTS.json"
+      ,"diagnostic_report": "DE_RANK_TREND_DIAGNOSTIC.json"
+      ,"decision": "All 18 scores valid. Best top64/full 55.3338 vs matched unit16 55.4202; DE skill .52210 vs .52573. Frozen top64 intersects only 3/4/3 true DE genes on reused E9.5 panels (2 correct directions each), post-scoring diagnosis only. Reject bounded global-rank prior; family not exhausted."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

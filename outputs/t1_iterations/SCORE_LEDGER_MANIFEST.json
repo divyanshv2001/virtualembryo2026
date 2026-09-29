@@ -1,5 +1,5 @@
 {
-  "records": 2776,
+  "records": 2794,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -357,6 +357,11 @@
       "outcomes_indexed": 18
     },
     {
+      "path": "private/de_rank_trend_challenge_01/report.json",
+      "sha256": "085ca19d99bd4211a670d6681e89c157b6343fc7a9088ce1ed1a7ba4b77f4d5f",
+      "outcomes_indexed": 18
+    },
+    {
       "path": "private/de_specialist_search_01/report.json",
       "sha256": "c97c7b7557eb36cac93d8650ad0f1d460ec884ba8980c5abd81ac29ad27b53b6",
       "outcomes_indexed": 24
@@ -634,5 +639,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "33c406d500845d16c6d5129b2b82d28301166309f6596a8262ff34b333659661"
+  "ledger_sha256": "4148357383c960bc27acacf31d5a92c8fcef42cd6871bd11e27baeddd430b4ed"
 }
