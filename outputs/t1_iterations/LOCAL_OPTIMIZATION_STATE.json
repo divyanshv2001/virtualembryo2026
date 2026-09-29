@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T06:29:55.101093+00:00",
+  "updated_utc": "2026-09-29T06:33:02.943562+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_cell_integration.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_duration_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Score frozen whole-cell integration of DE-oriented flow and local state control at four predeclared weights. Preserve all27 full-panel outcomes and cell/donor provenance. Reused target selection remains development; no official or72 promotion.",
+  "next_experiment": "Train density10/energy.1 for800 updates with first400 bit-identical verification; score18 unchanged challenge outcomes. No official or Monte Carlo promotion.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_cell_integration_01"
+    "cnf_duration_repair_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_cell_integration_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_duration_repair_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -358,13 +358,26 @@
     "decision": "Density10/strength1 raises CNF mean51.7282, scores51.7674/52.2818/51.1354, all mean skills>=50. Unit16 dominates this variant on every mean metric and remains stronger locally but officially rejected. Earlier energy.1/strength.5 retains slightly better DE recovery than state control and is the new integration constituent. No72 or Monte Carlo promotion."
   },
   "cnf_cell_integration_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_cell_integration_01",
     "prior_suite_tests_passed": 88,
     "targeted_mixture_tests_passed": 1,
     "evaluations_planned": 27,
-    "pending_evaluations": 27,
+    "pending_evaluations": 0,
     "process_id": 1796,
-    "plan_sha256": "dc6def24e8c3071522dd9c3611e2eefcf8881b2b5397f552920914fbbb6b395e"
+    "plan_sha256": "dc6def24e8c3071522dd9c3611e2eefcf8881b2b5397f552920914fbbb6b395e",
+    "evaluations": 27,
+    "report_sha256": "194500853798abdcd55b6b40cfcf05a88933caf35a6f77bba495d43f780071f9",
+    "results_report": "CNF_CELL_INTEGRATION_RESULTS.json",
+    "decision": "All four whole-cell mixtures underperform state control55.4202; best DE-flow fraction.1 mean54.9155. Preserve all27 outcomes and provenance. Next evaluate density10/energy.1 flow at800 versus400 updates; no72/official promotion."
+  },
+  "cnf_duration_job": {
+    "status": "running",
+    "run": "cnf_duration_repair_01",
+    "evaluations_planned": 18,
+    "pending_evaluations": 18,
+    "failed_run": "cnf_duration_challenge_01",
+    "process_id": 12436,
+    "plan_sha256": "e98c8748933c8453a5cda06d09ec252085dc59b707ac21b34ef77e69fb0398d0"
   }
 }

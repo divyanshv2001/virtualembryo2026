@@ -4840,7 +4840,7 @@
     },
     {
       "id": "continuous_flow_whole_cell_integration",
-      "status": "running",
+      "status": "implemented_evaluated_not_promoted",
       "metrics": [
         "de_score",
         "de_direction",
@@ -4857,7 +4857,23 @@
       "limitations": "Constituent/weight selection uses reusedE9.5 development results; not new blind validation. Unit16 is rejected for official use; this local integration does not reverse that failure or authorize submission. Small DE difference may be sampling noise.",
       "research_family_exhausted": false,
       "submissions_used": 0,
-      "jev_requests_used": 0
+      "jev_requests_used": 0,
+      "results_report": "CNF_CELL_INTEGRATION_RESULTS.json",
+      "decision": "All four whole-cell mixtures underperform state control55.4202; best DE-flow fraction.1 mean54.9155. Preserve all27 outcomes and provenance. Next evaluate density10/energy.1 flow at800 versus400 updates; no72/official promotion."
+    },
+    {
+      "id": "continuous_flow_training_duration",
+      "run": "cnf_duration_repair_01",
+      "status": "running",
+      "implementation": [
+        "cnf_duration_challenge.py",
+        "cnf_manifold_flow.py"
+      ],
+      "trial_scope": "Density10/energy.1,800 versus400 updates, strengths.5/1,18 scores across same three panels. Original400 checkpoint must replay bit-identically; unchanged architecture/data/seeds/scorer.",
+      "limitations": "Bounded duration test, not scientific-family exhaustion or new blind validation.",
+      "research_family_exhausted": false,
+      "failed_run": "cnf_duration_challenge_01",
+      "repair": "Plan tuple key corrected before training; failed source/diagnostic preserved. All plan assignment keys statically validated as strings."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."
