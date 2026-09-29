@@ -1,5 +1,5 @@
 {
-  "records": 1933,
+  "records": 1960,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -75,6 +75,11 @@
       "path": "private/cnf_alignment_temporal_01/report.json",
       "sha256": "732a1cbe1c7a5da393b58752126f42b96407850bd126510a1b9331cce8813089",
       "outcomes_indexed": 22
+    },
+    {
+      "path": "private/cnf_boundary_challenge_01/report.json",
+      "sha256": "a2c4cd50290c9230ae9e502d60a911d5ea01fb948a89e4479930e610fd07e578",
+      "outcomes_indexed": 27
     },
     {
       "path": "private/cnf_cell_integration_01/report.json",
@@ -474,5 +479,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "434d9d6bc4fe158581e528c7fa6d234fa68da4ba72898a7ad194de9d7628cc05"
+  "ledger_sha256": "743af0d554586280b8ff324ccfce611c2adec03e0d714072022d8031d64a44d5"
 }

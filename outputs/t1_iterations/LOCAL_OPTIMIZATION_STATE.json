@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T09:19:55.744093+00:00",
+  "updated_utc": "2026-09-29T09:30:08.402243+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_boundary_challenge.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_recent_positive_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Frozen800-update flow timeclamp/ballistic policies, abundance/joint,27scores with fivecontrols.",
+  "next_experiment": "Recent positive conditional heads latest1/2/3 observed stages; frozen flow/global detection,33scores.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_boundary_challenge_01"
+    "cnf_recent_positive_challenge_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_boundary_challenge_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_recent_positive_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -579,13 +579,26 @@
     "results_report": "CNF_STRONG_MMD_RESULTS.json"
   },
   "cnf_boundary_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_boundary_challenge_01",
     "tests_passed": 107,
     "evaluations_planned": 27,
-    "pending_evaluations": 27,
+    "pending_evaluations": 0,
     "process_id": 23464,
     "plan_sha256": "953f79e60683d26b311ff3b10e6dcede3a0119e0eb7fee14b2657d94937fd269",
-    "decision": "Frozen-weight timeclamp and ballistic forecast ablations against original flow. No promotion; local72 gate unmet."
+    "decision": "Timeclamp/ballistic joint means53.5215/53.1480 below original53.5953; abundance52.7918/52.6956 below original52.8811. Preserve27 outcomes, neither promoted. Next recent-stage positive decoder ablation with fixed detection/dynamics.",
+    "evaluations": 27,
+    "report_sha256": "a2c4cd50290c9230ae9e502d60a911d5ea01fb948a89e4479930e610fd07e578",
+    "results_report": "CNF_BOUNDARY_RESULTS.json"
+  },
+  "cnf_recent_positive_job": {
+    "status": "running",
+    "run": "cnf_recent_positive_challenge_01",
+    "tests_passed": 108,
+    "evaluations_planned": 33,
+    "pending_evaluations": 33,
+    "process_id": 25292,
+    "plan_sha256": "6b6ea47fc2004e13d775d3b8344c2846a2d61971fc37e89f0d12673479bc2da7",
+    "decision": "Recent-stage positive decoder windows1/2/3 with global detection and original field fixed. No promotion; local72 gate unmet."
   }
 }

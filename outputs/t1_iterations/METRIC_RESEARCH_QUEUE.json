@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T09:18:58.951248+00:00",
+  "updated_utc": "2026-09-29T09:29:11.852704+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5105,7 +5105,7 @@
     {
       "id": "continuous_flow_boundary_extrapolation",
       "run": "cnf_boundary_challenge_01",
-      "status": "implemented_running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_boundary_challenge.py",
         "cnf_boundary_forecast.py"
@@ -5115,7 +5115,24 @@
       "limitations": "State extrapolation remains unsupported; constant velocity may erase biological acceleration. Reused development; temporal confirmation required for any gain.",
       "research_family_exhausted": false,
       "tests_passed": 107,
-      "validation_report": "CNF_BOUNDARY_VALIDATION.json"
+      "validation_report": "CNF_BOUNDARY_VALIDATION.json",
+      "results_report": "CNF_BOUNDARY_RESULTS.json",
+      "decision": "Timeclamp/ballistic joint means53.5215/53.1480 below original53.5953; abundance52.7918/52.6956 below original52.8811. Preserve27 outcomes, neither promoted. Next recent-stage positive decoder ablation with fixed detection/dynamics."
+    },
+    {
+      "id": "continuous_flow_recent_positive_decoder",
+      "run": "cnf_recent_positive_challenge_01",
+      "status": "implemented_running",
+      "implementation": [
+        "cnf_recent_positive_challenge.py",
+        "recent_positive_forecast.py"
+      ],
+      "trial_scope": "Latest1/2/3 past-stage positive fits x abundance/joint; global detection and800-update flow fixed. Sixforecasts plus fivearchives=33 scores.",
+      "hypothesis": "Positive conditional expression-state responses may change over stages. This tests the decoder with best frozen flow; earlier affine-flow window experiment does not exhaust this context.",
+      "limitations": "Recent smaller samples can increase noise and remove cross-stage information. Own local-stationarity adaptation, no published method replication claimed. Reused development; temporal validation required for gains.",
+      "research_family_exhausted": false,
+      "tests_passed": 108,
+      "validation_report": "CNF_RECENT_POSITIVE_VALIDATION.json"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."
