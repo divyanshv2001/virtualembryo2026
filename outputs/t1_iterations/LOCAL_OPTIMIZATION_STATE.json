@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T08:20:00.258024+00:00",
+  "updated_utc": "2026-09-29T08:29:47.318043+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,14 +31,14 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_feature_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Finish recent detection windows1/2/3 and diagnose full metric vectors, support/actual switches/covariance. Temporal-check any meaningful gains before promotion.",
+  "next_experiment": "Finish recent detectionwindow1/2 rolling checks on frozen flows; diagnose actual paired gains over abundance/global detection and per-metric evidence before further fitting.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_recent_detection_challenge_01"
+    "cnf_recent_detection_temporal_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_recent_detection_challenge_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_recent_detection_temporal_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -501,12 +501,25 @@
     "decision": "Logistic joint ridge.1/1 means53.5603/53.3622 do not beat linear joint53.5953; per-panel tradeoffs retained. Detection-only52.0006/51.3897. Bounded logistic-link/ridge test not promoted, no72 gate. Next recent-stage detection fits with positive heads/flow fixed."
   },
   "cnf_recent_detection_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_recent_detection_challenge_01",
     "tests_passed": 99,
     "evaluations_planned": 33,
-    "pending_evaluations": 33,
+    "pending_evaluations": 0,
     "process_id": 26552,
-    "plan_sha256": "4a61bba3db556986520af62f265930be34e8fb44ff9bb1557049f1142ef21cba"
+    "plan_sha256": "4a61bba3db556986520af62f265930be34e8fb44ff9bb1557049f1142ef21cba",
+    "evaluations": 33,
+    "report_sha256": "89ed9567c0589f2043ff0b0ff68f02c903e73be021754c02cd07e0c0cce0bf30",
+    "results_report": "CNF_RECENT_DETECTION_RESULTS.json",
+    "decision": "Recent1/2/3 joint means53.7224/53.6489/53.5239 versus global53.5953. Latest-stage gain+.1271 has one slightly worse panel, not reliable promotion. All33 scores retained. Next rolling checks forwindows1/2 using exact archived flows and global abundance controls."
+  },
+  "cnf_recent_detection_temporal_job": {
+    "status": "running",
+    "run": "cnf_recent_detection_temporal_01",
+    "tests_passed": 99,
+    "evaluations_planned": 18,
+    "pending_evaluations": 18,
+    "process_id": 4876,
+    "plan_sha256": "e3bcce099c72e37a75385d0091563a11897ba0dc329aa07dd0fbf854085c4df8"
   }
 }

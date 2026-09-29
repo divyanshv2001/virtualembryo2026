@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T08:20:00.258024+00:00",
+  "updated_utc": "2026-09-29T08:29:47.318043+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5015,7 +5015,7 @@
     {
       "id": "continuous_flow_recent_detection",
       "run": "cnf_recent_detection_challenge_01",
-      "status": "running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_recent_detection_challenge.py",
         "recent_detection_head.py",
@@ -5023,6 +5023,20 @@
       ],
       "trial_scope": "Last1/2/3 actual past stages for detection only; fixed global abundance coefficients/centering,4096-gene8D flow, systematic strength1,33 full-panel scores with five archives. Exact abundance replay required.",
       "limitations": "Own local-stationarity adaptation, not new published reproduction. Earlier affine positive-window experiments failed; this changes detection only in CNF context. Reused development, no guarantee or72 promotion.",
+      "research_family_exhausted": false,
+      "results_report": "CNF_RECENT_DETECTION_RESULTS.json",
+      "decision": "Recent1/2/3 joint means53.7224/53.6489/53.5239 versus global53.5953. Latest-stage gain+.1271 has one slightly worse panel, not reliable promotion. All33 scores retained. Next rolling checks forwindows1/2 using exact archived flows and global abundance controls."
+    },
+    {
+      "id": "continuous_flow_recent_detection_rolling",
+      "run": "cnf_recent_detection_temporal_01",
+      "status": "running",
+      "implementation": [
+        "cnf_recent_detection_temporal.py",
+        "recent_detection_head.py"
+      ],
+      "trial_scope": "Two sourcefolds, recent detectionwindows1/2; reuse exact4096-gene8D flows, no retraining. Seven archive controls plus two new forecasts per fold=18 scores. Require bit-exact global abundance replay.",
+      "limitations": "Reused development with missing-gene placeholders, no independent embryos/blind test; small challenge gain may not transfer.",
       "research_family_exhausted": false
     }
   ],

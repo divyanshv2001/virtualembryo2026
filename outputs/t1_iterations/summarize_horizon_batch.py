@@ -19,7 +19,7 @@ def main():
 
     for name in ['matched_horizon_audit_01','quantile_horizon_pilot_01','state_quantile_horizon_pilot_01',
                  'annotation_horizon_pilot_01','annotation_support_pilot_01',
-                 'program_horizon_pilot_01','cell_program_horizon_pilot_01','cell_program_repair_01','cell_program_feature_pilot_01','empirical_bayes_horizon_01','covariance_horizon_01','empirical_bayes_repair_01','copula_horizon_01','neural_ode_horizon_01','neural_hurdle_horizon_01','neural_sampling_horizon_01','growth_composition_horizon_01','transport_hurdle_horizon_01','transport_decoder_horizon_01','transport_conditional_horizon_01','stage_transport_horizon_01','resolution_transport_horizon_01','dimensional_transport_horizon_01','strength_transport_horizon_01','ridge_transport_horizon_01','cnf_temporal_horizon_01','cnf_hurdle_temporal_01']:
+                 'program_horizon_pilot_01','cell_program_horizon_pilot_01','cell_program_repair_01','cell_program_feature_pilot_01','empirical_bayes_horizon_01','covariance_horizon_01','empirical_bayes_repair_01','copula_horizon_01','neural_ode_horizon_01','neural_hurdle_horizon_01','neural_sampling_horizon_01','growth_composition_horizon_01','transport_hurdle_horizon_01','transport_decoder_horizon_01','transport_conditional_horizon_01','stage_transport_horizon_01','resolution_transport_horizon_01','dimensional_transport_horizon_01','strength_transport_horizon_01','ridge_transport_horizon_01','cnf_temporal_horizon_01','cnf_hurdle_temporal_01','cnf_recent_detection_temporal_01']:
         folder=HERE/'private'/name;path=folder/'report.json'
         if not path.exists():
             if folder.exists():
