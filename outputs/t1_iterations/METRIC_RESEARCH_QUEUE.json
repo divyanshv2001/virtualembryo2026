@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T05:50:44.605966+00:00",
+  "updated_utc": "2026-09-29T06:00:52.399171+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -4742,7 +4742,7 @@
     },
     {
       "id": "recent_transport_velocity",
-      "status": "running",
+      "status": "implemented_evaluated_not_promoted",
       "metrics": [
         "de_score",
         "de_direction",
@@ -4759,6 +4759,29 @@
       "primary_reference": "LATENT_DIMENSION_REFERENCE.json",
       "reference_scope": "Own historical-window sensitivity inspired by nonstationary temporal dynamics; not TrajectoryNet/CNF reproduction. No new literature claim.",
       "limitations": "Latest short interval may amplify snapshot/capture noise. ExposedE9.5 development target, no independent embryo validation. Full-panel scorer and donor protected genes preserved. This bounded adaptation cannot exhaust continuous neural dynamics.",
+      "research_family_exhausted": false,
+      "submissions_used": 0,
+      "jev_requests_used": 0,
+      "results_report": "RECENT_TRANSPORT_CHALLENGE_RESULTS.json",
+      "decision": "Latest1/2-interval velocity does not repair challenge transfer: all four means47.9632\u201348.2260, below persistence50 and archived16D global49.0279. Same panels/calibrations and bit-identical encoder/heads verified. Preserve all27 outcomes. Next test decoder stage nonstationarity; broader neural/density dynamics remain unresolved."
+    },
+    {
+      "id": "conditional_decoder_stage_window",
+      "status": "running",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "run": "decoder_window_challenge_01",
+      "implementation": [
+        "windowed_positive_head.py",
+        "decoder_window_challenge.py"
+      ],
+      "hypothesis": "Conditional gene heads may average stage-dependent relationships and decode extrapolated states incorrectly. Restrict their fit to latest1/2/3 stages while keeping representation and velocity fixed.",
+      "trial_scope": "Neutral8D/16D \u00d7head-stage windows1/2/3; compare five archived persistence/unit16/global/moment controls on three identical challenge panels.33 evaluations, no seed or panel selection. Global heads/drift must reproduce bit-identically.",
+      "limitations": "Window changes head centering/support as well as coefficients; coupled effects disclosed. Fewer cells can increase noise. Prepared cohort remains sampled; no blind challenge or independent embryo validation. No continuous neural/density-model reproduction claim.",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0
