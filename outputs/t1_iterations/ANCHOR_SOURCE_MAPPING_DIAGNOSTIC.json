@@ -1,0 +1,377 @@
+{
+  "created_utc": "2026-09-29T17:51:28.847619+00:00",
+  "scope": "Past-only E8.5 representation feasibility; no E9.5 target or model scoring.",
+  "source_rows": 3000,
+  "anchor_rows": 16787,
+  "neighbors": 16,
+  "source_self_median_first_neighbor_distance": 0.45320058319961454,
+  "challenge_median_first_neighbor_distance": 1.487065769394517,
+  "challenge_to_source_distance_ratio": 3.2812529915468605,
+  "anchor_fraction_majority_support_ge_half": 0.44510633228093166,
+  "anchor_fraction_distance_ratio_le_two": 0.054923452671710254,
+  "by_challenge_type": [
+    {
+      "challenge_type": "AVC-CM",
+      "cells": 598,
+      "median_distance_ratio": 2.7350580776168227,
+      "median_neighbor_label_support": 0.625,
+      "top_source_types": [
+        {
+          "label": "Cardiomyocytes SHF 2",
+          "cells": 499
+        },
+        {
+          "label": "Cardiomyocytes FHF 2",
+          "cells": 90
+        },
+        {
+          "label": "Cardiomyocytes SHF 1",
+          "cells": 9
+        }
+      ]
+    },
+    {
+      "challenge_type": "Blood",
+      "cells": 266,
+      "median_distance_ratio": 4.699065133029908,
+      "median_neighbor_label_support": 1.0,
+      "top_source_types": [
+        {
+          "label": "Erythroid",
+          "cells": 262
+        },
+        {
+          "label": "Mesenchyme",
+          "cells": 2
+        },
+        {
+          "label": "Foregut",
+          "cells": 1
+        }
+      ]
+    },
+    {
+      "challenge_type": "EXEM",
+      "cells": 863,
+      "median_distance_ratio": 3.6381357702620267,
+      "median_neighbor_label_support": 0.9375,
+      "top_source_types": [
+        {
+          "label": "Mesenchyme",
+          "cells": 811
+        },
+        {
+          "label": "Embryo proper mesothelium",
+          "cells": 31
+        },
+        {
+          "label": "Erythroid",
+          "cells": 8
+        }
+      ]
+    },
+    {
+      "challenge_type": "Endothelium",
+      "cells": 1139,
+      "median_distance_ratio": 3.234903266043539,
+      "median_neighbor_label_support": 0.875,
+      "top_source_types": [
+        {
+          "label": "Endocardium",
+          "cells": 1033
+        },
+        {
+          "label": "Venous endothelium",
+          "cells": 79
+        },
+        {
+          "label": "Embryo proper endothelium",
+          "cells": 24
+        }
+      ]
+    },
+    {
+      "challenge_type": "Foregut",
+      "cells": 2405,
+      "median_distance_ratio": 3.274550810393655,
+      "median_neighbor_label_support": 0.4375,
+      "top_source_types": [
+        {
+          "label": "Foregut",
+          "cells": 1121
+        },
+        {
+          "label": "Pharyngeal endoderm",
+          "cells": 1097
+        },
+        {
+          "label": "Surface ectoderm",
+          "cells": 73
+        }
+      ]
+    },
+    {
+      "challenge_type": "IFT-CM",
+      "cells": 949,
+      "median_distance_ratio": 2.8078266123319304,
+      "median_neighbor_label_support": 0.5,
+      "top_source_types": [
+        {
+          "label": "Cardiomyocytes SHF 1",
+          "cells": 328
+        },
+        {
+          "label": "Cardiomyocytes SHF 2",
+          "cells": 231
+        },
+        {
+          "label": "Epicardium",
+          "cells": 201
+        }
+      ]
+    },
+    {
+      "challenge_type": "JCF",
+      "cells": 1119,
+      "median_distance_ratio": 3.897294107725195,
+      "median_neighbor_label_support": 0.4375,
+      "top_source_types": [
+        {
+          "label": "Epicardium",
+          "cells": 670
+        },
+        {
+          "label": "Mesenchyme",
+          "cells": 246
+        },
+        {
+          "label": "Cardiomyocytes FHF 1",
+          "cells": 72
+        }
+      ]
+    },
+    {
+      "challenge_type": "LV-CM",
+      "cells": 344,
+      "median_distance_ratio": 2.6510256705509114,
+      "median_neighbor_label_support": 0.5625,
+      "top_source_types": [
+        {
+          "label": "Cardiomyocytes FHF 2",
+          "cells": 265
+        },
+        {
+          "label": "Cardiomyocytes SHF 2",
+          "cells": 57
+        },
+        {
+          "label": "Cardiomyocytes SHF 1",
+          "cells": 19
+        }
+      ]
+    },
+    {
+      "challenge_type": "NCC",
+      "cells": 287,
+      "median_distance_ratio": 2.6258816338525293,
+      "median_neighbor_label_support": 0.4375,
+      "top_source_types": [
+        {
+          "label": "Lateral plate mesoderm",
+          "cells": 212
+        },
+        {
+          "label": "Migratory neural crest",
+          "cells": 28
+        },
+        {
+          "label": "Embryo proper endothelium",
+          "cells": 23
+        }
+      ]
+    },
+    {
+      "challenge_type": "Neural Tube",
+      "cells": 773,
+      "median_distance_ratio": 3.459294490075572,
+      "median_neighbor_label_support": 0.375,
+      "top_source_types": [
+        {
+          "label": "Lateral plate mesoderm",
+          "cells": 298
+        },
+        {
+          "label": "Pharyngeal endoderm",
+          "cells": 200
+        },
+        {
+          "label": "Foregut",
+          "cells": 148
+        }
+      ]
+    },
+    {
+      "challenge_type": "OFT/RV-CM",
+      "cells": 1176,
+      "median_distance_ratio": 3.064657042653976,
+      "median_neighbor_label_support": 0.4375,
+      "top_source_types": [
+        {
+          "label": "Cardiomyocytes FHF 2",
+          "cells": 398
+        },
+        {
+          "label": "Cardiomyocytes SHF 1",
+          "cells": 324
+        },
+        {
+          "label": "Cardiomyocytes SHF 2",
+          "cells": 242
+        }
+      ]
+    },
+    {
+      "challenge_type": "Paraxial Mesoderm",
+      "cells": 934,
+      "median_distance_ratio": 3.3029479281455236,
+      "median_neighbor_label_support": 0.3125,
+      "top_source_types": [
+        {
+          "label": "Lateral plate mesoderm",
+          "cells": 530
+        },
+        {
+          "label": "Anterior cardiopharyngeal progenitors",
+          "cells": 142
+        },
+        {
+          "label": "Foregut",
+          "cells": 49
+        }
+      ]
+    },
+    {
+      "challenge_type": "Pericardium",
+      "cells": 745,
+      "median_distance_ratio": 3.4142069556023387,
+      "median_neighbor_label_support": 0.375,
+      "top_source_types": [
+        {
+          "label": "Mesenchyme",
+          "cells": 322
+        },
+        {
+          "label": "Embryo proper mesothelium",
+          "cells": 125
+        },
+        {
+          "label": "Epicardium",
+          "cells": 118
+        }
+      ]
+    },
+    {
+      "challenge_type": "RV-CM",
+      "cells": 442,
+      "median_distance_ratio": 2.621772157409542,
+      "median_neighbor_label_support": 0.5625,
+      "top_source_types": [
+        {
+          "label": "Cardiomyocytes FHF 2",
+          "cells": 242
+        },
+        {
+          "label": "Cardiomyocytes SHF 2",
+          "cells": 179
+        },
+        {
+          "label": "Cardiomyocytes SHF 1",
+          "cells": 21
+        }
+      ]
+    },
+    {
+      "challenge_type": "SV-CM",
+      "cells": 310,
+      "median_distance_ratio": 2.746333001249385,
+      "median_neighbor_label_support": 0.4375,
+      "top_source_types": [
+        {
+          "label": "Cardiomyocytes SHF 1",
+          "cells": 213
+        },
+        {
+          "label": "Cardiomyocytes FHF 2",
+          "cells": 46
+        },
+        {
+          "label": "Cardiomyocytes SHF 2",
+          "cells": 28
+        }
+      ]
+    },
+    {
+      "challenge_type": "Surface Ectoderm",
+      "cells": 1423,
+      "median_distance_ratio": 3.3296472693717782,
+      "median_neighbor_label_support": 0.5,
+      "top_source_types": [
+        {
+          "label": "Pharyngeal endoderm",
+          "cells": 404
+        },
+        {
+          "label": "Foregut",
+          "cells": 403
+        },
+        {
+          "label": "Mesenchyme",
+          "cells": 380
+        }
+      ]
+    },
+    {
+      "challenge_type": "aSHF",
+      "cells": 822,
+      "median_distance_ratio": 3.4993765215500865,
+      "median_neighbor_label_support": 0.3125,
+      "top_source_types": [
+        {
+          "label": "Epicardium",
+          "cells": 222
+        },
+        {
+          "label": "Cardiomyocytes FHF 1",
+          "cells": 165
+        },
+        {
+          "label": "Lateral plate mesoderm",
+          "cells": 124
+        }
+      ]
+    },
+    {
+      "challenge_type": "pSHF",
+      "cells": 2192,
+      "median_distance_ratio": 3.475697821263267,
+      "median_neighbor_label_support": 0.3125,
+      "top_source_types": [
+        {
+          "label": "Lateral plate mesoderm",
+          "cells": 630
+        },
+        {
+          "label": "Cardiomyocytes FHF 1",
+          "cells": 328
+        },
+        {
+          "label": "Epicardium",
+          "cells": 319
+        }
+      ]
+    }
+  ],
+  "encoder_sha256": "aeb62eff48c22185288e2e6843b47ff6f9bace0a0530e46acf82cae5c3b7ecaf",
+  "anchor_input_sha256": "8eab2d0ccaa89f92861b09816b76b6a731b8ed6b5995e4af196d9ed8ff76e504",
+  "limitations": "Nearest-source labels are not validated ontology mappings; source is a sampled atlas cohort, not the full raw atlas. Distances assess feasibility only."
+}

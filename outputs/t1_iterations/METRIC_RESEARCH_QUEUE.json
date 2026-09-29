@@ -5684,6 +5684,21 @@
       "results_report": "DE_RANK_TREND_RESULTS.json"
       ,"diagnostic_report": "DE_RANK_TREND_DIAGNOSTIC.json"
       ,"decision": "All 18 scores valid. Best top64/full 55.3338 vs matched unit16 55.4202; DE skill .52210 vs .52573. Frozen top64 intersects only 3/4/3 true DE genes on reused E9.5 panels (2 correct directions each), post-scoring diagnosis only. Reject bounded global-rank prior; family not exhausted."
+    },
+    {
+      "id": "full_source_stage_trend_statistics",
+      "run": "full_atlas_stage_means_01",
+      "status": "running_preparation",
+      "implementation": [
+        "anchor_source_mapping_diagnostic.py",
+        "full_atlas_stage_means.py"
+      ],
+      "metric_objective": ["de_score", "de_direction", "mmd_u", "variogram"],
+      "hypothesis": "The 3,000-cell-per-stage source sample may miss challenge-relevant developmental gene trends; stream all eligible past source cells into normalized whole/cardiac stage means, then test historical transfer before a new challenge forecast.",
+      "trial_scope": "D-only two-pass sufficient statistics over full author-linked source atlas E7.5-E8.5. No dense full-atlas matrix and no E9.5 fitting. Historical source-stage checks first; challenge scoring only if viable, with frozen controls.",
+      "limitations": "Cardiac proxy labels do not map one-to-one to challenge types; source full atlas has no independent embryo replication guarantee. Direct 8D nearest-source composition weighting rejected by ANCHOR_SOURCE_MAPPING_DIAGNOSTIC.json (median distance ratio 3.28).",
+      "research_family_exhausted": false,
+      "feasibility_report": "ANCHOR_SOURCE_MAPPING_DIAGNOSTIC.json"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."
