@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T13:53:25.690830+00:00",
+  "updated_utc": "2026-09-29T13:59:57.335779+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,20 +29,20 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_log1p_positive_temporal.py --resume",
+  "resume_command": "Inspect active process and frozen partial report; resume comparison repair pending after active run completes.",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Run18-score fixedalpha.5 log1p positive abundance/joint temporal diagnostic on twoearlier folds.",
+  "next_experiment": "Run30-score fixedterminal latent dispersion .025/.05/.1, abundance/jointalpha.5; zeroexactreplay andunchangedscorer.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
     {
-      "script": "cnf_log1p_positive_temporal.py",
-      "process_id": 5544,
-      "worker_process_id": 12460
+      "script": "cnf_latent_dispersion_challenge.py",
+      "process_id": 1796,
+      "worker_process_id": 19544
     }
   ],
-  "active_run_path": "outputs\\t1_iterations\\private\\cnf_log1p_positive_temporal_01",
+  "active_run_path": "outputs\\t1_iterations\\private\\cnf_latent_dispersion_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -154,7 +154,7 @@
     "status": "completed",
     "running": [],
     "report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-    "report_sha256": "39724a053ffde6574d73971ccddce7e44f90219669e1f9b7d0e98d834cf48d61"
+    "report_sha256": "8af5b990e6681ec6552b7be660b615478e02cf1ad3744396a0f89de0291fdcfd"
   },
   "continuation_automation": {
     "id": "continue-t1-local-research",
@@ -941,15 +941,31 @@
     "results_report": "CNF_LOG1P_MATCHED_MIXTURE_RESULTS.json"
   },
   "cnf_log1p_positive_temporal_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_log1p_positive_temporal_01",
     "evaluations_planned": 18,
-    "pending_evaluations": 18,
+    "pending_evaluations": 0,
     "model_tests_passed": 1,
-    "decision": "Reusedsource temporal diagnostic for fixedalpha.5 log1p response; no promotion.",
+    "decision": "All18 temporal scores retained. Log1pjoint49.7003/51.1772 vsoriginaljoint49.1752/51.6250: secondfold regresses andfirst belowcopy50. Abundance50.4875/51.9650 beloworiginal50.6146/52.0392 bothfolds. Reject temporalpromotion; challenge54.9755 remainsdevelopmentonly. Nextfixedterminaldispersion sensitivity, notlearneddiffusionreproduction.",
     "process_id": 5544,
     "worker_process_id": 12460,
     "runner_syntax_verified": true,
-    "plan_sha256": "e9335bb90b2ea84a3c06938a2b8a2753088d4cbdfab8253299d4993fbd03f579"
+    "plan_sha256": "e9335bb90b2ea84a3c06938a2b8a2753088d4cbdfab8253299d4993fbd03f579",
+    "evaluations": 18,
+    "report_sha256": "5083de52f1b0a758536fb0400c0839c07d0d3b5f57591e90b92b387426df2068",
+    "results_report": "CNF_LOG1P_POSITIVE_TEMPORAL_RESULTS.json"
+  },
+  "cnf_latent_dispersion_job": {
+    "status": "running",
+    "run": "cnf_latent_dispersion_challenge_01",
+    "evaluations_planned": 30,
+    "pending_evaluations": 30,
+    "tests_passed": 1,
+    "decision": "Bounded terminal variance sensitivity; no promotion.",
+    "process_id": 1796,
+    "worker_process_id": 19544,
+    "runner_syntax_verified": true,
+    "resume_audit": "Legacy anchor_strengths key remains in resume comparison. Current fresh execution is unaffected. After active frozen run completes, repair resume-key declaration before advertising resume support; do not mutate live source now.",
+    "plan_sha256": "aa4ca3576e3dc8eea1bc50a70e4f7e55a6b5a86b0e1b60ab8e288c5637718dc0"
   }
 }

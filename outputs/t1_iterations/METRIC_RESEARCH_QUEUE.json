@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T13:53:25.690830+00:00",
+  "updated_utc": "2026-09-29T13:59:57.335779+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -4411,11 +4411,11 @@
       ],
       "scope": "Adaptation, not faithful ECC. Three positive-quantile strengths, global and four-state conditional, two one-day associated-cohort folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "39724a053ffde6574d73971ccddce7e44f90219669e1f9b7d0e98d834cf48d61",
+      "results_report_sha256": "8af5b990e6681ec6552b7be660b615478e02cf1ad3744396a0f89de0291fdcfd",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Execute cnf_anchor_slope_temporal.py: six fixed slope variants plus seven matched controls on two past-only folds,26 scores."
+      "next_action": "Run18-score fixedalpha.5 log1p positive abundance/joint temporal diagnostic on twoearlier folds."
     },
     {
       "id": "annotation_conditioned_temporal",
@@ -4439,7 +4439,7 @@
       ],
       "scope": "Heuristic adaptation to normalized abundance; not muscat replication. Observed annotations group past cells. Four expression/detection ablations, source support20 vs100, two one-day folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "39724a053ffde6574d73971ccddce7e44f90219669e1f9b7d0e98d834cf48d61",
+      "results_report_sha256": "8af5b990e6681ec6552b7be660b615478e02cf1ad3744396a0f89de0291fdcfd",
       "limitations": [
         "Published annotation may derive from joint stages; retrospective diagnostic only.",
         "Capture IDs do not establish independent embryos; cell-based errors are shrinkage heuristics.",
@@ -4448,7 +4448,7 @@
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Execute cnf_anchor_slope_temporal.py: six fixed slope variants plus seven matched controls on two past-only folds,26 scores."
+      "next_action": "Run18-score fixedalpha.5 log1p positive abundance/joint temporal diagnostic on twoearlier folds."
     },
     {
       "id": "shared_gene_program_dynamics",
@@ -4475,11 +4475,11 @@
       "scope": "Shared SVD profile directions versus cell-level NMF median consensus usage dynamics. Neither is a faithful cNMF reproduction or certified biological-program recovery.",
       "frozen_trials": "SVD ranks2/4/8 with detection0/.5; NMF ranks8/16 with detection0/.5,3 fixed seeds and200 iterations. Rank16 optimizer repair800 iterations. Two matched one-day development folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "39724a053ffde6574d73971ccddce7e44f90219669e1f9b7d0e98d834cf48d61",
+      "results_report_sha256": "8af5b990e6681ec6552b7be660b615478e02cf1ad3744396a0f89de0291fdcfd",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Execute cnf_anchor_slope_temporal.py: six fixed slope variants plus seven matched controls on two past-only folds,26 scores."
+      "next_action": "Run18-score fixedalpha.5 log1p positive abundance/joint temporal diagnostic on twoearlier folds."
     },
     {
       "id": "neural_latent_hurdle",
@@ -5531,13 +5531,29 @@
     {
       "id": "continuous_flow_log1p_positive_temporal",
       "run": "cnf_log1p_positive_temporal_01",
-      "status": "prepared",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_log1p_positive_temporal.py",
         "log1p_positive_forecast.py"
       ],
       "trial_scope": "Frozenflow headsrefit in log1p units past-only,alpha.5/ detection.5 fixed; abundance/joint plus7controls,18scores on8to9/8.25to9.25.",
       "limitations": "Reusedsourcefolds, missinggenes placeholders, no earlierchallenge data or independent embryos; notblind validation.",
+      "research_family_exhausted": false,
+      "results_report": "CNF_LOG1P_POSITIVE_TEMPORAL_RESULTS.json",
+      "decision": "All18 temporal scores retained. Log1pjoint49.7003/51.1772 vsoriginaljoint49.1752/51.6250: secondfold regresses andfirst belowcopy50. Abundance50.4875/51.9650 beloworiginal50.6146/52.0392 bothfolds. Reject temporalpromotion; challenge54.9755 remainsdevelopmentonly. Nextfixedterminaldispersion sensitivity, notlearneddiffusionreproduction."
+    },
+    {
+      "id": "continuous_flow_terminal_latent_dispersion",
+      "run": "cnf_latent_dispersion_challenge_01",
+      "status": "prepared",
+      "implementation": [
+        "cnf_latent_dispersion_challenge.py",
+        "latent_dispersion.py"
+      ],
+      "primary_reference": "LATENT_DISPERSION_REFERENCE.json",
+      "trial_scope": "Fixedantitheticseed2026092917, whitenedlatent terminal sigma.025/.05/.1 xabundance/joint,6variants+4controls=30scores. Zeroexactreplay, no temporal-rate/learneddiffusionclaim.",
+      "limitations": "Reuseddevelopment, sampledcohort; terminalGaussian sensitivity is neither learned diffusion model nor measuredbiologicalvariance. Smallgrid doesnotexhaust family.",
+      "tests_passed": 1,
       "research_family_exhausted": false
     }
   ],

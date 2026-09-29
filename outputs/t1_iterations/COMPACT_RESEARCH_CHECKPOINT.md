@@ -1,13 +1,13 @@
 # T1 compact research checkpoint
 
-Updated: 2026-09-29T13:53:52.935682+00:00
+Updated: 2026-09-29T14:00:56.226438+00:00
 
 Official best reported: **51.87**. Latest export: `T1_val__anchorslope_progress_20260929_01.h5ad`. Local>72 gate remains unmet.
 Official metrics: DE44.9, direction57.0, MMD53.5, variogram51.7. Latest screenshot shows S2WISH2 / Codex / AGENT, rank29 on that view; scoring-page rank131/270 is a different view.
 
-Next: Run18-score fixedalpha.5 log1p positive abundance/joint temporal diagnostic on twoearlier folds.
+Next: Run30-score fixedterminal latent dispersion .025/.05/.1, abundance/jointalpha.5; zeroexactreplay andunchangedscorer.
 
-Active jobs: [{"script":"cnf_log1p_positive_temporal.py","process_id":5544,"worker_process_id":12460}]
+Active jobs: [{"script":"cnf_latent_dispersion_challenge.py","process_id":1796,"worker_process_id":19544}]
 
 ## Latest measured decisions
 
@@ -27,7 +27,7 @@ Latest: validated; 1903 payload bytes; actual usage {'input_tokens': 820, 'outpu
 
 ## Current experiment
 
-`cnf_log1p_positive_temporal_01`: running; planned 18, completed 0.
+`cnf_latent_dispersion_challenge_01`: running; planned 30, completed 0.
 
 ## Evidence links
 

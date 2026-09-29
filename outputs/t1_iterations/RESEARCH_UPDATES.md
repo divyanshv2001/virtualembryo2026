@@ -25,3 +25,15 @@ Completed21 matched log1p specialist mixture scores; retain fullmetrics in CNF_L
 ## 2026-09-29T13:53:25.947299+00:00
 
 Matchedlog1p mixtures completed21scores: weights.25/.5/.75 means54.9454/54.5937/53.9621 belowjoint54.9755. Reject boundedmixtures. Prepared18-score log1palpha.5 abundance/joint temporal diagnostic with7matchedcontrols on8to9/8.25to9.25; reusedsourcefolds, no earlierchallenge data or independentembryos. No official/Jev/agent calls.
+
+## 2026-09-29T13:55:46.043427+00:00
+
+Temporalrun stillactive, no duplicatework. First8to9fold: log1pjoint49.7003 vsoriginaljoint49.1752, bothbelowpersistence50; abundance50.4875 vsoriginal50.6146. Nineof18scores complete; do notpromote partialoutcome. Refreshed SCORE_LEDGER:2668records across120reports,0indexerrors. Secondfold underway; no official/Jev calls.
+
+## 2026-09-29T13:56:33.930410+00:00
+
+Completed18 log1p positive decoder temporal scores on reused8to9/8.25to9.25 folds. All raw metrics/skills retained in CNF_LOG1P_POSITIVE_TEMPORAL_RESULTS.json; no72promotion or official upload.
+
+## 2026-09-29T13:59:57.590414+00:00
+
+Temporaldecoder18scores completed: joint49.7003/51.1772 vsoriginal49.1752/51.6250, inconsistent andfirstbelowcopy50; abundance50.4875/51.9650 belowmatchedoriginalbothfolds. No promotion. Reviewed scDiffusion authorabstract https://arxiv.org/abs/2401.03968 as future learnedgenerator pointer; currenttestisownfixedterminaldispersion sensitivity, notthatmodel. Prepared30scores sigma.025/.05/.1 xabundance/joint with4controls;zeroexactreplay required, antitheticmean/seed/time-scaling testpassed. No official/Jev/agent calls.

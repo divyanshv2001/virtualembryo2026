@@ -1,0 +1,9 @@
+{
+  "reviewed_utc": "2026-09-29T13:59:57.334195+00:00",
+  "primary_url": "https://arxiv.org/abs/2401.03968",
+  "title": "scDiffusion: conditional generation of high-quality single-cell data using diffusion model",
+  "coverage": "Author arXiv abstract and metadata only; fullpaper andauthorimplementation notread inthis boundedtest.",
+  "supported_scope": "Abstract describes controlled single-cell generation and developmental gradient interpolation. It does not validate our terminal Gaussian perturbation or future-day extrapolation.",
+  "our_experiment": "Fixed antithetic terminal variance sensitivity only; originallearnedCNF fixed, no denoiser/classifiercontroller/training and no scDiffusion reproduction claim. Smallpredeclared scales do not exhaust learned stochasticgenerator family.",
+  "variance_model": "Own sigma*sqrt(forecast_duration), no empiricalbiological rate claim. Zero perturbation exactreplay required, samefixed draws across scales/modes."
+}
