@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T12:34:06.526817+00:00",
+  "updated_utc": "2026-09-29T12:45:31.058370+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_autonomous_challenge.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_mixture_base_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Time-independent velocity CNF, batch64/512,800updates, exactreferencecoordinates and explicit-timecontrolarchives;39scores.",
+  "next_experiment": "Earliest7.5observedsource Gaussian1/8 bases, fixedvirtualorigin7.25,batch64,800updates, matchedstandardbasecontrols;33scores.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_autonomous_challenge_01"
+    "cnf_mixture_base_challenge_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_autonomous_challenge_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_mixture_base_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -780,14 +780,28 @@
     "results_report": "CNF_MATCHED_MIXTURE_RESULTS.json"
   },
   "cnf_autonomous_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_autonomous_challenge_01",
     "evaluations_planned": 39,
-    "pending_evaluations": 39,
-    "decision": "Stateonly velocity likelihood ablation; no promotion without original72MC/temporalgate.",
+    "pending_evaluations": 0,
+    "decision": "Autonomous64/512 joint means53.5208/52.7211 belowmatchedexplicit53.5952/54.0210; abundance53.1165/52.5694. Preserve39outcomes, no promotion. Next earliest-past fixedGaussian1/8-component base vs standardGaussian with unchangedvirtualorigin7.25 and originaltimeconditionedfield.",
     "tests_passed": 122,
     "process_id": 5200,
     "worker_process_id": 5752,
-    "plan_sha256": "7d006695049e4510f53e1d8de3223710ba2b50c8c025933da6e893e6a8b6ca8a"
+    "plan_sha256": "7d006695049e4510f53e1d8de3223710ba2b50c8c025933da6e893e6a8b6ca8a",
+    "evaluations": 39,
+    "report_sha256": "5aa300dfbb4706e3d07b7e23c4eb848aee827333276e1667b1ea88e1c85024a8",
+    "results_report": "CNF_AUTONOMOUS_RESULTS.json"
+  },
+  "cnf_mixture_base_job": {
+    "status": "running",
+    "run": "cnf_mixture_base_challenge_01",
+    "evaluations_planned": 33,
+    "pending_evaluations": 33,
+    "decision": "Testfixedpastempiricalbasedensity; virtualoriginapproximation explicit, no72promotion.",
+    "tests_passed": 124,
+    "process_id": 2436,
+    "worker_process_id": 10980,
+    "plan_sha256": "6b42eaaf060d306aafe580d7953e56f9b9a02ea40cf77073c3d096c5f7fd6c75"
   }
 }

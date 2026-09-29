@@ -5385,7 +5385,7 @@
     {
       "id": "continuous_flow_autonomous_velocity",
       "run": "cnf_autonomous_challenge_01",
-      "status": "implemented_running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_autonomous_challenge.py",
         "cnf_autonomous_flow.py"
@@ -5395,7 +5395,26 @@
       "limitations": "Own likelihoodadaptation ofstateonly vectorfield, notauthorsupervisedexample reproduction. Autonomousdevelopmentassumption may befalse; stateextrapolation remains. Sampled13963pastcells, exposedE9.5selection/noindependentembryos, no biologicalgrowth/velocityinputs.",
       "research_family_exhausted": false,
       "tests_passed": 122,
-      "validation_report": "CNF_AUTONOMOUS_VALIDATION.json"
+      "validation_report": "CNF_AUTONOMOUS_VALIDATION.json",
+      "results_report": "CNF_AUTONOMOUS_RESULTS.json",
+      "decision": "Autonomous64/512 joint means53.5208/52.7211 belowmatchedexplicit53.5952/54.0210; abundance53.1165/52.5694. Preserve39outcomes, no promotion. Next earliest-past fixedGaussian1/8-component base vs standardGaussian with unchangedvirtualorigin7.25 and originaltimeconditionedfield."
+    },
+    {
+      "id": "continuous_flow_earliest_mixture_base",
+      "run": "cnf_mixture_base_challenge_01",
+      "status": "implemented_running",
+      "implementation": [
+        "cnf_mixture_base_challenge.py",
+        "cnf_mixture_base.py",
+        "cnf_density_flow.py",
+        "cnf_manifold_flow.py"
+      ],
+      "primary_reference": "CNF_MIXTURE_BASE_REFERENCE.json",
+      "trial_scope": "Earliestpermitted7.5snapshot fullcovGaussian1/8components,reg.01,seed28,n_init1,100EMmax,requireconvergence. Fixedpriorparameters andorigin7.25; originaltimefield64,800updates,batch64,energy.1/manifold10. Fourforecasts/sevencontrols=33scores.",
+      "limitations": "Observed7.5population approximates virtual7.25, notmeasuredstage. Mixturemayoverfit sampledsourcecohort, domain/tissuebias remains; no independentembryos/growth/velocity. ExposedE9.5development, no promotion withoutoriginalgate.",
+      "research_family_exhausted": false,
+      "tests_passed": 124,
+      "validation_report": "CNF_MIXTURE_BASE_VALIDATION.json"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

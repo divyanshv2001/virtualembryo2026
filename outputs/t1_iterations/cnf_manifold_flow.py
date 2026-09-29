@@ -27,14 +27,14 @@ def train_manifold_density(net,z,stages,energy_weight,checkpoint,emit,resume=Fal
     torch.manual_seed(20260928);optimizer=torch.optim.Adam(net.parameters(),lr=.001);start=0;history=[]
     if resume and checkpoint.exists():
         saved=torch.load(checkpoint,weights_only=False,map_location='cpu')
-        if saved['energy_weight']!=energy_weight or saved['steps']!=steps or saved['density_weight']!=density_weight or saved.get('batch_size',64)!=batch_size:raise ValueError('Checkpoint configuration mismatch')
+        if saved['energy_weight']!=energy_weight or saved['steps']!=steps or saved['density_weight']!=density_weight or saved.get('batch_size',64)!=batch_size or saved.get('base_signature')!=getattr(net,'base_signature',None):raise ValueError('Checkpoint configuration mismatch')
         net.load_state_dict(saved['net']);optimizer.load_state_dict(saved['optimizer']);torch.set_rng_state(saved['rng']);start=saved['step'];history=saved['history']
     groups=[torch.tensor(z[stages==t],dtype=torch.float32) for t in np.unique(stages)];times=np.unique(stages)-net.origin
     reference=torch.tensor(z,dtype=torch.float32)
     for step in range(start,steps):
         group=int(torch.randint(len(groups),(1,)));source=groups[group][torch.randint(len(groups[group]),(batch_size,))].clone()
         noise=torch.randint(0,2,source.shape).float()*2-1
-        nll,energy=inverse_density(net.velocity,source,float(times[group]),noise=noise)
+        nll,energy=inverse_density(net.velocity,source,float(times[group]),noise=noise,log_base=getattr(net,'log_base',None))
         density=torch.tensor(0.)
         if density_weight and group>0:
             midpoint=rk4_position(net.velocity,source,float(times[group]),float(times[group])-.125)
@@ -46,6 +46,6 @@ def train_manifold_density(net,z,stages,energy_weight,checkpoint,emit,resume=Fal
         optimizer.step()
         if (step+1)%50==0 or step+1==steps:
             record={'step':step+1,'loss':float(loss.detach()),'negative_log_likelihood':float(nll.mean().detach()),'energy':float(energy.mean().detach()),'manifold_density':float(density.detach()),'sampled_past_stage':float(times[group]+net.origin)};history.append(record)
-            torch.save({'net':net.state_dict(),'optimizer':optimizer.state_dict(),'rng':torch.get_rng_state(),'step':step+1,'steps':steps,'energy_weight':energy_weight,'density_weight':density_weight,'batch_size':batch_size,'history':history},checkpoint)
+            torch.save({'net':net.state_dict(),'optimizer':optimizer.state_dict(),'rng':torch.get_rng_state(),'step':step+1,'steps':steps,'energy_weight':energy_weight,'density_weight':density_weight,'batch_size':batch_size,'base_signature':getattr(net,'base_signature',None),'history':history},checkpoint)
             emit('cnf_training_checkpoint',**record)
     net.eval();return history

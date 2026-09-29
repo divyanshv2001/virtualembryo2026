@@ -1,0 +1,8 @@
+{
+  "retrieved_utc": "2026-09-29T12:43:05.578939+00:00",
+  "primary_documentation": "https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html",
+  "read": "Full covariance, diagonal regularization, reproducible initialization, finite EM budget/convergence and per-cell score_samples definitions.",
+  "adaptation": "Own fixed earliest-past1/8-component Gaussian mixture base in existing likelihood CNF; density function remains differentiable through state, mixture parameters frozen. Not a published single-cell result.",
+  "configuration": "Full covariance reg.01,n_init1,random_state20260928,max_iter100, requireconvergence. Earliest observed source snapshot used as approximate virtual7.25 base; origin unchanged to isolate density shape.",
+  "limitations": "Actual earliestobservedstage7.5, not a measured7.25 distribution; priorapproximation and selectedcohort/domainbias remain. No measuredgrowth,velocity or independentembryos."
+}

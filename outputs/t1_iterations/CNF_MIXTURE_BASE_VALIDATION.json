@@ -1,0 +1,13 @@
+{
+  "updated_utc": "2026-09-29T12:45:31.058370+00:00",
+  "tests_passed": 124,
+  "command": "pytest outputs/t1_iterations -q -p no:cacheprovider --basetemp outputs/t1_iterations/private/pytest_tmp_55",
+  "checks": [
+    "Differentiable mixture logdensity agrees with sklearn score_samples for1/8components",
+    "Future expression perturbation does not alter earliest-past prior",
+    "Finite likelihood gradients; defaultstandardbase bit-exact replay",
+    "Checkpoint rejects changedbase signature",
+    "Existing fullpanel/mass/protectedgene/temporal checks remain passing"
+  ],
+  "limitations": "Prior fittedto7.5cells approximates unchangedvirtual7.25origin; predictiveaccuracy and biologicalvalidity stillunmeasured."
+}

@@ -11,7 +11,7 @@ def divergence(field,z,noise=None):
     return (torch.autograd.grad((field*noise).sum(),z,create_graph=True,retain_graph=True)[0]*noise).sum(1)
 
 
-def inverse_density(field,values,time,step=.125,noise=None):
+def inverse_density(field,values,time,step=.125,noise=None,log_base=None):
     z=values.requires_grad_(True);delta=torch.zeros(len(z));energy=torch.zeros(len(z))
     count=max(1,int(math.ceil(abs(time)/step)));dt=-time/count
     def rhs(t,state):
@@ -23,7 +23,7 @@ def inverse_density(field,values,time,step=.125,noise=None):
         k3=rhs(t+dt/2,tuple(a+dt*b/2 for a,b in zip(s,k2)))
         k4=rhs(t+dt,tuple(a+dt*b for a,b in zip(s,k3)))
         z,delta,energy=tuple(a+dt*(b+2*c+2*d+e)/6 for a,b,c,d,e in zip(s,k1,k2,k3,k4))
-    logbase=-.5*(z.square()+math.log(2*math.pi)).sum(1)
+    logbase=-.5*(z.square()+math.log(2*math.pi)).sum(1) if log_base is None else log_base(z)
     return -logbase+delta,-energy
 
 
