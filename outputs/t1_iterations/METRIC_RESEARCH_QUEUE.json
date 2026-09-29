@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T08:40:50.910016+00:00",
+  "updated_utc": "2026-09-29T08:49:29.167941+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5044,7 +5044,7 @@
     {
       "id": "continuous_flow_latent_anchor_alignment",
       "run": "cnf_alignment_challenge_01",
-      "status": "running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_alignment_challenge.py",
         "latent_anchor_alignment.py"
@@ -5052,6 +5052,20 @@
       "primary_reference": "LATENT_ALIGNMENT_REFERENCE.json",
       "trial_scope": "Covariancealignment strengths.25/.5/1 and mean-only1 crossed abundance/joint,39 scores with fivearchives. Fixedridge.1;currentE8.5atlas and challengeE8.5anchors only. Zeroalignment must exactly replay both archived baselines.",
       "limitations": "Own reverse CORAL adaptation, paper reverse classifier direction weaker; may erase biology/composition. Prior affine feature-moment alignment weak; different latent learner hypothesis remains bounded, not full-family exhaustion. Reused development.",
+      "research_family_exhausted": false,
+      "results_report": "CNF_ALIGNMENT_RESULTS.json",
+      "decision": "Covariance-aligned joint strengths.25/.5/1 means53.7995/53.7336/53.8095; all three panels improve over unaligned joint53.5953. Mean-only joint53.3096 regresses. Small gains far below72 and prior localunit16, no promotion. Next same-cohort earlier-fold alignment checks; independent challenge-domain temporal validation unavailable because data onlyE8.5/E9.5."
+    },
+    {
+      "id": "continuous_flow_alignment_temporal",
+      "run": "cnf_alignment_temporal_01",
+      "status": "running",
+      "implementation": [
+        "cnf_alignment_temporal.py",
+        "latent_anchor_alignment.py"
+      ],
+      "trial_scope": "Frozen rolling flows; covariancealignment.25/1 x abundance/joint,22 outcomes with sevenarchivecontrols. Current-stage rows only; original fullpanel/scorer unchanged.",
+      "limitations": "Same-cohort donor/source statistics cannot establish independent-domain adaptation. data folder has onlyE8.5/E9.5 challenge files; earlier challenge-domain rolling checks input-blocked. Reused stages, missing-gene placeholders, no independent embryos or72 promotion.",
       "research_family_exhausted": false
     }
   ],
