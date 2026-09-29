@@ -1,0 +1,27 @@
+{
+  "updated_utc": "2026-09-29T17:04:19.553949+00:00",
+  "completed_utc": "2026-09-29T17:03:04.210725+00:00",
+  "status": "completed",
+  "files_hashed": 168,
+  "duplicates_consolidated": 136,
+  "logical_duplicate_bytes": 998164657,
+  "D_free_before_bytes": 112174493696,
+  "D_free_after_bytes": 113172926464,
+  "observed_free_change_bytes": 998432768,
+  "verified_all_paths_samefile": true,
+  "unique_files_deleted": 0,
+  "logical_paths_removed": 0,
+  "audit_directory": "E:\\virtualembryo-research-storage\\storage_small_dedup_20260929_01",
+  "limitation": "This consolidates only byte-identical completed-run artifacts; it does not delete the previously blocked forecast arrays or remove unique evidence.",
+  "executed_source_sha256": "f2809567ab887914ab48c77ba2290ecb9451b813d747ff018799400a394c9249",
+  "reviewable_reusable_tool": "consolidate_archived_storage.py",
+  "reviewable_tool_sha256": "050b001c2bbe9b2129d9af5ec4b0e0f610d063df69ce311d3e70652b12f08478",
+  "audit_plan_sha256": "bb860d12ea2e66215ff2e45faf775fdb21bec92c9e1f723b1469c89652eafcfd",
+  "audit_events_sha256": "031301034043c82ff85bd3e3277977145bc0358dfdce00b0c7d908ba8bbe44bb",
+  "post_run_dry_run": {
+    "report_sha256": "2db172bd8b6a96e1fd77c01893065cb4c14523ec8af8faff8d9438dc950a984c",
+    "duplicate_paths_remaining": 0
+  },
+  "actual_D_free_at_publication_bytes": 113172905984,
+  "deletion_auto_review_status": "A separately attempted literal forecast-file deletion was rejected blocked by policy; this compaction does not remove any path."
+}

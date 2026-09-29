@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T16:44:05.400927+00:00",
+  "updated_utc": "2026-09-29T17:08:52.942358+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5620,6 +5620,25 @@
       "results_report": "CNF_PARTIAL_ANCHOR_RESULTS.json",
       "decision": "Bestp.25/d.75 mean55.09960 vs.5/.5control54.97552 (+.12408) onreused3E9.5developmentpanels. DE52.198 vs52.385, direction58.969 vs57.765, MMD55.675 vs56.006, variogram53.027 vs53.181; not promoted. Earlierfold/64MC not run; official best51.87.",
       "next_action": "Matchedrollingtemporalcheck; no promotion on3reusedpanels."
+    },
+    {
+      "id": "continuous_flow_partial_anchor_temporal",
+      "run": "cnf_partial_anchor_temporal_01",
+      "status": "implemented_running",
+      "implementation": [
+        "cnf_partial_anchor_temporal.py",
+        "temporary_forecast_cache.py"
+      ],
+      "metric_objective": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "hypothesis": "Challenge E9.5 partialcalibration gain +.124 may or maynot repeat on two reused rolling source folds; comparep.25/d.75 to.5/.5joint, originalflowjoint andpersistence.",
+      "trial_scope": "Four candidates x two frozen folds=8scores, unchanged32285gene fullpanel/scorer/calibration, past-only heads, temporaryDcache with no retained forecast matrices.",
+      "limitations": "Reused source development, sampled cohort, missinggenes placeholders, not independentembryos or hidden task.",
+      "research_family_exhausted": false
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

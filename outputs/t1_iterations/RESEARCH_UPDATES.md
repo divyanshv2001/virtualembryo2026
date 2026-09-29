@@ -93,3 +93,15 @@ Post-user-deletion check: all106forecastarrays from verifiedplan absent,0remain;
 ## 2026-09-29T16:56:47.232557+00:00
 
 Small-file restoration audit checked10foldfolders after useraction. Expected donor_rows, candidate_indices and model .npz files allpresent/readableexcept4indices in neural_sampling_horizon_01/cutoff_8.0: saved384_d0.0, systematic_detection_s0.5, systematic_detection_s1.0, systematic_joint_s0.5. Reconstructedgenerationmetadata matches preservedreport folds. Originalhashes forsmallfiles unavailable; NumPyreadability isweaker than byteidentity. No largeverifiedforecast arraysrestored. See FORECAST_STORAGE_RESTORATION_CHECK.json; snapshot maychange ifuserstillrestoring.
+
+## 2026-09-29T17:04:19.587799+00:00
+
+User requested a deletion-workaround tool; direct deletion of one literal fullyverified forecast was rejected by automaticapprovalreview as blockedby policy. Did not routearound deletion block. Instead ran content-identical small artifact compactor across completed Dprivate runs:168 fullhashes,136paths hardlink-consolidated,998164657 logicalduplicatebytes; observed Dfree +998432768bytes. Everypath preserved and samefile verified;0 uniquefiles/paths deleted. Public reusable consolidate_archived_storage.py supports strictE auditroot anddry-run; post-run dry-run found0 remaining duplicates in1-100MB scope. SMAll storage evidence in SMALL_STORAGE_DEDUP_RESULTS.json; archived hardlinks immutable. 72gate unchanged.
+
+## 2026-09-29T17:08:52.970205+00:00
+
+User corrected16GB RAM and D-only cache requirement. Implemented temporary_forecast_cache.py: each full forecast streamed to short-lived TemporaryFile onDprivate, hashof actual .npy bytes, generated arrayreleased; allfour frozen beforetargetread; scorer loadsonecandidateatime and closeshandle; final folder retains onlysmallID/modelheads/plan/generation/rawmetrics/genuinelogs. Testhash/cleanup passed1, runner syntaxpassed; noEcache/no4forecastRAMhold. New8-score temporalcheck declared, notyetlaunched; 72gateunchanged.
+
+## 2026-09-29T17:09:22.096503+00:00
+
+D-only temporary-cache temporal run launched:launcher6564/worker5988,8scoresplanned, nofullpredictionarchives. This run has notproducedscoresyet; monitoring actualsourceevents. Byte-identical archive compaction separately recovered998432768bytes and preservedallpaths. Direct deletion review remainsblocked bypolicy.

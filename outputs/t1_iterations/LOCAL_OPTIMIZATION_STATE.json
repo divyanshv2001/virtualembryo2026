@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T16:44:05.400927+00:00",
+  "updated_utc": "2026-09-29T17:09:22.046969+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": false,
+  "local_process_running": true,
   "quota_reset_evidence": {
     "limit_observed": false,
     "remaining_quota": null,
@@ -31,12 +31,18 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Temporal-check partialanchor p.25/d.75 vsmatched.5/.5 andpersistence, but read FORECAST_STORAGE_POSTDELETE_CHECK.json: five old cutoff folders lost small indices/heads; avoid treating deleted arrays as available.",
+  "next_experiment": "Execute8scorepartialanchor rolling temporal check onD: with TemporaryFile cache; no full prediction archives.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
-  "active_run_path": "private/cnf_partial_anchor_challenge_01",
+  "active_jobs": [
+    {
+      "run": "cnf_partial_anchor_temporal_01",
+      "process_id": 6564,
+      "worker_process_id": 5988
+    }
+  ],
+  "active_run_path": "private/cnf_partial_anchor_temporal_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -982,7 +988,7 @@
     "results_report": "CNF_LATENT_DISPERSION_RESULTS.json"
   },
   "research_storage": {
-    "D_free_observed_bytes": 112175013888,
+    "D_free_observed_bytes": 113172905984,
     "E_free_observed_bytes": 277806256128,
     "new_bulky_private_run_root": "E:/virtualembryo-research-storage",
     "policy": "Use verifiedempty localjunctions fornewruns. Keep failedoriginalD arrays/events. No data deleted or committed.",
@@ -995,7 +1001,9 @@
     "deletion_status": "User removed all106verified forecasts and also emptied both cutoff folders in5runs; generationmetadata reconstructed from report, small indices and modelheads missing.",
     "postdelete_check": "FORECAST_STORAGE_POSTDELETE_CHECK.json",
     "restoration_check": "FORECAST_STORAGE_RESTORATION_CHECK.json",
-    "missing_small_files_as_of_check": 4
+    "missing_small_files_as_of_check": 4,
+    "small_storage_dedup_report": "SMALL_STORAGE_DEDUP_RESULTS.json",
+    "small_storage_reclaimed_observed_bytes": 998432768
   },
   "cnf_latent_population_scale_job": {
     "status": "completed_not_promoted",
@@ -1035,5 +1043,20 @@
     "plan_sha256": "627c167967c3444c5ba3a6607af9b916a72cc26300c97574cd5812d405262aa8",
     "report_sha256": "0c5c0f0f6dcc314da68cf02ae685e26cfd979cf0755c48a413bb3b19a4b5ff9e",
     "results_report": "CNF_PARTIAL_ANCHOR_RESULTS.json"
+  },
+  "cnf_partial_anchor_temporal_job": {
+    "status": "running",
+    "run": "cnf_partial_anchor_temporal_01",
+    "evaluations_planned": 8,
+    "evaluations": 0,
+    "pending_evaluations": 8,
+    "tests_passed": 1,
+    "syntax_verified": true,
+    "storage": "D:/.../outputs/t1_iterations/private; TemporaryFile cache on D: only",
+    "retention": "No full forecast arrays retained, one prediction loaded for scoring at a time; small plans/heads/IDs/metrics/events persist.",
+    "gate": "Rolling check only, reused source folds, not64MC or official score.",
+    "process_id": 6564,
+    "worker_process_id": 5988,
+    "plan_sha256": "3d1adc611831a178ddde86f3cfa4f87333ec8cb29f91046e46b598890179cbfd"
   }
 }
