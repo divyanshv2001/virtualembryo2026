@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T06:38:09.158446+00:00",
+  "updated_utc": "2026-09-29T06:49:59.721328+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_extended_challenge.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_temporal_horizon.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Train fixed density10/energy.1 for1600 updates; verify first400/800 archived states exactly; evaluate24 unchanged challenge outcomes.",
+  "next_experiment": "Fit fixed800-update density10/energy.1 flow separately atE8.0/E8.25; assess one-dayE9.0/E9.25 temporal consistency under unchanged matched calibration.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_extended_repair_01"
+    "cnf_temporal_horizon_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_extended_repair_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_temporal_horizon_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -385,12 +385,24 @@
     "decision": "800-update strength1 mean52.8369, all panels improve over400-update51.7282. First400 training states replayed bit-identically. No72/official promotion; next predeclared1600-update duration check with400/800 lineage verification."
   },
   "cnf_extended_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_extended_repair_01",
     "evaluations_planned": 24,
-    "pending_evaluations": 24,
+    "pending_evaluations": 0,
     "process_id": 22128,
     "plan_sha256": "0d9ab2a6c9ad3769770a89e744413835db5a6a400d6e1ca3ca41b439c1a1a1b9",
-    "failed_run": "cnf_extended_challenge_01"
+    "failed_run": "cnf_extended_challenge_01",
+    "evaluations": 24,
+    "report_sha256": "7d9c91a76b73544bbc5bae7c45ea121854025a1f3498b1043c907361af6cc55c",
+    "results_report": "CNF_EXTENDED_RESULTS.json",
+    "decision": "1600 updates regress to51.8346 versus800-update52.8369 on every challenge panel. First400 and800 states verified exactly; all24 outcomes preserved. More updates do not reliably improve this learner. Next assess fixed800-update learner on earlier rolling one-day folds before another mechanism or stability promotion."
+  },
+  "cnf_temporal_job": {
+    "status": "running",
+    "run": "cnf_temporal_horizon_01",
+    "evaluations_planned": 14,
+    "pending_evaluations": 14,
+    "process_id": 3156,
+    "plan_sha256": "859259efc365a233d4b16badf562c18c10017488cdc8fe5fdd3159301c656ad8"
   }
 }

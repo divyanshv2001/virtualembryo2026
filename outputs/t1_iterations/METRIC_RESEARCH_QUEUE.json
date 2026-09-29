@@ -4880,7 +4880,7 @@
     {
       "id": "continuous_flow_extended_duration",
       "run": "cnf_extended_repair_01",
-      "status": "running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_extended_challenge.py",
         "cnf_manifold_flow.py"
@@ -4889,7 +4889,21 @@
       "limitations": "Reused development panels, no fresh validation, no72 or official readiness.",
       "research_family_exhausted": false,
       "failed_run": "cnf_extended_challenge_01",
-      "repair": "Tuple lookup corrected; recover genuine400-step checkpoint and verify against archived400 states, then continue. All plan subscript accesses statically checked for tuple keys."
+      "repair": "Tuple lookup corrected; recover genuine400-step checkpoint and verify against archived400 states, then continue. All plan subscript accesses statically checked for tuple keys.",
+      "results_report": "CNF_EXTENDED_RESULTS.json",
+      "decision": "1600 updates regress to51.8346 versus800-update52.8369 on every challenge panel. First400 and800 states verified exactly; all24 outcomes preserved. More updates do not reliably improve this learner. Next assess fixed800-update learner on earlier rolling one-day folds before another mechanism or stability promotion."
+    },
+    {
+      "id": "continuous_flow_rolling_consistency",
+      "run": "cnf_temporal_horizon_01",
+      "status": "running",
+      "implementation": [
+        "cnf_temporal_horizon.py",
+        "cnf_manifold_flow.py"
+      ],
+      "trial_scope": "Two800-update source-cohort fits atcutoffs8.0/8.25, strengths.5/1,14 scores including five frozen controls. Full-panel/calibration/seed unchanged.",
+      "limitations": "Reused development folds and source missing-gene placeholders; no blind or independent embryo validation. Local>72 gate remains required.",
+      "research_family_exhausted": false
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."
