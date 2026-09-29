@@ -1,0 +1,15 @@
+{
+  "status": "execution_failed_after_first_head_fit",
+  "run": "cnf_cdr_logistic_repair_01",
+  "failure": {
+    "status": "execution_failed",
+    "type": "TypeError",
+    "error": "Object of type function is not JSON serializable",
+    "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_cdr_logistic_challenge.py --resume"
+  },
+  "local_score": null,
+  "metrics_measured": false,
+  "fitted_head_sha256": "38eedd3b013eec61429356dea8d04c6512cb7fcb273a58ba9dfa2d203ee8668e",
+  "report_sha256": "10018b9739ba5fe3c9904e2a823f6ea9f1284425b1c579f86ea4cb6a7ee07133",
+  "repair": "cnf_cdr_logistic_repair_02"
+}

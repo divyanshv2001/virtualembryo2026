@@ -5207,7 +5207,7 @@
     {
       "id": "continuous_flow_cdr_logistic_repair",
       "run": "cnf_cdr_logistic_repair_01",
-      "status": "implemented_running",
+      "status": "execution_failed_after_first_head_fit",
       "implementation": [
         "cnf_cdr_logistic_challenge.py",
         "cdr_logistic_forecast.py",
@@ -5219,6 +5219,25 @@
       "limitations": "Own L2 logistic adaptation not MAST Bayesian inference; observed CDR fixed can remove biological variation, part-whole dependence remains. Past-only normalization, reused development and no independent embryos.",
       "research_family_exhausted": false,
       "repair_of": "cnf_cdr_logistic_challenge_01",
+      "tests_passed": 112,
+      "validation_report": "CNF_CDR_LOGISTIC_VALIDATION.json",
+      "failure_report": "CNF_CDR_LOGISTIC_REPAIR_FAILURE.json"
+    },
+    {
+      "id": "continuous_flow_cdr_logistic_repair02",
+      "run": "cnf_cdr_logistic_repair_02",
+      "status": "implemented_running",
+      "implementation": [
+        "cnf_cdr_logistic_challenge.py",
+        "cdr_logistic_forecast.py",
+        "cdr_detection_forecast.py",
+        "logistic_detection_head.py"
+      ],
+      "primary_reference": "CDR_DETECTION_REFERENCE.json",
+      "trial_scope": "CDR logistic ridge.1/1 x detection/joint, same80-update optimizer as matched non-CDR logistic controls. Fourforecasts/sevenarchives=33outcomes. Original positive heads and flow fixed.",
+      "limitations": "Own L2 logistic adaptation not MAST Bayesian inference; observed CDR fixed can remove biological variation, part-whole dependence remains. Past-only normalization, reused development and no independent embryos.",
+      "research_family_exhausted": false,
+      "repair_of": "cnf_cdr_logistic_repair_01",
       "tests_passed": 112,
       "validation_report": "CNF_CDR_LOGISTIC_VALIDATION.json"
     }

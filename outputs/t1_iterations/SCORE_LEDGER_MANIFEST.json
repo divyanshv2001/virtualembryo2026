@@ -1,5 +1,5 @@
 {
-  "records": 2070,
+  "records": 2071,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -89,6 +89,11 @@
     {
       "path": "private/cnf_cdr_logistic_challenge_01/report.json",
       "sha256": "c2ed61f57a4d70dd05aea68f7f2e3fd5e338fc5dcbec432673059bdb9bbd7aeb",
+      "outcomes_indexed": 1
+    },
+    {
+      "path": "private/cnf_cdr_logistic_repair_01/report.json",
+      "sha256": "10018b9739ba5fe3c9904e2a823f6ea9f1284425b1c579f86ea4cb6a7ee07133",
       "outcomes_indexed": 1
     },
     {
@@ -504,5 +509,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "f5aa929fb42ebd303aafff53a5ee98dc78a623db210f48a687eb0b8fe7ce78d1"
+  "ledger_sha256": "199064868e25768b7fca75778d1289569907939ce385ace6739b3222759fb663"
 }

@@ -8,8 +8,21 @@ from logistic_detection_head import fit_logistic
 
 
 class CDRLogisticForecast(CDRDetectionForecast):
-    def __init__(self,*args,detection_ridge=1.,emit=lambda **kw:None,**kwargs):
+    def __init__(self,*args,detection_ridge=1.,emit=lambda **kw:None,saved_heads=None,**kwargs):
         super().__init__(*args,cdr_ridge=1.,**kwargs)
+        if saved_heads is not None:
+            saved=np.load(saved_heads)
+            np.testing.assert_array_equal(saved['donor_cdr'],self.donor_cdr)
+            if float(saved['cdr_mean'])!=self.cdr_mean or float(saved['cdr_scale'])!=self.cdr_scale:
+                raise ValueError('Saved CDR normalization mismatch')
+            coef=saved['coef']
+            if coef.shape!=(len(self.zcenter)+2,len(self.mapped)) or not np.isfinite(coef).all():
+                raise ValueError('Invalid saved logistic coefficients')
+            self.cdr_logistic_coef=coef.copy()
+            self.audit.update(detection_link='logistic',detection_ridge=detection_ridge,
+                              fitted_head_reused=str(saved_heads),additional_logistic_updates=0,
+                              scope='Reuse fitted head from preserved failed run; runner verifies training inputs and original module provenance. Original optimizer diagnostics remain in failed-run events.')
+            return
         x,stages,cutoff=args[:3];panel,symbols=args[4:6]
         counts=Counter(symbols);lookup={s:i for i,s in enumerate(symbols) if s and counts[s]==1}
         rows=np.flatnonzero(stages<=cutoff)

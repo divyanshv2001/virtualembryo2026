@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T10:11:59.296438+00:00",
+  "updated_utc": "2026-09-29T10:30:19.527493+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,14 +31,14 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_cdr_logistic_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Repair CDR logistic plan serialization, original failedrun retained, run cnf_cdr_logistic_repair_01.",
+  "next_experiment": "Correct callback event serialization; verify/reuse fitted ridge.1 head, train ridge1 once in cnf_cdr_logistic_repair_02.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_cdr_logistic_repair_01"
+    "cnf_cdr_logistic_repair_02"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_cdr_logistic_repair_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_cdr_logistic_repair_02",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -652,12 +652,19 @@
   },
   "cnf_cdr_logistic_job": {
     "status": "running",
-    "run": "cnf_cdr_logistic_repair_01",
+    "run": "cnf_cdr_logistic_repair_02",
     "tests_passed": 112,
     "evaluations_planned": 33,
     "pending_evaluations": 33,
-    "process_id": 24096,
-    "plan_sha256": "ea1b54eafffac64dab85062197b0c0f88dd82e250e7ba55e9bbcf55232dae10f",
+    "process_id": 22192,
+    "plan_sha256": "47ed39489ca3d88e16a949d7faaf90ea2507d570a999c59c8a7a4c4daeb7f5b8",
     "decision": "CDR logistic nuisance with matched no-CDR logistic controls and global positive head/field fixed. No promotion; local72 gate unmet."
+  },
+  "cnf_cdr_logistic_repair_failed_job": {
+    "status": "execution_failed_after_first_head_fit",
+    "run": "cnf_cdr_logistic_repair_01",
+    "failure_report": "CNF_CDR_LOGISTIC_REPAIR_FAILURE.json",
+    "evaluations": 0,
+    "local_score": null
   }
 }

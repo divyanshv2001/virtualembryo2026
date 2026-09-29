@@ -12,9 +12,11 @@ def test_cdr_runner_plan_uses_json_serializable_keys():
     for node in ast.walk(tree):
         if isinstance(node,ast.Subscript) and isinstance(node.value,ast.Name) and node.value.id=='plan':
             assert not isinstance(node.slice,ast.Tuple), 'Plan dictionary keys must be strings'
+        if isinstance(node,ast.Call) and isinstance(node.func,ast.Name) and node.func.id=='append_event':
+            assert all(not isinstance(k.value,ast.Lambda) for k in node.keywords), 'Event fields must serialize'
 
 
-def test_cdr_logistic_matches_optimizer_and_keeps_positive_head_past_only():
+def test_cdr_logistic_matches_optimizer_and_keeps_positive_head_past_only(tmp_path):
     rng=np.random.default_rng(512)
     stages=np.repeat([7.5,7.75,8.,9.],40)
     x=rng.uniform(.2,.8,(160,8)).astype(np.float32);x[rng.random(x.shape)<.3]=0
@@ -29,6 +31,11 @@ def test_cdr_logistic_matches_optimizer_and_keeps_positive_head_past_only():
         matrix=np.column_stack([h,(cdr-model.cdr_mean)/model.cdr_scale])
         coef,_=fit_logistic(matrix,(x[:120]>0).astype(float),ridge)
         np.testing.assert_array_equal(model.cdr_logistic_coef,coef)
+        saved=tmp_path/f'heads{ridge}.npz'
+        np.savez(saved,coef=model.cdr_logistic_coef,cdr_mean=model.cdr_mean,cdr_scale=model.cdr_scale,donor_cdr=model.donor_cdr)
+        reused=CDRLogisticForecast(*args,detection_ridge=ridge,saved_heads=saved,
+                                 emit=lambda **kw:(_ for _ in ()).throw(AssertionError('Must not retrain')))
+        np.testing.assert_array_equal(model.predict(9.,'joint',1.,sampling='systematic')[0],reused.predict(9.,'joint',1.,sampling='systematic')[0])
         np.testing.assert_array_equal(model.predict(9.,'abundance',1.)[0],control.predict(9.,'abundance',1.)[0])
         changed=x.copy();changed[stages>8.]=999
         other=CDRLogisticForecast(changed,*args[1:],detection_ridge=ridge)

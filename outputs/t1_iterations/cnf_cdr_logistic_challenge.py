@@ -24,7 +24,7 @@ from offline_backtest import load_core,Panel
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--resume',action='store_true');args=parser.parse_args()
-    root=HERE.parents[1];data=HERE/'private/associated_prepared_01';out=HERE/'private/cnf_cdr_logistic_repair_01'
+    root=HERE.parents[1];data=HERE/'private/associated_prepared_01';out=HERE/'private/cnf_cdr_logistic_repair_02'
     if out.exists() and not args.resume:raise ValueError('Preserve prior run; use --resume')
     prepared=json.loads((data/'report.json').read_text())
     for f,k in [('expression.npy','expression_sha256'),('selected_metadata.csv','metadata_sha256'),('genes.csv','genes_sha256')]:
@@ -59,6 +59,15 @@ def main():
     plan['cdr_reference_sha256']=digest(HERE/'CDR_DETECTION_REFERENCE.json')
     plan['logistic_reference_sha256']=digest(HERE/'LOGISTIC_DETECTION_REFERENCE.json')
     plan['encoder_sha256']=digest(old/'encoder4096.npz');plan['heads_sha256']=digest(old/'features4096_heads.npz')
+    previous_run=HERE/'private/cnf_cdr_logistic_repair_01'
+    previous_plan=json.loads((previous_run/'plan.json').read_text())
+    for key in ['input_sha256','prepared_report_sha256','panel_sha256','encoder_sha256','heads_sha256','reference_checkpoint_sha256']:
+        if previous_plan[key]!=plan[key]:raise ValueError('Fitted-head reuse inputs changed:'+key)
+    for module in ['cdr_logistic_forecast.py','cdr_detection_forecast.py','logistic_detection_head.py']:
+        if digest(previous_run/module)!=previous_plan['source_sha256'][module]:raise ValueError('Original fitted module provenance changed')
+    plan['reused_head_sha256']=digest(previous_run/'cdrlogistic0.1_heads.npz')
+    plan['reused_head_original_plan_sha256']=digest(previous_run/'plan.json')
+    plan['reused_head_scope']='First ridge.1 optimization completed before logging failure. Reuse saved fitted coefficients, original input hashes/normalization/module snapshots verified; no repeated ridge.1 training.'
     def control_path(name):
         return (HERE/'private/cnf_logistic_challenge_01' if name.startswith('logistic') else HERE/'private/cnf_hurdle_challenge_01' if name=='joint_systematic_s1.0' else old)/(name+'.npy')
     plan['archived_report_sha256']=digest(old/'report.json')
@@ -66,7 +75,7 @@ def main():
     plan['archived_control_sha256']={n:digest(control_path(n)) for n in controls}
     if args.resume:
         previous=json.loads((out/'plan.json').read_text())
-        for k in ['configs','evaluation_seeds','source_sha256','input_sha256','prepared_report_sha256','panel_sha256','dependencies','archived_report_sha256','archived_features_sha256','archived_control_sha256','author_reference_sha256','past_encoder_sha256','manifold_reference_sha256','reference_checkpoint_sha256','encoder_sha256','heads_sha256','cdr_reference_sha256','logistic_reference_sha256']:
+        for k in ['configs','evaluation_seeds','source_sha256','input_sha256','prepared_report_sha256','panel_sha256','dependencies','archived_report_sha256','archived_features_sha256','archived_control_sha256','author_reference_sha256','past_encoder_sha256','manifold_reference_sha256','reference_checkpoint_sha256','encoder_sha256','heads_sha256','cdr_reference_sha256','logistic_reference_sha256','reused_head_sha256','reused_head_original_plan_sha256']:
             if previous[k]!=plan[k]:raise ValueError('Resume mismatch:'+k)
         plan=previous
     else:
@@ -103,11 +112,11 @@ def main():
         append_event(events,'archived_positive_heads_and_abundance_forecasts_verified_exactly')
         np.savez_compressed(out/'hurdle_heads.npz',detection=program.detection,pmean=program.pmean,positive_coef=program.positive_coef,positive_center=program.positive_center,positive_mean=program.positive_mean,zcenter=program.zcenter,support=program.support)
         for ridge in [.1,1.]:
-            candidate=CDRLogisticForecast(x,stages,8.5,donors,panel,symbols,net,center,scale,encoder_features,guard_features,detection_ridge=ridge,emit=lambda **kw:append_event(events,'cdr_logistic_block_fitted',ridge=ridge,**kw))
+            candidate=CDRLogisticForecast(x,stages,8.5,donors,panel,symbols,net,center,scale,encoder_features,guard_features,detection_ridge=ridge,saved_heads=(previous_run/'cdrlogistic0.1_heads.npz' if ridge==.1 else None),emit=lambda **kw:append_event(events,'cdr_logistic_block_fitted',ridge=ridge,**kw))
             np.testing.assert_array_equal(candidate.positive_coef,program.positive_coef)
             np.testing.assert_array_equal(candidate.predict(9.5,'abundance',1.)[0],np.load(old/'features4096_s1.0.npy'))
             np.savez_compressed(out/f'cdrlogistic{ridge}_heads.npz',coef=candidate.cdr_logistic_coef,cdr_mean=candidate.cdr_mean,cdr_scale=candidate.cdr_scale,donor_cdr=candidate.donor_cdr)
-            append_event(events,'cdr_detection_global_abundance_verified_exactly',detection_ridge=ridge,emit=lambda **kw:append_event(events,'cdr_logistic_block_fitted',ridge=ridge,**kw))
+            append_event(events,'cdr_detection_global_abundance_verified_exactly',detection_ridge=ridge)
             for mode in ['detection','joint']:
                 name=f'cdrlogistic{ridge}_{mode}'
                 prediction,indices,audit=candidate.predict(9.5,mode,1.,sampling='systematic')
@@ -148,7 +157,7 @@ def main():
     p=HERE/'LOCAL_OPTIMIZATION_STATE.json';state=json.loads(p.read_text());state['cnf_cdr_logistic_job'].update(status='completed_not_promoted',evaluations=33,pending_evaluations=0,report_sha256=public['report_sha256'],results_report='CNF_CDR_LOGISTIC_RESULTS.json');state['local_process_running']=False;state['active_jobs']=[];p.write_text(json.dumps(state,indent=2))
     p=HERE/'METRIC_RESEARCH_QUEUE.json';queue=json.loads(p.read_text())
     for entry in queue['paths']:
-        if entry.get('run')=='cnf_cdr_logistic_repair_01':entry.update(status='implemented_evaluated_not_promoted',results_report='CNF_CDR_LOGISTIC_RESULTS.json')
+        if entry.get('run')=='cnf_cdr_logistic_repair_02':entry.update(status='implemented_evaluated_not_promoted',results_report='CNF_CDR_LOGISTIC_RESULTS.json')
     p.write_text(json.dumps(queue,indent=2))
     from index_scores import main as index_scores
     index_scores();append_event(events,'challenge_transport_completed',evaluations=33)
@@ -159,6 +168,6 @@ if __name__=='__main__':
         torch.set_num_threads(2)
         with threadpool_limits(limits=2):main()
     except Exception as exc:
-        folder=HERE/'private/cnf_cdr_logistic_repair_01'
+        folder=HERE/'private/cnf_cdr_logistic_repair_02'
         if folder.exists():(folder/'failure.json').write_text(json.dumps({'status':'execution_failed','type':type(exc).__name__,'error':str(exc),'resume_command':'outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_cdr_logistic_challenge.py --resume'},indent=2))
         raise
