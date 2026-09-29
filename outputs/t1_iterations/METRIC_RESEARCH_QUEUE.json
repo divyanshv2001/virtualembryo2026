@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T16:28:01.003854+00:00",
+  "updated_utc": "2026-09-29T16:34:13.059030+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5575,7 +5575,7 @@
     {
       "id": "continuous_flow_terminal_population_scale",
       "run": "cnf_latent_population_scale_challenge_02",
-      "status": "implemented_running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "latent_population_scale.py",
         "cnf_latent_population_scale_challenge.py"
@@ -5589,7 +5589,34 @@
       "limitations": "Own sensitivity, no faithful literature reproduction/biological rate; batch-centering depends on donor population, reuseddevelopment, sampledcohort. Existing variance/shrinkage family remains open.",
       "tests_passed": 1,
       "research_family_exhausted": false,
-      "prior_startup_failure_report": "CNF_LATENT_POPULATION_SCALE_STARTUP_FAILURE.json"
+      "prior_startup_failure_report": "CNF_LATENT_POPULATION_SCALE_STARTUP_FAILURE.json",
+      "results_report": "CNF_LATENT_POPULATION_SCALE_RESULTS.json",
+      "decision": {
+        "status": "rejected_bounded_grid",
+        "control_mean": 54.97552441396573,
+        "best_joint_variant_mean": 54.32029127733524,
+        "mean_gain": -0.6552331366304927,
+        "mechanism_diagnosis": "Joint contraction mean direction58.766 vs57.765control, but MMD47.823 vs56.006. Expansion MMD56.331 slightly above56.006, direction55.601 andvariogram52.115 below57.765/53.181. All4variants regress vs correspondingcontrols; no promotion. Notfamilyexhaustion."
+      }
+    },
+    {
+      "id": "continuous_flow_partial_anchor_calibration",
+      "run": "cnf_partial_anchor_challenge_01",
+      "status": "implemented_running",
+      "implementation": [
+        "partial_anchor_forecast.py",
+        "cnf_partial_anchor_challenge.py"
+      ],
+      "metric_objective": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "hypothesis": "Separate partialshrinkage of positive anddetectionconditional anchor slopes may balance metrics inone jointforecast.",
+      "trial_scope": "Positive .25/.75 crossedwithdetection .25/.75;4variants+4controls x3fixedpanels=24scores. Exact.5 archivedreplay required beforetargetread.",
+      "limitations": "Own boundedextension ofanchorcalibration, notfaithfulpaperreproduction/temporalvelocity; sampledsource, reuseddevelopment, noindependentembryos.",
+      "research_family_exhausted": false
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

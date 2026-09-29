@@ -61,3 +61,15 @@ New24-score population-scale run02 is actually running: launcher10536/worker2164
 ## 2026-09-29T16:31:32.594762+00:00
 
 User requested storage cleanup first. Additional audit identifies completed-test temporary fixture directories totalling59952870bytes. Attempted nativePowerShell recursive deletion was rejected by automatic tool approval with reason blockedby policy, before execution; actualdeleted0, no workaround attempted. TEST_TEMP_CLEANUP_STATUS.json preserves status and privatecandidateaudit. Original111383323600byte duplicate consolidation succeeded. Raw1.564GB exprMatrix.bin is still referenced by atlaspreparation; retain biologicalinputs/uniqueevidence. No further experiment launched during cleanup.
+
+## 2026-09-29T16:31:40.397896+00:00
+
+Completed24 mean-preserving latent population scale scores. All means/raw4/skills4 retained in CNF_LATENT_POPULATION_SCALE_RESULTS.json and SCORE_LEDGER.jsonl. Review matched gains before promotion;72 gate remains unmet.
+
+## 2026-09-29T16:34:13.075037+00:00
+
+Completed24population-scale scores: fourvariants allregress versusmatchedcontrols. Joint.75 direction58.766 improves butMMD47.823 fallsbelowpersistence; joint1.25 mean54.3203 versus54.9755control (-.6552). Reject boundedwidthgrid; originalfullmetrics retained in CNF_LATENT_POPULATION_SCALE_RESULTS.json, ledger2732records. Newimplemented24score partial-anchor grid crossespositive/detection.25/.75, samefrozenfield andfullpanel. Syntaxpassed; mustreplay.5control exactlybeforetargetread; owncalibrationextension, notliterature reproduction. Gateunchanged,noofficialsubmissions/Jev/agents.
+
+## 2026-09-29T16:34:43.540490+00:00
+
+Partial-anchor run01 actuallyrunning:launcher6548/worker3684, planfrozen. Fourcontrols saved; next required exact.5controlreplay beforefournewforecasts. Past-onlyheads, unchanged32,285genefullpanel and3frozenevaluationpanels.24scoresplanned, noneclaimedcomplete;72gateunmet.

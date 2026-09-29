@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T16:29:25.110461+00:00",
+  "updated_utc": "2026-09-29T16:34:43.505698+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,18 +31,18 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Test mean-preserving latent population scale .75/1.25 with abundance/joint, four controls and three frozen panels; no promotion from dispersion +.022 development gain.",
+  "next_experiment": "Partial positive/detection conditional anchor slopes .25/.75 crossed, same frozen flow/panel/calibration,24scores; testbalance rather than isotropic width.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
     {
-      "run": "cnf_latent_population_scale_challenge_02",
-      "process_id": 10536,
-      "worker_process_id": 21644
+      "run": "cnf_partial_anchor_challenge_01",
+      "process_id": 6548,
+      "worker_process_id": 3684
     }
   ],
-  "active_run_path": "private/cnf_latent_population_scale_challenge_02",
+  "active_run_path": "private/cnf_partial_anchor_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -997,18 +997,40 @@
     "temporary_cleanup_status": "TEST_TEMP_CLEANUP_STATUS.json"
   },
   "cnf_latent_population_scale_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_latent_population_scale_challenge_02",
     "evaluations_planned": 24,
-    "evaluations": 0,
-    "pending_evaluations": 24,
+    "evaluations": 24,
+    "pending_evaluations": 0,
     "tests_passed": 1,
     "runner_syntax_verified": true,
     "storage": "E:/virtualembryo-research-storage/cnf_latent_population_scale_challenge_02 via Dprivate junction",
-    "decision": "Own bounded latent population-width sensitivity; latent mean preserved, decoded full-expression means not assumed preserved. No promotion.",
+    "decision": {
+      "status": "rejected_bounded_grid",
+      "control_mean": 54.97552441396573,
+      "best_joint_variant_mean": 54.32029127733524,
+      "mean_gain": -0.6552331366304927,
+      "mechanism_diagnosis": "Joint contraction mean direction58.766 vs57.765control, but MMD47.823 vs56.006. Expansion MMD56.331 slightly above56.006, direction55.601 andvariogram52.115 below57.765/53.181. All4variants regress vs correspondingcontrols; no promotion. Notfamilyexhaustion."
+    },
     "prior_startup_failure_report": "CNF_LATENT_POPULATION_SCALE_STARTUP_FAILURE.json",
     "process_id": 10536,
     "worker_process_id": 21644,
-    "plan_sha256": "0900f8ee12b7d6e0bb311aead5f6425e8856167ff381d0983e595467162d9d88"
+    "plan_sha256": "0900f8ee12b7d6e0bb311aead5f6425e8856167ff381d0983e595467162d9d88",
+    "report_sha256": "1c0acd28c4930ce62b86807417db68930cce464480de9e8495bf08af119e2e57",
+    "results_report": "CNF_LATENT_POPULATION_SCALE_RESULTS.json"
+  },
+  "cnf_partial_anchor_job": {
+    "status": "running",
+    "run": "cnf_partial_anchor_challenge_01",
+    "evaluations_planned": 24,
+    "evaluations": 0,
+    "pending_evaluations": 24,
+    "runner_syntax_verified": true,
+    "identity_replay_required": true,
+    "storage": "E:/virtualembryo-research-storage/cnf_partial_anchor_challenge_01 via Dprivatejunction",
+    "decision": "Unpromoted foursetting development ablation; futurefit forbidden.",
+    "process_id": 6548,
+    "worker_process_id": 3684,
+    "plan_sha256": "627c167967c3444c5ba3a6607af9b916a72cc26300c97574cd5812d405262aa8"
   }
 }

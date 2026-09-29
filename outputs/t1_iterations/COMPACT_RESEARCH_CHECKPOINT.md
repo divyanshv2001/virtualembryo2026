@@ -1,13 +1,13 @@
 # T1 compact research checkpoint
 
-Updated: 2026-09-29T16:31:32.594762+00:00
+Updated: 2026-09-29T16:34:43.540490+00:00
 
 Official best reported: **51.87**. Latest export: `T1_val__anchorslope_progress_20260929_01.h5ad`. Local>72 gate remains unmet.
 Official metrics: DE44.9, direction57.0, MMD53.5, variogram51.7. Latest screenshot shows S2WISH2 / Codex / AGENT, rank29 on that view; scoring-page rank131/270 is a different view.
 
-Next: Test mean-preserving latent population scale .75/1.25 with abundance/joint, four controls and three frozen panels; no promotion from dispersion +.022 development gain.
+Next: Partial positive/detection conditional anchor slopes .25/.75 crossed, same frozen flow/panel/calibration,24scores; testbalance rather than isotropic width.
 
-Active jobs: [{"run":"cnf_latent_population_scale_challenge_02","process_id":10536,"worker_process_id":21644}]
+Active jobs: [{"run":"cnf_partial_anchor_challenge_01","process_id":6548,"worker_process_id":3684}]
 
 ## Latest measured decisions
 
@@ -27,7 +27,7 @@ Latest: validated; 1903 payload bytes; actual usage {'input_tokens': 820, 'outpu
 
 ## Current experiment
 
-`cnf_latent_population_scale_challenge_02`: running; planned 24, completed 0.
+`cnf_partial_anchor_challenge_01`: running; planned 24, completed 0.
 
 ## Storage
 

@@ -1,5 +1,5 @@
 {
-  "records": 2708,
+  "records": 2732,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -205,6 +205,11 @@
       "path": "private/cnf_latent_dispersion_challenge_repair_01/report.json",
       "sha256": "1df3cf9cc5335e8eb17ef7d04c3f885d88cf41731a8ab4d32cbbde926870a181",
       "outcomes_indexed": 30
+    },
+    {
+      "path": "private/cnf_latent_population_scale_challenge_02/report.json",
+      "sha256": "1c0acd28c4930ce62b86807417db68930cce464480de9e8495bf08af119e2e57",
+      "outcomes_indexed": 24
     },
     {
       "path": "private/cnf_log1p_matched_mixture_01/report.json",
@@ -614,5 +619,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "5f72926b86b467333ed6f18ddbddff12cc43b1f4f592f7542d9451fd50d00646"
+  "ledger_sha256": "bfb3839a4a3971a262b4ad24d494553920050c6a64d0beb1f40801d1d017fb5d"
 }
