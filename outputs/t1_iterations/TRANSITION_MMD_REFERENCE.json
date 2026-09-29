@@ -1,0 +1,6 @@
+{
+  "primary_paper": "https://www.jmlr.org/papers/volume13/gretton12a/gretton12a.pdf",
+  "title": "A Kernel Two-Sample Test",
+  "read": "Abstract/introduction andSection2 definition/RKHS empirical biased and unbiased estimators. No claim to read full51-page proofs or reproduce statistical testing experiments.",
+  "adaptation": "Use biased empirical squared MMD as differentiable past-transition loss with five fixed RBF scales; actual evaluator remains unbiased full-panel truth-PCA metric. Own CNF fine-tuning application, not paper temporal-model reproduction. Training-bandwidth and snapshots past-only."
+}

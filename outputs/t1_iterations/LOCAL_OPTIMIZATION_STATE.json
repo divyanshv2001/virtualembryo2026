@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T08:49:29.167941+00:00",
+  "updated_utc": "2026-09-29T09:02:48.983528+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,14 +31,14 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_feature_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Finish same-cohort covariance alignment rolling checks; assess full paired metrics and limitations. Independent challenge-domain earlier-stage validation remains input-blocked.",
+  "next_experiment": "Finish past-transition MMD weights0/1/10 with matched continuation control; diagnose training convergence and all scored metrics before temporal assessment or new mechanism.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_alignment_temporal_01"
+    "cnf_transition_mmd_challenge_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_alignment_temporal_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_transition_mmd_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -150,7 +150,7 @@
     "status": "completed",
     "running": [],
     "report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-    "report_sha256": "2fa04d619a792cf0f34a727b44b26c305aa0e3b5d04fa0ad3d4e4deb26ec4803"
+    "report_sha256": "79a92d862be5e1b03ab418c117ab5a10b847e048cf7e105caaba65bf2191a6d5"
   },
   "continuation_automation": {
     "id": "continue-t1-local-research",
@@ -540,12 +540,25 @@
     "decision": "Covariance-aligned joint strengths.25/.5/1 means53.7995/53.7336/53.8095; all three panels improve over unaligned joint53.5953. Mean-only joint53.3096 regresses. Small gains far below72 and prior localunit16, no promotion. Next same-cohort earlier-fold alignment checks; independent challenge-domain temporal validation unavailable because data onlyE8.5/E9.5."
   },
   "cnf_alignment_temporal_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_alignment_temporal_01",
     "tests_passed": 101,
     "evaluations_planned": 22,
-    "pending_evaluations": 22,
+    "pending_evaluations": 0,
     "process_id": 12504,
-    "plan_sha256": "f59d78f756952af054bc044135891d7328d9b4fa45d65624f51adc4eb6fd2f50"
+    "plan_sha256": "f59d78f756952af054bc044135891d7328d9b4fa45d65624f51adc4eb6fd2f50",
+    "report_sha256": "732a1cbe1c7a5da393b58752126f42b96407850bd126510a1b9331cce8813089",
+    "results_report": "CNF_ALIGNMENT_TEMPORAL_RESULTS.json",
+    "evaluations": 22,
+    "decision": "Aligned joint still failsfirst rollingfold: strengths.25/1 scores49.1761/49.0897(first),51.6523/51.6853(second). Abundancealignment beats persistence but gains only+.024/+.044 mean. No temporal readiness or independent-domain confirmation; preserve22 outcomes. Next direct past-transition MMD fine-tuning with matched zero-loss continuation."
+  },
+  "cnf_transition_mmd_job": {
+    "status": "running",
+    "run": "cnf_transition_mmd_challenge_01",
+    "tests_passed": 103,
+    "evaluations_planned": 33,
+    "pending_evaluations": 33,
+    "process_id": 20032,
+    "plan_sha256": "0957c8b3f99e73e7501e8037cecee3962d6445fb245fd90600c1eac8396ec9f6"
   }
 }

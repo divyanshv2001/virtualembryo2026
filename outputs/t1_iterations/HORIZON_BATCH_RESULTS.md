@@ -290,6 +290,17 @@ A frozen-flow decoder ablation verifies every archived head array, then separate
 | cnf_recent_detection_temporal_01 | flow_joint_systematic_s1.0 | 49.175 | 51.625 | 50.400 |
 | cnf_recent_detection_temporal_01 | recent1_joint | 49.838 | 51.412 | 50.625 |
 | cnf_recent_detection_temporal_01 | recent2_joint | 48.962 | 51.612 | 50.287 |
+| cnf_alignment_temporal_01 | copy | 50.000 | 50.000 | 50.000 |
+| cnf_alignment_temporal_01 | unit16 | 47.143 | 47.987 | 47.565 |
+| cnf_alignment_temporal_01 | saved384_d0.0 | 49.200 | 51.366 | 50.283 |
+| cnf_alignment_temporal_01 | dimension_neutral_d8 | 52.929 | 50.495 | 51.712 |
+| cnf_alignment_temporal_01 | dimension_growth1_d8 | 52.766 | 50.476 | 51.621 |
+| cnf_alignment_temporal_01 | flow_abundance_s1.0 | 50.615 | 52.039 | 51.327 |
+| cnf_alignment_temporal_01 | flow_joint_systematic_s1.0 | 49.175 | 51.625 | 50.400 |
+| cnf_alignment_temporal_01 | align_a0.25_abundance | 50.621 | 52.080 | 51.350 |
+| cnf_alignment_temporal_01 | align_a0.25_joint | 49.176 | 51.652 | 50.414 |
+| cnf_alignment_temporal_01 | align_a1.0_abundance | 50.617 | 52.125 | 51.371 |
+| cnf_alignment_temporal_01 | align_a1.0_joint | 49.090 | 51.685 | 50.387 |
 
 Status: completed. Full four-metric vectors, raw metrics, model audits and provenance hashes are in HORIZON_BATCH_RESULTS.json.
 No new prospective export or official submission. The >72 objective remains unfinished.
