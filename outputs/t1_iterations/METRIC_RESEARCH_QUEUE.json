@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T09:59:30.247433+00:00",
+  "updated_utc": "2026-09-29T10:09:12.721989+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5174,7 +5174,7 @@
     {
       "id": "continuous_flow_cdr_detection",
       "run": "cnf_cdr_detection_challenge_01",
-      "status": "implemented_running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_cdr_detection_challenge.py",
         "cdr_detection_forecast.py"
@@ -5184,7 +5184,43 @@
       "limitations": "Own linear-ridge adaptation, not MAST inference. CDR can represent true biology and response-gene dependence. Fixed observed donor nuisance, past-only fit/normalization. Reused development; temporal checks needed for gains.",
       "research_family_exhausted": false,
       "tests_passed": 110,
-      "validation_report": "CNF_CDR_DETECTION_VALIDATION.json"
+      "validation_report": "CNF_CDR_DETECTION_VALIDATION.json",
+      "results_report": "CNF_CDR_DETECTION_RESULTS.json",
+      "decision": "Linear CDR nuisance joint means53.5612/53.5272 at penalties.1/1 below original53.5953; detection51.8719/51.7631. Preserve27outcomes. Next logistic CDR with matched non-CDR logistic controls before judging nuisance range."
+    },
+    {
+      "id": "continuous_flow_cdr_logistic",
+      "run": "cnf_cdr_logistic_challenge_01",
+      "status": "execution_failed_before_training",
+      "implementation": [
+        "cnf_cdr_logistic_challenge.py",
+        "cdr_logistic_forecast.py",
+        "cdr_detection_forecast.py",
+        "logistic_detection_head.py"
+      ],
+      "primary_reference": "CDR_DETECTION_REFERENCE.json",
+      "trial_scope": "CDR logistic ridge.1/1 x detection/joint, same80-update optimizer as matched non-CDR logistic controls. Fourforecasts/sevenarchives=33outcomes. Original positive heads and flow fixed.",
+      "limitations": "Own L2 logistic adaptation not MAST Bayesian inference; observed CDR fixed can remove biological variation, part-whole dependence remains. Past-only normalization, reused development and no independent embryos.",
+      "research_family_exhausted": false,
+      "failure_report": "CNF_CDR_LOGISTIC_FAILURE.json"
+    },
+    {
+      "id": "continuous_flow_cdr_logistic_repair",
+      "run": "cnf_cdr_logistic_repair_01",
+      "status": "implemented_running",
+      "implementation": [
+        "cnf_cdr_logistic_challenge.py",
+        "cdr_logistic_forecast.py",
+        "cdr_detection_forecast.py",
+        "logistic_detection_head.py"
+      ],
+      "primary_reference": "CDR_DETECTION_REFERENCE.json",
+      "trial_scope": "CDR logistic ridge.1/1 x detection/joint, same80-update optimizer as matched non-CDR logistic controls. Fourforecasts/sevenarchives=33outcomes. Original positive heads and flow fixed.",
+      "limitations": "Own L2 logistic adaptation not MAST Bayesian inference; observed CDR fixed can remove biological variation, part-whole dependence remains. Past-only normalization, reused development and no independent embryos.",
+      "research_family_exhausted": false,
+      "repair_of": "cnf_cdr_logistic_challenge_01",
+      "tests_passed": 112,
+      "validation_report": "CNF_CDR_LOGISTIC_VALIDATION.json"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

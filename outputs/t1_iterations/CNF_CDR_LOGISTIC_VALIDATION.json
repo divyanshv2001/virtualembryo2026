@@ -1,0 +1,11 @@
+{
+  "updated_utc": "2026-09-29T10:11:59.296438+00:00",
+  "tests_passed": 112,
+  "command": "pytest outputs/t1_iterations -q -p no:cacheprovider",
+  "checks": [
+    "CDR logistic coefficients match independent optimizer replay",
+    "Global abundance prediction and positive coefficients remain unchanged",
+    "Future expression invariance, mapped mass and protected genes verified"
+  ],
+  "limitations": "Tests establish implementation behavior, not forecast accuracy or leaderboard readiness."
+}
