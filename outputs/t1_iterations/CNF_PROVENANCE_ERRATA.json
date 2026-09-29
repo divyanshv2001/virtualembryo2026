@@ -1,0 +1,10 @@
+{
+  "scope": "Preserved frozen CNF and manifold plan metadata; original private plans are unchanged.",
+  "correction": "Inherited latent_velocity_cap:6 metadata is erroneous for the CNF adaptation. cnf_density_flow.py has no velocity norm cap; its source code and plan fit prose correctly describe this. Decoder abundance/covariance guards and scoring are unchanged.",
+  "affected_runs": [
+    "cnf_challenge_repair_01",
+    "cnf_manifold_challenge_01"
+  ],
+  "impact": "Metadata clarification only; no model, forecast, calibration, metric, or score change.",
+  "additional_scope": "Manifold fit metadata retains generic energy0/.1 description from first CNF experiment; actual manifold source and manifold_fit field use energy.1 fixed with density0/1/10."
+}

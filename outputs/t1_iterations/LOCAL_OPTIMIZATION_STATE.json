@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T06:22:19.401140+00:00",
+  "updated_utc": "2026-09-29T06:29:55.101093+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_manifold_challenge.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_cell_integration.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Fit frozen manifold density weights1/10 with energy.1; verify zero-density400-step replay, then score27 challenge outcomes on unchanged full-panel panels. Preserve numerical diagnostics and all four metrics; no promotion without original72/temporal/Monte Carlo gate.",
+  "next_experiment": "Score frozen whole-cell integration of DE-oriented flow and local state control at four predeclared weights. Preserve all27 full-panel outcomes and cell/donor provenance. Reused target selection remains development; no official or72 promotion.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_manifold_challenge_01"
+    "cnf_cell_integration_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_manifold_challenge_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_cell_integration_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -345,12 +345,26 @@
     "decision": "Best energy.1/strength1 mean51.3664; all three challenge panels>50. Mean direction49.668 remains below persistence; state control55.4202 still stronger and officially rejected after46.59 feedback. No72/Monte Carlo promotion. Step sensitivity~3.2e-7; next test past-manifold density regularization with fixed likelihood/energy training."
   },
   "cnf_manifold_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_manifold_challenge_01",
     "tests_passed": 88,
     "evaluations_planned": 27,
-    "pending_evaluations": 27,
+    "pending_evaluations": 0,
     "process_id": 15716,
-    "plan_sha256": "c541cef6763adfd7aca1d4571b29411072d03d37b0f9bdf3ce5a9187e22a10f2"
+    "plan_sha256": "c541cef6763adfd7aca1d4571b29411072d03d37b0f9bdf3ce5a9187e22a10f2",
+    "evaluations": 27,
+    "report_sha256": "504e1ba3c005037c6842009b57a9144b8abddd90c6dad7a3856a5ff1b195ce87",
+    "results_report": "CNF_MANIFOLD_RESULTS.json",
+    "decision": "Density10/strength1 raises CNF mean51.7282, scores51.7674/52.2818/51.1354, all mean skills>=50. Unit16 dominates this variant on every mean metric and remains stronger locally but officially rejected. Earlier energy.1/strength.5 retains slightly better DE recovery than state control and is the new integration constituent. No72 or Monte Carlo promotion."
+  },
+  "cnf_cell_integration_job": {
+    "status": "running",
+    "run": "cnf_cell_integration_01",
+    "prior_suite_tests_passed": 88,
+    "targeted_mixture_tests_passed": 1,
+    "evaluations_planned": 27,
+    "pending_evaluations": 27,
+    "process_id": 1796,
+    "plan_sha256": "dc6def24e8c3071522dd9c3611e2eefcf8881b2b5397f552920914fbbb6b395e"
   }
 }

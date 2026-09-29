@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T06:22:19.401140+00:00",
+  "updated_utc": "2026-09-29T06:29:55.101093+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -4816,7 +4816,7 @@
     },
     {
       "id": "continuous_flow_manifold_density",
-      "status": "running",
+      "status": "implemented_evaluated_not_promoted",
       "metrics": [
         "de_score",
         "de_direction",
@@ -4832,6 +4832,29 @@
       "hypothesis": "Discourage unsupported intermediate paths using five-neighbor hinge density relative to all permitted past cells. Check whether this improves direction and joint score with likelihood/energy fixed.",
       "trial_scope": "Density weights1/10 vs0, energy.1,400 updates, abundance strengths.5/1. Nine candidates\u00d7three unchanged panels=27 evaluations. Zero-density400-step replay must be bit-identical before scoring. Midpoint is half-quarter inverse transition; skip earliest stage with no earlier observed stage.",
       "limitations": "Own CPU adaptation differs from author random intermediate sampling/likelihood accumulation. References are cells, not independent embryos. No growth/velocity evidence, no extrapolation guarantee; source and target development already exposed.",
+      "research_family_exhausted": false,
+      "submissions_used": 0,
+      "jev_requests_used": 0,
+      "results_report": "CNF_MANIFOLD_RESULTS.json",
+      "decision": "Density10/strength1 raises CNF mean51.7282, scores51.7674/52.2818/51.1354, all mean skills>=50. Unit16 dominates this variant on every mean metric and remains stronger locally but officially rejected. Earlier energy.1/strength.5 retains slightly better DE recovery than state control and is the new integration constituent. No72 or Monte Carlo promotion."
+    },
+    {
+      "id": "continuous_flow_whole_cell_integration",
+      "status": "running",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "run": "cnf_cell_integration_01",
+      "implementation": [
+        "cnf_cell_integration.py",
+        "cell_mixture.py"
+      ],
+      "hypothesis": "Earlier flow energy.1/strength.5 slightly improves DE recovery while state control leads remaining metrics. Whole-cell mixtures may retain both distributions without averaging expression or best scores.",
+      "trial_scope": "DE-flow weights.1/.25/.5/.75, seed2026092812 fixed. Four actual mixtures plus five archive controls\u00d7three unchanged panels=27 outcomes. Preserve exact per-cell constituent/donor provenance.",
+      "limitations": "Constituent/weight selection uses reusedE9.5 development results; not new blind validation. Unit16 is rejected for official use; this local integration does not reverse that failure or authorize submission. Small DE difference may be sampling noise.",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0

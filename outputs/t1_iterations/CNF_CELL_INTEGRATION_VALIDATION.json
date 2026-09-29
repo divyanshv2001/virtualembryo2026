@@ -1,0 +1,7 @@
+{
+  "updated_utc": "2026-09-29T06:29:55.101093+00:00",
+  "prior_suite_tests_passed": 88,
+  "targeted_mixture_tests_passed": 1,
+  "scope": "Reuse tested complete-cell mixture mechanism. Runner additionally checks each mixed row bit-identical to its archived constituent and carries exact donor indices; no new expression transform.",
+  "command": "python -m pytest outputs/t1_iterations/test_cell_mixture.py -q -p no:cacheprovider --basetemp outputs/t1_iterations/private/test_temp_cell_integration_20260929_20"
+}
