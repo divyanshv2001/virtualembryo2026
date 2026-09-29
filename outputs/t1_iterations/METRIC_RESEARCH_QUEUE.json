@@ -5641,6 +5641,27 @@
       "research_family_exhausted": false,
       "results_report": "CNF_PARTIAL_ANCHOR_TEMPORAL_RESULTS.json",
       "decision": "Scores49.7503/51.2433 vsmatchedlog1p49.7003/51.1772: paired+.0500/+.0660, first below persistence50; second below archivedoriginalflowjoint51.625. Reused source, no challenge-domain temporal validation. No promotion. Dtempfiles closed/no full matrices persisted."
+    },
+    {
+      "id": "continuous_flow_full_anchor_conditional_calibration",
+      "run": "cnf_full_anchor_challenge_01",
+      "status": "implemented_evaluated_not_promoted",
+      "implementation": [
+        "full_anchor_slope_forecast.py",
+        "cnf_full_anchor_challenge.py"
+      ],
+      "metric_objective": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "hypothesis": "All 16,787 permitted E8.5 cells stabilize conditional positive/detection slopes compared with 1,500 evaluation donors.",
+      "trial_scope": "Three reused E9.5 development panels, unchanged 32,285-gene scorer, original floor/ceiling and seeds. Cross-sectional slope adaptation is not a temporal velocity estimate or independent validation.",
+      "limitations": "Reused development panels; cross-sectional associations not temporal velocities. Bounded trial does not exhaust family.",
+      "research_family_exhausted": false,
+      "results_report": "CNF_FULL_ANCHOR_RESULTS.json"
+      ,"decision": "Mean 55.1173 versus matched 54.9755 (+0.1418); DE overlap unchanged, direction gain offset by MMD/variogram declines. Below unit16 55.42; not promoted or family exhaustion."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

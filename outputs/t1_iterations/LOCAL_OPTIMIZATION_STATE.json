@@ -31,12 +31,12 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Current bounded partialanchor trialcomplete, not promoted. Diagnose remaining DE/MMD transfer mismatch before next frozen mechanism; preserve matched floor and noE cache. Earlier challenge-domain folds unavailable.",
+  "next_experiment": "Full E8.5 anchor calibration completed at 55.1173 mean versus matched 54.9755; DE unchanged, MMD/variogram lower, below unit16 55.42. Next: freeze a past-only gene-rank mechanism targeting DE overlap, with unchanged scorer and matched controls; no promotion from reused E9.5 panels.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [],
-  "active_run_path": "private/cnf_partial_anchor_temporal_01",
+  "active_run_path": "private/cnf_full_anchor_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -1075,5 +1075,17 @@
       "RAM_policy_verified": "D-only tempfile, one matrix loaded/scored at a time; no retained full forecast matrices; cache0 at completion",
       "report": "CNF_PARTIAL_ANCHOR_TEMPORAL_RESULTS.json"
     }
+  },
+  "cnf_full_anchor_job": {
+    "status": "completed_not_promoted",
+    "run": "cnf_full_anchor_challenge_01",
+    "evaluations_planned": 12,
+    "evaluations": 12,
+    "pending_evaluations": 0,
+    "storage": "D-only temporary forecast cache; no retained full matrices",
+    "plan_sha256": "bc1d723f792ef87b0a77fd3719bd0db95df3ca6fc9f0547879cf2b443d2c50b2",
+    "report_sha256": "42a37b53f162aed10a901e627da662d81c6185df44e863df8563720a28467560",
+    "results_report": "CNF_FULL_ANCHOR_RESULTS.json"
+    ,"decision": "Not promoted: p0.25/d0.75 mean 55.1173 versus matched log1p 54.9755 (+0.1418); DE skill 0.52385 unchanged, direction 0.59151 versus 0.57765, MMD 0.55489 versus 0.56006, variogram 0.52933 versus 0.53181. Still below archived unit16 55.42 and far below >72 gate. Reused E9.5 development only."
   }
 }

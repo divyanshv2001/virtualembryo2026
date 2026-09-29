@@ -117,3 +117,11 @@ Completed D-only temporary-cache partialanchor temporal batch:8/8scores, all4raw
 ## 2026-09-29T17:24:00+00:00
 
 Started full-E8.5 anchor-slope trial (`cnf_full_anchor_challenge_01`). It tests whether fitting conditional positive/detection slopes on all 16,787 permitted E8.5 cells improves the unchanged 1,500-donor forecast, against matched copy and archived 1,500-anchor log1p control on three previously exposed E9.5 panels. Two predeclared calibration strengths; 12 full-panel scores planned. Frozen encoder/flow/source heads, no future-expression fitting. Full forecasts use D-only temporary handles, one loaded for scoring at a time; no retained full prediction matrices. New model and cache tests passed (three tests); initial pytest attempt failed because the default C: temp directory denied access, then passed using a D: test directory. This trial cannot alone satisfy independent temporal or 64-replicate >72 readiness gates. Worker started; results pending.
+
+## 2026-09-29T17:26:48.757382+00:00
+
+Full E8.5 anchor slope trial complete on three reused development panels; all raw metrics/skills indexed. Review paired gains before promotion; >72 and temporal gates remain unmet.
+
+## 2026-09-29T17:28:26.091106+00:00
+
+Full E8.5 anchor calibration:12/12 valid local scores, best p.25/d.75 mean55.1173 vs matched log1p54.9755 and previous unit16 55.42. DE skill unchanged .52385; direction .59151 vs .57765, MMD .55489 vs .56006, variogram .52933 vs .53181. Not promoted. Full forecasts closed from D-only cache; no official submission. Next target is DE gene-ranking mechanism using past-only temporal information, frozen matched controls and unchanged scorer.

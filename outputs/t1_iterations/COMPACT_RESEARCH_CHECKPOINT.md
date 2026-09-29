@@ -1,11 +1,11 @@
 # T1 compact research checkpoint
 
-Updated: 2026-09-29T17:13:04.782561+00:00
+Updated: 2026-09-29T17:28:26.091106+00:00
 
 Official best reported: **51.87**. Latest export: `T1_val__anchorslope_progress_20260929_01.h5ad`. Local>72 gate remains unmet.
 Official metrics: DE44.9, direction57.0, MMD53.5, variogram51.7. Latest screenshot shows S2WISH2 / Codex / AGENT, rank29 on that view; scoring-page rank131/270 is a different view.
 
-Next: Current bounded partialanchor trialcomplete, not promoted. Diagnose remaining DE/MMD transfer mismatch before next frozen mechanism; preserve matched floor and noE cache. Earlier challenge-domain folds unavailable.
+Next: Full E8.5 anchor calibration completed at 55.1173 mean versus matched 54.9755; DE unchanged, MMD/variogram lower, below unit16 55.42. Next: freeze a past-only gene-rank mechanism targeting DE overlap, with unchanged scorer and matched controls; no promotion from reused E9.5 panels.
 
 Active jobs: []
 
@@ -27,9 +27,9 @@ Latest: validated; 1903 payload bytes; actual usage {'input_tokens': 820, 'outpu
 
 ## Current experiment
 
-`cnf_partial_anchor_temporal_01`: completed_not_promoted; planned 8, completed 8.
-copy=50.0; flow_joint_systematic_s1.0=50.400085552890886; log1p_joint_a0.5=50.43876048483774; partial_anchor_p0.25_d0.75=50.496790643073346
-Full metrics: [CNF_PARTIAL_ANCHOR_TEMPORAL_RESULTS.json](CNF_PARTIAL_ANCHOR_TEMPORAL_RESULTS.json).
+`cnf_full_anchor_challenge_01`: completed_not_promoted; planned 12, completed 12.
+copy=50.0; log1p_joint_a0.5=54.97552441396573; full_anchor_p0.25_d0.75=55.11730206916419; full_anchor_p0.5_d0.5=54.875207079766
+Full metrics: [CNF_FULL_ANCHOR_RESULTS.json](CNF_FULL_ANCHOR_RESULTS.json).
 
 ## Storage
 

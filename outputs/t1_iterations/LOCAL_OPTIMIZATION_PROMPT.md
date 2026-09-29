@@ -2,7 +2,7 @@
 
 ## Compact continuation context — user update 2026-09-29
 
-Storage checkpoint 2026-09-29: D drive prediction save failed with24.6MBfree; original interrupted run and truncated array are retained. E:/virtualembryo-research-storage has substantial available capacity. Provision new bulky private runs onE using an empty verified localjunction under outputs/t1_iterations/private; preserve the logical path for indexing and source references. Never overwrite or delete original predictions to free space. Check actual drive availability before additional arrays; retain precise failure/null outcomes and a new repair-run plan. Small public code/Markdown/results remain in the Git workspace. No datasets are committed or sent externally.
+Storage checkpoint 2026-09-29: historical D-drive prediction saves once failed with 24.6 MB free. The user later specified **D-only** new-run storage and a 16 GB RAM limit. The current policy is the "New-run cache and retention policy" below: generate full-panel forecasts in short-lived D: temporary files, score one at a time, and retain only compact evidence. Do not create new E: runs or caches. Preserve historical arrays/events and user-managed deletions as recorded. Check D: free space before starting. No datasets are committed or sent externally.
 
 Read COMPACT_RESEARCH_CHECKPOINT.md first. Write every meaningful progress update, experiment decision, failure and next action to RESEARCH_UPDATES.md; refresh the compact checkpoint after each batch. Read referenced full reports only when needed, and retain every original raw metric, skill, calibration and provenance in source reports/ledgers. Do not replace evidence with summaries or claim unmeasured token savings.
 
@@ -88,7 +88,7 @@ Record `objective_status`, `threshold`, `candidate`, `mean_score`, `lower_tail_s
 
 ## Archived prediction storage
 
-Byte-identical archived predictions may share hardlinks after full SHA256 verification. Every logical path and unique evidence value remains available. These archives are immutable: never overwrite an existing prediction path in place, because hardlinks share bytes. New experiments use fresh verified directories on E via local junctions. Preserve the cleanup audit and full original reports; cache deletion blocked by tool policy was not performed.
+Byte-identical archived predictions may share hardlinks after full SHA256 verification. Archived hardlinks are immutable: never overwrite an existing prediction path in place, because hardlinks share bytes. New experiments use D-only temporary caches and compact retained outputs. Preserve the cleanup audit, surviving original reports and events, and precise records of the user's manual deletions. Automatic approval review blocked direct removal of historical files; do not use an alternate mechanism to bypass that decision.
 
 ## New-run cache and retention policy (user correction, 2026-09-29)
 
