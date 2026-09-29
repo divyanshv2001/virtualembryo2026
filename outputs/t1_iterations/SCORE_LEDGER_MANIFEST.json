@@ -1,5 +1,5 @@
 {
-  "records": 1428,
+  "records": 1450,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -65,6 +65,16 @@
       "path": "private/challenge_identity_01/report.json",
       "sha256": "8dcc87f084eb86cff5433c2a131a8d0819b6e9954ce67a026636cac5facaad39",
       "outcomes_indexed": 27
+    },
+    {
+      "path": "private/cnf_challenge_01/report.json",
+      "sha256": "9576930038aa74fd31f8cca039cd8b8a801097dbd3a89c0f13da0bbd6be111f9",
+      "outcomes_indexed": 1
+    },
+    {
+      "path": "private/cnf_challenge_repair_01/report.json",
+      "sha256": "e7f18b94f9584c3112fcaa2a19a5bb37bb74b202d6ec2f722cc7b0cadf04e9e5",
+      "outcomes_indexed": 21
     },
     {
       "path": "private/conditioned_oneday_temporal_01/report.json",
@@ -364,5 +374,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "af9d4dabae30cfd745fa3d172dfe1d578494774e9f51d8bd7f7e7df8edc1c51b"
+  "ledger_sha256": "a92c364ff15455bee5f99ac3979580aa90fe874ae39dedbf390bb8d8c717c137"
 }

@@ -1,0 +1,6 @@
+{
+  "author_code": "https://github.com/KrishnaswamyLab/TrajectoryNet/blob/810c89b081f95405bc0ad42bfb3cb41038e13700/TrajectoryNet/main.py",
+  "read": "compute_loss density regularization: five nearest full past-data neighbors, Euclidean distance hinge.1, intermediate flow samples.",
+  "implementation": "Own fixed half-quarter inverse midpoint for sampled stages after the earliest; references all13963 permitted past PCA coordinates. No penalty below earliest observed stage. Energy.1 fixed; density weights0/1/10. Sampled stage and RK4 differ from author implementation; not a full reproduction.",
+  "controls": "Zero-density400-step learner must replay previous energy.1 model bit-identically; same seeds, features, decoder and three scored panels."
+}

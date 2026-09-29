@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T06:13:02.712579+00:00",
+  "updated_utc": "2026-09-29T06:22:19.401140+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -4790,7 +4790,7 @@
     },
     {
       "id": "continuous_density_flow",
-      "status": "running",
+      "status": "implemented_evaluated_not_promoted",
       "metrics": [
         "de_score",
         "de_direction",
@@ -4810,7 +4810,31 @@
       "submissions_used": 0,
       "jev_requests_used": 0,
       "failed_run": "cnf_challenge_01",
-      "repair": "Replace accidental tuple dictionary keys with string keys before training. Failed runner and diagnostic retained; no scores generated."
+      "repair": "Replace accidental tuple dictionary keys with string keys before training. Failed runner and diagnostic retained; no scores generated.",
+      "results_report": "CNF_CHALLENGE_RESULTS.json",
+      "decision": "Best energy.1/strength1 mean51.3664; all three challenge panels>50. Mean direction49.668 remains below persistence; state control55.4202 still stronger and officially rejected after46.59 feedback. No72/Monte Carlo promotion. Step sensitivity~3.2e-7; next test past-manifold density regularization with fixed likelihood/energy training."
+    },
+    {
+      "id": "continuous_flow_manifold_density",
+      "status": "running",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "run": "cnf_manifold_challenge_01",
+      "implementation": [
+        "cnf_manifold_flow.py",
+        "cnf_manifold_challenge.py"
+      ],
+      "primary_reference": "CNF_MANIFOLD_REFERENCE.json",
+      "hypothesis": "Discourage unsupported intermediate paths using five-neighbor hinge density relative to all permitted past cells. Check whether this improves direction and joint score with likelihood/energy fixed.",
+      "trial_scope": "Density weights1/10 vs0, energy.1,400 updates, abundance strengths.5/1. Nine candidates\u00d7three unchanged panels=27 evaluations. Zero-density400-step replay must be bit-identical before scoring. Midpoint is half-quarter inverse transition; skip earliest stage with no earlier observed stage.",
+      "limitations": "Own CPU adaptation differs from author random intermediate sampling/likelihood accumulation. References are cells, not independent embryos. No growth/velocity evidence, no extrapolation guarantee; source and target development already exposed.",
+      "research_family_exhausted": false,
+      "submissions_used": 0,
+      "jev_requests_used": 0
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

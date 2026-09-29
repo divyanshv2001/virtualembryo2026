@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T06:13:02.712579+00:00",
+  "updated_utc": "2026-09-29T06:22:19.401140+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_challenge_backtest.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_manifold_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Train frozen density-likelihood continuous-flow energy0/.1 models, checkpoint every50 of400 updates, then evaluate all21 challenge outcomes with fixed panels and unchanged scorer. Diagnose numerical step sensitivity and all four metrics before any promotion.",
+  "next_experiment": "Fit frozen manifold density weights1/10 with energy.1; verify zero-density400-step replay, then score27 challenge outcomes on unchanged full-panel panels. Preserve numerical diagnostics and all four metrics; no promotion without original72/temporal/Monte Carlo gate.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_challenge_repair_01"
+    "cnf_manifold_challenge_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_challenge_repair_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_manifold_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -331,13 +331,26 @@
     "decision": "Six decoder-window variants remain below persistence; best16D/three-stage mean49.3056, worse8D/current-stage46.8030. All33 outcomes retained. Global encoder/drift/heads replayed bit-identically; decoder window does not repair challenge transfer. Next broad branch is density-likelihood nonlinear continuous flow, not another affine window."
   },
   "cnf_challenge_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_challenge_repair_01",
     "tests_passed": 86,
     "evaluations_planned": 21,
-    "pending_evaluations": 21,
+    "pending_evaluations": 0,
     "failed_run": "cnf_challenge_01",
     "process_id": 6808,
-    "plan_sha256": "6b6991cb4f460bb3244028ba33cce098f726667822027c1649b5a32f5ccdf9fc"
+    "plan_sha256": "6b6991cb4f460bb3244028ba33cce098f726667822027c1649b5a32f5ccdf9fc",
+    "evaluations": 21,
+    "report_sha256": "e7f18b94f9584c3112fcaa2a19a5bb37bb74b202d6ec2f722cc7b0cadf04e9e5",
+    "results_report": "CNF_CHALLENGE_RESULTS.json",
+    "decision": "Best energy.1/strength1 mean51.3664; all three challenge panels>50. Mean direction49.668 remains below persistence; state control55.4202 still stronger and officially rejected after46.59 feedback. No72/Monte Carlo promotion. Step sensitivity~3.2e-7; next test past-manifold density regularization with fixed likelihood/energy training."
+  },
+  "cnf_manifold_job": {
+    "status": "running",
+    "run": "cnf_manifold_challenge_01",
+    "tests_passed": 88,
+    "evaluations_planned": 27,
+    "pending_evaluations": 27,
+    "process_id": 15716,
+    "plan_sha256": "c541cef6763adfd7aca1d4571b29411072d03d37b0f9bdf3ce5a9187e22a10f2"
   }
 }

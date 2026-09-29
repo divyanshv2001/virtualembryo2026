@@ -1,0 +1,6 @@
+{
+  "updated_utc": "2026-09-29T06:22:19.401140+00:00",
+  "tests_passed": 88,
+  "scope": "Full suite: analytic midpoint flow, five-neighbor hinge/gradient, exact zero-penalty training equivalence and finite positive-penalty gradients at reference cells. Initial missing numpy import fixed before any batch training.",
+  "command": "python -m pytest outputs/t1_iterations -q -p no:cacheprovider --basetemp outputs/t1_iterations/private/test_temp_manifold_full_20260929_19"
+}
