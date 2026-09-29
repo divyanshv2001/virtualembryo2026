@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T13:05:11.932288+00:00",
+  "updated_utc": "2026-09-29T13:17:13.833498+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_anchor_head_challenge.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_anchor_slope_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Past E8.5anchor positive/detection intercept calibration .5/1,separate/both, originalsourceheadslope/fieldfrozen;39scores.",
+  "next_experiment": "Anchor conditional slopes positive/detection/both .5/1, source levels held at anchor centroids;48 scores.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_anchor_head_challenge_01"
+    "cnf_anchor_slope_challenge_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_anchor_head_challenge_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_anchor_slope_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -822,14 +822,29 @@
     "results_report": "CNF_OBSERVED_BASE_RESULTS.json"
   },
   "cnf_anchor_head_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_anchor_head_challenge_01",
     "evaluations_planned": 39,
-    "pending_evaluations": 39,
-    "decision": "Testsource-to-anchor decoderlevel mismatch; notverifiedtechnicalbatch correction, no72promotion.",
+    "pending_evaluations": 0,
+    "decision": "Anchor intercept six means53.10-53.58 below original53.5953; preserve39 outcomes, no promotion. Next conditional anchor slopes with source levels held at anchor centroids, ridge1 and1500 past anchors; previous intercept controls retained.",
     "tests_passed": 126,
     "process_id": 16544,
     "worker_process_id": 6280,
-    "plan_sha256": "e7c12e4253f087ff5e08d23bd9c6a045039b1f149c48b197b3b7cfd60cd4ba83"
+    "plan_sha256": "e7c12e4253f087ff5e08d23bd9c6a045039b1f149c48b197b3b7cfd60cd4ba83",
+    "evaluations": 39,
+    "report_sha256": "8481a450c13474afc3ee1f065f3c45652189a0adaf0c7b0bec9e05a6da454e27",
+    "results_report": "CNF_ANCHOR_HEAD_RESULTS.json"
+  },
+  "cnf_anchor_slope_job": {
+    "status": "running",
+    "run": "cnf_anchor_slope_challenge_01",
+    "evaluations_planned": 48,
+    "pending_evaluations": 48,
+    "decision": "Conditional domain association test, not measured temporal velocity; no promotion.",
+    "tests_passed": 127,
+    "extra_centering_test_passed": true,
+    "process_id": 5964,
+    "worker_process_id": 23044,
+    "plan_sha256": "7277bc0d249d99d110d3ee78b79cbd40f8bb5c4b11c39e813693e1b50dc90afe"
   }
 }

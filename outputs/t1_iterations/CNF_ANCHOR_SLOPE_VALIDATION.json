@@ -1,0 +1,14 @@
+{
+  "updated_utc": "2026-09-29T13:17:13.833498+00:00",
+  "tests_passed": 127,
+  "command": "pytest outputs/t1_iterations -q -p no:cacheprovider --basetemp outputs/t1_iterations/private/pytest_tmp_58",
+  "additional_command": "pytest outputs/t1_iterations/test_anchor_slope_calibration.py -q -p no:cacheprovider --basetemp outputs/t1_iterations/private/pytest_anchor_slope_tmp_59",
+  "additional_tests_passed": 1,
+  "checks": [
+    "Zero correction reproduces the baseline forecast exactly",
+    "Future expression cannot alter anchor slopes; protected genes and mapped mass preserved",
+    "Direct centering checks hold detection at anchor mean and each positive gene at its conditional anchor centroid",
+    "Finite conditional slopes; original source coefficients remain unchanged"
+  ],
+  "limitations": "Only1500 past anchors; cross-sectional association is not temporal velocity or independent validation."
+}

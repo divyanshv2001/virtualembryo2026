@@ -5438,7 +5438,7 @@
     {
       "id": "continuous_flow_anchor_head_calibration",
       "run": "cnf_anchor_head_challenge_01",
-      "status": "implemented_running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_anchor_head_challenge.py",
         "anchor_head_calibration.py"
@@ -5448,7 +5448,24 @@
       "limitations": "Anchorfit uses sampled1500pastcells, notfullchallengeatlas. Biological/tissue differences cannotbeclassifiedastechnicalbatch effects. SameexposedE9.5development, noindependentembryos or targetlearning; alloriginalreadinessrequirements remain.",
       "research_family_exhausted": false,
       "tests_passed": 126,
-      "validation_report": "CNF_ANCHOR_HEAD_VALIDATION.json"
+      "validation_report": "CNF_ANCHOR_HEAD_VALIDATION.json",
+      "results_report": "CNF_ANCHOR_HEAD_RESULTS.json",
+      "decision": "Anchor intercept six means53.10-53.58 below original53.5953; preserve39 outcomes, no promotion. Next conditional anchor slopes with source levels held at anchor centroids, ridge1 and1500 past anchors; previous intercept controls retained."
+    },
+    {
+      "id": "continuous_flow_anchor_conditional_slopes",
+      "run": "cnf_anchor_slope_challenge_01",
+      "status": "implemented_running",
+      "implementation": [
+        "cnf_anchor_slope_challenge.py",
+        "anchor_slope_calibration.py"
+      ],
+      "primary_reference": "ANCHOR_SLOPE_CALIBRATION_REFERENCE.json",
+      "trial_scope": "Ridge1 population scaling, support20; positive/detection/both x.5/1 slopes centered at anchor centroids. Six forecasts/ten controls x3 panels=48 scores. Zero-correction exact replay required.",
+      "limitations": "1500 observed E8.5 anchors, not full challenge/atlas fitting. Cross-sectional associations may not predict temporal response. Reused development, no independent embryos; readiness gate unchanged.",
+      "research_family_exhausted": false,
+      "tests_passed": 127,
+      "validation_report": "CNF_ANCHOR_SLOPE_VALIDATION.json"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."
