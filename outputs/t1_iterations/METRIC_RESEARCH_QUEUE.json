@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T11:39:21.097644+00:00",
+  "updated_utc": "2026-09-29T13:22:54.023755+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5455,7 +5455,7 @@
     {
       "id": "continuous_flow_anchor_conditional_slopes",
       "run": "cnf_anchor_slope_challenge_01",
-      "status": "implemented_running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_anchor_slope_challenge.py",
         "anchor_slope_calibration.py"
@@ -5465,7 +5465,22 @@
       "limitations": "1500 observed E8.5 anchors, not full challenge/atlas fitting. Cross-sectional associations may not predict temporal response. Reused development, no independent embryos; readiness gate unchanged.",
       "research_family_exhausted": false,
       "tests_passed": 127,
-      "validation_report": "CNF_ANCHOR_SLOPE_VALIDATION.json"
+      "validation_report": "CNF_ANCHOR_SLOPE_VALIDATION.json",
+      "results_report": "CNF_ANCHOR_SLOPE_RESULTS.json",
+      "decision": "Slope challenge positive/detection/both .5/1 means53.7922/53.1700/54.8529/54.8572/54.9083/54.2891. Best both.5 improves original joint by1.3130 across all3 panels, but below local unit16 control55.4202 and72. Run allsix frozen variants on earlier source folds; no promotion."
+    },
+    {
+      "id": "continuous_flow_anchor_slopes_temporal",
+      "run": "cnf_anchor_slope_temporal_01",
+      "status": "prepared",
+      "implementation": [
+        "cnf_anchor_slope_temporal.py",
+        "anchor_slope_calibration.py"
+      ],
+      "primary_reference": "ANCHOR_SLOPE_CALIBRATION_REFERENCE.json",
+      "trial_scope": "Allsix declared slope variants plus seven unchanged controls,26 scores on reused source folds8to9/8.25to9.25. Zero replay, unchanged calibration, forecasts frozen before target read.",
+      "limitations": "No independent embryo or earlier challenge-domain validation; sampled source cohort and1500 anchors only.",
+      "research_family_exhausted": false
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

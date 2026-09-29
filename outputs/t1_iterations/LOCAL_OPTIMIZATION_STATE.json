@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T13:17:13.833498+00:00",
+  "updated_utc": "2026-09-29T13:24:01.445892+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,20 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_anchor_slope_challenge.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_anchor_slope_temporal.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Anchor conditional slopes positive/detection/both .5/1, source levels held at anchor centroids;48 scores.",
+  "next_experiment": "Execute cnf_anchor_slope_temporal.py: six fixed slope variants plus seven matched controls on two past-only folds,26 scores.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_anchor_slope_challenge_01"
+    {
+      "script": "cnf_anchor_slope_temporal.py",
+      "process_id": 2248,
+      "worker_process_id": 23380
+    }
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_anchor_slope_challenge_01",
+  "active_run_path": "outputs\\t1_iterations\\private\\cnf_anchor_slope_temporal_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -836,15 +840,30 @@
     "results_report": "CNF_ANCHOR_HEAD_RESULTS.json"
   },
   "cnf_anchor_slope_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_anchor_slope_challenge_01",
     "evaluations_planned": 48,
-    "pending_evaluations": 48,
-    "decision": "Conditional domain association test, not measured temporal velocity; no promotion.",
+    "pending_evaluations": 0,
+    "decision": "Slope challenge positive/detection/both .5/1 means53.7922/53.1700/54.8529/54.8572/54.9083/54.2891. Best both.5 improves original joint by1.3130 across all3 panels, but below local unit16 control55.4202 and72. Run allsix frozen variants on earlier source folds; no promotion.",
     "tests_passed": 127,
     "extra_centering_test_passed": true,
     "process_id": 5964,
     "worker_process_id": 23044,
-    "plan_sha256": "7277bc0d249d99d110d3ee78b79cbd40f8bb5c4b11c39e813693e1b50dc90afe"
+    "plan_sha256": "7277bc0d249d99d110d3ee78b79cbd40f8bb5c4b11c39e813693e1b50dc90afe",
+    "evaluations": 48,
+    "report_sha256": "23019702b3ca10fae57df180c791de02663a185f457f47839ab773448c4d2445",
+    "results_report": "CNF_ANCHOR_SLOPE_RESULTS.json"
+  },
+  "cnf_anchor_slope_temporal_job": {
+    "status": "running",
+    "run": "cnf_anchor_slope_temporal_01",
+    "evaluations_planned": 26,
+    "pending_evaluations": 26,
+    "decision": "Consistency diagnostic only; no official export.",
+    "process_id": 2248,
+    "worker_process_id": 23380,
+    "model_test_passed": true,
+    "runner_syntax_verified": true,
+    "plan_sha256": "184f396ea040d6b1a76004639c2bb2b981d1b3e43a222b0bea416ecb41d96f12"
   }
 }
