@@ -1,0 +1,433 @@
+{
+  "updated_utc": "2026-09-29T07:53:15.590248+00:00",
+  "status": "completed_not_promoted",
+  "evaluations": 22,
+  "plan_sha256": "8141b0dc9d9ee24b2bb0556aca9c555cc2698741a060c16db7513dd03cc0a471",
+  "report_sha256": "f1b70a38d507318760cf03610dcec394aee490d1e0e9cdd27fd74b9cb56e3aba",
+  "summaries": [
+    {
+      "candidate": "copy",
+      "scores": [
+        50.0,
+        50.0
+      ],
+      "mean_score": 50.0,
+      "raw_metrics": [
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.26304274797439575,
+          "variogram": 0.009573637507855892
+        },
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.2375742495059967,
+          "variogram": 0.008673261851072311
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        }
+      ],
+      "all_calibrations_valid": true,
+      "beats_persistence_on_every_fold": false
+    },
+    {
+      "candidate": "unit16",
+      "scores": [
+        47.142658332960416,
+        47.98714389154627
+      ],
+      "mean_score": 47.56490111225334,
+      "raw_metrics": [
+        {
+          "de_score": -0.2392108508014796,
+          "de_direction": -0.1276339315604888,
+          "mmd_u": 0.2767234444618225,
+          "variogram": 0.009945238940417767
+        },
+        {
+          "de_score": -0.3287904599659284,
+          "de_direction": -0.07611305688343999,
+          "mmd_u": 0.2259478121995926,
+          "variogram": 0.008606153540313244
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.4433411214953271,
+          "de_direction": 0.46573119386378403,
+          "mmd_u": 0.48695238491166565,
+          "variogram": 0.4903639450816336
+        },
+        {
+          "de_score": 0.4239558707643814,
+          "de_direction": 0.4787328678973971,
+          "mmd_u": 0.5126845405062341,
+          "variogram": 0.5019694604907392
+        }
+      ],
+      "all_calibrations_valid": true,
+      "beats_persistence_on_every_fold": false
+    },
+    {
+      "candidate": "saved384_d0.0",
+      "scores": [
+        49.200036578447445,
+        51.36612769509718
+      ],
+      "mean_score": 50.28308213677231,
+      "raw_metrics": [
+        {
+          "de_score": -0.11220715166461158,
+          "de_direction": 0.0012039346574039623,
+          "mmd_u": 0.2659091651439667,
+          "variogram": 0.009607630781829357
+        },
+        {
+          "de_score": -0.005110732538330506,
+          "de_direction": 0.09910054820824371,
+          "mmd_u": 0.22197532653808594,
+          "variogram": 0.008473003283143044
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.47172156619018024,
+          "de_direction": 0.500347273748285,
+          "mmd_u": 0.4972086486689718,
+          "variogram": 0.4991028059958329
+        },
+        {
+          "de_score": 0.49860982391102876,
+          "de_direction": 0.5306957452121235,
+          "mmd_u": 0.5171673628650272,
+          "variogram": 0.5059233790533778
+        }
+      ],
+      "all_calibrations_valid": true,
+      "beats_persistence_on_every_fold": false
+    },
+    {
+      "candidate": "dimension_neutral_d8",
+      "scores": [
+        52.929213820600275,
+        50.49530920633336
+      ],
+      "mean_score": 51.712261513466814,
+      "raw_metrics": [
+        {
+          "de_score": 0.1183723797780518,
+          "de_direction": 0.22562848019727663,
+          "mmd_u": 0.25778618454933167,
+          "variogram": 0.009460379369556904
+        },
+        {
+          "de_score": -0.131175468483816,
+          "de_direction": 0.1498642806416642,
+          "mmd_u": 0.23376354575157166,
+          "variogram": 0.008657390251755714
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5337552742616034,
+          "de_direction": 0.5747617140025154,
+          "mmd_u": 0.50520118983104,
+          "variogram": 0.5030126709533049
+        },
+        {
+          "de_score": 0.46660884648742407,
+          "de_direction": 0.5479266503235288,
+          "mmd_u": 0.5040877961937433,
+          "variogram": 0.500464395012362
+        }
+      ],
+      "all_calibrations_valid": true,
+      "beats_persistence_on_every_fold": true
+    },
+    {
+      "candidate": "dimension_growth1_d8",
+      "scores": [
+        52.76573302598844,
+        50.47598424868731
+      ],
+      "mean_score": 51.620858637337875,
+      "raw_metrics": [
+        {
+          "de_score": 0.11097410604192354,
+          "de_direction": 0.2119895482832681,
+          "mmd_u": 0.2571278512477875,
+          "variogram": 0.009457528591156006
+        },
+        {
+          "de_score": -0.1345826235093697,
+          "de_direction": 0.14900018976757495,
+          "mmd_u": 0.2333872765302658,
+          "variogram": 0.008663840591907501
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5315126050420168,
+          "de_direction": 0.5696132724277807,
+          "mmd_u": 0.505860222808331,
+          "variogram": 0.5030889702496784
+        },
+        {
+          "de_score": 0.4658008658008658,
+          "de_direction": 0.5476239932524264,
+          "mmd_u": 0.504495054218343,
+          "variogram": 0.5002755572902357
+        }
+      ],
+      "all_calibrations_valid": true,
+      "beats_persistence_on_every_fold": true
+    },
+    {
+      "candidate": "flow_abundance_s0.5",
+      "scores": [
+        50.40763713644161,
+        51.53684027066452
+      ],
+      "mean_score": 50.97223870355306,
+      "raw_metrics": [
+        {
+          "de_score": -0.0813810110974106,
+          "de_direction": 0.09601867128156472,
+          "mmd_u": 0.25631943345069885,
+          "variogram": 0.00958151277154684
+        },
+        {
+          "de_score": 0.018739352640545187,
+          "de_direction": 0.10805525798403415,
+          "mmd_u": 0.2225635051727295,
+          "variogram": 0.00855205487459898
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.47916666666666663,
+          "de_direction": 0.5292991048281096,
+          "mmd_u": 0.5066718556363363,
+          "variogram": 0.4997918589991053
+        },
+        {
+          "de_score": 0.5051643192488262,
+          "de_direction": 0.5336561092545916,
+          "mmd_u": 0.5164986842511244,
+          "variogram": 0.5035684515272668
+        }
+      ],
+      "all_calibrations_valid": true,
+      "beats_persistence_on_every_fold": true
+    },
+    {
+      "candidate": "flow_abundance_s1.0",
+      "scores": [
+        50.614632344474316,
+        52.03915837144745
+      ],
+      "mean_score": 51.32689535796088,
+      "raw_metrics": [
+        {
+          "de_score": -0.07768187422934646,
+          "de_direction": 0.09535473804153466,
+          "mmd_u": 0.24995426833629608,
+          "variogram": 0.00959070585668087
+        },
+        {
+          "de_score": 0.005110732538330506,
+          "de_direction": 0.11766844224238932,
+          "mmd_u": 0.20986799895763397,
+          "variogram": 0.008432743139564991
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.4800759013282732,
+          "de_direction": 0.5290847277766468,
+          "mmd_u": 0.5131544822577047,
+          "variogram": 0.4995491074560088
+        },
+        {
+          "de_score": 0.5013979496738117,
+          "de_direction": 0.5368711414506951,
+          "mmd_u": 0.5313269003098565,
+          "variogram": 0.5071312042019541
+        }
+      ],
+      "all_calibrations_valid": true,
+      "beats_persistence_on_every_fold": true
+    },
+    {
+      "candidate": "flow_joint_independent_s0.5",
+      "scores": [
+        49.114148403077834,
+        50.97237402189365
+      ],
+      "mean_score": 50.043261212485746,
+      "raw_metrics": [
+        {
+          "de_score": -0.1541307028360049,
+          "de_direction": -0.00476580175126071,
+          "mmd_u": 0.2579483091831207,
+          "variogram": 0.00967205036431551
+        },
+        {
+          "de_score": -0.10562180579216349,
+          "de_direction": 0.11688759822412255,
+          "mmd_u": 0.22026875615119934,
+          "variogram": 0.008396185003221035
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.4619598295800365,
+          "de_direction": 0.49863002733807305,
+          "mmd_u": 0.5050391563170994,
+          "variogram": 0.4974113645306058
+        },
+        {
+          "de_score": 0.4727592267135325,
+          "de_direction": 0.536608551288682,
+          "mmd_u": 0.519117336355256,
+          "variogram": 0.5082329740590303
+        }
+      ],
+      "all_calibrations_valid": true,
+      "beats_persistence_on_every_fold": false
+    },
+    {
+      "candidate": "flow_joint_independent_s1.0",
+      "scores": [
+        49.14397119065325,
+        51.64864762441158
+      ],
+      "mean_score": 50.396309407532414,
+      "raw_metrics": [
+        {
+          "de_score": -0.1541307028360049,
+          "de_direction": -0.009016480254527493,
+          "mmd_u": 0.2534477710723877,
+          "variogram": 0.009818185120821
+        },
+        {
+          "de_score": -0.10562180579216349,
+          "de_direction": 0.11895181719891376,
+          "mmd_u": 0.20575737953186035,
+          "variogram": 0.008162643760442734
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.4619598295800365,
+          "de_direction": 0.49741445004146545,
+          "mmd_u": 0.5095761166913325,
+          "variogram": 0.49361653496878594
+        },
+        {
+          "de_score": 0.4727592267135325,
+          "de_direction": 0.5373032865891338,
+          "mmd_u": 0.5363122386905631,
+          "variogram": 0.5153858815564016
+        }
+      ],
+      "all_calibrations_valid": true,
+      "beats_persistence_on_every_fold": false
+    },
+    {
+      "candidate": "flow_joint_systematic_s0.5",
+      "scores": [
+        49.06131727717487,
+        51.02970848761866
+      ],
+      "mean_score": 50.045512882396764,
+      "raw_metrics": [
+        {
+          "de_score": -0.15782983970406902,
+          "de_direction": -0.009322890122695979,
+          "mmd_u": 0.2580176889896393,
+          "variogram": 0.009666564874351025
+        },
+        {
+          "de_score": -0.09199318568994891,
+          "de_direction": 0.11359583488221074,
+          "mmd_u": 0.22031483054161072,
+          "variogram": 0.008391468785703182
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.4611178614823815,
+          "de_direction": 0.4973270542083777,
+          "mmd_u": 0.5049698472571769,
+          "variogram": 0.49755494835952935
+        },
+        {
+          "de_score": 0.4761061946902655,
+          "de_direction": 0.5355043818134296,
+          "mmd_u": 0.5190644973886483,
+          "variogram": 0.5083754576683416
+        }
+      ],
+      "all_calibrations_valid": true,
+      "beats_persistence_on_every_fold": false
+    },
+    {
+      "candidate": "flow_joint_systematic_s1.0",
+      "scores": [
+        49.17518459753685,
+        51.62498650824493
+      ],
+      "mean_score": 50.400085552890886,
+      "raw_metrics": [
+        {
+          "de_score": -0.1541307028360049,
+          "de_direction": -0.00648671092513288,
+          "mmd_u": 0.25327804684638977,
+          "variogram": 0.009802744723856449
+        },
+        {
+          "de_score": -0.09880749574105614,
+          "de_direction": 0.1104107985892109,
+          "mmd_u": 0.20583872497081757,
+          "variogram": 0.0081478301435709
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.4619598295800365,
+          "de_direction": 0.49813717952801456,
+          "mmd_u": 0.5097488100154162,
+          "variogram": 0.49401475346865426
+        },
+        {
+          "de_score": 0.47442680776014107,
+          "de_direction": 0.534440329080872,
+          "mmd_u": 0.5362126761773823,
+          "variogram": 0.5158463900949065
+        }
+      ],
+      "all_calibrations_valid": true,
+      "beats_persistence_on_every_fold": false
+    }
+  ],
+  "decision": "Joint strength1 rolling scores49.1752/51.6250(systematic), worse than abundance50.6146/52.0392 on both folds; first below persistence. Challenge gain does not establish temporal robustness. Preserve all22 outcomes; next regularized logistic detection link with frozen best flow.",
+  "scope": "Two reused source-cohort one-day development folds, five archived controls and six new forecasts:22 scores. Past-only prepared samples, not full raw atlas. Missing official genes are zero placeholders; cell folds are not independent embryos or blind challenge tests.",
+  "local_72_gate_passed": false,
+  "official_score": null,
+  "submissions_used": 0,
+  "jev_requests_used": 0
+}

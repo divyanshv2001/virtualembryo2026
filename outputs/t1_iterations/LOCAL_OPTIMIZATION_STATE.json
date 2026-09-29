@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T07:50:27.071804+00:00",
+  "updated_utc": "2026-09-29T08:02:05.525887+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,14 +31,14 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_feature_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Finish joint versus abundance rolling checks on past-only4096-gene8D encoders. Diagnose per-metric gains and source/challenge mismatch before further decoder or domain adaptation.",
+  "next_experiment": "Finish L2 logistic detection.1/1 with matched fixed-flow controls, diagnose convergence/metric vectors, then test temporal consistency if gains meaningful.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_hurdle_temporal_01"
+    "cnf_logistic_challenge_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_hurdle_temporal_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_logistic_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -150,7 +150,7 @@
     "status": "completed",
     "running": [],
     "report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-    "report_sha256": "b36687301815d6c28e1c420f01a80ba346da3bf8426aa6eab4b0567db4f12f0c"
+    "report_sha256": "b7063eb10552a67d6ab789c932b14f851e3dfcfba4ca5dacc95513b2eada4f62"
   },
   "continuation_automation": {
     "id": "continue-t1-local-research",
@@ -475,12 +475,25 @@
     "decision": "Joint strength1 improves every challenge panel:independent mean53.5919/systematic53.5953 versus abundance52.8811. Detection-only remains51.52-51.74. Samplingdifference.0034 is negligible; do not select luckyseed. Gain remains below unit16local55.4202 and72, no promotion. Next matched earlier temporal folds with4096-gene8D flow and same joint/abundance heads."
   },
   "cnf_hurdle_temporal_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_hurdle_temporal_01",
     "tests_passed": 96,
     "evaluations_planned": 22,
-    "pending_evaluations": 22,
+    "pending_evaluations": 0,
     "process_id": 4416,
-    "plan_sha256": "8141b0dc9d9ee24b2bb0556aca9c555cc2698741a060c16db7513dd03cc0a471"
+    "plan_sha256": "8141b0dc9d9ee24b2bb0556aca9c555cc2698741a060c16db7513dd03cc0a471",
+    "report_sha256": "f1b70a38d507318760cf03610dcec394aee490d1e0e9cdd27fd74b9cb56e3aba",
+    "results_report": "CNF_HURDLE_TEMPORAL_RESULTS.json",
+    "evaluations": 22,
+    "decision": "Joint strength1 rolling scores49.1752/51.6250(systematic), worse than abundance50.6146/52.0392 on both folds; first below persistence. Challenge gain does not establish temporal robustness. Preserve all22 outcomes; next regularized logistic detection link with frozen best flow."
+  },
+  "cnf_logistic_job": {
+    "status": "running",
+    "run": "cnf_logistic_challenge_01",
+    "tests_passed": 98,
+    "evaluations_planned": 27,
+    "pending_evaluations": 27,
+    "process_id": 25604,
+    "plan_sha256": "134ccef2237eddccbba9c2a5956b60da56a384331111b218f07e6a75852b11bc"
   }
 }

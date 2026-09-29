@@ -12,6 +12,9 @@ class FeaturePanelForecast(RidgeConditionalPositiveForecast):
         self.guard_features=np.asarray(guard_features,int)
         self.audit.update(encoder_features=len(features),covariance_guard_features=len(guard_features),guard_panel_policy='Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.')
 
+    def detection_probability(self,h,sl):
+        return np.clip(self.pmean[sl]+h@self.detection[:,sl],1e-4,1-1e-4)
+
     def predict(self,target,mode,strength=1.,seed=20260928,sampling='independent'):
         if target<=self.cutoff or mode not in ['abundance','detection','joint'] or strength not in [.5,1.] or sampling not in ['independent','systematic']:raise ValueError('Invalid hurdle forecast')
         with torch.no_grad():
@@ -30,8 +33,8 @@ class FeaturePanelForecast(RidgeConditionalPositiveForecast):
                     change=(h1-h0)@self.positive_coef[:,sl]
                     updated*=np.exp(np.clip(strength*backoff*change,-np.log(2.),np.log(2.)))
                 if mode in ['detection','joint']:
-                    p0=np.clip(self.pmean[sl]+h0@self.detection[:,sl],1e-4,1-1e-4)
-                    p1=np.clip(self.pmean[sl]+h1@self.detection[:,sl],1e-4,1-1e-4)
+                    p0=self.detection_probability(h0,sl)
+                    p1=self.detection_probability(h1,sl)
                     change=np.clip(strength*backoff*(p1-p0),-.25,.25)*active
                     if sampling=='independent':
                         uniforms=rng.random(original.shape,dtype=np.float32)

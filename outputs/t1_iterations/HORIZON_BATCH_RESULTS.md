@@ -270,6 +270,17 @@ A frozen-flow decoder ablation verifies every archived head array, then separate
 | cnf_temporal_horizon_01 | dimension_growth1_d8 | 52.766 | 50.476 | 51.621 |
 | cnf_temporal_horizon_01 | cnf800_s0.5 | 50.061 | 51.661 | 50.861 |
 | cnf_temporal_horizon_01 | cnf800_s1.0 | 50.199 | 52.553 | 51.376 |
+| cnf_hurdle_temporal_01 | copy | 50.000 | 50.000 | 50.000 |
+| cnf_hurdle_temporal_01 | unit16 | 47.143 | 47.987 | 47.565 |
+| cnf_hurdle_temporal_01 | saved384_d0.0 | 49.200 | 51.366 | 50.283 |
+| cnf_hurdle_temporal_01 | dimension_neutral_d8 | 52.929 | 50.495 | 51.712 |
+| cnf_hurdle_temporal_01 | dimension_growth1_d8 | 52.766 | 50.476 | 51.621 |
+| cnf_hurdle_temporal_01 | flow_abundance_s0.5 | 50.408 | 51.537 | 50.972 |
+| cnf_hurdle_temporal_01 | flow_abundance_s1.0 | 50.615 | 52.039 | 51.327 |
+| cnf_hurdle_temporal_01 | flow_joint_independent_s0.5 | 49.114 | 50.972 | 50.043 |
+| cnf_hurdle_temporal_01 | flow_joint_independent_s1.0 | 49.144 | 51.649 | 50.396 |
+| cnf_hurdle_temporal_01 | flow_joint_systematic_s0.5 | 49.061 | 51.030 | 50.046 |
+| cnf_hurdle_temporal_01 | flow_joint_systematic_s1.0 | 49.175 | 51.625 | 50.400 |
 
 Status: completed. Full four-metric vectors, raw metrics, model audits and provenance hashes are in HORIZON_BATCH_RESULTS.json.
 No new prospective export or official submission. The >72 objective remains unfinished.
