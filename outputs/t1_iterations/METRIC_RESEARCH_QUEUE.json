@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T09:29:11.852704+00:00",
+  "updated_utc": "2026-09-29T09:37:58.080852+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5122,7 +5122,7 @@
     {
       "id": "continuous_flow_recent_positive_decoder",
       "run": "cnf_recent_positive_challenge_01",
-      "status": "implemented_running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_recent_positive_challenge.py",
         "recent_positive_forecast.py"
@@ -5132,7 +5132,23 @@
       "limitations": "Recent smaller samples can increase noise and remove cross-stage information. Own local-stationarity adaptation, no published method replication claimed. Reused development; temporal validation required for gains.",
       "research_family_exhausted": false,
       "tests_passed": 108,
-      "validation_report": "CNF_RECENT_POSITIVE_VALIDATION.json"
+      "validation_report": "CNF_RECENT_POSITIVE_VALIDATION.json",
+      "results_report": "CNF_RECENT_POSITIVE_RESULTS.json",
+      "decision": "Recent1 positive joint mean54.2995 versusglobal53.5953, allthreepanels improve; abundance53.6320 versus52.8811. Recent2 joint53.6216 negligible/mixed, recent3 joint53.5638 regresses. All33 outcomes preserved. Next frozen rolling checks windows1/2, no72 promotion."
+    },
+    {
+      "id": "continuous_flow_recent_positive_temporal",
+      "run": "cnf_recent_positive_temporal_01",
+      "status": "implemented_running",
+      "implementation": [
+        "cnf_recent_positive_temporal.py",
+        "recent_positive_forecast.py"
+      ],
+      "trial_scope": "Frozen rolling flows and original scoring, latest1/2 positive heads x abundance/joint with sevenarchives=22outcomes. Global detection stays fixed.",
+      "limitations": "Reused source-cohort folds, missing gene placeholders and no independent embryos. Earlier challenge files unavailable; same-cohort validation cannot establish domain transfer.",
+      "research_family_exhausted": false,
+      "tests_passed": 108,
+      "validation_report": "CNF_RECENT_POSITIVE_TEMPORAL_VALIDATION.json"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."
