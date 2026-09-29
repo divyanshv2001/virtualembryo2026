@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T11:31:31.066448+00:00",
+  "updated_utc": "2026-09-29T11:40:34.095808+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_nonlinear_positive_challenge.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_width_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Nonlinear positive residual head width64/400updates, penalties.1/1, frozenflow/detection,33scores.",
+  "next_experiment": "Retrain widths64/128/256 on identical reconstructed pastcoordinates,800updates and originalheads;33scores.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_nonlinear_positive_challenge_01"
+    "cnf_width_challenge_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_nonlinear_positive_challenge_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_width_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -697,13 +697,26 @@
     "results_report": "CNF_GAMMA_POSITIVE_RESULTS.json"
   },
   "cnf_nonlinear_positive_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_nonlinear_positive_challenge_01",
     "tests_passed": 117,
     "evaluations_planned": 33,
-    "pending_evaluations": 33,
+    "pending_evaluations": 0,
     "process_id": 12872,
     "plan_sha256": "09dcbccbe76775b16eb9f20f308c0bd8fcadefd55665ba67acc366a54a9ac198",
-    "decision": "Nonlinear positive residual penalties.1/1,400updates, global detection and original field fixed. No promotion; local72 gate unmet."
+    "decision": "Nonlinear residual penalties.1/1 joint53.5417/53.6164 versusoriginal53.5953; gain+.0211 negligible, belowrecentpositive54.2995. Abundance52.9620/52.9477 smallgains. Preserve33outcomes; next flow-capacity128/256 with newlytrained64 matchedcontrol,800updates fixed.",
+    "evaluations": 33,
+    "report_sha256": "fe5205c9acb45943469808581c0d44a62bceb044078c0fe98e2862bbcdb8018e",
+    "results_report": "CNF_NONLINEAR_POSITIVE_RESULTS.json"
+  },
+  "cnf_width_job": {
+    "status": "running",
+    "run": "cnf_width_challenge_01",
+    "tests_passed": 118,
+    "evaluations_planned": 33,
+    "pending_evaluations": 33,
+    "process_id": 11788,
+    "plan_sha256": "212887a50159a9a80567c10750d86f5e1f7e2f83733ed6552f8e2edbea02aab2",
+    "decision": "Matched widths64/128/256,800updates, decoder/encoder fixed. No promotion; local72 gate unmet."
   }
 }

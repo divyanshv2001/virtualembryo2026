@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T11:30:22.291620+00:00",
+  "updated_utc": "2026-09-29T11:39:21.097644+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5280,7 +5280,7 @@
     {
       "id": "continuous_flow_nonlinear_positive",
       "run": "cnf_nonlinear_positive_challenge_01",
-      "status": "implemented_running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_nonlinear_positive_challenge.py",
         "nonlinear_positive_forecast.py"
@@ -5290,7 +5290,25 @@
       "limitations": "Sampled cohort, deterministic positive-log conditional means; no observation generation, count likelihood or uncertainty calibration. Reused development, no independent embryos; may overfit beyond latent support.",
       "research_family_exhausted": false,
       "tests_passed": 117,
-      "validation_report": "CNF_NONLINEAR_POSITIVE_VALIDATION.json"
+      "validation_report": "CNF_NONLINEAR_POSITIVE_VALIDATION.json",
+      "results_report": "CNF_NONLINEAR_POSITIVE_RESULTS.json",
+      "decision": "Nonlinear residual penalties.1/1 joint53.5417/53.6164 versusoriginal53.5953; gain+.0211 negligible, belowrecentpositive54.2995. Abundance52.9620/52.9477 smallgains. Preserve33outcomes; next flow-capacity128/256 with newlytrained64 matchedcontrol,800updates fixed."
+    },
+    {
+      "id": "continuous_flow_field_width",
+      "run": "cnf_width_challenge_01",
+      "status": "implemented_running",
+      "implementation": [
+        "cnf_width_challenge.py",
+        "cnf_density_flow.py",
+        "cnf_manifold_flow.py"
+      ],
+      "primary_reference": "CNF_AUTHOR_REFERENCE.json",
+      "trial_scope": "Widths64/128/256,3hiddenlayers,800updates,commonseed/pastcoordinates/stage-trace draws; x abundance/joint, sixforecasts/fivearchives=33outcomes. Encoder and fullgene heads remain fixed.",
+      "limitations": "Architecture-width hypothesis only; larger model can overfit same sampled pastcohort. Reconstructedcoordinates not assumed bitidentical to archive; matchednew64control required. Reused development, no independent embryos.",
+      "research_family_exhausted": false,
+      "tests_passed": 118,
+      "validation_report": "CNF_WIDTH_VALIDATION.json"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

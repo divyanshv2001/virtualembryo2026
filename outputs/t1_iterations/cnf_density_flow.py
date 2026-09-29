@@ -28,11 +28,13 @@ def inverse_density(field,values,time,step=.125,noise=None):
 
 
 class DensityFlowNet(nn.Module):
-    def __init__(self,basis,pca_center,cutoff,origin):
+    def __init__(self,basis,pca_center,cutoff,origin,width=64):
         super().__init__();self.cutoff=cutoff;self.origin=origin
+        if width not in [64,128,256]:raise ValueError('Undeclared flow width')
+        self.width=width
         self.register_buffer('basis',torch.tensor(basis,dtype=torch.float32))
         self.register_buffer('pca_center',torch.tensor(pca_center,dtype=torch.float32))
-        d=len(basis);self.field=nn.Sequential(nn.Linear(d+1,64),nn.Tanh(),nn.Linear(64,64),nn.Tanh(),nn.Linear(64,64),nn.Tanh(),nn.Linear(64,d))
+        d=len(basis);self.field=nn.Sequential(nn.Linear(d+1,width),nn.Tanh(),nn.Linear(width,width),nn.Tanh(),nn.Linear(width,width),nn.Tanh(),nn.Linear(width,d))
         nn.init.zeros_(self.field[-1].weight);nn.init.zeros_(self.field[-1].bias)
     def encode(self,values):
         z=(values-self.pca_center)@self.basis.T;return z,torch.zeros_like(z)
