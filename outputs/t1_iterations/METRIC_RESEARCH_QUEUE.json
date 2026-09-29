@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T07:39:52.038265+00:00",
+  "updated_utc": "2026-09-29T07:50:27.071804+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -4968,7 +4968,7 @@
     {
       "id": "continuous_flow_hurdle_decoding",
       "run": "cnf_hurdle_challenge_01",
-      "status": "running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_hurdle_challenge.py",
         "feature_panel_forecast.py",
@@ -4977,6 +4977,21 @@
       "trial_scope": "Frozen4096-gene8D flow, detection/joint modes x independent/systematic sampling x strengths.5/1, fixedseed20260928;36 scores including four archived controls. Recomputed permitted-past positive heads and abundance forecasts must match archive exactly.",
       "hypothesis": "Zero-preserving abundance decoder may omit developmental detection changes. Test same frozen flow with marginal detection changes and controlled sampler variance.",
       "limitations": "Linear detection probabilities and conditional abundance are own heuristic adaptation, not assay-noise or raw-count likelihood. Earlier neural hurdle tests failed; this is new flow context, not untested scientific family. Reused development selection, no blind validation.",
+      "research_family_exhausted": false,
+      "results_report": "CNF_HURDLE_RESULTS.json",
+      "decision": "Joint strength1 improves every challenge panel:independent mean53.5919/systematic53.5953 versus abundance52.8811. Detection-only remains51.52-51.74. Samplingdifference.0034 is negligible; do not select luckyseed. Gain remains below unit16local55.4202 and72, no promotion. Next matched earlier temporal folds with4096-gene8D flow and same joint/abundance heads."
+    },
+    {
+      "id": "continuous_flow_hurdle_rolling_consistency",
+      "run": "cnf_hurdle_temporal_01",
+      "status": "running",
+      "implementation": [
+        "cnf_hurdle_temporal.py",
+        "past_encoder_panel.py",
+        "feature_panel_forecast.py"
+      ],
+      "trial_scope": "Fit4096-gene8D encoder/800-update flow separately atcutoffs8/8.25; abundance and joint independent/systematic strengths.5/1 plus five frozen controls;22 scores.",
+      "limitations": "Repeated exposed source stages with missing-gene placeholders, not fresh blind challenge validation or independent embryo replication. All learner inputs past-only; unchanged full-panel scorer.",
       "research_family_exhausted": false
     }
   ],

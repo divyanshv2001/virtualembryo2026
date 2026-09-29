@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T07:39:52.038265+00:00",
+  "updated_utc": "2026-09-29T07:50:27.071804+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,14 +31,14 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_feature_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Finish detection/joint forecasts and sampler comparison using frozen4096-gene8D flow; assess all metric vectors and actual detection/covariance/backoff diagnostics before another path.",
+  "next_experiment": "Finish joint versus abundance rolling checks on past-only4096-gene8D encoders. Diagnose per-metric gains and source/challenge mismatch before further decoder or domain adaptation.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_hurdle_challenge_01"
+    "cnf_hurdle_temporal_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_hurdle_challenge_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_hurdle_temporal_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -462,12 +462,25 @@
     "decision": "Sequential400/800 strength1 mean51.6455/52.1481 regress versus matched stochastic4096-gene8D52.8811 on every panel. All30 scores and exact400-update lineage retained. Next detection/joint sampling on frozen best flow to test zero-pattern dynamics."
   },
   "cnf_hurdle_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_hurdle_challenge_01",
     "tests_passed": 95,
     "evaluations_planned": 36,
-    "pending_evaluations": 36,
+    "pending_evaluations": 0,
     "process_id": 9996,
-    "plan_sha256": "5f6c9af2747d510e70bae21f3e115b487a3647be2900e7185c10720e57013aa2"
+    "plan_sha256": "5f6c9af2747d510e70bae21f3e115b487a3647be2900e7185c10720e57013aa2",
+    "evaluations": 36,
+    "report_sha256": "acd1eff1042b9418adb872bb5b2ea32840d1a4704105d1878b56255b97530c18",
+    "results_report": "CNF_HURDLE_RESULTS.json",
+    "decision": "Joint strength1 improves every challenge panel:independent mean53.5919/systematic53.5953 versus abundance52.8811. Detection-only remains51.52-51.74. Samplingdifference.0034 is negligible; do not select luckyseed. Gain remains below unit16local55.4202 and72, no promotion. Next matched earlier temporal folds with4096-gene8D flow and same joint/abundance heads."
+  },
+  "cnf_hurdle_temporal_job": {
+    "status": "running",
+    "run": "cnf_hurdle_temporal_01",
+    "tests_passed": 96,
+    "evaluations_planned": 22,
+    "pending_evaluations": 22,
+    "process_id": 4416,
+    "plan_sha256": "8141b0dc9d9ee24b2bb0556aca9c555cc2698741a060c16db7513dd03cc0a471"
   }
 }

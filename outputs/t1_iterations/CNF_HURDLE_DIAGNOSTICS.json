@@ -1,0 +1,56 @@
+{
+  "updated_utc": "2026-09-29T07:50:27.071804+00:00",
+  "report_sha256": "acd1eff1042b9418adb872bb5b2ea32840d1a4704105d1878b56255b97530c18",
+  "baseline": "features4096_s1.0",
+  "scope": "Reused challenge development panels; metric skills shown on0-100 scale. No independent embryo inference, stability or72 promotion.",
+  "candidates": {
+    "joint_independent_s1.0": {
+      "mean_score": 53.59191466346662,
+      "paired_headline_gains": [
+        0.3284038596125569,
+        0.9848390688918514,
+        0.8191946727718502
+      ],
+      "mean_metric_skills": {
+        "de_score": 52.92935635792779,
+        "de_direction": 54.65974846970747,
+        "mmd_u": 54.86626556044817,
+        "variogram": 51.17379394211679
+      },
+      "paired_mean_metric_skill_gains": {
+        "de_score": -0.791525934383067,
+        "de_direction": 2.8005897516739324,
+        "mmd_u": 0.5388016257552053,
+        "variogram": 0.23453045854736843
+      },
+      "actual_backoff": 1.0,
+      "covariance_change": 0.3274235790690985,
+      "newly_detected_entries": 64313,
+      "removed_detection_entries": 115732
+    },
+    "joint_systematic_s1.0": {
+      "mean_score": 53.59528811081316,
+      "paired_headline_gains": [
+        0.3267992840008773,
+        0.9848853141142584,
+        0.8308733452007431
+      ],
+      "mean_metric_skills": {
+        "de_score": 52.92935635792779,
+        "de_direction": 54.66880985142284,
+        "mmd_u": 54.861169197724415,
+        "variogram": 51.186978995790916
+      },
+      "paired_mean_metric_skill_gains": {
+        "de_score": -0.791525934383067,
+        "de_direction": 2.809651133389302,
+        "mmd_u": 0.5337052630314503,
+        "variogram": 0.24771551222149668
+      },
+      "actual_backoff": 1.0,
+      "covariance_change": 0.325593557590369,
+      "newly_detected_entries": 64692,
+      "removed_detection_entries": 115830
+    }
+  }
+}

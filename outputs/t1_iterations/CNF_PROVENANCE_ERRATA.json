@@ -6,5 +6,15 @@
     "cnf_manifold_challenge_01"
   ],
   "impact": "Metadata clarification only; no model, forecast, calibration, metric, or score change.",
-  "additional_scope": "Manifold fit metadata retains generic energy0/.1 description from first CNF experiment; actual manifold source and manifold_fit field use energy.1 fixed with density0/1/10."
+  "additional_scope": "Manifold fit metadata retains generic energy0/.1 description from first CNF experiment; actual manifold source and manifold_fit field use energy.1 fixed with density0/1/10.",
+  "decoder_metadata_correction": {
+    "affected_runs": [
+      "cnf_feature_challenge_01",
+      "cnf_dimension_challenge_01",
+      "cnf_sequential_challenge_01",
+      "cnf_hurdle_challenge_01"
+    ],
+    "correction": "Inherited decoder audit method/scope says VAE/neuralODE and diagonal positive regression. These CNF runs use likelihood/energy/manifold flow and full conditional ridge1 positive regression; the same audit positive_regression field and frozen plan/source state the correct implementation. Original private reports unchanged.",
+    "impact": "Metadata clarification only; no model/prediction/calibration/score changes."
+  }
 }
