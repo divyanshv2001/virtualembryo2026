@@ -36,6 +36,10 @@ The [muscat paper](https://www.nature.com/articles/s41467-020-19894-4) motivates
 
 [Kotliar et al. (2019)](https://pmc.ncbi.nlm.nih.gov/articles/PMC6639075/) distinguishes identity and activity programs and warns that type averages can miss activity and statistical factors need not be biological programs. Introduction, simulation benchmark, preprocessing and consensus methods were read. The cell-level adaptation uses fewer genes/replicas, normalized abundance, no component outlier filtering, and added ridge decoding and temporal extrapolation; it is not cNMF reproduction or a test of the paper's biological claims.
 
+Historical transport fits past-only PCA representations and quarter-day couplings, then extrapolates barycentric velocities with a ridge affine field. Balanced transport and three unbalanced prior settings use the same frozen full-panel scoring. All first-pilot candidates fail persistence on both folds. The entropy convention is explicit and differs from newer POT KL-reference defaults; this is an adaptation, not WOT/moscot reproduction. Couplings use256 cells per stage and PCA uses3000 fit cells, so these are bounded computational pilots, not full raw-atlas transport.
+
+A frozen-flow decoder ablation verifies every archived head array, then separates positive abundance, detection switches and systematic joint sampling. Abundance-only improves over joint forecasts on both development folds, but its best mean50.0276 combines51.7018 and48.3534 and fails consistency. This motivates a declared full conditional latent covariance ridge ablation; model fitting remains past-only. All folds are exposed development data, not untouched validation.
+
 | Run | Candidate | Fold 1 | Fold 2 | Mean |
 | --- | --- | ---: | ---: | ---: |
 | matched_horizon_audit_01 | copy | 50.000 | 50.000 | 50.000 |
@@ -163,6 +167,33 @@ The [muscat paper](https://www.nature.com/articles/s41467-020-19894-4) motivates
 | growth_composition_horizon_01 | growth_proliferation_p1.0 | 48.003 | 47.849 | 47.926 |
 | growth_composition_horizon_01 | growth_p53_p0.5 | 48.297 | 47.137 | 47.717 |
 | growth_composition_horizon_01 | growth_p53_p1.0 | 48.671 | 47.962 | 48.316 |
+| transport_hurdle_horizon_01 | copy | 50.000 | 50.000 | 50.000 |
+| transport_hurdle_horizon_01 | unit16 | 47.143 | 47.987 | 47.565 |
+| transport_hurdle_horizon_01 | saved384_d0.0 | 49.200 | 51.366 | 50.283 |
+| transport_hurdle_horizon_01 | saved_ode | 48.438 | 51.342 | 49.890 |
+| transport_hurdle_horizon_01 | transport_balanced_s0.5 | 49.374 | 46.275 | 47.824 |
+| transport_hurdle_horizon_01 | transport_balanced_s1.0 | 48.773 | 45.744 | 47.258 |
+| transport_hurdle_horizon_01 | transport_neutral_s0.5 | 49.783 | 47.211 | 48.497 |
+| transport_hurdle_horizon_01 | transport_neutral_s1.0 | 49.425 | 46.854 | 48.139 |
+| transport_hurdle_horizon_01 | transport_growth05_s0.5 | 49.890 | 47.360 | 48.625 |
+| transport_hurdle_horizon_01 | transport_growth05_s1.0 | 49.520 | 46.976 | 48.248 |
+| transport_hurdle_horizon_01 | transport_growth1_s0.5 | 49.974 | 47.508 | 48.741 |
+| transport_hurdle_horizon_01 | transport_growth1_s1.0 | 49.680 | 47.083 | 48.382 |
+| transport_decoder_horizon_01 | copy | 50.000 | 50.000 | 50.000 |
+| transport_decoder_horizon_01 | unit16 | 47.143 | 47.987 | 47.565 |
+| transport_decoder_horizon_01 | saved384_d0.0 | 49.200 | 51.366 | 50.283 |
+| transport_decoder_horizon_01 | transport_balanced_s0.5 | 49.374 | 46.275 | 47.824 |
+| transport_decoder_horizon_01 | transport_neutral_s0.5 | 49.783 | 47.211 | 48.497 |
+| transport_decoder_horizon_01 | transport_growth1_s0.5 | 49.974 | 47.508 | 48.741 |
+| transport_decoder_horizon_01 | decoder_balanced_abundance | 51.523 | 47.252 | 49.387 |
+| transport_decoder_horizon_01 | decoder_balanced_detection | 48.020 | 46.066 | 47.043 |
+| transport_decoder_horizon_01 | decoder_balanced_systematic | 49.286 | 46.292 | 47.789 |
+| transport_decoder_horizon_01 | decoder_neutral_abundance | 51.519 | 48.105 | 49.812 |
+| transport_decoder_horizon_01 | decoder_neutral_detection | 48.424 | 46.108 | 47.266 |
+| transport_decoder_horizon_01 | decoder_neutral_systematic | 49.875 | 47.288 | 48.582 |
+| transport_decoder_horizon_01 | decoder_growth1_abundance | 51.702 | 48.353 | 50.028 |
+| transport_decoder_horizon_01 | decoder_growth1_detection | 48.586 | 46.320 | 47.453 |
+| transport_decoder_horizon_01 | decoder_growth1_systematic | 50.099 | 47.498 | 48.799 |
 
 Status: running. Full four-metric vectors, raw metrics, model audits and provenance hashes are in HORIZON_BATCH_RESULTS.json.
 No new prospective export or official submission. The >72 objective remains unfinished.

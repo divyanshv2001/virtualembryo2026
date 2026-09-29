@@ -253,7 +253,7 @@
       ],
       "run": "neural_ode_horizon_01",
       "declared_experiment_and_result": null,
-      "next_action": "Implement past-only neural latent detection/positive-abundance heads; compare expression-only, detection-only and joint forecasts with common fixed random uniforms on matched one-day folds.",
+      "next_action": "Neural hurdle and sampling trials complete without promotion; frozen transport decoder decomposition is next.",
       "research_family_exhausted": false,
       "constraints": [
         "All learner inputs <= fold cutoff; challenge calibration <=E8.5",
@@ -672,7 +672,7 @@
         "mmd_u",
         "variogram"
       ],
-      "status": "input_audit_and_composition_pilot_evaluated_transport_open",
+      "status": "transport_pilot_evaluated_not_promoted",
       "sources": [
         {
           "title": "Waddington-OT",
@@ -693,7 +693,7 @@
       ],
       "run": null,
       "declared_experiment_and_result": null,
-      "next_action": "Implement and test past-only PCA transport flow with balanced, unbalanced-neutral and bounded growth priors; use unchanged hurdle heads and matched full-panel one-day scoring.",
+      "next_action": "Frozen transport decoder decomposition: abundance, detection, systematic joint switches versus independent joint controls.",
       "research_family_exhausted": false,
       "constraints": [
         "All learner inputs <= fold cutoff; challenge calibration <=E8.5",
@@ -4397,7 +4397,7 @@
         "mmd_u",
         "variogram"
       ],
-      "status": "running",
+      "status": "implemented_evaluated",
       "sources": [
         {
           "url": "https://arxiv.org/html/1302.7149v2",
@@ -4410,11 +4410,11 @@
       ],
       "scope": "Adaptation, not faithful ECC. Three positive-quantile strengths, global and four-state conditional, two one-day associated-cohort folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "19ee77576ea05d6932e7800abfb111ea17172e421e80a0b69cc794acbd762f8c",
+      "results_report_sha256": "93129c5f7d556e05b49b0325c79d44be9f6f501983422704bc08a9ae5c372d3f",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Complete the frozen growth-composition pilot, preserve all four scores, and inspect both one-day folds. Keep official quota unused."
+      "next_action": "Finish frozen batches: transport_conditional_horizon_01. Preserve paired controls and all four metrics."
     },
     {
       "id": "annotation_conditioned_temporal",
@@ -4438,7 +4438,7 @@
       ],
       "scope": "Heuristic adaptation to normalized abundance; not muscat replication. Observed annotations group past cells. Four expression/detection ablations, source support20 vs100, two one-day folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "19ee77576ea05d6932e7800abfb111ea17172e421e80a0b69cc794acbd762f8c",
+      "results_report_sha256": "93129c5f7d556e05b49b0325c79d44be9f6f501983422704bc08a9ae5c372d3f",
       "limitations": [
         "Published annotation may derive from joint stages; retrospective diagnostic only.",
         "Capture IDs do not establish independent embryos; cell-based errors are shrinkage heuristics.",
@@ -4447,7 +4447,7 @@
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Complete the frozen growth-composition pilot, preserve all four scores, and inspect both one-day folds. Keep official quota unused."
+      "next_action": "Finish frozen batches: transport_conditional_horizon_01. Preserve paired controls and all four metrics."
     },
     {
       "id": "shared_gene_program_dynamics",
@@ -4474,11 +4474,11 @@
       "scope": "Shared SVD profile directions versus cell-level NMF median consensus usage dynamics. Neither is a faithful cNMF reproduction or certified biological-program recovery.",
       "frozen_trials": "SVD ranks2/4/8 with detection0/.5; NMF ranks8/16 with detection0/.5,3 fixed seeds and200 iterations. Rank16 optimizer repair800 iterations. Two matched one-day development folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "19ee77576ea05d6932e7800abfb111ea17172e421e80a0b69cc794acbd762f8c",
+      "results_report_sha256": "93129c5f7d556e05b49b0325c79d44be9f6f501983422704bc08a9ae5c372d3f",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Complete the frozen growth-composition pilot, preserve all four scores, and inspect both one-day folds. Keep official quota unused."
+      "next_action": "Finish frozen batches: transport_conditional_horizon_01. Preserve paired controls and all four metrics."
     },
     {
       "id": "neural_latent_hurdle",
@@ -4529,7 +4529,7 @@
     },
     {
       "id": "historical_transport_hurdle",
-      "status": "running",
+      "status": "implemented_evaluated_not_promoted",
       "metrics": [
         "de_score",
         "de_direction",
@@ -4548,6 +4548,50 @@
           "read": "Generalized scaling updates and entropy/KL convention in official author implementation; own log-domain adaptation, not a faithful solver reproduction."
         }
       ],
+      "research_family_exhausted": false,
+      "submissions_used": 0,
+      "jev_requests_used": 0,
+      "results_report": "TRANSPORT_HURDLE_RESULTS.json",
+      "next_action": "Frozen transport decoder decomposition: abundance, detection, systematic joint switches versus independent joint controls."
+    },
+    {
+      "id": "transport_decoder_decomposition",
+      "status": "implemented_evaluated_not_promoted",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "run": "transport_decoder_horizon_01",
+      "implementation": [
+        "transport_decoder_horizon.py"
+      ],
+      "hypothesis": "Detection switches may cause distribution and DE penalties separately from positive abundance drift. Freeze flows and verify all head arrays before altering decoder mechanisms.",
+      "scope": "Balanced, neutral and growth1 at strength.5; abundance-only, detection-only, systematic joint versus archived independent joint. Same two exposed development folds and projections. Target-informed mechanism choice, not independent validation.",
+      "research_family_exhausted": false,
+      "submissions_used": 0,
+      "jev_requests_used": 0,
+      "results_report": "TRANSPORT_DECODER_RESULTS.json",
+      "next_action": "Full conditional latent covariance positive head versus archived diagonal abundance head; frozen transport dynamics, strengths.5/1, matched panels."
+    },
+    {
+      "id": "full_conditional_positive_head",
+      "status": "running",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "primary_objective": "Unchanged weighted full-panel headline score",
+      "run": "transport_conditional_horizon_01",
+      "implementation": [
+        "conditional_positive_head.py",
+        "transport_conditional_horizon.py"
+      ],
+      "hypothesis": "Conditional latent correlations may bias diagonal positive abundance coefficients. Replace diagonal covariance by full conditional ridge1 covariance; freeze transport, verify archived diagonal heads, exclude future fitting.",
+      "scope": "Own statistical mechanism ablation, not a biological model reproduction. Three frozen flows, strengths.5/1; controls diagonal abundance.5 and persistence. Reused development folds; no blind transfer claim.",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0

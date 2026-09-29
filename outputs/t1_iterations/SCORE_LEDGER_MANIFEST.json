@@ -1,5 +1,5 @@
 {
-  "records": 1155,
+  "records": 1209,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -292,6 +292,16 @@
       "outcomes_indexed": 27
     },
     {
+      "path": "private/transport_decoder_horizon_01/report.json",
+      "sha256": "d5ae44ffa10a44596950fe628ffa9a52300df6a94c9ee3c571fb92a7c6244028",
+      "outcomes_indexed": 30
+    },
+    {
+      "path": "private/transport_hurdle_horizon_01/report.json",
+      "sha256": "1ceb8da6f2eac033ba99cbb28da22568545dd05cafe557580456b93aacd9e342",
+      "outcomes_indexed": 24
+    },
+    {
       "path": "private/variogram_backtest_01/report.json",
       "sha256": "e8bb3db811e3c69ae6118e23e6a09361e95a8f3d04b72191b8b42823d84f64be",
       "outcomes_indexed": 24
@@ -309,5 +319,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "389e0145fec5f7653691150cdabb1e87e5ae1493dc8ef03b0ca30d30abbdf9c0"
+  "ledger_sha256": "a9e45473031fbd744b8f604b6520765d3a2afb1f896e772d378ea4e6cea0fade"
 }

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T04:30:30.963985+00:00",
+  "updated_utc": "2026-09-29T04:41:13.584902+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,7 +31,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/index_scores.py",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Finish frozen transport/hurdle batch and inspect every component against unchanged paired controls.",
+  "next_experiment": "Finish frozen batches: transport_conditional_horizon_01. Preserve paired controls and all four metrics.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -149,10 +149,10 @@
   "horizon_batch": {
     "status": "running",
     "running": [
-      "transport_hurdle_horizon_01"
+      "transport_conditional_horizon_01"
     ],
     "report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-    "report_sha256": "19ee77576ea05d6932e7800abfb111ea17172e421e80a0b69cc794acbd762f8c"
+    "report_sha256": "93129c5f7d556e05b49b0325c79d44be9f6f501983422704bc08a9ae5c372d3f"
   },
   "continuation_automation": {
     "id": "continue-t1-local-research",
@@ -160,7 +160,7 @@
     "cadence": "hourly",
     "user_authorized": true
   },
-  "current_turn_evaluations": 64,
+  "current_turn_evaluations": 54,
   "neural_ode_job": {
     "status": "completed_not_promoted",
     "session_id": 62711,
@@ -196,11 +196,26 @@
     "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/growth_composition_horizon.py --resume"
   },
   "transport_hurdle_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "session_id": 53908,
     "run": "private/transport_hurdle_horizon_01",
     "plan_sha256": "a621075ed0a37277adedb97f221ca4c80093623e1dc397000669cce93708d7ec",
     "tests_passed": 72,
     "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/transport_hurdle_horizon.py --resume"
+  },
+  "transport_decoder_job": {
+    "status": "completed_not_promoted",
+    "session_id": 91674,
+    "run": "private/transport_decoder_horizon_01",
+    "plan_sha256": "1d1af02990201e65f6ae41f8ed71b6dab693c97702cf917ef9820d786169d18b",
+    "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/transport_decoder_horizon.py --resume"
+  },
+  "transport_conditional_job": {
+    "status": "running",
+    "session_id": 11776,
+    "run": "private/transport_conditional_horizon_01",
+    "plan_sha256": "182791942ffc28be5c3bf1e7a4e25138571aa7c2f3e06c9055e52771286bf5fd",
+    "tests_passed": 74,
+    "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/transport_conditional_horizon.py --resume"
   }
 }

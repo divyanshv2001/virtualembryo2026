@@ -9,7 +9,7 @@ def main():
     runs={};running=[]
     for name in ['matched_horizon_audit_01','quantile_horizon_pilot_01','state_quantile_horizon_pilot_01',
                  'annotation_horizon_pilot_01','annotation_support_pilot_01',
-                 'program_horizon_pilot_01','cell_program_horizon_pilot_01','cell_program_repair_01','cell_program_feature_pilot_01','empirical_bayes_horizon_01','covariance_horizon_01','empirical_bayes_repair_01','copula_horizon_01','neural_ode_horizon_01','neural_hurdle_horizon_01','neural_sampling_horizon_01','growth_composition_horizon_01','transport_hurdle_horizon_01']:
+                 'program_horizon_pilot_01','cell_program_horizon_pilot_01','cell_program_repair_01','cell_program_feature_pilot_01','empirical_bayes_horizon_01','covariance_horizon_01','empirical_bayes_repair_01','copula_horizon_01','neural_ode_horizon_01','neural_hurdle_horizon_01','neural_sampling_horizon_01','growth_composition_horizon_01','transport_hurdle_horizon_01','transport_decoder_horizon_01','transport_conditional_horizon_01']:
         folder=HERE/'private'/name;path=folder/'report.json'
         if not path.exists():
             running.append(name);continue
@@ -77,6 +77,8 @@ def main():
         'Introduction, simulation benchmark, preprocessing and consensus methods were read. '
         'The cell-level adaptation uses fewer genes/replicas, normalized abundance, no component outlier filtering, '
         'and added ridge decoding and temporal extrapolation; it is not cNMF reproduction or a test of the paper\'s biological claims.','',
+        'Historical transport fits past-only PCA representations and quarter-day couplings, then extrapolates barycentric velocities with a ridge affine field. Balanced transport and three unbalanced prior settings use the same frozen full-panel scoring. All first-pilot candidates fail persistence on both folds. The entropy convention is explicit and differs from newer POT KL-reference defaults; this is an adaptation, not WOT/moscot reproduction. Couplings use256 cells per stage and PCA uses3000 fit cells, so these are bounded computational pilots, not full raw-atlas transport.', '',
+        'A frozen-flow decoder ablation verifies every archived head array, then separates positive abundance, detection switches and systematic joint sampling. Abundance-only improves over joint forecasts on both development folds, but its best mean50.0276 combines51.7018 and48.3534 and fails consistency. This motivates a declared full conditional latent covariance ridge ablation; model fitting remains past-only. All folds are exposed development data, not untouched validation.', '',
         '| Run | Candidate | Fold 1 | Fold 2 | Mean |','| --- | --- | ---: | ---: | ---: |']
     for name,r in runs.items():
         for s in r['summaries']:
@@ -89,11 +91,11 @@ def main():
     state.update(updated_utc=now(),local_process_running=bool(running))
     state['horizon_batch']={'status':status,'running':running,'report':'outputs/t1_iterations/HORIZON_BATCH_RESULTS.json',
         'report_sha256':digest(HERE/'HORIZON_BATCH_RESULTS.json')}
-    state['next_experiment']='Complete the frozen growth-composition pilot, preserve all four scores, and inspect both one-day folds. Keep official quota unused.' if running else 'Use recorded growth-composition and neural failures to specify historical balanced/unbalanced transport and meaningful prior sensitivities. No candidate is ready for official use.'
+    state['next_experiment']='Finish frozen batches: '+', '.join(running)+'. Preserve paired controls and all four metrics.' if running else 'Inspect completed transport metrics and test frozen-flow decoder mechanisms before any readiness assessment.'
     path.write_text(json.dumps(state,indent=2))
     path=HERE/'METRIC_RESEARCH_QUEUE.json';queue=json.loads(path.read_text())
     entry={'id':'positive_quantile_temporal','metrics':['de_score','de_direction','mmd_u','variogram'],
-        'status':'running' if running else 'implemented_evaluated',
+        'status':'running' if any('quantile' in r for r in running) else 'implemented_evaluated',
         'sources':[{'url':'https://arxiv.org/html/1302.7149v2',
             'read':'Methods sections4.1-4.3 and experiment section5.4; marginal/rank separation and limits.'}],
         'implementation':['positive_quantile_forecast.py','state_quantile_forecast.py'],

@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "tests_passed": 74,
+  "checks": "Full conditional coefficients match direct per-gene centered ridge solutions; future-expression invariance; exact protected genes and zero-mask preservation; mapped mass and covariance bounds; full existing research regression suite.",
+  "command": "outputs/research_workflow/.venv/Scripts/python.exe -m pytest outputs/t1_iterations -q -p no:cacheprovider --basetemp outputs/t1_iterations/private/test_temp_conditional_20260929_03",
+  "limitation": "Implementation checks do not establish predictive performance or official score."
+}

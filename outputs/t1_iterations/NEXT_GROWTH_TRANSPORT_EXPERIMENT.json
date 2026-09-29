@@ -30,5 +30,8 @@
   "marker_reference": "GROWTH_MARKER_REFERENCE.json",
   "input_audit": "GROWTH_PRIOR_AUDIT.json",
   "composition_pilot": "private/growth_composition_horizon_01",
-  "next_unimplemented": "Historical balanced/unbalanced coupling solver and explicit one-day extrapolation. Preliminary growth-proxy composition alone does not implement transport."
+  "next_unimplemented": "Historical balanced/unbalanced coupling solver and explicit one-day extrapolation. Preliminary growth-proxy composition alone does not implement transport.",
+  "transport_status": "completed_not_promoted",
+  "transport_results": "TRANSPORT_HURDLE_RESULTS.json",
+  "current_next": "Frozen-flow abundance/detection/systematic decoder ablation, run private/transport_decoder_horizon_01. No new transport fit and no official upload."
 }
