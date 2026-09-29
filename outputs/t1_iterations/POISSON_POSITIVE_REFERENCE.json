@@ -1,0 +1,8 @@
+{
+  "primary_context": "https://arxiv.org/abs/1709.02082",
+  "published_context": "https://www.nature.com/articles/s41592-018-0229-2",
+  "read_scope": "Primary preprint abstract and bibliographic context, following withdrawn duplicate1710.05086 to its replacement; PMC browser challenge and Nature redirect prevented full-text access in this review.",
+  "hypothesis": "A count-aware conditional mean objective may differ from squared regression of log-positive expression. Isolate this on the frozen flow and global detection.",
+  "implementation": "Positive-only log-link Poisson mean objective with L2 slopes, unpenalized intercept, Newton/backtracking; ridge.1/1, at most12 steps. Input is expm1 of library-normalized expression, fractional rather than raw UMI counts; use quasi-likelihood interpretation only.",
+  "limitations": "Own decoder ablation, not scVI reproduction, a negative-binomial generative architecture, raw-count likelihood, or zero-truncated Poisson model. Detection is modeled separately and only observed-positive cells fit the mean. No calibrated biological uncertainty claimed. Full architecture/count models remain open."
+}

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T10:30:19.527493+00:00",
+  "updated_utc": "2026-09-29T10:51:49.830403+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_cdr_logistic_challenge.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_poisson_positive_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Correct callback event serialization; verify/reuse fitted ridge.1 head, train ridge1 once in cnf_cdr_logistic_repair_02.",
+  "next_experiment": "Positive quasi-Poisson conditional means ridge.1/1, frozenfield/globaldetection,27scores.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_cdr_logistic_repair_02"
+    "cnf_poisson_positive_challenge_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_cdr_logistic_repair_02",
+  "active_run_path": "outputs/t1_iterations/private/cnf_poisson_positive_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -651,14 +651,17 @@
     "local_score": null
   },
   "cnf_cdr_logistic_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_cdr_logistic_repair_02",
     "tests_passed": 112,
     "evaluations_planned": 33,
-    "pending_evaluations": 33,
+    "pending_evaluations": 0,
     "process_id": 22192,
     "plan_sha256": "47ed39489ca3d88e16a949d7faaf90ea2507d570a999c59c8a7a4c4daeb7f5b8",
-    "decision": "CDR logistic nuisance with matched no-CDR logistic controls and global positive head/field fixed. No promotion; local72 gate unmet."
+    "decision": "CDR logistic ridge.1 joint53.6162 versusmatchednonCDR53.5603 and globallinear53.5953; ridge1joint53.3463 belowmatched53.3622. Tiny gain not promoted, no72 readiness. All33 scores retained alongside two null failure outcomes. Next quasi-Poisson positive mean decoder.",
+    "evaluations": 33,
+    "report_sha256": "515a8749c94174e91c88fbc90816724a65fc30356942473c69a67e5448bb03b6",
+    "results_report": "CNF_CDR_LOGISTIC_RESULTS.json"
   },
   "cnf_cdr_logistic_repair_failed_job": {
     "status": "execution_failed_after_first_head_fit",
@@ -666,5 +669,15 @@
     "failure_report": "CNF_CDR_LOGISTIC_REPAIR_FAILURE.json",
     "evaluations": 0,
     "local_score": null
+  },
+  "cnf_poisson_positive_job": {
+    "status": "running",
+    "run": "cnf_poisson_positive_challenge_01",
+    "tests_passed": 114,
+    "evaluations_planned": 27,
+    "pending_evaluations": 27,
+    "process_id": 14192,
+    "plan_sha256": "18f75b2b94e6d7fe19f258ef0ed06416ef245d180f9eaaba2185e1c9e3a17d41",
+    "decision": "Positive quasi-Poisson ridge.1/1 with global detection and original field fixed. No promotion; local72 gate unmet."
   }
 }
