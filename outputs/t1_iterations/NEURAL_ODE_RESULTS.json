@@ -1,0 +1,142 @@
+{
+  "status": "completed_not_promoted",
+  "evaluations": 18,
+  "report_sha256": "6e321a4e516d5003b515f0d2e4e37f51e09cf227573665788e3bc28008b78a60",
+  "summaries": [
+    {
+      "candidate": "ode_b0.0_s0.25",
+      "scores": [
+        48.38004889679512,
+        50.236951071478174
+      ],
+      "mean": 49.308499984136645,
+      "skills_percent": [
+        {
+          "de_score": 47.76589049716804,
+          "de_direction": 45.6990242253305,
+          "mmd_u": 50.115842448288205,
+          "variogram": 49.895337408420126
+        },
+        {
+          "de_score": 47.11033274956217,
+          "de_direction": 52.3687213536712,
+          "mmd_u": 50.97356231950575,
+          "variogram": 50.37559424909056
+        }
+      ]
+    },
+    {
+      "candidate": "ode_b0.0_s0.5",
+      "scores": [
+        48.41282184870214,
+        50.7965450106639
+      ],
+      "mean": 49.60468342968302,
+      "skills_percent": [
+        {
+          "de_score": 47.76589049716804,
+          "de_direction": 45.826246980306784,
+          "mmd_u": 50.200382952638456,
+          "variogram": 49.773362967709474
+        },
+        {
+          "de_score": 46.86411149825784,
+          "de_direction": 54.050910775112726,
+          "mmd_u": 51.46565066384603,
+          "variogram": 50.64047121583724
+        }
+      ]
+    },
+    {
+      "candidate": "ode_b0.0_s1.0",
+      "scores": [
+        48.4379952968312,
+        51.342010806448776
+      ],
+      "mean": 49.89000305163999,
+      "skills_percent": [
+        {
+          "de_score": 47.735849056603776,
+          "de_direction": 46.162243101327746,
+          "mmd_u": 50.213895877517686,
+          "variogram": 49.496517470465065
+        },
+        {
+          "de_score": 46.620450606585784,
+          "de_direction": 55.35699383353724,
+          "mmd_u": 52.135803351497856,
+          "variogram": 51.03454345484334
+        }
+      ]
+    },
+    {
+      "candidate": "ode_b1.0_s0.25",
+      "scores": [
+        48.53592262642593,
+        49.535275650287325
+      ],
+      "mean": 49.03559913835663,
+      "skills_percent": [
+        {
+          "de_score": 45.50359712230216,
+          "de_direction": 49.44629841540336,
+          "mmd_u": 49.46546090280758,
+          "variogram": 49.79405235578639
+        },
+        {
+          "de_score": 45.516074450084595,
+          "de_direction": 51.587891031141616,
+          "mmd_u": 50.74145478268449,
+          "variogram": 50.184239225877114
+        }
+      ]
+    },
+    {
+      "candidate": "ode_b1.0_s0.5",
+      "scores": [
+        48.27538472892389,
+        49.88267752722395
+      ],
+      "mean": 49.07903112807392,
+      "skills_percent": [
+        {
+          "de_score": 45.421903052064636,
+          "de_direction": 49.388752933287535,
+          "mmd_u": 48.870425994556136,
+          "variogram": 49.55796467109504
+        },
+        {
+          "de_score": 45.172124265323255,
+          "de_direction": 52.671951426612814,
+          "mmd_u": 51.19565586168087,
+          "variogram": 50.31480922867836
+        }
+      ]
+    },
+    {
+      "candidate": "ode_b1.0_s1.0",
+      "scores": [
+        47.82683374070241,
+        50.411475713522236
+      ],
+      "mean": 49.119154727112324,
+      "skills_percent": [
+        {
+          "de_score": 45.667870036101085,
+          "de_direction": 48.886729569557524,
+          "mmd_u": 47.89201171090783,
+          "variogram": 49.10290163007704
+        },
+        {
+          "de_score": 44.75873544093177,
+          "de_direction": 54.33345862738289,
+          "mmd_u": 51.79612378600245,
+          "variogram": 50.497950303214154
+        }
+      ]
+    }
+  ],
+  "diagnosis": "No variant beats persistence on both folds. All DE recovery scores below baseline. Gene-change direction reverses across folds. Zero-mask preservation excludes detection changes. Larger magnitude alone cannot fix rank-based DE recovery.",
+  "research_family_exhausted": false,
+  "submissions_used": 0
+}

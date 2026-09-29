@@ -1,0 +1,30 @@
+{
+  "status": "literature_reviewed_not_implemented",
+  "reviewed_utc": "2026-09-28T18:50:13.226973+00:00",
+  "sources": [
+    {
+      "url": "https://broadinstitute.github.io/wot/tutorial/",
+      "scope": "Author tutorial: historical transport couplings, held-out interpolation and growth inputs."
+    },
+    {
+      "url": "https://moscot.readthedocs.io/en/stable/notebooks/examples/problems/TemporalProblem/800_score_genes_for_marginals.html",
+      "scope": "Marginal scoring and prior growth sections, lines719-815, including species-specific marker availability and rate sensitivity."
+    }
+  ],
+  "hypothesis": "Past proliferation/apoptosis expression can supply uncertain growth priors to unbalanced transport. The prepared equal-per-stage sample counts cannot be treated as biological growth.",
+  "implementation_before_training": [
+    "Retrieve and pin authoritative mouse proliferation/apoptosis gene sets, record exact overlap and expression normalization.",
+    "Fit and audit marker scores on permitted past cells only, including expression-matched control genes.",
+    "Compare neutral-growth balanced control against bounded growth sensitivities and unbalanced transport on historical adjacent stages.",
+    "Specify how past transport/growth is extrapolated for one day; published interpolation does not establish extrapolation accuracy.",
+    "Freeze all proposals before evaluation; record four actual metrics, fixed sampling seeds, solver convergence, marginal residuals and failed settings."
+  ],
+  "limitations": [
+    "Signatures are growth proxies, not calibrated embryonic birth/death measurements.",
+    "Prepared population sampling and historical annotation can bias estimates.",
+    "Mouse embryonic rates must not be assumed equal to human reprogramming defaults.",
+    "This is an unresolved research path, not a proven improvement or executed experiment."
+  ],
+  "submissions_allowed": 0,
+  "jev_requests_allowed": 0
+}

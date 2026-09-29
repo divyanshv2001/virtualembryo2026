@@ -1,5 +1,5 @@
 {
-  "status": "specified_not_implemented_or_executed",
+  "status": "completed_not_promoted",
   "method": "scNODE-inspired VAE plus neural ODE with Sinkhorn observation/dynamic losses",
   "source_review": {
     "paper": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11373355/",
@@ -61,5 +61,10 @@
   "validity": "Complete four actual metrics with unchanged anchors. Save every outcome and failures; require consistent meaningful gains on both folds before Monte Carlo promotion.",
   "freeze_requirement": "This is a method specification. Freeze actual code/data/dependency hashes, configuration and resource budget before any scored training run.",
   "submissions_allowed": 0,
-  "jev_requests_allowed": 0
+  "jev_requests_allowed": 0,
+  "actual_run": "private/neural_ode_horizon_01",
+  "plan_sha256": "d42821676813044472f45f608830be16ffe11db14b00d4f266117a7b7421429b",
+  "tests_passed": 66,
+  "results": "NEURAL_ODE_RESULTS.json",
+  "evaluations": 18
 }

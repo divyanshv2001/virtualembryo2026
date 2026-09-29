@@ -9,7 +9,7 @@ def main():
     runs={};running=[]
     for name in ['matched_horizon_audit_01','quantile_horizon_pilot_01','state_quantile_horizon_pilot_01',
                  'annotation_horizon_pilot_01','annotation_support_pilot_01',
-                 'program_horizon_pilot_01','cell_program_horizon_pilot_01','cell_program_repair_01','cell_program_feature_pilot_01','empirical_bayes_horizon_01','covariance_horizon_01','empirical_bayes_repair_01','copula_horizon_01']:
+                 'program_horizon_pilot_01','cell_program_horizon_pilot_01','cell_program_repair_01','cell_program_feature_pilot_01','empirical_bayes_horizon_01','covariance_horizon_01','empirical_bayes_repair_01','copula_horizon_01','neural_ode_horizon_01','neural_hurdle_horizon_01']:
         folder=HERE/'private'/name;path=folder/'report.json'
         if not path.exists():
             running.append(name);continue
@@ -58,6 +58,9 @@ def main():
         'decoder and evaluator panels. Higher iteration count is not assumed to improve forecast accuracy.','',
         'The2048-gene coverage ablation converged but regressed. Empirical Bayes pilots tested normal-mixture slope shrinkage with error inflation1/2 and sign gates none/.1/.25. Initial EM fits hit1000 iterations; a separate100-step EM plus convex-simplex SLSQP repair converged with scientific settings unchanged. Neither produced meaningful forecast gains.','',
         'Covariance pilots used8 past-fitted PCA dimensions and compared OAS with empirical covariance at three strengths. Positive-margin rank coupling used those covariance proposals, fixed zero masks and exact per-type margins before factor clipping and per-cell mass conservation. Projection changes final margins; all actual metrics remain required. Neither branch meaningfully exceeded persistence.','',
+        'The neural ODE pilot uses a Gaussian latent encoder, reconstruction pretraining and Sinkhorn losses for observed distributions and latent dynamics. Two fixed regularization values and three forecast strengths use all permitted past cells in the prepared cohort as minibatch pools. This is not the complete raw atlas, and stochastic batches do not guarantee every cell was sampled. A past-only full-gene ridge decoder transfers conditional latent-mean drift to bounded donor-relative factors. No type labels enter the neural learner. The final training iteration is fixed before target scoring. Complete forecast metrics, rather than training loss, determine progress.','',
+        'Author implementation: [scNODE](https://github.com/rsinghlab/scNODE), architecture, solver, training, loss and benchmark sources reviewed and pinned in NEURAL_ODE_AUTHOR_REFERENCE.json. The full paper fetch was blocked. Normalization, velocity and gradient bounds, ridge decoding and conditional-mean forecasting make this an adaptation rather than a reproduction.','',
+        'A subsequent ablation fits separate detection and positive-abundance heads on frozen beta0 neural latent means, with abundance-only, detection-only and joint forecasts at two strengths. It permits zero-mask changes with common fixed random uniforms, conserves mapped mass and retains protected genes. Clipped linear probability estimates and diagonal-shrunken conditional abundance coefficients are heuristic adaptations. No additional neural dynamics training or target-selected checkpoint is used. These are reused development folds, not fresh blind validation.','',
         'Sources: [Stephens supplement](https://stephenslab.uchicago.edu/assets/papers/Stephens2017-supplement.pdf), sectionsS.1-S.2; [Chen et al.](https://arxiv.org/html/0907.4698v1), Gaussian assumptions, OAS derivationIII-C and simulationIV; [sklearn covariance documentation](https://scikit-learn.org/stable/modules/covariance.html). These motivate estimator adaptations and do not establish developmental forecasting accuracy.','',
         'Literature: [Schefzik, Thorarinsdottir and Gneiting (2013)](https://arxiv.org/html/1302.7149v2), '
         'methods 4.1–4.3 and experiments 5.4 read. ECC separates marginal calibration from rank dependence. '
@@ -84,7 +87,7 @@ def main():
     state.update(updated_utc=now(),local_process_running=bool(running))
     state['horizon_batch']={'status':status,'running':running,'report':'outputs/t1_iterations/HORIZON_BATCH_RESULTS.json',
         'report_sha256':digest(HERE/'HORIZON_BATCH_RESULTS.json')}
-    state['next_experiment']='Complete the current positive-margin copula batch, preserve all four scores, and proceed to the next declared viable method. Keep official quota unused.' if running else 'Implement and freeze NEXT_NEURAL_ODE_EXPERIMENT.json after CPU dependency checks; continue remaining neural/transport/growth paths and meaningful ablations. Covariance, copula and repaired empirical Bayes pilots are recorded; no candidate is ready for official use.'
+    state['next_experiment']='Complete the frozen neural hurdle batch, preserve all four scores, and inspect both one-day folds. Keep official quota unused.' if running else 'Inspect neural hurdle outcomes and drift/detection diagnostics before freezing further ablations; continue validated growth-prior and remaining transport paths. No candidate is ready for official use.'
     path.write_text(json.dumps(state,indent=2))
     path=HERE/'METRIC_RESEARCH_QUEUE.json';queue=json.loads(path.read_text())
     entry={'id':'positive_quantile_temporal','metrics':['de_score','de_direction','mmd_u','variogram'],

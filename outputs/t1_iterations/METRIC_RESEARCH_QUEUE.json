@@ -238,7 +238,7 @@
         "de_direction",
         "de_score"
       ],
-      "status": "author_code_reviewed_dependencies_verified",
+      "status": "implemented_evaluated_not_promoted",
       "sources": [
         {
           "title": "scNODE",
@@ -247,10 +247,13 @@
         }
       ],
       "hypothesis_and_limits": "Nonlinear latent dynamics with a decoder may capture curved development; out-of-range forecasting is a separate assumption.",
-      "implementation": null,
-      "run": null,
+      "implementation": [
+        "neural_ode_forecast.py",
+        "neural_ode_horizon.py"
+      ],
+      "run": "neural_ode_horizon_01",
       "declared_experiment_and_result": null,
-      "next_action": "Implement and test NEXT_NEURAL_ODE_EXPERIMENT.json, then freeze actual hashes before any training. CPU torch/torchdiffeq/geomloss imports and gradient/solver checks passed.",
+      "next_action": "Implement past-only neural latent detection/positive-abundance heads; compare expression-only, detection-only and joint forecasts with common fixed random uniforms on matched one-day folds.",
       "research_family_exhausted": false,
       "constraints": [
         "All learner inputs <= fold cutoff; challenge calibration <=E8.5",
@@ -259,7 +262,8 @@
         "Cell resampling uncertainty is not independent embryo uncertainty"
       ],
       "method_specification": "NEXT_NEURAL_ODE_EXPERIMENT.json",
-      "paper_access": "Full methods fetch blocked this turn; author model, solver, training, losses and benchmark read."
+      "paper_access": "Full methods fetch blocked this turn; author model, solver, training, losses and benchmark read.",
+      "results_report": "NEURAL_ODE_RESULTS.json"
     },
     {
       "id": "distribution_dynamic_ot",
@@ -668,7 +672,7 @@
         "mmd_u",
         "variogram"
       ],
-      "status": "queued_with_input_assumptions",
+      "status": "literature_reviewed_prior_validation_required",
       "sources": [
         {
           "title": "Waddington-OT",
@@ -685,13 +689,23 @@
       "implementation": null,
       "run": null,
       "declared_experiment_and_result": null,
-      "next_action": "Determine defensible growth priors or measurements; do not equate sampled cell counts with biological growth.",
+      "next_action": "Use NEXT_GROWTH_TRANSPORT_EXPERIMENT.json: validate authoritative mouse marker overlap and past-only growth proxies before bounded neutral/growth transport ablations.",
       "research_family_exhausted": false,
       "constraints": [
         "All learner inputs <= fold cutoff; challenge calibration <=E8.5",
         "Full official 32285-gene evaluator unchanged",
         "No official submissions or new Jev calls",
         "Cell resampling uncertainty is not independent embryo uncertainty"
+      ],
+      "additional_review": [
+        {
+          "url": "https://broadinstitute.github.io/wot/tutorial/",
+          "scope": "Author tutorial: historical transport couplings, held-out interpolation and growth inputs."
+        },
+        {
+          "url": "https://moscot.readthedocs.io/en/stable/notebooks/examples/problems/TemporalProblem/800_score_genes_for_marginals.html",
+          "scope": "Marginal scoring and prior growth sections, lines719-815, including species-specific marker availability and rate sensitivity."
+        }
       ]
     },
     {
@@ -4376,11 +4390,11 @@
       ],
       "scope": "Adaptation, not faithful ECC. Three positive-quantile strengths, global and four-state conditional, two one-day associated-cohort folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "80c788648c064565daf652d4cc4487efc2c05793fb73543a5a34d729cb74cc9e",
+      "results_report_sha256": "77d0ec16a6dc4ec26f293db4fd1d690ef9b59d948d375461a5afc648aaeaddf8",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Implement and freeze NEXT_NEURAL_ODE_EXPERIMENT.json after CPU dependency checks; continue remaining neural/transport/growth paths and meaningful ablations. Covariance, copula and repaired empirical Bayes pilots are recorded; no candidate is ready for official use."
+      "next_action": "Inspect neural hurdle outcomes and drift/detection diagnostics before freezing further ablations; continue validated growth-prior and remaining transport paths. No candidate is ready for official use."
     },
     {
       "id": "annotation_conditioned_temporal",
@@ -4404,7 +4418,7 @@
       ],
       "scope": "Heuristic adaptation to normalized abundance; not muscat replication. Observed annotations group past cells. Four expression/detection ablations, source support20 vs100, two one-day folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "80c788648c064565daf652d4cc4487efc2c05793fb73543a5a34d729cb74cc9e",
+      "results_report_sha256": "77d0ec16a6dc4ec26f293db4fd1d690ef9b59d948d375461a5afc648aaeaddf8",
       "limitations": [
         "Published annotation may derive from joint stages; retrospective diagnostic only.",
         "Capture IDs do not establish independent embryos; cell-based errors are shrinkage heuristics.",
@@ -4413,7 +4427,7 @@
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Implement and freeze NEXT_NEURAL_ODE_EXPERIMENT.json after CPU dependency checks; continue remaining neural/transport/growth paths and meaningful ablations. Covariance, copula and repaired empirical Bayes pilots are recorded; no candidate is ready for official use."
+      "next_action": "Inspect neural hurdle outcomes and drift/detection diagnostics before freezing further ablations; continue validated growth-prior and remaining transport paths. No candidate is ready for official use."
     },
     {
       "id": "shared_gene_program_dynamics",
@@ -4440,11 +4454,34 @@
       "scope": "Shared SVD profile directions versus cell-level NMF median consensus usage dynamics. Neither is a faithful cNMF reproduction or certified biological-program recovery.",
       "frozen_trials": "SVD ranks2/4/8 with detection0/.5; NMF ranks8/16 with detection0/.5,3 fixed seeds and200 iterations. Rank16 optimizer repair800 iterations. Two matched one-day development folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "80c788648c064565daf652d4cc4487efc2c05793fb73543a5a34d729cb74cc9e",
+      "results_report_sha256": "77d0ec16a6dc4ec26f293db4fd1d690ef9b59d948d375461a5afc648aaeaddf8",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Implement and freeze NEXT_NEURAL_ODE_EXPERIMENT.json after CPU dependency checks; continue remaining neural/transport/growth paths and meaningful ablations. Covariance, copula and repaired empirical Bayes pilots are recorded; no candidate is ready for official use."
+      "next_action": "Inspect neural hurdle outcomes and drift/detection diagnostics before freezing further ablations; continue validated growth-prior and remaining transport paths. No candidate is ready for official use."
+    },
+    {
+      "id": "neural_latent_hurdle",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "status": "implemented_evaluated_not_promoted",
+      "run": "neural_hurdle_horizon_01",
+      "implementation": [
+        "neural_hurdle_forecast.py",
+        "neural_hurdle_horizon.py"
+      ],
+      "hypothesis": "Frozen neural drift can inform separate detection and positive-abundance changes. Relax fixed-zero constraint while keeping protected genes and mapped mass.",
+      "trial_scope": "Strengths.5/1; abundance-only,detection-only,joint; ridge1,positive support20,abundancecap2,probabilitydeltacap.25; same frozen beta0 dynamics; seed20260928 common uniforms; two exposed one-day development folds.",
+      "limitations": "Linear clipped probabilities and diagonal conditional positive regression are heuristic adaptations; no faithful published reproduction or calibrated biological uncertainty claimed.",
+      "research_family_exhausted": false,
+      "submissions_used": 0,
+      "jev_requests_used": 0,
+      "next_action": "Freeze systematic detection sampling versus independent Bernoulli to test gene-mean Monte Carlo noise, preserving the same frozen dynamics, fitted heads and evaluation anchors.",
+      "results_report": "NEURAL_HURDLE_RESULTS.json"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

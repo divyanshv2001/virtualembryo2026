@@ -18,6 +18,12 @@ The2048-gene coverage ablation converged but regressed. Empirical Bayes pilots t
 
 Covariance pilots used8 past-fitted PCA dimensions and compared OAS with empirical covariance at three strengths. Positive-margin rank coupling used those covariance proposals, fixed zero masks and exact per-type margins before factor clipping and per-cell mass conservation. Projection changes final margins; all actual metrics remain required. Neither branch meaningfully exceeded persistence.
 
+The neural ODE pilot uses a Gaussian latent encoder, reconstruction pretraining and Sinkhorn losses for observed distributions and latent dynamics. Two fixed regularization values and three forecast strengths use all permitted past cells in the prepared cohort as minibatch pools. This is not the complete raw atlas, and stochastic batches do not guarantee every cell was sampled. A past-only full-gene ridge decoder transfers conditional latent-mean drift to bounded donor-relative factors. No type labels enter the neural learner. The final training iteration is fixed before target scoring. Complete forecast metrics, rather than training loss, determine progress.
+
+Author implementation: [scNODE](https://github.com/rsinghlab/scNODE), architecture, solver, training, loss and benchmark sources reviewed and pinned in NEURAL_ODE_AUTHOR_REFERENCE.json. The full paper fetch was blocked. Normalization, velocity and gradient bounds, ridge decoding and conditional-mean forecasting make this an adaptation rather than a reproduction.
+
+A subsequent ablation fits separate detection and positive-abundance heads on frozen beta0 neural latent means, with abundance-only, detection-only and joint forecasts at two strengths. It permits zero-mask changes with common fixed random uniforms, conserves mapped mass and retains protected genes. Clipped linear probability estimates and diagonal-shrunken conditional abundance coefficients are heuristic adaptations. No additional neural dynamics training or target-selected checkpoint is used. These are reused development folds, not fresh blind validation.
+
 Sources: [Stephens supplement](https://stephenslab.uchicago.edu/assets/papers/Stephens2017-supplement.pdf), sectionsS.1-S.2; [Chen et al.](https://arxiv.org/html/0907.4698v1), Gaussian assumptions, OAS derivationIII-C and simulationIV; [sklearn covariance documentation](https://scikit-learn.org/stable/modules/covariance.html). These motivate estimator adaptations and do not establish developmental forecasting accuracy.
 
 Literature: [Schefzik, Thorarinsdottir and Gneiting (2013)](https://arxiv.org/html/1302.7149v2), methods 4.1–4.3 and experiments 5.4 read. ECC separates marginal calibration from rank dependence. Its weather experiments found benefits dependent on the dependence structure. This implementation adapts that separation to historical positive scRNA margins; it is neither faithful ECC nor evidence that ECC improves this challenge.
@@ -112,6 +118,25 @@ The [muscat paper](https://www.nature.com/articles/s41467-020-19894-4) motivates
 | copula_horizon_01 | copula_oas_s0.25 | 50.003 | 49.998 | 50.000 |
 | copula_horizon_01 | copula_oas_s0.5 | 50.007 | 49.997 | 50.002 |
 | copula_horizon_01 | copula_oas_s1.0 | 50.016 | 49.996 | 50.006 |
+| neural_ode_horizon_01 | copy | 50.000 | 50.000 | 50.000 |
+| neural_ode_horizon_01 | unit16 | 47.143 | 47.987 | 47.565 |
+| neural_ode_horizon_01 | saved384_d0.0 | 49.200 | 51.366 | 50.283 |
+| neural_ode_horizon_01 | ode_b0.0_s0.25 | 48.380 | 50.237 | 49.308 |
+| neural_ode_horizon_01 | ode_b0.0_s0.5 | 48.413 | 50.797 | 49.605 |
+| neural_ode_horizon_01 | ode_b0.0_s1.0 | 48.438 | 51.342 | 49.890 |
+| neural_ode_horizon_01 | ode_b1.0_s0.25 | 48.536 | 49.535 | 49.036 |
+| neural_ode_horizon_01 | ode_b1.0_s0.5 | 48.275 | 49.883 | 49.079 |
+| neural_ode_horizon_01 | ode_b1.0_s1.0 | 47.827 | 50.411 | 49.119 |
+| neural_hurdle_horizon_01 | copy | 50.000 | 50.000 | 50.000 |
+| neural_hurdle_horizon_01 | unit16 | 47.143 | 47.987 | 47.565 |
+| neural_hurdle_horizon_01 | saved384_d0.0 | 49.200 | 51.366 | 50.283 |
+| neural_hurdle_horizon_01 | saved_ode | 48.438 | 51.342 | 49.890 |
+| neural_hurdle_horizon_01 | hurdle_abundance_s0.5 | 49.488 | 50.153 | 49.820 |
+| neural_hurdle_horizon_01 | hurdle_abundance_s1.0 | 49.549 | 50.153 | 49.851 |
+| neural_hurdle_horizon_01 | hurdle_detection_s0.5 | 48.639 | 48.404 | 48.521 |
+| neural_hurdle_horizon_01 | hurdle_detection_s1.0 | 48.623 | 48.386 | 48.504 |
+| neural_hurdle_horizon_01 | hurdle_joint_s0.5 | 49.948 | 49.924 | 49.936 |
+| neural_hurdle_horizon_01 | hurdle_joint_s1.0 | 49.858 | 49.924 | 49.891 |
 
 Status: completed. Full four-metric vectors, raw metrics, model audits and provenance hashes are in HORIZON_BATCH_RESULTS.json.
 No new prospective export or official submission. The >72 objective remains unfinished.

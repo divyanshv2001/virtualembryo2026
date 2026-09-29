@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-28T18:33:10.783356+00:00",
+  "updated_utc": "2026-09-29T01:27:39.952456+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,7 +31,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/index_scores.py",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement and freeze NEXT_NEURAL_ODE_EXPERIMENT.json after CPU dependency checks; continue remaining neural/transport/growth paths and meaningful ablations. Covariance, copula and repaired empirical Bayes pilots are recorded; no candidate is ready for official use.",
+  "next_experiment": "Freeze systematic detection sampling versus independent Bernoulli to test gene-mean Monte Carlo noise, preserving the same frozen dynamics, fitted heads and evaluation anchors.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -150,7 +150,7 @@
     "status": "completed",
     "running": [],
     "report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-    "report_sha256": "80c788648c064565daf652d4cc4487efc2c05793fb73543a5a34d729cb74cc9e"
+    "report_sha256": "77d0ec16a6dc4ec26f293db4fd1d690ef9b59d948d375461a5afc648aaeaddf8"
   },
   "continuation_automation": {
     "id": "continue-t1-local-research",
@@ -158,5 +158,23 @@
     "cadence": "hourly",
     "user_authorized": true
   },
-  "current_turn_evaluations": 78
+  "current_turn_evaluations": 20,
+  "neural_ode_job": {
+    "status": "completed_not_promoted",
+    "session_id": 62711,
+    "run": "private/neural_ode_horizon_01",
+    "plan_sha256": "d42821676813044472f45f608830be16ffe11db14b00d4f266117a7b7421429b",
+    "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/neural_ode_horizon.py --resume",
+    "tests_passed": 66,
+    "report_sha256": "6e321a4e516d5003b515f0d2e4e37f51e09cf227573665788e3bc28008b78a60"
+  },
+  "neural_hurdle_job": {
+    "status": "completed_not_promoted",
+    "session_id": 25599,
+    "run": "private/neural_hurdle_horizon_01",
+    "plan_sha256": "d0bb39a5ae5b856942d2068b5c5023ef041bc27bf11cedc1e03ef6d2e9e51621",
+    "tests_passed": 67,
+    "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/neural_hurdle_horizon.py --resume",
+    "report_sha256": "6f26015d850aae5ee7abf1149eb8589e96f15d3091dc32febf9bafd637a62d4d"
+  }
 }

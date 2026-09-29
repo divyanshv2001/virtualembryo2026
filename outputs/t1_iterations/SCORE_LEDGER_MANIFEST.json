@@ -1,5 +1,5 @@
 {
-  "records": 1073,
+  "records": 1111,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -187,6 +187,16 @@
       "outcomes_indexed": 18
     },
     {
+      "path": "private/neural_hurdle_horizon_01/report.json",
+      "sha256": "6f26015d850aae5ee7abf1149eb8589e96f15d3091dc32febf9bafd637a62d4d",
+      "outcomes_indexed": 20
+    },
+    {
+      "path": "private/neural_ode_horizon_01/report.json",
+      "sha256": "6e321a4e516d5003b515f0d2e4e37f51e09cf227573665788e3bc28008b78a60",
+      "outcomes_indexed": 18
+    },
+    {
       "path": "private/nonlinear_oneday_temporal_01/report.json",
       "sha256": "8da6653a6fe5ae9ed511117373f78bc72b4f390033f41af39fd71db4f9f2b523",
       "outcomes_indexed": 6
@@ -284,5 +294,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "70c178136b9a962c209e0fdc3a8ee15b348bffec879e62b5cf64835b2b14eb70"
+  "ledger_sha256": "1f1cafa01add3030ea99fe0ed3b09a56cefded7794740cff998a56fb7e72a68d"
 }

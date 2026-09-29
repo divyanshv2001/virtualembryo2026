@@ -1,0 +1,130 @@
+{
+  "status": "completed_not_promoted",
+  "evaluations": 20,
+  "report_sha256": "6f26015d850aae5ee7abf1149eb8589e96f15d3091dc32febf9bafd637a62d4d",
+  "results": [
+    {
+      "candidate": "hurdle_abundance_s0.5",
+      "scores": [
+        49.48767873089902,
+        50.152542706969186
+      ],
+      "mean_score": 49.8201107189341,
+      "actual_projection_backoffs": [
+        1.0,
+        1.0
+      ],
+      "newly_detected_entries": [
+        0,
+        0
+      ],
+      "removed_detection_entries": [
+        0,
+        0
+      ]
+    },
+    {
+      "candidate": "hurdle_abundance_s1.0",
+      "scores": [
+        49.54910314190698,
+        50.152542706969186
+      ],
+      "mean_score": 49.850822924438084,
+      "actual_projection_backoffs": [
+        1.0,
+        0.5
+      ],
+      "newly_detected_entries": [
+        0,
+        0
+      ],
+      "removed_detection_entries": [
+        0,
+        0
+      ]
+    },
+    {
+      "candidate": "hurdle_detection_s0.5",
+      "scores": [
+        48.6387236950229,
+        48.40385576637861
+      ],
+      "mean_score": 48.52128973070076,
+      "actual_projection_backoffs": [
+        1.0,
+        1.0
+      ],
+      "newly_detected_entries": [
+        93173,
+        49113
+      ],
+      "removed_detection_entries": [
+        40758,
+        110888
+      ]
+    },
+    {
+      "candidate": "hurdle_detection_s1.0",
+      "scores": [
+        48.62266762175783,
+        48.3859002146219
+      ],
+      "mean_score": 48.50428391818986,
+      "actual_projection_backoffs": [
+        1.0,
+        1.0
+      ],
+      "newly_detected_entries": [
+        186546,
+        97868
+      ],
+      "removed_detection_entries": [
+        81503,
+        220537
+      ]
+    },
+    {
+      "candidate": "hurdle_joint_s0.5",
+      "scores": [
+        49.94765390166518,
+        49.92436490939835
+      ],
+      "mean_score": 49.93600940553176,
+      "actual_projection_backoffs": [
+        1.0,
+        1.0
+      ],
+      "newly_detected_entries": [
+        93173,
+        49113
+      ],
+      "removed_detection_entries": [
+        40758,
+        110888
+      ]
+    },
+    {
+      "candidate": "hurdle_joint_s1.0",
+      "scores": [
+        49.858276307307115,
+        49.92436490939835
+      ],
+      "mean_score": 49.89132060835273,
+      "actual_projection_backoffs": [
+        1.0,
+        0.5
+      ],
+      "newly_detected_entries": [
+        186546,
+        49113
+      ],
+      "removed_detection_entries": [
+        81503,
+        110888
+      ]
+    }
+  ],
+  "diagnosis": "Detection-only worsens DE recovery on both folds. Joint forecasts nearly reach persistence but do not beat it on either fold. Stronger second-fold settings project to identical outputs. Independent Bernoulli detection transitions may contribute sampling noise; that hypothesis remains untested.",
+  "submissions_used": 0,
+  "research_family_exhausted": false
+}

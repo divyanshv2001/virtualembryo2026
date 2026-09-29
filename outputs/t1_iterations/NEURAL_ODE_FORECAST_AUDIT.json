@@ -1,0 +1,312 @@
+{
+  "created_utc": "2026-09-28T18:53:50.507265+00:00",
+  "report_sha256": "6e321a4e516d5003b515f0d2e4e37f51e09cf227573665788e3bc28008b78a60",
+  "scope": "Post-score descriptive diagnostics on already used development folds. These are not DE hypothesis-test scores, independent validation or learner inputs. Correlations use held-out means only after forecasts were frozen.",
+  "interpretation": "The audited DE score uses the truth effect threshold to define the number of up/down genes, then ranks predicted gene changes. Predicted changes need not exceed.25. Increasing magnitude alone does not correct a wrong predicted ranking; these descriptive counts cannot explain DE-score failure by themselves. Correlations here are ordinary mapped-gene correlations, not the official full-panel rank-partial direction metric. Diagnostics average in float64; original scores retain scorer source precision.",
+  "folds": [
+    {
+      "cutoff": 8.0,
+      "target": 9.0,
+      "mapped_genes": 26775,
+      "target_genes_with_abs_mean_change_ge_point25": 1112,
+      "candidates": [
+        {
+          "candidate": "copy",
+          "local_score": 50.0,
+          "mean_abs_gene_change": 0.0,
+          "absolute_gene_change_quantiles": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "genes_with_abs_mean_change_ge_point25": 0,
+          "genes_with_correct_sign_on_target_effect_ge_point25": 0,
+          "genes_with_correct_sign_and_predicted_effect_ge_point25": 0,
+          "gene_mean_delta_correlation": null,
+          "zero_mask_preserved": true
+        },
+        {
+          "candidate": "unit16",
+          "local_score": 47.142658332960416,
+          "mean_abs_gene_change": 0.0028891694488070523,
+          "absolute_gene_change_quantiles": [
+            0.00022325366735458096,
+            0.007952139365673093,
+            0.035936355495452425,
+            0.3566574008862178
+          ],
+          "genes_with_abs_mean_change_ge_point25": 3,
+          "genes_with_correct_sign_on_target_effect_ge_point25": 381,
+          "genes_with_correct_sign_and_predicted_effect_ge_point25": 0,
+          "gene_mean_delta_correlation": -0.18346397856769003,
+          "zero_mask_preserved": false
+        },
+        {
+          "candidate": "saved384_d0.0",
+          "local_score": 49.200036578447445,
+          "mean_abs_gene_change": 0.0014041463705616287,
+          "absolute_gene_change_quantiles": [
+            1.5310247739154861e-06,
+            0.0032235066890716597,
+            0.025675465331872222,
+            0.07881081807613377
+          ],
+          "genes_with_abs_mean_change_ge_point25": 0,
+          "genes_with_correct_sign_on_target_effect_ge_point25": 541,
+          "genes_with_correct_sign_and_predicted_effect_ge_point25": 0,
+          "gene_mean_delta_correlation": -0.019653982086805806,
+          "zero_mask_preserved": true
+        },
+        {
+          "candidate": "ode_b0.0_s0.25",
+          "local_score": 48.38004889679512,
+          "mean_abs_gene_change": 0.0008311343594202918,
+          "absolute_gene_change_quantiles": [
+            2.785464127858482e-06,
+            0.0018969122409820478,
+            0.013781661382913597,
+            0.08064607868591944
+          ],
+          "genes_with_abs_mean_change_ge_point25": 0,
+          "genes_with_correct_sign_on_target_effect_ge_point25": 462,
+          "genes_with_correct_sign_and_predicted_effect_ge_point25": 0,
+          "gene_mean_delta_correlation": -0.04862975509740669,
+          "zero_mask_preserved": true
+        },
+        {
+          "candidate": "ode_b0.0_s0.5",
+          "local_score": 48.41282184870214,
+          "mean_abs_gene_change": 0.0016250512635715274,
+          "absolute_gene_change_quantiles": [
+            5.44706980387384e-06,
+            0.0038012900809446817,
+            0.027423163896401665,
+            0.12715202611684795
+          ],
+          "genes_with_abs_mean_change_ge_point25": 0,
+          "genes_with_correct_sign_on_target_effect_ge_point25": 466,
+          "genes_with_correct_sign_and_predicted_effect_ge_point25": 0,
+          "gene_mean_delta_correlation": -0.06213020728693714,
+          "zero_mask_preserved": true
+        },
+        {
+          "candidate": "ode_b0.0_s1.0",
+          "local_score": 48.4379952968312,
+          "mean_abs_gene_change": 0.003037535986581251,
+          "absolute_gene_change_quantiles": [
+            9.14726654688519e-06,
+            0.0075678590774536465,
+            0.05032597508072821,
+            0.15254809476931896
+          ],
+          "genes_with_abs_mean_change_ge_point25": 0,
+          "genes_with_correct_sign_on_target_effect_ge_point25": 465,
+          "genes_with_correct_sign_and_predicted_effect_ge_point25": 0,
+          "gene_mean_delta_correlation": -0.090773607797785,
+          "zero_mask_preserved": true
+        },
+        {
+          "candidate": "ode_b1.0_s0.25",
+          "local_score": 48.53592262642593,
+          "mean_abs_gene_change": 0.0010192453932899425,
+          "absolute_gene_change_quantiles": [
+            2.188026905059967e-06,
+            0.002303770267963396,
+            0.018546761467059476,
+            0.12573461850484247
+          ],
+          "genes_with_abs_mean_change_ge_point25": 0,
+          "genes_with_correct_sign_on_target_effect_ge_point25": 387,
+          "genes_with_correct_sign_and_predicted_effect_ge_point25": 0,
+          "gene_mean_delta_correlation": -0.1543647512610947,
+          "zero_mask_preserved": true
+        },
+        {
+          "candidate": "ode_b1.0_s0.5",
+          "local_score": 48.27538472892389,
+          "mean_abs_gene_change": 0.0019669083497678604,
+          "absolute_gene_change_quantiles": [
+            3.910481929779051e-06,
+            0.004507995855808258,
+            0.03599874613841354,
+            0.1321065334876379
+          ],
+          "genes_with_abs_mean_change_ge_point25": 0,
+          "genes_with_correct_sign_on_target_effect_ge_point25": 379,
+          "genes_with_correct_sign_and_predicted_effect_ge_point25": 0,
+          "gene_mean_delta_correlation": -0.1770037220886273,
+          "zero_mask_preserved": true
+        },
+        {
+          "candidate": "ode_b1.0_s1.0",
+          "local_score": 47.82683374070241,
+          "mean_abs_gene_change": 0.003629757037016227,
+          "absolute_gene_change_quantiles": [
+            6.163160006205336e-06,
+            0.008926333034038543,
+            0.06465704663872684,
+            0.19134620120127988
+          ],
+          "genes_with_abs_mean_change_ge_point25": 0,
+          "genes_with_correct_sign_on_target_effect_ge_point25": 378,
+          "genes_with_correct_sign_and_predicted_effect_ge_point25": 0,
+          "gene_mean_delta_correlation": -0.19843663489641314,
+          "zero_mask_preserved": true
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 9.25,
+      "mapped_genes": 26775,
+      "target_genes_with_abs_mean_change_ge_point25": 1069,
+      "candidates": [
+        {
+          "candidate": "copy",
+          "local_score": 50.0,
+          "mean_abs_gene_change": 0.0,
+          "absolute_gene_change_quantiles": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "genes_with_abs_mean_change_ge_point25": 0,
+          "genes_with_correct_sign_on_target_effect_ge_point25": 0,
+          "genes_with_correct_sign_and_predicted_effect_ge_point25": 0,
+          "gene_mean_delta_correlation": null,
+          "zero_mask_preserved": true
+        },
+        {
+          "candidate": "unit16",
+          "local_score": 47.98714389154627,
+          "mean_abs_gene_change": 0.0029602485298921193,
+          "absolute_gene_change_quantiles": [
+            0.00022189138333002733,
+            0.008490939434369394,
+            0.03502956862250936,
+            0.2699917244414489
+          ],
+          "genes_with_abs_mean_change_ge_point25": 2,
+          "genes_with_correct_sign_on_target_effect_ge_point25": 623,
+          "genes_with_correct_sign_and_predicted_effect_ge_point25": 2,
+          "gene_mean_delta_correlation": 0.10777745454753272,
+          "zero_mask_preserved": false
+        },
+        {
+          "candidate": "saved384_d0.0",
+          "local_score": 51.36612769509718,
+          "mean_abs_gene_change": 0.001262891958953805,
+          "absolute_gene_change_quantiles": [
+            2.5756756464640103e-06,
+            0.0029425168275833326,
+            0.022564957238237003,
+            0.06213782149553282
+          ],
+          "genes_with_abs_mean_change_ge_point25": 0,
+          "genes_with_correct_sign_on_target_effect_ge_point25": 777,
+          "genes_with_correct_sign_and_predicted_effect_ge_point25": 0,
+          "gene_mean_delta_correlation": 0.47159096128226485,
+          "zero_mask_preserved": true
+        },
+        {
+          "candidate": "ode_b0.0_s0.25",
+          "local_score": 50.236951071478174,
+          "mean_abs_gene_change": 0.0010338622606119708,
+          "absolute_gene_change_quantiles": [
+            2.8422077496847217e-06,
+            0.00262712031801543,
+            0.01656016562004886,
+            0.0774479177594185
+          ],
+          "genes_with_abs_mean_change_ge_point25": 0,
+          "genes_with_correct_sign_on_target_effect_ge_point25": 757,
+          "genes_with_correct_sign_and_predicted_effect_ge_point25": 0,
+          "gene_mean_delta_correlation": 0.3731485669439083,
+          "zero_mask_preserved": true
+        },
+        {
+          "candidate": "ode_b0.0_s0.5",
+          "local_score": 50.7965450106639,
+          "mean_abs_gene_change": 0.0018600145049589352,
+          "absolute_gene_change_quantiles": [
+            3.8303534189859396e-06,
+            0.0048509328583876705,
+            0.03023737662494177,
+            0.0935257949928443
+          ],
+          "genes_with_abs_mean_change_ge_point25": 0,
+          "genes_with_correct_sign_on_target_effect_ge_point25": 744,
+          "genes_with_correct_sign_and_predicted_effect_ge_point25": 0,
+          "gene_mean_delta_correlation": 0.34149688030753667,
+          "zero_mask_preserved": true
+        },
+        {
+          "candidate": "ode_b0.0_s1.0",
+          "local_score": 51.342010806448776,
+          "mean_abs_gene_change": 0.0032142603205139305,
+          "absolute_gene_change_quantiles": [
+            6.466309229533149e-06,
+            0.008948762013514818,
+            0.05088953625539929,
+            0.14232597522934265
+          ],
+          "genes_with_abs_mean_change_ge_point25": 0,
+          "genes_with_correct_sign_on_target_effect_ge_point25": 716,
+          "genes_with_correct_sign_and_predicted_effect_ge_point25": 0,
+          "gene_mean_delta_correlation": 0.31981517783539076,
+          "zero_mask_preserved": true
+        },
+        {
+          "candidate": "ode_b1.0_s0.25",
+          "local_score": 49.535275650287325,
+          "mean_abs_gene_change": 0.0009030672581330139,
+          "absolute_gene_change_quantiles": [
+            2.241094907130814e-06,
+            0.0022411880155404594,
+            0.015506141418019892,
+            0.06547329097986232
+          ],
+          "genes_with_abs_mean_change_ge_point25": 0,
+          "genes_with_correct_sign_on_target_effect_ge_point25": 712,
+          "genes_with_correct_sign_and_predicted_effect_ge_point25": 0,
+          "gene_mean_delta_correlation": 0.2657638369742315,
+          "zero_mask_preserved": true
+        },
+        {
+          "candidate": "ode_b1.0_s0.5",
+          "local_score": 49.88267752722395,
+          "mean_abs_gene_change": 0.0017107243357656749,
+          "absolute_gene_change_quantiles": [
+            3.28566630681355e-06,
+            0.004325679483016332,
+            0.029588102914293517,
+            0.10252511064211545
+          ],
+          "genes_with_abs_mean_change_ge_point25": 0,
+          "genes_with_correct_sign_on_target_effect_ge_point25": 697,
+          "genes_with_correct_sign_and_predicted_effect_ge_point25": 0,
+          "gene_mean_delta_correlation": 0.23730291377861337,
+          "zero_mask_preserved": true
+        },
+        {
+          "candidate": "ode_b1.0_s1.0",
+          "local_score": 50.411475713522236,
+          "mean_abs_gene_change": 0.0031435813535272686,
+          "absolute_gene_change_quantiles": [
+            4.882415135701312e-06,
+            0.00842704493602116,
+            0.05285807179749003,
+            0.15600757135947507
+          ],
+          "genes_with_abs_mean_change_ge_point25": 0,
+          "genes_with_correct_sign_on_target_effect_ge_point25": 688,
+          "genes_with_correct_sign_and_predicted_effect_ge_point25": 0,
+          "gene_mean_delta_correlation": 0.21705873570277015,
+          "zero_mask_preserved": true
+        }
+      ]
+    }
+  ]
+}

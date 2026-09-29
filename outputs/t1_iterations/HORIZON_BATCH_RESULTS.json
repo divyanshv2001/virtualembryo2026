@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-28T18:33:10.768173+00:00",
+  "updated_utc": "2026-09-29T01:27:33.502406+00:00",
   "status": "completed",
   "runs": {
     "matched_horizon_audit_01": {
@@ -14234,6 +14234,3530 @@
         }
       ],
       "scope": "One-day source-cohort development, not independent challenge tissue replication. Atlas donor/target missing or ambiguous official genes are zero placeholders, not observed zeros. This experiment also uses observed annotation strings as learner grouping features. Labels may reflect joint atlas processing, so this is retrospective annotation-conditioned development, not a clean independently annotated holdout. Later-stage label values never enter fitting or prediction."
+    },
+    "neural_ode_horizon_01": {
+      "report_sha256": "6e321a4e516d5003b515f0d2e4e37f51e09cf227573665788e3bc28008b78a60",
+      "plan_sha256": "d42821676813044472f45f608830be16ffe11db14b00d4f266117a7b7421429b",
+      "folds": [
+        {
+          "cutoff": 8.0,
+          "target": 9.0,
+          "floor": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.26304274797439575,
+            "variogram": 0.009573637507855892
+          },
+          "ceiling": {
+            "de_score": 0.9358816276202219,
+            "de_direction": 0.8673063060165137,
+            "mmd_u": 0.007752883248031139,
+            "variogram": 0.00011852615716634318
+          },
+          "results": [
+            {
+              "candidate": "copy",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.26304274797439575,
+                "variogram": 0.009573637507855892
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit16",
+              "raw_metrics": {
+                "de_score": -0.2392108508014796,
+                "de_direction": -0.1276339315604888,
+                "mmd_u": 0.2767234444618225,
+                "variogram": 0.009945238940417767
+              },
+              "local_score": 47.142658332960416,
+              "skills": {
+                "de_score": 0.4433411214953271,
+                "de_direction": 0.46573119386378403,
+                "mmd_u": 0.48695238491166565,
+                "variogram": 0.4903639450816336
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "saved384_d0.0",
+              "raw_metrics": {
+                "de_score": -0.11220715166461158,
+                "de_direction": 0.0012039346574039623,
+                "mmd_u": 0.2659091651439667,
+                "variogram": 0.009607630781829357
+              },
+              "local_score": 49.200036578447445,
+              "skills": {
+                "de_score": 0.47172156619018024,
+                "de_direction": 0.500347273748285,
+                "mmd_u": 0.4972086486689718,
+                "variogram": 0.4991028059958329
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "ode_b0.0_s0.25",
+              "raw_metrics": {
+                "de_score": -0.0875462392108508,
+                "de_direction": -0.1632535256333753,
+                "mmd_u": 0.26186254620552063,
+                "variogram": 0.009613304398953915
+              },
+              "local_score": 48.38004889679512,
+              "skills": {
+                "de_score": 0.47765890497168034,
+                "de_direction": 0.456990242253305,
+                "mmd_u": 0.5011584244828821,
+                "variogram": 0.49895337408420126
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "ode_b0.0_s0.5",
+              "raw_metrics": {
+                "de_score": -0.0875462392108508,
+                "de_direction": -0.15798467263928487,
+                "mmd_u": 0.2610046863555908,
+                "variogram": 0.009659742936491966
+              },
+              "local_score": 48.41282184870214,
+              "skills": {
+                "de_score": 0.47765890497168034,
+                "de_direction": 0.45826246980306784,
+                "mmd_u": 0.5020038295263846,
+                "variogram": 0.4977336296770947
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "ode_b0.0_s1.0",
+              "raw_metrics": {
+                "de_score": -0.08877928483353882,
+                "de_direction": -0.1442092296888878,
+                "mmd_u": 0.2608678340911865,
+                "variogram": 0.009765993803739548
+              },
+              "local_score": 48.4379952968312,
+              "skills": {
+                "de_score": 0.47735849056603774,
+                "de_direction": 0.4616224310132775,
+                "mmd_u": 0.5021389587751769,
+                "variogram": 0.4949651747046506
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "ode_b1.0_s0.25",
+              "raw_metrics": {
+                "de_score": -0.1849568434032059,
+                "de_direction": -0.019424259908701207,
+                "mmd_u": 0.2685602307319641,
+                "variogram": 0.0096518499776721
+              },
+              "local_score": 48.53592262642593,
+              "skills": {
+                "de_score": 0.4550359712230216,
+                "de_direction": 0.4944629841540336,
+                "mmd_u": 0.4946546090280758,
+                "variogram": 0.49794052355786395
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "ode_b1.0_s0.5",
+              "raw_metrics": {
+                "de_score": -0.18865598027127,
+                "de_direction": -0.02146798224324106,
+                "mmd_u": 0.27484411001205444,
+                "variogram": 0.009742308408021927
+              },
+              "local_score": 48.27538472892389,
+              "skills": {
+                "de_score": 0.4542190305206463,
+                "de_direction": 0.49388752933287533,
+                "mmd_u": 0.4887042599455614,
+                "variogram": 0.4955796467109504
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "ode_b1.0_s1.0",
+              "raw_metrics": {
+                "de_score": -0.17755856966707764,
+                "de_direction": -0.039501372790776215,
+                "mmd_u": 0.2855161428451538,
+                "variogram": 0.0099191227927804
+              },
+              "local_score": 47.82683374070241,
+              "skills": {
+                "de_score": 0.4566787003610108,
+                "de_direction": 0.48886729569557524,
+                "mmd_u": 0.47892011710907834,
+                "variogram": 0.49102901630077045
+              },
+              "calibration_valid": true
+            }
+          ],
+          "generation": {
+            "copy": {
+              "audit": {
+                "method": "persistence",
+                "replayed_from": "private\\cell_program_horizon_pilot_01\\cutoff_8.0\\copy.npy"
+              },
+              "prediction_sha256": "53908b256a2f04ded456a9239a8231ce0c0f551e3bd9de2c1424524db824cd4d"
+            },
+            "unit16": {
+              "audit": {
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "guard_applied": true,
+                "population_mix": 1.0,
+                "expression_strength_used": 1.0,
+                "trusted_donor_fraction": 0.986,
+                "effective_sample_size": 1397.1175173673855,
+                "unique_donors": 1302,
+                "covariance_change_vs_reference": 0.11251184088826895,
+                "state_support": [
+                  143,
+                  1,
+                  82,
+                  73,
+                  166,
+                  73,
+                  0,
+                  165,
+                  92,
+                  24,
+                  36,
+                  37,
+                  5,
+                  19,
+                  66,
+                  1
+                ],
+                "alignment": "identity",
+                "covariance_limit": 0.4,
+                "feature_scaling": "unit",
+                "expression_factor_cap": 1.25,
+                "detection_strength": 0.5,
+                "maximum_probability_change": 0.02,
+                "attempted_additions": 8631,
+                "attempted_deletions": 16757,
+                "detection_candidate_covariance_change": 0.11372150904451062,
+                "detection_guard_rejected": false,
+                "actual_additions": 8631,
+                "actual_deletions": 16757,
+                "replayed_from": "private\\cell_program_horizon_pilot_01\\cutoff_8.0\\unit16.npy"
+              },
+              "prediction_sha256": "5a511aa567339d7d5cd9b2604d845633d450567a782672fcaf6edded2483f967"
+            },
+            "saved384_d0.0": {
+              "audit": {
+                "attempted_additions": 0,
+                "attempted_deletions": 0,
+                "method": "cell_nmf_consensus_usage_drift",
+                "requested_expression": 1.0,
+                "requested_detection": 0.0,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.05594341256359671,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 0,
+                  "Blood progenitors": 286,
+                  "Cardiomyocytes FHF 1": 31,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 0,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors FHF": 37,
+                  "Cardiopharyngeal progenitors SHF": 0,
+                  "EMP": 1,
+                  "Embryo proper endothelium": 32,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 0,
+                  "Epicardium": 0,
+                  "Erythroid": 1,
+                  "Foregut": 0,
+                  "Gut tube": 146,
+                  "Haematoendothelial progenitors": 46,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 235,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 154,
+                  "Pharyngeal endoderm": 0,
+                  "Pharyngeal mesoderm": 1,
+                  "Surface ectoderm": 0,
+                  "Venous endothelium": 2
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.6713333333333333,
+                "actual_additions": 0,
+                "actual_deletions": 0,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "fit_audit": {
+                  "rank": 8,
+                  "fit_cells": 3000,
+                  "features": 384,
+                  "replicate_iterations": [
+                    159,
+                    126,
+                    125
+                  ],
+                  "usage_iterations": [
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40
+                  ],
+                  "convergence_warnings": 0,
+                  "consensus_cluster_sizes": [
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3
+                  ],
+                  "consensus_dispersion": [
+                    0.008059101860016732,
+                    0.006262875167234888,
+                    0.0106354333646103,
+                    0.026826587971851907,
+                    0.014192102725697299,
+                    0.03477137496681977,
+                    0.03251563013903399,
+                    0.011814020930998663
+                  ],
+                  "adaptation": "Three NMF replicas, median consensus, fixed-component multiplicative usage fitting; normalized abundance instead of raw counts, 384 guard features instead of2000 v-score genes, no component outlier filter. Ridge1 full-panel log-abundance decoder and within-type usage slopes are added forecasting hypotheses, not cNMF reproduction.",
+                  "scope": "Cell-level factors are not validated biological activity programs; convergence and consensus with three replicas do not establish recovery or temporal accuracy."
+                },
+                "replayed_from": "private\\cell_program_horizon_pilot_01\\cutoff_8.0\\cell_r8_d0.0.npy"
+              },
+              "prediction_sha256": "0e6ee1508993d3631afe14efcca3497593fa179c7f2c1ad72f29a58603ccf3c0"
+            },
+            "ode_b0.0_s0.25": {
+              "audit": {
+                "method": "VAE neural ODE with Sinkhorn observation and latent dynamics losses",
+                "beta": 0.0,
+                "fit_cells": 7963,
+                "feature_count": 384,
+                "fit_max_stage": 8.0,
+                "past_stages": [
+                  7.5,
+                  7.75,
+                  8.0
+                ],
+                "pretrain_steps": 200,
+                "joint_steps": 1000,
+                "batch": 32,
+                "truth_batch": 200,
+                "training_history": [
+                  {
+                    "phase": "pretrain",
+                    "step": 100,
+                    "loss": 0.6642107963562012
+                  },
+                  {
+                    "phase": "pretrain",
+                    "step": 200,
+                    "loss": 0.6089091897010803
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 100,
+                    "loss": 141.82904052734375,
+                    "observation_loss": 141.82904052734375,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 200,
+                    "loss": 138.27099609375,
+                    "observation_loss": 138.27099609375,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 300,
+                    "loss": 139.79428100585938,
+                    "observation_loss": 139.79428100585938,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 400,
+                    "loss": 142.06817626953125,
+                    "observation_loss": 142.06817626953125,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 500,
+                    "loss": 134.56398010253906,
+                    "observation_loss": 134.56398010253906,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 600,
+                    "loss": 150.0184326171875,
+                    "observation_loss": 150.0184326171875,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 700,
+                    "loss": 144.77188110351562,
+                    "observation_loss": 144.77188110351562,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 800,
+                    "loss": 141.55064392089844,
+                    "observation_loss": 141.55064392089844,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 900,
+                    "loss": 139.24566650390625,
+                    "observation_loss": 139.24566650390625,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 1000,
+                    "loss": 155.739501953125,
+                    "observation_loss": 155.739501953125,
+                    "dynamic_loss": 0.0
+                  }
+                ],
+                "scope": "Author-architecture adaptation, not scNODE reproduction: normalized feature scaling, minibatch reconstruction, bounded velocity/gradient, fixed physical Euler step, ridge full-gene donor-relative decoding. No annotation labels or future expression are model inputs. All permitted prepared rows are available to training; prepared cohort is sampled, not the complete raw atlas.",
+                "surrogate_is_final_score": false,
+                "model_selection": "Predeclared final iteration; no target-based checkpoint selection.",
+                "requested_strength": 0.25,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.06529761158481412,
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "forecast_latent": "Conditional mean, no sampled seed selection.",
+                "zero_mask_preserved": true
+              },
+              "prediction_sha256": "b350b648b60c02cf9b5836385ec681f529a3bec3a8a13938f5e6ee9b42e32053"
+            },
+            "ode_b0.0_s0.5": {
+              "audit": {
+                "method": "VAE neural ODE with Sinkhorn observation and latent dynamics losses",
+                "beta": 0.0,
+                "fit_cells": 7963,
+                "feature_count": 384,
+                "fit_max_stage": 8.0,
+                "past_stages": [
+                  7.5,
+                  7.75,
+                  8.0
+                ],
+                "pretrain_steps": 200,
+                "joint_steps": 1000,
+                "batch": 32,
+                "truth_batch": 200,
+                "training_history": [
+                  {
+                    "phase": "pretrain",
+                    "step": 100,
+                    "loss": 0.6642107963562012
+                  },
+                  {
+                    "phase": "pretrain",
+                    "step": 200,
+                    "loss": 0.6089091897010803
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 100,
+                    "loss": 141.82904052734375,
+                    "observation_loss": 141.82904052734375,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 200,
+                    "loss": 138.27099609375,
+                    "observation_loss": 138.27099609375,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 300,
+                    "loss": 139.79428100585938,
+                    "observation_loss": 139.79428100585938,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 400,
+                    "loss": 142.06817626953125,
+                    "observation_loss": 142.06817626953125,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 500,
+                    "loss": 134.56398010253906,
+                    "observation_loss": 134.56398010253906,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 600,
+                    "loss": 150.0184326171875,
+                    "observation_loss": 150.0184326171875,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 700,
+                    "loss": 144.77188110351562,
+                    "observation_loss": 144.77188110351562,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 800,
+                    "loss": 141.55064392089844,
+                    "observation_loss": 141.55064392089844,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 900,
+                    "loss": 139.24566650390625,
+                    "observation_loss": 139.24566650390625,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 1000,
+                    "loss": 155.739501953125,
+                    "observation_loss": 155.739501953125,
+                    "dynamic_loss": 0.0
+                  }
+                ],
+                "scope": "Author-architecture adaptation, not scNODE reproduction: normalized feature scaling, minibatch reconstruction, bounded velocity/gradient, fixed physical Euler step, ridge full-gene donor-relative decoding. No annotation labels or future expression are model inputs. All permitted prepared rows are available to training; prepared cohort is sampled, not the complete raw atlas.",
+                "surrogate_is_final_score": false,
+                "model_selection": "Predeclared final iteration; no target-based checkpoint selection.",
+                "requested_strength": 0.5,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.10861363838152512,
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "forecast_latent": "Conditional mean, no sampled seed selection.",
+                "zero_mask_preserved": true
+              },
+              "prediction_sha256": "e3e8e51b29b270358f0c2426c1df09de96cc515d217445df8c61db0634441497"
+            },
+            "ode_b0.0_s1.0": {
+              "audit": {
+                "method": "VAE neural ODE with Sinkhorn observation and latent dynamics losses",
+                "beta": 0.0,
+                "fit_cells": 7963,
+                "feature_count": 384,
+                "fit_max_stage": 8.0,
+                "past_stages": [
+                  7.5,
+                  7.75,
+                  8.0
+                ],
+                "pretrain_steps": 200,
+                "joint_steps": 1000,
+                "batch": 32,
+                "truth_batch": 200,
+                "training_history": [
+                  {
+                    "phase": "pretrain",
+                    "step": 100,
+                    "loss": 0.6642107963562012
+                  },
+                  {
+                    "phase": "pretrain",
+                    "step": 200,
+                    "loss": 0.6089091897010803
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 100,
+                    "loss": 141.82904052734375,
+                    "observation_loss": 141.82904052734375,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 200,
+                    "loss": 138.27099609375,
+                    "observation_loss": 138.27099609375,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 300,
+                    "loss": 139.79428100585938,
+                    "observation_loss": 139.79428100585938,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 400,
+                    "loss": 142.06817626953125,
+                    "observation_loss": 142.06817626953125,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 500,
+                    "loss": 134.56398010253906,
+                    "observation_loss": 134.56398010253906,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 600,
+                    "loss": 150.0184326171875,
+                    "observation_loss": 150.0184326171875,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 700,
+                    "loss": 144.77188110351562,
+                    "observation_loss": 144.77188110351562,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 800,
+                    "loss": 141.55064392089844,
+                    "observation_loss": 141.55064392089844,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 900,
+                    "loss": 139.24566650390625,
+                    "observation_loss": 139.24566650390625,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 1000,
+                    "loss": 155.739501953125,
+                    "observation_loss": 155.739501953125,
+                    "dynamic_loss": 0.0
+                  }
+                ],
+                "scope": "Author-architecture adaptation, not scNODE reproduction: normalized feature scaling, minibatch reconstruction, bounded velocity/gradient, fixed physical Euler step, ridge full-gene donor-relative decoding. No annotation labels or future expression are model inputs. All permitted prepared rows are available to training; prepared cohort is sampled, not the complete raw atlas.",
+                "surrogate_is_final_score": false,
+                "model_selection": "Predeclared final iteration; no target-based checkpoint selection.",
+                "requested_strength": 1.0,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.1511019812401673,
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "forecast_latent": "Conditional mean, no sampled seed selection.",
+                "zero_mask_preserved": true
+              },
+              "prediction_sha256": "0b0f2379ba855d2475b64226dc9966cb89e5e8e251ead00180b358d41fcb9ee2"
+            },
+            "ode_b1.0_s0.25": {
+              "audit": {
+                "method": "VAE neural ODE with Sinkhorn observation and latent dynamics losses",
+                "beta": 1.0,
+                "fit_cells": 7963,
+                "feature_count": 384,
+                "fit_max_stage": 8.0,
+                "past_stages": [
+                  7.5,
+                  7.75,
+                  8.0
+                ],
+                "pretrain_steps": 200,
+                "joint_steps": 1000,
+                "batch": 32,
+                "truth_batch": 200,
+                "training_history": [
+                  {
+                    "phase": "pretrain",
+                    "step": 100,
+                    "loss": 0.6642107963562012
+                  },
+                  {
+                    "phase": "pretrain",
+                    "step": 200,
+                    "loss": 0.6089091897010803
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 100,
+                    "loss": 146.73898315429688,
+                    "observation_loss": 143.70144653320312,
+                    "dynamic_loss": 3.037543296813965
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 200,
+                    "loss": 140.62509155273438,
+                    "observation_loss": 138.2350311279297,
+                    "dynamic_loss": 2.3900680541992188
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 300,
+                    "loss": 140.8242950439453,
+                    "observation_loss": 138.82699584960938,
+                    "dynamic_loss": 1.9973065853118896
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 400,
+                    "loss": 148.8415985107422,
+                    "observation_loss": 145.71633911132812,
+                    "dynamic_loss": 3.125258445739746
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 500,
+                    "loss": 140.14077758789062,
+                    "observation_loss": 138.3766326904297,
+                    "dynamic_loss": 1.7641406059265137
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 600,
+                    "loss": 146.06101989746094,
+                    "observation_loss": 143.65298461914062,
+                    "dynamic_loss": 2.4080309867858887
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 700,
+                    "loss": 133.97982788085938,
+                    "observation_loss": 132.477294921875,
+                    "dynamic_loss": 1.5025274753570557
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 800,
+                    "loss": 170.6854248046875,
+                    "observation_loss": 167.1722869873047,
+                    "dynamic_loss": 3.513138771057129
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 900,
+                    "loss": 142.37808227539062,
+                    "observation_loss": 141.08811950683594,
+                    "dynamic_loss": 1.289961338043213
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 1000,
+                    "loss": 137.0782012939453,
+                    "observation_loss": 135.80697631835938,
+                    "dynamic_loss": 1.2712318897247314
+                  }
+                ],
+                "scope": "Author-architecture adaptation, not scNODE reproduction: normalized feature scaling, minibatch reconstruction, bounded velocity/gradient, fixed physical Euler step, ridge full-gene donor-relative decoding. No annotation labels or future expression are model inputs. All permitted prepared rows are available to training; prepared cohort is sampled, not the complete raw atlas.",
+                "surrogate_is_final_score": false,
+                "model_selection": "Predeclared final iteration; no target-based checkpoint selection.",
+                "requested_strength": 0.25,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.06563961512425927,
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "forecast_latent": "Conditional mean, no sampled seed selection.",
+                "zero_mask_preserved": true
+              },
+              "prediction_sha256": "36d5413da6af31c21d897602f0907024cfd4b59cbaa355437a2f83e5964815cf"
+            },
+            "ode_b1.0_s0.5": {
+              "audit": {
+                "method": "VAE neural ODE with Sinkhorn observation and latent dynamics losses",
+                "beta": 1.0,
+                "fit_cells": 7963,
+                "feature_count": 384,
+                "fit_max_stage": 8.0,
+                "past_stages": [
+                  7.5,
+                  7.75,
+                  8.0
+                ],
+                "pretrain_steps": 200,
+                "joint_steps": 1000,
+                "batch": 32,
+                "truth_batch": 200,
+                "training_history": [
+                  {
+                    "phase": "pretrain",
+                    "step": 100,
+                    "loss": 0.6642107963562012
+                  },
+                  {
+                    "phase": "pretrain",
+                    "step": 200,
+                    "loss": 0.6089091897010803
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 100,
+                    "loss": 146.73898315429688,
+                    "observation_loss": 143.70144653320312,
+                    "dynamic_loss": 3.037543296813965
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 200,
+                    "loss": 140.62509155273438,
+                    "observation_loss": 138.2350311279297,
+                    "dynamic_loss": 2.3900680541992188
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 300,
+                    "loss": 140.8242950439453,
+                    "observation_loss": 138.82699584960938,
+                    "dynamic_loss": 1.9973065853118896
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 400,
+                    "loss": 148.8415985107422,
+                    "observation_loss": 145.71633911132812,
+                    "dynamic_loss": 3.125258445739746
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 500,
+                    "loss": 140.14077758789062,
+                    "observation_loss": 138.3766326904297,
+                    "dynamic_loss": 1.7641406059265137
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 600,
+                    "loss": 146.06101989746094,
+                    "observation_loss": 143.65298461914062,
+                    "dynamic_loss": 2.4080309867858887
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 700,
+                    "loss": 133.97982788085938,
+                    "observation_loss": 132.477294921875,
+                    "dynamic_loss": 1.5025274753570557
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 800,
+                    "loss": 170.6854248046875,
+                    "observation_loss": 167.1722869873047,
+                    "dynamic_loss": 3.513138771057129
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 900,
+                    "loss": 142.37808227539062,
+                    "observation_loss": 141.08811950683594,
+                    "dynamic_loss": 1.289961338043213
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 1000,
+                    "loss": 137.0782012939453,
+                    "observation_loss": 135.80697631835938,
+                    "dynamic_loss": 1.2712318897247314
+                  }
+                ],
+                "scope": "Author-architecture adaptation, not scNODE reproduction: normalized feature scaling, minibatch reconstruction, bounded velocity/gradient, fixed physical Euler step, ridge full-gene donor-relative decoding. No annotation labels or future expression are model inputs. All permitted prepared rows are available to training; prepared cohort is sampled, not the complete raw atlas.",
+                "surrogate_is_final_score": false,
+                "model_selection": "Predeclared final iteration; no target-based checkpoint selection.",
+                "requested_strength": 0.5,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.10505091455421928,
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "forecast_latent": "Conditional mean, no sampled seed selection.",
+                "zero_mask_preserved": true
+              },
+              "prediction_sha256": "b3afbd784f44682863e28fe146ca92a221667807083d1185fb1e0fed57485143"
+            },
+            "ode_b1.0_s1.0": {
+              "audit": {
+                "method": "VAE neural ODE with Sinkhorn observation and latent dynamics losses",
+                "beta": 1.0,
+                "fit_cells": 7963,
+                "feature_count": 384,
+                "fit_max_stage": 8.0,
+                "past_stages": [
+                  7.5,
+                  7.75,
+                  8.0
+                ],
+                "pretrain_steps": 200,
+                "joint_steps": 1000,
+                "batch": 32,
+                "truth_batch": 200,
+                "training_history": [
+                  {
+                    "phase": "pretrain",
+                    "step": 100,
+                    "loss": 0.6642107963562012
+                  },
+                  {
+                    "phase": "pretrain",
+                    "step": 200,
+                    "loss": 0.6089091897010803
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 100,
+                    "loss": 146.73898315429688,
+                    "observation_loss": 143.70144653320312,
+                    "dynamic_loss": 3.037543296813965
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 200,
+                    "loss": 140.62509155273438,
+                    "observation_loss": 138.2350311279297,
+                    "dynamic_loss": 2.3900680541992188
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 300,
+                    "loss": 140.8242950439453,
+                    "observation_loss": 138.82699584960938,
+                    "dynamic_loss": 1.9973065853118896
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 400,
+                    "loss": 148.8415985107422,
+                    "observation_loss": 145.71633911132812,
+                    "dynamic_loss": 3.125258445739746
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 500,
+                    "loss": 140.14077758789062,
+                    "observation_loss": 138.3766326904297,
+                    "dynamic_loss": 1.7641406059265137
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 600,
+                    "loss": 146.06101989746094,
+                    "observation_loss": 143.65298461914062,
+                    "dynamic_loss": 2.4080309867858887
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 700,
+                    "loss": 133.97982788085938,
+                    "observation_loss": 132.477294921875,
+                    "dynamic_loss": 1.5025274753570557
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 800,
+                    "loss": 170.6854248046875,
+                    "observation_loss": 167.1722869873047,
+                    "dynamic_loss": 3.513138771057129
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 900,
+                    "loss": 142.37808227539062,
+                    "observation_loss": 141.08811950683594,
+                    "dynamic_loss": 1.289961338043213
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 1000,
+                    "loss": 137.0782012939453,
+                    "observation_loss": 135.80697631835938,
+                    "dynamic_loss": 1.2712318897247314
+                  }
+                ],
+                "scope": "Author-architecture adaptation, not scNODE reproduction: normalized feature scaling, minibatch reconstruction, bounded velocity/gradient, fixed physical Euler step, ridge full-gene donor-relative decoding. No annotation labels or future expression are model inputs. All permitted prepared rows are available to training; prepared cohort is sampled, not the complete raw atlas.",
+                "surrogate_is_final_score": false,
+                "model_selection": "Predeclared final iteration; no target-based checkpoint selection.",
+                "requested_strength": 1.0,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.15509759346647592,
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "forecast_latent": "Conditional mean, no sampled seed selection.",
+                "zero_mask_preserved": true
+              },
+              "prediction_sha256": "67ca32ed3b51024a3fe4111640181647ed085da3b2deb570679ecf8fe097c9b1"
+            }
+          }
+        },
+        {
+          "cutoff": 8.25,
+          "target": 9.25,
+          "floor": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.2375742495059967,
+            "variogram": 0.008673261851072311
+          },
+          "ceiling": {
+            "de_score": 0.9165247018739352,
+            "de_direction": 0.8566698563410718,
+            "mmd_u": 0.002615219447761774,
+            "variogram": 0.00012109167437301949
+          },
+          "results": [
+            {
+              "candidate": "copy",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.2375742495059967,
+                "variogram": 0.008673261851072311
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit16",
+              "raw_metrics": {
+                "de_score": -0.3287904599659284,
+                "de_direction": -0.07611305688343999,
+                "mmd_u": 0.2259478121995926,
+                "variogram": 0.008606153540313244
+              },
+              "local_score": 47.98714389154627,
+              "skills": {
+                "de_score": 0.4239558707643814,
+                "de_direction": 0.4787328678973971,
+                "mmd_u": 0.5126845405062341,
+                "variogram": 0.5019694604907392
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "saved384_d0.0",
+              "raw_metrics": {
+                "de_score": -0.005110732538330506,
+                "de_direction": 0.09910054820824371,
+                "mmd_u": 0.22197532653808594,
+                "variogram": 0.008473003283143044
+              },
+              "local_score": 51.36612769509718,
+              "skills": {
+                "de_score": 0.49860982391102876,
+                "de_direction": 0.5306957452121235,
+                "mmd_u": 0.5171673628650272,
+                "variogram": 0.5059233790533778
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "ode_b0.0_s0.25",
+              "raw_metrics": {
+                "de_score": -0.11243611584327083,
+                "de_direction": 0.07749710626147575,
+                "mmd_u": 0.22859911620616913,
+                "variogram": 0.008545733988285065
+              },
+              "local_score": 50.236951071478174,
+              "skills": {
+                "de_score": 0.47110332749562167,
+                "de_direction": 0.523687213536712,
+                "mmd_u": 0.5097356231950575,
+                "variogram": 0.5037559424909056
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "ode_b0.0_s0.5",
+              "raw_metrics": {
+                "de_score": -0.12265758091993184,
+                "de_direction": 0.12840831364359498,
+                "mmd_u": 0.224191814661026,
+                "variogram": 0.008456936106085777
+              },
+              "local_score": 50.7965450106639,
+              "skills": {
+                "de_score": 0.46864111498257843,
+                "de_direction": 0.5405091077511273,
+                "mmd_u": 0.5146565066384603,
+                "variogram": 0.5064047121583723
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "ode_b0.0_s1.0",
+              "raw_metrics": {
+                "de_score": -0.13287904599659284,
+                "de_direction": 0.1658029029392873,
+                "mmd_u": 0.2183235138654709,
+                "variogram": 0.008326532319188118
+              },
+              "local_score": 51.342010806448776,
+              "skills": {
+                "de_score": 0.46620450606585784,
+                "de_direction": 0.5535699383353724,
+                "mmd_u": 0.5213580335149786,
+                "variogram": 0.5103454345484334
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "ode_b1.0_s0.25",
+              "raw_metrics": {
+                "de_score": -0.18057921635434404,
+                "de_direction": 0.05273711928685776,
+                "mmd_u": 0.23070761561393738,
+                "variogram": 0.008610467426478863
+              },
+              "local_score": 49.535275650287325,
+              "skills": {
+                "de_score": 0.455160744500846,
+                "de_direction": 0.5158789103114162,
+                "mmd_u": 0.5074145478268449,
+                "variogram": 0.5018423922587711
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "ode_b1.0_s0.5",
+              "raw_metrics": {
+                "de_score": -0.19591141396933556,
+                "de_direction": 0.0869145791181074,
+                "mmd_u": 0.22659948468208313,
+                "variogram": 0.008566243574023247
+              },
+              "local_score": 49.88267752722395,
+              "skills": {
+                "de_score": 0.45172124265323255,
+                "de_direction": 0.5267195142661282,
+                "mmd_u": 0.5119565586168087,
+                "variogram": 0.5031480922867836
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "ode_b1.0_s1.0",
+              "raw_metrics": {
+                "de_score": -0.21465076660988075,
+                "de_direction": 0.13665036143711037,
+                "mmd_u": 0.22127899527549744,
+                "variogram": 0.008504599332809448
+              },
+              "local_score": 50.411475713522236,
+              "skills": {
+                "de_score": 0.44758735440931774,
+                "de_direction": 0.5433345862738289,
+                "mmd_u": 0.5179612378600245,
+                "variogram": 0.5049795030321416
+              },
+              "calibration_valid": true
+            }
+          ],
+          "generation": {
+            "copy": {
+              "audit": {
+                "method": "persistence",
+                "replayed_from": "private\\cell_program_horizon_pilot_01\\cutoff_8.25\\copy.npy"
+              },
+              "prediction_sha256": "f991bb722bc73fe1b4135b16a6a7a3db7132c306103559448dc13289eb73ae4e"
+            },
+            "unit16": {
+              "audit": {
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "guard_applied": true,
+                "population_mix": 1.0,
+                "expression_strength_used": 1.0,
+                "trusted_donor_fraction": 0.99,
+                "effective_sample_size": 1423.0487179949341,
+                "unique_donors": 1334,
+                "covariance_change_vs_reference": 0.1709030360203553,
+                "state_support": [
+                  136,
+                  65,
+                  203,
+                  10,
+                  86,
+                  55,
+                  113,
+                  25,
+                  10,
+                  106,
+                  85,
+                  193,
+                  90,
+                  37,
+                  172,
+                  40
+                ],
+                "alignment": "identity",
+                "covariance_limit": 0.4,
+                "feature_scaling": "unit",
+                "expression_factor_cap": 1.25,
+                "detection_strength": 0.5,
+                "maximum_probability_change": 0.02,
+                "attempted_additions": 22466,
+                "attempted_deletions": 24091,
+                "detection_candidate_covariance_change": 0.17236713534616505,
+                "detection_guard_rejected": false,
+                "actual_additions": 22466,
+                "actual_deletions": 24091,
+                "replayed_from": "private\\cell_program_horizon_pilot_01\\cutoff_8.25\\unit16.npy"
+              },
+              "prediction_sha256": "20ec068eb5979bde5541166183dc3cad964eb9e57ce7682f8fc60ea7d36a3d43"
+            },
+            "saved384_d0.0": {
+              "audit": {
+                "attempted_additions": 0,
+                "attempted_deletions": 0,
+                "method": "cell_nmf_consensus_usage_drift",
+                "requested_expression": 1.0,
+                "requested_detection": 0.0,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.14015833267277958,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 15,
+                  "Blood progenitors": 119,
+                  "Cardiomyocytes FHF 1": 117,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 56,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors": 0,
+                  "Cardiopharyngeal progenitors FHF": 97,
+                  "Cardiopharyngeal progenitors SHF": 4,
+                  "EMP": 17,
+                  "Embryo proper endothelium": 67,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 1,
+                  "Epicardium": 6,
+                  "Erythroid": 396,
+                  "Foregut": 2,
+                  "Gut tube": 59,
+                  "Haematoendothelial progenitors": 9,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 299,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 258,
+                  "Pharyngeal endoderm": 5,
+                  "Pharyngeal mesoderm": 11,
+                  "Surface ectoderm": 1,
+                  "Venous endothelium": 49
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.7906666666666666,
+                "actual_additions": 0,
+                "actual_deletions": 0,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "fit_audit": {
+                  "rank": 8,
+                  "fit_cells": 3000,
+                  "features": 384,
+                  "replicate_iterations": [
+                    95,
+                    200,
+                    84
+                  ],
+                  "usage_iterations": [
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40
+                  ],
+                  "convergence_warnings": 1,
+                  "consensus_cluster_sizes": [
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3
+                  ],
+                  "consensus_dispersion": [
+                    0.028002244782035595,
+                    0.013356682045371762,
+                    0.06924512910488885,
+                    0.009123007990364073,
+                    0.06738493024228102,
+                    0.010704869308864565,
+                    0.04563401786047869,
+                    0.020261331845189745
+                  ],
+                  "adaptation": "Three NMF replicas, median consensus, fixed-component multiplicative usage fitting; normalized abundance instead of raw counts, 384 guard features instead of2000 v-score genes, no component outlier filter. Ridge1 full-panel log-abundance decoder and within-type usage slopes are added forecasting hypotheses, not cNMF reproduction.",
+                  "scope": "Cell-level factors are not validated biological activity programs; convergence and consensus with three replicas do not establish recovery or temporal accuracy."
+                },
+                "replayed_from": "private\\cell_program_horizon_pilot_01\\cutoff_8.25\\cell_r8_d0.0.npy"
+              },
+              "prediction_sha256": "ae65a35c555d8d166d5beefb6ec5c97e9a1d4833f1c4c1f20f6a278a377f3dbb"
+            },
+            "ode_b0.0_s0.25": {
+              "audit": {
+                "method": "VAE neural ODE with Sinkhorn observation and latent dynamics losses",
+                "beta": 0.0,
+                "fit_cells": 10963,
+                "feature_count": 384,
+                "fit_max_stage": 8.25,
+                "past_stages": [
+                  7.5,
+                  7.75,
+                  8.0,
+                  8.25
+                ],
+                "pretrain_steps": 200,
+                "joint_steps": 1000,
+                "batch": 32,
+                "truth_batch": 200,
+                "training_history": [
+                  {
+                    "phase": "pretrain",
+                    "step": 100,
+                    "loss": 0.6465261578559875
+                  },
+                  {
+                    "phase": "pretrain",
+                    "step": 200,
+                    "loss": 0.599177360534668
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 100,
+                    "loss": 144.02877807617188,
+                    "observation_loss": 144.02877807617188,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 200,
+                    "loss": 150.77455139160156,
+                    "observation_loss": 150.77455139160156,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 300,
+                    "loss": 136.2915496826172,
+                    "observation_loss": 136.2915496826172,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 400,
+                    "loss": 133.44195556640625,
+                    "observation_loss": 133.44195556640625,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 500,
+                    "loss": 131.53802490234375,
+                    "observation_loss": 131.53802490234375,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 600,
+                    "loss": 140.2647247314453,
+                    "observation_loss": 140.2647247314453,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 700,
+                    "loss": 139.62109375,
+                    "observation_loss": 139.62109375,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 800,
+                    "loss": 132.12948608398438,
+                    "observation_loss": 132.12948608398438,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 900,
+                    "loss": 137.4237823486328,
+                    "observation_loss": 137.4237823486328,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 1000,
+                    "loss": 135.03646850585938,
+                    "observation_loss": 135.03646850585938,
+                    "dynamic_loss": 0.0
+                  }
+                ],
+                "scope": "Author-architecture adaptation, not scNODE reproduction: normalized feature scaling, minibatch reconstruction, bounded velocity/gradient, fixed physical Euler step, ridge full-gene donor-relative decoding. No annotation labels or future expression are model inputs. All permitted prepared rows are available to training; prepared cohort is sampled, not the complete raw atlas.",
+                "surrogate_is_final_score": false,
+                "model_selection": "Predeclared final iteration; no target-based checkpoint selection.",
+                "requested_strength": 0.25,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.08812678178856609,
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "forecast_latent": "Conditional mean, no sampled seed selection.",
+                "zero_mask_preserved": true
+              },
+              "prediction_sha256": "3e7ea804494eeba0c144ac8b5fb5e0ba6ce3a5a0cb8e86a1e06db18d806b092d"
+            },
+            "ode_b0.0_s0.5": {
+              "audit": {
+                "method": "VAE neural ODE with Sinkhorn observation and latent dynamics losses",
+                "beta": 0.0,
+                "fit_cells": 10963,
+                "feature_count": 384,
+                "fit_max_stage": 8.25,
+                "past_stages": [
+                  7.5,
+                  7.75,
+                  8.0,
+                  8.25
+                ],
+                "pretrain_steps": 200,
+                "joint_steps": 1000,
+                "batch": 32,
+                "truth_batch": 200,
+                "training_history": [
+                  {
+                    "phase": "pretrain",
+                    "step": 100,
+                    "loss": 0.6465261578559875
+                  },
+                  {
+                    "phase": "pretrain",
+                    "step": 200,
+                    "loss": 0.599177360534668
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 100,
+                    "loss": 144.02877807617188,
+                    "observation_loss": 144.02877807617188,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 200,
+                    "loss": 150.77455139160156,
+                    "observation_loss": 150.77455139160156,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 300,
+                    "loss": 136.2915496826172,
+                    "observation_loss": 136.2915496826172,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 400,
+                    "loss": 133.44195556640625,
+                    "observation_loss": 133.44195556640625,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 500,
+                    "loss": 131.53802490234375,
+                    "observation_loss": 131.53802490234375,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 600,
+                    "loss": 140.2647247314453,
+                    "observation_loss": 140.2647247314453,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 700,
+                    "loss": 139.62109375,
+                    "observation_loss": 139.62109375,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 800,
+                    "loss": 132.12948608398438,
+                    "observation_loss": 132.12948608398438,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 900,
+                    "loss": 137.4237823486328,
+                    "observation_loss": 137.4237823486328,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 1000,
+                    "loss": 135.03646850585938,
+                    "observation_loss": 135.03646850585938,
+                    "dynamic_loss": 0.0
+                  }
+                ],
+                "scope": "Author-architecture adaptation, not scNODE reproduction: normalized feature scaling, minibatch reconstruction, bounded velocity/gradient, fixed physical Euler step, ridge full-gene donor-relative decoding. No annotation labels or future expression are model inputs. All permitted prepared rows are available to training; prepared cohort is sampled, not the complete raw atlas.",
+                "surrogate_is_final_score": false,
+                "model_selection": "Predeclared final iteration; no target-based checkpoint selection.",
+                "requested_strength": 0.5,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.13281813482267898,
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "forecast_latent": "Conditional mean, no sampled seed selection.",
+                "zero_mask_preserved": true
+              },
+              "prediction_sha256": "59c763a36e464d0a49f9a2763fc87627f3a4b49c63e64851f9ebd81a10aa9165"
+            },
+            "ode_b0.0_s1.0": {
+              "audit": {
+                "method": "VAE neural ODE with Sinkhorn observation and latent dynamics losses",
+                "beta": 0.0,
+                "fit_cells": 10963,
+                "feature_count": 384,
+                "fit_max_stage": 8.25,
+                "past_stages": [
+                  7.5,
+                  7.75,
+                  8.0,
+                  8.25
+                ],
+                "pretrain_steps": 200,
+                "joint_steps": 1000,
+                "batch": 32,
+                "truth_batch": 200,
+                "training_history": [
+                  {
+                    "phase": "pretrain",
+                    "step": 100,
+                    "loss": 0.6465261578559875
+                  },
+                  {
+                    "phase": "pretrain",
+                    "step": 200,
+                    "loss": 0.599177360534668
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 100,
+                    "loss": 144.02877807617188,
+                    "observation_loss": 144.02877807617188,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 200,
+                    "loss": 150.77455139160156,
+                    "observation_loss": 150.77455139160156,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 300,
+                    "loss": 136.2915496826172,
+                    "observation_loss": 136.2915496826172,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 400,
+                    "loss": 133.44195556640625,
+                    "observation_loss": 133.44195556640625,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 500,
+                    "loss": 131.53802490234375,
+                    "observation_loss": 131.53802490234375,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 600,
+                    "loss": 140.2647247314453,
+                    "observation_loss": 140.2647247314453,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 700,
+                    "loss": 139.62109375,
+                    "observation_loss": 139.62109375,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 800,
+                    "loss": 132.12948608398438,
+                    "observation_loss": 132.12948608398438,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 900,
+                    "loss": 137.4237823486328,
+                    "observation_loss": 137.4237823486328,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 1000,
+                    "loss": 135.03646850585938,
+                    "observation_loss": 135.03646850585938,
+                    "dynamic_loss": 0.0
+                  }
+                ],
+                "scope": "Author-architecture adaptation, not scNODE reproduction: normalized feature scaling, minibatch reconstruction, bounded velocity/gradient, fixed physical Euler step, ridge full-gene donor-relative decoding. No annotation labels or future expression are model inputs. All permitted prepared rows are available to training; prepared cohort is sampled, not the complete raw atlas.",
+                "surrogate_is_final_score": false,
+                "model_selection": "Predeclared final iteration; no target-based checkpoint selection.",
+                "requested_strength": 1.0,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.17904613514211815,
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "forecast_latent": "Conditional mean, no sampled seed selection.",
+                "zero_mask_preserved": true
+              },
+              "prediction_sha256": "bb3d1f78496bd72dcd9a8554a09690d669d57b1f07655cd5d99c857cdec8bbfb"
+            },
+            "ode_b1.0_s0.25": {
+              "audit": {
+                "method": "VAE neural ODE with Sinkhorn observation and latent dynamics losses",
+                "beta": 1.0,
+                "fit_cells": 10963,
+                "feature_count": 384,
+                "fit_max_stage": 8.25,
+                "past_stages": [
+                  7.5,
+                  7.75,
+                  8.0,
+                  8.25
+                ],
+                "pretrain_steps": 200,
+                "joint_steps": 1000,
+                "batch": 32,
+                "truth_batch": 200,
+                "training_history": [
+                  {
+                    "phase": "pretrain",
+                    "step": 100,
+                    "loss": 0.6465261578559875
+                  },
+                  {
+                    "phase": "pretrain",
+                    "step": 200,
+                    "loss": 0.599177360534668
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 100,
+                    "loss": 148.65017700195312,
+                    "observation_loss": 143.91563415527344,
+                    "dynamic_loss": 4.734548568725586
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 200,
+                    "loss": 141.3458709716797,
+                    "observation_loss": 138.3416748046875,
+                    "dynamic_loss": 3.0042033195495605
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 300,
+                    "loss": 174.88766479492188,
+                    "observation_loss": 169.48684692382812,
+                    "dynamic_loss": 5.400825023651123
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 400,
+                    "loss": 135.03518676757812,
+                    "observation_loss": 133.45372009277344,
+                    "dynamic_loss": 1.5814591646194458
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 500,
+                    "loss": 162.33180236816406,
+                    "observation_loss": 159.30809020996094,
+                    "dynamic_loss": 3.023707389831543
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 600,
+                    "loss": 137.60777282714844,
+                    "observation_loss": 135.90469360351562,
+                    "dynamic_loss": 1.703086256980896
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 700,
+                    "loss": 140.56594848632812,
+                    "observation_loss": 139.0990753173828,
+                    "dynamic_loss": 1.4668681621551514
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 800,
+                    "loss": 152.3263397216797,
+                    "observation_loss": 149.16061401367188,
+                    "dynamic_loss": 3.165731191635132
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 900,
+                    "loss": 140.4232635498047,
+                    "observation_loss": 138.53468322753906,
+                    "dynamic_loss": 1.8885811567306519
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 1000,
+                    "loss": 140.491455078125,
+                    "observation_loss": 138.22506713867188,
+                    "dynamic_loss": 2.2663912773132324
+                  }
+                ],
+                "scope": "Author-architecture adaptation, not scNODE reproduction: normalized feature scaling, minibatch reconstruction, bounded velocity/gradient, fixed physical Euler step, ridge full-gene donor-relative decoding. No annotation labels or future expression are model inputs. All permitted prepared rows are available to training; prepared cohort is sampled, not the complete raw atlas.",
+                "surrogate_is_final_score": false,
+                "model_selection": "Predeclared final iteration; no target-based checkpoint selection.",
+                "requested_strength": 0.25,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.06402891301375735,
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "forecast_latent": "Conditional mean, no sampled seed selection.",
+                "zero_mask_preserved": true
+              },
+              "prediction_sha256": "9c0638e9377a4be71ea3449f47ba4423b0fa3d9c0ba2c6ea3a61ad8918392fb2"
+            },
+            "ode_b1.0_s0.5": {
+              "audit": {
+                "method": "VAE neural ODE with Sinkhorn observation and latent dynamics losses",
+                "beta": 1.0,
+                "fit_cells": 10963,
+                "feature_count": 384,
+                "fit_max_stage": 8.25,
+                "past_stages": [
+                  7.5,
+                  7.75,
+                  8.0,
+                  8.25
+                ],
+                "pretrain_steps": 200,
+                "joint_steps": 1000,
+                "batch": 32,
+                "truth_batch": 200,
+                "training_history": [
+                  {
+                    "phase": "pretrain",
+                    "step": 100,
+                    "loss": 0.6465261578559875
+                  },
+                  {
+                    "phase": "pretrain",
+                    "step": 200,
+                    "loss": 0.599177360534668
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 100,
+                    "loss": 148.65017700195312,
+                    "observation_loss": 143.91563415527344,
+                    "dynamic_loss": 4.734548568725586
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 200,
+                    "loss": 141.3458709716797,
+                    "observation_loss": 138.3416748046875,
+                    "dynamic_loss": 3.0042033195495605
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 300,
+                    "loss": 174.88766479492188,
+                    "observation_loss": 169.48684692382812,
+                    "dynamic_loss": 5.400825023651123
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 400,
+                    "loss": 135.03518676757812,
+                    "observation_loss": 133.45372009277344,
+                    "dynamic_loss": 1.5814591646194458
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 500,
+                    "loss": 162.33180236816406,
+                    "observation_loss": 159.30809020996094,
+                    "dynamic_loss": 3.023707389831543
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 600,
+                    "loss": 137.60777282714844,
+                    "observation_loss": 135.90469360351562,
+                    "dynamic_loss": 1.703086256980896
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 700,
+                    "loss": 140.56594848632812,
+                    "observation_loss": 139.0990753173828,
+                    "dynamic_loss": 1.4668681621551514
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 800,
+                    "loss": 152.3263397216797,
+                    "observation_loss": 149.16061401367188,
+                    "dynamic_loss": 3.165731191635132
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 900,
+                    "loss": 140.4232635498047,
+                    "observation_loss": 138.53468322753906,
+                    "dynamic_loss": 1.8885811567306519
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 1000,
+                    "loss": 140.491455078125,
+                    "observation_loss": 138.22506713867188,
+                    "dynamic_loss": 2.2663912773132324
+                  }
+                ],
+                "scope": "Author-architecture adaptation, not scNODE reproduction: normalized feature scaling, minibatch reconstruction, bounded velocity/gradient, fixed physical Euler step, ridge full-gene donor-relative decoding. No annotation labels or future expression are model inputs. All permitted prepared rows are available to training; prepared cohort is sampled, not the complete raw atlas.",
+                "surrogate_is_final_score": false,
+                "model_selection": "Predeclared final iteration; no target-based checkpoint selection.",
+                "requested_strength": 0.5,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.10017362380046346,
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "forecast_latent": "Conditional mean, no sampled seed selection.",
+                "zero_mask_preserved": true
+              },
+              "prediction_sha256": "c6fcbc0eafc9275e6d9378572a2c007c6d4dc4be7fad1348aa50c493bc6d9099"
+            },
+            "ode_b1.0_s1.0": {
+              "audit": {
+                "method": "VAE neural ODE with Sinkhorn observation and latent dynamics losses",
+                "beta": 1.0,
+                "fit_cells": 10963,
+                "feature_count": 384,
+                "fit_max_stage": 8.25,
+                "past_stages": [
+                  7.5,
+                  7.75,
+                  8.0,
+                  8.25
+                ],
+                "pretrain_steps": 200,
+                "joint_steps": 1000,
+                "batch": 32,
+                "truth_batch": 200,
+                "training_history": [
+                  {
+                    "phase": "pretrain",
+                    "step": 100,
+                    "loss": 0.6465261578559875
+                  },
+                  {
+                    "phase": "pretrain",
+                    "step": 200,
+                    "loss": 0.599177360534668
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 100,
+                    "loss": 148.65017700195312,
+                    "observation_loss": 143.91563415527344,
+                    "dynamic_loss": 4.734548568725586
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 200,
+                    "loss": 141.3458709716797,
+                    "observation_loss": 138.3416748046875,
+                    "dynamic_loss": 3.0042033195495605
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 300,
+                    "loss": 174.88766479492188,
+                    "observation_loss": 169.48684692382812,
+                    "dynamic_loss": 5.400825023651123
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 400,
+                    "loss": 135.03518676757812,
+                    "observation_loss": 133.45372009277344,
+                    "dynamic_loss": 1.5814591646194458
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 500,
+                    "loss": 162.33180236816406,
+                    "observation_loss": 159.30809020996094,
+                    "dynamic_loss": 3.023707389831543
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 600,
+                    "loss": 137.60777282714844,
+                    "observation_loss": 135.90469360351562,
+                    "dynamic_loss": 1.703086256980896
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 700,
+                    "loss": 140.56594848632812,
+                    "observation_loss": 139.0990753173828,
+                    "dynamic_loss": 1.4668681621551514
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 800,
+                    "loss": 152.3263397216797,
+                    "observation_loss": 149.16061401367188,
+                    "dynamic_loss": 3.165731191635132
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 900,
+                    "loss": 140.4232635498047,
+                    "observation_loss": 138.53468322753906,
+                    "dynamic_loss": 1.8885811567306519
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 1000,
+                    "loss": 140.491455078125,
+                    "observation_loss": 138.22506713867188,
+                    "dynamic_loss": 2.2663912773132324
+                  }
+                ],
+                "scope": "Author-architecture adaptation, not scNODE reproduction: normalized feature scaling, minibatch reconstruction, bounded velocity/gradient, fixed physical Euler step, ridge full-gene donor-relative decoding. No annotation labels or future expression are model inputs. All permitted prepared rows are available to training; prepared cohort is sampled, not the complete raw atlas.",
+                "surrogate_is_final_score": false,
+                "model_selection": "Predeclared final iteration; no target-based checkpoint selection.",
+                "requested_strength": 1.0,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.14055682540213849,
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "forecast_latent": "Conditional mean, no sampled seed selection.",
+                "zero_mask_preserved": true
+              },
+              "prediction_sha256": "e41ae23135acc71c208b7236e2a3f62e4baf34e10197b9f27f842b04b9865d00"
+            }
+          }
+        }
+      ],
+      "summaries": [
+        {
+          "candidate": "copy",
+          "all_calibrations_valid": true,
+          "scores": [
+            50.0,
+            50.0
+          ],
+          "mean_score": 50.0,
+          "mean_skills_percent": {
+            "de_score": 50.0,
+            "de_direction": 50.0,
+            "mmd_u": 50.0,
+            "variogram": 50.0
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": true
+        },
+        {
+          "candidate": "unit16",
+          "all_calibrations_valid": true,
+          "scores": [
+            47.142658332960416,
+            47.98714389154627
+          ],
+          "mean_score": 47.56490111225334,
+          "mean_skills_percent": {
+            "de_score": 43.364849612985424,
+            "de_direction": 47.22320308805906,
+            "mmd_u": 49.98184627089499,
+            "variogram": 49.61667027861864
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "saved384_d0.0",
+          "all_calibrations_valid": true,
+          "scores": [
+            49.200036578447445,
+            51.36612769509718
+          ],
+          "mean_score": 50.28308213677231,
+          "mean_skills_percent": {
+            "de_score": 48.516569505060446,
+            "de_direction": 51.552150948020426,
+            "mmd_u": 50.71880057669995,
+            "variogram": 50.25130925246053
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "ode_b0.0_s0.25",
+          "all_calibrations_valid": true,
+          "scores": [
+            48.38004889679512,
+            50.236951071478174
+          ],
+          "mean_score": 49.308499984136645,
+          "mean_skills_percent": {
+            "de_score": 47.438111623365096,
+            "de_direction": 49.03387278950085,
+            "mmd_u": 50.544702383896976,
+            "variogram": 50.13546582875534
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "ode_b0.0_s0.5",
+          "all_calibrations_valid": true,
+          "scores": [
+            48.41282184870214,
+            50.7965450106639
+          ],
+          "mean_score": 49.60468342968302,
+          "mean_skills_percent": {
+            "de_score": 47.31500099771294,
+            "de_direction": 49.93857887770975,
+            "mmd_u": 50.833016808242235,
+            "variogram": 50.20691709177335
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "ode_b0.0_s1.0",
+          "all_calibrations_valid": true,
+          "scores": [
+            48.4379952968312,
+            51.342010806448776
+          ],
+          "mean_score": 49.89000305163999,
+          "mean_skills_percent": {
+            "de_score": 47.17814983159478,
+            "de_direction": 50.75961846743249,
+            "mmd_u": 51.17484961450778,
+            "variogram": 50.265530462654205
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "ode_b1.0_s0.25",
+          "all_calibrations_valid": true,
+          "scores": [
+            48.53592262642593,
+            49.535275650287325
+          ],
+          "mean_score": 49.03559913835663,
+          "mean_skills_percent": {
+            "de_score": 45.50983578619338,
+            "de_direction": 50.51709472327249,
+            "mmd_u": 50.10345784274604,
+            "variogram": 49.989145790831756
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "ode_b1.0_s0.5",
+          "all_calibrations_valid": true,
+          "scores": [
+            48.27538472892389,
+            49.88267752722395
+          ],
+          "mean_score": 49.07903112807392,
+          "mean_skills_percent": {
+            "de_score": 45.29701365869394,
+            "de_direction": 51.03035217995018,
+            "mmd_u": 50.0330409281185,
+            "variogram": 49.9363869498867
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "ode_b1.0_s1.0",
+          "all_calibrations_valid": true,
+          "scores": [
+            47.82683374070241,
+            50.411475713522236
+          ],
+          "mean_score": 49.119154727112324,
+          "mean_skills_percent": {
+            "de_score": 45.213302738516425,
+            "de_direction": 51.610094098470206,
+            "mmd_u": 49.84406774845514,
+            "variogram": 49.8004259666456
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        }
+      ],
+      "scope": "One-day source-cohort development; not independent challenge-domain or embryo validation. Prepared cohort is already sampled from the raw atlas. Missing official genes are zero placeholders in this atlas-only diagnostic. All permitted prepared rows enter fit pools but stochastic minibatches do not guarantee every cell was sampled. Neural learner receives no type annotations. Publication code adapted, not faithful scNODE reproduction."
+    },
+    "neural_hurdle_horizon_01": {
+      "report_sha256": "6f26015d850aae5ee7abf1149eb8589e96f15d3091dc32febf9bafd637a62d4d",
+      "plan_sha256": "d0bb39a5ae5b856942d2068b5c5023ef041bc27bf11cedc1e03ef6d2e9e51621",
+      "folds": [
+        {
+          "cutoff": 8.0,
+          "target": 9.0,
+          "floor": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.26304274797439575,
+            "variogram": 0.009573637507855892
+          },
+          "ceiling": {
+            "de_score": 0.9358816276202219,
+            "de_direction": 0.8673063060165137,
+            "mmd_u": 0.007752883248031139,
+            "variogram": 0.00011852615716634318
+          },
+          "results": [
+            {
+              "candidate": "copy",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.26304274797439575,
+                "variogram": 0.009573637507855892
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit16",
+              "raw_metrics": {
+                "de_score": -0.2392108508014796,
+                "de_direction": -0.1276339315604888,
+                "mmd_u": 0.2767234444618225,
+                "variogram": 0.009945238940417767
+              },
+              "local_score": 47.142658332960416,
+              "skills": {
+                "de_score": 0.4433411214953271,
+                "de_direction": 0.46573119386378403,
+                "mmd_u": 0.48695238491166565,
+                "variogram": 0.4903639450816336
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "saved384_d0.0",
+              "raw_metrics": {
+                "de_score": -0.11220715166461158,
+                "de_direction": 0.0012039346574039623,
+                "mmd_u": 0.2659091651439667,
+                "variogram": 0.009607630781829357
+              },
+              "local_score": 49.200036578447445,
+              "skills": {
+                "de_score": 0.47172156619018024,
+                "de_direction": 0.500347273748285,
+                "mmd_u": 0.4972086486689718,
+                "variogram": 0.4991028059958329
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "saved_ode",
+              "raw_metrics": {
+                "de_score": -0.08877928483353882,
+                "de_direction": -0.1442092296888878,
+                "mmd_u": 0.2608678340911865,
+                "variogram": 0.009765993803739548
+              },
+              "local_score": 48.4379952968312,
+              "skills": {
+                "de_score": 0.47735849056603774,
+                "de_direction": 0.4616224310132775,
+                "mmd_u": 0.5021389587751769,
+                "variogram": 0.4949651747046506
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "hurdle_abundance_s0.5",
+              "raw_metrics": {
+                "de_score": 0.03575832305795315,
+                "de_direction": -0.09944218109385596,
+                "mmd_u": 0.2659774422645569,
+                "variogram": 0.009559090249240398
+              },
+              "local_score": 49.48767873089902,
+              "skills": {
+                "de_score": 0.5097380792478173,
+                "de_direction": 0.47289007355000645,
+                "mmd_u": 0.49714253957194543,
+                "variogram": 0.500384936189753
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "hurdle_abundance_s1.0",
+              "raw_metrics": {
+                "de_score": 0.04562268803945748,
+                "de_direction": -0.09615712843037981,
+                "mmd_u": 0.2669391334056854,
+                "variogram": 0.00956050120294094
+              },
+              "local_score": 49.54910314190698,
+              "skills": {
+                "de_score": 0.512491559756921,
+                "de_direction": 0.4737386066895446,
+                "mmd_u": 0.4962132494409696,
+                "variogram": 0.5003475748758128
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "hurdle_detection_s0.5",
+              "raw_metrics": {
+                "de_score": -0.22318125770653513,
+                "de_direction": 0.003529123912961964,
+                "mmd_u": 0.264721542596817,
+                "variogram": 0.00958486832678318
+              },
+              "local_score": 48.6387236950229,
+              "skills": {
+                "de_score": 0.4467333725721012,
+                "de_direction": 0.5010193396035435,
+                "mmd_u": 0.4983613795149117,
+                "variogram": 0.49970322525922134
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "hurdle_detection_s1.0",
+              "raw_metrics": {
+                "de_score": -0.22811344019728724,
+                "de_direction": 0.01615610777997006,
+                "mmd_u": 0.26636743545532227,
+                "variogram": 0.009649413637816906
+              },
+              "local_score": 48.62266762175783,
+              "skills": {
+                "de_score": 0.44568408690546096,
+                "de_direction": 0.5047007613343675,
+                "mmd_u": 0.49676526668055887,
+                "variogram": 0.4980044207672674
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "hurdle_joint_s0.5",
+              "raw_metrics": {
+                "de_score": 0.016029593094944564,
+                "de_direction": -0.0006064692275553541,
+                "mmd_u": 0.2679554224014282,
+                "variogram": 0.00959825236350298
+              },
+              "local_score": 49.94765390166518,
+              "skills": {
+                "de_score": 0.5043189368770764,
+                "de_direction": 0.4998252470728034,
+                "mmd_u": 0.49523496913818893,
+                "variogram": 0.4993500114386259
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "hurdle_joint_s1.0",
+              "raw_metrics": {
+                "de_score": 0.014796547472256533,
+                "de_direction": 0.010168001446778844,
+                "mmd_u": 0.2710381746292114,
+                "variogram": 0.009733365848660469
+              },
+              "local_score": 49.858276307307115,
+              "skills": {
+                "de_score": 0.50398406374502,
+                "de_direction": 0.5029481960117357,
+                "mmd_u": 0.49229096635208114,
+                "variogram": 0.4958120411412895
+              },
+              "calibration_valid": true
+            }
+          ],
+          "generation": {
+            "copy": {
+              "audit": {
+                "method": "persistence",
+                "replayed_from": "private\\neural_ode_horizon_01\\cutoff_8.0\\copy.npy"
+              },
+              "prediction_sha256": "53908b256a2f04ded456a9239a8231ce0c0f551e3bd9de2c1424524db824cd4d"
+            },
+            "unit16": {
+              "audit": {
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "guard_applied": true,
+                "population_mix": 1.0,
+                "expression_strength_used": 1.0,
+                "trusted_donor_fraction": 0.986,
+                "effective_sample_size": 1397.1175173673855,
+                "unique_donors": 1302,
+                "covariance_change_vs_reference": 0.11251184088826895,
+                "state_support": [
+                  143,
+                  1,
+                  82,
+                  73,
+                  166,
+                  73,
+                  0,
+                  165,
+                  92,
+                  24,
+                  36,
+                  37,
+                  5,
+                  19,
+                  66,
+                  1
+                ],
+                "alignment": "identity",
+                "covariance_limit": 0.4,
+                "feature_scaling": "unit",
+                "expression_factor_cap": 1.25,
+                "detection_strength": 0.5,
+                "maximum_probability_change": 0.02,
+                "attempted_additions": 8631,
+                "attempted_deletions": 16757,
+                "detection_candidate_covariance_change": 0.11372150904451062,
+                "detection_guard_rejected": false,
+                "actual_additions": 8631,
+                "actual_deletions": 16757,
+                "replayed_from": "private\\neural_ode_horizon_01\\cutoff_8.0\\unit16.npy"
+              },
+              "prediction_sha256": "5a511aa567339d7d5cd9b2604d845633d450567a782672fcaf6edded2483f967"
+            },
+            "saved384_d0.0": {
+              "audit": {
+                "attempted_additions": 0,
+                "attempted_deletions": 0,
+                "method": "cell_nmf_consensus_usage_drift",
+                "requested_expression": 1.0,
+                "requested_detection": 0.0,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.05594341256359671,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 0,
+                  "Blood progenitors": 286,
+                  "Cardiomyocytes FHF 1": 31,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 0,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors FHF": 37,
+                  "Cardiopharyngeal progenitors SHF": 0,
+                  "EMP": 1,
+                  "Embryo proper endothelium": 32,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 0,
+                  "Epicardium": 0,
+                  "Erythroid": 1,
+                  "Foregut": 0,
+                  "Gut tube": 146,
+                  "Haematoendothelial progenitors": 46,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 235,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 154,
+                  "Pharyngeal endoderm": 0,
+                  "Pharyngeal mesoderm": 1,
+                  "Surface ectoderm": 0,
+                  "Venous endothelium": 2
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.6713333333333333,
+                "actual_additions": 0,
+                "actual_deletions": 0,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "fit_audit": {
+                  "rank": 8,
+                  "fit_cells": 3000,
+                  "features": 384,
+                  "replicate_iterations": [
+                    159,
+                    126,
+                    125
+                  ],
+                  "usage_iterations": [
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40
+                  ],
+                  "convergence_warnings": 0,
+                  "consensus_cluster_sizes": [
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3
+                  ],
+                  "consensus_dispersion": [
+                    0.008059101860016732,
+                    0.006262875167234888,
+                    0.0106354333646103,
+                    0.026826587971851907,
+                    0.014192102725697299,
+                    0.03477137496681977,
+                    0.03251563013903399,
+                    0.011814020930998663
+                  ],
+                  "adaptation": "Three NMF replicas, median consensus, fixed-component multiplicative usage fitting; normalized abundance instead of raw counts, 384 guard features instead of2000 v-score genes, no component outlier filter. Ridge1 full-panel log-abundance decoder and within-type usage slopes are added forecasting hypotheses, not cNMF reproduction.",
+                  "scope": "Cell-level factors are not validated biological activity programs; convergence and consensus with three replicas do not establish recovery or temporal accuracy."
+                },
+                "replayed_from": "private\\neural_ode_horizon_01\\cutoff_8.0\\saved384_d0.0.npy"
+              },
+              "prediction_sha256": "0e6ee1508993d3631afe14efcca3497593fa179c7f2c1ad72f29a58603ccf3c0"
+            },
+            "saved_ode": {
+              "audit": {
+                "method": "VAE neural ODE with Sinkhorn observation and latent dynamics losses",
+                "beta": 0.0,
+                "fit_cells": 7963,
+                "feature_count": 384,
+                "fit_max_stage": 8.0,
+                "past_stages": [
+                  7.5,
+                  7.75,
+                  8.0
+                ],
+                "pretrain_steps": 200,
+                "joint_steps": 1000,
+                "batch": 32,
+                "truth_batch": 200,
+                "training_history": [
+                  {
+                    "phase": "pretrain",
+                    "step": 100,
+                    "loss": 0.6642107963562012
+                  },
+                  {
+                    "phase": "pretrain",
+                    "step": 200,
+                    "loss": 0.6089091897010803
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 100,
+                    "loss": 141.82904052734375,
+                    "observation_loss": 141.82904052734375,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 200,
+                    "loss": 138.27099609375,
+                    "observation_loss": 138.27099609375,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 300,
+                    "loss": 139.79428100585938,
+                    "observation_loss": 139.79428100585938,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 400,
+                    "loss": 142.06817626953125,
+                    "observation_loss": 142.06817626953125,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 500,
+                    "loss": 134.56398010253906,
+                    "observation_loss": 134.56398010253906,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 600,
+                    "loss": 150.0184326171875,
+                    "observation_loss": 150.0184326171875,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 700,
+                    "loss": 144.77188110351562,
+                    "observation_loss": 144.77188110351562,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 800,
+                    "loss": 141.55064392089844,
+                    "observation_loss": 141.55064392089844,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 900,
+                    "loss": 139.24566650390625,
+                    "observation_loss": 139.24566650390625,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 1000,
+                    "loss": 155.739501953125,
+                    "observation_loss": 155.739501953125,
+                    "dynamic_loss": 0.0
+                  }
+                ],
+                "scope": "Author-architecture adaptation, not scNODE reproduction: normalized feature scaling, minibatch reconstruction, bounded velocity/gradient, fixed physical Euler step, ridge full-gene donor-relative decoding. No annotation labels or future expression are model inputs. All permitted prepared rows are available to training; prepared cohort is sampled, not the complete raw atlas.",
+                "surrogate_is_final_score": false,
+                "model_selection": "Predeclared final iteration; no target-based checkpoint selection.",
+                "requested_strength": 1.0,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.1511019812401673,
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "forecast_latent": "Conditional mean, no sampled seed selection.",
+                "zero_mask_preserved": true,
+                "replayed_from": "private\\neural_ode_horizon_01\\cutoff_8.0\\ode_b0.0_s1.0.npy"
+              },
+              "prediction_sha256": "0b0f2379ba855d2475b64226dc9966cb89e5e8e251ead00180b358d41fcb9ee2"
+            },
+            "hurdle_abundance_s0.5": {
+              "audit": {
+                "fit_cells": 7963,
+                "fit_max_stage": 8.0,
+                "supported_genes": 13935,
+                "method": "Frozen VAE/neural ODE plus ridge1 detection probability and diagonal-shrunken positive-log abundance heads",
+                "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+                "mode": "abundance",
+                "strength": 0.5,
+                "backoff": 1.0,
+                "seed": 20260928,
+                "covariance_change_vs_reference": 0.18243497335011313,
+                "newly_detected_entries": 0,
+                "removed_detection_entries": 0,
+                "abundance_factor_cap": 2.0,
+                "detection_probability_delta_cap": 0.25,
+                "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection.",
+                "mapped_mass_conserved": true,
+                "protected_genes_unchanged": true
+              },
+              "prediction_sha256": "f6459e9f4235a2ec9d9c8370943b9878cc023af183f1e5cc0fb0f4715dcfe40e"
+            },
+            "hurdle_abundance_s1.0": {
+              "audit": {
+                "fit_cells": 7963,
+                "fit_max_stage": 8.0,
+                "supported_genes": 13935,
+                "method": "Frozen VAE/neural ODE plus ridge1 detection probability and diagonal-shrunken positive-log abundance heads",
+                "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+                "mode": "abundance",
+                "strength": 1.0,
+                "backoff": 1.0,
+                "seed": 20260928,
+                "covariance_change_vs_reference": 0.28427927273081693,
+                "newly_detected_entries": 0,
+                "removed_detection_entries": 0,
+                "abundance_factor_cap": 2.0,
+                "detection_probability_delta_cap": 0.25,
+                "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection.",
+                "mapped_mass_conserved": true,
+                "protected_genes_unchanged": true
+              },
+              "prediction_sha256": "4af9f86830466ca49a338b6f967f53154b4fb6714152ef2589eb5d0ec4638f6c"
+            },
+            "hurdle_detection_s0.5": {
+              "audit": {
+                "fit_cells": 7963,
+                "fit_max_stage": 8.0,
+                "supported_genes": 13935,
+                "method": "Frozen VAE/neural ODE plus ridge1 detection probability and diagonal-shrunken positive-log abundance heads",
+                "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+                "mode": "detection",
+                "strength": 0.5,
+                "backoff": 1.0,
+                "seed": 20260928,
+                "covariance_change_vs_reference": 0.0610467590651908,
+                "newly_detected_entries": 93173,
+                "removed_detection_entries": 40758,
+                "abundance_factor_cap": 2.0,
+                "detection_probability_delta_cap": 0.25,
+                "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection.",
+                "mapped_mass_conserved": true,
+                "protected_genes_unchanged": true
+              },
+              "prediction_sha256": "2a1c47d1f3ea507e1816ae15026615bd9b41377ba7a9c077d2c9ecdb013797da"
+            },
+            "hurdle_detection_s1.0": {
+              "audit": {
+                "fit_cells": 7963,
+                "fit_max_stage": 8.0,
+                "supported_genes": 13935,
+                "method": "Frozen VAE/neural ODE plus ridge1 detection probability and diagonal-shrunken positive-log abundance heads",
+                "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+                "mode": "detection",
+                "strength": 1.0,
+                "backoff": 1.0,
+                "seed": 20260928,
+                "covariance_change_vs_reference": 0.11428881366936691,
+                "newly_detected_entries": 186546,
+                "removed_detection_entries": 81503,
+                "abundance_factor_cap": 2.0,
+                "detection_probability_delta_cap": 0.25,
+                "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection.",
+                "mapped_mass_conserved": true,
+                "protected_genes_unchanged": true
+              },
+              "prediction_sha256": "0c635da1141a074ca3d9b95e11b83971188a9196bcbdc4fb4652f8f8e98bd902"
+            },
+            "hurdle_joint_s0.5": {
+              "audit": {
+                "fit_cells": 7963,
+                "fit_max_stage": 8.0,
+                "supported_genes": 13935,
+                "method": "Frozen VAE/neural ODE plus ridge1 detection probability and diagonal-shrunken positive-log abundance heads",
+                "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+                "mode": "joint",
+                "strength": 0.5,
+                "backoff": 1.0,
+                "seed": 20260928,
+                "covariance_change_vs_reference": 0.20045866388510647,
+                "newly_detected_entries": 93173,
+                "removed_detection_entries": 40758,
+                "abundance_factor_cap": 2.0,
+                "detection_probability_delta_cap": 0.25,
+                "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection.",
+                "mapped_mass_conserved": true,
+                "protected_genes_unchanged": true
+              },
+              "prediction_sha256": "a9d99186348bfea4c4b7f91e3ec57a38501ccac83e6b1ae610fe5080133ab127"
+            },
+            "hurdle_joint_s1.0": {
+              "audit": {
+                "fit_cells": 7963,
+                "fit_max_stage": 8.0,
+                "supported_genes": 13935,
+                "method": "Frozen VAE/neural ODE plus ridge1 detection probability and diagonal-shrunken positive-log abundance heads",
+                "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+                "mode": "joint",
+                "strength": 1.0,
+                "backoff": 1.0,
+                "seed": 20260928,
+                "covariance_change_vs_reference": 0.3147815415637878,
+                "newly_detected_entries": 186546,
+                "removed_detection_entries": 81503,
+                "abundance_factor_cap": 2.0,
+                "detection_probability_delta_cap": 0.25,
+                "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection.",
+                "mapped_mass_conserved": true,
+                "protected_genes_unchanged": true
+              },
+              "prediction_sha256": "2d5ae8a993eac5393c5a242c649aae336ba4810feee32ab749d323ca151c0c8a"
+            }
+          }
+        },
+        {
+          "cutoff": 8.25,
+          "target": 9.25,
+          "floor": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.2375742495059967,
+            "variogram": 0.008673261851072311
+          },
+          "ceiling": {
+            "de_score": 0.9165247018739352,
+            "de_direction": 0.8566698563410718,
+            "mmd_u": 0.002615219447761774,
+            "variogram": 0.00012109167437301949
+          },
+          "results": [
+            {
+              "candidate": "copy",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.2375742495059967,
+                "variogram": 0.008673261851072311
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit16",
+              "raw_metrics": {
+                "de_score": -0.3287904599659284,
+                "de_direction": -0.07611305688343999,
+                "mmd_u": 0.2259478121995926,
+                "variogram": 0.008606153540313244
+              },
+              "local_score": 47.98714389154627,
+              "skills": {
+                "de_score": 0.4239558707643814,
+                "de_direction": 0.4787328678973971,
+                "mmd_u": 0.5126845405062341,
+                "variogram": 0.5019694604907392
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "saved384_d0.0",
+              "raw_metrics": {
+                "de_score": -0.005110732538330506,
+                "de_direction": 0.09910054820824371,
+                "mmd_u": 0.22197532653808594,
+                "variogram": 0.008473003283143044
+              },
+              "local_score": 51.36612769509718,
+              "skills": {
+                "de_score": 0.49860982391102876,
+                "de_direction": 0.5306957452121235,
+                "mmd_u": 0.5171673628650272,
+                "variogram": 0.5059233790533778
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "saved_ode",
+              "raw_metrics": {
+                "de_score": -0.13287904599659284,
+                "de_direction": 0.1658029029392873,
+                "mmd_u": 0.2183235138654709,
+                "variogram": 0.008326532319188118
+              },
+              "local_score": 51.342010806448776,
+              "skills": {
+                "de_score": 0.46620450606585784,
+                "de_direction": 0.5535699383353724,
+                "mmd_u": 0.5213580335149786,
+                "variogram": 0.5103454345484334
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "hurdle_abundance_s0.5",
+              "raw_metrics": {
+                "de_score": -0.11243611584327083,
+                "de_direction": 0.0958808168317523,
+                "mmd_u": 0.23452076315879822,
+                "variogram": 0.008612127974629402
+              },
+              "local_score": 50.152542706969186,
+              "skills": {
+                "de_score": 0.47110332749562167,
+                "de_direction": 0.5296393364547735,
+                "mmd_u": 0.5032702056642957,
+                "variogram": 0.5017934969140218
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "hurdle_abundance_s1.0",
+              "raw_metrics": {
+                "de_score": -0.11243611584327083,
+                "de_direction": 0.0958808168317523,
+                "mmd_u": 0.23452076315879822,
+                "variogram": 0.008612127974629402
+              },
+              "local_score": 50.152542706969186,
+              "skills": {
+                "de_score": 0.47110332749562167,
+                "de_direction": 0.5296393364547735,
+                "mmd_u": 0.5032702056642957,
+                "variogram": 0.5017934969140218
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "hurdle_detection_s0.5",
+              "raw_metrics": {
+                "de_score": -0.5553662691652469,
+                "de_direction": 0.1332084152030654,
+                "mmd_u": 0.23421254754066467,
+                "variogram": 0.00842287763953209
+              },
+              "local_score": 48.40385576637861,
+              "skills": {
+                "de_score": 0.38373751783166904,
+                "de_direction": 0.5421510590340133,
+                "mmd_u": 0.5036026751180219,
+                "variogram": 0.5074280545597947
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "hurdle_detection_s1.0",
+              "raw_metrics": {
+                "de_score": -0.5689948892674616,
+                "de_direction": 0.11437609147029486,
+                "mmd_u": 0.23103395104408264,
+                "variogram": 0.008270691148936749
+              },
+              "local_score": 48.3859002146219,
+              "skills": {
+                "de_score": 0.38156028368794326,
+                "de_direction": 0.5357656953394629,
+                "mmd_u": 0.507057199334039,
+                "variogram": 0.5120517379457787
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "hurdle_joint_s0.5",
+              "raw_metrics": {
+                "de_score": -0.19931856899488923,
+                "de_direction": 0.1000848520699912,
+                "mmd_u": 0.2311723232269287,
+                "variogram": 0.008391314186155796
+              },
+              "local_score": 49.92436490939835,
+              "skills": {
+                "de_score": 0.4509639564124057,
+                "de_direction": 0.531019541460428,
+                "mmd_u": 0.5069058289579557,
+                "variogram": 0.508380129691942
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "hurdle_joint_s1.0",
+              "raw_metrics": {
+                "de_score": -0.19931856899488923,
+                "de_direction": 0.1000848520699912,
+                "mmd_u": 0.2311723232269287,
+                "variogram": 0.008391314186155796
+              },
+              "local_score": 49.92436490939835,
+              "skills": {
+                "de_score": 0.4509639564124057,
+                "de_direction": 0.531019541460428,
+                "mmd_u": 0.5069058289579557,
+                "variogram": 0.508380129691942
+              },
+              "calibration_valid": true
+            }
+          ],
+          "generation": {
+            "copy": {
+              "audit": {
+                "method": "persistence",
+                "replayed_from": "private\\neural_ode_horizon_01\\cutoff_8.25\\copy.npy"
+              },
+              "prediction_sha256": "f991bb722bc73fe1b4135b16a6a7a3db7132c306103559448dc13289eb73ae4e"
+            },
+            "unit16": {
+              "audit": {
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "guard_applied": true,
+                "population_mix": 1.0,
+                "expression_strength_used": 1.0,
+                "trusted_donor_fraction": 0.99,
+                "effective_sample_size": 1423.0487179949341,
+                "unique_donors": 1334,
+                "covariance_change_vs_reference": 0.1709030360203553,
+                "state_support": [
+                  136,
+                  65,
+                  203,
+                  10,
+                  86,
+                  55,
+                  113,
+                  25,
+                  10,
+                  106,
+                  85,
+                  193,
+                  90,
+                  37,
+                  172,
+                  40
+                ],
+                "alignment": "identity",
+                "covariance_limit": 0.4,
+                "feature_scaling": "unit",
+                "expression_factor_cap": 1.25,
+                "detection_strength": 0.5,
+                "maximum_probability_change": 0.02,
+                "attempted_additions": 22466,
+                "attempted_deletions": 24091,
+                "detection_candidate_covariance_change": 0.17236713534616505,
+                "detection_guard_rejected": false,
+                "actual_additions": 22466,
+                "actual_deletions": 24091,
+                "replayed_from": "private\\neural_ode_horizon_01\\cutoff_8.25\\unit16.npy"
+              },
+              "prediction_sha256": "20ec068eb5979bde5541166183dc3cad964eb9e57ce7682f8fc60ea7d36a3d43"
+            },
+            "saved384_d0.0": {
+              "audit": {
+                "attempted_additions": 0,
+                "attempted_deletions": 0,
+                "method": "cell_nmf_consensus_usage_drift",
+                "requested_expression": 1.0,
+                "requested_detection": 0.0,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.14015833267277958,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 15,
+                  "Blood progenitors": 119,
+                  "Cardiomyocytes FHF 1": 117,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 56,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors": 0,
+                  "Cardiopharyngeal progenitors FHF": 97,
+                  "Cardiopharyngeal progenitors SHF": 4,
+                  "EMP": 17,
+                  "Embryo proper endothelium": 67,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 1,
+                  "Epicardium": 6,
+                  "Erythroid": 396,
+                  "Foregut": 2,
+                  "Gut tube": 59,
+                  "Haematoendothelial progenitors": 9,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 299,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 258,
+                  "Pharyngeal endoderm": 5,
+                  "Pharyngeal mesoderm": 11,
+                  "Surface ectoderm": 1,
+                  "Venous endothelium": 49
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.7906666666666666,
+                "actual_additions": 0,
+                "actual_deletions": 0,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "fit_audit": {
+                  "rank": 8,
+                  "fit_cells": 3000,
+                  "features": 384,
+                  "replicate_iterations": [
+                    95,
+                    200,
+                    84
+                  ],
+                  "usage_iterations": [
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40
+                  ],
+                  "convergence_warnings": 1,
+                  "consensus_cluster_sizes": [
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3
+                  ],
+                  "consensus_dispersion": [
+                    0.028002244782035595,
+                    0.013356682045371762,
+                    0.06924512910488885,
+                    0.009123007990364073,
+                    0.06738493024228102,
+                    0.010704869308864565,
+                    0.04563401786047869,
+                    0.020261331845189745
+                  ],
+                  "adaptation": "Three NMF replicas, median consensus, fixed-component multiplicative usage fitting; normalized abundance instead of raw counts, 384 guard features instead of2000 v-score genes, no component outlier filter. Ridge1 full-panel log-abundance decoder and within-type usage slopes are added forecasting hypotheses, not cNMF reproduction.",
+                  "scope": "Cell-level factors are not validated biological activity programs; convergence and consensus with three replicas do not establish recovery or temporal accuracy."
+                },
+                "replayed_from": "private\\neural_ode_horizon_01\\cutoff_8.25\\saved384_d0.0.npy"
+              },
+              "prediction_sha256": "ae65a35c555d8d166d5beefb6ec5c97e9a1d4833f1c4c1f20f6a278a377f3dbb"
+            },
+            "saved_ode": {
+              "audit": {
+                "method": "VAE neural ODE with Sinkhorn observation and latent dynamics losses",
+                "beta": 0.0,
+                "fit_cells": 10963,
+                "feature_count": 384,
+                "fit_max_stage": 8.25,
+                "past_stages": [
+                  7.5,
+                  7.75,
+                  8.0,
+                  8.25
+                ],
+                "pretrain_steps": 200,
+                "joint_steps": 1000,
+                "batch": 32,
+                "truth_batch": 200,
+                "training_history": [
+                  {
+                    "phase": "pretrain",
+                    "step": 100,
+                    "loss": 0.6465261578559875
+                  },
+                  {
+                    "phase": "pretrain",
+                    "step": 200,
+                    "loss": 0.599177360534668
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 100,
+                    "loss": 144.02877807617188,
+                    "observation_loss": 144.02877807617188,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 200,
+                    "loss": 150.77455139160156,
+                    "observation_loss": 150.77455139160156,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 300,
+                    "loss": 136.2915496826172,
+                    "observation_loss": 136.2915496826172,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 400,
+                    "loss": 133.44195556640625,
+                    "observation_loss": 133.44195556640625,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 500,
+                    "loss": 131.53802490234375,
+                    "observation_loss": 131.53802490234375,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 600,
+                    "loss": 140.2647247314453,
+                    "observation_loss": 140.2647247314453,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 700,
+                    "loss": 139.62109375,
+                    "observation_loss": 139.62109375,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 800,
+                    "loss": 132.12948608398438,
+                    "observation_loss": 132.12948608398438,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 900,
+                    "loss": 137.4237823486328,
+                    "observation_loss": 137.4237823486328,
+                    "dynamic_loss": 0.0
+                  },
+                  {
+                    "phase": "joint",
+                    "step": 1000,
+                    "loss": 135.03646850585938,
+                    "observation_loss": 135.03646850585938,
+                    "dynamic_loss": 0.0
+                  }
+                ],
+                "scope": "Author-architecture adaptation, not scNODE reproduction: normalized feature scaling, minibatch reconstruction, bounded velocity/gradient, fixed physical Euler step, ridge full-gene donor-relative decoding. No annotation labels or future expression are model inputs. All permitted prepared rows are available to training; prepared cohort is sampled, not the complete raw atlas.",
+                "surrogate_is_final_score": false,
+                "model_selection": "Predeclared final iteration; no target-based checkpoint selection.",
+                "requested_strength": 1.0,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.17904613514211815,
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "forecast_latent": "Conditional mean, no sampled seed selection.",
+                "zero_mask_preserved": true,
+                "replayed_from": "private\\neural_ode_horizon_01\\cutoff_8.25\\ode_b0.0_s1.0.npy"
+              },
+              "prediction_sha256": "bb3d1f78496bd72dcd9a8554a09690d669d57b1f07655cd5d99c857cdec8bbfb"
+            },
+            "hurdle_abundance_s0.5": {
+              "audit": {
+                "fit_cells": 10963,
+                "fit_max_stage": 8.25,
+                "supported_genes": 14462,
+                "method": "Frozen VAE/neural ODE plus ridge1 detection probability and diagonal-shrunken positive-log abundance heads",
+                "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+                "mode": "abundance",
+                "strength": 0.5,
+                "backoff": 1.0,
+                "seed": 20260928,
+                "covariance_change_vs_reference": 0.29172642876652405,
+                "newly_detected_entries": 0,
+                "removed_detection_entries": 0,
+                "abundance_factor_cap": 2.0,
+                "detection_probability_delta_cap": 0.25,
+                "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection.",
+                "mapped_mass_conserved": true,
+                "protected_genes_unchanged": true
+              },
+              "prediction_sha256": "9f015e1ab22d85f85407f63323f26989c726f377a3fccd7eda8e609e66aabd9d"
+            },
+            "hurdle_abundance_s1.0": {
+              "audit": {
+                "fit_cells": 10963,
+                "fit_max_stage": 8.25,
+                "supported_genes": 14462,
+                "method": "Frozen VAE/neural ODE plus ridge1 detection probability and diagonal-shrunken positive-log abundance heads",
+                "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+                "mode": "abundance",
+                "strength": 1.0,
+                "backoff": 0.5,
+                "seed": 20260928,
+                "covariance_change_vs_reference": 0.29172642876652405,
+                "newly_detected_entries": 0,
+                "removed_detection_entries": 0,
+                "abundance_factor_cap": 2.0,
+                "detection_probability_delta_cap": 0.25,
+                "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection.",
+                "mapped_mass_conserved": true,
+                "protected_genes_unchanged": true
+              },
+              "prediction_sha256": "9f015e1ab22d85f85407f63323f26989c726f377a3fccd7eda8e609e66aabd9d"
+            },
+            "hurdle_detection_s0.5": {
+              "audit": {
+                "fit_cells": 10963,
+                "fit_max_stage": 8.25,
+                "supported_genes": 14462,
+                "method": "Frozen VAE/neural ODE plus ridge1 detection probability and diagonal-shrunken positive-log abundance heads",
+                "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+                "mode": "detection",
+                "strength": 0.5,
+                "backoff": 1.0,
+                "seed": 20260928,
+                "covariance_change_vs_reference": 0.070820309294728,
+                "newly_detected_entries": 49113,
+                "removed_detection_entries": 110888,
+                "abundance_factor_cap": 2.0,
+                "detection_probability_delta_cap": 0.25,
+                "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection.",
+                "mapped_mass_conserved": true,
+                "protected_genes_unchanged": true
+              },
+              "prediction_sha256": "8b9e8c32be95f30e2501494396c539dd510567a20106bdb2a6971bb0412489a5"
+            },
+            "hurdle_detection_s1.0": {
+              "audit": {
+                "fit_cells": 10963,
+                "fit_max_stage": 8.25,
+                "supported_genes": 14462,
+                "method": "Frozen VAE/neural ODE plus ridge1 detection probability and diagonal-shrunken positive-log abundance heads",
+                "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+                "mode": "detection",
+                "strength": 1.0,
+                "backoff": 1.0,
+                "seed": 20260928,
+                "covariance_change_vs_reference": 0.1226463644337989,
+                "newly_detected_entries": 97868,
+                "removed_detection_entries": 220537,
+                "abundance_factor_cap": 2.0,
+                "detection_probability_delta_cap": 0.25,
+                "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection.",
+                "mapped_mass_conserved": true,
+                "protected_genes_unchanged": true
+              },
+              "prediction_sha256": "776490124b536e79c042bec9f5b90e0ab16059d89bbf6d3d2ee9009255accb5d"
+            },
+            "hurdle_joint_s0.5": {
+              "audit": {
+                "fit_cells": 10963,
+                "fit_max_stage": 8.25,
+                "supported_genes": 14462,
+                "method": "Frozen VAE/neural ODE plus ridge1 detection probability and diagonal-shrunken positive-log abundance heads",
+                "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+                "mode": "joint",
+                "strength": 0.5,
+                "backoff": 1.0,
+                "seed": 20260928,
+                "covariance_change_vs_reference": 0.31350848937338555,
+                "newly_detected_entries": 49113,
+                "removed_detection_entries": 110888,
+                "abundance_factor_cap": 2.0,
+                "detection_probability_delta_cap": 0.25,
+                "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection.",
+                "mapped_mass_conserved": true,
+                "protected_genes_unchanged": true
+              },
+              "prediction_sha256": "b181048bdc4a030f31263dfc732d5f212f02f7467d7b5b5b662a2a62d8c80676"
+            },
+            "hurdle_joint_s1.0": {
+              "audit": {
+                "fit_cells": 10963,
+                "fit_max_stage": 8.25,
+                "supported_genes": 14462,
+                "method": "Frozen VAE/neural ODE plus ridge1 detection probability and diagonal-shrunken positive-log abundance heads",
+                "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+                "mode": "joint",
+                "strength": 1.0,
+                "backoff": 0.5,
+                "seed": 20260928,
+                "covariance_change_vs_reference": 0.31350848937338555,
+                "newly_detected_entries": 49113,
+                "removed_detection_entries": 110888,
+                "abundance_factor_cap": 2.0,
+                "detection_probability_delta_cap": 0.25,
+                "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection.",
+                "mapped_mass_conserved": true,
+                "protected_genes_unchanged": true
+              },
+              "prediction_sha256": "b181048bdc4a030f31263dfc732d5f212f02f7467d7b5b5b662a2a62d8c80676"
+            }
+          }
+        }
+      ],
+      "summaries": [
+        {
+          "candidate": "copy",
+          "all_calibrations_valid": true,
+          "scores": [
+            50.0,
+            50.0
+          ],
+          "mean_score": 50.0,
+          "mean_skills_percent": {
+            "de_score": 50.0,
+            "de_direction": 50.0,
+            "mmd_u": 50.0,
+            "variogram": 50.0
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": true
+        },
+        {
+          "candidate": "unit16",
+          "all_calibrations_valid": true,
+          "scores": [
+            47.142658332960416,
+            47.98714389154627
+          ],
+          "mean_score": 47.56490111225334,
+          "mean_skills_percent": {
+            "de_score": 43.364849612985424,
+            "de_direction": 47.22320308805906,
+            "mmd_u": 49.98184627089499,
+            "variogram": 49.61667027861864
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "saved384_d0.0",
+          "all_calibrations_valid": true,
+          "scores": [
+            49.200036578447445,
+            51.36612769509718
+          ],
+          "mean_score": 50.28308213677231,
+          "mean_skills_percent": {
+            "de_score": 48.516569505060446,
+            "de_direction": 51.552150948020426,
+            "mmd_u": 50.71880057669995,
+            "variogram": 50.25130925246053
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "saved_ode",
+          "all_calibrations_valid": true,
+          "scores": [
+            48.4379952968312,
+            51.342010806448776
+          ],
+          "mean_score": 49.89000305163999,
+          "mean_skills_percent": {
+            "de_score": 47.17814983159478,
+            "de_direction": 50.75961846743249,
+            "mmd_u": 51.17484961450778,
+            "variogram": 50.265530462654205
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "hurdle_abundance_s0.5",
+          "all_calibrations_valid": true,
+          "scores": [
+            49.48767873089902,
+            50.152542706969186
+          ],
+          "mean_score": 49.8201107189341,
+          "mean_skills_percent": {
+            "de_score": 49.04207033717195,
+            "de_direction": 50.126470500238995,
+            "mmd_u": 50.02063726181205,
+            "variogram": 50.108921655188745
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "hurdle_abundance_s1.0",
+          "all_calibrations_valid": true,
+          "scores": [
+            49.54910314190698,
+            50.152542706969186
+          ],
+          "mean_score": 49.850822924438084,
+          "mean_skills_percent": {
+            "de_score": 49.17974436262713,
+            "de_direction": 50.16889715721591,
+            "mmd_u": 49.97417275526327,
+            "variogram": 50.10705358949173
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "hurdle_detection_s0.5",
+          "all_calibrations_valid": true,
+          "scores": [
+            48.6387236950229,
+            48.40385576637861
+          ],
+          "mean_score": 48.52128973070076,
+          "mean_skills_percent": {
+            "de_score": 41.523544520188516,
+            "de_direction": 52.158519931877834,
+            "mmd_u": 50.09820273164668,
+            "variogram": 50.3565639909508
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "hurdle_detection_s1.0",
+          "all_calibrations_valid": true,
+          "scores": [
+            48.62266762175783,
+            48.3859002146219
+          ],
+          "mean_score": 48.50428391818986,
+          "mean_skills_percent": {
+            "de_score": 41.362218529670216,
+            "de_direction": 52.02332283369152,
+            "mmd_u": 50.1911233007299,
+            "variogram": 50.50280793565231
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "hurdle_joint_s0.5",
+          "all_calibrations_valid": true,
+          "scores": [
+            49.94765390166518,
+            49.92436490939835
+          ],
+          "mean_score": 49.93600940553176,
+          "mean_skills_percent": {
+            "de_score": 47.76414466447411,
+            "de_direction": 51.54223942666156,
+            "mmd_u": 50.10703990480722,
+            "variogram": 50.386507056528394
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "hurdle_joint_s1.0",
+          "all_calibrations_valid": true,
+          "scores": [
+            49.858276307307115,
+            49.92436490939835
+          ],
+          "mean_score": 49.89132060835273,
+          "mean_skills_percent": {
+            "de_score": 47.74740100787129,
+            "de_direction": 51.69838687360818,
+            "mmd_u": 49.95983976550184,
+            "variogram": 50.209608541661574
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        }
+      ],
+      "scope": "Two previously exposed one-day source-cohort development folds; not independent challenge-domain or embryo validation. Prepared cohort is sampled. Missing official genes are zero placeholders. No annotation labels in learner. This decomposes the decoder and relaxes its fixed-zero constraint; head regularization and factor cap also differ from the old scalar decoder. Abundance-only is the matched head control. Low-support genes have zero direct head coefficients but mapped mass normalization can still change them."
     }
   },
   "running": [],
