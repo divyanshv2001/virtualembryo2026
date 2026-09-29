@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T07:30:52.559696+00:00",
+  "updated_utc": "2026-09-29T07:39:52.038265+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -4953,7 +4953,7 @@
     {
       "id": "continuous_flow_sequential_likelihood",
       "run": "cnf_sequential_challenge_01",
-      "status": "running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_sequential_flow.py",
         "cnf_sequential_challenge.py"
@@ -4961,6 +4961,22 @@
       "primary_reference": "CNF_SEQUENTIAL_REFERENCE.json",
       "trial_scope": "Equal-stage backward shared likelihood,64 total sampled past cells,4096 genes/8 latent,400/800 updates, strengths.5/1 and six archived controls;30 full-panel scores.",
       "limitations": "Own numerical/representation adaptation, not full author replication; exposed development and no biological growth/velocity inputs. No guarantee or72 promotion.",
+      "research_family_exhausted": false,
+      "results_report": "CNF_SEQUENTIAL_RESULTS.json",
+      "decision": "Sequential400/800 strength1 mean51.6455/52.1481 regress versus matched stochastic4096-gene8D52.8811 on every panel. All30 scores and exact400-update lineage retained. Next detection/joint sampling on frozen best flow to test zero-pattern dynamics."
+    },
+    {
+      "id": "continuous_flow_hurdle_decoding",
+      "run": "cnf_hurdle_challenge_01",
+      "status": "running",
+      "implementation": [
+        "cnf_hurdle_challenge.py",
+        "feature_panel_forecast.py",
+        "neural_hurdle_forecast.py"
+      ],
+      "trial_scope": "Frozen4096-gene8D flow, detection/joint modes x independent/systematic sampling x strengths.5/1, fixedseed20260928;36 scores including four archived controls. Recomputed permitted-past positive heads and abundance forecasts must match archive exactly.",
+      "hypothesis": "Zero-preserving abundance decoder may omit developmental detection changes. Test same frozen flow with marginal detection changes and controlled sampler variance.",
+      "limitations": "Linear detection probabilities and conditional abundance are own heuristic adaptation, not assay-noise or raw-count likelihood. Earlier neural hurdle tests failed; this is new flow context, not untested scientific family. Reused development selection, no blind validation.",
       "research_family_exhausted": false
     }
   ],
