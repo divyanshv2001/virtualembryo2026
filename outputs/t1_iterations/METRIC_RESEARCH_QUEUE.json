@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T05:22:57.329702+00:00",
+  "updated_utc": "2026-09-29T05:29:19.045252+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -4411,11 +4411,11 @@
       ],
       "scope": "Adaptation, not faithful ECC. Three positive-quantile strengths, global and four-state conditional, two one-day associated-cohort folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "4531738b3762e7a08aedd0bbb885067d5a204b67c5dbc3aa8cf4fdc69ee38a8a",
+      "results_report_sha256": "b4d7ccbd196c7508364bbc0a70b393365f2b265ab0a2714db0c29cf2fb3beea4",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Finish frozen batches: strength_transport_horizon_01. Preserve paired controls and all four metrics."
+      "next_action": "Finish frozen batches: ridge_transport_horizon_01. Preserve paired controls and all four metrics."
     },
     {
       "id": "annotation_conditioned_temporal",
@@ -4439,7 +4439,7 @@
       ],
       "scope": "Heuristic adaptation to normalized abundance; not muscat replication. Observed annotations group past cells. Four expression/detection ablations, source support20 vs100, two one-day folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "4531738b3762e7a08aedd0bbb885067d5a204b67c5dbc3aa8cf4fdc69ee38a8a",
+      "results_report_sha256": "b4d7ccbd196c7508364bbc0a70b393365f2b265ab0a2714db0c29cf2fb3beea4",
       "limitations": [
         "Published annotation may derive from joint stages; retrospective diagnostic only.",
         "Capture IDs do not establish independent embryos; cell-based errors are shrinkage heuristics.",
@@ -4448,7 +4448,7 @@
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Finish frozen batches: strength_transport_horizon_01. Preserve paired controls and all four metrics."
+      "next_action": "Finish frozen batches: ridge_transport_horizon_01. Preserve paired controls and all four metrics."
     },
     {
       "id": "shared_gene_program_dynamics",
@@ -4475,11 +4475,11 @@
       "scope": "Shared SVD profile directions versus cell-level NMF median consensus usage dynamics. Neither is a faithful cNMF reproduction or certified biological-program recovery.",
       "frozen_trials": "SVD ranks2/4/8 with detection0/.5; NMF ranks8/16 with detection0/.5,3 fixed seeds and200 iterations. Rank16 optimizer repair800 iterations. Two matched one-day development folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "4531738b3762e7a08aedd0bbb885067d5a204b67c5dbc3aa8cf4fdc69ee38a8a",
+      "results_report_sha256": "b4d7ccbd196c7508364bbc0a70b393365f2b265ab0a2714db0c29cf2fb3beea4",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Finish frozen batches: strength_transport_horizon_01. Preserve paired controls and all four metrics."
+      "next_action": "Finish frozen batches: ridge_transport_horizon_01. Preserve paired controls and all four metrics."
     },
     {
       "id": "neural_latent_hurdle",
@@ -4672,7 +4672,7 @@
     },
     {
       "id": "transport_abundance_strength",
-      "status": "running",
+      "status": "implemented_evaluated_not_promoted",
       "metrics": [
         "de_score",
         "de_direction",
@@ -4687,6 +4687,29 @@
       "hypothesis": "The8D decoder drift is under-scaled or over-scaled; a fixed abundance multiplier can test this independently of latent geometry and fit.",
       "trial_scope": "Neutral/growth1 eight-dimensional models, strengths.25/1/2 against archived.5, plus copy/unit16/NMF controls;22 evaluations over two unchanged folds. Same seeds and panels. Verify reconstructed.5 bit-identical.",
       "limitations": "Caps/backoffs can collapse nominal strengths; actual diagnostics retained. Reused development folds; no fresh embryos or challenge-domain inference. Own sensitivity ablation, no new paper reproduction claim.",
+      "research_family_exhausted": false,
+      "submissions_used": 0,
+      "jev_requests_used": 0,
+      "results_report": "STRENGTH_TRANSPORT_RESULTS.json",
+      "decision": "No new strength improves the incumbent mean51.7123. Nominal2.0 equals1.0 on E8.0 because covariance backoff=.5; E8.25 remains weaker for DE. Preserve all22 outcomes; test conditional ridge next. No Monte Carlo or official promotion."
+    },
+    {
+      "id": "transport_conditional_ridge",
+      "status": "running",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "run": "ridge_transport_horizon_01",
+      "implementation": [
+        "ridge_conditional_head.py",
+        "ridge_transport_horizon.py"
+      ],
+      "hypothesis": "Fixed ridge1 may shrink positive conditional gene responses excessively or insufficiently. Test this independently of8D latent geometry and abundance strength.",
+      "trial_scope": "Neutral/growth1 priors, positive conditional ridges.1/.3/3 versus1, strength.5. Two unchanged development folds,22 scored outcomes. Reconstructed ridge1 controls must be bit-identical. No seed search.",
+      "limitations": "Past-only sampled prepared cohort, full-panel scoring with explicit missing-gene placeholders. Own covariance-regression sensitivity, not a faithful paper reproduction. No independent embryos or challenge transfer certification. Caps/guards remain unchanged.",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0

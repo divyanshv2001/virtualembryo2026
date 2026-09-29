@@ -241,6 +241,17 @@ A frozen-flow decoder ablation verifies every archived head array, then separate
 | dimensional_transport_horizon_01 | dimension_growth1_d5 | 49.872 | 50.839 | 50.356 |
 | dimensional_transport_horizon_01 | dimension_growth1_d8 | 52.766 | 50.476 | 51.621 |
 | dimensional_transport_horizon_01 | dimension_growth1_d24 | 52.021 | 49.099 | 50.560 |
+| strength_transport_horizon_01 | copy | 50.000 | 50.000 | 50.000 |
+| strength_transport_horizon_01 | unit16 | 47.143 | 47.987 | 47.565 |
+| strength_transport_horizon_01 | saved384_d0.0 | 49.200 | 51.366 | 50.283 |
+| strength_transport_horizon_01 | dimension_neutral_d8 | 52.929 | 50.495 | 51.712 |
+| strength_transport_horizon_01 | dimension_growth1_d8 | 52.766 | 50.476 | 51.621 |
+| strength_transport_horizon_01 | strength_neutral_s0.25 | 52.688 | 50.377 | 51.533 |
+| strength_transport_horizon_01 | strength_neutral_s1.0 | 52.711 | 50.633 | 51.672 |
+| strength_transport_horizon_01 | strength_neutral_s2.0 | 52.711 | 50.700 | 51.706 |
+| strength_transport_horizon_01 | strength_growth1_s0.25 | 52.608 | 50.334 | 51.471 |
+| strength_transport_horizon_01 | strength_growth1_s1.0 | 52.653 | 50.619 | 51.636 |
+| strength_transport_horizon_01 | strength_growth1_s2.0 | 52.653 | 50.683 | 51.668 |
 
 Status: running. Full four-metric vectors, raw metrics, model audits and provenance hashes are in HORIZON_BATCH_RESULTS.json.
 No new prospective export or official submission. The >72 objective remains unfinished.

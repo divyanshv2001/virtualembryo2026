@@ -1,5 +1,5 @@
 {
-  "records": 1303,
+  "records": 1325,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -307,6 +307,11 @@
       "outcomes_indexed": 27
     },
     {
+      "path": "private/strength_transport_horizon_01/report.json",
+      "sha256": "0e10bf9e77e6564196505c6e15f5eb414f56e04367b17a8d49bbe3a604945ad7",
+      "outcomes_indexed": 22
+    },
+    {
       "path": "private/transport_conditional_horizon_01/report.json",
       "sha256": "7234e31b154990092ad170c0157f3ce9dd0a974d248db0c39d8166ebf0915b70",
       "outcomes_indexed": 24
@@ -339,5 +344,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "4e0ef131b95fefe600e517f99b8c46f7cc58f181cc5d69281d8fe51c7b29e323"
+  "ledger_sha256": "2823973e474e68d08081612b2c6f8c7e33432ef8741a878703bd8f5faa4f4f95"
 }

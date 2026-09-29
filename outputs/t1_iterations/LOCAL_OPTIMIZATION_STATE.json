@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T05:23:32.573664+00:00",
+  "updated_utc": "2026-09-29T05:29:39.593115+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/strength_transport_horizon.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/ridge_transport_horizon.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Finish frozen batches: strength_transport_horizon_01. Preserve paired controls and all four metrics.",
+  "next_experiment": "Finish frozen batches: ridge_transport_horizon_01. Preserve paired controls and all four metrics.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "strength_transport_horizon_01"
+    "ridge_transport_horizon_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/strength_transport_horizon_01",
+  "active_run_path": "outputs/t1_iterations/private/ridge_transport_horizon_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -149,10 +149,10 @@
   "horizon_batch": {
     "status": "running",
     "running": [
-      "strength_transport_horizon_01"
+      "ridge_transport_horizon_01"
     ],
     "report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-    "report_sha256": "4531738b3762e7a08aedd0bbb885067d5a204b67c5dbc3aa8cf4fdc69ee38a8a"
+    "report_sha256": "b4d7ccbd196c7508364bbc0a70b393365f2b265ab0a2714db0c29cf2fb3beea4"
   },
   "continuation_automation": {
     "id": "continue-t1-local-research",
@@ -268,12 +268,25 @@
     "results_report": "DIMENSIONAL_TRANSPORT_RESULTS.json"
   },
   "strength_transport_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "strength_transport_horizon_01",
     "tests_passed": 79,
     "evaluations_planned": 22,
-    "pending_evaluations": 22,
+    "pending_evaluations": 0,
     "process_id": 11412,
-    "plan_sha256": "39906f9bb3e24cba1b072e3a350cb377e24f9bddc7328420fd0d8d88a58a0275"
+    "plan_sha256": "39906f9bb3e24cba1b072e3a350cb377e24f9bddc7328420fd0d8d88a58a0275",
+    "report_sha256": "0e10bf9e77e6564196505c6e15f5eb414f56e04367b17a8d49bbe3a604945ad7",
+    "results_report": "STRENGTH_TRANSPORT_RESULTS.json",
+    "evaluations": 22,
+    "decision": "No new strength improves the incumbent mean51.7123. Nominal2.0 equals1.0 on E8.0 because covariance backoff=.5; E8.25 remains weaker for DE. Preserve all22 outcomes; test conditional ridge next. No Monte Carlo or official promotion."
+  },
+  "ridge_transport_job": {
+    "status": "running",
+    "run": "ridge_transport_horizon_01",
+    "tests_passed": 80,
+    "evaluations_planned": 22,
+    "pending_evaluations": 22,
+    "process_id": 17316,
+    "plan_sha256": "d6a232a5adc88f7363c3987598f0a08c846e76c331d76661c562c5529715b02f"
   }
 }
