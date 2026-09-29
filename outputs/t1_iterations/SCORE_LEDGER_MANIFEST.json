@@ -1,5 +1,5 @@
 {
-  "records": 1281,
+  "records": 1303,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -95,6 +95,11 @@
       "path": "private/detection_backtest_01/report.json",
       "sha256": "56312bd40befca5bbc3604fac89c568cc8bef5db9dbcabd8771f80cbb296e6ca",
       "outcomes_indexed": 15
+    },
+    {
+      "path": "private/dimensional_transport_horizon_01/report.json",
+      "sha256": "9ef176c3737af9f254633a1a3e700bdd4dcaad162edb4ed2cdebfdf8c408bbee",
+      "outcomes_indexed": 22
     },
     {
       "path": "private/distribution_oneday_temporal_01/report.json",
@@ -334,5 +339,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "984f2ab0d877c2f8edf2b3a91f93084a65785d3f4726953e05847f7595aaf550"
+  "ledger_sha256": "4e0ef131b95fefe600e517f99b8c46f7cc58f181cc5d69281d8fe51c7b29e323"
 }

@@ -230,6 +230,17 @@ A frozen-flow decoder ablation verifies every archived head array, then separate
 | resolution_transport_horizon_01 | resolution_growth1_cells512 | 52.097 | 48.837 | 50.467 |
 | resolution_transport_horizon_01 | resolution_growth1_cells1024 | 52.214 | 48.648 | 50.431 |
 | resolution_transport_horizon_01 | resolution_growth1_pcaall | 51.900 | 48.373 | 50.137 |
+| dimensional_transport_horizon_01 | copy | 50.000 | 50.000 | 50.000 |
+| dimensional_transport_horizon_01 | unit16 | 47.143 | 47.987 | 47.565 |
+| dimensional_transport_horizon_01 | saved384_d0.0 | 49.200 | 51.366 | 50.283 |
+| dimensional_transport_horizon_01 | resolution_neutral_cells512 | 52.085 | 48.718 | 50.402 |
+| dimensional_transport_horizon_01 | resolution_growth1_cells512 | 52.097 | 48.837 | 50.467 |
+| dimensional_transport_horizon_01 | dimension_neutral_d5 | 49.876 | 51.001 | 50.438 |
+| dimensional_transport_horizon_01 | dimension_neutral_d8 | 52.929 | 50.495 | 51.712 |
+| dimensional_transport_horizon_01 | dimension_neutral_d24 | 52.002 | 48.846 | 50.424 |
+| dimensional_transport_horizon_01 | dimension_growth1_d5 | 49.872 | 50.839 | 50.356 |
+| dimensional_transport_horizon_01 | dimension_growth1_d8 | 52.766 | 50.476 | 51.621 |
+| dimensional_transport_horizon_01 | dimension_growth1_d24 | 52.021 | 49.099 | 50.560 |
 
 Status: running. Full four-metric vectors, raw metrics, model audits and provenance hashes are in HORIZON_BATCH_RESULTS.json.
 No new prospective export or official submission. The >72 objective remains unfinished.

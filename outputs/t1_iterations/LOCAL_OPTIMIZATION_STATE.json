@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T05:05:44.100534+00:00",
+  "updated_utc": "2026-09-29T05:23:32.573664+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/index_scores.py",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/strength_transport_horizon.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Finish frozen batches: dimensional_transport_horizon_01. Preserve paired controls and all four metrics.",
+  "next_experiment": "Finish frozen batches: strength_transport_horizon_01. Preserve paired controls and all four metrics.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "balanced_proxy_state_search_01"
+    "strength_transport_horizon_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/balanced_proxy_state_search_01",
+  "active_run_path": "outputs/t1_iterations/private/strength_transport_horizon_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -149,10 +149,10 @@
   "horizon_batch": {
     "status": "running",
     "running": [
-      "dimensional_transport_horizon_01"
+      "strength_transport_horizon_01"
     ],
     "report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-    "report_sha256": "d6431384f8ef803482d715b8f25a211efab6f613fc3bb7610d2b9a2d00fde2a6"
+    "report_sha256": "4531738b3762e7a08aedd0bbb885067d5a204b67c5dbc3aa8cf4fdc69ee38a8a"
   },
   "continuation_automation": {
     "id": "continue-t1-local-research",
@@ -242,12 +242,38 @@
     "evaluations": 22
   },
   "dimensional_transport_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "session_id": 27414,
     "run": "private/dimensional_transport_horizon_01",
     "plan_sha256": "4efa9132fe067f0c46700b6ee888e16929364a2f083f41f6c3da0f304983a051",
     "tests_passed": 78,
+    "pending_evaluations": 0,
+    "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/dimensional_transport_horizon.py --resume",
+    "report_sha256": "9ef176c3737af9f254633a1a3e700bdd4dcaad162edb4ed2cdebfdf8c408bbee",
+    "results_report": "DIMENSIONAL_TRANSPORT_RESULTS.json",
+    "evaluations": 22
+  },
+  "dimensional_transport_findings": {
+    "candidate": "dimension_neutral_d8",
+    "mean_score": 51.712261513466814,
+    "fold_scores": [
+      52.929213820600275,
+      50.49530920633336
+    ],
+    "beats_persistence_both_development_folds": true,
+    "stability_tested": false,
+    "challenge_domain_tested": false,
+    "official_score": null,
+    "local_72_gate_passed": false,
+    "results_report": "DIMENSIONAL_TRANSPORT_RESULTS.json"
+  },
+  "strength_transport_job": {
+    "status": "running",
+    "run": "strength_transport_horizon_01",
+    "tests_passed": 79,
+    "evaluations_planned": 22,
     "pending_evaluations": 22,
-    "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/dimensional_transport_horizon.py --resume"
+    "process_id": 11412,
+    "plan_sha256": "39906f9bb3e24cba1b072e3a350cb377e24f9bddc7328420fd0d8d88a58a0275"
   }
 }

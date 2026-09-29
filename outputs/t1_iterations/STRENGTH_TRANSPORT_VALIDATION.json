@@ -1,0 +1,6 @@
+{
+  "updated_utc": "2026-09-29T05:22:57.329702+00:00",
+  "tests_passed": 79,
+  "scope": "Full local suite including matching legacy strengths, preservation of fitted coefficients even on rejection, mass/zero/protected/covariance guards. Existing transport tests verify future-stage invariance.",
+  "command": "python -m pytest outputs/t1_iterations -q -p no:cacheprovider --basetemp outputs/t1_iterations/private/test_temp_strength_20260929_07"
+}
