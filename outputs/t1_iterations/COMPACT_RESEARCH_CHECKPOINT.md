@@ -1,13 +1,13 @@
 # T1 compact research checkpoint
 
-Updated: 2026-09-29T13:47:17.281419+00:00
+Updated: 2026-09-29T13:51:24.867364+00:00
 
 Official best reported: **51.87**. Latest export: `T1_val__anchorslope_progress_20260929_01.h5ad`. Local>72 gate remains unmet.
 Official metrics: DE44.9, direction57.0, MMD53.5, variogram51.7. Latest screenshot shows S2WISH2 / Codex / AGENT, rank29 on that view; scoring-page rank131/270 is a different view.
 
-Next: Run21-score fixedflow log1p positive response decoder batch; no official submissions.
+Next: Run21score matchedlog1p abundance/joint specialistmix weights.25/.5/.75, unchangedfullpanel.
 
-Active jobs: [{"script":"cnf_log1p_positive_challenge.py","process_id":14956,"worker_process_id":18892}]
+Active jobs: [{"script":"cnf_log1p_matched_mixture.py","process_id":15312,"worker_process_id":9128}]
 
 ## Latest measured decisions
 
@@ -24,6 +24,10 @@ Use deterministic rules for routine status. Jev is advisory compact routing, cac
 ## Jev accounting
 
 Latest: validated; 1903 payload bytes; actual usage {'input_tokens': 820, 'output_tokens': 103}; answers {'checkpoint_policy': {'choice': 'compact_md_and_sources', 'confidence': 1.0}, 'next_action': {'choice': 'run_log1p_decoder', 'confidence': 0.97}}. One live attempt, original3audit calls separate. No measured Codex token savings claim.
+
+## Current experiment
+
+`cnf_log1p_matched_mixture_01`: running; planned 21, completed 0.
 
 ## Evidence links
 

@@ -23,6 +23,18 @@ def refresh(update=None):
     f=p/'JEV_ROUTE_20260929_01.json'
     if f.exists():
         r=json.loads(f.read_text());lines.append(f"Latest: {r.get('status')}; {r.get('payload_bytes')} payload bytes; actual usage {r.get('usage')}; answers {r.get('answers')}. One live attempt, original3audit calls separate. No measured Codex token savings claim.")
+    current=s.get('active_run_path','')
+    if current:
+        run=Path(current).name
+        for key,job in s.items():
+            if isinstance(job,dict) and job.get('run')==run:
+                lines+=['','## Current experiment','',f"`{run}`: {job.get('status','unknown')}; planned {job.get('evaluations_planned','unknown')}, completed {job.get('evaluations',0)}."]
+                report=job.get('results_report')
+                if report and (p/report).exists():
+                    result=json.loads((p/report).read_text())
+                    means=[f"{row['candidate']}={row.get('mean_score')}" for row in result.get('summaries',[])]
+                    lines.append('; '.join(means));lines.append(f'Full metrics: [{report}]({report}).')
+                break
     lines+=['','## Evidence links','',
        '- [State](LOCAL_OPTIMIZATION_STATE.json), [queue](METRIC_RESEARCH_QUEUE.json), [mandate](LOCAL_OPTIMIZATION_PROMPT.md).',
        '- [Slope results](CNF_ANCHOR_SLOPE_RESULTS.json), [temporal](CNF_ANCHOR_SLOPE_TEMPORAL_RESULTS.json), [kernel](CNF_KERNEL_POPULATION_RESULTS.json).',

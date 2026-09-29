@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T13:44:02.965718+00:00",
+  "updated_utc": "2026-09-29T13:50:48.472278+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5502,7 +5502,7 @@
     {
       "id": "continuous_flow_log1p_positive_response",
       "run": "cnf_log1p_positive_challenge_01",
-      "status": "prepared",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_log1p_positive_challenge.py",
         "log1p_positive_forecast.py"
@@ -5510,6 +5510,20 @@
       "trial_scope": "Fixedfield/detection .5 anchorcorrection; positive response log1p conditionalridge1, positiveanchoralpha0/.5 crossedabundance/joint;21scores incl3controls.",
       "limitations": "Own metric-scale adaptation, not a publishedmethod reproduction or DE guarantee. Conditionalpositives stillomit zeros; repeateddevelopment and sampledcohort only.",
       "tests_passed": 1,
+      "research_family_exhausted": false,
+      "results_report": "CNF_LOG1P_POSITIVE_RESULTS.json",
+      "decision": "Completed21 log1p response scores. Bestjointalpha.5 mean54.9755 vs54.9083 control,+.06724 only. MeanDE52.385 vs52.026; MMD56.006 vs56.243 regresses. Abundancealpha.5 DE53.317 butdirection51.834/headline53.0584. No reliablepromotion; next fixedmatched specialist cellmixtures."
+    },
+    {
+      "id": "continuous_flow_log1p_specialist_integration",
+      "run": "cnf_log1p_matched_mixture_01",
+      "status": "prepared",
+      "implementation": [
+        "cnf_log1p_matched_mixture.py",
+        "cell_mixture.py"
+      ],
+      "trial_scope": "Frozenabundancealpha.5/jointalpha.5, matchedsame1500donors andoneforecastperdonor; weights.25/.5/.75 withfixedseed2026092812,21scoresincl4controls.",
+      "limitations": "Ownmetrictradeoff integration; mixturemarginal anddependencescores nonlinear. Exposeddevelopment, sampledcohort only, no candidate72gate.",
       "research_family_exhausted": false
     }
   ],
