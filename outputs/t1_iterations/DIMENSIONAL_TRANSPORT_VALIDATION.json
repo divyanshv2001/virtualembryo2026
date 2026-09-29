@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "tests_passed": 78,
+  "checks": "16-dimension default matches parent resolution coefficients exactly.5-dimensional fit excludes changed future expression and preserves every stage sample index. Existing numerical, mass/protected-gene, temporal-boundary and scoring regression tests also pass.",
+  "command": "outputs/research_workflow/.venv/Scripts/python.exe -m pytest outputs/t1_iterations -q -p no:cacheprovider --basetemp outputs/t1_iterations/private/test_temp_dimensions_20260929_06",
+  "limitation": "Implementation tests do not establish model accuracy."
+}

@@ -33,7 +33,7 @@ def finish(run,output,job_key,decision):
     (HERE/output).write_text(json.dumps(public,indent=2))
     path=HERE/'LOCAL_OPTIMIZATION_STATE.json';state=json.loads(path.read_text())
     state.setdefault(job_key,{}).update(status='completed_not_promoted',report_sha256=public['report_sha256'],
-        results_report=output,evaluations=public['evaluations'])
+        results_report=output,evaluations=public['evaluations'],pending_evaluations=0)
     state['local_process_running']=False
     path.write_text(json.dumps(state,indent=2))
     path=HERE/'METRIC_RESEARCH_QUEUE.json';queue=json.loads(path.read_text())

@@ -219,6 +219,17 @@ A frozen-flow decoder ablation verifies every archived head array, then separate
 | stage_transport_horizon_01 | stage_growth1_r1.0_s1.0 | 48.275 | 47.400 | 47.838 |
 | stage_transport_horizon_01 | stage_growth1_r10.0_s0.5 | 51.402 | 48.240 | 49.821 |
 | stage_transport_horizon_01 | stage_growth1_r10.0_s1.0 | 51.275 | 48.163 | 49.719 |
+| resolution_transport_horizon_01 | copy | 50.000 | 50.000 | 50.000 |
+| resolution_transport_horizon_01 | unit16 | 47.143 | 47.987 | 47.565 |
+| resolution_transport_horizon_01 | saved384_d0.0 | 49.200 | 51.366 | 50.283 |
+| resolution_transport_horizon_01 | conditional_neutral_s0.5 | 51.780 | 48.109 | 49.944 |
+| resolution_transport_horizon_01 | conditional_growth1_s0.5 | 51.928 | 48.416 | 50.172 |
+| resolution_transport_horizon_01 | resolution_neutral_cells512 | 52.085 | 48.718 | 50.402 |
+| resolution_transport_horizon_01 | resolution_neutral_cells1024 | 52.111 | 48.317 | 50.214 |
+| resolution_transport_horizon_01 | resolution_neutral_pcaall | 51.770 | 48.154 | 49.962 |
+| resolution_transport_horizon_01 | resolution_growth1_cells512 | 52.097 | 48.837 | 50.467 |
+| resolution_transport_horizon_01 | resolution_growth1_cells1024 | 52.214 | 48.648 | 50.431 |
+| resolution_transport_horizon_01 | resolution_growth1_pcaall | 51.900 | 48.373 | 50.137 |
 
 Status: running. Full four-metric vectors, raw metrics, model audits and provenance hashes are in HORIZON_BATCH_RESULTS.json.
 No new prospective export or official submission. The >72 objective remains unfinished.

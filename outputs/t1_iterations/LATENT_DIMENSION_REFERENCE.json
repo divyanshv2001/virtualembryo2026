@@ -1,0 +1,6 @@
+{
+  "primary_source": "https://proceedings.mlr.press/v119/tong20a/tong20a.pdf",
+  "read": "Section5.2 reports5-dimensional PCA experiments for interpolation. This is not evidence of T1 extrapolation accuracy.",
+  "hypothesis": "Transport geometry and conditional-head capacity may depend on latent dimensionality. Test5/8/24 against16 with identical stage sample indices, coupling budget512, PCA fit budget3000 and forecast strength.5. This is own model sensitivity, not TrajectoryNet reproduction.",
+  "scorer": "Full-panel evaluation PCA remains30 as previously frozen; changing learner dimensions does not alter metric definitions."
+}
