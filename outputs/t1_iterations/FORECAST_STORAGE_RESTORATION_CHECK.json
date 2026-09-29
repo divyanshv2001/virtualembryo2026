@@ -1,0 +1,91 @@
+{
+  "checked_utc": "2026-09-29T16:56:47.216425+00:00",
+  "status": "partial_small_file_restoration",
+  "folders_checked": 10,
+  "small_arrays_and_archives_loaded": 142,
+  "missing_small_files": [
+    "neural_sampling_horizon_01\\cutoff_8.0\\saved384_d0.0_indices.npy",
+    "neural_sampling_horizon_01\\cutoff_8.0\\systematic_detection_s0.5_indices.npy",
+    "neural_sampling_horizon_01\\cutoff_8.0\\systematic_detection_s1.0_indices.npy",
+    "neural_sampling_horizon_01\\cutoff_8.0\\systematic_joint_s0.5_indices.npy"
+  ],
+  "folds": [
+    {
+      "run": "covariance_horizon_01",
+      "fold": 8.0,
+      "missing": [],
+      "small_files_present": 14,
+      "generation_matches_report": true
+    },
+    {
+      "run": "covariance_horizon_01",
+      "fold": 8.25,
+      "missing": [],
+      "small_files_present": 14,
+      "generation_matches_report": true
+    },
+    {
+      "run": "empirical_bayes_repair_01",
+      "fold": 8.0,
+      "missing": [],
+      "small_files_present": 14,
+      "generation_matches_report": true
+    },
+    {
+      "run": "empirical_bayes_repair_01",
+      "fold": 8.25,
+      "missing": [],
+      "small_files_present": 14,
+      "generation_matches_report": true
+    },
+    {
+      "run": "growth_composition_horizon_01",
+      "fold": 8.0,
+      "missing": [],
+      "small_files_present": 12,
+      "generation_matches_report": true
+    },
+    {
+      "run": "growth_composition_horizon_01",
+      "fold": 8.25,
+      "missing": [],
+      "small_files_present": 12,
+      "generation_matches_report": true
+    },
+    {
+      "run": "neural_sampling_horizon_01",
+      "fold": 8.0,
+      "missing": [
+        "saved384_d0.0_indices.npy",
+        "systematic_detection_s0.5_indices.npy",
+        "systematic_detection_s1.0_indices.npy",
+        "systematic_joint_s0.5_indices.npy"
+      ],
+      "small_files_present": 11,
+      "generation_matches_report": true
+    },
+    {
+      "run": "neural_sampling_horizon_01",
+      "fold": 8.25,
+      "missing": [],
+      "small_files_present": 15,
+      "generation_matches_report": true
+    },
+    {
+      "run": "stage_transport_horizon_01",
+      "fold": 8.0,
+      "missing": [],
+      "small_files_present": 23,
+      "generation_matches_report": true
+    },
+    {
+      "run": "stage_transport_horizon_01",
+      "fold": 8.25,
+      "missing": [],
+      "small_files_present": 23,
+      "generation_matches_report": true
+    }
+  ],
+  "large_verified_forecasts_restored": 0,
+  "limitations": "Presence and NumPy readability checked. Original individual hashes for restored small files were not retained; restored generation.json equals preserved report fold.generation. Some files may still be restored after this snapshot."
+}

@@ -1,6 +1,6 @@
 # T1 compact research checkpoint
 
-Updated: 2026-09-29T16:54:00.408038+00:00
+Updated: 2026-09-29T16:56:47.232557+00:00
 
 Official best reported: **51.87**. Latest export: `T1_val__anchorslope_progress_20260929_01.h5ad`. Local>72 gate remains unmet.
 Official metrics: DE44.9, direction57.0, MMD53.5, variogram51.7. Latest screenshot shows S2WISH2 / Codex / AGENT, rank29 on that view; scoring-page rank131/270 is a different view.
@@ -33,7 +33,7 @@ Full metrics: [CNF_PARTIAL_ANCHOR_RESULTS.json](CNF_PARTIAL_ANCHOR_RESULTS.json)
 
 ## Storage
 
-{"D_free_observed_bytes":112175013888,"E_free_observed_bytes":277806256128,"new_bulky_private_run_root":"E:/virtualembryo-research-storage","policy":"Use verifiedempty localjunctions fornewruns. Keep failedoriginalD arrays/events. No data deleted or committed.","cleanup_report":"STORAGE_CLEANUP_RESULTS.json","archive_policy":"Hardlinked archived arrays are immutable; new experiments must write new paths.","temporary_cleanup_status":"TEST_TEMP_CLEANUP_STATUS.json","forecast_storage_audit":"FORECAST_STORAGE_AUDIT.json","private_folder_logical_bytes":243487320867,"private_folder_distinct_inode_bytes":132103997267,"deletion_status":"User removed all106verified forecasts and also emptied both cutoff folders in5runs; generationmetadata reconstructed from report, small indices and modelheads missing.","postdelete_check":"FORECAST_STORAGE_POSTDELETE_CHECK.json"}
+{"D_free_observed_bytes":112175013888,"E_free_observed_bytes":277806256128,"new_bulky_private_run_root":"E:/virtualembryo-research-storage","policy":"Use verifiedempty localjunctions fornewruns. Keep failedoriginalD arrays/events. No data deleted or committed.","cleanup_report":"STORAGE_CLEANUP_RESULTS.json","archive_policy":"Hardlinked archived arrays are immutable; new experiments must write new paths.","temporary_cleanup_status":"TEST_TEMP_CLEANUP_STATUS.json","forecast_storage_audit":"FORECAST_STORAGE_AUDIT.json","private_folder_logical_bytes":243487320867,"private_folder_distinct_inode_bytes":132103997267,"deletion_status":"User removed all106verified forecasts and also emptied both cutoff folders in5runs; generationmetadata reconstructed from report, small indices and modelheads missing.","postdelete_check":"FORECAST_STORAGE_POSTDELETE_CHECK.json","restoration_check":"FORECAST_STORAGE_RESTORATION_CHECK.json","missing_small_files_as_of_check":4}
 
 ## Evidence links
 

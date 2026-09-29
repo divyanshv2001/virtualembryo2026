@@ -993,7 +993,9 @@
     "private_folder_logical_bytes": 243487320867,
     "private_folder_distinct_inode_bytes": 132103997267,
     "deletion_status": "User removed all106verified forecasts and also emptied both cutoff folders in5runs; generationmetadata reconstructed from report, small indices and modelheads missing.",
-    "postdelete_check": "FORECAST_STORAGE_POSTDELETE_CHECK.json"
+    "postdelete_check": "FORECAST_STORAGE_POSTDELETE_CHECK.json",
+    "restoration_check": "FORECAST_STORAGE_RESTORATION_CHECK.json",
+    "missing_small_files_as_of_check": 4
   },
   "cnf_latent_population_scale_job": {
     "status": "completed_not_promoted",

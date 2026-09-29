@@ -89,3 +89,7 @@ User explicitly authorized deletion of completed-run forecast arrays. SHA256 che
 ## 2026-09-29T16:54:00.408038+00:00
 
 Post-user-deletion check: all106forecastarrays from verifiedplan absent,0remain;20,533,273,568logicalbytes removed. Observed Dfree rose774,795,264bytes from prior snapshot (hardlinks/filesystem allocation, notexact attribution). Allfive originalreport.json plan.json events.jsonl intact; report hashes match SCORE_LEDGER_MANIFEST. User also emptiedboth cutoff folders inclsmall donor/indexarrays and6small .npz headfiles. Restored10 tiny generation.json files from report.fold.generation, clearly labeled reconstructed; original standalone generation files absent. FORECAST_STORAGE_POSTDELETE_CHECK.json has exactprovenance; no otherfiles recreated or deleted. Research processes none observed. Do not reread deletedpredictions in future runners.
+
+## 2026-09-29T16:56:47.232557+00:00
+
+Small-file restoration audit checked10foldfolders after useraction. Expected donor_rows, candidate_indices and model .npz files allpresent/readableexcept4indices in neural_sampling_horizon_01/cutoff_8.0: saved384_d0.0, systematic_detection_s0.5, systematic_detection_s1.0, systematic_joint_s0.5. Reconstructedgenerationmetadata matches preservedreport folds. Originalhashes forsmallfiles unavailable; NumPyreadability isweaker than byteidentity. No largeverifiedforecast arraysrestored. See FORECAST_STORAGE_RESTORATION_CHECK.json; snapshot maychange ifuserstillrestoring.
