@@ -1,0 +1,94 @@
+{
+  "created_before_training_utc": "2026-09-29T13:28:22.358400+00:00",
+  "authorization": "User requested a submission file to check the score. Export only; no upload.",
+  "observed_cutoff": 9.5,
+  "forecast_target": 10.5,
+  "source_max_stage": 9.5,
+  "source_cohort": "associated_prepared_01",
+  "candidate": "anchorslope_both_0.5",
+  "seed": 20260928,
+  "donor_count": 1500,
+  "encoder_genes": 4096,
+  "dimensions": 8,
+  "training_steps": 800,
+  "batch_size": 64,
+  "energy_weight": 0.1,
+  "density_weight": 10.0,
+  "positive_alpha": 0.5,
+  "detection_alpha": 0.5,
+  "input_sha256": {
+    "anchor": "0296e0043842f944a663f3c11ac1542d1bbee733c1cd657bd56f75af65958361",
+    "panel": "2aeae4cd284933956242bbc9c5ab4f565c1d2acc7cc3fd3037977e4bce8be4bf",
+    "index": "26830523bcba077fe27481ee53cddcf49c6b35cf5bdd7acabc5f6b7c94ea7f78",
+    "prepared_report": "1acd8a635f76c9f9ac89a1186f116db91309b007f448a8d11ec612627ab5bca4"
+  },
+  "source_sha256": {
+    "export_anchor_slope_submission.py": "0a83935eb89a8adaef5595d43cba0e509a63e7e7d4e8c2238378e1927dac4245",
+    "past_encoder_panel.py": "aa1acb4435cadd8189fa64cea86f9d31ea8267ee0b859f8144495952a58271ed",
+    "anchor_slope_calibration.py": "1eedfe08bd2ae6301eab5c4d675775998b5062e52b1c8a312a025c4f2ef0551b",
+    "feature_panel_forecast.py": "0375ab96375dcc50c7e6ece07dc1f3b07ef5bb58c9a54a1a632ce45f257d48f0",
+    "ridge_conditional_head.py": "c812203e0109f8c8fff7d93653a2e05cbd228d21c56d6b6b8f41cbef46cfe835",
+    "cnf_manifold_flow.py": "55d1ec30848dcc75690129ef405c9d7e6cb692c2483032a109947de1b5b63596",
+    "cnf_density_flow.py": "740b6a25319a9e78739942571a80cef5bf81c373f0c0c31093ae89a779faca3a",
+    "hurdle_backtest.py": "c4f8236e49b7947f55ffd2734a7807834461c454c4447eedc44b757f5492c8f9",
+    "neural_hurdle_forecast.py": "941afefe0c34e346ca8ffb3af15e3c5d8d4474c37906fe9b3b62989efa73a987",
+    "robust_population.py": "86ae5926124b3704ed46596781a487735405291531c38d956cd7db359c8d56e6"
+  },
+  "development_report_sha256": "bde34bf4d64f89e6b3233f3a83202a2d62338d773de7a4bafd534072826acd32",
+  "local_development": {
+    "candidate": "anchorslope_both_0.5",
+    "scores": [
+      54.58510296901039,
+      56.21336229504822,
+      53.92638268116991
+    ],
+    "mean_score": 54.90828264840951,
+    "all_calibrations_valid": true,
+    "raw_metrics": [
+      {
+        "de_score": 0.04918032786885246,
+        "de_direction": 0.17485008575210656,
+        "mmd_u": 0.022915009409189224,
+        "variogram": 0.0010414960561320186
+      },
+      {
+        "de_score": 0.10294117647058823,
+        "de_direction": 0.20843605849766064,
+        "mmd_u": 0.024063384160399437,
+        "variogram": 0.0010712146759033203
+      },
+      {
+        "de_score": 0.03508771929824561,
+        "de_direction": 0.16583599944924587,
+        "mmd_u": 0.02188953198492527,
+        "variogram": 0.0009647838305681944
+      }
+    ],
+    "skills": [
+      {
+        "de_score": 0.5161290322580645,
+        "de_direction": 0.5717694754570334,
+        "mmd_u": 0.5605226031261662,
+        "variogram": 0.528598109117398
+      },
+      {
+        "de_score": 0.5346534653465347,
+        "de_direction": 0.5884855869877685,
+        "mmd_u": 0.5753742467758386,
+        "variogram": 0.5436829291707741
+      },
+      {
+        "de_score": 0.51,
+        "de_direction": 0.5676387213390675,
+        "mmd_u": 0.5513855157688269,
+        "variogram": 0.522192458731421
+      }
+    ]
+  },
+  "readiness_gate_passed": false,
+  "official_score": null,
+  "uploaded": false,
+  "scope": "Refit past-only encoder, flow and conditional heads on sampled external atlas throughE9.5; adapt slopes using1500 observed challengeE9.5 anchors. PredictE10.5 without hidden expression. Local54.91 does not estimate official score. Temporal checks pending at request.",
+  "external_data_disclosure": "Development2024 dev201867 associated prepared cohort:25963 cells selected from430339-cell public atlas, CC-BY. Not full atlas training.",
+  "guard_features_sha256": "46445f860914c5809d83b0560d6914756ed20f0254245a78b07e211b0e58c127"
+}

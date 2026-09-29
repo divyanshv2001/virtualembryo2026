@@ -1,5 +1,5 @@
 {
-  "records": 2558,
+  "records": 2584,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -85,6 +85,11 @@
       "path": "private/cnf_anchor_slope_challenge_01/report.json",
       "sha256": "23019702b3ca10fae57df180c791de02663a185f457f47839ab773448c4d2445",
       "outcomes_indexed": 48
+    },
+    {
+      "path": "private/cnf_anchor_slope_temporal_01/report.json",
+      "sha256": "98e1cbcffc77217ea6fd22bae7bd687cf679b52ee3eccdf37d16a8cb8b7eff94",
+      "outcomes_indexed": 26
     },
     {
       "path": "private/cnf_autonomous_challenge_01/report.json",
@@ -579,5 +584,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "1aa74e319a5d4962bab17f5d0a01e5c8237e40f4a2a531f4b530a8cb5455359e"
+  "ledger_sha256": "23a9248f407f7b934abbaccba2898e93827b8c460855b8a9ce0e070c16a0b718"
 }

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T13:24:01.445892+00:00",
+  "updated_utc": "2026-09-29T13:30:58.143641+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": true,
+  "local_process_running": false,
   "quota_reset_evidence": {
     "limit_observed": false,
     "remaining_quota": null,
@@ -31,17 +31,11 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_anchor_slope_temporal.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Execute cnf_anchor_slope_temporal.py: six fixed slope variants plus seven matched controls on two past-only folds,26 scores.",
+  "next_experiment": "Review challenge dissection/population shift mechanisms after inconsistent slope temporal diagnostics; await official feedback on user-requested progress export without duplicating uploads.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    {
-      "script": "cnf_anchor_slope_temporal.py",
-      "process_id": 2248,
-      "worker_process_id": 23380
-    }
-  ],
+  "active_jobs": [],
   "active_run_path": "outputs\\t1_iterations\\private\\cnf_anchor_slope_temporal_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -154,7 +148,7 @@
     "status": "completed",
     "running": [],
     "report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-    "report_sha256": "00820b315c0bea7736650b55b18d53896c966a073d60cc3c8b187e6ee4e69999"
+    "report_sha256": "39724a053ffde6574d73971ccddce7e44f90219669e1f9b7d0e98d834cf48d61"
   },
   "continuation_automation": {
     "id": "continue-t1-local-research",
@@ -855,15 +849,29 @@
     "results_report": "CNF_ANCHOR_SLOPE_RESULTS.json"
   },
   "cnf_anchor_slope_temporal_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_anchor_slope_temporal_01",
     "evaluations_planned": 26,
-    "pending_evaluations": 26,
-    "decision": "Consistency diagnostic only; no official export.",
+    "pending_evaluations": 0,
+    "decision": "All26 temporal scores retained. Chosen both.5 scores49.7722/51.2691 versus joint49.1752/51.6250: inconsistent gain, firstfold below persistence. Both1 scores50.4836/51.0186 but secondfold worse than joint. No temporal promotion. User subsequently requested a progress-only E10.5 export of both.5; local72 remains unmet.",
     "process_id": 2248,
     "worker_process_id": 23380,
     "model_test_passed": true,
     "runner_syntax_verified": true,
-    "plan_sha256": "184f396ea040d6b1a76004639c2bb2b981d1b3e43a222b0bea416ecb41d96f12"
+    "plan_sha256": "184f396ea040d6b1a76004639c2bb2b981d1b3e43a222b0bea416ecb41d96f12",
+    "report_sha256": "98e1cbcffc77217ea6fd22bae7bd687cf679b52ee3eccdf37d16a8cb8b7eff94",
+    "results_report": "CNF_ANCHOR_SLOPE_TEMPORAL_RESULTS.json",
+    "evaluations": 26
+  },
+  "latest_progress_export": {
+    "run": "outputs\\t1_submissions\\anchorslope_progress_20260929_01",
+    "artifact": "T1_val__anchorslope_progress_20260929_01.h5ad",
+    "sha256": "8bec0976142841374cffd8248eac2f3135832b6f8e5b9701c5ca307e5a1f6167",
+    "format_passed": true,
+    "official_score": null,
+    "uploaded": false,
+    "readiness_gate_passed": false,
+    "local_development_mean": 54.90828264840951,
+    "user_requested": true
   }
 }

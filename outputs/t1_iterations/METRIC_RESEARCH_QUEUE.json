@@ -4411,11 +4411,11 @@
       ],
       "scope": "Adaptation, not faithful ECC. Three positive-quantile strengths, global and four-state conditional, two one-day associated-cohort folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "00820b315c0bea7736650b55b18d53896c966a073d60cc3c8b187e6ee4e69999",
+      "results_report_sha256": "39724a053ffde6574d73971ccddce7e44f90219669e1f9b7d0e98d834cf48d61",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Batch64/512 temporal diagnostics on twofixedsourcefolds,22scores including7archivecontrols each."
+      "next_action": "Execute cnf_anchor_slope_temporal.py: six fixed slope variants plus seven matched controls on two past-only folds,26 scores."
     },
     {
       "id": "annotation_conditioned_temporal",
@@ -4439,7 +4439,7 @@
       ],
       "scope": "Heuristic adaptation to normalized abundance; not muscat replication. Observed annotations group past cells. Four expression/detection ablations, source support20 vs100, two one-day folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "00820b315c0bea7736650b55b18d53896c966a073d60cc3c8b187e6ee4e69999",
+      "results_report_sha256": "39724a053ffde6574d73971ccddce7e44f90219669e1f9b7d0e98d834cf48d61",
       "limitations": [
         "Published annotation may derive from joint stages; retrospective diagnostic only.",
         "Capture IDs do not establish independent embryos; cell-based errors are shrinkage heuristics.",
@@ -4448,7 +4448,7 @@
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Batch64/512 temporal diagnostics on twofixedsourcefolds,22scores including7archivecontrols each."
+      "next_action": "Execute cnf_anchor_slope_temporal.py: six fixed slope variants plus seven matched controls on two past-only folds,26 scores."
     },
     {
       "id": "shared_gene_program_dynamics",
@@ -4475,11 +4475,11 @@
       "scope": "Shared SVD profile directions versus cell-level NMF median consensus usage dynamics. Neither is a faithful cNMF reproduction or certified biological-program recovery.",
       "frozen_trials": "SVD ranks2/4/8 with detection0/.5; NMF ranks8/16 with detection0/.5,3 fixed seeds and200 iterations. Rank16 optimizer repair800 iterations. Two matched one-day development folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "00820b315c0bea7736650b55b18d53896c966a073d60cc3c8b187e6ee4e69999",
+      "results_report_sha256": "39724a053ffde6574d73971ccddce7e44f90219669e1f9b7d0e98d834cf48d61",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Batch64/512 temporal diagnostics on twofixedsourcefolds,22scores including7archivecontrols each."
+      "next_action": "Execute cnf_anchor_slope_temporal.py: six fixed slope variants plus seven matched controls on two past-only folds,26 scores."
     },
     {
       "id": "neural_latent_hurdle",
@@ -5472,7 +5472,7 @@
     {
       "id": "continuous_flow_anchor_slopes_temporal",
       "run": "cnf_anchor_slope_temporal_01",
-      "status": "prepared",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_anchor_slope_temporal.py",
         "anchor_slope_calibration.py"
@@ -5480,7 +5480,9 @@
       "primary_reference": "ANCHOR_SLOPE_CALIBRATION_REFERENCE.json",
       "trial_scope": "Allsix declared slope variants plus seven unchanged controls,26 scores on reused source folds8to9/8.25to9.25. Zero replay, unchanged calibration, forecasts frozen before target read.",
       "limitations": "No independent embryo or earlier challenge-domain validation; sampled source cohort and1500 anchors only.",
-      "research_family_exhausted": false
+      "research_family_exhausted": false,
+      "results_report": "CNF_ANCHOR_SLOPE_TEMPORAL_RESULTS.json",
+      "decision": "All26 temporal scores retained. Chosen both.5 scores49.7722/51.2691 versus joint49.1752/51.6250: inconsistent gain, firstfold below persistence. Both1 scores50.4836/51.0186 but secondfold worse than joint. No temporal promotion. User subsequently requested a progress-only E10.5 export of both.5; local72 remains unmet."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

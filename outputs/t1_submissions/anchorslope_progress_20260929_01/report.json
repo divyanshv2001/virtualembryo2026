@@ -1,0 +1,188 @@
+{
+  "artifact": "T1_val__anchorslope_progress_20260929_01.h5ad",
+  "plan_sha256": "0d73a5a69ca4043d76c141d12f751aa84dd66b0867180ec85195134f4c0ff479",
+  "format_validation": {
+    "passed": true,
+    "shape": [
+      1500,
+      32285
+    ],
+    "dtype": "float32",
+    "panel_exact_order": true,
+    "finite_nonnegative": true,
+    "coordinates_absent": true,
+    "obs_columns": [],
+    "sha256": "8bec0976142841374cffd8248eac2f3135832b6f8e5b9701c5ca307e5a1f6167",
+    "bytes": 30458951,
+    "scope": "Local format validation only; not official predictive score or competition eligibility"
+  },
+  "forecast_audit": {
+    "fit_cells": 25963,
+    "fit_max_stage": 9.5,
+    "supported_genes": 16325,
+    "method": "Past-anchor slope adaptation, source levels held at anchor centers",
+    "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+    "conditional_ridge_strength": 1.0,
+    "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+    "encoder_features": 4096,
+    "covariance_guard_features": 384,
+    "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+    "anchor_calibration_rows": 1500,
+    "anchor_supported_genes": 13109,
+    "anchor_slope_ridge": 1.0,
+    "limitation": "Cross-sectional associations are not temporal velocities; only 1500 past anchors.",
+    "anchor_positive_slope_strength": 0.5,
+    "anchor_detection_slope_strength": 0.5,
+    "mode": "joint",
+    "strength": 1.0,
+    "backoff": 1.0,
+    "seed": 20260928,
+    "sampling": "systematic",
+    "covariance_change_vs_reference": 0.3538406559289955,
+    "newly_detected_entries": 68959,
+    "removed_detection_entries": 162724,
+    "abundance_factor_cap": 2.0,
+    "detection_probability_delta_cap": 0.25,
+    "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+    "mapped_mass_conserved": true,
+    "protected_genes_unchanged": true
+  },
+  "training_history": [
+    {
+      "step": 50,
+      "loss": 14.353440284729004,
+      "negative_log_likelihood": 11.429365158081055,
+      "energy": 0.3646770119667053,
+      "manifold_density": 0.288760781288147,
+      "sampled_past_stage": 8.75
+    },
+    {
+      "step": 100,
+      "loss": 12.671096801757812,
+      "negative_log_likelihood": 9.753104209899902,
+      "energy": 0.4830450713634491,
+      "manifold_density": 0.28696876764297485,
+      "sampled_past_stage": 9.0
+    },
+    {
+      "step": 150,
+      "loss": 13.44145679473877,
+      "negative_log_likelihood": 10.364662170410156,
+      "energy": 0.26751476526260376,
+      "manifold_density": 0.3050042986869812,
+      "sampled_past_stage": 8.0
+    },
+    {
+      "step": 200,
+      "loss": 12.059038162231445,
+      "negative_log_likelihood": 9.232145309448242,
+      "energy": 0.7131900787353516,
+      "manifold_density": 0.27555736899375916,
+      "sampled_past_stage": 9.25
+    },
+    {
+      "step": 250,
+      "loss": 12.221977233886719,
+      "negative_log_likelihood": 9.010013580322266,
+      "energy": 0.6275383830070496,
+      "manifold_density": 0.3149210214614868,
+      "sampled_past_stage": 8.25
+    },
+    {
+      "step": 300,
+      "loss": 11.577581405639648,
+      "negative_log_likelihood": 8.962430000305176,
+      "energy": 0.28574684262275696,
+      "manifold_density": 0.25865763425827026,
+      "sampled_past_stage": 8.0
+    },
+    {
+      "step": 350,
+      "loss": 12.36496353149414,
+      "negative_log_likelihood": 9.234489440917969,
+      "energy": 0.3266371786594391,
+      "manifold_density": 0.3097810745239258,
+      "sampled_past_stage": 7.75
+    },
+    {
+      "step": 400,
+      "loss": 11.128591537475586,
+      "negative_log_likelihood": 7.961181640625,
+      "energy": 1.863244891166687,
+      "manifold_density": 0.29810863733291626,
+      "sampled_past_stage": 9.25
+    },
+    {
+      "step": 450,
+      "loss": 9.957776069641113,
+      "negative_log_likelihood": 9.942723274230957,
+      "energy": 0.15053147077560425,
+      "manifold_density": 0.0,
+      "sampled_past_stage": 7.5
+    },
+    {
+      "step": 500,
+      "loss": 11.676990509033203,
+      "negative_log_likelihood": 8.43864631652832,
+      "energy": 0.8838541507720947,
+      "manifold_density": 0.3149958848953247,
+      "sampled_past_stage": 8.25
+    },
+    {
+      "step": 550,
+      "loss": 12.937921524047852,
+      "negative_log_likelihood": 9.794584274291992,
+      "energy": 2.3073246479034424,
+      "manifold_density": 0.29126042127609253,
+      "sampled_past_stage": 9.25
+    },
+    {
+      "step": 600,
+      "loss": 11.346081733703613,
+      "negative_log_likelihood": 8.475674629211426,
+      "energy": 2.3714866638183594,
+      "manifold_density": 0.26332587003707886,
+      "sampled_past_stage": 8.75
+    },
+    {
+      "step": 650,
+      "loss": 9.772836685180664,
+      "negative_log_likelihood": 9.737125396728516,
+      "energy": 0.35710951685905457,
+      "manifold_density": 0.0,
+      "sampled_past_stage": 7.5
+    },
+    {
+      "step": 700,
+      "loss": 13.078132629394531,
+      "negative_log_likelihood": 8.949298858642578,
+      "energy": 2.157581090927124,
+      "manifold_density": 0.3913075923919678,
+      "sampled_past_stage": 8.5
+    },
+    {
+      "step": 750,
+      "loss": 12.562349319458008,
+      "negative_log_likelihood": 8.7993745803833,
+      "energy": 2.694728136062622,
+      "manifold_density": 0.3493501543998718,
+      "sampled_past_stage": 9.0
+    },
+    {
+      "step": 800,
+      "loss": 11.532670974731445,
+      "negative_log_likelihood": 8.268655776977539,
+      "energy": 0.9831628799438477,
+      "manifold_density": 0.3165699243545532,
+      "sampled_past_stage": 8.0
+    }
+  ],
+  "protected_genes_exact": true,
+  "mapped_mass_max_relative_error": 2.8585627315684695e-08,
+  "local_development_mean": 54.90828264840951,
+  "readiness_gate_passed": false,
+  "official_score": null,
+  "uploaded": false,
+  "external_data_disclosure": "Development2024 dev201867 associated prepared cohort:25963 cells selected from430339-cell public atlas, CC-BY. Not full atlas training.",
+  "evidence_scope": "Genuine trajectory records this export only, not the entire research history."
+}
