@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T09:02:48.983528+00:00",
+  "updated_utc": "2026-09-29T09:18:58.951248+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5088,7 +5088,7 @@
     {
       "id": "continuous_flow_strong_transition_mmd",
       "run": "cnf_strong_mmd_challenge_01",
-      "status": "implemented_running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_strong_mmd_challenge.py",
         "cnf_transition_mmd_flow.py"
@@ -5098,7 +5098,24 @@
       "limitations": "Stronger biased latent loss may degrade decoder/scored metrics or extrapolation; finite/clipped gradients tested. Boundedweight range, not fullfamily exhaustion. Reused development only.",
       "research_family_exhausted": false,
       "tests_passed": 105,
-      "validation_report": "CNF_STRONG_MMD_VALIDATION.json"
+      "validation_report": "CNF_STRONG_MMD_VALIDATION.json",
+      "results_report": "CNF_STRONG_MMD_RESULTS.json",
+      "decision": "Strong transitionMMD weights100/1000 joint means50.6362/48.4179 versusoriginal53.5953 and zero-continuation53.3626. All33 outcomes retained. Tested weighting range rejected; not entire MMD family. Next frozen-weight time-boundary extrapolation policies."
+    },
+    {
+      "id": "continuous_flow_boundary_extrapolation",
+      "run": "cnf_boundary_challenge_01",
+      "status": "implemented_running",
+      "implementation": [
+        "cnf_boundary_challenge.py",
+        "cnf_boundary_forecast.py"
+      ],
+      "trial_scope": "Timeclamp and ballistic x abundance/joint, frozen800-update weights and full-panel controls;27 outcomes. No new fitting.",
+      "hypothesis": "Time inputs beyond training interval can alter dynamics; isolate boundary extrapolation policy. Own falsifiable engineering hypothesis, no literature reproduction claim.",
+      "limitations": "State extrapolation remains unsupported; constant velocity may erase biological acceleration. Reused development; temporal confirmation required for any gain.",
+      "research_family_exhausted": false,
+      "tests_passed": 107,
+      "validation_report": "CNF_BOUNDARY_VALIDATION.json"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T09:13:09.670730+00:00",
+  "updated_utc": "2026-09-29T09:19:55.744093+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_strong_mmd_challenge.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_boundary_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Strong transitionMMD100/1000 with same200updates/initialization, archivedzeroMMD continuation,33scores.",
+  "next_experiment": "Frozen800-update flow timeclamp/ballistic policies, abundance/joint,27scores with fivecontrols.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_strong_mmd_challenge_01"
+    "cnf_boundary_challenge_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_strong_mmd_challenge_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_boundary_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -566,13 +566,26 @@
     "decision": "TransitionMMD weights1/10 joint means53.3712/53.3345 versuszero200-update continuation53.3626 and original800-update joint53.5953. Weight1 gain+.0086 negligible; all beloworiginal. Preserve33 outcomes; next boundedstrongweight100/1000 to test dominant transition matching before judging this range."
   },
   "cnf_strong_mmd_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_strong_mmd_challenge_01",
     "tests_passed": 105,
     "evaluations_planned": 33,
-    "pending_evaluations": 33,
+    "pending_evaluations": 0,
     "process_id": 27316,
     "plan_sha256": "61c94469791a12edeb9dcdd1a6c80e7d3ba96173f8f56ab6a841d691e127efb8",
-    "decision": "Weights100/1000 test stronger transition matching against archived zero-loss continuation. No promotion; local72 gate unmet."
+    "decision": "Strong transitionMMD weights100/1000 joint means50.6362/48.4179 versusoriginal53.5953 and zero-continuation53.3626. All33 outcomes retained. Tested weighting range rejected; not entire MMD family. Next frozen-weight time-boundary extrapolation policies.",
+    "evaluations": 33,
+    "report_sha256": "0c2f7d5343fc38230b7eb60503f1d1c5296581c1eb6709560af795bc073e3895",
+    "results_report": "CNF_STRONG_MMD_RESULTS.json"
+  },
+  "cnf_boundary_job": {
+    "status": "running",
+    "run": "cnf_boundary_challenge_01",
+    "tests_passed": 107,
+    "evaluations_planned": 27,
+    "pending_evaluations": 27,
+    "process_id": 23464,
+    "plan_sha256": "953f79e60683d26b311ff3b10e6dcede3a0119e0eb7fee14b2657d94937fd269",
+    "decision": "Frozen-weight timeclamp and ballistic forecast ablations against original flow. No promotion; local72 gate unmet."
   }
 }

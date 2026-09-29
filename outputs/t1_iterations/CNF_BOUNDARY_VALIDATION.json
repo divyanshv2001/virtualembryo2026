@@ -1,0 +1,11 @@
+{
+  "updated_utc": "2026-09-29T09:19:55.744093+00:00",
+  "tests_passed": 107,
+  "command": "pytest outputs/t1_iterations -q -p no:cacheprovider",
+  "checks": [
+    "Original policy delegates unchanged integration",
+    "Timeclamp agrees with analytic autonomous solution",
+    "Ballistic policy uses only initial cutoff velocity"
+  ],
+  "limitations": "Tests establish implementation behavior, not forecast accuracy or leaderboard readiness."
+}
