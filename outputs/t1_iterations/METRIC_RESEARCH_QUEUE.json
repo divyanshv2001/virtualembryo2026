@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T17:08:52.942358+00:00",
+  "updated_utc": "2026-09-29T17:13:04.753356+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -4411,11 +4411,11 @@
       ],
       "scope": "Adaptation, not faithful ECC. Three positive-quantile strengths, global and four-state conditional, two one-day associated-cohort folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "8af5b990e6681ec6552b7be660b615478e02cf1ad3744396a0f89de0291fdcfd",
+      "results_report_sha256": "450fe54b480206bcce1316d6130d83ed38863c4914d5309125da9cb8539837d1",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Run18-score fixedalpha.5 log1p positive abundance/joint temporal diagnostic on twoearlier folds."
+      "next_action": "Execute8scorepartialanchor rolling temporal check onD: with TemporaryFile cache; no full prediction archives."
     },
     {
       "id": "annotation_conditioned_temporal",
@@ -4439,7 +4439,7 @@
       ],
       "scope": "Heuristic adaptation to normalized abundance; not muscat replication. Observed annotations group past cells. Four expression/detection ablations, source support20 vs100, two one-day folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "8af5b990e6681ec6552b7be660b615478e02cf1ad3744396a0f89de0291fdcfd",
+      "results_report_sha256": "450fe54b480206bcce1316d6130d83ed38863c4914d5309125da9cb8539837d1",
       "limitations": [
         "Published annotation may derive from joint stages; retrospective diagnostic only.",
         "Capture IDs do not establish independent embryos; cell-based errors are shrinkage heuristics.",
@@ -4448,7 +4448,7 @@
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Run18-score fixedalpha.5 log1p positive abundance/joint temporal diagnostic on twoearlier folds."
+      "next_action": "Execute8scorepartialanchor rolling temporal check onD: with TemporaryFile cache; no full prediction archives."
     },
     {
       "id": "shared_gene_program_dynamics",
@@ -4475,11 +4475,11 @@
       "scope": "Shared SVD profile directions versus cell-level NMF median consensus usage dynamics. Neither is a faithful cNMF reproduction or certified biological-program recovery.",
       "frozen_trials": "SVD ranks2/4/8 with detection0/.5; NMF ranks8/16 with detection0/.5,3 fixed seeds and200 iterations. Rank16 optimizer repair800 iterations. Two matched one-day development folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "8af5b990e6681ec6552b7be660b615478e02cf1ad3744396a0f89de0291fdcfd",
+      "results_report_sha256": "450fe54b480206bcce1316d6130d83ed38863c4914d5309125da9cb8539837d1",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Run18-score fixedalpha.5 log1p positive abundance/joint temporal diagnostic on twoearlier folds."
+      "next_action": "Execute8scorepartialanchor rolling temporal check onD: with TemporaryFile cache; no full prediction archives."
     },
     {
       "id": "neural_latent_hurdle",
@@ -5624,7 +5624,7 @@
     {
       "id": "continuous_flow_partial_anchor_temporal",
       "run": "cnf_partial_anchor_temporal_01",
-      "status": "implemented_running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_partial_anchor_temporal.py",
         "temporary_forecast_cache.py"
@@ -5638,7 +5638,9 @@
       "hypothesis": "Challenge E9.5 partialcalibration gain +.124 may or maynot repeat on two reused rolling source folds; comparep.25/d.75 to.5/.5joint, originalflowjoint andpersistence.",
       "trial_scope": "Four candidates x two frozen folds=8scores, unchanged32285gene fullpanel/scorer/calibration, past-only heads, temporaryDcache with no retained forecast matrices.",
       "limitations": "Reused source development, sampled cohort, missinggenes placeholders, not independentembryos or hidden task.",
-      "research_family_exhausted": false
+      "research_family_exhausted": false,
+      "results_report": "CNF_PARTIAL_ANCHOR_TEMPORAL_RESULTS.json",
+      "decision": "Scores49.7503/51.2433 vsmatchedlog1p49.7003/51.1772: paired+.0500/+.0660, first below persistence50; second below archivedoriginalflowjoint51.625. Reused source, no challenge-domain temporal validation. No promotion. Dtempfiles closed/no full matrices persisted."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

@@ -1,0 +1,167 @@
+{
+  "updated_utc": "2026-09-29T17:11:43.851723+00:00",
+  "status": "completed_not_promoted",
+  "evaluations": 8,
+  "plan_sha256": "3d1adc611831a178ddde86f3cfa4f87333ec8cb29f91046e46b598890179cbfd",
+  "report_sha256": "0948ba863cb0cafe1a3fa417db8e7ebe81d5fe90eee785f7509f12c40a138030",
+  "summaries": [
+    {
+      "candidate": "copy",
+      "scores": [
+        50.0,
+        50.0
+      ],
+      "mean_score": 50.0,
+      "raw_metrics": [
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.26304274797439575,
+          "variogram": 0.009573637507855892
+        },
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.2375742495059967,
+          "variogram": 0.008673261851072311
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        }
+      ],
+      "all_calibrations_valid": true,
+      "beats_persistence_on_every_fold": false
+    },
+    {
+      "candidate": "flow_joint_systematic_s1.0",
+      "scores": [
+        49.17518459753685,
+        51.62498650824493
+      ],
+      "mean_score": 50.400085552890886,
+      "raw_metrics": [
+        {
+          "de_score": -0.1541307028360049,
+          "de_direction": -0.00648671092513288,
+          "mmd_u": 0.25327804684638977,
+          "variogram": 0.009802744723856449
+        },
+        {
+          "de_score": -0.09880749574105614,
+          "de_direction": 0.1104107985892109,
+          "mmd_u": 0.20583872497081757,
+          "variogram": 0.0081478301435709
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.4619598295800365,
+          "de_direction": 0.49813717952801456,
+          "mmd_u": 0.5097488100154162,
+          "variogram": 0.49401475346865426
+        },
+        {
+          "de_score": 0.47442680776014107,
+          "de_direction": 0.534440329080872,
+          "mmd_u": 0.5362126761773823,
+          "variogram": 0.5158463900949065
+        }
+      ],
+      "all_calibrations_valid": true,
+      "beats_persistence_on_every_fold": false
+    },
+    {
+      "candidate": "log1p_joint_a0.5",
+      "scores": [
+        49.70027428098265,
+        51.17724668869285
+      ],
+      "mean_score": 50.43876048483774,
+      "raw_metrics": [
+        {
+          "de_score": -0.12330456226880394,
+          "de_direction": 0.019468342415917883,
+          "mmd_u": 0.25065070390701294,
+          "variogram": 0.009653712622821331
+        },
+        {
+          "de_score": -0.1601362862010221,
+          "de_direction": 0.10681215303588851,
+          "mmd_u": 0.20634937286376953,
+          "variogram": 0.008202877826988697
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.46909765142150806,
+          "de_direction": 0.5056754241496735,
+          "mmd_u": 0.5124371240306729,
+          "variogram": 0.497891683539146
+        },
+        {
+          "de_score": 0.4598290598290598,
+          "de_direction": 0.5332431748196738,
+          "mmd_u": 0.5355885135881767,
+          "variogram": 0.51413927074146
+        }
+      ],
+      "all_calibrations_valid": true,
+      "beats_persistence_on_every_fold": false
+    },
+    {
+      "candidate": "partial_anchor_p0.25_d0.75",
+      "scores": [
+        49.750316367696215,
+        51.24326491845048
+      ],
+      "mean_score": 50.496790643073346,
+      "raw_metrics": [
+        {
+          "de_score": -0.13316892725030824,
+          "de_direction": 0.029308868727903243,
+          "mmd_u": 0.250038206577301,
+          "variogram": 0.009623500518500805
+        },
+        {
+          "de_score": -0.15161839863713794,
+          "de_direction": 0.10921887497481368,
+          "mmd_u": 0.20643670856952667,
+          "variogram": 0.00820307619869709
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.466789667896679,
+          "de_direction": 0.5085934452565907,
+          "mmd_u": 0.5130679158740936,
+          "variogram": 0.4986850531320834
+        },
+        {
+          "de_score": 0.46180257510729616,
+          "de_direction": 0.5340432193159816,
+          "mmd_u": 0.5354819090358209,
+          "variogram": 0.5141331393396953
+        }
+      ],
+      "all_calibrations_valid": true,
+      "beats_persistence_on_every_fold": false
+    }
+  ],
+  "decision": "Partial anchor slope temporal checks complete on two reused source folds. Retain all metrics and controls; no promotion without consistent paired gain and unchanged64-replicate gate.",
+  "scope": "Reused sourcecohort folds8to9/8.25to9.25, full32285genes, missinggene placeholders, frozenpredictions beforetargetread andunchangedfloor/ceiling/scorer. No independent embryos or earlierchallenge inputs. Ownmetric-scaleadaptation, not published temporal reproduction.",
+  "local_72_gate_passed": false,
+  "official_score": null,
+  "submissions_used": 0,
+  "jev_requests_used": 0
+}

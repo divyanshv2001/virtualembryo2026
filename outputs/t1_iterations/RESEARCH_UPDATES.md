@@ -105,3 +105,11 @@ User corrected16GB RAM and D-only cache requirement. Implemented temporary_forec
 ## 2026-09-29T17:09:22.096503+00:00
 
 D-only temporary-cache temporal run launched:launcher6564/worker5988,8scoresplanned, nofullpredictionarchives. This run has notproducedscoresyet; monitoring actualsourceevents. Byte-identical archive compaction separately recovered998432768bytes and preservedallpaths. Direct deletion review remainsblocked bypolicy.
+
+## 2026-09-29T17:11:47.409021+00:00
+
+Completed8 partial anchor calibration temporal scores on reused8to9/8.25to9.25 folds. All raw metrics/skills retained in CNF_PARTIAL_ANCHOR_TEMPORAL_RESULTS.json; no72promotion or official upload.
+
+## 2026-09-29T17:13:04.782561+00:00
+
+Completed D-only temporary-cache partialanchor temporal batch:8/8scores, all4raw/skills in CNF_PARTIAL_ANCHOR_TEMPORAL_RESULTS.json, ledger2764records125reports0errors. Candidatep.25/d.75 scores49.750316/51.243265 vslog1p.5/.5control49.700274/51.177247 (+.050042/+.066018), but firstbelowcopy50 andsecondbeloworiginalflowjoint51.624987; no promotion/64MC. Checked runfolder contains0full forecast matrices; Dprivate/temporary_cache has0files at completion. Duringrun four temporaryD forecasts frozen beforetarget read and eachclosedafter scoring; worker working set observedabout2.54GB. Full retainedplan/heads/rowIDs/hashes/rawmetricreports/events; noEcache. Noofficial submission/jev/agents.

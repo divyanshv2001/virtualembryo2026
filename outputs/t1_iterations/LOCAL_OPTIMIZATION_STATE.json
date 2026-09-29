@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T17:09:22.046969+00:00",
+  "updated_utc": "2026-09-29T17:13:04.753356+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": true,
+  "local_process_running": false,
   "quota_reset_evidence": {
     "limit_observed": false,
     "remaining_quota": null,
@@ -31,17 +31,11 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Execute8scorepartialanchor rolling temporal check onD: with TemporaryFile cache; no full prediction archives.",
+  "next_experiment": "Current bounded partialanchor trialcomplete, not promoted. Diagnose remaining DE/MMD transfer mismatch before next frozen mechanism; preserve matched floor and noE cache. Earlier challenge-domain folds unavailable.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    {
-      "run": "cnf_partial_anchor_temporal_01",
-      "process_id": 6564,
-      "worker_process_id": 5988
-    }
-  ],
+  "active_jobs": [],
   "active_run_path": "private/cnf_partial_anchor_temporal_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -154,7 +148,7 @@
     "status": "completed",
     "running": [],
     "report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-    "report_sha256": "8af5b990e6681ec6552b7be660b615478e02cf1ad3744396a0f89de0291fdcfd"
+    "report_sha256": "450fe54b480206bcce1316d6130d83ed38863c4914d5309125da9cb8539837d1"
   },
   "continuation_automation": {
     "id": "continue-t1-local-research",
@@ -988,7 +982,7 @@
     "results_report": "CNF_LATENT_DISPERSION_RESULTS.json"
   },
   "research_storage": {
-    "D_free_observed_bytes": 113172905984,
+    "D_free_observed_bytes": 113162403840,
     "E_free_observed_bytes": 277806256128,
     "new_bulky_private_run_root": "E:/virtualembryo-research-storage",
     "policy": "Use verifiedempty localjunctions fornewruns. Keep failedoriginalD arrays/events. No data deleted or committed.",
@@ -1003,7 +997,8 @@
     "restoration_check": "FORECAST_STORAGE_RESTORATION_CHECK.json",
     "missing_small_files_as_of_check": 4,
     "small_storage_dedup_report": "SMALL_STORAGE_DEDUP_RESULTS.json",
-    "small_storage_reclaimed_observed_bytes": 998432768
+    "small_storage_reclaimed_observed_bytes": 998432768,
+    "D_only_temporary_cache_verified_empty": true
   },
   "cnf_latent_population_scale_job": {
     "status": "completed_not_promoted",
@@ -1045,11 +1040,11 @@
     "results_report": "CNF_PARTIAL_ANCHOR_RESULTS.json"
   },
   "cnf_partial_anchor_temporal_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_partial_anchor_temporal_01",
     "evaluations_planned": 8,
-    "evaluations": 0,
-    "pending_evaluations": 8,
+    "evaluations": 8,
+    "pending_evaluations": 0,
     "tests_passed": 1,
     "syntax_verified": true,
     "storage": "D:/.../outputs/t1_iterations/private; TemporaryFile cache on D: only",
@@ -1057,6 +1052,28 @@
     "gate": "Rolling check only, reused source folds, not64MC or official score.",
     "process_id": 6564,
     "worker_process_id": 5988,
-    "plan_sha256": "3d1adc611831a178ddde86f3cfa4f87333ec8cb29f91046e46b598890179cbfd"
+    "plan_sha256": "3d1adc611831a178ddde86f3cfa4f87333ec8cb29f91046e46b598890179cbfd",
+    "report_sha256": "0948ba863cb0cafe1a3fa417db8e7ebe81d5fe90eee785f7509f12c40a138030",
+    "results_report": "CNF_PARTIAL_ANCHOR_TEMPORAL_RESULTS.json",
+    "decision": {
+      "status": "not_promoted",
+      "candidate_scores": [
+        49.750316367696215,
+        51.24326491845048
+      ],
+      "matched_log1p_scores": [
+        49.70027428098265,
+        51.17724668869285
+      ],
+      "paired_gain": [
+        0.05004208671356736,
+        0.06601822975763127
+      ],
+      "first_fold_below_persistence": true,
+      "second_fold_below_archived_flow_joint": true,
+      "local_72_gate_passed": false,
+      "RAM_policy_verified": "D-only tempfile, one matrix loaded/scored at a time; no retained full forecast matrices; cache0 at completion",
+      "report": "CNF_PARTIAL_ANCHOR_TEMPORAL_RESULTS.json"
+    }
   }
 }
