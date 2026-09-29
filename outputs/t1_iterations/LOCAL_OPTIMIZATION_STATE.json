@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T05:41:11.169321+00:00",
+  "updated_utc": "2026-09-29T05:50:44.605966+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/transport_challenge_backtest.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/recent_transport_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Run transport challenge transfer with actualE8.5 donors and atlas<=E8.5, test sourcefit8D/16D with past-only anchor alignment; preserve three exposedE9.5 panels and all metrics before any promotion.",
+  "next_experiment": "Evaluate latest1/2 historical transport interval velocity fit on unchanged challengeE8.5\u2192E9.5 panels; encoder/heads must match archived global model. Reject unvalidated atlas gains for promotion.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "transport_challenge_01"
+    "recent_transport_challenge_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/transport_challenge_01",
+  "active_run_path": "outputs/t1_iterations/private/recent_transport_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -292,12 +292,25 @@
     "decision": "Best ridge.3 neutral mean51.7222, folds52.9989/50.4455, only+.00993 mean over ridge1 and worse second fold. No reliable superiority, no72/stability promotion. Preserve all22 outcomes; next assess actual challenge-domain transfer."
   },
   "transport_challenge_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "transport_challenge_01",
     "tests_passed": 81,
     "evaluations_planned": 21,
-    "pending_evaluations": 21,
+    "pending_evaluations": 0,
     "process_id": 12444,
-    "plan_sha256": "be6c34ad20613c84c0c70f1ee3aac226c4e1a6475e5bcfe2efea8ca03e4c0c03"
+    "plan_sha256": "be6c34ad20613c84c0c70f1ee3aac226c4e1a6475e5bcfe2efea8ca03e4c0c03",
+    "evaluations": 21,
+    "report_sha256": "3c49f11ea661912540e52d83ecae3bc8eeb821a80e7810dd3ff99854d3d29ab2",
+    "results_report": "TRANSPORT_CHALLENGE_RESULTS.json",
+    "decision": "Challenge transfer failed:8D ridge1 identity mean47.7121, moments48.1415;16D identity49.0279, all below persistence50 across all three panels. MMD/direction deteriorate; bounded moments do not repair transfer. Unit16 local55.4202 remains rejected for official use after observed46.59. Atlas8D gain is diagnostic only, not promotion evidence."
+  },
+  "recent_transport_challenge_job": {
+    "status": "running",
+    "run": "recent_transport_challenge_01",
+    "tests_passed": 82,
+    "evaluations_planned": 27,
+    "pending_evaluations": 27,
+    "process_id": 23200,
+    "plan_sha256": "a5ee806d556014aea4acacbbe3ed69deb85a0c99da0e67eb78d8a51bba6d3942"
   }
 }

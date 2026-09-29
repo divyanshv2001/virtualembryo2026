@@ -1,0 +1,6 @@
+{
+  "updated_utc": "2026-09-29T05:50:44.605966+00:00",
+  "tests_passed": 82,
+  "scope": "Complete suite; new tests verify exact global-fit equivalence, latest interval selection, fixed representation/coupling sample stream, changed velocity coefficients and future-stage exclusion.",
+  "command": "python -m pytest outputs/t1_iterations -q -p no:cacheprovider --basetemp outputs/t1_iterations/private/test_temp_recent_20260929_10"
+}

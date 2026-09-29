@@ -4,6 +4,10 @@ The score remains below 72. This is a tracked research queue, not a claim that l
 
 The machine-readable queue records source-reading coverage, implementation, full results and unresolved paths. Abstract-only reviews require full method review before claiming faithful reproduction. Research families remain open even where a bounded local ablation failed.
 
+## Current evidence update —2026-09-29
+
+The machine-readable queue and frozen result files supersede older status snapshots below. Eight-dimensional source-cohort transport reached51.71 over two folds, but failed actual challenge transfer:47.71 identity,48.14 past-anchor moments,49.03 for16D. These are local exposed-development scores, not official results. Complete component vectors are in TRANSPORT_CHALLENGE_RESULTS.json. The next declared ablation changes only the historical velocity fitting window; broader research families remain open.
+
 ## de_reliability
 
 Regularize unreliable gene effects learned from two historical forecasts. This ridge gain implementation is an adaptation, not DESeq2 or adaptive-shrinkage reproduction.

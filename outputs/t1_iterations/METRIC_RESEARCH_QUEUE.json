@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T05:41:11.169321+00:00",
+  "updated_utc": "2026-09-29T05:50:44.605966+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -4718,7 +4718,7 @@
     },
     {
       "id": "transport_challenge_transfer",
-      "status": "running",
+      "status": "implemented_evaluated_not_promoted",
       "metrics": [
         "de_score",
         "de_direction",
@@ -4733,6 +4733,32 @@
       "hypothesis": "Eight-dimensional atlas-only gains may fail on the challenge donor domain. Compare actual complete-panel donor forecasts, sourcefit fixed; align only donor encoding with past moments.",
       "trial_scope": "Neutral8D positive ridge.3/1 crossed with identity/moments alignment,16D ridge1 identity, unit16 and persistence; seven candidates on three predeclared panels,21 outcomes. Strength.5 fixed. All predictions frozen before target read.",
       "limitations": "ChallengeE9.5 is exposed development data; overlapping cell panels are not independent embryos.13963 sampled prepared past atlas rows, not whole430339 raw atlas. Moment matching may alter identity; no guaranteed domain correction. Neutral mode uses no growth prior. Does not satisfy64-replicate gate or justifyE10.5 export.",
+      "research_family_exhausted": false,
+      "submissions_used": 0,
+      "jev_requests_used": 0,
+      "results_report": "TRANSPORT_CHALLENGE_RESULTS.json",
+      "decision": "Challenge transfer failed:8D ridge1 identity mean47.7121, moments48.1415;16D identity49.0279, all below persistence50 across all three panels. MMD/direction deteriorate; bounded moments do not repair transfer. Unit16 local55.4202 remains rejected for official use after observed46.59. Atlas8D gain is diagnostic only, not promotion evidence.",
+      "next_action": "Test latest1/2 interval velocity fit with unchanged source encoders/heads and matched actual challenge panels; broad dynamics family remains open."
+    },
+    {
+      "id": "recent_transport_velocity",
+      "status": "running",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "run": "recent_transport_challenge_01",
+      "implementation": [
+        "recent_transport_flow.py",
+        "recent_transport_challenge.py"
+      ],
+      "hypothesis": "Global historical velocity fits can average obsolete development intervals; the latest one/two couplings may forecast current direction better. Restrict only velocity regression, retaining all-past representation and heads.",
+      "trial_scope": "Neutral8D/16D with latest1/2 intervals versus archived all-interval8D/16D, past-moment8D, unit16 and persistence. Nine candidates, three identical challenge panels,27 scores. No seeds or panels changed. Global reconstruction and heads must be bit-identical to archives.",
+      "primary_reference": "LATENT_DIMENSION_REFERENCE.json",
+      "reference_scope": "Own historical-window sensitivity inspired by nonstationary temporal dynamics; not TrajectoryNet/CNF reproduction. No new literature claim.",
+      "limitations": "Latest short interval may amplify snapshot/capture noise. ExposedE9.5 development target, no independent embryo validation. Full-panel scorer and donor protected genes preserved. This bounded adaptation cannot exhaust continuous neural dynamics.",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0
