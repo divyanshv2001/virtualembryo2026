@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T13:22:54.023755+00:00",
+  "updated_utc": "2026-09-29T13:37:54.057024+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5483,6 +5483,19 @@
       "research_family_exhausted": false,
       "results_report": "CNF_ANCHOR_SLOPE_TEMPORAL_RESULTS.json",
       "decision": "All26 temporal scores retained. Chosen both.5 scores49.7722/51.2691 versus joint49.1752/51.6250: inconsistent gain, firstfold below persistence. Both1 scores50.4836/51.0186 but secondfold worse than joint. No temporal promotion. User subsequently requested a progress-only E10.5 export of both.5; local72 remains unmet."
+    },
+    {
+      "id": "continuous_flow_kernel_population_integration",
+      "run": "cnf_kernel_population_challenge_01",
+      "status": "prepared",
+      "implementation": [
+        "cnf_kernel_population_challenge.py",
+        "kernel_population.py"
+      ],
+      "trial_scope": "Copy/slopeboth.5 bases xstrength.5/1 xentropy.01/.1, lastfive past stages500RFF; eightforecasts plus threecontrols=33scores. ESS>=.6N/covariance<=.4.",
+      "limitations": "Wholecell reweighting may duplicate or omit donor cells; fixed projector clips10 unlike flow, sampled cohort only; repeated development, not biological growth inference.",
+      "research_family_exhausted": false,
+      "tests_passed": 2
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

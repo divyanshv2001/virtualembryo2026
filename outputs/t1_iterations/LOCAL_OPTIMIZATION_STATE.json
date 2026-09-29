@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T13:30:58.143641+00:00",
+  "updated_utc": "2026-09-29T13:37:54.057024+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": false,
+  "local_process_running": true,
   "quota_reset_evidence": {
     "limit_observed": false,
     "remaining_quota": null,
@@ -31,12 +31,18 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_anchor_slope_temporal.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Review challenge dissection/population shift mechanisms after inconsistent slope temporal diagnostics; await official feedback on user-requested progress export without duplicating uploads.",
+  "next_experiment": "Execute33score kernel population integration batch, unchanged panels and scorer; DE skill44.9 remains official weakness.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
-  "active_run_path": "outputs\\t1_iterations\\private\\cnf_anchor_slope_temporal_01",
+  "active_jobs": [
+    {
+      "script": "cnf_kernel_population_challenge.py",
+      "process_id": 18568,
+      "worker_process_id": 23996
+    }
+  ],
+  "active_run_path": "outputs\\t1_iterations\\private\\cnf_kernel_population_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -868,10 +874,24 @@
     "artifact": "T1_val__anchorslope_progress_20260929_01.h5ad",
     "sha256": "8bec0976142841374cffd8248eac2f3135832b6f8e5b9701c5ca307e5a1f6167",
     "format_passed": true,
-    "official_score": null,
-    "uploaded": false,
+    "official_score": 51.87,
+    "uploaded": true,
     "readiness_gate_passed": false,
     "local_development_mean": 54.90828264840951,
-    "user_requested": true
+    "user_requested": true,
+    "official_result": "outputs\\t1_submissions\\anchorslope_progress_20260929_01\\official_result.json",
+    "attribution": "Inferred from immediate response to latest export; screenshot itself does not show filename."
+  },
+  "best_reported_official_score": 51.87,
+  "cnf_kernel_population_job": {
+    "status": "running",
+    "run": "cnf_kernel_population_challenge_01",
+    "evaluations_planned": 33,
+    "pending_evaluations": 33,
+    "tests_passed": 2,
+    "decision": "Past-only kernel population integration on copy and fixed slope forecast; no promotion.",
+    "process_id": 18568,
+    "worker_process_id": 23996,
+    "plan_sha256": "a3b8e0019c1d52f6517ed949fb26fe7e666316ad26e4040039e41ca3a99151a8"
   }
 }
