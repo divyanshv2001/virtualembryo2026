@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T12:09:21.629606+00:00",
+  "updated_utc": "2026-09-29T12:15:56.514454+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_batch_temporal.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_specialist_mixture.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Batch64/512 temporal diagnostics on twofixedsourcefolds,22scores including7archivecontrols each.",
+  "next_experiment": "Frozen whole-cell mixtures recent1_joint/batch512_joint,weights.25/.5/.75, fixedrowseed,30full-panel scores. No promotion withouttemporal/72gate.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_batch_temporal_01"
+    "cnf_specialist_mixture_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_batch_temporal_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_specialist_mixture_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -150,7 +150,7 @@
     "status": "completed",
     "running": [],
     "report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-    "report_sha256": "d62fbc6a1b0aafebc518a07a3ed6b2734812974b0613630e35a0659ac12af516"
+    "report_sha256": "00820b315c0bea7736650b55b18d53896c966a073d60cc3c8b187e6ee4e69999"
   },
   "continuation_automation": {
     "id": "continue-t1-local-research",
@@ -737,14 +737,29 @@
     "results_report": "CNF_BATCH_RESULTS.json"
   },
   "cnf_batch_temporal_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_batch_temporal_01",
     "evaluations_planned": 22,
-    "pending_evaluations": 22,
-    "decision": "Check rolling consistency of exposed challenge batch512gain versus retrained64 and archivedflows; no promotion.",
+    "pending_evaluations": 0,
+    "decision": "Batch512joint temporal[49.23335570821051, 50.27847258220748] versusbatch64joint[49.18055233036935, 51.62929222686218]; firstfold fails persistence and DE/direction skills<50. No promotion; preserve22outcomes. Next three frozenwholecell mixtures of recentpositive andbatch512 complementarydevelopment metric vectors, diagnostic only.",
     "tests_passed": 119,
     "process_id": 6544,
     "worker_process_id": 8436,
-    "plan_sha256": "851f8cb2619a19eb305c923133c0feff8afb633122fd0a75cb12c6a2f2950898"
+    "plan_sha256": "851f8cb2619a19eb305c923133c0feff8afb633122fd0a75cb12c6a2f2950898",
+    "report_sha256": "50387431b640f3d2fff68f4f88f9b4a74114ebd1be77d8d0c6c132657cd69c02",
+    "results_report": "CNF_BATCH_TEMPORAL_RESULTS.json",
+    "evaluations": 22
+  },
+  "cnf_specialist_mixture_job": {
+    "status": "running",
+    "run": "cnf_specialist_mixture_01",
+    "evaluations_planned": 30,
+    "pending_evaluations": 30,
+    "decision": "Complementarydevelopment metricvector integration test; bothconstituentsfail temporalreadiness, not promotion.",
+    "tests_passed": 1,
+    "prior_full_suite_tests_passed": 119,
+    "process_id": 11664,
+    "worker_process_id": 23296,
+    "plan_sha256": "f142657f974232f10e0b9effe6647963bb2e8efe7d809803184d3ed96b2a0e05"
   }
 }

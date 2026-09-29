@@ -4411,11 +4411,11 @@
       ],
       "scope": "Adaptation, not faithful ECC. Three positive-quantile strengths, global and four-state conditional, two one-day associated-cohort folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "d62fbc6a1b0aafebc518a07a3ed6b2734812974b0613630e35a0659ac12af516",
+      "results_report_sha256": "00820b315c0bea7736650b55b18d53896c966a073d60cc3c8b187e6ee4e69999",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Latest1/2 positive decoder rolling checks on exact archived cutoffs8/8.25 flows;22 outcomes with sevencontrols."
+      "next_action": "Batch64/512 temporal diagnostics on twofixedsourcefolds,22scores including7archivecontrols each."
     },
     {
       "id": "annotation_conditioned_temporal",
@@ -4439,7 +4439,7 @@
       ],
       "scope": "Heuristic adaptation to normalized abundance; not muscat replication. Observed annotations group past cells. Four expression/detection ablations, source support20 vs100, two one-day folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "d62fbc6a1b0aafebc518a07a3ed6b2734812974b0613630e35a0659ac12af516",
+      "results_report_sha256": "00820b315c0bea7736650b55b18d53896c966a073d60cc3c8b187e6ee4e69999",
       "limitations": [
         "Published annotation may derive from joint stages; retrospective diagnostic only.",
         "Capture IDs do not establish independent embryos; cell-based errors are shrinkage heuristics.",
@@ -4448,7 +4448,7 @@
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Latest1/2 positive decoder rolling checks on exact archived cutoffs8/8.25 flows;22 outcomes with sevencontrols."
+      "next_action": "Batch64/512 temporal diagnostics on twofixedsourcefolds,22scores including7archivecontrols each."
     },
     {
       "id": "shared_gene_program_dynamics",
@@ -4475,11 +4475,11 @@
       "scope": "Shared SVD profile directions versus cell-level NMF median consensus usage dynamics. Neither is a faithful cNMF reproduction or certified biological-program recovery.",
       "frozen_trials": "SVD ranks2/4/8 with detection0/.5; NMF ranks8/16 with detection0/.5,3 fixed seeds and200 iterations. Rank16 optimizer repair800 iterations. Two matched one-day development folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "d62fbc6a1b0aafebc518a07a3ed6b2734812974b0613630e35a0659ac12af516",
+      "results_report_sha256": "00820b315c0bea7736650b55b18d53896c966a073d60cc3c8b187e6ee4e69999",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Latest1/2 positive decoder rolling checks on exact archived cutoffs8/8.25 flows;22 outcomes with sevencontrols."
+      "next_action": "Batch64/512 temporal diagnostics on twofixedsourcefolds,22scores including7archivecontrols each."
     },
     {
       "id": "neural_latent_hurdle",
@@ -5332,7 +5332,7 @@
     {
       "id": "continuous_flow_batch_temporal",
       "run": "cnf_batch_temporal_01",
-      "status": "implemented_running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_batch_temporal.py",
         "cnf_manifold_flow.py"
@@ -5342,7 +5342,27 @@
       "limitations": "Batch512 selected on exposed challengeE9.5; reusedsourcefolds and zeroabsentgeneplaceholders are diagnostics, not independentdomain/embryo validation. Largerbatches change totalexample exposure.",
       "research_family_exhausted": false,
       "tests_passed": 119,
-      "validation_report": "CNF_BATCH_TEMPORAL_VALIDATION.json"
+      "validation_report": "CNF_BATCH_TEMPORAL_VALIDATION.json",
+      "results_report": "CNF_BATCH_TEMPORAL_RESULTS.json",
+      "decision": "Batch512joint temporal[49.23335570821051, 50.27847258220748] versusbatch64joint[49.18055233036935, 51.62929222686218]; firstfold fails persistence and DE/direction skills<50. No promotion; preserve22outcomes. Next three frozenwholecell mixtures of recentpositive andbatch512 complementarydevelopment metric vectors, diagnostic only."
+    },
+    {
+      "id": "continuous_flow_specialist_wholecell_integration",
+      "run": "cnf_specialist_mixture_01",
+      "status": "implemented_running",
+      "implementation": [
+        "cnf_specialist_mixture.py",
+        "cell_mixture.py"
+      ],
+      "primary_context": [
+        "CNF_AUTHOR_REFERENCE.json",
+        "LOCAL_OPTIMIZATION_PROMPT.md"
+      ],
+      "trial_scope": "Fixed complete-cell mixtures recentpositiveweight.25/.5/.75,row seed2026092812, sevenarchivedcontrols/constituents,three unchangedE9.5 panels=30scores. No modeltraining. Provenance foreachcell preserved.",
+      "limitations": "Exposed development selection, noindependentembryos. Recentpositive andbatch512 failed firsttemporal fold, so this diagnosticcannotjustify promotion. Mixing canworsen populationbalance and othermetrics despitecomplementary constituentvectors.",
+      "research_family_exhausted": false,
+      "targeted_tests_passed": 1,
+      "validation_report": "CNF_SPECIALIST_MIXTURE_VALIDATION.json"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

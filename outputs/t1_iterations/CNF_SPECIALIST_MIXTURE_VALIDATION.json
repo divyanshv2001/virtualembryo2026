@@ -1,0 +1,12 @@
+{
+  "updated_utc": "2026-09-29T12:15:56.514454+00:00",
+  "targeted_tests_passed": 1,
+  "prior_full_suite_tests_passed": 119,
+  "command": "pytest outputs/t1_iterations/test_cell_mixture.py -q -p no:cacheprovider --basetemp outputs/t1_iterations/private/pytest_mixture_tmp_52",
+  "checks": [
+    "Mixtures preserve exact complete source cells, provenance, declaredcounts and deterministic rowselection",
+    "New runner parses; hashes,full-panel dimensions and donor identity verified before scoring",
+    "Forecasts frozen before reused target expression scoring; no learning from future expression"
+  ],
+  "limitations": "No biological accuracy or temporal-readiness claim. Bothconstituents have failed temporal checks."
+}

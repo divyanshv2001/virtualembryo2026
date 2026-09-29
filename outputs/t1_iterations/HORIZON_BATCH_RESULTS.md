@@ -312,6 +312,17 @@ A frozen-flow decoder ablation verifies every archived head array, then separate
 | cnf_recent_positive_temporal_01 | recent1_joint | 49.413 | 51.289 | 50.351 |
 | cnf_recent_positive_temporal_01 | recent2_abundance | 49.815 | 51.241 | 50.528 |
 | cnf_recent_positive_temporal_01 | recent2_joint | 48.961 | 51.313 | 50.137 |
+| cnf_batch_temporal_01 | copy | 50.000 | 50.000 | 50.000 |
+| cnf_batch_temporal_01 | unit16 | 47.143 | 47.987 | 47.565 |
+| cnf_batch_temporal_01 | saved384_d0.0 | 49.200 | 51.366 | 50.283 |
+| cnf_batch_temporal_01 | dimension_neutral_d8 | 52.929 | 50.495 | 51.712 |
+| cnf_batch_temporal_01 | dimension_growth1_d8 | 52.766 | 50.476 | 51.621 |
+| cnf_batch_temporal_01 | flow_abundance_s1.0 | 50.615 | 52.039 | 51.327 |
+| cnf_batch_temporal_01 | flow_joint_systematic_s1.0 | 49.175 | 51.625 | 50.400 |
+| cnf_batch_temporal_01 | batch64_abundance | 50.616 | 52.041 | 51.328 |
+| cnf_batch_temporal_01 | batch64_joint | 49.181 | 51.629 | 50.405 |
+| cnf_batch_temporal_01 | batch512_abundance | 50.117 | 50.785 | 50.451 |
+| cnf_batch_temporal_01 | batch512_joint | 49.233 | 50.278 | 49.756 |
 
 Status: completed. Full four-metric vectors, raw metrics, model audits and provenance hashes are in HORIZON_BATCH_RESULTS.json.
 No new prospective export or official submission. The >72 objective remains unfinished.
