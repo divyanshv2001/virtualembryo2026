@@ -5369,7 +5369,7 @@
     {
       "id": "continuous_flow_matched_cell_integration",
       "run": "cnf_matched_mixture_01",
-      "status": "implemented_running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_matched_mixture.py",
         "cell_mixture.py"
@@ -5378,7 +5378,24 @@
       "limitations": "Sameexposeddevelopment andconstituentswithfailedtemporalchecks. Matchedsamplingcanstillworsen expressionmeans/covariance; no guarantee or biologicalgrowthinput.",
       "research_family_exhausted": false,
       "tests_passed": 120,
-      "validation_report": "CNF_MATCHED_MIXTURE_VALIDATION.json"
+      "validation_report": "CNF_MATCHED_MIXTURE_VALIDATION.json",
+      "results_report": "CNF_MATCHED_MIXTURE_RESULTS.json",
+      "decision": "Matched recentweights.25/.5/.75 means54.2180/54.2182/54.2905 versusindependent53.5111/53.6059/53.7842. Donorcoverageconfound explainsmostmixingloss, but nofixedweight beatsrecent1 54.2995. Preserve39outcomes; closeevaluatedweights/samplingmechanism only. Next autonomousCNFtimechannelablation vs exactexplicitbatch64/512 controls."
+    },
+    {
+      "id": "continuous_flow_autonomous_velocity",
+      "run": "cnf_autonomous_challenge_01",
+      "status": "implemented_running",
+      "implementation": [
+        "cnf_autonomous_challenge.py",
+        "cnf_autonomous_flow.py"
+      ],
+      "primary_reference": "CNF_AUTONOMOUS_REFERENCE.json",
+      "trial_scope": "Zero inactive timechannel from initialization throughtraining/forecast, originalwidth64,batch64/512,800updates,energy.1/manifold10;fourforecast/ninearchivecontrols across3fixedpanels=39scores. Exactcoordinate and headlineage checks required, checkpoints50updates, nonfinite rejection.",
+      "limitations": "Own likelihoodadaptation ofstateonly vectorfield, notauthorsupervisedexample reproduction. Autonomousdevelopmentassumption may befalse; stateextrapolation remains. Sampled13963pastcells, exposedE9.5selection/noindependentembryos, no biologicalgrowth/velocityinputs.",
+      "research_family_exhausted": false,
+      "tests_passed": 122,
+      "validation_report": "CNF_AUTONOMOUS_VALIDATION.json"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

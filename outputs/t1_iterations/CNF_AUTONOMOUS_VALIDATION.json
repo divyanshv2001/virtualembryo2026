@@ -1,0 +1,12 @@
+{
+  "updated_utc": "2026-09-29T12:34:06.526817+00:00",
+  "tests_passed": 122,
+  "command": "pytest outputs/t1_iterations -q -p no:cacheprovider --basetemp outputs/t1_iterations/private/pytest_tmp_54",
+  "checks": [
+    "Nonzero autonomous field is exactly time invariant; segmented/direct fixed-step trajectories agree",
+    "Density/energy gradients finite; inactive timechannel has zero gradient",
+    "Autonomous and explicit-time networks preserve exact initialization lineage",
+    "Runtime exact archived coordinates/head/replay checks enforced before forecasts"
+  ],
+  "limitations": "State-only velocity assumption remains unverified biologically; implementation tests cannot establish score or temporal readiness."
+}

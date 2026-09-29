@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T12:22:26.182376+00:00",
+  "updated_utc": "2026-09-29T12:34:06.526817+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_matched_mixture.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_autonomous_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Matched-donor wholecell mixtures .25/.5/.75 with10controls,39full-panel development scores.",
+  "next_experiment": "Time-independent velocity CNF, batch64/512,800updates, exactreferencecoordinates and explicit-timecontrolarchives;39scores.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_matched_mixture_01"
+    "cnf_autonomous_challenge_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_matched_mixture_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_autonomous_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -766,14 +766,28 @@
     "results_report": "CNF_SPECIALIST_MIXTURE_RESULTS.json"
   },
   "cnf_matched_mixture_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_matched_mixture_01",
     "evaluations_planned": 39,
-    "pending_evaluations": 39,
-    "decision": "Isolate donor-composition sampling confound; no readinesspromotion.",
+    "pending_evaluations": 0,
+    "decision": "Matched recentweights.25/.5/.75 means54.2180/54.2182/54.2905 versusindependent53.5111/53.6059/53.7842. Donorcoverageconfound explainsmostmixingloss, but nofixedweight beatsrecent1 54.2995. Preserve39outcomes; closeevaluatedweights/samplingmechanism only. Next autonomousCNFtimechannelablation vs exactexplicitbatch64/512 controls.",
     "tests_passed": 120,
     "process_id": 26228,
     "worker_process_id": 16844,
-    "plan_sha256": "6c66fd529bff7e7154168c3e54d1c4f52ec8a7e3c1927a0bcf5f46c4553694aa"
+    "plan_sha256": "6c66fd529bff7e7154168c3e54d1c4f52ec8a7e3c1927a0bcf5f46c4553694aa",
+    "evaluations": 39,
+    "report_sha256": "cb150f5635f03b00ba8080cbcd1ed732f55b41039bc3c0fd2997d46835570853",
+    "results_report": "CNF_MATCHED_MIXTURE_RESULTS.json"
+  },
+  "cnf_autonomous_job": {
+    "status": "running",
+    "run": "cnf_autonomous_challenge_01",
+    "evaluations_planned": 39,
+    "pending_evaluations": 39,
+    "decision": "Stateonly velocity likelihood ablation; no promotion without original72MC/temporalgate.",
+    "tests_passed": 122,
+    "process_id": 5200,
+    "worker_process_id": 5752,
+    "plan_sha256": "7d006695049e4510f53e1d8de3223710ba2b50c8c025933da6e893e6a8b6ca8a"
   }
 }

@@ -12,7 +12,7 @@ User instruction adopted 2026-09-28: improve the score locally until it crosses 
 
 ## Objective and stopping rule
 
-Continue the local research-and-training loop until a candidate satisfies the locked, reproducible local >72 gate. Do not treat one completed batch, a plausible proposal, or a favorable random seed as completion of the optimization objective. Current challenge-data development best is 55.3123; the objective is unfinished. A local >72 result does not certify hidden E10.5 leaderboard performance.
+Continue the local research-and-training loop until a candidate satisfies the locked, reproducible local >72 gate. Do not treat one completed batch, a plausible proposal, or a favorable random seed as completion of the optimization objective. The historical unit16 control averages55.4202 on three local challenge development panels, but its official progress submission scored46.59 and was rejected; this is a local control, not a validated best model. The objective is unfinished. A local >72 result does not certify hidden E10.5 leaderboard performance.
 
 Before each batch, freeze datasets, temporal splits, complete 32,285-gene panel, scorer source/version, four metrics/weights, normalization, candidate configurations, seeds, evaluation sample sizes and compute limits. Do not change anchors or discard unsuccessful metrics/replicates after seeing outcomes. Preserve all failures and compare against measured persistence under identical evaluation conditions. Existing exposed E9.5 and earlier atlas stages are development data, not fresh blind tests.
 

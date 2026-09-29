@@ -1,0 +1,10 @@
+{
+  "retrieved_utc": "2026-09-29T12:32:17.280034+00:00",
+  "primary_code_url": "https://raw.githubusercontent.com/rtqichen/torchdiffeq/master/examples/ode_demo.py",
+  "github_source_url": "https://github.com/rtqichen/torchdiffeq/blob/master/examples/ode_demo.py",
+  "source_sha256": "36cc0ebfcf56afb7a291142c03a19b8f0bd3d437f914f3f98657e048aa8a60e4",
+  "read": "ODEFunc architecture and forward(t,y), which returns net(y**3) withoutusingt; synthetictrajectory generation and supervised training loop. Reviewedprimaryauthorcode, not new single-cell experiments.",
+  "adaptation": "Time-independent velocity in ourexisting8D likelihood/energy/manifold CNF. Keep timechannel atzero to retain identical parameterinitialization. Existingthree64hiddenlayers and densityobjective differ fromauthor2Dsupervisedexample. Not reproduction or evidenceofdevelopmentalautonomy.",
+  "hypothesis": "Removingexplicitcalendar-time dependence may reduceunsupportedtime-extrapolation; stateextrapolation and identifiability remain risks.",
+  "limits": "Autonomousflows assume samevelocity atsamestate regardlessofstage; development can violate this. No biologicalgrowth/velocitylabels. Referenceonlysupportsarchitecturemechanism, notscoreimprovement."
+}
