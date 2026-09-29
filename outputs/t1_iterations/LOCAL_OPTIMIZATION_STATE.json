@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T13:50:48.472278+00:00",
+  "updated_utc": "2026-09-29T13:53:25.690830+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,20 +29,20 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_log1p_matched_mixture.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_log1p_positive_temporal.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Run21score matchedlog1p abundance/joint specialistmix weights.25/.5/.75, unchangedfullpanel.",
+  "next_experiment": "Run18-score fixedalpha.5 log1p positive abundance/joint temporal diagnostic on twoearlier folds.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
     {
-      "script": "cnf_log1p_matched_mixture.py",
-      "process_id": 15312,
-      "worker_process_id": 9128
+      "script": "cnf_log1p_positive_temporal.py",
+      "process_id": 5544,
+      "worker_process_id": 12460
     }
   ],
-  "active_run_path": "outputs\\t1_iterations\\private\\cnf_log1p_matched_mixture_01",
+  "active_run_path": "outputs\\t1_iterations\\private\\cnf_log1p_positive_temporal_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -927,14 +927,29 @@
     "remaining_attempt_budget_this_turn": 0
   },
   "cnf_log1p_matched_mixture_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_log1p_matched_mixture_01",
     "evaluations_planned": 21,
-    "pending_evaluations": 21,
-    "decision": "Fixed3mixtures of complementary wholecells; no promotion.",
+    "pending_evaluations": 0,
+    "decision": "All21 matchedlog1p mixture scores retained. Weights.25/.5/.75 means54.9454/54.5937/53.9621 vsjoint54.9755 andabundance53.0584. Noneimprove bestconstituent; rejectthese boundedmixtures, scientificfamily remainsopen. Nextlog1p temporaldiagnostic.",
     "process_id": 15312,
     "worker_process_id": 9128,
     "tests_passed": 2,
-    "plan_sha256": "6e4445665da9656105e7fd616963b61b10ca2e3175301ba62f25b595d7ef336e"
+    "plan_sha256": "6e4445665da9656105e7fd616963b61b10ca2e3175301ba62f25b595d7ef336e",
+    "evaluations": 21,
+    "report_sha256": "7e31f681dbd1fc67636683f2102b03cfd508f8d012d109b692effbf41575cc3e",
+    "results_report": "CNF_LOG1P_MATCHED_MIXTURE_RESULTS.json"
+  },
+  "cnf_log1p_positive_temporal_job": {
+    "status": "running",
+    "run": "cnf_log1p_positive_temporal_01",
+    "evaluations_planned": 18,
+    "pending_evaluations": 18,
+    "model_tests_passed": 1,
+    "decision": "Reusedsource temporal diagnostic for fixedalpha.5 log1p response; no promotion.",
+    "process_id": 5544,
+    "worker_process_id": 12460,
+    "runner_syntax_verified": true,
+    "plan_sha256": "e9335bb90b2ea84a3c06938a2b8a2753088d4cbdfab8253299d4993fbd03f579"
   }
 }

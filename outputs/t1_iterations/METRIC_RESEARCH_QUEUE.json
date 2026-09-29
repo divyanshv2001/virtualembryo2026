@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T13:50:48.472278+00:00",
+  "updated_utc": "2026-09-29T13:53:25.690830+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5517,13 +5517,27 @@
     {
       "id": "continuous_flow_log1p_specialist_integration",
       "run": "cnf_log1p_matched_mixture_01",
-      "status": "prepared",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_log1p_matched_mixture.py",
         "cell_mixture.py"
       ],
       "trial_scope": "Frozenabundancealpha.5/jointalpha.5, matchedsame1500donors andoneforecastperdonor; weights.25/.5/.75 withfixedseed2026092812,21scoresincl4controls.",
       "limitations": "Ownmetrictradeoff integration; mixturemarginal anddependencescores nonlinear. Exposeddevelopment, sampledcohort only, no candidate72gate.",
+      "research_family_exhausted": false,
+      "results_report": "CNF_LOG1P_MATCHED_MIXTURE_RESULTS.json",
+      "decision": "All21 matchedlog1p mixture scores retained. Weights.25/.5/.75 means54.9454/54.5937/53.9621 vsjoint54.9755 andabundance53.0584. Noneimprove bestconstituent; rejectthese boundedmixtures, scientificfamily remainsopen. Nextlog1p temporaldiagnostic."
+    },
+    {
+      "id": "continuous_flow_log1p_positive_temporal",
+      "run": "cnf_log1p_positive_temporal_01",
+      "status": "prepared",
+      "implementation": [
+        "cnf_log1p_positive_temporal.py",
+        "log1p_positive_forecast.py"
+      ],
+      "trial_scope": "Frozenflow headsrefit in log1p units past-only,alpha.5/ detection.5 fixed; abundance/joint plus7controls,18scores on8to9/8.25to9.25.",
+      "limitations": "Reusedsourcefolds, missinggenes placeholders, no earlierchallenge data or independent embryos; notblind validation.",
       "research_family_exhausted": false
     }
   ],

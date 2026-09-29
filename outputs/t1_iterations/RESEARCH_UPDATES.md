@@ -17,3 +17,11 @@ Completed21 log1p decoder scores. All means/raw4/skills4 retained in CNF_LOG1P_P
 ## 2026-09-29T13:51:08.391810+00:00
 
 Log1p decoder completed21scores: bestjointalpha.5 mean54.9755 (+.0672 vs54.9083),DE52.385/direction57.765/MMD56.006/variogram53.181. Abundancealpha.5 mean53.0584 butDE53.317. Small mixed gains; no promotion. Next21scores testmatchedwholecell abundance/joint mixtures weights.25/.5/.75, unchangedscorer/calibration;2mixturetests passed. No additional Jev call for routine transition; no official submission.
+
+## 2026-09-29T13:52:15.760675+00:00
+
+Completed21 matched log1p specialist mixture scores; retain fullmetrics in CNF_LOG1P_MATCHED_MIXTURE_RESULTS.json. Review constituent tradeoffs, no official upload or72 certification.
+
+## 2026-09-29T13:53:25.947299+00:00
+
+Matchedlog1p mixtures completed21scores: weights.25/.5/.75 means54.9454/54.5937/53.9621 belowjoint54.9755. Reject boundedmixtures. Prepared18-score log1palpha.5 abundance/joint temporal diagnostic with7matchedcontrols on8to9/8.25to9.25; reusedsourcefolds, no earlierchallenge data or independentembryos. No official/Jev/agent calls.
