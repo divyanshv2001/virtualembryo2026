@@ -1,0 +1,53 @@
+{
+  "status": "blocked_by_automatic_approval_review",
+  "review_reason": "blocked by policy",
+  "attempted_action": "Delete SHA256-verified forecast arrays from five completed, independently reported backtest runs using native PowerShell file removals. The command was rejected before any hashing or deletion ran.",
+  "actual_deleted_files": 0,
+  "actual_freed_bytes": 0,
+  "candidate_runs": [
+    {
+      "run": "neural_sampling_horizon_01",
+      "completed_reports": true,
+      "arrays": 24,
+      "logical_bytes": 4649043072,
+      "single_link_bytes": 1162260768
+    },
+    {
+      "run": "stage_transport_horizon_01",
+      "completed_reports": true,
+      "arrays": 26,
+      "logical_bytes": 5036463328,
+      "single_link_bytes": 3099362048
+    },
+    {
+      "run": "growth_composition_horizon_01",
+      "completed_reports": true,
+      "arrays": 20,
+      "logical_bytes": 3874202560,
+      "single_link_bytes": 2324521536
+    },
+    {
+      "run": "empirical_bayes_repair_01",
+      "completed_reports": true,
+      "arrays": 18,
+      "logical_bytes": 3486782304,
+      "single_link_bytes": 2130811408
+    },
+    {
+      "run": "covariance_horizon_01",
+      "completed_reports": true,
+      "arrays": 18,
+      "logical_bytes": 3486782304,
+      "single_link_bytes": 2324521536
+    }
+  ],
+  "candidate_logical_bytes": 20533273568,
+  "candidate_single_link_bytes": 11041477296,
+  "candidate_hash_verification": "not performed; command was rejected before execution. Each archived generation.json records expected per-forecast SHA256.",
+  "private_folder_logical_bytes": 243487320867,
+  "private_folder_distinct_inode_bytes": 132103997267,
+  "private_folder_files": 6135,
+  "excluded_E_junctions": 4,
+  "D_free_observed_bytes": 111400624128,
+  "preservation": "Original private reports, plans, generation hashes, predictions, events, prepared data and running inputs remain unchanged."
+}

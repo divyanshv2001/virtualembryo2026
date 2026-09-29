@@ -1,13 +1,13 @@
 # T1 compact research checkpoint
 
-Updated: 2026-09-29T16:34:43.540490+00:00
+Updated: 2026-09-29T16:44:05.423507+00:00
 
 Official best reported: **51.87**. Latest export: `T1_val__anchorslope_progress_20260929_01.h5ad`. Local>72 gate remains unmet.
 Official metrics: DE44.9, direction57.0, MMD53.5, variogram51.7. Latest screenshot shows S2WISH2 / Codex / AGENT, rank29 on that view; scoring-page rank131/270 is a different view.
 
-Next: Partial positive/detection conditional anchor slopes .25/.75 crossed, same frozen flow/panel/calibration,24scores; testbalance rather than isotropic width.
+Next: Do not launch while user prioritizes storage. After storage issue resolved, temporal-check p.25/d.75 versus matched .5/.5 and persistence on past-only rolling folds; minor reused-development gain not promotion.
 
-Active jobs: [{"run":"cnf_partial_anchor_challenge_01","process_id":6548,"worker_process_id":3684}]
+Active jobs: []
 
 ## Latest measured decisions
 
@@ -27,11 +27,13 @@ Latest: validated; 1903 payload bytes; actual usage {'input_tokens': 820, 'outpu
 
 ## Current experiment
 
-`cnf_partial_anchor_challenge_01`: running; planned 24, completed 0.
+`cnf_partial_anchor_challenge_01`: completed_not_promoted; planned 24, completed 24.
+copy=50.0; anchorslope_both_0.5=54.90828264840951; log1p_abundance_a0.5=53.05838832058445; log1p_joint_a0.5=54.97552441396573; partial_anchor_p0.25_d0.25=54.53134900068799; partial_anchor_p0.25_d0.75=55.09960028521814; partial_anchor_p0.75_d0.25=54.751254284683625; partial_anchor_p0.75_d0.75=54.930665548744805
+Full metrics: [CNF_PARTIAL_ANCHOR_RESULTS.json](CNF_PARTIAL_ANCHOR_RESULTS.json).
 
 ## Storage
 
-{"D_free_observed_bytes":111404548096,"E_free_observed_bytes":277806256128,"new_bulky_private_run_root":"E:/virtualembryo-research-storage","policy":"Use verifiedempty localjunctions fornewruns. Keep failedoriginalD arrays/events. No data deleted or committed.","cleanup_report":"STORAGE_CLEANUP_RESULTS.json","archive_policy":"Hardlinked archived arrays are immutable; new experiments must write new paths.","temporary_cleanup_status":"TEST_TEMP_CLEANUP_STATUS.json"}
+{"D_free_observed_bytes":111400624128,"E_free_observed_bytes":277806256128,"new_bulky_private_run_root":"E:/virtualembryo-research-storage","policy":"Use verifiedempty localjunctions fornewruns. Keep failedoriginalD arrays/events. No data deleted or committed.","cleanup_report":"STORAGE_CLEANUP_RESULTS.json","archive_policy":"Hardlinked archived arrays are immutable; new experiments must write new paths.","temporary_cleanup_status":"TEST_TEMP_CLEANUP_STATUS.json","forecast_storage_audit":"FORECAST_STORAGE_AUDIT.json","private_folder_logical_bytes":243487320867,"private_folder_distinct_inode_bytes":132103997267,"deletion_status":"Automatic approval review rejected deletion: blocked by policy; no files removed."}
 
 ## Evidence links
 

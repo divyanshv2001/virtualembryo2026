@@ -73,3 +73,11 @@ Completed24population-scale scores: fourvariants allregress versusmatchedcontrol
 ## 2026-09-29T16:34:43.540490+00:00
 
 Partial-anchor run01 actuallyrunning:launcher6548/worker3684, planfrozen. Fourcontrols saved; next required exact.5controlreplay beforefournewforecasts. Past-onlyheads, unchanged32,285genefullpanel and3frozenevaluationpanels.24scoresplanned, noneclaimedcomplete;72gateunmet.
+
+## 2026-09-29T16:36:54.260412+00:00
+
+Completed24 partial positive/detection anchor calibration scores. All means/raw4/skills4 retained in CNF_PARTIAL_ANCHOR_RESULTS.json and SCORE_LEDGER.jsonl. Review matched gains before promotion;72 gate remains unmet.
+
+## 2026-09-29T16:44:05.423507+00:00
+
+Storage priority audit: Dprivate243487320867 logicalbytes but132103997267 distinct-inodebytes after earlier111383323600byte hardlinkdedup; Dfree111400624128. Fivecompleted report-preserved backtestfolders contain106 large forecasts20533273568 logicalbytes,11041477296bytes single-link potential physical savings. Attempted nativePowerShell per-file SHA256 validation/deletion rejected by automaticapprovalreview: blocked bypolicy beforeexecution, verifiedhash/deletion0. FORECAST_STORAGE_AUDIT.json records exact candidates and limits. Do not bypass rejection with anothershell; originaldata/predictions/reports/events retained. Partialanchor24scores completed: bestp.25/d.75 mean55.0996 vsincumbent54.9755 (+.1241) onreuseddevelopment; direction58.969 improves, DE52.198/MMD55.675/variogram53.027 regress slightly. No temporal/64MC/officialpass; next temporalchecks afterstorage priority.

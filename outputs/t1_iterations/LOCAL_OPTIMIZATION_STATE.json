@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T16:34:43.505698+00:00",
+  "updated_utc": "2026-09-29T16:44:05.400927+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": true,
+  "local_process_running": false,
   "quota_reset_evidence": {
     "limit_observed": false,
     "remaining_quota": null,
@@ -31,17 +31,11 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Partial positive/detection conditional anchor slopes .25/.75 crossed, same frozen flow/panel/calibration,24scores; testbalance rather than isotropic width.",
+  "next_experiment": "Do not launch while user prioritizes storage. After storage issue resolved, temporal-check p.25/d.75 versus matched .5/.5 and persistence on past-only rolling folds; minor reused-development gain not promotion.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    {
-      "run": "cnf_partial_anchor_challenge_01",
-      "process_id": 6548,
-      "worker_process_id": 3684
-    }
-  ],
+  "active_jobs": [],
   "active_run_path": "private/cnf_partial_anchor_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -988,13 +982,17 @@
     "results_report": "CNF_LATENT_DISPERSION_RESULTS.json"
   },
   "research_storage": {
-    "D_free_observed_bytes": 111404548096,
+    "D_free_observed_bytes": 111400624128,
     "E_free_observed_bytes": 277806256128,
     "new_bulky_private_run_root": "E:/virtualembryo-research-storage",
     "policy": "Use verifiedempty localjunctions fornewruns. Keep failedoriginalD arrays/events. No data deleted or committed.",
     "cleanup_report": "STORAGE_CLEANUP_RESULTS.json",
     "archive_policy": "Hardlinked archived arrays are immutable; new experiments must write new paths.",
-    "temporary_cleanup_status": "TEST_TEMP_CLEANUP_STATUS.json"
+    "temporary_cleanup_status": "TEST_TEMP_CLEANUP_STATUS.json",
+    "forecast_storage_audit": "FORECAST_STORAGE_AUDIT.json",
+    "private_folder_logical_bytes": 243487320867,
+    "private_folder_distinct_inode_bytes": 132103997267,
+    "deletion_status": "Automatic approval review rejected deletion: blocked by policy; no files removed."
   },
   "cnf_latent_population_scale_job": {
     "status": "completed_not_promoted",
@@ -1020,17 +1018,19 @@
     "results_report": "CNF_LATENT_POPULATION_SCALE_RESULTS.json"
   },
   "cnf_partial_anchor_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_partial_anchor_challenge_01",
     "evaluations_planned": 24,
-    "evaluations": 0,
-    "pending_evaluations": 24,
+    "evaluations": 24,
+    "pending_evaluations": 0,
     "runner_syntax_verified": true,
     "identity_replay_required": true,
     "storage": "E:/virtualembryo-research-storage/cnf_partial_anchor_challenge_01 via Dprivatejunction",
-    "decision": "Unpromoted foursetting development ablation; futurefit forbidden.",
+    "decision": "Bestp.25/d.75 mean55.09960 vs.5/.5control54.97552 (+.12408) onreused3E9.5developmentpanels. DE52.198 vs52.385, direction58.969 vs57.765, MMD55.675 vs56.006, variogram53.027 vs53.181; not promoted. Earlierfold/64MC not run; official best51.87.",
     "process_id": 6548,
     "worker_process_id": 3684,
-    "plan_sha256": "627c167967c3444c5ba3a6607af9b916a72cc26300c97574cd5812d405262aa8"
+    "plan_sha256": "627c167967c3444c5ba3a6607af9b916a72cc26300c97574cd5812d405262aa8",
+    "report_sha256": "0c5c0f0f6dcc314da68cf02ae685e26cfd979cf0755c48a413bb3b19a4b5ff9e",
+    "results_report": "CNF_PARTIAL_ANCHOR_RESULTS.json"
   }
 }
