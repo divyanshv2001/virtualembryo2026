@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T06:00:52.399171+00:00",
+  "updated_utc": "2026-09-29T06:13:02.712579+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/decoder_window_challenge.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_challenge_backtest.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Evaluate decoder past-stage windows1/2/3 against all-stage heads with fixed8D/16D transport on unchanged challenge panels; preserve all metrics and assess nonstationary decoder hypothesis before another dynamics family.",
+  "next_experiment": "Train frozen density-likelihood continuous-flow energy0/.1 models, checkpoint every50 of400 updates, then evaluate all21 challenge outcomes with fixed panels and unchanged scorer. Diagnose numerical step sensitivity and all four metrics before any promotion.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "decoder_window_challenge_01"
+    "cnf_challenge_repair_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/decoder_window_challenge_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_challenge_repair_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -318,12 +318,26 @@
     "decision": "Latest1/2-interval velocity does not repair challenge transfer: all four means47.9632\u201348.2260, below persistence50 and archived16D global49.0279. Same panels/calibrations and bit-identical encoder/heads verified. Preserve all27 outcomes. Next test decoder stage nonstationarity; broader neural/density dynamics remain unresolved."
   },
   "decoder_window_challenge_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "decoder_window_challenge_01",
     "tests_passed": 84,
     "evaluations_planned": 33,
-    "pending_evaluations": 33,
+    "pending_evaluations": 0,
     "process_id": 9528,
-    "plan_sha256": "e9478b01cf94d14f329c4ab976f27da7cb4c8cb5b01994e437caa4822711e514"
+    "plan_sha256": "e9478b01cf94d14f329c4ab976f27da7cb4c8cb5b01994e437caa4822711e514",
+    "evaluations": 33,
+    "report_sha256": "a6f17fef2ab018e6a09368839b0511f6c09ada2c67ddbabe3ea3fe756437f46c",
+    "results_report": "DECODER_WINDOW_CHALLENGE_RESULTS.json",
+    "decision": "Six decoder-window variants remain below persistence; best16D/three-stage mean49.3056, worse8D/current-stage46.8030. All33 outcomes retained. Global encoder/drift/heads replayed bit-identically; decoder window does not repair challenge transfer. Next broad branch is density-likelihood nonlinear continuous flow, not another affine window."
+  },
+  "cnf_challenge_job": {
+    "status": "running",
+    "run": "cnf_challenge_repair_01",
+    "tests_passed": 86,
+    "evaluations_planned": 21,
+    "pending_evaluations": 21,
+    "failed_run": "cnf_challenge_01",
+    "process_id": 6808,
+    "plan_sha256": "6b6991cb4f460bb3244028ba33cce098f726667822027c1649b5a32f5ccdf9fc"
   }
 }

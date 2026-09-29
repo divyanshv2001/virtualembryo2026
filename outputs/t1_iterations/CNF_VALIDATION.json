@@ -1,0 +1,7 @@
+{
+  "updated_utc": "2026-09-29T06:13:02.712579+00:00",
+  "tests_passed": 86,
+  "targeted_tests_after_step_parameter": 2,
+  "scope": "Full suite86 tests; analytical diagonal field verifies density sign, exact/Hutchinson trace, integrated energy, Gaussian likelihood and zero-flow identity with trainable gradients. Forecast step sensitivity.125/.0625 declared in actual runner.",
+  "command": "python -m pytest outputs/t1_iterations -q -p no:cacheprovider --basetemp outputs/t1_iterations/private/test_temp_cnf_full_20260929_14"
+}

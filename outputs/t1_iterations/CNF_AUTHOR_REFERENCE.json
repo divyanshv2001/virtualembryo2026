@@ -1,0 +1,12 @@
+{
+  "primary_paper": "https://proceedings.mlr.press/v119/tong20a/tong20a.pdf",
+  "author_code": "https://github.com/KrishnaswamyLab/TrajectoryNet",
+  "commit": "810c89b081f95405bc0ad42bfb3cb41038e13700",
+  "files_sha256": {
+    "TrajectoryNet/main.py": "550c3a7e372f12b470586cb05f65dd195f25a8dcb4e2aa868046ff459be4999c",
+    "TrajectoryNet/lib/layers/odefunc.py": "b33ca43d919a7a6e6c852344b38d111a91c4a6aa3a7ef0b0a38ff8fe30957f20",
+    "TrajectoryNet/lib/layers/wrappers/cnf_regularization.py": "151a35e27067bd038f96184fac7b686fd39458626a97189f62d83142ff7fae88"
+  },
+  "read": "main.py compute_loss and training sections; ode divergence routines and density-change sign; squared_l2 regularizer. Earlier main paper sections3.2/3.3/4.1\u20134.3/5.1\u20135.2 reviewed.",
+  "adaptation": "Own8D whitened PCA, three64-node tanh layers with explicit time, standard Gaussian prior at quarter-day before earliest observed snapshot, RK4.125 step, one equal-probability past stage per minibatch64, Rademacher Hutchinson trace,400 Adam.001 updates, energy0/.1. No growth or velocity measurements and no manifold-density penalty; author sequential concatenated multi-stage likelihood is replaced by stochastic per-stage likelihood. Full-panel positive ridge1 donor-relative decoder retained. Not a faithful TrajectoryNet reproduction or guarantee of future-stage extrapolation."
+}

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T06:00:52.399171+00:00",
+  "updated_utc": "2026-09-29T06:13:02.712579+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -4767,7 +4767,7 @@
     },
     {
       "id": "conditional_decoder_stage_window",
-      "status": "running",
+      "status": "implemented_evaluated_not_promoted",
       "metrics": [
         "de_score",
         "de_direction",
@@ -4784,7 +4784,33 @@
       "limitations": "Window changes head centering/support as well as coefficients; coupled effects disclosed. Fewer cells can increase noise. Prepared cohort remains sampled; no blind challenge or independent embryo validation. No continuous neural/density-model reproduction claim.",
       "research_family_exhausted": false,
       "submissions_used": 0,
-      "jev_requests_used": 0
+      "jev_requests_used": 0,
+      "results_report": "DECODER_WINDOW_CHALLENGE_RESULTS.json",
+      "decision": "Six decoder-window variants remain below persistence; best16D/three-stage mean49.3056, worse8D/current-stage46.8030. All33 outcomes retained. Global encoder/drift/heads replayed bit-identically; decoder window does not repair challenge transfer. Next broad branch is density-likelihood nonlinear continuous flow, not another affine window."
+    },
+    {
+      "id": "continuous_density_flow",
+      "status": "running",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "run": "cnf_challenge_repair_01",
+      "implementation": [
+        "cnf_density_flow.py",
+        "cnf_challenge_backtest.py"
+      ],
+      "primary_reference": "CNF_AUTHOR_REFERENCE.json",
+      "hypothesis": "Continuous density likelihood and nonlinear time-dependent velocity may represent distributions missed by affine barycentric transport. Energy penalty tests displacement regularization separately.",
+      "trial_scope": "8D whitened past PCA; two400-update/batch64 likelihood models with energy0/.1, abundance strengths.5/1, three archived controls, three unchanged challenge panels;21 evaluations. Final checkpoint fixed, training seed20260928. Checkpoint every50 updates; preserve history and integration step sensitivity.",
+      "limitations": "Own CPU adaptation: stochastic single-stage likelihood, tanh field, fixedRK4.125, Gaussian virtual base before first observed stage. Omits author sequential concatenation, manifold density, growth and measured velocity. Hutchinson trace is stochastic; final output still unchanged full-panel scorer. Not full TrajectoryNet reproduction, no fresh embryo validation or extrapolation guarantee.",
+      "research_family_exhausted": false,
+      "submissions_used": 0,
+      "jev_requests_used": 0,
+      "failed_run": "cnf_challenge_01",
+      "repair": "Replace accidental tuple dictionary keys with string keys before training. Failed runner and diagnostic retained; no scores generated."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

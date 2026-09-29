@@ -1,5 +1,5 @@
 {
-  "records": 1395,
+  "records": 1428,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -90,6 +90,11 @@
       "path": "private/de_specialist_search_01/report.json",
       "sha256": "c97c7b7557eb36cac93d8650ad0f1d460ec884ba8980c5abd81ac29ad27b53b6",
       "outcomes_indexed": 24
+    },
+    {
+      "path": "private/decoder_window_challenge_01/report.json",
+      "sha256": "a6f17fef2ab018e6a09368839b0511f6c09ada2c67ddbabe3ea3fe756437f46c",
+      "outcomes_indexed": 33
     },
     {
       "path": "private/detection_backtest_01/report.json",
@@ -359,5 +364,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "1f5fa7a052a4aad62bd88cb9e3ddccbfb4824cb1dd343fc7ca95ae2f63d8f236"
+  "ledger_sha256": "af9d4dabae30cfd745fa3d172dfe1d578494774e9f51d8bd7f7e7df8edc1c51b"
 }
