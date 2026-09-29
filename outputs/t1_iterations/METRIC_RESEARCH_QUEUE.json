@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T11:19:32.612963+00:00",
+  "updated_utc": "2026-09-29T11:30:22.291620+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5263,7 +5263,7 @@
     {
       "id": "continuous_flow_gamma_positive",
       "run": "cnf_gamma_positive_challenge_01",
-      "status": "implemented_running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_gamma_positive_challenge.py",
         "poisson_positive_forecast.py"
@@ -5273,7 +5273,24 @@
       "limitations": "Continuous normalized expression; no dispersion inference, generative observation sampling or uncertainty calibration. Reused development, no independent embryos.",
       "research_family_exhausted": false,
       "tests_passed": 116,
-      "validation_report": "CNF_GAMMA_POSITIVE_VALIDATION.json"
+      "validation_report": "CNF_GAMMA_POSITIVE_VALIDATION.json",
+      "results_report": "CNF_GAMMA_POSITIVE_RESULTS.json",
+      "decision": "Gamma joint ridge.1/1 means53.0142/53.5583 remain belowglobal53.5953, although ridge1beats matchedPoisson53.4266. Abundance52.9705/52.9459 onlysmall gains. Preserve33 outcomes; next nonlinear all-mapped-gene positive residual decoder, globaldetection/field fixed."
+    },
+    {
+      "id": "continuous_flow_nonlinear_positive",
+      "run": "cnf_nonlinear_positive_challenge_01",
+      "status": "implemented_running",
+      "implementation": [
+        "cnf_nonlinear_positive_challenge.py",
+        "nonlinear_positive_forecast.py"
+      ],
+      "literature_context": "POISSON_POSITIVE_REFERENCE.json provides primary nonlinear conditional decoder context; own residual implementation, not scVI generative/Bayesian reproduction.",
+      "trial_scope": "Width64 nonlinear residual,400updates,batch64,penalties.1/1 x abundance/joint. Fourforecasts/sevenarchives=33 outcomes, all26775mappedgenes and13963 permitted past cells. Zero-output initialization must replaybaseline exactly.",
+      "limitations": "Sampled cohort, deterministic positive-log conditional means; no observation generation, count likelihood or uncertainty calibration. Reused development, no independent embryos; may overfit beyond latent support.",
+      "research_family_exhausted": false,
+      "tests_passed": 117,
+      "validation_report": "CNF_NONLINEAR_POSITIVE_VALIDATION.json"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."
