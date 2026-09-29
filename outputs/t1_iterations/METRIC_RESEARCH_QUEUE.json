@@ -4910,7 +4910,7 @@
     {
       "id": "continuous_flow_observation_noise",
       "run": "cnf_noise_challenge_01",
-      "status": "running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_noise_challenge.py",
         "cnf_noise_flow.py"
@@ -4918,6 +4918,20 @@
       "primary_reference": "CNF_NOISE_REFERENCE.json",
       "trial_scope": "Noise0/.05/.1 on whitened past latent training snapshots, separate observation RNG.800 updates, density10/energy.1, strengths.5/1;24 scored outcomes with frozen controls/panels. Zero-noise checkpoint must match baseline exactly.",
       "limitations": "Own smoothing adaptation; no measured assay-noise claim or full paper reproduction. Reused development selection, not blind biological validation.",
+      "research_family_exhausted": false,
+      "results_report": "CNF_NOISE_RESULTS.json",
+      "decision": "Both observation-noise levels regress on every panel versus zero-noise800-update baseline52.8369; best noisy mean52.4979 at.05/strength1. Zero-noise training replay verified exactly. All24 outcomes preserved; this bounded jitter range does not help. Next test encoder gene coverage1024/4096 with original384 covariance guard."
+    },
+    {
+      "id": "continuous_flow_gene_coverage",
+      "run": "cnf_feature_challenge_01",
+      "status": "running",
+      "implementation": [
+        "cnf_feature_challenge.py",
+        "feature_panel_forecast.py"
+      ],
+      "trial_scope": "Past-variance mapped1024/4096 genes,8D PCA with3000 fixed sampled past rows,800 updates/density10/energy.1; two strengths,24 scores. Original384 covariance guard and full32285-gene scorer unchanged.",
+      "limitations": "All permitted prepared past rows, not full430339 atlas. More genes can add noise; no blind validation or guarantee. Full-gene decoder already fit all mapped genes; this varies only encoder input coverage.",
       "research_family_exhausted": false
     }
   ],

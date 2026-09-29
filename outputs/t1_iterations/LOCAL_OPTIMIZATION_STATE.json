@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T06:59:52.798155+00:00",
+  "updated_utc": "2026-09-29T07:10:07.458179+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_noise_challenge.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_feature_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Train observation-noise.05/.1 variants with fixed800-update density10/energy.1; verify zero-noise replay and score24 unchanged challenge outcomes.",
+  "next_experiment": "Evaluate1024/4096 encoder feature panels with8D CNF,800 updates and unchanged original384 covariance guard; preserve24 full-panel challenge outcomes.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_noise_challenge_01"
+    "cnf_feature_challenge_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_noise_challenge_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_feature_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -410,12 +410,25 @@
     "decision": "Fixed800-update flow passes persistence on both source-cohort one-day folds:50.1993/52.5533 atstrength1, mean51.3763. First gain is small; earlier atlas8Dcontrolmean51.7123 still higher. Temporal diagnostic is positive but far below72, uses missing-gene placeholders and exposed stages; no promotion. Next test past-observation jitter0/.05/.1 with fixed likelihood/manifold training."
   },
   "cnf_noise_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_noise_challenge_01",
     "tests_passed": 89,
     "evaluations_planned": 24,
-    "pending_evaluations": 24,
+    "pending_evaluations": 0,
     "process_id": 23084,
-    "plan_sha256": "2117a4966ba7134ccc7ab50c3d3efc39ba051e89507a291eea3f460e3faf3bd6"
+    "plan_sha256": "2117a4966ba7134ccc7ab50c3d3efc39ba051e89507a291eea3f460e3faf3bd6",
+    "evaluations": 24,
+    "report_sha256": "c71a60366cfdbc7e6fe8a1f638aa29d9cfd1fe30be3877ae003bffcfdf77cdd1",
+    "results_report": "CNF_NOISE_RESULTS.json",
+    "decision": "Both observation-noise levels regress on every panel versus zero-noise800-update baseline52.8369; best noisy mean52.4979 at.05/strength1. Zero-noise training replay verified exactly. All24 outcomes preserved; this bounded jitter range does not help. Next test encoder gene coverage1024/4096 with original384 covariance guard."
+  },
+  "cnf_feature_job": {
+    "status": "running",
+    "run": "cnf_feature_challenge_01",
+    "tests_passed": 90,
+    "evaluations_planned": 24,
+    "pending_evaluations": 24,
+    "process_id": 17420,
+    "plan_sha256": "f01d1a0d2e30be11b40bb6bd3df54133a5762b641cdc8be6c45231aff88a22cf"
   }
 }
