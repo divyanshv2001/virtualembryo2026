@@ -31,13 +31,14 @@ class TemporaryForecastCache:
             raise
 
     @contextmanager
-    def read(self, name):
-        handle = self.handles.pop(name)
+    def read(self, name, consume=True):
+        handle = self.handles.pop(name) if consume else self.handles[name]
         try:
             handle.seek(0)
             yield np.load(handle, allow_pickle=False)
         finally:
-            handle.close()
+            if consume:
+                handle.close()
 
     def close(self):
         for handle in self.handles.values():
