@@ -1,0 +1,11 @@
+{
+  "updated_utc": "2026-09-29T12:09:21.629606+00:00",
+  "tests_passed": 119,
+  "command": "pytest outputs/t1_iterations -q -p no:cacheprovider --basetemp outputs/t1_iterations/private/pytest_tmp_51",
+  "checks": [
+    "Past-only batch trainer exactdefault64 and finite256 objective plus checkpoint batch compatibility",
+    "Temporal runner AST parses; archived head/abundance/donor/calibration checks enforced at runtime",
+    "Existing future-invariance, full-panel scoring and protected-gene/mass checks pass"
+  ],
+  "limitations": "Runtime archive checks remain pending until reached; no temporal score yet. Implementation tests cannot establish predictive accuracy."
+}

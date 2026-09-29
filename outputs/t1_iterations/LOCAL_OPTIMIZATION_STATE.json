@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T11:52:44.727031+00:00",
+  "updated_utc": "2026-09-29T12:09:21.629606+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_batch_challenge.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_batch_temporal.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Fixed width64 batches64/256/512,800updates, original full-panel decoder and matched controls;33development scores.",
+  "next_experiment": "Batch64/512 temporal diagnostics on twofixedsourcefolds,22scores including7archivecontrols each.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_batch_challenge_01"
+    "cnf_batch_temporal_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_batch_challenge_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_batch_temporal_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -723,14 +723,28 @@
     "results_report": "CNF_WIDTH_RESULTS.json"
   },
   "cnf_batch_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_batch_challenge_01",
     "evaluations_planned": 33,
-    "pending_evaluations": 33,
-    "decision": "Batch variance/sample exposure hypothesis; no promotion or official submission.",
+    "pending_evaluations": 0,
+    "decision": "Batch64/256/512 joint means53.5952/52.0741/54.0210; abundance52.8811/51.8338/53.1277. Batch512 improvesdirection/MMD butDEdecreases slightly; no72promotion. Next matched64/512 rolling8to9 and8.25to9.25 checks before integration.",
     "tests_passed": 119,
     "process_id": 16640,
     "worker_process_id": 12680,
-    "plan_sha256": "e3ecbcd05af958fd39d19503b8155387067c4ccd575446b23412bccf70ec3078"
+    "plan_sha256": "e3ecbcd05af958fd39d19503b8155387067c4ccd575446b23412bccf70ec3078",
+    "evaluations": 33,
+    "report_sha256": "408b7f209e0391d349ebd5a61d9f9bf6fdda3019a409cc3819eb2946f255329a",
+    "results_report": "CNF_BATCH_RESULTS.json"
+  },
+  "cnf_batch_temporal_job": {
+    "status": "running",
+    "run": "cnf_batch_temporal_01",
+    "evaluations_planned": 22,
+    "pending_evaluations": 22,
+    "decision": "Check rolling consistency of exposed challenge batch512gain versus retrained64 and archivedflows; no promotion.",
+    "tests_passed": 119,
+    "process_id": 6544,
+    "worker_process_id": 8436,
+    "plan_sha256": "851f8cb2619a19eb305c923133c0feff8afb633122fd0a75cb12c6a2f2950898"
   }
 }

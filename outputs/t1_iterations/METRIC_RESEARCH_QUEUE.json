@@ -5315,7 +5315,7 @@
     {
       "id": "continuous_flow_training_batch",
       "run": "cnf_batch_challenge_01",
-      "status": "implemented_running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_batch_challenge.py",
         "cnf_manifold_flow.py"
@@ -5325,7 +5325,24 @@
       "limitations": "Larger batches change both gradient variance and total example exposure; not an equal-example or equal-compute comparison. Sampled atlas13963pastrows, no independent embryos; reused E9.5 development cannot certify leaderboard readiness.",
       "research_family_exhausted": false,
       "tests_passed": 119,
-      "validation_report": "CNF_BATCH_VALIDATION.json"
+      "validation_report": "CNF_BATCH_VALIDATION.json",
+      "results_report": "CNF_BATCH_RESULTS.json",
+      "decision": "Batch64/256/512 joint means53.5952/52.0741/54.0210; abundance52.8811/51.8338/53.1277. Batch512 improvesdirection/MMD butDEdecreases slightly; no72promotion. Next matched64/512 rolling8to9 and8.25to9.25 checks before integration."
+    },
+    {
+      "id": "continuous_flow_batch_temporal",
+      "run": "cnf_batch_temporal_01",
+      "status": "implemented_running",
+      "implementation": [
+        "cnf_batch_temporal.py",
+        "cnf_manifold_flow.py"
+      ],
+      "primary_reference": "CNF_AUTHOR_REFERENCE.json",
+      "trial_scope": "Two sourcecohort rollingfolds8to9/8.25to9.25, originalwidth64,800updates,batch64/512; fourforecasts plus7archives each=22scores. Fullpanel/head/scorer fixed, past-only percutofftraining.",
+      "limitations": "Batch512 selected on exposed challengeE9.5; reusedsourcefolds and zeroabsentgeneplaceholders are diagnostics, not independentdomain/embryo validation. Largerbatches change totalexample exposure.",
+      "research_family_exhausted": false,
+      "tests_passed": 119,
+      "validation_report": "CNF_BATCH_TEMPORAL_VALIDATION.json"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."
