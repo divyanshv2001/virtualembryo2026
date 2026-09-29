@@ -31,12 +31,12 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Direct global past-gene trend ranking failed (best 55.3338 below unit16 55.4202; selected top64 overlaps only 3-4 true DE genes on reused development and 1-2 signs wrong). Next: test anchor-composition-weighted source temporal gene trends on historical source folds first; use E9.5 only after forecasts frozen, with unit16/persistence controls. Do not tune from the post-scoring DE diagnostic.",
+  "next_experiment": "Full-source stage means completed (116,175 past rows, 26,775 mapped genes, no dense matrix). Historical cardiac trend ranks were negative on both held-out source folds and full-source whole trends failed the two-fold improvement rule, so do not apply this gene-trend correction to E9.5. Next viable mechanism: bounded full-source latent-flow fit with D-only temporary feature cache and historical temporal controls; freeze compute/memory budget before training.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [],
-  "active_run_path": "private/de_rank_trend_challenge_01",
+  "active_run_path": "private/full_atlas_stage_means_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -1097,7 +1097,19 @@
     "plan_sha256": "68ffde332edd176c92abc5ea3b65c8270f390d162e1f0904fd1f0fd5eb5bc3cd",
     "storage": "D-only temporary cache; no retained full forecast matrices",
     "report_sha256": "085ca19d99bd4211a670d6681e89c157b6343fc7a9088ce1ed1a7ba4b77f4d5f",
-    "results_report": "DE_RANK_TREND_RESULTS.json"
-    ,"decision": "Not promoted: 18 valid scores, best trend_k64_s1.0 mean55.3338 vs unit16 55.4202. DE skill .52210 vs .52573; no joint gain. Post-scoring E9.5 diagnostic: top64 overlaps 3/4/3 truth DE genes and sign correct 2/2/2 across three reused panels. D-only cache closed; no official score claim."
+    "results_report": "DE_RANK_TREND_RESULTS.json",
+    "decision": "Not promoted: 18 valid scores, best trend_k64_s1.0 mean55.3338 vs unit16 55.4202. DE skill .52210 vs .52573; no joint gain. Post-scoring E9.5 diagnostic: top64 overlaps 3/4/3 truth DE genes and sign correct 2/2/2 across three reused panels. D-only cache closed; no official score claim."
+  },
+  "full_atlas_stage_means_job": {
+    "status": "completed",
+    "run": "full_atlas_stage_means_01",
+    "plan_sha256": "4b1c0927a4b62585ef39d30acc3ece5bb061de6d6fdfcef0461adeba599e8a44",
+    "source_rows": 116175,
+    "genes_mapped": 26775,
+    "storage": "D-only small sufficient statistics",
+    "report_sha256": "129194a0ce4efc5c89567e7a774e4711d2456346906d89025da197f88b471329",
+    "stage_means_sha256": "8a71070fde35bf2aa5292586059786bbba14e3f27b3f1af1e0e2efecd33d6960"
+    ,"screen_report": "FULL_SOURCE_RANK_TRANSFER_RESULTS.json"
+    ,"decision": "Full source stage statistics prepared with low RAM and no dense matrix. Held-out signed-rank diagnostic: whole full .10606 vs sampled .03030 at8to8.25, but full -.11301 vs sampled -.10616 at8.25to8.5; cardiac full -.01220/-.12923, no gain over sampled -.01220/-.12615. Predeclared two-fold screening rule failed; no challenge forecast from this gene trend."
   }
 }

@@ -5688,7 +5688,7 @@
     {
       "id": "full_source_stage_trend_statistics",
       "run": "full_atlas_stage_means_01",
-      "status": "running_preparation",
+      "status": "prepared_screened_not_promoted",
       "implementation": [
         "anchor_source_mapping_diagnostic.py",
         "full_atlas_stage_means.py"
@@ -5698,7 +5698,10 @@
       "trial_scope": "D-only two-pass sufficient statistics over full author-linked source atlas E7.5-E8.5. No dense full-atlas matrix and no E9.5 fitting. Historical source-stage checks first; challenge scoring only if viable, with frozen controls.",
       "limitations": "Cardiac proxy labels do not map one-to-one to challenge types; source full atlas has no independent embryo replication guarantee. Direct 8D nearest-source composition weighting rejected by ANCHOR_SOURCE_MAPPING_DIAGNOSTIC.json (median distance ratio 3.28).",
       "research_family_exhausted": false,
-      "feasibility_report": "ANCHOR_SOURCE_MAPPING_DIAGNOSTIC.json"
+      "feasibility_report": "ANCHOR_SOURCE_MAPPING_DIAGNOSTIC.json",
+      "stage_means_report": "private/full_atlas_stage_means_01/report.json",
+      "historical_screen": "FULL_SOURCE_RANK_TRANSFER_RESULTS.json",
+      "decision": "All 116,175 permitted E7.5-E8.5 source cells streamed to normalized stage statistics. Full-source whole trend improved one historical fold but regressed on the next; cardiac trend remained negative on both. The predeclared full-better-both-whole screen failed. No E9.5 challenge prediction from this trend, no family exhaustion."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

@@ -1,11 +1,11 @@
 # T1 compact research checkpoint
 
-Updated: 2026-09-29T17:46:23.292620+00:00
+Updated: 2026-09-29T18:01:17.448606+00:00
 
 Official best reported: **51.87**. Latest export: `T1_val__anchorslope_progress_20260929_01.h5ad`. Local>72 gate remains unmet.
 Official metrics: DE44.9, direction57.0, MMD53.5, variogram51.7. Latest screenshot shows S2WISH2 / Codex / AGENT, rank29 on that view; scoring-page rank131/270 is a different view.
 
-Next: Direct global past-gene trend ranking failed (best 55.3338 below unit16 55.4202; selected top64 overlaps only 3-4 true DE genes on reused development and 1-2 signs wrong). Next: test anchor-composition-weighted source temporal gene trends on historical source folds first; use E9.5 only after forecasts frozen, with unit16/persistence controls. Do not tune from the post-scoring DE diagnostic.
+Next: Full-source stage means completed (116,175 past rows, 26,775 mapped genes, no dense matrix). Historical cardiac trend ranks were negative on both held-out source folds and full-source whole trends failed the two-fold improvement rule, so do not apply this gene-trend correction to E9.5. Next viable mechanism: bounded full-source latent-flow fit with D-only temporary feature cache and historical temporal controls; freeze compute/memory budget before training.
 
 Active jobs: []
 
@@ -27,9 +27,7 @@ Latest: validated; 1903 payload bytes; actual usage {'input_tokens': 820, 'outpu
 
 ## Current experiment
 
-`de_rank_trend_challenge_01`: completed_not_promoted; planned 18, completed 18.
-copy=50.0; unit16=55.42023285891992; trend_k64_s0.5=55.29499420234109; trend_k64_s1.0=55.33383873237873; trend_k256_s0.5=55.25843946515568; trend_k256_s1.0=55.046686456026286
-Full metrics: [DE_RANK_TREND_RESULTS.json](DE_RANK_TREND_RESULTS.json).
+`full_atlas_stage_means_01`: completed; planned unknown, completed 0.
 
 ## Storage
 

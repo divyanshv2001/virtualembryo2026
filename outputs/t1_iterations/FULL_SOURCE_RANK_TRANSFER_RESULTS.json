@@ -1,0 +1,152 @@
+{
+  "created_utc": "2026-09-29T18:00:17.964549+00:00",
+  "scope": "Historical source-only pseudobulk signed-rank screening. Not challenge full-panel score or independent embryos.",
+  "source_report_sha256": "129194a0ce4efc5c89567e7a774e4711d2456346906d89025da197f88b471329",
+  "results": [
+    {
+      "group": "whole",
+      "cutoff": 8.0,
+      "target": 8.25,
+      "full_past_counts": [
+        10994,
+        14493,
+        16681
+      ],
+      "sampled_past_counts": [
+        1963,
+        3000,
+        3000
+      ],
+      "heldout_target_cells": 12935,
+      "scores": {
+        "sampled_past_trend": {
+          "valid": true,
+          "true_up": 36,
+          "true_down": 33,
+          "signed_overlap": 0.07246376811594203,
+          "chance": 0.043478260869565216,
+          "chance_adjusted_score": 0.030303030303030307
+        },
+        "full_past_trend": {
+          "valid": true,
+          "true_up": 36,
+          "true_down": 33,
+          "signed_overlap": 0.14492753623188406,
+          "chance": 0.043478260869565216,
+          "chance_adjusted_score": 0.10606060606060606
+        }
+      }
+    },
+    {
+      "group": "whole",
+      "cutoff": 8.25,
+      "target": 8.5,
+      "full_past_counts": [
+        10994,
+        14493,
+        16681,
+        15935
+      ],
+      "sampled_past_counts": [
+        1963,
+        3000,
+        3000,
+        3000
+      ],
+      "heldout_target_cells": 55072,
+      "scores": {
+        "sampled_past_trend": {
+          "valid": true,
+          "true_up": 198,
+          "true_down": 133,
+          "signed_overlap": 0.02416918429003021,
+          "chance": 0.11782477341389729,
+          "chance_adjusted_score": -0.10616438356164383
+        },
+        "full_past_trend": {
+          "valid": true,
+          "true_up": 198,
+          "true_down": 133,
+          "signed_overlap": 0.01812688821752266,
+          "chance": 0.11782477341389729,
+          "chance_adjusted_score": -0.113013698630137
+        }
+      }
+    },
+    {
+      "group": "cardiac",
+      "cutoff": 8.0,
+      "target": 8.25,
+      "full_past_counts": [
+        68,
+        435,
+        896
+      ],
+      "sampled_past_counts": [
+        68,
+        298,
+        436
+      ],
+      "heldout_target_cells": 683,
+      "scores": {
+        "sampled_past_trend": {
+          "valid": true,
+          "true_up": 46,
+          "true_down": 39,
+          "signed_overlap": 0.023529411764705882,
+          "chance": 0.03529411764705882,
+          "chance_adjusted_score": -0.012195121951219513
+        },
+        "full_past_trend": {
+          "valid": true,
+          "true_up": 46,
+          "true_down": 39,
+          "signed_overlap": 0.023529411764705882,
+          "chance": 0.03529411764705882,
+          "chance_adjusted_score": -0.012195121951219513
+        }
+      }
+    },
+    {
+      "group": "cardiac",
+      "cutoff": 8.25,
+      "target": 8.5,
+      "full_past_counts": [
+        68,
+        435,
+        896,
+        1361
+      ],
+      "sampled_past_counts": [
+        68,
+        298,
+        436,
+        678
+      ],
+      "heldout_target_cells": 3911,
+      "scores": {
+        "sampled_past_trend": {
+          "valid": true,
+          "true_up": 205,
+          "true_down": 169,
+          "signed_overlap": 0.0213903743315508,
+          "chance": 0.13101604278074866,
+          "chance_adjusted_score": -0.12615384615384614
+        },
+        "full_past_trend": {
+          "valid": true,
+          "true_up": 205,
+          "true_down": 169,
+          "signed_overlap": 0.01871657754010695,
+          "chance": 0.13101604278074866,
+          "chance_adjusted_score": -0.12923076923076923
+        }
+      }
+    }
+  ],
+  "screen": {
+    "full_better_both_whole": false,
+    "cardiac_results_valid": true
+  },
+  "limitations": "Target stage source cells excluded from learner stages and sampled target cells removed from held-out truth; labels may not match challenge ontology. Do not fit from this report."
+}
