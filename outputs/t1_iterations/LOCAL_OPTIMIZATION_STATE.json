@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T08:29:47.318043+00:00",
+  "updated_utc": "2026-09-29T08:40:50.910016+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,14 +31,14 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_feature_challenge.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Finish recent detectionwindow1/2 rolling checks on frozen flows; diagnose actual paired gains over abundance/global detection and per-metric evidence before further fitting.",
+  "next_experiment": "Finish same-stage latent alignment tests and diagnose mean/covariance shift, actual backoffs and all metric vectors; retain full temporal rejection evidence.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_recent_detection_temporal_01"
+    "cnf_alignment_challenge_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_recent_detection_temporal_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_alignment_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -150,7 +150,7 @@
     "status": "completed",
     "running": [],
     "report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-    "report_sha256": "b7063eb10552a67d6ab789c932b14f851e3dfcfba4ca5dacc95513b2eada4f62"
+    "report_sha256": "2fa04d619a792cf0f34a727b44b26c305aa0e3b5d04fa0ad3d4e4deb26ec4803"
   },
   "continuation_automation": {
     "id": "continue-t1-local-research",
@@ -514,12 +514,25 @@
     "decision": "Recent1/2/3 joint means53.7224/53.6489/53.5239 versus global53.5953. Latest-stage gain+.1271 has one slightly worse panel, not reliable promotion. All33 scores retained. Next rolling checks forwindows1/2 using exact archived flows and global abundance controls."
   },
   "cnf_recent_detection_temporal_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_recent_detection_temporal_01",
     "tests_passed": 99,
     "evaluations_planned": 18,
-    "pending_evaluations": 18,
+    "pending_evaluations": 0,
     "process_id": 4876,
-    "plan_sha256": "e3bcce099c72e37a75385d0091563a11897ba0dc329aa07dd0fbf854085c4df8"
+    "plan_sha256": "e3bcce099c72e37a75385d0091563a11897ba0dc329aa07dd0fbf854085c4df8",
+    "report_sha256": "3afed26ef39cabd64c8d5100a98b2724b8d6e1491d158f26a597f4782d832f5f",
+    "results_report": "CNF_RECENT_DETECTION_TEMPORAL_RESULTS.json",
+    "evaluations": 18,
+    "decision": "Recent1/2 joint rolling scores49.8385/51.4123 and48.9623/51.6117; both below persistence onfirst fold and worse than abundance onboth. Small challenge gain fails temporal consistency; all18 outcomes preserved. Next same-stage latent alignment sensitivity, no promotion."
+  },
+  "cnf_alignment_job": {
+    "status": "running",
+    "run": "cnf_alignment_challenge_01",
+    "tests_passed": 101,
+    "evaluations_planned": 39,
+    "pending_evaluations": 39,
+    "process_id": 17400,
+    "plan_sha256": "de9ee37bd3bc5577a888dbe2f2403bc561915005899109a2cf600ed5cb36ae37"
   }
 }

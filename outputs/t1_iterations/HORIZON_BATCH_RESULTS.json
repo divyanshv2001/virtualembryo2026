@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T07:53:18.115301+00:00",
+  "updated_utc": "2026-09-29T08:32:50.163469+00:00",
   "status": "completed",
   "runs": {
     "matched_horizon_audit_01": {
@@ -44701,6 +44701,1926 @@
         }
       ],
       "scope": "Two reused source-cohort one-day development folds, five archived controls and six new forecasts:22 scores. Past-only prepared samples, not full raw atlas. Missing official genes are zero placeholders; cell folds are not independent embryos or blind challenge tests."
+    },
+    "cnf_recent_detection_temporal_01": {
+      "report_sha256": "3afed26ef39cabd64c8d5100a98b2724b8d6e1491d158f26a597f4782d832f5f",
+      "plan_sha256": "e3bcce099c72e37a75385d0091563a11897ba0dc329aa07dd0fbf854085c4df8",
+      "folds": [
+        {
+          "cutoff": 8.0,
+          "target": 9.0,
+          "floor": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.26304274797439575,
+            "variogram": 0.009573637507855892
+          },
+          "ceiling": {
+            "de_score": 0.9358816276202219,
+            "de_direction": 0.8673063060165137,
+            "mmd_u": 0.007752883248031139,
+            "variogram": 0.00011852615716634318
+          },
+          "results": [
+            {
+              "candidate": "copy",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.26304274797439575,
+                "variogram": 0.009573637507855892
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit16",
+              "raw_metrics": {
+                "de_score": -0.2392108508014796,
+                "de_direction": -0.1276339315604888,
+                "mmd_u": 0.2767234444618225,
+                "variogram": 0.009945238940417767
+              },
+              "local_score": 47.142658332960416,
+              "skills": {
+                "de_score": 0.4433411214953271,
+                "de_direction": 0.46573119386378403,
+                "mmd_u": 0.48695238491166565,
+                "variogram": 0.4903639450816336
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "saved384_d0.0",
+              "raw_metrics": {
+                "de_score": -0.11220715166461158,
+                "de_direction": 0.0012039346574039623,
+                "mmd_u": 0.2659091651439667,
+                "variogram": 0.009607630781829357
+              },
+              "local_score": 49.200036578447445,
+              "skills": {
+                "de_score": 0.47172156619018024,
+                "de_direction": 0.500347273748285,
+                "mmd_u": 0.4972086486689718,
+                "variogram": 0.4991028059958329
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "dimension_neutral_d8",
+              "raw_metrics": {
+                "de_score": 0.1183723797780518,
+                "de_direction": 0.22562848019727663,
+                "mmd_u": 0.25778618454933167,
+                "variogram": 0.009460379369556904
+              },
+              "local_score": 52.929213820600275,
+              "skills": {
+                "de_score": 0.5337552742616034,
+                "de_direction": 0.5747617140025154,
+                "mmd_u": 0.50520118983104,
+                "variogram": 0.5030126709533049
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "dimension_growth1_d8",
+              "raw_metrics": {
+                "de_score": 0.11097410604192354,
+                "de_direction": 0.2119895482832681,
+                "mmd_u": 0.2571278512477875,
+                "variogram": 0.009457528591156006
+              },
+              "local_score": 52.76573302598844,
+              "skills": {
+                "de_score": 0.5315126050420168,
+                "de_direction": 0.5696132724277807,
+                "mmd_u": 0.505860222808331,
+                "variogram": 0.5030889702496784
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "flow_abundance_s1.0",
+              "raw_metrics": {
+                "de_score": -0.07768187422934646,
+                "de_direction": 0.09535473804153466,
+                "mmd_u": 0.24995426833629608,
+                "variogram": 0.00959070585668087
+              },
+              "local_score": 50.614632344474316,
+              "skills": {
+                "de_score": 0.4800759013282732,
+                "de_direction": 0.5290847277766468,
+                "mmd_u": 0.5131544822577047,
+                "variogram": 0.4995491074560088
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "flow_joint_systematic_s1.0",
+              "raw_metrics": {
+                "de_score": -0.1541307028360049,
+                "de_direction": -0.00648671092513288,
+                "mmd_u": 0.25327804684638977,
+                "variogram": 0.009802744723856449
+              },
+              "local_score": 49.17518459753685,
+              "skills": {
+                "de_score": 0.4619598295800365,
+                "de_direction": 0.49813717952801456,
+                "mmd_u": 0.5097488100154162,
+                "variogram": 0.49401475346865426
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "recent1_joint",
+              "raw_metrics": {
+                "de_score": -0.12453760789149197,
+                "de_direction": 0.028389087555681043,
+                "mmd_u": 0.24838241934776306,
+                "variogram": 0.009636526927351952
+              },
+              "local_score": 49.83846171049425,
+              "skills": {
+                "de_score": 0.4688079061148857,
+                "de_direction": 0.5083192756249147,
+                "mmd_u": 0.5147809589645129,
+                "variogram": 0.4983426699031925
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "recent2_joint",
+              "raw_metrics": {
+                "de_score": -0.1541307028360049,
+                "de_direction": -0.037542433735551585,
+                "mmd_u": 0.2523563802242279,
+                "variogram": 0.009847039356827736
+              },
+              "local_score": 48.96232904492295,
+              "skills": {
+                "de_score": 0.4619598295800365,
+                "de_direction": 0.4894076892918618,
+                "mmd_u": 0.5106886473884867,
+                "variogram": 0.4928740825735447
+              },
+              "calibration_valid": true
+            }
+          ],
+          "generation": {
+            "copy": {
+              "audit": {
+                "method": "persistence",
+                "replayed_from": "private\\dimensional_transport_horizon_01\\cutoff_8.0\\copy.npy"
+              },
+              "prediction_sha256": "53908b256a2f04ded456a9239a8231ce0c0f551e3bd9de2c1424524db824cd4d"
+            },
+            "unit16": {
+              "audit": {
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "guard_applied": true,
+                "population_mix": 1.0,
+                "expression_strength_used": 1.0,
+                "trusted_donor_fraction": 0.986,
+                "effective_sample_size": 1397.1175173673855,
+                "unique_donors": 1302,
+                "covariance_change_vs_reference": 0.11251184088826895,
+                "state_support": [
+                  143,
+                  1,
+                  82,
+                  73,
+                  166,
+                  73,
+                  0,
+                  165,
+                  92,
+                  24,
+                  36,
+                  37,
+                  5,
+                  19,
+                  66,
+                  1
+                ],
+                "alignment": "identity",
+                "covariance_limit": 0.4,
+                "feature_scaling": "unit",
+                "expression_factor_cap": 1.25,
+                "detection_strength": 0.5,
+                "maximum_probability_change": 0.02,
+                "attempted_additions": 8631,
+                "attempted_deletions": 16757,
+                "detection_candidate_covariance_change": 0.11372150904451062,
+                "detection_guard_rejected": false,
+                "actual_additions": 8631,
+                "actual_deletions": 16757,
+                "replayed_from": "private\\dimensional_transport_horizon_01\\cutoff_8.0\\unit16.npy"
+              },
+              "prediction_sha256": "5a511aa567339d7d5cd9b2604d845633d450567a782672fcaf6edded2483f967"
+            },
+            "saved384_d0.0": {
+              "audit": {
+                "attempted_additions": 0,
+                "attempted_deletions": 0,
+                "method": "cell_nmf_consensus_usage_drift",
+                "requested_expression": 1.0,
+                "requested_detection": 0.0,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.05594341256359671,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 0,
+                  "Blood progenitors": 286,
+                  "Cardiomyocytes FHF 1": 31,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 0,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors FHF": 37,
+                  "Cardiopharyngeal progenitors SHF": 0,
+                  "EMP": 1,
+                  "Embryo proper endothelium": 32,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 0,
+                  "Epicardium": 0,
+                  "Erythroid": 1,
+                  "Foregut": 0,
+                  "Gut tube": 146,
+                  "Haematoendothelial progenitors": 46,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 235,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 154,
+                  "Pharyngeal endoderm": 0,
+                  "Pharyngeal mesoderm": 1,
+                  "Surface ectoderm": 0,
+                  "Venous endothelium": 2
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.6713333333333333,
+                "actual_additions": 0,
+                "actual_deletions": 0,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "fit_audit": {
+                  "rank": 8,
+                  "fit_cells": 3000,
+                  "features": 384,
+                  "replicate_iterations": [
+                    159,
+                    126,
+                    125
+                  ],
+                  "usage_iterations": [
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40
+                  ],
+                  "convergence_warnings": 0,
+                  "consensus_cluster_sizes": [
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3
+                  ],
+                  "consensus_dispersion": [
+                    0.008059101860016732,
+                    0.006262875167234888,
+                    0.0106354333646103,
+                    0.026826587971851907,
+                    0.014192102725697299,
+                    0.03477137496681977,
+                    0.03251563013903399,
+                    0.011814020930998663
+                  ],
+                  "adaptation": "Three NMF replicas, median consensus, fixed-component multiplicative usage fitting; normalized abundance instead of raw counts, 384 guard features instead of2000 v-score genes, no component outlier filter. Ridge1 full-panel log-abundance decoder and within-type usage slopes are added forecasting hypotheses, not cNMF reproduction.",
+                  "scope": "Cell-level factors are not validated biological activity programs; convergence and consensus with three replicas do not establish recovery or temporal accuracy."
+                },
+                "replayed_from": "private\\dimensional_transport_horizon_01\\cutoff_8.0\\saved384_d0.0.npy"
+              },
+              "prediction_sha256": "0e6ee1508993d3631afe14efcca3497593fa179c7f2c1ad72f29a58603ccf3c0"
+            },
+            "dimension_neutral_d8": {
+              "audit": {
+                "fit_cells": 7963,
+                "fit_max_stage": 8.0,
+                "supported_genes": 13935,
+                "method": "Dimension-controlled stationary transport and full conditional positive head",
+                "scope": "Past-only coupled latent geometry/decoder-capacity sensitivity, no detection switches. Every latent dimensionality uses unchanged full-panel scoring and source sample stream.",
+                "positive_regression": "Full conditional covariance ridge1; support20. Own regression ablation, not a published biological model reproduction.",
+                "latent_flow": {
+                  "mode": "neutral",
+                  "fit_cells": 7963,
+                  "fit_max_stage": 8.0,
+                  "pca_fit_cells": 3000,
+                  "pca_budget": 3000,
+                  "requested_latent_dimensions": 8,
+                  "actual_latent_dimensions": 8,
+                  "coupling_cell_budget_per_stage": 512,
+                  "couplings": [
+                    {
+                      "iterations": 252,
+                      "converged": true,
+                      "fixed_point_error": 9.689271514151665e-07,
+                      "source_marginal_l1": 0.19713530175110835,
+                      "target_marginal_l1": 0.0074270720158997085,
+                      "coupling_mass": 1.003241245355587,
+                      "epsilon": 0.05,
+                      "marginal_penalties": [
+                        1.0,
+                        50.0
+                      ],
+                      "regularizer": "entropy, not KL(P,a outer b)",
+                      "source_stage": 7.5,
+                      "target_stage": 7.75,
+                      "source_cells": 512,
+                      "target_cells": 512
+                    },
+                    {
+                      "iterations": 256,
+                      "converged": true,
+                      "fixed_point_error": 9.915165255502956e-07,
+                      "source_marginal_l1": 0.13013802019605597,
+                      "target_marginal_l1": 0.00602035333128012,
+                      "coupling_mass": 1.0059838709872309,
+                      "epsilon": 0.05,
+                      "marginal_penalties": [
+                        1.0,
+                        50.0
+                      ],
+                      "regularizer": "entropy, not KL(P,a outer b)",
+                      "source_stage": 7.75,
+                      "target_stage": 8.0,
+                      "source_cells": 512,
+                      "target_cells": 512
+                    }
+                  ],
+                  "growth_prior_power": 0.0,
+                  "method": "Past-only PCA transport barycentric velocities, ridge1 affine field, quarter-day Euler extrapolation",
+                  "scope": "Latent-dimensionality ablation on the prepared cohort; not full raw-atlas training. PCA-all preserves the baseline stage sampling RNG stream. Entropy generalized scaling adaptation; not WOT/moscot reproduction. Growth priors are normalized bounded source weights, not calibrated birth/death rates. Future dynamics extrapolate an affine field learned from historical couplings. Every later endpoint used in a coupling is <=cutoff."
+                },
+                "mode": "abundance",
+                "strength": 0.5,
+                "backoff": 1.0,
+                "seed": 20260928,
+                "sampling": "independent",
+                "covariance_change_vs_reference": 0.16730301773594672,
+                "newly_detected_entries": 0,
+                "removed_detection_entries": 0,
+                "abundance_factor_cap": 2.0,
+                "detection_probability_delta_cap": 0.25,
+                "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+                "mapped_mass_conserved": true,
+                "protected_genes_unchanged": true,
+                "replayed_from": "private\\dimensional_transport_horizon_01\\cutoff_8.0\\dimension_neutral_d8.npy"
+              },
+              "prediction_sha256": "860682bc045df35217c9f2fdb6c3969c9f37e453bad3a326d133d6530c8535da"
+            },
+            "dimension_growth1_d8": {
+              "audit": {
+                "fit_cells": 7963,
+                "fit_max_stage": 8.0,
+                "supported_genes": 13935,
+                "method": "Dimension-controlled stationary transport and full conditional positive head",
+                "scope": "Past-only coupled latent geometry/decoder-capacity sensitivity, no detection switches. Every latent dimensionality uses unchanged full-panel scoring and source sample stream.",
+                "positive_regression": "Full conditional covariance ridge1; support20. Own regression ablation, not a published biological model reproduction.",
+                "latent_flow": {
+                  "mode": "growth1",
+                  "fit_cells": 7963,
+                  "fit_max_stage": 8.0,
+                  "pca_fit_cells": 3000,
+                  "pca_budget": 3000,
+                  "requested_latent_dimensions": 8,
+                  "actual_latent_dimensions": 8,
+                  "coupling_cell_budget_per_stage": 512,
+                  "couplings": [
+                    {
+                      "iterations": 252,
+                      "converged": true,
+                      "fixed_point_error": 9.69376382831122e-07,
+                      "source_marginal_l1": 0.20076489998473185,
+                      "target_marginal_l1": 0.007425771794490955,
+                      "coupling_mass": 1.0032627580668647,
+                      "epsilon": 0.05,
+                      "marginal_penalties": [
+                        1.0,
+                        50.0
+                      ],
+                      "regularizer": "entropy, not KL(P,a outer b)",
+                      "source_stage": 7.5,
+                      "target_stage": 7.75,
+                      "source_cells": 512,
+                      "target_cells": 512
+                    },
+                    {
+                      "iterations": 256,
+                      "converged": true,
+                      "fixed_point_error": 9.901435354953136e-07,
+                      "source_marginal_l1": 0.1304475478757658,
+                      "target_marginal_l1": 0.005998656944718097,
+                      "coupling_mass": 1.005958208658928,
+                      "epsilon": 0.05,
+                      "marginal_penalties": [
+                        1.0,
+                        50.0
+                      ],
+                      "regularizer": "entropy, not KL(P,a outer b)",
+                      "source_stage": 7.75,
+                      "target_stage": 8.0,
+                      "source_cells": 512,
+                      "target_cells": 512
+                    }
+                  ],
+                  "growth_prior_power": 1.0,
+                  "method": "Past-only PCA transport barycentric velocities, ridge1 affine field, quarter-day Euler extrapolation",
+                  "scope": "Latent-dimensionality ablation on the prepared cohort; not full raw-atlas training. PCA-all preserves the baseline stage sampling RNG stream. Entropy generalized scaling adaptation; not WOT/moscot reproduction. Growth priors are normalized bounded source weights, not calibrated birth/death rates. Future dynamics extrapolate an affine field learned from historical couplings. Every later endpoint used in a coupling is <=cutoff."
+                },
+                "mode": "abundance",
+                "strength": 0.5,
+                "backoff": 1.0,
+                "seed": 20260928,
+                "sampling": "independent",
+                "covariance_change_vs_reference": 0.17466448534911644,
+                "newly_detected_entries": 0,
+                "removed_detection_entries": 0,
+                "abundance_factor_cap": 2.0,
+                "detection_probability_delta_cap": 0.25,
+                "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+                "mapped_mass_conserved": true,
+                "protected_genes_unchanged": true,
+                "replayed_from": "private\\dimensional_transport_horizon_01\\cutoff_8.0\\dimension_growth1_d8.npy"
+              },
+              "prediction_sha256": "ad397897e4208f6541496aa9e67088ec4af3c6a9bb12ef6f10389c18783d98e5"
+            },
+            "flow_abundance_s1.0": {
+              "audit": {
+                "fit_cells": 7963,
+                "fit_max_stage": 8.0,
+                "supported_genes": 13935,
+                "method": "800-update likelihood/energy/manifold flow temporal check",
+                "scope": "Past-only fit at each rolling cutoff; source-cohort diagnostic with zero placeholders for absent challenge genes. Reused developmental folds, not independent embryos or blind validation.",
+                "conditional_ridge_strength": 1.0,
+                "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+                "encoder_features": 4096,
+                "covariance_guard_features": 384,
+                "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+                "training_steps": 800,
+                "energy_weight": 0.1,
+                "density_weight": 10.0,
+                "training_history": [
+                  {
+                    "step": 50,
+                    "loss": 15.500225067138672,
+                    "negative_log_likelihood": 10.976118087768555,
+                    "energy": 0.01466120034456253,
+                    "manifold_density": 0.45226413011550903,
+                    "sampled_past_stage": 8.0
+                  },
+                  {
+                    "step": 100,
+                    "loss": 11.194064140319824,
+                    "negative_log_likelihood": 11.193130493164062,
+                    "energy": 0.009338034316897392,
+                    "manifold_density": 0.0,
+                    "sampled_past_stage": 7.5
+                  },
+                  {
+                    "step": 150,
+                    "loss": 16.71480941772461,
+                    "negative_log_likelihood": 11.662388801574707,
+                    "energy": 0.12950721383094788,
+                    "manifold_density": 0.5039469599723816,
+                    "sampled_past_stage": 8.0
+                  },
+                  {
+                    "step": 200,
+                    "loss": 15.843002319335938,
+                    "negative_log_likelihood": 10.807591438293457,
+                    "energy": 0.17081177234649658,
+                    "manifold_density": 0.5018329620361328,
+                    "sampled_past_stage": 7.75
+                  },
+                  {
+                    "step": 250,
+                    "loss": 10.110663414001465,
+                    "negative_log_likelihood": 10.086699485778809,
+                    "energy": 0.23963990807533264,
+                    "manifold_density": 0.0,
+                    "sampled_past_stage": 7.5
+                  },
+                  {
+                    "step": 300,
+                    "loss": 14.377625465393066,
+                    "negative_log_likelihood": 9.476442337036133,
+                    "energy": 1.804558277130127,
+                    "manifold_density": 0.47207269072532654,
+                    "sampled_past_stage": 8.0
+                  },
+                  {
+                    "step": 350,
+                    "loss": 14.419217109680176,
+                    "negative_log_likelihood": 8.827285766601562,
+                    "energy": 0.8959643840789795,
+                    "manifold_density": 0.5502334833145142,
+                    "sampled_past_stage": 7.75
+                  },
+                  {
+                    "step": 400,
+                    "loss": 15.71693229675293,
+                    "negative_log_likelihood": 9.733196258544922,
+                    "energy": 0.9953848123550415,
+                    "manifold_density": 0.5884197354316711,
+                    "sampled_past_stage": 7.75
+                  },
+                  {
+                    "step": 450,
+                    "loss": 10.051116943359375,
+                    "negative_log_likelihood": 10.000293731689453,
+                    "energy": 0.508228063583374,
+                    "manifold_density": 0.0,
+                    "sampled_past_stage": 7.5
+                  },
+                  {
+                    "step": 500,
+                    "loss": 9.447160720825195,
+                    "negative_log_likelihood": 9.361324310302734,
+                    "energy": 0.8583619594573975,
+                    "manifold_density": 0.0,
+                    "sampled_past_stage": 7.5
+                  },
+                  {
+                    "step": 550,
+                    "loss": 15.326116561889648,
+                    "negative_log_likelihood": 9.159621238708496,
+                    "energy": 1.3391985893249512,
+                    "manifold_density": 0.6032575964927673,
+                    "sampled_past_stage": 7.75
+                  },
+                  {
+                    "step": 600,
+                    "loss": 12.582436561584473,
+                    "negative_log_likelihood": 7.550112247467041,
+                    "energy": 2.1288650035858154,
+                    "manifold_density": 0.4819437861442566,
+                    "sampled_past_stage": 8.0
+                  },
+                  {
+                    "step": 650,
+                    "loss": 9.447675704956055,
+                    "negative_log_likelihood": 9.38125991821289,
+                    "energy": 0.6641556024551392,
+                    "manifold_density": 0.0,
+                    "sampled_past_stage": 7.5
+                  },
+                  {
+                    "step": 700,
+                    "loss": 14.865609169006348,
+                    "negative_log_likelihood": 8.805346488952637,
+                    "energy": 1.507063627243042,
+                    "manifold_density": 0.5909556150436401,
+                    "sampled_past_stage": 7.75
+                  },
+                  {
+                    "step": 750,
+                    "loss": 9.586540222167969,
+                    "negative_log_likelihood": 9.504228591918945,
+                    "energy": 0.8231146335601807,
+                    "manifold_density": 0.0,
+                    "sampled_past_stage": 7.5
+                  },
+                  {
+                    "step": 800,
+                    "loss": 13.858271598815918,
+                    "negative_log_likelihood": 8.236478805541992,
+                    "energy": 2.564732789993286,
+                    "manifold_density": 0.536531925201416,
+                    "sampled_past_stage": 8.0
+                  }
+                ],
+                "mode": "abundance",
+                "strength": 1.0,
+                "backoff": 1.0,
+                "seed": 20260928,
+                "sampling": "independent",
+                "covariance_change_vs_reference": 0.15742429933752927,
+                "newly_detected_entries": 0,
+                "removed_detection_entries": 0,
+                "abundance_factor_cap": 2.0,
+                "detection_probability_delta_cap": 0.25,
+                "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+                "mapped_mass_conserved": true,
+                "protected_genes_unchanged": true,
+                "replayed_from": "private\\cnf_hurdle_temporal_01\\cutoff_8.0\\flow_abundance_s1.0.npy"
+              },
+              "prediction_sha256": "b42822ed954af1b3d5bacfd61f8cd9f11ab7639200aae353f6f3f31176232e68"
+            },
+            "flow_joint_systematic_s1.0": {
+              "audit": {
+                "fit_cells": 7963,
+                "fit_max_stage": 8.0,
+                "supported_genes": 13935,
+                "method": "800-update likelihood/energy/manifold flow temporal check",
+                "scope": "Past-only fit at each rolling cutoff; source-cohort diagnostic with zero placeholders for absent challenge genes. Reused developmental folds, not independent embryos or blind validation.",
+                "conditional_ridge_strength": 1.0,
+                "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+                "encoder_features": 4096,
+                "covariance_guard_features": 384,
+                "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+                "training_steps": 800,
+                "energy_weight": 0.1,
+                "density_weight": 10.0,
+                "training_history": [
+                  {
+                    "step": 50,
+                    "loss": 15.500225067138672,
+                    "negative_log_likelihood": 10.976118087768555,
+                    "energy": 0.01466120034456253,
+                    "manifold_density": 0.45226413011550903,
+                    "sampled_past_stage": 8.0
+                  },
+                  {
+                    "step": 100,
+                    "loss": 11.194064140319824,
+                    "negative_log_likelihood": 11.193130493164062,
+                    "energy": 0.009338034316897392,
+                    "manifold_density": 0.0,
+                    "sampled_past_stage": 7.5
+                  },
+                  {
+                    "step": 150,
+                    "loss": 16.71480941772461,
+                    "negative_log_likelihood": 11.662388801574707,
+                    "energy": 0.12950721383094788,
+                    "manifold_density": 0.5039469599723816,
+                    "sampled_past_stage": 8.0
+                  },
+                  {
+                    "step": 200,
+                    "loss": 15.843002319335938,
+                    "negative_log_likelihood": 10.807591438293457,
+                    "energy": 0.17081177234649658,
+                    "manifold_density": 0.5018329620361328,
+                    "sampled_past_stage": 7.75
+                  },
+                  {
+                    "step": 250,
+                    "loss": 10.110663414001465,
+                    "negative_log_likelihood": 10.086699485778809,
+                    "energy": 0.23963990807533264,
+                    "manifold_density": 0.0,
+                    "sampled_past_stage": 7.5
+                  },
+                  {
+                    "step": 300,
+                    "loss": 14.377625465393066,
+                    "negative_log_likelihood": 9.476442337036133,
+                    "energy": 1.804558277130127,
+                    "manifold_density": 0.47207269072532654,
+                    "sampled_past_stage": 8.0
+                  },
+                  {
+                    "step": 350,
+                    "loss": 14.419217109680176,
+                    "negative_log_likelihood": 8.827285766601562,
+                    "energy": 0.8959643840789795,
+                    "manifold_density": 0.5502334833145142,
+                    "sampled_past_stage": 7.75
+                  },
+                  {
+                    "step": 400,
+                    "loss": 15.71693229675293,
+                    "negative_log_likelihood": 9.733196258544922,
+                    "energy": 0.9953848123550415,
+                    "manifold_density": 0.5884197354316711,
+                    "sampled_past_stage": 7.75
+                  },
+                  {
+                    "step": 450,
+                    "loss": 10.051116943359375,
+                    "negative_log_likelihood": 10.000293731689453,
+                    "energy": 0.508228063583374,
+                    "manifold_density": 0.0,
+                    "sampled_past_stage": 7.5
+                  },
+                  {
+                    "step": 500,
+                    "loss": 9.447160720825195,
+                    "negative_log_likelihood": 9.361324310302734,
+                    "energy": 0.8583619594573975,
+                    "manifold_density": 0.0,
+                    "sampled_past_stage": 7.5
+                  },
+                  {
+                    "step": 550,
+                    "loss": 15.326116561889648,
+                    "negative_log_likelihood": 9.159621238708496,
+                    "energy": 1.3391985893249512,
+                    "manifold_density": 0.6032575964927673,
+                    "sampled_past_stage": 7.75
+                  },
+                  {
+                    "step": 600,
+                    "loss": 12.582436561584473,
+                    "negative_log_likelihood": 7.550112247467041,
+                    "energy": 2.1288650035858154,
+                    "manifold_density": 0.4819437861442566,
+                    "sampled_past_stage": 8.0
+                  },
+                  {
+                    "step": 650,
+                    "loss": 9.447675704956055,
+                    "negative_log_likelihood": 9.38125991821289,
+                    "energy": 0.6641556024551392,
+                    "manifold_density": 0.0,
+                    "sampled_past_stage": 7.5
+                  },
+                  {
+                    "step": 700,
+                    "loss": 14.865609169006348,
+                    "negative_log_likelihood": 8.805346488952637,
+                    "energy": 1.507063627243042,
+                    "manifold_density": 0.5909556150436401,
+                    "sampled_past_stage": 7.75
+                  },
+                  {
+                    "step": 750,
+                    "loss": 9.586540222167969,
+                    "negative_log_likelihood": 9.504228591918945,
+                    "energy": 0.8231146335601807,
+                    "manifold_density": 0.0,
+                    "sampled_past_stage": 7.5
+                  },
+                  {
+                    "step": 800,
+                    "loss": 13.858271598815918,
+                    "negative_log_likelihood": 8.236478805541992,
+                    "energy": 2.564732789993286,
+                    "manifold_density": 0.536531925201416,
+                    "sampled_past_stage": 8.0
+                  }
+                ],
+                "mode": "joint",
+                "strength": 1.0,
+                "backoff": 1.0,
+                "seed": 20260928,
+                "sampling": "systematic",
+                "covariance_change_vs_reference": 0.17161919530676595,
+                "newly_detected_entries": 48482,
+                "removed_detection_entries": 142555,
+                "abundance_factor_cap": 2.0,
+                "detection_probability_delta_cap": 0.25,
+                "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+                "mapped_mass_conserved": true,
+                "protected_genes_unchanged": true,
+                "replayed_from": "private\\cnf_hurdle_temporal_01\\cutoff_8.0\\flow_joint_systematic_s1.0.npy"
+              },
+              "prediction_sha256": "32446e12ca87c2035e46cf6170e5537fd69d6a08db9b98f9437f1e77074e61c5"
+            },
+            "recent1_joint": {
+              "audit": {
+                "fit_cells": 7963,
+                "fit_max_stage": 8.0,
+                "supported_genes": 13935,
+                "method": "Frozen CNF, global full conditional abundance, recent-stage linear detection",
+                "scope": "Only detection probabilities change; global positive coefficients/centroids and encoder/flow fixed. Past-only local stationarity hypothesis, not published biological-model reproduction.",
+                "conditional_ridge_strength": 1.0,
+                "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+                "encoder_features": 4096,
+                "covariance_guard_features": 384,
+                "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+                "recent_detection_stages": [
+                  8.0
+                ],
+                "recent_detection_fit_cells": 3000,
+                "mode": "joint",
+                "strength": 1.0,
+                "backoff": 1.0,
+                "seed": 20260928,
+                "sampling": "systematic",
+                "covariance_change_vs_reference": 0.19374413197240556,
+                "newly_detected_entries": 57064,
+                "removed_detection_entries": 115011,
+                "abundance_factor_cap": 2.0,
+                "detection_probability_delta_cap": 0.25,
+                "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+                "mapped_mass_conserved": true,
+                "protected_genes_unchanged": true
+              },
+              "prediction_sha256": "d673302f970a97e9f417dad12dcc3e886118347069706edb85d9233cfb68a9f4"
+            },
+            "recent2_joint": {
+              "audit": {
+                "fit_cells": 7963,
+                "fit_max_stage": 8.0,
+                "supported_genes": 13935,
+                "method": "Frozen CNF, global full conditional abundance, recent-stage linear detection",
+                "scope": "Only detection probabilities change; global positive coefficients/centroids and encoder/flow fixed. Past-only local stationarity hypothesis, not published biological-model reproduction.",
+                "conditional_ridge_strength": 1.0,
+                "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+                "encoder_features": 4096,
+                "covariance_guard_features": 384,
+                "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+                "recent_detection_stages": [
+                  7.75,
+                  8.0
+                ],
+                "recent_detection_fit_cells": 6000,
+                "mode": "joint",
+                "strength": 1.0,
+                "backoff": 1.0,
+                "seed": 20260928,
+                "sampling": "systematic",
+                "covariance_change_vs_reference": 0.18517760306211148,
+                "newly_detected_entries": 52362,
+                "removed_detection_entries": 137385,
+                "abundance_factor_cap": 2.0,
+                "detection_probability_delta_cap": 0.25,
+                "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+                "mapped_mass_conserved": true,
+                "protected_genes_unchanged": true
+              },
+              "prediction_sha256": "da29ae2bbcf2634d6cf1c6d854413af97e586cabfb2455cb39b47bcf668dc859"
+            }
+          }
+        },
+        {
+          "cutoff": 8.25,
+          "target": 9.25,
+          "floor": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.2375742495059967,
+            "variogram": 0.008673261851072311
+          },
+          "ceiling": {
+            "de_score": 0.9165247018739352,
+            "de_direction": 0.8566698563410718,
+            "mmd_u": 0.002615219447761774,
+            "variogram": 0.00012109167437301949
+          },
+          "results": [
+            {
+              "candidate": "copy",
+              "raw_metrics": {
+                "de_score": 0.0,
+                "de_direction": 0.0,
+                "mmd_u": 0.2375742495059967,
+                "variogram": 0.008673261851072311
+              },
+              "local_score": 50.0,
+              "skills": {
+                "de_score": 0.5,
+                "de_direction": 0.5,
+                "mmd_u": 0.5,
+                "variogram": 0.5
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "unit16",
+              "raw_metrics": {
+                "de_score": -0.3287904599659284,
+                "de_direction": -0.07611305688343999,
+                "mmd_u": 0.2259478121995926,
+                "variogram": 0.008606153540313244
+              },
+              "local_score": 47.98714389154627,
+              "skills": {
+                "de_score": 0.4239558707643814,
+                "de_direction": 0.4787328678973971,
+                "mmd_u": 0.5126845405062341,
+                "variogram": 0.5019694604907392
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "saved384_d0.0",
+              "raw_metrics": {
+                "de_score": -0.005110732538330506,
+                "de_direction": 0.09910054820824371,
+                "mmd_u": 0.22197532653808594,
+                "variogram": 0.008473003283143044
+              },
+              "local_score": 51.36612769509718,
+              "skills": {
+                "de_score": 0.49860982391102876,
+                "de_direction": 0.5306957452121235,
+                "mmd_u": 0.5171673628650272,
+                "variogram": 0.5059233790533778
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "dimension_neutral_d8",
+              "raw_metrics": {
+                "de_score": -0.131175468483816,
+                "de_direction": 0.1498642806416642,
+                "mmd_u": 0.23376354575157166,
+                "variogram": 0.008657390251755714
+              },
+              "local_score": 50.49530920633336,
+              "skills": {
+                "de_score": 0.46660884648742407,
+                "de_direction": 0.5479266503235288,
+                "mmd_u": 0.5040877961937433,
+                "variogram": 0.500464395012362
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "dimension_growth1_d8",
+              "raw_metrics": {
+                "de_score": -0.1345826235093697,
+                "de_direction": 0.14900018976757495,
+                "mmd_u": 0.2333872765302658,
+                "variogram": 0.008663840591907501
+              },
+              "local_score": 50.47598424868731,
+              "skills": {
+                "de_score": 0.4658008658008658,
+                "de_direction": 0.5476239932524264,
+                "mmd_u": 0.504495054218343,
+                "variogram": 0.5002755572902357
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "flow_abundance_s1.0",
+              "raw_metrics": {
+                "de_score": 0.005110732538330506,
+                "de_direction": 0.11766844224238932,
+                "mmd_u": 0.20986799895763397,
+                "variogram": 0.008432743139564991
+              },
+              "local_score": 52.03915837144745,
+              "skills": {
+                "de_score": 0.5013979496738117,
+                "de_direction": 0.5368711414506951,
+                "mmd_u": 0.5313269003098565,
+                "variogram": 0.5071312042019541
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "flow_joint_systematic_s1.0",
+              "raw_metrics": {
+                "de_score": -0.09880749574105614,
+                "de_direction": 0.1104107985892109,
+                "mmd_u": 0.20583872497081757,
+                "variogram": 0.0081478301435709
+              },
+              "local_score": 51.62498650824493,
+              "skills": {
+                "de_score": 0.47442680776014107,
+                "de_direction": 0.534440329080872,
+                "mmd_u": 0.5362126761773823,
+                "variogram": 0.5158463900949065
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "recent1_joint",
+              "raw_metrics": {
+                "de_score": -0.12095400340715501,
+                "de_direction": 0.10023499735660008,
+                "mmd_u": 0.2048255205154419,
+                "variogram": 0.008198251016438007
+              },
+              "local_score": 51.41227583007637,
+              "skills": {
+                "de_score": 0.46904969485614645,
+                "de_direction": 0.531068967936273,
+                "mmd_u": 0.5374554282046862,
+                "variogram": 0.5142823207062651
+              },
+              "calibration_valid": true
+            },
+            {
+              "candidate": "recent2_joint",
+              "raw_metrics": {
+                "de_score": -0.09880749574105614,
+                "de_direction": 0.10884291671628589,
+                "mmd_u": 0.2049185335636139,
+                "variogram": 0.008202837780117989
+              },
+              "local_score": 51.611665556752165,
+              "skills": {
+                "de_score": 0.47442680776014107,
+                "de_direction": 0.5339180847820783,
+                "mmd_u": 0.53734110240394,
+                "variogram": 0.5141405085539241
+              },
+              "calibration_valid": true
+            }
+          ],
+          "generation": {
+            "copy": {
+              "audit": {
+                "method": "persistence",
+                "replayed_from": "private\\dimensional_transport_horizon_01\\cutoff_8.25\\copy.npy"
+              },
+              "prediction_sha256": "f991bb722bc73fe1b4135b16a6a7a3db7132c306103559448dc13289eb73ae4e"
+            },
+            "unit16": {
+              "audit": {
+                "mapping": {
+                  "mapped_genes": 26775,
+                  "protected_genes": 5510,
+                  "policy": "Unique exact symbols only; mapped abundance mass conserved within each donor. Protected genes unchanged. No full-panel renormalization."
+                },
+                "guard_applied": true,
+                "population_mix": 1.0,
+                "expression_strength_used": 1.0,
+                "trusted_donor_fraction": 0.99,
+                "effective_sample_size": 1423.0487179949341,
+                "unique_donors": 1334,
+                "covariance_change_vs_reference": 0.1709030360203553,
+                "state_support": [
+                  136,
+                  65,
+                  203,
+                  10,
+                  86,
+                  55,
+                  113,
+                  25,
+                  10,
+                  106,
+                  85,
+                  193,
+                  90,
+                  37,
+                  172,
+                  40
+                ],
+                "alignment": "identity",
+                "covariance_limit": 0.4,
+                "feature_scaling": "unit",
+                "expression_factor_cap": 1.25,
+                "detection_strength": 0.5,
+                "maximum_probability_change": 0.02,
+                "attempted_additions": 22466,
+                "attempted_deletions": 24091,
+                "detection_candidate_covariance_change": 0.17236713534616505,
+                "detection_guard_rejected": false,
+                "actual_additions": 22466,
+                "actual_deletions": 24091,
+                "replayed_from": "private\\dimensional_transport_horizon_01\\cutoff_8.25\\unit16.npy"
+              },
+              "prediction_sha256": "20ec068eb5979bde5541166183dc3cad964eb9e57ce7682f8fc60ea7d36a3d43"
+            },
+            "saved384_d0.0": {
+              "audit": {
+                "attempted_additions": 0,
+                "attempted_deletions": 0,
+                "method": "cell_nmf_consensus_usage_drift",
+                "requested_expression": 1.0,
+                "requested_detection": 0.0,
+                "backoff": 1.0,
+                "covariance_change_vs_reference": 0.14015833267277958,
+                "type_support": {
+                  "Anterior cardiopharyngeal progenitors": 15,
+                  "Blood progenitors": 119,
+                  "Cardiomyocytes FHF 1": 117,
+                  "Cardiomyocytes FHF 2": 0,
+                  "Cardiomyocytes SHF 1": 56,
+                  "Cardiomyocytes SHF 2": 0,
+                  "Cardiopharyngeal progenitors": 0,
+                  "Cardiopharyngeal progenitors FHF": 97,
+                  "Cardiopharyngeal progenitors SHF": 4,
+                  "EMP": 17,
+                  "Embryo proper endothelium": 67,
+                  "Embryo proper mesothelium": 0,
+                  "Endocardium": 1,
+                  "Epicardium": 6,
+                  "Erythroid": 396,
+                  "Foregut": 2,
+                  "Gut tube": 59,
+                  "Haematoendothelial progenitors": 9,
+                  "Lateral plate mesoderm": 288,
+                  "Mesenchyme": 299,
+                  "Migratory neural crest": 0,
+                  "Non-neural ectoderm": 258,
+                  "Pharyngeal endoderm": 5,
+                  "Pharyngeal mesoderm": 11,
+                  "Surface ectoderm": 1,
+                  "Venous endothelium": 49
+                },
+                "minimum_source_cells": 20,
+                "minimum_positive_cells": 10,
+                "supported_donor_fraction": 0.7906666666666666,
+                "actual_additions": 0,
+                "actual_deletions": 0,
+                "fixed_cell_counts": true,
+                "assumption": "Within-type historical abundance/detection trends persist; annotation strings are not measured lineage links.",
+                "fit_audit": {
+                  "rank": 8,
+                  "fit_cells": 3000,
+                  "features": 384,
+                  "replicate_iterations": [
+                    95,
+                    200,
+                    84
+                  ],
+                  "usage_iterations": [
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40,
+                    40
+                  ],
+                  "convergence_warnings": 1,
+                  "consensus_cluster_sizes": [
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3
+                  ],
+                  "consensus_dispersion": [
+                    0.028002244782035595,
+                    0.013356682045371762,
+                    0.06924512910488885,
+                    0.009123007990364073,
+                    0.06738493024228102,
+                    0.010704869308864565,
+                    0.04563401786047869,
+                    0.020261331845189745
+                  ],
+                  "adaptation": "Three NMF replicas, median consensus, fixed-component multiplicative usage fitting; normalized abundance instead of raw counts, 384 guard features instead of2000 v-score genes, no component outlier filter. Ridge1 full-panel log-abundance decoder and within-type usage slopes are added forecasting hypotheses, not cNMF reproduction.",
+                  "scope": "Cell-level factors are not validated biological activity programs; convergence and consensus with three replicas do not establish recovery or temporal accuracy."
+                },
+                "replayed_from": "private\\dimensional_transport_horizon_01\\cutoff_8.25\\saved384_d0.0.npy"
+              },
+              "prediction_sha256": "ae65a35c555d8d166d5beefb6ec5c97e9a1d4833f1c4c1f20f6a278a377f3dbb"
+            },
+            "dimension_neutral_d8": {
+              "audit": {
+                "fit_cells": 10963,
+                "fit_max_stage": 8.25,
+                "supported_genes": 14462,
+                "method": "Dimension-controlled stationary transport and full conditional positive head",
+                "scope": "Past-only coupled latent geometry/decoder-capacity sensitivity, no detection switches. Every latent dimensionality uses unchanged full-panel scoring and source sample stream.",
+                "positive_regression": "Full conditional covariance ridge1; support20. Own regression ablation, not a published biological model reproduction.",
+                "latent_flow": {
+                  "mode": "neutral",
+                  "fit_cells": 10963,
+                  "fit_max_stage": 8.25,
+                  "pca_fit_cells": 3000,
+                  "pca_budget": 3000,
+                  "requested_latent_dimensions": 8,
+                  "actual_latent_dimensions": 8,
+                  "coupling_cell_budget_per_stage": 512,
+                  "couplings": [
+                    {
+                      "iterations": 254,
+                      "converged": true,
+                      "fixed_point_error": 9.982048965184731e-07,
+                      "source_marginal_l1": 0.16307967087097455,
+                      "target_marginal_l1": 0.007278152471890754,
+                      "coupling_mass": 1.0039566550463008,
+                      "epsilon": 0.05,
+                      "marginal_penalties": [
+                        1.0,
+                        50.0
+                      ],
+                      "regularizer": "entropy, not KL(P,a outer b)",
+                      "source_stage": 7.5,
+                      "target_stage": 7.75,
+                      "source_cells": 512,
+                      "target_cells": 512
+                    },
+                    {
+                      "iterations": 258,
+                      "converged": true,
+                      "fixed_point_error": 9.990494205247558e-07,
+                      "source_marginal_l1": 0.13975541827403404,
+                      "target_marginal_l1": 0.006996256068131649,
+                      "coupling_mass": 1.0069962560681318,
+                      "epsilon": 0.05,
+                      "marginal_penalties": [
+                        1.0,
+                        50.0
+                      ],
+                      "regularizer": "entropy, not KL(P,a outer b)",
+                      "source_stage": 7.75,
+                      "target_stage": 8.0,
+                      "source_cells": 512,
+                      "target_cells": 512
+                    },
+                    {
+                      "iterations": 255,
+                      "converged": true,
+                      "fixed_point_error": 9.993850147438366e-07,
+                      "source_marginal_l1": 0.2811381999114204,
+                      "target_marginal_l1": 0.00660769747188621,
+                      "coupling_mass": 1.0054982336891847,
+                      "epsilon": 0.05,
+                      "marginal_penalties": [
+                        1.0,
+                        50.0
+                      ],
+                      "regularizer": "entropy, not KL(P,a outer b)",
+                      "source_stage": 8.0,
+                      "target_stage": 8.25,
+                      "source_cells": 512,
+                      "target_cells": 512
+                    }
+                  ],
+                  "growth_prior_power": 0.0,
+                  "method": "Past-only PCA transport barycentric velocities, ridge1 affine field, quarter-day Euler extrapolation",
+                  "scope": "Latent-dimensionality ablation on the prepared cohort; not full raw-atlas training. PCA-all preserves the baseline stage sampling RNG stream. Entropy generalized scaling adaptation; not WOT/moscot reproduction. Growth priors are normalized bounded source weights, not calibrated birth/death rates. Future dynamics extrapolate an affine field learned from historical couplings. Every later endpoint used in a coupling is <=cutoff."
+                },
+                "mode": "abundance",
+                "strength": 0.5,
+                "backoff": 1.0,
+                "seed": 20260928,
+                "sampling": "independent",
+                "covariance_change_vs_reference": 0.11376528024663236,
+                "newly_detected_entries": 0,
+                "removed_detection_entries": 0,
+                "abundance_factor_cap": 2.0,
+                "detection_probability_delta_cap": 0.25,
+                "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+                "mapped_mass_conserved": true,
+                "protected_genes_unchanged": true,
+                "replayed_from": "private\\dimensional_transport_horizon_01\\cutoff_8.25\\dimension_neutral_d8.npy"
+              },
+              "prediction_sha256": "2158c3cf6728f7ff64c632e487196398ae9a8d6c60626458ffe1643bbc5dfc6a"
+            },
+            "dimension_growth1_d8": {
+              "audit": {
+                "fit_cells": 10963,
+                "fit_max_stage": 8.25,
+                "supported_genes": 14462,
+                "method": "Dimension-controlled stationary transport and full conditional positive head",
+                "scope": "Past-only coupled latent geometry/decoder-capacity sensitivity, no detection switches. Every latent dimensionality uses unchanged full-panel scoring and source sample stream.",
+                "positive_regression": "Full conditional covariance ridge1; support20. Own regression ablation, not a published biological model reproduction.",
+                "latent_flow": {
+                  "mode": "growth1",
+                  "fit_cells": 10963,
+                  "fit_max_stage": 8.25,
+                  "pca_fit_cells": 3000,
+                  "pca_budget": 3000,
+                  "requested_latent_dimensions": 8,
+                  "actual_latent_dimensions": 8,
+                  "coupling_cell_budget_per_stage": 512,
+                  "couplings": [
+                    {
+                      "iterations": 254,
+                      "converged": true,
+                      "fixed_point_error": 9.929592854618363e-07,
+                      "source_marginal_l1": 0.16257714222939607,
+                      "target_marginal_l1": 0.0072621252431320634,
+                      "coupling_mass": 1.0039806634889816,
+                      "epsilon": 0.05,
+                      "marginal_penalties": [
+                        1.0,
+                        50.0
+                      ],
+                      "regularizer": "entropy, not KL(P,a outer b)",
+                      "source_stage": 7.5,
+                      "target_stage": 7.75,
+                      "source_cells": 512,
+                      "target_cells": 512
+                    },
+                    {
+                      "iterations": 259,
+                      "converged": true,
+                      "fixed_point_error": 9.534802747346305e-07,
+                      "source_marginal_l1": 0.1223631850635018,
+                      "target_marginal_l1": 0.00706044930573229,
+                      "coupling_mass": 1.0070604493057325,
+                      "epsilon": 0.05,
+                      "marginal_penalties": [
+                        1.0,
+                        50.0
+                      ],
+                      "regularizer": "entropy, not KL(P,a outer b)",
+                      "source_stage": 7.75,
+                      "target_stage": 8.0,
+                      "source_cells": 512,
+                      "target_cells": 512
+                    },
+                    {
+                      "iterations": 255,
+                      "converged": true,
+                      "fixed_point_error": 9.872887494211113e-07,
+                      "source_marginal_l1": 0.29532508189257806,
+                      "target_marginal_l1": 0.006578852373935084,
+                      "coupling_mass": 1.0053693856614183,
+                      "epsilon": 0.05,
+                      "marginal_penalties": [
+                        1.0,
+                        50.0
+                      ],
+                      "regularizer": "entropy, not KL(P,a outer b)",
+                      "source_stage": 8.0,
+                      "target_stage": 8.25,
+                      "source_cells": 512,
+                      "target_cells": 512
+                    }
+                  ],
+                  "growth_prior_power": 1.0,
+                  "method": "Past-only PCA transport barycentric velocities, ridge1 affine field, quarter-day Euler extrapolation",
+                  "scope": "Latent-dimensionality ablation on the prepared cohort; not full raw-atlas training. PCA-all preserves the baseline stage sampling RNG stream. Entropy generalized scaling adaptation; not WOT/moscot reproduction. Growth priors are normalized bounded source weights, not calibrated birth/death rates. Future dynamics extrapolate an affine field learned from historical couplings. Every later endpoint used in a coupling is <=cutoff."
+                },
+                "mode": "abundance",
+                "strength": 0.5,
+                "backoff": 1.0,
+                "seed": 20260928,
+                "sampling": "independent",
+                "covariance_change_vs_reference": 0.11639538057208035,
+                "newly_detected_entries": 0,
+                "removed_detection_entries": 0,
+                "abundance_factor_cap": 2.0,
+                "detection_probability_delta_cap": 0.25,
+                "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+                "mapped_mass_conserved": true,
+                "protected_genes_unchanged": true,
+                "replayed_from": "private\\dimensional_transport_horizon_01\\cutoff_8.25\\dimension_growth1_d8.npy"
+              },
+              "prediction_sha256": "23febb14c2dec20f3773778aa8f038f36801380ab32fd205c2e7d21780f3c0c7"
+            },
+            "flow_abundance_s1.0": {
+              "audit": {
+                "fit_cells": 10963,
+                "fit_max_stage": 8.25,
+                "supported_genes": 14462,
+                "method": "800-update likelihood/energy/manifold flow temporal check",
+                "scope": "Past-only fit at each rolling cutoff; source-cohort diagnostic with zero placeholders for absent challenge genes. Reused developmental folds, not independent embryos or blind validation.",
+                "conditional_ridge_strength": 1.0,
+                "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+                "encoder_features": 4096,
+                "covariance_guard_features": 384,
+                "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+                "training_steps": 800,
+                "energy_weight": 0.1,
+                "density_weight": 10.0,
+                "training_history": [
+                  {
+                    "step": 50,
+                    "loss": 16.843494415283203,
+                    "negative_log_likelihood": 11.672325134277344,
+                    "energy": 0.04773598909378052,
+                    "manifold_density": 0.5166397094726562,
+                    "sampled_past_stage": 8.25
+                  },
+                  {
+                    "step": 100,
+                    "loss": 15.920294761657715,
+                    "negative_log_likelihood": 11.130638122558594,
+                    "energy": 0.11241413652896881,
+                    "manifold_density": 0.4778415560722351,
+                    "sampled_past_stage": 8.0
+                  },
+                  {
+                    "step": 150,
+                    "loss": 15.727624893188477,
+                    "negative_log_likelihood": 11.081382751464844,
+                    "energy": 0.1510162055492401,
+                    "manifold_density": 0.46311402320861816,
+                    "sampled_past_stage": 7.75
+                  },
+                  {
+                    "step": 200,
+                    "loss": 16.06167221069336,
+                    "negative_log_likelihood": 10.555394172668457,
+                    "energy": 1.0633054971694946,
+                    "manifold_density": 0.5399948358535767,
+                    "sampled_past_stage": 8.25
+                  },
+                  {
+                    "step": 250,
+                    "loss": 10.301850318908691,
+                    "negative_log_likelihood": 10.292337417602539,
+                    "energy": 0.09512510895729065,
+                    "manifold_density": 0.0,
+                    "sampled_past_stage": 7.5
+                  },
+                  {
+                    "step": 300,
+                    "loss": 15.303577423095703,
+                    "negative_log_likelihood": 10.09225845336914,
+                    "energy": 0.5865103602409363,
+                    "manifold_density": 0.5152668356895447,
+                    "sampled_past_stage": 7.75
+                  },
+                  {
+                    "step": 350,
+                    "loss": 14.742975234985352,
+                    "negative_log_likelihood": 9.706710815429688,
+                    "energy": 0.5053786635398865,
+                    "manifold_density": 0.4985726475715637,
+                    "sampled_past_stage": 7.75
+                  },
+                  {
+                    "step": 400,
+                    "loss": 13.146016120910645,
+                    "negative_log_likelihood": 8.452956199645996,
+                    "energy": 1.8419196605682373,
+                    "manifold_density": 0.4508868157863617,
+                    "sampled_past_stage": 8.25
+                  },
+                  {
+                    "step": 450,
+                    "loss": 10.254532814025879,
+                    "negative_log_likelihood": 10.225359916687012,
+                    "energy": 0.2917267084121704,
+                    "manifold_density": 0.0,
+                    "sampled_past_stage": 7.5
+                  },
+                  {
+                    "step": 500,
+                    "loss": 13.714691162109375,
+                    "negative_log_likelihood": 8.565732955932617,
+                    "energy": 0.6395222544670105,
+                    "manifold_density": 0.5085006356239319,
+                    "sampled_past_stage": 7.75
+                  },
+                  {
+                    "step": 550,
+                    "loss": 15.57801342010498,
+                    "negative_log_likelihood": 9.888898849487305,
+                    "energy": 0.8087888360023499,
+                    "manifold_density": 0.5608235597610474,
+                    "sampled_past_stage": 7.75
+                  },
+                  {
+                    "step": 600,
+                    "loss": 12.020439147949219,
+                    "negative_log_likelihood": 7.435694694519043,
+                    "energy": 1.701054334640503,
+                    "manifold_density": 0.4414639472961426,
+                    "sampled_past_stage": 8.0
+                  },
+                  {
+                    "step": 650,
+                    "loss": 9.724220275878906,
+                    "negative_log_likelihood": 9.684272766113281,
+                    "energy": 0.39947614073753357,
+                    "manifold_density": 0.0,
+                    "sampled_past_stage": 7.5
+                  },
+                  {
+                    "step": 700,
+                    "loss": 13.563961029052734,
+                    "negative_log_likelihood": 8.222131729125977,
+                    "energy": 3.2839787006378174,
+                    "manifold_density": 0.5013431310653687,
+                    "sampled_past_stage": 8.25
+                  },
+                  {
+                    "step": 750,
+                    "loss": 12.76112174987793,
+                    "negative_log_likelihood": 7.8102216720581055,
+                    "energy": 1.5856904983520508,
+                    "manifold_density": 0.4792330861091614,
+                    "sampled_past_stage": 8.0
+                  },
+                  {
+                    "step": 800,
+                    "loss": 13.62104320526123,
+                    "negative_log_likelihood": 8.243542671203613,
+                    "energy": 1.0870897769927979,
+                    "manifold_density": 0.5268791317939758,
+                    "sampled_past_stage": 7.75
+                  }
+                ],
+                "mode": "abundance",
+                "strength": 1.0,
+                "backoff": 1.0,
+                "seed": 20260928,
+                "sampling": "independent",
+                "covariance_change_vs_reference": 0.2290159366955477,
+                "newly_detected_entries": 0,
+                "removed_detection_entries": 0,
+                "abundance_factor_cap": 2.0,
+                "detection_probability_delta_cap": 0.25,
+                "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+                "mapped_mass_conserved": true,
+                "protected_genes_unchanged": true,
+                "replayed_from": "private\\cnf_hurdle_temporal_01\\cutoff_8.25\\flow_abundance_s1.0.npy"
+              },
+              "prediction_sha256": "36ec22dee6671309a162dcaa172431e9c11c149039c130bd3090f74d5ff8e643"
+            },
+            "flow_joint_systematic_s1.0": {
+              "audit": {
+                "fit_cells": 10963,
+                "fit_max_stage": 8.25,
+                "supported_genes": 14462,
+                "method": "800-update likelihood/energy/manifold flow temporal check",
+                "scope": "Past-only fit at each rolling cutoff; source-cohort diagnostic with zero placeholders for absent challenge genes. Reused developmental folds, not independent embryos or blind validation.",
+                "conditional_ridge_strength": 1.0,
+                "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+                "encoder_features": 4096,
+                "covariance_guard_features": 384,
+                "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+                "training_steps": 800,
+                "energy_weight": 0.1,
+                "density_weight": 10.0,
+                "training_history": [
+                  {
+                    "step": 50,
+                    "loss": 16.843494415283203,
+                    "negative_log_likelihood": 11.672325134277344,
+                    "energy": 0.04773598909378052,
+                    "manifold_density": 0.5166397094726562,
+                    "sampled_past_stage": 8.25
+                  },
+                  {
+                    "step": 100,
+                    "loss": 15.920294761657715,
+                    "negative_log_likelihood": 11.130638122558594,
+                    "energy": 0.11241413652896881,
+                    "manifold_density": 0.4778415560722351,
+                    "sampled_past_stage": 8.0
+                  },
+                  {
+                    "step": 150,
+                    "loss": 15.727624893188477,
+                    "negative_log_likelihood": 11.081382751464844,
+                    "energy": 0.1510162055492401,
+                    "manifold_density": 0.46311402320861816,
+                    "sampled_past_stage": 7.75
+                  },
+                  {
+                    "step": 200,
+                    "loss": 16.06167221069336,
+                    "negative_log_likelihood": 10.555394172668457,
+                    "energy": 1.0633054971694946,
+                    "manifold_density": 0.5399948358535767,
+                    "sampled_past_stage": 8.25
+                  },
+                  {
+                    "step": 250,
+                    "loss": 10.301850318908691,
+                    "negative_log_likelihood": 10.292337417602539,
+                    "energy": 0.09512510895729065,
+                    "manifold_density": 0.0,
+                    "sampled_past_stage": 7.5
+                  },
+                  {
+                    "step": 300,
+                    "loss": 15.303577423095703,
+                    "negative_log_likelihood": 10.09225845336914,
+                    "energy": 0.5865103602409363,
+                    "manifold_density": 0.5152668356895447,
+                    "sampled_past_stage": 7.75
+                  },
+                  {
+                    "step": 350,
+                    "loss": 14.742975234985352,
+                    "negative_log_likelihood": 9.706710815429688,
+                    "energy": 0.5053786635398865,
+                    "manifold_density": 0.4985726475715637,
+                    "sampled_past_stage": 7.75
+                  },
+                  {
+                    "step": 400,
+                    "loss": 13.146016120910645,
+                    "negative_log_likelihood": 8.452956199645996,
+                    "energy": 1.8419196605682373,
+                    "manifold_density": 0.4508868157863617,
+                    "sampled_past_stage": 8.25
+                  },
+                  {
+                    "step": 450,
+                    "loss": 10.254532814025879,
+                    "negative_log_likelihood": 10.225359916687012,
+                    "energy": 0.2917267084121704,
+                    "manifold_density": 0.0,
+                    "sampled_past_stage": 7.5
+                  },
+                  {
+                    "step": 500,
+                    "loss": 13.714691162109375,
+                    "negative_log_likelihood": 8.565732955932617,
+                    "energy": 0.6395222544670105,
+                    "manifold_density": 0.5085006356239319,
+                    "sampled_past_stage": 7.75
+                  },
+                  {
+                    "step": 550,
+                    "loss": 15.57801342010498,
+                    "negative_log_likelihood": 9.888898849487305,
+                    "energy": 0.8087888360023499,
+                    "manifold_density": 0.5608235597610474,
+                    "sampled_past_stage": 7.75
+                  },
+                  {
+                    "step": 600,
+                    "loss": 12.020439147949219,
+                    "negative_log_likelihood": 7.435694694519043,
+                    "energy": 1.701054334640503,
+                    "manifold_density": 0.4414639472961426,
+                    "sampled_past_stage": 8.0
+                  },
+                  {
+                    "step": 650,
+                    "loss": 9.724220275878906,
+                    "negative_log_likelihood": 9.684272766113281,
+                    "energy": 0.39947614073753357,
+                    "manifold_density": 0.0,
+                    "sampled_past_stage": 7.5
+                  },
+                  {
+                    "step": 700,
+                    "loss": 13.563961029052734,
+                    "negative_log_likelihood": 8.222131729125977,
+                    "energy": 3.2839787006378174,
+                    "manifold_density": 0.5013431310653687,
+                    "sampled_past_stage": 8.25
+                  },
+                  {
+                    "step": 750,
+                    "loss": 12.76112174987793,
+                    "negative_log_likelihood": 7.8102216720581055,
+                    "energy": 1.5856904983520508,
+                    "manifold_density": 0.4792330861091614,
+                    "sampled_past_stage": 8.0
+                  },
+                  {
+                    "step": 800,
+                    "loss": 13.62104320526123,
+                    "negative_log_likelihood": 8.243542671203613,
+                    "energy": 1.0870897769927979,
+                    "manifold_density": 0.5268791317939758,
+                    "sampled_past_stage": 7.75
+                  }
+                ],
+                "mode": "joint",
+                "strength": 1.0,
+                "backoff": 1.0,
+                "seed": 20260928,
+                "sampling": "systematic",
+                "covariance_change_vs_reference": 0.2511229540628446,
+                "newly_detected_entries": 51471,
+                "removed_detection_entries": 137144,
+                "abundance_factor_cap": 2.0,
+                "detection_probability_delta_cap": 0.25,
+                "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+                "mapped_mass_conserved": true,
+                "protected_genes_unchanged": true,
+                "replayed_from": "private\\cnf_hurdle_temporal_01\\cutoff_8.25\\flow_joint_systematic_s1.0.npy"
+              },
+              "prediction_sha256": "5ff22777a520efa3069324b86d49d0a18906dfc154872bcdaebfc0e77fe17bd6"
+            },
+            "recent1_joint": {
+              "audit": {
+                "fit_cells": 10963,
+                "fit_max_stage": 8.25,
+                "supported_genes": 14462,
+                "method": "Frozen CNF, global full conditional abundance, recent-stage linear detection",
+                "scope": "Only detection probabilities change; global positive coefficients/centroids and encoder/flow fixed. Past-only local stationarity hypothesis, not published biological-model reproduction.",
+                "conditional_ridge_strength": 1.0,
+                "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+                "encoder_features": 4096,
+                "covariance_guard_features": 384,
+                "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+                "recent_detection_stages": [
+                  8.25
+                ],
+                "recent_detection_fit_cells": 3000,
+                "mode": "joint",
+                "strength": 1.0,
+                "backoff": 1.0,
+                "seed": 20260928,
+                "sampling": "systematic",
+                "covariance_change_vs_reference": 0.2709293391571009,
+                "newly_detected_entries": 65279,
+                "removed_detection_entries": 149263,
+                "abundance_factor_cap": 2.0,
+                "detection_probability_delta_cap": 0.25,
+                "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+                "mapped_mass_conserved": true,
+                "protected_genes_unchanged": true
+              },
+              "prediction_sha256": "a017b0e768267cdb02c48001ac0d340572a7e6edf285bca6f3e559f808b7ff5c"
+            },
+            "recent2_joint": {
+              "audit": {
+                "fit_cells": 10963,
+                "fit_max_stage": 8.25,
+                "supported_genes": 14462,
+                "method": "Frozen CNF, global full conditional abundance, recent-stage linear detection",
+                "scope": "Only detection probabilities change; global positive coefficients/centroids and encoder/flow fixed. Past-only local stationarity hypothesis, not published biological-model reproduction.",
+                "conditional_ridge_strength": 1.0,
+                "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+                "encoder_features": 4096,
+                "covariance_guard_features": 384,
+                "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+                "recent_detection_stages": [
+                  8.0,
+                  8.25
+                ],
+                "recent_detection_fit_cells": 6000,
+                "mode": "joint",
+                "strength": 1.0,
+                "backoff": 1.0,
+                "seed": 20260928,
+                "sampling": "systematic",
+                "covariance_change_vs_reference": 0.26767259167782187,
+                "newly_detected_entries": 63532,
+                "removed_detection_entries": 123409,
+                "abundance_factor_cap": 2.0,
+                "detection_probability_delta_cap": 0.25,
+                "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+                "mapped_mass_conserved": true,
+                "protected_genes_unchanged": true
+              },
+              "prediction_sha256": "18209bd603947fcb667b157a9a4581a45257dd943a472ab35c96c5218e87767c"
+            }
+          }
+        }
+      ],
+      "summaries": [
+        {
+          "candidate": "copy",
+          "all_calibrations_valid": true,
+          "scores": [
+            50.0,
+            50.0
+          ],
+          "mean_score": 50.0,
+          "mean_skills_percent": {
+            "de_score": 50.0,
+            "de_direction": 50.0,
+            "mmd_u": 50.0,
+            "variogram": 50.0
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": true
+        },
+        {
+          "candidate": "unit16",
+          "all_calibrations_valid": true,
+          "scores": [
+            47.142658332960416,
+            47.98714389154627
+          ],
+          "mean_score": 47.56490111225334,
+          "mean_skills_percent": {
+            "de_score": 43.364849612985424,
+            "de_direction": 47.22320308805906,
+            "mmd_u": 49.98184627089499,
+            "variogram": 49.61667027861864
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "saved384_d0.0",
+          "all_calibrations_valid": true,
+          "scores": [
+            49.200036578447445,
+            51.36612769509718
+          ],
+          "mean_score": 50.28308213677231,
+          "mean_skills_percent": {
+            "de_score": 48.516569505060446,
+            "de_direction": 51.552150948020426,
+            "mmd_u": 50.71880057669995,
+            "variogram": 50.25130925246053
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "dimension_neutral_d8",
+          "all_calibrations_valid": true,
+          "scores": [
+            52.929213820600275,
+            50.49530920633336
+          ],
+          "mean_score": 51.712261513466814,
+          "mean_skills_percent": {
+            "de_score": 50.01820603745137,
+            "de_direction": 56.13441821630221,
+            "mmd_u": 50.46444930123917,
+            "variogram": 50.17385329828335
+          },
+          "beats_persistence_on_every_fold": true,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "dimension_growth1_d8",
+          "all_calibrations_valid": true,
+          "scores": [
+            52.76573302598844,
+            50.47598424868731
+          ],
+          "mean_score": 51.620858637337875,
+          "mean_skills_percent": {
+            "de_score": 49.86567354214413,
+            "de_direction": 55.86186328401035,
+            "mmd_u": 50.5177638513337,
+            "variogram": 50.1682263769957
+          },
+          "beats_persistence_on_every_fold": true,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "flow_abundance_s1.0",
+          "all_calibrations_valid": true,
+          "scores": [
+            50.614632344474316,
+            52.03915837144745
+          ],
+          "mean_score": 51.32689535796088,
+          "mean_skills_percent": {
+            "de_score": 49.07369255010424,
+            "de_direction": 53.29779346136709,
+            "mmd_u": 52.22406912837806,
+            "variogram": 50.33401558289814
+          },
+          "beats_persistence_on_every_fold": true,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "flow_joint_systematic_s1.0",
+          "all_calibrations_valid": true,
+          "scores": [
+            49.17518459753685,
+            51.62498650824493
+          ],
+          "mean_score": 50.400085552890886,
+          "mean_skills_percent": {
+            "de_score": 46.81933186700888,
+            "de_direction": 51.62887543044433,
+            "mmd_u": 52.29807430963993,
+            "variogram": 50.493057178178034
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "recent1_joint",
+          "all_calibrations_valid": true,
+          "scores": [
+            49.83846171049425,
+            51.41227583007637
+          ],
+          "mean_score": 50.625368770285306,
+          "mean_skills_percent": {
+            "de_score": 46.89288004855161,
+            "de_direction": 51.96941217805939,
+            "mmd_u": 52.611819358459954,
+            "variogram": 50.63124953047288
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        },
+        {
+          "candidate": "recent2_joint",
+          "all_calibrations_valid": true,
+          "scores": [
+            48.96232904492295,
+            51.611665556752165
+          ],
+          "mean_score": 50.286997300837555,
+          "mean_skills_percent": {
+            "de_score": 46.81933186700888,
+            "de_direction": 51.166288703697006,
+            "mmd_u": 52.40148748962133,
+            "variogram": 50.350729556373444
+          },
+          "beats_persistence_on_every_fold": false,
+          "all_metrics_at_least_50_on_every_fold": false
+        }
+      ],
+      "scope": "Two reused source-cohort one-day folds, seven archived controls plus recent1/2 joint forecasts:18 scores. Missing official genes remain zero placeholders; no blind or independent embryo validation."
     }
   },
   "running": [],

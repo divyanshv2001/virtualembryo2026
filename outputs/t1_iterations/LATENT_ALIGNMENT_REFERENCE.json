@@ -1,0 +1,7 @@
+{
+  "primary_paper": "https://ojs.aaai.org/index.php/AAAI/article/download/10306/10165",
+  "title": "Return of Frustratingly Easy Domain Adaptation",
+  "doi": "10.1609/aaai.v30i1.10306",
+  "read": "Introduction,3.1 covariance objective/derivation,3.2 regularized whitening-coloring algorithm and reverse-direction limitation; image/text tasks described. No biological experiments or extrapolation evidence in this paper.",
+  "adaptation": "Own reverse-direction8D anchor-to-atlas alignment atprediction only with ridge.1 and partial strengths.25/.5/1; original source-to-target classifier retraining/ridge1 differs. Paper notes reverse direction performed worse in its classifiers. Mean-only control separates covariance mechanism. May erase actual population changes; no MMD/variogram or score improvement guaranteed."
+}

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T08:29:47.318043+00:00",
+  "updated_utc": "2026-09-29T08:40:50.910016+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -4411,11 +4411,11 @@
       ],
       "scope": "Adaptation, not faithful ECC. Three positive-quantile strengths, global and four-state conditional, two one-day associated-cohort folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "b7063eb10552a67d6ab789c932b14f851e3dfcfba4ca5dacc95513b2eada4f62",
+      "results_report_sha256": "2fa04d619a792cf0f34a727b44b26c305aa0e3b5d04fa0ad3d4e4deb26ec4803",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Finish joint versus abundance rolling checks on past-only4096-gene8D encoders. Diagnose per-metric gains and source/challenge mismatch before further decoder or domain adaptation."
+      "next_action": "Finish recent detectionwindow1/2 rolling checks on frozen flows; diagnose actual paired gains over abundance/global detection and per-metric evidence before further fitting."
     },
     {
       "id": "annotation_conditioned_temporal",
@@ -4439,7 +4439,7 @@
       ],
       "scope": "Heuristic adaptation to normalized abundance; not muscat replication. Observed annotations group past cells. Four expression/detection ablations, source support20 vs100, two one-day folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "b7063eb10552a67d6ab789c932b14f851e3dfcfba4ca5dacc95513b2eada4f62",
+      "results_report_sha256": "2fa04d619a792cf0f34a727b44b26c305aa0e3b5d04fa0ad3d4e4deb26ec4803",
       "limitations": [
         "Published annotation may derive from joint stages; retrospective diagnostic only.",
         "Capture IDs do not establish independent embryos; cell-based errors are shrinkage heuristics.",
@@ -4448,7 +4448,7 @@
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Finish joint versus abundance rolling checks on past-only4096-gene8D encoders. Diagnose per-metric gains and source/challenge mismatch before further decoder or domain adaptation."
+      "next_action": "Finish recent detectionwindow1/2 rolling checks on frozen flows; diagnose actual paired gains over abundance/global detection and per-metric evidence before further fitting."
     },
     {
       "id": "shared_gene_program_dynamics",
@@ -4475,11 +4475,11 @@
       "scope": "Shared SVD profile directions versus cell-level NMF median consensus usage dynamics. Neither is a faithful cNMF reproduction or certified biological-program recovery.",
       "frozen_trials": "SVD ranks2/4/8 with detection0/.5; NMF ranks8/16 with detection0/.5,3 fixed seeds and200 iterations. Rank16 optimizer repair800 iterations. Two matched one-day development folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "b7063eb10552a67d6ab789c932b14f851e3dfcfba4ca5dacc95513b2eada4f62",
+      "results_report_sha256": "2fa04d619a792cf0f34a727b44b26c305aa0e3b5d04fa0ad3d4e4deb26ec4803",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
-      "next_action": "Finish joint versus abundance rolling checks on past-only4096-gene8D encoders. Diagnose per-metric gains and source/challenge mismatch before further decoder or domain adaptation."
+      "next_action": "Finish recent detectionwindow1/2 rolling checks on frozen flows; diagnose actual paired gains over abundance/global detection and per-metric evidence before further fitting."
     },
     {
       "id": "neural_latent_hurdle",
@@ -5030,13 +5030,28 @@
     {
       "id": "continuous_flow_recent_detection_rolling",
       "run": "cnf_recent_detection_temporal_01",
-      "status": "running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_recent_detection_temporal.py",
         "recent_detection_head.py"
       ],
       "trial_scope": "Two sourcefolds, recent detectionwindows1/2; reuse exact4096-gene8D flows, no retraining. Seven archive controls plus two new forecasts per fold=18 scores. Require bit-exact global abundance replay.",
       "limitations": "Reused development with missing-gene placeholders, no independent embryos/blind test; small challenge gain may not transfer.",
+      "research_family_exhausted": false,
+      "results_report": "CNF_RECENT_DETECTION_TEMPORAL_RESULTS.json",
+      "decision": "Recent1/2 joint rolling scores49.8385/51.4123 and48.9623/51.6117; both below persistence onfirst fold and worse than abundance onboth. Small challenge gain fails temporal consistency; all18 outcomes preserved. Next same-stage latent alignment sensitivity, no promotion."
+    },
+    {
+      "id": "continuous_flow_latent_anchor_alignment",
+      "run": "cnf_alignment_challenge_01",
+      "status": "running",
+      "implementation": [
+        "cnf_alignment_challenge.py",
+        "latent_anchor_alignment.py"
+      ],
+      "primary_reference": "LATENT_ALIGNMENT_REFERENCE.json",
+      "trial_scope": "Covariancealignment strengths.25/.5/1 and mean-only1 crossed abundance/joint,39 scores with fivearchives. Fixedridge.1;currentE8.5atlas and challengeE8.5anchors only. Zeroalignment must exactly replay both archived baselines.",
+      "limitations": "Own reverse CORAL adaptation, paper reverse classifier direction weaker; may erase biology/composition. Prior affine feature-moment alignment weak; different latent learner hypothesis remains bounded, not full-family exhaustion. Reused development.",
       "research_family_exhausted": false
     }
   ],
