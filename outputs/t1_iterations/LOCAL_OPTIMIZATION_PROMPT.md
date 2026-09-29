@@ -84,3 +84,8 @@ Confirmed official feedback, 2026-09-28: the user-requested `T1_val__unit16_prog
 Do not resubmit this model unchanged. Prioritize testing whether the validation task matches the one-day forecast horizon, tissue domain, source support and gene-program direction. Existing quarter-day checks and different-cohort one-day pilots cannot certify transfer. Record official score feedback as feedback, not as a source of hidden target gene values; never reconstruct hidden expression from it. An actual official failure overrides any suggestion that local gains alone make a candidate ready.
 
 Record `objective_status`, `threshold`, `candidate`, `mean_score`, `lower_tail_score`, metric skills, temporal checks, scorer/data hashes, run path, completed/required replicate count, actual quota/reset evidence, resume command and next experiment. Report honestly: `threshold_not_met`, `resource_interrupted`, or `local_gate_passed`; never label the official leaderboard threshold verified unless an actual official result establishes it. If a turn ends before 72, leave a concrete checkpoint and next executable step. Say whether any process is actually still running.
+
+
+## Archived prediction storage
+
+Byte-identical archived predictions may share hardlinks after full SHA256 verification. Every logical path and unique evidence value remains available. These archives are immutable: never overwrite an existing prediction path in place, because hardlinks share bytes. New experiments use fresh verified directories on E via local junctions. Preserve the cleanup audit and full original reports; cache deletion blocked by tool policy was not performed.

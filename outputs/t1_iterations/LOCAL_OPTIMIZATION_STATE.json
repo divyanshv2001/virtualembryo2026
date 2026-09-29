@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T14:04:10.539465+00:00",
+  "updated_utc": "2026-09-29T16:29:25.110461+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,18 +31,18 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Run30score dispersion storage repair onE; originalDfailure retained, no biologicalfamily exhaustion.",
+  "next_experiment": "Test mean-preserving latent population scale .75/1.25 with abundance/joint, four controls and three frozen panels; no promotion from dispersion +.022 development gain.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
     {
-      "script": "cnf_latent_dispersion_challenge_repair.py",
-      "process_id": 23280,
-      "worker_process_id": 2012
+      "run": "cnf_latent_population_scale_challenge_02",
+      "process_id": 10536,
+      "worker_process_id": 21644
     }
   ],
-  "active_run_path": "outputs\\t1_iterations\\private\\cnf_latent_dispersion_challenge_repair_01",
+  "active_run_path": "private/cnf_latent_population_scale_challenge_02",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -972,22 +972,42 @@
     "failure": "D storage24.6MBfree, prediction save OSError; no scores generated. Originalarrays/trajectory preserved."
   },
   "cnf_latent_dispersion_repair_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_latent_dispersion_challenge_repair_01",
     "evaluations_planned": 30,
-    "pending_evaluations": 30,
+    "pending_evaluations": 0,
     "tests_passed": 1,
     "storage": "E:/virtualembryo-research-storage/cnf_latent_dispersion_challenge_repair_01 via Dprivate junction",
     "decision": "Identicalscientificconfig, freshprovenance andcorrectedresume keys; no promotion.",
     "process_id": 23280,
     "worker_process_id": 2012,
     "runner_syntax_verified": true,
-    "plan_sha256": "681961126da14e5081a413e5db8adb6eaba2efe17a3f7ff6c0a0ce30d321cff5"
+    "plan_sha256": "681961126da14e5081a413e5db8adb6eaba2efe17a3f7ff6c0a0ce30d321cff5",
+    "evaluations": 30,
+    "report_sha256": "1df3cf9cc5335e8eb17ef7d04c3f885d88cf41731a8ab4d32cbbde926870a181",
+    "results_report": "CNF_LATENT_DISPERSION_RESULTS.json"
   },
   "research_storage": {
-    "D_free_observed_bytes": 24604672,
-    "E_free_observed_bytes": 279750828032,
+    "D_free_observed_bytes": 111404761088,
+    "E_free_observed_bytes": 277806256128,
     "new_bulky_private_run_root": "E:/virtualembryo-research-storage",
-    "policy": "Use verifiedempty localjunctions fornewruns. Keep failedoriginalD arrays/events. No data deleted or committed."
+    "policy": "Use verifiedempty localjunctions fornewruns. Keep failedoriginalD arrays/events. No data deleted or committed.",
+    "cleanup_report": "STORAGE_CLEANUP_RESULTS.json",
+    "archive_policy": "Hardlinked archived arrays are immutable; new experiments must write new paths."
+  },
+  "cnf_latent_population_scale_job": {
+    "status": "running",
+    "run": "cnf_latent_population_scale_challenge_02",
+    "evaluations_planned": 24,
+    "evaluations": 0,
+    "pending_evaluations": 24,
+    "tests_passed": 1,
+    "runner_syntax_verified": true,
+    "storage": "E:/virtualembryo-research-storage/cnf_latent_population_scale_challenge_02 via Dprivate junction",
+    "decision": "Own bounded latent population-width sensitivity; latent mean preserved, decoded full-expression means not assumed preserved. No promotion.",
+    "prior_startup_failure_report": "CNF_LATENT_POPULATION_SCALE_STARTUP_FAILURE.json",
+    "process_id": 10536,
+    "worker_process_id": 21644,
+    "plan_sha256": "0900f8ee12b7d6e0bb311aead5f6425e8856167ff381d0983e595467162d9d88"
   }
 }

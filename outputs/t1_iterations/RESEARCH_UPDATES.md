@@ -41,3 +41,19 @@ Temporaldecoder18scores completed: joint49.7003/51.1772 vsoriginal49.1752/51.625
 ## 2026-09-29T14:05:11.440606+00:00
 
 Dispersionrun failedbefore scoring withOSError arraywrite: Dfree24,604,672bytes, attempted193,710,128bytefile; truncated128byteheader preserved. Stored failure/null raw4skills4/headline forfailedcandidate; no modelscore assigned. Efree279,750,828,032bytes. Provisioned freshrepairrun onE viajunction; scientificconfig/seeds unchanged, resume keys corrected andsource syntaxchecked. Launcher23280/worker2012 running; originalprivateplan/code/events/allarrays retained. Ledger2678records/121reports/0errors. No official/Jev/agent calls.
+
+## 2026-09-29T14:07:32.128266+00:00
+
+Completed30 terminal latent dispersion scores. All means/raw4/skills4 retained in CNF_LATENT_DISPERSION_RESULTS.json and SCORE_LEDGER.jsonl. Review matched gains before promotion;72 gate remains unmet.
+
+## 2026-09-29T16:26:19.918644+00:00
+
+Storage cleanup completed:575 full-SHA256-identical archived arrays consolidated with hardlinks,111383323600 duplicate bytes reclaimed. All575 paths verified samefile;3 post-operation fullhash checks passed. No unique predictions or datasets deleted. Cache removal was blocked by automatic tool policy and was not executed. Archives are immutable. See STORAGE_CLEANUP_RESULTS.json. Dispersion30-score batch completed: bestjoint54.99757 versus54.97552 matched control (+.02205), weak development-only difference; no promotion,72 gate unmet. Next: frozen latent distribution contraction/expansion sensitivity, no futurefit.
+
+## 2026-09-29T16:28:01.034560+00:00
+
+Implemented next24-score batch: terminal population factors.75/1.25 xabundance/joint, four matchedcontrols, same3 full-panel evaluation panels. Unit test verifies exactidentity, initialcondition, populationmean and covariance scaling; passed1. No new flow fitting; past-only responseheads refit, no futuretraining. Latentmean preservation doesnot guarantee decoded gene mean preservation. Runner syntax passed; newrun onE, originalarchives immutable. No externalcalls/submissions.
+
+## 2026-09-29T16:29:25.142845+00:00
+
+New24-score population-scale run02 is actually running: launcher10536/worker21644; plan frozen andfourcontrols saved. Run01 startup failed before scientific work because launcherlogs populated the empty output folder. Originalfailure/logs/source preserved, public CNF_LATENT_POPULATION_SCALE_STARTUP_FAILURE.json records no score; repaired launch writes logs outside fresh run02. No duplicate worker launched. Original dispersion30scores indexed:2708records/122reports, zero indexerrors. Cleanup111.4GB recovered;72objective unfinished, officialbest remains51.87.

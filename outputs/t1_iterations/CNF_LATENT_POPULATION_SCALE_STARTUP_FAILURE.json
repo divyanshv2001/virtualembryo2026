@@ -1,0 +1,11 @@
+{
+  "status": "execution_failed",
+  "type": "ValueError",
+  "error": "Preserve prior run; use --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_population_scale_challenge.py --resume",
+  "phase": "launcher_initialization_before_plan_training_prediction_scoring",
+  "scientific_outcomes": [],
+  "score": null,
+  "cause": "Launcher redirected stdout/stderr inside empty-run directory before runner checked emptiness. No plan or forecasts created.",
+  "repair": "Fresh run02, launcher logs outside output directory; preserve failed01 logs/source. --resume invalid without plan; do not use."
+}

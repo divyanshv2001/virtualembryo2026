@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T14:04:10.539465+00:00",
+  "updated_utc": "2026-09-29T16:28:01.003854+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5561,14 +5561,35 @@
     {
       "id": "continuous_flow_terminal_latent_dispersion_storage_repair",
       "run": "cnf_latent_dispersion_challenge_repair_01",
-      "status": "prepared",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_latent_dispersion_challenge_repair.py",
         "latent_dispersion.py"
       ],
       "trial_scope": "Same30-score scientificgrid, fixedseeds, fullpanel andmatchedcontrols; newoutput onE viajunction, retain originalDfailure.",
       "limitations": "Not diffusionmodelreproduction/biologicalrate; reuseddevelopment. Storage interruption providesno model-performance evidence.",
-      "research_family_exhausted": false
+      "research_family_exhausted": false,
+      "results_report": "CNF_LATENT_DISPERSION_RESULTS.json",
+      "decision": "Joint sigma.05 mean54.99757 vs54.97552 matched control: +.02205 development-only; abundance essentially unchanged. No gate or temporal promotion; six bounded noise settings do not exhaust diffusion families."
+    },
+    {
+      "id": "continuous_flow_terminal_population_scale",
+      "run": "cnf_latent_population_scale_challenge_02",
+      "status": "implemented_running",
+      "implementation": [
+        "latent_population_scale.py",
+        "cnf_latent_population_scale_challenge.py"
+      ],
+      "metric_objective": [
+        "mmd_u",
+        "variogram"
+      ],
+      "hypothesis": "Contraction/expansion of evolved centered latent population may improve full-expression distribution; latent mean preserved but decoded mean can change. Compare all four metrics, reject joint regressions.",
+      "trial_scope": "Frozen factors .75/1.25 x abundance/joint +4controls;3same panels=24scores. Alpha.5 heads, field fixed, no futurefit.",
+      "limitations": "Own sensitivity, no faithful literature reproduction/biological rate; batch-centering depends on donor population, reuseddevelopment, sampledcohort. Existing variance/shrinkage family remains open.",
+      "tests_passed": 1,
+      "research_family_exhausted": false,
+      "prior_startup_failure_report": "CNF_LATENT_POPULATION_SCALE_STARTUP_FAILURE.json"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."
