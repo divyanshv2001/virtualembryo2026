@@ -252,6 +252,17 @@ A frozen-flow decoder ablation verifies every archived head array, then separate
 | strength_transport_horizon_01 | strength_growth1_s0.25 | 52.608 | 50.334 | 51.471 |
 | strength_transport_horizon_01 | strength_growth1_s1.0 | 52.653 | 50.619 | 51.636 |
 | strength_transport_horizon_01 | strength_growth1_s2.0 | 52.653 | 50.683 | 51.668 |
+| ridge_transport_horizon_01 | copy | 50.000 | 50.000 | 50.000 |
+| ridge_transport_horizon_01 | unit16 | 47.143 | 47.987 | 47.565 |
+| ridge_transport_horizon_01 | saved384_d0.0 | 49.200 | 51.366 | 50.283 |
+| ridge_transport_horizon_01 | dimension_neutral_d8 | 52.929 | 50.495 | 51.712 |
+| ridge_transport_horizon_01 | dimension_growth1_d8 | 52.766 | 50.476 | 51.621 |
+| ridge_transport_horizon_01 | ridge_neutral_r0.1 | 53.007 | 50.433 | 51.720 |
+| ridge_transport_horizon_01 | ridge_neutral_r0.3 | 52.999 | 50.446 | 51.722 |
+| ridge_transport_horizon_01 | ridge_neutral_r3.0 | 52.729 | 50.550 | 51.640 |
+| ridge_transport_horizon_01 | ridge_growth1_r0.1 | 52.860 | 50.514 | 51.687 |
+| ridge_transport_horizon_01 | ridge_growth1_r0.3 | 52.796 | 50.521 | 51.658 |
+| ridge_transport_horizon_01 | ridge_growth1_r3.0 | 52.576 | 50.458 | 51.517 |
 
-Status: running. Full four-metric vectors, raw metrics, model audits and provenance hashes are in HORIZON_BATCH_RESULTS.json.
+Status: completed. Full four-metric vectors, raw metrics, model audits and provenance hashes are in HORIZON_BATCH_RESULTS.json.
 No new prospective export or official submission. The >72 objective remains unfinished.

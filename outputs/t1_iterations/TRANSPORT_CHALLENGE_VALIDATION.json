@@ -1,0 +1,6 @@
+{
+  "updated_utc": "2026-09-29T05:41:11.169321+00:00",
+  "tests_passed": 81,
+  "scope": "Complete suite including explicit normalized moment transformation equivalence, same-source identity and restoration of original encoder after projection failure. Existing decoder tests preserve past-only fitting, zeros, mapped mass and protected genes.",
+  "command": "python -m pytest outputs/t1_iterations -q -p no:cacheprovider --basetemp outputs/t1_iterations/private/test_temp_alignment_20260929_09"
+}

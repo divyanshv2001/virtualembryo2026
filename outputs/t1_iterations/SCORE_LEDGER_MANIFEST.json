@@ -1,5 +1,5 @@
 {
-  "records": 1325,
+  "records": 1347,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -262,6 +262,11 @@
       "outcomes_indexed": 22
     },
     {
+      "path": "private/ridge_transport_horizon_01/report.json",
+      "sha256": "ebc298c17eee181a49a3b4f7b1c7bb13ca6ac7a93ff00f5b0dc4ca9b67a4f6ba",
+      "outcomes_indexed": 22
+    },
+    {
       "path": "private/robust_associated_01/report.json",
       "sha256": "38e02ab04d3525a4426b43cdce4f784b36e5c0a587c93fbdfd277fb7202d95e0",
       "outcomes_indexed": 48
@@ -344,5 +349,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "2823973e474e68d08081612b2c6f8c7e33432ef8741a878703bd8f5faa4f4f95"
+  "ledger_sha256": "c9e68da8daec4892c0052bd69720797d0a14fbe0d7c345ad59e380185c3b82a9"
 }

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T05:29:39.593115+00:00",
+  "updated_utc": "2026-09-29T05:41:11.169321+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/ridge_transport_horizon.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/transport_challenge_backtest.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Finish frozen batches: ridge_transport_horizon_01. Preserve paired controls and all four metrics.",
+  "next_experiment": "Run transport challenge transfer with actualE8.5 donors and atlas<=E8.5, test sourcefit8D/16D with past-only anchor alignment; preserve three exposedE9.5 panels and all metrics before any promotion.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "ridge_transport_horizon_01"
+    "transport_challenge_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/ridge_transport_horizon_01",
+  "active_run_path": "outputs/t1_iterations/private/transport_challenge_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -147,12 +147,10 @@
   },
   "candidate_role": "Local control only; official progress export failed",
   "horizon_batch": {
-    "status": "running",
-    "running": [
-      "ridge_transport_horizon_01"
-    ],
+    "status": "completed",
+    "running": [],
     "report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-    "report_sha256": "b4d7ccbd196c7508364bbc0a70b393365f2b265ab0a2714db0c29cf2fb3beea4"
+    "report_sha256": "1317237816b970531fc09955ae24abccd6ae782d3d72cd11ece0e585aae363d1"
   },
   "continuation_automation": {
     "id": "continue-t1-local-research",
@@ -281,12 +279,25 @@
     "decision": "No new strength improves the incumbent mean51.7123. Nominal2.0 equals1.0 on E8.0 because covariance backoff=.5; E8.25 remains weaker for DE. Preserve all22 outcomes; test conditional ridge next. No Monte Carlo or official promotion."
   },
   "ridge_transport_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "ridge_transport_horizon_01",
     "tests_passed": 80,
     "evaluations_planned": 22,
-    "pending_evaluations": 22,
+    "pending_evaluations": 0,
     "process_id": 17316,
-    "plan_sha256": "d6a232a5adc88f7363c3987598f0a08c846e76c331d76661c562c5529715b02f"
+    "plan_sha256": "d6a232a5adc88f7363c3987598f0a08c846e76c331d76661c562c5529715b02f",
+    "report_sha256": "ebc298c17eee181a49a3b4f7b1c7bb13ca6ac7a93ff00f5b0dc4ca9b67a4f6ba",
+    "results_report": "RIDGE_TRANSPORT_RESULTS.json",
+    "evaluations": 22,
+    "decision": "Best ridge.3 neutral mean51.7222, folds52.9989/50.4455, only+.00993 mean over ridge1 and worse second fold. No reliable superiority, no72/stability promotion. Preserve all22 outcomes; next assess actual challenge-domain transfer."
+  },
+  "transport_challenge_job": {
+    "status": "running",
+    "run": "transport_challenge_01",
+    "tests_passed": 81,
+    "evaluations_planned": 21,
+    "pending_evaluations": 21,
+    "process_id": 12444,
+    "plan_sha256": "be6c34ad20613c84c0c70f1ee3aac226c4e1a6475e5bcfe2efea8ca03e4c0c03"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T05:29:19.045252+00:00",
+  "updated_utc": "2026-09-29T05:41:11.169321+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -4411,7 +4411,7 @@
       ],
       "scope": "Adaptation, not faithful ECC. Three positive-quantile strengths, global and four-state conditional, two one-day associated-cohort folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "b4d7ccbd196c7508364bbc0a70b393365f2b265ab0a2714db0c29cf2fb3beea4",
+      "results_report_sha256": "1317237816b970531fc09955ae24abccd6ae782d3d72cd11ece0e585aae363d1",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
@@ -4439,7 +4439,7 @@
       ],
       "scope": "Heuristic adaptation to normalized abundance; not muscat replication. Observed annotations group past cells. Four expression/detection ablations, source support20 vs100, two one-day folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "b4d7ccbd196c7508364bbc0a70b393365f2b265ab0a2714db0c29cf2fb3beea4",
+      "results_report_sha256": "1317237816b970531fc09955ae24abccd6ae782d3d72cd11ece0e585aae363d1",
       "limitations": [
         "Published annotation may derive from joint stages; retrospective diagnostic only.",
         "Capture IDs do not establish independent embryos; cell-based errors are shrinkage heuristics.",
@@ -4475,7 +4475,7 @@
       "scope": "Shared SVD profile directions versus cell-level NMF median consensus usage dynamics. Neither is a faithful cNMF reproduction or certified biological-program recovery.",
       "frozen_trials": "SVD ranks2/4/8 with detection0/.5; NMF ranks8/16 with detection0/.5,3 fixed seeds and200 iterations. Rank16 optimizer repair800 iterations. Two matched one-day development folds.",
       "results_report": "outputs/t1_iterations/HORIZON_BATCH_RESULTS.json",
-      "results_report_sha256": "b4d7ccbd196c7508364bbc0a70b393365f2b265ab0a2714db0c29cf2fb3beea4",
+      "results_report_sha256": "1317237816b970531fc09955ae24abccd6ae782d3d72cd11ece0e585aae363d1",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0,
@@ -4695,7 +4695,7 @@
     },
     {
       "id": "transport_conditional_ridge",
-      "status": "running",
+      "status": "implemented_evaluated_not_promoted",
       "metrics": [
         "de_score",
         "de_direction",
@@ -4710,6 +4710,29 @@
       "hypothesis": "Fixed ridge1 may shrink positive conditional gene responses excessively or insufficiently. Test this independently of8D latent geometry and abundance strength.",
       "trial_scope": "Neutral/growth1 priors, positive conditional ridges.1/.3/3 versus1, strength.5. Two unchanged development folds,22 scored outcomes. Reconstructed ridge1 controls must be bit-identical. No seed search.",
       "limitations": "Past-only sampled prepared cohort, full-panel scoring with explicit missing-gene placeholders. Own covariance-regression sensitivity, not a faithful paper reproduction. No independent embryos or challenge transfer certification. Caps/guards remain unchanged.",
+      "research_family_exhausted": false,
+      "submissions_used": 0,
+      "jev_requests_used": 0,
+      "results_report": "RIDGE_TRANSPORT_RESULTS.json",
+      "decision": "Best ridge.3 neutral mean51.7222, folds52.9989/50.4455, only+.00993 mean over ridge1 and worse second fold. No reliable superiority, no72/stability promotion. Preserve all22 outcomes; next assess actual challenge-domain transfer."
+    },
+    {
+      "id": "transport_challenge_transfer",
+      "status": "running",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "run": "transport_challenge_01",
+      "implementation": [
+        "transport_challenge_backtest.py",
+        "transport_anchor_alignment.py"
+      ],
+      "hypothesis": "Eight-dimensional atlas-only gains may fail on the challenge donor domain. Compare actual complete-panel donor forecasts, sourcefit fixed; align only donor encoding with past moments.",
+      "trial_scope": "Neutral8D positive ridge.3/1 crossed with identity/moments alignment,16D ridge1 identity, unit16 and persistence; seven candidates on three predeclared panels,21 outcomes. Strength.5 fixed. All predictions frozen before target read.",
+      "limitations": "ChallengeE9.5 is exposed development data; overlapping cell panels are not independent embryos.13963 sampled prepared past atlas rows, not whole430339 raw atlas. Moment matching may alter identity; no guaranteed domain correction. Neutral mode uses no growth prior. Does not satisfy64-replicate gate or justifyE10.5 export.",
       "research_family_exhausted": false,
       "submissions_used": 0,
       "jev_requests_used": 0
