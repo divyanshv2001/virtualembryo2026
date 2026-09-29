@@ -12,3 +12,18 @@ def mix_cells(first, second, first_weight, seed):
         np.column_stack([np.ones(len(b),dtype=int),b])])
     order = rng.permutation(n)
     return np.concatenate([first[a],second[b]],axis=0)[order], provenance[order]
+
+
+def mix_matched_cells(first, second, first_weight, seed):
+    """Choose one complete forecast per matched donor, retaining each donor once."""
+    if first.shape != second.shape or first.ndim != 2 or first.dtype != np.float32 or second.dtype != np.float32:
+        raise ValueError('Require matching full-panel float32 matrices')
+    if not np.isfinite(first_weight) or not 0 <= first_weight <= 1:
+        raise ValueError('Invalid mixture weight')
+    rng=np.random.default_rng(seed);n=len(first);count=int(np.floor(n*first_weight+.5))
+    selected=rng.permutation(n)[:count]
+    result=second.copy();result[selected]=first[selected]
+    provenance=np.column_stack([np.ones(n,dtype=int),np.arange(n)])
+    provenance[selected,0]=0
+    order=rng.permutation(n)
+    return result[order],provenance[order]

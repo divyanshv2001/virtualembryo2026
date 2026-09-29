@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T12:15:56.514454+00:00",
+  "updated_utc": "2026-09-29T12:22:26.182376+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -29,16 +29,16 @@
     "status": "not_exposed_to_session",
     "automatic_wakeup_installed": false
   },
-  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_specialist_mixture.py --resume",
+  "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_matched_mixture.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Frozen whole-cell mixtures recent1_joint/batch512_joint,weights.25/.5/.75, fixedrowseed,30full-panel scores. No promotion withouttemporal/72gate.",
+  "next_experiment": "Matched-donor wholecell mixtures .25/.5/.75 with10controls,39full-panel development scores.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cnf_specialist_mixture_01"
+    "cnf_matched_mixture_01"
   ],
-  "active_run_path": "outputs/t1_iterations/private/cnf_specialist_mixture_01",
+  "active_run_path": "outputs/t1_iterations/private/cnf_matched_mixture_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -751,15 +751,29 @@
     "evaluations": 22
   },
   "cnf_specialist_mixture_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "run": "cnf_specialist_mixture_01",
     "evaluations_planned": 30,
-    "pending_evaluations": 30,
-    "decision": "Complementarydevelopment metricvector integration test; bothconstituentsfail temporalreadiness, not promotion.",
+    "pending_evaluations": 0,
+    "decision": "Independentwholecell mixture recentweights.25/.5/.75 means53.5111/53.6059/53.7842 belowrecent1 54.2995 andbatch512 54.0210. Preserve30outcomes. Next matched-donor mixtures retain everydonor once, sameweights/seed and oldmixtures ascontrols; no promotion.",
     "tests_passed": 1,
     "prior_full_suite_tests_passed": 119,
     "process_id": 11664,
     "worker_process_id": 23296,
-    "plan_sha256": "f142657f974232f10e0b9effe6647963bb2e8efe7d809803184d3ed96b2a0e05"
+    "plan_sha256": "f142657f974232f10e0b9effe6647963bb2e8efe7d809803184d3ed96b2a0e05",
+    "evaluations": 30,
+    "report_sha256": "7a61a4f98310e701ce2dc9325bec114fe7ec5ef112028353c4352a511017e7c2",
+    "results_report": "CNF_SPECIALIST_MIXTURE_RESULTS.json"
+  },
+  "cnf_matched_mixture_job": {
+    "status": "running",
+    "run": "cnf_matched_mixture_01",
+    "evaluations_planned": 39,
+    "pending_evaluations": 39,
+    "decision": "Isolate donor-composition sampling confound; no readinesspromotion.",
+    "tests_passed": 120,
+    "process_id": 26228,
+    "worker_process_id": 16844,
+    "plan_sha256": "6c66fd529bff7e7154168c3e54d1c4f52ec8a7e3c1927a0bcf5f46c4553694aa"
   }
 }

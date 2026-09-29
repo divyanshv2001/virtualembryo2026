@@ -1,0 +1,11 @@
+{
+  "updated_utc": "2026-09-29T12:22:26.182376+00:00",
+  "tests_passed": 120,
+  "command": "pytest outputs/t1_iterations -q -p no:cacheprovider --basetemp outputs/t1_iterations/private/pytest_tmp_53",
+  "checks": [
+    "Matched mixtures keep every donor exactly once, preserve exact complete source rows/provenance and declaredcounts including endpoints",
+    "Deterministic seed replay and invalidweight rejection",
+    "Runner checks matching complete donor index vectors before mixing and freezes predictions before target scoring"
+  ],
+  "limitations": "Both constituent forecasts failed temporal readiness; sampling correction is diagnostic and does not establish biological accuracy."
+}

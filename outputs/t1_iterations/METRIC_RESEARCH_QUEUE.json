@@ -5349,7 +5349,7 @@
     {
       "id": "continuous_flow_specialist_wholecell_integration",
       "run": "cnf_specialist_mixture_01",
-      "status": "implemented_running",
+      "status": "implemented_evaluated_not_promoted",
       "implementation": [
         "cnf_specialist_mixture.py",
         "cell_mixture.py"
@@ -5362,7 +5362,23 @@
       "limitations": "Exposed development selection, noindependentembryos. Recentpositive andbatch512 failed firsttemporal fold, so this diagnosticcannotjustify promotion. Mixing canworsen populationbalance and othermetrics despitecomplementary constituentvectors.",
       "research_family_exhausted": false,
       "targeted_tests_passed": 1,
-      "validation_report": "CNF_SPECIALIST_MIXTURE_VALIDATION.json"
+      "validation_report": "CNF_SPECIALIST_MIXTURE_VALIDATION.json",
+      "results_report": "CNF_SPECIALIST_MIXTURE_RESULTS.json",
+      "decision": "Independentwholecell mixture recentweights.25/.5/.75 means53.5111/53.6059/53.7842 belowrecent1 54.2995 andbatch512 54.0210. Preserve30outcomes. Next matched-donor mixtures retain everydonor once, sameweights/seed and oldmixtures ascontrols; no promotion."
+    },
+    {
+      "id": "continuous_flow_matched_cell_integration",
+      "run": "cnf_matched_mixture_01",
+      "status": "implemented_running",
+      "implementation": [
+        "cnf_matched_mixture.py",
+        "cell_mixture.py"
+      ],
+      "trial_scope": "Matched donor assignments select onecompleteforecast per1500donors, weights.25/.5/.75,seed2026092812; tencontrols includingpriorindependentmixtures,3unchangedpanels=39scores. No modeltraining.",
+      "limitations": "Sameexposeddevelopment andconstituentswithfailedtemporalchecks. Matchedsamplingcanstillworsen expressionmeans/covariance; no guarantee or biologicalgrowthinput.",
+      "research_family_exhausted": false,
+      "tests_passed": 120,
+      "validation_report": "CNF_MATCHED_MIXTURE_VALIDATION.json"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."
