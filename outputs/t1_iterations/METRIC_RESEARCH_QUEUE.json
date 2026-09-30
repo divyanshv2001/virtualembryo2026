@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-30T13:40:00+00:00",
+  "updated_utc": "2026-09-30T13:48:23+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5835,6 +5835,19 @@
       "research_family_exhausted": false,
       "results_report": "CNF_DOMAIN_ALIGNMENT_STABILITY_RESULTS.json",
       "report_sha256": "9713304782b90c26aef258783412807357b761b26220e88d68b9d944209d475d"
+    },
+    {
+      "id": "challenge_covariance_alignment_pilot",
+      "metrics": ["de_score", "de_direction", "mmd_u", "variogram"],
+      "status": "completed_small_development_gain_below_expansion_gate",
+      "implementation": "cnf_covariance_alignment.py",
+      "run": "cnf_covariance_alignment_01",
+      "hypothesis_and_limits": "After the small mean-frame gain, a regularized 8D source-to-challenge E8.5 covariance map might improve trajectory transport without future-stage fitting. Covariance reflects composition as well as biology/assay and can worsen all skills; reused E9.5 panels are development only.",
+      "declared_experiment_and_result": "15/15 valid unchanged full 32285-gene E9.5 development scores on three reused panels; exact SHA256 replay of persistence and prior mean-shift controls. Mean-shift mean55.75368; covariance .25 mean55.98883, .5 mean55.96950, 1.0 mean54.85273. Strength .25 wins all three panels over both controls and has no mean four-skill regression; .5 loses DE skill; 1.0 regresses overall. The best +.23515 gain is well below the predeclared >=60 expansion rule, so no 16-resample test. All metrics/skills, calibration, seeds, hashes and genuine events retained.",
+      "next_action": "Retain .25 as a narrow reused-development Pareto candidate, do not spend 16/64-resample or official submission budget. Prioritize a distinct past-only mechanism addressing stagnant DE recovery/direction, with matched controls and temporal checks where possible.",
+      "research_family_exhausted": false,
+      "results_report": "CNF_COVARIANCE_ALIGNMENT_RESULTS.json",
+      "report_sha256": "39bf86fd8ee703401dfe710ea13e5c5ee718d9b09be75bfda94f92fde8102673"
     },
     {
       "id": "external_temporal_data_eligibility_audit",

@@ -1,5 +1,5 @@
 {
-  "records": 2862,
+  "records": 2877,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -150,6 +150,11 @@
       "path": "private/cnf_count_reliability_temporal_01/report.json",
       "sha256": "6ccc4bea639950fc2f18d08d1cc308140b19020f59347ebb3446ef8c16e6c676",
       "outcomes_indexed": 8
+    },
+    {
+      "path": "private/cnf_covariance_alignment_01/report.json",
+      "sha256": "39bf86fd8ee703401dfe710ea13e5c5ee718d9b09be75bfda94f92fde8102673",
+      "outcomes_indexed": 15
     },
     {
       "path": "private/cnf_dimension_challenge_01/report.json",
@@ -684,5 +689,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "b867e8f1f46b046b2ce41df851de9866fe30f87d12483bc9c07182ca434cb12a"
+  "ledger_sha256": "9aa2f26b0abde53181d052e37c35b853e732c561dbb0059569e1768d838f6a39"
 }

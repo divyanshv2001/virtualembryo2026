@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-30T13:40:00+00:00",
+  "updated_utc": "2026-09-30T13:48:23+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,7 +31,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Frozen full-shift alignment improved all 16 paired E9.5 cell-resamples (+0.6724 mean, +0.3678 lower tail) but shifted mean55.1678 fails predeclared >=60 futility gate; no 64-resample expansion or official submission. GEO GSE76118 metadata-only stage manifest now allowlists 143 E8.5 and 1288 E9.5 GSM files and excludes 1536 E10.5 plus 274 embryoid-body samples. Verify license, assay/tissue compatibility and QC discrepancy (118/949 analyzed) before any individually stage-separated D-only expression acquisition. Continue distinct past-only mechanism tests with matched controls.",
+  "next_experiment": "A past-only E8.5 covariance map at strength .25 improved all three reused E9.5 panels over exact mean-shift replay (55.98883 vs55.75368) with no mean metric-skill regression, but mean<60 fails its frozen 16-resample expansion rule and is far below >72. Do not expand or submit. Next pursue a distinct DE/direction mechanism with past-only historical temporal checks and matched full-panel controls. The metadata-only GSE76118 early-stage allowlist remains unapproved for training pending license, assay/tissue and QC review.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1199,5 +1199,17 @@
     "data_downloaded": false,
     "model_fitted": false,
     "independent_temporal_validation_available": false
+  },
+  "covariance_alignment_job": {
+    "status": "completed",
+    "planned_scores": 15,
+    "completed_scores": 15,
+    "plan_sha256": "efec75c993a35f56c1dbaf6d6991f54791dc6d273b598c4163f04fef29d23de4",
+    "report_sha256": "39bf86fd8ee703401dfe710ea13e5c5ee718d9b09be75bfda94f92fde8102673",
+    "passing_candidates": [
+      "covariance_0.25"
+    ],
+    "expand_to_16_resamples": false,
+    "results_report": "CNF_COVARIANCE_ALIGNMENT_RESULTS.json"
   }
 }

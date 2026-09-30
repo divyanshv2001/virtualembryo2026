@@ -1,13 +1,15 @@
 # T1 compact research checkpoint
 
-Updated: 2026-09-30T13:40:00+00:00
+Updated: 2026-09-30T13:48:23+00:00
 
 Official best reported: **51.87**. Latest export: `T1_val__anchorslope_progress_20260929_01.h5ad`. Local>72 gate remains unmet.
 Official metrics: DE44.9, direction57.0, MMD53.5, variogram51.7. Latest screenshot shows S2WISH2 / Codex / AGENT, rank29 on that view; scoring-page rank131/270 is a different view.
 
 Next: Full past-source flow and count-aware anchor-slope shrinkage failed frozen promotion rules. A past-only source-to-challenge 8D mean-frame shift improved all three reused E9.5 development panels (55.7537 vs exact unshifted 55.1173). A frozen 16-resample paired check then improved all 16: full shift mean55.1678, 2.5% tail53.8414, versus unshifted mean54.4955/tail52.9916 and persistence50; paired mean gain+.6724/tail+.3678. All four mean skills improved slightly. Mean<60 triggers the predeclared futility rule, so no 64-resample expansion. This is one-stage cell-resampling stability, not independent embryo, temporal or official validation; >72 remains far away. External temporal audit: only E8.5/E9.5 local Task 1 RNA; metadata-only GSE76118 includes permitted early heart stages and prohibited E10.5, and must not be used without strict stage isolation and license/provenance review. Next screen that source or test a distinct past-only mechanism with matched controls.
 
-Active jobs: none confirmed after `cnf_domain_mean_alignment_stability_01` completed; recheck actual processes before new work.
+Active jobs: none after `cnf_covariance_alignment_01` completed; verify actual processes before the next run.
+
+Latest covariance pilot: 15/15 valid full-panel scores, exact persistence/mean-shift forecast replay and unchanged calibration. Conservative 8D covariance alignment at strength .25 scored 55.9888 versus mean-shift 55.7537 across three reused E9.5 panels, winning each panel without mean skill regression. Strength .5 lost DE skill; full strength regressed overall. The +.2351 development gain fails the frozen mean>=60 expansion rule; no 16- or 64-resample expansion, no independent temporal validation, no official score. Full raw metrics, skills, seeds, hashes and events retained; score ledger now 2,877 rows, zero errors. Next test a distinct past-only DE/direction mechanism.
 
 New metadata-only stage manifest: `GSE76118_STAGE_METADATA_MANIFEST.json` reproducibly screens 3,241 GEO sample records, allowlisting 143 E8.5 and 1,288 E9.5 GSM IDs and excluding 1,536 E10.5 plus 274 embryoid-body records. No expression or mixed-stage archive was downloaded. The abstract reports only 118/949 analyzed early-stage cells; resolve QC, license and assay/tissue relevance before any individually allowlisted D-only acquisition. This is not independent validation yet.
 
