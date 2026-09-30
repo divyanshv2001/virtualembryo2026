@@ -1,5 +1,5 @@
 {
-  "records": 2814,
+  "records": 2862,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -160,6 +160,11 @@
       "path": "private/cnf_domain_mean_alignment_01/report.json",
       "sha256": "582a720c6f1d55304053dbe0461eccfbe20aa8aa4d93e88b1d541c8ae1310757",
       "outcomes_indexed": 12
+    },
+    {
+      "path": "private/cnf_domain_mean_alignment_stability_01/report.json",
+      "sha256": "9713304782b90c26aef258783412807357b761b26220e88d68b9d944209d475d",
+      "outcomes_indexed": 48
     },
     {
       "path": "private/cnf_duration_challenge_01/report.json",
@@ -679,5 +684,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "4584b9f601c90a6b8778f2cba850088637c9ade6a9da57477fd029aadb2eee6a"
+  "ledger_sha256": "b867e8f1f46b046b2ce41df851de9866fe30f87d12483bc9c07182ca434cb12a"
 }

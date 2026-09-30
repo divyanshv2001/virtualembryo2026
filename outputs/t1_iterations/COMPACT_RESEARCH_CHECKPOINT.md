@@ -1,13 +1,13 @@
 # T1 compact research checkpoint
 
-Updated: 2026-09-30T13:00:00+00:00
+Updated: 2026-09-30T13:25:00+00:00
 
 Official best reported: **51.87**. Latest export: `T1_val__anchorslope_progress_20260929_01.h5ad`. Local>72 gate remains unmet.
 Official metrics: DE44.9, direction57.0, MMD53.5, variogram51.7. Latest screenshot shows S2WISH2 / Codex / AGENT, rank29 on that view; scoring-page rank131/270 is a different view.
 
-Next: Full past-source flow and count-aware anchor-slope shrinkage failed their frozen promotion rules. Same-stage E8.5 observation audit found no gross global normalization mismatch (source/challenge median mapped abundance ratio .996, detected-gene ratio 1.105, prevalence Spearman .9335), despite poor nearest-source latent support. A past-only source-to-challenge 8D mean-frame shift, with exact archived unshifted replay and unchanged full-panel scorer, improved all three reused E9.5 development panels: full shift mean 55.7537 vs unshifted 55.1173 and persistence 50. All four mean skills improved slightly. This is a development gain, not temporal or official validation and still far below >72. Next freeze full shift for paired 16-resample stability versus exact unshifted/persistence; do not expand to 64 unless justified. No earlier challenge stage is available for independent temporal transfer.
+Next: Full past-source flow and count-aware anchor-slope shrinkage failed frozen promotion rules. A past-only source-to-challenge 8D mean-frame shift improved all three reused E9.5 development panels (55.7537 vs exact unshifted 55.1173). A frozen 16-resample paired check then improved all 16: full shift mean55.1678, 2.5% tail53.8414, versus unshifted mean54.4955/tail52.9916 and persistence50; paired mean gain+.6724/tail+.3678. All four mean skills improved slightly. Mean<60 triggers the predeclared futility rule, so no 64-resample expansion. This is one-stage cell-resampling stability, not independent embryo, temporal or official validation; >72 remains far away. External temporal audit: only E8.5/E9.5 local Task 1 RNA; metadata-only GSE76118 includes permitted early heart stages and prohibited E10.5, and must not be used without strict stage isolation and license/provenance review. Next screen that source or test a distinct past-only mechanism with matched controls.
 
-Active jobs: none confirmed after `cnf_domain_mean_alignment_01` completed; recheck actual processes before new work.
+Active jobs: none confirmed after `cnf_domain_mean_alignment_stability_01` completed; recheck actual processes before new work.
 
 ## Latest measured decisions
 
@@ -25,11 +25,11 @@ Use deterministic rules for routine status. Latest user instruction allows Jev f
 
 Latest: validated; 1903 payload bytes; actual usage {'input_tokens': 820, 'output_tokens': 103}; answers {'checkpoint_policy': {'choice': 'compact_md_and_sources', 'confidence': 1.0}, 'next_action': {'choice': 'run_log1p_decoder', 'confidence': 0.97}}. One live attempt, original3audit calls separate. No measured Codex token savings claim.
 
-2026-09-30: one new Jev packet, 2044 bytes, 827 input/61 output tokens. It favored `domain_overlap_gate` with confidence .61. The full-source E8.5 overlap gate was executed and failed; this low-confidence advice remains routing only. No measured net Codex credit savings.
+2026-09-30: Jev packet 2044 bytes, 827 input/61 output tokens favored `domain_overlap_gate` with confidence .61. Full-source E8.5 overlap gate failed. A second distinct 2068-byte packet after new stability evidence used 798 input/64 output tokens and favored `external_temporal_data_audit` with confidence .30. Both are advisory only; no measured net Codex credit savings.
 
 ## Current experiment
 
-`cnf_domain_mean_alignment_01`: completed, 12/12 full-panel scores, all valid; full shift passes its narrow reused-development panel rule. SCORE_LEDGER.jsonl has 2814 records. Original private report, plans, D-only forecast hashes and events remain; no full prediction matrices retained.
+`cnf_domain_mean_alignment_stability_01`: completed 48/48 valid full-panel scores; exact forecast SHA256 replay passed. SCORE_LEDGER.jsonl has 2862 records and zero index errors. Original private report, plan, indices and events remain; D-only temporary forecast cache is empty and no full matrices retained. External data audit made no download or model fit.
 
 ## Storage
 

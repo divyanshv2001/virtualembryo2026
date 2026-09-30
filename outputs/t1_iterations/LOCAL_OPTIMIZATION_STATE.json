@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-30T13:01:36.480588+00:00",
+  "updated_utc": "2026-09-30T13:25:00+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,12 +31,12 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Full latent mean-frame shift improved three reused challenge E9.5 panels (mean55.7537 vs55.1173 exact unshifted) and all four mean skills, but far below72. Next: frozen full-shift vs exact unshifted/persistence paired 16-resample pilot using fixed predictions, then reject or investigate further; source historical folds cannot emulate the challenge domain shift and no earlier challenge stage is available.",
+  "next_experiment": "Frozen full-shift alignment improved all 16 paired E9.5 cell-resamples (+0.6724 mean, +0.3678 lower tail) but shifted mean55.1678 fails the predeclared >=60 futility gate; do not expand to 64 or submit. External temporal audit found only E8.5/E9.5 local Task 1 RNA and metadata-only GSE76118 as a mixed E8.5/E9.5/E10.5 candidate. Before any external expression use, verify license/provenance and create a strict stage-separated manifest excluding E10.5; then compare assay/tissue relevance. Continue distinct past-only mechanisms with matched controls.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [],
-  "active_run_path": "private/cnf_domain_mean_alignment_01",
+  "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -1146,12 +1146,13 @@
     "direct_nearest_source_transfer_allowed": false
   },
   "jev_latest": {
-    "record": "JEV_ROUTE_20260930_01.json",
+    "record": "JEV_ROUTE_20260930_02.json",
     "status": "validated",
-    "input_tokens": 827,
-    "output_tokens": 61,
-    "choice": "domain_overlap_gate",
-    "confidence": 0.61,
+    "input_tokens": 798,
+    "output_tokens": 64,
+    "payload_bytes": 2068,
+    "choice": "external_temporal_data_audit",
+    "confidence": 0.3,
     "scientific_evidence": false
   },
   "count_reliability_job": {
@@ -1181,5 +1182,20 @@
     "median_abundance_proxy_ratio": 0.9961825630096648,
     "gene_prevalence_spearman": 0.933516379952812,
     "gross_observation_scale_mismatch": false
+  },
+  "domain_alignment_stability_job": {
+    "status": "completed",
+    "planned_scores": 48,
+    "completed_scores": 48,
+    "plan_sha256": "7f82f57a531dc00613bb8014a3a1dbd4a44c3499cc7dfec89fe35abf960b4b2d",
+    "report_sha256": "9713304782b90c26aef258783412807357b761b26220e88d68b9d944209d475d",
+    "expand_to_final_64_replicates": false
+  },
+  "external_temporal_data_audit": {
+    "status": "metadata_only_candidate_screened",
+    "results_report": "T1_EXTERNAL_TEMPORAL_DATA_AUDIT.json",
+    "data_downloaded": false,
+    "model_fitted": false,
+    "independent_temporal_validation_available": false
   }
 }

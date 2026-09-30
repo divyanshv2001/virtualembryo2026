@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-30T13:01:36.480588+00:00",
+  "updated_utc": "2026-09-30T13:25:00+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5817,6 +5817,35 @@
       "research_family_exhausted": false,
       "results_report": "CNF_DOMAIN_MEAN_ALIGNMENT_RESULTS.json",
       "report_sha256": "582a720c6f1d55304053dbe0461eccfbe20aa8aa4d93e88b1d541c8ae1310757"
+    },
+    {
+      "id": "challenge_domain_mean_alignment_stability",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "status": "completed_stable_development_gain_below_futility_gate",
+      "implementation": "cnf_domain_mean_alignment_stability.py",
+      "run": "cnf_domain_mean_alignment_stability_01",
+      "hypothesis_and_limits": "Check whether the small full-panel gain of past-only E8.5 mean-frame alignment persists under paired E9.5 cell resampling. All 16 panels reuse one exposed stage and fixed forecasts; this is sampling stability, not independent embryos or temporal validation.",
+      "declared_experiment_and_result": "48/48 valid unchanged full-panel scores on 16 predeclared paired E9.5 cell resamples. Exact SHA256 forecast replay passed. Persistence mean50.0000/tail50.0000, unshifted mean54.4955/tail52.9916, full-shift mean55.1678/tail53.8414. Paired gain +0.6724, lower 2.5% +0.3678, positive 16/16. All four mean skills improved slightly. Reused-stage sampling stability is not independent embryo or temporal validation. Frozen mean>=60 futility requirement failed; no 64-replicate expansion.",
+      "next_action": "Seek an eligible independent temporal validation source or a distinct mechanism; preserve this small domain-alignment gain as development only. Do not submit officially.",
+      "research_family_exhausted": false,
+      "results_report": "CNF_DOMAIN_ALIGNMENT_STABILITY_RESULTS.json",
+      "report_sha256": "9713304782b90c26aef258783412807357b761b26220e88d68b9d944209d475d"
+    },
+    {
+      "id": "external_temporal_data_eligibility_audit",
+      "metrics": ["de_score", "de_direction", "mmd_u", "variogram"],
+      "status": "screened_candidate_only_no_new_data_used",
+      "implementation": "T1_EXTERNAL_TEMPORAL_DATA_AUDIT.json",
+      "hypothesis_and_limits": "An independently sourced eligible earlier-stage heart time series could improve temporal validation and training. Official challenge has only E8.5/E9.5 released Task 1 RNA; external data after E9.5 through E13.5 inclusive are prohibited. Any mixed-stage resource requires stage-level filtering before expression use.",
+      "declared_experiment_and_result": "Official data/rules and local folder audited. Local data contains E8.5_RNA.h5ad and E9.5_RNA.h5ad only. GEO GSE76118 is a metadata-only candidate with E8.5/E9.5 heart cells but also prohibited E10.5; assay/tissue, licensing, stage-separated acquisition, and comparative value are unresolved. No data downloaded or model fit.",
+      "next_action": "Screen provenance/license and construct a stage-specific manifest excluding every E10.5 file before any access to expression. Assess assay/tissue mismatch and external-source disclosure. Continue distinct past-only method tests in parallel when feasible.",
+      "research_family_exhausted": false,
+      "results_report": "T1_EXTERNAL_TEMPORAL_DATA_AUDIT.json"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

@@ -1,0 +1,25 @@
+{
+  "audit_date_utc": "2026-09-30",
+  "scope": "Metadata and local-file inventory only; no external expression acquired, read, trained on, or scored.",
+  "official_challenge_data_url": "https://virtualembryo.ai/challenge/data",
+  "official_challenge_rules_url": "https://virtualembryo.ai/challenge/rules",
+  "task1_released_rna_stages": ["E8.5", "E9.5"],
+  "local_task1_rna_files": ["data/E8.5_RNA.h5ad", "data/E9.5_RNA.h5ad"],
+  "task1_unreleased": {"E7.75": "not released", "E10.5": "validation target withheld", "E12.5": "test target withheld", "E9.25": "no single-cell release"},
+  "external_data_rule": "Task 1 external public data are permitted with license and disclosure. Measured external data after E9.5 through E13.5 inclusive are excluded; E10.5 and E12.5 targets are excluded absolutely. A mixed-stage resource requires protected cells removed before training and removal described. External E9.5 exactly is permitted, but an E8.5-to-E9.5 development backtest must train only through E8.5.",
+  "metadata_only_candidate": {
+    "accession": "GSE76118",
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76118",
+    "species": "Mus musculus",
+    "tissue": "embryonic cardiac cells, not the challenge heart-centred dissection",
+    "assay": "single-cell RNA sequencing; platform and normalization require compatibility review",
+    "reported_cells_by_stage": {"E8.5": 118, "E9.5": 949, "E10.5": 1166},
+    "stage_policy": {"E8.5": "potentially eligible", "E9.5": "potentially eligible for final E10.5 model, not E8.5-to-E9.5 backtest training", "E10.5": "prohibited; must be excluded before expression access"},
+    "raw_supplementary_tar": "mixed-stage 425.5 MB; do not download or read unscreened",
+    "license": "not yet verified",
+    "stage_specific_manifest": "not yet constructed",
+    "prospective_value": "Uncertain; limited cell count and tissue/assay mismatch may make this a lineage diagnostic rather than a robust model-training source.",
+    "status": "candidate_not_approved_for_training"
+  },
+  "next_gate": "Verify accession-level and sample-level provenance/license without expression, prepare allowlist of E8.5 and E9.5-only accessions and an explicit E10.5 denylist, then assess value before D-only stage-separated acquisition. Preserve source disclosure. No temporal-validation claim until a separate, eligible measured stage is actually obtained and held out."
+}

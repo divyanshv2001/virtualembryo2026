@@ -1,0 +1,22 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "purpose": "Advisory routing for the next bounded T1 research experiment after new measured evidence; not a score prediction.",
+    "official_best": 51.87,
+    "local_readiness": "Unmet: 64-replicate mean and lower 2.5% >72 plus temporal gain. No official submission now.",
+    "evidence": "Past-only E8.5 source-to-challenge 8D mean alignment improved three reused E9.5 development panels from 55.12 to 55.75. Rebuilt predictions replayed exact hashes; 16 paired E9.5 cell resamples all improved, mean gain +0.672 and paired lower 2.5% +0.368. Shifted score mean 55.17, 2.5% 53.84, so frozen futility rule rejects 64 repetitions. Prior full-source flow, direct nearest-state transfer, and count-based anchor slope shrinkage failed historical controls. Challenge has only E8.5 and E9.5 local stages; E9.5 is target for this development fold and cannot train that forecast.",
+    "constraints": "One next small falsifiable action. Past-only training at each fold, unchanged 32285-gene full-panel scorer and matched controls, D-only cache and 16GB RAM. No dataset, source files, key, target gene matrix or protected information sent. Reused development is not independent validation."
+  },
+  "questions": {
+    "next_action": {
+      "type": "choice",
+      "instructions": "Pick the most informative next bounded action, considering that a +0.67 local gain is still about 17 points short of the 72 gate. Return only choice and confidence.",
+      "criteria": {
+        "covariance_alignment": "Test source-to-challenge E8.5 latent covariance alignment with predeclared conservative shrink strengths, exact mean-shift and persistence controls.",
+        "conditional_alignment": "Test label-conditioned latent alignment despite mismatched source/challenge annotation names and poor nearest-source support.",
+        "de_specific_mechanism": "Test a distinct past-only DE/direction gene program mechanism, with historical controls before challenge scoring.",
+        "external_temporal_data_audit": "Audit whether additional eligible challenge-like temporal data exist before costly architecture expansion; record absence if unavailable."
+      }
+    }
+  }
+}
