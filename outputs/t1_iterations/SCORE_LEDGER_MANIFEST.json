@@ -1,5 +1,5 @@
 {
-  "records": 2794,
+  "records": 2802,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -145,6 +145,11 @@
       "path": "private/cnf_challenge_repair_01/report.json",
       "sha256": "e7f18b94f9584c3112fcaa2a19a5bb37bb74b202d6ec2f722cc7b0cadf04e9e5",
       "outcomes_indexed": 21
+    },
+    {
+      "path": "private/cnf_count_reliability_temporal_01/report.json",
+      "sha256": "6ccc4bea639950fc2f18d08d1cc308140b19020f59347ebb3446ef8c16e6c676",
+      "outcomes_indexed": 8
     },
     {
       "path": "private/cnf_dimension_challenge_01/report.json",
@@ -422,6 +427,31 @@
       "outcomes_indexed": 10
     },
     {
+      "path": "private/full_atlas_stage_means_01/report.json",
+      "sha256": "129194a0ce4efc5c89567e7a774e4711d2456346906d89025da197f88b471329",
+      "outcomes_indexed": 0
+    },
+    {
+      "path": "private/full_source_anchor_overlap_01/report.json",
+      "sha256": "b2c6c44535c9a0e2512fcf6cdb1999fe7cf2ed02dd6f8675f57d5e6bd0f48815",
+      "outcomes_indexed": 0
+    },
+    {
+      "path": "private/full_source_flow_pilot_01/report.json",
+      "sha256": "7f8fa932e0b9667cbd00f5e3ac938a2df72f591521d15693f7de608cfcea48df",
+      "outcomes_indexed": 0
+    },
+    {
+      "path": "private/full_source_flow_shrink_01/report.json",
+      "sha256": "435c2cf39f8b3af9fc2c76bd747a0e8fa0094959cfe4f067993fa24f4a91adac",
+      "outcomes_indexed": 0
+    },
+    {
+      "path": "private/full_source_latent_coordinates_01/report.json",
+      "sha256": "936db9f2f3568122a87b41c0bbec50e97c2cd3cd50a97b9d24d8a24a10b9e485",
+      "outcomes_indexed": 0
+    },
+    {
       "path": "private/growth_composition_horizon_01/report.json",
       "sha256": "d2f032413afa5f4f378fc1c5ca3c4323ab1ae307686465e723377cc4a7dec4ab",
       "outcomes_indexed": 20
@@ -639,5 +669,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "4148357383c960bc27acacf31d5a92c8fcef42cd6871bd11e27baeddd430b4ed"
+  "ledger_sha256": "0b3065d136e8f6e9b89400e431f6c5dd487029363f189cc02de64b498b1d9af8"
 }

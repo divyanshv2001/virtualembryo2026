@@ -1,13 +1,13 @@
 # T1 compact research checkpoint
 
-Updated: 2026-09-29T18:01:17.448606+00:00
+Updated: 2026-09-30T12:41:06+00:00
 
 Official best reported: **51.87**. Latest export: `T1_val__anchorslope_progress_20260929_01.h5ad`. Local>72 gate remains unmet.
 Official metrics: DE44.9, direction57.0, MMD53.5, variogram51.7. Latest screenshot shows S2WISH2 / Codex / AGENT, rank29 on that view; scoring-page rank131/270 is a different view.
 
-Next: Full past-source cells have frozen 8D coordinates (256 sampled rows replay within 3.54e-8). Matched 200-update sampled/full-source CNF pilot on stages through E8.0 lost to persistence at E8.25/E8.5: 8D MMD .10189/.28565 sampled, .09356/.27454 full, .07657/.22550 persistence (lower better). All nonzero flow/persistence shrinkage alphas .1,.25,.5,1 also lost on both targets. Full E8.5 source-to-challenge overlap audit (58,072 source versus 16,787 challenge cells) found 2.95% geometric support and just 0.006% strict same-label support; only Foregut labels overlap exactly, so exact-label rule is conservative. Do not proceed to full-coverage fit or E9.5 forecast from this flow or direct nearest-source transfer. These are representation screens, not full-panel skills. Next test a distinct challenge-anchored, count-aware residual/decoder hypothesis with past-only historical controls; retain >72 and temporal gates.
+Next: Full past-source 8D flow, shrinkage and direct E8.5 nearest-source mapping screens failed their frozen promotion gates; do not run full-coverage fit or E9.5 forecast from those exact approaches. Count-aware anchor-slope shrinkage was then tested on two source one-day folds under the unchanged 32,285-gene scorer. k100 scored 49.5874/51.2920, k500 49.4025/51.3167 versus unshrunk 49.7003/51.1772 and persistence 50/50. The first fold regressed and no candidate passed both-fold/all-skill criteria; reject this bounded attenuation. Next viable route requires a distinct challenge-anchor/source-level or domain-adaptation mechanism and a frozen historical control. Local >72 and temporal gates remain unmet; no official submission.
 
-Active jobs: none confirmed after `full_source_flow_pilot_01` completed; recheck actual processes before new work.
+Active jobs: none confirmed after `cnf_count_reliability_temporal_01` completed; recheck actual processes before new work.
 
 ## Latest measured decisions
 
@@ -29,7 +29,7 @@ Latest: validated; 1903 payload bytes; actual usage {'input_tokens': 820, 'outpu
 
 ## Current experiment
 
-`full_source_flow_pilot_01`, `full_source_flow_shrink_01`, `full_source_anchor_overlap_01`: completed; no active job confirmed. No new full-panel scores, so the 2794-record ledger is unchanged.
+`cnf_count_reliability_temporal_01`: completed, 8/8 full-panel scores, all valid, no promotion. SCORE_LEDGER.jsonl has 2802 records. Original private report, plans, D-only forecast hashes and events remain; no full prediction matrices retained.
 
 ## Storage
 

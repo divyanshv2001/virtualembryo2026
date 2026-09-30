@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-30T12:29:15.121189+00:00",
+  "updated_utc": "2026-09-30T12:42:45.632666+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,12 +31,12 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Reject exact full-source flow and direct nearest-source E8.5 transfer. Next implement a distinct challenge-anchored count-aware residual/detection mechanism, first screening on historical past-only temporal folds with matched persistence/incumbent and unchanged full-panel scoring; retain source-domain mismatch limitation.",
+  "next_experiment": "Count-aware anchor delta shrinkage k100/500 failed both-fold promotion: first source fold regressed below unshrunk/persistence. Next investigate a distinct cross-domain challenge-anchor mechanism or gain from count-aware source-level calibration; freeze controls and compute before scoring. No official submission.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [],
-  "active_run_path": "private/full_source_flow_pilot_01",
+  "active_run_path": "private/cnf_count_reliability_temporal_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -1153,5 +1153,14 @@
     "choice": "domain_overlap_gate",
     "confidence": 0.61,
     "scientific_evidence": false
+  },
+  "count_reliability_job": {
+    "status": "completed_not_promoted",
+    "planned_scores": 8,
+    "completed_scores": 8,
+    "plan_sha256": "931d6f3e7ef78a6b8b617475e92b38aedc096d458ecda3433a57e8b14d55ef32",
+    "report_sha256": "6ccc4bea639950fc2f18d08d1cc308140b19020f59347ebb3446ef8c16e6c676",
+    "passing_candidates": [],
+    "results_report": "CNF_COUNT_RELIABILITY_TEMPORAL_RESULTS.json"
   }
 }

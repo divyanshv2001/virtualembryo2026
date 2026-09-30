@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-30T12:29:15.121189+00:00",
+  "updated_utc": "2026-09-30T12:42:45.632666+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5764,6 +5764,24 @@
       "next_action": "Do not use direct nearest-source transfer. A learned domain adaptation or count-aware challenge-anchor model remains an untested distinct family.",
       "research_family_exhausted": false,
       "report_sha256": "b2c6c44535c9a0e2512fcf6cdb1999fe7cf2ed02dd6f8675f57d5e6bd0f48815"
+    },
+    {
+      "id": "count_reliability_anchor_slopes",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "status": "implemented_evaluated_not_promoted",
+      "implementation": "cnf_count_reliability_temporal.py",
+      "run": "cnf_count_reliability_temporal_01",
+      "hypothesis_and_limits": "Past-only count/(count+k) shrinkage of challenge-analog anchor positive/detection slope deltas may reduce unstable low-count gene effects; two reused source-cohort folds are not challenge-domain or independent embryo validation.",
+      "declared_experiment_and_result": "Eight full-panel local scores on source 8\u21929 and 8.25\u21929.25. Copy 50/50; unshrunk 49.7003/51.1772; k100 49.5874/51.2920; k500 49.4025/51.3167. Both count-shrunk variants worsen the first fold below persistence despite slight second-fold gain; no candidate passes frozen both-fold/all-skill rule. All raw metrics and skills preserved.",
+      "next_action": "Reject this bounded count/(count+k) attenuation. Source-cohort folds and one-day challenge domain differ; seek a mechanism with measured target-domain support before more expensive model fitting.",
+      "research_family_exhausted": false,
+      "results_report": "CNF_COUNT_RELIABILITY_TEMPORAL_RESULTS.json",
+      "report_sha256": "6ccc4bea639950fc2f18d08d1cc308140b19020f59347ebb3446ef8c16e6c676"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."
