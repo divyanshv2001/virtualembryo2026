@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-30T12:42:45.632666+00:00",
+  "updated_utc": "2026-09-30T13:01:36.480588+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,12 +31,12 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Count-aware anchor delta shrinkage k100/500 failed both-fold promotion: first source fold regressed below unshrunk/persistence. Next investigate a distinct cross-domain challenge-anchor mechanism or gain from count-aware source-level calibration; freeze controls and compute before scoring. No official submission.",
+  "next_experiment": "Full latent mean-frame shift improved three reused challenge E9.5 panels (mean55.7537 vs55.1173 exact unshifted) and all four mean skills, but far below72. Next: frozen full-shift vs exact unshifted/persistence paired 16-resample pilot using fixed predictions, then reject or investigate further; source historical folds cannot emulate the challenge domain shift and no earlier challenge stage is available.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [],
-  "active_run_path": "private/cnf_count_reliability_temporal_01",
+  "active_run_path": "private/cnf_domain_mean_alignment_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -1162,5 +1162,24 @@
     "report_sha256": "6ccc4bea639950fc2f18d08d1cc308140b19020f59347ebb3446ef8c16e6c676",
     "passing_candidates": [],
     "results_report": "CNF_COUNT_RELIABILITY_TEMPORAL_RESULTS.json"
+  },
+  "domain_mean_alignment_job": {
+    "status": "completed_development_gain",
+    "plan_sha256": "e842d503d189b1f66d27ce7a69dc93bafb1e7c3e3c6e71ef13712a565eda1b7f",
+    "planned_scores": 12,
+    "completed_scores": 12,
+    "report_sha256": "582a720c6f1d55304053dbe0461eccfbe20aa8aa4d93e88b1d541c8ae1310757",
+    "passing_candidates": [
+      "shift_full"
+    ],
+    "results_report": "CNF_DOMAIN_MEAN_ALIGNMENT_RESULTS.json"
+  },
+  "source_challenge_observation_audit": {
+    "status": "completed",
+    "report_sha256": "0eaa4ed2f52cb2cc14c5da40e600e01de23d1a66d90b574968ed75a212db22bb",
+    "median_detected_ratio": 1.1054877151684566,
+    "median_abundance_proxy_ratio": 0.9961825630096648,
+    "gene_prevalence_spearman": 0.933516379952812,
+    "gross_observation_scale_mismatch": false
   }
 }

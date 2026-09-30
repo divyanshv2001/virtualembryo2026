@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-30T12:42:45.632666+00:00",
+  "updated_utc": "2026-09-30T13:01:36.480588+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5782,6 +5782,41 @@
       "research_family_exhausted": false,
       "results_report": "CNF_COUNT_RELIABILITY_TEMPORAL_RESULTS.json",
       "report_sha256": "6ccc4bea639950fc2f18d08d1cc308140b19020f59347ebb3446ef8c16e6c676"
+    },
+    {
+      "id": "source_challenge_e8_observation_scale",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "status": "completed_diagnostic",
+      "implementation": "source_challenge_observation_audit.py",
+      "run": "source_challenge_observation_audit_01",
+      "hypothesis_and_limits": "Source/challenge latent mismatch might be a simple observation-scale artifact. Same-stage E8.5 mapped-gene detected count and normalized abundance proxy are descriptive, not causal technical/biological disentanglement.",
+      "declared_experiment_and_result": "Sampled source E8.5 n3000 versus challenge E8.5 n16787 on 26775 uniquely mapped genes: median detected 3398.5 vs3757 (ratio1.105), mapped normalized abundance 9906.55 vs9868.74 (ratio .996), gene prevalence Spearman .9335 and mean log1p Spearman .9311. Predeclared gross observation-scale mismatch flag false.",
+      "next_action": "Do not apply blind global library-size normalization. Test a bounded past-only latent mean-frame alignment with matched unshifted and persistence full-panel controls; report composition confounding.",
+      "research_family_exhausted": false,
+      "report_sha256": "0eaa4ed2f52cb2cc14c5da40e600e01de23d1a66d90b574968ed75a212db22bb"
+    },
+    {
+      "id": "challenge_source_latent_mean_alignment",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "status": "implemented_evaluated_development_gain",
+      "implementation": "cnf_domain_mean_alignment.py",
+      "run": "cnf_domain_mean_alignment_01",
+      "hypothesis_and_limits": "Shift source-trained 8D CNF coordinate frame toward challenge E8.5 anchor mean without future target expression. Global mean shift may erase cell-composition biology; three reused E9.5 panels are development only.",
+      "declared_experiment_and_result": "12/12 valid unchanged full-panel challenge E9.5 development scores across three reused panels. Persistence mean50; exact-replay unshifted mean55.1173; half-shift55.6276; full-shift55.7537. Full shift beats both controls on every panel and improves mean skill in all four metrics (DE .52385\u2192.52563, direction .59151\u2192.60087, MMD .55489\u2192.56240, variogram .52933\u2192.53596). This is a development gain, not official or 72 readiness.",
+      "next_action": "Freeze full-shift candidate and run a bounded paired 16-replicate challenge E9.5 resampling pilot against exact unshifted and persistence with fixed predictor; do not expand to 64 unless meaningful gain and >72 plausibility. Check available temporal/domain validation separately.",
+      "research_family_exhausted": false,
+      "results_report": "CNF_DOMAIN_MEAN_ALIGNMENT_RESULTS.json",
+      "report_sha256": "582a720c6f1d55304053dbe0461eccfbe20aa8aa4d93e88b1d541c8ae1310757"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

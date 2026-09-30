@@ -1,13 +1,13 @@
 # T1 compact research checkpoint
 
-Updated: 2026-09-30T12:41:06+00:00
+Updated: 2026-09-30T13:00:00+00:00
 
 Official best reported: **51.87**. Latest export: `T1_val__anchorslope_progress_20260929_01.h5ad`. Local>72 gate remains unmet.
 Official metrics: DE44.9, direction57.0, MMD53.5, variogram51.7. Latest screenshot shows S2WISH2 / Codex / AGENT, rank29 on that view; scoring-page rank131/270 is a different view.
 
-Next: Full past-source 8D flow, shrinkage and direct E8.5 nearest-source mapping screens failed their frozen promotion gates; do not run full-coverage fit or E9.5 forecast from those exact approaches. Count-aware anchor-slope shrinkage was then tested on two source one-day folds under the unchanged 32,285-gene scorer. k100 scored 49.5874/51.2920, k500 49.4025/51.3167 versus unshrunk 49.7003/51.1772 and persistence 50/50. The first fold regressed and no candidate passed both-fold/all-skill criteria; reject this bounded attenuation. Next viable route requires a distinct challenge-anchor/source-level or domain-adaptation mechanism and a frozen historical control. Local >72 and temporal gates remain unmet; no official submission.
+Next: Full past-source flow and count-aware anchor-slope shrinkage failed their frozen promotion rules. Same-stage E8.5 observation audit found no gross global normalization mismatch (source/challenge median mapped abundance ratio .996, detected-gene ratio 1.105, prevalence Spearman .9335), despite poor nearest-source latent support. A past-only source-to-challenge 8D mean-frame shift, with exact archived unshifted replay and unchanged full-panel scorer, improved all three reused E9.5 development panels: full shift mean 55.7537 vs unshifted 55.1173 and persistence 50. All four mean skills improved slightly. This is a development gain, not temporal or official validation and still far below >72. Next freeze full shift for paired 16-resample stability versus exact unshifted/persistence; do not expand to 64 unless justified. No earlier challenge stage is available for independent temporal transfer.
 
-Active jobs: none confirmed after `cnf_count_reliability_temporal_01` completed; recheck actual processes before new work.
+Active jobs: none confirmed after `cnf_domain_mean_alignment_01` completed; recheck actual processes before new work.
 
 ## Latest measured decisions
 
@@ -29,7 +29,7 @@ Latest: validated; 1903 payload bytes; actual usage {'input_tokens': 820, 'outpu
 
 ## Current experiment
 
-`cnf_count_reliability_temporal_01`: completed, 8/8 full-panel scores, all valid, no promotion. SCORE_LEDGER.jsonl has 2802 records. Original private report, plans, D-only forecast hashes and events remain; no full prediction matrices retained.
+`cnf_domain_mean_alignment_01`: completed, 12/12 full-panel scores, all valid; full shift passes its narrow reused-development panel rule. SCORE_LEDGER.jsonl has 2814 records. Original private report, plans, D-only forecast hashes and events remain; no full prediction matrices retained.
 
 ## Storage
 

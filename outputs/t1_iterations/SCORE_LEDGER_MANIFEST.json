@@ -1,5 +1,5 @@
 {
-  "records": 2802,
+  "records": 2814,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -155,6 +155,11 @@
       "path": "private/cnf_dimension_challenge_01/report.json",
       "sha256": "4a183c39619268129095da227da912d8a0ca89e5e272e3b50027d9ed56bb13d2",
       "outcomes_indexed": 30
+    },
+    {
+      "path": "private/cnf_domain_mean_alignment_01/report.json",
+      "sha256": "582a720c6f1d55304053dbe0461eccfbe20aa8aa4d93e88b1d541c8ae1310757",
+      "outcomes_indexed": 12
     },
     {
       "path": "private/cnf_duration_challenge_01/report.json",
@@ -607,6 +612,11 @@
       "outcomes_indexed": 0
     },
     {
+      "path": "private/source_challenge_observation_audit_01/report.json",
+      "sha256": "0eaa4ed2f52cb2cc14c5da40e600e01de23d1a66d90b574968ed75a212db22bb",
+      "outcomes_indexed": 0
+    },
+    {
       "path": "private/specialist_integration_01/report.json",
       "sha256": "8fd419d544c764a4e201a8fc25a4b16eb6081d97be17ff272f6e6f0c2b6d54b8",
       "outcomes_indexed": 21
@@ -669,5 +679,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "0b3065d136e8f6e9b89400e431f6c5dd487029363f189cc02de64b498b1d9af8"
+  "ledger_sha256": "4584b9f601c90a6b8778f2cba850088637c9ade6a9da57477fd029aadb2eee6a"
 }

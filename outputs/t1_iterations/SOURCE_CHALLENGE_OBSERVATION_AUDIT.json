@@ -1,0 +1,78 @@
+{
+  "status": "completed",
+  "plan_sha256": "77fa5692a4305f8efef6c073c36ffe80cc1c793dad934567203e96b872ae6c84",
+  "source_rows": 3000,
+  "challenge_rows": 16787,
+  "mapped_genes": 26775,
+  "source_detected_quantiles": [
+    2571.7000000000003,
+    2957.75,
+    3398.5,
+    3930.5,
+    4625.2
+  ],
+  "challenge_detected_quantiles": [
+    2730.0,
+    3196.5,
+    3757.0,
+    4383.0,
+    5019.4
+  ],
+  "source_abundance_proxy_quantiles": [
+    9881.649950039387,
+    9893.154887378216,
+    9906.554463863373,
+    9918.931455343962,
+    9929.182233977317
+  ],
+  "challenge_abundance_proxy_quantiles": [
+    9839.777550697327,
+    9853.795022189617,
+    9868.73681640625,
+    9882.84614622593,
+    9894.768949890136
+  ],
+  "median_detected_ratio": 1.1054877151684566,
+  "median_abundance_proxy_ratio": 0.9961825630096648,
+  "gene_prevalence_spearman": 0.933516379952812,
+  "gene_mean_log1p_spearman": 0.9310919919259242,
+  "same_name_foregut": {
+    "source_cells": 40,
+    "challenge_cells": 2405,
+    "source_detected_quantiles": [
+      2850.7,
+      3076.25,
+      3651.0,
+      3929.5,
+      4899.1
+    ],
+    "challenge_detected_quantiles": [
+      2567.4,
+      2952.0,
+      3420.0,
+      3934.0,
+      4426.0
+    ],
+    "source_abundance_quantiles": [
+      9888.92720181942,
+      9901.339932262897,
+      9906.22751045227,
+      9912.56790202856,
+      9918.144970226287
+    ],
+    "challenge_abundance_quantiles": [
+      9844.0098767519,
+      9856.597775220871,
+      9869.334346532822,
+      9881.689205408096,
+      9892.171464538575
+    ],
+    "prevalence_spearman": 0.873240946919284
+  },
+  "observation_scale_mismatch_flag": false,
+  "expression_composition_heterogeneity_flag": false,
+  "limits": "Source E8.5 is a sampled atlas cohort; sum(expm1) on mapped normalized genes is a proxy, not raw UMI library. Source and challenge type ontologies are not aligned. Technical versus biological cause cannot be inferred.",
+  "created_utc": "2026-09-30T12:50:32.227359+00:00",
+  "report_sha256": "0eaa4ed2f52cb2cc14c5da40e600e01de23d1a66d90b574968ed75a212db22bb",
+  "aggregates_sha256": "1005e4c622f6e47b76d74d621f5e3d5ff5b0262b4c0f1f4eaba9f826ada4998d"
+}
