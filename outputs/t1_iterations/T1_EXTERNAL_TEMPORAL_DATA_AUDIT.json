@@ -17,9 +17,9 @@
     "stage_policy": {"E8.5": "potentially eligible", "E9.5": "potentially eligible for final E10.5 model, not E8.5-to-E9.5 backtest training", "E10.5": "prohibited; must be excluded before expression access"},
     "raw_supplementary_tar": "mixed-stage 425.5 MB; do not download or read unscreened",
     "license": "not yet verified",
-    "stage_specific_manifest": "not yet constructed",
+    "stage_specific_manifest": "GSE76118_STAGE_METADATA_MANIFEST.json: GEO MINiML metadata-only screen, 143 E8.5 and 1288 E9.5 candidate GSM IDs; 1536 E10.5 and 274 embryoid-body samples excluded; training not approved",
     "prospective_value": "Uncertain; limited cell count and tissue/assay mismatch may make this a lineage diagnostic rather than a robust model-training source.",
     "status": "candidate_not_approved_for_training"
   },
-  "next_gate": "Verify accession-level and sample-level provenance/license without expression, prepare allowlist of E8.5 and E9.5-only accessions and an explicit E10.5 denylist, then assess value before D-only stage-separated acquisition. Preserve source disclosure. No temporal-validation claim until a separate, eligible measured stage is actually obtained and held out."
+  "next_gate": "Sample-level metadata allowlist is built and excludes E10.5; next verify source license, assay normalization, genotype/region relevance, and the 143/1288 raw-versus-118/949 analyzed-cell QC discrepancy before deciding whether D-only, individual-GSM early-stage expression acquisition is justified. Never download mixed-stage RAW.tar. E9.5 cannot train the E8.5-to-E9.5 backtest. Preserve source disclosure. No temporal-validation claim until separate eligible measured data are obtained and held out."
 }

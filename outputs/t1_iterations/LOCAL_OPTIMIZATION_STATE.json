@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-30T13:25:00+00:00",
+  "updated_utc": "2026-09-30T13:40:00+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,7 +31,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Frozen full-shift alignment improved all 16 paired E9.5 cell-resamples (+0.6724 mean, +0.3678 lower tail) but shifted mean55.1678 fails the predeclared >=60 futility gate; do not expand to 64 or submit. External temporal audit found only E8.5/E9.5 local Task 1 RNA and metadata-only GSE76118 as a mixed E8.5/E9.5/E10.5 candidate. Before any external expression use, verify license/provenance and create a strict stage-separated manifest excluding E10.5; then compare assay/tissue relevance. Continue distinct past-only mechanisms with matched controls.",
+  "next_experiment": "Frozen full-shift alignment improved all 16 paired E9.5 cell-resamples (+0.6724 mean, +0.3678 lower tail) but shifted mean55.1678 fails predeclared >=60 futility gate; no 64-resample expansion or official submission. GEO GSE76118 metadata-only stage manifest now allowlists 143 E8.5 and 1288 E9.5 GSM files and excludes 1536 E10.5 plus 274 embryoid-body samples. Verify license, assay/tissue compatibility and QC discrepancy (118/949 analyzed) before any individually stage-separated D-only expression acquisition. Continue distinct past-only mechanism tests with matched controls.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1192,8 +1192,10 @@
     "expand_to_final_64_replicates": false
   },
   "external_temporal_data_audit": {
-    "status": "metadata_only_candidate_screened",
+    "status": "metadata_only_stage_manifest_built",
     "results_report": "T1_EXTERNAL_TEMPORAL_DATA_AUDIT.json",
+    "sample_manifest": "GSE76118_STAGE_METADATA_MANIFEST.json",
+    "metadata_archive_sha256": "b0cddff659944d328119025249ba1d22969c9ed75582e391edb81c8398b82276",
     "data_downloaded": false,
     "model_fitted": false,
     "independent_temporal_validation_available": false

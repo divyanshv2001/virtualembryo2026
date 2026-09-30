@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-30T13:25:00+00:00",
+  "updated_utc": "2026-09-30T13:40:00+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5839,11 +5839,11 @@
     {
       "id": "external_temporal_data_eligibility_audit",
       "metrics": ["de_score", "de_direction", "mmd_u", "variogram"],
-      "status": "screened_candidate_only_no_new_data_used",
+      "status": "metadata_stage_manifest_built_no_expression_used",
       "implementation": "T1_EXTERNAL_TEMPORAL_DATA_AUDIT.json",
       "hypothesis_and_limits": "An independently sourced eligible earlier-stage heart time series could improve temporal validation and training. Official challenge has only E8.5/E9.5 released Task 1 RNA; external data after E9.5 through E13.5 inclusive are prohibited. Any mixed-stage resource requires stage-level filtering before expression use.",
-      "declared_experiment_and_result": "Official data/rules and local folder audited. Local data contains E8.5_RNA.h5ad and E9.5_RNA.h5ad only. GEO GSE76118 is a metadata-only candidate with E8.5/E9.5 heart cells but also prohibited E10.5; assay/tissue, licensing, stage-separated acquisition, and comparative value are unresolved. No data downloaded or model fit.",
-      "next_action": "Screen provenance/license and construct a stage-specific manifest excluding every E10.5 file before any access to expression. Assess assay/tissue mismatch and external-source disclosure. Continue distinct past-only method tests in parallel when feasible.",
+      "declared_experiment_and_result": "Official data/rules and local folder audited. Local data contains E8.5_RNA.h5ad and E9.5_RNA.h5ad only. GEO MINiML metadata-only manifest screened 3241 samples: 143 E8.5 and 1288 E9.5 individual GSM IDs allowlisted; 1536 E10.5 and 274 embryoid-body samples excluded. Metadata SHA256 b0cddff659944d328119025249ba1d22969c9ed75582e391edb81c8398b82276. GEO abstract reports fewer analyzed cells (118/949), so QC/selection is unresolved. No expression acquired or model fit.",
+      "next_action": "Verify provenance/license, assay normalization, genotype/region relevance and raw-vs-analyzed QC gap before any D-only acquisition of individually allowlisted early-stage GSM files. Never use mixed-stage RAW.tar. E9.5 must be excluded from E8.5-to-E9.5 backtest training. Continue distinct past-only method tests.",
       "research_family_exhausted": false,
       "results_report": "T1_EXTERNAL_TEMPORAL_DATA_AUDIT.json"
     }
