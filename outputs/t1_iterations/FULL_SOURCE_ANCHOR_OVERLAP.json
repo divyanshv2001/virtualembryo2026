@@ -1,0 +1,147 @@
+{
+  "status": "completed",
+  "plan_sha256": "435500e25886a526ee29a48cd5f51ed7520b4706e94b547d7024a10dc5a94396",
+  "source_rows": 58072,
+  "challenge_rows": 16787,
+  "source_leave_one_out_median": 0.3028984314656453,
+  "challenge_median_distance_ratio": 3.4648869718161315,
+  "distance_ratio_le_two_fraction": 0.07160302615118842,
+  "geometric_support_fraction": 0.029487103115506046,
+  "strict_exact_label_support_fraction": 5.95699052838506e-05,
+  "exact_label_overlap": [
+    "Foregut"
+  ],
+  "types_with_majority_strict_support": [],
+  "by_challenge_type": [
+    {
+      "challenge_type": "AVC-CM",
+      "cells": 598,
+      "median_distance_ratio": 3.2119340417430364,
+      "geometric_support_fraction": 0.03177257525083612,
+      "strict_exact_label_support_fraction": 0.0
+    },
+    {
+      "challenge_type": "Blood",
+      "cells": 266,
+      "median_distance_ratio": 6.29388911028036,
+      "geometric_support_fraction": 0.0,
+      "strict_exact_label_support_fraction": 0.0
+    },
+    {
+      "challenge_type": "EXEM",
+      "cells": 863,
+      "median_distance_ratio": 3.995003829354309,
+      "geometric_support_fraction": 0.011587485515643106,
+      "strict_exact_label_support_fraction": 0.0
+    },
+    {
+      "challenge_type": "Endothelium",
+      "cells": 1139,
+      "median_distance_ratio": 4.160657166673818,
+      "geometric_support_fraction": 0.012291483757682178,
+      "strict_exact_label_support_fraction": 0.0
+    },
+    {
+      "challenge_type": "Foregut",
+      "cells": 2405,
+      "median_distance_ratio": 2.595333683287787,
+      "geometric_support_fraction": 0.05862785862785863,
+      "strict_exact_label_support_fraction": 0.0004158004158004158
+    },
+    {
+      "challenge_type": "IFT-CM",
+      "cells": 949,
+      "median_distance_ratio": 3.5024919169890856,
+      "geometric_support_fraction": 0.029504741833508957,
+      "strict_exact_label_support_fraction": 0.0
+    },
+    {
+      "challenge_type": "JCF",
+      "cells": 1119,
+      "median_distance_ratio": 4.493382218606563,
+      "geometric_support_fraction": 0.0035746201966041107,
+      "strict_exact_label_support_fraction": 0.0
+    },
+    {
+      "challenge_type": "LV-CM",
+      "cells": 344,
+      "median_distance_ratio": 3.0858783513578976,
+      "geometric_support_fraction": 0.020348837209302327,
+      "strict_exact_label_support_fraction": 0.0
+    },
+    {
+      "challenge_type": "NCC",
+      "cells": 287,
+      "median_distance_ratio": 2.8086626403741697,
+      "geometric_support_fraction": 0.03484320557491289,
+      "strict_exact_label_support_fraction": 0.0
+    },
+    {
+      "challenge_type": "Neural Tube",
+      "cells": 773,
+      "median_distance_ratio": 3.199607255149773,
+      "geometric_support_fraction": 0.037516170763260026,
+      "strict_exact_label_support_fraction": 0.0
+    },
+    {
+      "challenge_type": "OFT/RV-CM",
+      "cells": 1176,
+      "median_distance_ratio": 3.761164419204567,
+      "geometric_support_fraction": 0.01020408163265306,
+      "strict_exact_label_support_fraction": 0.0
+    },
+    {
+      "challenge_type": "Paraxial Mesoderm",
+      "cells": 934,
+      "median_distance_ratio": 3.1133563903903756,
+      "geometric_support_fraction": 0.08886509635974305,
+      "strict_exact_label_support_fraction": 0.0
+    },
+    {
+      "challenge_type": "Pericardium",
+      "cells": 745,
+      "median_distance_ratio": 3.726911087097134,
+      "geometric_support_fraction": 0.013422818791946308,
+      "strict_exact_label_support_fraction": 0.0
+    },
+    {
+      "challenge_type": "RV-CM",
+      "cells": 442,
+      "median_distance_ratio": 3.066981807809536,
+      "geometric_support_fraction": 0.03167420814479638,
+      "strict_exact_label_support_fraction": 0.0
+    },
+    {
+      "challenge_type": "SV-CM",
+      "cells": 310,
+      "median_distance_ratio": 3.678877152588342,
+      "geometric_support_fraction": 0.016129032258064516,
+      "strict_exact_label_support_fraction": 0.0
+    },
+    {
+      "challenge_type": "Surface Ectoderm",
+      "cells": 1423,
+      "median_distance_ratio": 3.239709932015185,
+      "geometric_support_fraction": 0.030217849613492623,
+      "strict_exact_label_support_fraction": 0.0
+    },
+    {
+      "challenge_type": "aSHF",
+      "cells": 822,
+      "median_distance_ratio": 3.7316153559776284,
+      "geometric_support_fraction": 0.019464720194647202,
+      "strict_exact_label_support_fraction": 0.0
+    },
+    {
+      "challenge_type": "pSHF",
+      "cells": 2192,
+      "median_distance_ratio": 3.4517665981295877,
+      "geometric_support_fraction": 0.02281021897810219,
+      "strict_exact_label_support_fraction": 0.0
+    }
+  ],
+  "direct_nearest_source_transfer_allowed": false,
+  "limits": "Exact celltype names are not an ontology alignment. This is a support screen, not model accuracy or a challenge score.",
+  "created_utc": "2026-09-30T12:25:28.761444+00:00",
+  "report_sha256": "b2c6c44535c9a0e2512fcf6cdb1999fe7cf2ed02dd6f8675f57d5e6bd0f48815"
+}

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T17:13:04.753356+00:00",
+  "updated_utc": "2026-09-30T12:29:15.121189+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5681,9 +5681,9 @@
       "trial_scope": "Unchanged 32,285-gene scorer and original floor/ceiling; source atlas sample and reused E9.5 panels are development evidence only. Top-k is chosen before target read, not optimized from target DE labels.",
       "limitations": "Own bounded trend prior, not DESeq2/ashr reproduction; source-stage associations and reused development do not establish hidden transfer.",
       "research_family_exhausted": false,
-      "results_report": "DE_RANK_TREND_RESULTS.json"
-      ,"diagnostic_report": "DE_RANK_TREND_DIAGNOSTIC.json"
-      ,"decision": "All 18 scores valid. Best top64/full 55.3338 vs matched unit16 55.4202; DE skill .52210 vs .52573. Frozen top64 intersects only 3/4/3 true DE genes on reused E9.5 panels (2 correct directions each), post-scoring diagnosis only. Reject bounded global-rank prior; family not exhausted."
+      "results_report": "DE_RANK_TREND_RESULTS.json",
+      "diagnostic_report": "DE_RANK_TREND_DIAGNOSTIC.json",
+      "decision": "All 18 scores valid. Best top64/full 55.3338 vs matched unit16 55.4202; DE skill .52210 vs .52573. Frozen top64 intersects only 3/4/3 true DE genes on reused E9.5 panels (2 correct directions each), post-scoring diagnosis only. Reject bounded global-rank prior; family not exhausted."
     },
     {
       "id": "full_source_stage_trend_statistics",
@@ -5693,7 +5693,12 @@
         "anchor_source_mapping_diagnostic.py",
         "full_atlas_stage_means.py"
       ],
-      "metric_objective": ["de_score", "de_direction", "mmd_u", "variogram"],
+      "metric_objective": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
       "hypothesis": "The 3,000-cell-per-stage source sample may miss challenge-relevant developmental gene trends; stream all eligible past source cells into normalized whole/cardiac stage means, then test historical transfer before a new challenge forecast.",
       "trial_scope": "D-only two-pass sufficient statistics over full author-linked source atlas E7.5-E8.5. No dense full-atlas matrix and no E9.5 fitting. Historical source-stage checks first; challenge scoring only if viable, with frozen controls.",
       "limitations": "Cardiac proxy labels do not map one-to-one to challenge types; source full atlas has no independent embryo replication guarantee. Direct 8D nearest-source composition weighting rejected by ANCHOR_SOURCE_MAPPING_DIAGNOSTIC.json (median distance ratio 3.28).",
@@ -5702,6 +5707,63 @@
       "stage_means_report": "private/full_atlas_stage_means_01/report.json",
       "historical_screen": "FULL_SOURCE_RANK_TRANSFER_RESULTS.json",
       "decision": "All 116,175 permitted E7.5-E8.5 source cells streamed to normalized stage statistics. Full-source whole trend improved one historical fold but regressed on the next; cardiac trend remained negative on both. The predeclared full-better-both-whole screen failed. No E9.5 challenge prediction from this trend, no family exhaustion."
+    },
+    {
+      "id": "full_source_latent_coordinates",
+      "metrics": [
+        "mmd_u",
+        "variogram"
+      ],
+      "status": "prepared_validated",
+      "hypothesis_and_limits": "Frozen 8D encoder coordinates from all 116,175 past source cells can enable small-memory source-dynamics screening; coordinate replay confirms mapping, but no predictive benefit by itself.",
+      "implementation": "full_source_latent_coordinates.py",
+      "run": "full_source_latent_coordinates_01",
+      "declared_experiment_and_result": "Gene-major compressed block streaming, full-library normalization, 256 sampled-row replay max absolute error 3.54e-8; no full feature matrix retained.",
+      "next_action": "Use only as past-source fit input; no E9.5 or full-panel score claim.",
+      "research_family_exhausted": false
+    },
+    {
+      "id": "full_source_latent_flow_pilot",
+      "metrics": [
+        "mmd_u"
+      ],
+      "status": "implemented_evaluated_not_promoted",
+      "hypothesis_and_limits": "More past source cells might improve 8D latent stage dynamics. Matched 200-update pilot exposes only a small fraction of full cells; not full-coverage training or 32,285-gene scoring.",
+      "implementation": "full_source_flow_pilot.py",
+      "run": "full_source_flow_pilot_01",
+      "declared_experiment_and_result": "Past-only E7.5\u2013E8.0 fits sampled 7,963 vs full 42,168 eligible cells. On held-out E8.25/E8.5, lower 8D MMD: persistence .07657/.22550; sampled CNF .10189/.28565; full CNF .09356/.27454. Full-source improves over sampled but loses to persistence on both; frozen two-target promotion rule failed.",
+      "next_action": "Do not run full-coverage version of this exact flow or E9.5 forecast. Investigate state-dependent residual or conditional decoder with matched source temporal/persistence controls.",
+      "research_family_exhausted": false,
+      "report_sha256": "7f8fa932e0b9667cbd00f5e3ac938a2df72f591521d15693f7de608cfcea48df"
+    },
+    {
+      "id": "full_source_flow_persistence_shrink",
+      "metrics": [
+        "mmd_u"
+      ],
+      "status": "implemented_evaluated_not_promoted",
+      "hypothesis_and_limits": "Shrinking frozen sampled/full past-source CNF velocity toward persistence could repair excess motion. Tested only in source 8D latent space; does not claim full-panel challenge skill.",
+      "implementation": "full_source_flow_shrink.py",
+      "run": "full_source_flow_shrink_01",
+      "declared_experiment_and_result": "Frozen alpha grid 0,.1,.25,.5,1 on identical source E8.0 donors and E8.25/E8.5 targets. Every nonzero alpha had higher unbiased 8D MMD than persistence on both held-out targets; full-source alpha .1 was closest (.07767/.22996 vs persistence .07657/.22550).",
+      "next_action": "Reject this exact full-source latent flow and its shrinkage. Investigate a different challenge-anchored count-aware decoder or source-to-challenge adaptation with past-only historical checks.",
+      "research_family_exhausted": false,
+      "report_sha256": "435c2cf39f8b3af9fc2c76bd747a0e8fa0094959cfe4f067993fa24f4a91adac"
+    },
+    {
+      "id": "full_source_anchor_domain_overlap",
+      "metrics": [
+        "mmd_u",
+        "variogram"
+      ],
+      "status": "completed_screen_rejected_direct_transfer",
+      "hypothesis_and_limits": "Full E8.5 source coverage might reveal a challenge cell subset suitable for nearest-source state adaptation. Exact celltype string equality is a conservative screen, not validated ontology mapping.",
+      "implementation": "full_source_anchor_overlap.py",
+      "run": "full_source_anchor_overlap_01",
+      "declared_experiment_and_result": "58,072 source E8.5 cells and 16,787 challenge E8.5 anchors. Median nearest-source ratio 3.465 versus source leave-one-out; 7.16% within 2x, 2.95% with >=8/16 neighbor label agreement, 0.00596% also exact same-label. Only Foregut names overlap. Predeclared direct-transfer gate failed.",
+      "next_action": "Do not use direct nearest-source transfer. A learned domain adaptation or count-aware challenge-anchor model remains an untested distinct family.",
+      "research_family_exhausted": false,
+      "report_sha256": "b2c6c44535c9a0e2512fcf6cdb1999fe7cf2ed02dd6f8675f57d5e6bd0f48815"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."

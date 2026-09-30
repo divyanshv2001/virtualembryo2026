@@ -1,0 +1,46 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "0fdba091c5349875888f7c62d6f83c9d3073ca45bc59af5db042fef5b599317d",
+  "attempts": 1,
+  "payload_bytes": 2044,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "purpose": "Advisory choice of next bounded local T1 research pilot; no scientific validation or score prediction.",
+      "official_best": {
+        "total": 51.87,
+        "DE": 44.9,
+        "direction": 57.0,
+        "MMD": 53.5,
+        "variogram": 51.7
+      },
+      "local_gate": "Mean and 2.5% tail >72 over 64 fixed replicates, plus temporal gains; still unmet. No official trial now.",
+      "new_evidence": "Full past-source atlas stream covered 116175 cells. Frozen 8D source-space CNF pilot used 200 updates on 7963 sampled or 42168 full eligible past rows. E8.0 to E8.25/E8.5 MMD (lower): persistence .07657/.22550; sampled flow .10189/.28565; full flow .09356/.27454. Shrink alpha .1,.25,.5,1 toward persistence all lost at both targets. Direct challenge/source nearest-state mapping also poor (5.49% challenge cells within 2x source leave-one-out distance). These are source-space screens, not challenge scores.",
+      "constraints": "Choose one next *small falsifiable* pilot; past-only fitting, matched persistence/incumbent controls, unchanged full 32285-gene scoring only after historical screen. 16GB RAM, D-only transient cache. No data, source files, secrets, official submissions or agent work supplied."
+    },
+    "questions": {
+      "next_pilot": {
+        "type": "choice",
+        "instructions": "Choose the next experiment most likely to provide discriminating evidence with low compute, given the measured failures. Return only a choice and confidence.",
+        "criteria": {
+          "count_aware_residual": "Frozen challenge-anchor count-aware gene residual/detection correction, learned only from earlier source temporal folds, first test on historical folds with exact full-panel matched controls.",
+          "domain_overlap_gate": "Diagnose whether any challenge-source cell subset passes a stringent past-only support/label overlap gate before trying any source-to-challenge state adaptation.",
+          "larger_full_source_flow": "Expand training of the current full-source CNF despite both historical target losses versus persistence.",
+          "repeat_mc": "Run more Monte Carlo replicates of the unchanged incumbent without changing its model."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 827,
+    "output_tokens": 61
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "next_pilot": {
+      "choice": "domain_overlap_gate",
+      "confidence": 0.61
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}

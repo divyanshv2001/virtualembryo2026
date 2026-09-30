@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-29T17:13:04.753356+00:00",
+  "updated_utc": "2026-09-30T12:29:15.121189+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,12 +31,12 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Full-source stage means completed (116,175 past rows, 26,775 mapped genes, no dense matrix). Historical cardiac trend ranks were negative on both held-out source folds and full-source whole trends failed the two-fold improvement rule, so do not apply this gene-trend correction to E9.5. Next viable mechanism: bounded full-source latent-flow fit with D-only temporary feature cache and historical temporal controls; freeze compute/memory budget before training.",
+  "next_experiment": "Reject exact full-source flow and direct nearest-source E8.5 transfer. Next implement a distinct challenge-anchored count-aware residual/detection mechanism, first screening on historical past-only temporal folds with matched persistence/incumbent and unchanged full-panel scoring; retain source-domain mismatch limitation.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [],
-  "active_run_path": "private/full_atlas_stage_means_01",
+  "active_run_path": "private/full_source_flow_pilot_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -1108,8 +1108,50 @@
     "genes_mapped": 26775,
     "storage": "D-only small sufficient statistics",
     "report_sha256": "129194a0ce4efc5c89567e7a774e4711d2456346906d89025da197f88b471329",
-    "stage_means_sha256": "8a71070fde35bf2aa5292586059786bbba14e3f27b3f1af1e0e2efecd33d6960"
-    ,"screen_report": "FULL_SOURCE_RANK_TRANSFER_RESULTS.json"
-    ,"decision": "Full source stage statistics prepared with low RAM and no dense matrix. Held-out signed-rank diagnostic: whole full .10606 vs sampled .03030 at8to8.25, but full -.11301 vs sampled -.10616 at8.25to8.5; cardiac full -.01220/-.12923, no gain over sampled -.01220/-.12615. Predeclared two-fold screening rule failed; no challenge forecast from this gene trend."
+    "stage_means_sha256": "8a71070fde35bf2aa5292586059786bbba14e3f27b3f1af1e0e2efecd33d6960",
+    "screen_report": "FULL_SOURCE_RANK_TRANSFER_RESULTS.json",
+    "decision": "Full source stage statistics prepared with low RAM and no dense matrix. Held-out signed-rank diagnostic: whole full .10606 vs sampled .03030 at8to8.25, but full -.11301 vs sampled -.10616 at8.25to8.5; cardiac full -.01220/-.12923, no gain over sampled -.01220/-.12615. Predeclared two-fold screening rule failed; no challenge forecast from this gene trend."
+  },
+  "full_source_flow_pilot_job": {
+    "status": "completed",
+    "run": "full_source_flow_pilot_01",
+    "report_sha256": "7f8fa932e0b9667cbd00f5e3ac938a2df72f591521d15693f7de608cfcea48df",
+    "results_report": "FULL_SOURCE_FLOW_PILOT_RESULTS.json",
+    "promotion_rule_passed": false,
+    "step_budget": 200,
+    "full_cell_coverage": false
+  },
+  "full_source_latent_coordinates": {
+    "status": "completed",
+    "run": "private/full_source_latent_coordinates_01",
+    "source_rows": 116175,
+    "sample_replay_rows": 256,
+    "sample_replay_max_abs_error": 3.5418268762299476e-08,
+    "full_feature_matrix_retained": false
+  },
+  "full_source_flow_shrink_screen": {
+    "status": "completed",
+    "run": "private/full_source_flow_shrink_01",
+    "report_sha256": "435c2cf39f8b3af9fc2c76bd747a0e8fa0094959cfe4f067993fa24f4a91adac",
+    "promotion_rule_passed": false,
+    "full_panel_scoring": false
+  },
+  "full_source_anchor_overlap": {
+    "status": "completed",
+    "report_sha256": "b2c6c44535c9a0e2512fcf6cdb1999fe7cf2ed02dd6f8675f57d5e6bd0f48815",
+    "source_rows": 58072,
+    "challenge_rows": 16787,
+    "geometric_support_fraction": 0.029487103115506046,
+    "strict_exact_label_support_fraction": 5.95699052838506e-05,
+    "direct_nearest_source_transfer_allowed": false
+  },
+  "jev_latest": {
+    "record": "JEV_ROUTE_20260930_01.json",
+    "status": "validated",
+    "input_tokens": 827,
+    "output_tokens": 61,
+    "choice": "domain_overlap_gate",
+    "confidence": 0.61,
+    "scientific_evidence": false
   }
 }

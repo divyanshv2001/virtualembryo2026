@@ -5,9 +5,9 @@ Updated: 2026-09-29T18:01:17.448606+00:00
 Official best reported: **51.87**. Latest export: `T1_val__anchorslope_progress_20260929_01.h5ad`. Local>72 gate remains unmet.
 Official metrics: DE44.9, direction57.0, MMD53.5, variogram51.7. Latest screenshot shows S2WISH2 / Codex / AGENT, rank29 on that view; scoring-page rank131/270 is a different view.
 
-Next: Full-source stage means completed (116,175 past rows, 26,775 mapped genes, no dense matrix). Historical cardiac trend ranks were negative on both held-out source folds and full-source whole trends failed the two-fold improvement rule, so do not apply this gene-trend correction to E9.5. Next viable mechanism: bounded full-source latent-flow fit with D-only temporary feature cache and historical temporal controls; freeze compute/memory budget before training.
+Next: Full past-source cells have frozen 8D coordinates (256 sampled rows replay within 3.54e-8). Matched 200-update sampled/full-source CNF pilot on stages through E8.0 lost to persistence at E8.25/E8.5: 8D MMD .10189/.28565 sampled, .09356/.27454 full, .07657/.22550 persistence (lower better). All nonzero flow/persistence shrinkage alphas .1,.25,.5,1 also lost on both targets. Full E8.5 source-to-challenge overlap audit (58,072 source versus 16,787 challenge cells) found 2.95% geometric support and just 0.006% strict same-label support; only Foregut labels overlap exactly, so exact-label rule is conservative. Do not proceed to full-coverage fit or E9.5 forecast from this flow or direct nearest-source transfer. These are representation screens, not full-panel skills. Next test a distinct challenge-anchored, count-aware residual/decoder hypothesis with past-only historical controls; retain >72 and temporal gates.
 
-Active jobs: []
+Active jobs: none confirmed after `full_source_flow_pilot_01` completed; recheck actual processes before new work.
 
 ## Latest measured decisions
 
@@ -19,15 +19,17 @@ Active jobs: []
 
 Read this file first; inspect only active plan, changed policy/state/queue entries and relevant frozen reports. Avoid full-history replay and unchanged large JSON output. Batch independent small reads. Write every meaningful update to RESEARCH_UPDATES.md and refresh this checkpoint.
 Keep all raw metrics/skills/calibration/splits/seeds/hashes in SCORE_LEDGER.jsonl and source reports. Summaries never replace genuine trajectories or original private predictions.
-Use deterministic rules for routine status. Jev is advisory compact routing, cached by full canonical packet/questions/model. No calls for unchanged state;3000byte cap, one attempt/no retries in this renewed authorization turn. No datasets/source files/secrets sent. Future unattended heartbeat Jev prohibition remains unchanged.
+Use deterministic rules for routine status. Latest user instruction allows Jev for genuinely new bounded decisions that could change the next experiment; canonical cache, <=3000 bytes, one attempt per distinct decision, no retries or data/source files/secrets. Its advice does not validate scores. Updated the heartbeat prompt accordingly. No call for unchanged state.
 
 ## Jev accounting
 
 Latest: validated; 1903 payload bytes; actual usage {'input_tokens': 820, 'output_tokens': 103}; answers {'checkpoint_policy': {'choice': 'compact_md_and_sources', 'confidence': 1.0}, 'next_action': {'choice': 'run_log1p_decoder', 'confidence': 0.97}}. One live attempt, original3audit calls separate. No measured Codex token savings claim.
 
+2026-09-30: one new Jev packet, 2044 bytes, 827 input/61 output tokens. It favored `domain_overlap_gate` with confidence .61. The full-source E8.5 overlap gate was executed and failed; this low-confidence advice remains routing only. No measured net Codex credit savings.
+
 ## Current experiment
 
-`full_atlas_stage_means_01`: completed; planned unknown, completed 0.
+`full_source_flow_pilot_01`, `full_source_flow_shrink_01`, `full_source_anchor_overlap_01`: completed; no active job confirmed. No new full-panel scores, so the 2794-record ledger is unchanged.
 
 ## Storage
 

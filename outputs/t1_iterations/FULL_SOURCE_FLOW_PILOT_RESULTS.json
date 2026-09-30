@@ -1,0 +1,41 @@
+{
+  "updated_utc": "2026-09-29T18:08:23.460932+00:00",
+  "scope": "Frozen source E8.0 donor rows. Lower 8D unbiased multi-kernel MMD versus held-out source E8.25/E8.5 cells. Persistence and sampled-source field are controls. Source latent metric only, not 32,285-gene challenge score.",
+  "plan_sha256": "0c51c589663d8733a7f1d9db4492dce199e5aa5809863dd61b1ce2a7b50349dc",
+  "report_sha256": "7f8fa932e0b9667cbd00f5e3ac938a2df72f591521d15693f7de608cfcea48df",
+  "training_rows": {
+    "sampled": 7963,
+    "full": 42168
+  },
+  "targets": [
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "metric": "8D source latent unbiased multi-kernel MMD; lower is better",
+      "raw_mmd": {
+        "persistence": 0.07657208293676376,
+        "sampled": 0.101889468729496,
+        "full": 0.09356164932250977
+      },
+      "donor_count": 1500,
+      "truth_count": 1000
+    },
+    {
+      "cutoff": 8.0,
+      "target": 8.5,
+      "metric": "8D source latent unbiased multi-kernel MMD; lower is better",
+      "raw_mmd": {
+        "persistence": 0.22550228238105774,
+        "sampled": 0.2856491804122925,
+        "full": 0.27454280853271484
+      },
+      "donor_count": 1500,
+      "truth_count": 1000
+    }
+  ],
+  "promotion_rule_passed": false,
+  "full_coverage_fit": false,
+  "challenge_score": null,
+  "official_score": null,
+  "submissions_used": 0
+}
