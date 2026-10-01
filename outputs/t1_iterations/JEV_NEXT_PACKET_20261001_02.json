@@ -1,0 +1,19 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "purpose": "Select next bounded diagnostic after new external compatibility results; advisory only.",
+    "evidence": "Frozen24earlyCD1heartcells,18QCpass9perstage. Shared atlas/external25464uniquegenes. E8.5atlas-frozen64gene centroid diagnostic:16externalcardiomyocyte-like,2progenitor-like; not validated cell IDs. External shared detection.144-.335 vs atlasE8.5 .05/.5/.95quantiles .092/.132/.199. Pooled externalvsatlascardiac E8.5->E9.5 deltaSpearman0.000650; region/type confounded, embryo independence unknown. Prior pooled/EB/conditional-time/detection coupling tests failed. Official52.16; >72gateunmet.",
+    "constraints": "Dcache16GBRAM,no new download/upload/agents. Do not send datasets/source/secrets. ExternalE9.5 never trains E8.5 backtest or E9.5truth validation. Both stages permitted only finalE10.5 training; independent transfer validation unresolved. Scorer/calibration unchanged."
+  },
+  "questions": {
+    "next_action": {
+      "type": "choice",
+      "instructions": "Choose one bounded next diagnostic with highest information value; choice/confidence only.",
+      "criteria": {
+        "matched_lineage_rank_diagnostic": "Using cached18cells, compare E8.5->E9.5 rank-delta within cardiomyocyte-like group only, region-balanced where supported, expression/detection-stratified and fixed gene-group shuffles. Diagnostics only, no forecast/backtest; reject prior if agreement absent.",
+        "source_saturating_time_proxy": "Return to source-only past-fitted saturating-time gene curve bank; frozen shrinkage/matched linear controls on temporal holdouts, mappedgene rank/direction screening before fullpanel.",
+        "source_state_time_interaction_proxy": "Past-only source lineage/state-by-time regression with strong shrinkage and matched global slopes; risk after negative global conditional-time result."
+      }
+    }
+  }
+}

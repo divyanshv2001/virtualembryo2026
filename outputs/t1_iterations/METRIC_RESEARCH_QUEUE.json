@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T05:35:51.764922+00:00",
+  "updated_utc": "2026-10-01T05:47:02.998043+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5878,11 +5878,11 @@
         "mmd_u",
         "variogram"
       ],
-      "status": "bounded_24cell_cohort_qc_completed_compatibility_pending",
+      "status": "cached_compatibility_completed_pooled_trend_unsupported",
       "implementation": "T1_EXTERNAL_TEMPORAL_DATA_AUDIT.json",
       "hypothesis_and_limits": "An independently sourced eligible earlier-stage heart time series could improve temporal validation and training. Official challenge has only E8.5/E9.5 released Task 1 RNA; external data after E9.5 through E13.5 inclusive are prohibited. Any mixed-stage resource requires stage-level filtering before expression use.",
-      "declared_experiment_and_result": "Four predeclared CD1 files (2E8.5/2E9.5, distinct regions) downloaded separately, stage/genotype checked, 541173compressedbytes total. Each43629ENSMUSGinteger-count genes; assignedcount sums1234278/1533200/19914/1629698. Existing annotation maps25621/32285panelgenes (79.36%); four cells are not representative. Raw reads/protein-coding QC unavailable, original QC pass unknown. No model fit or full-panel score. Mutants remain excluded; no mixed-stage archive. Matching Ensembl79 annotation covers43629IDs; four protein assignedfractions96.86-97.79%, unique historicalsymbol panelcoverage25931/32285=80.319%. GSM2033420 archive41099pairedspots (82198readestimate), other metadata blocked. Initial500MBexpanded bound failed; checksum-reused1GBstream limit succeeds669443027bytes. No training/score/reward. Frozen independent assignedcounts>=1M/protein>=.8/unknownbiotype<=.01 screen passes3/4pilots; lowdepthGSM2033420excluded. Conservative ID-symbol union rejects44ambiguousIDs, actualhistoricalpanelcoverage27179/32285=84.18%; annotationunion28266includesabsentIDs. No zeroimputation/fits/scores/reward. Frozen24cell(12perstage)stage/regionlexical acquisition:24parsed/0failures,18prospectiveQCpasses(9perstage),6excludedwithoutreplacement. Compressed3274024bytesincluding4reusedpilotfiles, onecellatatime. No transferfit/fullpanel score/reward; embryo/assay compatibility unresolved.",
-      "next_action": "Audit cached18QC-passing early CD1 cells (9E8.5/9E9.5) against available past-only atlas cardiac/lineage reference using27179unambiguous mapped genes. Quantify assay/detection/marker compatibility and region confounding without training a forecast, zero-filling missing genes, or downloading more data. Freeze any subsequent transfer experiment with matched controls and E9.5 excluded from E8.5 training.",
+      "declared_experiment_and_result": "Four predeclared CD1 files (2E8.5/2E9.5, distinct regions) downloaded separately, stage/genotype checked, 541173compressedbytes total. Each43629ENSMUSGinteger-count genes; assignedcount sums1234278/1533200/19914/1629698. Existing annotation maps25621/32285panelgenes (79.36%); four cells are not representative. Raw reads/protein-coding QC unavailable, original QC pass unknown. No model fit or full-panel score. Mutants remain excluded; no mixed-stage archive. Matching Ensembl79 annotation covers43629IDs; four protein assignedfractions96.86-97.79%, unique historicalsymbol panelcoverage25931/32285=80.319%. GSM2033420 archive41099pairedspots (82198readestimate), other metadata blocked. Initial500MBexpanded bound failed; checksum-reused1GBstream limit succeeds669443027bytes. No training/score/reward. Frozen independent assignedcounts>=1M/protein>=.8/unknownbiotype<=.01 screen passes3/4pilots; lowdepthGSM2033420excluded. Conservative ID-symbol union rejects44ambiguousIDs, actualhistoricalpanelcoverage27179/32285=84.18%; annotationunion28266includesabsentIDs. No zeroimputation/fits/scores/reward. Frozen24cell(12perstage)stage/regionlexical acquisition:24parsed/0failures,18prospectiveQCpasses(9perstage),6excludedwithoutreplacement. Compressed3274024bytesincluding4reusedpilotfiles, onecellatatime. No transferfit/fullpanel score/reward; embryo/assay compatibility unresolved. E8.5frozen64gene reference diagnostic over25464sharedgenes:16cardiomyocyte-like/2progenitor-like, externaldetection.144-.335 vsatlas.092/.132/.1995/50/95quantiles. Pooleddeltarho0.00065014, no directtransfer supported. Jev766in/63out chooses matched-lineage rank diagnostic; no predictive scores.",
+      "next_action": "Run cached-only matched cardiomyocyte-like rank/detection diagnostic using18eligible external cells and E8.5-frozen atlas diagnostic labels. Report stage/region composition; balance overlapping regions only when supported, do not fabricate region matches. Freeze expression/detection strata and64 gene-group shuffle controls. E8.5->E9.5 external delta is compatibility evidence only, never used to train an E8.5/E9.5 validation forecast. Reject external temporal prior if controlled agreement absent; no downloads or forecasts before result.",
       "research_family_exhausted": false,
       "results_report": "GSE76118_QC_PROVENANCE_AUDIT.json",
       "schema_results": "GSE76118_EARLY_SCHEMA_RESULTS.json",
@@ -5891,7 +5891,8 @@
       "read_metadata_results": "GSE76118_EARLY_READ_METADATA_RESULTS.json",
       "prospective_policy": "GSE76118_PROSPECTIVE_QC_POLICY.json",
       "prospective_results": "GSE76118_PROSPECTIVE_POLICY_RESULTS.json",
-      "cohort_results": "GSE76118_EARLY_COHORT_RESULTS.json"
+      "cohort_results": "GSE76118_EARLY_COHORT_RESULTS.json",
+      "compatibility_results": "GSE76118_EARLY_COMPATIBILITY_RESULTS.json"
     },
     {
       "id": "lineage_standardized_residual_proxy",

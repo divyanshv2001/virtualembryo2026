@@ -1,16 +1,16 @@
 {
-  "updated_utc": "2026-10-01T05:35:51.892012+00:00",
+  "updated_utc": "2026-10-01T05:47:03.132445+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "e8e0453e760a38274bfa58f657285c42b7a0738bbf5925f24517e8c710f5d2d3",
+    "LOCAL_OPTIMIZATION_STATE.json": "00500f38fcc73ad4b6ad1e45a782d0850cb8b44fbd1d55ea0f25e1d6f8591db1",
     "LOCAL_OPTIMIZATION_PROMPT.md": "dc34e90fa3519a22843971c550774ced585b0bab7dea86ab4fc00c5aee806f38",
-    "METRIC_RESEARCH_QUEUE.json": "ade62d78c542d2ceb81b225046e5a30c58ede13a5fc3ae6f750b0d9b32b01465",
+    "METRIC_RESEARCH_QUEUE.json": "97d38eb014fd090224a11f233e2f57f7323967b5531a3418b9c6ac6c51620477",
     "METRIC_CRITIQUE_POLICY.json": "025beff88fbd06be4f25b4643456853ca5f0c7ee68a66212ab0e1281bcd9a8e5",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [],
-  "next_experiment": "Audit cached18QC-passing early CD1 cells (9E8.5/9E9.5) against available past-only atlas cardiac/lineage reference using27179unambiguous mapped genes. Quantify assay/detection/marker compatibility and region confounding without training a forecast, zero-filling missing genes, or downloading more data. Freeze any subsequent transfer experiment with matched controls and E9.5 excluded from E8.5 training.",
+  "next_experiment": "Run cached-only matched cardiomyocyte-like rank/detection diagnostic using18eligible external cells and E8.5-frozen atlas diagnostic labels. Report stage/region composition; balance overlapping regions only when supported, do not fabricate region matches. Freeze expression/detection strata and64 gene-group shuffle controls. E8.5->E9.5 external delta is compatibility evidence only, never used to train an E8.5/E9.5 validation forecast. Reject external temporal prior if controlled agreement absent; no downloads or forecasts before result.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -53,20 +53,18 @@
     "attribution": "Inferred latest export; screenshot lacks filename"
   },
   "latest_jev": {
-    "packet": "JEV_NEXT_PACKET_20261001_01.json",
-    "record": "JEV_NEXT_ROUTE_20261001_01.json",
-    "payload_bytes": 1778,
+    "packet": "JEV_NEXT_PACKET_20261001_02.json",
+    "record": "JEV_NEXT_ROUTE_20261001_02.json",
     "usage": {
-      "input_tokens": 719,
+      "input_tokens": 766,
       "output_tokens": 63
     },
-    "answers": {
-      "next_action": {
-        "choice": "external_qc_provenance_audit",
-        "confidence": 0.97
-      }
+    "payload_bytes": 1795,
+    "decision": {
+      "choice": "matched_lineage_rank_diagnostic",
+      "confidence": 0.95
     },
-    "measured_codex_savings": null
+    "measured_codex_credit_savings": null
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -84,6 +82,7 @@
     "prospective_policy_results": "GSE76118_PROSPECTIVE_POLICY_RESULTS.json",
     "latest_cohort_report": "GSE76118_EARLY_COHORT_RESULTS.json",
     "acquired_cohort_cells": 24,
-    "prospective_qc_passing_cells": 18
+    "prospective_qc_passing_cells": 18,
+    "latest_compatibility_report": "GSE76118_EARLY_COMPATIBILITY_RESULTS.json"
   }
 }

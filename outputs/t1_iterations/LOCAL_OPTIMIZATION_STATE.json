@@ -31,7 +31,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Audit cached18QC-passing early CD1 cells (9E8.5/9E9.5) against available past-only atlas cardiac/lineage reference using27179unambiguous mapped genes. Quantify assay/detection/marker compatibility and region confounding without training a forecast, zero-filling missing genes, or downloading more data. Freeze any subsequent transfer experiment with matched controls and E9.5 excluded from E8.5 training.",
+  "next_experiment": "Run cached-only matched cardiomyocyte-like rank/detection diagnostic using18eligible external cells and E8.5-frozen atlas diagnostic labels. Report stage/region composition; balance overlapping regions only when supported, do not fabricate region matches. Freeze expression/detection strata and64 gene-group shuffle controls. E8.5->E9.5 external delta is compatibility evidence only, never used to train an E8.5/E9.5 validation forecast. Reject external temporal prior if controlled agreement absent; no downloads or forecasts before result.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1296,20 +1296,18 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "packet": "JEV_NEXT_PACKET_20261001_01.json",
-    "record": "JEV_NEXT_ROUTE_20261001_01.json",
-    "payload_bytes": 1778,
+    "packet": "JEV_NEXT_PACKET_20261001_02.json",
+    "record": "JEV_NEXT_ROUTE_20261001_02.json",
     "usage": {
-      "input_tokens": 719,
+      "input_tokens": 766,
       "output_tokens": 63
     },
-    "answers": {
-      "next_action": {
-        "choice": "external_qc_provenance_audit",
-        "confidence": 0.97
-      }
+    "payload_bytes": 1795,
+    "decision": {
+      "choice": "matched_lineage_rank_diagnostic",
+      "confidence": 0.95
     },
-    "measured_codex_savings": null
+    "measured_codex_credit_savings": null
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -1327,7 +1325,8 @@
     "prospective_policy_results": "GSE76118_PROSPECTIVE_POLICY_RESULTS.json",
     "latest_cohort_report": "GSE76118_EARLY_COHORT_RESULTS.json",
     "acquired_cohort_cells": 24,
-    "prospective_qc_passing_cells": 18
+    "prospective_qc_passing_cells": 18,
+    "latest_compatibility_report": "GSE76118_EARLY_COMPATIBILITY_RESULTS.json"
   },
   "external_schema_audit": {
     "status": "completed_training_not_ready",
@@ -1380,5 +1379,22 @@
     "models_fit": 0,
     "full_panel_scores": 0,
     "embryo_independence_verified": false
+  },
+  "external_compatibility_audit": {
+    "report": "GSE76118_EARLY_COMPATIBILITY_RESULTS.json",
+    "report_sha256": "de9981827c24434e2541f52e0a6597a342bcf1245ad044c499aea1a30f72c4aa",
+    "shared_unique_genes": 25464,
+    "diagnostic_group_counts": {
+      "cardiomyocyte": 16,
+      "cardiopharyngeal_progenitor": 2
+    },
+    "pooled_delta_spearman": 0.0006501436482951131,
+    "external_detection_range": [
+      0.1438501413760603,
+      0.33533616085453977
+    ],
+    "transfer_validated": false,
+    "models_fit": 0,
+    "full_panel_scores": 0
   }
 }
