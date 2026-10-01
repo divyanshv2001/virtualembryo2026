@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T04:48:18.160042+00:00",
+  "updated_utc": "2026-10-01T05:01:25.296545+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,7 +31,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement actual latent-state-adjusted temporal residual gene regression, distinct from failed lineage-standardized pseudobulk and joint detection coupling. Use frozen past-only encoder at each historical cutoff, residualize latent/state effects before stage slope, alpha .1/.25, exact pooled trend/persistence controls; freeze before target reads and require both-fold signed ranking/direction improvement before full-panel expansion.",
+  "next_experiment": "Bounded D-only individual-file schema/normalization audit using at most2 strict E8.5 CD1 and2 strict E9.5 CD1 allowlisted GSMs; verify metadata before each fetch, maximum2MB/file. No expression training until QC/compatibility assessment; no mixed-stage archive. E9.5 cannot fit an E8.5-to-E9.5 backtest.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1283,5 +1283,40 @@
     "diagnostic": "DETECTION_COUPLING_DIAGNOSTIC.json",
     "exact_control_replay": true,
     "temporary_cache_empty": true
+  },
+  "latent_residual_gene_screen": {
+    "status": "completed_proxy_gate_failed",
+    "report_sha256": "82c4dffe7dce2d94451c74d31889b830de6a44f8fbf3f00d8eeb673355ad2b56",
+    "evaluations": 14,
+    "reward_delta": 0,
+    "tests_passed": [
+      "Schur contrast exact joint ridge coefficient",
+      "intercept invariance"
+    ],
+    "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
+  },
+  "latest_jev_advisory": {
+    "packet": "JEV_NEXT_PACKET_20261001_01.json",
+    "record": "JEV_NEXT_ROUTE_20261001_01.json",
+    "payload_bytes": 1778,
+    "usage": {
+      "input_tokens": 719,
+      "output_tokens": 63
+    },
+    "answers": {
+      "next_action": {
+        "choice": "external_qc_provenance_audit",
+        "confidence": 0.97
+      }
+    },
+    "measured_codex_savings": null
+  },
+  "external_qc_audit": {
+    "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
+    "strict_manifest": "GSE76118_WT_STAGE_MANIFEST.json",
+    "mutants_excluded": 127,
+    "separate_b6_wt": 162,
+    "training_approved": false,
+    "expression_acquired": false
   }
 }

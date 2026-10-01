@@ -17,7 +17,7 @@ from pathlib import Path
 
 URL = "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE76nnn/GSE76118/miniml/GSE76118_family.xml.tgz"
 HERE = Path(__file__).resolve().parent
-OUT = HERE / "GSE76118_STAGE_METADATA_MANIFEST.json"
+OUT = HERE / "GSE76118_WT_STAGE_MANIFEST.json"
 NS = {"g": "http://www.ncbi.nlm.nih.gov/geo/info/MINiML"}
 ALLOWED = {"e8.5", "e9.5"}
 MAX_ARCHIVE_BYTES = 1_000_000
@@ -52,6 +52,7 @@ def main() -> None:
     regions: dict[str, Counter[str]] = {"E8.5": Counter(), "E9.5": Counter()}
     backgrounds: dict[str, Counter[str]] = {"E8.5": Counter(), "E9.5": Counter()}
     all_accessions: set[str] = set()
+    separate_b6_controls: list[str] = []
     for sample in root.findall("g:Sample", NS):
         accession = clean(sample.findtext("g:Accession", namespaces=NS))
         title = clean(sample.findtext("g:Title", namespaces=NS)).lower()
@@ -69,16 +70,26 @@ def main() -> None:
             raise ValueError(f"Ambiguous stage metadata for {accession}")
         if len(chars) < 3 or chars[0] not in {"cd1", "b6"}:
             raise ValueError(f"Unexpected genotype/background for {accession}")
-        if any(term in title + " " + source_name for term in ("knockout", "knock-out", "-/-", "cre;")):
-            raise ValueError(f"Potential perturbation in allowed stage: {accession}")
+        if any(term in title + " " + source_name for term in
+               ("knockout", "knock-out", "-/-", "cre;", "nkx2.5mut", "nkx2.5 mut")):
+            excluded["mutant_" + stage] += 1
+            continue
+        if chars[0] != "cd1":
+            if chars[0] == "b6" and "nkx2.5wt" in title and "nkx2.5 wt" in source_name:
+                separate_b6_controls.append(accession)
+                excluded["separate_b6_wt_cohort"] += 1
+                continue
+            raise ValueError(f"Unresolved non-CD1 background for {accession}")
         stage_key = stage.upper()
         allow[stage_key].append(accession)
         backgrounds[stage_key][chars[0]] += 1
         regions[stage_key][chars[2]] += 1
-    if len(all_accessions) != 3241 or len(allow["E8.5"]) != 143 or len(allow["E9.5"]) != 1288:
+    if len(all_accessions) != 3241 or len(allow["E8.5"]) != 143 or len(allow["E9.5"]) != 999:
         raise ValueError("GEO metadata sample counts changed; review before use")
     if excluded["e10.5"] != 1536 or excluded["embryoid body"] != 274:
         raise ValueError("Protected or non-embryo exclusion counts changed")
+    if excluded["mutant_e9.5"] != 127 or len(separate_b6_controls) != 162:
+        raise ValueError("Mutant exclusion counts changed")
     result = {
         "created_utc": datetime.now(timezone.utc).isoformat(),
         "scope": "Metadata-only sample accession allowlist. No expression files or mixed-stage RAW.tar acquired.",
@@ -90,10 +101,12 @@ def main() -> None:
         "excluded_counts": dict(sorted(excluded.items())),
         "allowed_sample_ids": {stage: sorted(ids) for stage, ids in allow.items()},
         "allowed_counts": {stage: len(ids) for stage, ids in allow.items()},
+        "separate_b6_wt_sample_ids": sorted(separate_b6_controls),
+        "separate_b6_wt_policy": "162 E9.5 WT controls from the B6 perturbation cohort; eligible stage but not pooled into the primary CD1 temporal cohort without assay/background checks.",
         "backgrounds": {stage: dict(sorted(counts.items())) for stage, counts in backgrounds.items()},
         "anatomical_regions": {stage: dict(sorted(counts.items())) for stage, counts in regions.items()},
         "access_policy": "For any later expression acquisition, download only individually allowlisted E8.5/E9.5 GSM files; never bulk-download mixed-stage RAW.tar. E9.5 cannot train an E8.5-to-E9.5 backtest. Reverify stage/genotype, license, and challenge disclosure before modeling.",
-        "qc_note": "GEO metadata contains 143 E8.5 and 1288 E9.5 files; the series abstract reports 118 and 949 analyzed cells, likely reflecting QC/selection. Treat raw metadata counts as candidates, not final usable cells.",
+        "qc_note": "Primary candidate WT/CD1 counts143 E8.5 and999 E9.5. Of289 B6 E9.5 samples,127 are explicit Nkx2.5 mutants and162 WT controls retained as a separate cohort. Published analyzed CD1 counts118/949 still require QC. Old stage-only allowlist superseded for acquisition; no expression used.",
         "training_approved": False,
     }
     OUT.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")

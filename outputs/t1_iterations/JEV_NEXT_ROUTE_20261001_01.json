@@ -1,0 +1,38 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "ad93b79ba497c539027341f38602e8dfab182b00f553497ecd497a76fc669c25",
+  "attempts": 1,
+  "payload_bytes": 1778,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "purpose": "Choose the next bounded T1 research action after newly completed negative tests; advisory only.",
+      "new_evidence": "Official best52.16: DE47.2,direction56.3,MMD53.2,CSS51.7. Soft EB, lineage-standardized trends and conditional latent/time ridge rank screens fail both-fold gates. Detection PCA coupling .25/.5 worsens all four mean skills on matched one-day source folds; no promotion. Source/challenge mean-covariance alignment gave only sub-point gains.",
+      "constraints": "No hidden E10.5 truth, official uploads or agents. Only challengeE8.5/E9.5 RNA locally. External stagesafterE9.5 prohibited. D-only16GBRAM, unchanged32285gene scorer, frozen past-only controls. Do not send data/code/secrets.",
+      "external_status": "GSE76118 metadata allowlists143E8.5 and1288E9.5 records; license/provenance/raw-versus-analyzedQC and heart-region compatibility unresolved. No expression acquired."
+    },
+    "questions": {
+      "next_action": {
+        "type": "choice",
+        "instructions": "Choose the single next actionable small experiment/audit most likely to resolve the present bottleneck. Choice and confidence only.",
+        "criteria": {
+          "sigmoidal_time_proxy": "Fit a frozen small bank of saturating gene-time curves using >=4 earlier source snapshots, compare against exact pooled linear controls on two later source folds; screen before fullpanel scoring.",
+          "external_qc_provenance_audit": "Resolve analyzed sample allowlist, provenance/license and assay/tissue eligibility for early-heartGSE76118 using primary metadata/methods before any individually allowlisted expression download.",
+          "state_time_interaction_proxy": "Screen past-fitted lineage/state-by-time interaction slopes with frozen strong shrinkage; distinct from global conditional time coefficient but higher overfit risk."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 719,
+    "output_tokens": 63
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "next_action": {
+      "choice": "external_qc_provenance_audit",
+      "confidence": 0.97
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}

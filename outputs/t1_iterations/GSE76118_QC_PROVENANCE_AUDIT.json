@@ -1,0 +1,39 @@
+{
+  "updated_utc": "2026-10-01T05:01:25.296545+00:00",
+  "status": "metadata_provenance_resolved_qc_pending",
+  "metadata_archive_sha256": "b0cddff659944d328119025249ba1d22969c9ed75582e391edb81c8398b82276",
+  "strict_manifest_sha256": "db3cd1f3744cb1c1598c316541db326385a4b6c654ea7d31f7db77db1972b1ff",
+  "original_stage_manifest_preserved": true,
+  "primary_cd1_candidate_counts": {
+    "E8.5": 143,
+    "E9.5": 999
+  },
+  "explicit_mutants_excluded": 127,
+  "separate_b6_wt_controls": 162,
+  "no_expression_acquired": true,
+  "training_approved": false,
+  "sources": {
+    "primary_methods": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5130110/",
+    "geo_data_use": "https://www.ncbi.nlm.nih.gov/geo/info/disclaimer.html",
+    "geo_metadata": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE76nnn/GSE76118/miniml/GSE76118_family.xml.tgz"
+  },
+  "methods_summary": "CD1 embryonic cardiac dissection; C1/SMARTer workflow described, with Smart-seq2 for mutant cells. HTSeq gene counts and CPM preprocessing in paper; sample metadata also mentions TPM calculation. Do not equate these units. Paper QC retains scRNA cells with >=1million total reads and >=80% counted reads attributed to protein-coding genes.",
+  "data_use_summary": "NCBI GEO states it places no restrictions on GEO data use/distribution. This does not license copying the article; retain citation and challenge disclosure.",
+  "remaining_gaps": [
+    "Exact analyzed CD1 cell IDs118/949 versus metadata143/999 not resolved.",
+    "Total sequencing read counts and protein-coding annotation/quality fields needed to reproduce QC; gene-count sum alone is not total reads.",
+    "B6 WT assay/background and comparability to CD1 unresolved; keep separate.",
+    "Challenge assay, units, tissue/composition and embryo replication compatibility require validation."
+  ],
+  "next_action": "Bounded D-only individual-file schema/normalization audit using at most2 strict E8.5 CD1 and2 strict E9.5 CD1 allowlisted GSMs; verify metadata before each fetch, maximum2MB/file. No expression training until QC/compatibility assessment; no mixed-stage archive. E9.5 cannot fit an E8.5-to-E9.5 backtest.",
+  "technical_failures": [
+    {
+      "stage": "first supplemental metadata print",
+      "outcome": "Whitespace in XML characteristics yielded empty stage matches and StopIteration. Empty intermediate preserved; corrected cached parse matches1431early-stage records."
+    },
+    {
+      "stage": "strict initial mutant count assumption",
+      "outcome": "Non-CD1 guard exposed162 explicit B6 WT controls. Corrected classification to127mutants/162WT; no expression read."
+    }
+  ]
+}

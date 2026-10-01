@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T04:48:18.160042+00:00",
+  "updated_utc": "2026-10-01T05:01:25.296545+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5878,13 +5878,13 @@
         "mmd_u",
         "variogram"
       ],
-      "status": "metadata_stage_manifest_built_no_expression_used",
+      "status": "strict_wt_manifest_corrected_qc_pending",
       "implementation": "T1_EXTERNAL_TEMPORAL_DATA_AUDIT.json",
       "hypothesis_and_limits": "An independently sourced eligible earlier-stage heart time series could improve temporal validation and training. Official challenge has only E8.5/E9.5 released Task 1 RNA; external data after E9.5 through E13.5 inclusive are prohibited. Any mixed-stage resource requires stage-level filtering before expression use.",
-      "declared_experiment_and_result": "Official data/rules and local folder audited. Local data contains E8.5_RNA.h5ad and E9.5_RNA.h5ad only. GEO MINiML metadata-only manifest screened 3241 samples: 143 E8.5 and 1288 E9.5 individual GSM IDs allowlisted; 1536 E10.5 and 274 embryoid-body samples excluded. Metadata SHA256 b0cddff659944d328119025249ba1d22969c9ed75582e391edb81c8398b82276. GEO abstract reports fewer analyzed cells (118/949), so QC/selection is unresolved. No expression acquired or model fit.",
-      "next_action": "Verify provenance/license, assay normalization, genotype/region relevance and raw-vs-analyzed QC gap before any D-only acquisition of individually allowlisted early-stage GSM files. Never use mixed-stage RAW.tar. E9.5 must be excluded from E8.5-to-E9.5 backtest training. Continue distinct past-only method tests.",
+      "declared_experiment_and_result": "Original stage-only list unintentionally includes127 Nkx2.5mut samples and162 B6WT controls. Strict primaryCD1 manifest now143E8.5/999E9.5; mutants excluded, B6WT separate. PaperQC thresholds and NCBIGEO reuse statement checked; exact analyzed118/949 IDs and assay compatibility unresolved. No expression acquired.",
+      "next_action": "Bounded D-only individual-file schema/normalization audit using at most2 strict E8.5 CD1 and2 strict E9.5 CD1 allowlisted GSMs; verify metadata before each fetch, maximum2MB/file. No expression training until QC/compatibility assessment; no mixed-stage archive. E9.5 cannot fit an E8.5-to-E9.5 backtest.",
       "research_family_exhausted": false,
-      "results_report": "T1_EXTERNAL_TEMPORAL_DATA_AUDIT.json"
+      "results_report": "GSE76118_QC_PROVENANCE_AUDIT.json"
     },
     {
       "id": "lineage_standardized_residual_proxy",
@@ -5924,6 +5924,21 @@
       "results_report": "JOINT_DETECTION_COUPLING_RESULTS.json",
       "diagnostic": "DETECTION_COUPLING_DIAGNOSTIC.json",
       "report_sha256": "44c4f4e6d6509730b34876e8e306ff3376ce75a9ede73b97df0e6b6e1faf401a"
+    },
+    {
+      "id": "latent_state_adjusted_temporal_gene_slopes",
+      "metrics": [
+        "de_score",
+        "de_direction"
+      ],
+      "status": "historical_proxy_gate_failed",
+      "implementation": "latent_residual_gene_screen.py",
+      "run": "latent_residual_gene_screen_01",
+      "declared_experiment_and_result": "14proxy candidate/control evaluations across8->8.25 and8.25->8.5, past-frozen8Dencoder/state+lineage/time joint ridge1. Conditionaltimeenergy fractions.514/.716, so identification gate passes; .1/.25 blends fail bothfold signedrank/direction rule versus matched OLS and recentlinear. Fullpanel0/reward0.",
+      "research_family_exhausted": false,
+      "results_report": "LATENT_RESIDUAL_GENE_SCREEN_RESULTS.json",
+      "report_sha256": "82c4dffe7dce2d94451c74d31889b830de6a44f8fbf3f00d8eeb673355ad2b56",
+      "next_action": "Do not expand exact estimator. After new failures Jev favors externalQC/provenance audit; pursue independent eligible validation before further blind scaling."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",
