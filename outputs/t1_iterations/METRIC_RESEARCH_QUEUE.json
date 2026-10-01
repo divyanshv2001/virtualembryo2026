@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T20:01:52.058333+00:00",
+  "updated_utc": "2026-10-01T20:11:47.248986+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -6308,12 +6308,12 @@
     },
     {
       "id": "capture_gene_module_stability",
-      "status": "initial_stability_completed_matched_OLS_control_pending",
-      "next_action": "Implement/run matched_capture_module_OLS_omission_audit_01 fromfrozenpastcapturemeans only: exactfull/omittedrank2projectedslopes replay, calculateunprojectedOLS foridenticalmandatoryomissions andstage/captureweights. Reportpairedstabilityenergy/cosines/signs anddiscardedenergy, retainallunsupportedcases. Noexpression/target/scorer/reward, no threshold/rankgrid. Onlythen separatelydeclarefixeddecoder/evaluation withmatchedcontrols ifviable. Families/readinessopen.",
-      "specification": "NEXT_MATCHED_MODULE_OLS_OMISSION_AUDIT.json",
+      "status": "matched_OLS_stability_complete_rank2_no_general_advantage",
+      "next_action": "Implement/run capture_OLS_gate_decoder_preflight_01: fromfrozenpastcapturemeans reconstruct fixedungatedOLS, allomissionOLSsigngate, adjacent-intervaltimeconsistentOLSgate, rank2projection. Identicalcompletecasecoverage3lineagescut8/4cut8.25; unsupportedcopyfallback. Fixedonequarter-day slope donorlogshift, clip/countmassrepair; copy/incumbentexactcontrols. Auditmean/mass/covariance/finite/protected/fallback/clipping/fidelity, no futureexpression/newscore/reward, no rank/strengthgrid orguardretuning. Separatelydeclarefullpanelonlyifviable. Families/readinessopen.",
+      "specification": "NEXT_CAPTURE_OLS_GATE_DECODER_PREFLIGHT.json",
       "research_family_exhausted": false,
       "limitations": "Capturepseudoreplication, limitedearlylineagesupport, fixedrank2notvalidatedforecast; priorlatent/ridge/captureEB failurespreserved.",
-      "report_sha256": "d3d9e1202e4bfc6ff2582a48ea61186541901b453cb6a9c58579fcf6851ed3a0"
+      "report_sha256": "5cbf328178b043857f0af95e0f831b5f7196c04a790db466a37e621a748cbe1a"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",

@@ -155,6 +155,11 @@
       "script": "capture_module_stability_audit.py",
       "run": "private/capture_module_stability_audit_01",
       "report": "CAPTURE_MODULE_STABILITY_AUDIT_RESULTS.json"
+    },
+    "matched_module_OLS": {
+      "script": "matched_module_ols_omission_audit.py",
+      "run": "private/matched_capture_module_OLS_omission_audit_01",
+      "report": "MATCHED_MODULE_OLS_OMISSION_AUDIT_RESULTS.json"
     }
   }
 }

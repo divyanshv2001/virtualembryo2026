@@ -1,0 +1,62 @@
+{
+  "status": "verified_algebra_and_numerics",
+  "scope": "Frozenpastmeansonly, noexpression/newmetrics/reward",
+  "formula": "EqualstageweightedOLS on3equallyspacedstages hasstagecontrast[-.5,0,.5] perquarterday; middlemeans contributezero directweight. Captureomissionstabilityisnotadjacentintervalconsistency.",
+  "checks": [
+    {
+      "cutoff": 8.0,
+      "lineage": "blood",
+      "max_absolute_difference_OLS_vs_endpoint_half": 5.551115123125783e-16
+    },
+    {
+      "cutoff": 8.0,
+      "lineage": "ectoderm_other",
+      "max_absolute_difference_OLS_vs_endpoint_half": 6.661338147750939e-16
+    },
+    {
+      "cutoff": 8.0,
+      "lineage": "endoderm",
+      "max_absolute_difference_OLS_vs_endpoint_half": 5.551115123125783e-16
+    },
+    {
+      "cutoff": 8.0,
+      "lineage": "mesenchymal",
+      "max_absolute_difference_OLS_vs_endpoint_half": 1.7208456881689926e-15
+    },
+    {
+      "cutoff": 8.25,
+      "lineage": "blood",
+      "max_absolute_difference_OLS_vs_endpoint_half": 6.661338147750939e-16
+    },
+    {
+      "cutoff": 8.25,
+      "lineage": "cardiomyocyte",
+      "max_absolute_difference_OLS_vs_endpoint_half": 7.355227538141662e-16
+    },
+    {
+      "cutoff": 8.25,
+      "lineage": "cardiopharyngeal",
+      "max_absolute_difference_OLS_vs_endpoint_half": 5.290906601729262e-16
+    },
+    {
+      "cutoff": 8.25,
+      "lineage": "ectoderm_other",
+      "max_absolute_difference_OLS_vs_endpoint_half": 5.793976409762536e-16
+    },
+    {
+      "cutoff": 8.25,
+      "lineage": "endoderm",
+      "max_absolute_difference_OLS_vs_endpoint_half": 7.78023478975598e-16
+    },
+    {
+      "cutoff": 8.25,
+      "lineage": "endothelial",
+      "max_absolute_difference_OLS_vs_endpoint_half": 6.730727086790012e-16
+    },
+    {
+      "cutoff": 8.25,
+      "lineage": "mesenchymal",
+      "max_absolute_difference_OLS_vs_endpoint_half": 5.620504062164855e-16
+    }
+  ]
+}

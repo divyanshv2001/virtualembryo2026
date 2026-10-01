@@ -1,0 +1,25 @@
+{
+  "status": "predeclared_not_started",
+  "seed": 20260928,
+  "cutoffs": [
+    8.0,
+    8.25
+  ],
+  "source_mean_run": "private/capture_module_stability_audit_01",
+  "matched_control_run": "private/matched_capture_module_OLS_omission_audit_01",
+  "source_report_sha256": "5cbf328178b043857f0af95e0f831b5f7196c04a790db466a37e621a748cbe1a",
+  "candidates": [
+    "copy",
+    "anchor_unshrunk",
+    "capture_OLS",
+    "capture_OLS_omission_gate",
+    "capture_OLS_curvature_gate",
+    "capture_rank2"
+  ],
+  "scope": "Past-only frozenmeans andcurrentdonors; nofutureexpression,benchmark,reward. Samecompleteeveryomissioncoverage forall4newmethods. Unsupportedlineagesfallbackdonorcopy; alloriginal unsupportedcasesretained.",
+  "shifts": "OLS onequarterday peroriginalfit (endpointmean delta/2). UngatedOLS. Omissiongate retains fullOLSgene slope onlyifnonzeroandsame sign acrossALLrequiredOLS omissions. Curvaturegate retainsfullOLS slope onlyifnonzero andBOTHadjacent stagecapturemean-delta signs equalfullOLS sign infullfitAND everyrequiredcaptureomission; thisisconsistencyhypothesisnotcausalvelocity, sharedmiddlenoise acknowledged. Rank2projectedfullslope unchanged asmatchedcontrol. No rank/strengthtuning.",
+  "decoder": "Addfixedshift tomappedgene donorlog1p entries foridenticallysupportedlineages,clip0, then expm1rowmappedcountmassrepair/log1p. Protectedgenesandunsupportedlineages bitwisecopy. Intendeddecodedmeanisdonormean+shift, notforcedcapture-currentmean. Recordrealizedshift/clipping/supportchanges, covariance notclaimedpreserved.",
+  "controls": "FrozenOLS/projectedarrays exactreplay, originalcopy/incumbentforecasthashes exactreplay; syntheticgate cases forsignstable versusintervalreversal, zero/identity, omissioneligibility, mass/protected/fallback/finite. Source/mapping/encoder/split/codehashes andgenuineevents.",
+  "acceptance": "Finite/nonnegative,mappedmassrelativeerror<=1e-5,globalmeanchange<=.5,covariancechange<=.4, exactprotected/fallback. Guardfailure retained, do not lowerstrengthtofit. No accuracy/promotionfromguards.",
+  "resources": "D-onlysource memmap/currentdonorlookup256genechunks,smallfrozenmeans,2threads16GBRAM;oneforecastatime temporarycacheclosedafterhash."
+}

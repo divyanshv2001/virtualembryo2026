@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T20:01:52.058333+00:00",
+  "updated_utc": "2026-10-01T20:11:47.248986+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement/run matched_capture_module_OLS_omission_audit_01 fromfrozenpastcapturemeans only: exactfull/omittedrank2projectedslopes replay, calculateunprojectedOLS foridenticalmandatoryomissions andstage/captureweights. Reportpairedstabilityenergy/cosines/signs anddiscardedenergy, retainallunsupportedcases. Noexpression/target/scorer/reward, no threshold/rankgrid. Onlythen separatelydeclarefixeddecoder/evaluation withmatchedcontrols ifviable. Families/readinessopen.",
+  "next_experiment": "Implement/run capture_OLS_gate_decoder_preflight_01: fromfrozenpastcapturemeans reconstruct fixedungatedOLS, allomissionOLSsigngate, adjacent-intervaltimeconsistentOLSgate, rank2projection. Identicalcompletecasecoverage3lineagescut8/4cut8.25; unsupportedcopyfallback. Fixedonequarter-day slope donorlogshift, clip/countmassrepair; copy/incumbentexactcontrols. Auditmean/mass/covariance/finite/protected/fallback/clipping/fidelity, no futureexpression/newscore/reward, no rank/strengthgrid orguardretuning. Separatelydeclarefullpanelonlyifviable. Families/readinessopen.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1297,12 +1297,12 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_MODULE_STABILITY_ROUTE_20261002_01.json",
+    "record": "JEV_MATCHED_MODULE_ROUTE_20261002_01.json",
     "usage": {
-      "input_tokens": 880,
-      "output_tokens": 65
+      "input_tokens": 978,
+      "output_tokens": 54
     },
-    "choice": "matched_OLS_omission_audit",
+    "choice": "matched_gate_decoder_preflight",
     "confidence": 1.0
   },
   "external_qc_audit": {
@@ -2235,6 +2235,24 @@
       "reused_contexts": 4,
       "resource_limitation": "Observedagentthreadlimit;existingcriticsreviewednewpackets",
       "review_corrections": "Stabilityconditionalonsubspace, unmatchedOLSstabilitymissing; clipping/repairmaychangecovariance; untouchedsplitunverified."
+    },
+    "matched_capture_module_OLS_omission_audit_01": {
+      "status": "completed",
+      "report_sha256": "5cbf328178b043857f0af95e0f831b5f7196c04a790db466a37e621a748cbe1a",
+      "review": "METRIC_CRITIQUES_MATCHED_MODULE_20261002.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": false,
+      "reward_delta": 0,
+      "fresh_contexts": 0,
+      "reused_contexts": 4,
+      "resource_limitation": "Observedthreadlimit existing4specialists reviewednewpackets",
+      "review_corrections": "EqualstageOLS ignoresmiddlemeans directly, verified1.73e-15; sharedmiddlenoise notcausal; donorcopyfallback frozen ratherthanmixedanchor; untouchedsplitunverified."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -2585,6 +2603,18 @@
     "fit_only_unsupported": 4,
     "stage_fit_unsupported": 5,
     "target_expression_read": false,
+    "reward_delta": 0
+  },
+  "matched_module_OLS_job": {
+    "status": "completed",
+    "pid": 10516,
+    "report": "MATCHED_MODULE_OLS_OMISSION_AUDIT_RESULTS.json",
+    "spec": "NEXT_MATCHED_MODULE_OLS_OMISSION_AUDIT.json",
+    "report_sha256": "5cbf328178b043857f0af95e0f831b5f7196c04a790db466a37e621a748cbe1a",
+    "exact_full_arrays": 11,
+    "complete_cases": 7,
+    "projection_stable_energy_worse_cases": 5,
+    "projection_minimum_cosine_worse_cases": 6,
     "reward_delta": 0
   }
 }

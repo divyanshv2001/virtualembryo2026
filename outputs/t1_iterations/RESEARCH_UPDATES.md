@@ -604,3 +604,7 @@ Relevantpriorcell-level8Dconditionalridge andindependentgeneEB aredifferentfromp
 ## 2026-10-01T20:01:52.058333+00:00 — capture-module stability diagnostic
 
 Fixedrank2capturebalancedSVD/OLS withfullomissionrefits implemented,testedandrun past-only. Sevencompletecases/fourfit-only unsupported/fivestagefitunsupported. Stableprojectedshiftenergy.902–.995; projectionretains.547–.972OLSenergy. Fourreusedcriticcontexts warnprojectionadvantageunprovenwithoutmatchedOLS omissionstability. Jev880in/65out chosematchedcontrolaudit usingfrozenmeans,newexpressionunneeded. NEXT_MATCHED_MODULE_OLS_OMISSION_AUDIT.json declared. No targetexpression/metrics/reward;−848 andledgerunchangeddiagnosticbatch. Allsupport/hashes/events retained;coverage/readinessopen.
+
+## 2026-10-01T20:11:47.248986+00:00 — matched module/OLS stability and endpoint identity
+
+11fullprojected/OLS arrays andsupportedomittedprojected/stablemasks exactreplay fromfrozenmeans. Projectedmincosineworse6/7,stableenergyfractionworse5/7; no generalprojectionstabilityadvantage, forecastaccuracyunmeasured. Equalstage3stageOLS contrast[-.5,0,.5] verifiedmaxerror1.73e-15; middleomissionstabilitynot temporalconsistency. Fourreusedcriticcontexts recorded. Jev978in/54out selectedfixedOLS/omissiongate/adjacentintervalgate/rank2matcheddecoderpreflight samecoverage, no rank/strengthgrid. Specdeclarednotrun. Noexpression/newmetrics/reward;−848 unchanged. Families/readinessopen.
