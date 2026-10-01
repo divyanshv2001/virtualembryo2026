@@ -19,7 +19,9 @@
   },
   "eligibility": "Future predeclared scored experiments only; no retroactive rewards, repeated seeds, duplicate variants, changing comparison or proxy claims. Validity is assessed before reward.",
   "promotion_rule": "Original full-panel four-metric, temporal and >72 mean/lower-tail >=64-replicate readiness gates unchanged. Critiques must discuss uncertainty/tradeoffs even when reward is positive.",
-  "agents": "Four critics completed on explicit user request. Routine future heartbeat review does not automatically authorize spawning agents.",
+  "agents": "User explicitly authorized four metric critics after each new completed or failed experimental batch on2026-10-01. Use compact fresh-context packets, max120words per critic, one critic per DE/direction/MMD/variogram; no repeat critique of unchanged batch hashes. For proxy/invalid/missing metrics, report unavailability, no invented scores/reward. Schedule within available concurrency slots.",
   "implementation": "metric_critique_reward.py",
-  "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl"
+  "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
+  "updated_utc": "2026-10-01T09:28:35.901084+00:00",
+  "decision_routing": "Jev-first for meaningful experiment selection, uncertain design choices, failure diagnosis and critique synthesis. These are distinct decision points and may require multiple calls in one batch. One cached<=3000byte request per distinct decision, no automatic retry; no calls merely to increase count. Send summaries only, never datasets/full source/secrets. Record actual token use; do not claim unmeasured savings."
 }

@@ -1,0 +1,37 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "160658d03324b3307d0e5884e7cc290c5d605b3a2149ad471f318c4bb8cdf691",
+  "attempts": 1,
+  "payload_bytes": 1781,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "purpose": "Adjudicate design ambiguity raised by four post-batch metric critics before CM calibration pilot.",
+      "evidence": "Capturebalancedfullpanel10scores failedall4metricsvsanchor/copy; criticsreject. Two criticphrases suggestedexcludeheldcaptureevenfromanchorcalibration; two saybaselearnerexcludeheldcapturebutallowedcurrentanchorcalibrationvalid. Proposed CM-specific detectionodds correction (fixed.25/.5) corrects permittedCURRENT observedanchor differences betweentrainingcapturepool andnewcapture, then futuretemporaltest. Currentanchor is available atforecast time; futuretarget is not. Independentembryo pairingunknown. Prior globalalignment/detectioncoupling differsfromCM calibration.",
+      "constraints": "Past-onlylearner refitexcludingheldcapture. Allforecasts/calibrationchoicesfrozenbeforefuturetruth. No unseenchallengefuture or targettuning. Sameglobal/no-calibration/copycontrols andfull32285scorer. No scorecertification; compactsummaryonly."
+    },
+    "questions": {
+      "calibration_boundary": {
+        "type": "choice",
+        "instructions": "Choose valid boundary forheldcapturetemporaltest matching intendedobserved-anchor deployment.",
+        "criteria": {
+          "exclude_from_base_allow_current_anchor": "Excludeheldcapturefromencoder/dynamics/response learner; permititsCURRENTobservedexpressionfor predeclared detectioncalibration only. Neverusefutureheldcaptureexpression tofit. Trackcurrentcalibrationrows andfuturetruthseparately, no independentembryo claim.",
+          "exclude_from_all_calibration": "Excludeheldcapture even current observedanchor fromeverycalibration step; testszero-anchor-transfer insteadofobserved-anchor deployment.",
+          "allow_in_base_and_calibration": "Reusethearchivedlearnerthatincludedheldcapture tosavecompute; reportheldcapturevalidationdespiteexposure."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 785,
+    "output_tokens": 62
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "calibration_boundary": {
+      "choice": "exclude_from_base_allow_current_anchor",
+      "confidence": 1.0
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}

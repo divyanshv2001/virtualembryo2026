@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-01T08:26:23.521531+00:00
+Updated: 2026-10-01T09:31:57.332878+00:00
 
 Run `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_playbook.py` first. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -16,10 +16,10 @@ Four metric critiques completed; consult METRIC_CRITIQUES_20261001.md when desig
 
 Current separate reward: -436. This is not a benchmark score.
 
-External acquisition entry point: GSE76118_WT_STAGE_MANIFEST.json. The old stage-only list is historical;127 mutants excluded,162 B6 WT controls separate,143E8.5/999E9.5 primary CD1 candidates. Expression acquired: True; pilot cells: 4; training readiness: False. QC/compatibility pending. Latest Jev actual usage: {'input_tokens': 1041, 'output_tokens': 63}.
+External acquisition entry point: GSE76118_WT_STAGE_MANIFEST.json. The old stage-only list is historical;127 mutants excluded,162 B6 WT controls separate,143E8.5/999E9.5 primary CD1 candidates. Expression acquired: True; pilot cells: 4; training readiness: False. QC/compatibility pending. Latest Jev actual usage: {'input_tokens': 785, 'output_tokens': 62}.
 
-Use D-only temporary disk cache, two BLAS threads, one full forecast at a time;16GBRAM. Retain source reports/events, seeds/splits/hashes, raw4/skills4 and failed outcomes. Refresh SCORE_LEDGER.jsonl after full-panel batches; proxy/export is not a score batch. Commit small evidence/code, never datasets/secrets/artifact matrices. No automatic official upload or new agents.
+Use D-only temporary disk cache, two BLAS threads, one full forecast at a time;16GBRAM. Retain source reports/events, seeds/splits/hashes, raw4/skills4 and failed outcomes. Refresh SCORE_LEDGER.jsonl after full-panel batches; proxy/export is not a score batch. Commit small evidence/code, never datasets/secrets/artifact matrices. No automatic official upload. Run four compact metric critics after each new experiment batch once; max120words each, fresh context, no routine agents.
 
-Jev: cached advisory <=3000bytes for a genuinely new uncertain decision; at most one per decision. Routine checks/policy updates use zero calls. Actual last formula calls815in/71out and730in/69out; no measured Codex credit savings. Do not invent quota resets.
+Jev: cached advisory <=3000bytes for a genuinely new uncertain decision; at most one per decision. Prefer Jev for distinct consequential selection/design/diagnosis/critique-synthesis decisions; multiple decisions per batch allowed. Routine checks use zero calls. Actual last formula calls815in/71out and730in/69out; no measured Codex credit savings. Do not invent quota resets.
 
 After meaningful changes: update state, queue and append concise RESEARCH_UPDATES.md entry; run this tool with `--refresh`. Histories are retained as evidence, not repeatedly loaded. A changed hash is a pointer to inspect relevant changes, not an instruction to read every file. A missing required input is recorded precisely. Never treat the playbook as proof a process is still running.
