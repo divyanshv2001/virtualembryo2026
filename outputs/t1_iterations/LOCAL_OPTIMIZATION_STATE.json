@@ -1807,5 +1807,37 @@
       "new_reward_delta": 0
     }
   },
-  "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00"
+  "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
+  "central_research_harness": {
+    "status": "verified",
+    "entry_point": "research_harness.py",
+    "manifest": "RESEARCH_HARNESS_MANIFEST.json",
+    "docs": "RESEARCH_HARNESS.md",
+    "commands": [
+      "status",
+      "run --experiment NAME",
+      "collect --experiment NAME"
+    ],
+    "checks": [
+      "compile",
+      "existing_report_status",
+      "cached_collection",
+      "duplicate_run_rejection",
+      "background_launch_live_status_completion"
+    ],
+    "initial_failure": "Windows slash mismatch in process detection, repaired and smoke test passed",
+    "automatic_agents": false,
+    "measured_credit_savings": null,
+    "updated_utc": "2026-10-01T09:44:53.030536+00:00"
+  },
+  "official_temporal_task_review": {
+    "review": "TEMPORAL_TASK_REVIEW_20261001.md",
+    "training_stages": [
+      8.5,
+      9.5
+    ],
+    "validation_stage": 10.5,
+    "test_stage": 12.5,
+    "no_new_training_or_upload": true
+  }
 }

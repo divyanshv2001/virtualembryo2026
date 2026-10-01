@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "experiments": {
+    "capture_balanced": {
+      "script": "capture_balanced_fullpanel.py",
+      "run": "private/capture_balanced_fullpanel_01",
+      "report": "CAPTURE_BALANCED_FULLPANEL_RESULTS.json"
+    },
+    "observed_support": {
+      "script": "observed_lineage_support_audit.py",
+      "run": "private/observed_lineage_support_01",
+      "report": "OBSERVED_LINEAGE_SUPPORT_RESULTS.json"
+    },
+    "capture_contrasts": {
+      "script": "disjoint_capture_contrasts.py",
+      "run": "private/disjoint_capture_contrasts_01",
+      "report": "DISJOINT_CAPTURE_CONTRAST_RESULTS.json"
+    }
+  }
+}

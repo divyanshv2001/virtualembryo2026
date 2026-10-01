@@ -1,8 +1,10 @@
 # T1 resume playbook
 
-Updated: 2026-10-01T09:31:57.332878+00:00
+Updated: 2026-10-01T09:44:53.293973+00:00
 
 Run `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_playbook.py` first. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
+
+Use `research_harness.py status` for compact live-process/report checks, `run --experiment NAME` for registered launches and `collect --experiment NAME` for cached critic packets. Commands use the same project Python runtime. Register a new predeclared script/run/report before launch. Collection prepares packets; the coordinator still runs four critics and Jev decisions. See RESEARCH_HARNESS.md only when changing orchestration. Official task review: TEMPORAL_TASK_REVIEW_20261001.md.
 
 Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction': 56.3, 'mmd_u': 53.2, 'variogram': 51.7}. Covariance .25 reused-development mean55.98883; EB and lineage-standardized historical proxy screens failed. Local>72 mean/lower-tail >=64-replicate AND temporal gate unmet. Full32285-gene scorer/calibration unchanged.
 

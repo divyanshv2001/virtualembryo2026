@@ -8,7 +8,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 TRACKED = ('LOCAL_OPTIMIZATION_STATE.json', 'LOCAL_OPTIMIZATION_PROMPT.md',
            'METRIC_RESEARCH_QUEUE.json', 'METRIC_CRITIQUE_POLICY.json',
-           'METRIC_CRITIQUES_20261001.md')
+           'METRIC_CRITIQUES_20261001.md', 'RESEARCH_HARNESS_MANIFEST.json')
 
 
 def fingerprints():
@@ -47,6 +47,8 @@ def main():
 Updated: {compact['updated_utc']}
 
 Run `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_playbook.py` first. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
+
+Use `research_harness.py status` for compact live-process/report checks, `run --experiment NAME` for registered launches and `collect --experiment NAME` for cached critic packets. Commands use the same project Python runtime. Register a new predeclared script/run/report before launch. Collection prepares packets; the coordinator still runs four critics and Jev decisions. See RESEARCH_HARNESS.md only when changing orchestration. Official task review: TEMPORAL_TASK_REVIEW_20261001.md.
 
 Official best: {compact['official_best']}. Latest reported skills: {official.get('metric_skills_percent', 'see original official result')}. Covariance .25 reused-development mean55.98883; EB and lineage-standardized historical proxy screens failed. Local>72 mean/lower-tail >=64-replicate AND temporal gate unmet. Full32285-gene scorer/calibration unchanged.
 
