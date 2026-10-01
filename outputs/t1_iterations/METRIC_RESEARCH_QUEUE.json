@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T08:02:45.609882+00:00",
+  "updated_utc": "2026-10-01T08:13:45.809890+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -6099,10 +6099,13 @@
     },
     {
       "id": "capture_balanced_robust_trend",
-      "status": "declared_next_requires_frozen_plan",
+      "status": "running_fullpanel_development",
       "research_family_exhausted": false,
       "hypothesis_and_limits": "Capture-balanced lineage median stage means reduce dominance of large captures before temporal fitting; no independent embryo identity or resolved stage/capture confounding. Compare matched cell-weighted lineage estimator to isolate aggregation.",
-      "next_action": "Predeclare capture-balanced robust trend ablation: past-only supported capture-specific lineage means, median across captures before three-stage temporal fit; compare matched cell-weighted lineage fit with identical application/shrinkage/backoffs plus copy/incumbent controls. Freeze >=10cells/capture-lineage and >=2captures/stage-lineage eligibility; explicit pooled fallback/coverage flags where unsupported, no invented embryo IDs. Declare capture holdouts and temporal splits before scoring, label previously reused folds as development, no target-driven negation/tuning. Start with bounded diagnostic/proxy validation, then unchanged full-panel scoring only for viable candidates; preserve all outcomes. Jev selected this route from new disjoint-contrast evidence."
+      "next_action": "Monitor session59541 actualprocess/events; finish frozen batch, do not duplicate. Preserve every metric/calibration/hash/failure and matched split replays; update ledger/reward then compact playbook.",
+      "plan": "CAPTURE_BALANCED_FULLPANEL_PLAN.json",
+      "private_run": "private/capture_balanced_fullpanel_01",
+      "planned_scores": 10
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",

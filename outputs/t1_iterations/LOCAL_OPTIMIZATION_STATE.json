@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": false,
+  "local_process_running": true,
   "quota_reset_evidence": {
     "limit_observed": false,
     "remaining_quota": null,
@@ -31,12 +31,14 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Predeclare capture-balanced robust trend ablation: past-only supported capture-specific lineage means, median across captures before three-stage temporal fit; compare matched cell-weighted lineage fit with identical application/shrinkage/backoffs plus copy/incumbent controls. Freeze >=10cells/capture-lineage and >=2captures/stage-lineage eligibility; explicit pooled fallback/coverage flags where unsupported, no invented embryo IDs. Declare capture holdouts and temporal splits before scoring, label previously reused folds as development, no target-driven negation/tuning. Start with bounded diagnostic/proxy validation, then unchanged full-panel scoring only for viable candidates; preserve all outcomes. Jev selected this route from new disjoint-contrast evidence.",
+  "next_experiment": "Monitor actual capture_balanced_fullpanel_01 process/session59541; do not duplicate. Finish10 declared full-panel development scores (copy/anchor/recent/cellweightedlineage/capturemedianlineage), verify matched controls and splits. Diagnose fallback/leavecapture-out sensitivity and all four raw metrics/skills; refresh ledger/reward summaries after completion. Stage/capture confounding and >72 readiness unresolved.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
-  "active_run_path": null,
+  "active_jobs": [
+    "capture_balanced_fullpanel_01"
+  ],
+  "active_run_path": "private/capture_balanced_fullpanel_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -1721,5 +1723,12 @@
     "reward_delta": 0,
     "next_action": "Predeclare capture-balanced robust trend ablation: past-only supported capture-specific lineage means, median across captures before three-stage temporal fit; compare matched cell-weighted lineage fit with identical application/shrinkage/backoffs plus copy/incumbent controls. Freeze >=10cells/capture-lineage and >=2captures/stage-lineage eligibility; explicit pooled fallback/coverage flags where unsupported, no invented embryo IDs. Declare capture holdouts and temporal splits before scoring, label previously reused folds as development, no target-driven negation/tuning. Start with bounded diagnostic/proxy validation, then unchanged full-panel scoring only for viable candidates; preserve all outcomes. Jev selected this route from new disjoint-contrast evidence.",
     "unique_complementary_partitions_per_triple": 3
+  },
+  "capture_balanced_fullpanel_job": {
+    "status": "running",
+    "planned_scores": 10,
+    "completed_scores": 5,
+    "plan_sha256": "81d7b271d1363d1d9c207fdde48c57c621ffb45a89984c50a05db2d68ea3164b",
+    "session": 59541
   }
 }

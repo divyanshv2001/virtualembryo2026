@@ -1,0 +1,75 @@
+{
+  "created_utc": "2026-10-01T08:12:09.245515+00:00",
+  "code_sha256": "330f63cf86ae3e206969493267fd93ccc582a9b56f0db7126fa2fce2bcc75f7c",
+  "model_source_sha256": {
+    "partial_anchor_forecast.py": "8c9a4c362b634d648b0ecacf3e44f5953d5b18bce2ac551aefd16a4f17770225",
+    "log1p_positive_forecast.py": "48bc5e43ee5a6742a97d049c77978f23469d1db68575202d477396d5ad0ce4ee",
+    "anchor_slope_calibration.py": "1eedfe08bd2ae6301eab5c4d675775998b5062e52b1c8a312a025c4f2ef0551b",
+    "feature_panel_forecast.py": "0375ab96375dcc50c7e6ece07dc1f3b07ef5bb58c9a54a1a632ce45f257d48f0",
+    "lineage_time_partial_pool_proxy.py": "9ba750a6430f3a84b14b8710111489a7f4e6e2ed11664964aa795d4d3280a27d",
+    "metric_critique_reward.py": "db16970899173ae560d9c08faecf425ac8258613727c241dec8f34ffaf5d018a",
+    "lineage_residual_screen.py": "caa26ef0300cd52f98e10f41686a92393c489309020d207915d70f5565bdaf7a",
+    "temporary_forecast_cache.py": "52e855549a43fdb5ac346ebf4ca73e9d03a88967ff6cc1b355a9095e4b3bb301",
+    "offline_backtest.py": "874b840c6bb3cce570b85482f2f11daacfcd164a04994301a33568c44ae3f3b6",
+    "capture_lineage_trends.py": "d0d0874f443001b132afac7668527fa535f933b00c39d7a3740ab0933bf72f2a"
+  },
+  "prepared_report_sha256": "1acd8a635f76c9f9ac89a1186f116db91309b007f448a8d11ec612627ab5bca4",
+  "panel_sha256": "2aeae4cd284933956242bbc9c5ab4f565c1d2acc7cc3fd3037977e4bce8be4bf",
+  "archive_sha256": {
+    "8.0/encoder.npz": "a6c2212ebd71b2b5e7f533bd159cf98357614bd3039adae77ba0fd6247d26bc5",
+    "8.0/training.pt": "b1eeaf7bdcdfee791d60966b52d458b4b21054efe0c927df9fb615f43c9bacca",
+    "8.0/heads.npz": "20fab0b1957084520deb90bb868a2c6ec93c0e1a01485a4312c4f44574653ac5",
+    "8.25/encoder.npz": "53784ceb3050ff9e809eeceed2dbf78ffd71b12680bcec567468204c28cabefc",
+    "8.25/training.pt": "6d75f53164ab1686a13eec1fcf4fc6170082451382c52e5a934585d3b8bb1c39",
+    "8.25/heads.npz": "74ea78e995c2a93267ca51ce2bcadb4b0cca37aef90acc4f5c357fe00eeb37da"
+  },
+  "folds": [
+    [
+      8.0,
+      9.0
+    ],
+    [
+      8.25,
+      9.25
+    ]
+  ],
+  "candidates": [
+    "copy",
+    "anchor_unshrunk",
+    "slope_recent",
+    "slope_cellweighted",
+    "slope_capturemedian"
+  ],
+  "seed": 20260928,
+  "donor_count": 1500,
+  "target_count": 2000,
+  "scored_truth_count": 1000,
+  "fit": "Past-only three-stage equal-stage lineage OLS. Capture-median means (>=10cells/capture-lineage, >=2eligiblecaptures/stage-lineage) compared with matched pooled cell means, same current lineage weights and one-day four-step delta. Insufficient capture support explicitly pooled fallback; missing lineage stage gives zero slope. Same fixed backoffs/logmass/mean/cov guards. Leave-one-capture-out is past-fit sensitivity only, never independent temporal validation. Future targets never fit or choose candidates.",
+  "control": "Same donors/targets, source cutoff, scorer and calibration: persistence and unshrunk .5/.5 anchor decoder.",
+  "scope": "Two reused source-cohort one-day folds, five predictions per fold, full unchanged 32285-gene metric vector and calibration. These folds are not challenge-domain validation.",
+  "decision": "Advance only if a slope improves headline versus persistence and incumbent on EACH fold and preserves all four skills versus incumbent. Separate reward uses paired mean skills; >72 temporal/64-replicate gate remains unmet.",
+  "retention": "D-only temporary forecast handles; no full prediction arrays retained.",
+  "submissions_allowed": 0,
+  "jev_requests_allowed": 0,
+  "slope_artifacts_sha256": {
+    "8.0": "43a161572a1c2c3570112df9505d04783a111ad146b89592c3af47ef1b291ef9",
+    "8.25": "443458a8e6dbc51dddcec3f2397b8b52fcd9116a92793af45156b9852ff93bcd"
+  },
+  "replay_controls_report_sha256": "44c4f4e6d6509730b34876e8e306ff3376ce75a9ede73b97df0e6b6e1faf401a",
+  "prior_report_sha256": "68d7dfe62b9b9fdfad8798b6091f7427a12be52375bb1d4ff58420d947c29454",
+  "reward_candidates": [
+    "slope_cellweighted",
+    "slope_capturemedian"
+  ],
+  "capture_minimum_cells": 10,
+  "capture_minimum_count": 2,
+  "shrinkage_backoffs": [
+    0.25,
+    0.125,
+    0.0625,
+    0.0
+  ],
+  "horizon_steps": 4.0,
+  "maximum_mean_perturbation": 0.5,
+  "covariance_guard": 0.4
+}
