@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T08:02:45.609882+00:00",
+  "updated_utc": "2026-10-01T08:16:23.083107+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": true,
+  "local_process_running": false,
   "quota_reset_evidence": {
     "limit_observed": false,
     "remaining_quota": null,
@@ -31,14 +31,12 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Monitor actual capture_balanced_fullpanel_01 process/session59541; do not duplicate. Finish10 declared full-panel development scores (copy/anchor/recent/cellweightedlineage/capturemedianlineage), verify matched controls and splits. Diagnose fallback/leavecapture-out sensitivity and all four raw metrics/skills; refresh ledger/reward summaries after completion. Stage/capture confounding and >72 readiness unresolved.",
+  "next_experiment": "Inspect only prior source_challenge_observation_audit, cohort_coverage_audit and domain_mean_alignment evidence to identify already-completed compatibility diagnostics. Then freeze the missing observed-source/challenge lineage-support audit using allowed observed stages only and fixed past-trained features: lineage-specific detection/expression and nearest-neighbor support with explicit missing-label/coverage limits. Do not duplicate an existing audit, infer independent embryos, read unseen challenge future, or fit from reused future targets. Jev selected support diagnosis after two capture estimators failed.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "capture_balanced_fullpanel_01"
-  ],
-  "active_run_path": "private/capture_balanced_fullpanel_01",
+  "active_jobs": [],
+  "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -1230,7 +1228,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -356,
+    "current_reward": -436,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1239,7 +1237,7 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -356
+    "uncapped_reward": -436
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -1298,16 +1296,16 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "packet": "JEV_CAPTURE_PACKET_20261001_01.json",
-    "record": "JEV_CAPTURE_ROUTE_20261001_01.json",
+    "packet": "JEV_BALANCED_PACKET_20261001_01.json",
+    "record": "JEV_BALANCED_ROUTE_20261001_01.json",
     "status": "validated",
-    "payload_bytes": 2017,
+    "payload_bytes": 2154,
     "usage": {
-      "input_tokens": 880,
-      "output_tokens": 65
+      "input_tokens": 973,
+      "output_tokens": 71
     },
-    "choice": "capture_balanced_robust_trend",
-    "confidence": 0.97,
+    "choice": "observed_source_challenge_lineage_support_audit",
+    "confidence": 0.96,
     "measured_codex_credit_savings": null
   },
   "external_qc_audit": {
@@ -1725,10 +1723,56 @@
     "unique_complementary_partitions_per_triple": 3
   },
   "capture_balanced_fullpanel_job": {
-    "status": "running",
+    "status": "completed",
     "planned_scores": 10,
-    "completed_scores": 5,
+    "completed_scores": 10,
     "plan_sha256": "81d7b271d1363d1d9c207fdde48c57c621ffb45a89984c50a05db2d68ea3164b",
-    "session": 59541
+    "session": 59541,
+    "report_sha256": "13410a7c94083490c5c04dfdee22c461644b09b708de0c5b3d439fe4f4b1e6f7",
+    "passing_candidates": []
+  },
+  "capture_balanced_fullpanel_result": {
+    "report": "CAPTURE_BALANCED_FULLPANEL_RESULTS.json",
+    "report_sha256": "13410a7c94083490c5c04dfdee22c461644b09b708de0c5b3d439fe4f4b1e6f7",
+    "plan_sha256": "81d7b271d1363d1d9c207fdde48c57c621ffb45a89984c50a05db2d68ea3164b",
+    "passing_candidates": [],
+    "scores": [
+      {
+        "candidate": "copy",
+        "scores": [
+          50.0,
+          50.0
+        ]
+      },
+      {
+        "candidate": "anchor_unshrunk",
+        "scores": [
+          49.70027428098265,
+          51.17724668869285
+        ]
+      },
+      {
+        "candidate": "slope_recent",
+        "scores": [
+          44.213124174966204,
+          51.371900515978
+        ]
+      },
+      {
+        "candidate": "slope_cellweighted",
+        "scores": [
+          48.72068748343535,
+          46.51602855925361
+        ]
+      },
+      {
+        "candidate": "slope_capturemedian",
+        "scores": [
+          48.32818848235453,
+          47.42399743079574
+        ]
+      }
+    ],
+    "next_action": "Inspect only prior source_challenge_observation_audit, cohort_coverage_audit and domain_mean_alignment evidence to identify already-completed compatibility diagnostics. Then freeze the missing observed-source/challenge lineage-support audit using allowed observed stages only and fixed past-trained features: lineage-specific detection/expression and nearest-neighbor support with explicit missing-label/coverage limits. Do not duplicate an existing audit, infer independent embryos, read unseen challenge future, or fit from reused future targets. Jev selected support diagnosis after two capture estimators failed."
   }
 }

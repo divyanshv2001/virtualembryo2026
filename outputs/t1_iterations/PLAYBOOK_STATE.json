@@ -1,18 +1,16 @@
 {
-  "updated_utc": "2026-10-01T08:13:45.993936+00:00",
+  "updated_utc": "2026-10-01T08:16:23.256933+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "574caccc1842c6c2d5c18486867d217a3c0b6c8495bfdab586417979a965b00d",
+    "LOCAL_OPTIMIZATION_STATE.json": "77c70938eca7783257f568f3606a7e833ea57be1f15be1d5eaefba07710b9dda",
     "LOCAL_OPTIMIZATION_PROMPT.md": "dc34e90fa3519a22843971c550774ced585b0bab7dea86ab4fc00c5aee806f38",
-    "METRIC_RESEARCH_QUEUE.json": "f7024b948947d763c57a776831174ef7a9b6b4ad579d4ddb397b8e692f17585d",
+    "METRIC_RESEARCH_QUEUE.json": "db22edb239c27f8293073f527e35f2494eed0e4c3c0fe1f54058445cbc0df6cf",
     "METRIC_CRITIQUE_POLICY.json": "025beff88fbd06be4f25b4643456853ca5f0c7ee68a66212ab0e1281bcd9a8e5",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [
-    "capture_balanced_fullpanel_01"
-  ],
-  "next_experiment": "Monitor actual capture_balanced_fullpanel_01 process/session59541; do not duplicate. Finish10 declared full-panel development scores (copy/anchor/recent/cellweightedlineage/capturemedianlineage), verify matched controls and splits. Diagnose fallback/leavecapture-out sensitivity and all four raw metrics/skills; refresh ledger/reward summaries after completion. Stage/capture confounding and >72 readiness unresolved.",
+  "active_jobs_at_checkpoint": [],
+  "next_experiment": "Inspect only prior source_challenge_observation_audit, cohort_coverage_audit and domain_mean_alignment evidence to identify already-completed compatibility diagnostics. Then freeze the missing observed-source/challenge lineage-support audit using allowed observed stages only and fixed past-trained features: lineage-specific detection/expression and nearest-neighbor support with explicit missing-label/coverage limits. Do not duplicate an existing audit, infer independent embryos, read unseen challenge future, or fit from reused future targets. Jev selected support diagnosis after two capture estimators failed.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -29,7 +27,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -356,
+    "current_reward": -436,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -38,7 +36,7 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -356
+    "uncapped_reward": -436
   },
   "official_best": 52.16,
   "latest_official": {
@@ -55,16 +53,16 @@
     "attribution": "Inferred latest export; screenshot lacks filename"
   },
   "latest_jev": {
-    "packet": "JEV_CAPTURE_PACKET_20261001_01.json",
-    "record": "JEV_CAPTURE_ROUTE_20261001_01.json",
+    "packet": "JEV_BALANCED_PACKET_20261001_01.json",
+    "record": "JEV_BALANCED_ROUTE_20261001_01.json",
     "status": "validated",
-    "payload_bytes": 2017,
+    "payload_bytes": 2154,
     "usage": {
-      "input_tokens": 880,
-      "output_tokens": 65
+      "input_tokens": 973,
+      "output_tokens": 71
     },
-    "choice": "capture_balanced_robust_trend",
-    "confidence": 0.97,
+    "choice": "observed_source_challenge_lineage_support_audit",
+    "confidence": 0.96,
     "measured_codex_credit_savings": null
   },
   "external_qc_audit": {

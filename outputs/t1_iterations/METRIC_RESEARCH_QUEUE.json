@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T08:13:45.809890+00:00",
+  "updated_utc": "2026-10-01T08:16:23.083107+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -6099,13 +6099,17 @@
     },
     {
       "id": "capture_balanced_robust_trend",
-      "status": "running_fullpanel_development",
+      "status": "completed_not_promoted",
       "research_family_exhausted": false,
       "hypothesis_and_limits": "Capture-balanced lineage median stage means reduce dominance of large captures before temporal fitting; no independent embryo identity or resolved stage/capture confounding. Compare matched cell-weighted lineage estimator to isolate aggregation.",
-      "next_action": "Monitor session59541 actualprocess/events; finish frozen batch, do not duplicate. Preserve every metric/calibration/hash/failure and matched split replays; update ledger/reward then compact playbook.",
+      "next_action": "Inspect only prior source_challenge_observation_audit, cohort_coverage_audit and domain_mean_alignment evidence to identify already-completed compatibility diagnostics. Then freeze the missing observed-source/challenge lineage-support audit using allowed observed stages only and fixed past-trained features: lineage-specific detection/expression and nearest-neighbor support with explicit missing-label/coverage limits. Do not duplicate an existing audit, infer independent embryos, read unseen challenge future, or fit from reused future targets. Jev selected support diagnosis after two capture estimators failed.",
       "plan": "CAPTURE_BALANCED_FULLPANEL_PLAN.json",
       "private_run": "private/capture_balanced_fullpanel_01",
-      "planned_scores": 10
+      "planned_scores": 10,
+      "report": "CAPTURE_BALANCED_FULLPANEL_RESULTS.json",
+      "report_sha256": "13410a7c94083490c5c04dfdee22c461644b09b708de0c5b3d439fe4f4b1e6f7",
+      "full_panel_scores": 10,
+      "passing_candidates": []
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",

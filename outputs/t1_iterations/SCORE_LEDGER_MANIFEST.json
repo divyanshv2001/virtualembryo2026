@@ -1,5 +1,5 @@
 {
-  "records": 2915,
+  "records": 2925,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -25,6 +25,11 @@
       "path": "private/balanced_proxy_state_search_01/report.json",
       "sha256": "30a6659756808ace07f2dfac93f7f0a5332acb03eaa1ad7606051290532c54b9",
       "outcomes_indexed": 27
+    },
+    {
+      "path": "private/capture_balanced_fullpanel_01/report.json",
+      "sha256": "13410a7c94083490c5c04dfdee22c461644b09b708de0c5b3d439fe4f4b1e6f7",
+      "outcomes_indexed": 10
     },
     {
       "path": "private/cardiac_global_01/report.json",
@@ -377,6 +382,11 @@
       "outcomes_indexed": 18
     },
     {
+      "path": "private/de_error_attribution_01/report.json",
+      "sha256": "3377f841c9ecdcdfc5052adbf862a8343de998523a8630a292b0bbc9d629df1b",
+      "outcomes_indexed": 0
+    },
+    {
       "path": "private/de_rank_trend_challenge_01/report.json",
       "sha256": "085ca19d99bd4211a670d6681e89c157b6343fc7a9088ce1ed1a7ba4b77f4d5f",
       "outcomes_indexed": 18
@@ -400,6 +410,11 @@
       "path": "private/dimensional_transport_horizon_01/report.json",
       "sha256": "9ef176c3737af9f254633a1a3e700bdd4dcaad162edb4ed2cdebfdf8c408bbee",
       "outcomes_indexed": 22
+    },
+    {
+      "path": "private/disjoint_capture_contrasts_01/report.json",
+      "sha256": "d7e69b1293f4bde62ded6cf1b02dc5b27e788ed03bc049444e1bc2f17625dc57",
+      "outcomes_indexed": 0
     },
     {
       "path": "private/distribution_oneday_temporal_01/report.json",
@@ -652,6 +667,11 @@
       "outcomes_indexed": 30
     },
     {
+      "path": "private/past_source_integrity_01/report.json",
+      "sha256": "d48a78a2b669cc1949b93a083e7e65db1d75ae63a6fb9caf158763b80c61fa07",
+      "outcomes_indexed": 0
+    },
+    {
       "path": "private/program_horizon_pilot_01/report.json",
       "sha256": "b082b360dd82d13ee8c6b4b05d4d835d0927e8ffe803a4efcdc5039612e6fe04",
       "outcomes_indexed": 16
@@ -804,5 +824,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "cdcf612002c963b795f7d0536116df0e2f6e55e550ee4242c5919a5e9656cc87"
+  "ledger_sha256": "46db6c0a8f605f9d4bc463cb1a70c373b6a6f079ec656945aee5bf147e006d79"
 }

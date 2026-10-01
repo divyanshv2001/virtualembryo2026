@@ -394,3 +394,26 @@ Predeclare capture-balanced robust trend ablation: past-only supported capture-s
 ## 2026-10-01T08:13:45.809890+00:00 — capture-balanced estimator batch launched
 
 Frozen10-score full-panel development plan (five methods × cutoffs8/8.25 one-day): copy, archived anchor, exact recent-log control, matched cell-weighted lineage slope and capture-median lineage slope. Equal-stage3-point OLS, same current lineage weights; >=10cells/capture-lineage, >=2captures/stage-lineage for medians, explicit pooled fallback and zero missing-lineage slope. Same .25/.125/.0625/0 donor-only backoffs, mean<=.5/covariance<=.4/logmass1e−5, source/panel/scorer hashes, seed20260928 and1500donor/1000truth/1000ceiling matching. Capture leave-out fits are sensitivity diagnostics, not temporal/embryo validation. Full scorer used because prior proxy-fidelity audit invalidated treating top200 quarterday screens as exact one-day metrics. All new slopes/coverage diagnostics frozen before target reads; no target-driven selection. Dcache,64cell aggregation chunks,2threads; worker observed1.63GB. Python compiled. Session59541 active. No new Jev call: this implements its prior capture-balanced decision. New candidates only qualify for separate future reward; controls not rewarded twice. Official52.16/readiness unchanged.
+
+## 2026-10-01T08:16:23.083107+00:00 — capture-balanced full-panel batch completed
+
+All10 evaluations completed, unchanged full-panel scorer/calibration and matched archived forecasts/splits verified. Median-capture estimator improves matched cell estimator only on second fold and worsens first; both below persistence on both. Neither promotes. Capture leave-out fit sensitivity minimumrho.8271/.7705; pooledfallback3/1 and missing-group-stage1/1. Those diagnostics are not independent temporal validation. Original private plans, fitted slopes, capture audit, forecasts hashes, events and full raw/skill/calibration reports retained.
+
+| Candidate | Cutoff | Headline | Raw DE | Raw direction | Raw MMD | Raw variogram | Skill DE | Skill direction | Skill MMD | Skill variogram |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| copy | 8.0 | 50.00000000 | 0.00000000 | 0.00000000 | 0.26304275 | 0.00957364 | 0.50000000 | 0.50000000 | 0.50000000 | 0.50000000 |
+| anchor_unshrunk | 8.0 | 49.70027428 | -0.12330456 | 0.01946834 | 0.25065070 | 0.00965371 | 0.46909765 | 0.50567542 | 0.51243712 | 0.49789168 |
+| slope_recent | 8.0 | 44.21312417 | -0.29346486 | -0.37483490 | 0.28634921 | 0.01219317 | 0.43223235 | 0.41115330 | 0.47817282 | 0.43916492 |
+| slope_cellweighted | 8.0 | 48.72068748 | -0.13316893 | 0.00133862 | 0.27072293 | 0.01003154 | 0.46678967 | 0.50038615 | 0.49259042 | 0.48817897 |
+| slope_capturemedian | 8.0 | 48.32818848 | -0.15043157 | -0.01104385 | 0.27364036 | 0.01027544 | 0.46280488 | 0.49683676 | 0.48983300 | 0.48210787 |
+| copy | 8.25 | 50.00000000 | 0.00000000 | 0.00000000 | 0.23757425 | 0.00867326 | 0.50000000 | 0.50000000 | 0.50000000 | 0.50000000 |
+| anchor_unshrunk | 8.25 | 51.17724669 | -0.16013629 | 0.10681215 | 0.20634937 | 0.00820288 | 0.45982906 | 0.53324317 | 0.53558851 | 0.51413927 |
+| slope_recent | 8.25 | 51.37190052 | 0.00681431 | 0.15230912 | 0.22387567 | 0.00928400 | 0.50186567 | 0.54878480 | 0.51501314 | 0.48276222 |
+| slope_cellweighted | 8.25 | 46.51602856 | -0.29642249 | -0.14019003 | 0.23818183 | 0.01011861 | 0.43040000 | 0.46218296 | 0.49935436 | 0.46104119 |
+| slope_capturemedian | 8.25 | 47.42399743 | -0.25894378 | -0.09359442 | 0.23642440 | 0.00941959 | 0.43811075 | 0.47410132 | 0.50122646 | 0.47909510 |
+
+Score ledger refreshed:2925records,164reports,0errors. Each new estimator−40separate reward, total−436; controls not rewarded twice. Official52.16, >72 mean/lower-tail64replicate/temporal readiness unmet. No stronger submission candidate found.
+
+One2154-byte Jev advisory used973input/71output tokens; selected observed_source_challenge_lineage_support_audit confidence.96. Summary only, no datasets/source/secrets sent. Actual usage recorded, no measured credit savings claim.
+
+Inspect only prior source_challenge_observation_audit, cohort_coverage_audit and domain_mean_alignment evidence to identify already-completed compatibility diagnostics. Then freeze the missing observed-source/challenge lineage-support audit using allowed observed stages only and fixed past-trained features: lineage-specific detection/expression and nearest-neighbor support with explicit missing-label/coverage limits. Do not duplicate an existing audit, infer independent embryos, read unseen challenge future, or fit from reused future targets. Jev selected support diagnosis after two capture estimators failed.
