@@ -31,7 +31,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Freeze 24-cell strict CD1 E8.5/E9.5 stage/region-stratified lexical selection before bounded individual expression acquisition (48MBcompressed maximum). Apply frozen prospective assigned-count/biotype QC, retain exclusions, audit normalization/assay/embryo metadata. Use conservative mapping actual historical panel coverage27179/32285=84.18%; missing genes back off to incumbent, never zero. Do not fit transfer models before compatibility audit; E9.5 cannot train E8.5 backtests.",
+  "next_experiment": "Audit cached18QC-passing early CD1 cells (9E8.5/9E9.5) against available past-only atlas cardiac/lineage reference using27179unambiguous mapped genes. Quantify assay/detection/marker compatibility and region confounding without training a forecast, zero-filling missing genes, or downloading more data. Freeze any subsequent transfer experiment with matched controls and E9.5 excluded from E8.5 training.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1324,7 +1324,10 @@
     "latest_biotype_report": "GSE76118_EARLY_BIOTYPE_RESULTS.json",
     "latest_read_metadata_report": "GSE76118_EARLY_READ_METADATA_RESULTS.json",
     "prospective_policy": "GSE76118_PROSPECTIVE_QC_POLICY.json",
-    "prospective_policy_results": "GSE76118_PROSPECTIVE_POLICY_RESULTS.json"
+    "prospective_policy_results": "GSE76118_PROSPECTIVE_POLICY_RESULTS.json",
+    "latest_cohort_report": "GSE76118_EARLY_COHORT_RESULTS.json",
+    "acquired_cohort_cells": 24,
+    "prospective_qc_passing_cells": 18
   },
   "external_schema_audit": {
     "status": "completed_training_not_ready",
@@ -1361,5 +1364,21 @@
     "original_paper_qc_reconstructed": false,
     "models_fit": 0,
     "full_panel_scores": 0
+  },
+  "external_cohort_audit": {
+    "report": "GSE76118_EARLY_COHORT_RESULTS.json",
+    "report_sha256": "074479a70454237336883edf4b83f757405b38bf57d62bcb2912730850368de0",
+    "plan_sha256": "6be8a2b68beb0c0e5a096162e7a85f238ee038cae4512bf5274de6736c8fbf77",
+    "parsed_cells": 24,
+    "qc_passes_by_stage": {
+      "E8.5": 9,
+      "E9.5": 9
+    },
+    "excluded_cells": 6,
+    "failed_cells": 0,
+    "compressed_bytes_including_reused": 3274024,
+    "models_fit": 0,
+    "full_panel_scores": 0,
+    "embryo_independence_verified": false
   }
 }

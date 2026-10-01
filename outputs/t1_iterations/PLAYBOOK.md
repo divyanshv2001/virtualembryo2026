@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-01T05:25:00.872214+00:00
+Updated: 2026-10-01T05:35:51.892012+00:00
 
 Run `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_playbook.py` first. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -8,7 +8,7 @@ Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction':
 
 Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Freeze 24-cell strict CD1 E8.5/E9.5 stage/region-stratified lexical selection before bounded individual expression acquisition (48MBcompressed maximum). Apply frozen prospective assigned-count/biotype QC, retain exclusions, audit normalization/assay/embryo metadata. Use conservative mapping actual historical panel coverage27179/32285=84.18%; missing genes back off to incumbent, never zero. Do not fit transfer models before compatibility audit; E9.5 cannot train E8.5 backtests.
+Next: Audit cached18QC-passing early CD1 cells (9E8.5/9E9.5) against available past-only atlas cardiac/lineage reference using27179unambiguous mapped genes. Quantify assay/detection/marker compatibility and region confounding without training a forecast, zero-filling missing genes, or downloading more data. Freeze any subsequent transfer experiment with matched controls and E9.5 excluded from E8.5 training.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in outputs\t1_submissions\formula_progress_20260930_01\official_result.json. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 

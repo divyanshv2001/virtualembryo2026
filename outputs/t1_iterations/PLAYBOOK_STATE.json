@@ -1,16 +1,16 @@
 {
-  "updated_utc": "2026-10-01T05:25:00.872214+00:00",
+  "updated_utc": "2026-10-01T05:35:51.892012+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "cff752fcb37a6e9e1555c5d5ce9a192b10cfa886ad597163fad554ee72e7c48c",
+    "LOCAL_OPTIMIZATION_STATE.json": "e8e0453e760a38274bfa58f657285c42b7a0738bbf5925f24517e8c710f5d2d3",
     "LOCAL_OPTIMIZATION_PROMPT.md": "dc34e90fa3519a22843971c550774ced585b0bab7dea86ab4fc00c5aee806f38",
-    "METRIC_RESEARCH_QUEUE.json": "79781505cdb33c55a7fb96185cc22901ec7023f06f0cc8ea46fa8e93faddc43d",
+    "METRIC_RESEARCH_QUEUE.json": "ade62d78c542d2ceb81b225046e5a30c58ede13a5fc3ae6f750b0d9b32b01465",
     "METRIC_CRITIQUE_POLICY.json": "025beff88fbd06be4f25b4643456853ca5f0c7ee68a66212ab0e1281bcd9a8e5",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [],
-  "next_experiment": "Freeze 24-cell strict CD1 E8.5/E9.5 stage/region-stratified lexical selection before bounded individual expression acquisition (48MBcompressed maximum). Apply frozen prospective assigned-count/biotype QC, retain exclusions, audit normalization/assay/embryo metadata. Use conservative mapping actual historical panel coverage27179/32285=84.18%; missing genes back off to incumbent, never zero. Do not fit transfer models before compatibility audit; E9.5 cannot train E8.5 backtests.",
+  "next_experiment": "Audit cached18QC-passing early CD1 cells (9E8.5/9E9.5) against available past-only atlas cardiac/lineage reference using27179unambiguous mapped genes. Quantify assay/detection/marker compatibility and region confounding without training a forecast, zero-filling missing genes, or downloading more data. Freeze any subsequent transfer experiment with matched controls and E9.5 excluded from E8.5 training.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -81,6 +81,9 @@
     "latest_biotype_report": "GSE76118_EARLY_BIOTYPE_RESULTS.json",
     "latest_read_metadata_report": "GSE76118_EARLY_READ_METADATA_RESULTS.json",
     "prospective_policy": "GSE76118_PROSPECTIVE_QC_POLICY.json",
-    "prospective_policy_results": "GSE76118_PROSPECTIVE_POLICY_RESULTS.json"
+    "prospective_policy_results": "GSE76118_PROSPECTIVE_POLICY_RESULTS.json",
+    "latest_cohort_report": "GSE76118_EARLY_COHORT_RESULTS.json",
+    "acquired_cohort_cells": 24,
+    "prospective_qc_passing_cells": 18
   }
 }
