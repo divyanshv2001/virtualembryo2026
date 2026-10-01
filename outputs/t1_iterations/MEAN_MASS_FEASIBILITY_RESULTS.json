@@ -1,0 +1,244 @@
+{
+  "status": "completed",
+  "plan": {
+    "created_utc": "2026-10-01T10:21:41.604335+00:00",
+    "code_sha256": "2b3fa2a8bacf28db11463d38f2af0c8daa759b3db1a0f094a204d8bc66cd5a1e",
+    "projection_sha256": "a263e7125231d91475e6f92b39aefa0c8f1f0e55c190802f2bbccc6a8bd47582",
+    "prepared_report_sha256": "1acd8a635f76c9f9ac89a1186f116db91309b007f448a8d11ec612627ab5bca4",
+    "panel_sha256": "2aeae4cd284933956242bbc9c5ab4f565c1d2acc7cc3fd3037977e4bce8be4bf",
+    "route_sha256": "cfdbc9a35ae768979432e5c46be8986b78afd6e88fdba53ba9b0c78b3939ba11",
+    "observations": [
+      [
+        8.0,
+        "16"
+      ],
+      [
+        8.0,
+        "33"
+      ],
+      [
+        8.25,
+        "25"
+      ],
+      [
+        8.25,
+        "24"
+      ]
+    ],
+    "seed": 20260928,
+    "alpha": 0.25,
+    "iterations": 200,
+    "mean_tolerance": 1e-05,
+    "raw_mass_relative_tolerance": 1e-05,
+    "support": "CM current expression only, mapped genes with >=2 positives in heldcapture; unsupported genes unchanged. Lock post-switch support; explicit infeasibility, never fallback counted as success.",
+    "method": "Current-only synthetic odds perturbation: Jeffreys current-CM empirical q plus .25*(logit held-q minus logit othercapture-q). Systematic switches; added values use current-held conditional-positive log means. Alternate gene log-mean and row RAW mass projection to original current reference.",
+    "scope": "Numerical feasibility of joint constraints on currentobservations only, not CNFforecast,temporalvalidation,DErankguarantee,officialscore or reward. Entirely stages<=8.25. No future expression or future-score-driven fitting. No independent embryo identity.",
+    "decision": "Proceed to predeclared temporal scoring only if all4 observation cases converge with finite nonnegative locked-support outputs; failure retains residuals and does not exhaust other structural methods."
+  },
+  "results": [
+    {
+      "cutoff": 8.0,
+      "held_capture": "16",
+      "current_cm_cells": 63,
+      "source_cm_cells": 135,
+      "mapped_genes": 26775,
+      "added_detections": 5005,
+      "removed_detections": 4022,
+      "finite_nonnegative": true,
+      "projection": {
+        "valid": false,
+        "reason": "Iteration budget exhausted; feasibility/convergence unestablished",
+        "iterations": 200,
+        "history": [
+          {
+            "step": 0,
+            "max_gene_log_mean_error": 0.13828926385487428,
+            "max_row_raw_mass_relative_error": 0.0084324325184711
+          },
+          {
+            "step": 1,
+            "max_gene_log_mean_error": 0.003032165346330551,
+            "max_row_raw_mass_relative_error": 3.670392406339533e-16
+          },
+          {
+            "step": 10,
+            "max_gene_log_mean_error": 0.004000795509707444,
+            "max_row_raw_mass_relative_error": 1.8407208245440223e-16
+          },
+          {
+            "step": 50,
+            "max_gene_log_mean_error": 0.01629375759697016,
+            "max_row_raw_mass_relative_error": 1.842866331957194e-16
+          },
+          {
+            "step": 100,
+            "max_gene_log_mean_error": 4.754689737981145,
+            "max_row_raw_mass_relative_error": 9.19961728398464e-16
+          },
+          {
+            "step": 200,
+            "max_gene_log_mean_error": 4.754689737981145,
+            "max_row_raw_mass_relative_error": 9.21433165978597e-16
+          }
+        ],
+        "support_preserved": false
+      },
+      "rows_sha256": "65cb865adfa6574e668e42a6023aa4c3ecd8a7c7b62de6fc308d7e90c87ad79a"
+    },
+    {
+      "cutoff": 8.0,
+      "held_capture": "33",
+      "current_cm_cells": 44,
+      "source_cm_cells": 154,
+      "mapped_genes": 26775,
+      "added_detections": 2116,
+      "removed_detections": 3300,
+      "finite_nonnegative": true,
+      "projection": {
+        "valid": false,
+        "reason": "Iteration budget exhausted; feasibility/convergence unestablished",
+        "iterations": 200,
+        "history": [
+          {
+            "step": 0,
+            "max_gene_log_mean_error": 0.1353621807965366,
+            "max_row_raw_mass_relative_error": 0.019492232409365564
+          },
+          {
+            "step": 1,
+            "max_gene_log_mean_error": 0.011169527856157657,
+            "max_row_raw_mass_relative_error": 1.8407391259417945e-16
+          },
+          {
+            "step": 10,
+            "max_gene_log_mean_error": 0.014687263790427174,
+            "max_row_raw_mass_relative_error": 1.8407391259417945e-16
+          },
+          {
+            "step": 50,
+            "max_gene_log_mean_error": 0.08961688575537341,
+            "max_row_raw_mass_relative_error": 1.8407391259417945e-16
+          },
+          {
+            "step": 100,
+            "max_gene_log_mean_error": 4.5897429262157985,
+            "max_row_raw_mass_relative_error": 9.198590205089448e-16
+          },
+          {
+            "step": 200,
+            "max_gene_log_mean_error": 4.5897429262157985,
+            "max_row_raw_mass_relative_error": 9.198590205089448e-16
+          }
+        ],
+        "support_preserved": false
+      },
+      "rows_sha256": "f17142421ec4127121b78c5e3811935b0608ea56e4295d627471a681e31f2bea"
+    },
+    {
+      "cutoff": 8.25,
+      "held_capture": "25",
+      "current_cm_cells": 130,
+      "source_cm_cells": 215,
+      "mapped_genes": 26775,
+      "added_detections": 3552,
+      "removed_detections": 9012,
+      "finite_nonnegative": true,
+      "projection": {
+        "valid": false,
+        "reason": "Iteration budget exhausted; feasibility/convergence unestablished",
+        "iterations": 200,
+        "history": [
+          {
+            "step": 0,
+            "max_gene_log_mean_error": 0.08966468847714948,
+            "max_row_raw_mass_relative_error": 0.018288679775233043
+          },
+          {
+            "step": 1,
+            "max_gene_log_mean_error": 0.005082212817188569,
+            "max_row_raw_mass_relative_error": 1.8404644176025087e-16
+          },
+          {
+            "step": 10,
+            "max_gene_log_mean_error": 0.00719153536273609,
+            "max_row_raw_mass_relative_error": 3.6747287231927094e-16
+          },
+          {
+            "step": 50,
+            "max_gene_log_mean_error": 0.04557105581091481,
+            "max_row_raw_mass_relative_error": 3.674558102698895e-16
+          },
+          {
+            "step": 100,
+            "max_gene_log_mean_error": 4.305689152954977,
+            "max_row_raw_mass_relative_error": 1.1015787537653576e-15
+          },
+          {
+            "step": 200,
+            "max_gene_log_mean_error": 4.305689152954977,
+            "max_row_raw_mass_relative_error": 1.1015787537653576e-15
+          }
+        ],
+        "support_preserved": false
+      },
+      "rows_sha256": "ac68830a65bd328216b6165551cdbaf22340419c59860249213a48d9e5d679f6"
+    },
+    {
+      "cutoff": 8.25,
+      "held_capture": "24",
+      "current_cm_cells": 134,
+      "source_cm_cells": 211,
+      "mapped_genes": 26775,
+      "added_detections": 3356,
+      "removed_detections": 10269,
+      "finite_nonnegative": true,
+      "projection": {
+        "valid": false,
+        "reason": "Iteration budget exhausted; feasibility/convergence unestablished",
+        "iterations": 200,
+        "history": [
+          {
+            "step": 0,
+            "max_gene_log_mean_error": 0.07474337051163848,
+            "max_row_raw_mass_relative_error": 0.018723000489111474
+          },
+          {
+            "step": 1,
+            "max_gene_log_mean_error": 0.005347566692812222,
+            "max_row_raw_mass_relative_error": 1.8422576066898086e-16
+          },
+          {
+            "step": 10,
+            "max_gene_log_mean_error": 0.007450696622158581,
+            "max_row_raw_mass_relative_error": 3.678881574408566e-16
+          },
+          {
+            "step": 50,
+            "max_gene_log_mean_error": 0.044458567304740626,
+            "max_row_raw_mass_relative_error": 3.676461155488879e-16
+          },
+          {
+            "step": 100,
+            "max_gene_log_mean_error": 4.374651945875517,
+            "max_row_raw_mass_relative_error": 1.102624076560414e-15
+          },
+          {
+            "step": 200,
+            "max_gene_log_mean_error": 4.374651945875517,
+            "max_row_raw_mass_relative_error": 1.102624076560414e-15
+          }
+        ],
+        "support_preserved": false
+      },
+      "rows_sha256": "9af5b6849207cb3501f9463c9acc95b77f14bf1d18c64efb069c07dbcd0aff31"
+    }
+  ],
+  "all_cases_viable": false,
+  "official_score": null,
+  "headline_score": null,
+  "raw_metrics": null,
+  "skills": null,
+  "reward_delta": 0,
+  "plan_sha256": "6ccdae38681d6a2e1838462797e01665bbd3500eb37f8ddda96d2218118e96f6",
+  "report_sha256": "827699da95147cb6ba0418ec0df4052eaeb602fcdd7e4955be800c95741fdec3"
+}

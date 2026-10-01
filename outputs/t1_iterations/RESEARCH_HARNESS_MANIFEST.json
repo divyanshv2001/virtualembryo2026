@@ -25,6 +25,16 @@
       "script": "cm_capture_replication_fullpanel.py",
       "run": "private/cm_capture_replication_fullpanel_01",
       "report": "CM_CAPTURE_REPLICATION_FULLPANEL_RESULTS.json"
+    },
+    "mean_mass_feasibility": {
+      "script": "mean_mass_feasibility_audit.py",
+      "run": "private/mean_mass_feasibility_01",
+      "report": "MEAN_MASS_FEASIBILITY_RESULTS.json"
+    },
+    "support_mass_bounds": {
+      "script": "support_mass_bounds_audit.py",
+      "run": "private/support_mass_bounds_01",
+      "report": "SUPPORT_MASS_BOUNDS_RESULTS.json"
     }
   }
 }

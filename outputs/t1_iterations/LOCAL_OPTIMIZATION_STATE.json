@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": true,
+  "local_process_running": false,
   "quota_reset_evidence": {
     "limit_observed": false,
     "remaining_quota": null,
@@ -31,14 +31,12 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Run registered cm_capture_replication: fixed CM.25 only, second-largest current captures33/24 excluded from all base refits, permitted current-anchor calibration, matched copy/anchor, two one-day stages and6full-panel scores. Compare all4metrics; reject promotion for any incumbent-skill regression. After completion run four metric specialists with Problem/Proposed solution/Validation (role policy2), update ledger/journal/playbook. Tiny prior gains are not readiness; population/emergence and distinct specialist mechanisms remain open.",
+  "next_experiment": "Finish support_mass_bounds report and four compact specialist reviews first. Analytic necessary support/mass checks only, no forecasts/metrics/reward. If bounds reject, revise locked constraints/support explicitly rather than increasing solver iterations; if bounds pass, feasibility remains unresolved and a separately predeclared solver is needed before temporal scoring. Jev selects distinct next design after evidence; preserve prior numerical failure and all open structural/population paths.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "cm_capture_replication_fullpanel_01"
-  ],
-  "active_run_path": "private/cm_capture_replication_fullpanel_01",
+  "active_jobs": [],
+  "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -1230,7 +1228,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -475,
+    "current_reward": -482,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1239,7 +1237,7 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -475
+    "uncapped_reward": -482
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -1298,16 +1296,16 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "packet": "JEV_CM_NEXT_PACKET_20261001_01.json",
-    "route": "JEV_CM_NEXT_ROUTE_20261001_01.json",
-    "decision": "fixed_capture_replication",
-    "confidence": 0.94,
-    "payload_bytes": 1859,
+    "packet": "JEV_PROJECTION_FAILURE_PACKET_20261001_01.json",
+    "route": "JEV_PROJECTION_FAILURE_ROUTE_20261001_01.json",
+    "decision": "necessary_bounds_first",
+    "confidence": 1.0,
     "usage": {
-      "input_tokens": 886,
-      "output_tokens": 54
+      "input_tokens": 703,
+      "output_tokens": 46
     },
-    "scope": "Next bounded scientific decision; no measured savings."
+    "payload_bytes": 1570,
+    "scope": "Distinct failure diagnosis; no measured savings."
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -1825,6 +1823,40 @@
       ],
       "specialist_role_version": 2,
       "new_reward_delta_from_review": 0
+    },
+    "cm_capture_replication_fullpanel_01": {
+      "status": "completed",
+      "report_sha256": "d7f567e93e395a72ba4fc00cd25c2a97c93617671096a20edaf96e1cf44cbe3a",
+      "review": "METRIC_CRITIQUES_CM_REPLICATION_20261001.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "agents": [
+        "replication_de",
+        "replication_direction",
+        "replication_mmd",
+        "replication_css"
+      ],
+      "specialist_role_version": 2,
+      "new_reward_delta_from_review": 0
+    },
+    "mean_mass_feasibility_01": {
+      "status": "completed",
+      "report_sha256": "827699da95147cb6ba0418ec0df4052eaeb602fcdd7e4955be800c95741fdec3",
+      "review": "METRIC_CRITIQUES_MEAN_MASS_20261001.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": false,
+      "reward_delta": 0,
+      "fresh_agent_limit_observed": "agent thread limit reached; existing MMD/CSS agents reused"
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -1866,8 +1898,24 @@
     "report_sha256": "c81b597bc4704408aca1e79ea4b390aa883491e8b7f450e91c729d2ab8af0fe9"
   },
   "cm_capture_replication_job": {
-    "status": "running",
-    "plan_sha256": "98317a8f46b621dfabc298a453baf16facb487b5f8ff8fc511964fcf2aa89068",
-    "planned_scores": 6
+    "status": "completed",
+    "passing_candidates": [],
+    "report_sha256": "d7f567e93e395a72ba4fc00cd25c2a97c93617671096a20edaf96e1cf44cbe3a"
+  },
+  "mean_mass_feasibility_job": {
+    "status": "completed_not_viable",
+    "registered_experiment": "mean_mass_feasibility",
+    "formula_tests": "identity,margins/support,structural infeasibility,iteration-budget failure passed",
+    "metric_availability": false,
+    "reward_delta": 0,
+    "report_sha256": "827699da95147cb6ba0418ec0df4052eaeb602fcdd7e4955be800c95741fdec3",
+    "all_cases_viable": false
+  },
+  "support_mass_bounds_job": {
+    "status": "completed_pending_specialist_reviews",
+    "tests": "known feasible reference,Jensen-impossible support,zero-support conflict and unresolved support passed",
+    "metric_availability": false,
+    "reward_delta": 0,
+    "report_sha256": "ba33f91d6a5f598f2228df9ad4dc58bec23c2ed94f7562049490d2d2ad8bfd26"
   }
 }

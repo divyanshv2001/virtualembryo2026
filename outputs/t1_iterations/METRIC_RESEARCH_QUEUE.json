@@ -6132,11 +6132,41 @@
     },
     {
       "id": "cm_capture_observation_replication",
-      "status": "predeclared_ready",
+      "status": "completed_not_promoted",
       "research_family_exhausted": false,
       "implementation": "cm_capture_replication_fullpanel.py",
       "run": "cm_capture_replication_fullpanel_01",
-      "next_action": "Fixed CM.25 vs matched copy/anchor on second-largest current captures with all base fits excluded;6scores, no parameter search or officialupload."
+      "next_action": "Finish registered mean_mass_feasibility current-only four-CM-capture numerical audit: locked support, original LOG gene means and RAW row masses,200iterations/tolerances1e-5. Record explicit infeasibility/nonconvergence; no temporal/headline/raw4/skills4/reward. Four specialists must report unavailable metrics and propose remedies. If all cases converge only then predeclare matched full-panel temporal tests; otherwise select distinct structural/population mechanism with Jev after checking prior coverage. FixedCM.25 replication failed both headline comparisons; do not strength-tune exposed folds.",
+      "report": "CM_CAPTURE_REPLICATION_FULLPANEL_RESULTS.json",
+      "report_sha256": "d7f567e93e395a72ba4fc00cd25c2a97c93617671096a20edaf96e1cf44cbe3a",
+      "critique": "METRIC_CRITIQUES_CM_REPLICATION_20261001.md"
+    },
+    {
+      "id": "mean_mass_projection_feasibility",
+      "status": "completed_nonconverged",
+      "research_family_exhausted": false,
+      "implementation": [
+        "mean_mass_projection.py",
+        "mean_mass_feasibility_audit.py"
+      ],
+      "run": "mean_mass_feasibility_01",
+      "next_action": "Run registered support_mass_bounds: current-only four-case analytic necessary support/mass checks on identical fixed perturbations. Jensen rawmass lowerbound and percolumn rowcapacity, referencecontrols and constructed tests; no optimizer/forecast/benchmark/reward. Failed bound rejects exact locked margins/support; passing remains unresolved and requires distinct validated solver before temporal scoring. Preserve numerical projection failure and all open structural/population families.",
+      "metrics_available": false,
+      "report": "MEAN_MASS_FEASIBILITY_RESULTS.json",
+      "report_sha256": "827699da95147cb6ba0418ec0df4052eaeb602fcdd7e4955be800c95741fdec3",
+      "critique": "METRIC_CRITIQUES_MEAN_MASS_20261001.md"
+    },
+    {
+      "id": "support_mass_necessary_bounds",
+      "status": "predeclared_ready",
+      "research_family_exhausted": false,
+      "implementation": [
+        "support_mass_bounds.py",
+        "support_mass_bounds_audit.py"
+      ],
+      "run": "support_mass_bounds_01",
+      "metrics_available": false,
+      "next_action": "Run registered support_mass_bounds: current-only four-case analytic necessary support/mass checks on identical fixed perturbations. Jensen rawmass lowerbound and percolumn rowcapacity, referencecontrols and constructed tests; no optimizer/forecast/benchmark/reward. Failed bound rejects exact locked margins/support; passing remains unresolved and requires distinct validated solver before temporal scoring. Preserve numerical projection failure and all open structural/population families."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",

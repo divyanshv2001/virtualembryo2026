@@ -1,0 +1,19 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "purpose": "Select failure-diagnosis step after current-only alternating projection failed all4cases; no benchmark metrics.",
+    "evidence": "Fixed support200iterations preservedrawrowmass~1e-15 butgeneLOGmeanerror4.30-4.75. Four specialistssaynonconvergencecannotproveinfeasibility,suggestjointscaled/dampedsolverandstructuralbounds. Need distinguish constraints impossiblevsbadsolver before more fitting.",
+    "constraints": "Past/currentobservationsonly,no futuretargets/headlines/rewards. Necessarybound via convexity: n cells, columnmean mu_j, m_j lockedpositive entries requires at least m_j*expm1(n*mu_j/m_j) totalrawmass incolumn. Sum these minima mustnot exceed available sumrowrawmasses. Eachcolumnlogsum n*mu_j mustnot exceed sumlog1p(rowrawmass_i) over its supportedrows. Failedbound proves infeasibility within declaredsupport/constraints; passingbounds doesNOTprove feasibility. Samefrozenperturbations,references,seed, no retuning."
+  },
+  "questions": {
+    "failure_step": {
+      "type": "choice",
+      "instructions": "Choose bounded diagnostic before newconstrained solver training.",
+      "criteria": {
+        "necessary_bounds_first": "Implement analytic support/mass necessarybounds, validate identity andconstructed impossible cases, then testfour frozen-current cases. Recordrejectedvsunresolved; no optimizerorheadline certification.",
+        "joint_solver_first": "Immediately implementscaledjoint nonlinear constrained solver withanalyticderivatives; solverfailurestillnotproof.",
+        "increase_iterations": "Simplyincreasealternatingiterations despite currentlarge residuals."
+      }
+    }
+  }
+}
