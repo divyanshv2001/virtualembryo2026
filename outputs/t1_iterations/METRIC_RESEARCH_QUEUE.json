@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T07:53:11.724086+00:00",
+  "updated_utc": "2026-10-01T07:58:03.561330+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -6078,6 +6078,15 @@
       "report_sha256": "3377f841c9ecdcdfc5052adbf862a8343de998523a8630a292b0bbc9d629df1b",
       "scope": "Labeled posthoc diagnosis on reused-development targets. No fit, candidate/backoff selection, reward or new benchmark scores. Do not reuse targets for promotion of any resulting method.",
       "next_action": "Declare past-source integrity audit using only stages<=8.25: metadata sample/capture and lineage composition, raw library-size and detection distributions, normalized implied-count totals, past stage mean/detection direction stability within supported lineages and captures. Check technical discontinuity before interpreting fold8 posthoc reversal biologically. No future-target fitting or slope negation based on known targets. If no independent capture replication/embryo identity exists, record that limit precisely; choose subsequent experiment with fresh predeclared temporal validation."
+    },
+    {
+      "id": "past_source_integrity_audit",
+      "status": "completed_diagnostic",
+      "research_family_exhausted": false,
+      "report": "PAST_SOURCE_INTEGRITY_RESULTS.json",
+      "report_sha256": "d48a78a2b669cc1949b93a083e7e65db1d75ae63a6fb9caf158763b80c61fa07",
+      "scope": "Past-only source expression/stage/capture diagnostics. No future expression, fitting, predictions, benchmark scores or reward. Capture sample labels are not established embryo IDs.",
+      "next_action": "Declare disjoint-middle capture contrast audit for past-only triples7.5/7.75/8 and7.75/8/8.25. Enumerate all6 oriented balanced partitions of each four-capture middle stage; compare B_left-A with C-B_right against shared-middle contrasts, using seven common supported lineages and explicit >=20cell coverage. Report overlap/coverage and rank/sign diagnostics, do not claim independent embryos,64replicates, biological reversal or benchmark improvement. This tests shared-middle estimator noise before any forecast fitting; new temporal validation required for derived methods."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",

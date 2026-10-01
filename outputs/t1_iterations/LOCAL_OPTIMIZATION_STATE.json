@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T07:53:11.724086+00:00",
+  "updated_utc": "2026-10-01T07:58:03.561330+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,7 +31,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Declare past-source integrity audit using only stages<=8.25: metadata sample/capture and lineage composition, raw library-size and detection distributions, normalized implied-count totals, past stage mean/detection direction stability within supported lineages and captures. Check technical discontinuity before interpreting fold8 posthoc reversal biologically. No future-target fitting or slope negation based on known targets. If no independent capture replication/embryo identity exists, record that limit precisely; choose subsequent experiment with fresh predeclared temporal validation.",
+  "next_experiment": "Declare disjoint-middle capture contrast audit for past-only triples7.5/7.75/8 and7.75/8/8.25. Enumerate all6 oriented balanced partitions of each four-capture middle stage; compare B_left-A with C-B_right against shared-middle contrasts, using seven common supported lineages and explicit >=20cell coverage. Report overlap/coverage and rank/sign diagnostics, do not claim independent embryos,64replicates, biological reversal or benchmark improvement. This tests shared-middle estimator noise before any forecast fitting; new temporal validation required for derived methods.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1296,16 +1296,16 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "packet": "JEV_DE_PACKET_20261001_01.json",
-    "record": "JEV_DE_ROUTE_20261001_01.json",
+    "packet": "JEV_INTEGRITY_PACKET_20261001_01.json",
+    "record": "JEV_INTEGRITY_ROUTE_20261001_01.json",
     "status": "validated",
-    "payload_bytes": 1950,
+    "payload_bytes": 1837,
     "usage": {
-      "input_tokens": 785,
-      "output_tokens": 64
+      "input_tokens": 898,
+      "output_tokens": 66
     },
-    "choice": "past_source_integrity_audit",
-    "confidence": 0.95,
+    "choice": "disjoint_middle_capture_contrasts",
+    "confidence": 0.99,
     "measured_codex_credit_savings": null
   },
   "external_qc_audit": {
@@ -1664,5 +1664,16 @@
     "reward_delta": 0,
     "causal_attribution_certified": false,
     "next_action": "Declare past-source integrity audit using only stages<=8.25: metadata sample/capture and lineage composition, raw library-size and detection distributions, normalized implied-count totals, past stage mean/detection direction stability within supported lineages and captures. Check technical discontinuity before interpreting fold8 posthoc reversal biologically. No future-target fitting or slope negation based on known targets. If no independent capture replication/embryo identity exists, record that limit precisely; choose subsequent experiment with fresh predeclared temporal validation."
+  },
+  "past_source_integrity_job": {
+    "status": "completed_past_only",
+    "report": "PAST_SOURCE_INTEGRITY_RESULTS.json",
+    "report_sha256": "d48a78a2b669cc1949b93a083e7e65db1d75ae63a6fb9caf158763b80c61fa07",
+    "plan_sha256": "d69ef4ece2e38fe1888d46b81204ed8ba17b432d6de68d9d3e332d9bbe5c5c66",
+    "new_scores": 0,
+    "reward_delta": 0,
+    "independent_embryo_ids_available": false,
+    "causal_discontinuity_established": false,
+    "next_action": "Declare disjoint-middle capture contrast audit for past-only triples7.5/7.75/8 and7.75/8/8.25. Enumerate all6 oriented balanced partitions of each four-capture middle stage; compare B_left-A with C-B_right against shared-middle contrasts, using seven common supported lineages and explicit >=20cell coverage. Report overlap/coverage and rank/sign diagnostics, do not claim independent embryos,64replicates, biological reversal or benchmark improvement. This tests shared-middle estimator noise before any forecast fitting; new temporal validation required for derived methods."
   }
 }

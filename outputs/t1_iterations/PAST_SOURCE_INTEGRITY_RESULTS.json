@@ -1,0 +1,913 @@
+{
+  "updated_utc": "2026-10-01T07:55:54.695416+00:00",
+  "plan_sha256": "d69ef4ece2e38fe1888d46b81204ed8ba17b432d6de68d9d3e332d9bbe5c5c66",
+  "scope": "Past-only source expression/stage/capture diagnostics. No future expression, fitting, predictions, benchmark scores or reward. Capture sample labels are not established embryo IDs.",
+  "embryo_id_status": "sample is an assay/capture identifier; embryo_version labels Original/Extended, not independent embryos.",
+  "sample_ids_shared_between_stages": 0,
+  "stages": [
+    {
+      "stage": 7.5,
+      "cells": 1963,
+      "sample_counts": {
+        "19": 1056,
+        "6": 400,
+        "20": 287,
+        "3": 88,
+        "2": 87,
+        "4": 45
+      },
+      "version_counts": {
+        "Original": 1963
+      },
+      "lineage_fractions": {
+        "mesenchymal": 0.3998981151299032,
+        "blood": 0.35557819663779927,
+        "endoderm": 0.11360163015792155,
+        "ectoderm_other": 0.07845134997452878,
+        "cardiopharyngeal": 0.01935812531839022,
+        "endothelial": 0.017320427916454408,
+        "cardiomyocyte": 0.015792154865002548
+      },
+      "raw_library_quantiles": {
+        "0.05": 7978.2,
+        "0.5": 15219.0,
+        "0.95": 30195.9
+      },
+      "cell_detection_fraction_quantiles": {
+        "0.05": 0.08981170262748925,
+        "0.5": 0.12461599624128085,
+        "0.95": 0.16865083667642483
+      },
+      "normalized_implied_count_quantiles": {
+        "0.05": 9999.999845183682,
+        "0.5": 9999.999999383652,
+        "0.95": 10000.000154964826
+      },
+      "max_normalization_relative_error": 3.867307807325915e-08
+    },
+    {
+      "stage": 7.75,
+      "cells": 3000,
+      "sample_counts": {
+        "13": 1018,
+        "12": 992,
+        "9": 530,
+        "8": 460
+      },
+      "version_counts": {
+        "Original": 3000
+      },
+      "lineage_fractions": {
+        "blood": 0.4256666666666667,
+        "mesenchymal": 0.259,
+        "ectoderm_other": 0.09433333333333334,
+        "endoderm": 0.078,
+        "cardiomyocyte": 0.058333333333333334,
+        "cardiopharyngeal": 0.042333333333333334,
+        "endothelial": 0.039,
+        "neural_crest": 0.0033333333333333335
+      },
+      "raw_library_quantiles": {
+        "0.05": 7801.650000000001,
+        "0.5": 15912.0,
+        "0.95": 27840.54999999998
+      },
+      "cell_detection_fraction_quantiles": {
+        "0.05": 0.08713361523726915,
+        "0.5": 0.1244172178250027,
+        "0.95": 0.1684574794896816
+      },
+      "normalized_implied_count_quantiles": {
+        "0.05": 9999.999844143595,
+        "0.5": 10000.000000203163,
+        "0.95": 10000.000156030846
+      },
+      "max_normalization_relative_error": 3.688246652533422e-08
+    },
+    {
+      "stage": 8.0,
+      "cells": 3000,
+      "sample_counts": {
+        "16": 1010,
+        "33": 699,
+        "34": 660,
+        "35": 631
+      },
+      "version_counts": {
+        "Original": 3000
+      },
+      "lineage_fractions": {
+        "blood": 0.455,
+        "mesenchymal": 0.201,
+        "ectoderm_other": 0.09133333333333334,
+        "cardiopharyngeal": 0.08033333333333334,
+        "cardiomyocyte": 0.066,
+        "endothelial": 0.05533333333333333,
+        "endoderm": 0.051
+      },
+      "raw_library_quantiles": {
+        "0.05": 7805.650000000001,
+        "0.5": 14335.5,
+        "0.95": 23841.89999999999
+      },
+      "cell_detection_fraction_quantiles": {
+        "0.05": 0.08676858578192201,
+        "0.5": 0.11832736998084499,
+        "0.95": 0.15823304058693843
+      },
+      "normalized_implied_count_quantiles": {
+        "0.05": 9999.999837417856,
+        "0.5": 10000.000001900102,
+        "0.95": 10000.00016562879
+      },
+      "max_normalization_relative_error": 3.791248270879066e-08
+    },
+    {
+      "stage": 8.25,
+      "cells": 3000,
+      "sample_counts": {
+        "25": 1214,
+        "24": 1108,
+        "28": 678
+      },
+      "version_counts": {
+        "Original": 3000
+      },
+      "lineage_fractions": {
+        "blood": 0.2826666666666667,
+        "mesenchymal": 0.228,
+        "cardiopharyngeal": 0.116,
+        "cardiomyocyte": 0.115,
+        "ectoderm_other": 0.09833333333333333,
+        "endothelial": 0.08233333333333333,
+        "endoderm": 0.05266666666666667,
+        "neural_crest": 0.025
+      },
+      "raw_library_quantiles": {
+        "0.05": 7414.7,
+        "0.5": 15062.0,
+        "0.95": 28768.549999999996
+      },
+      "cell_detection_fraction_quantiles": {
+        "0.05": 0.08430915464960786,
+        "0.5": 0.12271856590408037,
+        "0.95": 0.1672033683906176
+      },
+      "normalized_implied_count_quantiles": {
+        "0.05": 9999.999834019336,
+        "0.5": 9999.99999864915,
+        "0.95": 10000.000163315473
+      },
+      "max_normalization_relative_error": 3.5616082749712064e-08
+    }
+  ],
+  "samples": [
+    {
+      "stage": 7.5,
+      "sample": 2,
+      "cells": 87,
+      "raw_library_quantiles": {
+        "0.05": 6357.7,
+        "0.5": 12435.0,
+        "0.95": 21810.4
+      },
+      "cell_detection_quantiles": {
+        "0.05": 0.0795872637247461,
+        "0.5": 0.11706241642271134,
+        "0.95": 0.14764176515233654
+      },
+      "lineage_fractions": {
+        "mesenchymal": 0.39080459770114945,
+        "blood": 0.3333333333333333,
+        "ectoderm_other": 0.10344827586206896,
+        "endoderm": 0.08045977011494253,
+        "cardiopharyngeal": 0.05747126436781609,
+        "cardiomyocyte": 0.022988505747126436,
+        "endothelial": 0.011494252873563218
+      },
+      "mean_vs_stage_rho": 0.9231811829493695
+    },
+    {
+      "stage": 7.5,
+      "sample": 3,
+      "cells": 88,
+      "raw_library_quantiles": {
+        "0.05": 6370.8,
+        "0.5": 12843.5,
+        "0.95": 19185.349999999995
+      },
+      "cell_detection_quantiles": {
+        "0.05": 0.08368029202356428,
+        "0.5": 0.12053200332502079,
+        "0.95": 0.14622501716722686
+      },
+      "lineage_fractions": {
+        "mesenchymal": 0.5113636363636364,
+        "blood": 0.23863636363636365,
+        "ectoderm_other": 0.13636363636363635,
+        "endoderm": 0.11363636363636363
+      },
+      "mean_vs_stage_rho": 0.9230190640994873
+    },
+    {
+      "stage": 7.5,
+      "sample": 4,
+      "cells": 45,
+      "raw_library_quantiles": {
+        "0.05": 8503.6,
+        "0.5": 13567.0,
+        "0.95": 22372.0
+      },
+      "cell_detection_quantiles": {
+        "0.05": 0.09601358921536737,
+        "0.5": 0.12338718421337959,
+        "0.95": 0.15801077017600923
+      },
+      "lineage_fractions": {
+        "mesenchymal": 0.4666666666666667,
+        "blood": 0.3111111111111111,
+        "ectoderm_other": 0.1111111111111111,
+        "endoderm": 0.08888888888888889,
+        "cardiomyocyte": 0.022222222222222223
+      },
+      "mean_vs_stage_rho": 0.8992388224243166
+    },
+    {
+      "stage": 7.5,
+      "sample": 6,
+      "cells": 400,
+      "raw_library_quantiles": {
+        "0.05": 8483.7,
+        "0.5": 16567.0,
+        "0.95": 39241.94999999997
+      },
+      "cell_detection_quantiles": {
+        "0.05": 0.09254038816003471,
+        "0.5": 0.12933246593660774,
+        "0.95": 0.18677762116448007
+      },
+      "lineage_fractions": {
+        "mesenchymal": 0.435,
+        "blood": 0.2775,
+        "endoderm": 0.165,
+        "ectoderm_other": 0.0875,
+        "cardiopharyngeal": 0.015,
+        "endothelial": 0.01,
+        "cardiomyocyte": 0.01
+      },
+      "mean_vs_stage_rho": 0.9710351292402474
+    },
+    {
+      "stage": 7.5,
+      "sample": 19,
+      "cells": 1056,
+      "raw_library_quantiles": {
+        "0.05": 7879.5,
+        "0.5": 14056.0,
+        "0.95": 24249.75
+      },
+      "cell_detection_quantiles": {
+        "0.05": 0.08917922584842242,
+        "0.5": 0.11883335140409845,
+        "0.95": 0.15524594311323142
+      },
+      "lineage_fractions": {
+        "blood": 0.39109848484848486,
+        "mesenchymal": 0.3759469696969697,
+        "endoderm": 0.09375,
+        "ectoderm_other": 0.07575757575757576,
+        "cardiopharyngeal": 0.022727272727272728,
+        "endothelial": 0.022727272727272728,
+        "cardiomyocyte": 0.017992424242424244
+      },
+      "mean_vs_stage_rho": 0.9863626857957148
+    },
+    {
+      "stage": 7.5,
+      "sample": 20,
+      "cells": 287,
+      "raw_library_quantiles": {
+        "0.05": 13688.2,
+        "0.5": 22330.0,
+        "0.95": 38440.1
+      },
+      "cell_detection_quantiles": {
+        "0.05": 0.1164660811738769,
+        "0.5": 0.14684303733420073,
+        "0.95": 0.18786728830098665
+      },
+      "lineage_fractions": {
+        "mesenchymal": 0.397212543554007,
+        "blood": 0.3832752613240418,
+        "endoderm": 0.1289198606271777,
+        "ectoderm_other": 0.04529616724738676,
+        "cardiomyocyte": 0.017421602787456445,
+        "endothelial": 0.017421602787456445,
+        "cardiopharyngeal": 0.010452961672473868
+      },
+      "mean_vs_stage_rho": 0.9699005318640866
+    },
+    {
+      "stage": 7.75,
+      "sample": 8,
+      "cells": 460,
+      "raw_library_quantiles": {
+        "0.05": 7827.900000000001,
+        "0.5": 15083.0,
+        "0.95": 37217.74999999998
+      },
+      "cell_detection_quantiles": {
+        "0.05": 0.0884636235498211,
+        "0.5": 0.12427265170407314,
+        "0.95": 0.18984965123423325
+      },
+      "lineage_fractions": {
+        "blood": 0.4934782608695652,
+        "mesenchymal": 0.33260869565217394,
+        "endoderm": 0.06956521739130435,
+        "ectoderm_other": 0.06086956521739131,
+        "endothelial": 0.01956521739130435,
+        "cardiopharyngeal": 0.013043478260869565,
+        "cardiomyocyte": 0.010869565217391304
+      },
+      "mean_vs_stage_rho": 0.9638007202621038
+    },
+    {
+      "stage": 7.75,
+      "sample": 9,
+      "cells": 530,
+      "raw_library_quantiles": {
+        "0.05": 7566.3,
+        "0.5": 15174.0,
+        "0.95": 26053.99999999999
+      },
+      "cell_detection_quantiles": {
+        "0.05": 0.08593190935704217,
+        "0.5": 0.12306191044128809,
+        "0.95": 0.15940221908995625
+      },
+      "lineage_fractions": {
+        "blood": 0.5358490566037736,
+        "mesenchymal": 0.24339622641509434,
+        "endoderm": 0.07547169811320754,
+        "ectoderm_other": 0.07358490566037736,
+        "cardiomyocyte": 0.02830188679245283,
+        "cardiopharyngeal": 0.02830188679245283,
+        "endothelial": 0.01509433962264151
+      },
+      "mean_vs_stage_rho": 0.9656614053798145
+    },
+    {
+      "stage": 7.75,
+      "sample": 12,
+      "cells": 992,
+      "raw_library_quantiles": {
+        "0.05": 8826.7,
+        "0.5": 16757.0,
+        "0.95": 28247.699999999997
+      },
+      "cell_detection_quantiles": {
+        "0.05": 0.09108749864469262,
+        "0.5": 0.12656763887382994,
+        "0.95": 0.1671346994831761
+      },
+      "lineage_fractions": {
+        "blood": 0.375,
+        "mesenchymal": 0.25201612903225806,
+        "ectoderm_other": 0.11693548387096774,
+        "endoderm": 0.08165322580645161,
+        "cardiomyocyte": 0.07258064516129033,
+        "cardiopharyngeal": 0.05241935483870968,
+        "endothelial": 0.046370967741935484,
+        "neural_crest": 0.0030241935483870967
+      },
+      "mean_vs_stage_rho": 0.9838339580316373
+    },
+    {
+      "stage": 7.75,
+      "sample": 13,
+      "cells": 1018,
+      "raw_library_quantiles": {
+        "0.05": 7587.75,
+        "0.5": 15655.5,
+        "0.95": 26684.95
+      },
+      "cell_detection_quantiles": {
+        "0.05": 0.08518920091076657,
+        "0.5": 0.12342332574361198,
+        "0.95": 0.16492283783295383
+      },
+      "lineage_fractions": {
+        "blood": 0.38703339882121807,
+        "mesenchymal": 0.2406679764243615,
+        "ectoderm_other": 0.09823182711198428,
+        "cardiomyocyte": 0.08153241650294696,
+        "endoderm": 0.07956777996070727,
+        "cardiopharyngeal": 0.05304518664047151,
+        "endothelial": 0.05304518664047151,
+        "neural_crest": 0.0068762278978389
+      },
+      "mean_vs_stage_rho": 0.9836548625168553
+    },
+    {
+      "stage": 8.0,
+      "sample": 16,
+      "cells": 1010,
+      "raw_library_quantiles": {
+        "0.05": 7630.2,
+        "0.5": 13358.0,
+        "0.95": 21693.6
+      },
+      "cell_detection_quantiles": {
+        "0.05": 0.08262495934077849,
+        "0.5": 0.11010517185297625,
+        "0.95": 0.14693339115978168
+      },
+      "lineage_fractions": {
+        "blood": 0.5732673267326732,
+        "mesenchymal": 0.15148514851485148,
+        "cardiopharyngeal": 0.06336633663366337,
+        "cardiomyocyte": 0.062376237623762376,
+        "ectoderm_other": 0.055445544554455446,
+        "endothelial": 0.05148514851485148,
+        "endoderm": 0.04257425742574258
+      },
+      "mean_vs_stage_rho": 0.9778714275774502
+    },
+    {
+      "stage": 8.0,
+      "sample": 33,
+      "cells": 699,
+      "raw_library_quantiles": {
+        "0.05": 7598.0,
+        "0.5": 14005.0,
+        "0.95": 22056.6
+      },
+      "cell_detection_quantiles": {
+        "0.05": 0.08595178719867,
+        "0.5": 0.12020672955292927,
+        "0.95": 0.15487007119881457
+      },
+      "lineage_fractions": {
+        "blood": 0.4034334763948498,
+        "mesenchymal": 0.2246065808297568,
+        "ectoderm_other": 0.10300429184549356,
+        "cardiopharyngeal": 0.09012875536480687,
+        "cardiomyocyte": 0.06294706723891273,
+        "endothelial": 0.058655221745350504,
+        "endoderm": 0.05722460658082976
+      },
+      "mean_vs_stage_rho": 0.9751338442749582
+    },
+    {
+      "stage": 8.0,
+      "sample": 34,
+      "cells": 660,
+      "raw_library_quantiles": {
+        "0.05": 8445.4,
+        "0.5": 15430.0,
+        "0.95": 26149.899999999998
+      },
+      "cell_detection_quantiles": {
+        "0.05": 0.09171636127073621,
+        "0.5": 0.12497741154360476,
+        "0.95": 0.16380064331923813
+      },
+      "lineage_fractions": {
+        "blood": 0.40606060606060607,
+        "mesenchymal": 0.2318181818181818,
+        "ectoderm_other": 0.10303030303030303,
+        "cardiopharyngeal": 0.07575757575757576,
+        "cardiomyocyte": 0.06818181818181818,
+        "endothelial": 0.06515151515151515,
+        "endoderm": 0.05
+      },
+      "mean_vs_stage_rho": 0.975994262730363
+    },
+    {
+      "stage": 8.0,
+      "sample": 35,
+      "cells": 631,
+      "raw_library_quantiles": {
+        "0.05": 8247.0,
+        "0.5": 15188.0,
+        "0.95": 25709.5
+      },
+      "cell_detection_quantiles": {
+        "0.05": 0.09015504716469695,
+        "0.5": 0.12400159022733022,
+        "0.95": 0.16404640572481838
+      },
+      "lineage_fractions": {
+        "blood": 0.37400950871632327,
+        "mesenchymal": 0.2218700475435816,
+        "ectoderm_other": 0.12361331220285261,
+        "cardiopharyngeal": 0.10142630744849446,
+        "cardiomyocyte": 0.07290015847860538,
+        "endoderm": 0.058637083993660855,
+        "endothelial": 0.04754358161648178
+      },
+      "mean_vs_stage_rho": 0.9757868307372651
+    },
+    {
+      "stage": 8.25,
+      "sample": 24,
+      "cells": 1108,
+      "raw_library_quantiles": {
+        "0.05": 7659.7,
+        "0.5": 13706.0,
+        "0.95": 23499.69999999998
+      },
+      "cell_detection_quantiles": {
+        "0.05": 0.08524883443565001,
+        "0.5": 0.11525533991109184,
+        "0.95": 0.15649282590624888
+      },
+      "lineage_fractions": {
+        "blood": 0.2788808664259928,
+        "mesenchymal": 0.21931407942238268,
+        "cardiomyocyte": 0.12093862815884476,
+        "cardiopharyngeal": 0.1164259927797834,
+        "ectoderm_other": 0.10379061371841156,
+        "endothelial": 0.08754512635379061,
+        "endoderm": 0.04693140794223827,
+        "neural_crest": 0.026173285198555957
+      },
+      "mean_vs_stage_rho": 0.9834289014456409
+    },
+    {
+      "stage": 8.25,
+      "sample": 25,
+      "cells": 1214,
+      "raw_library_quantiles": {
+        "0.05": 6882.95,
+        "0.5": 14005.5,
+        "0.95": 23310.49999999999
+      },
+      "cell_detection_quantiles": {
+        "0.05": 0.07983302613032636,
+        "0.5": 0.11899598829014421,
+        "0.95": 0.15800534894647436
+      },
+      "lineage_fractions": {
+        "blood": 0.2932454695222405,
+        "mesenchymal": 0.2257001647446458,
+        "cardiopharyngeal": 0.11367380560131796,
+        "cardiomyocyte": 0.1070840197693575,
+        "ectoderm_other": 0.08978583196046129,
+        "endothelial": 0.07907742998352553,
+        "endoderm": 0.05848434925864909,
+        "neural_crest": 0.032948929159802305
+      },
+      "mean_vs_stage_rho": 0.9854278755598195
+    },
+    {
+      "stage": 8.25,
+      "sample": 28,
+      "cells": 678,
+      "raw_library_quantiles": {
+        "0.05": 9303.05,
+        "0.5": 23146.5,
+        "0.95": 33254.59999999999
+      },
+      "cell_detection_quantiles": {
+        "0.05": 0.09818930933535726,
+        "0.5": 0.14536123459467276,
+        "0.95": 0.17635259676894718
+      },
+      "lineage_fractions": {
+        "blood": 0.26991150442477874,
+        "mesenchymal": 0.24631268436578171,
+        "cardiomyocyte": 0.11946902654867257,
+        "cardiopharyngeal": 0.11946902654867257,
+        "ectoderm_other": 0.10471976401179942,
+        "endothelial": 0.07964601769911504,
+        "endoderm": 0.051622418879056046,
+        "neural_crest": 0.008849557522123894
+      },
+      "mean_vs_stage_rho": 0.9798870257032026
+    }
+  ],
+  "common_supported_lineages": [
+    "blood",
+    "cardiomyocyte",
+    "cardiopharyngeal",
+    "ectoderm_other",
+    "endoderm",
+    "endothelial",
+    "mesenchymal"
+  ],
+  "transitions": [
+    {
+      "start": 7.5,
+      "end": 7.75,
+      "bulk_vs_equal_lineage_delta_rho": 0.7121087664819773,
+      "bulk_delta_std": 0.03543156320821022,
+      "equal_lineage_delta_std": 0.0341779644428872,
+      "per_lineage_bulk_delta_rho": {
+        "blood": 0.6481231429492041,
+        "cardiomyocyte": 0.3324388487962816,
+        "cardiopharyngeal": 0.34889591212447857,
+        "ectoderm_other": 0.4168189416153564,
+        "endoderm": 0.4394856900217595,
+        "endothelial": 0.31017917788511973,
+        "mesenchymal": 0.585874885408127
+      }
+    },
+    {
+      "start": 7.75,
+      "end": 8.0,
+      "bulk_vs_equal_lineage_delta_rho": 0.7987958131470816,
+      "bulk_delta_std": 0.03262066928234085,
+      "equal_lineage_delta_std": 0.033337834715088464,
+      "per_lineage_bulk_delta_rho": {
+        "blood": 0.6982216373325757,
+        "cardiomyocyte": 0.4751455394696378,
+        "cardiopharyngeal": 0.4468776954198241,
+        "ectoderm_other": 0.5134214591197738,
+        "endoderm": 0.41832355961986106,
+        "endothelial": 0.42440817005117065,
+        "mesenchymal": 0.5821881514930859
+      }
+    },
+    {
+      "start": 8.0,
+      "end": 8.25,
+      "bulk_vs_equal_lineage_delta_rho": 0.7343647967685938,
+      "bulk_delta_std": 0.03167210206635822,
+      "equal_lineage_delta_std": 0.028777570418108172,
+      "per_lineage_bulk_delta_rho": {
+        "blood": 0.3316146867150924,
+        "cardiomyocyte": 0.43004868085292486,
+        "cardiopharyngeal": 0.4414076751471635,
+        "ectoderm_other": 0.40770944524485947,
+        "endoderm": 0.27955698600935086,
+        "endothelial": 0.39651159930445695,
+        "mesenchymal": 0.5375662253334837
+      }
+    }
+  ],
+  "consecutive_delta_stability": [
+    {
+      "earlier_delta_ending": 7.75,
+      "later_delta_ending": 8.0,
+      "bulk_delta_rho": -0.2748203039100332,
+      "equal_lineage_delta_rho": -0.37770543209724006,
+      "per_lineage_consecutive_delta_rho": {
+        "blood": -0.08299989887522297,
+        "cardiomyocyte": -0.34601971905431345,
+        "cardiopharyngeal": -0.35883884275927447,
+        "ectoderm_other": -0.3126888918728796,
+        "endoderm": -0.26716328088026403,
+        "endothelial": -0.3758317770978866,
+        "mesenchymal": -0.27554942319007886
+      }
+    },
+    {
+      "earlier_delta_ending": 8.0,
+      "later_delta_ending": 8.25,
+      "bulk_delta_rho": -0.40257126707066676,
+      "equal_lineage_delta_rho": -0.44516420640933824,
+      "per_lineage_consecutive_delta_rho": {
+        "blood": -0.12961131666324746,
+        "cardiomyocyte": -0.442799076507594,
+        "cardiopharyngeal": -0.43134688946408495,
+        "ectoderm_other": -0.46128734092069273,
+        "endoderm": -0.44182042594948384,
+        "endothelial": -0.45508294066101623,
+        "mesenchymal": -0.3814170031596632
+      }
+    }
+  ],
+  "leave_one_capture_out": [
+    {
+      "start": 7.5,
+      "end": 7.75,
+      "removed_stage": 7.5,
+      "removed_sample": 2,
+      "status": "diagnosed",
+      "rho_vs_complete": 0.9615475829809325,
+      "material_sign_agreement": 0.9661646046261431
+    },
+    {
+      "start": 7.5,
+      "end": 7.75,
+      "removed_stage": 7.5,
+      "removed_sample": 3,
+      "status": "diagnosed",
+      "rho_vs_complete": 0.9864699651413483,
+      "material_sign_agreement": 0.9827326519634212
+    },
+    {
+      "start": 7.5,
+      "end": 7.75,
+      "removed_stage": 7.5,
+      "removed_sample": 4,
+      "status": "diagnosed",
+      "rho_vs_complete": 0.9875789180801872,
+      "material_sign_agreement": 0.9860677783754707
+    },
+    {
+      "start": 7.5,
+      "end": 7.75,
+      "removed_stage": 7.5,
+      "removed_sample": 6,
+      "status": "diagnosed",
+      "rho_vs_complete": 0.9221328600737062,
+      "material_sign_agreement": 0.9285637439483594
+    },
+    {
+      "start": 7.5,
+      "end": 7.75,
+      "removed_stage": 7.5,
+      "removed_sample": 19,
+      "status": "insufficient_lineage_coverage"
+    },
+    {
+      "start": 7.5,
+      "end": 7.75,
+      "removed_stage": 7.5,
+      "removed_sample": 20,
+      "status": "diagnosed",
+      "rho_vs_complete": 0.9429524385311858,
+      "material_sign_agreement": 0.9449704142011834
+    },
+    {
+      "start": 7.5,
+      "end": 7.75,
+      "removed_stage": 7.75,
+      "removed_sample": 8,
+      "status": "diagnosed",
+      "rho_vs_complete": 0.9699888761619779,
+      "material_sign_agreement": 0.9615922538999462
+    },
+    {
+      "start": 7.5,
+      "end": 7.75,
+      "removed_stage": 7.75,
+      "removed_sample": 9,
+      "status": "diagnosed",
+      "rho_vs_complete": 0.9568777166566611,
+      "material_sign_agreement": 0.9523937600860678
+    },
+    {
+      "start": 7.5,
+      "end": 7.75,
+      "removed_stage": 7.75,
+      "removed_sample": 12,
+      "status": "diagnosed",
+      "rho_vs_complete": 0.8858186765310138,
+      "material_sign_agreement": 0.8968262506724045
+    },
+    {
+      "start": 7.5,
+      "end": 7.75,
+      "removed_stage": 7.75,
+      "removed_sample": 13,
+      "status": "diagnosed",
+      "rho_vs_complete": 0.8970388495058637,
+      "material_sign_agreement": 0.9010220548682087
+    },
+    {
+      "start": 7.75,
+      "end": 8.0,
+      "removed_stage": 7.75,
+      "removed_sample": 8,
+      "status": "diagnosed",
+      "rho_vs_complete": 0.9536742522080485,
+      "material_sign_agreement": 0.9515510073552926
+    },
+    {
+      "start": 7.75,
+      "end": 8.0,
+      "removed_stage": 7.75,
+      "removed_sample": 9,
+      "status": "diagnosed",
+      "rho_vs_complete": 0.9332020970274653,
+      "material_sign_agreement": 0.9364140283551861
+    },
+    {
+      "start": 7.75,
+      "end": 8.0,
+      "removed_stage": 7.75,
+      "removed_sample": 12,
+      "status": "diagnosed",
+      "rho_vs_complete": 0.8380936043878976,
+      "material_sign_agreement": 0.8692570088476709
+    },
+    {
+      "start": 7.75,
+      "end": 8.0,
+      "removed_stage": 7.75,
+      "removed_sample": 13,
+      "status": "diagnosed",
+      "rho_vs_complete": 0.8538224717172738,
+      "material_sign_agreement": 0.8727214582667093
+    },
+    {
+      "start": 7.75,
+      "end": 8.0,
+      "removed_stage": 8.0,
+      "removed_sample": 16,
+      "status": "diagnosed",
+      "rho_vs_complete": 0.8241699435487065,
+      "material_sign_agreement": 0.8724016629357212
+    },
+    {
+      "start": 7.75,
+      "end": 8.0,
+      "removed_stage": 8.0,
+      "removed_sample": 33,
+      "status": "diagnosed",
+      "rho_vs_complete": 0.908886336333982,
+      "material_sign_agreement": 0.9137085598550261
+    },
+    {
+      "start": 7.75,
+      "end": 8.0,
+      "removed_stage": 8.0,
+      "removed_sample": 34,
+      "status": "diagnosed",
+      "rho_vs_complete": 0.9152476432287819,
+      "material_sign_agreement": 0.91738620616139
+    },
+    {
+      "start": 7.75,
+      "end": 8.0,
+      "removed_stage": 8.0,
+      "removed_sample": 35,
+      "status": "diagnosed",
+      "rho_vs_complete": 0.9200864607561705,
+      "material_sign_agreement": 0.9209039548022598
+    },
+    {
+      "start": 8.0,
+      "end": 8.25,
+      "removed_stage": 8.0,
+      "removed_sample": 16,
+      "status": "diagnosed",
+      "rho_vs_complete": 0.8236042554407642,
+      "material_sign_agreement": 0.8759458595331984
+    },
+    {
+      "start": 8.0,
+      "end": 8.25,
+      "removed_stage": 8.0,
+      "removed_sample": 33,
+      "status": "diagnosed",
+      "rho_vs_complete": 0.9000739650666136,
+      "material_sign_agreement": 0.9083981668975807
+    },
+    {
+      "start": 8.0,
+      "end": 8.25,
+      "removed_stage": 8.0,
+      "removed_sample": 34,
+      "status": "diagnosed",
+      "rho_vs_complete": 0.9108930915913613,
+      "material_sign_agreement": 0.9167110732175211
+    },
+    {
+      "start": 8.0,
+      "end": 8.25,
+      "removed_stage": 8.0,
+      "removed_sample": 35,
+      "status": "diagnosed",
+      "rho_vs_complete": 0.9127473359010819,
+      "material_sign_agreement": 0.9151657252477886
+    },
+    {
+      "start": 8.0,
+      "end": 8.25,
+      "removed_stage": 8.25,
+      "removed_sample": 24,
+      "status": "diagnosed",
+      "rho_vs_complete": 0.8706246332342295,
+      "material_sign_agreement": 0.8883619311520835
+    },
+    {
+      "start": 8.0,
+      "end": 8.25,
+      "removed_stage": 8.25,
+      "removed_sample": 25,
+      "status": "diagnosed",
+      "rho_vs_complete": 0.8648551090780446,
+      "material_sign_agreement": 0.8819673878290526
+    },
+    {
+      "start": 8.0,
+      "end": 8.25,
+      "removed_stage": 8.25,
+      "removed_sample": 28,
+      "status": "diagnosed",
+      "rho_vs_complete": 0.8748467142851685,
+      "material_sign_agreement": 0.9012043056591709
+    }
+  ],
+  "summary_vectors_sha256": "76f77457918547fdef1d98115a45993864895940e4ac4789bb41d6f44a7b29f6",
+  "normalization_target": 10000,
+  "causal_discontinuity_established": false,
+  "new_scores": 0,
+  "reward_delta": 0,
+  "report_sha256": "d48a78a2b669cc1949b93a083e7e65db1d75ae63a6fb9caf158763b80c61fa07"
+}

@@ -1,0 +1,37 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "a31b0677c762a797b7385e594a5d378ce0a6b6b8e60ebb23d7bb54aa8e3cf19f",
+  "attempts": 1,
+  "payload_bytes": 1837,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "purpose": "Choose next bounded past-only diagnostic after stage integrity audit.",
+      "evidence": "Source7.5/7.75/8/8.25 normalized impliedcount relativeerror<3.9e-8. Median libraries15219/15912/14335.5/15062, detection.125/.124/.118/.123. Blood fractions.356/.426/.455/.283. No sharedcaptureIDs acrossstages; sample meansassay/capture, independentembryoIDsunknown. Consecutive bulkdeltaSpearman-.275 and-.403; equal7lineage-.378 and-.445; all7lineagesnegative. Leaveonecaptureout minrho.824-.886, signs>=.869,1coveragefail. Prior one-day recent-slope forecasts44.21/51.37 and repairsworse. Opposing adjacentdelta can result from sharedmiddle mean noise: Cov(B-A,C-B) includes-Var(B). These ranks alone cannot prove biologicalreversal.",
+      "constraints": "Past<=8.25 only. No futuretargets forfit/candidatechoice, no negation tunedtoreusedtruth, no newagents/downloads. Summaryonly. Dcache16GB. No benchmarkscore/readinessalteration. Capturepartitionsnotindependentembryovalidation."
+    },
+    "questions": {
+      "next_action": {
+        "type": "choice",
+        "instructions": "Choose highest-information diagnostic before fitting another forecast. Choice/confidence only.",
+        "criteria": {
+          "disjoint_middle_capture_contrasts": "Fortriples7.5/7.75/8 and7.75/8/8.25 use allbalanced partitions ofmiddle-stage4captures: B_left-A vs C-B_right. Groupmeansweightedwithin7supportedlineages; report sharedmiddle and disjoint comparisons/coverage, no biologicalclaim. Avoid artificial64replicateclaim fromonly6partitions.",
+          "moderated_stage_mean_forecast": "Fitpast-onlyshrinkageofstagegene meansbefore differencing; risk biologicalsignal erased and priorEBfamiliesfailed; freshvalidationrequired.",
+          "cell_bootstrap_shared_deltas": "Resamplecellsgroupwise64times but same middlemean entersbothdelta; quantifiescellnoise but notremovingstructural anticorrelation."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 898,
+    "output_tokens": 66
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "next_action": {
+      "choice": "disjoint_middle_capture_contrasts",
+      "confidence": 0.99
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}

@@ -353,3 +353,25 @@ Fold8 all seven supported within-lineage direction correlations negative; fold8.
 One cached1950-byte Jev advisory used785input/64output tokens; recommended past_source_integrity_audit confidence.95. No datasets/source/secrets sent, no measured Codex credit savings claimed. Separate reward remains−356; official52.16/readiness gates unchanged.
 
 Declare past-source integrity audit using only stages<=8.25: metadata sample/capture and lineage composition, raw library-size and detection distributions, normalized implied-count totals, past stage mean/detection direction stability within supported lineages and captures. Check technical discontinuity before interpreting fold8 posthoc reversal biologically. No future-target fitting or slope negation based on known targets. If no independent capture replication/embryo identity exists, record that limit precisely; choose subsequent experiment with fresh predeclared temporal validation.
+
+## 2026-10-01T07:58:03.561330+00:00 — past-source integrity audit completed
+
+Past expression only<=8.25; source hashes verified, frozen plan/source/report/events and compressed private summary vectors retained. No fits/predictions/new scores/reward. Normalized implied counts hold10,000 within3.87e−8relative error. No sample IDs shared across stages; capture labels are not independent embryos. Stage and capture effects remain confounded.
+
+| Stage | Cells | Median raw library | Median detection fraction | Blood fraction | Max normalization error |
+|---|---:|---:|---:|---:|---:|
+| 7.5 | 1963 | 15219.0 | 0.124616 | 0.355578 | 3.8673078e-08 |
+| 7.75 | 3000 | 15912.0 | 0.124417 | 0.425667 | 3.6882467e-08 |
+| 8.0 | 3000 | 14335.5 | 0.118327 | 0.455000 | 3.7912483e-08 |
+| 8.25 | 3000 | 15062.0 | 0.122719 | 0.282667 | 3.5616083e-08 |
+
+| Earlier/later delta ends | Bulk rho | Equal-lineage rho |
+|---|---:|---:|
+| 7.75 / 8.0 | -0.274820 | -0.377705 |
+| 8.0 / 8.25 | -0.402571 | -0.445164 |
+
+All seven common lineage consecutive deltas anticorrelate. Leave-one-capture-out:9/10,8/8,7/7 comparisons evaluable; minima rho.8858/.8242/.8236 and sign agreement.8968/.8693/.8759. One lacked lineage coverage. Adjacent differences share the middle-stage mean: Cov(B−A,C−B) contains−Var(B); these correlations do not establish a biological or technical reversal. Need disjoint-middle contrast test.
+
+One1837-byte Jev summary advisory used898input/66output tokens; recommended disjoint_middle_capture_contrasts confidence.99. No datasets/source/secrets sent or measured Codex savings claimed. Actual normalization did not explain the DE failure. Official52.16, separate reward−356 and readiness gates unchanged.
+
+Declare disjoint-middle capture contrast audit for past-only triples7.5/7.75/8 and7.75/8/8.25. Enumerate all6 oriented balanced partitions of each four-capture middle stage; compare B_left-A with C-B_right against shared-middle contrasts, using seven common supported lineages and explicit >=20cell coverage. Report overlap/coverage and rank/sign diagnostics, do not claim independent embryos,64replicates, biological reversal or benchmark improvement. This tests shared-middle estimator noise before any forecast fitting; new temporal validation required for derived methods.
