@@ -1,0 +1,37 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "57010f52329461ddca7394eedd1b76f0d34aba6a55b7935159559652f7f0e2f0",
+  "attempts": 1,
+  "payload_bytes": 1859,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "purpose": "Choose next bounded step after completed capture-excluded CM calibration, four metric critiques available.",
+      "evidence": "12full32285scores,validcalibrationall. Anchor scores51.06329/50.40193. CM.25 scores51.06861/50.43717:tinyheadgainboth,DEskillfirst-.000308/second+.001136;direction,MMD,CSS improvebothonlytiny. CM.5 firstheadregresses. Globaltradeoffs. Nonepassesstrict4metricpreservationgate. SecondfoldallforecastDEskill~.445vs persistence.5. Critics3 recommend fixedCM.25 acrossnewcapture splits,DEcritic asks posthocDEdiagnosis. Selectedlargestcurrentheldcaptures16/25 excludedfromallbasefits; currentanchorscalibrate; futuredifferentcapturesnotembryopaired. PrevioussourceDEdiagnosis,global/CDR/coupling andpopulationgrowth trials exist; manyfamilies remainopen.",
+      "constraints": "No futuretargetfit,scoreinversion,unseenchallengefuture orofficialupload. Newreplicatecanpredeclaresecondlargestcurrentcaptures33(699cells/44CM) at8.0 and24(1108cells/134CM) at8.25 metadataonly,refit800updatesallbase,copy/nooffsetanchor/CM.25 fixed6scores. Reusedtemporalstages,distinctcaptureholdout;notindependentembryosor64replicates. Ddisk,16GB,2threads."
+    },
+    "questions": {
+      "next_step": {
+        "type": "choice",
+        "instructions": "Select most informative bounded next experiment without target-driven parameter tuning.",
+        "criteria": {
+          "fixed_capture_replication": "FreezeCM.25 and test secondlargest currentcapture holdout with fullrefits onbothexistingtemporalstages; reportall4metrics andstopthisspecificsetting ifDE/headreverses.",
+          "de_posthoc_diagnosis": "Repeat signedDEcontributiondiagnosis aftertiny CMchange;posthocdiagnosticonly,no targetfit.",
+          "new_population_method": "Immediately switch to a genuinelydistinct population-birth mechanism despite calibrationreplication beinguntested;new methodrequires literature/source-onlyspec first."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 886,
+    "output_tokens": 54
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "next_step": {
+      "choice": "fixed_capture_replication",
+      "confidence": 0.94
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}

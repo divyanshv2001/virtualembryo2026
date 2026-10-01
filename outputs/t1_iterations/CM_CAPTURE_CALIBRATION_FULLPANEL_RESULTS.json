@@ -1,0 +1,922 @@
+{
+  "status": "completed",
+  "updated_utc": "2026-10-01T09:56:10.372827+00:00",
+  "summary": [
+    {
+      "candidate": "copy",
+      "scores": [
+        50.0,
+        50.0
+      ],
+      "raw_metrics": [
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.2672020196914673,
+          "variogram": 0.010692782700061798
+        },
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.2255355417728424,
+          "variogram": 0.008255396969616413
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "anchor_unshrunk",
+      "scores": [
+        51.06329243935629,
+        50.40192657997884
+      ],
+      "raw_metrics": [
+        {
+          "de_score": 0.006928406466512724,
+          "de_direction": 0.09930090126425367,
+          "mmd_u": 0.2595829367637634,
+          "variogram": 0.010585522279143333
+        },
+        {
+          "de_score": -0.2271126760563381,
+          "de_direction": 0.10253395938564872,
+          "mmd_u": 0.20366771519184113,
+          "variogram": 0.007933663204312325
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5018427518427518,
+          "de_direction": 0.5297086951155949,
+          "mmd_u": 0.5074510004292492,
+          "variogram": 0.5025488126260071
+        },
+        {
+          "de_score": 0.44529262086513993,
+          "de_direction": 0.5317672821635355,
+          "mmd_u": 0.5257891846470145,
+          "variogram": 0.5100876732425756
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "global_025",
+      "scores": [
+        50.96581720379289,
+        50.41515429621053
+      ],
+      "raw_metrics": [
+        {
+          "de_score": 0.0023094688221709327,
+          "de_direction": 0.09329977603349253,
+          "mmd_u": 0.2598493695259094,
+          "variogram": 0.010609444230794907
+        },
+        {
+          "de_score": -0.2306338028169014,
+          "de_direction": 0.10382670412410942,
+          "mmd_u": 0.20340871810913086,
+          "variogram": 0.007915269583463669
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5006127450980392,
+          "de_direction": 0.5278134146090846,
+          "mmd_u": 0.5071867003048949,
+          "variogram": 0.5019781100983972
+        },
+        {
+          "de_score": 0.44453852667231164,
+          "de_direction": 0.5321935914051295,
+          "mmd_u": 0.5261105757798955,
+          "variogram": 0.5106767035438816
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "global_050",
+      "scores": [
+        50.81058567416106,
+        50.44949162004618
+      ],
+      "raw_metrics": [
+        {
+          "de_score": -0.012702078521939946,
+          "de_direction": 0.08897784101555323,
+          "mmd_u": 0.2602311670780182,
+          "variogram": 0.010632684454321861
+        },
+        {
+          "de_score": -0.2271126760563381,
+          "de_direction": 0.102525536737336,
+          "mmd_u": 0.20308813452720642,
+          "variogram": 0.007893059402704239
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.4966565349544073,
+          "de_direction": 0.5264568368048764,
+          "mmd_u": 0.5068084384010197,
+          "variogram": 0.5014249114074187
+        },
+        {
+          "de_score": 0.44529262086513993,
+          "de_direction": 0.5317645068609407,
+          "mmd_u": 0.5265089345583819,
+          "variogram": 0.5113897695071358
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "cm_025",
+      "scores": [
+        51.068610683904836,
+        50.437170953272215
+      ],
+      "raw_metrics": [
+        {
+          "de_score": 0.005773672055427258,
+          "de_direction": 0.10055372028651322,
+          "mmd_u": 0.25954505801200867,
+          "variogram": 0.0105814253911376
+        },
+        {
+          "de_score": -0.221830985915493,
+          "de_direction": 0.10277339695945986,
+          "mmd_u": 0.20363585650920868,
+          "variogram": 0.007927901111543179
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5015346838551258,
+          "de_direction": 0.5301060801492887,
+          "mmd_u": 0.5074885983503318,
+          "variogram": 0.502646681664226
+        },
+        {
+          "de_score": 0.4464285714285714,
+          "de_direction": 0.5318461900995559,
+          "mmd_u": 0.5258286971083475,
+          "variogram": 0.5102720500909302
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "cm_050",
+      "scores": [
+        51.05793921822419,
+        50.43523609695269
+      ],
+      "raw_metrics": [
+        {
+          "de_score": 0.006928406466512724,
+          "de_direction": 0.09876111174759929,
+          "mmd_u": 0.2595888078212738,
+          "variogram": 0.010587411932647228
+        },
+        {
+          "de_score": -0.22359154929577466,
+          "de_direction": 0.10349916644739186,
+          "mmd_u": 0.20366469025611877,
+          "variogram": 0.007923782803118229
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5018427518427518,
+          "de_direction": 0.5295376614194307,
+          "mmd_u": 0.5074451733980402,
+          "variogram": 0.5025036842364211
+        },
+        {
+          "de_score": 0.4460492778249787,
+          "de_direction": 0.5320855144612713,
+          "mmd_u": 0.5257929360427809,
+          "variogram": 0.5104039104256507
+        }
+      ],
+      "all_calibrations_valid": true
+    }
+  ],
+  "folds": [
+    {
+      "cutoff": 8.0,
+      "target": 9.0,
+      "held_capture": "16",
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.2672020196914673,
+        "variogram": 0.010692782700061798
+      },
+      "ceiling": {
+        "de_score": 0.943418013856813,
+        "de_direction": 0.8852719822904438,
+        "mmd_u": 0.007752883248031139,
+        "variogram": 0.00011852615716634318
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.2672020196914673,
+            "variogram": 0.010692782700061798
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "anchor_unshrunk",
+          "raw_metrics": {
+            "de_score": 0.006928406466512724,
+            "de_direction": 0.09930090126425367,
+            "mmd_u": 0.2595829367637634,
+            "variogram": 0.010585522279143333
+          },
+          "local_score": 51.06329243935629,
+          "skills": {
+            "de_score": 0.5018427518427518,
+            "de_direction": 0.5297086951155949,
+            "mmd_u": 0.5074510004292492,
+            "variogram": 0.5025488126260071
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "global_025",
+          "raw_metrics": {
+            "de_score": 0.0023094688221709327,
+            "de_direction": 0.09329977603349253,
+            "mmd_u": 0.2598493695259094,
+            "variogram": 0.010609444230794907
+          },
+          "local_score": 50.96581720379289,
+          "skills": {
+            "de_score": 0.5006127450980392,
+            "de_direction": 0.5278134146090846,
+            "mmd_u": 0.5071867003048949,
+            "variogram": 0.5019781100983972
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "global_050",
+          "raw_metrics": {
+            "de_score": -0.012702078521939946,
+            "de_direction": 0.08897784101555323,
+            "mmd_u": 0.2602311670780182,
+            "variogram": 0.010632684454321861
+          },
+          "local_score": 50.81058567416106,
+          "skills": {
+            "de_score": 0.4966565349544073,
+            "de_direction": 0.5264568368048764,
+            "mmd_u": 0.5068084384010197,
+            "variogram": 0.5014249114074187
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "cm_025",
+          "raw_metrics": {
+            "de_score": 0.005773672055427258,
+            "de_direction": 0.10055372028651322,
+            "mmd_u": 0.25954505801200867,
+            "variogram": 0.0105814253911376
+          },
+          "local_score": 51.068610683904836,
+          "skills": {
+            "de_score": 0.5015346838551258,
+            "de_direction": 0.5301060801492887,
+            "mmd_u": 0.5074885983503318,
+            "variogram": 0.502646681664226
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "cm_050",
+          "raw_metrics": {
+            "de_score": 0.006928406466512724,
+            "de_direction": 0.09876111174759929,
+            "mmd_u": 0.2595888078212738,
+            "variogram": 0.010587411932647228
+          },
+          "local_score": 51.05793921822419,
+          "skills": {
+            "de_score": 0.5018427518427518,
+            "de_direction": 0.5295376614194307,
+            "mmd_u": 0.5074451733980402,
+            "variogram": 0.5025036842364211
+          },
+          "calibration_valid": true
+        }
+      ],
+      "generation": {
+        "copy": {
+          "audit": {
+            "method": "persistence"
+          },
+          "prediction_sha256": "7643903543a7dd2dd63b9af2fc65ef3beabb433b2b734e989c3baa8c25e1c9c8"
+        },
+        "anchor_unshrunk": {
+          "audit": {
+            "fit_cells": 6953,
+            "fit_max_stage": 8.0,
+            "supported_genes": 13775,
+            "method": "Conditional positive log1p response decoder",
+            "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+            "conditional_ridge_strength": 1.0,
+            "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+            "encoder_features": 4096,
+            "covariance_guard_features": 384,
+            "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+            "anchor_calibration_rows": 1010,
+            "anchor_supported_genes": 10176,
+            "anchor_slope_ridge": 1.0,
+            "limitation": "Cross-sectional associations are not temporal velocities; only 1500 past anchors.",
+            "anchor_positive_slope_strength": 0.5,
+            "anchor_detection_slope_strength": 0.5,
+            "response_units": "log1p normalized expression",
+            "response_fit_rows": 6953,
+            "response_fit_max_stage": 8.0,
+            "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+            "observation_scope": "none",
+            "observation_alpha": 0.0,
+            "calibration_endpoint_policy": "Same current-only offset applied to p0/p1; calibrated switching denominators",
+            "observation_calibrated_cells": 1010,
+            "mode": "joint",
+            "strength": 1.0,
+            "backoff": 1.0,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.1992641581227917,
+            "newly_detected_entries": 29647,
+            "removed_detection_entries": 74050,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true,
+            "mapped_raw_mass_relative_error": 2.9827262862347366e-08
+          },
+          "prediction_sha256": "5d0c3b56eb06555f3d12bbe01f88419f63bd018b2261c64cfd38f5384d959523"
+        },
+        "global_025": {
+          "audit": {
+            "fit_cells": 6953,
+            "fit_max_stage": 8.0,
+            "supported_genes": 13775,
+            "method": "Conditional positive log1p response decoder",
+            "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+            "conditional_ridge_strength": 1.0,
+            "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+            "encoder_features": 4096,
+            "covariance_guard_features": 384,
+            "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+            "anchor_calibration_rows": 1010,
+            "anchor_supported_genes": 10176,
+            "anchor_slope_ridge": 1.0,
+            "limitation": "Cross-sectional associations are not temporal velocities; only 1500 past anchors.",
+            "anchor_positive_slope_strength": 0.5,
+            "anchor_detection_slope_strength": 0.5,
+            "response_units": "log1p normalized expression",
+            "response_fit_rows": 6953,
+            "response_fit_max_stage": 8.0,
+            "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+            "observation_scope": "global",
+            "observation_alpha": 0.25,
+            "calibration_endpoint_policy": "Same current-only offset applied to p0/p1; calibrated switching denominators",
+            "observation_calibrated_cells": 1010,
+            "mode": "joint",
+            "strength": 1.0,
+            "backoff": 1.0,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.2044627623658183,
+            "newly_detected_entries": 28440,
+            "removed_detection_entries": 75426,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true,
+            "mapped_raw_mass_relative_error": 2.752379082977893e-08
+          },
+          "prediction_sha256": "4adc18fe7f343351eb65283a8ead7907cefda612abd84d18d666d95240466a76"
+        },
+        "global_050": {
+          "audit": {
+            "fit_cells": 6953,
+            "fit_max_stage": 8.0,
+            "supported_genes": 13775,
+            "method": "Conditional positive log1p response decoder",
+            "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+            "conditional_ridge_strength": 1.0,
+            "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+            "encoder_features": 4096,
+            "covariance_guard_features": 384,
+            "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+            "anchor_calibration_rows": 1010,
+            "anchor_supported_genes": 10176,
+            "anchor_slope_ridge": 1.0,
+            "limitation": "Cross-sectional associations are not temporal velocities; only 1500 past anchors.",
+            "anchor_positive_slope_strength": 0.5,
+            "anchor_detection_slope_strength": 0.5,
+            "response_units": "log1p normalized expression",
+            "response_fit_rows": 6953,
+            "response_fit_max_stage": 8.0,
+            "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+            "observation_scope": "global",
+            "observation_alpha": 0.5,
+            "calibration_endpoint_policy": "Same current-only offset applied to p0/p1; calibrated switching denominators",
+            "observation_calibrated_cells": 1010,
+            "mode": "joint",
+            "strength": 1.0,
+            "backoff": 1.0,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.200871352038279,
+            "newly_detected_entries": 27473,
+            "removed_detection_entries": 76899,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true,
+            "mapped_raw_mass_relative_error": 2.319042551355804e-08
+          },
+          "prediction_sha256": "0ecbe3b74272b9c536a5ad8f8bcac7753c3cf80c352748545471a9884259ea97"
+        },
+        "cm_025": {
+          "audit": {
+            "fit_cells": 6953,
+            "fit_max_stage": 8.0,
+            "supported_genes": 13775,
+            "method": "Conditional positive log1p response decoder",
+            "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+            "conditional_ridge_strength": 1.0,
+            "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+            "encoder_features": 4096,
+            "covariance_guard_features": 384,
+            "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+            "anchor_calibration_rows": 1010,
+            "anchor_supported_genes": 10176,
+            "anchor_slope_ridge": 1.0,
+            "limitation": "Cross-sectional associations are not temporal velocities; only 1500 past anchors.",
+            "anchor_positive_slope_strength": 0.5,
+            "anchor_detection_slope_strength": 0.5,
+            "response_units": "log1p normalized expression",
+            "response_fit_rows": 6953,
+            "response_fit_max_stage": 8.0,
+            "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+            "observation_scope": "cm",
+            "observation_alpha": 0.25,
+            "calibration_endpoint_policy": "Same current-only offset applied to p0/p1; calibrated switching denominators",
+            "observation_calibrated_cells": 63,
+            "mode": "joint",
+            "strength": 1.0,
+            "backoff": 1.0,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.20494147825991543,
+            "newly_detected_entries": 29715,
+            "removed_detection_entries": 74104,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true,
+            "mapped_raw_mass_relative_error": 3.124944330959589e-08
+          },
+          "prediction_sha256": "9a7185ad4c910e1ce060c82cfe4f9ee792ad794efc4735f75e27d32483ee2e1e"
+        },
+        "cm_050": {
+          "audit": {
+            "fit_cells": 6953,
+            "fit_max_stage": 8.0,
+            "supported_genes": 13775,
+            "method": "Conditional positive log1p response decoder",
+            "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+            "conditional_ridge_strength": 1.0,
+            "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+            "encoder_features": 4096,
+            "covariance_guard_features": 384,
+            "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+            "anchor_calibration_rows": 1010,
+            "anchor_supported_genes": 10176,
+            "anchor_slope_ridge": 1.0,
+            "limitation": "Cross-sectional associations are not temporal velocities; only 1500 past anchors.",
+            "anchor_positive_slope_strength": 0.5,
+            "anchor_detection_slope_strength": 0.5,
+            "response_units": "log1p normalized expression",
+            "response_fit_rows": 6953,
+            "response_fit_max_stage": 8.0,
+            "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+            "observation_scope": "cm",
+            "observation_alpha": 0.5,
+            "calibration_endpoint_policy": "Same current-only offset applied to p0/p1; calibrated switching denominators",
+            "observation_calibrated_cells": 63,
+            "mode": "joint",
+            "strength": 1.0,
+            "backoff": 1.0,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.2081356782302453,
+            "newly_detected_entries": 29840,
+            "removed_detection_entries": 74172,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true,
+            "mapped_raw_mass_relative_error": 2.6538256894546656e-08
+          },
+          "prediction_sha256": "9a96704d9f5f3e9cb12d7ae3512e3d025ed5fddd590a9e8c88bab67d5cf27de3"
+        }
+      },
+      "donor_rows_sha256": "d626131c0f9408f6955401cc0a2dab911c347e838092c02522c973dfbe2c6fa8",
+      "target_rows_sha256": "f53375624025205768b06d32a296496d49612b473ee07ae32bbf8b6e5b8984fa"
+    },
+    {
+      "cutoff": 8.25,
+      "target": 9.25,
+      "held_capture": "25",
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.2255355417728424,
+        "variogram": 0.008255396969616413
+      },
+      "ceiling": {
+        "de_score": 0.9242957746478874,
+        "de_direction": 0.8581817706545721,
+        "mmd_u": 0.002615219447761774,
+        "variogram": 0.00012109167437301949
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.2255355417728424,
+            "variogram": 0.008255396969616413
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "anchor_unshrunk",
+          "raw_metrics": {
+            "de_score": -0.2271126760563381,
+            "de_direction": 0.10253395938564872,
+            "mmd_u": 0.20366771519184113,
+            "variogram": 0.007933663204312325
+          },
+          "local_score": 50.40192657997884,
+          "skills": {
+            "de_score": 0.44529262086513993,
+            "de_direction": 0.5317672821635355,
+            "mmd_u": 0.5257891846470145,
+            "variogram": 0.5100876732425756
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "global_025",
+          "raw_metrics": {
+            "de_score": -0.2306338028169014,
+            "de_direction": 0.10382670412410942,
+            "mmd_u": 0.20340871810913086,
+            "variogram": 0.007915269583463669
+          },
+          "local_score": 50.41515429621053,
+          "skills": {
+            "de_score": 0.44453852667231164,
+            "de_direction": 0.5321935914051295,
+            "mmd_u": 0.5261105757798955,
+            "variogram": 0.5106767035438816
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "global_050",
+          "raw_metrics": {
+            "de_score": -0.2271126760563381,
+            "de_direction": 0.102525536737336,
+            "mmd_u": 0.20308813452720642,
+            "variogram": 0.007893059402704239
+          },
+          "local_score": 50.44949162004618,
+          "skills": {
+            "de_score": 0.44529262086513993,
+            "de_direction": 0.5317645068609407,
+            "mmd_u": 0.5265089345583819,
+            "variogram": 0.5113897695071358
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "cm_025",
+          "raw_metrics": {
+            "de_score": -0.221830985915493,
+            "de_direction": 0.10277339695945986,
+            "mmd_u": 0.20363585650920868,
+            "variogram": 0.007927901111543179
+          },
+          "local_score": 50.437170953272215,
+          "skills": {
+            "de_score": 0.4464285714285714,
+            "de_direction": 0.5318461900995559,
+            "mmd_u": 0.5258286971083475,
+            "variogram": 0.5102720500909302
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "cm_050",
+          "raw_metrics": {
+            "de_score": -0.22359154929577466,
+            "de_direction": 0.10349916644739186,
+            "mmd_u": 0.20366469025611877,
+            "variogram": 0.007923782803118229
+          },
+          "local_score": 50.43523609695269,
+          "skills": {
+            "de_score": 0.4460492778249787,
+            "de_direction": 0.5320855144612713,
+            "mmd_u": 0.5257929360427809,
+            "variogram": 0.5104039104256507
+          },
+          "calibration_valid": true
+        }
+      ],
+      "generation": {
+        "copy": {
+          "audit": {
+            "method": "persistence"
+          },
+          "prediction_sha256": "437a3be5a9d5591a3590b517c0ff8db858a53e16cd9f393275748e85fd622c7b"
+        },
+        "anchor_unshrunk": {
+          "audit": {
+            "fit_cells": 9749,
+            "fit_max_stage": 8.25,
+            "supported_genes": 14287,
+            "method": "Conditional positive log1p response decoder",
+            "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+            "conditional_ridge_strength": 1.0,
+            "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+            "encoder_features": 4096,
+            "covariance_guard_features": 384,
+            "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+            "anchor_calibration_rows": 1214,
+            "anchor_supported_genes": 11101,
+            "anchor_slope_ridge": 1.0,
+            "limitation": "Cross-sectional associations are not temporal velocities; only 1500 past anchors.",
+            "anchor_positive_slope_strength": 0.5,
+            "anchor_detection_slope_strength": 0.5,
+            "response_units": "log1p normalized expression",
+            "response_fit_rows": 9749,
+            "response_fit_max_stage": 8.25,
+            "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+            "observation_scope": "none",
+            "observation_alpha": 0.0,
+            "calibration_endpoint_policy": "Same current-only offset applied to p0/p1; calibrated switching denominators",
+            "observation_calibrated_cells": 1214,
+            "mode": "joint",
+            "strength": 1.0,
+            "backoff": 1.0,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.3206970419132709,
+            "newly_detected_entries": 49528,
+            "removed_detection_entries": 115205,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true,
+            "mapped_raw_mass_relative_error": 3.402018726791074e-08
+          },
+          "prediction_sha256": "1743515f93645cfc58392e4c87750b7607127b884994fe910abec3ae8ea628f8"
+        },
+        "global_025": {
+          "audit": {
+            "fit_cells": 9749,
+            "fit_max_stage": 8.25,
+            "supported_genes": 14287,
+            "method": "Conditional positive log1p response decoder",
+            "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+            "conditional_ridge_strength": 1.0,
+            "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+            "encoder_features": 4096,
+            "covariance_guard_features": 384,
+            "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+            "anchor_calibration_rows": 1214,
+            "anchor_supported_genes": 11101,
+            "anchor_slope_ridge": 1.0,
+            "limitation": "Cross-sectional associations are not temporal velocities; only 1500 past anchors.",
+            "anchor_positive_slope_strength": 0.5,
+            "anchor_detection_slope_strength": 0.5,
+            "response_units": "log1p normalized expression",
+            "response_fit_rows": 9749,
+            "response_fit_max_stage": 8.25,
+            "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+            "observation_scope": "global",
+            "observation_alpha": 0.25,
+            "calibration_endpoint_policy": "Same current-only offset applied to p0/p1; calibrated switching denominators",
+            "observation_calibrated_cells": 1214,
+            "mode": "joint",
+            "strength": 1.0,
+            "backoff": 1.0,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.3282326141604283,
+            "newly_detected_entries": 48402,
+            "removed_detection_entries": 117351,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true,
+            "mapped_raw_mass_relative_error": 3.510588332907802e-08
+          },
+          "prediction_sha256": "ff1ff4a709484dc5ff800a7965826b9b89e26666a3d729e456b1efb8d14e554b"
+        },
+        "global_050": {
+          "audit": {
+            "fit_cells": 9749,
+            "fit_max_stage": 8.25,
+            "supported_genes": 14287,
+            "method": "Conditional positive log1p response decoder",
+            "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+            "conditional_ridge_strength": 1.0,
+            "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+            "encoder_features": 4096,
+            "covariance_guard_features": 384,
+            "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+            "anchor_calibration_rows": 1214,
+            "anchor_supported_genes": 11101,
+            "anchor_slope_ridge": 1.0,
+            "limitation": "Cross-sectional associations are not temporal velocities; only 1500 past anchors.",
+            "anchor_positive_slope_strength": 0.5,
+            "anchor_detection_slope_strength": 0.5,
+            "response_units": "log1p normalized expression",
+            "response_fit_rows": 9749,
+            "response_fit_max_stage": 8.25,
+            "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+            "observation_scope": "global",
+            "observation_alpha": 0.5,
+            "calibration_endpoint_policy": "Same current-only offset applied to p0/p1; calibrated switching denominators",
+            "observation_calibrated_cells": 1214,
+            "mode": "joint",
+            "strength": 1.0,
+            "backoff": 1.0,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.3229019530105852,
+            "newly_detected_entries": 47306,
+            "removed_detection_entries": 119601,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true,
+            "mapped_raw_mass_relative_error": 2.811812567340477e-08
+          },
+          "prediction_sha256": "6eb918bbf0a9450a3e428a137af0bba28c77e78e7afb70d970553899c1c48dc7"
+        },
+        "cm_025": {
+          "audit": {
+            "fit_cells": 9749,
+            "fit_max_stage": 8.25,
+            "supported_genes": 14287,
+            "method": "Conditional positive log1p response decoder",
+            "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+            "conditional_ridge_strength": 1.0,
+            "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+            "encoder_features": 4096,
+            "covariance_guard_features": 384,
+            "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+            "anchor_calibration_rows": 1214,
+            "anchor_supported_genes": 11101,
+            "anchor_slope_ridge": 1.0,
+            "limitation": "Cross-sectional associations are not temporal velocities; only 1500 past anchors.",
+            "anchor_positive_slope_strength": 0.5,
+            "anchor_detection_slope_strength": 0.5,
+            "response_units": "log1p normalized expression",
+            "response_fit_rows": 9749,
+            "response_fit_max_stage": 8.25,
+            "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+            "observation_scope": "cm",
+            "observation_alpha": 0.25,
+            "calibration_endpoint_policy": "Same current-only offset applied to p0/p1; calibrated switching denominators",
+            "observation_calibrated_cells": 130,
+            "mode": "joint",
+            "strength": 1.0,
+            "backoff": 1.0,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.32020296763904416,
+            "newly_detected_entries": 49443,
+            "removed_detection_entries": 115692,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true,
+            "mapped_raw_mass_relative_error": 2.986604276421071e-08
+          },
+          "prediction_sha256": "117494b9e7284da22230857ba076bd601e6dd35ff84d4d731eada9c904655d74"
+        },
+        "cm_050": {
+          "audit": {
+            "fit_cells": 9749,
+            "fit_max_stage": 8.25,
+            "supported_genes": 14287,
+            "method": "Conditional positive log1p response decoder",
+            "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+            "conditional_ridge_strength": 1.0,
+            "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+            "encoder_features": 4096,
+            "covariance_guard_features": 384,
+            "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+            "anchor_calibration_rows": 1214,
+            "anchor_supported_genes": 11101,
+            "anchor_slope_ridge": 1.0,
+            "limitation": "Cross-sectional associations are not temporal velocities; only 1500 past anchors.",
+            "anchor_positive_slope_strength": 0.5,
+            "anchor_detection_slope_strength": 0.5,
+            "response_units": "log1p normalized expression",
+            "response_fit_rows": 9749,
+            "response_fit_max_stage": 8.25,
+            "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+            "observation_scope": "cm",
+            "observation_alpha": 0.5,
+            "calibration_endpoint_policy": "Same current-only offset applied to p0/p1; calibrated switching denominators",
+            "observation_calibrated_cells": 130,
+            "mode": "joint",
+            "strength": 1.0,
+            "backoff": 1.0,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.3215742425099707,
+            "newly_detected_entries": 49435,
+            "removed_detection_entries": 116183,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true,
+            "mapped_raw_mass_relative_error": 3.05246951304383e-08
+          },
+          "prediction_sha256": "279bacfc0f7f1b69bb1d489da16bf443db6761d337f4238e0f475cac675c13b7"
+        }
+      },
+      "donor_rows_sha256": "1c7abfbf353aa75bb388a30d672903ae678dc09f0f05d31755bd3e2bec76cb45",
+      "target_rows_sha256": "ff1e0fb3157dc946c14688b69c28b59b0b7ec89767855eaf8aa0cf468a1f4d40"
+    }
+  ],
+  "passing_candidates": [],
+  "report_sha256": "c81b597bc4704408aca1e79ea4b390aa883491e8b7f450e91c729d2ab8af0fe9",
+  "plan_sha256": "9a15132fef918fe4b3ee3823d959ad0218a5cddc796f1de16b57eacff1abe61e",
+  "official_score": null,
+  "local_72_gate_passed": false,
+  "submissions_used": 0
+}

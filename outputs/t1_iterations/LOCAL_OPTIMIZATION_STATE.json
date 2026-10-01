@@ -31,14 +31,14 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Registered cm_capture_calibration full-panel batch: largest current capture excluded from encoder/dynamics/source-head fitting, current-only CM/global odds offsets .25/.5 applied to both endpoints, matched copy/no-offset anchor controls. Two one-day source folds,12scores; future samples are different captures, independent embryo pairing unavailable. Finish and run four metric critics once by report hash; no promotion without original64-replicate/temporal gate.",
+  "next_experiment": "Run registered cm_capture_replication: fixed CM.25 only, second-largest current captures33/24 excluded from all base refits, permitted current-anchor calibration, matched copy/anchor, two one-day stages and6full-panel scores. Compare all4metrics; reject promotion for any incumbent-skill regression. After completion run four metric specialists with Problem/Proposed solution/Validation (role policy2), update ledger/journal/playbook. Tiny prior gains are not readiness; population/emergence and distinct specialist mechanisms remain open.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "cm_capture_calibration_fullpanel_01"
+    "cm_capture_replication_fullpanel_01"
   ],
-  "active_run_path": "private/cm_capture_calibration_fullpanel_01",
+  "active_run_path": "private/cm_capture_replication_fullpanel_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -1230,7 +1230,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -436,
+    "current_reward": -475,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1239,7 +1239,7 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -436
+    "uncapped_reward": -475
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -1298,16 +1298,16 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "packet": "JEV_CM_ODDS_PACKET_20261001_01.json",
-    "route": "JEV_CM_ODDS_ROUTE_20261001_01.json",
-    "decision": "both_endpoints",
-    "confidence": 0.95,
+    "packet": "JEV_CM_NEXT_PACKET_20261001_01.json",
+    "route": "JEV_CM_NEXT_ROUTE_20261001_01.json",
+    "decision": "fixed_capture_replication",
+    "confidence": 0.94,
+    "payload_bytes": 1859,
     "usage": {
-      "input_tokens": 646,
-      "output_tokens": 49
+      "input_tokens": 886,
+      "output_tokens": 54
     },
-    "payload_bytes": 1640,
-    "scope": "One new odds-implementation decision; advisory only, no measured savings."
+    "scope": "Next bounded scientific decision; no measured savings."
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -1806,6 +1806,25 @@
         "batch_variogram_critic"
       ],
       "new_reward_delta": 0
+    },
+    "cm_capture_calibration_fullpanel_01": {
+      "status": "completed",
+      "report_sha256": "c81b597bc4704408aca1e79ea4b390aa883491e8b7f450e91c729d2ab8af0fe9",
+      "review": "METRIC_CRITIQUES_CM_CALIBRATION_20261001.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "agents": [
+        "cm_de_critic",
+        "batch_direction_critic",
+        "batch_mmd_critic",
+        "batch_variogram_critic"
+      ],
+      "specialist_role_version": 2,
+      "new_reward_delta_from_review": 0
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -1842,8 +1861,13 @@
     "no_new_training_or_upload": true
   },
   "cm_capture_calibration_job": {
+    "status": "completed",
+    "passing_candidates": [],
+    "report_sha256": "c81b597bc4704408aca1e79ea4b390aa883491e8b7f450e91c729d2ab8af0fe9"
+  },
+  "cm_capture_replication_job": {
     "status": "running",
-    "plan_sha256": "9a15132fef918fe4b3ee3823d959ad0218a5cddc796f1de16b57eacff1abe61e",
-    "planned_scores": 12
+    "plan_sha256": "98317a8f46b621dfabc298a453baf16facb487b5f8ff8fc511964fcf2aa89068",
+    "planned_scores": 6
   }
 }

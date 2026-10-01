@@ -6119,6 +6119,24 @@
       "report_sha256": "9cc75371456d087279ccbf0fc784cd3018b39b8dda890122b85ffbf80a895815",
       "scope": "Descriptive coarse tissue-proxy mapping, not validated identities or independent embryo evidence. E8.5 allowed observations only; no E9.5/future reads, scores, reward or causal transfer proof.",
       "next_action": "Predeclare CM-specific two-part observation/detection calibration ablation, selected by Jev from observed-only compatibility evidence. Inspect existing detection-coupling/CDR/recent-detection code/results first to avoid duplication. Use observed anchor CM detection odds with fixed .25/.5 shrinkage; preserve conditional-positive reference and mapped mass, matched global/no-calibration and copy/incumbent controls. Treat coarse labels/composition as uncertain. Freeze source capture-heldout temporal validation before fitting/scoring, refit any learner that included heldout calibration capture; no future challenge data. Document unavailable independent embryo pairing and full four-metric outcomes. Do not assume calibration corrects a technical cause or increases score."
+    },
+    {
+      "id": "cm_capture_observation_calibration",
+      "status": "completed_not_promoted",
+      "research_family_exhausted": false,
+      "report": "CM_CAPTURE_CALIBRATION_FULLPANEL_RESULTS.json",
+      "report_sha256": "c81b597bc4704408aca1e79ea4b390aa883491e8b7f450e91c729d2ab8af0fe9",
+      "critique": "METRIC_CRITIQUES_CM_CALIBRATION_20261001.md",
+      "scope": "12validfull-panel scores, two current-capture-excluded one-day source folds; different future captures, no embryo pairing. CM.25 tiny headline gains but firstfoldDEregression; no promotion.",
+      "next_action": "Run registered cm_capture_replication: fixed CM.25 only, second-largest current captures33/24 excluded from all base refits, permitted current-anchor calibration, matched copy/anchor, two one-day stages and6full-panel scores. Compare all4metrics; reject promotion for any incumbent-skill regression. After completion run four metric specialists with Problem/Proposed solution/Validation (role policy2), update ledger/journal/playbook. Tiny prior gains are not readiness; population/emergence and distinct specialist mechanisms remain open."
+    },
+    {
+      "id": "cm_capture_observation_replication",
+      "status": "predeclared_ready",
+      "research_family_exhausted": false,
+      "implementation": "cm_capture_replication_fullpanel.py",
+      "run": "cm_capture_replication_fullpanel_01",
+      "next_action": "Fixed CM.25 vs matched copy/anchor on second-largest current captures with all base fits excluded;6scores, no parameter search or officialupload."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",

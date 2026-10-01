@@ -19,9 +19,16 @@
   },
   "eligibility": "Future predeclared scored experiments only; no retroactive rewards, repeated seeds, duplicate variants, changing comparison or proxy claims. Validity is assessed before reward.",
   "promotion_rule": "Original full-panel four-metric, temporal and >72 mean/lower-tail >=64-replicate readiness gates unchanged. Critiques must discuss uncertainty/tradeoffs even when reward is positive.",
-  "agents": "User explicitly authorized four metric critics after each new completed or failed experimental batch on2026-10-01. Use compact fresh-context packets, max120words per critic, one critic per DE/direction/MMD/variogram; no repeat critique of unchanged batch hashes. For proxy/invalid/missing metrics, report unavailability, no invented scores/reward. Schedule within available concurrency slots.",
+  "agents": "Four metric methodological specialists after each new completed or failed experimental batch; fresh compact packets, max150words each. Each must provide Problem, Proposed solution and Validation: evidence-supported diagnosis, uncertainties, a concrete past-only remedy, matched controls and measurable success/failure criterion. No claimed human credentials or certified solutions. User-requested role changes permit revisiting a batch without changing its scores/reward. Cache normal reviews by report hash and role-policy version. Missing/proxy metrics stay unavailable. No routine agents.",
   "implementation": "metric_critique_reward.py",
   "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
-  "updated_utc": "2026-10-01T09:28:35.901084+00:00",
-  "decision_routing": "Jev-first for meaningful experiment selection, uncertain design choices, failure diagnosis and critique synthesis. These are distinct decision points and may require multiple calls in one batch. One cached<=3000byte request per distinct decision, no automatic retry; no calls merely to increase count. Send summaries only, never datasets/full source/secrets. Record actual token use; do not claim unmeasured savings."
+  "updated_utc": "2026-10-01T10:01:14.715229+00:00",
+  "decision_routing": "Jev-first for meaningful experiment selection, uncertain design choices, failure diagnosis and critique synthesis. These are distinct decision points and may require multiple calls in one batch. One cached<=3000byte request per distinct decision, no automatic retry; no calls merely to increase count. Send summaries only, never datasets/full source/secrets. Record actual token use; do not claim unmeasured savings.",
+  "specialist_role_version": 2,
+  "specialists": {
+    "de_score": "DE recovery, signed gene ranks and effect reliability",
+    "de_direction": "Partial rank correlation and temporal direction",
+    "mmd_u": "Population distributions, kernels and cell-state coverage",
+    "variogram": "Nonspatial CSS cell-state contrasts and covariance structure"
+  }
 }

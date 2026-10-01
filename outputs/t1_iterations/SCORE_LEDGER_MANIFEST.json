@@ -1,5 +1,5 @@
 {
-  "records": 2925,
+  "records": 2937,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -70,6 +70,11 @@
       "path": "private/challenge_identity_01/report.json",
       "sha256": "8dcc87f084eb86cff5433c2a131a8d0819b6e9954ce67a026636cac5facaad39",
       "outcomes_indexed": 27
+    },
+    {
+      "path": "private/cm_capture_calibration_fullpanel_01/report.json",
+      "sha256": "c81b597bc4704408aca1e79ea4b390aa883491e8b7f450e91c729d2ab8af0fe9",
+      "outcomes_indexed": 12
     },
     {
       "path": "private/cnf_alignment_challenge_01/report.json",
@@ -657,6 +662,11 @@
       "outcomes_indexed": 12
     },
     {
+      "path": "private/observed_lineage_support_01/report.json",
+      "sha256": "9cc75371456d087279ccbf0fc784cd3018b39b8dda890122b85ffbf80a895815",
+      "outcomes_indexed": 0
+    },
+    {
       "path": "private/offline_backtest_01/report.json",
       "sha256": "c394b46f0e509a5d19df81ce01305ce2a57dd642ba6ae5237643d5c3c710ca33",
       "outcomes_indexed": 31
@@ -824,5 +834,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "46db6c0a8f605f9d4bc463cb1a70c373b6a6f079ec656945aee5bf147e006d79"
+  "ledger_sha256": "6fc5a4bf099fdca3a334d87c085367a7e9bce9415b7f222a456672d9e9489ada"
 }
