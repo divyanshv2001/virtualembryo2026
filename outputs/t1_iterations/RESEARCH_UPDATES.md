@@ -612,3 +612,9 @@ Fixedrank2capturebalancedSVD/OLS withfullomissionrefits implemented,testedandrun
 ## 2026-10-01T20:25:11.698102+00:00 — OLS gate decoder guard failure
 
 FourfixedOLS/omission/curvature/rank2methods samecompletecoverage. Allfailcut8 mean(.742–.784>.5);threecovariancefail,curvature.382passes. Allpasscut8.25mean.375–.422/cov.293–.337. Mass<=6.4e-8,finite/protected/fallbackpass;copy/incumbent exacthashreplay. Clippingcurvaturemuchlower butnoaccuracyclaim. Fourreusedcritics recorded; Jev1028in/59out chose fixedstage/boundaryattribution beforeanynewdecoder. NEXT_CAPTURE_OLS_DECODER_BOUNDARY_AUDIT.json declarednotstarted. No targetexpression/scorer/reward orguard/strengthretuning;−848/ledgerunchanged. Priorinfeasiblejointsolverfailurespreserved. Families/readinessopen.
+
+## 2026-10-01T20:47:22.503745+00:00 — decoder boundary audit
+
+All12 frozen forecasts replayed exactly. Early OLS maxmean .82769 preclip -> .78322 repaired; covariance .56619 -> .42459. Curvature mean .82769 -> .78397, covariance .51109 -> .38247. Thus requested upstream shifts already violate guards; clipping/repair attenuate. Hbb-bh1 drives mean guard, not causal evidence or a gene-specific exclusion. Later OLS maxmean .46048 -> .42165. Four specialist critiques saved; existing contexts reused due observed thread limit. No future expression/full-panel scores/reward; separate reward remains -848, ledger unchanged diagnostic. Jev873in/74out selected fixed geometric rate preflight confidence.38; prior fixed tanh coverage inspected. New predeclared universal d2*(d2/d1) with mandatory-omission support and matched mask OLS/recent controls, frozen decoder/guards. D cache,16GBRAM. Readiness/families open; no upload.
+
+Registered capture_geometric_rate launched uniquely after actual0-process check; PID12088. Synthetic signed-decay/matched-support/omission controls and compile checks passed. No score or readiness change.

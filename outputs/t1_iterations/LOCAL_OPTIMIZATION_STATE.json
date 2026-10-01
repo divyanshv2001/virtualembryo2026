@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T20:25:11.698102+00:00",
+  "updated_utc": "2026-10-01T20:49:35.533587+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement/run capture_OLS_decoder_boundary_audit_01: exact12currentforecastreplays past-only, trace requestedrawlogshift/preclip(negativeinvaliddiagnostic), afterclip, aftercountmassrepair. Global/lineagegene mean guardcrossings/signs/energy, top10guardgenes andfrozenpastcapturemeanpatterns, fixeddonorzero/positive/clipped-boundary strata andcovarianceguardfeatures. Separateupstreamshift fromclip/repairfailure; nofullpanelmetric/futureexpr/reward/rank/strengthgrid. Do notrepeatpriorinfeasibleexactmean/masssolver. Families/readinessopen.",
+  "next_experiment": "Run registered capture_geometric_rate preflight: fixed d2*(d2/d1) on same-sign strictly decelerating full/all-required-omission capture means. Matched eligibility-mask OLS/recent plus unmasked OLS/recent, copy/incumbent; exact prior OLS/control replays. Frozen decoder/guards, no future expression/scorer/reward. Family/readiness open.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1145,13 +1145,13 @@
     "direct_nearest_source_transfer_allowed": false
   },
   "jev_latest": {
-    "route": "JEV_TEMPORAL_PROJECTION_FAILURE_ROUTE_20261001_01.json",
+    "route": "JEV_OLS_BOUNDARY_ROUTE_20261002_01.json",
     "usage": {
-      "input_tokens": 639,
-      "output_tokens": 53
+      "input_tokens": 873,
+      "output_tokens": 74
     },
-    "choice": "anchor_support_witness",
-    "confidence": 0.2
+    "choice": "geometric_rate_preflight",
+    "confidence": 0.38
   },
   "count_reliability_job": {
     "status": "completed_not_promoted",
@@ -1297,13 +1297,13 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_OLS_DECODER_FAILURE_ROUTE_20261002_01.json",
+    "record": "JEV_OLS_BOUNDARY_ROUTE_20261002_01.json",
+    "choice": "geometric_rate_preflight",
+    "confidence": 0.38,
     "usage": {
-      "input_tokens": 1028,
-      "output_tokens": 59
-    },
-    "choice": "staged_mean_boundary_audit",
-    "confidence": 1.0
+      "input_tokens": 873,
+      "output_tokens": 74
+    }
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -2271,6 +2271,24 @@
       "reused_contexts": 4,
       "resource_limitation": "Observedthreadlimit;existing4specialists reviewednewpackets",
       "review_corrections": "Clippingcountsnotcause/signproof, priorjointconstraintsinfeasibilitynotignored, invalidpreclipneverscore, pooledversuswithin-lineagecovariance distinguished."
+    },
+    "capture_OLS_decoder_boundary_audit_01": {
+      "status": "completed",
+      "report_sha256": "0f272f4660ee03d46318b2d1a3f3fd70a711b6c6912ad29fa2be2cf73154f947",
+      "review": "METRIC_CRITIQUES_OLS_BOUNDARY_20261002.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": false,
+      "reward_delta": 0,
+      "fresh_contexts": 0,
+      "reused_contexts": 4,
+      "resource_limitation": "Previously observed agent thread limit; existing4 specialists reviewed new compact packets",
+      "review_corrections": "Preclip negatives invalid diagnostics; guards upstream. Prior tanh bank checked. Fixed universal rule; matched support controls, donor copy fallback, no causal gene assertion or accuracy claim."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -2646,5 +2664,21 @@
     "all_four_pass_later_guards": true,
     "target_expression_read": false,
     "reward_delta": 0
+  },
+  "capture_OLS_boundary_job": {
+    "status": "completed",
+    "report": "CAPTURE_OLS_DECODER_BOUNDARY_AUDIT_RESULTS.json",
+    "report_sha256": "0f272f4660ee03d46318b2d1a3f3fd70a711b6c6912ad29fa2be2cf73154f947",
+    "exact_preflight_replays": 12,
+    "target_expression_read": false,
+    "reward_delta": 0,
+    "conclusion": "Early requested shifts already violate mean/covariance guards; clipping and repair attenuate. Hbb-bh1 drives global mean, not a causal or gene-specific exclusion claim."
+  },
+  "capture_geometric_rate_job": {
+    "status": "running",
+    "spec": "NEXT_CAPTURE_GEOMETRIC_RATE_PREFLIGHT.json",
+    "pid": 12088,
+    "experiment": "capture_geometric_rate",
+    "report": "CAPTURE_GEOMETRIC_RATE_PREFLIGHT_RESULTS.json"
   }
 }

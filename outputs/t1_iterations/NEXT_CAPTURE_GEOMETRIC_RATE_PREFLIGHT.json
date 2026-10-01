@@ -1,0 +1,13 @@
+{
+  "status": "predeclared_not_started",
+  "seed": 20260928,
+  "cutoffs": [8.0, 8.25],
+  "source_report_sha256": "5cbf328178b043857f0af95e0f831b5f7196c04a790db466a37e621a748cbe1a",
+  "boundary_report_sha256": "0f272f4660ee03d46318b2d1a3f3fd70a711b6c6912ad29fa2be2cf73154f947",
+  "candidates": ["copy", "anchor_unshrunk", "capture_OLS", "capture_recent", "capture_OLS_decay_support", "capture_recent_decay_support", "capture_geometric_decay"],
+  "formula": "Three capture-balanced quarter-day means. d1=middle-old,d2=current-middle. Eligibility requires nonzero same-sign increments and abs(d2)<abs(d1) in full fit AND every required capture omission, >=2 captures/stage after omission. Fixed full-fit next increment d2*(d2/d1) on eligible genes, zero otherwise. No strength grid or gene identity exclusions. OLS and recent controls on identical eligibility mask separate rate effect from support selection; unmasked OLS/recent retained.",
+  "coverage": "Same seven complete lineage/fold cases as prior OLS audit; unsupported lineages donor copy for all new methods. Frozen capture means, original donors and decoder; archived incumbent exact replay. Capture sample is not embryo identity. This is conditional deceleration hypothesis, not estimated causal kinetics.",
+  "prior_coverage": "saturating_time_proxy.py used fixed tanh rates1/2/4, centers-.375/0 across four cell-pooled stages and .25/.5 blends; failed proxy. New formula is a distinct capture-balanced adjacent-increment ratio, not claimed novel science. No repeated tanh bank.",
+  "validation": "Synthetic signed decay, acceleration, reversal/zero fallback, mandatory-omission rejection and matched support controls before launch. Exact copy/incumbent and previous OLS prediction replay. Full panel scorer not executed. Fixed finite/nonnegative, protected/fallback copy, mapped count-mass <=1e-5, maxmean <=.5, encoder covariance <=.4. Retain all failures. Passing guards not accuracy or promotion; before any later scoring freeze matched experiment and forecasts. Both historical folds reused development; untouched evaluation availability unverified.",
+  "resources": "D-only source memmap/temporary disk forecast cache, two BLAS threads, one forecast at time within16GBRAM. No future expression reads; raw4/skills4 unavailable, reward0. Original readiness gates unchanged. No official upload."
+}

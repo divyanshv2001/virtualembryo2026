@@ -165,6 +165,16 @@
       "script": "capture_ols_gate_decoder_preflight.py",
       "run": "private/capture_OLS_gate_decoder_preflight_01",
       "report": "CAPTURE_OLS_GATE_DECODER_PREFLIGHT_RESULTS.json"
+    },
+    "capture_OLS_boundary": {
+      "script": "capture_ols_decoder_boundary_audit.py",
+      "run": "private/capture_OLS_decoder_boundary_audit_01",
+      "report": "CAPTURE_OLS_DECODER_BOUNDARY_AUDIT_RESULTS.json"
+    },
+    "capture_geometric_rate": {
+      "script": "capture_geometric_rate_preflight.py",
+      "run": "private/capture_geometric_rate_preflight_01",
+      "report": "CAPTURE_GEOMETRIC_RATE_PREFLIGHT_RESULTS.json"
     }
   }
 }
