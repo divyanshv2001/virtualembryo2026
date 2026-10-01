@@ -1,16 +1,16 @@
 {
-  "updated_utc": "2026-10-01T07:10:16.017691+00:00",
+  "updated_utc": "2026-10-01T07:18:42.185401+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "cdc424daaa45db2909cf53f9cfb989add5ae1a36d860616feb64a2177fbea0a7",
+    "LOCAL_OPTIMIZATION_STATE.json": "2c3f05ce9546a42417660d55c61e08117fa2a66065302b539ca042780b98a06d",
     "LOCAL_OPTIMIZATION_PROMPT.md": "dc34e90fa3519a22843971c550774ced585b0bab7dea86ab4fc00c5aee806f38",
-    "METRIC_RESEARCH_QUEUE.json": "41ce0b2afa2cb70db65256d1441c785e51f8e7f5a13a1077d1cde0621bccf22b",
+    "METRIC_RESEARCH_QUEUE.json": "3fef666c4fca9103bcb0278625ead2a415c9d9b760c140a063fdc157f13ed305",
     "METRIC_CRITIQUE_POLICY.json": "025beff88fbd06be4f25b4643456853ca5f0c7ee68a66212ab0e1281bcd9a8e5",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [],
-  "next_experiment": "Implement source_slope_fullpanel_02 with predeclared shrinkage backoffs [.25,.125,.0625,0] per formula/fold, chosen solely by same past-donor mean-change<=.5/covariance<=.4/mass-validity guards before target read. Preserve each attempted alpha/diagnostic and finalforecast hash; maintain exact persistence/archivedanchor controls, unchanged1500donor/1000truth+1000ceiling/full32285scorer/calibration. Replay guards/control hashes; deduplicate identical forecasts within a panel when scoring, preserve separate outcomes. Run10evaluations, refreshledger/reward; no target tuning or threshold relaxation. Prior10score batch collapsedallslopes tocopy, so actual slope efficacy/proxy fidelity remains unresolved.",
+  "next_experiment": "Audit forecast transform fidelity using frozen donor/fit inputs only: intended source gene-delta vectors versus realized means after nonnegative clipping and mapped log-mass repair. Quantify sign/rank distortion and reference-magnitude component; compare donor logsum with expm1 normalized-count sums under source normalization_target10000. Regenerate hashes exactly without target fitting. If log-space mass constraint is inconsistent with normalized counts, declare a matched count-space restoration ablation with same backoffs/guards/scorer/controls before scoring. No more slope banks or target-driven tuning before diagnosis.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -27,7 +27,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -167,
+    "current_reward": -276,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -36,7 +36,7 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -167
+    "uncapped_reward": -276
   },
   "official_best": 52.16,
   "latest_official": {

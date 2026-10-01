@@ -1,5 +1,5 @@
 {
-  "records": 2895,
+  "records": 2905,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -722,6 +722,11 @@
       "outcomes_indexed": 10
     },
     {
+      "path": "private/source_slope_fullpanel_02/report.json",
+      "sha256": "9a24e2a594977d8cc873a350593c43a75271d643c73724d4ec5e40fd7d4f9cb9",
+      "outcomes_indexed": 10
+    },
+    {
       "path": "private/specialist_integration_01/report.json",
       "sha256": "8fd419d544c764a4e201a8fc25a4b16eb6081d97be17ff272f6e6f0c2b6d54b8",
       "outcomes_indexed": 21
@@ -789,5 +794,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "1e00f4759bb4836e02d7fe1face45f2944f6ab7aa8bdb119a19f49ad037f9608"
+  "ledger_sha256": "099346718dbbec72c1829d5d40dd7a10064f9f22455e0830b13f71761d505236"
 }

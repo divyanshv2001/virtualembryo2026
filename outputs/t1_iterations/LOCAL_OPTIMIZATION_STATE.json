@@ -31,7 +31,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement source_slope_fullpanel_02 with predeclared shrinkage backoffs [.25,.125,.0625,0] per formula/fold, chosen solely by same past-donor mean-change<=.5/covariance<=.4/mass-validity guards before target read. Preserve each attempted alpha/diagnostic and finalforecast hash; maintain exact persistence/archivedanchor controls, unchanged1500donor/1000truth+1000ceiling/full32285scorer/calibration. Replay guards/control hashes; deduplicate identical forecasts within a panel when scoring, preserve separate outcomes. Run10evaluations, refreshledger/reward; no target tuning or threshold relaxation. Prior10score batch collapsedallslopes tocopy, so actual slope efficacy/proxy fidelity remains unresolved.",
+  "next_experiment": "Audit forecast transform fidelity using frozen donor/fit inputs only: intended source gene-delta vectors versus realized means after nonnegative clipping and mapped log-mass repair. Quantify sign/rank distortion and reference-magnitude component; compare donor logsum with expm1 normalized-count sums under source normalization_target10000. Regenerate hashes exactly without target fitting. If log-space mass constraint is inconsistent with normalized counts, declare a matched count-space restoration ablation with same backoffs/guards/scorer/controls before scoring. No more slope banks or target-driven tuning before diagnosis.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1228,7 +1228,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -167,
+    "current_reward": -276,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1237,7 +1237,7 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -167
+    "uncapped_reward": -276
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -1528,13 +1528,13 @@
     "scorer_changed": false
   },
   "source_slope_fullpanel_job": {
-    "status": "completed_all_slopes_guard_fallback",
+    "status": "backoff_completed_nonzero_not_promoted",
     "planned_scores": 10,
     "completed_scores": 10,
-    "plan_sha256": "9d8c5e9a7807a5fc4739ceedeb9bb3b8c3abc1fc92d00a13c6efe5fde2392472",
-    "report_sha256": "2866fe637e073dde3001dc580d77f18748505cb8f69e377757644a7b06e7e1df",
+    "plan_sha256": "7931ce560bd317a94b5699b188451e8371aa72f4ed54487cc7c4247a65f1f3c3",
+    "report_sha256": "9a24e2a594977d8cc873a350593c43a75271d643c73724d4ec5e40fd7d4f9cb9",
     "passing_candidates": [],
-    "public_report": "SOURCE_SLOPE_FULLPANEL_RESULTS.json",
+    "public_report": "SOURCE_SLOPE_BACKOFF_RESULTS.json",
     "control_replay_verified": true
   },
   "source_slope_fullpanel_result": {
@@ -1553,5 +1553,36 @@
     "passing_candidates": [],
     "score_ledger_records": 2895,
     "scorer_fidelity_of_nonzero_slopes_measured": false
+  },
+  "source_slope_backoff_result": {
+    "report": "SOURCE_SLOPE_BACKOFF_RESULTS.json",
+    "report_sha256": "9a24e2a594977d8cc873a350593c43a75271d643c73724d4ec5e40fd7d4f9cb9",
+    "full_panel_scores": 10,
+    "selected_alphas": 0.125,
+    "all_slope_forecasts_nonzero": true,
+    "scores": {
+      "copy": [
+        50.0,
+        50.0
+      ],
+      "anchor_unshrunk": [
+        49.70027428098265,
+        51.17724668869285
+      ],
+      "slope_recent": [
+        44.213124174966204,
+        51.371900515978
+      ],
+      "slope_global": [
+        48.11015961538241,
+        47.07046208046309
+      ],
+      "slope_lineage1000": [
+        47.80383931730732,
+        46.97023620297313
+      ]
+    },
+    "passing_candidates": [],
+    "score_ledger_records": 2905
   }
 }
