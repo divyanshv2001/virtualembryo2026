@@ -15,6 +15,11 @@
       "script": "disjoint_capture_contrasts.py",
       "run": "private/disjoint_capture_contrasts_01",
       "report": "DISJOINT_CAPTURE_CONTRAST_RESULTS.json"
+    },
+    "cm_capture_calibration": {
+      "script": "cm_capture_calibration_fullpanel.py",
+      "run": "private/cm_capture_calibration_fullpanel_01",
+      "report": "CM_CAPTURE_CALIBRATION_FULLPANEL_RESULTS.json"
     }
   }
 }

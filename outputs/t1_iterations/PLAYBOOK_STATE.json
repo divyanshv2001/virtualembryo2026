@@ -1,17 +1,19 @@
 {
-  "updated_utc": "2026-10-01T09:44:53.293973+00:00",
+  "updated_utc": "2026-10-01T09:53:01.333099+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "585c1894c09c459a7bad1af48bffcb3285ad3cff276658560d3b4e67eff046d9",
+    "LOCAL_OPTIMIZATION_STATE.json": "ce2c3c1654367b7e13c5ab0fec2aab22677f95b9df0d492a95405d6f8405e619",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
     "METRIC_RESEARCH_QUEUE.json": "ab7e0b6128a40afa5c56ea9306b62e301037173e97f90e668593fc89b79fa24b",
     "METRIC_CRITIQUE_POLICY.json": "51b63a2ca02abb2d6c4ca005d67948e7d3d5516553c0967b50e4d685363ef147",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
-    "RESEARCH_HARNESS_MANIFEST.json": "2c112fb70f74cf2c2f401af075e1e452d037996555c5a45087e905224d99191c"
+    "RESEARCH_HARNESS_MANIFEST.json": "8e88bace70117eed6a1fd3afa7f9aa5020b47cc2e982e1d3e6144950cbbef541"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [],
-  "next_experiment": "Predeclare CM-specific two-part observation/detection calibration ablation, selected by Jev from observed-only compatibility evidence. Inspect existing detection-coupling/CDR/recent-detection code/results first to avoid duplication. Use observed anchor CM detection odds with fixed .25/.5 shrinkage; preserve conditional-positive reference and mapped mass, matched global/no-calibration and copy/incumbent controls. Treat coarse labels/composition as uncertain. Freeze source capture-heldout temporal validation before fitting/scoring, refit any learner that included heldout calibration capture; no future challenge data. Document unavailable independent embryo pairing and full four-metric outcomes. Do not assume calibration corrects a technical cause or increases score.",
+  "active_jobs_at_checkpoint": [
+    "cm_capture_calibration_fullpanel_01"
+  ],
+  "next_experiment": "Registered cm_capture_calibration full-panel batch: largest current capture excluded from encoder/dynamics/source-head fitting, current-only CM/global odds offsets .25/.5 applied to both endpoints, matched copy/no-offset anchor controls. Two one-day source folds,12scores; future samples are different captures, independent embryo pairing unavailable. Finish and run four metric critics once by report hash; no promotion without original64-replicate/temporal gate.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -54,17 +56,16 @@
     "attribution": "Inferred latest export; screenshot lacks filename"
   },
   "latest_jev": {
-    "packet": "JEV_CRITIC_DESIGN_PACKET_20261001_01.json",
-    "record": "JEV_CRITIC_DESIGN_ROUTE_20261001_01.json",
-    "status": "validated",
-    "payload_bytes": 1781,
+    "packet": "JEV_CM_ODDS_PACKET_20261001_01.json",
+    "route": "JEV_CM_ODDS_ROUTE_20261001_01.json",
+    "decision": "both_endpoints",
+    "confidence": 0.95,
     "usage": {
-      "input_tokens": 785,
-      "output_tokens": 62
+      "input_tokens": 646,
+      "output_tokens": 49
     },
-    "choice": "exclude_from_base_allow_current_anchor",
-    "confidence": 1.0,
-    "measured_codex_credit_savings": null
+    "payload_bytes": 1640,
+    "scope": "One new odds-implementation decision; advisory only, no measured savings."
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",

@@ -1,0 +1,37 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "2b62fbe863382da7403265c6374d270babfd739b754a011925653b091d8b739f",
+  "attempts": 1,
+  "payload_bytes": 1640,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "purpose": "Choose precise observation-only odds calibration implementation before CM capture-heldout full-panel test.",
+      "evidence": "Current capture largest by count: cutoff8.0 sample16 1010cells/63CM; cutoff8.25 sample25 1214cells/130CM. Base encoder,800updateflow,fullheads refit excluding selected sample entirely. Current heldcapture may calibrate. Future entire source stage9/9.25 is scored only after forecasts freeze; sample ids do not establish same embryo pairing. Existing hurdle sampling uses change=p1-p0 and switch denominator p0; conditional-positive head and mapped raw mass guards unchanged.",
+      "constraints": "Fixed CM/global scope crossed with alpha.25/.5 and copy/no-calibration anchor controls. Compute offsets Jeffreys logit(current heldcapture detection)-logit(current remaining capture detection). Past only; no future fitting. No official export/upload, no independent embryo claim."
+    },
+    "questions": {
+      "odds_application": {
+        "type": "choice",
+        "instructions": "Choose coherent offset application for this nuisance-calibration ablation; advisory not proof.",
+        "criteria": {
+          "both_endpoints": "Apply same frozen per-gene group offset to logistic probabilities p0 and p1; sampling uses calibrated p0 denominators and p1-p0 change. Offset0 exactly matches base. Tests nonlinear sensitivity of temporal response to observation level.",
+          "future_only": "Apply offset to p1 only; leave p0 unchanged. Forecast mixes a current cohort discrepancy into temporal change even without latent change.",
+          "skip_refit": "Reuse archived model including heldcapture and call it heldcapture temporal validation to save compute."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 646,
+    "output_tokens": 49
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "odds_application": {
+      "choice": "both_endpoints",
+      "confidence": 0.95
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}
