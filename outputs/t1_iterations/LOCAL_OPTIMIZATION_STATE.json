@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": false,
+  "local_process_running": true,
   "quota_reset_evidence": {
     "limit_observed": false,
     "remaining_quota": null,
@@ -31,12 +31,14 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement/register cm_anchor_support_shrinkage_fullpanel_01 per NEXT_ANCHOR_SUPPORT_SHRINKAGE_EXPERIMENT.json: fixedbeta.25 anchor+.25*(exactanchor-supportinit-anchor), 6matchedcandidates4conditions, strictforecast-only mean/mass projection andidentityhash. Reuseddevelopment hypothesis ablation, no independentvalidation orfutureexpressionfit. Fullamplitude bothfailedheadline all4; originalconstraints/gates unchanged.",
+  "next_experiment": "Monitor registered cm_anchor_support_shrinkage; after completion collect24outcomes, four specialists, Jev synthesis/nextchoice and ledger/journal. Fixedbeta.25 positive redistribution; no duplicate run, no fittedfutureconstraints or automaticupload.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
-  "active_run_path": null,
+  "active_jobs": [
+    "cm_anchor_support_shrinkage_fullpanel_01"
+  ],
+  "active_run_path": "private/cm_anchor_support_shrinkage_fullpanel_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -2034,5 +2036,11 @@
     "all_outcomes_valid": true,
     "scored_outcomes": 24,
     "next_action": "Implement/register cm_anchor_support_shrinkage_fullpanel_01 per NEXT_ANCHOR_SUPPORT_SHRINKAGE_EXPERIMENT.json: fixedbeta.25 anchor+.25*(exactanchor-supportinit-anchor), 6matchedcandidates4conditions, strictforecast-only mean/mass projection andidentityhash. Reuseddevelopment hypothesis ablation, no independentvalidation orfutureexpressionfit. Fullamplitude bothfailedheadline all4; originalconstraints/gates unchanged."
+  },
+  "cm_anchor_support_shrinkage_job": {
+    "status": "running",
+    "planned_scores": 24,
+    "registered_experiment": "cm_anchor_support_shrinkage",
+    "integration_controls": "passed: exactsupport/fill, fixedquarterstrength, protectedregions, zerocorrectionidentity, feasibleprojection"
   }
 }

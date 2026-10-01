@@ -496,3 +496,7 @@ Implemented separate predeclared24outcome/4condition comparison: copy,anchor,CMr
 ## 2026-10-01 Anchor-support batch complete: feasible but no headline gain
 
 All24valid, archive/identityhashes exact; projected4/5/5/5steps, postcastmargins/support/protection/covguard pass. Bothnewcandidates belowanchor all4; projectedvsinit improves3of4. Allraw4/skills4 retained,ledger refreshed,2newrewards each-29,current-540 (notbenchmark). Four150word specialists Problem/Solution/Validation completed oncompactnewpackets. New Jevsynthesis1859bytes843input64output selected fixedquarteramplitude confidence.94. Singlebeta.25 experiment separatelypredeclared, reuseddevelopment/selectionlimitations explicit; nofutureexpressionfit,noofficialupload/improvedexport. Packetformat includescapture/role2actualpolicy,24rowDE4927bytes; nomeasuredcredit-savingclaim.
+
+## 2026-10-01 Fixed quarter-strength comparison launched
+
+Implemented/registered cm_anchor_support_shrinkage_fullpanel_01, single beta.25 inLOGspace afterexactanchor-support initialization. Sixmatchedcandidates/4captureconditions; samearchives/controlhashes/scoring/calibration. Passed support/fill,strength,protectedregions,zerocorrectionidentity andfeasibleprojection controls. Dcache,2threads,harnessuniquelaunch. CachedJevofprevioussynthesis used,no routinenewcall. Reuseddevelopment outcomesguidehypotheses,notindependentvalidation; nofutureexpressionfit/officialupload.
