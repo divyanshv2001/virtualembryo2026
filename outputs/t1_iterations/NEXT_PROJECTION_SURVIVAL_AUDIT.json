@@ -1,6 +1,6 @@
 {
   "status": "predeclared_pending_implementation",
-  "run": "cm_projection_survival_audit_01",
+  "run": "cm_projection_survival_audit_02",
   "conditions": [
     {
       "archive": "cm_capture_calibration_fullpanel_01",
@@ -45,5 +45,7 @@
   "decision": "Numerically informative if nonzero initial correction andfinite well-defined summaries,verifiedcontrolhashes,structuredJacobiancontrols pass. Diagnose suppression or lackofamplituderesponse only from measuredratios,notheadlines. No arbitrarysuccessclaim. Any futuretangentforecast/shufflednegativecontrol independentlypredeclared before scoring; nofits fromfuturetruth.",
   "metrics": "All benchmarkheadline/raw4/skills4 unavailable/null; auditonly,no reward or readiness advancement. Fourcaptures/two reused stages, notindependentvalidation.",
   "predeclared_before_execution": true,
-  "resources": "Donlydisposable forecastcache,oneconditionatatime,2threads,16GBRAM; rankchunks512,celldenseSchur<=134. Preserve smallhashes/events/diagnosticreports only."
+  "resources": "Donlydisposable forecastcache,oneconditionatatime,2threads,16GBRAM; rankchunks512,celldenseSchur<=134. Preserve smallhashes/events/diagnosticreports only.",
+  "retry_of": "cm_projection_survival_audit_01",
+  "retry_reason": "Deterministic Windows provenance-key separator repair; firstpreflightfailure retained. No diagnostic/scientificsetting changed."
 }

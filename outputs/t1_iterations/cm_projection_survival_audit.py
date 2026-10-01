@@ -18,7 +18,7 @@ from cm_capture_replication_fullpanel import checkpoint
 from test_projection_survival_diagnostics import main as diagnostic_controls
 from test_joint_margin_solver import main as solver_controls
 
-RUN='cm_projection_survival_audit_01'
+RUN='cm_projection_survival_audit_02'
 PUBLIC='CM_PROJECTION_SURVIVAL_AUDIT_RESULTS.json'
 
 
@@ -39,11 +39,11 @@ def main():
         for name,sha in old['plan']['source_sha256'].items():
             if digest(HERE/name)!=sha:raise ValueError('Archived dependency changed: '+name)
         for name in ['encoder.npz','training.pt','donor_rows.npy','observation_offsets.npz']:
-            hashes[str((folder/name).relative_to(HERE))]=digest(folder/name)
-        hashes[str((root/'report.json').relative_to(HERE))]=digest(root/'report.json')
+            hashes[(folder/name).relative_to(HERE).as_posix()]=digest(folder/name)
+        hashes[(root/'report.json').relative_to(HERE).as_posix()]=digest(root/'report.json')
     scored={}
     for name in ['cm_anchor_support_projection_fullpanel_01','cm_anchor_support_shrinkage_fullpanel_01']:
-        path=HERE/'private'/name/'report.json';scored[name]=json.loads(path.read_text());hashes[str(path.relative_to(HERE))]=digest(path)
+        path=HERE/'private'/name/'report.json';scored[name]=json.loads(path.read_text());hashes[path.relative_to(HERE).as_posix()]=digest(path)
     if hashes['private/cm_anchor_support_shrinkage_fullpanel_01/report.json']!=spec['parent_report_sha256']:raise ValueError('Parent changed')
     plan={**spec,'created_utc':now(),'source_sha256':{name:digest(HERE/name) for name in dependencies},
           'predeclaration_sha256':digest(HERE/'NEXT_PROJECTION_SURVIVAL_AUDIT.json'),

@@ -1,0 +1,51 @@
+{
+  "status": "predeclared_pending_implementation",
+  "run": "early_tangent_metric_hindcast_01",
+  "seed": 20260928,
+  "conditions": [
+    {
+      "cutoff": 7.75,
+      "target": 8.75,
+      "held_capture": "13",
+      "selection": "largestcurrentcapture bydonorcount, deterministicmetadataonly"
+    },
+    {
+      "cutoff": 7.75,
+      "target": 8.75,
+      "held_capture": "12",
+      "selection": "secondlargestcurrentcapture bydonorcount, deterministicmetadataonly"
+    }
+  ],
+  "candidates": [
+    "copy",
+    "anchor_unshrunk",
+    "cm_025",
+    "support_full_initial",
+    "support_full_projected",
+    "support_quarter_initial",
+    "support_quarter_projected",
+    "anchor_projected_identity",
+    "tangent_learned_initial",
+    "tangent_learned_projected",
+    "tangent_shuffle_initial",
+    "tangent_shuffle_projected"
+  ],
+  "maximum_scores": 24,
+  "truth_count": 1000,
+  "ceiling_count": 1000,
+  "fit": "New capture-excluded past-only refits: source stages7.5/7.75; exclude allheldcapture rows fromencoder/dynamics/sourceheads. Fixed4096gene8DPCA/800densityupdates energy.1 densityweight10, ridge1 heads, .5/.5 anchorcalibration. Currenthelddonors allowedfixed CM.25 observationoffset. No futuretruth/score-fittedparameters. Save model/splits/hashes.",
+  "controls": "Copy/nooffsetanchor/CM.25, exactanchor-support full/quarter initial/projected and projectedanchor identity usingfrozenpriorformula/settings; no strengthselection. Same donor/model/target/scorer/calibration ineachcondition. Identity musthashmatch anchor.",
+  "tangent_formula": "AnchorCMmapped reference A, supportedcorrection v=exactanchor_support_initial(CM.25,A)-A. T(v)=v-JT(JJT+1e-9I)^-1Jv via structuredcellSchur; mean_scale=max(LOGgene mean,.1),mass_scale=max(RAWcellmass,1e-12). For eachgene shuffle v overanchorpositiveCMcells withfixedseed20260928 andprojectT(shuffle(v)). Scale shuffledtangent to learnedtangent Frobeniusnorm before initialization. No targetexpression in construction.",
+  "positivity": "Shared scalar s=min(.25,.9*min(Aij/(-dij)) overnegative entries in BOTH learned andnormmatchedshuffled directions). If nonegatives bound infinite. Initialize A+s*d, float64thenfloat32, exactsupport/protectedrows/genes. Reportactuals,norms/floatcast. Nonfinite/zero direction,norm orscale fails explicitly; no redraw/refit/fallback.",
+  "projection": "Same joint_margin_solver.solve(adaptive=True),100steps,initial.001 accepted*.3floor1e-9/rejected*10ceiling1e3; fixedbackoffs/floor. Constraints anchor FORECAST LOGmeans/RAWcellmasses, strictlypostfloat32 absmean<=1e-5/rawmassrelative<=1e-5, finite/nonnegative/exactsupport/protection/covguard<=.4. Invalid candidates retained null. Initializations separately scored asablations.",
+  "negative_control_validation": "Before targetexpression read: learned/shuffled tangent norms matchedbefore shareds within1e-6relative; after nonlinearprojection require survivingnorm ratio learned/shuffled within[.9,1.1] for decisive matched-null interpretation. If mismatch retain allscores andlabel negativecontrol comparison invalid; no adjustscale usingtargets oriterate seeds. Single shuffle seed is limited evidence.",
+  "freeze_and_score": "Freeze ALL12 forecasts andconstructiondiagnostics percondition before reading targetexpression8.75. Targetsortedrngchoice2000 thenrngpermutation1000truth/1000ceiling. Unchanged pinned full32285 Panel/scorer/calibration. Retainraw4/skills4/failures/hashesevents. Actualscore calibrationunchanged.",
+  "diagnostics": "Freeze DE eligibility/statistic/sign/threshold conventions frompinned scorer code before evaluation; inspect gene-level decision margins/rank/sign changes and contribution changes ifpinned API exposes them. Otherwise record precisely unavailable auxiliaryoutputs; do not modify scorer or invent contributions. Norm/rank separation andrawmetric sensitivity reported separately; no metricrules fittedtofuturetruth.",
+  "decision": "Newlearnedtangent candidate mustpass allconstruction/nonlinear/calibration gates and beat copy/anchor/CM.25 headline inBOTHcaptures withallanchorskills preserved. To claim correctionrelevance requirevalidmatchednullnorms andlearnedheadline>shuffledprojected inBOTHcaptures; mixedsigns/null-equivalence fails. Statistical/independenttemporalreadiness andoriginal>72mean/lower-tail64replicate gates remainunmet.",
+  "reward": "Only new tangent_learned_initial and tangent_learned_projected validBOTHconditions eligible vsanchor. Negativecontrols/identity/replayedformula controls not newreward. Invalid/proxy0; +1/-10 capped100 unchanged.",
+  "scope": "Earlier retrospective source development transition7.75->8.75,2currentcaptures, only2paststages; not2temporalstages orindependentembryos. Currentcalibrationallowed, futureevaluationonly. Notofficialsubmission orproofcausaltechnicalcorrection. Noexposed9/9.25amplitudesearch.",
+  "parent_audit_report_sha256": "268ce4c1b7773e4b6b56335153f0a0094f0fa20e3aea128631642073b1333526",
+  "jev_route": "JEV_SURVIVAL_SYNTHESIS_ROUTE_20261001_01.json",
+  "predeclared_before_execution": true,
+  "resources": "Donlytemporaryforecastcache/2threads/oneconditionatatime/16GBRAM; sparse-support cellSchur<=83, no giant dense Jacobian. Archive smallmodels/evidence, notdataset/predictionmatrices."
+}

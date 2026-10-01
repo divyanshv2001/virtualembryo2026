@@ -62,8 +62,13 @@
       "report": "CM_ANCHOR_SUPPORT_SHRINKAGE_FULLPANEL_RESULTS.json"
     },
     "cm_projection_survival": {
-      "script": "cm_projection_survival_audit.py",
+      "script": "private/cm_projection_survival_audit_01/executed_source.py",
       "run": "private/cm_projection_survival_audit_01",
+      "report": "CM_PROJECTION_SURVIVAL_PREFLIGHT_FAILURE_01.json"
+    },
+    "cm_projection_survival_repaired": {
+      "script": "cm_projection_survival_audit.py",
+      "run": "private/cm_projection_survival_audit_02",
       "report": "CM_PROJECTION_SURVIVAL_AUDIT_RESULTS.json"
     }
   }

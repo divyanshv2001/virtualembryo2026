@@ -1,0 +1,19 @@
+{
+  "status": "failed",
+  "created_utc": "2026-10-01T11:38:18.843163+00:00",
+  "recorded_after_failure": true,
+  "predeclaration_sha256": "f20cce504eebdcde10470c1c419e5f599f9ea0008330bbc16845a433846448c7",
+  "executed_source_sha256": "a5d9b39d73673e9769e96cef00e6eb5ca491a9237a7c9d8d0515953621a9e1cb",
+  "failure_stage": "preflight, before plan/directory creation and expression-value access",
+  "error_type": "KeyError",
+  "error": "private/cm_anchor_support_shrinkage_fullpanel_01/report.json",
+  "diagnosis": "Windows Path.relative_to serialized backslashes; forward-slash literal lookup missing. No evidence of changed parent contents.",
+  "stderr_path": "private/harness_runs/cm_projection_survival/stderr.log",
+  "stderr_sha256": "6192cdb86936299999ab589cb7d0931a577f8260f287424132eb8afe1c589d04",
+  "headline_score": null,
+  "raw_metrics": null,
+  "skills": null,
+  "reward_delta": 0,
+  "future_expression_read": false,
+  "report_sha256": "2170343bc090225c159c659b0842e282784c7078836123aa2e140966c063ca0e"
+}

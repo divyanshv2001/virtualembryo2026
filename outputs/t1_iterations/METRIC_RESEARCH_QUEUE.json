@@ -6240,11 +6240,24 @@
     },
     {
       "id": "cm_projection_survival_tangent_audit",
-      "status": "running",
+      "status": "completed_repaired_forecast_only",
       "research_family_exhausted": false,
       "plan": "NEXT_PROJECTION_SURVIVAL_AUDIT.json",
-      "next_action": "Monitor registered cm_projection_survival; after completion collect cachedpackets/four specialists withdiagnosticcompactsummary, Jevconsequentialnextmethod, journal/playbook. Forecast-onlyreplay, futureexpressionblocked, metricsunavailable/reward0. No duplicate orclaimsfromheadlines.",
-      "registered_experiment": "cm_projection_survival"
+      "next_action": "Implement/register early_tangent_metric_hindcast_01 per NEXT_EARLY_TANGENT_METRIC_EXPERIMENT.json. Newcutoff7.75 capture13/12 excludedrefits,target8.75; 12matchedforecasts2conditions24scores. Learned vsnormmatchedshuffled tangent, fixedsharedpositive s<=.25, strictforecast-onlymean/massprojection andidentity. Freezebeforefutureevaluation; trace metricrelevance ifpinnedAPIavailable, recordauxunavailableotherwise. No9/9.25strengthsearch; limitedoneearlytransition, originalreadinessunmet.",
+      "registered_experiment": "cm_projection_survival_repaired",
+      "run": "cm_projection_survival_audit_02",
+      "report": "CM_PROJECTION_SURVIVAL_AUDIT_RESULTS.json",
+      "report_sha256": "268ce4c1b7773e4b6b56335153f0a0094f0fa20e3aea128631642073b1333526",
+      "critique": "METRIC_CRITIQUES_PROJECTION_SURVIVAL_20261001.md",
+      "metrics_available": false,
+      "first_attempt_failure": "CM_PROJECTION_SURVIVAL_PREFLIGHT_FAILURE_01.json"
+    },
+    {
+      "id": "early_tangent_metric_hindcast",
+      "status": "predeclared_pending_implementation",
+      "research_family_exhausted": false,
+      "plan": "NEXT_EARLY_TANGENT_METRIC_EXPERIMENT.json",
+      "next_action": "Implement/register early_tangent_metric_hindcast_01 per NEXT_EARLY_TANGENT_METRIC_EXPERIMENT.json. Newcutoff7.75 capture13/12 excludedrefits,target8.75; 12matchedforecasts2conditions24scores. Learned vsnormmatchedshuffled tangent, fixedsharedpositive s<=.25, strictforecast-onlymean/massprojection andidentity. Freezebeforefutureevaluation; trace metricrelevance ifpinnedAPIavailable, recordauxunavailableotherwise. No9/9.25strengthsearch; limitedoneearlytransition, originalreadinessunmet."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",
