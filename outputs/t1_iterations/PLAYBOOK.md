@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-01T21:25:30.140645+00:00
+Updated: 2026-10-01T21:36:50.639891+00:00
 
 Run `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_playbook.py` first. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -8,9 +8,9 @@ Use `research_harness.py status` for compact live-process/report checks, `run --
 
 Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction': 56.3, 'mmd_u': 53.2, 'variogram': 51.7}. Covariance .25 reused-development mean55.98883; EB and lineage-standardized historical proxy screens failed. Local>72 mean/lower-tail >=64-replicate AND temporal gate unmet. Full32285-gene scorer/calibration unchanged.
 
-Checkpoint jobs: [{'experiment': 'capture_decoded_energy', 'pid': 21832, 'status': 'running', 'report': 'CAPTURE_DECODED_ENERGY_PREFLIGHT_RESULTS.json'}]. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
+Checkpoint jobs: [{'experiment': 'capture_decoded_energy_retry', 'pid': 4448, 'status': 'running', 'report': 'CAPTURE_DECODED_ENERGY_RETRY_PREFLIGHT_RESULTS.json'}]. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Run/finish registered capture_decoded_energy preflight: exact original10forecast replay; geo/uniformOLS/uniformrecent new variants countspace-interpolated to frozen perlineage minimum decoded energy. Existing40step bisection; equality1e-6/upperbudget1e-8 relative-to-max1 tolerances, unchanged guards; measure signs/support. No future expression/scorer/reward, no originalplan retuning. Four critics aftercompletion; family/readiness open.
+Next: Finish registered capture_decoded_energy_retry (unique implementation retry after TypeError). Same method/budgets/guards; original failedrun source/events retained, diagnostic OLS reference renamed. Require ten preceding amplitude forecast replays and six new guards plus independent emitted-energy equality/upper tolerances; no future scoring/reward. After batch four critics; family/readiness open.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in outputs\t1_submissions\formula_progress_20260930_01\official_result.json. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 

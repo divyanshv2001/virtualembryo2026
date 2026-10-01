@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T21:25:07.207154+00:00",
+  "updated_utc": "2026-10-01T21:36:50.464126+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,16 +30,16 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Run/finish registered capture_decoded_energy preflight: exact original10forecast replay; geo/uniformOLS/uniformrecent new variants countspace-interpolated to frozen perlineage minimum decoded energy. Existing40step bisection; equality1e-6/upperbudget1e-8 relative-to-max1 tolerances, unchanged guards; measure signs/support. No future expression/scorer/reward, no originalplan retuning. Four critics aftercompletion; family/readiness open.",
+  "next_experiment": "Finish registered capture_decoded_energy_retry (unique implementation retry after TypeError). Same method/budgets/guards; original failedrun source/events retained, diagnostic OLS reference renamed. Require ten preceding amplitude forecast replays and six new guards plus independent emitted-energy equality/upper tolerances; no future scoring/reward. After batch four critics; family/readiness open.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
     {
-      "experiment": "capture_decoded_energy",
-      "pid": 21832,
+      "experiment": "capture_decoded_energy_retry",
+      "pid": 4448,
       "status": "running",
-      "report": "CAPTURE_DECODED_ENERGY_PREFLIGHT_RESULTS.json"
+      "report": "CAPTURE_DECODED_ENERGY_RETRY_PREFLIGHT_RESULTS.json"
     }
   ],
   "active_run_path": null,
@@ -2349,6 +2349,24 @@
       "reused_contexts": 0,
       "resource_limitation": "One MMD spawn hit observed thread limit; succeeded after firstcritic completed",
       "review_corrections": "Recentearlyblood signreversals1 not0. Requestedmatch notdecodedmatch; noaccuracy. Existingcountinterpolation reused, notnovel. No zero-support preservation assumption or infeasible mean/mass repeat."
+    },
+    "capture_decoded_energy_preflight_01": {
+      "status": "completed",
+      "report_sha256": "07761dd32645a10231fc826ecd6a2ddda5e80a75c4921734142317cc9f56aa75",
+      "review": "METRIC_CRITIQUES_DECODED_FAILURE_20261002.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": false,
+      "reward_delta": 0,
+      "fresh_contexts": 4,
+      "reused_contexts": 0,
+      "resource_limitation": "MMD/CSS spawn threadlimits resolved after earliercritics finished",
+      "review_corrections": "Only2completedchecks in failedrun; tenreplayhashes from precedingamplitude successfulbatch. No madeupmetrics/events, deterministic codefix same science."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -2772,10 +2790,26 @@
     "target_expression_read": false
   },
   "capture_decoded_energy_job": {
-    "status": "running",
+    "status": "failed",
     "spec": "NEXT_CAPTURE_DECODED_ENERGY_PREFLIGHT.json",
     "report": "CAPTURE_DECODED_ENERGY_PREFLIGHT_RESULTS.json",
     "pid": 21832,
-    "experiment": "capture_decoded_energy"
+    "experiment": "capture_decoded_energy",
+    "report_sha256": "07761dd32645a10231fc826ecd6a2ddda5e80a75c4921734142317cc9f56aa75",
+    "error": {
+      "type": "TypeError",
+      "message": "unhashable type: 'numpy.ndarray'",
+      "cause": "candidate base string was overwritten by OLS reference vector during first supported lineage fidelity calculation; next lineage dictionary access failed"
+    },
+    "completed_guard_checks": 2,
+    "target_expression_read": false,
+    "reward_delta": 0
+  },
+  "capture_decoded_energy_retry_job": {
+    "status": "running",
+    "pid": 4448,
+    "experiment": "capture_decoded_energy_retry",
+    "spec": "NEXT_CAPTURE_DECODED_ENERGY_RETRY_PREFLIGHT.json",
+    "report": "CAPTURE_DECODED_ENERGY_RETRY_PREFLIGHT_RESULTS.json"
   }
 }

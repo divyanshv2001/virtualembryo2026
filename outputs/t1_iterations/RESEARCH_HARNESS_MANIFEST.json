@@ -190,6 +190,11 @@
       "script": "capture_decoded_energy_preflight.py",
       "run": "private/capture_decoded_energy_preflight_01",
       "report": "CAPTURE_DECODED_ENERGY_PREFLIGHT_RESULTS.json"
+    },
+    "capture_decoded_energy_retry": {
+      "script": "capture_decoded_energy_retry_preflight.py",
+      "run": "private/capture_decoded_energy_retry_preflight_01",
+      "report": "CAPTURE_DECODED_ENERGY_RETRY_PREFLIGHT_RESULTS.json"
     }
   }
 }
