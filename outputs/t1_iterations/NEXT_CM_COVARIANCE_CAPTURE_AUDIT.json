@@ -1,0 +1,39 @@
+{
+  "run": "cm_covariance_capture_audit_01",
+  "declared_utc": "2026-10-01T15:43:06.362250+00:00",
+  "seed": 20260928,
+  "min_capture_cells": 5,
+  "parent_report_sha256": "c0d39fcd556aa893cb6afc8545e58bf7affb7f99eadbe23010d8e382fa575d52",
+  "conditions": [
+    {
+      "cutoff": 7.75,
+      "target": 8.0,
+      "archive_folder": "cutoff_7.75_capture_16",
+      "target_captures": [
+        "16",
+        "33",
+        "34",
+        "35"
+      ]
+    },
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "archive_folder": "cutoff_8.0_capture_25",
+      "target_captures": [
+        "24",
+        "25",
+        "28"
+      ]
+    }
+  ],
+  "method": "Read unchanged archived4D pastbasis/6covarianceforecasts, verifyhashes; evaluateall7futurecapture LWcovariances,42proxyoutcomes. Exactreplayoriginalcapture16/25diagnostics tolerance1e-9; no training/parameterselection.",
+  "diagnostics": "Per-captureBuresdistance2/Frobeniuserrors, pairedchanges/victoriesversusCMpersist bystage; withinstagepairwisecovariancedifferences. Do notcompareuncalibratedabsoluteerrors acrossdifferentfoldbases.",
+  "success_failure": "Exactparent/source/basis/covariance identities andoriginaltarget replays first. Record inconsistentcaptureeffects/negativecontrols; no surrogate promotion or target-derivednewsettings.",
+  "limitations": [
+    "CaptureIDs are not established independentembryos",
+    "Smallinputcovarianceestimation/earlyclipping preserved",
+    "No fullgenedecoder/benchmarkcalibration/officialrawmetrics orreward",
+    "Additionaltargetevaluation labelsheterogeneitydiagnostic, notunseen independentmodelvalidation"
+  ]
+}

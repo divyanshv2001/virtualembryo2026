@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T15:32:43.303600+00:00",
+  "updated_utc": "2026-10-01T15:43:06.362250+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -6278,11 +6278,19 @@
     },
     {
       "id": "cm_conditional_covariance_sensitivity",
-      "status": "declared_viable",
-      "next_action": "Launch/monitor registered cm_covariance_sensitivity:4D past-only conditionalLW/Bures covariance,2rollingfolds6covariancecontrols, proxyonly/no reward. Fourcritics/Jev aftercompletion; retain originalbenchmarkgates.",
+      "status": "completed_proxy_negative_vs_persistence",
+      "next_action": "Launch/monitor registered cm_covariance_capture: unchanged archived4D forecasts,all7targetcaptures42surrogate outcomes and original2exactreplays; no refit/targettuning/fullpanelmetrics/reward. Fourcritics afterbatch.",
       "research_family_exhausted": false,
       "limitations": "PriorpooledOAS/coloring isimplemented; conditionalBures comparison isboundedextension, not newwholefamily. No spatialinputs.",
-      "specification": "NEXT_CM_COVARIANCE_SENSITIVITY_AUDIT.json"
+      "specification": "NEXT_CM_COVARIANCE_SENSITIVITY_AUDIT.json",
+      "report_sha256": "c0d39fcd556aa893cb6afc8545e58bf7affb7f99eadbe23010d8e382fa575d52"
+    },
+    {
+      "id": "cm_covariance_capture_heterogeneity",
+      "status": "declared_viable",
+      "specification": "NEXT_CM_COVARIANCE_CAPTURE_AUDIT.json",
+      "next_action": "Launch/monitor registered cm_covariance_capture: unchanged archived4D forecasts,all7targetcaptures42surrogate outcomes and original2exactreplays; no refit/targettuning/fullpanelmetrics/reward. Fourcritics afterbatch.",
+      "research_family_exhausted": false
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",

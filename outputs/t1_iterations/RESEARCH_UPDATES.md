@@ -538,3 +538,7 @@ Four failedbatch critiques completed/cached; missingmetrics/no reward. Corrected
 
 ### 2026-10-01T15:32:43.303600+00:00 — conditional covariance audit declared
 CMcounts31/175/198/345 at7.5/7.75/8/8.25; min5percapture leavesearly19+5. Jev1716bytes833in51out chose4D withconfidence.46. Formula verified fromPOT Gaussian OT documentation https://pythonot.github.io/gen_modules/ot.gaussian.html . PriorpooledOAS/coloring remainscontrol. Numericalmap/identity/PSD/symmetry/smallcovfloor/null/pasttime/capturebalance tests passed. Initialunitassert wrongly expected LWshrinkage invariant toduplicate samplecount; correctedtest checks equalcaptureaverage ofindependentlyestimatedcovariances. IntermediatePSDrootfloor separatedfromcovariancefloor. No benchmark/calibration/reward claim. Historicalholdouttargetcovariances readonlyafterforecastfreeze.
+
+
+### 2026-10-01T15:43:06.362250+00:00 — conditional covariance audit completed
+Bures surrogate7.4943/13.8286 vsCMpersist1.8021/11.3090; bothworse. Identityexact, nullnorm1, basisfit<=7.75/8, futurecov evaluationafterfreeze. Early3/4eigenvaluesclipped,2supportedcaptures. Raw4/skills4/headline unavailable, reward0/balance-663. Fourfreshcritiquescached; count/eigenwording corrections retained. Jev2069bytes979in64out selectedfrozen all7capturediagnostic,42surrogates,norefit/targettuning. Familyopen/no promotion.

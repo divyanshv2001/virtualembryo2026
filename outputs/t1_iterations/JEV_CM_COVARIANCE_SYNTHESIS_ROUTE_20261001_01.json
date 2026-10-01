@@ -1,0 +1,39 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "53fd10e92af725567b8408829cee2c4e18596258a52d32d6f4341df47ce60d85",
+  "attempts": 1,
+  "payload_bytes": 2069,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "purpose": "Next decision after conditionalCM covariance audit underperformed persistence",
+      "evidence": "4D two rollingfolds fit<=7.75/8; heldtargetcapture16at8 and25at8.25; six fixedcovarianceforecasts, no decoder/fullpanelmetrics/reward. Buresproxy7.4943/13.8286 vspersistence1.8021/11.3090;shuffle10.6947/13.7335;LWlinear4.5609/13.5844;pooledOAS10.0784/39.2478. Identityexact, nullnormratio1,unclippedmapreconstruction~4e-14. Earliest3/4eigenvaluesclipped(not3maps), earlyCM31butonly19+5cells qualifycapturecov. Gaussiantrend extrapolation/capturevariation bothplausible.",
+      "critics": "Four specialists: benchmarksunavailable, no DE/direction fromcovariance. Pastonlyshrinkage/supportcontrols possible buttargetmustnotselectclamps/blends. CSSnotspatial.",
+      "resources": "Allfuturestage8 CMcaptures16/33/34/35 counts63/44/45/46; stage8.25 captures24/25/28 counts134/130/81. Frozen pastbasis and6forecastcov matrices available, exacthashes. Couldevaluate all7capturecovariances withsameforecasts/no refits andcheck original2 errors exactly.",
+      "constraints": "No targettuning/no clipping changes. Surrogatesnotofficialscores, targetcaptureIDsnotindependentembryos. D16GB2threads, original>72gatesunchanged. Singlecached bounded decision."
+    },
+    "questions": {
+      "next_action": {
+        "type": "choice",
+        "instructions": "Choose information gain without exposed-target tuning or overclaiming.",
+        "criteria": {
+          "frozen_capture_heterogeneity_audit": "Expand only diagnostic evaluation toall7targetcaptures, unchanged frozenbasis/LW/Bures/null/persistence predictions. Estimate withinstage capturevariation and wins/gains, exactreplay original2errors. No parameterselection or benchmarkpromotion.",
+          "past_only_shrinkage_training": "Immediately construct regularized sourcecovariance predictor withtrain-internalleavecaptureout strengthselection, newrecipe andcontrols; earlysupportsmall andfewtemporaltransitions.",
+          "pivot_gene_mean_audit": "Record boundednegative and movehierarchicalpastpseudobulkmeanresiduals, explicitDEmeanchannel; defer covarianceheterogeneity diagnosis."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 979,
+    "output_tokens": 64
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "next_action": {
+      "choice": "frozen_capture_heterogeneity_audit",
+      "confidence": 1.0
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T15:32:43.303600+00:00",
+  "updated_utc": "2026-10-01T15:43:06.362250+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Launch/monitor registered cm_covariance_sensitivity:4D past-only conditionalLW/Bures covariance,2rollingfolds6covariancecontrols, proxyonly/no reward. Fourcritics/Jev aftercompletion; retain originalbenchmarkgates.",
+  "next_experiment": "Launch/monitor registered cm_covariance_capture: unchanged archived4D forecasts,all7targetcaptures42surrogate outcomes and original2exactreplays; no refit/targettuning/fullpanelmetrics/reward. Fourcritics afterbatch.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1294,13 +1294,12 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_CM_COVARIANCE_DESIGN_ROUTE_20261001_01.json",
+    "record": "JEV_CM_COVARIANCE_SYNTHESIS_ROUTE_20261001_01.json",
     "usage": {
-      "input_tokens": 833,
-      "output_tokens": 51
+      "input_tokens": 979,
+      "output_tokens": 64
     },
-    "choice": "four_latent_dimensions",
-    "confidence": 0.46
+    "choice": "frozen_capture_heterogeneity_audit"
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -2042,6 +2041,20 @@
         "Spatial CSS model without established spatial inputs",
         "Substantial DE gain while exact gene means are preserved"
       ]
+    },
+    "cm_covariance_sensitivity_audit_01": {
+      "status": "completed",
+      "report_sha256": "c0d39fcd556aa893cb6afc8545e58bf7affb7f99eadbe23010d8e382fa575d52",
+      "review": "METRIC_CRITIQUES_CM_COVARIANCE_20261001.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": false,
+      "reward_delta": 0
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -2206,6 +2219,11 @@
   "cm_covariance_sensitivity_job": {
     "status": "completed",
     "report_sha256": "c0d39fcd556aa893cb6afc8545e58bf7affb7f99eadbe23010d8e382fa575d52",
+    "metrics_available": false
+  },
+  "cm_covariance_capture_job": {
+    "status": "completed",
+    "report_sha256": "ccf051098aab0f958515e70c3498344326bb257410f538ed0d33df90ce236852",
     "metrics_available": false
   }
 }
