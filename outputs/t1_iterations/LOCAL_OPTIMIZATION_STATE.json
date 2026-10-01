@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": true,
+  "local_process_running": false,
   "quota_reset_evidence": {
     "limit_observed": false,
     "remaining_quota": null,
@@ -31,14 +31,12 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Monitor registered cm_mean_mass_projection via harness status and active evidence; never duplicate. On completion collect, four metric specialists, Jev synthesis/next decision, full-panel ledger and compact updates. Strict projected failures remain null; replay controls earn no new reward.",
+  "next_experiment": "Implement/register NEW cm_anchor_support_projection_fullpanel_01 per NEXT_ANCHOR_SUPPORT_PROJECTION_EXPERIMENT.json: exact anchor support with feasible anchor witness, corrected positive values/fill missing fromanchor, zero anchorzero. Sixcontrols incl unprojectedinit and projectedanchor identity, fourconditions. Positive-value redistribution, not detection correction. Strict adaptive100/postcast1e-5/covguard; failures null. Original failed run preserved; nofuturefit.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "cm_mean_mass_projection_fullpanel_01"
-  ],
-  "active_run_path": "private/cm_mean_mass_projection_fullpanel_01",
+  "active_jobs": [],
+  "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -1148,14 +1146,13 @@
     "direct_nearest_source_transfer_allowed": false
   },
   "jev_latest": {
-    "record": "JEV_ROUTE_20260930_02.json",
-    "status": "validated",
-    "input_tokens": 798,
-    "output_tokens": 64,
-    "payload_bytes": 2068,
-    "choice": "external_temporal_data_audit",
-    "confidence": 0.3,
-    "scientific_evidence": false
+    "route": "JEV_TEMPORAL_PROJECTION_FAILURE_ROUTE_20261001_01.json",
+    "usage": {
+      "input_tokens": 639,
+      "output_tokens": 53
+    },
+    "choice": "anchor_support_witness",
+    "confidence": 0.2
   },
   "count_reliability_job": {
     "status": "completed_not_promoted",
@@ -1298,16 +1295,16 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "packet": "JEV_PROJECTION_TEMPORAL_DESIGN_PACKET_20261001_01.json",
-    "route": "JEV_PROJECTION_TEMPORAL_DESIGN_ROUTE_20261001_01.json",
-    "decision": "strict_invalid_no_fallback",
-    "confidence": 1.0,
+    "packet": "JEV_TEMPORAL_PROJECTION_FAILURE_PACKET_20261001_01.json",
+    "route": "JEV_TEMPORAL_PROJECTION_FAILURE_ROUTE_20261001_01.json",
+    "decision": "anchor_support_witness",
+    "confidence": 0.2,
     "usage": {
-      "input_tokens": 810,
-      "output_tokens": 57
+      "input_tokens": 639,
+      "output_tokens": 53
     },
-    "payload_bytes": 1697,
-    "scope": "Prospective biological temporal-test support design; no measured savings."
+    "payload_bytes": 1719,
+    "scope": "New prospective response to temporal structural infeasibility; no measured savings."
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -1901,6 +1898,21 @@
       "specialist_role_version": 2,
       "metric_availability": false,
       "reward_delta": 0
+    },
+    "cm_mean_mass_projection_fullpanel_01": {
+      "status": "completed",
+      "report_sha256": "93306cf73e2bad5e6d94d2b0fc3203529c706cdd8d2579f7ceaf3a979795ac3d",
+      "review": "METRIC_CRITIQUES_CM_PROJECTION_20261001.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": true,
+      "projected_metric_availability": false,
+      "reward_delta": 0
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -1992,10 +2004,12 @@
     "iterations_each": 7
   },
   "cm_mean_mass_projection_job": {
-    "status": "running",
-    "planned_scores": 16,
-    "registered_experiment": "cm_mean_mass_projection",
-    "run": "cm_mean_mass_projection_fullpanel_01",
-    "integration_controls": "passed: adaptive solver/Jacobian/Schur, identity/protection, impossible support, covariance rejection"
+    "status": "completed",
+    "passing_candidates": [],
+    "report_sha256": "93306cf73e2bad5e6d94d2b0fc3203529c706cdd8d2579f7ceaf3a979795ac3d",
+    "next_action": "Implement/register NEW cm_anchor_support_projection_fullpanel_01 per NEXT_ANCHOR_SUPPORT_PROJECTION_EXPERIMENT.json: exact anchor support with feasible anchor witness, corrected positive values/fill missing fromanchor, zero anchorzero. Sixcontrols incl unprojectedinit and projectedanchor identity, fourconditions. Positive-value redistribution, not detection correction. Strict adaptive100/postcast1e-5/covguard; failures null. Original failed run preserved; nofuturefit.",
+    "invalid_conditions": 4,
+    "scored_controls": 12,
+    "critique": "METRIC_CRITIQUES_CM_PROJECTION_20261001.md"
   }
 }

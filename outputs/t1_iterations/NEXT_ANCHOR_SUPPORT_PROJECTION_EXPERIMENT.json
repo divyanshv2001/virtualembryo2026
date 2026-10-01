@@ -1,0 +1,56 @@
+{
+  "status": "predeclared_pending_implementation",
+  "run": "cm_anchor_support_projection_fullpanel_01",
+  "candidates": [
+    "copy",
+    "anchor_unshrunk",
+    "cm_025_replay",
+    "anchor_support_initial",
+    "anchor_projected_identity",
+    "anchor_support_projected"
+  ],
+  "conditions": [
+    {
+      "archive": "cm_capture_calibration_fullpanel_01",
+      "cutoff": 8.0,
+      "target": 9.0,
+      "held_capture": "16"
+    },
+    {
+      "archive": "cm_capture_replication_fullpanel_01",
+      "cutoff": 8.0,
+      "target": 9.0,
+      "held_capture": "33"
+    },
+    {
+      "archive": "cm_capture_calibration_fullpanel_01",
+      "cutoff": 8.25,
+      "target": 9.25,
+      "held_capture": "25"
+    },
+    {
+      "archive": "cm_capture_replication_fullpanel_01",
+      "cutoff": 8.25,
+      "target": 9.25,
+      "held_capture": "24"
+    }
+  ],
+  "seed": 20260928,
+  "truth_count": 1000,
+  "ceiling_count": 1000,
+  "minimum_scores": 20,
+  "maximum_scores": 24,
+  "method": "NEW experiment, not repair of frozen failure. Reconstruct same archives/control hashes. CM mapped block initialization: on EXACT anchor-positive support use correctedCM positive values; if corrected value iszero use original anchor positive value; anchorzero remainszero. Keep nonCM/protectedgenes unchanged. Project this initialization to anchor FORECAST LOGgene means/RAWcellmasses. Anchor itself is an explicit feasible witness for exact support. This tests positive-value redistribution, NOT detection odds/support correction. No futuretruth fitting.",
+  "solver": "joint_margin_solver.solve(adaptive=True),fixed100steps including rejections,initial.001,accept*.3floor1e-9,reject*10ceiling1e3,existingpositivebackoffs/floor",
+  "mean_tolerance": 1e-05,
+  "raw_mass_relative_tolerance": 1e-05,
+  "post_cast_validation": "Recheck both margins afterfloat32cast,finite/nonnegative,locked support,protectedrows/genes exact and existingcovguard<=.4 relativeto donor guardpanel. Rejectviolations, never backoff/fallback counted asprojection success.",
+  "invalid_policy": "Nonconvergence/postcast/support/protection/covariance failure retained null; no fallback. Do not claim numerical convergence from existence of witness. Projected-anchor identity must replay exact anchor SHA; failed identity invalidates batch. Initialization separately scored even if projectedcandidate invalid.",
+  "reward": "Only NEW anchor_support_initial and anchor_support_projected eligible vs anchor if all4valid; replay and identity no reward.",
+  "scope": "Fourcaptureconditions covertwo reused one-day temporalstages,notfourindependentfolds orindependentembryos. Source development only,noofficialupload.",
+  "decision": "Advance only if all4valid and eachheadline beats copy/anchor/replayedCM whilepreservingallfouranchorskills. Report paired comparison to initialization to isolate projection effect. Original readiness gates unchanged.",
+  "predeclared_before_execution": true,
+  "jev_route": "JEV_TEMPORAL_PROJECTION_FAILURE_ROUTE_20261001_01.json",
+  "parent_failure_report_sha256": "93306cf73e2bad5e6d94d2b0fc3203529c706cdd8d2579f7ceaf3a979795ac3d",
+  "support_rule_tuning": "None: fixed exact anchor support and fill rule, no threshold search."
+}

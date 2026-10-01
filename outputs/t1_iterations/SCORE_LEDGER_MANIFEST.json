@@ -1,5 +1,5 @@
 {
-  "records": 2943,
+  "records": 2959,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -80,6 +80,11 @@
       "path": "private/cm_capture_replication_fullpanel_01/report.json",
       "sha256": "d7f567e93e395a72ba4fc00cd25c2a97c93617671096a20edaf96e1cf44cbe3a",
       "outcomes_indexed": 6
+    },
+    {
+      "path": "private/cm_mean_mass_projection_fullpanel_01/report.json",
+      "sha256": "93306cf73e2bad5e6d94d2b0fc3203529c706cdd8d2579f7ceaf3a979795ac3d",
+      "outcomes_indexed": 16
     },
     {
       "path": "private/cnf_alignment_challenge_01/report.json",
@@ -582,9 +587,19 @@
       "outcomes_indexed": 24
     },
     {
+      "path": "private/joint_adaptive_solver_01/report.json",
+      "sha256": "da2d0af16d186e3e72b446b9ec8f2e9dadf52532c855c47cd0ee10c018177dde",
+      "outcomes_indexed": 0
+    },
+    {
       "path": "private/joint_detection_coupling_temporal_01/report.json",
       "sha256": "44c4f4e6d6509730b34876e8e306ff3376ce75a9ede73b97df0e6b6e1faf401a",
       "outcomes_indexed": 8
+    },
+    {
+      "path": "private/joint_margin_solver_01/report.json",
+      "sha256": "dc9a64fba1de1a55b99f63d7fa3c88f2dfa5593597eaaeb822e2bdb6ce2dcd8d",
+      "outcomes_indexed": 0
     },
     {
       "path": "private/kernel_backtest_01/report.json",
@@ -610,6 +625,11 @@
       "path": "private/matched_horizon_audit_01/report.json",
       "sha256": "e993ec02b71ca8b00e638c7b7641a950ca72abf524e2432c323a277d4a6ed18a",
       "outcomes_indexed": 10
+    },
+    {
+      "path": "private/mean_mass_feasibility_01/report.json",
+      "sha256": "827699da95147cb6ba0418ec0df4052eaeb602fcdd7e4955be800c95741fdec3",
+      "outcomes_indexed": 0
     },
     {
       "path": "private/monte_carlo_detection_01/report.json",
@@ -802,6 +822,11 @@
       "outcomes_indexed": 22
     },
     {
+      "path": "private/support_mass_bounds_01/report.json",
+      "sha256": "ba33f91d6a5f598f2228df9ad4dc58bec23c2ed94f7562049490d2d2ad8bfd26",
+      "outcomes_indexed": 0
+    },
+    {
       "path": "private/transport_challenge_01/report.json",
       "sha256": "3c49f11ea661912540e52d83ecae3bc8eeb821a80e7810dd3ff99854d3d29ab2",
       "outcomes_indexed": 21
@@ -839,5 +864,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "6385371f87e71866a974aadbb5517e28474aaf320502ad6c005c31a4f65e13a3"
+  "ledger_sha256": "6086d45598299cbc375388633e2d3bbd211610bb1443511edd98e5008e9d6a18"
 }
