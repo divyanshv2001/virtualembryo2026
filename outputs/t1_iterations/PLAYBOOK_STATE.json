@@ -1,18 +1,16 @@
 {
-  "updated_utc": "2026-10-01T07:38:09.084871+00:00",
+  "updated_utc": "2026-10-01T07:48:20.012867+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "6046af880789c7e96b9ed6d18182cc9a6d0ce41ade6e378ceea811cc5c98c220",
+    "LOCAL_OPTIMIZATION_STATE.json": "60509db6624665572ebae286cf59b03dbc09262568b7a6165eca84547595563f",
     "LOCAL_OPTIMIZATION_PROMPT.md": "dc34e90fa3519a22843971c550774ced585b0bab7dea86ab4fc00c5aee806f38",
-    "METRIC_RESEARCH_QUEUE.json": "f4e0d9d518c610b142327107adaa4e0280c8b91178ada87223ea2b54a8c325f0",
+    "METRIC_RESEARCH_QUEUE.json": "ed016f458a4ca9834ef1e2f488b60c2f3414543a2ca372e9c2d084986c926c73",
     "METRIC_CRITIQUE_POLICY.json": "025beff88fbd06be4f25b4643456853ca5f0c7ee68a66212ab0e1281bcd9a8e5",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [
-    "source_slope_transform_01"
-  ],
-  "next_experiment": "Inspect actual source_slope_transform_01 process/events first; do not duplicate. Finish the frozen10-score matched recent-slope clip/log/count transform ablation. On completion diagnose per-fold four raw metrics/skills, guard-selected backoffs, hashes, matched controls and separate new-candidate rewards; verify refreshed score ledger. Retain failures and logs. Update compact journal/playbook before selecting next viable path. No official upload; >72 readiness remains unmet.",
+  "active_jobs_at_checkpoint": [],
+  "next_experiment": "Declare DE error attribution audit on preserved source_slope_transform_01 forecasts/splits: reproduce log/clip/count hashes; compare scorer-selected BH/effect-size DE sets, rank errors and realized-versus-truth direction at fold8 and8.25. Diagnose temporal direction reversal versus sparse-detection/group-composition effects. Future targets may be used ONLY as labeled posthoc diagnostic evidence, never for fit/backoff/candidate tuning; predeclare new validation before any resulting method. Current transform repairs failed both-fold promotion; do not repeat slope/repair banks.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -29,7 +27,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -276,
+    "current_reward": -356,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -38,7 +36,7 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -276
+    "uncapped_reward": -356
   },
   "official_best": 52.16,
   "latest_official": {

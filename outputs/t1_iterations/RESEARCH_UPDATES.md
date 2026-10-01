@@ -309,3 +309,32 @@ Jev calls0 for this deterministic audit; separate reward remains−276; official
 ## 2026-10-01T07:38:08.902587+00:00 — matched transform ablation launched
 
 Frozen SOURCE_SLOPE_TRANSFORM_PLAN.json before loading/fitting/scoring. Ten planned full-panel evaluations: copy, anchor, recent log repair (exact archived replay required), recent clipping, recent count repair × cutoffs8/8.25 to9/9.25. Same seed20260928,1500donors,1000truth/1000ceiling,32285genes and original scorer/calibration. Backoffs .25/.125/.0625/0 chosen solely by donor mean<=.5/covariance<=.4; repair-specific mass tolerance1e−5. Clipping explicitly has no mass preservation requirement. Only two new candidates receive future separate critique rewards; old log-repair re-evaluation does not duplicate its prior reward. Count conversion streams256genes; temporary forecasts stay onD and close after scoring. Python compiled successfully. One background job (virtualenv parent16320/worker24648), no duplicate training; initial plan event observed, stderr empty. Jev calls0. Results pending; official52.16/readiness gates unchanged.
+
+## 2026-10-01T07:40:25.516092+00:00 — interruption detected
+
+Live process check found no Python process although checkpoint said running. Five completed fold8 scores remain in report.partial.json; latest event is fold8.25 clip forecast frozen. No final report or stderr explanation. Cause unknown. Marked interrupted; recover remaining fold without repeating completed scores. No quota/reset evidence.
+
+## 2026-10-01T07:46:34.714597+00:00 — recovery started
+
+Original executed source, plan and events retained; partial report snapshotted before recovery. Recovery source compiled and frozen separately; original plan hash verified. Fold8 completed scores reused without rescoring. Fold8.25 regenerated forecasts must match every previously frozen prediction hash before target scoring. One live execution session79671, temporary arrays onD. Interruption cause remains unknown. No new Jev calls or official uploads.
+
+## 2026-10-01T07:48:19.853939+00:00 — transform ablation completed after recovery
+
+All10 full-panel outcomes preserved; five fold8 scores reused without recomputation, five fold8.25 scores computed after four interrupted forecast hashes replayed exactly. All methods selected donor-only backoff.125. All calibrations valid. No candidates passed both-fold headline/four-skill promotion. Clipping/count repair failed to outperform old log repair across both folds, despite some improved donor-only fidelity. Source interruption cause remains unknown; original source/plan/events/partial snapshot and recovery source/events retained.
+
+| Candidate | Cutoff | Headline | Raw DE | Raw direction | Raw MMD | Raw variogram | Skill DE | Skill direction | Skill MMD | Skill variogram |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| copy | 8.0 | 50.00000000 | 0.00000000 | 0.00000000 | 0.26304275 | 0.00957364 | 0.50000000 | 0.50000000 | 0.50000000 | 0.50000000 |
+| anchor_unshrunk | 8.0 | 49.70027428 | -0.12330456 | 0.01946834 | 0.25065070 | 0.00965371 | 0.46909765 | 0.50567542 | 0.51243712 | 0.49789168 |
+| slope_recent | 8.0 | 44.21312417 | -0.29346486 | -0.37483490 | 0.28634921 | 0.01219317 | 0.43223235 | 0.41115330 | 0.47817282 | 0.43916492 |
+| slope_clip | 8.0 | 43.76603799 | -0.31935882 | -0.40381362 | 0.29025942 | 0.01238057 | 0.42712437 | 0.40558159 | 0.47469612 | 0.43537528 |
+| slope_count | 8.0 | 43.95338595 | -0.31072750 | -0.39140189 | 0.28842175 | 0.01228844 | 0.42881356 | 0.40794938 | 0.47632373 | 0.43723002 |
+| copy | 8.25 | 50.00000000 | 0.00000000 | 0.00000000 | 0.23757425 | 0.00867326 | 0.50000000 | 0.50000000 | 0.50000000 | 0.50000000 |
+| anchor_unshrunk | 8.25 | 51.17724669 | -0.16013629 | 0.10681215 | 0.20634937 | 0.00820288 | 0.45982906 | 0.53324317 | 0.53558851 | 0.51413927 |
+| slope_recent | 8.25 | 51.37190052 | 0.00681431 | 0.15230912 | 0.22387567 | 0.00928400 | 0.50186567 | 0.54878480 | 0.51501314 | 0.48276222 |
+| slope_clip | 8.25 | 51.03588254 | -0.01703578 | 0.14734446 | 0.22604270 | 0.00939057 | 0.49539595 | 0.54704499 | 0.51257841 | 0.47987534 |
+| slope_count | 8.25 | 51.16044659 | -0.00681431 | 0.15084299 | 0.22589910 | 0.00935292 | 0.49814815 | 0.54826986 | 0.51273904 | 0.48089126 |
+
+Score ledger refreshed:2915records,160reports,0errors. New clip/count candidates each earned−40 in the separate critique reward; total−356. Replayed old log/control candidates earned no duplicate rewards. Original benchmark score/calibration/readiness gates unchanged. Official best52.16. No better submission candidate identified by this batch. Jev calls0 for deterministic recovery; no quota resets observed.
+
+Declare DE error attribution audit on preserved source_slope_transform_01 forecasts/splits: reproduce log/clip/count hashes; compare scorer-selected BH/effect-size DE sets, rank errors and realized-versus-truth direction at fold8 and8.25. Diagnose temporal direction reversal versus sparse-detection/group-composition effects. Future targets may be used ONLY as labeled posthoc diagnostic evidence, never for fit/backoff/candidate tuning; predeclare new validation before any resulting method. Current transform repairs failed both-fold promotion; do not repeat slope/repair banks.

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T07:38:08.902587+00:00",
+  "updated_utc": "2026-10-01T07:48:19.853939+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": true,
+  "local_process_running": false,
   "quota_reset_evidence": {
     "limit_observed": false,
     "remaining_quota": null,
@@ -31,14 +31,12 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Inspect actual source_slope_transform_01 process/events first; do not duplicate. Finish the frozen10-score matched recent-slope clip/log/count transform ablation. On completion diagnose per-fold four raw metrics/skills, guard-selected backoffs, hashes, matched controls and separate new-candidate rewards; verify refreshed score ledger. Retain failures and logs. Update compact journal/playbook before selecting next viable path. No official upload; >72 readiness remains unmet.",
+  "next_experiment": "Declare DE error attribution audit on preserved source_slope_transform_01 forecasts/splits: reproduce log/clip/count hashes; compare scorer-selected BH/effect-size DE sets, rank errors and realized-versus-truth direction at fold8 and8.25. Diagnose temporal direction reversal versus sparse-detection/group-composition effects. Future targets may be used ONLY as labeled posthoc diagnostic evidence, never for fit/backoff/candidate tuning; predeclare new validation before any resulting method. Current transform repairs failed both-fold promotion; do not repeat slope/repair banks.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "source_slope_transform_01"
-  ],
-  "active_run_path": "private/source_slope_transform_01",
+  "active_jobs": [],
+  "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -1230,7 +1228,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -276,
+    "current_reward": -356,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1239,7 +1237,7 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -276
+    "uncapped_reward": -356
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -1601,9 +1599,59 @@
     "next_action": "Declare and run matched recent-slope transform full-panel ablation: persistence, archived anchor, old mapped-log repair, clip-only, and mapped-expm1 count repair on cutoffs8/8.25 one-day horizons. Freeze donor-only backoffs [.25,.125,.0625,0], same mean<=.5/covariance<=.4 guards, unchanged32285-gene scorer/calibration and seed/splits. Declare transform-specific mass checks (log/count relative error<=1e-5; clip-only reports mass change without preservation). Select recent slope from donor-only audit; count repair worsened global/lineage sign fidelity. Freeze forecasts before target reads. This is reused-development evidence, not readiness validation."
   },
   "source_slope_transform_job": {
-    "status": "running",
+    "status": "completed",
     "planned_scores": 10,
-    "completed_scores": 0,
-    "plan_sha256": "8d38a97ecd2088ee1f0e66bbe9d048bc093d810e681ea8a5116f620f69cb7ada"
+    "completed_scores": 10,
+    "plan_sha256": "8d38a97ecd2088ee1f0e66bbe9d048bc093d810e681ea8a5116f620f69cb7ada",
+    "recovery_session": 79671,
+    "report_sha256": "d2a540b590e68c7262c1c28be7d6b933b9f118e774343959bc63bab4ee2ba6c8",
+    "passing_candidates": [],
+    "recovery_completed": true,
+    "remaining_scores_computed": 5,
+    "original_scores_reused": 5
+  },
+  "source_slope_transform_result": {
+    "report": "SOURCE_SLOPE_TRANSFORM_RESULTS.json",
+    "report_sha256": "d2a540b590e68c7262c1c28be7d6b933b9f118e774343959bc63bab4ee2ba6c8",
+    "plan_sha256": "8d38a97ecd2088ee1f0e66bbe9d048bc093d810e681ea8a5116f620f69cb7ada",
+    "passing_candidates": [],
+    "scores": [
+      {
+        "candidate": "copy",
+        "scores": [
+          50.0,
+          50.0
+        ]
+      },
+      {
+        "candidate": "anchor_unshrunk",
+        "scores": [
+          49.70027428098265,
+          51.17724668869285
+        ]
+      },
+      {
+        "candidate": "slope_recent",
+        "scores": [
+          44.213124174966204,
+          51.371900515978
+        ]
+      },
+      {
+        "candidate": "slope_clip",
+        "scores": [
+          43.76603799339288,
+          51.035882541914624
+        ]
+      },
+      {
+        "candidate": "slope_count",
+        "scores": [
+          43.953385945959354,
+          51.160446587118045
+        ]
+      }
+    ],
+    "next_action": "Declare DE error attribution audit on preserved source_slope_transform_01 forecasts/splits: reproduce log/clip/count hashes; compare scorer-selected BH/effect-size DE sets, rank errors and realized-versus-truth direction at fold8 and8.25. Diagnose temporal direction reversal versus sparse-detection/group-composition effects. Future targets may be used ONLY as labeled posthoc diagnostic evidence, never for fit/backoff/candidate tuning; predeclare new validation before any resulting method. Current transform repairs failed both-fold promotion; do not repeat slope/repair banks."
   }
 }

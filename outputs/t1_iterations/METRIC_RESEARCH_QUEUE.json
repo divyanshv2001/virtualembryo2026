@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T07:38:08.902587+00:00",
+  "updated_utc": "2026-10-01T07:48:19.853939+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -6047,7 +6047,7 @@
     },
     {
       "id": "source_slope_transform_ablation",
-      "status": "running",
+      "status": "completed_not_promoted",
       "research_family_exhausted": false,
       "plan": "SOURCE_SLOPE_TRANSFORM_PLAN.json",
       "private_run": "private/source_slope_transform_01",
@@ -6064,7 +6064,11 @@
         "slope_clip",
         "slope_count"
       ],
-      "next_action": "Inspect actual source_slope_transform_01 process/events first; do not duplicate. Finish the frozen10-score matched recent-slope clip/log/count transform ablation. On completion diagnose per-fold four raw metrics/skills, guard-selected backoffs, hashes, matched controls and separate new-candidate rewards; verify refreshed score ledger. Retain failures and logs. Update compact journal/playbook before selecting next viable path. No official upload; >72 readiness remains unmet."
+      "next_action": "Declare DE error attribution audit on preserved source_slope_transform_01 forecasts/splits: reproduce log/clip/count hashes; compare scorer-selected BH/effect-size DE sets, rank errors and realized-versus-truth direction at fold8 and8.25. Diagnose temporal direction reversal versus sparse-detection/group-composition effects. Future targets may be used ONLY as labeled posthoc diagnostic evidence, never for fit/backoff/candidate tuning; predeclare new validation before any resulting method. Current transform repairs failed both-fold promotion; do not repeat slope/repair banks.",
+      "report": "SOURCE_SLOPE_TRANSFORM_RESULTS.json",
+      "report_sha256": "d2a540b590e68c7262c1c28be7d6b933b9f118e774343959bc63bab4ee2ba6c8",
+      "full_panel_scores": 10,
+      "passing_candidates": []
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",

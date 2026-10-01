@@ -1,5 +1,5 @@
 {
-  "records": 2905,
+  "records": 2915,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -452,6 +452,11 @@
       "outcomes_indexed": 0
     },
     {
+      "path": "private/forecast_transform_fidelity_01/report.json",
+      "sha256": "3d82c762b0c0b3e1bbdc5c73727b0e940a61b14a586f773c4103193f38afcadb",
+      "outcomes_indexed": 0
+    },
+    {
       "path": "private/full_atlas_stage_means_01/report.json",
       "sha256": "129194a0ce4efc5c89567e7a774e4711d2456346906d89025da197f88b471329",
       "outcomes_indexed": 0
@@ -727,6 +732,11 @@
       "outcomes_indexed": 10
     },
     {
+      "path": "private/source_slope_transform_01/report.json",
+      "sha256": "d2a540b590e68c7262c1c28be7d6b933b9f118e774343959bc63bab4ee2ba6c8",
+      "outcomes_indexed": 10
+    },
+    {
       "path": "private/specialist_integration_01/report.json",
       "sha256": "8fd419d544c764a4e201a8fc25a4b16eb6081d97be17ff272f6e6f0c2b6d54b8",
       "outcomes_indexed": 21
@@ -794,5 +804,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "099346718dbbec72c1829d5d40dd7a10064f9f22455e0830b13f71761d505236"
+  "ledger_sha256": "cdcf612002c963b795f7d0536116df0e2f6e55e550ee4242c5919a5e9656cc87"
 }
