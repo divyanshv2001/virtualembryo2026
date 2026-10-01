@@ -1,0 +1,220 @@
+{
+  "updated_utc": "2026-10-01T06:35:27.474641+00:00",
+  "plan_sha256": "bc3d4da4d0acf99fc605bdba210f7764b355045b9ea0fee7f65601ffa65397b0",
+  "outcomes": [
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "fit_rows": 7963,
+      "current_state_mean": [
+        0.1952415555715561,
+        -0.1062173992395401,
+        -0.0595242977142334,
+        -0.8901580572128296,
+        -0.1251615732908249,
+        -0.11502566188573837,
+        0.35879814624786377,
+        0.07045019418001175
+      ],
+      "results": {
+        "copy": {
+          "signed_top200_overlap": 0.0,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.11420612813370473,
+          "partial_spearman": 0.0
+        },
+        "recent_linear": {
+          "signed_top200_overlap": 0.0075,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.10584958217270196,
+          "partial_spearman": -0.4038197105549282
+        },
+        "global": {
+          "signed_top200_overlap": 0.1,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.002785515320334249,
+          "partial_spearman": -0.024763364797095604
+        },
+        "interaction_10000.0": {
+          "signed_top200_overlap": 0.09,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.013927576601671307,
+          "partial_spearman": -0.036376093097147275
+        },
+        "interaction_100000.0": {
+          "signed_top200_overlap": 0.1,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.002785515320334249,
+          "partial_spearman": -0.02593905366488016
+        },
+        "past_ols": {
+          "signed_top200_overlap": 0.0425,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.06685236768802227,
+          "partial_spearman": -0.270603519614682
+        },
+        "global_blend0.1": {
+          "signed_top200_overlap": 0.0075,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.10584958217270196,
+          "partial_spearman": -0.40195378224507916
+        },
+        "interaction_10000.0_blend0.1": {
+          "signed_top200_overlap": 0.0075,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.10584958217270196,
+          "partial_spearman": -0.4040709140445509
+        },
+        "interaction_100000.0_blend0.1": {
+          "signed_top200_overlap": 0.0075,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.10584958217270196,
+          "partial_spearman": -0.40209380734312444
+        },
+        "past_ols_blend0.1": {
+          "signed_top200_overlap": 0.01,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.10306406685236769,
+          "partial_spearman": -0.40368361451602525
+        },
+        "global_blend0.25": {
+          "signed_top200_overlap": 0.0125,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.10027855153203342,
+          "partial_spearman": -0.3938713475879593
+        },
+        "interaction_10000.0_blend0.25": {
+          "signed_top200_overlap": 0.01,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.10306406685236769,
+          "partial_spearman": -0.39745119389358263
+        },
+        "interaction_100000.0_blend0.25": {
+          "signed_top200_overlap": 0.0125,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.10027855153203342,
+          "partial_spearman": -0.39420538668274874
+        },
+        "past_ols_blend0.25": {
+          "signed_top200_overlap": 0.0125,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.10027855153203342,
+          "partial_spearman": -0.4009526803861332
+        }
+      }
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "fit_rows": 9000,
+      "current_state_mean": [
+        -0.16705258190631866,
+        -0.317748486995697,
+        -0.2028585970401764,
+        0.24888956546783447,
+        0.13738349080085754,
+        -0.27226921916007996,
+        0.13145564496517181,
+        0.17207732796669006
+      ],
+      "results": {
+        "copy": {
+          "signed_top200_overlap": 0.0,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": -0.20481927710843376,
+          "partial_spearman": 0.0
+        },
+        "recent_linear": {
+          "signed_top200_overlap": 0.1925,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.027108433734939753,
+          "partial_spearman": 0.07671315505701229
+        },
+        "global": {
+          "signed_top200_overlap": 0.085,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": -0.10240963855421688,
+          "partial_spearman": -0.14320778655613764
+        },
+        "interaction_10000.0": {
+          "signed_top200_overlap": 0.085,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": -0.10240963855421688,
+          "partial_spearman": -0.14545945642225774
+        },
+        "interaction_100000.0": {
+          "signed_top200_overlap": 0.085,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": -0.10240963855421688,
+          "partial_spearman": -0.1440651528950219
+        },
+        "past_ols": {
+          "signed_top200_overlap": 0.08,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": -0.10843373493975905,
+          "partial_spearman": -0.20290993687330064
+        },
+        "global_blend0.1": {
+          "signed_top200_overlap": 0.1875,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.021084337349397575,
+          "partial_spearman": 0.06747305846519751
+        },
+        "interaction_10000.0_blend0.1": {
+          "signed_top200_overlap": 0.1875,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.021084337349397575,
+          "partial_spearman": 0.06723817095835224
+        },
+        "interaction_100000.0_blend0.1": {
+          "signed_top200_overlap": 0.1875,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.021084337349397575,
+          "partial_spearman": 0.06730915810950584
+        },
+        "past_ols_blend0.1": {
+          "signed_top200_overlap": 0.19,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.024096385542168666,
+          "partial_spearman": 0.06031484242723221
+        },
+        "global_blend0.25": {
+          "signed_top200_overlap": 0.185,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.018072289156626488,
+          "partial_spearman": 0.05440700360221965
+        },
+        "interaction_10000.0_blend0.25": {
+          "signed_top200_overlap": 0.185,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.018072289156626488,
+          "partial_spearman": 0.05426913050744371
+        },
+        "interaction_100000.0_blend0.25": {
+          "signed_top200_overlap": 0.185,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.018072289156626488,
+          "partial_spearman": 0.054319809214051135
+        },
+        "past_ols_blend0.25": {
+          "signed_top200_overlap": 0.1725,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.0030120481927710537,
+          "partial_spearman": 0.03563285787284788
+        }
+      }
+    }
+  ],
+  "passing_candidates": [],
+  "proxy_evaluations": 28,
+  "full_panel_scores": 0,
+  "reward_delta": 0,
+  "invariant_checks_passed": [
+    "constant_response",
+    "zero_interaction_reduces_to_global",
+    "finite_zero_sum_contrasts"
+  ],
+  "independent_embryo_validation": false,
+  "next_action": "Reject this latent state*time bank; next declared lineage-specific temporal interaction with partial pooling or transport uncertainty calibration. Entire state-dependent scientific family remains open.",
+  "report_sha256": "012aaf9f3d05df5d938841b68a4cd2b69c51526b7eb6a43ed04c9372819f3f4d"
+}
