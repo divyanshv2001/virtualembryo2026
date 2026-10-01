@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-10-01T05:24:18.656995+00:00",
+  "code_sha256": "e6d806ce89e78d7c88bb928c9ddf8a6153154be9f9ccbfb77988253e54380cb6",
+  "inputs_sha256": {
+    "private\\geo_early_biotype_audit_02\\gene_annotation.json": "ba1b4bad34144bf103ffe7e8b91ffd6374ed205b631f439b773c42fef839863e",
+    "private\\associated_prepared_01\\genes.csv": "51257824507698bda4200179b69b0e7550d0dc456e80691894fe8b717fbb07b7",
+    "GSE76118_EARLY_SCHEMA_RESULTS.json": "869eacc02520df0f91fff1fb17a2273cee3519f510a0d323d99c6199f92f2cdd"
+  },
+  "panel_sha256": "2aeae4cd284933956242bbc9c5ab4f565c1d2acc7cc3fd3037977e4bce8be4bf",
+  "eligibility": "Strict CD1 E8.5/E9.5 manifest only; mutants excluded, B6 controls separate. E9.5 never trains E8.5 validation.",
+  "prospective_qc": {
+    "minimum_assigned_gene_counts": 1000000,
+    "minimum_protein_coding_assigned_fraction": 0.8,
+    "maximum_unknown_biotype_assigned_fraction": 0.01,
+    "nonnegative_integer_counts_required": true,
+    "reject_archived_paired_reads_below_one_million_when_verified": true
+  },
+  "qc_interpretation": "Independent conservative count-depth screen, not exact reproduction of paper total-read QC or analyzed-cell IDs. Cohort assay/embryo validation still required.",
+  "mapping_rule": "Build stable-ID candidates from associated atlas and Ensembl79 names restricted to panel; retain only IDs having exactly one candidate panel symbol and symbols having exactly one candidate ID. Reject all ambiguity; no fuzzy aliases.",
+  "unmapped_gene_policy": "Unknown coverage, never zero-fill for a forecast; external data only informs mapped genes with matched incumbent backoff elsewhere.",
+  "acquisition_budget_next_batch": {
+    "maximum_cells": 24,
+    "maximum_compressed_expression_bytes": 48000000,
+    "selection": "Stage/region-stratified lexical GSM order frozen before expression download; retain QC failures, no replacement based on performance."
+  },
+  "promotion_gate": "No external forecast promotion without past-only matched-control full-panel temporal test; original >=64 replicate mean/lower-tail >72 gate unchanged.",
+  "models_fit": 0,
+  "full_panel_scores": 0
+}

@@ -1,0 +1,56 @@
+{
+  "updated_utc": "2026-10-01T05:24:19.192218+00:00",
+  "policy_sha256": "0cdb04d9f3e23c4817c11889eee553668a603e4c0fb0dc5d0ea9297b37f0e1d8",
+  "mapping_sha256": "3b2188128403a481765cf9fd5de945be647751b47f3bcc280f535ae53f2be57c",
+  "unique_panel_mapping_genes": 28266,
+  "panel_size": 32285,
+  "mapping_coverage_fraction": 0.8755149450209075,
+  "ambiguous_stable_ids": 44,
+  "outcomes": [
+    {
+      "gsm": "GSM2035425",
+      "stage": "E8.5",
+      "prospective_count_qc_pass": true,
+      "rejection_reasons": [],
+      "original_paper_qc_passed": null,
+      "mapped_panel_genes": 27179,
+      "mapped_assigned_count_fraction": 0.9807069396035577
+    },
+    {
+      "gsm": "GSM2035596",
+      "stage": "E8.5",
+      "prospective_count_qc_pass": true,
+      "rejection_reasons": [],
+      "original_paper_qc_passed": null,
+      "mapped_panel_genes": 27179,
+      "mapped_assigned_count_fraction": 0.9743647273675972
+    },
+    {
+      "gsm": "GSM2033420",
+      "stage": "E9.5",
+      "prospective_count_qc_pass": false,
+      "rejection_reasons": [
+        "assigned_gene_counts_below_1000000",
+        "verified_archived_paired_read_estimate_82198_below_1000000"
+      ],
+      "original_paper_qc_passed": null,
+      "mapped_panel_genes": 27179,
+      "mapped_assigned_count_fraction": 0.9786080144621874
+    },
+    {
+      "gsm": "GSM2034877",
+      "stage": "E9.5",
+      "prospective_count_qc_pass": true,
+      "rejection_reasons": [],
+      "original_paper_qc_passed": null,
+      "mapped_panel_genes": 27179,
+      "mapped_assigned_count_fraction": 0.9811615403590113
+    }
+  ],
+  "models_fit": 0,
+  "full_panel_scores": 0,
+  "reward_delta": 0,
+  "training_ready": false,
+  "next_gate": "Freeze 24-cell stage/region-only selection plan, audit cohort/QC/assay compatibility on disk before any transfer model.",
+  "mapping_coverage_interpretation": "Annotation union includes IDs absent from the historical count matrix; actual pilot coverage27179/32285=84.18%, distinct from annotation union87.55%."
+}

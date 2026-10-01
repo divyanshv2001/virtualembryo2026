@@ -31,7 +31,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Freeze prospective early-CD1 QC and conservative stable-ID/panel mapping from cached annotations; archive depth for GSM2033420 is below threshold (41099 paired spots). Three other pilot depth records remain unavailable after CAPTCHA responses. Investigate metadata-only source availability without bypass; do not enlarge expression acquisition or train until cohort/mapping rules are frozen. E9.5 never fits an E8.5 backtest.",
+  "next_experiment": "Freeze 24-cell strict CD1 E8.5/E9.5 stage/region-stratified lexical selection before bounded individual expression acquisition (48MBcompressed maximum). Apply frozen prospective assigned-count/biotype QC, retain exclusions, audit normalization/assay/embryo metadata. Use conservative mapping actual historical panel coverage27179/32285=84.18%; missing genes back off to incumbent, never zero. Do not fit transfer models before compatibility audit; E9.5 cannot train E8.5 backtests.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1322,7 +1322,9 @@
     "latest_schema_report": "GSE76118_EARLY_SCHEMA_RESULTS.json",
     "latest_mapping_report": "GSE76118_EARLY_MAPPING_RESULTS.json",
     "latest_biotype_report": "GSE76118_EARLY_BIOTYPE_RESULTS.json",
-    "latest_read_metadata_report": "GSE76118_EARLY_READ_METADATA_RESULTS.json"
+    "latest_read_metadata_report": "GSE76118_EARLY_READ_METADATA_RESULTS.json",
+    "prospective_policy": "GSE76118_PROSPECTIVE_QC_POLICY.json",
+    "prospective_policy_results": "GSE76118_PROSPECTIVE_POLICY_RESULTS.json"
   },
   "external_schema_audit": {
     "status": "completed_training_not_ready",
@@ -1346,6 +1348,17 @@
     "annotation_archive_bytes": 24613530,
     "first_attempt": "expanded bound exceeded; private failure retained",
     "retry": "same checksum-verified compressed archive; no duplicate download",
+    "models_fit": 0,
+    "full_panel_scores": 0
+  },
+  "external_prospective_policy": {
+    "pilot_passes": 3,
+    "pilot_rejections": 1,
+    "annotation_union_mapping_genes": 28266,
+    "actual_historical_count_mapping_genes": 27179,
+    "panel_size": 32285,
+    "ambiguous_stable_ids_rejected": 44,
+    "original_paper_qc_reconstructed": false,
     "models_fit": 0,
     "full_panel_scores": 0
   }

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T05:20:50.827812+00:00",
+  "updated_utc": "2026-10-01T05:25:00.733967+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5878,17 +5878,19 @@
         "mmd_u",
         "variogram"
       ],
-      "status": "matching_biotypes_resolved_depth_metadata_partial",
+      "status": "prospective_qc_and_mapping_frozen_three_of_four_pilots_pass",
       "implementation": "T1_EXTERNAL_TEMPORAL_DATA_AUDIT.json",
       "hypothesis_and_limits": "An independently sourced eligible earlier-stage heart time series could improve temporal validation and training. Official challenge has only E8.5/E9.5 released Task 1 RNA; external data after E9.5 through E13.5 inclusive are prohibited. Any mixed-stage resource requires stage-level filtering before expression use.",
-      "declared_experiment_and_result": "Four predeclared CD1 files (2E8.5/2E9.5, distinct regions) downloaded separately, stage/genotype checked, 541173compressedbytes total. Each43629ENSMUSGinteger-count genes; assignedcount sums1234278/1533200/19914/1629698. Existing annotation maps25621/32285panelgenes (79.36%); four cells are not representative. Raw reads/protein-coding QC unavailable, original QC pass unknown. No model fit or full-panel score. Mutants remain excluded; no mixed-stage archive. Matching Ensembl79 annotation covers43629IDs; four protein assignedfractions96.86-97.79%, unique historicalsymbol panelcoverage25931/32285=80.319%. GSM2033420 archive41099pairedspots (82198readestimate), other metadata blocked. Initial500MBexpanded bound failed; checksum-reused1GBstream limit succeeds669443027bytes. No training/score/reward.",
-      "next_action": "Freeze prospective early-CD1 QC and conservative stable-ID/panel mapping from cached annotations; archive depth for GSM2033420 is below threshold (41099 paired spots). Three other pilot depth records remain unavailable after CAPTCHA responses. Investigate metadata-only source availability without bypass; do not enlarge expression acquisition or train until cohort/mapping rules are frozen. E9.5 never fits an E8.5 backtest.",
+      "declared_experiment_and_result": "Four predeclared CD1 files (2E8.5/2E9.5, distinct regions) downloaded separately, stage/genotype checked, 541173compressedbytes total. Each43629ENSMUSGinteger-count genes; assignedcount sums1234278/1533200/19914/1629698. Existing annotation maps25621/32285panelgenes (79.36%); four cells are not representative. Raw reads/protein-coding QC unavailable, original QC pass unknown. No model fit or full-panel score. Mutants remain excluded; no mixed-stage archive. Matching Ensembl79 annotation covers43629IDs; four protein assignedfractions96.86-97.79%, unique historicalsymbol panelcoverage25931/32285=80.319%. GSM2033420 archive41099pairedspots (82198readestimate), other metadata blocked. Initial500MBexpanded bound failed; checksum-reused1GBstream limit succeeds669443027bytes. No training/score/reward. Frozen independent assignedcounts>=1M/protein>=.8/unknownbiotype<=.01 screen passes3/4pilots; lowdepthGSM2033420excluded. Conservative ID-symbol union rejects44ambiguousIDs, actualhistoricalpanelcoverage27179/32285=84.18%; annotationunion28266includesabsentIDs. No zeroimputation/fits/scores/reward.",
+      "next_action": "Freeze 24-cell strict CD1 E8.5/E9.5 stage/region-stratified lexical selection before bounded individual expression acquisition (48MBcompressed maximum). Apply frozen prospective assigned-count/biotype QC, retain exclusions, audit normalization/assay/embryo metadata. Use conservative mapping actual historical panel coverage27179/32285=84.18%; missing genes back off to incumbent, never zero. Do not fit transfer models before compatibility audit; E9.5 cannot train E8.5 backtests.",
       "research_family_exhausted": false,
       "results_report": "GSE76118_QC_PROVENANCE_AUDIT.json",
       "schema_results": "GSE76118_EARLY_SCHEMA_RESULTS.json",
       "mapping_results": "GSE76118_EARLY_MAPPING_RESULTS.json",
       "biotype_results": "GSE76118_EARLY_BIOTYPE_RESULTS.json",
-      "read_metadata_results": "GSE76118_EARLY_READ_METADATA_RESULTS.json"
+      "read_metadata_results": "GSE76118_EARLY_READ_METADATA_RESULTS.json",
+      "prospective_policy": "GSE76118_PROSPECTIVE_QC_POLICY.json",
+      "prospective_results": "GSE76118_PROSPECTIVE_POLICY_RESULTS.json"
     },
     {
       "id": "lineage_standardized_residual_proxy",
