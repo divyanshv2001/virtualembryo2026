@@ -1,0 +1,49 @@
+{
+  "status": "predeclared_pending_implementation",
+  "run": "cm_projection_survival_audit_01",
+  "conditions": [
+    {
+      "archive": "cm_capture_calibration_fullpanel_01",
+      "cutoff": 8.0,
+      "target": 9.0,
+      "held_capture": "16"
+    },
+    {
+      "archive": "cm_capture_replication_fullpanel_01",
+      "cutoff": 8.0,
+      "target": 9.0,
+      "held_capture": "33"
+    },
+    {
+      "archive": "cm_capture_calibration_fullpanel_01",
+      "cutoff": 8.25,
+      "target": 9.25,
+      "held_capture": "25"
+    },
+    {
+      "archive": "cm_capture_replication_fullpanel_01",
+      "cutoff": 8.25,
+      "target": 9.25,
+      "held_capture": "24"
+    }
+  ],
+  "seed": 20260928,
+  "parent_report_sha256": "5cd91cadca3941a1a36f8904cfa67e09cb320ae0bc107709744380092fb80657",
+  "jev_route": "JEV_SHRINKAGE_SYNTHESIS_ROUTE_20261001_01.json",
+  "method": "Reconstruct identical archived capture-excluded models/anchors/CM.25, verify originalprediction hashes. Generate exactanchor-support initializations and strictprojected beta1/.25 withsame settings; match storedforecast hashes inbothcompletedreports. NO futureexpression/targetrows expression/scorer/calibration read. Forecast targettime only from frozenplan. Original scoredreports preserved.",
+  "diagnostics": [
+    "CM mapped LOG residual Frobeniusnorm, relative toanchor, survival ratio andcosine forinitial/projection separately",
+    "full-vsquarter projected L2/maxabsolute difference andsensitivityratio relativeinitial difference",
+    "Within-CM per-gene rank changes viachunked tie-aware ranks; countpositiveentries andgenes, report denominators",
+    "Linear constraint Jacobian J at anchor withmean_scale=max(geneLOGmean,.1),mass_scale=max(rowRAWmass,1e-12); vT=v-JT(JJT+lambdaI)^-1Jv. Use existingcellSchur joint_step atfixedlambda1e-9, neverdensevariableJacobian. Reporttangentnorm/cosine andJvT residual; regularizedlinear diagnostic, notnonlinearfeasibility."
+  ],
+  "controls": [
+    "zeroresidual anchoridentity withundefinedratios/cosines null",
+    "existinganalyticJacobian finitedifference andSchur/dense tinycontrol",
+    "support/protection/finite checks andexactarchivedfull/quarterprediction hashes; failures invalidateaudit,neverfallback"
+  ],
+  "decision": "Numerically informative if nonzero initial correction andfinite well-defined summaries,verifiedcontrolhashes,structuredJacobiancontrols pass. Diagnose suppression or lackofamplituderesponse only from measuredratios,notheadlines. No arbitrarysuccessclaim. Any futuretangentforecast/shufflednegativecontrol independentlypredeclared before scoring; nofits fromfuturetruth.",
+  "metrics": "All benchmarkheadline/raw4/skills4 unavailable/null; auditonly,no reward or readiness advancement. Fourcaptures/two reused stages, notindependentvalidation.",
+  "predeclared_before_execution": true,
+  "resources": "Donlydisposable forecastcache,oneconditionatatime,2threads,16GBRAM; rankchunks512,celldenseSchur<=134. Preserve smallhashes/events/diagnosticreports only."
+}

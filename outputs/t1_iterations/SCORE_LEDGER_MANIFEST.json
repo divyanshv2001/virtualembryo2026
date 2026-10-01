@@ -1,5 +1,5 @@
 {
-  "records": 2983,
+  "records": 3007,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -74,6 +74,11 @@
     {
       "path": "private/cm_anchor_support_projection_fullpanel_01/report.json",
       "sha256": "36ea00923e346b70a531d1181fbe15fe0361e12c73adc6b0096130c829327a08",
+      "outcomes_indexed": 24
+    },
+    {
+      "path": "private/cm_anchor_support_shrinkage_fullpanel_01/report.json",
+      "sha256": "5cd91cadca3941a1a36f8904cfa67e09cb320ae0bc107709744380092fb80657",
       "outcomes_indexed": 24
     },
     {
@@ -869,5 +874,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "122f61e928e0671b750e977f20a0b31ec59b95a380b200c45f67028ba7d450d3"
+  "ledger_sha256": "eb497435364f90b32f1010b098b72eb18d76b4df3c839155b1bdacc8d6bf47e4"
 }

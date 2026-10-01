@@ -1,0 +1,51 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "9dd0b1f2391b44b58a7b438324316b68de9ff5bb7655dacbe4d41ac170b1c810",
+  "attempts": 1,
+  "payload_bytes": 1977,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "purpose": "Choose decisive bounded next step after two feasible forecast-margin amplitude tests failed.",
+      "evidence": {
+        "quarter_headline_loss_vsanchor": [
+          -0.0004372189585239994,
+          -0.027338969957902748,
+          -0.048594448886198904,
+          -0.05673827455802183
+        ],
+        "quarter_minus_full_projected_headline": [
+          -1.3619449021007313e-05,
+          7.041543881314283e-08,
+          -1.140264197374563e-05,
+          -1.418867370261978e-06
+        ]
+      },
+      "facts": "All24 quarter outcomes valid, exactarchivedreplay/identity. Fixedbeta1 andbeta.25 projectedheadlines nearlysame, bothbelowanchor all4. Mean direction skills regress,CSS improves3/4,MMDmixed. Four specialists independently suggest correction-survival/tangent diagnostic, notmore exposedstrengthtuning. Numericalcompatibility isnotpredictionbenefit.4captures=2reusedstages.",
+      "constraints": "Do not claim collapse fromscoresalone. Past/current archivedmodels andforecasts only, no futureexpression in diagnostic, no new officialupload. Dcache16GB2threads; preservefailureallraw4/skills4/rewards. Distinctscorelessdiagnosticmust label allbenchmarkmetrics unavailable/reward0."
+    },
+    "questions": {
+      "next_step": {
+        "type": "choice",
+        "instructions": "Select order that distinguishes null information from destructive projection before new full-score experiments.",
+        "criteria": {
+          "survival_tangent_audit_first": "Replay anchored/CM/full/quarter forecasts withoutreading futureexpression. Measure proposed-vs-surviving Frobenius displacement, cosine, rankchanges, sensitivity, linear tangent component vT=v-JT(JJT+lambdaI)^-1Jv usingexisting structuredSchur solver. Freeze diagnostics/identity/Jacobiancontrols; no scoreclaim. Predeclare later matched tangentmethod onlyif diagnostic informative.",
+          "tangent_method_immediately": "Implement tangent correction and fullscore directly; larger followupwithoutknowing whether usefulsignal survives.",
+          "close_bounded_amplitude_path": "Preserve completednegatives andprioritize otherdeclaredpopulation/decoder mechanism; broadfamilyremainsopen."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 935,
+    "output_tokens": 65
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "next_step": {
+      "choice": "survival_tangent_audit_first",
+      "confidence": 1.0
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}

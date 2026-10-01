@@ -500,3 +500,7 @@ All24valid, archive/identityhashes exact; projected4/5/5/5steps, postcastmargins
 ## 2026-10-01 Fixed quarter-strength comparison launched
 
 Implemented/registered cm_anchor_support_shrinkage_fullpanel_01, single beta.25 inLOGspace afterexactanchor-support initialization. Sixmatchedcandidates/4captureconditions; samearchives/controlhashes/scoring/calibration. Passed support/fill,strength,protectedregions,zerocorrectionidentity andfeasibleprojection controls. Dcache,2threads,harnessuniquelaunch. CachedJevofprevioussynthesis used,no routinenewcall. Reuseddevelopment outcomesguidehypotheses,notindependentvalidation; nofutureexpressionfit/officialupload.
+
+## 2026-10-01 Quarter-strength batch complete: no promotion
+
+24validscores/exactreplays andidentity, bothnewcandidates belowanchor all4. Quarter/full projectedheadlinedifferences<=1.4e-5 doNOTprovenumericalcollapse. Allraw4/skills4 preserved,ledger24newrecords; newreward-29each,batch-58,current-598 separatelyfrombenchmark. Fourfreshpacket specialistscompleted. Jevdistinctdecision1977bytes935input65output selectedsurvival_tangent_audit_first confidence1. New forecast-onlycontrolhash/displacement/rank/tangent diagnostic predeclared; nofutureexpressionornewscore/reward. Formula vT=v-JT(JJT+lambdaI)^-1Jv isregularizedlineardiagnostic,notvalidatednonlinearforecastbenefit. No furtherexposedamplitudegrid/officialupload/improvedexport; declaredcoverage remainsopen.
