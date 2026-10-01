@@ -185,6 +185,11 @@
       "script": "capture_amplitude_matched_preflight.py",
       "run": "private/capture_amplitude_matched_preflight_01",
       "report": "CAPTURE_AMPLITUDE_MATCHED_PREFLIGHT_RESULTS.json"
+    },
+    "capture_decoded_energy": {
+      "script": "capture_decoded_energy_preflight.py",
+      "run": "private/capture_decoded_energy_preflight_01",
+      "report": "CAPTURE_DECODED_ENERGY_PREFLIGHT_RESULTS.json"
     }
   }
 }

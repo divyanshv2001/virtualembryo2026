@@ -1,24 +1,24 @@
 {
-  "updated_utc": "2026-10-01T21:16:30.169123+00:00",
+  "updated_utc": "2026-10-01T21:25:30.140645+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "4987542f5577282fc7df4cadac81ee0f470fc656fcccb6a10f235af26695c562",
+    "LOCAL_OPTIMIZATION_STATE.json": "9a26acf6caa7f55a3af5782b1605aa46767fedb7f53f0708eb63fc81af0c5c75",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "97359a4a78ebfb0f9cb50088c93224cd3ac83fba2fcdf5a82fde9a691ce672fd",
+    "METRIC_RESEARCH_QUEUE.json": "f1eb1bf5585648933781521665cf267d7d6f6f0ac285421df51e97fa62ab2544",
     "METRIC_CRITIQUE_POLICY.json": "027368320281a1164dc91720fe8aa18a344ddf7c14b9c5a8fce8b2b075105b7b",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
-    "RESEARCH_HARNESS_MANIFEST.json": "7912cef993747118cdc3bd054ecd00b3339da8f680ef3616b147d15dec316e26"
+    "RESEARCH_HARNESS_MANIFEST.json": "623f488bf415bbbdaf3b1139aa37d8a118ccbfa1c93bc97563789c6710d2aae1"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [
     {
-      "experiment": "capture_amplitude_matched",
-      "pid": 3260,
+      "experiment": "capture_decoded_energy",
+      "pid": 21832,
       "status": "running",
-      "report": "CAPTURE_AMPLITUDE_MATCHED_PREFLIGHT_RESULTS.json"
+      "report": "CAPTURE_DECODED_ENERGY_PREFLIGHT_RESULTS.json"
     }
   ],
-  "next_experiment": "Run/finish registered capture_amplitude_matched preflight. Same frozen geometric mask, perlineage OLS/recent scalar ||geometric||/||control|| frompastonly; matched requestedlogshiftenergy, measure actual decodedcellenergy/signs. Same decoder/guards/coverage, exactcopy-anchor-geometric6replay. No future expression/scorer/reward. Four critiques after completion; families/readiness open.",
+  "next_experiment": "Run/finish registered capture_decoded_energy preflight: exact original10forecast replay; geo/uniformOLS/uniformrecent new variants countspace-interpolated to frozen perlineage minimum decoded energy. Existing40step bisection; equality1e-6/upperbudget1e-8 relative-to-max1 tolerances, unchanged guards; measure signs/support. No future expression/scorer/reward, no originalplan retuning. Four critics aftercompletion; family/readiness open.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -64,13 +64,13 @@
     "attribution": "Inferred latest export; screenshot lacks filename"
   },
   "latest_jev": {
-    "record": "JEV_GEOMETRIC_FULLPANEL_ROUTE_20261002_01.json",
+    "record": "JEV_AMPLITUDE_PREFLIGHT_ROUTE_20261002_01.json",
     "usage": {
-      "input_tokens": 966,
-      "output_tokens": 70
+      "input_tokens": 900,
+      "output_tokens": 64
     },
-    "choice": "amplitude_matched_preflight",
-    "confidence": 0.91
+    "choice": "decoded_energy_match_preflight",
+    "confidence": 0.78
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",

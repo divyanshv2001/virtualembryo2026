@@ -1,0 +1,702 @@
+{
+  "status": "completed",
+  "plan": {
+    "status": "predeclared_not_started",
+    "seed": 20260928,
+    "cutoffs": [
+      8.0,
+      8.25
+    ],
+    "source_report_sha256": "5cbf328178b043857f0af95e0f831b5f7196c04a790db466a37e621a748cbe1a",
+    "boundary_report_sha256": "0f272f4660ee03d46318b2d1a3f3fd70a711b6c6912ad29fa2be2cf73154f947",
+    "geometric_report_sha256": "f0fc2486757ec809b717d3aa7dc951c7fc0416a51467de187abb87e680651f73",
+    "candidates": [
+      "copy",
+      "anchor_unshrunk",
+      "capture_geometric_decay",
+      "capture_OLS_decay_support_amplitude_matched",
+      "capture_recent_decay_support_amplitude_matched"
+    ],
+    "formula": "For each complete supported lineage use frozen geometric eligibility mask. Each masked OLS/recent shift multiplied by ||geometric shift||2/||its shift||2; zero denominator returnszero. Scalar comes only from frozen past capture means. Same requested predecode logshift energy as geometric perlineage; no strength grid or targetcalibration. Actual postclip/repair energies measured separately, not assumed matched.",
+    "validation": "Numerical requested-energy/signed-support/zero tests before run. Exact copy/anchor/geometric6forecast replay. Same7complete cases, unsupportedlineages donorcopy, original decoder. Finite/nonnegative, countmass<=1e-5, protected/fallbackcopy, maxmean<=.5, encoder covariance<=.4 fixed. Retain all failed outcomes, requested/postdecode cellshift energy and signs. No future expression/fullpanel score/reward. Both reuseddevelopment folds; captures not embryos. If feasible, separate predeclared fullpanel test must freeze forecasts before scoring with unchanged scorer/calibration. No readiness claim or official upload.",
+    "resources": "D-onlysource memmap/temporary diskcache,256genechunks,twoBLASthreads16GBRAM. Keep genuine private plans/hashes/events and small evidence. Original readiness gates unchanged.",
+    "created_utc": "2026-10-01T21:16:13.747747+00:00",
+    "spec_sha256": "95b61ceba29be13333f7d621363f5e24b7af1bd0d7190dce9a0a84279c57ec32",
+    "prepared_report_sha256": "1acd8a635f76c9f9ac89a1186f116db91309b007f448a8d11ec612627ab5bca4",
+    "prior_report_sha256": "910ccd0e40d1c95f4006a492f39c0d18d7f863a60ef38479048c0ae8a98884f0",
+    "mean_report_sha256": "d3d9e1202e4bfc6ff2582a48ea61186541901b453cb6a9c58579fcf6851ed3a0",
+    "panel_sha256": "2aeae4cd284933956242bbc9c5ab4f565c1d2acc7cc3fd3037977e4bce8be4bf",
+    "code_sha256": {
+      "capture_amplitude_matched_preflight.py": "f1c532cc23cd4d78022838ab84eee95e2b9c0bc6ede018827287a3846aec97e6",
+      "capture_ols_gate_decoder.py": "4d99ca32135034f870b2328b53c2a135a87300deeba2570e742bfe8bf46c7a10",
+      "capture_geometric_rate.py": "8bc746af774df7cf6ad57cbd19de1ae9b2e39e7e81f191b08d544f5fa5f89e75",
+      "capture_amplitude_matched.py": "1f31e28cb0895dce229ae9ff93207f5d6b9b840badc5c879ad8d5ff9d51ce940",
+      "zero_creation_blocked_decoder.py": "4307a87c3f43f05434244d74d4fdf7a152226a2e324f8bed0e0b3390bd15d835",
+      "capture_mean_decoder_fullpanel.py": "723ac20e33201cd0aa538f5d217da711fc5a14ea3cb0b995ee16b058acafeb40",
+      "partial_anchor_forecast.py": "8c9a4c362b634d648b0ecacf3e44f5953d5b18bce2ac551aefd16a4f17770225",
+      "log1p_positive_forecast.py": "48bc5e43ee5a6742a97d049c77978f23469d1db68575202d477396d5ad0ce4ee",
+      "temporary_forecast_cache.py": "52e855549a43fdb5ac346ebf4ca73e9d03a88967ff6cc1b355a9095e4b3bb301",
+      "projection_survival_diagnostics.py": "7e574f7f12ea57dd34c09476229d545619631051a3e03a71f3e62950c5f87696",
+      "lineage_residual_screen.py": "caa26ef0300cd52f98e10f41686a92393c489309020d207915d70f5565bdaf7a",
+      "robust_population.py": "86ae5926124b3704ed46596781a487735405291531c38d956cd7db359c8d56e6"
+    }
+  },
+  "results": [
+    {
+      "cutoff": 8.0,
+      "candidate": "copy",
+      "prediction_sha256": "53908b256a2f04ded456a9239a8231ce0c0f551e3bd9de2c1424524db824cd4d",
+      "exact_control_replay": true,
+      "max_fit_stage": 8.0,
+      "source_artifacts": {
+        "blood": {
+          "means_sha256": "d20c3f2a51eadd471ff26a68b0da5bd39f4280ab66a8305ccaaa50889a4d0dc7",
+          "matched_sha256": "62f46325571807f76f66bcd3c13e327032363eb1f2464cd9db8fcd62f803ff43"
+        },
+        "endoderm": {
+          "means_sha256": "12f348baafa390079cf0c5985ef4af98631cf572658bd2b8a4a6a67094890a3d",
+          "matched_sha256": "401965f1a14c25deb1cdf33f70f8ec3ae511f151200c34648853f9130cb102ff"
+        },
+        "mesenchymal": {
+          "means_sha256": "a468405d13b24d34d480f3fb61d272b545ed98916eea2ddbead6dc8a2d1c99fc",
+          "matched_sha256": "09bd9efc54a6299b6fd9a8c7c55cb056c69e8c48801f9aa16fcb5945abbdfa9a"
+        }
+      },
+      "supported_lineages": [
+        "blood",
+        "endoderm",
+        "mesenchymal"
+      ],
+      "clipped_entries": 0,
+      "count_mass_relative_error": 0.0,
+      "max_mean_change": 0.0,
+      "covariance_change": 0.0,
+      "finite_nonnegative": true,
+      "protected_genes_unchanged": true,
+      "fallback_unchanged": true,
+      "guards_passed": true,
+      "shift_fidelity": [],
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0
+    },
+    {
+      "cutoff": 8.0,
+      "candidate": "anchor_unshrunk",
+      "prediction_sha256": "1b3d7ff9b7c635f2f03ac60bbd996173f07fc7d089157ef270a14767ee6e3405",
+      "exact_control_replay": true,
+      "max_fit_stage": 8.0,
+      "source_artifacts": {
+        "blood": {
+          "means_sha256": "d20c3f2a51eadd471ff26a68b0da5bd39f4280ab66a8305ccaaa50889a4d0dc7",
+          "matched_sha256": "62f46325571807f76f66bcd3c13e327032363eb1f2464cd9db8fcd62f803ff43"
+        },
+        "endoderm": {
+          "means_sha256": "12f348baafa390079cf0c5985ef4af98631cf572658bd2b8a4a6a67094890a3d",
+          "matched_sha256": "401965f1a14c25deb1cdf33f70f8ec3ae511f151200c34648853f9130cb102ff"
+        },
+        "mesenchymal": {
+          "means_sha256": "a468405d13b24d34d480f3fb61d272b545ed98916eea2ddbead6dc8a2d1c99fc",
+          "matched_sha256": "09bd9efc54a6299b6fd9a8c7c55cb056c69e8c48801f9aa16fcb5945abbdfa9a"
+        }
+      },
+      "supported_lineages": [
+        "blood",
+        "endoderm",
+        "mesenchymal"
+      ],
+      "clipped_entries": 0,
+      "count_mass_relative_error": 3.2135929092040094e-08,
+      "max_mean_change": 0.056188738425572815,
+      "covariance_change": 0.041118423547309144,
+      "finite_nonnegative": true,
+      "protected_genes_unchanged": true,
+      "fallback_unchanged": null,
+      "guards_passed": true,
+      "shift_fidelity": [],
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0
+    },
+    {
+      "cutoff": 8.0,
+      "candidate": "capture_geometric_decay",
+      "prediction_sha256": "eae2a657c6d4ddd2af7c0d84e1e90b7fc7839eb4bc4c22505790670d933df960",
+      "exact_control_replay": true,
+      "max_fit_stage": 8.0,
+      "source_artifacts": {
+        "blood": {
+          "means_sha256": "d20c3f2a51eadd471ff26a68b0da5bd39f4280ab66a8305ccaaa50889a4d0dc7",
+          "matched_sha256": "62f46325571807f76f66bcd3c13e327032363eb1f2464cd9db8fcd62f803ff43"
+        },
+        "endoderm": {
+          "means_sha256": "12f348baafa390079cf0c5985ef4af98631cf572658bd2b8a4a6a67094890a3d",
+          "matched_sha256": "401965f1a14c25deb1cdf33f70f8ec3ae511f151200c34648853f9130cb102ff"
+        },
+        "mesenchymal": {
+          "means_sha256": "a468405d13b24d34d480f3fb61d272b545ed98916eea2ddbead6dc8a2d1c99fc",
+          "matched_sha256": "09bd9efc54a6299b6fd9a8c7c55cb056c69e8c48801f9aa16fcb5945abbdfa9a"
+        }
+      },
+      "supported_lineages": [
+        "blood",
+        "endoderm",
+        "mesenchymal"
+      ],
+      "clipped_entries": 575218,
+      "count_mass_relative_error": 3.316460926986071e-08,
+      "max_mean_change": 0.3419870462814969,
+      "covariance_change": 0.10203072821472359,
+      "finite_nonnegative": true,
+      "protected_genes_unchanged": true,
+      "fallback_unchanged": true,
+      "guards_passed": true,
+      "shift_fidelity": [
+        {
+          "lineage": "blood",
+          "shift_norm": 1.1871619814225625,
+          "decoded_norm": 1.1330965262356187,
+          "relative_shift_error": 0.5233019601061324,
+          "retained_OLS_shift_energy": 0.04765305400210808,
+          "nonzero_shift_genes": 1118,
+          "requested_cell_shift_energy": 983.7287919543309,
+          "decoded_cell_shift_energy": 1142.1666455467075,
+          "decoded_gene_sign_reversals": 20
+        },
+        {
+          "lineage": "endoderm",
+          "shift_norm": 0.4715534923374735,
+          "decoded_norm": 0.36541638751883254,
+          "relative_shift_error": 0.4208996089944858,
+          "retained_OLS_shift_energy": 0.015123022971794102,
+          "nonzero_shift_genes": 202,
+          "requested_cell_shift_energy": 16.23247681790374,
+          "decoded_cell_shift_energy": 11.556327273851583,
+          "decoded_gene_sign_reversals": 0
+        },
+        {
+          "lineage": "mesenchymal",
+          "shift_norm": 0.4052418908730159,
+          "decoded_norm": 0.3813077348259957,
+          "relative_shift_error": 0.2248323223358109,
+          "retained_OLS_shift_energy": 0.012813051445124051,
+          "nonzero_shift_genes": 399,
+          "requested_cell_shift_energy": 48.773634065146176,
+          "decoded_cell_shift_energy": 44.85662481227861,
+          "decoded_gene_sign_reversals": 0
+        }
+      ],
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0
+    },
+    {
+      "cutoff": 8.0,
+      "candidate": "capture_OLS_decay_support_amplitude_matched",
+      "prediction_sha256": "73f470b8a52543433781d98472c70f9f8e8618f6268c512638023afc74f78479",
+      "exact_control_replay": null,
+      "max_fit_stage": 8.0,
+      "source_artifacts": {
+        "blood": {
+          "means_sha256": "d20c3f2a51eadd471ff26a68b0da5bd39f4280ab66a8305ccaaa50889a4d0dc7",
+          "matched_sha256": "62f46325571807f76f66bcd3c13e327032363eb1f2464cd9db8fcd62f803ff43"
+        },
+        "endoderm": {
+          "means_sha256": "12f348baafa390079cf0c5985ef4af98631cf572658bd2b8a4a6a67094890a3d",
+          "matched_sha256": "401965f1a14c25deb1cdf33f70f8ec3ae511f151200c34648853f9130cb102ff"
+        },
+        "mesenchymal": {
+          "means_sha256": "a468405d13b24d34d480f3fb61d272b545ed98916eea2ddbead6dc8a2d1c99fc",
+          "matched_sha256": "09bd9efc54a6299b6fd9a8c7c55cb056c69e8c48801f9aa16fcb5945abbdfa9a"
+        }
+      },
+      "supported_lineages": [
+        "blood",
+        "endoderm",
+        "mesenchymal"
+      ],
+      "clipped_entries": 575218,
+      "count_mass_relative_error": 3.3257766506948316e-08,
+      "max_mean_change": 0.26490054404735597,
+      "covariance_change": 0.08430670679381068,
+      "finite_nonnegative": true,
+      "protected_genes_unchanged": true,
+      "fallback_unchanged": true,
+      "guards_passed": true,
+      "shift_fidelity": [
+        {
+          "lineage": "blood",
+          "shift_norm": 1.1871619814225625,
+          "decoded_norm": 0.9395041356412661,
+          "relative_shift_error": 0.5614859041136097,
+          "retained_OLS_shift_energy": 0.04765305400210807,
+          "nonzero_shift_genes": 1118,
+          "requested_cell_shift_energy": 983.7287919543307,
+          "decoded_cell_shift_energy": 818.14023273722,
+          "decoded_gene_sign_reversals": 0
+        },
+        {
+          "lineage": "endoderm",
+          "shift_norm": 0.4715534923374735,
+          "decoded_norm": 0.34774678931159764,
+          "relative_shift_error": 0.47244837813450086,
+          "retained_OLS_shift_energy": 0.015123022971794103,
+          "nonzero_shift_genes": 202,
+          "requested_cell_shift_energy": 16.23247681790374,
+          "decoded_cell_shift_energy": 10.722866790482582,
+          "decoded_gene_sign_reversals": 0
+        },
+        {
+          "lineage": "mesenchymal",
+          "shift_norm": 0.40524189087301593,
+          "decoded_norm": 0.3740202129403035,
+          "relative_shift_error": 0.2679699614147115,
+          "retained_OLS_shift_energy": 0.012813051445124056,
+          "nonzero_shift_genes": 399,
+          "requested_cell_shift_energy": 48.77363406514619,
+          "decoded_cell_shift_energy": 43.846383539494155,
+          "decoded_gene_sign_reversals": 0
+        }
+      ],
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0
+    },
+    {
+      "cutoff": 8.0,
+      "candidate": "capture_recent_decay_support_amplitude_matched",
+      "prediction_sha256": "6c5383953359080e845383777a5065303539b9a4c48d31a423dfcbd5f24cd66e",
+      "exact_control_replay": null,
+      "max_fit_stage": 8.0,
+      "source_artifacts": {
+        "blood": {
+          "means_sha256": "d20c3f2a51eadd471ff26a68b0da5bd39f4280ab66a8305ccaaa50889a4d0dc7",
+          "matched_sha256": "62f46325571807f76f66bcd3c13e327032363eb1f2464cd9db8fcd62f803ff43"
+        },
+        "endoderm": {
+          "means_sha256": "12f348baafa390079cf0c5985ef4af98631cf572658bd2b8a4a6a67094890a3d",
+          "matched_sha256": "401965f1a14c25deb1cdf33f70f8ec3ae511f151200c34648853f9130cb102ff"
+        },
+        "mesenchymal": {
+          "means_sha256": "a468405d13b24d34d480f3fb61d272b545ed98916eea2ddbead6dc8a2d1c99fc",
+          "matched_sha256": "09bd9efc54a6299b6fd9a8c7c55cb056c69e8c48801f9aa16fcb5945abbdfa9a"
+        }
+      },
+      "supported_lineages": [
+        "blood",
+        "endoderm",
+        "mesenchymal"
+      ],
+      "clipped_entries": 575218,
+      "count_mass_relative_error": 5.958490281458574e-08,
+      "max_mean_change": 0.31304572274287557,
+      "covariance_change": 0.09453907803780166,
+      "finite_nonnegative": true,
+      "protected_genes_unchanged": true,
+      "fallback_unchanged": true,
+      "guards_passed": true,
+      "shift_fidelity": [
+        {
+          "lineage": "blood",
+          "shift_norm": 1.1871619814225625,
+          "decoded_norm": 1.0501676129843367,
+          "relative_shift_error": 0.5398882999458552,
+          "retained_OLS_shift_energy": 0.04765305400210807,
+          "nonzero_shift_genes": 1118,
+          "requested_cell_shift_energy": 983.7287919543307,
+          "decoded_cell_shift_energy": 999.4104971354642,
+          "decoded_gene_sign_reversals": 1
+        },
+        {
+          "lineage": "endoderm",
+          "shift_norm": 0.47155349233747357,
+          "decoded_norm": 0.35105235995351375,
+          "relative_shift_error": 0.45430376095566816,
+          "retained_OLS_shift_energy": 0.015123022971794105,
+          "nonzero_shift_genes": 202,
+          "requested_cell_shift_energy": 16.232476817903745,
+          "decoded_cell_shift_energy": 10.943657388835316,
+          "decoded_gene_sign_reversals": 0
+        },
+        {
+          "lineage": "mesenchymal",
+          "shift_norm": 0.4052418908730159,
+          "decoded_norm": 0.3738969732570512,
+          "relative_shift_error": 0.26154318101878915,
+          "retained_OLS_shift_energy": 0.012813051445124051,
+          "nonzero_shift_genes": 399,
+          "requested_cell_shift_energy": 48.773634065146176,
+          "decoded_cell_shift_energy": 43.73846104144424,
+          "decoded_gene_sign_reversals": 0
+        }
+      ],
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0
+    },
+    {
+      "cutoff": 8.25,
+      "candidate": "copy",
+      "prediction_sha256": "f991bb722bc73fe1b4135b16a6a7a3db7132c306103559448dc13289eb73ae4e",
+      "exact_control_replay": true,
+      "max_fit_stage": 8.25,
+      "source_artifacts": {
+        "blood": {
+          "means_sha256": "a67e58aa09e3b3bf4d3b1e8ffe04d984c1cc1b9c5c0cedc824e0fa39496c8ebc",
+          "matched_sha256": "c78084e072b31335015d7f332e9878a176ad9778256206342d7931313a09917b"
+        },
+        "ectoderm_other": {
+          "means_sha256": "22d9bf58d86f13f0c989287db36b068c54a4662c7d0a5932825fa3a44c26c21a",
+          "matched_sha256": "d6c9aab9b56750d44d2133cdd2c20c89fc71fe3f4d37e497f9ec30c97c619146"
+        },
+        "endoderm": {
+          "means_sha256": "60bd155ac92c11816bbe580859120335558221503ce4db9cfff9f480152f3372",
+          "matched_sha256": "5d49c27cdae764bb6c942be2ea3e2f56ba2211142a0278784a54f1cb5c42a188"
+        },
+        "mesenchymal": {
+          "means_sha256": "1aa8ae2da570009cb2dd126c600fdc0ef775bc3228530f55cccd2f8fcbb70586",
+          "matched_sha256": "b897e096b5187197276a0cf53b36abc607899d3dc9b3b3d85af4f9d7122cd1d6"
+        }
+      },
+      "supported_lineages": [
+        "blood",
+        "ectoderm_other",
+        "endoderm",
+        "mesenchymal"
+      ],
+      "clipped_entries": 0,
+      "count_mass_relative_error": 0.0,
+      "max_mean_change": 0.0,
+      "covariance_change": 0.0,
+      "finite_nonnegative": true,
+      "protected_genes_unchanged": true,
+      "fallback_unchanged": true,
+      "guards_passed": true,
+      "shift_fidelity": [],
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0
+    },
+    {
+      "cutoff": 8.25,
+      "candidate": "anchor_unshrunk",
+      "prediction_sha256": "5d6aa4173f2633aed63027306766a422040cce2e2a2b4e4dd4564d52ea10457c",
+      "exact_control_replay": true,
+      "max_fit_stage": 8.25,
+      "source_artifacts": {
+        "blood": {
+          "means_sha256": "a67e58aa09e3b3bf4d3b1e8ffe04d984c1cc1b9c5c0cedc824e0fa39496c8ebc",
+          "matched_sha256": "c78084e072b31335015d7f332e9878a176ad9778256206342d7931313a09917b"
+        },
+        "ectoderm_other": {
+          "means_sha256": "22d9bf58d86f13f0c989287db36b068c54a4662c7d0a5932825fa3a44c26c21a",
+          "matched_sha256": "d6c9aab9b56750d44d2133cdd2c20c89fc71fe3f4d37e497f9ec30c97c619146"
+        },
+        "endoderm": {
+          "means_sha256": "60bd155ac92c11816bbe580859120335558221503ce4db9cfff9f480152f3372",
+          "matched_sha256": "5d49c27cdae764bb6c942be2ea3e2f56ba2211142a0278784a54f1cb5c42a188"
+        },
+        "mesenchymal": {
+          "means_sha256": "1aa8ae2da570009cb2dd126c600fdc0ef775bc3228530f55cccd2f8fcbb70586",
+          "matched_sha256": "b897e096b5187197276a0cf53b36abc607899d3dc9b3b3d85af4f9d7122cd1d6"
+        }
+      },
+      "supported_lineages": [
+        "blood",
+        "ectoderm_other",
+        "endoderm",
+        "mesenchymal"
+      ],
+      "clipped_entries": 0,
+      "count_mass_relative_error": 2.5377836807901376e-08,
+      "max_mean_change": 0.07942071326573685,
+      "covariance_change": 0.06474211905825207,
+      "finite_nonnegative": true,
+      "protected_genes_unchanged": true,
+      "fallback_unchanged": null,
+      "guards_passed": true,
+      "shift_fidelity": [],
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0
+    },
+    {
+      "cutoff": 8.25,
+      "candidate": "capture_geometric_decay",
+      "prediction_sha256": "4ff401778a1250080c0ad9a99560127cb7eacaaf235cdf8a89e737a8fb151b97",
+      "exact_control_replay": true,
+      "max_fit_stage": 8.25,
+      "source_artifacts": {
+        "blood": {
+          "means_sha256": "a67e58aa09e3b3bf4d3b1e8ffe04d984c1cc1b9c5c0cedc824e0fa39496c8ebc",
+          "matched_sha256": "c78084e072b31335015d7f332e9878a176ad9778256206342d7931313a09917b"
+        },
+        "ectoderm_other": {
+          "means_sha256": "22d9bf58d86f13f0c989287db36b068c54a4662c7d0a5932825fa3a44c26c21a",
+          "matched_sha256": "d6c9aab9b56750d44d2133cdd2c20c89fc71fe3f4d37e497f9ec30c97c619146"
+        },
+        "endoderm": {
+          "means_sha256": "60bd155ac92c11816bbe580859120335558221503ce4db9cfff9f480152f3372",
+          "matched_sha256": "5d49c27cdae764bb6c942be2ea3e2f56ba2211142a0278784a54f1cb5c42a188"
+        },
+        "mesenchymal": {
+          "means_sha256": "1aa8ae2da570009cb2dd126c600fdc0ef775bc3228530f55cccd2f8fcbb70586",
+          "matched_sha256": "b897e096b5187197276a0cf53b36abc607899d3dc9b3b3d85af4f9d7122cd1d6"
+        }
+      },
+      "supported_lineages": [
+        "blood",
+        "ectoderm_other",
+        "endoderm",
+        "mesenchymal"
+      ],
+      "clipped_entries": 213468,
+      "count_mass_relative_error": 5.1204723300800844e-08,
+      "max_mean_change": 0.022793326675891956,
+      "covariance_change": 0.013413786511076704,
+      "finite_nonnegative": true,
+      "protected_genes_unchanged": true,
+      "fallback_unchanged": true,
+      "guards_passed": true,
+      "shift_fidelity": [
+        {
+          "lineage": "blood",
+          "shift_norm": 0.3502418719460291,
+          "decoded_norm": 0.26171976338752007,
+          "relative_shift_error": 0.4974832008314854,
+          "retained_OLS_shift_energy": 0.005754357223766861,
+          "nonzero_shift_genes": 592,
+          "requested_cell_shift_energy": 52.50248987390271,
+          "decoded_cell_shift_energy": 34.396940136968006,
+          "decoded_gene_sign_reversals": 4
+        },
+        {
+          "lineage": "ectoderm_other",
+          "shift_norm": 0.1327169214649534,
+          "decoded_norm": 0.10871041661238119,
+          "relative_shift_error": 0.4040740178183121,
+          "retained_OLS_shift_energy": 0.002154288329219941,
+          "nonzero_shift_genes": 142,
+          "requested_cell_shift_energy": 2.6949085301995943,
+          "decoded_cell_shift_energy": 2.031863953466606,
+          "decoded_gene_sign_reversals": 0
+        },
+        {
+          "lineage": "endoderm",
+          "shift_norm": 0.18794158069776307,
+          "decoded_norm": 0.13885108826603276,
+          "relative_shift_error": 0.5277811658501759,
+          "retained_OLS_shift_energy": 0.0033693181946730707,
+          "nonzero_shift_genes": 90,
+          "requested_cell_shift_energy": 2.649152831638034,
+          "decoded_cell_shift_energy": 1.6802024390395378,
+          "decoded_gene_sign_reversals": 0
+        },
+        {
+          "lineage": "mesenchymal",
+          "shift_norm": 0.15164648480951384,
+          "decoded_norm": 0.13965667865197245,
+          "relative_shift_error": 0.27152746239865244,
+          "retained_OLS_shift_energy": 0.0032674047118619906,
+          "nonzero_shift_genes": 171,
+          "requested_cell_shift_energy": 6.8989969065246335,
+          "decoded_cell_shift_energy": 6.121292988790417,
+          "decoded_gene_sign_reversals": 0
+        }
+      ],
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0
+    },
+    {
+      "cutoff": 8.25,
+      "candidate": "capture_OLS_decay_support_amplitude_matched",
+      "prediction_sha256": "aa61f6d778444d992de177abe5662aea9eff6e2d72ec0d45d62ef3672ae90247",
+      "exact_control_replay": null,
+      "max_fit_stage": 8.25,
+      "source_artifacts": {
+        "blood": {
+          "means_sha256": "a67e58aa09e3b3bf4d3b1e8ffe04d984c1cc1b9c5c0cedc824e0fa39496c8ebc",
+          "matched_sha256": "c78084e072b31335015d7f332e9878a176ad9778256206342d7931313a09917b"
+        },
+        "ectoderm_other": {
+          "means_sha256": "22d9bf58d86f13f0c989287db36b068c54a4662c7d0a5932825fa3a44c26c21a",
+          "matched_sha256": "d6c9aab9b56750d44d2133cdd2c20c89fc71fe3f4d37e497f9ec30c97c619146"
+        },
+        "endoderm": {
+          "means_sha256": "60bd155ac92c11816bbe580859120335558221503ce4db9cfff9f480152f3372",
+          "matched_sha256": "5d49c27cdae764bb6c942be2ea3e2f56ba2211142a0278784a54f1cb5c42a188"
+        },
+        "mesenchymal": {
+          "means_sha256": "1aa8ae2da570009cb2dd126c600fdc0ef775bc3228530f55cccd2f8fcbb70586",
+          "matched_sha256": "b897e096b5187197276a0cf53b36abc607899d3dc9b3b3d85af4f9d7122cd1d6"
+        }
+      },
+      "supported_lineages": [
+        "blood",
+        "ectoderm_other",
+        "endoderm",
+        "mesenchymal"
+      ],
+      "clipped_entries": 213468,
+      "count_mass_relative_error": 4.982390529622316e-08,
+      "max_mean_change": 0.029180107812086575,
+      "covariance_change": 0.017771013347981764,
+      "finite_nonnegative": true,
+      "protected_genes_unchanged": true,
+      "fallback_unchanged": true,
+      "guards_passed": true,
+      "shift_fidelity": [
+        {
+          "lineage": "blood",
+          "shift_norm": 0.35024187194602907,
+          "decoded_norm": 0.26844557859981466,
+          "relative_shift_error": 0.4795136650023978,
+          "retained_OLS_shift_energy": 0.005754357223766859,
+          "nonzero_shift_genes": 592,
+          "requested_cell_shift_energy": 52.5024898739027,
+          "decoded_cell_shift_energy": 35.64756291414676,
+          "decoded_gene_sign_reversals": 0
+        },
+        {
+          "lineage": "ectoderm_other",
+          "shift_norm": 0.1327169214649534,
+          "decoded_norm": 0.10469171449567542,
+          "relative_shift_error": 0.4591388971963746,
+          "retained_OLS_shift_energy": 0.0021542883292199415,
+          "nonzero_shift_genes": 142,
+          "requested_cell_shift_energy": 2.694908530199595,
+          "decoded_cell_shift_energy": 1.901930267318621,
+          "decoded_gene_sign_reversals": 0
+        },
+        {
+          "lineage": "endoderm",
+          "shift_norm": 0.1879415806977631,
+          "decoded_norm": 0.1300009079458925,
+          "relative_shift_error": 0.5566235138531906,
+          "retained_OLS_shift_energy": 0.003369318194673071,
+          "nonzero_shift_genes": 90,
+          "requested_cell_shift_energy": 2.6491528316380344,
+          "decoded_cell_shift_energy": 1.551974457626098,
+          "decoded_gene_sign_reversals": 0
+        },
+        {
+          "lineage": "mesenchymal",
+          "shift_norm": 0.15164648480951384,
+          "decoded_norm": 0.14098499954407523,
+          "relative_shift_error": 0.2489430060837319,
+          "retained_OLS_shift_energy": 0.0032674047118619906,
+          "nonzero_shift_genes": 171,
+          "requested_cell_shift_energy": 6.8989969065246335,
+          "decoded_cell_shift_energy": 6.220136244725526,
+          "decoded_gene_sign_reversals": 0
+        }
+      ],
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0
+    },
+    {
+      "cutoff": 8.25,
+      "candidate": "capture_recent_decay_support_amplitude_matched",
+      "prediction_sha256": "912fa9becee09c648fd6a7c90aef25201f05b2b2dccce651355375e581467a4e",
+      "exact_control_replay": null,
+      "max_fit_stage": 8.25,
+      "source_artifacts": {
+        "blood": {
+          "means_sha256": "a67e58aa09e3b3bf4d3b1e8ffe04d984c1cc1b9c5c0cedc824e0fa39496c8ebc",
+          "matched_sha256": "c78084e072b31335015d7f332e9878a176ad9778256206342d7931313a09917b"
+        },
+        "ectoderm_other": {
+          "means_sha256": "22d9bf58d86f13f0c989287db36b068c54a4662c7d0a5932825fa3a44c26c21a",
+          "matched_sha256": "d6c9aab9b56750d44d2133cdd2c20c89fc71fe3f4d37e497f9ec30c97c619146"
+        },
+        "endoderm": {
+          "means_sha256": "60bd155ac92c11816bbe580859120335558221503ce4db9cfff9f480152f3372",
+          "matched_sha256": "5d49c27cdae764bb6c942be2ea3e2f56ba2211142a0278784a54f1cb5c42a188"
+        },
+        "mesenchymal": {
+          "means_sha256": "1aa8ae2da570009cb2dd126c600fdc0ef775bc3228530f55cccd2f8fcbb70586",
+          "matched_sha256": "b897e096b5187197276a0cf53b36abc607899d3dc9b3b3d85af4f9d7122cd1d6"
+        }
+      },
+      "supported_lineages": [
+        "blood",
+        "ectoderm_other",
+        "endoderm",
+        "mesenchymal"
+      ],
+      "clipped_entries": 213468,
+      "count_mass_relative_error": 6.102895631092431e-08,
+      "max_mean_change": 0.023614465097586246,
+      "covariance_change": 0.01607557288666084,
+      "finite_nonnegative": true,
+      "protected_genes_unchanged": true,
+      "fallback_unchanged": true,
+      "guards_passed": true,
+      "shift_fidelity": [
+        {
+          "lineage": "blood",
+          "shift_norm": 0.3502418719460291,
+          "decoded_norm": 0.26770081493981596,
+          "relative_shift_error": 0.48296302856624246,
+          "retained_OLS_shift_energy": 0.00575435722376686,
+          "nonzero_shift_genes": 592,
+          "requested_cell_shift_energy": 52.502489873902704,
+          "decoded_cell_shift_energy": 35.461614158599055,
+          "decoded_gene_sign_reversals": 0
+        },
+        {
+          "lineage": "ectoderm_other",
+          "shift_norm": 0.13271692146495342,
+          "decoded_norm": 0.10757907146288205,
+          "relative_shift_error": 0.4225721619403746,
+          "retained_OLS_shift_energy": 0.002154288329219942,
+          "nonzero_shift_genes": 142,
+          "requested_cell_shift_energy": 2.6949085301995956,
+          "decoded_cell_shift_energy": 1.9924190057461568,
+          "decoded_gene_sign_reversals": 0
+        },
+        {
+          "lineage": "endoderm",
+          "shift_norm": 0.18794158069776307,
+          "decoded_norm": 0.13395315236210853,
+          "relative_shift_error": 0.5486550936309731,
+          "retained_OLS_shift_energy": 0.0033693181946730707,
+          "nonzero_shift_genes": 90,
+          "requested_cell_shift_energy": 2.649152831638034,
+          "decoded_cell_shift_energy": 1.6015923772335436,
+          "decoded_gene_sign_reversals": 0
+        },
+        {
+          "lineage": "mesenchymal",
+          "shift_norm": 0.15164648480951387,
+          "decoded_norm": 0.14010654741390235,
+          "relative_shift_error": 0.2633528369941425,
+          "retained_OLS_shift_energy": 0.003267404711861992,
+          "nonzero_shift_genes": 171,
+          "requested_cell_shift_energy": 6.898996906524635,
+          "decoded_cell_shift_energy": 6.15661058206053,
+          "decoded_gene_sign_reversals": 0
+        }
+      ],
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0
+    }
+  ],
+  "target_expression_read": false,
+  "full_panel_scoring_executed": false,
+  "reward_delta": 0,
+  "report_sha256": "040756aa27992f443f457c3f82abb291923931947233828664826dab2a7adcd1"
+}

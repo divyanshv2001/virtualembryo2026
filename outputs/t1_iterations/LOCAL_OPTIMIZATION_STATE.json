@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T21:16:03.949588+00:00",
+  "updated_utc": "2026-10-01T21:25:07.207154+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,16 +30,16 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Run/finish registered capture_amplitude_matched preflight. Same frozen geometric mask, perlineage OLS/recent scalar ||geometric||/||control|| frompastonly; matched requestedlogshiftenergy, measure actual decodedcellenergy/signs. Same decoder/guards/coverage, exactcopy-anchor-geometric6replay. No future expression/scorer/reward. Four critiques after completion; families/readiness open.",
+  "next_experiment": "Run/finish registered capture_decoded_energy preflight: exact original10forecast replay; geo/uniformOLS/uniformrecent new variants countspace-interpolated to frozen perlineage minimum decoded energy. Existing40step bisection; equality1e-6/upperbudget1e-8 relative-to-max1 tolerances, unchanged guards; measure signs/support. No future expression/scorer/reward, no originalplan retuning. Four critics aftercompletion; family/readiness open.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
     {
-      "experiment": "capture_amplitude_matched",
-      "pid": 3260,
+      "experiment": "capture_decoded_energy",
+      "pid": 21832,
       "status": "running",
-      "report": "CAPTURE_AMPLITUDE_MATCHED_PREFLIGHT_RESULTS.json"
+      "report": "CAPTURE_DECODED_ENERGY_PREFLIGHT_RESULTS.json"
     }
   ],
   "active_run_path": null,
@@ -1152,13 +1152,13 @@
     "direct_nearest_source_transfer_allowed": false
   },
   "jev_latest": {
-    "record": "JEV_GEOMETRIC_FULLPANEL_ROUTE_20261002_01.json",
+    "record": "JEV_AMPLITUDE_PREFLIGHT_ROUTE_20261002_01.json",
     "usage": {
-      "input_tokens": 966,
-      "output_tokens": 70
+      "input_tokens": 900,
+      "output_tokens": 64
     },
-    "choice": "amplitude_matched_preflight",
-    "confidence": 0.91
+    "choice": "decoded_energy_match_preflight",
+    "confidence": 0.78
   },
   "count_reliability_job": {
     "status": "completed_not_promoted",
@@ -1304,13 +1304,13 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_GEOMETRIC_FULLPANEL_ROUTE_20261002_01.json",
+    "record": "JEV_AMPLITUDE_PREFLIGHT_ROUTE_20261002_01.json",
     "usage": {
-      "input_tokens": 966,
-      "output_tokens": 70
+      "input_tokens": 900,
+      "output_tokens": 64
     },
-    "choice": "amplitude_matched_preflight",
-    "confidence": 0.91
+    "choice": "decoded_energy_match_preflight",
+    "confidence": 0.78
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -2331,6 +2331,24 @@
       "fresh_contexts": 4,
       "reused_contexts": 0,
       "review_corrections": "Mean forecast guard not scorer calibration; two temporal folds nottwo captures; nearcopy notaccuracy; amplitude match before ratio/floor extensions."
+    },
+    "capture_amplitude_matched_preflight_01": {
+      "status": "completed",
+      "report_sha256": "040756aa27992f443f457c3f82abb291923931947233828664826dab2a7adcd1",
+      "review": "METRIC_CRITIQUES_AMPLITUDE_PREFLIGHT_20261002.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": false,
+      "reward_delta": 0,
+      "fresh_contexts": 4,
+      "reused_contexts": 0,
+      "resource_limitation": "One MMD spawn hit observed thread limit; succeeded after firstcritic completed",
+      "review_corrections": "Recentearlyblood signreversals1 not0. Requestedmatch notdecodedmatch; noaccuracy. Existingcountinterpolation reused, notnovel. No zero-support preservation assumption or infeasible mean/mass repeat."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -2742,10 +2760,22 @@
     "reward_delta": -29
   },
   "capture_amplitude_matched_job": {
-    "status": "running",
+    "status": "completed",
     "report": "CAPTURE_AMPLITUDE_MATCHED_PREFLIGHT_RESULTS.json",
     "spec": "NEXT_CAPTURE_AMPLITUDE_MATCHED_PREFLIGHT.json",
     "pid": 3260,
-    "experiment": "capture_amplitude_matched"
+    "experiment": "capture_amplitude_matched",
+    "report_sha256": "040756aa27992f443f457c3f82abb291923931947233828664826dab2a7adcd1",
+    "all10_guards_passed": true,
+    "exact_control_replays": 6,
+    "reward_delta": 0,
+    "target_expression_read": false
+  },
+  "capture_decoded_energy_job": {
+    "status": "running",
+    "spec": "NEXT_CAPTURE_DECODED_ENERGY_PREFLIGHT.json",
+    "report": "CAPTURE_DECODED_ENERGY_PREFLIGHT_RESULTS.json",
+    "pid": 21832,
+    "experiment": "capture_decoded_energy"
   }
 }
