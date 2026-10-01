@@ -130,6 +130,11 @@
       "script": "zero_creation_blocked_fullpanel.py",
       "run": "private/zero_creation_blocked_fullpanel_01",
       "report": "ZERO_CREATION_BLOCKED_FULLPANEL_RESULTS.json"
+    },
+    "mean_norm_feasibility": {
+      "script": "mean_norm_feasibility_audit.py",
+      "run": "private/mean_norm_feasibility_audit_01",
+      "report": "MEAN_NORM_FEASIBILITY_AUDIT_RESULTS.json"
     }
   }
 }

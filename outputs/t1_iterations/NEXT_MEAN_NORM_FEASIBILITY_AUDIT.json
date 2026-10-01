@@ -1,0 +1,15 @@
+{
+  "candidates": [
+    "copy",
+    "anchor_unshrunk",
+    "capture_quarter",
+    "capture_shrunk",
+    "blocked_quarter",
+    "blocked_shrunk"
+  ],
+  "seed": 20260928,
+  "scope": "Past-donor-only necessarysupport/energybounds, no new forecast/fit/targetexpr/benchmark/reward. Exact12scoredforecastreplay. Desired gene-mean shift is actual decodedchange, not intended slope. Necessaryconditions only, no sufficientmass/nonnegativityclaim.",
+  "formula": "For lineage n cells, donorpositivecount n_g, requestedmeanchange d_g: zero-locked shifts need n_g>0 whenever d_g!=0; displacement squared >=sum_supported (n*d_g)^2/n_g. Unsupportedmean mismatchfloor=sum_unsupported d_g^2. Exactnonzero count plus1e-8 reporting threshold.",
+  "controls": "Copy andarchivedincumbent plusadditive/blockedquarter/shrunk exacthashes. Numericalidentity/unsupportedgene/equality/norminfeasibility controls beforediagnostic. No tolerance/grid selectedfromtargets.",
+  "resources": "D-onlyoneforecast cacheclosedafterhash; source256genechunks2threads; one lineage float64 bound buffer atatime,16GBRAM."
+}

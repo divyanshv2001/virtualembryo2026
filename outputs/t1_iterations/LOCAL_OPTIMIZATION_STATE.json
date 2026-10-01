@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T17:26:41.565610+00:00",
+  "updated_utc": "2026-10-01T17:52:40.281778+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Predeclare past-donor-only analytic mean/norm matching feasibility for frozen additive versus zero-blocked controls. Test support necessarybounds first: eachlineage/gene desiredmean requires donorpositive support; minimum Frobenius displacement >=sum_g(n*mean_delta_g)^2/n_positive_g; unsupported nonzero targetmean infeasible. Compare achievable mean/magnitude matching under existing mass/protectedgene guards, no parametergrid or targetexpr. Originalexactmean+countmass jointconstraints negatives preserved. Onlyseparatelydeclare fullpanelablation ifnewmatchedcontrol viable; families/readiness open.",
+  "next_experiment": "Past-donor-only supported mean/energy preflight: construct minimum-L2 field v_ig=n*d_g/n_positive_g on donor-positive entries using frozen additive decoded mean delta; unsupported deltas zero. Attenuate by min(1,sqrt(existing additive energy/minimum field energy)) per lineage, then clip and repair count mass. Audit achieved means, actual energy, support/protected genes, guards and distance from existing blocked controls. No target reads or amplitude grid; separately declare full-panel validation only if distinct and viable. Exact joint matching is not promised; coverage/readiness remain open.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1294,13 +1294,13 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_EXTERNAL_PREFLIGHT_ROUTE_20261001_01.json",
+    "record": "JEV_MEAN_NORM_ROUTE_20261001_01.json",
     "usage": {
-      "input_tokens": 1056,
-      "output_tokens": 65
+      "input_tokens": 879,
+      "output_tokens": 58
     },
-    "choice": "past_donor_mean_norm_feasibility",
-    "confidence": 0.83
+    "choice": "supported_mean_energy_preflight",
+    "confidence": 1.0
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -2145,6 +2145,21 @@
       "specialist_role_version": 2,
       "metric_availability": true,
       "reward_delta": -69
+    },
+    "mean_norm_feasibility_audit_01": {
+      "status": "completed",
+      "report_sha256": "2ab85d136c4f61c068ff82df7fa8824c207d875a4e387a84dda06610091da163",
+      "review": "METRIC_CRITIQUES_MEAN_NORM_20261001.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": false,
+      "reward_delta": 0,
+      "review_corrections": "Count mass versus log energy distinguished; no target-selected fallback; new diagnostics get new hashes while controls replay; subsequent separatelydeclared fullpanel metrics/reward unchanged."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -2403,5 +2418,16 @@
     "report_sha256": "910ccd0e40d1c95f4006a492f39c0d18d7f863a60ef38479048c0ae8a98884f0",
     "passing_candidates": [],
     "exact_control_metric_replays": true
+  },
+  "mean_norm_feasibility_job": {
+    "status": "completed",
+    "report": "MEAN_NORM_FEASIBILITY_AUDIT_RESULTS.json",
+    "spec": "NEXT_MEAN_NORM_FEASIBILITY_AUDIT.json",
+    "report_sha256": "2ab85d136c4f61c068ff82df7fa8824c207d875a4e387a84dda06610091da163",
+    "exact_control_forecast_replays": true,
+    "target_expression_read": false,
+    "full_panel_scoring_executed": false,
+    "reward_delta": 0,
+    "finding": "Exact supported mean/energy matching infeasible for additive quarter/shrunk bothcuts; copy/blocked necessary checks pass but not sufficient."
   }
 }

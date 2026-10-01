@@ -1,17 +1,17 @@
 {
-  "updated_utc": "2026-10-01T17:26:41.737292+00:00",
+  "updated_utc": "2026-10-01T17:52:40.475295+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "739fafacecc2f0ea559cf0f46d801b42a5a485a97df0f2627540a3d7ed1726bf",
+    "LOCAL_OPTIMIZATION_STATE.json": "8cc829c2e3d4143db5c7d20b9bc140c5a866147eef6e4170b5daece490cfb99d",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "17a6239ef09d528610795c6040dee6d0fb61a6c287cc26fc9dff7e1ac1b855ab",
+    "METRIC_RESEARCH_QUEUE.json": "8130881cb5cdc74873e611dc6ae6d2dc3eed3b4120ed2cbf4b92d0c8feb4eb70",
     "METRIC_CRITIQUE_POLICY.json": "027368320281a1164dc91720fe8aa18a344ddf7c14b9c5a8fce8b2b075105b7b",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
-    "RESEARCH_HARNESS_MANIFEST.json": "8e29a0ed6c70e6f28033aaed77380f79d10dbf402a1ef1f979f2ff454256589b"
+    "RESEARCH_HARNESS_MANIFEST.json": "193a6d6ccd0482e4eb764f7c2ccd3e3bd3c2f8af48375ca47878571dd8e21000"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [],
-  "next_experiment": "Predeclare past-donor-only analytic mean/norm matching feasibility for frozen additive versus zero-blocked controls. Test support necessarybounds first: eachlineage/gene desiredmean requires donorpositive support; minimum Frobenius displacement >=sum_g(n*mean_delta_g)^2/n_positive_g; unsupported nonzero targetmean infeasible. Compare achievable mean/magnitude matching under existing mass/protectedgene guards, no parametergrid or targetexpr. Originalexactmean+countmass jointconstraints negatives preserved. Onlyseparatelydeclare fullpanelablation ifnewmatchedcontrol viable; families/readiness open.",
+  "next_experiment": "Past-donor-only supported mean/energy preflight: construct minimum-L2 field v_ig=n*d_g/n_positive_g on donor-positive entries using frozen additive decoded mean delta; unsupported deltas zero. Attenuate by min(1,sqrt(existing additive energy/minimum field energy)) per lineage, then clip and repair count mass. Audit achieved means, actual energy, support/protected genes, guards and distance from existing blocked controls. No target reads or amplitude grid; separately declare full-panel validation only if distinct and viable. Exact joint matching is not promised; coverage/readiness remain open.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -54,13 +54,13 @@
     "attribution": "Inferred latest export; screenshot lacks filename"
   },
   "latest_jev": {
-    "record": "JEV_EXTERNAL_PREFLIGHT_ROUTE_20261001_01.json",
+    "record": "JEV_MEAN_NORM_ROUTE_20261001_01.json",
     "usage": {
-      "input_tokens": 1056,
-      "output_tokens": 65
+      "input_tokens": 879,
+      "output_tokens": 58
     },
-    "choice": "past_donor_mean_norm_feasibility",
-    "confidence": 0.83
+    "choice": "supported_mean_energy_preflight",
+    "confidence": 1.0
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",

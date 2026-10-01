@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T17:26:41.565610+00:00",
+  "updated_utc": "2026-10-01T17:52:40.281778+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -6299,10 +6299,12 @@
     },
     {
       "id": "hierarchical_mean_residual_audit",
-      "status": "zero_creation_blocked_completed_no_pass_family_open",
-      "next_action": "Predeclare past-donor-only analytic mean/norm matching feasibility for frozen additive versus zero-blocked controls. Test support necessarybounds first: eachlineage/gene desiredmean requires donorpositive support; minimum Frobenius displacement >=sum_g(n*mean_delta_g)^2/n_positive_g; unsupported nonzero targetmean infeasible. Compare achievable mean/magnitude matching under existing mass/protectedgene guards, no parametergrid or targetexpr. Originalexactmean+countmass jointconstraints negatives preserved. Onlyseparatelydeclare fullpanelablation ifnewmatchedcontrol viable; families/readiness open.",
+      "status": "mean_norm_necessary_bounds_completed_exact_matching_infeasible",
+      "next_action": "Past-donor-only supported mean/energy preflight: construct minimum-L2 field v_ig=n*d_g/n_positive_g on donor-positive entries using frozen additive decoded mean delta; unsupported deltas zero. Attenuate by min(1,sqrt(existing additive energy/minimum field energy)) per lineage, then clip and repair count mass. Audit achieved means, actual energy, support/protected genes, guards and distance from existing blocked controls. No target reads or amplitude grid; separately declare full-panel validation only if distinct and viable. Exact joint matching is not promised; coverage/readiness remain open.",
       "research_family_exhausted": false,
-      "limitations": "BlockedCSSearlyimprovesbutdirectionworsens. Bothfail2foldgates. Mean/magnitudefidelityconfounds; no embryo/challengevalidation."
+      "limitations": "BlockedCSSearlyimprovesbutdirectionworsens. Bothfail2foldgates. Mean/magnitudefidelityconfounds; no embryo/challengevalidation.",
+      "specification": "NEXT_SUPPORTED_MEAN_ENERGY_PREFLIGHT.json",
+      "report_sha256": "2ab85d136c4f61c068ff82df7fa8824c207d875a4e387a84dda06610091da163"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",
