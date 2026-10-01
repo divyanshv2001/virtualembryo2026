@@ -11,6 +11,11 @@ from pathlib import Path
 HERE=Path(__file__).resolve().parent
 METRICS=('de_score','de_direction','mmd_u','variogram')
 
+def critics_cached(review,report):
+    return (review.get('status')=='completed'
+            and review.get('report_sha256')==report.get('report_sha256')
+            and review.get('specialist_role_version')==2)
+
 def now():return datetime.now(timezone.utc).isoformat()
 def read(path):return json.loads(path.read_text()) if path.exists() else {}
 def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -71,7 +76,7 @@ def collect(name,entry,live):
     checkpoint=read(HERE/'LOCAL_OPTIMIZATION_STATE.json')
     previous_review=checkpoint.get('post_batch_agent_critiques',{}).get(Path(entry['run']).name,{})
     report=read(resolve(entry['report']))
-    critics_complete=previous_review.get('status')=='completed' and previous_review.get('report_sha256')==report.get('report_sha256')
+    critics_complete=critics_cached(previous_review,report)
     if collected.get('report_sha256')==state['report_sha256']:return {'experiment':name,'status':'unchanged','new_critic_packets':0,'critic_agents_needed':not critics_complete}
     report=read(resolve(entry['report']));packet_paths=[]
     summary=report.get('summary',[])

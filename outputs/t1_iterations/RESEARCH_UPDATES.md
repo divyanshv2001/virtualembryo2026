@@ -546,3 +546,5 @@ Bures surrogate7.4943/13.8286 vsCMpersist1.8021/11.3090; bothworse. Identityexac
 
 ### 2026-10-01T15:49:55.613788+00:00 — all-capture covariance diagnostic completed
 42surrogateoutcomes/7captures, original2replays match1e-9; no newtraining. BuresbeatsCMpersist1/4at8(capture34) and0/3at8.25, laterexcess2.17..2.52. Preserveonegain andallfailures, no familyexhaustion. Differentbasesnotabsoluteerroraggregated; captureIDsnotindependentembryos. Fourfreshcritiquescached. Raw4/skills4/headline unavailable,reward0/balance-663. Scoreravailable, genepaneldecoder absent. Jev2277bytes967in66out selects past-only gene-mean residual eligibility/priorcoverage preflight,confidence.47. All originalbenchmarkgates unchanged; no officialupload.
+
+Critic cache now requires both report SHA and specialist policy version2; matching cache returns zero new packets/agents. Hash/version controls passed, all-capture collection verified unchanged with no agents needed.
