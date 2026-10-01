@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T07:48:19.853939+00:00",
+  "updated_utc": "2026-10-01T07:53:11.724086+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -6069,6 +6069,15 @@
       "report_sha256": "d2a540b590e68c7262c1c28be7d6b933b9f118e774343959bc63bab4ee2ba6c8",
       "full_panel_scores": 10,
       "passing_candidates": []
+    },
+    {
+      "id": "de_error_attribution_posthoc",
+      "status": "completed_diagnostic",
+      "research_family_exhausted": false,
+      "report": "DE_ERROR_ATTRIBUTION_RESULTS.json",
+      "report_sha256": "3377f841c9ecdcdfc5052adbf862a8343de998523a8630a292b0bbc9d629df1b",
+      "scope": "Labeled posthoc diagnosis on reused-development targets. No fit, candidate/backoff selection, reward or new benchmark scores. Do not reuse targets for promotion of any resulting method.",
+      "next_action": "Declare past-source integrity audit using only stages<=8.25: metadata sample/capture and lineage composition, raw library-size and detection distributions, normalized implied-count totals, past stage mean/detection direction stability within supported lineages and captures. Check technical discontinuity before interpreting fold8 posthoc reversal biologically. No future-target fitting or slope negation based on known targets. If no independent capture replication/embryo identity exists, record that limit precisely; choose subsequent experiment with fresh predeclared temporal validation."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",

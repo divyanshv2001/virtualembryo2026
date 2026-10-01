@@ -1,0 +1,285 @@
+{
+  "updated_utc": "2026-10-01T07:51:24.320032+00:00",
+  "plan_sha256": "bb783719f238e6d8ed31aab71d1a2f6bf541454718297b4e270ae47d28d97b40",
+  "folds": [
+    {
+      "cutoff": 8.0,
+      "target": 9.0,
+      "truth_up": 476,
+      "truth_down": 636,
+      "truth_DE_count": 1112,
+      "effect_only_count": 1112,
+      "BH_effect_set_equals_effect_only": true,
+      "expression_magnitude_null_overlap": 0.27068345323741005,
+      "unmapped_truth_DE_count": 0,
+      "truth_DE_reference_detection_median": 0.8426666666666667,
+      "intended_truth_direction_rho": -0.41328282598404353,
+      "intended_truth_DE_sign_agreement": 0.10881294964028777,
+      "composition_truth_direction_rho": 0.19384331436067526,
+      "within_truth_direction_rho": 0.8616062248751196,
+      "group_decomposition_covered_reference_fraction": 1.0,
+      "group_decomposition_covered_truth_fraction": 0.864,
+      "group_decomposition_relative_residual": 0.47108473783104937,
+      "lineage_diagnostics": [
+        {
+          "lineage": "blood",
+          "reference_cells": 698,
+          "truth_cells": 142,
+          "reference_fraction": 0.4653333333333333,
+          "truth_fraction": 0.142,
+          "fraction_change": -0.32333333333333336,
+          "intended_within_lineage_direction_rho": -0.24624575526855091
+        },
+        {
+          "lineage": "cardiomyocyte",
+          "reference_cells": 100,
+          "truth_cells": 81,
+          "reference_fraction": 0.06666666666666667,
+          "truth_fraction": 0.081,
+          "fraction_change": 0.014333333333333337,
+          "intended_within_lineage_direction_rho": -0.30141842587350814
+        },
+        {
+          "lineage": "cardiopharyngeal",
+          "reference_cells": 117,
+          "truth_cells": 124,
+          "reference_fraction": 0.078,
+          "truth_fraction": 0.124,
+          "fraction_change": 0.046,
+          "intended_within_lineage_direction_rho": -0.3634498699033293
+        },
+        {
+          "lineage": "ectoderm_other",
+          "reference_cells": 127,
+          "truth_cells": 48,
+          "reference_fraction": 0.08466666666666667,
+          "truth_fraction": 0.048,
+          "fraction_change": -0.03666666666666667,
+          "intended_within_lineage_direction_rho": -0.35155339876814656
+        },
+        {
+          "lineage": "endoderm",
+          "reference_cells": 73,
+          "truth_cells": 111,
+          "reference_fraction": 0.048666666666666664,
+          "truth_fraction": 0.111,
+          "fraction_change": 0.06233333333333334,
+          "intended_within_lineage_direction_rho": -0.32146245943244983
+        },
+        {
+          "lineage": "endothelial",
+          "reference_cells": 88,
+          "truth_cells": 115,
+          "reference_fraction": 0.058666666666666666,
+          "truth_fraction": 0.115,
+          "fraction_change": 0.05633333333333334,
+          "intended_within_lineage_direction_rho": -0.3479302739146591
+        },
+        {
+          "lineage": "mesenchymal",
+          "reference_cells": 297,
+          "truth_cells": 243,
+          "reference_fraction": 0.198,
+          "truth_fraction": 0.243,
+          "fraction_change": 0.044999999999999984,
+          "intended_within_lineage_direction_rho": -0.3566512150780938
+        },
+        {
+          "lineage": "neural_crest",
+          "reference_cells": 0,
+          "truth_cells": 136,
+          "reference_fraction": 0.0,
+          "truth_fraction": 0.136,
+          "fraction_change": 0.136
+        }
+      ],
+      "candidates": [
+        {
+          "candidate": "slope_recent",
+          "prediction_sha256": "1550338158712cd90ef4c042c7bf47bee3f787fa204afa0342e721a031cd5376",
+          "de_score_replayed": -0.2934648581997534,
+          "signed_overlap": 0.05665467625899281,
+          "up_hits": 6,
+          "down_hits": 57,
+          "truth_de_sign_agreement": 0.14928057553956833,
+          "whole_panel_direction_rho": -0.38242926672006883,
+          "truth_de_direction_rho": -0.6333694743555683,
+          "direction_rho_composition_component": -0.05096463832332965,
+          "direction_rho_within_component": -0.34597930514624925,
+          "std_delta_ratio": 0.13082678616046906
+        },
+        {
+          "candidate": "slope_clip",
+          "prediction_sha256": "ffaf8f510d6a75acddf01aa774fae8bf8622255d9d402526d423add684a55ef9",
+          "de_score_replayed": -0.3193588162762022,
+          "signed_overlap": 0.03776978417266187,
+          "up_hits": 5,
+          "down_hits": 37,
+          "truth_de_sign_agreement": 0.10881294964028777,
+          "whole_panel_direction_rho": -0.40083797173100905,
+          "truth_de_direction_rho": -0.7159398646529509,
+          "direction_rho_composition_component": -0.11909217388333557,
+          "direction_rho_within_component": -0.37537213927242735,
+          "std_delta_ratio": 0.13278697431087494
+        },
+        {
+          "candidate": "slope_count",
+          "prediction_sha256": "45dceb9d1c69ce60abe877c54ae4f7bf2a8d918b6a15d230a03f24a79487bc39",
+          "de_score_replayed": -0.3107274969173859,
+          "signed_overlap": 0.044064748201438846,
+          "up_hits": 5,
+          "down_hits": 44,
+          "truth_de_sign_agreement": 0.12320143884892086,
+          "whole_panel_direction_rho": -0.3942443074315485,
+          "truth_de_direction_rho": -0.6944618030225911,
+          "direction_rho_composition_component": -0.07868951180748968,
+          "direction_rho_within_component": -0.3659099326063856,
+          "std_delta_ratio": 0.129580557346344
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 9.25,
+      "truth_up": 261,
+      "truth_down": 807,
+      "truth_DE_count": 1068,
+      "effect_only_count": 1069,
+      "BH_effect_set_equals_effect_only": false,
+      "expression_magnitude_null_overlap": 0.450374531835206,
+      "unmapped_truth_DE_count": 0,
+      "truth_DE_reference_detection_median": 0.8979999999999999,
+      "intended_truth_direction_rho": 0.12069595393489763,
+      "intended_truth_DE_sign_agreement": 0.700374531835206,
+      "composition_truth_direction_rho": -0.009679975991399598,
+      "within_truth_direction_rho": 0.8963401817525969,
+      "group_decomposition_covered_reference_fraction": 1.0,
+      "group_decomposition_covered_truth_fraction": 1.0,
+      "group_decomposition_relative_residual": 2.327743724921201e-06,
+      "lineage_diagnostics": [
+        {
+          "lineage": "blood",
+          "reference_cells": 428,
+          "truth_cells": 439,
+          "reference_fraction": 0.2853333333333333,
+          "truth_fraction": 0.439,
+          "fraction_change": 0.15366666666666667,
+          "intended_within_lineage_direction_rho": 0.08248424604160758
+        },
+        {
+          "lineage": "cardiomyocyte",
+          "reference_cells": 187,
+          "truth_cells": 32,
+          "reference_fraction": 0.12466666666666666,
+          "truth_fraction": 0.032,
+          "fraction_change": -0.09266666666666666,
+          "intended_within_lineage_direction_rho": 0.09969613859402371
+        },
+        {
+          "lineage": "cardiopharyngeal",
+          "reference_cells": 176,
+          "truth_cells": 93,
+          "reference_fraction": 0.11733333333333333,
+          "truth_fraction": 0.093,
+          "fraction_change": -0.024333333333333332,
+          "intended_within_lineage_direction_rho": 0.18474347521974707
+        },
+        {
+          "lineage": "ectoderm_other",
+          "reference_cells": 153,
+          "truth_cells": 80,
+          "reference_fraction": 0.102,
+          "truth_fraction": 0.08,
+          "fraction_change": -0.021999999999999992,
+          "intended_within_lineage_direction_rho": 0.2048239425635569
+        },
+        {
+          "lineage": "endoderm",
+          "reference_cells": 75,
+          "truth_cells": 51,
+          "reference_fraction": 0.05,
+          "truth_fraction": 0.051,
+          "fraction_change": 0.000999999999999994,
+          "intended_within_lineage_direction_rho": 0.16235791274576047
+        },
+        {
+          "lineage": "endothelial",
+          "reference_cells": 139,
+          "truth_cells": 44,
+          "reference_fraction": 0.09266666666666666,
+          "truth_fraction": 0.044,
+          "fraction_change": -0.048666666666666664,
+          "intended_within_lineage_direction_rho": 0.08925897157545343
+        },
+        {
+          "lineage": "mesenchymal",
+          "reference_cells": 300,
+          "truth_cells": 138,
+          "reference_fraction": 0.2,
+          "truth_fraction": 0.138,
+          "fraction_change": -0.062,
+          "intended_within_lineage_direction_rho": 0.20500655623771602
+        },
+        {
+          "lineage": "neural_crest",
+          "reference_cells": 42,
+          "truth_cells": 123,
+          "reference_fraction": 0.028,
+          "truth_fraction": 0.123,
+          "fraction_change": 0.095,
+          "intended_within_lineage_direction_rho": 0.15593498429846603
+        }
+      ],
+      "candidates": [
+        {
+          "candidate": "slope_recent",
+          "prediction_sha256": "3c3234a490faad0d9d3d521092bf6051bb9bf017f21975c2ea1efcf7bb506ef4",
+          "de_score_replayed": 0.006814310051107341,
+          "signed_overlap": 0.4541198501872659,
+          "up_hits": 42,
+          "down_hits": 443,
+          "truth_de_sign_agreement": 0.7256554307116105,
+          "whole_panel_direction_rho": 0.14545999582218766,
+          "truth_de_direction_rho": 0.4160035970092404,
+          "direction_rho_composition_component": -0.30371078938340224,
+          "direction_rho_within_component": 0.21975924314853412,
+          "std_delta_ratio": 0.1338452249765396
+        },
+        {
+          "candidate": "slope_clip",
+          "prediction_sha256": "6ce7f375672710f3309fe03bfed6ac8b805d03f7a1775a4cb185f9bcf5b737d0",
+          "de_score_replayed": -0.01703577512776825,
+          "signed_overlap": 0.4410112359550562,
+          "up_hits": 43,
+          "down_hits": 428,
+          "truth_de_sign_agreement": 0.700374531835206,
+          "whole_panel_direction_rho": 0.13535193256164613,
+          "truth_de_direction_rho": 0.3727545129166402,
+          "direction_rho_composition_component": -0.3125618813870325,
+          "direction_rho_within_component": 0.21214670839326413,
+          "std_delta_ratio": 0.13166102766990662
+        },
+        {
+          "candidate": "slope_count",
+          "prediction_sha256": "98ca34046f51ba83b53e9990668117577a22f54a7d6783c9100c062189b7bdfe",
+          "de_score_replayed": -0.006814310051107341,
+          "signed_overlap": 0.44662921348314605,
+          "up_hits": 44,
+          "down_hits": 433,
+          "truth_de_sign_agreement": 0.702247191011236,
+          "whole_panel_direction_rho": 0.13975520570760272,
+          "truth_de_direction_rho": 0.38206373656612086,
+          "direction_rho_composition_component": -0.2952416462067455,
+          "direction_rho_within_component": 0.21365588015695236,
+          "std_delta_ratio": 0.1317809373140335
+        }
+      ]
+    }
+  ],
+  "scope": "Labeled posthoc diagnosis on reused-development targets. No fit, candidate/backoff selection, reward or new benchmark scores. Do not reuse targets for promotion of any resulting method.",
+  "models_fit": 0,
+  "new_full_panel_scores": 0,
+  "reward_delta": 0,
+  "causal_attribution_certified": false,
+  "report_sha256": "3377f841c9ecdcdfc5052adbf862a8343de998523a8630a292b0bbc9d629df1b"
+}

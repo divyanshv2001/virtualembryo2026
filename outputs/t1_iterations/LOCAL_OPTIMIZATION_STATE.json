@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T07:48:19.853939+00:00",
+  "updated_utc": "2026-10-01T07:53:11.724086+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,7 +31,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Declare DE error attribution audit on preserved source_slope_transform_01 forecasts/splits: reproduce log/clip/count hashes; compare scorer-selected BH/effect-size DE sets, rank errors and realized-versus-truth direction at fold8 and8.25. Diagnose temporal direction reversal versus sparse-detection/group-composition effects. Future targets may be used ONLY as labeled posthoc diagnostic evidence, never for fit/backoff/candidate tuning; predeclare new validation before any resulting method. Current transform repairs failed both-fold promotion; do not repeat slope/repair banks.",
+  "next_experiment": "Declare past-source integrity audit using only stages<=8.25: metadata sample/capture and lineage composition, raw library-size and detection distributions, normalized implied-count totals, past stage mean/detection direction stability within supported lineages and captures. Check technical discontinuity before interpreting fold8 posthoc reversal biologically. No future-target fitting or slope negation based on known targets. If no independent capture replication/embryo identity exists, record that limit precisely; choose subsequent experiment with fresh predeclared temporal validation.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1296,17 +1296,16 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "packet": "JEV_STATIC_PACKET_20261001_01.json",
-    "record": "JEV_STATIC_ROUTE_20261001_01.json",
+    "packet": "JEV_DE_PACKET_20261001_01.json",
+    "record": "JEV_DE_ROUTE_20261001_01.json",
+    "status": "validated",
+    "payload_bytes": 1950,
     "usage": {
-      "input_tokens": 772,
-      "output_tokens": 60
+      "input_tokens": 785,
+      "output_tokens": 64
     },
-    "payload_bytes": 1672,
-    "decision": {
-      "choice": "cardiac_component_detection_guidance",
-      "confidence": 0.72
-    },
+    "choice": "past_source_integrity_audit",
+    "confidence": 0.95,
     "measured_codex_credit_savings": null
   },
   "external_qc_audit": {
@@ -1653,5 +1652,17 @@
       }
     ],
     "next_action": "Declare DE error attribution audit on preserved source_slope_transform_01 forecasts/splits: reproduce log/clip/count hashes; compare scorer-selected BH/effect-size DE sets, rank errors and realized-versus-truth direction at fold8 and8.25. Diagnose temporal direction reversal versus sparse-detection/group-composition effects. Future targets may be used ONLY as labeled posthoc diagnostic evidence, never for fit/backoff/candidate tuning; predeclare new validation before any resulting method. Current transform repairs failed both-fold promotion; do not repeat slope/repair banks."
+  },
+  "de_error_attribution_job": {
+    "status": "completed_posthoc",
+    "report": "DE_ERROR_ATTRIBUTION_RESULTS.json",
+    "report_sha256": "3377f841c9ecdcdfc5052adbf862a8343de998523a8630a292b0bbc9d629df1b",
+    "plan_sha256": "bb783719f238e6d8ed31aab71d1a2f6bf541454718297b4e270ae47d28d97b40",
+    "forecast_hashes_replayed": 6,
+    "de_score_replays_verified": 6,
+    "new_scores": 0,
+    "reward_delta": 0,
+    "causal_attribution_certified": false,
+    "next_action": "Declare past-source integrity audit using only stages<=8.25: metadata sample/capture and lineage composition, raw library-size and detection distributions, normalized implied-count totals, past stage mean/detection direction stability within supported lineages and captures. Check technical discontinuity before interpreting fold8 posthoc reversal biologically. No future-target fitting or slope negation based on known targets. If no independent capture replication/embryo identity exists, record that limit precisely; choose subsequent experiment with fresh predeclared temporal validation."
   }
 }

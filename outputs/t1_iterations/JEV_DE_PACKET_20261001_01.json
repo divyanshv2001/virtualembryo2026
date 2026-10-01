@@ -1,0 +1,19 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "purpose": "Choose next diagnostic after frozen full-panel DE attribution; advisory only.",
+    "evidence": "Two reused source one-day folds8->9 and8.25->9.25. Recent quarterday slope, clipping/log/count repair all fail both-fold promotion. Exact6hash replays and DEscores verified. Fold8 intended vs truth gene delta Spearman-.413; truth1112DEgenes signagreement10.9%; all7supported lineage directions negative. Actual logforecast truthDEsign14.9%, signedoverlap.0567 vs expressionnull.2707. Fold8.25 intendedrho+.121, sign70%; all8lineagespositive; logoverlap.4541 vsnull.4504. Fold8 blood fraction.465->.142; lineage decomposition excludes13.6%truth, residual47.1%; fold8.25fullcoverage residual2.3e-6. Median reference detection among fold8DEgenes.843; allDEmapped. This is diagnosis, not causal proof.",
+    "constraints": "No target-driven fits, negating slope because known target reverses, or repeated slopebanks. Audit past-only source metadata/normalization before biological claims. Full32285scorer/readiness unchanged;16GBRAM,Dcache. Summaries only, no datasets/source/secrets."
+  },
+  "questions": {
+    "next_action": {
+      "type": "choice",
+      "instructions": "Pick next bounded diagnostic for strongest information value; choice/confidence only.",
+      "criteria": {
+        "past_source_integrity_audit": "Audit <=8.25 stage/capture sample composition, raw library sizes, detection, normalization and gene trend stability; stratify by supported lineages/captures; diagnose technical discontinuity without future fitting.",
+        "past_only_turning_point_test": "Predeclare a past-only bounded nonlinear turning-point predictor on new temporal validation, after already failed tanh/global/lineage/conditional banks; risk reversal cannot be inferred from three past stages.",
+        "independent_cohort_transfer_audit": "Prioritize independent cohort compatibility and identity; current external early heart small/shallow, embryo identities unresolved. No new downloads."
+      }
+    }
+  }
+}

@@ -338,3 +338,18 @@ All10 full-panel outcomes preserved; five fold8 scores reused without recomputat
 Score ledger refreshed:2915records,160reports,0errors. New clip/count candidates each earned−40 in the separate critique reward; total−356. Replayed old log/control candidates earned no duplicate rewards. Original benchmark score/calibration/readiness gates unchanged. Official best52.16. No better submission candidate identified by this batch. Jev calls0 for deterministic recovery; no quota resets observed.
 
 Declare DE error attribution audit on preserved source_slope_transform_01 forecasts/splits: reproduce log/clip/count hashes; compare scorer-selected BH/effect-size DE sets, rank errors and realized-versus-truth direction at fold8 and8.25. Diagnose temporal direction reversal versus sparse-detection/group-composition effects. Future targets may be used ONLY as labeled posthoc diagnostic evidence, never for fit/backoff/candidate tuning; predeclare new validation before any resulting method. Current transform repairs failed both-fold promotion; do not repeat slope/repair banks.
+
+## 2026-10-01T07:53:11.724086+00:00 — posthoc DE attribution completed
+
+Frozen diagnostic plan; six prediction hashes and six scorer DE values replayed exactly. No learner fits, new headline scores, reward changes or promotion. Future truth used only as labeled posthoc evidence. No causal attribution established.
+
+| Cutoff | True DE genes | Intended/truth rho | Intended DE sign agreement | Log forecast signed overlap | Expression null overlap | Covered truth fraction | Decomposition residual |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| 8.0 | 1112.000000 | -0.413283 | 0.108813 | 0.056655 | 0.270683 | 0.864000 | 0.471085 |
+| 8.25 | 1068.000000 | 0.120696 | 0.700375 | 0.454120 | 0.450375 | 1.000000 | 0.000002 |
+
+Fold8 all seven supported within-lineage direction correlations negative; fold8.25 all eight positive. Fold8 blood fraction drops.4653→.142; unsupported truth groups13.6% and decomposition residual47.1% prevent attributing the full shift to composition/within-lineage terms. Fold8.25 coverage100% and residual2.33e−6. Fold8 true DE genes all mapped, median reference detection.843; failure is not confined to missing genes or rare detection. BH/effect selection equals effect-only fold8, but differs fold8.25; retain actual scorer selection. Full lineage/candidate diagnostics in JSON/private report.
+
+One cached1950-byte Jev advisory used785input/64output tokens; recommended past_source_integrity_audit confidence.95. No datasets/source/secrets sent, no measured Codex credit savings claimed. Separate reward remains−356; official52.16/readiness gates unchanged.
+
+Declare past-source integrity audit using only stages<=8.25: metadata sample/capture and lineage composition, raw library-size and detection distributions, normalized implied-count totals, past stage mean/detection direction stability within supported lineages and captures. Check technical discontinuity before interpreting fold8 posthoc reversal biologically. No future-target fitting or slope negation based on known targets. If no independent capture replication/embryo identity exists, record that limit precisely; choose subsequent experiment with fresh predeclared temporal validation.

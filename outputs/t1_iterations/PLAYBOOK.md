@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-01T07:48:20.012867+00:00
+Updated: 2026-10-01T07:53:11.894730+00:00
 
 Run `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_playbook.py` first. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -8,7 +8,7 @@ Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction':
 
 Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Declare DE error attribution audit on preserved source_slope_transform_01 forecasts/splits: reproduce log/clip/count hashes; compare scorer-selected BH/effect-size DE sets, rank errors and realized-versus-truth direction at fold8 and8.25. Diagnose temporal direction reversal versus sparse-detection/group-composition effects. Future targets may be used ONLY as labeled posthoc diagnostic evidence, never for fit/backoff/candidate tuning; predeclare new validation before any resulting method. Current transform repairs failed both-fold promotion; do not repeat slope/repair banks.
+Next: Declare past-source integrity audit using only stages<=8.25: metadata sample/capture and lineage composition, raw library-size and detection distributions, normalized implied-count totals, past stage mean/detection direction stability within supported lineages and captures. Check technical discontinuity before interpreting fold8 posthoc reversal biologically. No future-target fitting or slope negation based on known targets. If no independent capture replication/embryo identity exists, record that limit precisely; choose subsequent experiment with fresh predeclared temporal validation.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in outputs\t1_submissions\formula_progress_20260930_01\official_result.json. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 
@@ -16,7 +16,7 @@ Four metric critiques completed; consult METRIC_CRITIQUES_20261001.md when desig
 
 Current separate reward: -356. This is not a benchmark score.
 
-External acquisition entry point: GSE76118_WT_STAGE_MANIFEST.json. The old stage-only list is historical;127 mutants excluded,162 B6 WT controls separate,143E8.5/999E9.5 primary CD1 candidates. Expression acquired: True; pilot cells: 4; training readiness: False. QC/compatibility pending. Latest Jev actual usage: {'input_tokens': 772, 'output_tokens': 60}.
+External acquisition entry point: GSE76118_WT_STAGE_MANIFEST.json. The old stage-only list is historical;127 mutants excluded,162 B6 WT controls separate,143E8.5/999E9.5 primary CD1 candidates. Expression acquired: True; pilot cells: 4; training readiness: False. QC/compatibility pending. Latest Jev actual usage: {'input_tokens': 785, 'output_tokens': 64}.
 
 Use D-only temporary disk cache, two BLAS threads, one full forecast at a time;16GBRAM. Retain source reports/events, seeds/splits/hashes, raw4/skills4 and failed outcomes. Refresh SCORE_LEDGER.jsonl after full-panel batches; proxy/export is not a score batch. Commit small evidence/code, never datasets/secrets/artifact matrices. No automatic official upload or new agents.
 
