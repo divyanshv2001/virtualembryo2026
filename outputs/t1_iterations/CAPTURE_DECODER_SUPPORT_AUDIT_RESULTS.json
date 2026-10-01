@@ -1,0 +1,1824 @@
+{
+  "status": "completed",
+  "plan": {
+    "candidates": [
+      "copy",
+      "anchor_unshrunk",
+      "capture_quarter",
+      "capture_shrunk"
+    ],
+    "thresholds": [
+      0.0,
+      0.001,
+      0.01
+    ],
+    "seed": 20260928,
+    "scope": "Pastdonoronly exactscoredforecastreplay cut8/8.25; no targetexpression or newbenchmarkscore/calibration/reward. Zero/positive-origin maskedcounterfactuals are diagnostic notmasspreserved forecasts. Variogram squared donor-displacement is NOT actualCSSerror. Energies are nonadditive dueinteraction; no causalproof.",
+    "analysis": "All32285genes sampled20korderedpairs usingpinnedlocalPanel seedrecipe, samepairs allmethods; detectioncounts mappeduniquegenes, bylineage at exact0 and prespecified .001/.01. Zero/positive-origin matrixdisplacement squared and maskedvariogram changes measured separately.",
+    "controls": "Exactcopy andarchivedincumbent(.5,.5), quarter/shrunk fixeddecoder. All8predictionhashes mustexactlymatch original fullpanelscoredreport beforediagnostics. No parameter fit or selection.",
+    "resources": "D-only oneforecastcachecloseafterhash; source memmap256genechunks, variogrampairchunks512,2threads16GB.",
+    "created_utc": "2026-10-01T16:48:06.448605+00:00",
+    "spec_sha256": "1a7f3a102c6dfccb9b9988da97fc0f47a618a615d32c6b8cd76a7e878b280ea7",
+    "prepared_report_sha256": "1acd8a635f76c9f9ac89a1186f116db91309b007f448a8d11ec612627ab5bca4",
+    "prior_report_sha256": "05612728b692f42c1eaf6ead74c0f10b29ef1a26eca3682f1f2993cdd283b8f5",
+    "mean_report_sha256": "a4442fb533cc37a693ba07dfc43f8914423d19fd42d4d456b2584aa9c031bbb1",
+    "panel_sha256": "2aeae4cd284933956242bbc9c5ab4f565c1d2acc7cc3fd3037977e4bce8be4bf",
+    "code_sha256": {
+      "capture_decoder_support_audit.py": "4667d9a158f0997ebbeb9f149733449174d9e656002ec0b9432f2a3aa60466b7",
+      "capture_mean_decoder_fullpanel.py": "723ac20e33201cd0aa538f5d217da711fc5a14ea3cb0b995ee16b058acafeb40",
+      "partial_anchor_forecast.py": "8c9a4c362b634d648b0ecacf3e44f5953d5b18bce2ac551aefd16a4f17770225",
+      "log1p_positive_forecast.py": "48bc5e43ee5a6742a97d049c77978f23469d1db68575202d477396d5ad0ce4ee",
+      "temporary_forecast_cache.py": "52e855549a43fdb5ac346ebf4ca73e9d03a88967ff6cc1b355a9095e4b3bb301",
+      "projection_survival_diagnostics.py": "7e574f7f12ea57dd34c09476229d545619631051a3e03a71f3e62950c5f87696",
+      "lineage_residual_screen.py": "caa26ef0300cd52f98e10f41686a92393c489309020d207915d70f5565bdaf7a",
+      "robust_population.py": "86ae5926124b3704ed46596781a487735405291531c38d956cd7db359c8d56e6"
+    }
+  },
+  "results": [
+    {
+      "cutoff": 8.0,
+      "candidate": "copy",
+      "prediction_sha256": "53908b256a2f04ded456a9239a8231ce0c0f551e3bd9de2c1424524db824cd4d",
+      "exact_replay_passed": true,
+      "max_fit_stage": 8.0,
+      "lineages": [
+        {
+          "lineage": "blood",
+          "cells": 698,
+          "entries": 18688950,
+          "threshold_counts": {
+            "0.0": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 2186310,
+              "decoded_positive": 2186310
+            },
+            "0.001": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 2186310,
+              "decoded_positive": 2186310
+            },
+            "0.01": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 2186310,
+              "decoded_positive": 2186310
+            }
+          },
+          "zero_origin_displacement_squared": 0.0,
+          "positive_origin_displacement_squared": 0.0
+        },
+        {
+          "lineage": "cardiomyocyte",
+          "cells": 100,
+          "entries": 2677500,
+          "threshold_counts": {
+            "0.0": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 332630,
+              "decoded_positive": 332630
+            },
+            "0.001": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 332630,
+              "decoded_positive": 332630
+            },
+            "0.01": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 332630,
+              "decoded_positive": 332630
+            }
+          },
+          "zero_origin_displacement_squared": 0.0,
+          "positive_origin_displacement_squared": 0.0
+        },
+        {
+          "lineage": "cardiopharyngeal",
+          "cells": 117,
+          "entries": 3132675,
+          "threshold_counts": {
+            "0.0": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 387247,
+              "decoded_positive": 387247
+            },
+            "0.001": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 387247,
+              "decoded_positive": 387247
+            },
+            "0.01": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 387247,
+              "decoded_positive": 387247
+            }
+          },
+          "zero_origin_displacement_squared": 0.0,
+          "positive_origin_displacement_squared": 0.0
+        },
+        {
+          "lineage": "ectoderm_other",
+          "cells": 127,
+          "entries": 3400425,
+          "threshold_counts": {
+            "0.0": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 432047,
+              "decoded_positive": 432047
+            },
+            "0.001": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 432047,
+              "decoded_positive": 432047
+            },
+            "0.01": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 432047,
+              "decoded_positive": 432047
+            }
+          },
+          "zero_origin_displacement_squared": 0.0,
+          "positive_origin_displacement_squared": 0.0
+        },
+        {
+          "lineage": "endoderm",
+          "cells": 73,
+          "entries": 1954575,
+          "threshold_counts": {
+            "0.0": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 243882,
+              "decoded_positive": 243882
+            },
+            "0.001": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 243882,
+              "decoded_positive": 243882
+            },
+            "0.01": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 243882,
+              "decoded_positive": 243882
+            }
+          },
+          "zero_origin_displacement_squared": 0.0,
+          "positive_origin_displacement_squared": 0.0
+        },
+        {
+          "lineage": "endothelial",
+          "cells": 88,
+          "entries": 2356200,
+          "threshold_counts": {
+            "0.0": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 307730,
+              "decoded_positive": 307730
+            },
+            "0.001": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 307730,
+              "decoded_positive": 307730
+            },
+            "0.01": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 307730,
+              "decoded_positive": 307730
+            }
+          },
+          "zero_origin_displacement_squared": 0.0,
+          "positive_origin_displacement_squared": 0.0
+        },
+        {
+          "lineage": "mesenchymal",
+          "cells": 297,
+          "entries": 7952175,
+          "threshold_counts": {
+            "0.0": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 1047514,
+              "decoded_positive": 1047514
+            },
+            "0.001": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 1047514,
+              "decoded_positive": 1047514
+            },
+            "0.01": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 1047514,
+              "decoded_positive": 1047514
+            }
+          },
+          "zero_origin_displacement_squared": 0.0,
+          "positive_origin_displacement_squared": 0.0
+        }
+      ],
+      "zero_origin_displacement_squared": 0.0,
+      "positive_origin_displacement_squared": 0.0,
+      "selected_feature_covariance_change": 0.0,
+      "donor_variogram_displacement_mse": 0.0,
+      "zero_origin_variogram_mse": 0.0,
+      "positive_origin_variogram_mse": 0.0,
+      "interaction_variogram_mse": 0.0,
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0
+    },
+    {
+      "cutoff": 8.0,
+      "candidate": "anchor_unshrunk",
+      "prediction_sha256": "1b3d7ff9b7c635f2f03ac60bbd996173f07fc7d089157ef270a14767ee6e3405",
+      "exact_replay_passed": true,
+      "max_fit_stage": 8.0,
+      "lineages": [
+        {
+          "lineage": "blood",
+          "cells": 698,
+          "entries": 18688950,
+          "threshold_counts": {
+            "0.0": {
+              "created": 4468,
+              "destroyed": 12223,
+              "original_positive": 2186310,
+              "decoded_positive": 2178555
+            },
+            "0.001": {
+              "created": 4468,
+              "destroyed": 12223,
+              "original_positive": 2186310,
+              "decoded_positive": 2178555
+            },
+            "0.01": {
+              "created": 4468,
+              "destroyed": 12223,
+              "original_positive": 2186310,
+              "decoded_positive": 2178555
+            }
+          },
+          "zero_origin_displacement_squared": 2075.2260877927197,
+          "positive_origin_displacement_squared": 5910.931712069283
+        },
+        {
+          "lineage": "cardiomyocyte",
+          "cells": 100,
+          "entries": 2677500,
+          "threshold_counts": {
+            "0.0": {
+              "created": 840,
+              "destroyed": 3753,
+              "original_positive": 332630,
+              "decoded_positive": 329717
+            },
+            "0.001": {
+              "created": 840,
+              "destroyed": 3753,
+              "original_positive": 332630,
+              "decoded_positive": 329717
+            },
+            "0.01": {
+              "created": 840,
+              "destroyed": 3753,
+              "original_positive": 332630,
+              "decoded_positive": 329717
+            }
+          },
+          "zero_origin_displacement_squared": 389.02002997975416,
+          "positive_origin_displacement_squared": 2058.5541752006375
+        },
+        {
+          "lineage": "cardiopharyngeal",
+          "cells": 117,
+          "entries": 3132675,
+          "threshold_counts": {
+            "0.0": {
+              "created": 983,
+              "destroyed": 2646,
+              "original_positive": 387247,
+              "decoded_positive": 385584
+            },
+            "0.001": {
+              "created": 983,
+              "destroyed": 2646,
+              "original_positive": 387247,
+              "decoded_positive": 385584
+            },
+            "0.01": {
+              "created": 983,
+              "destroyed": 2646,
+              "original_positive": 387247,
+              "decoded_positive": 385584
+            }
+          },
+          "zero_origin_displacement_squared": 463.7370929730617,
+          "positive_origin_displacement_squared": 1467.7627640576288
+        },
+        {
+          "lineage": "ectoderm_other",
+          "cells": 127,
+          "entries": 3400425,
+          "threshold_counts": {
+            "0.0": {
+              "created": 1475,
+              "destroyed": 1781,
+              "original_positive": 432047,
+              "decoded_positive": 431741
+            },
+            "0.001": {
+              "created": 1475,
+              "destroyed": 1781,
+              "original_positive": 432047,
+              "decoded_positive": 431741
+            },
+            "0.01": {
+              "created": 1475,
+              "destroyed": 1781,
+              "original_positive": 432047,
+              "decoded_positive": 431741
+            }
+          },
+          "zero_origin_displacement_squared": 599.2470104248603,
+          "positive_origin_displacement_squared": 1045.9721263735746
+        },
+        {
+          "lineage": "endoderm",
+          "cells": 73,
+          "entries": 1954575,
+          "threshold_counts": {
+            "0.0": {
+              "created": 1356,
+              "destroyed": 1355,
+              "original_positive": 243882,
+              "decoded_positive": 243883
+            },
+            "0.001": {
+              "created": 1356,
+              "destroyed": 1355,
+              "original_positive": 243882,
+              "decoded_positive": 243883
+            },
+            "0.01": {
+              "created": 1356,
+              "destroyed": 1355,
+              "original_positive": 243882,
+              "decoded_positive": 243883
+            }
+          },
+          "zero_origin_displacement_squared": 598.3094823934358,
+          "positive_origin_displacement_squared": 871.7647043190804
+        },
+        {
+          "lineage": "endothelial",
+          "cells": 88,
+          "entries": 2356200,
+          "threshold_counts": {
+            "0.0": {
+              "created": 1243,
+              "destroyed": 2052,
+              "original_positive": 307730,
+              "decoded_positive": 306921
+            },
+            "0.001": {
+              "created": 1243,
+              "destroyed": 2052,
+              "original_positive": 307730,
+              "decoded_positive": 306921
+            },
+            "0.01": {
+              "created": 1243,
+              "destroyed": 2052,
+              "original_positive": 307730,
+              "decoded_positive": 306921
+            }
+          },
+          "zero_origin_displacement_squared": 595.3245645044004,
+          "positive_origin_displacement_squared": 1029.4637183351638
+        },
+        {
+          "lineage": "mesenchymal",
+          "cells": 297,
+          "entries": 7952175,
+          "threshold_counts": {
+            "0.0": {
+              "created": 4006,
+              "destroyed": 5536,
+              "original_positive": 1047514,
+              "decoded_positive": 1045984
+            },
+            "0.001": {
+              "created": 4006,
+              "destroyed": 5536,
+              "original_positive": 1047514,
+              "decoded_positive": 1045984
+            },
+            "0.01": {
+              "created": 4006,
+              "destroyed": 5536,
+              "original_positive": 1047514,
+              "decoded_positive": 1045984
+            }
+          },
+          "zero_origin_displacement_squared": 1643.0001445523053,
+          "positive_origin_displacement_squared": 3138.177257482398
+        }
+      ],
+      "zero_origin_displacement_squared": 6363.864412620538,
+      "positive_origin_displacement_squared": 15522.626457837767,
+      "selected_feature_covariance_change": 0.041118423547309144,
+      "donor_variogram_displacement_mse": 4.209990038361866e-06,
+      "zero_origin_variogram_mse": 9.408635150975897e-07,
+      "positive_origin_variogram_mse": 3.575164782887441e-06,
+      "interaction_variogram_mse": 5.180921802683258e-10,
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0
+    },
+    {
+      "cutoff": 8.0,
+      "candidate": "capture_quarter",
+      "prediction_sha256": "a3118114aa7677b1563f31f3c3aa717c1b93e60cea52560678439e693411c5d8",
+      "exact_replay_passed": true,
+      "max_fit_stage": 8.0,
+      "lineages": [
+        {
+          "lineage": "blood",
+          "cells": 698,
+          "entries": 18688950,
+          "threshold_counts": {
+            "0.0": {
+              "created": 4040068,
+              "destroyed": 0,
+              "original_positive": 2186310,
+              "decoded_positive": 6226378
+            },
+            "0.001": {
+              "created": 1446263,
+              "destroyed": 0,
+              "original_positive": 2186310,
+              "decoded_positive": 3632573
+            },
+            "0.01": {
+              "created": 192849,
+              "destroyed": 0,
+              "original_positive": 2186310,
+              "decoded_positive": 2379159
+            }
+          },
+          "zero_origin_displacement_squared": 123.00093522301687,
+          "positive_origin_displacement_squared": 1319.1857103370153
+        },
+        {
+          "lineage": "cardiomyocyte",
+          "cells": 100,
+          "entries": 2677500,
+          "threshold_counts": {
+            "0.0": {
+              "created": 502711,
+              "destroyed": 0,
+              "original_positive": 332630,
+              "decoded_positive": 835341
+            },
+            "0.001": {
+              "created": 327013,
+              "destroyed": 0,
+              "original_positive": 332630,
+              "decoded_positive": 659643
+            },
+            "0.01": {
+              "created": 58033,
+              "destroyed": 0,
+              "original_positive": 332630,
+              "decoded_positive": 390663
+            }
+          },
+          "zero_origin_displacement_squared": 32.45567165817584,
+          "positive_origin_displacement_squared": 248.6217958266129
+        },
+        {
+          "lineage": "cardiopharyngeal",
+          "cells": 117,
+          "entries": 3132675,
+          "threshold_counts": {
+            "0.0": {
+              "created": 648018,
+              "destroyed": 0,
+              "original_positive": 387247,
+              "decoded_positive": 1035265
+            },
+            "0.001": {
+              "created": 422112,
+              "destroyed": 0,
+              "original_positive": 387247,
+              "decoded_positive": 809359
+            },
+            "0.01": {
+              "created": 75699,
+              "destroyed": 0,
+              "original_positive": 387247,
+              "decoded_positive": 462946
+            }
+          },
+          "zero_origin_displacement_squared": 41.13198433419092,
+          "positive_origin_displacement_squared": 266.1081478321154
+        },
+        {
+          "lineage": "ectoderm_other",
+          "cells": 127,
+          "entries": 3400425,
+          "threshold_counts": {
+            "0.0": {
+              "created": 703800,
+              "destroyed": 0,
+              "original_positive": 432047,
+              "decoded_positive": 1135847
+            },
+            "0.001": {
+              "created": 410892,
+              "destroyed": 0,
+              "original_positive": 432047,
+              "decoded_positive": 842939
+            },
+            "0.01": {
+              "created": 56036,
+              "destroyed": 0,
+              "original_positive": 432047,
+              "decoded_positive": 488083
+            }
+          },
+          "zero_origin_displacement_squared": 28.867380932160458,
+          "positive_origin_displacement_squared": 205.82765463263647
+        },
+        {
+          "lineage": "endoderm",
+          "cells": 73,
+          "entries": 1954575,
+          "threshold_counts": {
+            "0.0": {
+              "created": 400197,
+              "destroyed": 0,
+              "original_positive": 243882,
+              "decoded_positive": 644079
+            },
+            "0.001": {
+              "created": 280045,
+              "destroyed": 0,
+              "original_positive": 243882,
+              "decoded_positive": 523927
+            },
+            "0.01": {
+              "created": 43435,
+              "destroyed": 0,
+              "original_positive": 243882,
+              "decoded_positive": 287317
+            }
+          },
+          "zero_origin_displacement_squared": 21.040679345769444,
+          "positive_origin_displacement_squared": 129.0376781047643
+        },
+        {
+          "lineage": "endothelial",
+          "cells": 88,
+          "entries": 2356200,
+          "threshold_counts": {
+            "0.0": {
+              "created": 490822,
+              "destroyed": 0,
+              "original_positive": 307730,
+              "decoded_positive": 798552
+            },
+            "0.001": {
+              "created": 350829,
+              "destroyed": 0,
+              "original_positive": 307730,
+              "decoded_positive": 658559
+            },
+            "0.01": {
+              "created": 69927,
+              "destroyed": 0,
+              "original_positive": 307730,
+              "decoded_positive": 377657
+            }
+          },
+          "zero_origin_displacement_squared": 39.269736997557665,
+          "positive_origin_displacement_squared": 236.7999120373639
+        },
+        {
+          "lineage": "mesenchymal",
+          "cells": 297,
+          "entries": 7952175,
+          "threshold_counts": {
+            "0.0": {
+              "created": 1923956,
+              "destroyed": 0,
+              "original_positive": 1047514,
+              "decoded_positive": 2971470
+            },
+            "0.001": {
+              "created": 911223,
+              "destroyed": 0,
+              "original_positive": 1047514,
+              "decoded_positive": 1958737
+            },
+            "0.01": {
+              "created": 107743,
+              "destroyed": 0,
+              "original_positive": 1047514,
+              "decoded_positive": 1155257
+            }
+          },
+          "zero_origin_displacement_squared": 51.50548373924447,
+          "positive_origin_displacement_squared": 447.36101309462714
+        }
+      ],
+      "zero_origin_displacement_squared": 337.27187223011566,
+      "positive_origin_displacement_squared": 2852.9419118651354,
+      "selected_feature_covariance_change": 0.0831250090622981,
+      "donor_variogram_displacement_mse": 0.0004134610644541681,
+      "zero_origin_variogram_mse": 0.00036250404082238674,
+      "positive_origin_variogram_mse": 1.794281524780672e-05,
+      "interaction_variogram_mse": 1.1870203604769092e-11,
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0
+    },
+    {
+      "cutoff": 8.0,
+      "candidate": "capture_shrunk",
+      "prediction_sha256": "7c21aa9c80db104f039bb0b9404a996793b837b507bec8a9eb4eb4629ed970a9",
+      "exact_replay_passed": true,
+      "max_fit_stage": 8.0,
+      "lineages": [
+        {
+          "lineage": "blood",
+          "cells": 698,
+          "entries": 18688950,
+          "threshold_counts": {
+            "0.0": {
+              "created": 4040068,
+              "destroyed": 0,
+              "original_positive": 2186310,
+              "decoded_positive": 6226378
+            },
+            "0.001": {
+              "created": 2484504,
+              "destroyed": 0,
+              "original_positive": 2186310,
+              "decoded_positive": 4670814
+            },
+            "0.01": {
+              "created": 713081,
+              "destroyed": 0,
+              "original_positive": 2186310,
+              "decoded_positive": 2899391
+            }
+          },
+          "zero_origin_displacement_squared": 493.4891384531054,
+          "positive_origin_displacement_squared": 2059.4833069193755
+        },
+        {
+          "lineage": "cardiomyocyte",
+          "cells": 100,
+          "entries": 2677500,
+          "threshold_counts": {
+            "0.0": {
+              "created": 502711,
+              "destroyed": 1,
+              "original_positive": 332630,
+              "decoded_positive": 835340
+            },
+            "0.001": {
+              "created": 466553,
+              "destroyed": 1,
+              "original_positive": 332630,
+              "decoded_positive": 799182
+            },
+            "0.01": {
+              "created": 181347,
+              "destroyed": 1,
+              "original_positive": 332630,
+              "decoded_positive": 513976
+            }
+          },
+          "zero_origin_displacement_squared": 150.87584945521849,
+          "positive_origin_displacement_squared": 570.4667624534284
+        },
+        {
+          "lineage": "cardiopharyngeal",
+          "cells": 117,
+          "entries": 3132675,
+          "threshold_counts": {
+            "0.0": {
+              "created": 648018,
+              "destroyed": 1,
+              "original_positive": 387247,
+              "decoded_positive": 1035264
+            },
+            "0.001": {
+              "created": 615512,
+              "destroyed": 1,
+              "original_positive": 387247,
+              "decoded_positive": 1002758
+            },
+            "0.01": {
+              "created": 227254,
+              "destroyed": 1,
+              "original_positive": 387247,
+              "decoded_positive": 614500
+            }
+          },
+          "zero_origin_displacement_squared": 187.6580634464526,
+          "positive_origin_displacement_squared": 585.2945492366753
+        },
+        {
+          "lineage": "ectoderm_other",
+          "cells": 127,
+          "entries": 3400425,
+          "threshold_counts": {
+            "0.0": {
+              "created": 703800,
+              "destroyed": 0,
+              "original_positive": 432047,
+              "decoded_positive": 1135847
+            },
+            "0.001": {
+              "created": 627565,
+              "destroyed": 0,
+              "original_positive": 432047,
+              "decoded_positive": 1059612
+            },
+            "0.01": {
+              "created": 186613,
+              "destroyed": 0,
+              "original_positive": 432047,
+              "decoded_positive": 618660
+            }
+          },
+          "zero_origin_displacement_squared": 102.29664572075727,
+          "positive_origin_displacement_squared": 245.78504364928702
+        },
+        {
+          "lineage": "endoderm",
+          "cells": 73,
+          "entries": 1954575,
+          "threshold_counts": {
+            "0.0": {
+              "created": 400197,
+              "destroyed": 0,
+              "original_positive": 243882,
+              "decoded_positive": 644079
+            },
+            "0.001": {
+              "created": 367853,
+              "destroyed": 0,
+              "original_positive": 243882,
+              "decoded_positive": 611735
+            },
+            "0.01": {
+              "created": 129891,
+              "destroyed": 0,
+              "original_positive": 243882,
+              "decoded_positive": 373773
+            }
+          },
+          "zero_origin_displacement_squared": 65.75366983323192,
+          "positive_origin_displacement_squared": 117.16059321420003
+        },
+        {
+          "lineage": "endothelial",
+          "cells": 88,
+          "entries": 2356200,
+          "threshold_counts": {
+            "0.0": {
+              "created": 490822,
+              "destroyed": 0,
+              "original_positive": 307730,
+              "decoded_positive": 798552
+            },
+            "0.001": {
+              "created": 464308,
+              "destroyed": 0,
+              "original_positive": 307730,
+              "decoded_positive": 772038
+            },
+            "0.01": {
+              "created": 200173,
+              "destroyed": 0,
+              "original_positive": 307730,
+              "decoded_positive": 507903
+            }
+          },
+          "zero_origin_displacement_squared": 169.7568177433988,
+          "positive_origin_displacement_squared": 496.758133063101
+        },
+        {
+          "lineage": "mesenchymal",
+          "cells": 297,
+          "entries": 7952175,
+          "threshold_counts": {
+            "0.0": {
+              "created": 1923956,
+              "destroyed": 1,
+              "original_positive": 1047514,
+              "decoded_positive": 2971469
+            },
+            "0.001": {
+              "created": 1455654,
+              "destroyed": 1,
+              "original_positive": 1047514,
+              "decoded_positive": 2503167
+            },
+            "0.01": {
+              "created": 433465,
+              "destroyed": 1,
+              "original_positive": 1047514,
+              "decoded_positive": 1480978
+            }
+          },
+          "zero_origin_displacement_squared": 246.6119770132892,
+          "positive_origin_displacement_squared": 730.7338460310921
+        }
+      ],
+      "zero_origin_displacement_squared": 1416.4421616654536,
+      "positive_origin_displacement_squared": 4805.68223456716,
+      "selected_feature_covariance_change": 0.044795883806256584,
+      "donor_variogram_displacement_mse": 0.0011136034736409783,
+      "zero_origin_variogram_mse": 0.001005191938020289,
+      "positive_origin_variogram_mse": 2.941076127171982e-05,
+      "interaction_variogram_mse": 1.5561307797895552e-10,
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0
+    },
+    {
+      "cutoff": 8.25,
+      "candidate": "copy",
+      "prediction_sha256": "f991bb722bc73fe1b4135b16a6a7a3db7132c306103559448dc13289eb73ae4e",
+      "exact_replay_passed": true,
+      "max_fit_stage": 8.25,
+      "lineages": [
+        {
+          "lineage": "blood",
+          "cells": 428,
+          "entries": 11459700,
+          "threshold_counts": {
+            "0.0": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 1306035,
+              "decoded_positive": 1306035
+            },
+            "0.001": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 1306035,
+              "decoded_positive": 1306035
+            },
+            "0.01": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 1306035,
+              "decoded_positive": 1306035
+            }
+          },
+          "zero_origin_displacement_squared": 0.0,
+          "positive_origin_displacement_squared": 0.0
+        },
+        {
+          "lineage": "cardiomyocyte",
+          "cells": 187,
+          "entries": 5006925,
+          "threshold_counts": {
+            "0.0": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 645953,
+              "decoded_positive": 645953
+            },
+            "0.001": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 645953,
+              "decoded_positive": 645953
+            },
+            "0.01": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 645953,
+              "decoded_positive": 645953
+            }
+          },
+          "zero_origin_displacement_squared": 0.0,
+          "positive_origin_displacement_squared": 0.0
+        },
+        {
+          "lineage": "cardiopharyngeal",
+          "cells": 176,
+          "entries": 4712400,
+          "threshold_counts": {
+            "0.0": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 614582,
+              "decoded_positive": 614582
+            },
+            "0.001": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 614582,
+              "decoded_positive": 614582
+            },
+            "0.01": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 614582,
+              "decoded_positive": 614582
+            }
+          },
+          "zero_origin_displacement_squared": 0.0,
+          "positive_origin_displacement_squared": 0.0
+        },
+        {
+          "lineage": "ectoderm_other",
+          "cells": 153,
+          "entries": 4096575,
+          "threshold_counts": {
+            "0.0": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 549327,
+              "decoded_positive": 549327
+            },
+            "0.001": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 549327,
+              "decoded_positive": 549327
+            },
+            "0.01": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 549327,
+              "decoded_positive": 549327
+            }
+          },
+          "zero_origin_displacement_squared": 0.0,
+          "positive_origin_displacement_squared": 0.0
+        },
+        {
+          "lineage": "endoderm",
+          "cells": 75,
+          "entries": 2008125,
+          "threshold_counts": {
+            "0.0": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 265046,
+              "decoded_positive": 265046
+            },
+            "0.001": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 265046,
+              "decoded_positive": 265046
+            },
+            "0.01": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 265046,
+              "decoded_positive": 265046
+            }
+          },
+          "zero_origin_displacement_squared": 0.0,
+          "positive_origin_displacement_squared": 0.0
+        },
+        {
+          "lineage": "endothelial",
+          "cells": 139,
+          "entries": 3721725,
+          "threshold_counts": {
+            "0.0": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 478534,
+              "decoded_positive": 478534
+            },
+            "0.001": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 478534,
+              "decoded_positive": 478534
+            },
+            "0.01": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 478534,
+              "decoded_positive": 478534
+            }
+          },
+          "zero_origin_displacement_squared": 0.0,
+          "positive_origin_displacement_squared": 0.0
+        },
+        {
+          "lineage": "mesenchymal",
+          "cells": 300,
+          "entries": 8032500,
+          "threshold_counts": {
+            "0.0": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 1070756,
+              "decoded_positive": 1070756
+            },
+            "0.001": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 1070756,
+              "decoded_positive": 1070756
+            },
+            "0.01": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 1070756,
+              "decoded_positive": 1070756
+            }
+          },
+          "zero_origin_displacement_squared": 0.0,
+          "positive_origin_displacement_squared": 0.0
+        },
+        {
+          "lineage": "neural_crest",
+          "cells": 42,
+          "entries": 1124550,
+          "threshold_counts": {
+            "0.0": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 144658,
+              "decoded_positive": 144658
+            },
+            "0.001": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 144658,
+              "decoded_positive": 144658
+            },
+            "0.01": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 144658,
+              "decoded_positive": 144658
+            }
+          },
+          "zero_origin_displacement_squared": 0.0,
+          "positive_origin_displacement_squared": 0.0
+        }
+      ],
+      "zero_origin_displacement_squared": 0.0,
+      "positive_origin_displacement_squared": 0.0,
+      "selected_feature_covariance_change": 0.0,
+      "donor_variogram_displacement_mse": 0.0,
+      "zero_origin_variogram_mse": 0.0,
+      "positive_origin_variogram_mse": 0.0,
+      "interaction_variogram_mse": 0.0,
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0
+    },
+    {
+      "cutoff": 8.25,
+      "candidate": "anchor_unshrunk",
+      "prediction_sha256": "5d6aa4173f2633aed63027306766a422040cce2e2a2b4e4dd4564d52ea10457c",
+      "exact_replay_passed": true,
+      "max_fit_stage": 8.25,
+      "lineages": [
+        {
+          "lineage": "blood",
+          "cells": 428,
+          "entries": 11459700,
+          "threshold_counts": {
+            "0.0": {
+              "created": 2345,
+              "destroyed": 8936,
+              "original_positive": 1306035,
+              "decoded_positive": 1299444
+            },
+            "0.001": {
+              "created": 2345,
+              "destroyed": 8936,
+              "original_positive": 1306035,
+              "decoded_positive": 1299444
+            },
+            "0.01": {
+              "created": 2345,
+              "destroyed": 8936,
+              "original_positive": 1306035,
+              "decoded_positive": 1299444
+            }
+          },
+          "zero_origin_displacement_squared": 1140.4516466599218,
+          "positive_origin_displacement_squared": 3975.7468121194925
+        },
+        {
+          "lineage": "cardiomyocyte",
+          "cells": 187,
+          "entries": 5006925,
+          "threshold_counts": {
+            "0.0": {
+              "created": 2634,
+              "destroyed": 7962,
+              "original_positive": 645953,
+              "decoded_positive": 640625
+            },
+            "0.001": {
+              "created": 2634,
+              "destroyed": 7962,
+              "original_positive": 645953,
+              "decoded_positive": 640625
+            },
+            "0.01": {
+              "created": 2634,
+              "destroyed": 7962,
+              "original_positive": 645953,
+              "decoded_positive": 640625
+            }
+          },
+          "zero_origin_displacement_squared": 1307.882474276409,
+          "positive_origin_displacement_squared": 4547.8017635549295
+        },
+        {
+          "lineage": "cardiopharyngeal",
+          "cells": 176,
+          "entries": 4712400,
+          "threshold_counts": {
+            "0.0": {
+              "created": 1291,
+              "destroyed": 3371,
+              "original_positive": 614582,
+              "decoded_positive": 612502
+            },
+            "0.001": {
+              "created": 1291,
+              "destroyed": 3371,
+              "original_positive": 614582,
+              "decoded_positive": 612502
+            },
+            "0.01": {
+              "created": 1291,
+              "destroyed": 3371,
+              "original_positive": 614582,
+              "decoded_positive": 612502
+            }
+          },
+          "zero_origin_displacement_squared": 564.9887251676819,
+          "positive_origin_displacement_squared": 1794.6953161691008
+        },
+        {
+          "lineage": "ectoderm_other",
+          "cells": 153,
+          "entries": 4096575,
+          "threshold_counts": {
+            "0.0": {
+              "created": 1561,
+              "destroyed": 1927,
+              "original_positive": 549327,
+              "decoded_positive": 548961
+            },
+            "0.001": {
+              "created": 1561,
+              "destroyed": 1927,
+              "original_positive": 549327,
+              "decoded_positive": 548961
+            },
+            "0.01": {
+              "created": 1561,
+              "destroyed": 1927,
+              "original_positive": 549327,
+              "decoded_positive": 548961
+            }
+          },
+          "zero_origin_displacement_squared": 588.1517265359624,
+          "positive_origin_displacement_squared": 971.1260347401177
+        },
+        {
+          "lineage": "endoderm",
+          "cells": 75,
+          "entries": 2008125,
+          "threshold_counts": {
+            "0.0": {
+              "created": 722,
+              "destroyed": 1261,
+              "original_positive": 265046,
+              "decoded_positive": 264507
+            },
+            "0.001": {
+              "created": 722,
+              "destroyed": 1261,
+              "original_positive": 265046,
+              "decoded_positive": 264507
+            },
+            "0.01": {
+              "created": 722,
+              "destroyed": 1261,
+              "original_positive": 265046,
+              "decoded_positive": 264507
+            }
+          },
+          "zero_origin_displacement_squared": 292.52731066283496,
+          "positive_origin_displacement_squared": 720.2772178661901
+        },
+        {
+          "lineage": "endothelial",
+          "cells": 139,
+          "entries": 3721725,
+          "threshold_counts": {
+            "0.0": {
+              "created": 1856,
+              "destroyed": 4130,
+              "original_positive": 478534,
+              "decoded_positive": 476260
+            },
+            "0.001": {
+              "created": 1856,
+              "destroyed": 4130,
+              "original_positive": 478534,
+              "decoded_positive": 476260
+            },
+            "0.01": {
+              "created": 1856,
+              "destroyed": 4130,
+              "original_positive": 478534,
+              "decoded_positive": 476260
+            }
+          },
+          "zero_origin_displacement_squared": 903.7393910697958,
+          "positive_origin_displacement_squared": 2536.6367486176355
+        },
+        {
+          "lineage": "mesenchymal",
+          "cells": 300,
+          "entries": 8032500,
+          "threshold_counts": {
+            "0.0": {
+              "created": 3642,
+              "destroyed": 6011,
+              "original_positive": 1070756,
+              "decoded_positive": 1068387
+            },
+            "0.001": {
+              "created": 3642,
+              "destroyed": 6011,
+              "original_positive": 1070756,
+              "decoded_positive": 1068387
+            },
+            "0.01": {
+              "created": 3642,
+              "destroyed": 6011,
+              "original_positive": 1070756,
+              "decoded_positive": 1068387
+            }
+          },
+          "zero_origin_displacement_squared": 1535.2157474431244,
+          "positive_origin_displacement_squared": 3425.9710265489607
+        },
+        {
+          "lineage": "neural_crest",
+          "cells": 42,
+          "entries": 1124550,
+          "threshold_counts": {
+            "0.0": {
+              "created": 462,
+              "destroyed": 521,
+              "original_positive": 144658,
+              "decoded_positive": 144599
+            },
+            "0.001": {
+              "created": 462,
+              "destroyed": 521,
+              "original_positive": 144658,
+              "decoded_positive": 144599
+            },
+            "0.01": {
+              "created": 462,
+              "destroyed": 521,
+              "original_positive": 144658,
+              "decoded_positive": 144599
+            }
+          },
+          "zero_origin_displacement_squared": 181.31501229215462,
+          "positive_origin_displacement_squared": 282.39404193809105
+        }
+      ],
+      "zero_origin_displacement_squared": 6514.272034107885,
+      "positive_origin_displacement_squared": 18254.648961554518,
+      "selected_feature_covariance_change": 0.06474211905825207,
+      "donor_variogram_displacement_mse": 5.885482096346095e-06,
+      "zero_origin_variogram_mse": 1.1365178806954646e-06,
+      "positive_origin_variogram_mse": 5.0264161473023705e-06,
+      "interaction_variogram_mse": 4.364451300364891e-10,
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0
+    },
+    {
+      "cutoff": 8.25,
+      "candidate": "capture_quarter",
+      "prediction_sha256": "f578fe28fd43f97ff33f7aa7d51170c0b17ef0966fbc70cee0de230dbbabc064",
+      "exact_replay_passed": true,
+      "max_fit_stage": 8.25,
+      "lineages": [
+        {
+          "lineage": "blood",
+          "cells": 428,
+          "entries": 11459700,
+          "threshold_counts": {
+            "0.0": {
+              "created": 1723397,
+              "destroyed": 0,
+              "original_positive": 1306035,
+              "decoded_positive": 3029432
+            },
+            "0.001": {
+              "created": 597671,
+              "destroyed": 0,
+              "original_positive": 1306035,
+              "decoded_positive": 1903706
+            },
+            "0.01": {
+              "created": 54725,
+              "destroyed": 0,
+              "original_positive": 1306035,
+              "decoded_positive": 1360760
+            }
+          },
+          "zero_origin_displacement_squared": 75.13938724980525,
+          "positive_origin_displacement_squared": 1669.644803277034
+        },
+        {
+          "lineage": "cardiomyocyte",
+          "cells": 187,
+          "entries": 5006925,
+          "threshold_counts": {
+            "0.0": {
+              "created": 1148625,
+              "destroyed": 0,
+              "original_positive": 645953,
+              "decoded_positive": 1794578
+            },
+            "0.001": {
+              "created": 691477,
+              "destroyed": 0,
+              "original_positive": 645953,
+              "decoded_positive": 1337430
+            },
+            "0.01": {
+              "created": 122621,
+              "destroyed": 0,
+              "original_positive": 645953,
+              "decoded_positive": 768574
+            }
+          },
+          "zero_origin_displacement_squared": 119.10890912218835,
+          "positive_origin_displacement_squared": 621.8969863997603
+        },
+        {
+          "lineage": "cardiopharyngeal",
+          "cells": 176,
+          "entries": 4712400,
+          "threshold_counts": {
+            "0.0": {
+              "created": 1070229,
+              "destroyed": 0,
+              "original_positive": 614582,
+              "decoded_positive": 1684811
+            },
+            "0.001": {
+              "created": 629170,
+              "destroyed": 0,
+              "original_positive": 614582,
+              "decoded_positive": 1243752
+            },
+            "0.01": {
+              "created": 94206,
+              "destroyed": 0,
+              "original_positive": 614582,
+              "decoded_positive": 708788
+            }
+          },
+          "zero_origin_displacement_squared": 47.33193697486971,
+          "positive_origin_displacement_squared": 277.24123393581607
+        },
+        {
+          "lineage": "ectoderm_other",
+          "cells": 153,
+          "entries": 4096575,
+          "threshold_counts": {
+            "0.0": {
+              "created": 903908,
+              "destroyed": 0,
+              "original_positive": 549327,
+              "decoded_positive": 1453235
+            },
+            "0.001": {
+              "created": 532246,
+              "destroyed": 0,
+              "original_positive": 549327,
+              "decoded_positive": 1081573
+            },
+            "0.01": {
+              "created": 69769,
+              "destroyed": 0,
+              "original_positive": 549327,
+              "decoded_positive": 619096
+            }
+          },
+          "zero_origin_displacement_squared": 34.747039661360496,
+          "positive_origin_displacement_squared": 244.0903964866276
+        },
+        {
+          "lineage": "endoderm",
+          "cells": 75,
+          "entries": 2008125,
+          "threshold_counts": {
+            "0.0": {
+              "created": 414212,
+              "destroyed": 1,
+              "original_positive": 265046,
+              "decoded_positive": 679257
+            },
+            "0.001": {
+              "created": 294164,
+              "destroyed": 1,
+              "original_positive": 265046,
+              "decoded_positive": 559209
+            },
+            "0.01": {
+              "created": 52835,
+              "destroyed": 1,
+              "original_positive": 265046,
+              "decoded_positive": 317880
+            }
+          },
+          "zero_origin_displacement_squared": 27.08711003920425,
+          "positive_origin_displacement_squared": 160.2062217697637
+        },
+        {
+          "lineage": "endothelial",
+          "cells": 139,
+          "entries": 3721725,
+          "threshold_counts": {
+            "0.0": {
+              "created": 782443,
+              "destroyed": 0,
+              "original_positive": 478534,
+              "decoded_positive": 1260977
+            },
+            "0.001": {
+              "created": 492256,
+              "destroyed": 0,
+              "original_positive": 478534,
+              "decoded_positive": 970790
+            },
+            "0.01": {
+              "created": 88037,
+              "destroyed": 0,
+              "original_positive": 478534,
+              "decoded_positive": 566571
+            }
+          },
+          "zero_origin_displacement_squared": 48.24343953660782,
+          "positive_origin_displacement_squared": 285.8062759853325
+        },
+        {
+          "lineage": "mesenchymal",
+          "cells": 300,
+          "entries": 8032500,
+          "threshold_counts": {
+            "0.0": {
+              "created": 1940818,
+              "destroyed": 0,
+              "original_positive": 1070756,
+              "decoded_positive": 3011574
+            },
+            "0.001": {
+              "created": 929330,
+              "destroyed": 0,
+              "original_positive": 1070756,
+              "decoded_positive": 2000086
+            },
+            "0.01": {
+              "created": 98907,
+              "destroyed": 0,
+              "original_positive": 1070756,
+              "decoded_positive": 1169663
+            }
+          },
+          "zero_origin_displacement_squared": 51.4841445393858,
+          "positive_origin_displacement_squared": 367.2065325235191
+        },
+        {
+          "lineage": "neural_crest",
+          "cells": 42,
+          "entries": 1124550,
+          "threshold_counts": {
+            "0.0": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 144658,
+              "decoded_positive": 144658
+            },
+            "0.001": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 144658,
+              "decoded_positive": 144658
+            },
+            "0.01": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 144658,
+              "decoded_positive": 144658
+            }
+          },
+          "zero_origin_displacement_squared": 0.0,
+          "positive_origin_displacement_squared": 0.0
+        }
+      ],
+      "zero_origin_displacement_squared": 403.1419671234217,
+      "positive_origin_displacement_squared": 3626.092450377853,
+      "selected_feature_covariance_change": 0.11054992394497119,
+      "donor_variogram_displacement_mse": 0.0003484691260382533,
+      "zero_origin_variogram_mse": 0.0003186977992299944,
+      "positive_origin_variogram_mse": 1.5177106433839072e-05,
+      "interaction_variogram_mse": 1.265660493077192e-11,
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0
+    },
+    {
+      "cutoff": 8.25,
+      "candidate": "capture_shrunk",
+      "prediction_sha256": "b64c67130bd61d7615d3dd8a000d6a63a5c51c264bc9583e0d48f50f59a19432",
+      "exact_replay_passed": true,
+      "max_fit_stage": 8.25,
+      "lineages": [
+        {
+          "lineage": "blood",
+          "cells": 428,
+          "entries": 11459700,
+          "threshold_counts": {
+            "0.0": {
+              "created": 1723397,
+              "destroyed": 0,
+              "original_positive": 1306035,
+              "decoded_positive": 3029432
+            },
+            "0.001": {
+              "created": 1070688,
+              "destroyed": 0,
+              "original_positive": 1306035,
+              "decoded_positive": 2376723
+            },
+            "0.01": {
+              "created": 282479,
+              "destroyed": 0,
+              "original_positive": 1306035,
+              "decoded_positive": 1588514
+            }
+          },
+          "zero_origin_displacement_squared": 260.98703566555326,
+          "positive_origin_displacement_squared": 2189.0492964646846
+        },
+        {
+          "lineage": "cardiomyocyte",
+          "cells": 187,
+          "entries": 5006925,
+          "threshold_counts": {
+            "0.0": {
+              "created": 1148625,
+              "destroyed": 0,
+              "original_positive": 645953,
+              "decoded_positive": 1794578
+            },
+            "0.001": {
+              "created": 1040645,
+              "destroyed": 0,
+              "original_positive": 645953,
+              "decoded_positive": 1686598
+            },
+            "0.01": {
+              "created": 416491,
+              "destroyed": 0,
+              "original_positive": 645953,
+              "decoded_positive": 1062444
+            }
+          },
+          "zero_origin_displacement_squared": 498.67986406171286,
+          "positive_origin_displacement_squared": 1123.3843073281557
+        },
+        {
+          "lineage": "cardiopharyngeal",
+          "cells": 176,
+          "entries": 4712400,
+          "threshold_counts": {
+            "0.0": {
+              "created": 1070229,
+              "destroyed": 0,
+              "original_positive": 614582,
+              "decoded_positive": 1684811
+            },
+            "0.001": {
+              "created": 959815,
+              "destroyed": 0,
+              "original_positive": 614582,
+              "decoded_positive": 1574397
+            },
+            "0.01": {
+              "created": 308564,
+              "destroyed": 0,
+              "original_positive": 614582,
+              "decoded_positive": 923146
+            }
+          },
+          "zero_origin_displacement_squared": 181.3338722787989,
+          "positive_origin_displacement_squared": 277.31254083813633
+        },
+        {
+          "lineage": "ectoderm_other",
+          "cells": 153,
+          "entries": 4096575,
+          "threshold_counts": {
+            "0.0": {
+              "created": 903908,
+              "destroyed": 0,
+              "original_positive": 549327,
+              "decoded_positive": 1453235
+            },
+            "0.001": {
+              "created": 816160,
+              "destroyed": 0,
+              "original_positive": 549327,
+              "decoded_positive": 1365487
+            },
+            "0.01": {
+              "created": 259308,
+              "destroyed": 0,
+              "original_positive": 549327,
+              "decoded_positive": 808635
+            }
+          },
+          "zero_origin_displacement_squared": 147.84803441535905,
+          "positive_origin_displacement_squared": 268.49380279047756
+        },
+        {
+          "lineage": "endoderm",
+          "cells": 75,
+          "entries": 2008125,
+          "threshold_counts": {
+            "0.0": {
+              "created": 414212,
+              "destroyed": 0,
+              "original_positive": 265046,
+              "decoded_positive": 679258
+            },
+            "0.001": {
+              "created": 387068,
+              "destroyed": 0,
+              "original_positive": 265046,
+              "decoded_positive": 652114
+            },
+            "0.01": {
+              "created": 154300,
+              "destroyed": 0,
+              "original_positive": 265046,
+              "decoded_positive": 419346
+            }
+          },
+          "zero_origin_displacement_squared": 104.08067559063763,
+          "positive_origin_displacement_squared": 179.8566805751083
+        },
+        {
+          "lineage": "endothelial",
+          "cells": 139,
+          "entries": 3721725,
+          "threshold_counts": {
+            "0.0": {
+              "created": 782443,
+              "destroyed": 0,
+              "original_positive": 478534,
+              "decoded_positive": 1260977
+            },
+            "0.001": {
+              "created": 725673,
+              "destroyed": 0,
+              "original_positive": 478534,
+              "decoded_positive": 1204207
+            },
+            "0.01": {
+              "created": 260001,
+              "destroyed": 0,
+              "original_positive": 478534,
+              "decoded_positive": 738535
+            }
+          },
+          "zero_origin_displacement_squared": 194.38208490577304,
+          "positive_origin_displacement_squared": 344.01012443482887
+        },
+        {
+          "lineage": "mesenchymal",
+          "cells": 300,
+          "entries": 8032500,
+          "threshold_counts": {
+            "0.0": {
+              "created": 1940818,
+              "destroyed": 0,
+              "original_positive": 1070756,
+              "decoded_positive": 3011574
+            },
+            "0.001": {
+              "created": 1435410,
+              "destroyed": 0,
+              "original_positive": 1070756,
+              "decoded_positive": 2506166
+            },
+            "0.01": {
+              "created": 409691,
+              "destroyed": 0,
+              "original_positive": 1070756,
+              "decoded_positive": 1480447
+            }
+          },
+          "zero_origin_displacement_squared": 211.77743118442814,
+          "positive_origin_displacement_squared": 400.5709631347699
+        },
+        {
+          "lineage": "neural_crest",
+          "cells": 42,
+          "entries": 1124550,
+          "threshold_counts": {
+            "0.0": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 144658,
+              "decoded_positive": 144658
+            },
+            "0.001": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 144658,
+              "decoded_positive": 144658
+            },
+            "0.01": {
+              "created": 0,
+              "destroyed": 0,
+              "original_positive": 144658,
+              "decoded_positive": 144658
+            }
+          },
+          "zero_origin_displacement_squared": 0.0,
+          "positive_origin_displacement_squared": 0.0
+        }
+      ],
+      "zero_origin_displacement_squared": 1599.088998102263,
+      "positive_origin_displacement_squared": 4782.677715566162,
+      "selected_feature_covariance_change": 0.0691069873707019,
+      "donor_variogram_displacement_mse": 0.0009776853257790208,
+      "zero_origin_variogram_mse": 0.0009076211717911065,
+      "positive_origin_variogram_mse": 2.1114059563842602e-05,
+      "interaction_variogram_mse": 1.8634514764581667e-10,
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0
+    }
+  ],
+  "pairs_sha256": "8a51b085492bb7104e13b2654834c8abfc3a74b18b62f6304de374741d630690",
+  "target_expression_read": false,
+  "full_panel_scoring_executed": false,
+  "reward_delta": 0,
+  "report_sha256": "8665a3f0e71a3451d0741fdd65ff7236c2944a1ff245f70959e517052859d101"
+}

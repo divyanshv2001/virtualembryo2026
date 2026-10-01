@@ -120,6 +120,11 @@
       "script": "capture_mean_decoder_fullpanel.py",
       "run": "private/capture_mean_decoder_fullpanel_01",
       "report": "CAPTURE_MEAN_DECODER_FULLPANEL_RESULTS.json"
+    },
+    "capture_decoder_support": {
+      "script": "capture_decoder_support_audit.py",
+      "run": "private/capture_decoder_support_audit_01",
+      "report": "CAPTURE_DECODER_SUPPORT_AUDIT_RESULTS.json"
     }
   }
 }

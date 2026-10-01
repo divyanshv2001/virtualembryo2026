@@ -1,0 +1,39 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "7fee7bf651141fde6fe8b83200cf60ef47e192aac021a21fe149b26feeab4a59",
+  "attempts": 1,
+  "payload_bytes": 2332,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "purpose": "Select boundednextsupportdecoder ablation after donoronlydecomposition",
+      "evidence": "All8forecast hashesexactreplay, nofutureexpression/newbenchmarkmetrics/reward. Quarter/shrunkcreate7.98-8.71M newpositiveentries atop4.94/5.07M originaldonorpositives; above.01quarter.58-.60M/shrunk2.07-2.09M. Incumbentonly14kcreates,29-34kdestroys. DonorvariogramMSEquarter.000348-.000413,shrunk.000978-.001114 vsincumbent4.21-5.89e-6. Zero-origin-onlymaskedMSE.000319-.000363/.000908-.001005; positiveorigin1.5-2.94e-5. Nonadditivecounterfactualsnotvalidmassforecasts, notprooffutureerrorcause.",
+      "history": "ActualearlyCSSbothregress, laterquarterimproves/shrunkregresses. Directionearlyworse/laterbetter, correctonecriticmisstatement. Nopassingcandidate. Full32285scorer/calibration unchanged, reuseddevelopmentonly capturesnotembryos.",
+      "critics": "MMD/CSSsuggestsupport-preservingmultiplicative counts andseparatesparsegate. Directiondonorpositivemaskedshift. Decompestablisheszero-origin structuraldisplacement notoptimalfuturechanges. Need actualmatchedscoredablation, no repeatedproxyor targetgrid.",
+      "constraints": "Fixedfrozenpastquarter/shrunkdeltas, copy/incumbent/additivecontrol exactreplay, guardsbeforetargetreads. Dcache2threads16GB. Originalreadiness>72/64replicate/temporalincomplete. No promotion."
+    },
+    "questions": {
+      "decoder_test": {
+        "type": "choice",
+        "instructions": "Choose singlebounded causal-mechanism ablation; acknowledge magnitude/mass confounds and score withmatched controls later.",
+        "criteria": {
+          "block_zero_creation": "Apply exactsame frozenlineage logdeltas only where donorlog>0; lock donorzeros0 before/after countmassrepair. Clippositivesnonnegative: maydestroypositives, so NOTstrictsupportpreserving. Fixedquarter/shrunk, no strengthfit. Isolatespermissionforzero-filling butchangesrealizedmeans, reportfidelity/magnitude asconfounds. Preflightguards andfullpanelscoreseparatelydeclared.",
+          "count_multiplicative_support": "Counts*=exp(frozendelta), rowcountmassrepair; strictzeros/positivespreserved. Convertslogmean delta tologcountratio withoutfitting, changesbothzeroorigin andpositiveorigin transform,moredifficultattribution.",
+          "new_sparse_gate_proxy": "Fitnewgate/newentrybudgets frompastdonors, morehyperparameters/proxies beforeactualmetrics andearlyhistoricalsupportlimited."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 1094,
+    "output_tokens": 51
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "decoder_test": {
+      "choice": "block_zero_creation",
+      "confidence": 0.47
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}

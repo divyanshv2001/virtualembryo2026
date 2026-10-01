@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T16:34:22.387540+00:00",
+  "updated_utc": "2026-10-01T17:00:11.409665+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Predeclare donor-only positive-support/detection decomposition of exact frozen quarter/shrunk capture-mean decoder forecasts. Measure lineage zero\u2192positive/positive\u2192zero counts, detectionrate displacement, zero/positive-origin contributions and fullpanel sampledvariogram drift versus selectedfeature covariance guard using same donors/seed. No targetread/scoring or exposedtarget strengthselection. Decide a separatelydeclared support-preserving ablation only after mechanism evidence; families/readiness remain open.",
+  "next_experiment": "Predeclare fixed zero-creation-blocked capture decoder ablation: identical frozenquarter/shrunk lineage logdeltas applied only to donor-positive entries, donorzeros locked0; clipnonnegative thenmappedcountmassrepair. Maydestroypositives, notstrictsupportpreserving. Checkpastdonor guards and reportrealizedmean/magnitude confounds. Matchedcopy/incumbent/additiveexactreplay controls; full32285scorer/calibrationunchanged iffeasible. No exposedtarget strengthgrid. Readiness/familycoverage incomplete.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1294,13 +1294,13 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_CAPTURE_FULLPANEL_SYNTHESIS_ROUTE_20261001_01.json",
+    "record": "JEV_SUPPORT_SYNTHESIS_ROUTE_20261001_01.json",
     "usage": {
-      "input_tokens": 1024,
-      "output_tokens": 58
+      "input_tokens": 1094,
+      "output_tokens": 51
     },
-    "choice": "donor_support_decomposition",
-    "confidence": 1.0
+    "choice": "block_zero_creation",
+    "confidence": 0.47
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -2112,6 +2112,21 @@
       "specialist_role_version": 2,
       "metric_availability": true,
       "reward_delta": -58
+    },
+    "capture_decoder_support_audit_01": {
+      "status": "completed",
+      "report_sha256": "8665a3f0e71a3451d0741fdd65ff7236c2944a1ff245f70959e517052859d101",
+      "review": "METRIC_CRITIQUES_DECODER_SUPPORT_20261001.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": false,
+      "reward_delta": 0,
+      "review_corrections": "Direction interval reversed bycritic and creation vs totalpositive count corrected explicitly; no causalfutureerror attribution."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -2352,5 +2367,14 @@
         }
       }
     ]
+  },
+  "capture_decoder_support_job": {
+    "status": "completed",
+    "report_sha256": "8665a3f0e71a3451d0741fdd65ff7236c2944a1ff245f70959e517052859d101",
+    "report": "CAPTURE_DECODER_SUPPORT_AUDIT_RESULTS.json",
+    "exact_replays": 8,
+    "target_expression_read": false,
+    "metrics_available": false,
+    "reward_delta": 0
   }
 }

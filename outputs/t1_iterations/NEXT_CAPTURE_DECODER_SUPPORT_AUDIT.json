@@ -1,0 +1,18 @@
+{
+  "candidates": [
+    "copy",
+    "anchor_unshrunk",
+    "capture_quarter",
+    "capture_shrunk"
+  ],
+  "thresholds": [
+    0.0,
+    0.001,
+    0.01
+  ],
+  "seed": 20260928,
+  "scope": "Pastdonoronly exactscoredforecastreplay cut8/8.25; no targetexpression or newbenchmarkscore/calibration/reward. Zero/positive-origin maskedcounterfactuals are diagnostic notmasspreserved forecasts. Variogram squared donor-displacement is NOT actualCSSerror. Energies are nonadditive dueinteraction; no causalproof.",
+  "analysis": "All32285genes sampled20korderedpairs usingpinnedlocalPanel seedrecipe, samepairs allmethods; detectioncounts mappeduniquegenes, bylineage at exact0 and prespecified .001/.01. Zero/positive-origin matrixdisplacement squared and maskedvariogram changes measured separately.",
+  "controls": "Exactcopy andarchivedincumbent(.5,.5), quarter/shrunk fixeddecoder. All8predictionhashes mustexactlymatch original fullpanelscoredreport beforediagnostics. No parameter fit or selection.",
+  "resources": "D-only oneforecastcachecloseafterhash; source memmap256genechunks, variogrampairchunks512,2threads16GB."
+}
