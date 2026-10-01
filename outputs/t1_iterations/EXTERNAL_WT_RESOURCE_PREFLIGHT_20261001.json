@@ -1,0 +1,216 @@
+{
+  "updated_utc": "2026-10-01T17:23:58.163335+00:00",
+  "scope": "Status/resource preflight, no new experiment/expressionparse/fit/benchmark/reward. Existing acquisition/QC screens not rerun.",
+  "checks": [
+    {
+      "gsm": "GSM2035425",
+      "stage": "E8.5",
+      "allowlisted": true,
+      "exists": true,
+      "hash_matches": true,
+      "prospective_qc_pass": true
+    },
+    {
+      "gsm": "GSM2035596",
+      "stage": "E8.5",
+      "allowlisted": true,
+      "exists": true,
+      "hash_matches": true,
+      "prospective_qc_pass": true
+    },
+    {
+      "gsm": "GSM2035426",
+      "stage": "E8.5",
+      "allowlisted": true,
+      "exists": true,
+      "hash_matches": true,
+      "prospective_qc_pass": true
+    },
+    {
+      "gsm": "GSM2035597",
+      "stage": "E8.5",
+      "allowlisted": true,
+      "exists": true,
+      "hash_matches": true,
+      "prospective_qc_pass": false
+    },
+    {
+      "gsm": "GSM2035427",
+      "stage": "E8.5",
+      "allowlisted": true,
+      "exists": true,
+      "hash_matches": true,
+      "prospective_qc_pass": true
+    },
+    {
+      "gsm": "GSM2035598",
+      "stage": "E8.5",
+      "allowlisted": true,
+      "exists": true,
+      "hash_matches": true,
+      "prospective_qc_pass": false
+    },
+    {
+      "gsm": "GSM2035428",
+      "stage": "E8.5",
+      "allowlisted": true,
+      "exists": true,
+      "hash_matches": true,
+      "prospective_qc_pass": true
+    },
+    {
+      "gsm": "GSM2035599",
+      "stage": "E8.5",
+      "allowlisted": true,
+      "exists": true,
+      "hash_matches": true,
+      "prospective_qc_pass": false
+    },
+    {
+      "gsm": "GSM2035429",
+      "stage": "E8.5",
+      "allowlisted": true,
+      "exists": true,
+      "hash_matches": true,
+      "prospective_qc_pass": true
+    },
+    {
+      "gsm": "GSM2035600",
+      "stage": "E8.5",
+      "allowlisted": true,
+      "exists": true,
+      "hash_matches": true,
+      "prospective_qc_pass": true
+    },
+    {
+      "gsm": "GSM2035430",
+      "stage": "E8.5",
+      "allowlisted": true,
+      "exists": true,
+      "hash_matches": true,
+      "prospective_qc_pass": true
+    },
+    {
+      "gsm": "GSM2035601",
+      "stage": "E8.5",
+      "allowlisted": true,
+      "exists": true,
+      "hash_matches": true,
+      "prospective_qc_pass": true
+    },
+    {
+      "gsm": "GSM2033420",
+      "stage": "E9.5",
+      "allowlisted": true,
+      "exists": true,
+      "hash_matches": true,
+      "prospective_qc_pass": false
+    },
+    {
+      "gsm": "GSM2034877",
+      "stage": "E9.5",
+      "allowlisted": true,
+      "exists": true,
+      "hash_matches": true,
+      "prospective_qc_pass": true
+    },
+    {
+      "gsm": "GSM2034954",
+      "stage": "E9.5",
+      "allowlisted": true,
+      "exists": true,
+      "hash_matches": true,
+      "prospective_qc_pass": false
+    },
+    {
+      "gsm": "GSM2035200",
+      "stage": "E9.5",
+      "allowlisted": true,
+      "exists": true,
+      "hash_matches": true,
+      "prospective_qc_pass": true
+    },
+    {
+      "gsm": "GSM2034094",
+      "stage": "E9.5",
+      "allowlisted": true,
+      "exists": true,
+      "hash_matches": true,
+      "prospective_qc_pass": false
+    },
+    {
+      "gsm": "GSM2035031",
+      "stage": "E9.5",
+      "allowlisted": true,
+      "exists": true,
+      "hash_matches": true,
+      "prospective_qc_pass": true
+    },
+    {
+      "gsm": "GSM2035117",
+      "stage": "E9.5",
+      "allowlisted": true,
+      "exists": true,
+      "hash_matches": true,
+      "prospective_qc_pass": true
+    },
+    {
+      "gsm": "GSM2033421",
+      "stage": "E9.5",
+      "allowlisted": true,
+      "exists": true,
+      "hash_matches": true,
+      "prospective_qc_pass": true
+    },
+    {
+      "gsm": "GSM2034878",
+      "stage": "E9.5",
+      "allowlisted": true,
+      "exists": true,
+      "hash_matches": true,
+      "prospective_qc_pass": true
+    },
+    {
+      "gsm": "GSM2034955",
+      "stage": "E9.5",
+      "allowlisted": true,
+      "exists": true,
+      "hash_matches": true,
+      "prospective_qc_pass": true
+    },
+    {
+      "gsm": "GSM2035201",
+      "stage": "E9.5",
+      "allowlisted": true,
+      "exists": true,
+      "hash_matches": true,
+      "prospective_qc_pass": true
+    },
+    {
+      "gsm": "GSM2034095",
+      "stage": "E9.5",
+      "allowlisted": true,
+      "exists": true,
+      "hash_matches": true,
+      "prospective_qc_pass": true
+    }
+  ],
+  "acquired_cells": 24,
+  "qc_passing_cells": 18,
+  "all_available_and_verified": true,
+  "existing_static_guidance_passing_alphas": [],
+  "training_ready": false,
+  "transfer_validated": false,
+  "report_hashes": {
+    "GSE76118_EARLY_COHORT_RESULTS.json": "9848269d1d48a45adcdd6871e226b91e0c24491500a1ab8d24cb6daee7d7c331",
+    "GSE76118_EARLY_COMPATIBILITY_RESULTS.json": "1dcdbbcab856d0e11219720c9a51d3067b9cf94517d3d4888bf29afdd43cddd9",
+    "GSE76118_MATCHED_LINEAGE_RESULTS.json": "704415d1238c1569bf47589a01953385c5f181c9f57d8ad039bf1515e4aa47c0",
+    "GSE76118_MATCHED_ROBUSTNESS_RESULTS.json": "c4de7cfe7a8110049cacd6ff1de7bce7f6de9c8f71be49cb15ceeaadfbab9abc"
+  },
+  "missing_or_unverified_inputs": [
+    "Independent embryo IDs/replication",
+    "Original paper QC membership",
+    "Validated read-count versus UMI transfer",
+    "Unexposed future evaluation after an E9.5 external temporal fit"
+  ]
+}

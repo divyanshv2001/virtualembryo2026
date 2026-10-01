@@ -1,9 +1,9 @@
 {
-  "updated_utc": "2026-10-01T17:20:25.982598+00:00",
+  "updated_utc": "2026-10-01T17:26:41.737292+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "66d2a94b70d6ca197eb8c677fc3707ad77508a52ae963f1628536e16e7e720c3",
+    "LOCAL_OPTIMIZATION_STATE.json": "739fafacecc2f0ea559cf0f46d801b42a5a485a97df0f2627540a3d7ed1726bf",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "8dd81d6f7edc9eb6878fea984b8672f2b3ac36eaac075e90c82e19f0e0df4748",
+    "METRIC_RESEARCH_QUEUE.json": "17a6239ef09d528610795c6040dee6d0fb61a6c287cc26fc9dff7e1ac1b855ab",
     "METRIC_CRITIQUE_POLICY.json": "027368320281a1164dc91720fe8aa18a344ddf7c14b9c5a8fce8b2b075105b7b",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
     "RESEARCH_HARNESS_MANIFEST.json": "8e29a0ed6c70e6f28033aaed77380f79d10dbf402a1ef1f979f2ff454256589b"
@@ -11,7 +11,7 @@
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [],
-  "next_experiment": "Preflight existing externalWT QC/compatibility path: inspect GSE76118_WT_STAGE_MANIFEST.json, actual local acquisition manifest/files/processes and4cellpilot; do not reread allhistory. Identify supported gene/stage/count normalization and metadata before separatelydeclaring lowRAM QC. No new acquisition/training until sourcevalidation; enforce taskexclusions and eachfitcutoff (externalE8.5/E9.5 cannot enter earlierE8/E8.25 fits). Capture-mean/support families remain open/boundednegative; readiness unmet.",
+  "next_experiment": "Predeclare past-donor-only analytic mean/norm matching feasibility for frozen additive versus zero-blocked controls. Test support necessarybounds first: eachlineage/gene desiredmean requires donorpositive support; minimum Frobenius displacement >=sum_g(n*mean_delta_g)^2/n_positive_g; unsupported nonzero targetmean infeasible. Compare achievable mean/magnitude matching under existing mass/protectedgene guards, no parametergrid or targetexpr. Originalexactmean+countmass jointconstraints negatives preserved. Onlyseparatelydeclare fullpanelablation ifnewmatchedcontrol viable; families/readiness open.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -54,13 +54,13 @@
     "attribution": "Inferred latest export; screenshot lacks filename"
   },
   "latest_jev": {
-    "record": "JEV_BLOCKED_SYNTHESIS_ROUTE_20261001_01.json",
+    "record": "JEV_EXTERNAL_PREFLIGHT_ROUTE_20261001_01.json",
     "usage": {
-      "input_tokens": 1130,
+      "input_tokens": 1056,
       "output_tokens": 65
     },
-    "choice": "external_wt_qc_preflight",
-    "confidence": 0.74
+    "choice": "past_donor_mean_norm_feasibility",
+    "confidence": 0.83
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -81,6 +81,10 @@
     "prospective_qc_passing_cells": 18,
     "latest_compatibility_report": "GSE76118_EARLY_COMPATIBILITY_RESULTS.json",
     "latest_matched_report": "GSE76118_MATCHED_LINEAGE_RESULTS.json",
-    "latest_robustness_report": "GSE76118_MATCHED_ROBUSTNESS_RESULTS.json"
+    "latest_robustness_report": "GSE76118_MATCHED_ROBUSTNESS_RESULTS.json",
+    "local_resources_verified_utc": "2026-10-01T17:26:41.565610+00:00",
+    "resource_preflight": "EXTERNAL_WT_RESOURCE_PREFLIGHT_20261001.json",
+    "all_acquired_files_verified": true,
+    "compact_status": "24-cell cohort/QC, compatibility, lineage matching, robustness and E8.5 static guidance already completed; static guidance had no passing alpha. Transfer/embryo replication not validated. Do not repeat acquisition or QC; per-cutoff stage restrictions remain."
   }
 }

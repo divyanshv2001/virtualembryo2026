@@ -1,0 +1,21 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "purpose": "Correct staleexternalpreflight andchoose distinct nextviabledecision withoutrepeatingcompletedQC",
+    "verified": "Actual24acquired/18QCpassingcells, all24files hashmatchandWTstageallowlisted. Cohort/compatibility/lineagematching/robustness/staticguidance alreadycompleted. Externalstatic E8.5prior7CMlikecells alphas.1/.25 failed2foldproxy; passingalphasnone. Earlier4cellpilotwordinginplaybookwasstale, printercorrected. Sourcecounts1M/proteinfraction.8/unknownbiotype.01 QCfixed.",
+    "limits": "27179/32285externalmappedgenes,25464sharedunique withatlas; externaldetection.144-.335 vsatlas.092/.132/.199quantiles. ReadcountsnotUMI, embryoIDs/originalpaperQCmembershipunverified. External8.5\u21929.5matchedtemporalrankrho.0587 onlydevelopment, cannotfitE9.5temporalcoefficientsbeforecut9.5. No transfervalidated/trainingready. Sourceonlysaturatingtime/ridge/EB proxiesalreadynegative; donotrepeat.",
+    "recent": "Zero-creationblockedactual2foldquarter46.94/51.89,shrunk46.23/51.81 vsanchor50.07/50.91. EarlyCSSimprovesdirectionworsens; realisedmeans/magnitudeconfounds. Matchedmean/norm control remainsuntested; exactmean+countmassconstraints earlierinfeasible/nearanchor.",
+    "constraints": "No newacquisitionneededforcurrent24cellcohort, nofuturestageleakage or exposedtargettuning. Full32285scorer/calibrationunchanged, >72/64replicate/temporalgatesunmet; familiesopen D16GB2threads."
+  },
+  "questions": {
+    "next_step": {
+      "type": "choice",
+      "instructions": "Select nextinformativeboundedpreflight aftercheckingactualcompletedcoverage.",
+      "criteria": {
+        "past_donor_mean_norm_feasibility": "Predeclareanalytic/resourcefeasibility for norm/mean-displacementmatched blockedversusadditive donorcontrols. Donoronly, testbounds/achievablematching beforeimplementation grid; no hardjointlogmean/countmass assumption. Freeze tolerancesfrompastonly, iffeasible laterseparatefullpanelvalidation.",
+        "external_replication_metadata_preflight": "InspectavailableGEO metadata forindependentembryo/paperQC mapping withoutnewdataacquisition; documentmissingexactly. Mayremainblockedwithoutactualreplication IDs.",
+        "repeat_external_QC_or_static": "Repeatalreadycompleted24cellQC orsame.1/.25staticguidance; no newscientificinformation."
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T17:20:24.024742+00:00",
+  "updated_utc": "2026-10-01T17:26:41.565610+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Preflight existing externalWT QC/compatibility path: inspect GSE76118_WT_STAGE_MANIFEST.json, actual local acquisition manifest/files/processes and4cellpilot; do not reread allhistory. Identify supported gene/stage/count normalization and metadata before separatelydeclaring lowRAM QC. No new acquisition/training until sourcevalidation; enforce taskexclusions and eachfitcutoff (externalE8.5/E9.5 cannot enter earlierE8/E8.25 fits). Capture-mean/support families remain open/boundednegative; readiness unmet.",
+  "next_experiment": "Predeclare past-donor-only analytic mean/norm matching feasibility for frozen additive versus zero-blocked controls. Test support necessarybounds first: eachlineage/gene desiredmean requires donorpositive support; minimum Frobenius displacement >=sum_g(n*mean_delta_g)^2/n_positive_g; unsupported nonzero targetmean infeasible. Compare achievable mean/magnitude matching under existing mass/protectedgene guards, no parametergrid or targetexpr. Originalexactmean+countmass jointconstraints negatives preserved. Onlyseparatelydeclare fullpanelablation ifnewmatchedcontrol viable; families/readiness open.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1294,13 +1294,13 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_BLOCKED_SYNTHESIS_ROUTE_20261001_01.json",
+    "record": "JEV_EXTERNAL_PREFLIGHT_ROUTE_20261001_01.json",
     "usage": {
-      "input_tokens": 1130,
+      "input_tokens": 1056,
       "output_tokens": 65
     },
-    "choice": "external_wt_qc_preflight",
-    "confidence": 0.74
+    "choice": "past_donor_mean_norm_feasibility",
+    "confidence": 0.83
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -1321,7 +1321,11 @@
     "prospective_qc_passing_cells": 18,
     "latest_compatibility_report": "GSE76118_EARLY_COMPATIBILITY_RESULTS.json",
     "latest_matched_report": "GSE76118_MATCHED_LINEAGE_RESULTS.json",
-    "latest_robustness_report": "GSE76118_MATCHED_ROBUSTNESS_RESULTS.json"
+    "latest_robustness_report": "GSE76118_MATCHED_ROBUSTNESS_RESULTS.json",
+    "local_resources_verified_utc": "2026-10-01T17:26:41.565610+00:00",
+    "resource_preflight": "EXTERNAL_WT_RESOURCE_PREFLIGHT_20261001.json",
+    "all_acquired_files_verified": true,
+    "compact_status": "24-cell cohort/QC, compatibility, lineage matching, robustness and E8.5 static guidance already completed; static guidance had no passing alpha. Transfer/embryo replication not validated. Do not repeat acquisition or QC; per-cutoff stage restrictions remain."
   },
   "external_schema_audit": {
     "status": "completed_training_not_ready",

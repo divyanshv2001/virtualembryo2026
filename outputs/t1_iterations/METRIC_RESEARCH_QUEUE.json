@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T17:20:24.024742+00:00",
+  "updated_utc": "2026-10-01T17:26:41.565610+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5882,7 +5882,7 @@
       "implementation": "T1_EXTERNAL_TEMPORAL_DATA_AUDIT.json",
       "hypothesis_and_limits": "An independently sourced eligible earlier-stage heart time series could improve temporal validation and training. Official challenge has only E8.5/E9.5 released Task 1 RNA; external data after E9.5 through E13.5 inclusive are prohibited. Any mixed-stage resource requires stage-level filtering before expression use.",
       "declared_experiment_and_result": "Four predeclared CD1 files (2E8.5/2E9.5, distinct regions) downloaded separately, stage/genotype checked, 541173compressedbytes total. Each43629ENSMUSGinteger-count genes; assignedcount sums1234278/1533200/19914/1629698. Existing annotation maps25621/32285panelgenes (79.36%); four cells are not representative. Raw reads/protein-coding QC unavailable, original QC pass unknown. No model fit or full-panel score. Mutants remain excluded; no mixed-stage archive. Matching Ensembl79 annotation covers43629IDs; four protein assignedfractions96.86-97.79%, unique historicalsymbol panelcoverage25931/32285=80.319%. GSM2033420 archive41099pairedspots (82198readestimate), other metadata blocked. Initial500MBexpanded bound failed; checksum-reused1GBstream limit succeeds669443027bytes. No training/score/reward. Frozen independent assignedcounts>=1M/protein>=.8/unknownbiotype<=.01 screen passes3/4pilots; lowdepthGSM2033420excluded. Conservative ID-symbol union rejects44ambiguousIDs, actualhistoricalpanelcoverage27179/32285=84.18%; annotationunion28266includesabsentIDs. No zeroimputation/fits/scores/reward. Frozen24cell(12perstage)stage/regionlexical acquisition:24parsed/0failures,18prospectiveQCpasses(9perstage),6excludedwithoutreplacement. Compressed3274024bytesincluding4reusedpilotfiles, onecellatatime. No transferfit/fullpanel score/reward; embryo/assay compatibility unresolved. E8.5frozen64gene reference diagnostic over25464sharedgenes:16cardiomyocyte-like/2progenitor-like, externaldetection.144-.335 vsatlas.092/.132/.1995/50/95quantiles. Pooleddeltarho0.00065014, no directtransfer supported. Jev766in/63out chooses matched-lineage rank diagnostic; no predictive scores. MatchedCM-like16cells/broadatriumandventricle:primaryregion-balancedrho.05595,stratifiedrho.05873,p1/65versus64fixedexpression/detectionstratum shuffles, screeninggate>.05/p<=.05passes. AtlasCM237E8.5/111E9.5. Small effect, inferredidentity/assay/embryoconfoundingremain; no predictive validation. Frozen64within-stage/regioncellbootstraps meanrho.05173/2.5%tail.02358/97.5%.08175,0nonpositive;14leaveoneoutminrho.04844. Exactprimaryreplay.058728579. Conditionalstabilitygatepasses, noindependentembryoorpredictivevalidation. NextexternalE8.5onlystaticguidance; E9.5-derivedtemporalpriorcannotfitearliervalidation. ExternalE8.5-only7CM-likecells staticdetectionrank weights applied onlysourceCMdelta component, alpha.1/.25 versusrecent/sourceweight/withinexpressiondecileshuffle/copy.16proxy evaluationsfolds8.5->8.75/8.75->9. Firstslightgain,secondpartialdirectionworsens(-.00393/-.00416vsbaseline-.00366);bothfoldgatefails. No E9.5externalexpression used, no fullpanel/reward.",
-      "next_action": "Freeze a bounded10score full-panel one-day ablation on existing sourcefolds: persistence, archived .5/.5 anchor incumbent, anchored recentpooled slope, lineageglobal slope and partialpool1000 slope. Identical1500donors/1000truth+1000ceiling, seed20260928, scorer/calibration and mappedmass safeguards. Pastfits and forecastsfrozen beforetarget read. Use fixed conservative horizon/shrinkage, no quarterdaygate requirement; development only. Freeze shrinkage.25 of one-day slope (four quarter-day steps), nonnegative anchored changes and per-donor mapped-mass repair before execution; record actual mean perturbation and any guard fallback. Do not change scorer/calibration or reinterpret proxy scores as headline.",
+      "next_action": "Do not repeat completedQC/staticguidance. IndependentembryoIDs/originalpaperQC/assaytransfer remain unverified; futuredistinctmethods mustrestrict externalstage<=fitcutoff.",
       "research_family_exhausted": false,
       "results_report": "GSE76118_QC_PROVENANCE_AUDIT.json",
       "schema_results": "GSE76118_EARLY_SCHEMA_RESULTS.json",
@@ -5895,7 +5895,11 @@
       "compatibility_results": "GSE76118_EARLY_COMPATIBILITY_RESULTS.json",
       "matched_lineage_results": "GSE76118_MATCHED_LINEAGE_RESULTS.json",
       "robustness_results": "GSE76118_MATCHED_ROBUSTNESS_RESULTS.json",
-      "static_guidance_results": "EXTERNAL_STATIC_GUIDANCE_RESULTS.json"
+      "static_guidance_results": "EXTERNAL_STATIC_GUIDANCE_RESULTS.json",
+      "resource_preflight": "EXTERNAL_WT_RESOURCE_PREFLIGHT_20261001.json",
+      "acquired_cells": 24,
+      "qc_passing_cells": 18,
+      "all_local_files_hash_verified": true
     },
     {
       "id": "lineage_standardized_residual_proxy",
@@ -6296,7 +6300,7 @@
     {
       "id": "hierarchical_mean_residual_audit",
       "status": "zero_creation_blocked_completed_no_pass_family_open",
-      "next_action": "Retain boundednegative results; futurepast-only mean/magnitude-matchedfeasibility possible. Nextglobalstep existingexternalWTQC preflight.",
+      "next_action": "Predeclare past-donor-only analytic mean/norm matching feasibility for frozen additive versus zero-blocked controls. Test support necessarybounds first: eachlineage/gene desiredmean requires donorpositive support; minimum Frobenius displacement >=sum_g(n*mean_delta_g)^2/n_positive_g; unsupported nonzero targetmean infeasible. Compare achievable mean/magnitude matching under existing mass/protectedgene guards, no parametergrid or targetexpr. Originalexactmean+countmass jointconstraints negatives preserved. Onlyseparatelydeclare fullpanelablation ifnewmatchedcontrol viable; families/readiness open.",
       "research_family_exhausted": false,
       "limitations": "BlockedCSSearlyimprovesbutdirectionworsens. Bothfail2foldgates. Mean/magnitudefidelityconfounds; no embryo/challengevalidation."
     }
