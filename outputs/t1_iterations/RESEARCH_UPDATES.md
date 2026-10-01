@@ -375,3 +375,18 @@ All seven common lineage consecutive deltas anticorrelate. Leave-one-capture-out
 One1837-byte Jev summary advisory used898input/66output tokens; recommended disjoint_middle_capture_contrasts confidence.99. No datasets/source/secrets sent or measured Codex savings claimed. Actual normalization did not explain the DE failure. Official52.16, separate reward−356 and readiness gates unchanged.
 
 Declare disjoint-middle capture contrast audit for past-only triples7.5/7.75/8 and7.75/8/8.25. Enumerate all6 oriented balanced partitions of each four-capture middle stage; compare B_left-A with C-B_right against shared-middle contrasts, using seven common supported lineages and explicit >=20cell coverage. Report overlap/coverage and rank/sign diagnostics, do not claim independent embryos,64replicates, biological reversal or benchmark improvement. This tests shared-middle estimator noise before any forecast fitting; new temporal validation required for derived methods.
+
+## 2026-10-01T08:02:45.609882+00:00 — disjoint-middle capture contrasts completed
+
+Twelve oriented partitions, three complementary capture splits per triple; no cells shared between middle partitions. Past<=8.25 only. Ten primary comparisons have all seven predeclared lineages>=20cells; two primary unavailable, supported-subset diagnostics retained separately. No new scores, fitting, reward or causal proof.
+
+| Past triple | Primary evaluable | Shared-middle rho | Disjoint median rho | Disjoint rho range |
+|---|---:|---:|---:|---|
+| [7.5, 7.75, 8.0] | 4/6 | -0.377705 | -0.235562 | [-0.26496679542963325, -0.2309759243544348] |
+| [7.75, 8.0, 8.25] | 6/6 | -0.445164 | -0.187067 | [-0.2100358557526699, -0.15725228727108373] |
+
+Negative correlations attenuate substantially when shared-middle estimates are removed, but persist in every primary partition. This supports a shared-estimator-noise contribution; stage/capture confounding remains, and capture partitions are not independent embryos or64replicate readiness evidence. Each oriented result/lineage/coverage retained in JSON/private report.
+
+One2017-byte Jev advisory used880input/65output tokens; selected capture_balanced_robust_trend confidence.97. Summary only, no datasets/source/secrets sent. No measured Codex savings claimed. Official52.16/reward−356/readiness unchanged.
+
+Predeclare capture-balanced robust trend ablation: past-only supported capture-specific lineage means, median across captures before three-stage temporal fit; compare matched cell-weighted lineage fit with identical application/shrinkage/backoffs plus copy/incumbent controls. Freeze >=10cells/capture-lineage and >=2captures/stage-lineage eligibility; explicit pooled fallback/coverage flags where unsupported, no invented embryo IDs. Declare capture holdouts and temporal splits before scoring, label previously reused folds as development, no target-driven negation/tuning. Start with bounded diagnostic/proxy validation, then unchanged full-panel scoring only for viable candidates; preserve all outcomes. Jev selected this route from new disjoint-contrast evidence.

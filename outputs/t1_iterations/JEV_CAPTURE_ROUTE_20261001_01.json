@@ -1,0 +1,37 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "ecf5c08a4c6e9acefa738254da82e450cdb1eafed7ae1690ec768aef4cbc775d",
+  "attempts": 1,
+  "payload_bytes": 2017,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "purpose": "Select next bounded viable forecast method or diagnostic after disjoint capture results.",
+      "evidence": "Past source7.5/7.75/8/8.25,7commonlineages. Sharedmiddle adjacentdelta rho-.378/- .445. Disjointmiddle (B_left-A,C-B_right),6orientedcapture partitions pertriple: primary4/6 and6/6coverage; medianrho-.236/-.187, ranges[-.265,-.231]/[-.210,-.157]. Zero sharedmiddlecells. Negativerhoattenuatesbutpersists. Capturesdifferentacrossstages; independentembryoIDsunknown; no causalreversal established. Normalizationcount10000consistent. Prior recent/global/partialpoollineage one-day fullpanel slopes and log/clip/count repair failedtwofold promotion. CellweightedEB/ridge/saturating/state*time proxiesfailed. Official52.16; readinessunmet.",
+      "constraints": "Past-onlytraining; no target-basedslopenegation, repeatedslopebank, officialuploads/agents/downloads. Compactsummaryonly. Dcache16GB. Freshpredeclaredtemporal/captureholdoutvalidation, matchedcopy/anchorcontrols, unchanged32285scorer; independence limitations explicit."
+    },
+    "questions": {
+      "next_action": {
+        "type": "choice",
+        "instructions": "Choose highestvalue bounded next action, avoiding duplication of completed methods.",
+        "criteria": {
+          "capture_balanced_robust_trend": "New observational-unit ablation: median across supported capture-specific lineage means before temporal regression; equalcapture contribution, donorlineage weights, strongfixedshrink/backoffs, reportlineage/capturecoverage. Matchedcellweightedcurrentfit control. Predeclareheldcaptureand temporalvalidation beforetargetscoring; no claimtechnicalconfoundsresolved.",
+          "capture_noise_weighted_gls": "Fitlineage-aware gene GLS slopes using withinstagecapture variance, fixedvariancefloor/shrinkage; comparepast-onlycellweightedridge. Risksfew3-6captures and similarfailedshrinkagefamily.",
+          "embryo_identity_resolution": "Auditcachedmetadata/provenance forindependentembryoIDs before moretraining; may remain unavailable. Doesnotdirectlyproducehigherforecastscore."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 880,
+    "output_tokens": 65
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "next_action": {
+      "choice": "capture_balanced_robust_trend",
+      "confidence": 0.97
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}

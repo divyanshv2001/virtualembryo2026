@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T07:58:03.561330+00:00",
+  "updated_utc": "2026-10-01T08:02:45.609882+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -6087,6 +6087,22 @@
       "report_sha256": "d48a78a2b669cc1949b93a083e7e65db1d75ae63a6fb9caf158763b80c61fa07",
       "scope": "Past-only source expression/stage/capture diagnostics. No future expression, fitting, predictions, benchmark scores or reward. Capture sample labels are not established embryo IDs.",
       "next_action": "Declare disjoint-middle capture contrast audit for past-only triples7.5/7.75/8 and7.75/8/8.25. Enumerate all6 oriented balanced partitions of each four-capture middle stage; compare B_left-A with C-B_right against shared-middle contrasts, using seven common supported lineages and explicit >=20cell coverage. Report overlap/coverage and rank/sign diagnostics, do not claim independent embryos,64replicates, biological reversal or benchmark improvement. This tests shared-middle estimator noise before any forecast fitting; new temporal validation required for derived methods."
+    },
+    {
+      "id": "disjoint_middle_capture_contrasts",
+      "status": "completed_diagnostic",
+      "research_family_exhausted": false,
+      "report": "DISJOINT_CAPTURE_CONTRAST_RESULTS.json",
+      "report_sha256": "d7e69b1293f4bde62ded6cf1b02dc5b27e788ed03bc049444e1bc2f17625dc57",
+      "scope": "Past-only <=8.25 expression. Twelve oriented contrasts (six per triple, three complementary partitions); no independent embryo or64replicate claim, fit, future expression, prediction, benchmark score or reward.",
+      "next_action": "Predeclare capture-balanced robust trend ablation: past-only supported capture-specific lineage means, median across captures before three-stage temporal fit; compare matched cell-weighted lineage fit with identical application/shrinkage/backoffs plus copy/incumbent controls. Freeze >=10cells/capture-lineage and >=2captures/stage-lineage eligibility; explicit pooled fallback/coverage flags where unsupported, no invented embryo IDs. Declare capture holdouts and temporal splits before scoring, label previously reused folds as development, no target-driven negation/tuning. Start with bounded diagnostic/proxy validation, then unchanged full-panel scoring only for viable candidates; preserve all outcomes. Jev selected this route from new disjoint-contrast evidence."
+    },
+    {
+      "id": "capture_balanced_robust_trend",
+      "status": "declared_next_requires_frozen_plan",
+      "research_family_exhausted": false,
+      "hypothesis_and_limits": "Capture-balanced lineage median stage means reduce dominance of large captures before temporal fitting; no independent embryo identity or resolved stage/capture confounding. Compare matched cell-weighted lineage estimator to isolate aggregation.",
+      "next_action": "Predeclare capture-balanced robust trend ablation: past-only supported capture-specific lineage means, median across captures before three-stage temporal fit; compare matched cell-weighted lineage fit with identical application/shrinkage/backoffs plus copy/incumbent controls. Freeze >=10cells/capture-lineage and >=2captures/stage-lineage eligibility; explicit pooled fallback/coverage flags where unsupported, no invented embryo IDs. Declare capture holdouts and temporal splits before scoring, label previously reused folds as development, no target-driven negation/tuning. Start with bounded diagnostic/proxy validation, then unchanged full-panel scoring only for viable candidates; preserve all outcomes. Jev selected this route from new disjoint-contrast evidence."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",

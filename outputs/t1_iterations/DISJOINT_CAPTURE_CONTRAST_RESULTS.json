@@ -1,0 +1,1440 @@
+{
+  "updated_utc": "2026-10-01T08:00:36.683432+00:00",
+  "plan_sha256": "19dc5426ea60c992d6645a81ed27b8d7fa6d74cb343b47ee2fbdd36fe352f055",
+  "summary": [
+    {
+      "triple": [
+        7.5,
+        7.75,
+        8.0
+      ],
+      "oriented_partitions": 6,
+      "unique_complementary_partitions": 3,
+      "primary_evaluable": 4,
+      "primary_shared_middle_rho": -0.3777054350174452,
+      "primary_disjoint_middle_rho_range": [
+        -0.26496679542963325,
+        -0.2309759243544348
+      ],
+      "primary_disjoint_middle_rho_median": -0.2355623068902647
+    },
+    {
+      "triple": [
+        7.75,
+        8.0,
+        8.25
+      ],
+      "oriented_partitions": 6,
+      "unique_complementary_partitions": 3,
+      "primary_evaluable": 6,
+      "primary_shared_middle_rho": -0.44516420640933824,
+      "primary_disjoint_middle_rho_range": [
+        -0.2100358557526699,
+        -0.15725228727108373
+      ],
+      "primary_disjoint_middle_rho_median": -0.1870670850363606
+    }
+  ],
+  "partitions": [
+    {
+      "a": 7.5,
+      "b": 7.75,
+      "c": 8.0,
+      "left": [
+        8,
+        9
+      ],
+      "right": [
+        12,
+        13
+      ],
+      "cell_overlap_between_middle_partitions": 0,
+      "coverage": {
+        "blood": {
+          "a": 698,
+          "b_full": 1277,
+          "c": 1365,
+          "b_left": 511,
+          "b_right": 766
+        },
+        "cardiomyocyte": {
+          "a": 31,
+          "b_full": 175,
+          "c": 198,
+          "b_left": 20,
+          "b_right": 155
+        },
+        "cardiopharyngeal": {
+          "a": 38,
+          "b_full": 127,
+          "c": 241,
+          "b_left": 21,
+          "b_right": 106
+        },
+        "ectoderm_other": {
+          "a": 154,
+          "b_full": 283,
+          "c": 274,
+          "b_left": 67,
+          "b_right": 216
+        },
+        "endoderm": {
+          "a": 223,
+          "b_full": 234,
+          "c": 153,
+          "b_left": 72,
+          "b_right": 162
+        },
+        "endothelial": {
+          "a": 34,
+          "b_full": 117,
+          "c": 166,
+          "b_left": 17,
+          "b_right": 100
+        },
+        "mesenchymal": {
+          "a": 785,
+          "b_full": 777,
+          "c": 603,
+          "b_left": 282,
+          "b_right": 495
+        }
+      },
+      "supported_groups": [
+        "blood",
+        "cardiomyocyte",
+        "cardiopharyngeal",
+        "ectoderm_other",
+        "endoderm",
+        "mesenchymal"
+      ],
+      "primary_available": false,
+      "primary_unavailable_reason": "Predeclared lineage coverage <20cells",
+      "diagnostics": {
+        "scope": "secondary_supported_subset_only",
+        "shared_middle_rho": -0.3543604578056445,
+        "disjoint_middle_rho": -0.1268476576509614,
+        "left_vs_right_middle_mean_rho": 0.9633976696931705,
+        "middle_difference_std": 0.043010858436430786,
+        "middle_difference_vs_shared_delta_std_ratio": 1.2973657669600287,
+        "disjoint_delta_sign_agreement": 0.5942751816111894,
+        "disjoint_vs_shared_first_delta_rho": 0.4954194098158749,
+        "disjoint_vs_shared_second_delta_rho": 0.863857386327355,
+        "per_group": {
+          "blood": {
+            "shared_middle_rho": -0.0829999088149813,
+            "disjoint_middle_rho": -0.03384421992150209
+          },
+          "cardiomyocyte": {
+            "shared_middle_rho": -0.34601971905431345,
+            "disjoint_middle_rho": -0.08131363218621143
+          },
+          "cardiopharyngeal": {
+            "shared_middle_rho": -0.35883884275927447,
+            "disjoint_middle_rho": -0.07349853842950524
+          },
+          "ectoderm_other": {
+            "shared_middle_rho": -0.3126888918728796,
+            "disjoint_middle_rho": -0.017787195557213246
+          },
+          "endoderm": {
+            "shared_middle_rho": -0.26716328088026403,
+            "disjoint_middle_rho": 0.0013049188611724417
+          },
+          "mesenchymal": {
+            "shared_middle_rho": -0.27554942319012055,
+            "disjoint_middle_rho": -0.07657385280693826
+          }
+        }
+      }
+    },
+    {
+      "a": 7.5,
+      "b": 7.75,
+      "c": 8.0,
+      "left": [
+        8,
+        12
+      ],
+      "right": [
+        9,
+        13
+      ],
+      "cell_overlap_between_middle_partitions": 0,
+      "coverage": {
+        "blood": {
+          "a": 698,
+          "b_full": 1277,
+          "c": 1365,
+          "b_left": 599,
+          "b_right": 678
+        },
+        "cardiomyocyte": {
+          "a": 31,
+          "b_full": 175,
+          "c": 198,
+          "b_left": 77,
+          "b_right": 98
+        },
+        "cardiopharyngeal": {
+          "a": 38,
+          "b_full": 127,
+          "c": 241,
+          "b_left": 58,
+          "b_right": 69
+        },
+        "ectoderm_other": {
+          "a": 154,
+          "b_full": 283,
+          "c": 274,
+          "b_left": 144,
+          "b_right": 139
+        },
+        "endoderm": {
+          "a": 223,
+          "b_full": 234,
+          "c": 153,
+          "b_left": 113,
+          "b_right": 121
+        },
+        "endothelial": {
+          "a": 34,
+          "b_full": 117,
+          "c": 166,
+          "b_left": 55,
+          "b_right": 62
+        },
+        "mesenchymal": {
+          "a": 785,
+          "b_full": 777,
+          "c": 603,
+          "b_left": 403,
+          "b_right": 374
+        }
+      },
+      "supported_groups": [
+        "blood",
+        "cardiomyocyte",
+        "cardiopharyngeal",
+        "ectoderm_other",
+        "endoderm",
+        "endothelial",
+        "mesenchymal"
+      ],
+      "primary_available": true,
+      "primary_unavailable_reason": null,
+      "diagnostics": {
+        "scope": "primary_all_predeclared_lineages",
+        "shared_middle_rho": -0.3777054350174452,
+        "disjoint_middle_rho": -0.2309759243544348,
+        "left_vs_right_middle_mean_rho": 0.9710780423017105,
+        "middle_difference_std": 0.017395334946415,
+        "middle_difference_vs_shared_delta_std_ratio": 0.5152967205709239,
+        "disjoint_delta_sign_agreement": 0.570891611550833,
+        "disjoint_vs_shared_first_delta_rho": 0.8760265950576052,
+        "disjoint_vs_shared_second_delta_rho": 0.8430322987630061,
+        "per_group": {
+          "blood": {
+            "shared_middle_rho": -0.0829999088149813,
+            "disjoint_middle_rho": -0.01110551045813881
+          },
+          "cardiomyocyte": {
+            "shared_middle_rho": -0.34601971905431345,
+            "disjoint_middle_rho": -0.15300364425735594
+          },
+          "cardiopharyngeal": {
+            "shared_middle_rho": -0.35883884275927447,
+            "disjoint_middle_rho": -0.12021217566518289
+          },
+          "ectoderm_other": {
+            "shared_middle_rho": -0.3126888918728796,
+            "disjoint_middle_rho": -0.0996399358371597
+          },
+          "endoderm": {
+            "shared_middle_rho": -0.26716328088026403,
+            "disjoint_middle_rho": -0.0684982514508194
+          },
+          "endothelial": {
+            "shared_middle_rho": -0.3758317770978866,
+            "disjoint_middle_rho": -0.18086893321506056
+          },
+          "mesenchymal": {
+            "shared_middle_rho": -0.27554942319012055,
+            "disjoint_middle_rho": -0.10954696102788451
+          }
+        }
+      }
+    },
+    {
+      "a": 7.5,
+      "b": 7.75,
+      "c": 8.0,
+      "left": [
+        8,
+        13
+      ],
+      "right": [
+        9,
+        12
+      ],
+      "cell_overlap_between_middle_partitions": 0,
+      "coverage": {
+        "blood": {
+          "a": 698,
+          "b_full": 1277,
+          "c": 1365,
+          "b_left": 621,
+          "b_right": 656
+        },
+        "cardiomyocyte": {
+          "a": 31,
+          "b_full": 175,
+          "c": 198,
+          "b_left": 88,
+          "b_right": 87
+        },
+        "cardiopharyngeal": {
+          "a": 38,
+          "b_full": 127,
+          "c": 241,
+          "b_left": 60,
+          "b_right": 67
+        },
+        "ectoderm_other": {
+          "a": 154,
+          "b_full": 283,
+          "c": 274,
+          "b_left": 128,
+          "b_right": 155
+        },
+        "endoderm": {
+          "a": 223,
+          "b_full": 234,
+          "c": 153,
+          "b_left": 113,
+          "b_right": 121
+        },
+        "endothelial": {
+          "a": 34,
+          "b_full": 117,
+          "c": 166,
+          "b_left": 63,
+          "b_right": 54
+        },
+        "mesenchymal": {
+          "a": 785,
+          "b_full": 777,
+          "c": 603,
+          "b_left": 398,
+          "b_right": 379
+        }
+      },
+      "supported_groups": [
+        "blood",
+        "cardiomyocyte",
+        "cardiopharyngeal",
+        "ectoderm_other",
+        "endoderm",
+        "endothelial",
+        "mesenchymal"
+      ],
+      "primary_available": true,
+      "primary_unavailable_reason": null,
+      "diagnostics": {
+        "scope": "primary_all_predeclared_lineages",
+        "shared_middle_rho": -0.3777054350174452,
+        "disjoint_middle_rho": -0.23977927406325447,
+        "left_vs_right_middle_mean_rho": 0.9707005042604747,
+        "middle_difference_std": 0.018914187434278678,
+        "middle_difference_vs_shared_delta_std_ratio": 0.5602892262305197,
+        "disjoint_delta_sign_agreement": 0.5700242148252557,
+        "disjoint_vs_shared_first_delta_rho": 0.8654529991575872,
+        "disjoint_vs_shared_second_delta_rho": 0.8335102722446263,
+        "per_group": {
+          "blood": {
+            "shared_middle_rho": -0.0829999088149813,
+            "disjoint_middle_rho": -0.03929442780374337
+          },
+          "cardiomyocyte": {
+            "shared_middle_rho": -0.34601971905431345,
+            "disjoint_middle_rho": -0.18143420336854676
+          },
+          "cardiopharyngeal": {
+            "shared_middle_rho": -0.35883884275927447,
+            "disjoint_middle_rho": -0.10766593279382772
+          },
+          "ectoderm_other": {
+            "shared_middle_rho": -0.3126888918728796,
+            "disjoint_middle_rho": -0.13450155230246272
+          },
+          "endoderm": {
+            "shared_middle_rho": -0.26716328088026403,
+            "disjoint_middle_rho": -0.07219187047161904
+          },
+          "endothelial": {
+            "shared_middle_rho": -0.3758317770978866,
+            "disjoint_middle_rho": -0.13842822605217345
+          },
+          "mesenchymal": {
+            "shared_middle_rho": -0.27554942319012055,
+            "disjoint_middle_rho": -0.1734360201566238
+          }
+        }
+      }
+    },
+    {
+      "a": 7.5,
+      "b": 7.75,
+      "c": 8.0,
+      "left": [
+        9,
+        12
+      ],
+      "right": [
+        8,
+        13
+      ],
+      "cell_overlap_between_middle_partitions": 0,
+      "coverage": {
+        "blood": {
+          "a": 698,
+          "b_full": 1277,
+          "c": 1365,
+          "b_left": 656,
+          "b_right": 621
+        },
+        "cardiomyocyte": {
+          "a": 31,
+          "b_full": 175,
+          "c": 198,
+          "b_left": 87,
+          "b_right": 88
+        },
+        "cardiopharyngeal": {
+          "a": 38,
+          "b_full": 127,
+          "c": 241,
+          "b_left": 67,
+          "b_right": 60
+        },
+        "ectoderm_other": {
+          "a": 154,
+          "b_full": 283,
+          "c": 274,
+          "b_left": 155,
+          "b_right": 128
+        },
+        "endoderm": {
+          "a": 223,
+          "b_full": 234,
+          "c": 153,
+          "b_left": 121,
+          "b_right": 113
+        },
+        "endothelial": {
+          "a": 34,
+          "b_full": 117,
+          "c": 166,
+          "b_left": 54,
+          "b_right": 63
+        },
+        "mesenchymal": {
+          "a": 785,
+          "b_full": 777,
+          "c": 603,
+          "b_left": 379,
+          "b_right": 398
+        }
+      },
+      "supported_groups": [
+        "blood",
+        "cardiomyocyte",
+        "cardiopharyngeal",
+        "ectoderm_other",
+        "endoderm",
+        "endothelial",
+        "mesenchymal"
+      ],
+      "primary_available": true,
+      "primary_unavailable_reason": null,
+      "diagnostics": {
+        "scope": "primary_all_predeclared_lineages",
+        "shared_middle_rho": -0.3777054350174452,
+        "disjoint_middle_rho": -0.2313453397172749,
+        "left_vs_right_middle_mean_rho": 0.9707005042604747,
+        "middle_difference_std": 0.018914187434278678,
+        "middle_difference_vs_shared_delta_std_ratio": 0.5602892262305197,
+        "disjoint_delta_sign_agreement": 0.5707109038996712,
+        "disjoint_vs_shared_first_delta_rho": 0.8804711506045466,
+        "disjoint_vs_shared_second_delta_rho": 0.8184189192956979,
+        "per_group": {
+          "blood": {
+            "shared_middle_rho": -0.0829999088149813,
+            "disjoint_middle_rho": 0.07472449117068927
+          },
+          "cardiomyocyte": {
+            "shared_middle_rho": -0.34601971905431345,
+            "disjoint_middle_rho": -0.16325333066962186
+          },
+          "cardiopharyngeal": {
+            "shared_middle_rho": -0.35883884275927447,
+            "disjoint_middle_rho": -0.13659623711154265
+          },
+          "ectoderm_other": {
+            "shared_middle_rho": -0.3126888918728796,
+            "disjoint_middle_rho": -0.07713160841544528
+          },
+          "endoderm": {
+            "shared_middle_rho": -0.26716328088026403,
+            "disjoint_middle_rho": -0.038701398124664846
+          },
+          "endothelial": {
+            "shared_middle_rho": -0.3758317770978866,
+            "disjoint_middle_rho": -0.17815791793891614
+          },
+          "mesenchymal": {
+            "shared_middle_rho": -0.27554942319012055,
+            "disjoint_middle_rho": -0.04979543070941023
+          }
+        }
+      }
+    },
+    {
+      "a": 7.5,
+      "b": 7.75,
+      "c": 8.0,
+      "left": [
+        9,
+        13
+      ],
+      "right": [
+        8,
+        12
+      ],
+      "cell_overlap_between_middle_partitions": 0,
+      "coverage": {
+        "blood": {
+          "a": 698,
+          "b_full": 1277,
+          "c": 1365,
+          "b_left": 678,
+          "b_right": 599
+        },
+        "cardiomyocyte": {
+          "a": 31,
+          "b_full": 175,
+          "c": 198,
+          "b_left": 98,
+          "b_right": 77
+        },
+        "cardiopharyngeal": {
+          "a": 38,
+          "b_full": 127,
+          "c": 241,
+          "b_left": 69,
+          "b_right": 58
+        },
+        "ectoderm_other": {
+          "a": 154,
+          "b_full": 283,
+          "c": 274,
+          "b_left": 139,
+          "b_right": 144
+        },
+        "endoderm": {
+          "a": 223,
+          "b_full": 234,
+          "c": 153,
+          "b_left": 121,
+          "b_right": 113
+        },
+        "endothelial": {
+          "a": 34,
+          "b_full": 117,
+          "c": 166,
+          "b_left": 62,
+          "b_right": 55
+        },
+        "mesenchymal": {
+          "a": 785,
+          "b_full": 777,
+          "c": 603,
+          "b_left": 374,
+          "b_right": 403
+        }
+      },
+      "supported_groups": [
+        "blood",
+        "cardiomyocyte",
+        "cardiopharyngeal",
+        "ectoderm_other",
+        "endoderm",
+        "endothelial",
+        "mesenchymal"
+      ],
+      "primary_available": true,
+      "primary_unavailable_reason": null,
+      "diagnostics": {
+        "scope": "primary_all_predeclared_lineages",
+        "shared_middle_rho": -0.3777054350174452,
+        "disjoint_middle_rho": -0.26496679542963325,
+        "left_vs_right_middle_mean_rho": 0.9710780423017104,
+        "middle_difference_std": 0.017395334946415,
+        "middle_difference_vs_shared_delta_std_ratio": 0.5152967205709239,
+        "disjoint_delta_sign_agreement": 0.5657956557880661,
+        "disjoint_vs_shared_first_delta_rho": 0.8851569335287611,
+        "disjoint_vs_shared_second_delta_rho": 0.8293431781023819,
+        "per_group": {
+          "blood": {
+            "shared_middle_rho": -0.0829999088149813,
+            "disjoint_middle_rho": 0.03515194619747695
+          },
+          "cardiomyocyte": {
+            "shared_middle_rho": -0.34601971905431345,
+            "disjoint_middle_rho": -0.1969338195306055
+          },
+          "cardiopharyngeal": {
+            "shared_middle_rho": -0.35883884275927447,
+            "disjoint_middle_rho": -0.12787933747584646
+          },
+          "ectoderm_other": {
+            "shared_middle_rho": -0.3126888918728796,
+            "disjoint_middle_rho": -0.12799983171204146
+          },
+          "endoderm": {
+            "shared_middle_rho": -0.26716328088026403,
+            "disjoint_middle_rho": -0.059445487287489385
+          },
+          "endothelial": {
+            "shared_middle_rho": -0.3758317770978866,
+            "disjoint_middle_rho": -0.13514239580428877
+          },
+          "mesenchymal": {
+            "shared_middle_rho": -0.27554942319012055,
+            "disjoint_middle_rho": -0.11357181548852294
+          }
+        }
+      }
+    },
+    {
+      "a": 7.5,
+      "b": 7.75,
+      "c": 8.0,
+      "left": [
+        12,
+        13
+      ],
+      "right": [
+        8,
+        9
+      ],
+      "cell_overlap_between_middle_partitions": 0,
+      "coverage": {
+        "blood": {
+          "a": 698,
+          "b_full": 1277,
+          "c": 1365,
+          "b_left": 766,
+          "b_right": 511
+        },
+        "cardiomyocyte": {
+          "a": 31,
+          "b_full": 175,
+          "c": 198,
+          "b_left": 155,
+          "b_right": 20
+        },
+        "cardiopharyngeal": {
+          "a": 38,
+          "b_full": 127,
+          "c": 241,
+          "b_left": 106,
+          "b_right": 21
+        },
+        "ectoderm_other": {
+          "a": 154,
+          "b_full": 283,
+          "c": 274,
+          "b_left": 216,
+          "b_right": 67
+        },
+        "endoderm": {
+          "a": 223,
+          "b_full": 234,
+          "c": 153,
+          "b_left": 162,
+          "b_right": 72
+        },
+        "endothelial": {
+          "a": 34,
+          "b_full": 117,
+          "c": 166,
+          "b_left": 100,
+          "b_right": 17
+        },
+        "mesenchymal": {
+          "a": 785,
+          "b_full": 777,
+          "c": 603,
+          "b_left": 495,
+          "b_right": 282
+        }
+      },
+      "supported_groups": [
+        "blood",
+        "cardiomyocyte",
+        "cardiopharyngeal",
+        "ectoderm_other",
+        "endoderm",
+        "mesenchymal"
+      ],
+      "primary_available": false,
+      "primary_unavailable_reason": "Predeclared lineage coverage <20cells",
+      "diagnostics": {
+        "scope": "secondary_supported_subset_only",
+        "shared_middle_rho": -0.3543604578056445,
+        "disjoint_middle_rho": 0.12010826603074308,
+        "left_vs_right_middle_mean_rho": 0.9633976696931705,
+        "middle_difference_std": 0.043010858436430786,
+        "middle_difference_vs_shared_delta_std_ratio": 1.2973657669600287,
+        "disjoint_delta_sign_agreement": 0.6548483862806751,
+        "disjoint_vs_shared_first_delta_rho": 0.9165826215341347,
+        "disjoint_vs_shared_second_delta_rho": 0.4854126306177708,
+        "per_group": {
+          "blood": {
+            "shared_middle_rho": -0.0829999088149813,
+            "disjoint_middle_rho": 0.30519959748638814
+          },
+          "cardiomyocyte": {
+            "shared_middle_rho": -0.34601971905431345,
+            "disjoint_middle_rho": 0.10490434711364241
+          },
+          "cardiopharyngeal": {
+            "shared_middle_rho": -0.35883884275927447,
+            "disjoint_middle_rho": 0.04502775572853615
+          },
+          "ectoderm_other": {
+            "shared_middle_rho": -0.3126888918728796,
+            "disjoint_middle_rho": 0.09098295624894859
+          },
+          "endoderm": {
+            "shared_middle_rho": -0.26716328088026403,
+            "disjoint_middle_rho": 0.14445744883801592
+          },
+          "mesenchymal": {
+            "shared_middle_rho": -0.27554942319012055,
+            "disjoint_middle_rho": 0.1733663195950325
+          }
+        }
+      }
+    },
+    {
+      "a": 7.75,
+      "b": 8.0,
+      "c": 8.25,
+      "left": [
+        16,
+        33
+      ],
+      "right": [
+        34,
+        35
+      ],
+      "cell_overlap_between_middle_partitions": 0,
+      "coverage": {
+        "blood": {
+          "a": 1277,
+          "b_full": 1365,
+          "c": 848,
+          "b_left": 861,
+          "b_right": 504
+        },
+        "cardiomyocyte": {
+          "a": 175,
+          "b_full": 198,
+          "c": 345,
+          "b_left": 107,
+          "b_right": 91
+        },
+        "cardiopharyngeal": {
+          "a": 127,
+          "b_full": 241,
+          "c": 348,
+          "b_left": 127,
+          "b_right": 114
+        },
+        "ectoderm_other": {
+          "a": 283,
+          "b_full": 274,
+          "c": 295,
+          "b_left": 128,
+          "b_right": 146
+        },
+        "endoderm": {
+          "a": 234,
+          "b_full": 153,
+          "c": 158,
+          "b_left": 83,
+          "b_right": 70
+        },
+        "endothelial": {
+          "a": 117,
+          "b_full": 166,
+          "c": 247,
+          "b_left": 93,
+          "b_right": 73
+        },
+        "mesenchymal": {
+          "a": 777,
+          "b_full": 603,
+          "c": 684,
+          "b_left": 310,
+          "b_right": 293
+        }
+      },
+      "supported_groups": [
+        "blood",
+        "cardiomyocyte",
+        "cardiopharyngeal",
+        "ectoderm_other",
+        "endoderm",
+        "endothelial",
+        "mesenchymal"
+      ],
+      "primary_available": true,
+      "primary_unavailable_reason": null,
+      "diagnostics": {
+        "scope": "primary_all_predeclared_lineages",
+        "shared_middle_rho": -0.44516420640933824,
+        "disjoint_middle_rho": -0.17910614720744597,
+        "left_vs_right_middle_mean_rho": 0.9695113968727487,
+        "middle_difference_std": 0.02424454600722049,
+        "middle_difference_vs_shared_delta_std_ratio": 0.7806290872685095,
+        "disjoint_delta_sign_agreement": 0.5792764465647475,
+        "disjoint_vs_shared_first_delta_rho": 0.8032175670347194,
+        "disjoint_vs_shared_second_delta_rho": 0.7694095162075075,
+        "per_group": {
+          "blood": {
+            "shared_middle_rho": -0.12961131871013443,
+            "disjoint_middle_rho": 0.10596273023054578
+          },
+          "cardiomyocyte": {
+            "shared_middle_rho": -0.442799076507594,
+            "disjoint_middle_rho": -0.09303421837440605
+          },
+          "cardiopharyngeal": {
+            "shared_middle_rho": -0.43134688946408495,
+            "disjoint_middle_rho": -0.13595677137571535
+          },
+          "ectoderm_other": {
+            "shared_middle_rho": -0.46128734092069273,
+            "disjoint_middle_rho": -0.15147843083360069
+          },
+          "endoderm": {
+            "shared_middle_rho": -0.44182042594948384,
+            "disjoint_middle_rho": -0.10537619941120385
+          },
+          "endothelial": {
+            "shared_middle_rho": -0.45508294066101623,
+            "disjoint_middle_rho": -0.11425374084918577
+          },
+          "mesenchymal": {
+            "shared_middle_rho": -0.3814170031596632,
+            "disjoint_middle_rho": -0.09680137348164088
+          }
+        }
+      }
+    },
+    {
+      "a": 7.75,
+      "b": 8.0,
+      "c": 8.25,
+      "left": [
+        16,
+        34
+      ],
+      "right": [
+        33,
+        35
+      ],
+      "cell_overlap_between_middle_partitions": 0,
+      "coverage": {
+        "blood": {
+          "a": 1277,
+          "b_full": 1365,
+          "c": 848,
+          "b_left": 847,
+          "b_right": 518
+        },
+        "cardiomyocyte": {
+          "a": 175,
+          "b_full": 198,
+          "c": 345,
+          "b_left": 108,
+          "b_right": 90
+        },
+        "cardiopharyngeal": {
+          "a": 127,
+          "b_full": 241,
+          "c": 348,
+          "b_left": 114,
+          "b_right": 127
+        },
+        "ectoderm_other": {
+          "a": 283,
+          "b_full": 274,
+          "c": 295,
+          "b_left": 124,
+          "b_right": 150
+        },
+        "endoderm": {
+          "a": 234,
+          "b_full": 153,
+          "c": 158,
+          "b_left": 76,
+          "b_right": 77
+        },
+        "endothelial": {
+          "a": 117,
+          "b_full": 166,
+          "c": 247,
+          "b_left": 95,
+          "b_right": 71
+        },
+        "mesenchymal": {
+          "a": 777,
+          "b_full": 603,
+          "c": 684,
+          "b_left": 306,
+          "b_right": 297
+        }
+      },
+      "supported_groups": [
+        "blood",
+        "cardiomyocyte",
+        "cardiopharyngeal",
+        "ectoderm_other",
+        "endoderm",
+        "endothelial",
+        "mesenchymal"
+      ],
+      "primary_available": true,
+      "primary_unavailable_reason": null,
+      "diagnostics": {
+        "scope": "primary_all_predeclared_lineages",
+        "shared_middle_rho": -0.44516420640933824,
+        "disjoint_middle_rho": -0.1741202254359131,
+        "left_vs_right_middle_mean_rho": 0.9702102350832958,
+        "middle_difference_std": 0.024315523399577304,
+        "middle_difference_vs_shared_delta_std_ratio": 0.7829144267009616,
+        "disjoint_delta_sign_agreement": 0.5794571542159095,
+        "disjoint_vs_shared_first_delta_rho": 0.7977321078154136,
+        "disjoint_vs_shared_second_delta_rho": 0.7802698283625511,
+        "per_group": {
+          "blood": {
+            "shared_middle_rho": -0.12961131871013443,
+            "disjoint_middle_rho": 0.13943147913868784
+          },
+          "cardiomyocyte": {
+            "shared_middle_rho": -0.442799076507594,
+            "disjoint_middle_rho": -0.11411747587761749
+          },
+          "cardiopharyngeal": {
+            "shared_middle_rho": -0.43134688946408495,
+            "disjoint_middle_rho": -0.11760335864634859
+          },
+          "ectoderm_other": {
+            "shared_middle_rho": -0.46128734092069273,
+            "disjoint_middle_rho": -0.14953507021378096
+          },
+          "endoderm": {
+            "shared_middle_rho": -0.44182042594948384,
+            "disjoint_middle_rho": -0.09080914727229275
+          },
+          "endothelial": {
+            "shared_middle_rho": -0.45508294066101623,
+            "disjoint_middle_rho": -0.12481878004959113
+          },
+          "mesenchymal": {
+            "shared_middle_rho": -0.3814170031596632,
+            "disjoint_middle_rho": -0.10658333472343551
+          }
+        }
+      }
+    },
+    {
+      "a": 7.75,
+      "b": 8.0,
+      "c": 8.25,
+      "left": [
+        16,
+        35
+      ],
+      "right": [
+        33,
+        34
+      ],
+      "cell_overlap_between_middle_partitions": 0,
+      "coverage": {
+        "blood": {
+          "a": 1277,
+          "b_full": 1365,
+          "c": 848,
+          "b_left": 815,
+          "b_right": 550
+        },
+        "cardiomyocyte": {
+          "a": 175,
+          "b_full": 198,
+          "c": 345,
+          "b_left": 109,
+          "b_right": 89
+        },
+        "cardiopharyngeal": {
+          "a": 127,
+          "b_full": 241,
+          "c": 348,
+          "b_left": 128,
+          "b_right": 113
+        },
+        "ectoderm_other": {
+          "a": 283,
+          "b_full": 274,
+          "c": 295,
+          "b_left": 134,
+          "b_right": 140
+        },
+        "endoderm": {
+          "a": 234,
+          "b_full": 153,
+          "c": 158,
+          "b_left": 80,
+          "b_right": 73
+        },
+        "endothelial": {
+          "a": 117,
+          "b_full": 166,
+          "c": 247,
+          "b_left": 82,
+          "b_right": 84
+        },
+        "mesenchymal": {
+          "a": 777,
+          "b_full": 603,
+          "c": 684,
+          "b_left": 293,
+          "b_right": 310
+        }
+      },
+      "supported_groups": [
+        "blood",
+        "cardiomyocyte",
+        "cardiopharyngeal",
+        "ectoderm_other",
+        "endoderm",
+        "endothelial",
+        "mesenchymal"
+      ],
+      "primary_available": true,
+      "primary_unavailable_reason": null,
+      "diagnostics": {
+        "scope": "primary_all_predeclared_lineages",
+        "shared_middle_rho": -0.44516420640933824,
+        "disjoint_middle_rho": -0.15725228727108373,
+        "left_vs_right_middle_mean_rho": 0.9699676459744814,
+        "middle_difference_std": 0.026454638303356738,
+        "middle_difference_vs_shared_delta_std_ratio": 0.8517899302638038,
+        "disjoint_delta_sign_agreement": 0.5844808269182117,
+        "disjoint_vs_shared_first_delta_rho": 0.7848042748128822,
+        "disjoint_vs_shared_second_delta_rho": 0.7759852968117661,
+        "per_group": {
+          "blood": {
+            "shared_middle_rho": -0.12961131871013443,
+            "disjoint_middle_rho": 0.15621790143459524
+          },
+          "cardiomyocyte": {
+            "shared_middle_rho": -0.442799076507594,
+            "disjoint_middle_rho": -0.11360785444086363
+          },
+          "cardiopharyngeal": {
+            "shared_middle_rho": -0.43134688946408495,
+            "disjoint_middle_rho": -0.13930183329928264
+          },
+          "ectoderm_other": {
+            "shared_middle_rho": -0.46128734092069273,
+            "disjoint_middle_rho": -0.1518852827977375
+          },
+          "endoderm": {
+            "shared_middle_rho": -0.44182042594948384,
+            "disjoint_middle_rho": -0.08617311261753036
+          },
+          "endothelial": {
+            "shared_middle_rho": -0.45508294066101623,
+            "disjoint_middle_rho": -0.08677989843981508
+          },
+          "mesenchymal": {
+            "shared_middle_rho": -0.3814170031596632,
+            "disjoint_middle_rho": -0.09296352723979333
+          }
+        }
+      }
+    },
+    {
+      "a": 7.75,
+      "b": 8.0,
+      "c": 8.25,
+      "left": [
+        33,
+        34
+      ],
+      "right": [
+        16,
+        35
+      ],
+      "cell_overlap_between_middle_partitions": 0,
+      "coverage": {
+        "blood": {
+          "a": 1277,
+          "b_full": 1365,
+          "c": 848,
+          "b_left": 550,
+          "b_right": 815
+        },
+        "cardiomyocyte": {
+          "a": 175,
+          "b_full": 198,
+          "c": 345,
+          "b_left": 89,
+          "b_right": 109
+        },
+        "cardiopharyngeal": {
+          "a": 127,
+          "b_full": 241,
+          "c": 348,
+          "b_left": 113,
+          "b_right": 128
+        },
+        "ectoderm_other": {
+          "a": 283,
+          "b_full": 274,
+          "c": 295,
+          "b_left": 140,
+          "b_right": 134
+        },
+        "endoderm": {
+          "a": 234,
+          "b_full": 153,
+          "c": 158,
+          "b_left": 73,
+          "b_right": 80
+        },
+        "endothelial": {
+          "a": 117,
+          "b_full": 166,
+          "c": 247,
+          "b_left": 84,
+          "b_right": 82
+        },
+        "mesenchymal": {
+          "a": 777,
+          "b_full": 603,
+          "c": 684,
+          "b_left": 310,
+          "b_right": 293
+        }
+      },
+      "supported_groups": [
+        "blood",
+        "cardiomyocyte",
+        "cardiopharyngeal",
+        "ectoderm_other",
+        "endoderm",
+        "endothelial",
+        "mesenchymal"
+      ],
+      "primary_available": true,
+      "primary_unavailable_reason": null,
+      "diagnostics": {
+        "scope": "primary_all_predeclared_lineages",
+        "shared_middle_rho": -0.44516420640933824,
+        "disjoint_middle_rho": -0.19502802286527526,
+        "left_vs_right_middle_mean_rho": 0.9699676459744813,
+        "middle_difference_std": 0.026454638303356738,
+        "middle_difference_vs_shared_delta_std_ratio": 0.8517899302638038,
+        "disjoint_delta_sign_agreement": 0.5739275000903539,
+        "disjoint_vs_shared_first_delta_rho": 0.7760978292181593,
+        "disjoint_vs_shared_second_delta_rho": 0.7676570248939864,
+        "per_group": {
+          "blood": {
+            "shared_middle_rho": -0.12961131871013443,
+            "disjoint_middle_rho": -0.032726800064061146
+          },
+          "cardiomyocyte": {
+            "shared_middle_rho": -0.442799076507594,
+            "disjoint_middle_rho": -0.15748610370093366
+          },
+          "cardiopharyngeal": {
+            "shared_middle_rho": -0.43134688946408495,
+            "disjoint_middle_rho": -0.13185935394940143
+          },
+          "ectoderm_other": {
+            "shared_middle_rho": -0.46128734092069273,
+            "disjoint_middle_rho": -0.17989324143856317
+          },
+          "endoderm": {
+            "shared_middle_rho": -0.44182042594948384,
+            "disjoint_middle_rho": -0.09865755402113781
+          },
+          "endothelial": {
+            "shared_middle_rho": -0.45508294066101623,
+            "disjoint_middle_rho": -0.14094818702748713
+          },
+          "mesenchymal": {
+            "shared_middle_rho": -0.3814170031596632,
+            "disjoint_middle_rho": -0.08809263426897711
+          }
+        }
+      }
+    },
+    {
+      "a": 7.75,
+      "b": 8.0,
+      "c": 8.25,
+      "left": [
+        33,
+        35
+      ],
+      "right": [
+        16,
+        34
+      ],
+      "cell_overlap_between_middle_partitions": 0,
+      "coverage": {
+        "blood": {
+          "a": 1277,
+          "b_full": 1365,
+          "c": 848,
+          "b_left": 518,
+          "b_right": 847
+        },
+        "cardiomyocyte": {
+          "a": 175,
+          "b_full": 198,
+          "c": 345,
+          "b_left": 90,
+          "b_right": 108
+        },
+        "cardiopharyngeal": {
+          "a": 127,
+          "b_full": 241,
+          "c": 348,
+          "b_left": 127,
+          "b_right": 114
+        },
+        "ectoderm_other": {
+          "a": 283,
+          "b_full": 274,
+          "c": 295,
+          "b_left": 150,
+          "b_right": 124
+        },
+        "endoderm": {
+          "a": 234,
+          "b_full": 153,
+          "c": 158,
+          "b_left": 77,
+          "b_right": 76
+        },
+        "endothelial": {
+          "a": 117,
+          "b_full": 166,
+          "c": 247,
+          "b_left": 71,
+          "b_right": 95
+        },
+        "mesenchymal": {
+          "a": 777,
+          "b_full": 603,
+          "c": 684,
+          "b_left": 297,
+          "b_right": 306
+        }
+      },
+      "supported_groups": [
+        "blood",
+        "cardiomyocyte",
+        "cardiopharyngeal",
+        "ectoderm_other",
+        "endoderm",
+        "endothelial",
+        "mesenchymal"
+      ],
+      "primary_available": true,
+      "primary_unavailable_reason": null,
+      "diagnostics": {
+        "scope": "primary_all_predeclared_lineages",
+        "shared_middle_rho": -0.44516420640933824,
+        "disjoint_middle_rho": -0.2100358557526699,
+        "left_vs_right_middle_mean_rho": 0.970210235083296,
+        "middle_difference_std": 0.024315523399577304,
+        "middle_difference_vs_shared_delta_std_ratio": 0.7829144267009616,
+        "disjoint_delta_sign_agreement": 0.5694098088113051,
+        "disjoint_vs_shared_first_delta_rho": 0.7773529363936601,
+        "disjoint_vs_shared_second_delta_rho": 0.7825941284180133,
+        "per_group": {
+          "blood": {
+            "shared_middle_rho": -0.12961131871013443,
+            "disjoint_middle_rho": -0.05061613994693353
+          },
+          "cardiomyocyte": {
+            "shared_middle_rho": -0.442799076507594,
+            "disjoint_middle_rho": -0.14865036634572276
+          },
+          "cardiopharyngeal": {
+            "shared_middle_rho": -0.43134688946408495,
+            "disjoint_middle_rho": -0.13850123063352582
+          },
+          "ectoderm_other": {
+            "shared_middle_rho": -0.46128734092069273,
+            "disjoint_middle_rho": -0.164276512066103
+          },
+          "endoderm": {
+            "shared_middle_rho": -0.44182042594948384,
+            "disjoint_middle_rho": -0.10538346999395573
+          },
+          "endothelial": {
+            "shared_middle_rho": -0.45508294066101623,
+            "disjoint_middle_rho": -0.183130435945369
+          },
+          "mesenchymal": {
+            "shared_middle_rho": -0.3814170031596632,
+            "disjoint_middle_rho": -0.0972128205656776
+          }
+        }
+      }
+    },
+    {
+      "a": 7.75,
+      "b": 8.0,
+      "c": 8.25,
+      "left": [
+        34,
+        35
+      ],
+      "right": [
+        16,
+        33
+      ],
+      "cell_overlap_between_middle_partitions": 0,
+      "coverage": {
+        "blood": {
+          "a": 1277,
+          "b_full": 1365,
+          "c": 848,
+          "b_left": 504,
+          "b_right": 861
+        },
+        "cardiomyocyte": {
+          "a": 175,
+          "b_full": 198,
+          "c": 345,
+          "b_left": 91,
+          "b_right": 107
+        },
+        "cardiopharyngeal": {
+          "a": 127,
+          "b_full": 241,
+          "c": 348,
+          "b_left": 114,
+          "b_right": 127
+        },
+        "ectoderm_other": {
+          "a": 283,
+          "b_full": 274,
+          "c": 295,
+          "b_left": 146,
+          "b_right": 128
+        },
+        "endoderm": {
+          "a": 234,
+          "b_full": 153,
+          "c": 158,
+          "b_left": 70,
+          "b_right": 83
+        },
+        "endothelial": {
+          "a": 117,
+          "b_full": 166,
+          "c": 247,
+          "b_left": 73,
+          "b_right": 93
+        },
+        "mesenchymal": {
+          "a": 777,
+          "b_full": 603,
+          "c": 684,
+          "b_left": 293,
+          "b_right": 310
+        }
+      },
+      "supported_groups": [
+        "blood",
+        "cardiomyocyte",
+        "cardiopharyngeal",
+        "ectoderm_other",
+        "endoderm",
+        "endothelial",
+        "mesenchymal"
+      ],
+      "primary_available": true,
+      "primary_unavailable_reason": null,
+      "diagnostics": {
+        "scope": "primary_all_predeclared_lineages",
+        "shared_middle_rho": -0.44516420640933824,
+        "disjoint_middle_rho": -0.20750131633584548,
+        "left_vs_right_middle_mean_rho": 0.9695113968727486,
+        "middle_difference_std": 0.02424454600722049,
+        "middle_difference_vs_shared_delta_std_ratio": 0.7806290872685095,
+        "disjoint_delta_sign_agreement": 0.5706747623694387,
+        "disjoint_vs_shared_first_delta_rho": 0.7753599063886881,
+        "disjoint_vs_shared_second_delta_rho": 0.7928586925033957,
+        "per_group": {
+          "blood": {
+            "shared_middle_rho": -0.12961131871013443,
+            "disjoint_middle_rho": -0.04452696165998304
+          },
+          "cardiomyocyte": {
+            "shared_middle_rho": -0.442799076507594,
+            "disjoint_middle_rho": -0.1791886368829933
+          },
+          "cardiopharyngeal": {
+            "shared_middle_rho": -0.43134688946408495,
+            "disjoint_middle_rho": -0.16070526552684203
+          },
+          "ectoderm_other": {
+            "shared_middle_rho": -0.46128734092069273,
+            "disjoint_middle_rho": -0.16470678788441465
+          },
+          "endoderm": {
+            "shared_middle_rho": -0.44182042594948384,
+            "disjoint_middle_rho": -0.10195773103345486
+          },
+          "endothelial": {
+            "shared_middle_rho": -0.45508294066101623,
+            "disjoint_middle_rho": -0.1808257270518382
+          },
+          "mesenchymal": {
+            "shared_middle_rho": -0.3814170031596632,
+            "disjoint_middle_rho": -0.11387248353787491
+          }
+        }
+      }
+    }
+  ],
+  "scope": "Past-only <=8.25 expression. Twelve oriented contrasts (six per triple, three complementary partitions); no independent embryo or64replicate claim, fit, future expression, prediction, benchmark score or reward.",
+  "embryo_id_status": "sample is an assay/capture identifier; embryo_version labels Original/Extended, not independent embryos.",
+  "causal_discontinuity_established": false,
+  "new_scores": 0,
+  "reward_delta": 0,
+  "report_sha256": "d7e69b1293f4bde62ded6cf1b02dc5b27e788ed03bc049444e1bc2f17625dc57"
+}
