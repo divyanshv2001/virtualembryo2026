@@ -6158,7 +6158,7 @@
     },
     {
       "id": "support_mass_necessary_bounds",
-      "status": "predeclared_ready",
+      "status": "completed_unresolved",
       "research_family_exhausted": false,
       "implementation": [
         "support_mass_bounds.py",
@@ -6166,7 +6166,18 @@
       ],
       "run": "support_mass_bounds_01",
       "metrics_available": false,
-      "next_action": "Run registered support_mass_bounds: current-only four-case analytic necessary support/mass checks on identical fixed perturbations. Jensen rawmass lowerbound and percolumn rowcapacity, referencecontrols and constructed tests; no optimizer/forecast/benchmark/reward. Failed bound rejects exact locked margins/support; passing remains unresolved and requires distinct validated solver before temporal scoring. Preserve numerical projection failure and all open structural/population families."
+      "next_action": "Implement/test predeclared structured damped Gauss-Newton/LM joint log-gene-mean and raw-row-mass feasibility solver with gene-diagonal/cell-Schur elimination, locked support,100iteration fixedbudget, finite positive backtracking, both1e-5margin tolerances. Verify analytic Jacobian finite differences plus identity,knownfeasibleperturbed andcontradictory-support controls BEFORE current-only fourcaseaudit. Do not run densevariable-sized solver or raiseiterationbudget from failedcaseknowledge. Register unique harness run; four specialists after batch. Bounds allpass leavefeasibilityunresolved. No futurefit/scoring/reward until separatelydeclared temporaltest aftervalidatedsolver.",
+      "report": "SUPPORT_MASS_BOUNDS_RESULTS.json",
+      "report_sha256": "ba33f91d6a5f598f2228df9ad4dc58bec23c2ed94f7562049490d2d2ad8bfd26",
+      "critique": "METRIC_CRITIQUES_SUPPORT_BOUNDS_20261001.md"
+    },
+    {
+      "id": "structured_joint_margin_solver",
+      "status": "predeclared_pending_implementation",
+      "research_family_exhausted": false,
+      "plan": "NEXT_JOINT_SOLVER_EXPERIMENT.json",
+      "metrics_available": false,
+      "next_action": "Implement/test predeclared structured damped Gauss-Newton/LM joint log-gene-mean and raw-row-mass feasibility solver with gene-diagonal/cell-Schur elimination, locked support,100iteration fixedbudget, finite positive backtracking, both1e-5margin tolerances. Verify analytic Jacobian finite differences plus identity,knownfeasibleperturbed andcontradictory-support controls BEFORE current-only fourcaseaudit. Do not run densevariable-sized solver or raiseiterationbudget from failedcaseknowledge. Register unique harness run; four specialists after batch. Bounds allpass leavefeasibilityunresolved. No futurefit/scoring/reward until separatelydeclared temporaltest aftervalidatedsolver."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",

@@ -1,0 +1,19 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "purpose": "Choose bounded low-memory jointsolver design after necessarybounds leave feasibility unresolved.",
+    "evidence": "All4current-onlyCMcasespass Jensenlower/capacitybounds; old200alternatingiterationsdivergedgeneLOGmean4.30-4.75 whilerawmass~1e-15. Four specialistsrequestscaledjointconstraints,analyticderivatives,damping,knownfeasiblecontrols. Eachcase44-134CMcells and26775mappedgenes, sparsepositivevariablecountpotentially~500k. Ddisk16GBRAM2threads; nofuture/benchmark/reward.",
+    "constraints": "Lockedpositive support/nonnegativity; geneLOGmeans androw RAWmasses targetcurrentreference. Use fixed budgets andstrict1e-5bothmarginchecks; passingnotmetricgain,failingnotinfeasibility. Beforeobservedcases validate Jacobian finite differences,knownfeasibleidentity/perturbedcontrols andcontradictorysupport. StructuralGN residualJacobian has column diagonal and row diagonal blocks with gene-by-cell crossblock; eliminate columnblock andsolveonly<=134rowSchur block. No densevariable-sizedJacobian orNN matrix. Numericallyuncertain;stopinvalidifnotfinite/monotonic."
+  },
+  "questions": {
+    "solver": {
+      "type": "choice",
+      "instructions": "Select viable memory-safe prospective solver approach;advisorynotproof.",
+      "criteria": {
+        "structured_damped_gauss_newton": "Scaledresidual LM/GaussNewton usinganalyticblockSchur elimination,maskedupdates,backtrackingpositivefloors,fixed100iterations. Verifyderivativesandjointmargincontrols beforeanycurrent audit.",
+        "generic_dense_slsqp": "UsegenericSLSQP withdensevariableconstraints;mayexceed16GB for~500kvariables.",
+        "more_alternating_rescaling": "Repeatnaiveprojectionwithmoreiterationswithoutjointderivativesorline-search."
+      }
+    }
+  }
+}

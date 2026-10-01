@@ -1,0 +1,202 @@
+{
+  "status": "completed",
+  "plan": {
+    "created_utc": "2026-10-01T10:29:17.688260+00:00",
+    "code_sha256": "6177cd49556b6ed8b394a4e157633ac434d1a2e5098f0aa4148025458473d847",
+    "bounds_sha256": "a37dd7c396f1c6ed5f847c9b0811275c89ac1130134240281b6b1aadf138f59b",
+    "prepared_report_sha256": "1acd8a635f76c9f9ac89a1186f116db91309b007f448a8d11ec612627ab5bca4",
+    "panel_sha256": "2aeae4cd284933956242bbc9c5ab4f565c1d2acc7cc3fd3037977e4bce8be4bf",
+    "route_sha256": "ba7c817f80aaec17f695a2177464834f2b038b079a8705ddca47852d54f31f08",
+    "observations": [
+      [
+        8.0,
+        "16"
+      ],
+      [
+        8.0,
+        "33"
+      ],
+      [
+        8.25,
+        "25"
+      ],
+      [
+        8.25,
+        "24"
+      ]
+    ],
+    "seed": 20260928,
+    "alpha": 0.25,
+    "bound_tolerance": 1e-08,
+    "support": "CM current expression only, mapped genes with >=2 positives in heldcapture; unsupported genes unchanged. Lock post-switch support; explicit infeasibility, never fallback counted as success.",
+    "method": "Current-only synthetic odds perturbation: Jeffreys current-CM empirical q plus .25*(logit held-q minus logit othercapture-q). Systematic switches; added values use current-held conditional-positive log means. Compute necessary raw-mass Jensen lower bounds and per-column supported-row log capacity for original current margins. Passing does NOT prove feasibility.",
+    "scope": "Numerical feasibility of joint constraints on currentobservations only, not CNFforecast,temporalvalidation,DErankguarantee,officialscore or reward. Entirely stages<=8.25. No future expression or future-score-driven fitting. No independent embryo identity.",
+    "decision": "A failed necessary bound proves incompatibility of the locked support/margins; all passing cases remain unresolved. No temporal scoring is authorized by a passing bound alone."
+  },
+  "results": [
+    {
+      "cutoff": 8.0,
+      "held_capture": "16",
+      "current_cm_cells": 63,
+      "source_cm_cells": 135,
+      "mapped_genes": 26775,
+      "added_detections": 5005,
+      "removed_detections": 4022,
+      "finite_nonnegative": true,
+      "necessary_bounds": {
+        "bounds_rejected": false,
+        "valid": true,
+        "interpretation": "Unresolved: necessary bounds pass, feasibility not established",
+        "zero_support_conflict": false,
+        "minimum_raw_mass_sum": 586279.1694956274,
+        "minimum_raw_mass_overflow": false,
+        "available_raw_mass_sum": 623335.6231133398,
+        "minimum_to_available_ratio": 0.9405513623100369,
+        "raw_mass_bound_rejected": false,
+        "max_column_log_capacity_excess": 0.0,
+        "column_capacity_bound_rejected": false,
+        "tolerance": 1e-08
+      },
+      "reference_control": {
+        "bounds_rejected": false,
+        "valid": true,
+        "interpretation": "Unresolved: necessary bounds pass, feasibility not established",
+        "zero_support_conflict": false,
+        "minimum_raw_mass_sum": 584372.3650805032,
+        "minimum_raw_mass_overflow": false,
+        "available_raw_mass_sum": 623335.6231133398,
+        "minimum_to_available_ratio": 0.9374923290309818,
+        "raw_mass_bound_rejected": false,
+        "max_column_log_capacity_excess": 0.0,
+        "column_capacity_bound_rejected": false,
+        "tolerance": 1e-08
+      },
+      "rows_sha256": "65cb865adfa6574e668e42a6023aa4c3ecd8a7c7b62de6fc308d7e90c87ad79a"
+    },
+    {
+      "cutoff": 8.0,
+      "held_capture": "33",
+      "current_cm_cells": 44,
+      "source_cm_cells": 154,
+      "mapped_genes": 26775,
+      "added_detections": 2116,
+      "removed_detections": 3300,
+      "finite_nonnegative": true,
+      "necessary_bounds": {
+        "bounds_rejected": false,
+        "valid": true,
+        "interpretation": "Unresolved: necessary bounds pass, feasibility not established",
+        "zero_support_conflict": false,
+        "minimum_raw_mass_sum": 414978.2006444433,
+        "minimum_raw_mass_overflow": false,
+        "available_raw_mass_sum": 435530.4646198319,
+        "minimum_to_available_ratio": 0.9528109612416473,
+        "raw_mass_bound_rejected": false,
+        "max_column_log_capacity_excess": 0.0,
+        "column_capacity_bound_rejected": false,
+        "tolerance": 1e-08
+      },
+      "reference_control": {
+        "bounds_rejected": false,
+        "valid": true,
+        "interpretation": "Unresolved: necessary bounds pass, feasibility not established",
+        "zero_support_conflict": false,
+        "minimum_raw_mass_sum": 410746.1149982858,
+        "minimum_raw_mass_overflow": false,
+        "available_raw_mass_sum": 435530.4646198319,
+        "minimum_to_available_ratio": 0.9430938783049769,
+        "raw_mass_bound_rejected": false,
+        "max_column_log_capacity_excess": 0.0,
+        "column_capacity_bound_rejected": false,
+        "tolerance": 1e-08
+      },
+      "rows_sha256": "f17142421ec4127121b78c5e3811935b0608ea56e4295d627471a681e31f2bea"
+    },
+    {
+      "cutoff": 8.25,
+      "held_capture": "25",
+      "current_cm_cells": 130,
+      "source_cm_cells": 215,
+      "mapped_genes": 26775,
+      "added_detections": 3552,
+      "removed_detections": 9012,
+      "finite_nonnegative": true,
+      "necessary_bounds": {
+        "bounds_rejected": false,
+        "valid": true,
+        "interpretation": "Unresolved: necessary bounds pass, feasibility not established",
+        "zero_support_conflict": false,
+        "minimum_raw_mass_sum": 1198505.379618246,
+        "minimum_raw_mass_overflow": false,
+        "available_raw_mass_sum": 1288125.3002648416,
+        "minimum_to_available_ratio": 0.930426084614463,
+        "raw_mass_bound_rejected": false,
+        "max_column_log_capacity_excess": 0.0,
+        "column_capacity_bound_rejected": false,
+        "tolerance": 1e-08
+      },
+      "reference_control": {
+        "bounds_rejected": false,
+        "valid": true,
+        "interpretation": "Unresolved: necessary bounds pass, feasibility not established",
+        "zero_support_conflict": false,
+        "minimum_raw_mass_sum": 1193497.2306334055,
+        "minimum_raw_mass_overflow": false,
+        "available_raw_mass_sum": 1288125.3002648416,
+        "minimum_to_available_ratio": 0.9265381484146143,
+        "raw_mass_bound_rejected": false,
+        "max_column_log_capacity_excess": 0.0,
+        "column_capacity_bound_rejected": false,
+        "tolerance": 1e-08
+      },
+      "rows_sha256": "ac68830a65bd328216b6165551cdbaf22340419c59860249213a48d9e5d679f6"
+    },
+    {
+      "cutoff": 8.25,
+      "held_capture": "24",
+      "current_cm_cells": 134,
+      "source_cm_cells": 211,
+      "mapped_genes": 26775,
+      "added_detections": 3356,
+      "removed_detections": 10269,
+      "finite_nonnegative": true,
+      "necessary_bounds": {
+        "bounds_rejected": false,
+        "valid": true,
+        "interpretation": "Unresolved: necessary bounds pass, feasibility not established",
+        "zero_support_conflict": false,
+        "minimum_raw_mass_sum": 1238258.6219623662,
+        "minimum_raw_mass_overflow": false,
+        "available_raw_mass_sum": 1327313.1122654811,
+        "minimum_to_available_ratio": 0.9329061926080763,
+        "raw_mass_bound_rejected": false,
+        "max_column_log_capacity_excess": 0.0,
+        "column_capacity_bound_rejected": false,
+        "tolerance": 1e-08
+      },
+      "reference_control": {
+        "bounds_rejected": false,
+        "valid": true,
+        "interpretation": "Unresolved: necessary bounds pass, feasibility not established",
+        "zero_support_conflict": false,
+        "minimum_raw_mass_sum": 1232736.363726596,
+        "minimum_raw_mass_overflow": false,
+        "available_raw_mass_sum": 1327313.1122654811,
+        "minimum_to_available_ratio": 0.9287457136790732,
+        "raw_mass_bound_rejected": false,
+        "max_column_log_capacity_excess": 0.0,
+        "column_capacity_bound_rejected": false,
+        "tolerance": 1e-08
+      },
+      "rows_sha256": "9af5b6849207cb3501f9463c9acc95b77f14bf1d18c64efb069c07dbcd0aff31"
+    }
+  ],
+  "all_cases_bounds_not_rejected": true,
+  "official_score": null,
+  "headline_score": null,
+  "raw_metrics": null,
+  "skills": null,
+  "reward_delta": 0,
+  "plan_sha256": "d0812261d095086ab902a49cb924cb20038f0c5e6b94bd76f49d09cec9a289d5",
+  "report_sha256": "ba33f91d6a5f598f2228df9ad4dc58bec23c2ed94f7562049490d2d2ad8bfd26"
+}

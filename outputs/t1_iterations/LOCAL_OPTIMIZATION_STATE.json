@@ -31,7 +31,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Finish support_mass_bounds report and four compact specialist reviews first. Analytic necessary support/mass checks only, no forecasts/metrics/reward. If bounds reject, revise locked constraints/support explicitly rather than increasing solver iterations; if bounds pass, feasibility remains unresolved and a separately predeclared solver is needed before temporal scoring. Jev selects distinct next design after evidence; preserve prior numerical failure and all open structural/population paths.",
+  "next_experiment": "Implement/test predeclared structured damped Gauss-Newton/LM joint log-gene-mean and raw-row-mass feasibility solver with gene-diagonal/cell-Schur elimination, locked support,100iteration fixedbudget, finite positive backtracking, both1e-5margin tolerances. Verify analytic Jacobian finite differences plus identity,knownfeasibleperturbed andcontradictory-support controls BEFORE current-only fourcaseaudit. Do not run densevariable-sized solver or raiseiterationbudget from failedcaseknowledge. Register unique harness run; four specialists after batch. Bounds allpass leavefeasibilityunresolved. No futurefit/scoring/reward until separatelydeclared temporaltest aftervalidatedsolver.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1296,16 +1296,16 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "packet": "JEV_PROJECTION_FAILURE_PACKET_20261001_01.json",
-    "route": "JEV_PROJECTION_FAILURE_ROUTE_20261001_01.json",
-    "decision": "necessary_bounds_first",
+    "packet": "JEV_JOINT_SOLVER_PACKET_20261001_01.json",
+    "route": "JEV_JOINT_SOLVER_ROUTE_20261001_01.json",
+    "decision": "structured_damped_gauss_newton",
     "confidence": 1.0,
     "usage": {
-      "input_tokens": 703,
-      "output_tokens": 46
+      "input_tokens": 808,
+      "output_tokens": 62
     },
-    "payload_bytes": 1570,
-    "scope": "Distinct failure diagnosis; no measured savings."
+    "payload_bytes": 1682,
+    "scope": "Distinct low-memory solver design, pending validation; no measured savings."
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -1857,6 +1857,20 @@
       "metric_availability": false,
       "reward_delta": 0,
       "fresh_agent_limit_observed": "agent thread limit reached; existing MMD/CSS agents reused"
+    },
+    "support_mass_bounds_01": {
+      "status": "completed",
+      "report_sha256": "ba33f91d6a5f598f2228df9ad4dc58bec23c2ed94f7562049490d2d2ad8bfd26",
+      "review": "METRIC_CRITIQUES_SUPPORT_BOUNDS_20261001.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": false,
+      "reward_delta": 0
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -1912,10 +1926,17 @@
     "all_cases_viable": false
   },
   "support_mass_bounds_job": {
-    "status": "completed_pending_specialist_reviews",
+    "status": "completed_unresolved",
     "tests": "known feasible reference,Jensen-impossible support,zero-support conflict and unresolved support passed",
     "metric_availability": false,
     "reward_delta": 0,
-    "report_sha256": "ba33f91d6a5f598f2228df9ad4dc58bec23c2ed94f7562049490d2d2ad8bfd26"
+    "report_sha256": "ba33f91d6a5f598f2228df9ad4dc58bec23c2ed94f7562049490d2d2ad8bfd26",
+    "all_cases_bounds_not_rejected": true
+  },
+  "joint_solver_design": {
+    "status": "predeclared_pending_implementation",
+    "plan": "NEXT_JOINT_SOLVER_EXPERIMENT.json",
+    "reviews": "METRIC_CRITIQUES_SUPPORT_BOUNDS_20261001.md",
+    "metrics_available": false
   }
 }
