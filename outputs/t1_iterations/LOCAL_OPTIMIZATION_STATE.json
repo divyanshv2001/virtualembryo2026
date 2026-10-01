@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": false,
+  "local_process_running": true,
   "quota_reset_evidence": {
     "limit_observed": false,
     "remaining_quota": null,
@@ -31,12 +31,14 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement/register predeclared CM mean/mass projection full-panel temporaltest per NEXT_PROJECTION_TEMPORAL_EXPERIMENT.json. Fourcapture-excluded conditions(two reusedstagefolds), verifiedarchivedmodels/donors/controlhashes,copy/anchor/uncorrectedCM.25/projectedCM.25. ProjectonlyCM toANCHORFORECAST LOGgene means/RAWrowmasses,lockeduncorrected mask,adaptive100steps/1e-5bothchecks postfloat32,finite/nonnegative/covguard. Contradiction/nonconvergence invalid withnullmetrics,no fallback orsupportrestoration. Freezeforecasts beforetruthread,unchanged32285scoring/calibration. Rewardonlynewvalidprojectedcandidate; fullscoreledger andfour specialists afterbatch. Numericaldevelopment success isnotforecast/officialscore; originalgateunmet.",
+  "next_experiment": "Monitor registered cm_mean_mass_projection via harness status and active evidence; never duplicate. On completion collect, four metric specialists, Jev synthesis/next decision, full-panel ledger and compact updates. Strict projected failures remain null; replay controls earn no new reward.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
-  "active_run_path": null,
+  "active_jobs": [
+    "cm_mean_mass_projection_fullpanel_01"
+  ],
+  "active_run_path": "private/cm_mean_mass_projection_fullpanel_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -1988,5 +1990,12 @@
     "all_cases_viable": true,
     "report_sha256": "da2d0af16d186e3e72b446b9ec8f2e9dadf52532c855c47cd0ee10c018177dde",
     "iterations_each": 7
+  },
+  "cm_mean_mass_projection_job": {
+    "status": "running",
+    "planned_scores": 16,
+    "registered_experiment": "cm_mean_mass_projection",
+    "run": "cm_mean_mass_projection_fullpanel_01",
+    "integration_controls": "passed: adaptive solver/Jacobian/Schur, identity/protection, impossible support, covariance rejection"
   }
 }

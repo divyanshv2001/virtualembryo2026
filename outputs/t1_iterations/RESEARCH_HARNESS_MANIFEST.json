@@ -45,6 +45,11 @@
       "script": "joint_adaptive_solver_audit.py",
       "run": "private/joint_adaptive_solver_01",
       "report": "JOINT_ADAPTIVE_SOLVER_RESULTS.json"
+    },
+    "cm_mean_mass_projection": {
+      "script": "cm_mean_mass_projection_fullpanel.py",
+      "run": "private/cm_mean_mass_projection_fullpanel_01",
+      "report": "CM_MEAN_MASS_PROJECTION_FULLPANEL_RESULTS.json"
     }
   }
 }
