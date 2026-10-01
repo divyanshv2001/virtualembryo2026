@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": false,
+  "local_process_running": true,
   "quota_reset_evidence": {
     "limit_observed": false,
     "remaining_quota": null,
@@ -31,12 +31,14 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement/test predeclared structured damped Gauss-Newton/LM joint log-gene-mean and raw-row-mass feasibility solver with gene-diagonal/cell-Schur elimination, locked support,100iteration fixedbudget, finite positive backtracking, both1e-5margin tolerances. Verify analytic Jacobian finite differences plus identity,knownfeasibleperturbed andcontradictory-support controls BEFORE current-only fourcaseaudit. Do not run densevariable-sized solver or raiseiterationbudget from failedcaseknowledge. Register unique harness run; four specialists after batch. Bounds allpass leavefeasibilityunresolved. No futurefit/scoring/reward until separatelydeclared temporaltest aftervalidatedsolver.",
+  "next_experiment": "Run registered joint_margin_solver current-only fourcase audit after passed Jacobian finite-difference,Schur-vs-dense tinycontrol,identity,feasibleperturbation,supportcontradiction andzero-budget controls. Fixed100iterations/two1e-5tolerances/locked support/Ddisk2threads; no variable-sized dense Jacobian. Finish diagnostics and four metric specialists, no benchmark/reward. Only if allcasesconverge may new temporaltest be predeclared; originalgate remains unmet.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
-  "active_run_path": null,
+  "active_jobs": [
+    "joint_margin_solver_01"
+  ],
+  "active_run_path": "private/joint_margin_solver_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -1934,9 +1936,19 @@
     "all_cases_bounds_not_rejected": true
   },
   "joint_solver_design": {
-    "status": "predeclared_pending_implementation",
+    "status": "implemented_controls_passed",
     "plan": "NEXT_JOINT_SOLVER_EXPERIMENT.json",
     "reviews": "METRIC_CRITIQUES_SUPPORT_BOUNDS_20261001.md",
-    "metrics_available": false
+    "metrics_available": false,
+    "script": "joint_margin_solver_audit.py",
+    "module": "joint_margin_solver.py",
+    "controls": "test_joint_margin_solver.py"
+  },
+  "joint_margin_solver_job": {
+    "status": "running",
+    "registered_experiment": "joint_margin_solver",
+    "controls_passed": true,
+    "metric_availability": false,
+    "reward_delta": 0
   }
 }

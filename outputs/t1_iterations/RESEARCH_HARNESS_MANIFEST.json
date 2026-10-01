@@ -35,6 +35,11 @@
       "script": "support_mass_bounds_audit.py",
       "run": "private/support_mass_bounds_01",
       "report": "SUPPORT_MASS_BOUNDS_RESULTS.json"
+    },
+    "joint_margin_solver": {
+      "script": "joint_margin_solver_audit.py",
+      "run": "private/joint_margin_solver_01",
+      "report": "JOINT_MARGIN_SOLVER_RESULTS.json"
     }
   }
 }

@@ -6173,11 +6173,17 @@
     },
     {
       "id": "structured_joint_margin_solver",
-      "status": "predeclared_pending_implementation",
+      "status": "running",
       "research_family_exhausted": false,
       "plan": "NEXT_JOINT_SOLVER_EXPERIMENT.json",
       "metrics_available": false,
-      "next_action": "Implement/test predeclared structured damped Gauss-Newton/LM joint log-gene-mean and raw-row-mass feasibility solver with gene-diagonal/cell-Schur elimination, locked support,100iteration fixedbudget, finite positive backtracking, both1e-5margin tolerances. Verify analytic Jacobian finite differences plus identity,knownfeasibleperturbed andcontradictory-support controls BEFORE current-only fourcaseaudit. Do not run densevariable-sized solver or raiseiterationbudget from failedcaseknowledge. Register unique harness run; four specialists after batch. Bounds allpass leavefeasibilityunresolved. No futurefit/scoring/reward until separatelydeclared temporaltest aftervalidatedsolver."
+      "next_action": "Run registered joint_margin_solver current-only fourcase audit after passed Jacobian finite-difference,Schur-vs-dense tinycontrol,identity,feasibleperturbation,supportcontradiction andzero-budget controls. Fixed100iterations/two1e-5tolerances/locked support/Ddisk2threads; no variable-sized dense Jacobian. Finish diagnostics and four metric specialists, no benchmark/reward. Only if allcasesconverge may new temporaltest be predeclared; originalgate remains unmet.",
+      "implementation": [
+        "joint_margin_solver.py",
+        "joint_margin_solver_audit.py",
+        "test_joint_margin_solver.py"
+      ],
+      "run": "joint_margin_solver_01"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",
