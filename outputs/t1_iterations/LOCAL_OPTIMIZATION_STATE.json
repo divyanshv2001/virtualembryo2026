@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T08:16:23.083107+00:00",
+  "updated_utc": "2026-10-01T08:26:23.356763+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,7 +31,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Inspect only prior source_challenge_observation_audit, cohort_coverage_audit and domain_mean_alignment evidence to identify already-completed compatibility diagnostics. Then freeze the missing observed-source/challenge lineage-support audit using allowed observed stages only and fixed past-trained features: lineage-specific detection/expression and nearest-neighbor support with explicit missing-label/coverage limits. Do not duplicate an existing audit, infer independent embryos, read unseen challenge future, or fit from reused future targets. Jev selected support diagnosis after two capture estimators failed.",
+  "next_experiment": "Predeclare CM-specific two-part observation/detection calibration ablation, selected by Jev from observed-only compatibility evidence. Inspect existing detection-coupling/CDR/recent-detection code/results first to avoid duplication. Use observed anchor CM detection odds with fixed .25/.5 shrinkage; preserve conditional-positive reference and mapped mass, matched global/no-calibration and copy/incumbent controls. Treat coarse labels/composition as uncertain. Freeze source capture-heldout temporal validation before fitting/scoring, refit any learner that included heldout calibration capture; no future challenge data. Document unavailable independent embryo pairing and full four-metric outcomes. Do not assume calibration corrects a technical cause or increases score.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1296,16 +1296,16 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "packet": "JEV_BALANCED_PACKET_20261001_01.json",
-    "record": "JEV_BALANCED_ROUTE_20261001_01.json",
+    "packet": "JEV_SUPPORT_PACKET_20261001_01.json",
+    "record": "JEV_SUPPORT_ROUTE_20261001_01.json",
     "status": "validated",
-    "payload_bytes": 2154,
+    "payload_bytes": 2317,
     "usage": {
-      "input_tokens": 973,
-      "output_tokens": 71
+      "input_tokens": 1041,
+      "output_tokens": 63
     },
-    "choice": "observed_source_challenge_lineage_support_audit",
-    "confidence": 0.96,
+    "choice": "lineage_detection_calibration",
+    "confidence": 0.76,
     "measured_codex_credit_savings": null
   },
   "external_qc_audit": {
@@ -1774,5 +1774,17 @@
       }
     ],
     "next_action": "Inspect only prior source_challenge_observation_audit, cohort_coverage_audit and domain_mean_alignment evidence to identify already-completed compatibility diagnostics. Then freeze the missing observed-source/challenge lineage-support audit using allowed observed stages only and fixed past-trained features: lineage-specific detection/expression and nearest-neighbor support with explicit missing-label/coverage limits. Do not duplicate an existing audit, infer independent embryos, read unseen challenge future, or fit from reused future targets. Jev selected support diagnosis after two capture estimators failed."
+  },
+  "observed_lineage_support_job": {
+    "status": "completed_observed_only",
+    "report": "OBSERVED_LINEAGE_SUPPORT_RESULTS.json",
+    "report_sha256": "9cc75371456d087279ccbf0fc784cd3018b39b8dda890122b85ffbf80a895815",
+    "plan_sha256": "10a9911335347e3d8a9b869afa5d3689c8e5e2cef41c241f74710f08c3280293",
+    "source_cells": 3000,
+    "challenge_cells": 16787,
+    "mapped_genes": 26775,
+    "new_scores": 0,
+    "reward_delta": 0,
+    "next_action": "Predeclare CM-specific two-part observation/detection calibration ablation, selected by Jev from observed-only compatibility evidence. Inspect existing detection-coupling/CDR/recent-detection code/results first to avoid duplication. Use observed anchor CM detection odds with fixed .25/.5 shrinkage; preserve conditional-positive reference and mapped mass, matched global/no-calibration and copy/incumbent controls. Treat coarse labels/composition as uncertain. Freeze source capture-heldout temporal validation before fitting/scoring, refit any learner that included heldout calibration capture; no future challenge data. Document unavailable independent embryo pairing and full four-metric outcomes. Do not assume calibration corrects a technical cause or increases score."
   }
 }

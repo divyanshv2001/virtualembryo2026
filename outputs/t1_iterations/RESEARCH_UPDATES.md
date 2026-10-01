@@ -417,3 +417,24 @@ Score ledger refreshed:2925records,164reports,0errors. Each new estimator−40se
 One2154-byte Jev advisory used973input/71output tokens; selected observed_source_challenge_lineage_support_audit confidence.96. Summary only, no datasets/source/secrets sent. Actual usage recorded, no measured credit savings claim.
 
 Inspect only prior source_challenge_observation_audit, cohort_coverage_audit and domain_mean_alignment evidence to identify already-completed compatibility diagnostics. Then freeze the missing observed-source/challenge lineage-support audit using allowed observed stages only and fixed past-trained features: lineage-specific detection/expression and nearest-neighbor support with explicit missing-label/coverage limits. Do not duplicate an existing audit, infer independent embryos, read unseen challenge future, or fit from reused future targets. Jev selected support diagnosis after two capture estimators failed.
+
+## 2026-10-01T08:26:23.356763+00:00 — observed tissue-proxy support audit completed
+
+Existing audits already covered gross scale, prevalence and exact Foregut observation statistics, plus label counts. Added missing within-tissue fixed-encoder/cross-capture-NN support diagnostics. Frozen<=8.25 encoder4096features/8D; only source/challengeE8.5 observations read. Source/panel/challenge/encoder hashes verified. 3000source cells,26775mappedgenes. Manual challenge/source tissue proxies explicitly listed in plan; not validated biological identities. Radius calibrated from source nearest same-proxy cell in a different capture; no same-capture density optimism. Backed128cell reads, worker observed~1.05GB. No future data, fitted forecasts, new scores or rewards.
+
+| Tissue proxy | Source cells | Challenge cells | Beyond source95 radius | Global NN same-proxy agreement | Detection median ratio | Prevalence rho | Mean log1p rho |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| blood | 1152 | 266 | 1.000000 | 0.977444 | 0.943849 | 0.900658 | 0.899670 |
+| cardiomyocyte | 237 | 3819 | 0.534695 | 0.932181 | 1.351221 | 0.908607 | 0.907764 |
+| cardiopharyngeal | 303 | 4133 | 0.965400 | 0.555045 | 1.028530 | 0.907871 | 0.905858 |
+| ectoderm_other | 83 | 2196 | 0.800546 | 0.212204 | 0.919062 | 0.895588 | 0.892610 |
+| endoderm | 193 | 2405 | 0.813721 | 0.412890 | 0.963652 | 0.908920 | 0.906908 |
+| endothelial | 247 | 1139 | 0.879719 | 0.988586 | 1.065604 | 0.905935 | 0.904193 |
+| mesenchymal | 541 | 2542 | 0.870574 | 0.499607 | 0.977164 | 0.916004 | 0.913787 |
+| neural_crest | 244 | 287 | 0.982578 | 0.006969 | 1.097044 | 0.900947 | 0.899798 |
+
+Cardiomyocyte observed detection ratio1.351 despite mapped abundance ratios~.996; latent support gaps substantial even where coarse label NN concordance high. Source blood fraction.384 versus challenge.01585. Neural-crest global NN concordance.007 exposes label/identity/support uncertainty. These are descriptive signals, not proof of technical origin, missing biological programs or forecast improvement. Public and genuine private report/plan/events/latent hash retained.
+
+One2317-byte Jev summary advisory used1041input/63output tokens; chose lineage_detection_calibration confidence.76. No datasets/source/secrets sent or measured Codex savings claimed. Official52.16, separate reward−436 and readiness unchanged.
+
+Predeclare CM-specific two-part observation/detection calibration ablation, selected by Jev from observed-only compatibility evidence. Inspect existing detection-coupling/CDR/recent-detection code/results first to avoid duplication. Use observed anchor CM detection odds with fixed .25/.5 shrinkage; preserve conditional-positive reference and mapped mass, matched global/no-calibration and copy/incumbent controls. Treat coarse labels/composition as uncertain. Freeze source capture-heldout temporal validation before fitting/scoring, refit any learner that included heldout calibration capture; no future challenge data. Document unavailable independent embryo pairing and full four-metric outcomes. Do not assume calibration corrects a technical cause or increases score.

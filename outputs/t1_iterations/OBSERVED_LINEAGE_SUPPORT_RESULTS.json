@@ -1,0 +1,382 @@
+{
+  "updated_utc": "2026-10-01T08:23:17.779295+00:00",
+  "plan_sha256": "10a9911335347e3d8a9b869afa5d3689c8e5e2cef41c241f74710f08c3280293",
+  "scope": "Descriptive coarse tissue-proxy mapping, not validated identities or independent embryo evidence. E8.5 allowed observations only; no E9.5/future reads, scores, reward or causal transfer proof.",
+  "source_cells": 3000,
+  "challenge_cells": 16787,
+  "mapped_genes": 26775,
+  "unmapped_challenge_labels": [],
+  "results": [
+    {
+      "tissue_proxy": "blood",
+      "source_cells": 1152,
+      "challenge_cells": 266,
+      "source_fraction": 0.384,
+      "challenge_fraction": 0.015845594805504258,
+      "source_label_names": [
+        "Blood progenitors",
+        "EMP",
+        "Erythroid",
+        "Haematoendothelial progenitors",
+        "Megakaryocyte progenitors"
+      ],
+      "challenge_label_names": [
+        "Blood"
+      ],
+      "source_cross_capture_covered_cells": 1152,
+      "support_status": "diagnosed",
+      "source_cross_capture_nn_distance_quantiles": {
+        "0.05": 0.2507326702632154,
+        "0.5": 0.405462499712738,
+        "0.95": 0.9123809140805575
+      },
+      "source_only95_radius": 0.9123809140805575,
+      "challenge_same_proxy_nn_distance_quantiles": {
+        "0.05": 1.93020427709278,
+        "0.5": 2.956073606510933,
+        "0.95": 3.8435936644577824
+      },
+      "challenge_fraction_beyond_source95_radius": 1.0,
+      "challenge_unconstrained_nn_proxy_label_agreement": 0.9774436090225563,
+      "source_detection_quantiles": {
+        "0.05": 2207.95,
+        "0.5": 3170.0,
+        "0.95": 4063.45
+      },
+      "challenge_detection_quantiles": {
+        "0.05": 2156.5,
+        "0.5": 2992.0,
+        "0.95": 3913.25
+      },
+      "detection_median_ratio": 0.9438485804416403,
+      "mapped_implied_count_median_ratio": 0.9958099334077929,
+      "gene_prevalence_rho": 0.9006580794922411,
+      "gene_mean_log1p_rho": 0.8996702358053318
+    },
+    {
+      "tissue_proxy": "cardiomyocyte",
+      "source_cells": 237,
+      "challenge_cells": 3819,
+      "source_fraction": 0.079,
+      "challenge_fraction": 0.22749746827902545,
+      "source_label_names": [
+        "Cardiomyocytes FHF 1",
+        "Cardiomyocytes FHF 2",
+        "Cardiomyocytes SHF 1",
+        "Cardiomyocytes SHF 2"
+      ],
+      "challenge_label_names": [
+        "AVC-CM",
+        "IFT-CM",
+        "LV-CM",
+        "OFT/RV-CM",
+        "RV-CM",
+        "SV-CM"
+      ],
+      "source_cross_capture_covered_cells": 237,
+      "support_status": "diagnosed",
+      "source_cross_capture_nn_distance_quantiles": {
+        "0.05": 0.590810222387186,
+        "0.5": 0.9849288819132037,
+        "0.95": 1.8449399857695299
+      },
+      "source_only95_radius": 1.8449399857695299,
+      "challenge_same_proxy_nn_distance_quantiles": {
+        "0.05": 1.1509791498279762,
+        "0.5": 1.8931648877452374,
+        "0.95": 2.996947485728704
+      },
+      "challenge_fraction_beyond_source95_radius": 0.5346949463210264,
+      "challenge_unconstrained_nn_proxy_label_agreement": 0.9321811992668237,
+      "source_detection_quantiles": {
+        "0.05": 2360.2,
+        "0.5": 3317.0,
+        "0.95": 5172.6
+      },
+      "challenge_detection_quantiles": {
+        "0.05": 3097.9,
+        "0.5": 4482.0,
+        "0.95": 5886.299999999999
+      },
+      "detection_median_ratio": 1.3512209828157975,
+      "mapped_implied_count_median_ratio": 0.9970068148125919,
+      "gene_prevalence_rho": 0.9086073216769216,
+      "gene_mean_log1p_rho": 0.9077638795166718
+    },
+    {
+      "tissue_proxy": "cardiopharyngeal",
+      "source_cells": 303,
+      "challenge_cells": 4133,
+      "source_fraction": 0.101,
+      "challenge_fraction": 0.24620241853815453,
+      "source_label_names": [
+        "Anterior cardiopharyngeal progenitors",
+        "Cardiopharyngeal progenitors",
+        "Cardiopharyngeal progenitors FHF",
+        "Cardiopharyngeal progenitors SHF",
+        "Pharyngeal mesoderm"
+      ],
+      "challenge_label_names": [
+        "JCF",
+        "aSHF",
+        "pSHF"
+      ],
+      "source_cross_capture_covered_cells": 303,
+      "support_status": "diagnosed",
+      "source_cross_capture_nn_distance_quantiles": {
+        "0.05": 0.3894579524248306,
+        "0.5": 0.6698982858530225,
+        "0.95": 1.2827204111278945
+      },
+      "source_only95_radius": 1.2827204111278945,
+      "challenge_same_proxy_nn_distance_quantiles": {
+        "0.05": 1.360284850333215,
+        "0.5": 2.395815641711176,
+        "0.95": 3.7293058251883457
+      },
+      "challenge_fraction_beyond_source95_radius": 0.9654004355189935,
+      "challenge_unconstrained_nn_proxy_label_agreement": 0.5550447616743286,
+      "source_detection_quantiles": {
+        "0.05": 2456.1,
+        "0.5": 3435.0,
+        "0.95": 5325.199999999998
+      },
+      "challenge_detection_quantiles": {
+        "0.05": 2315.6,
+        "0.5": 3533.0,
+        "0.95": 4945.399999999996
+      },
+      "detection_median_ratio": 1.0285298398835516,
+      "mapped_implied_count_median_ratio": 0.9961140054246853,
+      "gene_prevalence_rho": 0.9078707365154278,
+      "gene_mean_log1p_rho": 0.9058579919827893
+    },
+    {
+      "tissue_proxy": "ectoderm_other",
+      "source_cells": 83,
+      "challenge_cells": 2196,
+      "source_fraction": 0.027666666666666666,
+      "challenge_fraction": 0.1308155120033359,
+      "source_label_names": [
+        "Non-neural ectoderm",
+        "Surface ectoderm"
+      ],
+      "challenge_label_names": [
+        "Neural Tube",
+        "Surface Ectoderm"
+      ],
+      "source_cross_capture_covered_cells": 83,
+      "support_status": "diagnosed",
+      "source_cross_capture_nn_distance_quantiles": {
+        "0.05": 0.4251352366935842,
+        "0.5": 0.862222862475155,
+        "0.95": 1.8792576502460263
+      },
+      "source_only95_radius": 1.8792576502460263,
+      "challenge_same_proxy_nn_distance_quantiles": {
+        "0.05": 1.3986295798153754,
+        "0.5": 2.4853386375847872,
+        "0.95": 4.378800019035055
+      },
+      "challenge_fraction_beyond_source95_radius": 0.8005464480874317,
+      "challenge_unconstrained_nn_proxy_label_agreement": 0.2122040072859745,
+      "source_detection_quantiles": {
+        "0.05": 2514.6000000000004,
+        "0.5": 3861.0,
+        "0.95": 6098.799999999999
+      },
+      "challenge_detection_quantiles": {
+        "0.05": 2282.25,
+        "0.5": 3548.5,
+        "0.95": 4985.5
+      },
+      "detection_median_ratio": 0.919062419062419,
+      "mapped_implied_count_median_ratio": 0.9964095969724328,
+      "gene_prevalence_rho": 0.8955881984115978,
+      "gene_mean_log1p_rho": 0.8926099207931558
+    },
+    {
+      "tissue_proxy": "endoderm",
+      "source_cells": 193,
+      "challenge_cells": 2405,
+      "source_fraction": 0.06433333333333334,
+      "challenge_fraction": 0.1432656222076607,
+      "source_label_names": [
+        "Foregut",
+        "Gut tube",
+        "Pharyngeal endoderm"
+      ],
+      "challenge_label_names": [
+        "Foregut"
+      ],
+      "source_cross_capture_covered_cells": 193,
+      "support_status": "diagnosed",
+      "source_cross_capture_nn_distance_quantiles": {
+        "0.05": 0.4015495946134444,
+        "0.5": 0.751876215121712,
+        "0.95": 1.6175164483901612
+      },
+      "source_only95_radius": 1.6175164483901612,
+      "challenge_same_proxy_nn_distance_quantiles": {
+        "0.05": 1.2100007770792718,
+        "0.5": 2.220415867262414,
+        "0.95": 3.54298968117062
+      },
+      "challenge_fraction_beyond_source95_radius": 0.8137214137214137,
+      "challenge_unconstrained_nn_proxy_label_agreement": 0.4128898128898129,
+      "source_detection_quantiles": {
+        "0.05": 2503.6,
+        "0.5": 3549.0,
+        "0.95": 5294.799999999997
+      },
+      "challenge_detection_quantiles": {
+        "0.05": 2336.2,
+        "0.5": 3420.0,
+        "0.95": 4786.599999999999
+      },
+      "detection_median_ratio": 0.9636517328825022,
+      "mapped_implied_count_median_ratio": 0.9966765634415192,
+      "gene_prevalence_rho": 0.9089197533046285,
+      "gene_mean_log1p_rho": 0.9069078660772676
+    },
+    {
+      "tissue_proxy": "endothelial",
+      "source_cells": 247,
+      "challenge_cells": 1139,
+      "source_fraction": 0.08233333333333333,
+      "challenge_fraction": 0.06785012211830584,
+      "source_label_names": [
+        "Embryo proper endothelium",
+        "Endocardium",
+        "Venous endothelium"
+      ],
+      "challenge_label_names": [
+        "Endothelium"
+      ],
+      "source_cross_capture_covered_cells": 247,
+      "support_status": "diagnosed",
+      "source_cross_capture_nn_distance_quantiles": {
+        "0.05": 0.5288738549197023,
+        "0.5": 0.8959066758534142,
+        "0.95": 1.770325357618358
+      },
+      "source_only95_radius": 1.770325357618358,
+      "challenge_same_proxy_nn_distance_quantiles": {
+        "0.05": 1.4779637448473708,
+        "0.5": 2.572301464204971,
+        "0.95": 3.766451246176115
+      },
+      "challenge_fraction_beyond_source95_radius": 0.8797190517998245,
+      "challenge_unconstrained_nn_proxy_label_agreement": 0.9885864793678666,
+      "source_detection_quantiles": {
+        "0.05": 2507.8,
+        "0.5": 3765.0,
+        "0.95": 5551.9
+      },
+      "challenge_detection_quantiles": {
+        "0.05": 2869.9,
+        "0.5": 4012.0,
+        "0.95": 5221.299999999999
+      },
+      "detection_median_ratio": 1.0656042496679947,
+      "mapped_implied_count_median_ratio": 0.9970788551197779,
+      "gene_prevalence_rho": 0.9059354268705018,
+      "gene_mean_log1p_rho": 0.9041928481747932
+    },
+    {
+      "tissue_proxy": "mesenchymal",
+      "source_cells": 541,
+      "challenge_cells": 2542,
+      "source_fraction": 0.18033333333333335,
+      "challenge_fraction": 0.15142669923154822,
+      "source_label_names": [
+        "Embryo proper mesothelium",
+        "Epicardium",
+        "Lateral plate mesoderm",
+        "Mesenchyme"
+      ],
+      "challenge_label_names": [
+        "EXEM",
+        "Paraxial Mesoderm",
+        "Pericardium"
+      ],
+      "source_cross_capture_covered_cells": 541,
+      "support_status": "diagnosed",
+      "source_cross_capture_nn_distance_quantiles": {
+        "0.05": 0.3760854913490085,
+        "0.5": 0.7600516625991194,
+        "0.95": 1.6476095478513575
+      },
+      "source_only95_radius": 1.6476095478513575,
+      "challenge_same_proxy_nn_distance_quantiles": {
+        "0.05": 1.3492645052467624,
+        "0.5": 2.437783978610777,
+        "0.95": 3.614463201412026
+      },
+      "challenge_fraction_beyond_source95_radius": 0.8705743509047994,
+      "challenge_unconstrained_nn_proxy_label_agreement": 0.4996066089693155,
+      "source_detection_quantiles": {
+        "0.05": 2586.0,
+        "0.5": 3766.0,
+        "0.95": 5362.0
+      },
+      "challenge_detection_quantiles": {
+        "0.05": 2516.1,
+        "0.5": 3680.0,
+        "0.95": 5041.95
+      },
+      "detection_median_ratio": 0.9771640998406798,
+      "mapped_implied_count_median_ratio": 0.9959814173460205,
+      "gene_prevalence_rho": 0.9160042960914799,
+      "gene_mean_log1p_rho": 0.9137867885356258
+    },
+    {
+      "tissue_proxy": "neural_crest",
+      "source_cells": 244,
+      "challenge_cells": 287,
+      "source_fraction": 0.08133333333333333,
+      "challenge_fraction": 0.01709656281646512,
+      "source_label_names": [
+        "Branchial arch neural crest",
+        "Migratory neural crest"
+      ],
+      "challenge_label_names": [
+        "NCC"
+      ],
+      "source_cross_capture_covered_cells": 244,
+      "support_status": "diagnosed",
+      "source_cross_capture_nn_distance_quantiles": {
+        "0.05": 0.3364756256142199,
+        "0.5": 0.5427550033062588,
+        "0.95": 1.0575983257955752
+      },
+      "source_only95_radius": 1.0575983257955752,
+      "challenge_same_proxy_nn_distance_quantiles": {
+        "0.05": 1.252903193091015,
+        "0.5": 2.3395618990466187,
+        "0.95": 4.12106149490185
+      },
+      "challenge_fraction_beyond_source95_radius": 0.9825783972125436,
+      "challenge_unconstrained_nn_proxy_label_agreement": 0.006968641114982578,
+      "source_detection_quantiles": {
+        "0.05": 2518.85,
+        "0.5": 3704.5,
+        "0.95": 5199.9
+      },
+      "challenge_detection_quantiles": {
+        "0.05": 2781.5,
+        "0.5": 4064.0,
+        "0.95": 5506.299999999999
+      },
+      "detection_median_ratio": 1.097044135510865,
+      "mapped_implied_count_median_ratio": 0.9956425170245753,
+      "gene_prevalence_rho": 0.9009474455802687,
+      "gene_mean_log1p_rho": 0.8997979853163476
+    }
+  ],
+  "new_scores": 0,
+  "reward_delta": 0,
+  "independent_embryo_validation": false,
+  "latent_coordinates_sha256": "875b97770d85022d5f2ee1d5ff03037c31e562f29561d6f2afbab39b9010ced1",
+  "report_sha256": "9cc75371456d087279ccbf0fc784cd3018b39b8dda890122b85ffbf80a895815"
+}

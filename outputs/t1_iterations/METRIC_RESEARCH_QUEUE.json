@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T08:16:23.083107+00:00",
+  "updated_utc": "2026-10-01T08:26:23.356763+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -6110,6 +6110,15 @@
       "report_sha256": "13410a7c94083490c5c04dfdee22c461644b09b708de0c5b3d439fe4f4b1e6f7",
       "full_panel_scores": 10,
       "passing_candidates": []
+    },
+    {
+      "id": "observed_source_challenge_lineage_support",
+      "status": "completed_diagnostic",
+      "research_family_exhausted": false,
+      "report": "OBSERVED_LINEAGE_SUPPORT_RESULTS.json",
+      "report_sha256": "9cc75371456d087279ccbf0fc784cd3018b39b8dda890122b85ffbf80a895815",
+      "scope": "Descriptive coarse tissue-proxy mapping, not validated identities or independent embryo evidence. E8.5 allowed observations only; no E9.5/future reads, scores, reward or causal transfer proof.",
+      "next_action": "Predeclare CM-specific two-part observation/detection calibration ablation, selected by Jev from observed-only compatibility evidence. Inspect existing detection-coupling/CDR/recent-detection code/results first to avoid duplication. Use observed anchor CM detection odds with fixed .25/.5 shrinkage; preserve conditional-positive reference and mapped mass, matched global/no-calibration and copy/incumbent controls. Treat coarse labels/composition as uncertain. Freeze source capture-heldout temporal validation before fitting/scoring, refit any learner that included heldout calibration capture; no future challenge data. Document unavailable independent embryo pairing and full four-metric outcomes. Do not assume calibration corrects a technical cause or increases score."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",
