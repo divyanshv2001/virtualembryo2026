@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T21:48:11.626340+00:00",
+  "updated_utc": "2026-10-01T22:01:32.249147+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,18 +30,11 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Run/finish registered capture_decoded_matched_fullpanel: fixed sixenergy matched forecasts plus tenoriginal exactpreflight freezes before anyfuture read. Unchanged32285gene scorer/calibration, exactcopy-anchor-originalgeo6raw/skillscore replays. Reward onlynewgeo vsanchor, uniformvariantscontrols, no targetretuning. Aftercompletion fourcritics+ledger; signconstraint followon untested, families/readiness open.",
+  "next_experiment": "Priority user rootcause request: implement/register unique production_coverage_audit per NEXT_PRODUCTION_COVERAGE_AUDIT.json using actual52.16artifact/anchor matchedrows. No hiddenfuture/score/reward. Inspect time/gene/detection/updatecoverage with Dchunks; then choose targeted productionlength matched experiment, notmore quarterdayconstraint tweaks. No genuinelynewsubmission ready; extra user-30 pending evaluation. Fourcritics afteraudit; originalreadiness/families open.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    {
-      "experiment": "capture_decoded_matched_fullpanel",
-      "pid": 9000,
-      "status": "running",
-      "report": "CAPTURE_DECODED_MATCHED_FULLPANEL_RESULTS.json"
-    }
-  ],
+  "active_jobs": [],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -1152,13 +1145,13 @@
     "direct_nearest_source_transfer_allowed": false
   },
   "jev_latest": {
-    "record": "JEV_DECODED_MATCH_ROUTE_20261002_01.json",
+    "record": "JEV_PRODUCTION_PRIORITY_ROUTE_20261002_01.json",
     "usage": {
-      "input_tokens": 978,
-      "output_tokens": 65
+      "input_tokens": 1017,
+      "output_tokens": 63
     },
-    "choice": "fixed_matched_fullpanel",
-    "confidence": 0.89
+    "choice": "production_coverage_audit",
+    "confidence": 0.99
   },
   "count_reliability_job": {
     "status": "completed_not_promoted",
@@ -1233,7 +1226,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -877,
+    "current_reward": -906,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1242,8 +1235,8 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -877,
-    "reward_score": -877,
+    "uncapped_reward": -906,
+    "reward_score": -906,
     "benchmark_score": "unchanged; separately reported",
     "last_batch_reward_delta": -29
   },
@@ -1304,13 +1297,13 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_DECODED_MATCH_ROUTE_20261002_01.json",
+    "record": "JEV_PRODUCTION_PRIORITY_ROUTE_20261002_01.json",
     "usage": {
-      "input_tokens": 978,
-      "output_tokens": 65
+      "input_tokens": 1017,
+      "output_tokens": 63
     },
-    "choice": "fixed_matched_fullpanel",
-    "confidence": 0.89
+    "choice": "production_coverage_audit",
+    "confidence": 0.99
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -2385,6 +2378,23 @@
       "reused_contexts": 0,
       "resource_limitation": "Directionspawnthreadlimit resolved afterDEfinished; freshcritics scheduled sequentially",
       "review_corrections": "Energy tolerance notexactsymbolic equality; doesnotfix signs/means. No targetaccuracy/fullCSS claim. Signconstraint proposed notperformed; score current fixed matched comparison."
+    },
+    "capture_decoded_matched_fullpanel_01": {
+      "status": "completed",
+      "report_sha256": "08fd1b1b94126ec37386ad2303600dde625b8d136a5e3a37ae4fe202ffccfcc9",
+      "review": "METRIC_CRITIQUES_DECODED_FULLPANEL_20261002.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": true,
+      "reward_delta": -29,
+      "fresh_contexts": 4,
+      "reused_contexts": 0,
+      "review_corrections": "CSSnonspatial; no hidden10.5states/biology inference fromscore. Quarterday notproduction. Userfastrootauditpriority takesprecedence over signconstraint development."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -2838,10 +2848,47 @@
     "reward_delta": 0
   },
   "capture_decoded_matched_fullpanel_job": {
-    "status": "running",
+    "status": "completed",
     "spec": "NEXT_CAPTURE_DECODED_MATCHED_FULLPANEL.json",
     "report": "CAPTURE_DECODED_MATCHED_FULLPANEL_RESULTS.json",
     "pid": 9000,
-    "experiment": "capture_decoded_matched_fullpanel"
+    "experiment": "capture_decoded_matched_fullpanel",
+    "report_sha256": "08fd1b1b94126ec37386ad2303600dde625b8d136a5e3a37ae4fe202ffccfcc9",
+    "passing_candidates": [],
+    "reward_delta": -29,
+    "exact_preflight_replays": 16,
+    "exact_scored_control_replays": 6
+  },
+  "user_requested_manual_penalty": {
+    "requested": -30,
+    "status": "pending_user_evaluation",
+    "applied": 0,
+    "reason": "Latest user asked to evaluate a genuinelynewsubmission before deciding minus30; none currentlyready",
+    "separate_from_benchmark": true
+  },
+  "official_latest_reported": {
+    "headline": 52.16,
+    "rank": 134,
+    "board_entries": 278,
+    "skills_percent": {
+      "de_score": 47.2,
+      "de_direction": 56.3,
+      "mmd_u": 53.2,
+      "variogram": 51.7
+    },
+    "source": "User screenshot codex-clipboard-e6bd29ed-7b06-4151-8553-76a4726e66fd.png",
+    "submission_identity": "Notshown; bestscoreteam screenshot notproofnewupload"
+  },
+  "experiment_inventory_snapshot": {
+    "registered_harness_experiments": 40,
+    "explicitly_completed": 34,
+    "failed": 4,
+    "legacy_report_status_unspecified": 2,
+    "score_report_batches": 202,
+    "score_records": 3121,
+    "queue_method_entries": 125,
+    "remaining_exact_count": null,
+    "reason": "Queueentries include testedmethods and openfamilies, not125pendingexperiments; future variants depend on diagnostic evidence",
+    "next_spec": "NEXT_PRODUCTION_COVERAGE_AUDIT.json"
   }
 }

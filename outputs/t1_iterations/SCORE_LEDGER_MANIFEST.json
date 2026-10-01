@@ -1,5 +1,5 @@
 {
-  "records": 3105,
+  "records": 3121,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -27,9 +27,29 @@
       "outcomes_indexed": 27
     },
     {
+      "path": "private/capture_amplitude_matched_preflight_01/report.json",
+      "sha256": "040756aa27992f443f457c3f82abb291923931947233828664826dab2a7adcd1",
+      "outcomes_indexed": 0
+    },
+    {
       "path": "private/capture_balanced_fullpanel_01/report.json",
       "sha256": "13410a7c94083490c5c04dfdee22c461644b09b708de0c5b3d439fe4f4b1e6f7",
       "outcomes_indexed": 10
+    },
+    {
+      "path": "private/capture_decoded_energy_preflight_01/report.json",
+      "sha256": "07761dd32645a10231fc826ecd6a2ddda5e80a75c4921734142317cc9f56aa75",
+      "outcomes_indexed": 0
+    },
+    {
+      "path": "private/capture_decoded_energy_retry_preflight_01/report.json",
+      "sha256": "0f134d90ced33be9a1c9a0737cc0757a912427b6310a7e9766b030ab24057e56",
+      "outcomes_indexed": 0
+    },
+    {
+      "path": "private/capture_decoded_matched_fullpanel_01/report.json",
+      "sha256": "08fd1b1b94126ec37386ad2303600dde625b8d136a5e3a37ae4fe202ffccfcc9",
+      "outcomes_indexed": 16
     },
     {
       "path": "private/capture_decoder_support_audit_01/report.json",
@@ -994,5 +1014,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "fbccfecab38674259393d78433d1935bb5a69034b912f0518ef4e42dd8c71a32"
+  "ledger_sha256": "e6dfc8a69fcb7eb65de6415af1d169fb86341ededfaca0f725c4ad35ea7cf1e6"
 }
