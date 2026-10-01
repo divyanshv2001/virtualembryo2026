@@ -1,0 +1,14 @@
+{
+  "status": "predeclared_not_started",
+  "purpose": "Diagnose actual one-day full-gene forecast errors before choosing a decoder fix or new soft-OT flow-matching objective.",
+  "audit_evidence": "PRODUCTION_COVERAGE_AUDIT_RETRY_RESULTS.json",
+  "historical_batch": "private/cnf_covariance_alignment_01/report.json",
+  "controls": ["copy", "mean_shift", "covariance_0.25"],
+  "cutoff": 8.5,
+  "target": 9.5,
+  "implementation_requirement": "Inspect existing one-day evidence and original executed sources/checkpoints first. Forecast matrices used TemporaryForecastCache and were not retained. Do not relaunch the old batch. Implement/register unique diagnostic reconstruction from frozen checkpoint/source/donor indices; require exact original .npy prediction SHA for every declared control before reading target expression. If replay differs, fail and preserve evidence; no score or claimed comparison.",
+  "sampling": "Use the original fixed donor seed and saved target rows for 20260928/20260929/20260930. Do not resample or search seeds. Panels reused/overlapping, not independent embryo validation.",
+  "diagnostics": "Per-gene mean and detection change error relative to the actual historical target, mapped/protected coverage strata; fixed all-gene sign confusion diagnostics, prediction detection turnover, and unchanged full scorer's DE selection definitions where required. Do not choose a new posthoc gene mask or treat every detection loss as bad. Source-challenge domain difference is separate from temporal error. Reuse existing raw4/skills4/calibration evidence; no new metrics invented.",
+  "policy": "No fitting during this diagnostic; model/preprocessing/couplings only through8.5, historical9.5target used solely for evaluation after verified forecasts frozen. Future10.5 never read. Evidence supports next prospective matched test; original72/64replicate/temporal gates unchanged. Four metric critics after completion/failure and cached Jev selection if diagnosis creates a genuinely new uncertain decision.",
+  "resources": "D-only short-lived disk forecast cache and per-gene diagnostics;256genechunks,2threads,16GB. All failures/seeds/hashes/events preserved. No official uploads or new artifact promised. Register unique script/run/report before launch."
+}

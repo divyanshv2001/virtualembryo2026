@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-01T22:09:43.236863+00:00
+Updated: 2026-10-01T22:19:40.869468+00:00
 
 Run `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_playbook.py` first. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -10,7 +10,7 @@ Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction':
 
 Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Priority user rootcause request: implement/register unique production_coverage_audit per NEXT_PRODUCTION_COVERAGE_AUDIT.json using actual52.16artifact/anchor matchedrows. No hiddenfuture/score/reward. Inspect time/gene/detection/updatecoverage with Dchunks; then choose targeted productionlength matched experiment, notmore quarterdayconstraint tweaks. No genuinelynewsubmission ready; extra user-30 pending evaluation. Fourcritics afteraudit; originalreadiness/families open.
+Next: Implement/register unique one_day_decoder_diagnostic per NEXT_ONE_DAY_DECODER_DIAGNOSTIC.json. Productionaudit passed exactartifact/source/donors/order andactual1daytiming. 2605activeprotectedgenes only1.396%abundance; detectionnetloss100182 notcausalproof. HistoricalCNFcovariance predictions notretained: reconstruct frozencontrols andrequireoriginalhashes beforetargetread; no relauncholdbatch. Then selecttargetedremedy/softOTflowmatching fromactualone-dayerror. No newsubmission/score; gates unchanged.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in outputs\t1_submissions\formula_progress_20260930_01\official_result.json. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 
@@ -18,7 +18,7 @@ Four metric critiques completed; consult METRIC_CRITIQUES_20261001.md when desig
 
 Current separate reward: -906. This is not a benchmark score.
 
-External acquisition entry point: GSE76118_WT_STAGE_MANIFEST.json. The old stage-only list is historical;127 mutants excluded,162 B6 WT controls separate,143E8.5/999E9.5 primary CD1 candidates. Expression acquired: True; acquired cohort cells: 24; prospective QC passes: 18; original pilot cells: 4; training readiness: False. Latest external status: 24-cell cohort/QC, compatibility, lineage matching, robustness and E8.5 static guidance already completed; static guidance had no passing alpha. Transfer/embryo replication not validated. Do not repeat acquisition or QC; per-cutoff stage restrictions remain.. Latest Jev actual usage: {'input_tokens': 1017, 'output_tokens': 63}.
+External acquisition entry point: GSE76118_WT_STAGE_MANIFEST.json. The old stage-only list is historical;127 mutants excluded,162 B6 WT controls separate,143E8.5/999E9.5 primary CD1 candidates. Expression acquired: True; acquired cohort cells: 24; prospective QC passes: 18; original pilot cells: 4; training readiness: False. Latest external status: 24-cell cohort/QC, compatibility, lineage matching, robustness and E8.5 static guidance already completed; static guidance had no passing alpha. Transfer/embryo replication not validated. Do not repeat acquisition or QC; per-cutoff stage restrictions remain.. Latest Jev actual usage: none.
 
 Use D-only temporary disk cache, two BLAS threads, one full forecast at a time;16GBRAM. Retain source reports/events, seeds/splits/hashes, raw4/skills4 and failed outcomes. Refresh SCORE_LEDGER.jsonl after full-panel batches; proxy/export is not a score batch. Commit small evidence/code, never datasets/secrets/artifact matrices. No automatic official upload. Run four compact metric critics after each new experiment batch once; max150words each, fresh context, no routine agents. Each metric specialist must state Problem / Proposed solution / Validation, with evidence, uncertainty, concrete past-only remedy, matched controls and failure criteria; proposed solutions are unvalidated until tested.
 

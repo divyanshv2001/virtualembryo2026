@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Priority user rootcause request: implement/register unique production_coverage_audit per NEXT_PRODUCTION_COVERAGE_AUDIT.json using actual52.16artifact/anchor matchedrows. No hiddenfuture/score/reward. Inspect time/gene/detection/updatecoverage with Dchunks; then choose targeted productionlength matched experiment, notmore quarterdayconstraint tweaks. No genuinelynewsubmission ready; extra user-30 pending evaluation. Fourcritics afteraudit; originalreadiness/families open.",
+  "next_experiment": "Implement/register unique one_day_decoder_diagnostic per NEXT_ONE_DAY_DECODER_DIAGNOSTIC.json. Productionaudit passed exactartifact/source/donors/order andactual1daytiming. 2605activeprotectedgenes only1.396%abundance; detectionnetloss100182 notcausalproof. HistoricalCNFcovariance predictions notretained: reconstruct frozencontrols andrequireoriginalhashes beforetargetread; no relauncholdbatch. Then selecttargetedremedy/softOTflowmatching fromactualone-dayerror. No newsubmission/score; gates unchanged.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1297,13 +1297,13 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_PRODUCTION_PRIORITY_ROUTE_20261002_01.json",
-    "usage": {
-      "input_tokens": 1017,
-      "output_tokens": 63
+    "route": "JEV_PRODUCTION_AUDIT_SYNTHESIS_ROUTE_20261002_01.json",
+    "choice": "one_day_decoder_error_decomposition",
+    "actual_usage": {
+      "input_tokens": 1116,
+      "output_tokens": 73
     },
-    "choice": "production_coverage_audit",
-    "confidence": 0.99
+    "payload_bytes": 2539
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -2395,6 +2395,34 @@
       "fresh_contexts": 4,
       "reused_contexts": 0,
       "review_corrections": "CSSnonspatial; no hidden10.5states/biology inference fromscore. Quarterday notproduction. Userfastrootauditpriority takesprecedence over signconstraint development."
+    },
+    "production_coverage_audit_01": {
+      "status": "completed",
+      "report_sha256": "8cd4c4fcbcea533fae5504b844c4ece20f114ee6eb4b9dfaa80203ff8614fedf",
+      "specialist_role_version": 2,
+      "agents": [
+        "production_audit_de",
+        "production_audit_direction",
+        "production_audit_mmd",
+        "production_audit_variogram"
+      ],
+      "review": "METRIC_CRITIQUES_PRODUCTION_AUDIT_20261002.md",
+      "metrics_unavailable": true,
+      "reward": 0
+    },
+    "production_coverage_audit_retry_01": {
+      "status": "completed",
+      "report_sha256": "645b665c67e4c4a4c0109bbb20b7dc8e2cce134672309917a48b5d336d4995f2",
+      "specialist_role_version": 2,
+      "agents": [
+        "production_retry_de",
+        "production_retry_direction",
+        "production_retry_mmd",
+        "production_retry_variogram"
+      ],
+      "review": "METRIC_CRITIQUES_PRODUCTION_AUDIT_20261002.md",
+      "metrics_unavailable": true,
+      "reward": 0
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -2880,16 +2908,14 @@
     "submission_identity": "Notshown; bestscoreteam screenshot notproofnewupload"
   },
   "experiment_inventory_snapshot": {
-    "registered_harness_experiments": 40,
-    "explicitly_completed": 34,
-    "failed": 4,
-    "legacy_report_status_unspecified": 2,
-    "score_report_batches": 202,
-    "score_records": 3121,
-    "queue_method_entries": 125,
-    "remaining_exact_count": null,
-    "reason": "Queueentries include testedmethods and openfamilies, not125pendingexperiments; future variants depend on diagnostic evidence",
-    "next_spec": "NEXT_PRODUCTION_COVERAGE_AUDIT.json"
+    "utc": "2026-10-01T22:19:13.310857+00:00",
+    "registered_harness_experiments": 42,
+    "completed_explicit": 35,
+    "failed_explicit": 5,
+    "legacy_no_explicit_status": 2,
+    "scoring_records": 3121,
+    "scored_reports": 202,
+    "remaining_count": "not_fixed; next_unique_diagnostic_then_targeted_method_and_required_validation"
   },
   "literature_priority_20261002": {
     "review": "LITERATURE_PRIORITY_20261002.md",
@@ -2902,5 +2928,73 @@
       "output_tokens": 64
     },
     "route": "JEV_LITERATURE_PRIORITY_ROUTE_20261002_01.json"
+  },
+  "production_coverage_audit_job": {
+    "status": "completed_after_distinct_retry",
+    "failed_report_sha256": "8cd4c4fcbcea533fae5504b844c4ece20f114ee6eb4b9dfaa80203ff8614fedf",
+    "report": "PRODUCTION_COVERAGE_AUDIT_RETRY_RESULTS.json",
+    "report_sha256": "645b665c67e4c4a4c0109bbb20b7dc8e2cce134672309917a48b5d336d4995f2",
+    "strata": {
+      "all": {
+        "genes": 32285,
+        "anchor_active_genes": 22141,
+        "changed_genes": 19599,
+        "unchanged_active_genes": 2605,
+        "mean_log1p_sum_before": 3882.6545228535533,
+        "mean_log1p_sum_after": 3790.920749147584,
+        "detected_entries_before": 5953636,
+        "detected_entries_after": 5853454,
+        "new_detection_entries": 71377,
+        "lost_detection_entries": 171559
+      },
+      "unique_mapped": {
+        "genes": 26775,
+        "anchor_active_genes": 19536,
+        "changed_genes": 19599,
+        "unchanged_active_genes": 0,
+        "mean_log1p_sum_before": 3814.413231067886,
+        "mean_log1p_sum_after": 3722.6794573619163,
+        "detected_entries_before": 5832214,
+        "detected_entries_after": 5732032,
+        "new_detection_entries": 71377,
+        "lost_detection_entries": 171559
+      },
+      "ambiguous": {
+        "genes": 21,
+        "anchor_active_genes": 13,
+        "changed_genes": 0,
+        "unchanged_active_genes": 13,
+        "mean_log1p_sum_before": 0.9974404067595799,
+        "mean_log1p_sum_after": 0.9974404067595799,
+        "detected_entries_before": 1542,
+        "detected_entries_after": 1542,
+        "new_detection_entries": 0,
+        "lost_detection_entries": 0
+      },
+      "absent": {
+        "genes": 5489,
+        "anchor_active_genes": 2592,
+        "changed_genes": 0,
+        "unchanged_active_genes": 2592,
+        "mean_log1p_sum_before": 67.24385137890776,
+        "mean_log1p_sum_after": 67.24385137890776,
+        "detected_entries_before": 119880,
+        "detected_entries_after": 119880,
+        "new_detection_entries": 0,
+        "lost_detection_entries": 0
+      }
+    },
+    "unmapped_abundance_fraction": 0.013963642057209534,
+    "time_policy": {
+      "observed": 9.5,
+      "target": 10.5,
+      "horizon_days": 1.0,
+      "source_max": 9.5,
+      "executed_target_call_verified": true
+    },
+    "raw_metrics": null,
+    "skills": null,
+    "reward": 0,
+    "next_spec": "NEXT_ONE_DAY_DECODER_DIAGNOSTIC.json"
   }
 }

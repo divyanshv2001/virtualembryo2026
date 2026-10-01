@@ -1,0 +1,95 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-10-01T22:15:04.263340+00:00",
+  "plan_sha256": "62db11e7fe20f91b001ba24bc3f83d727788d4473c6e4c486c61d6d98a876e4f",
+  "input_sha256": {
+    "artifact": "23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c",
+    "anchor": "0296e0043842f944a663f3c11ac1542d1bbee733c1cd657bd56f75af65958361",
+    "panel": "2aeae4cd284933956242bbc9c5ab4f565c1d2acc7cc3fd3037977e4bce8be4bf",
+    "export_plan": "e19d93a820e7479d418a5bf8e9b1b8d1c747e87880c97c6b97b2a994644eaae0",
+    "export_report": "53bea7614f76e2b75dbc2a051424456a680e8faf0de556c374c14086f8f59821",
+    "source_genes": "51257824507698bda4200179b69b0e7550d0dc456e80691894fe8b717fbb07b7",
+    "source_metadata": "3db3903c24447cfa250622780a60dc4799881f0501869a9458afb124914193bf",
+    "source_expression": "ef68dc70b341eb2bbbae9610fc88132a116c4526f334d1d6d013849d47a9c387",
+    "executed_source": "5d9875c1f030452740ff2766698462880a6cd9347898fc351a57035d44b914c5",
+    "observed_rows": "db012e4572b2a46e983a11bb23343846e405b29911cb0bdeb1c47d27e566b9a8",
+    "donor_indices": "c83e7d6eb3bd6a2aa38bb7c9594f24e282d781b8f144c5f403c011b2004b6aed"
+  },
+  "time_policy": {
+    "observed": 9.5,
+    "target": 10.5,
+    "horizon_days": 1.0,
+    "source_max": 9.5,
+    "executed_target_call_verified": true
+  },
+  "donor_provenance_passed": true,
+  "gene_order_passed": true,
+  "strata": {
+    "all": {
+      "genes": 32285,
+      "anchor_active_genes": 22141,
+      "changed_genes": 19599,
+      "unchanged_active_genes": 2605,
+      "mean_log1p_sum_before": 3882.6545228535533,
+      "mean_log1p_sum_after": 3790.920749147584,
+      "detected_entries_before": 5953636,
+      "detected_entries_after": 5853454,
+      "new_detection_entries": 71377,
+      "lost_detection_entries": 171559
+    },
+    "unique_mapped": {
+      "genes": 26775,
+      "anchor_active_genes": 19536,
+      "changed_genes": 19599,
+      "unchanged_active_genes": 0,
+      "mean_log1p_sum_before": 3814.413231067886,
+      "mean_log1p_sum_after": 3722.6794573619163,
+      "detected_entries_before": 5832214,
+      "detected_entries_after": 5732032,
+      "new_detection_entries": 71377,
+      "lost_detection_entries": 171559
+    },
+    "ambiguous": {
+      "genes": 21,
+      "anchor_active_genes": 13,
+      "changed_genes": 0,
+      "unchanged_active_genes": 13,
+      "mean_log1p_sum_before": 0.9974404067595799,
+      "mean_log1p_sum_after": 0.9974404067595799,
+      "detected_entries_before": 1542,
+      "detected_entries_after": 1542,
+      "new_detection_entries": 0,
+      "lost_detection_entries": 0
+    },
+    "absent": {
+      "genes": 5489,
+      "anchor_active_genes": 2592,
+      "changed_genes": 0,
+      "unchanged_active_genes": 2592,
+      "mean_log1p_sum_before": 67.24385137890776,
+      "mean_log1p_sum_after": 67.24385137890776,
+      "detected_entries_before": 119880,
+      "detected_entries_after": 119880,
+      "new_detection_entries": 0,
+      "lost_detection_entries": 0
+    }
+  },
+  "source_cutoff_cells": 3000,
+  "source_anchor_comparison": {
+    "mapped_mean_absolute_log1p_difference": 0.0679759162293785,
+    "mapped_mean_absolute_detection_difference": 0.057538537192654844
+  },
+  "unchanged_protected_genes_verified": true,
+  "mapped_mass_max_relative_error": 3.2992132855884585e-08,
+  "mean_unmapped_anchor_abundance_fraction": 0.013963642057209534,
+  "reported_head_support_counts_only": {
+    "source": 16325,
+    "anchor": 15784
+  },
+  "private_per_gene_sha256": "4870ed333ce0c8ae629dc5e3c98d375551ef4d565d9a557ce8ab81e98808f70f",
+  "raw_metrics": null,
+  "skills": null,
+  "reward": 0,
+  "scope": "Read-only same-donor artifact audit; no future truth/model fitting/score. Abundance is expm1(log-normalized expression), not raw UMI depth. Source comparison is sampled source versus sampled challenge, not biological matched cells. Coverage limits are measured; causal effect on official52.16 is unproven.",
+  "report_sha256": "645b665c67e4c4a4c0109bbb20b7dc8e2cce134672309917a48b5d336d4995f2"
+}

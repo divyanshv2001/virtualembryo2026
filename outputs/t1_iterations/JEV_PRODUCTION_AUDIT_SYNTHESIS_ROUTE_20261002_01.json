@@ -1,0 +1,38 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "7d9f44af2e62812821413d911ceaa521c0dfbb263615f7f29cda5390b2fd0f3d",
+  "attempts": 1,
+  "payload_bytes": 2539,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "decision": "After read-only actual52.16 exportaudit choose immediate next bounded investigation before launching a newmodel.",
+      "evidence": "Auditretry complete: actualartifacthash/genes/sourcehashes/donorrows/order correct; cutoff9.5 target10.5 one-day call verified. 26775/32285uniquemapped,21ambiguous5489absent;2605of22141activeanchor genes protected unchanged. Unmapped meanexpm1abundance fraction.01396364, not rawUMI. 19599geneschange;new71377/lost171559detectionentries net-100182 across1500cells (~-1.68% observedentrycount). Mappedmass conserved3.30e-8. Source9.5sample3000 versusdonorchallenge source meanabslog1pdifference.06798, detectiondifference.05754; crossdomaincomparisonnotmatchedcells. No futuretruth, raw4skills4 unavailable, auditreward0. Rootcauseofficial52.16 notproven. Firstauditfailedfilename, distinctretryfixedhashverified. Earlier fullpanelchallengeone-day covariance.25 mean55.98883 expansionfailed; recentquarterday50scores no promotion.",
+      "literature": "PriorJev recommends softOTflowmatching as prospective objective innovation. Review scFM2026preprint with2000HVG Wasserstein/l2 gains, notourfullscore; existinglocalCNF/affineOT/ODE notfaithfulreplications. Audit suggests protectedcoverage is limitedbyabundance butgene-specificDEeffectunknown. Detectionlossnotintrinsicallybad: correctfuturemaylosegenes.",
+      "constraints": "Alltraining <=foldcutoff, fixedfull32285scorer/calibration; samecopy/incumbent controls,seeds,split. 16GB Dcache2threads. Noofficialupload. Do not repeat unchanged registeredruns. Cheap replaycachedone-dayprediction ifavailable; unknown coverage inspectrelevantreports only. Originalgatesunchanged."
+    },
+    "questions": {
+      "next": {
+        "type": "choice",
+        "criteria": {
+          "one_day_decoder_error_decomposition": "Inspect existing actualone-daychallengebacktest predictions/report. Quantify currentdecoder vsobserved heldoutfuture change in mean/detection/DE signs, mapped/protectedstrata, currenttransform versuscopy. No newfitting/selectionbysignificantgenemask. Freeze diagnostic then selecttargetedremedy; reusecachedoutputs ifavailable.",
+          "new_soft_ot_flow_matching": "Immediately implementpredeclaredsmallnewvelocityobjective withsameencoderdecoder, matchedactualone-daycontrols, beforediagnosingdecoderbias.",
+          "fix_missing_genes_only": "Prioritize5510unmappedgenes despite1.4%abundance andnoDEattribution; potentiallyunsupported updates.",
+          "minimize_detection_loss": "Shrinkuntildetections preserved withoutactualpastfuturecomparison; mayincorrectlysuppressrealdevelopment."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 1116,
+    "output_tokens": 73
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "next": {
+      "choice": "one_day_decoder_error_decomposition",
+      "confidence": 1.0
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}

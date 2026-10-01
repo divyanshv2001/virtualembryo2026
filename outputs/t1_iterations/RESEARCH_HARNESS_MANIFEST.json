@@ -200,6 +200,16 @@
       "script": "capture_decoded_matched_fullpanel.py",
       "run": "private/capture_decoded_matched_fullpanel_01",
       "report": "CAPTURE_DECODED_MATCHED_FULLPANEL_RESULTS.json"
+    },
+    "production_coverage_audit": {
+      "script": "production_coverage_audit.py",
+      "run": "private/production_coverage_audit_01",
+      "report": "PRODUCTION_COVERAGE_AUDIT_RESULTS.json"
+    },
+    "production_coverage_audit_retry": {
+      "script": "production_coverage_audit_retry.py",
+      "run": "private/production_coverage_audit_retry_01",
+      "report": "PRODUCTION_COVERAGE_AUDIT_RETRY_RESULTS.json"
     }
   }
 }
