@@ -135,6 +135,11 @@
       "script": "mean_norm_feasibility_audit.py",
       "run": "private/mean_norm_feasibility_audit_01",
       "report": "MEAN_NORM_FEASIBILITY_AUDIT_RESULTS.json"
+    },
+    "supported_mean_energy": {
+      "script": "supported_mean_energy_preflight.py",
+      "run": "private/supported_mean_energy_preflight_01",
+      "report": "SUPPORTED_MEAN_ENERGY_PREFLIGHT_RESULTS.json"
     }
   }
 }

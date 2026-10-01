@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T17:52:40.281778+00:00",
+  "updated_utc": "2026-10-01T18:02:26.909672+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Past-donor-only supported mean/energy preflight: construct minimum-L2 field v_ig=n*d_g/n_positive_g on donor-positive entries using frozen additive decoded mean delta; unsupported deltas zero. Attenuate by min(1,sqrt(existing additive energy/minimum field energy)) per lineage, then clip and repair count mass. Audit achieved means, actual energy, support/protected genes, guards and distance from existing blocked controls. No target reads or amplitude grid; separately declare full-panel validation only if distinct and viable. Exact joint matching is not promised; coverage/readiness remain open.",
+  "next_experiment": "Implement predeclared repair-aware count-space interpolation from donor counts to fixed projected forecast counts. Per-lineage monotone log-displacement energy permits deterministic40-step bisection for largest amplitude within original additive budget, including emitted float32 audit. Preserve mass/support/protected/fallback; no target reads/grid. Repeat original12 control hashes; audit achieved means/energy and diagnostics before separate full-panel declaration. Families/readiness open.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1294,12 +1294,12 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_MEAN_NORM_ROUTE_20261001_01.json",
+    "record": "JEV_SUPPORTED_ENERGY_ROUTE_20261001_01.json",
     "usage": {
-      "input_tokens": 879,
-      "output_tokens": 58
+      "input_tokens": 907,
+      "output_tokens": 60
     },
-    "choice": "supported_mean_energy_preflight",
+    "choice": "repair_aware_count_interpolation",
     "confidence": 1.0
   },
   "external_qc_audit": {
@@ -2160,6 +2160,24 @@
       "metric_availability": false,
       "reward_delta": 0,
       "review_corrections": "Count mass versus log energy distinguished; no target-selected fallback; new diagnostics get new hashes while controls replay; subsequent separatelydeclared fullpanel metrics/reward unchanged."
+    },
+    "supported_mean_energy_preflight_01": {
+      "status": "completed",
+      "report_sha256": "93286b8c5ae63cc03c6491ead21a0e04aebb80058b0bad654a60df64cf052fba",
+      "review": "METRIC_CRITIQUES_SUPPORTED_ENERGY_20261001.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": false,
+      "reward_delta": 0,
+      "fresh_contexts": 2,
+      "reused_contexts": 2,
+      "resource_limitation": "agent thread limit reached",
+      "review_corrections": "No distance guard waspredeclared; countmassversuslogenergy distinguished; no targetfit or promotion."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -2429,5 +2447,21 @@
     "full_panel_scoring_executed": false,
     "reward_delta": 0,
     "finding": "Exact supported mean/energy matching infeasible for additive quarter/shrunk bothcuts; copy/blocked necessary checks pass but not sufficient."
+  },
+  "supported_mean_energy_job": {
+    "experiment": "supported_mean_energy",
+    "started_utc": "2026-10-01T17:56:13.225814+00:00",
+    "pid": 9192,
+    "script_sha256": "7f19ec6ff5f3180e49e12f2d051451232f4d67b996474ecb903cad1ccdce052f",
+    "registered_run": "private/supported_mean_energy_preflight_01",
+    "registered_report": "SUPPORTED_MEAN_ENERGY_PREFLIGHT_RESULTS.json",
+    "logs": "private\\harness_runs\\supported_mean_energy",
+    "status": "completed",
+    "spec": "NEXT_SUPPORTED_MEAN_ENERGY_PREFLIGHT.json",
+    "report": "SUPPORTED_MEAN_ENERGY_PREFLIGHT_RESULTS.json",
+    "report_sha256": "93286b8c5ae63cc03c6491ead21a0e04aebb80058b0bad654a60df64cf052fba",
+    "exact_control_forecast_replays": 12,
+    "passing_candidates": [],
+    "finding": "Standardguards pass butquarterfailsenergybothcuts, shrunkfailscut8.25; no score/reward."
   }
 }
