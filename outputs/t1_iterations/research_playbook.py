@@ -34,22 +34,25 @@ def main():
                    'active_jobs_at_checkpoint': state.get('active_jobs', []),
                    'next_experiment': state['next_experiment'],
                    'export': state.get('formula_progress_export'),
-                   'reward': state.get('metric_critique_reward')}
+                   'reward': state.get('metric_critique_reward'),
+                   'official_best': state.get('best_reported_official_score'),
+                   'latest_official': state.get('latest_official_result')}
         manifest.write_text(json.dumps(compact, indent=2)+'\n')
         export = compact['export'] or {}
+        official = compact['latest_official'] or {}
         playbook = f'''# T1 resume playbook
 
 Updated: {compact['updated_utc']}
 
 Run `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_playbook.py` first. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
-Official best51.87 (DE44.9, direction57.0, MMD53.5, CSS51.7). Covariance .25 reused-development mean55.98883; EB historical proxy failed. Local>72 mean/lower-tail >=64-replicate AND temporal gate unmet. Full32285-gene scorer/calibration unchanged.
+Official best: {compact['official_best']}. Latest reported skills: {official.get('metric_skills_percent', 'see original official result')}. Covariance .25 reused-development mean55.98883; EB and lineage-standardized historical proxy screens failed. Local>72 mean/lower-tail >=64-replicate AND temporal gate unmet. Full32285-gene scorer/calibration unchanged.
 
 Checkpoint jobs: {compact['active_jobs_at_checkpoint']}. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
 Next: {compact['next_experiment']}
 
-Completed export: {export.get('artifact', 'none')}. Format passed; SHA256 {export.get('artifact_sha256', 'none')}.1500cells/32285genes,30.55MB. No official score/upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
+Completed export: {export.get('artifact', 'none')}. Format passed; SHA256 {export.get('artifact_sha256', 'none')}.1500cells/32285genes,30.55MB. Latest user-reported official result: {official.get('headline_score', 'none')}; attribution/screenshot evidence in {official.get('report', 'export report')}. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 
 Four metric critiques completed; consult METRIC_CRITIQUES_20261001.md when designing the next mechanism. Separate reward starts0: +1 positive paired mean skill gain / -10 tie or regression per metric, aggregate maximum100; negative balances visible. Pending/invalid/proxy0. Future unique declared experiments only; promotion gates unchanged.
 

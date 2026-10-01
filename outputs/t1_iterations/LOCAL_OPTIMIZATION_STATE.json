@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T04:29:37.519302+00:00",
+  "updated_utc": "2026-10-01T04:39:39.578210+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,7 +31,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Freeze lineage-conditioned residual drift historical screen with matched controls; separate joint detection coupling is the CSS critic proposal. Four user-requested metric critiques completed. No process currently running.",
+  "next_experiment": "Freeze joint detection coupling at fixed per-gene detection counts/positive-value margins on historical source folds, matched independent-switch/incumbent controls; stream one forecast at a time. Do not rerun rejected lineage-standardization proxy. Actual latent-state-adjusted residual regression remains distinct and untested.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -876,7 +876,7 @@
     "official_result": "outputs\\t1_submissions\\anchorslope_progress_20260929_01\\official_result.json",
     "attribution": "Inferred from immediate response to latest export; screenshot itself does not show filename."
   },
-  "best_reported_official_score": 51.87,
+  "best_reported_official_score": 52.16,
   "cnf_kernel_population_job": {
     "status": "completed_not_promoted",
     "run": "cnf_kernel_population_challenge_01",
@@ -1218,8 +1218,11 @@
     "artifact_sha256": "23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c",
     "format_passed": true,
     "uploaded": false,
-    "official_score": null,
-    "readiness_gate_passed": false
+    "official_score": 52.16,
+    "readiness_gate_passed": false,
+    "reported_uploaded_by_user": true,
+    "official_result": "outputs\\t1_submissions\\formula_progress_20260930_01\\official_result.json",
+    "artifact_attribution": "Inferred from user last-submission screenshot following delivery of latest export; screenshot does not show filename."
   },
   "metric_critique_reward": {
     "policy": "METRIC_CRITIQUE_POLICY.json",
@@ -1234,5 +1237,26 @@
       "mmd_u",
       "variogram"
     ]
+  },
+  "lineage_residual_screen": {
+    "status": "completed_proxy_gate_failed",
+    "report_sha256": "d354edce363d9c6b960ae3e38df39352d7b361c96f4ee1809c4d40f5e09c6b69",
+    "results_report": "LINEAGE_RESIDUAL_SCREEN_RESULTS.json",
+    "full_panel_scores": 0,
+    "reward_delta": 0,
+    "decision": "Second historical fold improved signed ranking/direction; first-fold overlap ties and direction remains negative. No both-fold promotion."
+  },
+  "latest_official_result": {
+    "headline_score": 52.16,
+    "metric_skills_percent": {
+      "de_score": 47.2,
+      "de_direction": 56.3,
+      "mmd_u": 53.2,
+      "variogram": 51.7
+    },
+    "report": "outputs\\t1_submissions\\formula_progress_20260930_01\\official_result.json",
+    "rank": 130,
+    "board_entries": 274,
+    "attribution": "Inferred latest export; screenshot lacks filename"
   }
 }

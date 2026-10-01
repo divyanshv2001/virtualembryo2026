@@ -2,8 +2,8 @@
 
 Updated: 2026-10-01T04:29:37.519302+00:00
 
-Official best reported: **51.87**. Latest export: `T1_val__anchorslope_progress_20260929_01.h5ad`. Local>72 gate remains unmet.
-Official metrics: DE44.9, direction57.0, MMD53.5, variogram51.7. Latest screenshot shows S2WISH2 / Codex / AGENT, rank29 on that view; scoring-page rank131/270 is a different view.
+Official best reported: **52.16**. Latest export: `T1_val__formula_progress_20260930_01.h5ad` (inferred screenshot attribution). Local>72 gate remains unmet.
+Latest official skills: DE47.2, direction56.3, MMD53.2, variogram51.7. Rank130/274 on screenshot. Headline+.29 over51.87; DE+2.3, direction-.7, MMD-.3, CSS0. No new raw metrics exposed.
 
 Next: Full past-source flow and count-aware anchor-slope shrinkage failed frozen promotion rules. A past-only source-to-challenge 8D mean-frame shift improved all three reused E9.5 development panels (55.7537 vs exact unshifted 55.1173). A frozen 16-resample paired check then improved all 16: full shift mean55.1678, 2.5% tail53.8414, versus unshifted mean54.4955/tail52.9916 and persistence50; paired mean gain+.6724/tail+.3678. All four mean skills improved slightly. Mean<60 triggers the predeclared futility rule, so no 64-resample expansion. This is one-stage cell-resampling stability, not independent embryo, temporal or official validation; >72 remains far away. External temporal audit: only E8.5/E9.5 local Task 1 RNA; metadata-only GSE76118 includes permitted early heart stages and prohibited E10.5, and must not be used without strict stage isolation and license/provenance review. Next screen that source or test a distinct past-only mechanism with matched controls.
 
@@ -50,3 +50,6 @@ Latest: validated; 1903 payload bytes; actual usage {'input_tokens': 820, 'outpu
 
 
 Four user-requested metric critics completed; findings in METRIC_CRITIQUES_20261001.md. Separate research reward starts at0, +1 strict matched mean skill improvement / -10 tie or regression per metric, total capped100 (negative balances visible), future eligible declared experiments only. This reward never changes benchmark scores or promotion gates. Next freeze lineage-conditioned residual drift; CSS alternative is detection coupling. No new Jev request for this routine policy update.
+
+
+Latest official feedback recorded in ../t1_submissions/formula_progress_20260930_01/official_result.json. Prior export audit remains unchanged as a generation-time record; screenshot feedback is separate. Lineage-standardized proxy failed both-fold gate; next detection coupling remains prospective.

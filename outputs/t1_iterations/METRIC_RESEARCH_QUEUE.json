@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T04:29:37.519302+00:00",
+  "updated_utc": "2026-10-01T04:38:17.016318+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5885,6 +5885,22 @@
       "next_action": "Verify provenance/license, assay normalization, genotype/region relevance and raw-vs-analyzed QC gap before any D-only acquisition of individually allowlisted early-stage GSM files. Never use mixed-stage RAW.tar. E9.5 must be excluded from E8.5-to-E9.5 backtest training. Continue distinct past-only method tests.",
       "research_family_exhausted": false,
       "results_report": "T1_EXTERNAL_TEMPORAL_DATA_AUDIT.json"
+    },
+    {
+      "id": "lineage_standardized_residual_proxy",
+      "metrics": [
+        "de_score",
+        "de_direction"
+      ],
+      "status": "historical_proxy_screen_failed",
+      "implementation": "lineage_residual_screen.py",
+      "run": "lineage_residual_screen_01",
+      "hypothesis_and_limits": "Composition-standardized within-lineage trends and two-part detection odds could improve source signed gene rankings. Supplied atlas labels are not independent lineage truth; this is not latent-state-adjusted regression or full-panel scoring.",
+      "declared_experiment_and_result": "Two frozen historical folds8->8.25 and8.25->8.5, alpha.25/.5, minimum20groupcells. All variants tie first-fold overlap at-.10585 and have negative direction (-.3991 to-.3680 versus baseline-.4038). Second fold improves overlap from.02711 to.05120/.07530 and direction.07671 to.09191-.13264. Strict both-fold/persistence direction gate fails; no challenge promotion.",
+      "research_family_exhausted": false,
+      "results_report": "LINEAGE_RESIDUAL_SCREEN_RESULTS.json",
+      "report_sha256": "d354edce363d9c6b960ae3e38df39352d7b361c96f4ee1809c4d40f5e09c6b69",
+      "next_action": "Test distinct detection coupling or actual latent-state-adjusted residual regression with frozen historical controls. No full-panel/official score or research reward from this proxy."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",

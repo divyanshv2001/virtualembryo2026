@@ -1,0 +1,135 @@
+{
+  "status": "completed",
+  "outcomes": [
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "supported_groups": [
+        "blood",
+        "cardiomyocyte",
+        "cardiopharyngeal",
+        "ectoderm_other",
+        "endoderm",
+        "endothelial",
+        "mesenchymal"
+      ],
+      "current_group_counts": {
+        "blood": 1365,
+        "cardiomyocyte": 198,
+        "cardiopharyngeal": 241,
+        "ectoderm_other": 274,
+        "endoderm": 153,
+        "endothelial": 166,
+        "mesenchymal": 603,
+        "neural_crest": 0
+      },
+      "results": {
+        "copy": {
+          "signed_top200_overlap": 0.0,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.11420612813370473,
+          "partial_spearman": 0.0
+        },
+        "recent_linear": {
+          "signed_top200_overlap": 0.0075,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.10584958217270196,
+          "partial_spearman": -0.4038197105549282
+        },
+        "within_a0.25": {
+          "signed_top200_overlap": 0.0075,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.10584958217270196,
+          "partial_spearman": -0.3991383447377326
+        },
+        "odds_a0.25": {
+          "signed_top200_overlap": 0.0075,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.10584958217270196,
+          "partial_spearman": -0.38543682320700345
+        },
+        "within_a0.5": {
+          "signed_top200_overlap": 0.0075,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.10584958217270196,
+          "partial_spearman": -0.3925904948887306
+        },
+        "odds_a0.5": {
+          "signed_top200_overlap": 0.0075,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.10584958217270196,
+          "partial_spearman": -0.36800061691655617
+        }
+      }
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "supported_groups": [
+        "blood",
+        "cardiomyocyte",
+        "cardiopharyngeal",
+        "ectoderm_other",
+        "endoderm",
+        "endothelial",
+        "mesenchymal"
+      ],
+      "current_group_counts": {
+        "blood": 848,
+        "cardiomyocyte": 345,
+        "cardiopharyngeal": 348,
+        "ectoderm_other": 295,
+        "endoderm": 158,
+        "endothelial": 247,
+        "mesenchymal": 684,
+        "neural_crest": 75
+      },
+      "results": {
+        "copy": {
+          "signed_top200_overlap": 0.0,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": -0.20481927710843376,
+          "partial_spearman": 0.0
+        },
+        "recent_linear": {
+          "signed_top200_overlap": 0.1925,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.027108433734939753,
+          "partial_spearman": 0.07671315505701229
+        },
+        "within_a0.25": {
+          "signed_top200_overlap": 0.2125,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.05120481927710842,
+          "partial_spearman": 0.09191381548659838
+        },
+        "odds_a0.25": {
+          "signed_top200_overlap": 0.2125,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.05120481927710842,
+          "partial_spearman": 0.10688113096698236
+        },
+        "within_a0.5": {
+          "signed_top200_overlap": 0.2325,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.07530120481927711,
+          "partial_spearman": 0.11028353637598357
+        },
+        "odds_a0.5": {
+          "signed_top200_overlap": 0.2325,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.07530120481927711,
+          "partial_spearman": 0.13263809054013426
+        }
+      }
+    }
+  ],
+  "passing_candidates": [],
+  "full_panel_scores": 0,
+  "research_reward_delta": 0,
+  "official_submissions": 0,
+  "scope": "Mapped-gene rank proxy only; no full-panel metrics, challenge fitting, independent embryos or reward. Lineage correction alone is not latent-state-adjusted residual regression.",
+  "plan_sha256": "6f890cd051e0f7e58c188e8455f08705fe10e67b06ea036371dc390ce8c8298d",
+  "updated_utc": "2026-10-01T04:37:10.333928+00:00",
+  "report_sha256": "d354edce363d9c6b960ae3e38df39352d7b361c96f4ee1809c4d40f5e09c6b69"
+}

@@ -211,3 +211,11 @@ Completed formula export and revalidated corrected filename with byte-identical 
 ## 2026-10-01T04:32:31.908905+00:00
 
 Implemented disk-backed PLAYBOOK.md/PLAYBOOK_STATE.json and deterministic research_playbook.py hash/change detector. Updated recurring automation to use compact entry point and targeted changed evidence instead of reloading all documents. No Jev/model call in local detector; actual net Codex credits not measured.
+
+## 2026-10-01T04:38:17.016318+00:00
+
+Lineage-standardized source proxy completed12candidate/control evaluations across2historical folds; predictions frozen before each target expression read. Within-lineage and detection-odds blends improve the second fold, but first-fold signed overlap ties and direction remains below persistence. Frozen both-fold promotion gate failed. Narrow proxy only; no rawMMD/CSS or full-panel headline measured, reward0, official0; SCORE_LEDGER unchanged. Original plan/events/deltas/report preserved D-only; reportSHA d354edce363d9c6b960ae3e38df39352d7b361c96f4ee1809c4d40f5e09c6b69. No live Python process. No Jev decision call: predeclared gate resolves outcome deterministically. Next distinct detection-coupling mechanism; actual latent-state-adjusted residual regression remains untested.
+
+## 2026-10-01T04:39:39.578210+00:00
+
+User last-submission screenshot: official52.16,rank130/274,skillsDE47.2/direction56.3/MMD53.2/CSS51.7. Attribution inferred latest formula export; screenshot lacksfilename. Headline+.29 vs51.87, DE+2.3/direction-.7/MMD-.3/CSS0. Rawmetrics unavailable, not reconstructed. Original export report remains generation-time evidence; official_result.json records later feedback. Reward0 (no retroactive matched experiment). Best official52.16, >72 unmet; no upload performed by agent. Playbook now reads official score dynamically from state.
