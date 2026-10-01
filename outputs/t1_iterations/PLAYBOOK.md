@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-01T11:30:50.159709+00:00
+Updated: 2026-10-01T11:36:51.470074+00:00
 
 Run `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_playbook.py` first. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -10,7 +10,7 @@ Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction':
 
 Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Implement/register cm_projection_survival_audit_01 per NEXT_PROJECTION_SURVIVAL_AUDIT.json: replay archived anchor/CM/full/quarter forecast hashes, no futureexpression/scorerread. Measure correction survival/norm/cosine, amplitude sensitivity/rankchanges andregularizedlinear tangent withstructuredcellSchur. Null benchmarkmetrics/reward0; validateidentity/Jacobian/protection. Do not infer collapse fromscores orcontinueexposedstrengthgrid.
+Next: Monitor registered cm_projection_survival; after completion collect cachedpackets/four specialists withdiagnosticcompactsummary, Jevconsequentialnextmethod, journal/playbook. Forecast-onlyreplay, futureexpressionblocked, metricsunavailable/reward0. No duplicate orclaimsfromheadlines.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in outputs\t1_submissions\formula_progress_20260930_01\official_result.json. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 
