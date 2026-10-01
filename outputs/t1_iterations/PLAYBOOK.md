@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-01T06:05:33.376823+00:00
+Updated: 2026-10-01T06:17:36.576866+00:00
 
 Run `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_playbook.py` first. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -8,7 +8,7 @@ Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction':
 
 Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Declare bounded external-E8.5-only static gene-program guidance proxy: freeze externalE8.5 eligible cell IDs and gene reliability/marker guidance, then fit source-only temporal slopes at cutoffs>=8.5 with matched shrinkage/zero/shuffled guidance controls. No externalE9.5 expression-derived trends, directions or magnitudes enter validation fits. Reused source temporal folds must be labeled development, not independent embryo validation. Screen rank/direction before full-panel scoring; preserve >72gate. One compact cached Jev advisory is permitted if new estimator choice is uncertain.
+Next: Declare source-only saturating-time gene-curve proxy with>=4past quarter-day snapshots. Freeze small tanh-rate bank and centers using sourcepast only, matched four-stage linear and recentlinear controls plus shrinkage blends; evaluate two temporal development folds with no externaldata or target-driven parameter selection. Reject unless rank/direction improves bothfolds before full-panel scoring. Preserve all candidates/seeds/splits/failures; retain external paths as open rather than exhaust scientific family.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in outputs\t1_submissions\formula_progress_20260930_01\official_result.json. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 
@@ -16,7 +16,7 @@ Four metric critiques completed; consult METRIC_CRITIQUES_20261001.md when desig
 
 Current separate reward: -80. This is not a benchmark score.
 
-External acquisition entry point: GSE76118_WT_STAGE_MANIFEST.json. The old stage-only list is historical;127 mutants excluded,162 B6 WT controls separate,143E8.5/999E9.5 primary CD1 candidates. Expression acquired: True; pilot cells: 4; training readiness: False. QC/compatibility pending. Latest Jev actual usage: {'input_tokens': 766, 'output_tokens': 63}.
+External acquisition entry point: GSE76118_WT_STAGE_MANIFEST.json. The old stage-only list is historical;127 mutants excluded,162 B6 WT controls separate,143E8.5/999E9.5 primary CD1 candidates. Expression acquired: True; pilot cells: 4; training readiness: False. QC/compatibility pending. Latest Jev actual usage: {'input_tokens': 772, 'output_tokens': 60}.
 
 Use D-only temporary disk cache, two BLAS threads, one full forecast at a time;16GBRAM. Retain source reports/events, seeds/splits/hashes, raw4/skills4 and failed outcomes. Refresh SCORE_LEDGER.jsonl after full-panel batches; proxy/export is not a score batch. Commit small evidence/code, never datasets/secrets/artifact matrices. No automatic official upload or new agents.
 

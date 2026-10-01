@@ -1,0 +1,134 @@
+{
+  "updated_utc": "2026-10-01T06:16:38.940758+00:00",
+  "plan_sha256": "475824a0bb10fa8d8acf46d4dfdd2e67079af4ac367419b7df7243902de46cce",
+  "outcomes": [
+    {
+      "cutoff": 8.5,
+      "target": 8.75,
+      "past_cm_counts": [
+        345,
+        237
+      ],
+      "cm_fraction": 0.079,
+      "results": {
+        "copy": {
+          "signed_top200_overlap": 0.0025,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": -0.10526315789473685,
+          "partial_spearman": 0.0
+        },
+        "recent_linear": {
+          "signed_top200_overlap": 0.47,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.4127423822714681,
+          "partial_spearman": 0.34914294477069935
+        },
+        "external_0.1": {
+          "signed_top200_overlap": 0.4725,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.41551246537396125,
+          "partial_spearman": 0.34927034691573194
+        },
+        "source_0.1": {
+          "signed_top200_overlap": 0.4725,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.41551246537396125,
+          "partial_spearman": 0.34944593403810714
+        },
+        "shuffled_0.1": {
+          "signed_top200_overlap": 0.4725,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.41551246537396125,
+          "partial_spearman": 0.34919325416448926
+        },
+        "external_0.25": {
+          "signed_top200_overlap": 0.475,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.41828254847645424,
+          "partial_spearman": 0.3504690412654697
+        },
+        "source_0.25": {
+          "signed_top200_overlap": 0.475,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.41828254847645424,
+          "partial_spearman": 0.3507677594490945
+        },
+        "shuffled_0.25": {
+          "signed_top200_overlap": 0.475,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.41828254847645424,
+          "partial_spearman": 0.35001459957272296
+        }
+      }
+    },
+    {
+      "cutoff": 8.75,
+      "target": 9.0,
+      "past_cm_counts": [
+        237,
+        231
+      ],
+      "cm_fraction": 0.077,
+      "results": {
+        "copy": {
+          "signed_top200_overlap": 0.005,
+          "reference_magnitude_chance": 0.0775,
+          "chance_adjusted_overlap": -0.07859078590785908,
+          "partial_spearman": 0.0
+        },
+        "recent_linear": {
+          "signed_top200_overlap": 0.1775,
+          "reference_magnitude_chance": 0.0775,
+          "chance_adjusted_overlap": 0.1084010840108401,
+          "partial_spearman": -0.003661471496328496
+        },
+        "external_0.1": {
+          "signed_top200_overlap": 0.1775,
+          "reference_magnitude_chance": 0.0775,
+          "chance_adjusted_overlap": 0.1084010840108401,
+          "partial_spearman": -0.00393069183014764
+        },
+        "source_0.1": {
+          "signed_top200_overlap": 0.1775,
+          "reference_magnitude_chance": 0.0775,
+          "chance_adjusted_overlap": 0.1084010840108401,
+          "partial_spearman": -0.00401211299800985
+        },
+        "shuffled_0.1": {
+          "signed_top200_overlap": 0.1775,
+          "reference_magnitude_chance": 0.0775,
+          "chance_adjusted_overlap": 0.1084010840108401,
+          "partial_spearman": -0.003976095103903678
+        },
+        "external_0.25": {
+          "signed_top200_overlap": 0.18,
+          "reference_magnitude_chance": 0.0775,
+          "chance_adjusted_overlap": 0.1111111111111111,
+          "partial_spearman": -0.004157820152742038
+        },
+        "source_0.25": {
+          "signed_top200_overlap": 0.1775,
+          "reference_magnitude_chance": 0.0775,
+          "chance_adjusted_overlap": 0.1084010840108401,
+          "partial_spearman": -0.004176734070434993
+        },
+        "shuffled_0.25": {
+          "signed_top200_overlap": 0.18,
+          "reference_magnitude_chance": 0.0775,
+          "chance_adjusted_overlap": 0.1111111111111111,
+          "partial_spearman": -0.0048408946129676386
+        }
+      }
+    }
+  ],
+  "passing_alphas": [],
+  "external_E8_5_cells": 7,
+  "external_guidance_supported_genes": 25464,
+  "proxy_evaluations": 16,
+  "full_panel_scores": 0,
+  "reward_delta": 0,
+  "external_E9_5_expression_used": false,
+  "independent_embryo_validation": false,
+  "next_action": "Reject tested static guidance formula; next source-only saturating-time formula proxy. External scientific family remains open.",
+  "report_sha256": "d3cc48271d6265a2d657a8a95b11dd3da3841ef5ca59da8afba68509bf6ca1e5"
+}

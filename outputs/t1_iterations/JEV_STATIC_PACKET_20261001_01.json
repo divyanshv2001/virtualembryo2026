@@ -1,0 +1,19 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "purpose": "Choose bounded estimator for externalE8.5 static guidance; advisory only.",
+    "evidence": "ExternalQC18cells. E8.5-frozen atlas diagnostic identifies7CM-likeE8.5cells. MatchedE8.5->E9.5 external/atlasCMrankrho.05873,64conditionalcellbootstraplower.02358,14LOOmin.04844; no independentembryos. ExternalE9.5 trends prohibited in validation fits. Prior global EB/conditionaltime/detectioncoupling failed. Official52.16.",
+    "constraints": "Use only7cachedexternalE8.5CM-like cells and sourceatlaspast atcutoffs8.5/8.75. Targets8.75/9 reuseddevelopment. No E9.5 expression-derived directions/magnitudes in candidate fitting. Sharedgenes25464, unmappedbackoff. Small alpha.1/.25, matched controls, proxy first, unchangedfullpanel scorer, no upload/data/secrets."
+  },
+  "questions": {
+    "estimator": {
+      "type": "choice",
+      "instructions": "Select one small interpretable static-prior formula; choice/confidence only.",
+      "criteria": {
+        "cardiac_component_detection_guidance": "Separate pooled source recentdelta into sourceCMfraction*CMdelta plus remainder. Weight onlyCMcomponent by1+alpha*(2*rank(externalE8.5CMdetection)/G-1), othercomponentunchanged. Compare recent baseline, matchedsourceCMdetectionguidance and sourceexpression-stratified shuffled externalweights. Static weights encode expression reliability, no external direction.",
+        "global_detection_guidance": "Multiply all pooledsource recentdelta by sameexternalE8.5 detectionrank weights; simpler but heart-onlyprior maybiasnoncardiacgenes.",
+        "source_saturating_time_proxy": "External agreement too weak; abandonstaticguidance and screen source-only saturating-time curves against matchedlinearcontrols."
+      }
+    }
+  }
+}

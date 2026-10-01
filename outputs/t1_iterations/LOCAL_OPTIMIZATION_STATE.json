@@ -31,7 +31,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Declare bounded external-E8.5-only static gene-program guidance proxy: freeze externalE8.5 eligible cell IDs and gene reliability/marker guidance, then fit source-only temporal slopes at cutoffs>=8.5 with matched shrinkage/zero/shuffled guidance controls. No externalE9.5 expression-derived trends, directions or magnitudes enter validation fits. Reused source temporal folds must be labeled development, not independent embryo validation. Screen rank/direction before full-panel scoring; preserve >72gate. One compact cached Jev advisory is permitted if new estimator choice is uncertain.",
+  "next_experiment": "Declare source-only saturating-time gene-curve proxy with>=4past quarter-day snapshots. Freeze small tanh-rate bank and centers using sourcepast only, matched four-stage linear and recentlinear controls plus shrinkage blends; evaluate two temporal development folds with no externaldata or target-driven parameter selection. Reject unless rank/direction improves bothfolds before full-panel scoring. Preserve all candidates/seeds/splits/failures; retain external paths as open rather than exhaust scientific family.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1296,16 +1296,16 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "packet": "JEV_NEXT_PACKET_20261001_02.json",
-    "record": "JEV_NEXT_ROUTE_20261001_02.json",
+    "packet": "JEV_STATIC_PACKET_20261001_01.json",
+    "record": "JEV_STATIC_ROUTE_20261001_01.json",
     "usage": {
-      "input_tokens": 766,
-      "output_tokens": 63
+      "input_tokens": 772,
+      "output_tokens": 60
     },
-    "payload_bytes": 1795,
+    "payload_bytes": 1672,
     "decision": {
-      "choice": "matched_lineage_rank_diagnostic",
-      "confidence": 0.95
+      "choice": "cardiac_component_detection_guidance",
+      "confidence": 0.72
     },
     "measured_codex_credit_savings": null
   },
@@ -1431,5 +1431,16 @@
     "predictive_transfer_validated": false,
     "models_fit": 0,
     "full_panel_scores": 0
+  },
+  "external_static_guidance_screen": {
+    "report": "EXTERNAL_STATIC_GUIDANCE_RESULTS.json",
+    "report_sha256": "d3cc48271d6265a2d657a8a95b11dd3da3841ef5ca59da8afba68509bf6ca1e5",
+    "external_fit_stage": "E8.5",
+    "external_cells": 7,
+    "proxy_evaluations": 16,
+    "passing_alphas": [],
+    "external_E9_5_expression_used": false,
+    "full_panel_scores": 0,
+    "reward_delta": 0
   }
 }
