@@ -1,0 +1,39 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "f5d3dee5b0dda44447714d2a66e35f6a83875a42ff3a48291e314a076cd9b92e",
+  "attempts": 1,
+  "payload_bytes": 2024,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "purpose": "Select a specific past-only DE/direction formula for the next cheap falsification, after independent specialist reviews. Advisory only.",
+      "metric_mechanism": "DE recovery is signed top-K gene-rank overlap; direction is partial rank correlation controlling reference expression. Pure positive scaling of predicted changes cannot improve DE rank. Local incumbent mean about56 on three reused E9.5 panels, DE mean skill about52.6; >72 readiness unmet.",
+      "negative_evidence": "Hard sign gating, global top64/256 source gene-rank trends, count shrinkage and full-source pseudobulk trend transfer were weak/inconsistent. Mean/covariance latent alignment gave sub-point improvements. Challenge E8.5 and E9.5 are only local Task1 stages; no future target fit.",
+      "constraints": "Choose one falsifiable formula. Past-source historical temporal folds before reused challenge E9.5 scoring; same full 32285-gene panel, calibrated four metrics, matched persistence/incumbent; D-only temporary files, 16GB RAM. No data/source/secrets sent and no official submission."
+    },
+    "questions": {
+      "de_formula": {
+        "type": "choice",
+        "instructions": "Which specific formula is the best next small experiment, considering prior failures? Return choice and confidence only.",
+        "criteria": {
+          "soft_empirical_bayes": "Estimate posterior sign certainty and posterior past-stage gene slope, then softly blend a signed gene-mean correction with incumbent rather than hard gating.",
+          "conditional_residual_drift": "Fit past temporal residual intercepts after removing 8D latent-state hurdle effects; add a shrunk one-day drift to challenge detection and positive-expression heads.",
+          "lineage_detection_odds": "Fit supported cell-lineage gene detection log-odds slopes from earlier stages; forecast sigmoid(logit anchor probability + horizon slope), preserve conditional-positive expression.",
+          "sigmoidal_gene_time": "Fit saturating logistic gene-expression trajectories on >=3 earlier stages, with fallback to incumbent when support is weak."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 730,
+    "output_tokens": 69
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "de_formula": {
+      "choice": "soft_empirical_bayes",
+      "confidence": 0.58
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}

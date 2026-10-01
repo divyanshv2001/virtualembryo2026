@@ -1,0 +1,21 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "purpose": "Advisory selection of a mathematical mechanism for the next bounded, past-only T1 experiment; no score prediction or hidden-target inference.",
+    "score_rule": "Local weighted skills: signed DE gene-rank overlap 25%, direction partial Spearman 25%, MMD 30%, variogram 20%; same full 32285-gene scorer. Only E8.5/E9.5 challenge RNA released; E10.5/E12.5 targets withheld.",
+    "observations": "Official best51.87, component skills DE44.9, direction57.0, MMD53.5, variogram51.7. Past-only 8D mean alignment plus conservative covariance .25 gives 55.99 on three reused E9.5 development panels, versus 55.75 mean-only; all four skills improve slightly but DE stays about52.56 local. Full-source flow loses to persistence on historical folds; simple gene-rank trend and count shrinkage fail their frozen controls. This is far from >72.",
+    "constraints": "Choose one distinct formula family and a small falsifiable local test. Fit each fold only through cutoff; full-panel matched persistence/incumbent controls, same calibration; no official submissions. Avoid target gene matrices, datasets, full code and secrets. Limited RAM 16GB, D-only temporary data. Do not treat reused E9.5 as independent validation."
+  },
+  "questions": {
+    "formula_family": {
+      "type": "choice",
+      "instructions": "Which one formula family has the strongest plausible path to a nontrivial joint gain given the measured bottleneck, while respecting past-only data? Return choice and confidence only.",
+      "criteria": {
+        "empirical_bayes_gene_effects": "Derive sign-aware, uncertainty-shrunk gene-level temporal effect estimates from past source folds and E8.5 anchor; freeze top signed programs before E9.5 scoring.",
+        "population_growth_equation": "Use a constrained birth/transition equation for cell-type proportions and mix frozen cell predictions; no target composition learning.",
+        "distribution_transport": "Use a closed-form quantile/optimal-transport map learned on past temporal pairs, beyond 8D mean/covariance shifts.",
+        "nonlinear_time_extrapolation": "Fit a bounded parametric acceleration law to eligible earlier-stage states with temporal holdouts, then forecast gene/cell effects."
+      }
+    }
+  }
+}

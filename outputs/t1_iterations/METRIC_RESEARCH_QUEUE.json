@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-30T13:48:23+00:00",
+  "updated_utc": "2026-10-01T04:29:37.519302+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5838,7 +5838,12 @@
     },
     {
       "id": "challenge_covariance_alignment_pilot",
-      "metrics": ["de_score", "de_direction", "mmd_u", "variogram"],
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
       "status": "completed_small_development_gain_below_expansion_gate",
       "implementation": "cnf_covariance_alignment.py",
       "run": "cnf_covariance_alignment_01",
@@ -5850,8 +5855,29 @@
       "report_sha256": "39bf86fd8ee703401dfe710ea13e5c5ee718d9b09be75bfda94f92fde8102673"
     },
     {
+      "id": "soft_empirical_bayes_gene_slope_screen",
+      "metrics": [
+        "de_score",
+        "de_direction"
+      ],
+      "status": "historical_proxy_screen_failed",
+      "implementation": "eb_gene_slope_screen.py",
+      "run": "eb_gene_slope_screen_01",
+      "hypothesis_and_limits": "A gene-specific posterior slope and soft sign certainty from past source stages might rank future DE genes better than the recent linear slope without the failed hard sign gate. Cell sampling variance and past trend inconsistency are not embryo-level uncertainty; source historical folds may not transfer to challenge domain.",
+      "declared_experiment_and_result": "Source-only 8.0->8.25 and 8.25->8.5 proxy screens completed with all five frozen formulas. Baseline chance-adjusted signed top200 overlap -0.10585/0.02711, partial Spearman -0.40382/0.07671. No EB candidate improved overlap on both folds without direction regression; all four variants worsened direction in both folds. Median posterior weight about .999, so the simple cell-sampling-plus-curvature uncertainty provides little shrinkage. This is a proxy screen, not a full-panel score.",
+      "next_action": "Reject this bounded EB estimator before expensive challenge scoring. Test a distinct covariate-adjusted residual or lineage detection-odds mechanism if feasible; retain uncertainty that embryo-level variance is unavailable.",
+      "research_family_exhausted": false,
+      "results_report": "EB_GENE_SLOPE_SCREEN_RESULTS.json",
+      "report_sha256": "abe0199bde8eae1d5cb72ac2c04199abe7fbb8eb84e9eff3cffbfcf7c1edf7c5"
+    },
+    {
       "id": "external_temporal_data_eligibility_audit",
-      "metrics": ["de_score", "de_direction", "mmd_u", "variogram"],
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
       "status": "metadata_stage_manifest_built_no_expression_used",
       "implementation": "T1_EXTERNAL_TEMPORAL_DATA_AUDIT.json",
       "hypothesis_and_limits": "An independently sourced eligible earlier-stage heart time series could improve temporal validation and training. Official challenge has only E8.5/E9.5 released Task 1 RNA; external data after E9.5 through E13.5 inclusive are prohibited. Any mixed-stage resource requires stage-level filtering before expression use.",
@@ -5861,5 +5887,6 @@
       "results_report": "T1_EXTERNAL_TEMPORAL_DATA_AUDIT.json"
     }
   ],
-  "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families."
+  "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",
+  "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json"
 }

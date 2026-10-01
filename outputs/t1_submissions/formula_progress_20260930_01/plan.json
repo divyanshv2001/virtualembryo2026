@@ -1,0 +1,46 @@
+{
+  "created_before_fitting_utc": "2026-09-30T14:13:17.259724+00:00",
+  "authorization": "User requested a submission .h5ad after the formula experiment. Export only; no upload.",
+  "observed_cutoff": 9.5,
+  "target": 10.5,
+  "source_max_stage": 9.5,
+  "candidate": "source/challenge E9.5 8D mean plus covariance .25; full E9.5 anchor slope .25/.75",
+  "candidate_selection": "EB historical proxy screen failed; conservative covariance .25 was strongest eligible narrow E8.5->E9.5 development pilot (55.98883 mean), but its >=60 expansion rule failed. Prospective transfer is unvalidated.",
+  "covariance_strength": 0.25,
+  "covariance_ridge_fraction": 0.05,
+  "map_eigenvalue_clip": [
+    0.5,
+    2.0
+  ],
+  "positive_alpha": 0.25,
+  "detection_alpha": 0.75,
+  "donor_seed": 20260928,
+  "donors": 1500,
+  "cells_written": 1500,
+  "input_sha256": {
+    "anchor": "0296e0043842f944a663f3c11ac1542d1bbee733c1cd657bd56f75af65958361",
+    "panel": "2aeae4cd284933956242bbc9c5ab4f565c1d2acc7cc3fd3037977e4bce8be4bf",
+    "index": "26830523bcba077fe27481ee53cddcf49c6b35cf5bdd7acabc5f6b7c94ea7f78",
+    "prepared_report": "1acd8a635f76c9f9ac89a1186f116db91309b007f448a8d11ec612627ab5bca4",
+    "prior_encoder": "2285106730de53d0fd6837c6785210bc1412abecdb277d9bd8d2cb5dc6d75b03",
+    "prior_flow_checkpoint": "93de5b170eebc2d9b287cdbc0cd1c6be0a60db3a7980c0a086fdc740bd19f2f9",
+    "development_result": "c9ea953b7556409cd281bc765ae6da98107c43870039fd25fe5f49a5face2534"
+  },
+  "source_sha256": {
+    "export_formula_progress_submission.py": "5d9875c1f030452740ff2766698462880a6cd9347898fc351a57035d44b914c5",
+    "cnf_covariance_alignment.py": "b8210a4fd4b99c9f59f3bd9b1f53ce909a3edeeaba5c0ba20e83b1d882b6010a",
+    "full_anchor_slope_forecast.py": "4a0f5503996215370693f2409f31fa6b28bd2c5233ef2d2fc3c50000314bd612",
+    "partial_anchor_forecast.py": "8c9a4c362b634d648b0ecacf3e44f5953d5b18bce2ac551aefd16a4f17770225",
+    "log1p_positive_forecast.py": "48bc5e43ee5a6742a97d049c77978f23469d1db68575202d477396d5ad0ce4ee",
+    "feature_panel_forecast.py": "0375ab96375dcc50c7e6ece07dc1f3b07ef5bb58c9a54a1a632ce45f257d48f0",
+    "cnf_manifold_flow.py": "55d1ec30848dcc75690129ef405c9d7e6cb692c2483032a109947de1b5b63596",
+    "offline_backtest.py": "874b840c6bb3cce570b85482f2f11daacfcd164a04994301a33568c44ae3f3b6",
+    "temporary_forecast_cache.py": "52e855549a43fdb5ac346ebf4ca73e9d03a88967ff6cc1b355a9095e4b3bb301"
+  },
+  "method": "Reuse past-only encoder/CNF trained through E9.5 from the prior prospective export; refit full E9.5 challenge anchor conditional slopes and stage-matched source/challenge 8D mean/covariance using only observed E9.5. Transport E9.5 donor states for one day with regularized covariance alignment .25; decoder keeps protected genes and per-cell mapped abundance mass.",
+  "limitations": "No E10.5 truth is used. Reused E8.5->E9.5 development is not an official E10.5 score; local >72/temporal readiness gates remain unmet. External atlas must be disclosed.",
+  "external_data_disclosure": "Development2024 dev201867 public atlas, associated_prepared_01 sample (25,963 cells), through E9.5; no GSE76118 expression used.",
+  "official_score": null,
+  "uploaded": false,
+  "submissions_allowed": 0
+}

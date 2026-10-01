@@ -1,0 +1,25 @@
+{
+  "created_utc": "2026-10-01T04:29:37.519302+00:00",
+  "user_request": "Critique agent for all four parameters; +1 improvement, -10 no improvement, total100",
+  "metrics": [
+    "de_score",
+    "de_direction",
+    "mmd_u",
+    "variogram"
+  ],
+  "initial_reward": 0,
+  "maximum_reward": 100,
+  "minimum_reward": null,
+  "interpretation": "Start at zero; sum four metric rewards across unique future declared experiments, capped at100. Negative balances remain visible. Separate from actual benchmark.",
+  "improvement_rule": "Strict positive paired mean normalized skill gain over frozen incumbent, identical splits/seeds/calibration/full-panel scorer. Raw metric directions remain documented separately. A mean gain alone does not certify stability.",
+  "reward_per_metric": {
+    "improves": 1,
+    "ties_or_regresses": -10,
+    "invalid_or_pending_or_proxy": 0
+  },
+  "eligibility": "Future predeclared scored experiments only; no retroactive rewards, repeated seeds, duplicate variants, changing comparison or proxy claims. Validity is assessed before reward.",
+  "promotion_rule": "Original full-panel four-metric, temporal and >72 mean/lower-tail >=64-replicate readiness gates unchanged. Critiques must discuss uncertainty/tradeoffs even when reward is positive.",
+  "agents": "Four critics completed on explicit user request. Routine future heartbeat review does not automatically authorize spawning agents.",
+  "implementation": "metric_critique_reward.py",
+  "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl"
+}

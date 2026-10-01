@@ -1,0 +1,37 @@
+# Four metric critiques
+
+Four agents reviewed targeted frozen evidence on the user's explicit request.
+These are scientific critiques, not measured new experiments. Full evidence:
+CNF_COVARIANCE_ALIGNMENT_RESULTS.json, EB_GENE_SLOPE_SCREEN_RESULTS.json and
+the formula_progress_20260930_01 submission report.
+
+| Metric | Finding versus mean-shift incumbent | Next falsifiable mechanism |
+| --- | --- | --- |
+| DES / de_score | Covariance .25 leaves DES unchanged on all three panels, mean52.563. EB proxy fails. | Lineage-conditioned temporal residual drift separating abundance changes from within-lineage gene changes. |
+| DCS / de_direction | Mean60.087 to60.217, but third panel falls59.292 to59.181. All four EB variants worsen direction on both folds. | Past-state-adjusted positive-expression/detection residual slopes; freeze alpha .1/.25 before held-out reads. |
+| MMD / mmd_u | Mean skill56.24 to56.68, lower raw MMD on all panels; .5 trades away DE. | Conditional residual drift targeting non-Gaussian distribution mismatch, matched donors and incumbent. |
+| CSS / variogram | Mean53.596 to53.947, all three panels improve. | Within-lineage joint detection coupling, strengths0/.25/.5 at fixed gene detection counts and positive-value margins. |
+
+DES critic: critique_de. DCS critic: critique_direction. MMD critic:
+critique_mmd. CSS critic: critique_variogram. All four reviews completed.
+
+Scorer CSS compares mean square-root absolute gene-pair differences; latent
+covariance alone does not determine it. Raw MMD is lower-is-better; normalized
+skills are higher-is-better. A positive mean does not hide panel regressions.
+
+Freeze lineage definitions, residual estimator, correction strengths, controls,
+splits and acceptance before a target read. First require gains across historical
+cutoffs; then evaluate unchanged full-panel metrics. Preserve mass/protected-gene
+guards, and record failures rather than quietly changing them. Sparse associations,
+composition confounding and mass correction can erase proposed coupling benefits.
+
+Cell resampling is not independent embryo or temporal validation. Reused E9.5
+panels invite selection bias. Proxy overlap cannot certify DES or E10.5 transfer.
+Submission format checks establish format only. The export uses source through
+E9.5 and17057 E9.5 anchors; generic E8.5 audit wording is annotated as stale.
+
+The new +1/-10 research reward starts at0 and has a100 maximum. Future valid,
+predeclared paired mean gains earn+1 per metric; ties/regressions earn-10.
+Invalid, pending or proxy evidence earns0. Negative balances remain visible.
+No retroactive award for these three reused panels. Actual benchmark scores and
+the >72 temporal/64-replicate mean/lower-tail gates remain unchanged.

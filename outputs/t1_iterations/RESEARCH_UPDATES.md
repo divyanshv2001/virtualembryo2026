@@ -130,6 +130,10 @@ Full E8.5 anchor calibration:12/12 valid local scores, best p.25/d.75 mean55.117
 
 Started `de_rank_trend_challenge_01`: a bounded past-only signed gene-rank prior. It takes the strongest 64 or 256 genes whose log1p pseudobulk changes keep the same sign from sampled source E8.0→8.25 and E8.25→8.5, requires anchor detection support, and applies a capped ±0.15 log-unit positive-entry correction to the archived unit16 forecast at strengths .5/1. The unit16 and persistence forecasts are matched controls; 18 unchanged full-panel scores across the three frozen E9.5 development panels are planned. Target expression is read only after all six forecasts are frozen to D-only temporary handles. The prior is our own extrapolation, not a published DE method or independent challenge validation. No official submission, Jev call, agent, or full forecast retention. Model test and syntax passed; results pending.
 
+## 2026-09-29T17:44:06.867677+00:00
+
+Completed 18 full-panel past gene-rank trend scores with matched controls; inspect raw DE/MMD/variogram and paired outcomes before any promotion.
+
 ## 2026-09-29T17:46:00+00:00
 
 `de_rank_trend_challenge_01` completed 18/18 valid full-panel scores; no candidate beat matched unit16 (55.42023). Best top64/full-strength was 55.33384, with mean DE skill .52210 versus unit16 .52573; top256/full fell to 55.04669. All four raw metrics, skills, calibrations, seeds, plan/prediction hashes and genuine events are in the report and score ledger (2794 records, zero indexing errors). D-only temporary forecasts closed, no full arrays persisted. Post-scoring diagnostic on the same reused E9.5 development panels found selected top64 genes overlapped only 3/4/3 truth DE genes, with just 2 correct directions per panel; top256 overlapped 7/11/6, with 3/5/4 correct directions. This diagnosis explains the weak transfer but is **not** used to fit or retune the trial. Next falsifiable path: anchor-composition-weighted source temporal effects, checked on historical source folds before challenge scoring. >72/temporal gate remains unmet; no official submission.
@@ -141,10 +145,6 @@ Checked feasibility of matching E8.5 challenge cells to sampled source E8.5 cell
 ## 2026-09-29T18:01:00+00:00
 
 Full-source D-only streaming completed: 116,175 eligible E7.5–E8.5 cells, 26,775 uniquely mapped official genes, including all 58,072 E8.5 source cells. Both passes used the full indexed-gene library size for log1p(10,000-count) normalization; no dense all-cell matrix was retained and worker memory stayed small. Historical source-only signed-rank screen removed sampled target cells from its held-out target mean. Whole-cohort full-source trend improved 8→8.25 versus sampled (.10606 vs .03030 chance-adjusted overlap) but regressed 8.25→8.5 (−.11301 vs −.10616). Cardiac-proxy full-source trends were negative in both historical folds (−.01220, −.12923). The predeclared two-fold improvement rule failed; **no E9.5 challenge forecast** was made from this trend. These are pseudobulk screening scores, not the challenge headline or any of its four calibrated skills. Full-data sufficient statistics do not establish full-model training. Next path is a bounded full-source latent-flow fit with D-only transient feature cache and historical temporal controls; keep >72/official gates unchanged.
-
-## 2026-09-29T17:44:06.867677+00:00
-
-Completed 18 full-panel past gene-rank trend scores with matched controls; inspect raw DE/MMD/variogram and paired outcomes before any promotion.
 
 ## 2026-09-30T12:16:38.027958+00:00
 
@@ -195,3 +195,19 @@ Declared next bounded mechanism before scoring: E8.5 source/challenge 8D covaria
 ## 2026-09-30T13:48:23+00:00
 
 Completed `cnf_covariance_alignment_01`: 15/15 valid unchanged full 32,285-gene scores on three reused E9.5 panels. The E8.5-only symmetric covariance map used 5% pooled-trace ridge; two of eight map eigenvalues were clipped to 2. Exact SHA256 replay of frozen persistence and mean-shift forecasts passed, as did matched floor/ceiling calibration. Means: persistence50.0000, mean shift55.75368, covariance .25 55.98883, .5 55.96950, full1.0 54.85273. Covariance .25 improved all three panels by .28135/.29567/.12842 and mean skills versus mean shift were DE .52563→.52563, direction .60087→.60217, MMD .56240→.56682, variogram .53596→.53947. Strength .5 lost DE mean skill; full strength regressed overall. The .25 pilot passes its narrow three-panel rule but fails frozen mean>=60 expansion; no 16- or 64-resample run, no official submission. All raw metrics/skills, calibrations, seeds, donor/target indices, forecast hashes, map/plan/input/report hashes and genuine events are retained in the private report and 2,877-row score ledger, zero index errors. D-only temporary forecast cache is empty; no full prediction arrays retained. This remains reused-stage development and does not validate >72 or temporal transfer. Next seek a distinct past-only DE/direction mechanism rather than amplify this sub-point gain.
+
+## 2026-09-30T14:07:50+00:00
+
+The user requested three specialist formula reviews and more targeted Jev use. Scorer, biology and transport reviews found no validated universal score-boost formula. Two distinct <=3,000-byte Jev advisory packets (2,168 and 2,024 bytes; 815/71 and 730/69 input/output tokens) both suggested soft empirical-Bayes gene effects with moderate confidence .56/.58. These are choices, not score evidence or measured Codex-token savings. Formula derivations, literature links, constraints and full packet records are in FORMULA_RESEARCH_20260930.md and JEV_FORMULA_* files.
+
+Completed a frozen source-only EB gene-slope screen on 8.0→8.25 and 8.25→8.5 before any challenge E9.5 read. Five formulas (recent linear control and four alpha/gamma posterior blends) were scored by fixed signed top-200 chance-adjusted overlap and partial Spearman proxies across 26,775 uniquely mapped genes. Baseline overlap −.10585/.02711 and direction −.40382/.07671; no EB variant improved overlap on both folds without direction regression, so none passed the predeclared full-panel promotion rule. Median posterior weights ~.999 show this uncertainty model barely shrank slopes. Full outcomes, predictions, seeds/stages, plan hashes and genuine events are in the private report and EB_GENE_SLOPE_SCREEN_RESULTS.json. This is not the full local or official score; no E9.5 target or official submission used.
+
+The user also requested a submission file after this experiment. The EB formula did not pass its early screen, so a prospective E10.5 artifact will instead use the strongest eligible narrow local development candidate (past-only mean plus conservative covariance .25), refitted through observed E9.5 with unchanged full anchor decoder settings. Keep the artifact separate from local scores, validate exact 32,285-gene order and cell bounds, and do not upload it. Its hidden E10.5 performance is unknown and >72 readiness remains unmet.
+
+## 2026-10-01T04:29:37.519302+00:00
+
+Completed formula export and revalidated corrected filename with byte-identical SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c. Format passed1500x32285float32,30.55MB. Preserved original executed source privately and genuine filename-correction event. No Python training process remains. Four user-requested metric critique agents completed: DES unchanged under covariance; DCS small mixed gain; MMD/CSS small development gains. Recorded next residual-drift/detection-coupling hypotheses and separate +1/-10 capped100 research reward starting0; unchanged benchmark/gates. No new Jev request.
+
+## 2026-10-01T04:32:31.908905+00:00
+
+Implemented disk-backed PLAYBOOK.md/PLAYBOOK_STATE.json and deterministic research_playbook.py hash/change detector. Updated recurring automation to use compact entry point and targeted changed evidence instead of reloading all documents. No Jev/model call in local detector; actual net Codex credits not measured.

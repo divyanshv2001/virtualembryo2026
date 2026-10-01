@@ -1,13 +1,15 @@
 # T1 compact research checkpoint
 
-Updated: 2026-09-30T13:48:23+00:00
+Updated: 2026-10-01T04:29:37.519302+00:00
 
 Official best reported: **51.87**. Latest export: `T1_val__anchorslope_progress_20260929_01.h5ad`. Local>72 gate remains unmet.
 Official metrics: DE44.9, direction57.0, MMD53.5, variogram51.7. Latest screenshot shows S2WISH2 / Codex / AGENT, rank29 on that view; scoring-page rank131/270 is a different view.
 
 Next: Full past-source flow and count-aware anchor-slope shrinkage failed frozen promotion rules. A past-only source-to-challenge 8D mean-frame shift improved all three reused E9.5 development panels (55.7537 vs exact unshifted 55.1173). A frozen 16-resample paired check then improved all 16: full shift mean55.1678, 2.5% tail53.8414, versus unshifted mean54.4955/tail52.9916 and persistence50; paired mean gain+.6724/tail+.3678. All four mean skills improved slightly. Mean<60 triggers the predeclared futility rule, so no 64-resample expansion. This is one-stage cell-resampling stability, not independent embryo, temporal or official validation; >72 remains far away. External temporal audit: only E8.5/E9.5 local Task 1 RNA; metadata-only GSE76118 includes permitted early heart stages and prohibited E10.5, and must not be used without strict stage isolation and license/provenance review. Next screen that source or test a distinct past-only mechanism with matched controls.
 
-Active jobs: none after `cnf_covariance_alignment_01` completed; verify actual processes before the next run.
+Active job: none (actual Python process check empty). Prospective export complete: `../t1_submissions/formula_progress_20260930_01/T1_val__formula_progress_20260930_01.h5ad`, 1500x32285 float32, 30,554,025 bytes; exact panel/finite/nonnegative/no-coordinate guards passed. SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c. User-requested progress export only; no upload or official score; >72 unmet. Filename corrected without changing prediction bytes; executed source snapshot preserved.
+
+Formula review: three user-requested specialists and two compact Jev advisories converged on testing soft empirical-Bayes gene slopes; its historical two-fold signed-rank/direction proxy screen failed. No full-panel challenge score or official submission from that screen. Details, formulas, citations and Jev actual usage in `FORMULA_RESEARCH_20260930.md`; genuine proxy outcomes in `EB_GENE_SLOPE_SCREEN_RESULTS.json`. After export, continue distinct conditional hurdle residual or lineage detection-odds mechanisms.
 
 Latest covariance pilot: 15/15 valid full-panel scores, exact persistence/mean-shift forecast replay and unchanged calibration. Conservative 8D covariance alignment at strength .25 scored 55.9888 versus mean-shift 55.7537 across three reused E9.5 panels, winning each panel without mean skill regression. Strength .5 lost DE skill; full strength regressed overall. The +.2351 development gain fails the frozen mean>=60 expansion rule; no 16- or 64-resample expansion, no independent temporal validation, no official score. Full raw metrics, skills, seeds, hashes and events retained; score ledger now 2,877 rows, zero errors. Next test a distinct past-only DE/direction mechanism.
 
@@ -45,3 +47,6 @@ Latest: validated; 1903 payload bytes; actual usage {'input_tokens': 820, 'outpu
 - [Slope results](CNF_ANCHOR_SLOPE_RESULTS.json), [temporal](CNF_ANCHOR_SLOPE_TEMPORAL_RESULTS.json), [kernel](CNF_KERNEL_POPULATION_RESULTS.json).
 - [Official feedback](../t1_submissions/anchorslope_progress_20260929_01/official_result.json).
 - Full32285gene scorer unchanged;>=64frozenMC mean AND2.5thpercentile>72, metricmeans>=50, matched temporal gains required. Local72≠official. No automatic official submissions or agents. Never invent quota resets.
+
+
+Four user-requested metric critics completed; findings in METRIC_CRITIQUES_20261001.md. Separate research reward starts at0, +1 strict matched mean skill improvement / -10 tie or regression per metric, total capped100 (negative balances visible), future eligible declared experiments only. This reward never changes benchmark scores or promotion gates. Next freeze lineage-conditioned residual drift; CSS alternative is detection coupling. No new Jev request for this routine policy update.

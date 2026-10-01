@@ -1,0 +1,103 @@
+{
+  "updated_utc": "2026-09-30T14:05:51.170747+00:00",
+  "status": "completed",
+  "outcomes": [
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "source_stage_rows": {
+        "7.5": 1963,
+        "7.75": 3000,
+        "8.0": 3000,
+        "8.25": 3000
+      },
+      "tau2": 0.01749238353616623,
+      "median_s2": 1.6498453073238537e-05,
+      "median_posterior_weight": 0.9990577095051884,
+      "median_sign_certainty": 0.28060526901330163,
+      "results": {
+        "recent_linear": {
+          "signed_top200_overlap": 0.0075,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.10584958217270196,
+          "partial_spearman": -0.4038197105549282
+        },
+        "eb_a0.25_g0": {
+          "signed_top200_overlap": 0.0075,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.10584958217270196,
+          "partial_spearman": -0.40413032084292627
+        },
+        "eb_a0.25_g1": {
+          "signed_top200_overlap": 0.005,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.10863509749303621,
+          "partial_spearman": -0.40477457183013843
+        },
+        "eb_a0.5_g0": {
+          "signed_top200_overlap": 0.0075,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.10584958217270196,
+          "partial_spearman": -0.40448068274707205
+        },
+        "eb_a0.5_g1": {
+          "signed_top200_overlap": 0.0075,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.10584958217270196,
+          "partial_spearman": -0.4059547420203415
+        }
+      }
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "source_stage_rows": {
+        "7.75": 3000,
+        "8.0": 3000,
+        "8.25": 3000,
+        "8.5": 3000
+      },
+      "tau2": 0.016445075598315272,
+      "median_s2": 1.8539066634303022e-05,
+      "median_posterior_weight": 0.9988739370416769,
+      "median_sign_certainty": 0.32360687435260005,
+      "results": {
+        "recent_linear": {
+          "signed_top200_overlap": 0.1925,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.027108433734939753,
+          "partial_spearman": 0.07671315505701229
+        },
+        "eb_a0.25_g0": {
+          "signed_top200_overlap": 0.1925,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.027108433734939753,
+          "partial_spearman": 0.07583583087084717
+        },
+        "eb_a0.25_g1": {
+          "signed_top200_overlap": 0.1925,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.027108433734939753,
+          "partial_spearman": 0.0748696936293057
+        },
+        "eb_a0.5_g0": {
+          "signed_top200_overlap": 0.1825,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.015060240963855403,
+          "partial_spearman": 0.0744865724582015
+        },
+        "eb_a0.5_g1": {
+          "signed_top200_overlap": 0.1875,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.021084337349397575,
+          "partial_spearman": 0.07209903352411817
+        }
+      }
+    }
+  ],
+  "passing_candidates": [],
+  "plan_sha256": "01c2330732e4f2ad8a2e7ec708959ce81a97e8906815b0a6dba8f1fb53483e25",
+  "report_sha256": "abe0199bde8eae1d5cb72ac2c04199abe7fbb8eb84e9eff3cffbfcf7c1edf7c5",
+  "scope": "Two historical source folds with training <= cutoff. No challenge E9.5 reads, full-panel score, future-stage fitting, Jev call or official submission.",
+  "not_full_panel_score": true
+}

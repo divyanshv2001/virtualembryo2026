@@ -1,0 +1,37 @@
+{
+  "updated_utc": "2026-10-01T04:32:32.042180+00:00",
+  "fingerprints": {
+    "LOCAL_OPTIMIZATION_STATE.json": "71780bd20667370d433ca85298760a054b0a96a43dbcb2a411b56b0517d8e31c",
+    "LOCAL_OPTIMIZATION_PROMPT.md": "dc34e90fa3519a22843971c550774ced585b0bab7dea86ab4fc00c5aee806f38",
+    "METRIC_RESEARCH_QUEUE.json": "5013b1081cbb35fffd60fb3e821e43c508068386622d905c0908ff63e44e6ca2",
+    "METRIC_CRITIQUE_POLICY.json": "025beff88fbd06be4f25b4643456853ca5f0c7ee68a66212ab0e1281bcd9a8e5",
+    "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4"
+  },
+  "objective_status": "threshold_not_met",
+  "process_state_is_snapshot": true,
+  "active_jobs_at_checkpoint": [],
+  "next_experiment": "Freeze lineage-conditioned residual drift historical screen with matched controls; separate joint detection coupling is the CSS critic proposal. Four user-requested metric critiques completed. No process currently running.",
+  "export": {
+    "status": "completed_format_validated",
+    "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
+    "artifact_sha256": "23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c",
+    "format_passed": true,
+    "uploaded": false,
+    "official_score": null,
+    "readiness_gate_passed": false
+  },
+  "reward": {
+    "policy": "METRIC_CRITIQUE_POLICY.json",
+    "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
+    "initial_reward": 0,
+    "current_reward": 0,
+    "maximum": 100,
+    "separate_from_benchmark": true,
+    "completed_critics": [
+      "de_score",
+      "de_direction",
+      "mmd_u",
+      "variogram"
+    ]
+  }
+}

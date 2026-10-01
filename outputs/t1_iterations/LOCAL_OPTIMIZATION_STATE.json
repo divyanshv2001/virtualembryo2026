@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-30T13:48:23+00:00",
+  "updated_utc": "2026-10-01T04:29:37.519302+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,7 +31,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "A past-only E8.5 covariance map at strength .25 improved all three reused E9.5 panels over exact mean-shift replay (55.98883 vs55.75368) with no mean metric-skill regression, but mean<60 fails its frozen 16-resample expansion rule and is far below >72. Do not expand or submit. Next pursue a distinct DE/direction mechanism with past-only historical temporal checks and matched full-panel controls. The metadata-only GSE76118 early-stage allowlist remains unapproved for training pending license, assay/tissue and QC review.",
+  "next_experiment": "Freeze lineage-conditioned residual drift historical screen with matched controls; separate joint detection coupling is the CSS critic proposal. Four user-requested metric critiques completed. No process currently running.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1211,5 +1211,28 @@
     ],
     "expand_to_16_resamples": false,
     "results_report": "CNF_COVARIANCE_ALIGNMENT_RESULTS.json"
+  },
+  "formula_progress_export": {
+    "status": "completed_format_validated",
+    "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
+    "artifact_sha256": "23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c",
+    "format_passed": true,
+    "uploaded": false,
+    "official_score": null,
+    "readiness_gate_passed": false
+  },
+  "metric_critique_reward": {
+    "policy": "METRIC_CRITIQUE_POLICY.json",
+    "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
+    "initial_reward": 0,
+    "current_reward": 0,
+    "maximum": 100,
+    "separate_from_benchmark": true,
+    "completed_critics": [
+      "de_score",
+      "de_direction",
+      "mmd_u",
+      "variogram"
+    ]
   }
 }
