@@ -1,0 +1,232 @@
+{
+  "status": "completed",
+  "plan": {
+    "run": "early_forecast_scope_audit_01",
+    "seed": 20260928,
+    "declared_utc": "2026-10-01T14:43:14.432313+00:00",
+    "parent_report_sha256": "280c2ce6843a2bba1920bdc6d3920699c86a78370cdcd2e759786c9479ba7c51",
+    "conditions": [
+      {
+        "cutoff": 7.75,
+        "target": 8.75,
+        "held_capture": "13",
+        "folder": "private/early_tangent_metric_hindcast_01/cutoff_7.75"
+      },
+      {
+        "cutoff": 7.75,
+        "target": 8.75,
+        "held_capture": "12",
+        "folder": "private/early_tangent_metric_hindcast_02/cutoff_7.75_capture_12"
+      }
+    ],
+    "method": "Hash-exact frozen-model replay; partition mean changes CM/nonCM; anchor-based CM-only learned tangent and strict projection; no scoring/future expression",
+    "failure_criteria": [
+      "Any parent/source/panel/prediction hash mismatch",
+      "Future expression access",
+      "Anchor-base protected cells or full mean tolerance violated"
+    ],
+    "limitations": "Shared systematic switches and backoff are plausible pathways; partition establishes location, not uniquely causal attribution. No future tuning or score claim; invalid covariance projection remains unavailable.",
+    "created_utc": "2026-10-01T14:44:18.153158+00:00",
+    "spec_sha256": "f4e2ddf08c720c96b0ebd7e77ab48ae0b7d041336fb8a319e1935bb5f578b781",
+    "code_sha256": "a7e635f1e870cbb664e7817d26e9558901a6048b9663cf5959a488de93cafd48",
+    "archive_artifact_sha256": {
+      "private/early_tangent_metric_hindcast_01/cutoff_7.75/encoder.npz": "d3ca0045d182f42c393574e28d188ba2660d0b9ad6675bf4aff1c16ad62f1c00",
+      "private/early_tangent_metric_hindcast_01/cutoff_7.75/training.pt": "1425b8ad29eff64de638fde3e1b6b7ee071b9c724a2bda6c7914520859eed899",
+      "private/early_tangent_metric_hindcast_01/cutoff_7.75/donor_rows.npy": "f7da207bb2a6bb72c509e9c863105869793daf2a9692b5c340290f657c6a19c5",
+      "private/early_tangent_metric_hindcast_01/cutoff_7.75/observation_offsets.npz": "9e8c40ed7f809c6fc7af1990f68f1940510fe496b15dc7f56fa3a7283ebc48d1",
+      "private/early_tangent_metric_hindcast_02/cutoff_7.75_capture_12/encoder.npz": "01d4f0c9e5a565ee016e2ba98e3a6a90cac2568e6b0002617eaeadc013b181a6",
+      "private/early_tangent_metric_hindcast_02/cutoff_7.75_capture_12/training.pt": "4071db2c40b2f206be5e8c754c6afe1ac633db5ccbd7a9d33e2c436e604efbc2",
+      "private/early_tangent_metric_hindcast_02/cutoff_7.75_capture_12/donor_rows.npy": "12c9df8e12690c41919c1f2267cef0b7bc9c0af21e8c6bb25fa8f7ed010daebc",
+      "private/early_tangent_metric_hindcast_02/cutoff_7.75_capture_12/observation_offsets.npz": "033620a19502e8f931781fd3079c43677d19c85cfbcc61bc029be35bf6ae4f3d"
+    }
+  },
+  "results": [
+    {
+      "cutoff": 7.75,
+      "target": 8.75,
+      "held_capture": "13",
+      "folder": "private/early_tangent_metric_hindcast_01/cutoff_7.75",
+      "replays_valid": true,
+      "cm_offset": {
+        "full_mean_max": 0.004366345527949642,
+        "cm_contribution_max": 0.005117765607674604,
+        "noncm_contribution_max": 0.0058370017408153636,
+        "decomposition_error": 8.673617379884035e-19,
+        "noncm_changed_entries": 3237445,
+        "cm_changed_entries": 303576
+      },
+      "legacy_tangent": {
+        "full_mean_max": 0.005837001652989266,
+        "cm_contribution_max": 2.107826337833067e-09,
+        "noncm_contribution_max": 0.0058370017408153636,
+        "decomposition_error": 8.673617379884035e-19,
+        "noncm_changed_entries": 3237445,
+        "cm_changed_entries": 298659
+      },
+      "anchor_base": {
+        "initial": {
+          "full_mean_max": 2.107826337833067e-09,
+          "cm_contribution_max": 2.107826337833067e-09,
+          "noncm_contribution_max": 0.0,
+          "decomposition_error": 0.0,
+          "noncm_changed_entries": 0,
+          "cm_changed_entries": 298659
+        },
+        "initial_sha256": "a6a43101f1fd605847c394469904ba2c7c92efc18edcc3372a997cba1bd69229",
+        "projection": {
+          "valid": true,
+          "iterations": 0,
+          "history": [
+            {
+              "step": 0,
+              "objective": 4.0593910760645743e-13,
+              "damping": 0.001,
+              "max_gene_log_mean_error": 2.5852616936106187e-08,
+              "max_row_raw_mass_relative_error": 2.619044129173627e-07
+            }
+          ],
+          "support_preserved": true,
+          "solver": "Structured damped Gauss-Newton",
+          "adaptive_damping": true,
+          "largest_dense_square_dimension": 83,
+          "post_cast_checks": {
+            "finite_nonnegative": true,
+            "support_preserved": true,
+            "protected_cells_unchanged": true,
+            "protected_genes_unchanged": true,
+            "gene_margin_passed": true,
+            "raw_mass_margin_passed": true,
+            "covariance_guard_passed": true
+          },
+          "max_gene_log_mean_error": 2.5852616936106187e-08,
+          "max_row_raw_mass_relative_error": 2.619044129173627e-07,
+          "covariance_change_vs_reference": 0.2935428290039804,
+          "constraints_source": "No-offset anchor FORECAST; no future truth",
+          "projected_cells": 83
+        },
+        "projected": {
+          "full_mean_max": 2.107826337833067e-09,
+          "cm_contribution_max": 2.107826337833067e-09,
+          "noncm_contribution_max": 0.0,
+          "decomposition_error": 0.0,
+          "noncm_changed_entries": 0,
+          "cm_changed_entries": 298659
+        },
+        "projected_sha256": "a6a43101f1fd605847c394469904ba2c7c92efc18edcc3372a997cba1bd69229"
+      },
+      "generation": {
+        "anchor_unshrunk": {
+          "sha256": "24ceb15f2cf15aceb5bf904287a085848adcddd5c2f835070cda8fb2589289d0",
+          "backoff": 1.0
+        },
+        "cm_025": {
+          "sha256": "33f55dec0ca908baf5f58c2a6a7932b721e2ce32e00cb4ed9ce691e701da3d53",
+          "backoff": 1.0
+        }
+      },
+      "future_expression_read": false,
+      "max_expression_stage_read": 7.75,
+      "raw_metrics": null,
+      "skills": null,
+      "headline_score": null,
+      "reward_delta": 0
+    },
+    {
+      "cutoff": 7.75,
+      "target": 8.75,
+      "held_capture": "12",
+      "folder": "private/early_tangent_metric_hindcast_02/cutoff_7.75_capture_12",
+      "replays_valid": true,
+      "cm_offset": {
+        "full_mean_max": 0.009613780214661551,
+        "cm_contribution_max": 0.004599174995335841,
+        "noncm_contribution_max": 0.011639995590573358,
+        "decomposition_error": 1.734723475976807e-18,
+        "noncm_changed_entries": 3213067,
+        "cm_changed_entries": 267547
+      },
+      "legacy_tangent": {
+        "full_mean_max": 0.011639996071255976,
+        "cm_contribution_max": 1.682389167047316e-09,
+        "noncm_contribution_max": 0.011639995590573358,
+        "decomposition_error": 8.673617379884035e-19,
+        "noncm_changed_entries": 3213067,
+        "cm_changed_entries": 263488
+      },
+      "anchor_base": {
+        "initial": {
+          "full_mean_max": 1.682389167047316e-09,
+          "cm_contribution_max": 1.682389167047316e-09,
+          "noncm_contribution_max": 0.0,
+          "decomposition_error": 0.0,
+          "noncm_changed_entries": 0,
+          "cm_changed_entries": 263488
+        },
+        "initial_sha256": "289f2c8399f0f7f8f5d335f7721e2c613cc495bff7d8d413bb4b05fb3e492459",
+        "projection": {
+          "valid": true,
+          "iterations": 0,
+          "history": [
+            {
+              "step": 0,
+              "objective": 5.996017600066055e-13,
+              "damping": 0.001,
+              "max_gene_log_mean_error": 2.317958447406454e-08,
+              "max_row_raw_mass_relative_error": 3.5856715993939573e-07
+            }
+          ],
+          "support_preserved": true,
+          "solver": "Structured damped Gauss-Newton",
+          "adaptive_damping": true,
+          "largest_dense_square_dimension": 72,
+          "post_cast_checks": {
+            "finite_nonnegative": true,
+            "support_preserved": true,
+            "protected_cells_unchanged": true,
+            "protected_genes_unchanged": true,
+            "gene_margin_passed": true,
+            "raw_mass_margin_passed": true,
+            "covariance_guard_passed": true
+          },
+          "max_gene_log_mean_error": 2.317958447406454e-08,
+          "max_row_raw_mass_relative_error": 3.5856715993939573e-07,
+          "covariance_change_vs_reference": 0.29423426532789454,
+          "constraints_source": "No-offset anchor FORECAST; no future truth",
+          "projected_cells": 72
+        },
+        "projected": {
+          "full_mean_max": 1.682389167047316e-09,
+          "cm_contribution_max": 1.682389167047316e-09,
+          "noncm_contribution_max": 0.0,
+          "decomposition_error": 0.0,
+          "noncm_changed_entries": 0,
+          "cm_changed_entries": 263488
+        },
+        "projected_sha256": "289f2c8399f0f7f8f5d335f7721e2c613cc495bff7d8d413bb4b05fb3e492459"
+      },
+      "generation": {
+        "anchor_unshrunk": {
+          "sha256": "1d938e645cf39588eb4f53ede9566834dccb09beaf929c888f81a26691d01b1f",
+          "backoff": 1.0
+        },
+        "cm_025": {
+          "sha256": "0f4b17bebf535c49f1df5144efeb13fd29b57fdc25e9f9d75009997ce6da9089",
+          "backoff": 1.0
+        }
+      },
+      "future_expression_read": false,
+      "max_expression_stage_read": 7.75,
+      "raw_metrics": null,
+      "skills": null,
+      "headline_score": null,
+      "reward_delta": 0
+    }
+  ],
+  "future_expression_read": false,
+  "raw_metrics": null,
+  "skills": null,
+  "headline_score": null,
+  "reward_delta": 0,
+  "official_score": null,
+  "report_sha256": "37756100392093c722577f7f0a3906af7600d7100df893505c2d4eac64acf455"
+}

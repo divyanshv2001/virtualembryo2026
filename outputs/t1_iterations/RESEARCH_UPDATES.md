@@ -520,3 +520,7 @@ Implemented12candidate2capture24score early7.75->8.75 experiment, capture13/12 e
 
 ### 2026-10-01T14:43:14.432313+00:00 — early hindcast completed; scope audit declared
 24 combined outcomes, only12 freshly scored; exact reuse of capture13 after directory collision. No passing candidates. Learned54.001522/53.267982 versus anchor54.024627/53.258442 and shuffle54.001522/53.267979. Raw4/skills4 preserved, ledger3043 records. Four specialist reviews for failed and resumed batches cached by report hash/policy2; reward-36, balance-634. Fullpanel mean shift .005837 exceeds CM constraint: candidate-base nonCM protection needs explicit attribution. Jev2172bytes836in58out chose scope audit. Frozen-model replay, D-only temporary cache, no future reads/scoring. Scope helper algebra/protection/identity controls passed. Actual limit reset observed only7:54 PM; execution now resumed.
+
+
+### 2026-10-01T14:57:50.639188+00:00 — scope attribution completed
+Exactreplays13/12. Legacywholemeans .005837/.011640 fromnonCM; isolatedmeans2.1e-9/1.7e-9 andnonCMbitwiseunchanged. Bothbackoff1; notunique causalproof. Raw4/skills4 unavailable,reward0. Fourfresh specialistreviews saved. Jev812in63out chose sixforecast12score isolation diagnostic onreusedtargets,noindependentpromotion. Originalreadinessunmet.

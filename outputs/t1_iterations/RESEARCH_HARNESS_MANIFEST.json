@@ -85,6 +85,11 @@
       "script": "forecast_scope_audit.py",
       "run": "private/early_forecast_scope_audit_01",
       "report": "EARLY_FORECAST_SCOPE_AUDIT_RESULTS.json"
+    },
+    "isolated_scope_fullpanel": {
+      "script": "isolated_scope_fullpanel.py",
+      "run": "private/isolated_scope_fullpanel_01",
+      "report": "ISOLATED_SCOPE_FULLPANEL_RESULTS.json"
     }
   }
 }

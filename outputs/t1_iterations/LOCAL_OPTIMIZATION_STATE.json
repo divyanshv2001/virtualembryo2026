@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T14:43:14.432313+00:00",
+  "updated_utc": "2026-10-01T14:57:50.639188+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": true,
+  "local_process_running": false,
   "quota_reset_evidence": {
     "limit_observed": true,
     "observed_reset_text": "7:54 PM",
@@ -30,14 +30,12 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Monitor registered early_scope_audit; frozen13/12 models, CM/nonCM mean attribution and anchor-base isolation. No retraining, future expression or scorer. After completion four specialists/Jev; separately declare any new full-panel batch.",
+  "next_experiment": "Monitor registered isolated_scope_fullpanel: frozen models,6forecasts2captures12scores; no duplicated training or future tuning. Reused targets diagnostic only. Aftercompletion collect fourcritics/Jev,refreshledger; originalreadinessunmet.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "early_forecast_scope_audit_01"
-  ],
-  "active_run_path": "private/early_forecast_scope_audit_01",
+  "active_jobs": [],
+  "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -1296,12 +1294,12 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_EARLY_SCOPE_DECISION_ROUTE_20261001_01.json",
+    "record": "JEV_SCOPE_SYNTHESIS_ROUTE_20261001_01.json",
     "usage": {
-      "input_tokens": 836,
-      "output_tokens": 58
+      "input_tokens": 812,
+      "output_tokens": 63
     },
-    "choice": "scope_audit_then_anchor_base"
+    "choice": "isolated_scope_matched_fullpanel"
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -1997,6 +1995,20 @@
       "reward_delta": -36,
       "fresh_conditions": 1,
       "reused_conditions": 1
+    },
+    "early_forecast_scope_audit_01": {
+      "status": "completed",
+      "report_sha256": "37756100392093c722577f7f0a3906af7600d7100df893505c2d4eac64acf455",
+      "review": "METRIC_CRITIQUES_EARLY_SCOPE_20261001.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": false,
+      "reward_delta": 0
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -2142,6 +2154,12 @@
     "report_sha256": "280c2ce6843a2bba1920bdc6d3920699c86a78370cdcd2e759786c9479ba7c51"
   },
   "early_scope_audit_job": {
-    "status": "running"
+    "status": "completed",
+    "report_sha256": "37756100392093c722577f7f0a3906af7600d7100df893505c2d4eac64acf455",
+    "metrics_available": false
+  },
+  "isolated_scope_job": {
+    "status": "failed",
+    "error": "'tuple' object has no attribute 'de_genes'"
   }
 }

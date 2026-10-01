@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T14:43:14.432313+00:00",
+  "updated_utc": "2026-10-01T14:57:50.639188+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -6263,10 +6263,17 @@
     },
     {
       "id": "early_forecast_scope_audit",
-      "status": "declared",
-      "next_action": "Run registered early_scope_audit: frozen13/12 replay, CM/nonCM mean attribution, anchor-base isolation; no future expression/scoring. Then four specialists/Jev and separately declare next full-panel method.",
+      "status": "completed_scope_confounded_legacy",
+      "next_action": "Launch registered isolated_scope_fullpanel: six forecasts2captures12scores, frozenmodels/no retrain, unchangedscorer, no future tuning. Reusedtargets diagnostic only; critics/Jev/ledger afterbatch.",
       "research_family_exhausted": false,
       "specification": "NEXT_EARLY_SCOPE_AUDIT.json"
+    },
+    {
+      "id": "isolated_scope_fullpanel",
+      "status": "declared",
+      "specification": "NEXT_ISOLATED_SCOPE_EXPERIMENT.json",
+      "next_action": "Launch registered isolated_scope_fullpanel: six forecasts2captures12scores, frozenmodels/no retrain, unchangedscorer, no future tuning. Reusedtargets diagnostic only; critics/Jev/ledger afterbatch.",
+      "research_family_exhausted": false
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",

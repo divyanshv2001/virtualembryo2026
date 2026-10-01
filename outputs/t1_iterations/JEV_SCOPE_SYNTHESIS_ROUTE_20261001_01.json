@@ -1,0 +1,38 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "5f3210b234d36a4def06ff159eb1eef81e5ec364858c5648507141ab38dce4f9",
+  "attempts": 1,
+  "payload_bytes": 1929,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "purpose": "Select next scored experiment after scope audit and four specialist reviews",
+      "evidence": "Scoreless hash-exact replay captures13/12 cutoff7.75 target8.75. Legacy tangent fullmean shifts .005837/.011640 entirely nonCM contribution; ~3.2million nonCMentries altered. CMcontribution ~2e-9. Anchor-based CM-only tangent has zero nonCMchanged/fullmeanerror2.1e-9/1.7e-9,valid support/mass/covariance; bothbackoff1. No auditmetrics/reward. Prior learned/shuffle nearlyequal headlines,no promotion. Specialists favor frozen scope-compliant anchor/copy/identity/shuffle comparison; DE/direction exactwholemeans constrain these metrics, distributionmetrics remain untested cleanly.",
+      "constraints": "No future fitting or amplitude tuning. Reuse frozenmodel,donor/target splits,unchanged32285scorer/calibration,seed20260928,sharedscale<=.25; newpredeclaration. Pastmodelreads<=7.75; future8.75 only afterallforecastfreeze. Dcache16GB2threads. Previously evaluatedtargets are reused diagnostic panels, not independent validation; no readiness/promotion fromthisalone.",
+      "limitations": "Two captures one temporaltransition,one shuffle seed. Preserve legacyscores and failedrun."
+    },
+    "questions": {
+      "next_scored_action": {
+        "type": "choice",
+        "instructions": "Choose bounded informative next step before further training.",
+        "criteria": {
+          "isolated_scope_matched_fullpanel": "Archived replay no retraining; sixforecasts copy/anchor/identity/legacytangent/isolatedlearned/isolatedshuffle,12scores. Verifycontrolreplay andnonCMbitwise/wholemeans/normmatching beforetruth. No futuretuning, labelreusedtargets diagnostic.",
+          "new_mean_correction_training": "Start distinct gene-mean learner on earlier rolling contrasts; scope audit valid but isolated distribution efficacy unscored.",
+          "end_tangent_branch": "Record boundednegative and defer scope-controlled scoring; move nextopenfamily without testing isolated construction."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 812,
+    "output_tokens": 63
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "next_scored_action": {
+      "choice": "isolated_scope_matched_fullpanel",
+      "confidence": 0.99
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}
