@@ -115,6 +115,11 @@
       "script": "capture_mean_decoder_preflight.py",
       "run": "private/capture_mean_decoder_preflight_01",
       "report": "CAPTURE_MEAN_DECODER_PREFLIGHT_RESULTS.json"
+    },
+    "capture_mean_fullpanel": {
+      "script": "capture_mean_decoder_fullpanel.py",
+      "run": "private/capture_mean_decoder_fullpanel_01",
+      "report": "CAPTURE_MEAN_DECODER_FULLPANEL_RESULTS.json"
     }
   }
 }

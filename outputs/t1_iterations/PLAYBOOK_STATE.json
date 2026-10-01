@@ -1,17 +1,17 @@
 {
-  "updated_utc": "2026-10-01T16:20:39.229907+00:00",
+  "updated_utc": "2026-10-01T16:34:24.573354+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "21b9860933989f56d5d5aa28162111cfea44b7f6b8b487702db02a717a4090a6",
+    "LOCAL_OPTIMIZATION_STATE.json": "c9342aced4c1fcddcb6f424ddb7386b743a39aec1d315f5ce600fecd90dc86f7",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "e177d342a4efea10a9b6c0368c0b24cf3ee74a8139fb12801b793c9e4f01e939",
+    "METRIC_RESEARCH_QUEUE.json": "d099c58fdb03da182482162726a3a272addbb24d577855bc0abb0a72cdf2250a",
     "METRIC_CRITIQUE_POLICY.json": "027368320281a1164dc91720fe8aa18a344ddf7c14b9c5a8fce8b2b075105b7b",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
-    "RESEARCH_HARNESS_MANIFEST.json": "32b521d546582a939933fda278f6e94da5d1bb39c109a6c164d76d9be66c3dad"
+    "RESEARCH_HARNESS_MANIFEST.json": "29c6fa5d1a53caf59ae30a7919fa4a89acc7a9fa237084e3808b739b770413be"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [],
-  "next_experiment": "Implement and register fixed capture-mean decoder full-panel test: cut8/8.25 target8.25/8.5, archived1500donors/seed20260928, copy/incumbent anchor(.5,.5)/quarter/shrunk controls. Regenerate exact preflight hashes and pass guards before target reads. Unchanged32285scorer/calibration,2000targetrows truth1000/ceiling1000. No strength grid or exposed-target tuning; reused development evidence. Bothfolds must beat copy/incumbent headlines and preserveallskills to advance. Readiness and familycoverage remain incomplete.",
+  "next_experiment": "Predeclare donor-only positive-support/detection decomposition of exact frozen quarter/shrunk capture-mean decoder forecasts. Measure lineage zero\u2192positive/positive\u2192zero counts, detectionrate displacement, zero/positive-origin contributions and fullpanel sampledvariogram drift versus selectedfeature covariance guard using same donors/seed. No targetread/scoring or exposedtarget strengthselection. Decide a separatelydeclared support-preserving ablation only after mechanism evidence; families/readiness remain open.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -28,7 +28,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -663,
+    "current_reward": -721,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -37,7 +37,7 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -663
+    "uncapped_reward": -721
   },
   "official_best": 52.16,
   "latest_official": {
@@ -54,12 +54,12 @@
     "attribution": "Inferred latest export; screenshot lacks filename"
   },
   "latest_jev": {
-    "record": "JEV_DECODER_SYNTHESIS_ROUTE_20261001_01.json",
+    "record": "JEV_CAPTURE_FULLPANEL_SYNTHESIS_ROUTE_20261001_01.json",
     "usage": {
-      "input_tokens": 950,
-      "output_tokens": 49
+      "input_tokens": 1024,
+      "output_tokens": 58
     },
-    "choice": "score_fixed_decoder",
+    "choice": "donor_support_decomposition",
     "confidence": 1.0
   },
   "external_qc_audit": {

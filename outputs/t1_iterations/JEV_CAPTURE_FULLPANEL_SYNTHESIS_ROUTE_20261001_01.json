@@ -1,0 +1,39 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "fd165b1bf39dac56318c78c38fe18bbb2613ea6e796884a649284fbc6ac32fe8",
+  "attempts": 1,
+  "payload_bytes": 2187,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "purpose": "Choose next diagnostic/mechanism after fullpanel capturemean decoder negative earlyfold",
+      "results": "Actualfull32285 scorer fixed2folds cut8/8.25 targets8.25/8.5. Copy50/50 incumbent50.0687/50.9113 quarter45.1510/53.7643 shrunk43.0909/52.5917. Earlyquarter/shrunk all4skillsbelowincumbent. Laterquarterall4better; shrunkCSSbelow. Allcalibrationsvalid,nopassing. Exactpreflighthashreplay andall8forecasts frozen beforetargeteval.",
+      "mechanism": "Equalcapturelineagelogmeans inclzeros, deltaquarter/shrunk; addlogclip0 thenperrowexpm1massrepair. Numericalguards pass,butCSSearlyquarter35.947/shrunk27.434 vsincumbent49.461. Covarianceguarduses limitedselectedfeatures<=.111, maymissfullpanelstructure. Clippednegativeentries9.3-9.6million; numbernewpositiveentriesnotyetmeasured. Detection/supportdistortion is hypothesis, notestablishedcause.",
+      "critics": "DE/direction pastrolling-strength selection, MMD temporalconsistency, CSS capture-associated corrections/anchor proximity. SparseearlysupportandpreviousEB/ridge/capturecontrastnegative constrainrepeatedCV. Do not selectfromtheseexposedtargets.",
+      "constraints": "Pastonly nofuturefit; capturesnotembryos, reuseddevelopmentnotchallengevalidation. Original>72/64replicate/temporalunmet. Preserveallraw4/skills4failure/reward; D16GB2threads. No promotion."
+    },
+    "questions": {
+      "next_step": {
+        "type": "choice",
+        "instructions": "Choose informativebounded nextstep withoutretuning exposedtargetgrid.",
+        "criteria": {
+          "donor_support_decomposition": "Pastdonor-only exactreplay audit positive-support creation/destruction, detectionrate shifts, fullpanel sampledvariogram change vs limitedcovguard, brokenoutbylineage/zero-vspositive origins. Comparefixedquarter/shrunk/copy. Freezeanalysis beforeexpression read; no benchmarkclaim. Establishspecificdecodermechanismbeforeseparatelydeclaredsupport-preservingablation.",
+          "rolling_strength_proxy": "Moregaincap/gridCV onearliertransitions only4lineages earlysupport; priorcellweightedEB/reliability/ridgefailed. Couldtestbutdelaymechanisticdiagnosis.",
+          "submit_later_best": "Exportlaterquartercandidate because53.76 despiteearly45.15 andfailuregates; unsupportedpromotion."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 1024,
+    "output_tokens": 58
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "next_step": {
+      "choice": "donor_support_decomposition",
+      "confidence": 1.0
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}

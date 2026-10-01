@@ -1,0 +1,485 @@
+{
+  "status": "completed",
+  "plan": {
+    "folds": [
+      [
+        8.0,
+        8.25
+      ],
+      [
+        8.25,
+        8.5
+      ]
+    ],
+    "candidates": [
+      "copy",
+      "anchor_unshrunk",
+      "capture_quarter",
+      "capture_shrunk"
+    ],
+    "seed": 20260928,
+    "donor_count": 1500,
+    "target_count": 2000,
+    "scored_truth_count": 1000,
+    "ceiling_count": 1000,
+    "fit": "Frozen pastonly equalcapture loggene shifts from capture_mean_shrinkage_audit_01. Quarter and shrunk unchanged; additive logclip thenexpm1mappedcountmassrepair. Exact preflightpredictionhashes required; unsupportedlineagespersist, unmappedprotectedgenesunchanged. No parameter selection.",
+    "incumbent": "Archived past-only CNF/PartialAnchorForecast positive/detection slopes .5/.5, jointsystematicsamplingstrength1, same donors and target time.",
+    "evaluation": "Allfold forecasts frozen beforetargetexpression. Full32285 pinnedscorer/weights/calibration unchanged, identical targetsplit/order reference seed. Fourrawmetrics/fourskills/calibration failures preserved. Reuseddevelopmenttargets, not independentchallenge/embryovalidation.",
+    "promotion": "Bothfolds headline greaterthan copyandincumbent andall4skills>=incumbent, validcalibration; original>72mean/lower-tail64replicate/temporalgatesunchanged.",
+    "reward": "Separatefuture-only +1positivepairedmean skill /-10tie/regression permetric againstincumbent, capped100 aggregate; invalid0.",
+    "resources": "D-onlytemporaryforecastcache singlepredictiongeneration/read atatime; genechunks256,2threads16GB. Retain private reports/splits/events/hashes; largecacheclosedafterconsumption. Noofficialupload.",
+    "created_utc": "2026-10-01T16:24:54.159519+00:00",
+    "spec_sha256": "eeffdeed4306a442bfd837b28195517b0ceee36699cfeea31bc2c78e4fb9b7fd",
+    "prepared_report_sha256": "1acd8a635f76c9f9ac89a1186f116db91309b007f448a8d11ec612627ab5bca4",
+    "panel_sha256": "2aeae4cd284933956242bbc9c5ab4f565c1d2acc7cc3fd3037977e4bce8be4bf",
+    "preflight_report_sha256": "dc28b09682f8ba20de9db3c157486d5492c21d5b9ab599395d61b6b0614d6617",
+    "mean_report_sha256": "a4442fb533cc37a693ba07dfc43f8914423d19fd42d4d456b2584aa9c031bbb1",
+    "scorer_manifest": {
+      "repository": "https://github.com/aristoteleo/veckit",
+      "commit": "46d41e63f42a9aab815db20b742feeccd249cb17",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/aristoteleo/veckit/46d41e63f42a9aab815db20b742feeccd249cb17/LICENSE",
+          "sha256": "22325e2f0ed62f603feb6b5888cad1f891fcd9b89b1cfab3c70b1dca0ac974f4"
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/aristoteleo/veckit/46d41e63f42a9aab815db20b742feeccd249cb17/README.md",
+          "sha256": "088e62cd3d528804dd3c3e5ed42fac44b154aedcf82104c30d8fa22975152a09"
+        },
+        {
+          "path": "common/core_metrics.py",
+          "url": "https://raw.githubusercontent.com/aristoteleo/veckit/46d41e63f42a9aab815db20b742feeccd249cb17/common/core_metrics.py",
+          "sha256": "3be7099a0c9a7ad5b609f86078871ed8290ed0bd8916b0cb3e14fb9831909f31"
+        },
+        {
+          "path": "T1/metrics.py",
+          "url": "https://raw.githubusercontent.com/aristoteleo/veckit/46d41e63f42a9aab815db20b742feeccd249cb17/T1/metrics.py",
+          "sha256": "c6252f964e782b4bb20f8b66352eb43ee244de402dafea5d3a0864ad5ed2fab8"
+        },
+        {
+          "path": "pyproject.toml",
+          "url": "https://raw.githubusercontent.com/aristoteleo/veckit/46d41e63f42a9aab815db20b742feeccd249cb17/pyproject.toml",
+          "sha256": "763c2670bd5ae014a5f04b640b9f854e228397c3af7ea4fb37ffbb776d77a320"
+        }
+      ],
+      "biological_data_downloaded": false
+    },
+    "code_sha256": {
+      "capture_mean_decoder_fullpanel.py": "723ac20e33201cd0aa538f5d217da711fc5a14ea3cb0b995ee16b058acafeb40",
+      "offline_backtest.py": "874b840c6bb3cce570b85482f2f11daacfcd164a04994301a33568c44ae3f3b6",
+      "partial_anchor_forecast.py": "8c9a4c362b634d648b0ecacf3e44f5953d5b18bce2ac551aefd16a4f17770225",
+      "log1p_positive_forecast.py": "48bc5e43ee5a6742a97d049c77978f23469d1db68575202d477396d5ad0ce4ee",
+      "feature_panel_forecast.py": "0375ab96375dcc50c7e6ece07dc1f3b07ef5bb58c9a54a1a632ce45f257d48f0",
+      "forecast_transform_fidelity.py": "a06d124dfa36ebd803f9263439ef1c7a4301eb57484a9fc3f97d911bf0bca870",
+      "temporary_forecast_cache.py": "52e855549a43fdb5ac346ebf4ca73e9d03a88967ff6cc1b355a9095e4b3bb301",
+      "projection_survival_diagnostics.py": "7e574f7f12ea57dd34c09476229d545619631051a3e03a71f3e62950c5f87696",
+      "metric_critique_reward.py": "db16970899173ae560d9c08faecf425ac8258613727c241dec8f34ffaf5d018a"
+    },
+    "archive_sha256": {
+      "8.0": {
+        "encoder.npz": "a6c2212ebd71b2b5e7f533bd159cf98357614bd3039adae77ba0fd6247d26bc5",
+        "training.pt": "b1eeaf7bdcdfee791d60966b52d458b4b21054efe0c927df9fb615f43c9bacca",
+        "heads.npz": "20fab0b1957084520deb90bb868a2c6ec93c0e1a01485a4312c4f44574653ac5"
+      },
+      "8.25": {
+        "encoder.npz": "53784ceb3050ff9e809eeceed2dbf78ffd71b12680bcec567468204c28cabefc",
+        "training.pt": "6d75f53164ab1686a13eec1fcf4fc6170082451382c52e5a934585d3b8bb1c39",
+        "heads.npz": "74ea78e995c2a93267ca51ce2bcadb4b0cca37aef90acc4f5c357fe00eeb37da"
+      }
+    }
+  },
+  "folds": [
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.046701036393642426,
+        "variogram": 0.000905122491531074
+      },
+      "ceiling": {
+        "de_score": 0.8571428571428572,
+        "de_direction": 0.6880143054493401,
+        "mmd_u": 0.005036866758018732,
+        "variogram": 9.857086843112484e-05
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "53908b256a2f04ded456a9239a8231ce0c0f551e3bd9de2c1424524db824cd4d",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.046701036393642426,
+            "variogram": 0.000905122491531074
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "anchor_unshrunk",
+          "prediction_sha256": "1b3d7ff9b7c635f2f03ac60bbd996173f07fc7d089157ef270a14767ee6e3405",
+          "raw_metrics": {
+            "de_score": 0.03174603174603175,
+            "de_direction": -0.03968307602750476,
+            "mmd_u": 0.04511524364352226,
+            "variogram": 0.0009226970723830163
+          },
+          "local_score": 50.068691056502665,
+          "skills": {
+            "de_score": 0.5094339622641509,
+            "de_direction": 0.48598476074119823,
+            "mmd_u": 0.5096999226082973,
+            "variogram": 0.4946112651560008
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "capture_quarter",
+          "prediction_sha256": "a3118114aa7677b1563f31f3c3aa717c1b93e60cea52560678439e693411c5d8",
+          "raw_metrics": {
+            "de_score": -0.03174603174603175,
+            "de_direction": -0.19302671812561148,
+            "mmd_u": 0.048247743397951126,
+            "variogram": 0.0015357410302385688
+          },
+          "local_score": 45.15102343549633,
+          "skills": {
+            "de_score": 0.49090909090909096,
+            "de_direction": 0.4384895119518685,
+            "mmd_u": 0.4908883289483746,
+            "variogram": 0.3594704247760551
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "capture_shrunk",
+          "prediction_sha256": "7c21aa9c80db104f039bb0b9404a996793b837b507bec8a9eb4eb4629ed970a9",
+          "raw_metrics": {
+            "de_score": -0.03174603174603175,
+            "de_direction": -0.1873876051574757,
+            "mmd_u": 0.05059954524040222,
+            "variogram": 0.0022319781128317118
+          },
+          "local_score": 43.09091881509883,
+          "skills": {
+            "de_score": 0.49090909090909096,
+            "de_direction": 0.44007110735035865,
+            "mmd_u": 0.4776530453015705,
+            "variogram": 0.2743411249782739
+          },
+          "calibration_valid": true
+        }
+      ],
+      "generation": {
+        "copy": {
+          "prediction_sha256": "53908b256a2f04ded456a9239a8231ce0c0f551e3bd9de2c1424524db824cd4d",
+          "audit": {
+            "method": "persistence",
+            "exact_preflight_replay": true
+          }
+        },
+        "anchor_unshrunk": {
+          "prediction_sha256": "1b3d7ff9b7c635f2f03ac60bbd996173f07fc7d089157ef270a14767ee6e3405",
+          "audit": {
+            "fit_cells": 7963,
+            "fit_max_stage": 8.0,
+            "supported_genes": 13935,
+            "method": "Conditional positive log1p response decoder",
+            "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+            "conditional_ridge_strength": 1.0,
+            "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+            "encoder_features": 4096,
+            "covariance_guard_features": 384,
+            "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+            "anchor_calibration_rows": 1500,
+            "anchor_supported_genes": 11177,
+            "anchor_slope_ridge": 1.0,
+            "limitation": "Cross-sectional associations are not temporal velocities; only 1500 past anchors.",
+            "anchor_positive_slope_strength": 0.5,
+            "anchor_detection_slope_strength": 0.5,
+            "response_units": "log1p normalized expression",
+            "response_fit_rows": 7963,
+            "response_fit_max_stage": 8.0,
+            "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+            "mode": "joint",
+            "strength": 1.0,
+            "backoff": 1.0,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.041118423547309144,
+            "newly_detected_entries": 14371,
+            "removed_detection_entries": 29346,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true
+          }
+        },
+        "capture_quarter": {
+          "prediction_sha256": "a3118114aa7677b1563f31f3c3aa717c1b93e60cea52560678439e693411c5d8",
+          "audit": {
+            "method": "frozen_capture_mean_countmass_decoder",
+            "exact_preflight_replay": true
+          }
+        },
+        "capture_shrunk": {
+          "prediction_sha256": "7c21aa9c80db104f039bb0b9404a996793b837b507bec8a9eb4eb4629ed970a9",
+          "audit": {
+            "method": "frozen_capture_mean_countmass_decoder",
+            "exact_preflight_replay": true
+          }
+        }
+      },
+      "donor_rows_sha256": "7d951f227d44ea8091374db5278ed8dfd5fc3026d938288ca0e8ae98ed15a3b0",
+      "target_rows_sha256": "27dd7bbbfcf35cb903f1defe93a5123c998bfb3ea62b7a7a6ae3f641e92b6fcd"
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.15222033858299255,
+        "variogram": 0.0030451943166553974
+      },
+      "ceiling": {
+        "de_score": 0.9175257731958761,
+        "de_direction": 0.7961990239209324,
+        "mmd_u": 0.0019628286827355623,
+        "variogram": 0.00010568655852694064
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "f991bb722bc73fe1b4135b16a6a7a3db7132c306103559448dc13289eb73ae4e",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.15222033858299255,
+            "variogram": 0.0030451943166553974
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "anchor_unshrunk",
+          "prediction_sha256": "5d6aa4173f2633aed63027306766a422040cce2e2a2b4e4dd4564d52ea10457c",
+          "raw_metrics": {
+            "de_score": 0.006872852233676978,
+            "de_direction": 0.06363941941395837,
+            "mmd_u": 0.1463458240032196,
+            "variogram": 0.003018938936293125
+          },
+          "local_score": 50.91127297853878,
+          "skills": {
+            "de_score": 0.5018796992481203,
+            "de_direction": 0.5208140834761475,
+            "mmd_u": 0.5099689528012651,
+            "variogram": 0.5022429913197065
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "capture_quarter",
+          "prediction_sha256": "f578fe28fd43f97ff33f7aa7d51170c0b17ef0966fbc70cee0de230dbbabc064",
+          "raw_metrics": {
+            "de_score": 0.140893470790378,
+            "de_direction": 0.1825520589608911,
+            "mmd_u": 0.1385682076215744,
+            "variogram": 0.0028232361655682325
+          },
+          "local_score": 53.76432310688628,
+          "skills": {
+            "de_score": 0.5415821501014199,
+            "de_direction": 0.5647418442867602,
+            "mmd_u": 0.523795568357878,
+            "variogram": 0.5196178098222719
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "capture_shrunk",
+          "prediction_sha256": "b64c67130bd61d7615d3dd8a000d6a63a5c51c264bc9583e0d48f50f59a19432",
+          "raw_metrics": {
+            "de_score": 0.017182130584192462,
+            "de_direction": 0.21060296394677663,
+            "mmd_u": 0.13891205191612244,
+            "variogram": 0.003120612585917115
+          },
+          "local_score": 52.5917001669517,
+          "skills": {
+            "de_score": 0.5047258979206048,
+            "de_direction": 0.5762062936832558,
+            "mmd_u": 0.5231684795855351,
+            "variogram": 0.49366704946445644
+          },
+          "calibration_valid": true
+        }
+      ],
+      "generation": {
+        "copy": {
+          "prediction_sha256": "f991bb722bc73fe1b4135b16a6a7a3db7132c306103559448dc13289eb73ae4e",
+          "audit": {
+            "method": "persistence",
+            "exact_preflight_replay": true
+          }
+        },
+        "anchor_unshrunk": {
+          "prediction_sha256": "5d6aa4173f2633aed63027306766a422040cce2e2a2b4e4dd4564d52ea10457c",
+          "audit": {
+            "fit_cells": 10963,
+            "fit_max_stage": 8.25,
+            "supported_genes": 14462,
+            "method": "Conditional positive log1p response decoder",
+            "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+            "conditional_ridge_strength": 1.0,
+            "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+            "encoder_features": 4096,
+            "covariance_guard_features": 384,
+            "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+            "anchor_calibration_rows": 1500,
+            "anchor_supported_genes": 11513,
+            "anchor_slope_ridge": 1.0,
+            "limitation": "Cross-sectional associations are not temporal velocities; only 1500 past anchors.",
+            "anchor_positive_slope_strength": 0.5,
+            "anchor_detection_slope_strength": 0.5,
+            "response_units": "log1p normalized expression",
+            "response_fit_rows": 10963,
+            "response_fit_max_stage": 8.25,
+            "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+            "mode": "joint",
+            "strength": 1.0,
+            "backoff": 1.0,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.06474211905825207,
+            "newly_detected_entries": 14513,
+            "removed_detection_entries": 34119,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true
+          }
+        },
+        "capture_quarter": {
+          "prediction_sha256": "f578fe28fd43f97ff33f7aa7d51170c0b17ef0966fbc70cee0de230dbbabc064",
+          "audit": {
+            "method": "frozen_capture_mean_countmass_decoder",
+            "exact_preflight_replay": true
+          }
+        },
+        "capture_shrunk": {
+          "prediction_sha256": "b64c67130bd61d7615d3dd8a000d6a63a5c51c264bc9583e0d48f50f59a19432",
+          "audit": {
+            "method": "frozen_capture_mean_countmass_decoder",
+            "exact_preflight_replay": true
+          }
+        }
+      },
+      "donor_rows_sha256": "1faf5d3c2e23851202f3c24b72f3413ccd2b116b3cecb71b85668b5458681684",
+      "target_rows_sha256": "71a194288ba56e9eb2c51a69ef4921c9141c73b691de1672e511d358098a172a"
+    }
+  ],
+  "critic_assessments": [
+    {
+      "experiment_id": "capture_mean_decoder_fullpanel_01/capture_quarter",
+      "assessment": {
+        "status": "evaluated",
+        "metrics": {
+          "de_score": {
+            "paired_mean_skill_gain": 0.010588789749119809,
+            "positive_pairs": 1,
+            "pairs": 2,
+            "reward": 1,
+            "stability_verified": false
+          },
+          "de_direction": {
+            "paired_mean_skill_gain": -0.001783743989358516,
+            "positive_pairs": 1,
+            "pairs": 2,
+            "reward": -10,
+            "stability_verified": false
+          },
+          "mmd_u": {
+            "paired_mean_skill_gain": -0.002492489051654917,
+            "positive_pairs": 1,
+            "pairs": 2,
+            "reward": -10,
+            "stability_verified": false
+          },
+          "variogram": {
+            "paired_mean_skill_gain": -0.05888301093869014,
+            "positive_pairs": 1,
+            "pairs": 2,
+            "reward": -10,
+            "stability_verified": false
+          }
+        },
+        "reward_delta": -29
+      },
+      "plan_sha256": "56a71dd819d5e5636eba14c51a9002c75c649eea0390a4bc761ea964d951146b"
+    },
+    {
+      "experiment_id": "capture_mean_decoder_fullpanel_01/capture_shrunk",
+      "assessment": {
+        "status": "evaluated",
+        "metrics": {
+          "de_score": {
+            "paired_mean_skill_gain": -0.007839336341287695,
+            "positive_pairs": 1,
+            "pairs": 2,
+            "reward": -10,
+            "stability_verified": false
+          },
+          "de_direction": {
+            "paired_mean_skill_gain": 0.004739278408134345,
+            "positive_pairs": 1,
+            "pairs": 2,
+            "reward": 1,
+            "stability_verified": false
+          },
+          "mmd_u": {
+            "paired_mean_skill_gain": -0.009423675261228392,
+            "positive_pairs": 1,
+            "pairs": 2,
+            "reward": -10,
+            "stability_verified": false
+          },
+          "variogram": {
+            "paired_mean_skill_gain": -0.11442304101648848,
+            "positive_pairs": 0,
+            "pairs": 2,
+            "reward": -10,
+            "stability_verified": false
+          }
+        },
+        "reward_delta": -29
+      },
+      "plan_sha256": "56a71dd819d5e5636eba14c51a9002c75c649eea0390a4bc761ea964d951146b"
+    }
+  ],
+  "passing_candidates": [],
+  "official_score": null,
+  "local_72_gate_passed": false,
+  "submissions_used": 0,
+  "report_sha256": "05612728b692f42c1eaf6ead74c0f10b29ef1a26eca3682f1f2993cdd283b8f5",
+  "plan_sha256": "56a71dd819d5e5636eba14c51a9002c75c649eea0390a4bc761ea964d951146b"
+}

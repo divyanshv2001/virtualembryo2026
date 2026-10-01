@@ -1,5 +1,5 @@
 {
-  "records": 3055,
+  "records": 3063,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -30,6 +30,21 @@
       "path": "private/capture_balanced_fullpanel_01/report.json",
       "sha256": "13410a7c94083490c5c04dfdee22c461644b09b708de0c5b3d439fe4f4b1e6f7",
       "outcomes_indexed": 10
+    },
+    {
+      "path": "private/capture_mean_decoder_fullpanel_01/report.json",
+      "sha256": "05612728b692f42c1eaf6ead74c0f10b29ef1a26eca3682f1f2993cdd283b8f5",
+      "outcomes_indexed": 8
+    },
+    {
+      "path": "private/capture_mean_decoder_preflight_01/report.json",
+      "sha256": "dc28b09682f8ba20de9db3c157486d5492c21d5b9ab599395d61b6b0614d6617",
+      "outcomes_indexed": 0
+    },
+    {
+      "path": "private/capture_mean_shrinkage_audit_01/report.json",
+      "sha256": "a4442fb533cc37a693ba07dfc43f8914423d19fd42d4d456b2584aa9c031bbb1",
+      "outcomes_indexed": 0
     },
     {
       "path": "private/cardiac_global_01/report.json",
@@ -919,5 +934,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "1104dafa4dce140cfd3b2a8d2ac357bf5d75c195d194f8b12247bb20c677ae82"
+  "ledger_sha256": "c520c79ee76f360a5e400273ae9f9b3e91062632073b7a432d75b12942b09039"
 }
