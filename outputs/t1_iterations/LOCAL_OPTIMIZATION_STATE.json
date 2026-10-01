@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": true,
+  "local_process_running": false,
   "quota_reset_evidence": {
     "limit_observed": false,
     "remaining_quota": null,
@@ -31,14 +31,12 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Run registered joint_margin_solver current-only fourcase audit after passed Jacobian finite-difference,Schur-vs-dense tinycontrol,identity,feasibleperturbation,supportcontradiction andzero-budget controls. Fixed100iterations/two1e-5tolerances/locked support/Ddisk2threads; no variable-sized dense Jacobian. Finish diagnostics and four metric specialists, no benchmark/reward. Only if allcasesconverge may new temporaltest be predeclared; originalgate remains unmet.",
+  "next_experiment": "Implement/register predeclared CM mean/mass projection full-panel temporaltest per NEXT_PROJECTION_TEMPORAL_EXPERIMENT.json. Fourcapture-excluded conditions(two reusedstagefolds), verifiedarchivedmodels/donors/controlhashes,copy/anchor/uncorrectedCM.25/projectedCM.25. ProjectonlyCM toANCHORFORECAST LOGgene means/RAWrowmasses,lockeduncorrected mask,adaptive100steps/1e-5bothchecks postfloat32,finite/nonnegative/covguard. Contradiction/nonconvergence invalid withnullmetrics,no fallback orsupportrestoration. Freezeforecasts beforetruthread,unchanged32285scoring/calibration. Rewardonlynewvalidprojectedcandidate; fullscoreledger andfour specialists afterbatch. Numericaldevelopment success isnotforecast/officialscore; originalgateunmet.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "joint_margin_solver_01"
-  ],
-  "active_run_path": "private/joint_margin_solver_01",
+  "active_jobs": [],
+  "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -1298,16 +1296,16 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "packet": "JEV_JOINT_SOLVER_PACKET_20261001_01.json",
-    "route": "JEV_JOINT_SOLVER_ROUTE_20261001_01.json",
-    "decision": "structured_damped_gauss_newton",
+    "packet": "JEV_PROJECTION_TEMPORAL_DESIGN_PACKET_20261001_01.json",
+    "route": "JEV_PROJECTION_TEMPORAL_DESIGN_ROUTE_20261001_01.json",
+    "decision": "strict_invalid_no_fallback",
     "confidence": 1.0,
     "usage": {
-      "input_tokens": 808,
-      "output_tokens": 62
+      "input_tokens": 810,
+      "output_tokens": 57
     },
-    "payload_bytes": 1682,
-    "scope": "Distinct low-memory solver design, pending validation; no measured savings."
+    "payload_bytes": 1697,
+    "scope": "Prospective biological temporal-test support design; no measured savings."
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -1873,6 +1871,34 @@
       "specialist_role_version": 2,
       "metric_availability": false,
       "reward_delta": 0
+    },
+    "joint_margin_solver_01": {
+      "status": "completed",
+      "report_sha256": "dc9a64fba1de1a55b99f63d7fa3c88f2dfa5593597eaaeb822e2bdb6ce2dcd8d",
+      "review": "METRIC_CRITIQUES_JOINT_SOLVER_20261001.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": false,
+      "reward_delta": 0
+    },
+    "joint_adaptive_solver_01": {
+      "status": "completed",
+      "report_sha256": "da2d0af16d186e3e72b446b9ec8f2e9dadf52532c855c47cd0ee10c018177dde",
+      "review": "METRIC_CRITIQUES_JOINT_ADAPTIVE_20261001.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": false,
+      "reward_delta": 0
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -1945,10 +1971,22 @@
     "controls": "test_joint_margin_solver.py"
   },
   "joint_margin_solver_job": {
-    "status": "running",
+    "status": "completed_nonconverged",
     "registered_experiment": "joint_margin_solver",
     "controls_passed": true,
     "metric_availability": false,
-    "reward_delta": 0
+    "reward_delta": 0,
+    "all_cases_viable": false,
+    "report_sha256": "dc9a64fba1de1a55b99f63d7fa3c88f2dfa5593597eaaeb822e2bdb6ce2dcd8d"
+  },
+  "joint_adaptive_solver_job": {
+    "status": "completed_numerically_viable",
+    "registered_experiment": "joint_adaptive_solver",
+    "controls_passed": true,
+    "metric_availability": false,
+    "reward_delta": 0,
+    "all_cases_viable": true,
+    "report_sha256": "da2d0af16d186e3e72b446b9ec8f2e9dadf52532c855c47cd0ee10c018177dde",
+    "iterations_each": 7
   }
 }

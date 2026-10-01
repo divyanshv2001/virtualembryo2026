@@ -40,6 +40,11 @@
       "script": "joint_margin_solver_audit.py",
       "run": "private/joint_margin_solver_01",
       "report": "JOINT_MARGIN_SOLVER_RESULTS.json"
+    },
+    "joint_adaptive_solver": {
+      "script": "joint_adaptive_solver_audit.py",
+      "run": "private/joint_adaptive_solver_01",
+      "report": "JOINT_ADAPTIVE_SOLVER_RESULTS.json"
     }
   }
 }

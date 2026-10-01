@@ -1,0 +1,37 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "bb5541febbda605aa1711222cf3ef46b8f1d766578be67280a3ba0af99168062",
+  "attempts": 1,
+  "payload_bytes": 1306,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "purpose": "Select bounded numerical remedy after structured fixed-damping joint solver.",
+      "evidence": "Six controls pass includingfinite-differenceJacobians andtinySchur/denseequivalence. Fourcurrent-onlycases100stepsfixedLM.001 reducegeneLOGmeanerrors from4.3-4.75 to.000119/.001533/.000149/.000308;massrelative5.47e-6/1.14e-4/6.43e-6/1.20e-5. Allfail strict1e-5jointgate. Necessarybounds pass,feasibilityunresolved. Fourcritics suggestadaptive damping;oneasks500moresteps. Nofuturedata/benchmark/reward.",
+      "constraints": "Frozen100steps,locked support/sameinitialperturbations and1e-5tolerances. Newnumericaldesignpredeclared beforeexecution; oldresults retained. No claimforecastgain or mathematicalinfeasibility."
+    },
+    "questions": {
+      "next": {
+        "type": "choice",
+        "instructions": "Select nextbounded remedy withoutlooseninggates.",
+        "criteria": {
+          "adaptive_lm_matched100": "Predeclare100step adaptiveLM,initial.001,successfulstep*.3floor1e-9,rejectedstep*10ceiling1e3,unchangedpositivebackoffs/scaling. Reruncontrols thensamecurrentcases; numericaldevelopment only.",
+          "longer_fixed_damping": "IncreasefixedLMbudgetto600steps withoutnewalgorithm; strongercomputeclaimnotcertified.",
+          "abandon_constraint_branch": "Keepcurrentfailure andmove to distinctpopulationmethod withouttestingadaptiveLM."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 742,
+    "output_tokens": 60
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "next": {
+      "choice": "adaptive_lm_matched100",
+      "confidence": 0.99
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}

@@ -3,7 +3,7 @@ import numpy as np
 from joint_margin_solver import solve, residuals, joint_step
 
 
-def main():
+def main(adaptive=False):
     reference=np.array([[.4,1.2,0.],[1.1,.7,0.],[.6,.9,0.]])
     support=reference>0;n,g=reference.shape
     mean=reference.mean(0);mass=np.expm1(reference).sum(1)
@@ -22,16 +22,16 @@ def main():
     expected=-jacobian.T@np.linalg.solve(jacobian@jacobian.T+damping*np.eye(g+n),np.r_[column,row])
     actual=joint_step(point,support,column,row,ms,rs,damping)
     np.testing.assert_allclose(actual[support],expected,rtol=1e-7,atol=1e-9)
-    result,audit=solve(reference,reference)
+    result,audit=solve(reference,reference,adaptive=adaptive)
     assert audit['valid'] and audit['iterations']==0
-    result,audit=solve(point,reference)
+    result,audit=solve(point,reference,adaptive=adaptive)
     assert audit['valid'],audit
     np.testing.assert_allclose(result.mean(0),mean,atol=1e-5)
     np.testing.assert_allclose(np.expm1(result).sum(1),mass,rtol=1e-5)
     assert np.array_equal(result>0,support)
-    _,audit=solve(np.array([[1.],[0.]]),np.ones((2,1)))
+    _,audit=solve(np.array([[1.],[0.]]),np.ones((2,1)),adaptive=adaptive)
     assert not audit['valid'] and 'contradiction' in audit['reason']
-    _,audit=solve(point,reference,iterations=0)
+    _,audit=solve(point,reference,iterations=0,adaptive=adaptive)
     assert not audit['valid']
     print('Joint solver controls passed: Jacobian finite differences, Schur/dense equivalence, identity, feasible perturbation, support contradiction, zero-budget failure.')
 

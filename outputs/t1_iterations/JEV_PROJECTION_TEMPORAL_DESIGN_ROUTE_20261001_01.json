@@ -1,0 +1,37 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "ceb6448c5cca22b9b6fb92a280174b6640d925f739ab02b5d2f9504f25c4b569",
+  "attempts": 1,
+  "payload_bytes": 1697,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "purpose": "Freeze next biological temporaltest after current-only adaptiveprojection success.",
+      "evidence": "All4currentCMstresscases converge7steps underunchanged100step/1e-5bothgates;Jacobian/Schur/feasible/impossiblecontrols pass. MarginsnotDErank/distributionproof. Four specialistsrequest matchedcopy/anchor/uncorrectedCM/projectedCM fullpanel tests,explicitfuturemaskfeasibility. EarlierCM.25 scoresfailednewcaptures.",
+      "constraints": "Fourexistingcapture-excluded conditions (stages8->9 and8.25->9.25,largest/secondlargestcapturechoices) aredevelopment,not4independentfolds. Reconstructsamepast-onlyrefits/donors,targetsplit/calibrationseed andverifycontrolhashes. ProjectonlyCM predictedmatrix to no-offsetANCHORFORECAST per-geneLOGmeans/rowRAWmasses,othercells/genesprotected. No futuretruthfit. Freezeallpredictions beforetargetread. Originalfull32285panel andreadinessgate unchanged. No extra rewardfor replaycontrols; onlynewprojectedcandidateeligible whenallvalid."
+    },
+    "questions": {
+      "support_policy": {
+        "type": "choice",
+        "instructions": "Choose prospective handling of futureforecast-mask infeasibility withouthiddenfallback.",
+        "criteria": {
+          "strict_invalid_no_fallback": "KeepuncorrectedCMpost-switch support fixed. Necessarycontradiction/nonconvergence marksprojectedcandidateinvalid withmissingraw4/skills4; stillscorecopy/anchor/uncorrectedcontrols. No restorationorsupporttuning;recordallfailedcases.",
+          "support_restoration_first": "Beforeprojectionrestore entiregeneswithcontradictorysupport toanchor,declareandcompare matchedrestoredcontrol; changesmechanism/extraablation.",
+          "relax_margins": "Loosen1e-5gates untilfutureforecasts pass,thenclaimprojectionworks."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 810,
+    "output_tokens": 57
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "support_policy": {
+      "choice": "strict_invalid_no_fallback",
+      "confidence": 1.0
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}

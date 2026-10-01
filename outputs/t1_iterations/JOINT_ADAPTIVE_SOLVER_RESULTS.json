@@ -1,0 +1,218 @@
+{
+  "status": "completed",
+  "plan": {
+    "created_utc": "2026-10-01T10:43:28.018972+00:00",
+    "code_sha256": "3d7f8ffdfd2796cf59392298049032a6f2742bfe2b87c1197c67db551842fc7e",
+    "solver_sha256": "fa394deb7d69af55c580bebd2fbd26a01a2139568399c15512652f68346d78b1",
+    "controls_sha256": "df307b0afa70d9449fb54138bbb56ec06e8db6e34df76794066191823ad1f751",
+    "predeclaration_sha256": "55e1bc0495fc3f7f512610d26a150bce244c55a6f787a5c3c7a5d75fd129817a",
+    "prepared_report_sha256": "1acd8a635f76c9f9ac89a1186f116db91309b007f448a8d11ec612627ab5bca4",
+    "panel_sha256": "2aeae4cd284933956242bbc9c5ab4f565c1d2acc7cc3fd3037977e4bce8be4bf",
+    "route_sha256": "8f0cbeede38fe33930ecccbf13a3a7ac2c9c5a476e93d20ac696c210de1f00a0",
+    "observations": [
+      [
+        8.0,
+        "16"
+      ],
+      [
+        8.0,
+        "33"
+      ],
+      [
+        8.25,
+        "25"
+      ],
+      [
+        8.25,
+        "24"
+      ]
+    ],
+    "seed": 20260928,
+    "alpha": 0.25,
+    "iterations": 100,
+    "mean_tolerance": 1e-05,
+    "raw_mass_relative_tolerance": 1e-05,
+    "support": "CM current expression only, mapped genes with >=2 positives in heldcapture; unsupported genes unchanged. Lock post-switch support; explicit infeasibility, never fallback counted as success.",
+    "method": "Current-only synthetic odds perturbation: Jeffreys current-CM empirical q plus .25*(logit held-q minus logit othercapture-q). Systematic switches; added values use current-held conditional-positive log means. Joint scaled log-gene-mean/raw-row-mass residuals; analytic Schur-cell Gauss-Newton, damping.001, fixed positivity-preserving backoffs1,.5,.25,.125,.0625,.03125 and floor1e-10. No variable-sized dense matrix.",
+    "scope": "Numerical feasibility of joint constraints on currentobservations only, not CNFforecast,temporalvalidation,DErankguarantee,officialscore or reward. Entirely stages<=8.25. No future expression or future-score-driven fitting. No independent embryo identity.",
+    "decision": "Proceed to predeclared temporal scoring only if all4 observation cases converge with finite nonnegative locked-support outputs; failure retains residuals and does not exhaust other structural methods."
+  },
+  "results": [
+    {
+      "cutoff": 8.0,
+      "held_capture": "16",
+      "current_cm_cells": 63,
+      "source_cm_cells": 135,
+      "mapped_genes": 26775,
+      "added_detections": 5005,
+      "removed_detections": 4022,
+      "finite_nonnegative": true,
+      "projection": {
+        "valid": true,
+        "iterations": 7,
+        "history": [
+          {
+            "step": 0,
+            "objective": 64.15379949481063,
+            "damping": 0.001,
+            "max_gene_log_mean_error": 0.13828926385487428,
+            "max_row_raw_mass_relative_error": 0.0084324325184711
+          },
+          {
+            "step": 1,
+            "objective": 0.011028267361794892,
+            "damping": 0.0003,
+            "max_gene_log_mean_error": 0.03014087750819483,
+            "max_row_raw_mass_relative_error": 0.0031884065773961257
+          },
+          {
+            "step": 7,
+            "objective": 2.9342747874007524e-14,
+            "damping": 2.1869999999999994e-07,
+            "max_gene_log_mean_error": 3.044273277907905e-07,
+            "max_row_raw_mass_relative_error": 1.4072447893160143e-08
+          }
+        ],
+        "support_preserved": true,
+        "solver": "Structured damped Gauss-Newton",
+        "adaptive_damping": true,
+        "largest_dense_square_dimension": 63
+      },
+      "rows_sha256": "65cb865adfa6574e668e42a6023aa4c3ecd8a7c7b62de6fc308d7e90c87ad79a"
+    },
+    {
+      "cutoff": 8.0,
+      "held_capture": "33",
+      "current_cm_cells": 44,
+      "source_cm_cells": 154,
+      "mapped_genes": 26775,
+      "added_detections": 2116,
+      "removed_detections": 3300,
+      "finite_nonnegative": true,
+      "projection": {
+        "valid": true,
+        "iterations": 7,
+        "history": [
+          {
+            "step": 0,
+            "objective": 64.36110207963655,
+            "damping": 0.001,
+            "max_gene_log_mean_error": 0.1353621807965366,
+            "max_row_raw_mass_relative_error": 0.019492232409365564
+          },
+          {
+            "step": 1,
+            "objective": 0.009595913915616119,
+            "damping": 0.0003,
+            "max_gene_log_mean_error": 0.07574595031926723,
+            "max_row_raw_mass_relative_error": 0.005749016166852006
+          },
+          {
+            "step": 7,
+            "objective": 8.212135929710927e-12,
+            "damping": 2.1869999999999994e-07,
+            "max_gene_log_mean_error": 4.164873018019932e-06,
+            "max_row_raw_mass_relative_error": 3.2209831696654076e-07
+          }
+        ],
+        "support_preserved": true,
+        "solver": "Structured damped Gauss-Newton",
+        "adaptive_damping": true,
+        "largest_dense_square_dimension": 44
+      },
+      "rows_sha256": "f17142421ec4127121b78c5e3811935b0608ea56e4295d627471a681e31f2bea"
+    },
+    {
+      "cutoff": 8.25,
+      "held_capture": "25",
+      "current_cm_cells": 130,
+      "source_cm_cells": 215,
+      "mapped_genes": 26775,
+      "added_detections": 3552,
+      "removed_detections": 9012,
+      "finite_nonnegative": true,
+      "projection": {
+        "valid": true,
+        "iterations": 7,
+        "history": [
+          {
+            "step": 0,
+            "objective": 23.59125107956015,
+            "damping": 0.001,
+            "max_gene_log_mean_error": 0.08966468847714948,
+            "max_row_raw_mass_relative_error": 0.018288679775233043
+          },
+          {
+            "step": 1,
+            "objective": 0.021781438399004472,
+            "damping": 0.0003,
+            "max_gene_log_mean_error": 0.02780652320365773,
+            "max_row_raw_mass_relative_error": 0.0026630731184041703
+          },
+          {
+            "step": 7,
+            "objective": 1.1268249764985384e-13,
+            "damping": 2.1869999999999994e-07,
+            "max_gene_log_mean_error": 3.69444771664007e-07,
+            "max_row_raw_mass_relative_error": 1.604162525970953e-08
+          }
+        ],
+        "support_preserved": true,
+        "solver": "Structured damped Gauss-Newton",
+        "adaptive_damping": true,
+        "largest_dense_square_dimension": 130
+      },
+      "rows_sha256": "ac68830a65bd328216b6165551cdbaf22340419c59860249213a48d9e5d679f6"
+    },
+    {
+      "cutoff": 8.25,
+      "held_capture": "24",
+      "current_cm_cells": 134,
+      "source_cm_cells": 211,
+      "mapped_genes": 26775,
+      "added_detections": 3356,
+      "removed_detections": 10269,
+      "finite_nonnegative": true,
+      "projection": {
+        "valid": true,
+        "iterations": 7,
+        "history": [
+          {
+            "step": 0,
+            "objective": 24.39481940301986,
+            "damping": 0.001,
+            "max_gene_log_mean_error": 0.07474337051163848,
+            "max_row_raw_mass_relative_error": 0.018723000489111474
+          },
+          {
+            "step": 1,
+            "objective": 0.02249763487631857,
+            "damping": 0.0003,
+            "max_gene_log_mean_error": 0.02904680235093071,
+            "max_row_raw_mass_relative_error": 0.0027555946767358263
+          },
+          {
+            "step": 7,
+            "objective": 3.7094415057569737e-13,
+            "damping": 2.1869999999999994e-07,
+            "max_gene_log_mean_error": 7.037309792679025e-07,
+            "max_row_raw_mass_relative_error": 2.774970802263547e-08
+          }
+        ],
+        "support_preserved": true,
+        "solver": "Structured damped Gauss-Newton",
+        "adaptive_damping": true,
+        "largest_dense_square_dimension": 134
+      },
+      "rows_sha256": "9af5b6849207cb3501f9463c9acc95b77f14bf1d18c64efb069c07dbcd0aff31"
+    }
+  ],
+  "all_cases_viable": true,
+  "official_score": null,
+  "headline_score": null,
+  "raw_metrics": null,
+  "skills": null,
+  "reward_delta": 0,
+  "plan_sha256": "9f784420638f2cf610b14fc2ccbfefb692c4584bf4b91198ca208166ce372feb",
+  "report_sha256": "da2d0af16d186e3e72b446b9ec8f2e9dadf52532c855c47cd0ee10c018177dde"
+}

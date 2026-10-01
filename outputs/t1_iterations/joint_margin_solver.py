@@ -25,7 +25,7 @@ def joint_step(value, support, column, row, mean_scale, mass_scale, damping):
 
 
 def solve(candidate, reference, iterations=100, mean_tolerance=1e-5, mass_tolerance=1e-5,
-          damping=.001, backoffs=(1.,.5,.25,.125,.0625,.03125), positivity_floor=1e-10):
+          damping=.001, backoffs=(1.,.5,.25,.125,.0625,.03125), positivity_floor=1e-10, adaptive=False):
     candidate=np.asarray(candidate,float);reference=np.asarray(reference,float)
     bounds=necessary_bounds(candidate,reference)
     support=candidate>0
@@ -40,11 +40,11 @@ def solve(candidate, reference, iterations=100, mean_tolerance=1e-5, mass_tolera
         with np.errstate(over='ignore'):
             mass_error=float(np.max(np.abs(np.expm1(value).sum(1)-target_mass)/mass_scale))
         if step in [0,1,10,25,50,75,iterations] or (mean_error<=mean_tolerance and mass_error<=mass_tolerance):
-            history.append({'step':step,'objective':objective,'max_gene_log_mean_error':mean_error,
+            history.append({'step':step,'objective':objective,'damping':damping,'max_gene_log_mean_error':mean_error,
                             'max_row_raw_mass_relative_error':mass_error})
         if np.isfinite(objective) and mean_error<=mean_tolerance and mass_error<=mass_tolerance:
             return value,{'valid':True,'iterations':step,'history':history,'support_preserved':bool(np.array_equal(value>0,support)),
-                          'solver':'Structured damped Gauss-Newton','largest_dense_square_dimension':len(value)}
+                          'solver':'Structured damped Gauss-Newton','adaptive_damping':adaptive,'largest_dense_square_dimension':len(value)}
         if step==iterations:break
         if not np.isfinite(objective):reason='Nonfinite residual';break
         try:
@@ -58,6 +58,12 @@ def solve(candidate, reference, iterations=100, mean_tolerance=1e-5, mass_tolera
             _,_,next_objective=residuals(proposed,target_mean,target_mass,mean_scale,mass_scale)
             if np.isfinite(next_objective) and next_objective<objective:
                 value=proposed;accepted=True;break
-        if not accepted:reason='No finite decreasing positivity-preserving step';break
+        if accepted and adaptive:
+            damping=max(damping*.3,1e-9)
+        if not accepted:
+            if adaptive and damping<1e3:
+                damping=min(damping*10.,1e3)
+                continue
+            reason='No finite decreasing positivity-preserving step';break
     return value,{'valid':False,'reason':reason,'iterations':step,'history':history,'support_preserved':bool(np.array_equal(value>0,support)),
-                  'solver':'Structured damped Gauss-Newton','largest_dense_square_dimension':len(value)}
+                  'solver':'Structured damped Gauss-Newton','adaptive_damping':adaptive,'largest_dense_square_dimension':len(value)}

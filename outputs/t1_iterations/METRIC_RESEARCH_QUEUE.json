@@ -6173,17 +6173,44 @@
     },
     {
       "id": "structured_joint_margin_solver",
-      "status": "running",
+      "status": "completed_nonconverged",
       "research_family_exhausted": false,
       "plan": "NEXT_JOINT_SOLVER_EXPERIMENT.json",
       "metrics_available": false,
-      "next_action": "Run registered joint_margin_solver current-only fourcase audit after passed Jacobian finite-difference,Schur-vs-dense tinycontrol,identity,feasibleperturbation,supportcontradiction andzero-budget controls. Fixed100iterations/two1e-5tolerances/locked support/Ddisk2threads; no variable-sized dense Jacobian. Finish diagnostics and four metric specialists, no benchmark/reward. Only if allcasesconverge may new temporaltest be predeclared; originalgate remains unmet.",
+      "next_action": "Finish registered joint_adaptive_solver observation-only audit, same100step budget/locked support/two1e-5tolerances; adaptive LMaccepted*.3/rejected*10floor1e-9ceiling1e3. Bothfixed/adaptive sixcontrols passed; fixedsolver stillinvalidall4cases despitelarge numericalimprovement. Four metric specialists aftercompletion with unavailablebenchmark fields; no reward. Only aftervalidatedallcases may matchedtemporaltests be separatelypredeclared; nofuturefit orofficialupload.",
       "implementation": [
         "joint_margin_solver.py",
         "joint_margin_solver_audit.py",
         "test_joint_margin_solver.py"
       ],
-      "run": "joint_margin_solver_01"
+      "run": "joint_margin_solver_01",
+      "report": "JOINT_MARGIN_SOLVER_RESULTS.json",
+      "report_sha256": "dc9a64fba1de1a55b99f63d7fa3c88f2dfa5593597eaaeb822e2bdb6ce2dcd8d",
+      "critique": "METRIC_CRITIQUES_JOINT_SOLVER_20261001.md"
+    },
+    {
+      "id": "structured_adaptive_joint_margin_solver",
+      "status": "completed_numerically_viable",
+      "research_family_exhausted": false,
+      "plan": "NEXT_JOINT_ADAPTIVE_EXPERIMENT.json",
+      "implementation": [
+        "joint_margin_solver.py",
+        "joint_adaptive_solver_audit.py",
+        "test_joint_margin_solver.py"
+      ],
+      "run": "joint_adaptive_solver_01",
+      "metrics_available": false,
+      "next_action": "Implement/register predeclared CM mean/mass projection full-panel temporaltest per NEXT_PROJECTION_TEMPORAL_EXPERIMENT.json. Fourcapture-excluded conditions(two reusedstagefolds), verifiedarchivedmodels/donors/controlhashes,copy/anchor/uncorrectedCM.25/projectedCM.25. ProjectonlyCM toANCHORFORECAST LOGgene means/RAWrowmasses,lockeduncorrected mask,adaptive100steps/1e-5bothchecks postfloat32,finite/nonnegative/covguard. Contradiction/nonconvergence invalid withnullmetrics,no fallback orsupportrestoration. Freezeforecasts beforetruthread,unchanged32285scoring/calibration. Rewardonlynewvalidprojectedcandidate; fullscoreledger andfour specialists afterbatch. Numericaldevelopment success isnotforecast/officialscore; originalgateunmet.",
+      "report": "JOINT_ADAPTIVE_SOLVER_RESULTS.json",
+      "report_sha256": "da2d0af16d186e3e72b446b9ec8f2e9dadf52532c855c47cd0ee10c018177dde",
+      "critique": "METRIC_CRITIQUES_JOINT_ADAPTIVE_20261001.md"
+    },
+    {
+      "id": "cm_mean_mass_projection_temporal",
+      "status": "predeclared_pending_implementation",
+      "research_family_exhausted": false,
+      "plan": "NEXT_PROJECTION_TEMPORAL_EXPERIMENT.json",
+      "next_action": "Implement/register predeclared CM mean/mass projection full-panel temporaltest per NEXT_PROJECTION_TEMPORAL_EXPERIMENT.json. Fourcapture-excluded conditions(two reusedstagefolds), verifiedarchivedmodels/donors/controlhashes,copy/anchor/uncorrectedCM.25/projectedCM.25. ProjectonlyCM toANCHORFORECAST LOGgene means/RAWrowmasses,lockeduncorrected mask,adaptive100steps/1e-5bothchecks postfloat32,finite/nonnegative/covguard. Contradiction/nonconvergence invalid withnullmetrics,no fallback orsupportrestoration. Freezeforecasts beforetruthread,unchanged32285scoring/calibration. Rewardonlynewvalidprojectedcandidate; fullscoreledger andfour specialists afterbatch. Numericaldevelopment success isnotforecast/officialscore; originalgateunmet."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",

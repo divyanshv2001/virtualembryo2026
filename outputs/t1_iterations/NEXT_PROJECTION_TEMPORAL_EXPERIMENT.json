@@ -1,0 +1,52 @@
+{
+  "status": "predeclared_pending_implementation",
+  "run": "cm_mean_mass_projection_fullpanel_01",
+  "candidates": [
+    "copy",
+    "anchor_unshrunk",
+    "cm_025_replay",
+    "cm_projected_025"
+  ],
+  "conditions": [
+    {
+      "archive": "cm_capture_calibration_fullpanel_01",
+      "cutoff": 8.0,
+      "target": 9.0,
+      "held_capture": "16"
+    },
+    {
+      "archive": "cm_capture_replication_fullpanel_01",
+      "cutoff": 8.0,
+      "target": 9.0,
+      "held_capture": "33"
+    },
+    {
+      "archive": "cm_capture_calibration_fullpanel_01",
+      "cutoff": 8.25,
+      "target": 9.25,
+      "held_capture": "25"
+    },
+    {
+      "archive": "cm_capture_replication_fullpanel_01",
+      "cutoff": 8.25,
+      "target": 9.25,
+      "held_capture": "24"
+    }
+  ],
+  "seed": 20260928,
+  "truth_count": 1000,
+  "ceiling_count": 1000,
+  "minimum_scores": 12,
+  "maximum_scores": 16,
+  "method": "Reconstruct and verify past/capture-excluded archived learners and exact donor/control hashes. CM.25 detectionoffset is matched replay. Project only predictedCM mappedgene block to no-offset anchor FORECAST LOGgene means/RAWrowmasses with locked corrected support. Othercells and protectedgenes unchanged. Future truth never fits or sets constraints.",
+  "solver": "joint_margin_solver.solve(adaptive=True),fixed100steps including rejections,initial.001,accept*.3floor1e-9,reject*10ceiling1e3,existingpositivebackoffs/floor",
+  "mean_tolerance": 1e-05,
+  "raw_mass_relative_tolerance": 1e-05,
+  "post_cast_validation": "Recheck both margins afterfloat32cast,finite/nonnegative,locked support,protectedrows/genes exact and existingcovguard<=.4 relativeto donor guardpanel. Rejectviolations, never backoff/fallback counted asprojection success.",
+  "invalid_policy": "Necessary contradiction or solver/cast/guard failure retained explicitly,raw4/skills4/local_score null,calibration_valid false; stillscore allmatchedcontrols. No support restoration or tolerance relaxation.",
+  "reward": "Only newprojectedcandidate acrossall4validconditions paired withanchor eligible; replayedcontrols no new reward. Invalid/proxy0. Original +1/-10 cap100 separatepolicy unchanged.",
+  "scope": "Fourcaptureconditions covertwo reused one-day temporalstages,notfourindependentfolds orindependentembryos. Source development only,noofficialupload.",
+  "decision": "Onlyadvance if allconditionsvalid and eachheadlinebeats copy/anchor whilepreservingallfouranchorskills. Original >72 mean/lower-tail64replicate AND temporalreadinessgate unchanged.",
+  "predeclared_before_execution": true,
+  "jev_route": "JEV_PROJECTION_TEMPORAL_DESIGN_ROUTE_20261001_01.json"
+}

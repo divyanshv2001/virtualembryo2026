@@ -1,0 +1,302 @@
+{
+  "status": "completed",
+  "plan": {
+    "created_utc": "2026-10-01T10:38:06.268736+00:00",
+    "code_sha256": "5ed51ba1ee22e35f2642708d706fc3844d6c67e94ea83c5a0b6468e089656419",
+    "solver_sha256": "f9b45a4e81cb13ef7c86630da8bbdf760e092360e91e90072e9abe59acfa983d",
+    "controls_sha256": "178c6476d0969dbe367eb68d3389b2f996921c3eda85ba9cf28c19d562a765f8",
+    "predeclaration_sha256": "54b4b538f6e655aaedc7901b8563c9bc6dcf7f17282936c8ce40f93efdb06bd1",
+    "prepared_report_sha256": "1acd8a635f76c9f9ac89a1186f116db91309b007f448a8d11ec612627ab5bca4",
+    "panel_sha256": "2aeae4cd284933956242bbc9c5ab4f565c1d2acc7cc3fd3037977e4bce8be4bf",
+    "route_sha256": "e0355e856b2c66d47604e38be1e1487887060adca2d5792b9b246685278c5d6a",
+    "observations": [
+      [
+        8.0,
+        "16"
+      ],
+      [
+        8.0,
+        "33"
+      ],
+      [
+        8.25,
+        "25"
+      ],
+      [
+        8.25,
+        "24"
+      ]
+    ],
+    "seed": 20260928,
+    "alpha": 0.25,
+    "iterations": 100,
+    "mean_tolerance": 1e-05,
+    "raw_mass_relative_tolerance": 1e-05,
+    "support": "CM current expression only, mapped genes with >=2 positives in heldcapture; unsupported genes unchanged. Lock post-switch support; explicit infeasibility, never fallback counted as success.",
+    "method": "Current-only synthetic odds perturbation: Jeffreys current-CM empirical q plus .25*(logit held-q minus logit othercapture-q). Systematic switches; added values use current-held conditional-positive log means. Joint scaled log-gene-mean/raw-row-mass residuals; analytic Schur-cell Gauss-Newton, damping.001, fixed positivity-preserving backoffs1,.5,.25,.125,.0625,.03125 and floor1e-10. No variable-sized dense matrix.",
+    "scope": "Numerical feasibility of joint constraints on currentobservations only, not CNFforecast,temporalvalidation,DErankguarantee,officialscore or reward. Entirely stages<=8.25. No future expression or future-score-driven fitting. No independent embryo identity.",
+    "decision": "Proceed to predeclared temporal scoring only if all4 observation cases converge with finite nonnegative locked-support outputs; failure retains residuals and does not exhaust other structural methods."
+  },
+  "results": [
+    {
+      "cutoff": 8.0,
+      "held_capture": "16",
+      "current_cm_cells": 63,
+      "source_cm_cells": 135,
+      "mapped_genes": 26775,
+      "added_detections": 5005,
+      "removed_detections": 4022,
+      "finite_nonnegative": true,
+      "projection": {
+        "valid": false,
+        "reason": "Iteration budget exhausted; feasibility unresolved",
+        "iterations": 100,
+        "history": [
+          {
+            "step": 0,
+            "objective": 64.15379949481063,
+            "max_gene_log_mean_error": 0.13828926385487428,
+            "max_row_raw_mass_relative_error": 0.0084324325184711
+          },
+          {
+            "step": 1,
+            "objective": 0.011028267361794892,
+            "max_gene_log_mean_error": 0.03014087750819483,
+            "max_row_raw_mass_relative_error": 0.0031884065773961257
+          },
+          {
+            "step": 10,
+            "objective": 5.467753811550411e-05,
+            "max_gene_log_mean_error": 0.013156559351313213,
+            "max_row_raw_mass_relative_error": 0.0006089634196071934
+          },
+          {
+            "step": 25,
+            "objective": 1.0664220298463873e-05,
+            "max_gene_log_mean_error": 0.005834715196711748,
+            "max_row_raw_mass_relative_error": 0.0002684532815176337
+          },
+          {
+            "step": 50,
+            "objective": 7.728055852481231e-07,
+            "max_gene_log_mean_error": 0.0015691011050922299,
+            "max_row_raw_mass_relative_error": 7.22246324302963e-05
+          },
+          {
+            "step": 75,
+            "objective": 5.827451385105723e-08,
+            "max_gene_log_mean_error": 0.000430779309059659,
+            "max_row_raw_mass_relative_error": 1.982995469888516e-05
+          },
+          {
+            "step": 100,
+            "objective": 4.441279313679835e-09,
+            "max_gene_log_mean_error": 0.00011891683638687311,
+            "max_row_raw_mass_relative_error": 5.474164574798192e-06
+          }
+        ],
+        "support_preserved": true,
+        "solver": "Structured damped Gauss-Newton",
+        "largest_dense_square_dimension": 63
+      },
+      "rows_sha256": "65cb865adfa6574e668e42a6023aa4c3ecd8a7c7b62de6fc308d7e90c87ad79a"
+    },
+    {
+      "cutoff": 8.0,
+      "held_capture": "33",
+      "current_cm_cells": 44,
+      "source_cm_cells": 154,
+      "mapped_genes": 26775,
+      "added_detections": 2116,
+      "removed_detections": 3300,
+      "finite_nonnegative": true,
+      "projection": {
+        "valid": false,
+        "reason": "Iteration budget exhausted; feasibility unresolved",
+        "iterations": 100,
+        "history": [
+          {
+            "step": 0,
+            "objective": 64.36110207963655,
+            "max_gene_log_mean_error": 0.1353621807965366,
+            "max_row_raw_mass_relative_error": 0.019492232409365564
+          },
+          {
+            "step": 1,
+            "objective": 0.009595913915616119,
+            "max_gene_log_mean_error": 0.07574595031926723,
+            "max_row_raw_mass_relative_error": 0.005749016166852006
+          },
+          {
+            "step": 10,
+            "objective": 0.0007496020891724631,
+            "max_gene_log_mean_error": 0.03974123038269095,
+            "max_row_raw_mass_relative_error": 0.0030242698622979956
+          },
+          {
+            "step": 25,
+            "objective": 0.00021226611314902408,
+            "max_gene_log_mean_error": 0.021309360342365302,
+            "max_row_raw_mass_relative_error": 0.0016094344600205413
+          },
+          {
+            "step": 50,
+            "objective": 3.320589658869243e-05,
+            "max_gene_log_mean_error": 0.008492283491885466,
+            "max_row_raw_mass_relative_error": 0.0006362936626652756
+          },
+          {
+            "step": 75,
+            "objective": 5.838828327608737e-06,
+            "max_gene_log_mean_error": 0.0035723711633819377,
+            "max_row_raw_mass_relative_error": 0.00026674064116397007
+          },
+          {
+            "step": 100,
+            "objective": 1.0729425453748159e-06,
+            "max_gene_log_mean_error": 0.001533442117195527,
+            "max_row_raw_mass_relative_error": 0.00011432849224820466
+          }
+        ],
+        "support_preserved": true,
+        "solver": "Structured damped Gauss-Newton",
+        "largest_dense_square_dimension": 44
+      },
+      "rows_sha256": "f17142421ec4127121b78c5e3811935b0608ea56e4295d627471a681e31f2bea"
+    },
+    {
+      "cutoff": 8.25,
+      "held_capture": "25",
+      "current_cm_cells": 130,
+      "source_cm_cells": 215,
+      "mapped_genes": 26775,
+      "added_detections": 3552,
+      "removed_detections": 9012,
+      "finite_nonnegative": true,
+      "projection": {
+        "valid": false,
+        "reason": "Iteration budget exhausted; feasibility unresolved",
+        "iterations": 100,
+        "history": [
+          {
+            "step": 0,
+            "objective": 23.59125107956015,
+            "max_gene_log_mean_error": 0.08966468847714948,
+            "max_row_raw_mass_relative_error": 0.018288679775233043
+          },
+          {
+            "step": 1,
+            "objective": 0.021781438399004472,
+            "max_gene_log_mean_error": 0.02780652320365773,
+            "max_row_raw_mass_relative_error": 0.0026630731184041703
+          },
+          {
+            "step": 10,
+            "objective": 0.00016897702661885605,
+            "max_gene_log_mean_error": 0.014079125665045211,
+            "max_row_raw_mass_relative_error": 0.0006236757632292256
+          },
+          {
+            "step": 25,
+            "objective": 3.459531784410781e-05,
+            "max_gene_log_mean_error": 0.006542998071289219,
+            "max_row_raw_mass_relative_error": 0.00028093103760660934
+          },
+          {
+            "step": 50,
+            "objective": 2.707765327159835e-06,
+            "max_gene_log_mean_error": 0.0018231087098934395,
+            "max_row_raw_mass_relative_error": 7.856873662984578e-05
+          },
+          {
+            "step": 75,
+            "objective": 2.2048318326687348e-07,
+            "max_gene_log_mean_error": 0.0005196123386363993,
+            "max_row_raw_mass_relative_error": 2.2417839079921798e-05
+          },
+          {
+            "step": 100,
+            "objective": 1.8152277939689096e-08,
+            "max_gene_log_mean_error": 0.00014904323723197166,
+            "max_row_raw_mass_relative_error": 6.432215809409394e-06
+          }
+        ],
+        "support_preserved": true,
+        "solver": "Structured damped Gauss-Newton",
+        "largest_dense_square_dimension": 130
+      },
+      "rows_sha256": "ac68830a65bd328216b6165551cdbaf22340419c59860249213a48d9e5d679f6"
+    },
+    {
+      "cutoff": 8.25,
+      "held_capture": "24",
+      "current_cm_cells": 134,
+      "source_cm_cells": 211,
+      "mapped_genes": 26775,
+      "added_detections": 3356,
+      "removed_detections": 10269,
+      "finite_nonnegative": true,
+      "projection": {
+        "valid": false,
+        "reason": "Iteration budget exhausted; feasibility unresolved",
+        "iterations": 100,
+        "history": [
+          {
+            "step": 0,
+            "objective": 24.39481940301986,
+            "max_gene_log_mean_error": 0.07474337051163848,
+            "max_row_raw_mass_relative_error": 0.018723000489111474
+          },
+          {
+            "step": 1,
+            "objective": 0.02249763487631857,
+            "max_gene_log_mean_error": 0.02904680235093071,
+            "max_row_raw_mass_relative_error": 0.0027555946767358263
+          },
+          {
+            "step": 10,
+            "objective": 0.00019986295843629084,
+            "max_gene_log_mean_error": 0.01601188412552368,
+            "max_row_raw_mass_relative_error": 0.0006447596642350657
+          },
+          {
+            "step": 25,
+            "objective": 4.980157854834656e-05,
+            "max_gene_log_mean_error": 0.008248779929897587,
+            "max_row_raw_mass_relative_error": 0.0003205524578898376
+          },
+          {
+            "step": 50,
+            "objective": 5.39578937435825e-06,
+            "max_gene_log_mean_error": 0.0027060274438337473,
+            "max_row_raw_mass_relative_error": 0.00010544002737643592
+          },
+          {
+            "step": 75,
+            "objective": 6.106871615440087e-07,
+            "max_gene_log_mean_error": 0.0009092784064614889,
+            "max_row_raw_mass_relative_error": 3.546424334107992e-05
+          },
+          {
+            "step": 100,
+            "objective": 7.011080509099362e-08,
+            "max_gene_log_mean_error": 0.0003079710253715007,
+            "max_row_raw_mass_relative_error": 1.2015478860931813e-05
+          }
+        ],
+        "support_preserved": true,
+        "solver": "Structured damped Gauss-Newton",
+        "largest_dense_square_dimension": 134
+      },
+      "rows_sha256": "9af5b6849207cb3501f9463c9acc95b77f14bf1d18c64efb069c07dbcd0aff31"
+    }
+  ],
+  "all_cases_viable": false,
+  "official_score": null,
+  "headline_score": null,
+  "raw_metrics": null,
+  "skills": null,
+  "reward_delta": 0,
+  "plan_sha256": "00afb23a028657f2024faa060511f2969295bd36de0c50f0517f99f8d9d2f2e6",
+  "report_sha256": "dc9a64fba1de1a55b99f63d7fa3c88f2dfa5593597eaaeb822e2bdb6ce2dcd8d"
+}
