@@ -588,3 +588,7 @@ Playbook stale4cellpilot/QCpending text contradicted existing state:24acquired,1
 ## 2026-10-01T18:02:26.909672+00:00 — supported mean/energy preflight
 
 Implemented analytic minimum-L2 supported mean field with frozen budget attenuation, clipping and countmassrepair; numericalcontrols pass. All12 originalforecast hashes replay. Newfour forecasts guardspass (masserror<3.8e-8), butquarter bloodenergy1.02176/1.08904 budgetratios atcuts8/8.25; shrunkblood1.00464cut8.25. Neitherpassesenergybothfolds. Distancesfromblocked.402–.775 diagnosticonly. No futureexpr/newscore/reward;−790 unchanged. Four reviews saved; DE/direction fresh, MMD/CSS existingthreads afteractualagentthreadlimit; distanceguard misstatements corrected. Jev907in/60out chose deterministicrepair-aware countinterpolation/bisection, separatelypredeclared. No targetgrid; coverage/gatesopen.
+
+## 2026-10-01T18:14:23.658063+00:00 — repair-aware energy preflight passes
+
+Count-space interpolation with40-step donor-only perlineage bisection implemented/tested. All4newforecasts passenergy within frozen1e-8*max(1,budget)tolerance andallstandardguards. Masserror<=5.29e-8; meansstillmismatched. All12original+4unadjustedprojectionhashes replay. No targetexpression/newmetrics/reward;−790 unchanged, ledgerunchangeddiagnosticbatch. Fourexisting specialists reviewednewpackets due observedthreadlimit(nofreshclaim). Jev923in/57out chose8-method16forecastmatchedfullpanel separatelypredeclared; freezeallbeforeANYfuturetruthread. No targetgrid/promotion. Coverage/readinessopen.

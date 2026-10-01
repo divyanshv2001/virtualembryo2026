@@ -9,5 +9,13 @@
   "formula": "c(t)=(1-t)*expm1(donor)+t*expm1(projected), log1p after interpolation; each countcoordinate lies between endpoints, so squared logdifference fromdonor monotone in t>=0. Perlineage largest t within frozen original additive Frobenius energy using40bisection steps on[0,1]; preserve t=1 ifbudget alreadypasses. Evaluate actual emitted float32 output at trial and final endpoints. If no passing positive endpoint found, donorcopy fallback is frozen.",
   "controls": "All12 prior hashes exactreplay; both unadjusted projections hashreplay percut, blocked/copy/incumbent/additive matchedcontrols. Numericalmass/support/energy/identity controls. No different target-selected strength or retuning.",
   "acceptance": "Everylineage actualpostrepair energy<=originalbudget+1e-8*max(1,budget), finite/nonnegative, exactzero/protected/fallback invariance, countmassrelativeerror<=1e-5,globalmaxmeanchange<=.5,covariancechange<=.4. Record mean residuals and distance diagnostic only; no invented distance threshold. No promotion frompreflight.",
-  "resources": "D-onlytemporary disk cache,2threads, oneforecast/one lineagefloat64buffers;16GBRAM."
+  "resources": "D-onlytemporary disk cache,2threads, oneforecast/one lineagefloat64buffers;16GBRAM.",
+  "candidates": [
+    "copy",
+    "anchor_unshrunk",
+    "capture_quarter",
+    "capture_shrunk",
+    "blocked_quarter",
+    "blocked_shrunk"
+  ]
 }

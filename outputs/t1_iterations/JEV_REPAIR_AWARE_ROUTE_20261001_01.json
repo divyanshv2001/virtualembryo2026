@@ -1,0 +1,38 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "c705ab6b264f0cfef3de3ad3e8062425b3cf00320dc3542d006c5695e7443818",
+  "attempts": 1,
+  "payload_bytes": 1950,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "purpose": "Choose fixed evaluation scope after repair-aware energy preflight passes; no promotion.",
+      "evidence": "All4fixednewforecasts passzero/support/protected/fallback/mass/mean/covariance and perlineageenergy bothcuts8/8.25. 12originalcontrols and4unadjustedprojection hashes exactreplay. Countmasserrors<=5.29e-8. Budgettolerance1e-8*max(1,budget),40bisectionsteps evaluatedemittedfloat32. Amplitudesquarterblood.989/.958,shrunkblood1/.99765; no targetexpr/scorer/reward inpreflight.",
+      "limitations": "Genemeanrelativeerrorquarter.051-.202,shrunk.186-.505; exactmeanmatchingnotachieved. Distancefromblocked.398-.775 diagnosticonly. Prioradditive/blockedfailed2foldgate. Fourmetric specialists advise frozenfullpanel controls, metricbenefitunknown. Reuseddevelopmentfolds notindependentembryos.",
+      "constraints": "No targetstrength/refit/grid orpromotionfromguards. Existingfull32285scorer/calibration unchanged; >72mean/lower-tail64replicates+temporal gateunmet. D16GB2threads, oneforecastatime. Preserve failures/raw4skills4/splits/hashes; rewardnewcandidatesonly."
+    },
+    "questions": {
+      "next_step": {
+        "type": "choice",
+        "instructions": "Choose declared matched scope; scientificallydistinctfixedmethods, noparametertuning.",
+        "criteria": {
+          "eight_method_fullpanel": "Score2repairedcandidates and6existingcopy/incumbent/additive/blockedcontrols at2fixedfolds; replay12priorcontrol metrics/calibration/hashes; freezeallforecasts before ANYtargetexpressionread. Newcandidatehashesexactpreflight. Recordall4metrics/reward once; no promotionunlessoriginalcriteria. Failedunadjustedprojections remainpreflightdiagnostics.",
+          "ten_method_diagnostic_fullpanel": "Also score2unadjustedprojections as energy-ineligible diagnosticcontrols, explicitlycannotpromote;20forecasts vs16, extraattribution evidence but no readinessbenefit.",
+          "another_target_strength_grid": "Retuneforecastamplitudes usingfuturemetricresults, violatesfrozenplan andavoid."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 923,
+    "output_tokens": 57
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "next_step": {
+      "choice": "eight_method_fullpanel",
+      "confidence": 0.91
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}

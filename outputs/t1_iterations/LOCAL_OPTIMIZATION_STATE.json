@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T18:02:26.909672+00:00",
+  "updated_utc": "2026-10-01T18:14:23.658063+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement predeclared repair-aware count-space interpolation from donor counts to fixed projected forecast counts. Per-lineage monotone log-displacement energy permits deterministic40-step bisection for largest amplitude within original additive budget, including emitted float32 audit. Preserve mass/support/protected/fallback; no target reads/grid. Repeat original12 control hashes; audit achieved means/energy and diagnostics before separate full-panel declaration. Families/readiness open.",
+  "next_experiment": "Implement and run separately predeclared repair_aware_energy_fullpanel_01: fixed2 repaired candidates +6copy/incumbent/additive/blocked controls atcutoffs8/8.25, unchanged32285scorer/calibration. Freeze ALL16forecasts before anyfutureexpressionread; newcandidate hashes exactpreflight and12controlmetrics/hash replay. No targetstrength/refit/grid. Rewardnewunique candidates once; thenfourcritics/Jev/ledger. Originalreadiness/coverage gatesremainopen.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1294,13 +1294,13 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_SUPPORTED_ENERGY_ROUTE_20261001_01.json",
+    "record": "JEV_REPAIR_AWARE_ROUTE_20261001_01.json",
     "usage": {
-      "input_tokens": 907,
-      "output_tokens": 60
+      "input_tokens": 923,
+      "output_tokens": 57
     },
-    "choice": "repair_aware_count_interpolation",
-    "confidence": 1.0
+    "choice": "eight_method_fullpanel",
+    "confidence": 0.91
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -2178,6 +2178,24 @@
       "reused_contexts": 2,
       "resource_limitation": "agent thread limit reached",
       "review_corrections": "No distance guard waspredeclared; countmassversuslogenergy distinguished; no targetfit or promotion."
+    },
+    "repair_aware_energy_preflight_01": {
+      "status": "completed",
+      "report_sha256": "ecccdc9ac86d84047329e58c055c38f3fde2cc0b001fa64d4cce143a0ee253ff",
+      "review": "METRIC_CRITIQUES_REPAIR_AWARE_20261001.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": false,
+      "reward_delta": 0,
+      "fresh_contexts": 0,
+      "reused_contexts": 4,
+      "resource_limitation": "Observedagentthreadlimit precedingbatch;fourexisting specialists reviewed newpackets",
+      "review_corrections": "Tolerance versus exactbudget/mass distinguished. Onlytrainingpast, evaluationfutureafterfreeze. Unadjustedprojections retaineddiagnostics notscoredselectedscope."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -2463,5 +2481,26 @@
     "exact_control_forecast_replays": 12,
     "passing_candidates": [],
     "finding": "Standardguards pass butquarterfailsenergybothcuts, shrunkfailscut8.25; no score/reward."
+  },
+  "repair_aware_energy_job": {
+    "experiment": "repair_aware_energy",
+    "started_utc": "2026-10-01T18:06:37.801363+00:00",
+    "pid": 14040,
+    "script_sha256": "06cb5a4011bf7b9921eec1956ffa9df8cf9f77fca43c7c76a85fb8e624715ddb",
+    "registered_run": "private/repair_aware_energy_preflight_01",
+    "registered_report": "REPAIR_AWARE_ENERGY_PREFLIGHT_RESULTS.json",
+    "logs": "private\\harness_runs\\repair_aware_energy",
+    "status": "completed",
+    "spec": "NEXT_REPAIR_AWARE_ENERGY_PREFLIGHT.json",
+    "report": "REPAIR_AWARE_ENERGY_PREFLIGHT_RESULTS.json",
+    "report_sha256": "ecccdc9ac86d84047329e58c055c38f3fde2cc0b001fa64d4cce143a0ee253ff",
+    "exact_control_forecast_replays": 12,
+    "unadjusted_projection_replays": 4,
+    "passing_preflight_candidates": [
+      "repair_aware_capture_quarter",
+      "repair_aware_capture_shrunk"
+    ],
+    "headline_score": null,
+    "reward_delta": 0
   }
 }

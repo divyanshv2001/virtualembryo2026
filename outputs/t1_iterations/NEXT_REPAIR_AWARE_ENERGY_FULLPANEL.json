@@ -1,0 +1,23 @@
+{
+  "status": "predeclared_not_started",
+  "seed": 20260928,
+  "cutoffs": [
+    8.0,
+    8.25
+  ],
+  "candidates": [
+    "copy",
+    "anchor_unshrunk",
+    "capture_quarter",
+    "capture_shrunk",
+    "blocked_quarter",
+    "blocked_shrunk",
+    "repair_aware_capture_quarter",
+    "repair_aware_capture_shrunk"
+  ],
+  "forecast_policy": "Fixed source mean forecasts/archivedincumbent. Deterministic supported minimum-L2 field, frozenadditivebudget, clipping/countmassrepair, countinterpolation40-stepbisection. No fitting fromtargetexpr. All16forecasts frozen before ANYtruthread; exactnewpreflightsha and12priorcontrolforecast/calibration/rawmetrics/headlines replay.",
+  "scoring": "Unchanged full32285genes, existing offlinebacktest scorer/calibration25/25/30/20, originalmatchedtruth/reference/calibration partitions1500donors/2000future sample first1000truth last1000ceiling. Preserveall4raw4skills/seeds/splits/hashes/failures.",
+  "acceptance": "Originalmatchedincumbent/copy criteria atbothcuts. Feasibleforecast doesnotguaranteescorebenefit. No promotionwithoutoriginal>72mean/lower-tail64replicates andtemporalreadiness gates. Unadjustedprojections energy-ineligible preflightdiagnostics retained, notscored inthisboundedbatch.",
+  "reward": "Separate +1positivepairedmeanskill/-10tieorregression permetric,capped100,newunique2candidates once. Controlsno repeatedreward; invalid/missing0.",
+  "resources": "D-onlytemporaryforecastcache all16frozenonD then consume/close,2threads16GBRAM oneforecastatime. Neveruploadofficially."
+}

@@ -140,6 +140,11 @@
       "script": "supported_mean_energy_preflight.py",
       "run": "private/supported_mean_energy_preflight_01",
       "report": "SUPPORTED_MEAN_ENERGY_PREFLIGHT_RESULTS.json"
+    },
+    "repair_aware_energy": {
+      "script": "repair_aware_energy_preflight.py",
+      "run": "private/repair_aware_energy_preflight_01",
+      "report": "REPAIR_AWARE_ENERGY_PREFLIGHT_RESULTS.json"
     }
   }
 }
