@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": false,
+  "local_process_running": true,
   "quota_reset_evidence": {
     "limit_observed": false,
     "remaining_quota": null,
@@ -31,12 +31,14 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement/register NEW cm_anchor_support_projection_fullpanel_01 per NEXT_ANCHOR_SUPPORT_PROJECTION_EXPERIMENT.json: exact anchor support with feasible anchor witness, corrected positive values/fill missing fromanchor, zero anchorzero. Sixcontrols incl unprojectedinit and projectedanchor identity, fourconditions. Positive-value redistribution, not detection correction. Strict adaptive100/postcast1e-5/covguard; failures null. Original failed run preserved; nofuturefit.",
+  "next_experiment": "Monitor registered cm_anchor_support_projection; on completion collect full24outcomes, four specialists, Jev synthesis/selection, ledger and compact journal. Exact-anchor support tests positive redistribution only; no duplicate runs or repaired parent failure.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
-  "active_run_path": null,
+  "active_jobs": [
+    "cm_anchor_support_projection_fullpanel_01"
+  ],
+  "active_run_path": "private/cm_anchor_support_projection_fullpanel_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -2011,5 +2013,11 @@
     "invalid_conditions": 4,
     "scored_controls": 12,
     "critique": "METRIC_CRITIQUES_CM_PROJECTION_20261001.md"
+  },
+  "cm_anchor_support_projection_job": {
+    "status": "running",
+    "planned_scores": 24,
+    "registered_experiment": "cm_anchor_support_projection",
+    "integration_controls": "passed: anchor mask/fill, corrected positives, protected regions, identity, feasible projection"
   }
 }

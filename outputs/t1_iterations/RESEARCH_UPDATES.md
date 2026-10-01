@@ -488,3 +488,7 @@ Implemented and registered cm_mean_mass_projection_fullpanel_01, four capture-ex
 ## 2026-10-01 CM temporal projection completed: structural infeasibility
 
 All4projectedconditions invalid beforeoptimization: lockedcorrectedmask conflicts withanchorFORECAST margins (zero-support andcolumncapacity).12control prediction hashes andcalibration replay exact; scores/raw4/skills4 andnull4outcomes retained,scoreledger refreshed,reward0,current-482. Four specialists reviewed compactpackets; freshspawn limit observed,MMD/CSS explicitlyfreshpacket existingagents. Cached older Jevroute name collision blocked beforeAPI; originalpacket restored andnewdistinctroute used once:1719bytes639input53output,anchor_support_witness confidence.2. New separatelypredeclared exactanchor-support positive-value redistribution comparison,6candidates4conditions,feasibleanchorwitness,strictunchangedchecks. Doesnotrepairfailedrun orprovegain; softmarginfamily remainsopen. Noofficialupload.
+
+## 2026-10-01 Anchor-support temporal comparison launched
+
+Implemented separate predeclared24outcome/4condition comparison: copy,anchor,CMreplay,exactanchor-support initialization,projectedanchor identity,projectedinitialization. Past-onlyarchivedreplay,forecast-onlyconstraints,strictadaptive100/support/postcast1e-5/covarianceguard. Tested fill/mask/correctedpositives/protectedregions/identity/feasibleprojection. Registereduniqueharnesslaunch,2threads,Dcache. Cached Jevselection retained confidence.2; noadditionalroutineAPIcalls. Parentfailurepreserved; noofficialupload.
