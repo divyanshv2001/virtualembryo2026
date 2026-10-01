@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T06:56:47.917566+00:00",
+  "updated_utc": "2026-10-01T07:10:15.880345+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5998,13 +5998,28 @@
         "mmd_u",
         "variogram"
       ],
-      "status": "completed_material_mismatches_no_empirical_fidelity",
+      "status": "fullpanel_attempt_collapsed_to_persistence_fidelity_unresolved",
       "research_family_exhausted": false,
-      "next_action": "Freeze a bounded10score full-panel one-day ablation on existing sourcefolds: persistence, archived .5/.5 anchor incumbent, anchored recentpooled slope, lineageglobal slope and partialpool1000 slope. Identical1500donors/1000truth+1000ceiling, seed20260928, scorer/calibration and mappedmass safeguards. Pastfits and forecastsfrozen beforetarget read. Use fixed conservative horizon/shrinkage, no quarterdaygate requirement; development only. Freeze shrinkage.25 of one-day slope (four quarter-day steps), nonnegative anchored changes and per-donor mapped-mass repair before execution; record actual mean perturbation and any guard fallback. Do not change scorer/calibration or reinterpret proxy scores as headline.",
+      "next_action": "Implement source_slope_fullpanel_02 with predeclared shrinkage backoffs [.25,.125,.0625,0] per formula/fold, chosen solely by same past-donor mean-change<=.5/covariance<=.4/mass-validity guards before target read. Preserve each attempted alpha/diagnostic and finalforecast hash; maintain exact persistence/archivedanchor controls, unchanged1500donor/1000truth+1000ceiling/full32285scorer/calibration. Replay guards/control hashes; deduplicate identical forecasts within a panel when scoring, preserve separate outcomes. Run10evaluations, refreshledger/reward; no target tuning or threshold relaxation. Prior10score batch collapsedallslopes tocopy, so actual slope efficacy/proxy fidelity remains unresolved.",
       "hypothesis_and_limits": "Quarter-day mapped rank proxies may not predict one-day whole-distribution calibrated skills. No matched evidence yet; audit first, unchanged scorer and fullpanel controls remain mandatory.",
       "implementation": "proxy_fidelity_audit.py",
       "results_report": "PROXY_SCORER_HORIZON_AUDIT.json",
       "declared_experiment_and_result": "Code/frozenplan audit:quarterday vsone-day horizons, fixed200/200 vsBH/effectvariabletruthsets,26775mapped vs32285panel, missingnoeffectguard, allstage vs1500donor/1000truth+1000ceiling, float/ties, absentMMD/CSS50%weight, nofloor/ceiling.0exactnontrivialcandidate/split/horizonpairs; fidelityuncertified. Synthetic80x1000fixture70up/30down:corecopyDE/DCS0, proxycopyDE-.36318, notbenchmarkscore. Scorer unchanged."
+    },
+    {
+      "id": "source_slope_fullpanel_fidelity",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "status": "ten_scores_complete_all_slope_forecasts_guard_fallback",
+      "implementation": "source_slope_fullpanel.py",
+      "results_report": "SOURCE_SLOPE_FULLPANEL_RESULTS.json",
+      "research_family_exhausted": false,
+      "next_action": "Implement source_slope_fullpanel_02 with predeclared shrinkage backoffs [.25,.125,.0625,0] per formula/fold, chosen solely by same past-donor mean-change<=.5/covariance<=.4/mass-validity guards before target read. Preserve each attempted alpha/diagnostic and finalforecast hash; maintain exact persistence/archivedanchor controls, unchanged1500donor/1000truth+1000ceiling/full32285scorer/calibration. Replay guards/control hashes; deduplicate identical forecasts within a panel when scoring, preserve separate outcomes. Run10evaluations, refreshledger/reward; no target tuning or threshold relaxation. Prior10score batch collapsedallslopes tocopy, so actual slope efficacy/proxy fidelity remains unresolved.",
+      "declared_experiment_and_result": "2one-dayfolds/5forecasts=10validfullpanel scores. Exactcopy/anchor forecastSHA andall4rawmetric/headline replayverified. All3slopesonbothfolds mean-changeguardfallback tocopy50.0; anchor49.70027/51.17725. Actualslopeefficacy remainsuntested, no promotion. Ledger2895/0errors; separate reward3x-29=-87,total-167, DE+1reflectscopyfallbackvsanchor notnewbiologicalgain."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",

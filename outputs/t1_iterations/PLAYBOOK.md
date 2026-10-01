@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-01T06:56:48.058392+00:00
+Updated: 2026-10-01T07:10:16.017691+00:00
 
 Run `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_playbook.py` first. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -8,13 +8,13 @@ Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction':
 
 Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Freeze a bounded10score full-panel one-day ablation on existing sourcefolds: persistence, archived .5/.5 anchor incumbent, anchored recentpooled slope, lineageglobal slope and partialpool1000 slope. Identical1500donors/1000truth+1000ceiling, seed20260928, scorer/calibration and mappedmass safeguards. Pastfits and forecastsfrozen beforetarget read. Use fixed conservative horizon/shrinkage, no quarterdaygate requirement; development only. Freeze shrinkage.25 of one-day slope (four quarter-day steps), nonnegative anchored changes and per-donor mapped-mass repair before execution; record actual mean perturbation and any guard fallback. Do not change scorer/calibration or reinterpret proxy scores as headline.
+Next: Implement source_slope_fullpanel_02 with predeclared shrinkage backoffs [.25,.125,.0625,0] per formula/fold, chosen solely by same past-donor mean-change<=.5/covariance<=.4/mass-validity guards before target read. Preserve each attempted alpha/diagnostic and finalforecast hash; maintain exact persistence/archivedanchor controls, unchanged1500donor/1000truth+1000ceiling/full32285scorer/calibration. Replay guards/control hashes; deduplicate identical forecasts within a panel when scoring, preserve separate outcomes. Run10evaluations, refreshledger/reward; no target tuning or threshold relaxation. Prior10score batch collapsedallslopes tocopy, so actual slope efficacy/proxy fidelity remains unresolved.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in outputs\t1_submissions\formula_progress_20260930_01\official_result.json. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 
 Four metric critiques completed; consult METRIC_CRITIQUES_20261001.md when designing the next mechanism. Separate reward starts0: +1 positive paired mean skill gain / -10 tie or regression per metric, aggregate maximum100; negative balances visible. Pending/invalid/proxy0. Future unique declared experiments only; promotion gates unchanged.
 
-Current separate reward: -80. This is not a benchmark score.
+Current separate reward: -167. This is not a benchmark score.
 
 External acquisition entry point: GSE76118_WT_STAGE_MANIFEST.json. The old stage-only list is historical;127 mutants excluded,162 B6 WT controls separate,143E8.5/999E9.5 primary CD1 candidates. Expression acquired: True; pilot cells: 4; training readiness: False. QC/compatibility pending. Latest Jev actual usage: {'input_tokens': 772, 'output_tokens': 60}.
 

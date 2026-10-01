@@ -1,0 +1,584 @@
+{
+  "updated_utc": "2026-10-01T07:07:18.522819+00:00",
+  "status": "completed",
+  "summary": [
+    {
+      "candidate": "copy",
+      "scores": [
+        50.0,
+        50.0
+      ],
+      "raw_metrics": [
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.26304274797439575,
+          "variogram": 0.009573637507855892
+        },
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.2375742495059967,
+          "variogram": 0.008673261851072311
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "anchor_unshrunk",
+      "scores": [
+        49.70027428098265,
+        51.17724668869285
+      ],
+      "raw_metrics": [
+        {
+          "de_score": -0.12330456226880394,
+          "de_direction": 0.019468342415917883,
+          "mmd_u": 0.25065070390701294,
+          "variogram": 0.009653712622821331
+        },
+        {
+          "de_score": -0.1601362862010221,
+          "de_direction": 0.10681215303588851,
+          "mmd_u": 0.20634937286376953,
+          "variogram": 0.008202877826988697
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.46909765142150806,
+          "de_direction": 0.5056754241496735,
+          "mmd_u": 0.5124371240306729,
+          "variogram": 0.497891683539146
+        },
+        {
+          "de_score": 0.4598290598290598,
+          "de_direction": 0.5332431748196738,
+          "mmd_u": 0.5355885135881767,
+          "variogram": 0.51413927074146
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "slope_recent",
+      "scores": [
+        50.0,
+        50.0
+      ],
+      "raw_metrics": [
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.26304274797439575,
+          "variogram": 0.009573637507855892
+        },
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.2375742495059967,
+          "variogram": 0.008673261851072311
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "slope_global",
+      "scores": [
+        50.0,
+        50.0
+      ],
+      "raw_metrics": [
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.26304274797439575,
+          "variogram": 0.009573637507855892
+        },
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.2375742495059967,
+          "variogram": 0.008673261851072311
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "slope_lineage1000",
+      "scores": [
+        50.0,
+        50.0
+      ],
+      "raw_metrics": [
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.26304274797439575,
+          "variogram": 0.009573637507855892
+        },
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.2375742495059967,
+          "variogram": 0.008673261851072311
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        }
+      ],
+      "all_calibrations_valid": true
+    }
+  ],
+  "folds": [
+    {
+      "cutoff": 8.0,
+      "target": 9.0,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.26304274797439575,
+        "variogram": 0.009573637507855892
+      },
+      "ceiling": {
+        "de_score": 0.9358816276202219,
+        "de_direction": 0.8673063060165137,
+        "mmd_u": 0.007752883248031139,
+        "variogram": 0.00011852615716634318
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "53908b256a2f04ded456a9239a8231ce0c0f551e3bd9de2c1424524db824cd4d",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.26304274797439575,
+            "variogram": 0.009573637507855892
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "anchor_unshrunk",
+          "prediction_sha256": "4b45e13713deb62f776b3056212aabfe7adfe2a4120cde4a0082f3aa41b35299",
+          "raw_metrics": {
+            "de_score": -0.12330456226880394,
+            "de_direction": 0.019468342415917883,
+            "mmd_u": 0.25065070390701294,
+            "variogram": 0.009653712622821331
+          },
+          "local_score": 49.70027428098265,
+          "skills": {
+            "de_score": 0.46909765142150806,
+            "de_direction": 0.5056754241496735,
+            "mmd_u": 0.5124371240306729,
+            "variogram": 0.497891683539146
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "slope_recent",
+          "prediction_sha256": "53908b256a2f04ded456a9239a8231ce0c0f551e3bd9de2c1424524db824cd4d",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.26304274797439575,
+            "variogram": 0.009573637507855892
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "slope_global",
+          "prediction_sha256": "53908b256a2f04ded456a9239a8231ce0c0f551e3bd9de2c1424524db824cd4d",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.26304274797439575,
+            "variogram": 0.009573637507855892
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "slope_lineage1000",
+          "prediction_sha256": "53908b256a2f04ded456a9239a8231ce0c0f551e3bd9de2c1424524db824cd4d",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.26304274797439575,
+            "variogram": 0.009573637507855892
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        }
+      ],
+      "generation": {
+        "copy": {
+          "prediction_sha256": "53908b256a2f04ded456a9239a8231ce0c0f551e3bd9de2c1424524db824cd4d",
+          "audit": {
+            "method": "persistence"
+          }
+        },
+        "anchor_unshrunk": {
+          "prediction_sha256": "4b45e13713deb62f776b3056212aabfe7adfe2a4120cde4a0082f3aa41b35299",
+          "audit": {
+            "fit_cells": 7963,
+            "fit_max_stage": 8.0,
+            "supported_genes": 13935,
+            "method": "Conditional positive log1p response decoder",
+            "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+            "conditional_ridge_strength": 1.0,
+            "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+            "encoder_features": 4096,
+            "covariance_guard_features": 384,
+            "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+            "anchor_calibration_rows": 1500,
+            "anchor_supported_genes": 11177,
+            "anchor_slope_ridge": 1.0,
+            "limitation": "Cross-sectional associations are not temporal velocities; only 1500 past anchors.",
+            "anchor_positive_slope_strength": 0.5,
+            "anchor_detection_slope_strength": 0.5,
+            "response_units": "log1p normalized expression",
+            "response_fit_rows": 7963,
+            "response_fit_max_stage": 8.0,
+            "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+            "mode": "joint",
+            "strength": 1.0,
+            "backoff": 1.0,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.17741440261405234,
+            "newly_detected_entries": 49251,
+            "removed_detection_entries": 128540,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true
+          }
+        },
+        "slope_recent": {
+          "prediction_sha256": "53908b256a2f04ded456a9239a8231ce0c0f551e3bd9de2c1424524db824cd4d",
+          "audit": {
+            "method": "anchored_past_slope",
+            "slope_artifact_sha256": "43a161572a1c2c3570112df9505d04783a111ad146b89592c3af47ef1b291ef9",
+            "horizon_steps": 4,
+            "shrinkage": 0.25,
+            "covariance_change_before_guard": 0.09450535450942962,
+            "maximum_mean_perturbation_before_guard": 0.6630051242311796,
+            "mapped_mass_relative_error": 2.4759634800204475e-09,
+            "persistence_guard_fallback": true
+          }
+        },
+        "slope_global": {
+          "prediction_sha256": "53908b256a2f04ded456a9239a8231ce0c0f551e3bd9de2c1424524db824cd4d",
+          "audit": {
+            "method": "anchored_past_slope",
+            "slope_artifact_sha256": "43a161572a1c2c3570112df9505d04783a111ad146b89592c3af47ef1b291ef9",
+            "horizon_steps": 4,
+            "shrinkage": 0.25,
+            "covariance_change_before_guard": 0.06731162597663745,
+            "maximum_mean_perturbation_before_guard": 0.8035819048285484,
+            "mapped_mass_relative_error": 1.8507667366097655e-09,
+            "persistence_guard_fallback": true
+          }
+        },
+        "slope_lineage1000": {
+          "prediction_sha256": "53908b256a2f04ded456a9239a8231ce0c0f551e3bd9de2c1424524db824cd4d",
+          "audit": {
+            "method": "anchored_past_slope",
+            "slope_artifact_sha256": "43a161572a1c2c3570112df9505d04783a111ad146b89592c3af47ef1b291ef9",
+            "horizon_steps": 4,
+            "shrinkage": 0.25,
+            "covariance_change_before_guard": 0.07008717298400513,
+            "maximum_mean_perturbation_before_guard": 0.8490553297400476,
+            "mapped_mass_relative_error": 1.8171732392397743e-09,
+            "persistence_guard_fallback": true
+          }
+        }
+      },
+      "donor_rows_sha256": "7d951f227d44ea8091374db5278ed8dfd5fc3026d938288ca0e8ae98ed15a3b0",
+      "target_rows_sha256": "f53375624025205768b06d32a296496d49612b473ee07ae32bbf8b6e5b8984fa"
+    },
+    {
+      "cutoff": 8.25,
+      "target": 9.25,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.2375742495059967,
+        "variogram": 0.008673261851072311
+      },
+      "ceiling": {
+        "de_score": 0.9165247018739352,
+        "de_direction": 0.8566698563410718,
+        "mmd_u": 0.002615219447761774,
+        "variogram": 0.00012109167437301949
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "f991bb722bc73fe1b4135b16a6a7a3db7132c306103559448dc13289eb73ae4e",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.2375742495059967,
+            "variogram": 0.008673261851072311
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "anchor_unshrunk",
+          "prediction_sha256": "a6a3b5fe26a162b47b8704fd1584e0ae9d5995a363d05d7634ab27bf5e9bdb34",
+          "raw_metrics": {
+            "de_score": -0.1601362862010221,
+            "de_direction": 0.10681215303588851,
+            "mmd_u": 0.20634937286376953,
+            "variogram": 0.008202877826988697
+          },
+          "local_score": 51.17724668869285,
+          "skills": {
+            "de_score": 0.4598290598290598,
+            "de_direction": 0.5332431748196738,
+            "mmd_u": 0.5355885135881767,
+            "variogram": 0.51413927074146
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "slope_recent",
+          "prediction_sha256": "f991bb722bc73fe1b4135b16a6a7a3db7132c306103559448dc13289eb73ae4e",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.2375742495059967,
+            "variogram": 0.008673261851072311
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "slope_global",
+          "prediction_sha256": "f991bb722bc73fe1b4135b16a6a7a3db7132c306103559448dc13289eb73ae4e",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.2375742495059967,
+            "variogram": 0.008673261851072311
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "slope_lineage1000",
+          "prediction_sha256": "f991bb722bc73fe1b4135b16a6a7a3db7132c306103559448dc13289eb73ae4e",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.2375742495059967,
+            "variogram": 0.008673261851072311
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        }
+      ],
+      "generation": {
+        "copy": {
+          "prediction_sha256": "f991bb722bc73fe1b4135b16a6a7a3db7132c306103559448dc13289eb73ae4e",
+          "audit": {
+            "method": "persistence"
+          }
+        },
+        "anchor_unshrunk": {
+          "prediction_sha256": "a6a3b5fe26a162b47b8704fd1584e0ae9d5995a363d05d7634ab27bf5e9bdb34",
+          "audit": {
+            "fit_cells": 10963,
+            "fit_max_stage": 8.25,
+            "supported_genes": 14462,
+            "method": "Conditional positive log1p response decoder",
+            "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+            "conditional_ridge_strength": 1.0,
+            "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+            "encoder_features": 4096,
+            "covariance_guard_features": 384,
+            "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+            "anchor_calibration_rows": 1500,
+            "anchor_supported_genes": 11513,
+            "anchor_slope_ridge": 1.0,
+            "limitation": "Cross-sectional associations are not temporal velocities; only 1500 past anchors.",
+            "anchor_positive_slope_strength": 0.5,
+            "anchor_detection_slope_strength": 0.5,
+            "response_units": "log1p normalized expression",
+            "response_fit_rows": 10963,
+            "response_fit_max_stage": 8.25,
+            "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+            "mode": "joint",
+            "strength": 1.0,
+            "backoff": 1.0,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.2658842982346395,
+            "newly_detected_entries": 57708,
+            "removed_detection_entries": 142745,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true
+          }
+        },
+        "slope_recent": {
+          "prediction_sha256": "f991bb722bc73fe1b4135b16a6a7a3db7132c306103559448dc13289eb73ae4e",
+          "audit": {
+            "method": "anchored_past_slope",
+            "slope_artifact_sha256": "443458a8e6dbc51dddcec3f2397b8b52fcd9116a92793af45156b9852ff93bcd",
+            "horizon_steps": 4,
+            "shrinkage": 0.25,
+            "covariance_change_before_guard": 0.08371979843733933,
+            "maximum_mean_perturbation_before_guard": 0.5910761943062144,
+            "mapped_mass_relative_error": 1.7860059149822163e-09,
+            "persistence_guard_fallback": true
+          }
+        },
+        "slope_global": {
+          "prediction_sha256": "f991bb722bc73fe1b4135b16a6a7a3db7132c306103559448dc13289eb73ae4e",
+          "audit": {
+            "method": "anchored_past_slope",
+            "slope_artifact_sha256": "443458a8e6dbc51dddcec3f2397b8b52fcd9116a92793af45156b9852ff93bcd",
+            "horizon_steps": 4,
+            "shrinkage": 0.25,
+            "covariance_change_before_guard": 0.04080407163656177,
+            "maximum_mean_perturbation_before_guard": 0.5721388357579706,
+            "mapped_mass_relative_error": 2.2651155377248907e-09,
+            "persistence_guard_fallback": true
+          }
+        },
+        "slope_lineage1000": {
+          "prediction_sha256": "f991bb722bc73fe1b4135b16a6a7a3db7132c306103559448dc13289eb73ae4e",
+          "audit": {
+            "method": "anchored_past_slope",
+            "slope_artifact_sha256": "443458a8e6dbc51dddcec3f2397b8b52fcd9116a92793af45156b9852ff93bcd",
+            "horizon_steps": 4,
+            "shrinkage": 0.25,
+            "covariance_change_before_guard": 0.041039116682187564,
+            "maximum_mean_perturbation_before_guard": 0.5157096174259981,
+            "mapped_mass_relative_error": 1.7029297757424266e-09,
+            "persistence_guard_fallback": true
+          }
+        }
+      },
+      "donor_rows_sha256": "1faf5d3c2e23851202f3c24b72f3413ccd2b116b3cecb71b85668b5458681684",
+      "target_rows_sha256": "ff1e0fb3157dc946c14688b69c28b59b0b7ec89767855eaf8aa0cf468a1f4d40"
+    }
+  ],
+  "passing_candidates": [],
+  "plan_sha256": "9d8c5e9a7807a5fc4739ceedeb9bb3b8c3abc1fc92d00a13c6efe5fde2392472",
+  "report_sha256": "2866fe637e073dde3001dc580d77f18748505cb8f69e377757644a7b06e7e1df",
+  "official_score": null,
+  "local_72_gate_passed": false,
+  "submissions_used": 0
+}
