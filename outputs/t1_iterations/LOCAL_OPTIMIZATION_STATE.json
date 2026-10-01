@@ -31,7 +31,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Declare source-only partially pooled lineage*time slope proxy over three past snapshots, distinct from continuous latent interactions and prior two-stage lineage standardization. Integrate slopes using current lineage fractions; shrink lineage deviations toward global temporal slope with fixed strong penalties/minimum per-stage cell support. Matched global/pooled/recentlinear and matched recent-blend controls; freeze coefficients, split IDs and gate before target read. Two historical development folds, unchanged mapped rank/direction proxy before any full-panel expansion. No externaldata/target-driven tuning.",
+  "next_experiment": "Audit proxy/scorer/horizon fidelity before further slope banks. Inspect unchanged full-panel scorer definitions, original frozen one-day controls/calibration and proxy top200/chance/partial-rank definitions; document mismatches and compare existing genuine reports where candidates/splits actually match. Then declare a bounded one-day scorer-aligned past-only ablation with persistence/incumbent controls for representative saved formulas if audit supports it. Do not treat quarter-day proxy rejection as proof of official-score failure, relax gates using target outcomes, or invent unavailable raw scores.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1487,6 +1487,32 @@
       "constant_response",
       "zero_interaction_reduces_to_global",
       "finite_zero_sum_contrasts"
+    ],
+    "full_panel_scores": 0,
+    "reward_delta": 0
+  },
+  "lineage_time_partial_pool_proxy": {
+    "report": "LINEAGE_TIME_PARTIAL_POOL_RESULTS.json",
+    "report_sha256": "2f4d7dbe0b3c1ea29336d581db07582c2fb25cc72ebb9a3f9fa3df0789975880",
+    "proxy_evaluations": 28,
+    "passing_candidates": [],
+    "deviation_penalties": [
+      100,
+      1000
+    ],
+    "folds": [
+      [
+        8,
+        8.25
+      ],
+      [
+        8.25,
+        8.5
+      ]
+    ],
+    "invariants": [
+      "finite_zero_sum",
+      "static_lineage_intercept_invariance"
     ],
     "full_panel_scores": 0,
     "reward_delta": 0

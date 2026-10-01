@@ -1,0 +1,321 @@
+{
+  "updated_utc": "2026-10-01T06:49:46.614297+00:00",
+  "plan_sha256": "f3268cd346c0d6f50ec6a76ce40e438a95969335bd14194e04d8a92dbcdaebfe",
+  "outcomes": [
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "lineage_counts_by_past_stage": {
+        "blood": [
+          698,
+          1277,
+          1365
+        ],
+        "cardiomyocyte": [
+          31,
+          175,
+          198
+        ],
+        "cardiopharyngeal": [
+          38,
+          127,
+          241
+        ],
+        "ectoderm_other": [
+          154,
+          283,
+          274
+        ],
+        "endoderm": [
+          223,
+          234,
+          153
+        ],
+        "endothelial": [
+          34,
+          117,
+          166
+        ],
+        "mesenchymal": [
+          785,
+          777,
+          603
+        ],
+        "neural_crest": [
+          0,
+          10,
+          0
+        ]
+      },
+      "retained_groups": [
+        "blood",
+        "cardiomyocyte",
+        "cardiopharyngeal",
+        "ectoderm_other",
+        "endoderm",
+        "endothelial",
+        "fallback",
+        "mesenchymal"
+      ],
+      "current_fractions": {
+        "blood": 0.455,
+        "cardiomyocyte": 0.066,
+        "cardiopharyngeal": 0.08033333333333334,
+        "ectoderm_other": 0.09133333333333334,
+        "endoderm": 0.051,
+        "endothelial": 0.05533333333333333,
+        "fallback": 0.0,
+        "mesenchymal": 0.201
+      },
+      "results": {
+        "copy": {
+          "signed_top200_overlap": 0.0,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.11420612813370473,
+          "partial_spearman": 0.0
+        },
+        "recent_linear": {
+          "signed_top200_overlap": 0.0075,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.10584958217270196,
+          "partial_spearman": -0.4038197105549282
+        },
+        "global": {
+          "signed_top200_overlap": 0.045,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.06406685236768803,
+          "partial_spearman": -0.22428630481227183
+        },
+        "lineage_100.0": {
+          "signed_top200_overlap": 0.04,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.06963788300835654,
+          "partial_spearman": -0.2580562058457194
+        },
+        "lineage_1000.0": {
+          "signed_top200_overlap": 0.045,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.06406685236768803,
+          "partial_spearman": -0.2433001246695815
+        },
+        "past_ols": {
+          "signed_top200_overlap": 0.0425,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.06685236768802227,
+          "partial_spearman": -0.270603519614682
+        },
+        "global_blend0.25": {
+          "signed_top200_overlap": 0.0125,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.10027855153203342,
+          "partial_spearman": -0.3917894417744547
+        },
+        "lineage_100.0_blend0.25": {
+          "signed_top200_overlap": 0.0125,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.10027855153203342,
+          "partial_spearman": -0.3955089292736295
+        },
+        "lineage_1000.0_blend0.25": {
+          "signed_top200_overlap": 0.0125,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.10027855153203342,
+          "partial_spearman": -0.3948061520013089
+        },
+        "past_ols_blend0.25": {
+          "signed_top200_overlap": 0.0125,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.10027855153203342,
+          "partial_spearman": -0.4009526803861332
+        },
+        "global_blend0.5": {
+          "signed_top200_overlap": 0.0225,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.08913649025069637,
+          "partial_spearman": -0.3702676453770107
+        },
+        "lineage_100.0_blend0.5": {
+          "signed_top200_overlap": 0.025,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.0863509749303621,
+          "partial_spearman": -0.37999724335410484
+        },
+        "lineage_1000.0_blend0.5": {
+          "signed_top200_overlap": 0.025,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.0863509749303621,
+          "partial_spearman": -0.37573206287735633
+        },
+        "past_ols_blend0.5": {
+          "signed_top200_overlap": 0.025,
+          "reference_magnitude_chance": 0.1025,
+          "chance_adjusted_overlap": -0.0863509749303621,
+          "partial_spearman": -0.388839898626924
+        }
+      }
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage_counts_by_past_stage": {
+        "blood": [
+          1277,
+          1365,
+          848
+        ],
+        "cardiomyocyte": [
+          175,
+          198,
+          345
+        ],
+        "cardiopharyngeal": [
+          127,
+          241,
+          348
+        ],
+        "ectoderm_other": [
+          283,
+          274,
+          295
+        ],
+        "endoderm": [
+          234,
+          153,
+          158
+        ],
+        "endothelial": [
+          117,
+          166,
+          247
+        ],
+        "mesenchymal": [
+          777,
+          603,
+          684
+        ],
+        "neural_crest": [
+          10,
+          0,
+          75
+        ]
+      },
+      "retained_groups": [
+        "blood",
+        "cardiomyocyte",
+        "cardiopharyngeal",
+        "ectoderm_other",
+        "endoderm",
+        "endothelial",
+        "fallback",
+        "mesenchymal"
+      ],
+      "current_fractions": {
+        "blood": 0.2826666666666667,
+        "cardiomyocyte": 0.115,
+        "cardiopharyngeal": 0.116,
+        "ectoderm_other": 0.09833333333333333,
+        "endoderm": 0.05266666666666667,
+        "endothelial": 0.08233333333333333,
+        "fallback": 0.025,
+        "mesenchymal": 0.228
+      },
+      "results": {
+        "copy": {
+          "signed_top200_overlap": 0.0,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": -0.20481927710843376,
+          "partial_spearman": 0.0
+        },
+        "recent_linear": {
+          "signed_top200_overlap": 0.1925,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.027108433734939753,
+          "partial_spearman": 0.07671315505701229
+        },
+        "global": {
+          "signed_top200_overlap": 0.1,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": -0.08433734939759037,
+          "partial_spearman": -0.20347151206093728
+        },
+        "lineage_100.0": {
+          "signed_top200_overlap": 0.08,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": -0.10843373493975905,
+          "partial_spearman": -0.21099101262247758
+        },
+        "lineage_1000.0": {
+          "signed_top200_overlap": 0.0825,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": -0.10542168674698797,
+          "partial_spearman": -0.2086796792753683
+        },
+        "past_ols": {
+          "signed_top200_overlap": 0.08,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": -0.10843373493975905,
+          "partial_spearman": -0.20290993687330064
+        },
+        "global_blend0.25": {
+          "signed_top200_overlap": 0.18,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.012048192771084315,
+          "partial_spearman": 0.040649934757324195
+        },
+        "lineage_100.0_blend0.25": {
+          "signed_top200_overlap": 0.18,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.012048192771084315,
+          "partial_spearman": 0.04003047719881691
+        },
+        "lineage_1000.0_blend0.25": {
+          "signed_top200_overlap": 0.1825,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.015060240963855403,
+          "partial_spearman": 0.04044840357225643
+        },
+        "past_ols_blend0.25": {
+          "signed_top200_overlap": 0.1725,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.0030120481927710537,
+          "partial_spearman": 0.03563285787284788
+        },
+        "global_blend0.5": {
+          "signed_top200_overlap": 0.17,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.0,
+          "partial_spearman": -0.015945180558433383
+        },
+        "lineage_100.0_blend0.5": {
+          "signed_top200_overlap": 0.1675,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": -0.003012048192771087,
+          "partial_spearman": -0.017728270023622632
+        },
+        "lineage_1000.0_blend0.5": {
+          "signed_top200_overlap": 0.1675,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": -0.003012048192771087,
+          "partial_spearman": -0.016022120004151617
+        },
+        "past_ols_blend0.5": {
+          "signed_top200_overlap": 0.1575,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": -0.015060240963855435,
+          "partial_spearman": -0.025585987399460223
+        }
+      }
+    }
+  ],
+  "passing_candidates": [],
+  "proxy_evaluations": 28,
+  "invariants_passed": [
+    "finite_zero_sum",
+    "static_lineage_intercept_invariance"
+  ],
+  "full_panel_scores": 0,
+  "reward_delta": 0,
+  "independent_embryo_validation": false,
+  "next_action": "Reject tested lineage-time partial pooling. Audit forecast horizon and scorer-aligned proxy fidelity before more quarter-day slope variants; scientific families remain open.",
+  "report_sha256": "2f4d7dbe0b3c1ea29336d581db07582c2fb25cc72ebb9a3f9fa3df0789975880"
+}
