@@ -1,16 +1,16 @@
 {
-  "updated_utc": "2026-10-01T05:47:03.132445+00:00",
+  "updated_utc": "2026-10-01T05:56:07.671100+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "00500f38fcc73ad4b6ad1e45a782d0850cb8b44fbd1d55ea0f25e1d6f8591db1",
+    "LOCAL_OPTIMIZATION_STATE.json": "9a5067694fb3aedf6c793a04be1dcc882b2eea0cc974e7cf85e9b31df05a23b5",
     "LOCAL_OPTIMIZATION_PROMPT.md": "dc34e90fa3519a22843971c550774ced585b0bab7dea86ab4fc00c5aee806f38",
-    "METRIC_RESEARCH_QUEUE.json": "97d38eb014fd090224a11f233e2f57f7323967b5531a3418b9c6ac6c51620477",
+    "METRIC_RESEARCH_QUEUE.json": "9fd867451b4f562e71268762e26b4cfff7e30bd59f4f19b0383b0d8e27f0b084",
     "METRIC_CRITIQUE_POLICY.json": "025beff88fbd06be4f25b4643456853ca5f0c7ee68a66212ab0e1281bcd9a8e5",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [],
-  "next_experiment": "Run cached-only matched cardiomyocyte-like rank/detection diagnostic using18eligible external cells and E8.5-frozen atlas diagnostic labels. Report stage/region composition; balance overlapping regions only when supported, do not fabricate region matches. Freeze expression/detection strata and64 gene-group shuffle controls. E8.5->E9.5 external delta is compatibility evidence only, never used to train an E8.5/E9.5 validation forecast. Reject external temporal prior if controlled agreement absent; no downloads or forecasts before result.",
+  "next_experiment": "Run cached-only64seeded within-stage/broad-region cell-bootstrap and leave-one-cell-out robustness for matched external CM-like rank signal (primaryrho.05873). Preserve each diagnostic replicate and all failures; report conditional cell uncertainty, never independent embryo uncertainty. Freeze positive lower-tail/leave-one-out sign gate before evaluation; externalE9.5 remains diagnostic only, no earlier validation training. These64diagnostic replicates are not the >72fullpanel readiness gate. If fragile return to source-only saturating-time proxy; no more external acquisition.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -83,6 +83,7 @@
     "latest_cohort_report": "GSE76118_EARLY_COHORT_RESULTS.json",
     "acquired_cohort_cells": 24,
     "prospective_qc_passing_cells": 18,
-    "latest_compatibility_report": "GSE76118_EARLY_COMPATIBILITY_RESULTS.json"
+    "latest_compatibility_report": "GSE76118_EARLY_COMPATIBILITY_RESULTS.json",
+    "latest_matched_report": "GSE76118_MATCHED_LINEAGE_RESULTS.json"
   }
 }

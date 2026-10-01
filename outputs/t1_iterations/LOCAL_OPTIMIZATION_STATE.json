@@ -31,7 +31,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Run cached-only matched cardiomyocyte-like rank/detection diagnostic using18eligible external cells and E8.5-frozen atlas diagnostic labels. Report stage/region composition; balance overlapping regions only when supported, do not fabricate region matches. Freeze expression/detection strata and64 gene-group shuffle controls. E8.5->E9.5 external delta is compatibility evidence only, never used to train an E8.5/E9.5 validation forecast. Reject external temporal prior if controlled agreement absent; no downloads or forecasts before result.",
+  "next_experiment": "Run cached-only64seeded within-stage/broad-region cell-bootstrap and leave-one-cell-out robustness for matched external CM-like rank signal (primaryrho.05873). Preserve each diagnostic replicate and all failures; report conditional cell uncertainty, never independent embryo uncertainty. Freeze positive lower-tail/leave-one-out sign gate before evaluation; externalE9.5 remains diagnostic only, no earlier validation training. These64diagnostic replicates are not the >72fullpanel readiness gate. If fragile return to source-only saturating-time proxy; no more external acquisition.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1326,7 +1326,8 @@
     "latest_cohort_report": "GSE76118_EARLY_COHORT_RESULTS.json",
     "acquired_cohort_cells": 24,
     "prospective_qc_passing_cells": 18,
-    "latest_compatibility_report": "GSE76118_EARLY_COMPATIBILITY_RESULTS.json"
+    "latest_compatibility_report": "GSE76118_EARLY_COMPATIBILITY_RESULTS.json",
+    "latest_matched_report": "GSE76118_MATCHED_LINEAGE_RESULTS.json"
   },
   "external_schema_audit": {
     "status": "completed_training_not_ready",
@@ -1394,6 +1395,25 @@
       0.33533616085453977
     ],
     "transfer_validated": false,
+    "models_fit": 0,
+    "full_panel_scores": 0
+  },
+  "external_matched_diagnostic": {
+    "report": "GSE76118_MATCHED_LINEAGE_RESULTS.json",
+    "report_sha256": "94bd85b29b26b0760bf11229b687d2c8c0d0d81035fd7a87e8d930a4ad651d64",
+    "primary_stratified_rho": 0.0587285791528187,
+    "shuffle_p": 0.015384615384615385,
+    "broad_regions": [
+      "atrium",
+      "ventricle"
+    ],
+    "cm_like_cells": 16,
+    "atlas_cm_stage_counts": {
+      "8.5": 237,
+      "9.5": 111
+    },
+    "screen_gate_passed": true,
+    "predictive_transfer_validated": false,
     "models_fit": 0,
     "full_panel_scores": 0
   }
