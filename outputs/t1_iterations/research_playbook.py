@@ -60,7 +60,7 @@ Four metric critiques completed; consult METRIC_CRITIQUES_20261001.md when desig
 
 Current separate reward: {(compact['reward'] or {}).get('current_reward', 0)}. This is not a benchmark score.
 
-External acquisition entry point: {(compact['external_qc_audit'] or {}).get('strict_manifest', 'original metadata audit')}. The old stage-only list is historical;127 mutants excluded,162 B6 WT controls separate,143E8.5/999E9.5 primary CD1 candidates. No expression acquired; QC/compatibility pending. Latest Jev actual usage: {(compact['latest_jev'] or {}).get('usage', 'none')}.
+External acquisition entry point: {(compact['external_qc_audit'] or {}).get('strict_manifest', 'original metadata audit')}. The old stage-only list is historical;127 mutants excluded,162 B6 WT controls separate,143E8.5/999E9.5 primary CD1 candidates. Expression acquired: {(compact['external_qc_audit'] or {}).get('expression_acquired', False)}; pilot cells: {(compact['external_qc_audit'] or {}).get('pilot_cells', 0)}; training readiness: {(compact['external_qc_audit'] or {}).get('training_approved', False)}. QC/compatibility pending. Latest Jev actual usage: {(compact['latest_jev'] or {}).get('usage', 'none')}.
 
 Use D-only temporary disk cache, two BLAS threads, one full forecast at a time;16GBRAM. Retain source reports/events, seeds/splits/hashes, raw4/skills4 and failed outcomes. Refresh SCORE_LEDGER.jsonl after full-panel batches; proxy/export is not a score batch. Commit small evidence/code, never datasets/secrets/artifact matrices. No automatic official upload or new agents.
 

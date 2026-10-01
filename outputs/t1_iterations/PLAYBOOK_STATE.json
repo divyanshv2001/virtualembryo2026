@@ -1,16 +1,16 @@
 {
-  "updated_utc": "2026-10-01T05:02:13.302532+00:00",
+  "updated_utc": "2026-10-01T05:08:53.614714+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "a01eecabb9db3d10a37048a8ab9131691d8173c72a53b03df6074a00fd3dd9c2",
+    "LOCAL_OPTIMIZATION_STATE.json": "7edc20f5820d0313d7d2f4eb24de634046ed6def2b4b05d88a133ca4e2c24d60",
     "LOCAL_OPTIMIZATION_PROMPT.md": "dc34e90fa3519a22843971c550774ced585b0bab7dea86ab4fc00c5aee806f38",
-    "METRIC_RESEARCH_QUEUE.json": "a63be916af587d9de0451f80de279e6760c22b70ad15843cb34baf92211bb3da",
+    "METRIC_RESEARCH_QUEUE.json": "9e19441fc51730c30e4317133fef49d2177903a9990eb69ee8c2329c25352a8f",
     "METRIC_CRITIQUE_POLICY.json": "025beff88fbd06be4f25b4643456853ca5f0c7ee68a66212ab0e1281bcd9a8e5",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [],
-  "next_experiment": "Bounded D-only individual-file schema/normalization audit using at most2 strict E8.5 CD1 and2 strict E9.5 CD1 allowlisted GSMs; verify metadata before each fetch, maximum2MB/file. No expression training until QC/compatibility assessment; no mixed-stage archive. E9.5 cannot fit an E8.5-to-E9.5 backtest.",
+  "next_experiment": "Recover bounded GRCm38.79 gene-only symbol/biotype annotation and audit available per-cell read/QC metadata for the four strict CD1 GSM pilots. Exact original QC remains unknown; four-cell mapped coverage79.36% is not a training gate. Do not enlarge/download mixed-stage expression or train until annotation/QC and prospective selection rules are frozen. Keep B6 controls separate; E9.5 excluded from E8.5-backtest fitting.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -74,6 +74,9 @@
     "mutants_excluded": 127,
     "separate_b6_wt": 162,
     "training_approved": false,
-    "expression_acquired": false
+    "expression_acquired": true,
+    "pilot_cells": 4,
+    "latest_schema_report": "GSE76118_EARLY_SCHEMA_RESULTS.json",
+    "latest_mapping_report": "GSE76118_EARLY_MAPPING_RESULTS.json"
   }
 }

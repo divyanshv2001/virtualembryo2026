@@ -1,0 +1,61 @@
+{
+  "updated_utc": "2026-10-01T05:07:31.517922+00:00",
+  "code_sha256": "db2e4cebc6c863e1c012bbeba2a79e0a89b4c696a8eb0485ecbb4c94798f772b",
+  "schema_report_sha256": "869eacc02520df0f91fff1fb17a2273cee3519f510a0d323d99c6199f92f2cdd",
+  "annotation_sha256": "51257824507698bda4200179b69b0e7550d0dc456e80691894fe8b717fbb07b7",
+  "panel_sha256": "2aeae4cd284933956242bbc9c5ab4f565c1d2acc7cc3fd3037977e4bce8be4bf",
+  "rows": [
+    {
+      "gsm": "GSM2035425",
+      "stage": "E8.5",
+      "region": "atrium",
+      "mapped_unique_panel_genes": 25621,
+      "panel_size": 32285,
+      "panel_annotation_coverage_fraction": 0.7935883537246399,
+      "positive_mapped_genes": 7422,
+      "mapped_assigned_count_fraction": 0.9755841066599259,
+      "normalization_candidate": "log1p(10000*gene_count/all_assigned_gene_count_sum), after QC; not fitted or scored",
+      "unknown_panel_genes_policy": "Absent/ambiguous annotation is missing coverage, not biological zero."
+    },
+    {
+      "gsm": "GSM2035596",
+      "stage": "E8.5",
+      "region": "ventricle",
+      "mapped_unique_panel_genes": 25621,
+      "panel_size": 32285,
+      "panel_annotation_coverage_fraction": 0.7935883537246399,
+      "positive_mapped_genes": 6038,
+      "mapped_assigned_count_fraction": 0.9621360553091574,
+      "normalization_candidate": "log1p(10000*gene_count/all_assigned_gene_count_sum), after QC; not fitted or scored",
+      "unknown_panel_genes_policy": "Absent/ambiguous annotation is missing coverage, not biological zero."
+    },
+    {
+      "gsm": "GSM2033420",
+      "stage": "E9.5",
+      "region": "left atrium",
+      "mapped_unique_panel_genes": 25621,
+      "panel_size": 32285,
+      "panel_annotation_coverage_fraction": 0.7935883537246399,
+      "positive_mapped_genes": 4428,
+      "mapped_assigned_count_fraction": 0.9700210906899669,
+      "normalization_candidate": "log1p(10000*gene_count/all_assigned_gene_count_sum), after QC; not fitted or scored",
+      "unknown_panel_genes_policy": "Absent/ambiguous annotation is missing coverage, not biological zero."
+    },
+    {
+      "gsm": "GSM2034877",
+      "stage": "E9.5",
+      "region": "left ventricle",
+      "mapped_unique_panel_genes": 25621,
+      "panel_size": 32285,
+      "panel_annotation_coverage_fraction": 0.7935883537246399,
+      "positive_mapped_genes": 7103,
+      "mapped_assigned_count_fraction": 0.972857547840152,
+      "normalization_candidate": "log1p(10000*gene_count/all_assigned_gene_count_sum), after QC; not fitted or scored",
+      "unknown_panel_genes_policy": "Absent/ambiguous annotation is missing coverage, not biological zero."
+    }
+  ],
+  "models_fit": 0,
+  "full_panel_scores": 0,
+  "scope": "Existing atlas IDs/symbols are not complete GRCm38.79 biotype annotation. Four cells cannot certify population or temporal transfer.",
+  "training_ready": false
+}

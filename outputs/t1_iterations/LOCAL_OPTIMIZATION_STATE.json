@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T05:01:25.296545+00:00",
+  "updated_utc": "2026-10-01T05:08:53.256290+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,7 +31,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Bounded D-only individual-file schema/normalization audit using at most2 strict E8.5 CD1 and2 strict E9.5 CD1 allowlisted GSMs; verify metadata before each fetch, maximum2MB/file. No expression training until QC/compatibility assessment; no mixed-stage archive. E9.5 cannot fit an E8.5-to-E9.5 backtest.",
+  "next_experiment": "Recover bounded GRCm38.79 gene-only symbol/biotype annotation and audit available per-cell read/QC metadata for the four strict CD1 GSM pilots. Exact original QC remains unknown; four-cell mapped coverage79.36% is not a training gate. Do not enlarge/download mixed-stage expression or train until annotation/QC and prospective selection rules are frozen. Keep B6 controls separate; E9.5 excluded from E8.5-backtest fitting.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1317,6 +1317,22 @@
     "mutants_excluded": 127,
     "separate_b6_wt": 162,
     "training_approved": false,
-    "expression_acquired": false
+    "expression_acquired": true,
+    "pilot_cells": 4,
+    "latest_schema_report": "GSE76118_EARLY_SCHEMA_RESULTS.json",
+    "latest_mapping_report": "GSE76118_EARLY_MAPPING_RESULTS.json"
+  },
+  "external_schema_audit": {
+    "status": "completed_training_not_ready",
+    "report": "GSE76118_EARLY_SCHEMA_RESULTS.json",
+    "mapping": "GSE76118_EARLY_MAPPING_RESULTS.json",
+    "count_file_bytes": 541173,
+    "cells": 4,
+    "mapped_genes": 25621,
+    "total_panel_genes": 32285,
+    "full_panel_scores": 0,
+    "reward_delta": 0,
+    "models_fit": 0,
+    "unresolved": "Total sequencing reads and protein-coding fraction/exact analyzed-cell IDs unavailable; separate library unit/annotation overlap from biological zeros."
   }
 }

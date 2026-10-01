@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T05:01:25.296545+00:00",
+  "updated_utc": "2026-10-01T05:08:53.256290+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5878,13 +5878,15 @@
         "mmd_u",
         "variogram"
       ],
-      "status": "strict_wt_manifest_corrected_qc_pending",
+      "status": "four_early_schema_files_verified_qc_still_unresolved",
       "implementation": "T1_EXTERNAL_TEMPORAL_DATA_AUDIT.json",
       "hypothesis_and_limits": "An independently sourced eligible earlier-stage heart time series could improve temporal validation and training. Official challenge has only E8.5/E9.5 released Task 1 RNA; external data after E9.5 through E13.5 inclusive are prohibited. Any mixed-stage resource requires stage-level filtering before expression use.",
-      "declared_experiment_and_result": "Original stage-only list unintentionally includes127 Nkx2.5mut samples and162 B6WT controls. Strict primaryCD1 manifest now143E8.5/999E9.5; mutants excluded, B6WT separate. PaperQC thresholds and NCBIGEO reuse statement checked; exact analyzed118/949 IDs and assay compatibility unresolved. No expression acquired.",
-      "next_action": "Bounded D-only individual-file schema/normalization audit using at most2 strict E8.5 CD1 and2 strict E9.5 CD1 allowlisted GSMs; verify metadata before each fetch, maximum2MB/file. No expression training until QC/compatibility assessment; no mixed-stage archive. E9.5 cannot fit an E8.5-to-E9.5 backtest.",
+      "declared_experiment_and_result": "Four predeclared CD1 files (2E8.5/2E9.5, distinct regions) downloaded separately, stage/genotype checked, 541173compressedbytes total. Each43629ENSMUSGinteger-count genes; assignedcount sums1234278/1533200/19914/1629698. Existing annotation maps25621/32285panelgenes (79.36%); four cells are not representative. Raw reads/protein-coding QC unavailable, original QC pass unknown. No model fit or full-panel score. Mutants remain excluded; no mixed-stage archive.",
+      "next_action": "Recover bounded GRCm38.79 gene-only symbol/biotype annotation and audit available per-cell read/QC metadata for the four strict CD1 GSM pilots. Exact original QC remains unknown; four-cell mapped coverage79.36% is not a training gate. Do not enlarge/download mixed-stage expression or train until annotation/QC and prospective selection rules are frozen. Keep B6 controls separate; E9.5 excluded from E8.5-backtest fitting.",
       "research_family_exhausted": false,
-      "results_report": "GSE76118_QC_PROVENANCE_AUDIT.json"
+      "results_report": "GSE76118_QC_PROVENANCE_AUDIT.json",
+      "schema_results": "GSE76118_EARLY_SCHEMA_RESULTS.json",
+      "mapping_results": "GSE76118_EARLY_MAPPING_RESULTS.json"
     },
     {
       "id": "lineage_standardized_residual_proxy",

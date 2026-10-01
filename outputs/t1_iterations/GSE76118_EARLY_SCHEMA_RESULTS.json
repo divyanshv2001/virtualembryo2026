@@ -1,0 +1,143 @@
+{
+  "status": "completed",
+  "plan_sha256": "ecada206828e1b797a82dc96debf1436136573175178316cdbb506c5abc64124",
+  "outcomes": [
+    {
+      "gsm": "GSM2035425",
+      "stage": "E8.5",
+      "region": "atrium",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2035nnn/GSM2035425/suppl/GSM2035425_A-A1.HTSeq.output.txt.gz",
+      "status": "parsed",
+      "compressed_bytes": 139045,
+      "unpacked_bytes": 924870,
+      "file_sha256": "f3489aa70083689da914f906a16681e6226e74d9d1f5ab6accfba60f20542491",
+      "gene_rows": 43629,
+      "identifier_prefix_counts": {
+        "ENSMUSG": 43629
+      },
+      "all_counts_integer": true,
+      "detected_gene_count": 8714,
+      "assigned_gene_count_sum": 1234278.0,
+      "special_counters": {
+        "__no_feature": 230135.0,
+        "__ambiguous": 25011.0,
+        "__too_low_aQual": 0.0,
+        "__not_aligned": 0.0,
+        "__alignment_not_unique": 413058.0
+      },
+      "column_counts": {
+        "2": 43634
+      },
+      "total_sequencing_reads_available": false,
+      "protein_coding_fraction_available": false,
+      "library_unit": "HTSeq assigned gene counts; not TPM/CPM",
+      "original_paper_qc_passed": null,
+      "original_paper_qc_reason": "Total reads and gene biotypes/assignment denominator not yet established; cannot reproduce original QC from gene sum alone."
+    },
+    {
+      "gsm": "GSM2035596",
+      "stage": "E8.5",
+      "region": "ventricle",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2035nnn/GSM2035596/suppl/GSM2035596_V-A10.HTSeq.output.txt.gz",
+      "status": "parsed",
+      "compressed_bytes": 136591,
+      "unpacked_bytes": 924278,
+      "file_sha256": "3cc72e093ffcb275a501e4712fac3098620981be04a7e980ff1f33faa69da5fb",
+      "gene_rows": 43629,
+      "identifier_prefix_counts": {
+        "ENSMUSG": 43629
+      },
+      "all_counts_integer": true,
+      "detected_gene_count": 6973,
+      "assigned_gene_count_sum": 1533200.0,
+      "special_counters": {
+        "__no_feature": 443803.0,
+        "__ambiguous": 27398.0,
+        "__too_low_aQual": 0.0,
+        "__not_aligned": 0.0,
+        "__alignment_not_unique": 613853.0
+      },
+      "column_counts": {
+        "2": 43634
+      },
+      "total_sequencing_reads_available": false,
+      "protein_coding_fraction_available": false,
+      "library_unit": "HTSeq assigned gene counts; not TPM/CPM",
+      "original_paper_qc_passed": null,
+      "original_paper_qc_reason": "Total reads and gene biotypes/assignment denominator not yet established; cannot reproduce original QC from gene sum alone."
+    },
+    {
+      "gsm": "GSM2033420",
+      "stage": "E9.5",
+      "region": "left atrium",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2033nnn/GSM2033420/suppl/GSM2033420_1-A1.HTSeq.output.txt.gz",
+      "status": "parsed",
+      "compressed_bytes": 126412,
+      "unpacked_bytes": 916699,
+      "file_sha256": "49c5eb53e743cf0f5780270f82a66a9893912384908212a7cc9200eb2fbabcc1",
+      "gene_rows": 43629,
+      "identifier_prefix_counts": {
+        "ENSMUSG": 43629
+      },
+      "all_counts_integer": true,
+      "detected_gene_count": 4640,
+      "assigned_gene_count_sum": 19914.0,
+      "special_counters": {
+        "__no_feature": 8850.0,
+        "__ambiguous": 442.0,
+        "__too_low_aQual": 0.0,
+        "__not_aligned": 0.0,
+        "__alignment_not_unique": 5545.0
+      },
+      "column_counts": {
+        "2": 43634
+      },
+      "total_sequencing_reads_available": false,
+      "protein_coding_fraction_available": false,
+      "library_unit": "HTSeq assigned gene counts; not TPM/CPM",
+      "original_paper_qc_passed": null,
+      "original_paper_qc_reason": "Total reads and gene biotypes/assignment denominator not yet established; cannot reproduce original QC from gene sum alone."
+    },
+    {
+      "gsm": "GSM2034877",
+      "stage": "E9.5",
+      "region": "left ventricle",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2034nnn/GSM2034877/suppl/GSM2034877_3-A1.HTSeq.output.txt.gz",
+      "status": "parsed",
+      "compressed_bytes": 139125,
+      "unpacked_bytes": 925446,
+      "file_sha256": "d9931706d474adfe773ad271684390abd3f1acd5ac622159d72a30a1ae823ea7",
+      "gene_rows": 43629,
+      "identifier_prefix_counts": {
+        "ENSMUSG": 43629
+      },
+      "all_counts_integer": true,
+      "detected_gene_count": 8430,
+      "assigned_gene_count_sum": 1629698.0,
+      "special_counters": {
+        "__no_feature": 279622.0,
+        "__ambiguous": 30613.0,
+        "__too_low_aQual": 0.0,
+        "__not_aligned": 0.0,
+        "__alignment_not_unique": 553970.0
+      },
+      "column_counts": {
+        "2": 43634
+      },
+      "total_sequencing_reads_available": false,
+      "protein_coding_fraction_available": false,
+      "library_unit": "HTSeq assigned gene counts; not TPM/CPM",
+      "original_paper_qc_passed": null,
+      "original_paper_qc_reason": "Total reads and gene biotypes/assignment denominator not yet established; cannot reproduce original QC from gene sum alone."
+    }
+  ],
+  "models_fit": 0,
+  "full_panel_scores": 0,
+  "reward_delta": 0,
+  "official_submissions": 0,
+  "training_ready": false,
+  "scope": "File schema/count quality only, four cells are not representative or validated training data. E9.5 never trains an E8.5 backtest. No mixed-stage download.",
+  "next_gate": "Recover per-cell QC provenance or reproducible prospective QC with appropriate gene biotypes, then assess gene overlap and assay normalization on a larger strictly eligible early cohort before forecasting.",
+  "updated_utc": "2026-10-01T05:04:44.171474+00:00",
+  "report_sha256": "3024928c137140688a4a386631ffcd5912a076ef713eddbf0e58afd893c8adac"
+}
