@@ -1,0 +1,18 @@
+{
+  "status": "predeclared_not_started",
+  "cutoffs": [
+    8.0,
+    8.25
+  ],
+  "min_capture_cells": 20,
+  "min_stage_captures_fit": 2,
+  "min_stage_captures_every_omission": 3,
+  "rank": 2,
+  "seed": 20260928,
+  "scope": "Past3stage capture-level coexpression identifiability diagnostic, nofutureexpression/scorer/reward. Capturesnotindependentembryos; metadataannotation provenance retained.",
+  "estimator": "Perlineage meanlog1p includingzeros foreacheligiblecapture atcutoff-.5,-.25,cutoff; stream256mappedgenes. Equalstage andequalcapture withinstage weightsw. Center weightedcapturemean matrix; SVD ofsqrt(w)*(means-weightedcenter), fixedrank2rightsingularvectors. CapturebalancedOLS perquarterday gene slope=weightedcov(time,means)/weightedvar(time); projectgene slope ontofixed2Dbasis. Numericalrank deficiency marksunsupported, no adaptive rank/grid.",
+  "omission": "Everyeligiblecapture omission refitsweights/center/SVD/OLS, compare reconstructedgene slopes tofullfit (notlatentaxis signs). Ifanyomission leaves<2eligiblecapturesatanypaststage, markfullstability unsupported, retainfitdiagnostic andrecordmissingomissions; do notselectfavorableomissions. Every-omission support thusrequires>=3initialcaptures eachstage. Keepstagecutoff strict.",
+  "controls": "Persistencezeros andunprojectedcapturebalancedOLS; identity/knownrank2synthetic numericalcontrols, temporalrowguard/hashes. No targetfit/strengthgrid, nohiddenrankoptimization.",
+  "outputs": "Capture/lineage/stagecounts, rank/singularvalues, projected/unprojectedenergy, allomissiongenedelta cosine/signagreement andstablegeneshiftenergyfraction; source/code/split hashes andgenuineevents. No claimaccuracy/promotionfromstability. Originalfullpanel/calibration/readinessunchanged; onlyseparatelydeclareforecastifidentifiable.",
+  "resources": "D-only source memmap/chunk256genes, tinycapture-by-mappedgene matrix,2threads16GBRAM; retainsmallmeans/slopes/hash evidence, nofullcellforecastorRAMatlas."
+}

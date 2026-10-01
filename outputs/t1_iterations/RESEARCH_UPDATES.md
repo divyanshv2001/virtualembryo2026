@@ -596,3 +596,7 @@ Count-space interpolation with40-step donor-only perlineage bisection implemente
 ## 2026-10-01T19:39:24.621738+00:00 — repair-aware full-panel negative two-fold gate
 
 All16forecasts frozen beforeANYfutureexpression,12originalcontrols exactforecast/rawmetrics/headline/calibration/split replay,4newhashes guardedpreflight. Quarter47.309794/53.367924;shrunk47.141697/52.679601 vsanchor50.068691/50.911273. Earlyall4skillsworse,laterall4better; neitherpassesboth. Fullraw4/skills4 preserved. Reward−18/−40=>−58,balance−848. Ledger3091records/192reports/0errors. Fourreusedcriticcontexts recorded(threadlimit), corrections/sourcecoverage caveatsexplicit. Jev1082in/62out chosepriorgene-modulecoveragepreflight beforeanynewmethod, no targetgrid. Families/readinessopen; noofficialupload ornewpromotedexport.
+
+## 2026-10-01T19:49:05.084765+00:00 — capture-module coverage/resources
+
+Relevantpriorcell-level8Dconditionalridge andindependentgeneEB aredifferentfrompredeclaredcapture-levelrank2basis/omissionrefit; limitedlocalcodecoverage recorded, no wholefamilyclaim. Metadata-only counts: everyomissionrequires3captures/stage;3lineagescut8 and4cut8.25 qualify, unsupportedcasesexplicit. DEsignedoverlapdiscreteness/scaling documented; actualtiedscoresgene-sets uninspected. Jev1026in/56out selectedfixedrank2capturemeanprojection. NEXT_CAPTURE_MODULE_STABILITY_AUDIT.json declared, notstarted. Noexpression/newexperimentmetrics/reward;ledgerunchanged.

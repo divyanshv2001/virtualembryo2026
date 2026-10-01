@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T19:39:24.621738+00:00",
+  "updated_utc": "2026-10-01T19:49:05.084765+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Past gene-module coverage preflight: inspect only relevant prior latent residual/gene/module specs and frozen results plus scorer DE behavior. Determine whether capture-omission sign-stable lineage gene modules are genuinely distinct from prior tested latent/residual methods, what historical inputs/support and unexposed validation remain. Do not rerun covered method; only then predeclare viable exact past-only diagnostic/forecast. Repair-aware fixed2candidate fullpanel negativebothfoldgate; families/readiness open, no exposedtargetstrengthgrid.",
+  "next_experiment": "Implement/run predeclared capture_module_stability_audit_01: past3stage capturebalancedrank2SVD gene-slope projection andfullcaptureomissionrefits. Strict20cells/min2stagefit/min3everyomission support; unsupportedlineages/omissions recorded, no targetexpression/score/reward or rank/strengthgrid. Numericalrank2/identitycontrols; comparegene-space slope signs/energy/cosines. Onlyseparatelydeclareforecastafteridentifiability; no repeatprior8Dlatent/ridge method. Families/readinessopen.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1297,13 +1297,13 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_REPAIR_FULLPANEL_ROUTE_20261001_01.json",
+    "record": "JEV_MODULE_DESIGN_ROUTE_20261002_01.json",
     "usage": {
-      "input_tokens": 1082,
-      "output_tokens": 62
+      "input_tokens": 1026,
+      "output_tokens": 56
     },
-    "choice": "past_gene_module_coverage",
-    "confidence": 0.45
+    "choice": "rank2_capture_mean_projection",
+    "confidence": 1.0
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -2547,5 +2547,14 @@
         52.67960143893363
       ]
     }
+  },
+  "gene_module_coverage_preflight": {
+    "status": "completed_resource_check",
+    "report": "GENE_MODULE_COVERAGE_PREFLIGHT_20261002.json",
+    "report_sha256": "0b721535c48ecb3df65e0e67627c37ab56f2704de58fbafa918c2a35b1f6c953",
+    "review": "GENE_MODULE_COVERAGE_PREFLIGHT_20261002.md",
+    "new_experiment_batch": false,
+    "reward_delta": 0,
+    "expression_read": false
   }
 }

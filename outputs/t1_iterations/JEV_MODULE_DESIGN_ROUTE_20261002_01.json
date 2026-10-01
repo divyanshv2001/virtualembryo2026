@@ -1,0 +1,39 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "fe4a45d32efb1ff66f9e14c65264bc29ada119d942658eff60c1959fbe531bf9",
+  "attempts": 1,
+  "payload_bytes": 2270,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "purpose": "Predeclare genuinelydistinct capture-mean module identifiability diagnostic after targetedcoveragecheck.",
+      "coverage": "Priorlatent_residual_gene_screen fits cell-level8Dencoder+lineageonehot conditionaltime ridge1 viaSchurcomplement; .1/.25blends withrecentdelta failedmappedrankproxy. Existingcapturemeanshrinkage usesgeneindependentEBvariance and2stages, no coexpressionmodule extraction/captureomissionbasisrefit insearchedlocalpython. This isboundedcoverage evidence notclaim allmodulefamiliesuntested.",
+      "resources": "Atcut8 threepaststages7.5/7.75/8: blood5/4/4captures,endoderm3/4/4,ectoderm2/4/4,mesenchymal6/4/4. CM0/2/4,cph1/2/4,endothelial1/2/4 =>3stage stablemoduleunsupported. Cut8.25 sevenlineages>=2captures each of7.75/8/8.25; neuralcrest0/0/2unsupported. Capture>=20cells. Capturesnotembryos. 26775uniquemappedgenes.",
+      "scorer": "DE signedoverlap discretehitcount/truthDEgene count, scalespositiveconstant rankinvariant exceptnochangeguard. IdenticalearlyDEdoesnotproveidenticalgeneorderingorresolutionfailure; actualsets/hitsnotyetinspected. No scoreralteration.",
+      "constraints": "Past-onlyno targetexpression/score/reward. D16GB2threads256genechunks; tinycapture-by-gene matrix. Modulebasis re-fit foreachcaptureomission, projectedgene shifts compared toavoidsign/rotationissues. No newtargetgrid. Families/readinessopen."
+    },
+    "questions": {
+      "module_design": {
+        "type": "choice",
+        "instructions": "Select fixed lowcost firstdiagnostic, no claimedforecastaccuracy.",
+        "criteria": {
+          "rank2_capture_mean_projection": "Stagebalancedcapturemeans; center acrosscaptures with equalstage/equalcaptureweights, fixedrank2SVD past3stages. CapturebalancedOLS gene slope projected ontobasis. For everyeligiblecapture omission refitmean/basis/OLS, compare reconstructedgenedelta signs/cosines tofullpast estimate. Require>=2captureseachstage beforefullfit; ifomission leaves<2 markstabilityunsupported ratherthanfit. Reportstableenergyfraction/support nottargetscore. Copy/geneindependentOLScontrols.",
+          "fixed_external_gene_modules": "Externalcuratedgene sets neednotyetprovideddata/provenance; cannotinventvalidatedmodules, mayrequireacquisition.",
+          "repeat_latent_time_ridge": "Samecellencoder/ridge1/.1/.25 priorfailedproxy no distinctcoverage."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 1026,
+    "output_tokens": 56
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "module_design": {
+      "choice": "rank2_capture_mean_projection",
+      "confidence": 1.0
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}

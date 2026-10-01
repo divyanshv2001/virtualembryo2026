@@ -1,0 +1,281 @@
+{
+  "status": "resource_and_prior_coverage_checked",
+  "updated_utc": "2026-10-01T19:49:05.084765+00:00",
+  "not_experiment_batch": true,
+  "sources": {
+    "latent_residual_gene_screen.py": "de81fb147cf87c6a7cee2d75fc5529ce4fbc221dd91f773a9fdc932fd420cf40",
+    "LATENT_RESIDUAL_GENE_SCREEN_RESULTS.json": "26da26d6391afefea5861247cee4206c2c2bdc8f9ebca0bd70b9e8432f19d4f9",
+    "capture_mean_shrinkage_audit.py": "9d3f611daab83551c6eaef0524f227be86ea0ad8d26c6dcde952054a048712c2",
+    "capture_mean_shrinkage.py": "30e172452fef8e64bb638e896542390d173df68d810c33043e3b965c8baa8f7f",
+    "offline_backtest.py": "874b840c6bb3cce570b85482f2f11daacfcd164a04994301a33568c44ae3f3b6",
+    "private/scorer_source/common/core_metrics.py": "3be7099a0c9a7ad5b609f86078871ed8290ed0bd8916b0cb3e14fb9831909f31",
+    "private/associated_prepared_01/selected_metadata.csv": "3db3903c24447cfa250622780a60dc4799881f0501869a9458afb124914193bf"
+  },
+  "prior_latent_residual": "Cell-level8D conditionaltime ridge1 viaSchurcomplement; .1/.25recentdelta blends; mappedrankproxy failed. No capture-level rank2modulebasis/omissionrefit inthismethod.",
+  "prior_capture_mean": "Two-stage independentgene EBvariance, no coexpressionmodulebasis.",
+  "searched_local_python": "rg caseinsensitive module/genecluster/captureomission inspectedlocal.py; no matchingcapturemodule implementation found; limitedsearchnotproof all scientificfamiliesabsent.",
+  "de_scorer": "TruthdefinesDEup/downcounts; signedrankoverlaphitcount is discrete; positiveglobalscale rankinvariant exceptnochangeguard. ActualforecastDEsets/hitcounts not inspected; identicalearlyDE alone proves neitheridenticalordering norresolutionfailure. Scorer/calibrationunchanged.",
+  "support": [
+    {
+      "cutoff": 8.0,
+      "lineage": "blood",
+      "stages": [
+        7.5,
+        7.75,
+        8.0
+      ],
+      "eligible_capture_counts": [
+        5,
+        4,
+        4
+      ],
+      "three_stage_fit_supported": true,
+      "every_omission_stability_supported": true
+    },
+    {
+      "cutoff": 8.0,
+      "lineage": "cardiomyocyte",
+      "stages": [
+        7.5,
+        7.75,
+        8.0
+      ],
+      "eligible_capture_counts": [
+        0,
+        2,
+        4
+      ],
+      "three_stage_fit_supported": false,
+      "every_omission_stability_supported": false
+    },
+    {
+      "cutoff": 8.0,
+      "lineage": "cardiopharyngeal",
+      "stages": [
+        7.5,
+        7.75,
+        8.0
+      ],
+      "eligible_capture_counts": [
+        1,
+        2,
+        4
+      ],
+      "three_stage_fit_supported": false,
+      "every_omission_stability_supported": false
+    },
+    {
+      "cutoff": 8.0,
+      "lineage": "ectoderm_other",
+      "stages": [
+        7.5,
+        7.75,
+        8.0
+      ],
+      "eligible_capture_counts": [
+        2,
+        4,
+        4
+      ],
+      "three_stage_fit_supported": true,
+      "every_omission_stability_supported": false
+    },
+    {
+      "cutoff": 8.0,
+      "lineage": "endoderm",
+      "stages": [
+        7.5,
+        7.75,
+        8.0
+      ],
+      "eligible_capture_counts": [
+        3,
+        4,
+        4
+      ],
+      "three_stage_fit_supported": true,
+      "every_omission_stability_supported": true
+    },
+    {
+      "cutoff": 8.0,
+      "lineage": "endothelial",
+      "stages": [
+        7.5,
+        7.75,
+        8.0
+      ],
+      "eligible_capture_counts": [
+        1,
+        2,
+        4
+      ],
+      "three_stage_fit_supported": false,
+      "every_omission_stability_supported": false
+    },
+    {
+      "cutoff": 8.0,
+      "lineage": "mesenchymal",
+      "stages": [
+        7.5,
+        7.75,
+        8.0
+      ],
+      "eligible_capture_counts": [
+        6,
+        4,
+        4
+      ],
+      "three_stage_fit_supported": true,
+      "every_omission_stability_supported": true
+    },
+    {
+      "cutoff": 8.0,
+      "lineage": "neural_crest",
+      "stages": [
+        7.5,
+        7.75,
+        8.0
+      ],
+      "eligible_capture_counts": [
+        0,
+        0,
+        0
+      ],
+      "three_stage_fit_supported": false,
+      "every_omission_stability_supported": false
+    },
+    {
+      "cutoff": 8.25,
+      "lineage": "blood",
+      "stages": [
+        7.75,
+        8.0,
+        8.25
+      ],
+      "eligible_capture_counts": [
+        4,
+        4,
+        3
+      ],
+      "three_stage_fit_supported": true,
+      "every_omission_stability_supported": true
+    },
+    {
+      "cutoff": 8.25,
+      "lineage": "cardiomyocyte",
+      "stages": [
+        7.75,
+        8.0,
+        8.25
+      ],
+      "eligible_capture_counts": [
+        2,
+        4,
+        3
+      ],
+      "three_stage_fit_supported": true,
+      "every_omission_stability_supported": false
+    },
+    {
+      "cutoff": 8.25,
+      "lineage": "cardiopharyngeal",
+      "stages": [
+        7.75,
+        8.0,
+        8.25
+      ],
+      "eligible_capture_counts": [
+        2,
+        4,
+        3
+      ],
+      "three_stage_fit_supported": true,
+      "every_omission_stability_supported": false
+    },
+    {
+      "cutoff": 8.25,
+      "lineage": "ectoderm_other",
+      "stages": [
+        7.75,
+        8.0,
+        8.25
+      ],
+      "eligible_capture_counts": [
+        4,
+        4,
+        3
+      ],
+      "three_stage_fit_supported": true,
+      "every_omission_stability_supported": true
+    },
+    {
+      "cutoff": 8.25,
+      "lineage": "endoderm",
+      "stages": [
+        7.75,
+        8.0,
+        8.25
+      ],
+      "eligible_capture_counts": [
+        4,
+        4,
+        3
+      ],
+      "three_stage_fit_supported": true,
+      "every_omission_stability_supported": true
+    },
+    {
+      "cutoff": 8.25,
+      "lineage": "endothelial",
+      "stages": [
+        7.75,
+        8.0,
+        8.25
+      ],
+      "eligible_capture_counts": [
+        2,
+        4,
+        3
+      ],
+      "three_stage_fit_supported": true,
+      "every_omission_stability_supported": false
+    },
+    {
+      "cutoff": 8.25,
+      "lineage": "mesenchymal",
+      "stages": [
+        7.75,
+        8.0,
+        8.25
+      ],
+      "eligible_capture_counts": [
+        4,
+        4,
+        3
+      ],
+      "three_stage_fit_supported": true,
+      "every_omission_stability_supported": true
+    },
+    {
+      "cutoff": 8.25,
+      "lineage": "neural_crest",
+      "stages": [
+        7.75,
+        8.0,
+        8.25
+      ],
+      "eligible_capture_counts": [
+        0,
+        0,
+        2
+      ],
+      "three_stage_fit_supported": false,
+      "every_omission_stability_supported": false
+    }
+  ],
+  "expression_read": false,
+  "target_expression_read": false,
+  "new_metrics": false,
+  "reward_delta": 0,
+  "independent_embryos_established": false
+}
