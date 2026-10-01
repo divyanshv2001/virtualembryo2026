@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-01T06:50:47.560072+00:00
+Updated: 2026-10-01T06:56:48.058392+00:00
 
 Run `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_playbook.py` first. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -8,7 +8,7 @@ Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction':
 
 Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Audit proxy/scorer/horizon fidelity before further slope banks. Inspect unchanged full-panel scorer definitions, original frozen one-day controls/calibration and proxy top200/chance/partial-rank definitions; document mismatches and compare existing genuine reports where candidates/splits actually match. Then declare a bounded one-day scorer-aligned past-only ablation with persistence/incumbent controls for representative saved formulas if audit supports it. Do not treat quarter-day proxy rejection as proof of official-score failure, relax gates using target outcomes, or invent unavailable raw scores.
+Next: Freeze a bounded10score full-panel one-day ablation on existing sourcefolds: persistence, archived .5/.5 anchor incumbent, anchored recentpooled slope, lineageglobal slope and partialpool1000 slope. Identical1500donors/1000truth+1000ceiling, seed20260928, scorer/calibration and mappedmass safeguards. Pastfits and forecastsfrozen beforetarget read. Use fixed conservative horizon/shrinkage, no quarterdaygate requirement; development only. Freeze shrinkage.25 of one-day slope (four quarter-day steps), nonnegative anchored changes and per-donor mapped-mass repair before execution; record actual mean perturbation and any guard fallback. Do not change scorer/calibration or reinterpret proxy scores as headline.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in outputs\t1_submissions\formula_progress_20260930_01\official_result.json. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 

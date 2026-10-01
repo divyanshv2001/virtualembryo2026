@@ -31,7 +31,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Audit proxy/scorer/horizon fidelity before further slope banks. Inspect unchanged full-panel scorer definitions, original frozen one-day controls/calibration and proxy top200/chance/partial-rank definitions; document mismatches and compare existing genuine reports where candidates/splits actually match. Then declare a bounded one-day scorer-aligned past-only ablation with persistence/incumbent controls for representative saved formulas if audit supports it. Do not treat quarter-day proxy rejection as proof of official-score failure, relax gates using target outcomes, or invent unavailable raw scores.",
+  "next_experiment": "Freeze a bounded10score full-panel one-day ablation on existing sourcefolds: persistence, archived .5/.5 anchor incumbent, anchored recentpooled slope, lineageglobal slope and partialpool1000 slope. Identical1500donors/1000truth+1000ceiling, seed20260928, scorer/calibration and mappedmass safeguards. Pastfits and forecastsfrozen beforetarget read. Use fixed conservative horizon/shrinkage, no quarterdaygate requirement; development only. Freeze shrinkage.25 of one-day slope (four quarter-day steps), nonnegative anchored changes and per-donor mapped-mass repair before execution; record actual mean perturbation and any guard fallback. Do not change scorer/calibration or reinterpret proxy scores as headline.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1516,5 +1516,15 @@
     ],
     "full_panel_scores": 0,
     "reward_delta": 0
+  },
+  "proxy_scorer_fidelity_audit": {
+    "report": "PROXY_SCORER_HORIZON_AUDIT.json",
+    "report_sha256": "78439e3d873b287d71723ffc76f71ff3a35aec6de0165fdfe00eb0e6ec0cfa84",
+    "exact_nontrivial_pairs": 0,
+    "empirical_fidelity_correlation": null,
+    "nochange_proxy_mismatch_verified": true,
+    "full_panel_scores": 0,
+    "reward_delta": 0,
+    "scorer_changed": false
   }
 }

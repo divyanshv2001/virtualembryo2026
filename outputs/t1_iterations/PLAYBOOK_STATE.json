@@ -1,16 +1,16 @@
 {
-  "updated_utc": "2026-10-01T06:50:47.560072+00:00",
+  "updated_utc": "2026-10-01T06:56:48.058392+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "f3d15b8e4e58eed334ad09a19ea18ee30e51f86e817ff7f398a868b86f5ae7e3",
+    "LOCAL_OPTIMIZATION_STATE.json": "485cdbe3f9a2f1d8be06ca7c0075b3ca868df5f07507240d673b9b1d7bca46cf",
     "LOCAL_OPTIMIZATION_PROMPT.md": "dc34e90fa3519a22843971c550774ced585b0bab7dea86ab4fc00c5aee806f38",
-    "METRIC_RESEARCH_QUEUE.json": "5a0d0df22a77417a1a824ac2055f11dba2045e103e04975767b091d6083e9fad",
+    "METRIC_RESEARCH_QUEUE.json": "5c2eab43043915a5257f691b74e773f2f0292dc18dd6186120c59ec66c76d3c7",
     "METRIC_CRITIQUE_POLICY.json": "025beff88fbd06be4f25b4643456853ca5f0c7ee68a66212ab0e1281bcd9a8e5",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [],
-  "next_experiment": "Audit proxy/scorer/horizon fidelity before further slope banks. Inspect unchanged full-panel scorer definitions, original frozen one-day controls/calibration and proxy top200/chance/partial-rank definitions; document mismatches and compare existing genuine reports where candidates/splits actually match. Then declare a bounded one-day scorer-aligned past-only ablation with persistence/incumbent controls for representative saved formulas if audit supports it. Do not treat quarter-day proxy rejection as proof of official-score failure, relax gates using target outcomes, or invent unavailable raw scores.",
+  "next_experiment": "Freeze a bounded10score full-panel one-day ablation on existing sourcefolds: persistence, archived .5/.5 anchor incumbent, anchored recentpooled slope, lineageglobal slope and partialpool1000 slope. Identical1500donors/1000truth+1000ceiling, seed20260928, scorer/calibration and mappedmass safeguards. Pastfits and forecastsfrozen beforetarget read. Use fixed conservative horizon/shrinkage, no quarterdaygate requirement; development only. Freeze shrinkage.25 of one-day slope (four quarter-day steps), nonnegative anchored changes and per-donor mapped-mass repair before execution; record actual mean perturbation and any guard fallback. Do not change scorer/calibration or reinterpret proxy scores as headline.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
