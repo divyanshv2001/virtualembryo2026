@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T16:07:28.461567+00:00",
+  "updated_utc": "2026-10-01T16:20:39.069032+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Preflight fixed full-panel decoder for capture-balanced log-gene-mean shrinkage and quarter-step controls. Inspect existing donor transport versus positive-slope decoder, resolve nonnegativity, row mass, protected genes and unsupported-lineage persistence without changing pinned scorer/calibration. Freeze one bounded implementation before evaluation; no exposed-target parameter grid. Mean/covariance families remain open; readiness unmet.",
+  "next_experiment": "Implement and register fixed capture-mean decoder full-panel test: cut8/8.25 target8.25/8.5, archived1500donors/seed20260928, copy/incumbent anchor(.5,.5)/quarter/shrunk controls. Regenerate exact preflight hashes and pass guards before target reads. Unchanged32285scorer/calibration,2000targetrows truth1000/ceiling1000. No strength grid or exposed-target tuning; reused development evidence. Bothfolds must beat copy/incumbent headlines and preserveallskills to advance. Readiness and familycoverage remain incomplete.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1294,13 +1294,13 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_MEAN_SYNTHESIS_ROUTE_20261001_01.json",
+    "record": "JEV_DECODER_SYNTHESIS_ROUTE_20261001_01.json",
     "usage": {
-      "input_tokens": 923,
-      "output_tokens": 60
+      "input_tokens": 950,
+      "output_tokens": 49
     },
-    "choice": "fullpanel_fixed_decoder_preflight",
-    "confidence": 0.99
+    "choice": "score_fixed_decoder",
+    "confidence": 1.0
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -2084,6 +2084,20 @@
       "specialist_role_version": 2,
       "metric_availability": false,
       "reward_delta": 0
+    },
+    "capture_mean_decoder_preflight_01": {
+      "status": "completed",
+      "report_sha256": "dc28b09682f8ba20de9db3c157486d5492c21d5b9ab599395d61b6b0614d6617",
+      "review": "METRIC_CRITIQUES_CAPTURE_DECODER_20261001.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": false,
+      "reward_delta": 0
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -2287,6 +2301,14 @@
         "better_than_persistence": 26
       }
     ],
+    "reward_delta": 0
+  },
+  "capture_mean_decoder_job": {
+    "status": "completed",
+    "report_sha256": "dc28b09682f8ba20de9db3c157486d5492c21d5b9ab599395d61b6b0614d6617",
+    "metrics_available": false,
+    "report": "CAPTURE_MEAN_DECODER_PREFLIGHT_RESULTS.json",
+    "guards_passed_cases": 6,
     "reward_delta": 0
   }
 }

@@ -110,6 +110,11 @@
       "script": "capture_mean_shrinkage_audit.py",
       "run": "private/capture_mean_shrinkage_audit_01",
       "report": "CAPTURE_MEAN_SHRINKAGE_AUDIT_RESULTS.json"
+    },
+    "capture_mean_decoder": {
+      "script": "capture_mean_decoder_preflight.py",
+      "run": "private/capture_mean_decoder_preflight_01",
+      "report": "CAPTURE_MEAN_DECODER_PREFLIGHT_RESULTS.json"
     }
   }
 }

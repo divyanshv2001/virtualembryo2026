@@ -1,0 +1,20 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "purpose": "Choose next action after donor-only cell decoder feasibility audit",
+    "evidence": "All6cases cut8/8.25 copy/quarter/shrunk pass finite nonnegative protectedgenes unsupportedpersist identityexact countmass<=3.3e-8 meanchange<=.298 covchange<=.111. Quarterlineage shiftrelativeerror.232-.408 cosine.917-.974; shrunkerror.344-.491 cosine.880-.943. Targetexpressionnotread; actual4metrics unavailable. Earliermeanproxyshrunk30/76betterpersist,quarter37/76,first2foldsmeanerrorworse. Capturesnotembryos.",
+    "critics": "DEsuggests constrainedprojection toreduceshiftdistortion, but earlier jointmean/mass constraints wereinfeasible ornearanchor. Direction/CSSsuggest paststrengthselection butdonotusealreadyexposedtargets. MMD/CSSrequire actualfullpanelscoringmatchedcopy/incumbent. No benchmarkclaims.",
+    "constraints": "Unchangedfull32285scorer/calibration. Exactfrozenmeans/splits/hashes. Onequarterday target8.25/8.5 historicaldevelopment diagnostic notfreshchallengevalidation. No targetparametergrid, existingquarter/shrunkfixed. Dcacheoneforecast2threads16GB. Rewardonlyvalidfullpanel; readiness>72/64replicate/temporalunmet."
+  },
+  "questions": {
+    "action": {
+      "type": "choice",
+      "instructions": "Choose informative next boundedaction given operationallyvalidforecasts and imperfectmeanfidelity.",
+      "criteria": {
+        "score_fixed_decoder": "Predeclare actualfullpanelfixedcopy/incumbent/quarter/shrunk atcut8/8.25 target8.25/8.5 withsamearchived1500donors seed20260928, targets2000 truth1000/ceiling1000. Regenerateforecast exactlyandverifyhashes beforetargetread. Reportall4metrics+skills+calibration; no promotion unlessbothfolds improvecontrols and preserveallskills.",
+        "another_projection_proxy": "Attemptnewmean/countmassprojection first; no proofdesiredlogmeansfeasible and repeatsoldnegativeconstraintfamily, delaysactualmetrics.",
+        "select_strength_on_exposed_proxy": "Chooseoptimalgain fromalreadyobservedtargeterrors; prohibited targettuning."
+      }
+    }
+  }
+}

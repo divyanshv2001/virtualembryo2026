@@ -1,0 +1,22 @@
+{
+  "cutoffs": [
+    8.0,
+    8.25
+  ],
+  "candidates": [
+    "persistence",
+    "capture_quarter",
+    "capture_shrunk"
+  ],
+  "fit": "Reuse frozen past-only capturemean predictions; one quarterday delta. Same archived1500donors andguardfeatures. No fit/strength/backoff selection, no future expression read.",
+  "decoder": "Add lineage logmean delta to mapped donor loggenes, clip0; perrow expm1mapped countmass repair, log1p. Unsupportedlineages exactcopy, protectedunmapped genes exactcopy.",
+  "guards": {
+    "finite_nonnegative": true,
+    "mapped_countmass_relative_error_max": 1e-05,
+    "meanchange_max": 0.5,
+    "covariance_change_max": 0.4
+  },
+  "scope": "Past-only decoder feasibility. Full32285columns used but no scorer/calibration/benchmarkmetrics/reward. Lineage shift fidelity diagnostic only; predictions hashed thenDtemporarycacheclosed. No independent embryo claim.",
+  "seed": 20260928,
+  "resources": "D-only temporary cache; source memmap256genechunks,2BLASthreads; oneforecast atatime."
+}

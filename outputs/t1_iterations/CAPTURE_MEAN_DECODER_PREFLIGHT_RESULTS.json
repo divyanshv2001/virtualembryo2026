@@ -1,0 +1,533 @@
+{
+  "status": "completed",
+  "plan": {
+    "cutoffs": [
+      8.0,
+      8.25
+    ],
+    "candidates": [
+      "persistence",
+      "capture_quarter",
+      "capture_shrunk"
+    ],
+    "fit": "Reuse frozen past-only capturemean predictions; one quarterday delta. Same archived1500donors andguardfeatures. No fit/strength/backoff selection, no future expression read.",
+    "decoder": "Add lineage logmean delta to mapped donor loggenes, clip0; perrow expm1mapped countmass repair, log1p. Unsupportedlineages exactcopy, protectedunmapped genes exactcopy.",
+    "guards": {
+      "finite_nonnegative": true,
+      "mapped_countmass_relative_error_max": 1e-05,
+      "meanchange_max": 0.5,
+      "covariance_change_max": 0.4
+    },
+    "scope": "Past-only decoder feasibility. Full32285columns used but no scorer/calibration/benchmarkmetrics/reward. Lineage shift fidelity diagnostic only; predictions hashed thenDtemporarycacheclosed. No independent embryo claim.",
+    "seed": 20260928,
+    "resources": "D-only temporary cache; source memmap256genechunks,2BLASthreads; oneforecast atatime.",
+    "created_utc": "2026-10-01T16:12:23.086478+00:00",
+    "spec_sha256": "c95671f35a40344ec43c04513365be447adf583449d5c5c2887720672d52bf98",
+    "panel_sha256": "2aeae4cd284933956242bbc9c5ab4f565c1d2acc7cc3fd3037977e4bce8be4bf",
+    "prepared_report_sha256": "1acd8a635f76c9f9ac89a1186f116db91309b007f448a8d11ec612627ab5bca4",
+    "prior_report_sha256": "a4442fb533cc37a693ba07dfc43f8914423d19fd42d4d456b2584aa9c031bbb1",
+    "code_sha256": {
+      "capture_mean_decoder_preflight.py": "0252cc7d8a37265fe66b21333d143e30287e06eb8f17d647b25c4907bf0b3085",
+      "forecast_transform_fidelity.py": "a06d124dfa36ebd803f9263439ef1c7a4301eb57484a9fc3f97d911bf0bca870",
+      "robust_population.py": "86ae5926124b3704ed46596781a487735405291531c38d956cd7db359c8d56e6",
+      "temporary_forecast_cache.py": "52e855549a43fdb5ac346ebf4ca73e9d03a88967ff6cc1b355a9095e4b3bb301",
+      "projection_survival_diagnostics.py": "7e574f7f12ea57dd34c09476229d545619631051a3e03a71f3e62950c5f87696",
+      "lineage_residual_screen.py": "caa26ef0300cd52f98e10f41686a92393c489309020d207915d70f5565bdaf7a"
+    }
+  },
+  "results": [
+    {
+      "cutoff": 8.0,
+      "candidate": "persistence",
+      "donor_rows_sha256": "7d951f227d44ea8091374db5278ed8dfd5fc3026d938288ca0e8ae98ed15a3b0",
+      "encoder_sha256": "a6c2212ebd71b2b5e7f533bd159cf98357614bd3039adae77ba0fd6247d26bc5",
+      "mean_forecast_sha256": "d7d534842c39be3b43f5c8edff78e0995b8b357b8aee1671dcaf57b4f50a5227",
+      "prediction_sha256": "53908b256a2f04ded456a9239a8231ce0c0f551e3bd9de2c1424524db824cd4d",
+      "donors": 1500,
+      "max_fit_stage": 8.0,
+      "clipped_entries": 0,
+      "count_mass_relative_error": 0.0,
+      "max_mean_change": 0.0,
+      "covariance_change": 0.0,
+      "protected_genes_unchanged": true,
+      "unsupported_lineages_unchanged": true,
+      "finite_nonnegative": true,
+      "identity_passed": true,
+      "guards_passed": true,
+      "lineage_shift_fidelity": [
+        {
+          "lineage": "blood",
+          "donors": 698,
+          "intended_norm": 0.0,
+          "decoded_norm": 0.0,
+          "relative_shift_error": null,
+          "shift_cosine": null
+        },
+        {
+          "lineage": "mesenchymal",
+          "donors": 297,
+          "intended_norm": 0.0,
+          "decoded_norm": 0.0,
+          "relative_shift_error": null,
+          "shift_cosine": null
+        },
+        {
+          "lineage": "endoderm",
+          "donors": 73,
+          "intended_norm": 0.0,
+          "decoded_norm": 0.0,
+          "relative_shift_error": null,
+          "shift_cosine": null
+        },
+        {
+          "lineage": "ectoderm_other",
+          "donors": 127,
+          "intended_norm": 0.0,
+          "decoded_norm": 0.0,
+          "relative_shift_error": null,
+          "shift_cosine": null
+        },
+        {
+          "lineage": "cardiopharyngeal",
+          "donors": 117,
+          "intended_norm": 0.0,
+          "decoded_norm": 0.0,
+          "relative_shift_error": null,
+          "shift_cosine": null
+        },
+        {
+          "lineage": "endothelial",
+          "donors": 88,
+          "intended_norm": 0.0,
+          "decoded_norm": 0.0,
+          "relative_shift_error": null,
+          "shift_cosine": null
+        },
+        {
+          "lineage": "cardiomyocyte",
+          "donors": 100,
+          "intended_norm": 0.0,
+          "decoded_norm": 0.0,
+          "relative_shift_error": null,
+          "shift_cosine": null
+        }
+      ],
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0
+    },
+    {
+      "cutoff": 8.0,
+      "candidate": "capture_quarter",
+      "donor_rows_sha256": "7d951f227d44ea8091374db5278ed8dfd5fc3026d938288ca0e8ae98ed15a3b0",
+      "encoder_sha256": "a6c2212ebd71b2b5e7f533bd159cf98357614bd3039adae77ba0fd6247d26bc5",
+      "mean_forecast_sha256": "d7d534842c39be3b43f5c8edff78e0995b8b357b8aee1671dcaf57b4f50a5227",
+      "prediction_sha256": "a3118114aa7677b1563f31f3c3aa717c1b93e60cea52560678439e693411c5d8",
+      "donors": 1500,
+      "max_fit_stage": 8.0,
+      "clipped_entries": 9612586,
+      "count_mass_relative_error": 3.2806904738435634e-08,
+      "max_mean_change": 0.1668819387170175,
+      "covariance_change": 0.0831250090622981,
+      "protected_genes_unchanged": true,
+      "unsupported_lineages_unchanged": true,
+      "finite_nonnegative": true,
+      "identity_passed": true,
+      "guards_passed": true,
+      "lineage_shift_fidelity": [
+        {
+          "lineage": "blood",
+          "donors": 698,
+          "intended_norm": 1.5435692133995043,
+          "decoded_norm": 1.3325679724521815,
+          "relative_shift_error": 0.3260678252350309,
+          "shift_cosine": 0.9492448414529525
+        },
+        {
+          "lineage": "mesenchymal",
+          "donors": 297,
+          "intended_norm": 1.404973098266966,
+          "decoded_norm": 1.2346358796317805,
+          "relative_shift_error": 0.2555031864333506,
+          "shift_cosine": 0.971219122951248
+        },
+        {
+          "lineage": "endoderm",
+          "donors": 73,
+          "intended_norm": 1.5937761171523104,
+          "decoded_norm": 1.3534251760591531,
+          "relative_shift_error": 0.3221539036135521,
+          "shift_cosine": 0.9522837562775588
+        },
+        {
+          "lineage": "ectoderm_other",
+          "donors": 127,
+          "intended_norm": 1.4946536732401792,
+          "decoded_norm": 1.293377102688622,
+          "relative_shift_error": 0.2973147249328218,
+          "shift_cosine": 0.9594021361247157
+        },
+        {
+          "lineage": "cardiopharyngeal",
+          "donors": 117,
+          "intended_norm": 1.771876270196825,
+          "decoded_norm": 1.5547068545352667,
+          "relative_shift_error": 0.2860874511909609,
+          "shift_cosine": 0.9619208786610683
+        },
+        {
+          "lineage": "endothelial",
+          "donors": 88,
+          "intended_norm": 1.943001541925828,
+          "decoded_norm": 1.6970799557807859,
+          "relative_shift_error": 0.27670147286749586,
+          "shift_cosine": 0.9653411665090457
+        },
+        {
+          "lineage": "cardiomyocyte",
+          "donors": 100,
+          "intended_norm": 1.8551765608475956,
+          "decoded_norm": 1.5975855128324403,
+          "relative_shift_error": 0.3085072627552181,
+          "shift_cosine": 0.9559325141421479
+        }
+      ],
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0
+    },
+    {
+      "cutoff": 8.0,
+      "candidate": "capture_shrunk",
+      "donor_rows_sha256": "7d951f227d44ea8091374db5278ed8dfd5fc3026d938288ca0e8ae98ed15a3b0",
+      "encoder_sha256": "a6c2212ebd71b2b5e7f533bd159cf98357614bd3039adae77ba0fd6247d26bc5",
+      "mean_forecast_sha256": "d7d534842c39be3b43f5c8edff78e0995b8b357b8aee1671dcaf57b4f50a5227",
+      "prediction_sha256": "7c21aa9c80db104f039bb0b9404a996793b837b507bec8a9eb4eb4629ed970a9",
+      "donors": 1500,
+      "max_fit_stage": 8.0,
+      "clipped_entries": 9612589,
+      "count_mass_relative_error": 1.5314340811035516e-08,
+      "max_mean_change": 0.2972125653425852,
+      "covariance_change": 0.044795883806256584,
+      "protected_genes_unchanged": true,
+      "unsupported_lineages_unchanged": true,
+      "finite_nonnegative": true,
+      "identity_passed": true,
+      "guards_passed": true,
+      "lineage_shift_fidelity": [
+        {
+          "lineage": "blood",
+          "donors": 698,
+          "intended_norm": 2.3036917549413776,
+          "decoded_norm": 1.7486349368404694,
+          "relative_shift_error": 0.4437554197730521,
+          "shift_cosine": 0.9085275882237839
+        },
+        {
+          "lineage": "mesenchymal",
+          "donors": 297,
+          "intended_norm": 2.110668966858606,
+          "decoded_norm": 1.6764539559606064,
+          "relative_shift_error": 0.3954231178612337,
+          "shift_cosine": 0.9282131715550803
+        },
+        {
+          "lineage": "endoderm",
+          "donors": 73,
+          "intended_norm": 1.9275450829912455,
+          "decoded_norm": 1.4648754970951505,
+          "relative_shift_error": 0.4905755017982785,
+          "shift_cosine": 0.8795677425009448
+        },
+        {
+          "lineage": "ectoderm_other",
+          "donors": 127,
+          "intended_norm": 1.9674814037323731,
+          "decoded_norm": 1.5499985356307515,
+          "relative_shift_error": 0.45223835535997586,
+          "shift_cosine": 0.8987734372501603
+        },
+        {
+          "lineage": "cardiopharyngeal",
+          "donors": 117,
+          "intended_norm": 2.975327178923529,
+          "decoded_norm": 2.437104876132194,
+          "relative_shift_error": 0.4101381284762264,
+          "shift_cosine": 0.9172937224886754
+        },
+        {
+          "lineage": "endothelial",
+          "donors": 88,
+          "intended_norm": 3.1564905611883134,
+          "decoded_norm": 2.6164419884156005,
+          "relative_shift_error": 0.3889597379645174,
+          "shift_cosine": 0.9263987614171332
+        },
+        {
+          "lineage": "cardiomyocyte",
+          "donors": 100,
+          "intended_norm": 3.1488099746259897,
+          "decoded_norm": 2.527530020463524,
+          "relative_shift_error": 0.4232720935603089,
+          "shift_cosine": 0.9126506813582568
+        }
+      ],
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0
+    },
+    {
+      "cutoff": 8.25,
+      "candidate": "persistence",
+      "donor_rows_sha256": "1faf5d3c2e23851202f3c24b72f3413ccd2b116b3cecb71b85668b5458681684",
+      "encoder_sha256": "53784ceb3050ff9e809eeceed2dbf78ffd71b12680bcec567468204c28cabefc",
+      "mean_forecast_sha256": "2b08cbe7760e6aa5c8fbdba9967643de8ce507cf73d3da5371904d05efe58a5e",
+      "prediction_sha256": "f991bb722bc73fe1b4135b16a6a7a3db7132c306103559448dc13289eb73ae4e",
+      "donors": 1500,
+      "max_fit_stage": 8.25,
+      "clipped_entries": 0,
+      "count_mass_relative_error": 0.0,
+      "max_mean_change": 0.0,
+      "covariance_change": 0.0,
+      "protected_genes_unchanged": true,
+      "unsupported_lineages_unchanged": true,
+      "finite_nonnegative": true,
+      "identity_passed": true,
+      "guards_passed": true,
+      "lineage_shift_fidelity": [
+        {
+          "lineage": "blood",
+          "donors": 428,
+          "intended_norm": 0.0,
+          "decoded_norm": 0.0,
+          "relative_shift_error": null,
+          "shift_cosine": null
+        },
+        {
+          "lineage": "mesenchymal",
+          "donors": 300,
+          "intended_norm": 0.0,
+          "decoded_norm": 0.0,
+          "relative_shift_error": null,
+          "shift_cosine": null
+        },
+        {
+          "lineage": "endoderm",
+          "donors": 75,
+          "intended_norm": 0.0,
+          "decoded_norm": 0.0,
+          "relative_shift_error": null,
+          "shift_cosine": null
+        },
+        {
+          "lineage": "ectoderm_other",
+          "donors": 153,
+          "intended_norm": 0.0,
+          "decoded_norm": 0.0,
+          "relative_shift_error": null,
+          "shift_cosine": null
+        },
+        {
+          "lineage": "cardiopharyngeal",
+          "donors": 176,
+          "intended_norm": 0.0,
+          "decoded_norm": 0.0,
+          "relative_shift_error": null,
+          "shift_cosine": null
+        },
+        {
+          "lineage": "endothelial",
+          "donors": 139,
+          "intended_norm": 0.0,
+          "decoded_norm": 0.0,
+          "relative_shift_error": null,
+          "shift_cosine": null
+        },
+        {
+          "lineage": "cardiomyocyte",
+          "donors": 187,
+          "intended_norm": 0.0,
+          "decoded_norm": 0.0,
+          "relative_shift_error": null,
+          "shift_cosine": null
+        }
+      ],
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0
+    },
+    {
+      "cutoff": 8.25,
+      "candidate": "capture_quarter",
+      "donor_rows_sha256": "1faf5d3c2e23851202f3c24b72f3413ccd2b116b3cecb71b85668b5458681684",
+      "encoder_sha256": "53784ceb3050ff9e809eeceed2dbf78ffd71b12680bcec567468204c28cabefc",
+      "mean_forecast_sha256": "2b08cbe7760e6aa5c8fbdba9967643de8ce507cf73d3da5371904d05efe58a5e",
+      "prediction_sha256": "f578fe28fd43f97ff33f7aa7d51170c0b17ef0966fbc70cee0de230dbbabc064",
+      "donors": 1500,
+      "max_fit_stage": 8.25,
+      "clipped_entries": 9311662,
+      "count_mass_relative_error": 3.018711771501604e-08,
+      "max_mean_change": 0.16225921372572571,
+      "covariance_change": 0.11054992394497119,
+      "protected_genes_unchanged": true,
+      "unsupported_lineages_unchanged": true,
+      "finite_nonnegative": true,
+      "identity_passed": true,
+      "guards_passed": true,
+      "lineage_shift_fidelity": [
+        {
+          "lineage": "blood",
+          "donors": 428,
+          "intended_norm": 1.786864247693645,
+          "decoded_norm": 1.7960142604781977,
+          "relative_shift_error": 0.408444615646528,
+          "shift_cosine": 0.9170245022300394
+        },
+        {
+          "lineage": "mesenchymal",
+          "donors": 300,
+          "intended_norm": 1.2560768208398132,
+          "decoded_norm": 1.1272205441021514,
+          "relative_shift_error": 0.2597834505379115,
+          "shift_cosine": 0.9682624123813421
+        },
+        {
+          "lineage": "endoderm",
+          "donors": 75,
+          "intended_norm": 1.7461807832030012,
+          "decoded_norm": 1.4718710823700543,
+          "relative_shift_error": 0.3453158145076512,
+          "shift_cosine": 0.9439053436292123
+        },
+        {
+          "lineage": "ectoderm_other",
+          "donors": 153,
+          "intended_norm": 1.4448009938133723,
+          "decoded_norm": 1.2765839713261364,
+          "relative_shift_error": 0.3057896589833303,
+          "shift_cosine": 0.9547565644628305
+        },
+        {
+          "lineage": "cardiopharyngeal",
+          "donors": 176,
+          "intended_norm": 1.4477921996931002,
+          "decoded_norm": 1.2901777988498904,
+          "relative_shift_error": 0.27091785770490745,
+          "shift_cosine": 0.9654682816041857
+        },
+        {
+          "lineage": "endothelial",
+          "donors": 139,
+          "intended_norm": 1.6959177348937868,
+          "decoded_norm": 1.4629860903105567,
+          "relative_shift_error": 0.3102854251075314,
+          "shift_cosine": 0.9551311005409219
+        },
+        {
+          "lineage": "cardiomyocyte",
+          "donors": 187,
+          "intended_norm": 2.0512545680581646,
+          "decoded_norm": 1.8801229170533862,
+          "relative_shift_error": 0.2322353492226853,
+          "shift_cosine": 0.9743756902680515
+        }
+      ],
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0
+    },
+    {
+      "cutoff": 8.25,
+      "candidate": "capture_shrunk",
+      "donor_rows_sha256": "1faf5d3c2e23851202f3c24b72f3413ccd2b116b3cecb71b85668b5458681684",
+      "encoder_sha256": "53784ceb3050ff9e809eeceed2dbf78ffd71b12680bcec567468204c28cabefc",
+      "mean_forecast_sha256": "2b08cbe7760e6aa5c8fbdba9967643de8ce507cf73d3da5371904d05efe58a5e",
+      "prediction_sha256": "b64c67130bd61d7615d3dd8a000d6a63a5c51c264bc9583e0d48f50f59a19432",
+      "donors": 1500,
+      "max_fit_stage": 8.25,
+      "clipped_entries": 9311661,
+      "count_mass_relative_error": 2.4272752544123522e-08,
+      "max_mean_change": 0.1273871535460156,
+      "covariance_change": 0.0691069873707019,
+      "protected_genes_unchanged": true,
+      "unsupported_lineages_unchanged": true,
+      "finite_nonnegative": true,
+      "identity_passed": true,
+      "guards_passed": true,
+      "lineage_shift_fidelity": [
+        {
+          "lineage": "blood",
+          "donors": 428,
+          "intended_norm": 2.850464611275877,
+          "decoded_norm": 2.2046385637614216,
+          "relative_shift_error": 0.4372304440086155,
+          "shift_cosine": 0.909599542537055
+        },
+        {
+          "lineage": "mesenchymal",
+          "donors": 300,
+          "intended_norm": 1.6101614360386183,
+          "decoded_norm": 1.3359702613088922,
+          "relative_shift_error": 0.39470007957190867,
+          "shift_cosine": 0.923593879930117
+        },
+        {
+          "lineage": "endoderm",
+          "donors": 75,
+          "intended_norm": 2.274277139755173,
+          "decoded_norm": 1.8026975219377008,
+          "relative_shift_error": 0.47933986638169024,
+          "shift_cosine": 0.882185053188262
+        },
+        {
+          "lineage": "ectoderm_other",
+          "donors": 153,
+          "intended_norm": 1.89099701698007,
+          "decoded_norm": 1.54045564436819,
+          "relative_shift_error": 0.4468509831927241,
+          "shift_cosine": 0.8985348437966333
+        },
+        {
+          "lineage": "cardiopharyngeal",
+          "donors": 176,
+          "intended_norm": 1.8091094695736532,
+          "decoded_norm": 1.5212824031855652,
+          "relative_shift_error": 0.4082033336395278,
+          "shift_cosine": 0.9159725660913299
+        },
+        {
+          "lineage": "endothelial",
+          "donors": 139,
+          "intended_norm": 2.2591854553681188,
+          "decoded_norm": 1.8438962882158558,
+          "relative_shift_error": 0.4277090219088166,
+          "shift_cosine": 0.9086324409070543
+        },
+        {
+          "lineage": "cardiomyocyte",
+          "donors": 187,
+          "intended_norm": 3.258410420645425,
+          "decoded_norm": 2.7854875039986218,
+          "relative_shift_error": 0.34372249835854735,
+          "shift_cosine": 0.9432189559668741
+        }
+      ],
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0
+    }
+  ],
+  "target_expression_read": false,
+  "full_panel_scoring_executed": false,
+  "reward_delta": 0,
+  "headline_score": null,
+  "raw_metrics": null,
+  "skills": null,
+  "report_sha256": "dc28b09682f8ba20de9db3c157486d5492c21d5b9ab599395d61b6b0614d6617"
+}
