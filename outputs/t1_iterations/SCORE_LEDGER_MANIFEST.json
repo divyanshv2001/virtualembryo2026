@@ -1,5 +1,5 @@
 {
-  "records": 3091,
+  "records": 3105,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -37,6 +37,16 @@
       "outcomes_indexed": 0
     },
     {
+      "path": "private/capture_geometric_rate_fullpanel_01/report.json",
+      "sha256": "9581f35e500d7db53b519e713ecdaa4dea8abeee7a56cf5452bcab19d8b1ee61",
+      "outcomes_indexed": 14
+    },
+    {
+      "path": "private/capture_geometric_rate_preflight_01/report.json",
+      "sha256": "f0fc2486757ec809b717d3aa7dc951c7fc0416a51467de187abb87e680651f73",
+      "outcomes_indexed": 0
+    },
+    {
       "path": "private/capture_mean_decoder_fullpanel_01/report.json",
       "sha256": "05612728b692f42c1eaf6ead74c0f10b29ef1a26eca3682f1f2993cdd283b8f5",
       "outcomes_indexed": 8
@@ -49,6 +59,21 @@
     {
       "path": "private/capture_mean_shrinkage_audit_01/report.json",
       "sha256": "a4442fb533cc37a693ba07dfc43f8914423d19fd42d4d456b2584aa9c031bbb1",
+      "outcomes_indexed": 0
+    },
+    {
+      "path": "private/capture_module_stability_audit_01/report.json",
+      "sha256": "d3d9e1202e4bfc6ff2582a48ea61186541901b453cb6a9c58579fcf6851ed3a0",
+      "outcomes_indexed": 0
+    },
+    {
+      "path": "private/capture_OLS_decoder_boundary_audit_01/report.json",
+      "sha256": "0f272f4660ee03d46318b2d1a3f3fd70a711b6c6912ad29fa2be2cf73154f947",
+      "outcomes_indexed": 0
+    },
+    {
+      "path": "private/capture_OLS_gate_decoder_preflight_01/report.json",
+      "sha256": "8d2dbba3ed81cbca4abc748a7a11de89d9ad8b146382f9f8705519d3a7736afd",
       "outcomes_indexed": 0
     },
     {
@@ -697,6 +722,11 @@
       "outcomes_indexed": 0
     },
     {
+      "path": "private/matched_capture_module_OLS_omission_audit_01/report.json",
+      "sha256": "5cbf328178b043857f0af95e0f831b5f7196c04a790db466a37e621a748cbe1a",
+      "outcomes_indexed": 0
+    },
+    {
       "path": "private/matched_horizon_audit_01/report.json",
       "sha256": "e993ec02b71ca8b00e638c7b7641a950ca72abf524e2432c323a277d4a6ed18a",
       "outcomes_indexed": 10
@@ -964,5 +994,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "06bbbea6e1e28198906765f47ad9439415f7273eb2359284eb071b79fc33687d"
+  "ledger_sha256": "fbccfecab38674259393d78433d1935bb5a69034b912f0518ef4e42dd8c71a32"
 }

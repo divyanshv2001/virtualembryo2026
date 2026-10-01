@@ -25,6 +25,8 @@ def outcomes(value,context=None,pointer=''):
                 'raw_metrics':value.get('raw_metrics',value.get('raw',context.get('floor') if pointer.endswith('/persistence') else None)),
                 'diagnostics':entry.get('audit'),
                 'skills':value.get('skills'),'calibration_valid':value.get('calibration_valid'),
+                'guards_passed':value.get('guards_passed',entry.get('guards_passed')),
+                'diagnostic_invalid_control':value.get('diagnostic_invalid_control'),
                 'invalid_calibration_metrics':value.get('invalid_calibration_metrics'),
                 'scope':'Local development; not an official leaderboard score'}
         for key,child in value.items():

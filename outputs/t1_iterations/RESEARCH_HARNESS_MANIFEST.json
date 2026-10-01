@@ -180,6 +180,11 @@
       "script": "capture_geometric_rate_fullpanel.py",
       "run": "private/capture_geometric_rate_fullpanel_01",
       "report": "CAPTURE_GEOMETRIC_RATE_FULLPANEL_RESULTS.json"
+    },
+    "capture_amplitude_matched": {
+      "script": "capture_amplitude_matched_preflight.py",
+      "run": "private/capture_amplitude_matched_preflight_01",
+      "report": "CAPTURE_AMPLITUDE_MATCHED_PREFLIGHT_RESULTS.json"
     }
   }
 }

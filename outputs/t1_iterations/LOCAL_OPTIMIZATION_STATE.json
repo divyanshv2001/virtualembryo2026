@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T21:06:23.412128+00:00",
+  "updated_utc": "2026-10-01T21:16:03.949588+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,16 +30,16 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Run/finish registered capture_geometric_fullpanel: frozen fixed geometric/support/decoder, exact14preflight replays before all future reads; unchanged full32285gene scoring/copy-anchor calibration. Invalid matched controls diagnostic only; reward only guard-valid geometric. Reused development folds, no readiness/official claim. After completed batch four critics and score-ledger refresh.",
+  "next_experiment": "Run/finish registered capture_amplitude_matched preflight. Same frozen geometric mask, perlineage OLS/recent scalar ||geometric||/||control|| frompastonly; matched requestedlogshiftenergy, measure actual decodedcellenergy/signs. Same decoder/guards/coverage, exactcopy-anchor-geometric6replay. No future expression/scorer/reward. Four critiques after completion; families/readiness open.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
     {
-      "experiment": "capture_geometric_fullpanel",
-      "pid": 7688,
+      "experiment": "capture_amplitude_matched",
+      "pid": 3260,
       "status": "running",
-      "report": "CAPTURE_GEOMETRIC_RATE_FULLPANEL_RESULTS.json"
+      "report": "CAPTURE_AMPLITUDE_MATCHED_PREFLIGHT_RESULTS.json"
     }
   ],
   "active_run_path": null,
@@ -1152,13 +1152,13 @@
     "direct_nearest_source_transfer_allowed": false
   },
   "jev_latest": {
-    "record": "JEV_GEOMETRIC_PREFLIGHT_ROUTE_20261002_01.json",
+    "record": "JEV_GEOMETRIC_FULLPANEL_ROUTE_20261002_01.json",
     "usage": {
-      "input_tokens": 843,
+      "input_tokens": 966,
       "output_tokens": 70
     },
-    "choice": "fixed_fullpanel_development",
-    "confidence": 0.98
+    "choice": "amplitude_matched_preflight",
+    "confidence": 0.91
   },
   "count_reliability_job": {
     "status": "completed_not_promoted",
@@ -1233,7 +1233,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -848,
+    "current_reward": -877,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1242,10 +1242,10 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -848,
-    "reward_score": -848,
+    "uncapped_reward": -877,
+    "reward_score": -877,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": -58
+    "last_batch_reward_delta": -29
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -1304,13 +1304,13 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_GEOMETRIC_PREFLIGHT_ROUTE_20261002_01.json",
+    "record": "JEV_GEOMETRIC_FULLPANEL_ROUTE_20261002_01.json",
     "usage": {
-      "input_tokens": 843,
+      "input_tokens": 966,
       "output_tokens": 70
     },
-    "choice": "fixed_fullpanel_development",
-    "confidence": 0.98
+    "choice": "amplitude_matched_preflight",
+    "confidence": 0.91
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -2314,6 +2314,23 @@
       "reused_contexts": 2,
       "resource_limitation": "Old MMD followup observed thread limit; fresh agents succeeded after earlier critics completed",
       "review_corrections": "Public/private hashes separately verified; guards not accuracy; no untouched claim; amplitude matched followon not performed; invalid controls diagnostic not eligible."
+    },
+    "capture_geometric_rate_fullpanel_01": {
+      "status": "completed",
+      "report_sha256": "9581f35e500d7db53b519e713ecdaa4dea8abeee7a56cf5452bcab19d8b1ee61",
+      "review": "METRIC_CRITIQUES_GEOMETRIC_FULLPANEL_20261002.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": true,
+      "reward_delta": -29,
+      "fresh_contexts": 4,
+      "reused_contexts": 0,
+      "review_corrections": "Mean forecast guard not scorer calibration; two temporal folds nottwo captures; nearcopy notaccuracy; amplitude match before ratio/floor extensions."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -2713,10 +2730,22 @@
     "reward_delta": 0
   },
   "capture_geometric_fullpanel_job": {
-    "status": "running",
+    "status": "completed",
     "spec": "NEXT_CAPTURE_GEOMETRIC_FULLPANEL.json",
     "report": "CAPTURE_GEOMETRIC_RATE_FULLPANEL_RESULTS.json",
     "pid": 7688,
-    "experiment": "capture_geometric_fullpanel"
+    "experiment": "capture_geometric_fullpanel",
+    "report_sha256": "9581f35e500d7db53b519e713ecdaa4dea8abeee7a56cf5452bcab19d8b1ee61",
+    "passing_candidates": [],
+    "exact_preflight_replays": 14,
+    "exact_scored_control_replays": 4,
+    "reward_delta": -29
+  },
+  "capture_amplitude_matched_job": {
+    "status": "running",
+    "report": "CAPTURE_AMPLITUDE_MATCHED_PREFLIGHT_RESULTS.json",
+    "spec": "NEXT_CAPTURE_AMPLITUDE_MATCHED_PREFLIGHT.json",
+    "pid": 3260,
+    "experiment": "capture_amplitude_matched"
   }
 }
