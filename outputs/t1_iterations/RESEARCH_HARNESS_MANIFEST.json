@@ -145,6 +145,11 @@
       "script": "repair_aware_energy_preflight.py",
       "run": "private/repair_aware_energy_preflight_01",
       "report": "REPAIR_AWARE_ENERGY_PREFLIGHT_RESULTS.json"
+    },
+    "repair_aware_fullpanel": {
+      "script": "repair_aware_energy_fullpanel.py",
+      "run": "private/repair_aware_energy_fullpanel_01",
+      "report": "REPAIR_AWARE_ENERGY_FULLPANEL_RESULTS.json"
     }
   }
 }

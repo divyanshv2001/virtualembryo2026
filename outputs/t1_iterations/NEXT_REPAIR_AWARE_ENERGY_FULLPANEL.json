@@ -19,5 +19,15 @@
   "scoring": "Unchanged full32285genes, existing offlinebacktest scorer/calibration25/25/30/20, originalmatchedtruth/reference/calibration partitions1500donors/2000future sample first1000truth last1000ceiling. Preserveall4raw4skills/seeds/splits/hashes/failures.",
   "acceptance": "Originalmatchedincumbent/copy criteria atbothcuts. Feasibleforecast doesnotguaranteescorebenefit. No promotionwithoutoriginal>72mean/lower-tail64replicates andtemporalreadiness gates. Unadjustedprojections energy-ineligible preflightdiagnostics retained, notscored inthisboundedbatch.",
   "reward": "Separate +1positivepairedmeanskill/-10tieorregression permetric,capped100,newunique2candidates once. Controlsno repeatedreward; invalid/missing0.",
-  "resources": "D-onlytemporaryforecastcache all16frozenonD then consume/close,2threads16GBRAM oneforecastatime. Neveruploadofficially."
+  "resources": "D-onlytemporaryforecastcache all16frozenonD then consume/close,2threads16GBRAM oneforecastatime. Neveruploadofficially.",
+  "folds": [
+    [
+      8.0,
+      8.25
+    ],
+    [
+      8.25,
+      8.5
+    ]
+  ]
 }

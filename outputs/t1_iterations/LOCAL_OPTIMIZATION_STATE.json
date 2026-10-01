@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T18:14:23.658063+00:00",
+  "updated_utc": "2026-10-01T19:39:24.621738+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement and run separately predeclared repair_aware_energy_fullpanel_01: fixed2 repaired candidates +6copy/incumbent/additive/blocked controls atcutoffs8/8.25, unchanged32285scorer/calibration. Freeze ALL16forecasts before anyfutureexpressionread; newcandidate hashes exactpreflight and12controlmetrics/hash replay. No targetstrength/refit/grid. Rewardnewunique candidates once; thenfourcritics/Jev/ledger. Originalreadiness/coverage gatesremainopen.",
+  "next_experiment": "Past gene-module coverage preflight: inspect only relevant prior latent residual/gene/module specs and frozen results plus scorer DE behavior. Determine whether capture-omission sign-stable lineage gene modules are genuinely distinct from prior tested latent/residual methods, what historical inputs/support and unexposed validation remain. Do not rerun covered method; only then predeclare viable exact past-only diagnostic/forecast. Repair-aware fixed2candidate fullpanel negativebothfoldgate; families/readiness open, no exposedtargetstrengthgrid.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1226,7 +1226,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -790,
+    "current_reward": -848,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1235,7 +1235,10 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -790
+    "uncapped_reward": -848,
+    "reward_score": -848,
+    "benchmark_score": "unchanged; separately reported",
+    "last_batch_reward_delta": -58
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -1294,13 +1297,13 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_REPAIR_AWARE_ROUTE_20261001_01.json",
+    "record": "JEV_REPAIR_FULLPANEL_ROUTE_20261001_01.json",
     "usage": {
-      "input_tokens": 923,
-      "output_tokens": 57
+      "input_tokens": 1082,
+      "output_tokens": 62
     },
-    "choice": "eight_method_fullpanel",
-    "confidence": 0.91
+    "choice": "past_gene_module_coverage",
+    "confidence": 0.45
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -2196,6 +2199,24 @@
       "reused_contexts": 4,
       "resource_limitation": "Observedagentthreadlimit precedingbatch;fourexisting specialists reviewed newpackets",
       "review_corrections": "Tolerance versus exactbudget/mass distinguished. Onlytrainingpast, evaluationfutureafterfreeze. Unadjustedprojections retaineddiagnostics notscoredselectedscope."
+    },
+    "repair_aware_energy_fullpanel_01": {
+      "status": "completed",
+      "report_sha256": "bd1d53b2f9eaf0f0f2af32760c755d38e03fd81d124917dee9911bcd505bae58",
+      "review": "METRIC_CRITIQUES_REPAIR_FULLPANEL_20261001.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": true,
+      "reward_delta": -58,
+      "fresh_contexts": 0,
+      "reused_contexts": 4,
+      "resource_limitation": "Observedagentthreadlimit; existing4specialists reviewednewpackets",
+      "review_corrections": "IdenticalDEdoesnotprove metricresolution; unexposednewsplitavailability unverified; module/compositionpriorcoveragecheckrequired."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -2502,5 +2523,29 @@
     ],
     "headline_score": null,
     "reward_delta": 0
+  },
+  "repair_aware_energy_fullpanel_job": {
+    "status": "completed",
+    "pid": 22748,
+    "report": "REPAIR_AWARE_ENERGY_FULLPANEL_RESULTS.json",
+    "spec": "NEXT_REPAIR_AWARE_ENERGY_FULLPANEL.json",
+    "report_sha256": "bd1d53b2f9eaf0f0f2af32760c755d38e03fd81d124917dee9911bcd505bae58",
+    "passing_candidates": [],
+    "exact_control_metric_replays": true,
+    "new_preflight_hash_replays": 4,
+    "scores": {
+      "anchor_unshrunk": [
+        50.068691056502665,
+        50.91127297853878
+      ],
+      "repair_aware_capture_quarter": [
+        47.30979378232101,
+        53.36792354003171
+      ],
+      "repair_aware_capture_shrunk": [
+        47.141696911191424,
+        52.67960143893363
+      ]
+    }
   }
 }

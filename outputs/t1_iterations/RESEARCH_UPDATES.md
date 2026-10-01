@@ -592,3 +592,7 @@ Implemented analytic minimum-L2 supported mean field with frozen budget attenuat
 ## 2026-10-01T18:14:23.658063+00:00 — repair-aware energy preflight passes
 
 Count-space interpolation with40-step donor-only perlineage bisection implemented/tested. All4newforecasts passenergy within frozen1e-8*max(1,budget)tolerance andallstandardguards. Masserror<=5.29e-8; meansstillmismatched. All12original+4unadjustedprojectionhashes replay. No targetexpression/newmetrics/reward;−790 unchanged, ledgerunchangeddiagnosticbatch. Fourexisting specialists reviewednewpackets due observedthreadlimit(nofreshclaim). Jev923in/57out chose8-method16forecastmatchedfullpanel separatelypredeclared; freezeallbeforeANYfuturetruthread. No targetgrid/promotion. Coverage/readinessopen.
+
+## 2026-10-01T19:39:24.621738+00:00 — repair-aware full-panel negative two-fold gate
+
+All16forecasts frozen beforeANYfutureexpression,12originalcontrols exactforecast/rawmetrics/headline/calibration/split replay,4newhashes guardedpreflight. Quarter47.309794/53.367924;shrunk47.141697/52.679601 vsanchor50.068691/50.911273. Earlyall4skillsworse,laterall4better; neitherpassesboth. Fullraw4/skills4 preserved. Reward−18/−40=>−58,balance−848. Ledger3091records/192reports/0errors. Fourreusedcriticcontexts recorded(threadlimit), corrections/sourcecoverage caveatsexplicit. Jev1082in/62out chosepriorgene-modulecoveragepreflight beforeanynewmethod, no targetgrid. Families/readinessopen; noofficialupload ornewpromotedexport.

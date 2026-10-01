@@ -1,5 +1,5 @@
 {
-  "records": 3075,
+  "records": 3091,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -707,6 +707,11 @@
       "outcomes_indexed": 0
     },
     {
+      "path": "private/mean_norm_feasibility_audit_01/report.json",
+      "sha256": "2ab85d136c4f61c068ff82df7fa8824c207d875a4e387a84dda06610091da163",
+      "outcomes_indexed": 0
+    },
+    {
       "path": "private/monte_carlo_detection_01/report.json",
       "sha256": "beb1fcd7cec061728f4c467c27b3b798c3bf8538b389cb65f14dc32858ec9979",
       "outcomes_indexed": 48
@@ -807,6 +812,16 @@
       "outcomes_indexed": 24
     },
     {
+      "path": "private/repair_aware_energy_fullpanel_01/report.json",
+      "sha256": "bd1d53b2f9eaf0f0f2af32760c755d38e03fd81d124917dee9911bcd505bae58",
+      "outcomes_indexed": 16
+    },
+    {
+      "path": "private/repair_aware_energy_preflight_01/report.json",
+      "sha256": "ecccdc9ac86d84047329e58c055c38f3fde2cc0b001fa64d4cce143a0ee253ff",
+      "outcomes_indexed": 0
+    },
+    {
       "path": "private/resolution_transport_horizon_01/report.json",
       "sha256": "2f10e0a775e16e99633754c964564baa150ea2b008edbd1c1f467711668385a2",
       "outcomes_indexed": 22
@@ -902,6 +917,11 @@
       "outcomes_indexed": 0
     },
     {
+      "path": "private/supported_mean_energy_preflight_01/report.json",
+      "sha256": "93286b8c5ae63cc03c6491ead21a0e04aebb80058b0bad654a60df64cf052fba",
+      "outcomes_indexed": 0
+    },
+    {
       "path": "private/transport_challenge_01/report.json",
       "sha256": "3c49f11ea661912540e52d83ecae3bc8eeb821a80e7810dd3ff99854d3d29ab2",
       "outcomes_indexed": 21
@@ -944,5 +964,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "5367b00999d35a52e786854037e9d7944c63331dbac06f32df71cf57fc56c863"
+  "ledger_sha256": "06bbbea6e1e28198906765f47ad9439415f7273eb2359284eb071b79fc33687d"
 }
