@@ -6254,10 +6254,11 @@
     },
     {
       "id": "early_tangent_metric_hindcast",
-      "status": "predeclared_pending_implementation",
+      "status": "running",
       "research_family_exhausted": false,
       "plan": "NEXT_EARLY_TANGENT_METRIC_EXPERIMENT.json",
-      "next_action": "Implement/register early_tangent_metric_hindcast_01 per NEXT_EARLY_TANGENT_METRIC_EXPERIMENT.json. Newcutoff7.75 capture13/12 excludedrefits,target8.75; 12matchedforecasts2conditions24scores. Learned vsnormmatchedshuffled tangent, fixedsharedpositive s<=.25, strictforecast-onlymean/massprojection andidentity. Freezebeforefutureevaluation; trace metricrelevance ifpinnedAPIavailable, recordauxunavailableotherwise. No9/9.25strengthsearch; limitedoneearlytransition, originalreadinessunmet."
+      "next_action": "Monitor registered early_tangent_metric; newcutoff7.75 captures13/12 target8.75,12forecasts2conditions24scores. Aftercompletion ledger/fourspecialists/Jevsynthesis. PinnedDEmean invariance explicitlytraced, distributionnullcontrols normmatched; no duplicate/officialupload.",
+      "registered_experiment": "early_tangent_metric"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",

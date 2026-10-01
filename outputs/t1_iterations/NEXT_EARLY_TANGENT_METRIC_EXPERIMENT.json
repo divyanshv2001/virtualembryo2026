@@ -47,5 +47,6 @@
   "parent_audit_report_sha256": "268ce4c1b7773e4b6b56335153f0a0094f0fa20e3aea128631642073b1333526",
   "jev_route": "JEV_SURVIVAL_SYNTHESIS_ROUTE_20261001_01.json",
   "predeclared_before_execution": true,
-  "resources": "Donlytemporaryforecastcache/2threads/oneconditionatatime/16GBRAM; sparse-support cellSchur<=83, no giant dense Jacobian. Archive smallmodels/evidence, notdataset/predictionmatrices."
+  "resources": "Donlytemporaryforecastcache/2threads/oneconditionatatime/16GBRAM; sparse-support cellSchur<=83, no giant dense Jacobian. Archive smallmodels/evidence, notdataset/predictionmatrices.",
+  "scorer_contract_clarification": "Pinned DE_score takes pseudobulk delta gene ranking and DE_direction is partial Spearman of pseudobulk deltas controlling reference; neither uses within-gene cell ranks. Exact anchor gene means mathematicallypreserve bothcomponents, butfloat32 near-tie rankings canchange. Recordfloat32/64 mean drift, delta rank/sign/up-downmembership changes/overlap andstd gates. No presumedDEgain frommean-preservingredistribution; sensitivityexperiment still testsMMD/CSS versusmatchednull. No scorer orcalibrationchange."
 }

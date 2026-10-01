@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": false,
+  "local_process_running": true,
   "quota_reset_evidence": {
     "limit_observed": false,
     "remaining_quota": null,
@@ -31,12 +31,14 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement/register early_tangent_metric_hindcast_01 per NEXT_EARLY_TANGENT_METRIC_EXPERIMENT.json. Newcutoff7.75 capture13/12 excludedrefits,target8.75; 12matchedforecasts2conditions24scores. Learned vsnormmatchedshuffled tangent, fixedsharedpositive s<=.25, strictforecast-onlymean/massprojection andidentity. Freezebeforefutureevaluation; trace metricrelevance ifpinnedAPIavailable, recordauxunavailableotherwise. No9/9.25strengthsearch; limitedoneearlytransition, originalreadinessunmet.",
+  "next_experiment": "Monitor registered early_tangent_metric; newcutoff7.75 captures13/12 target8.75,12forecasts2conditions24scores. Aftercompletion ledger/fourspecialists/Jevsynthesis. PinnedDEmean invariance explicitlytraced, distributionnullcontrols normmatched; no duplicate/officialupload.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
-  "active_run_path": null,
+  "active_jobs": [
+    "early_tangent_metric_hindcast_01"
+  ],
+  "active_run_path": "private/early_tangent_metric_hindcast_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -2107,5 +2109,13 @@
       0.764134087
     ],
     "collapse_hypothesis_supported": false
+  },
+  "early_tangent_metric_job": {
+    "status": "running",
+    "plan_sha256": "1e63534891db4578171600133cefde8893fca7976171dae72818b6df8a948c2b",
+    "planned_scores": 24,
+    "registered_experiment": "early_tangent_metric",
+    "controls": "passed deterministicshuffle/normmatch/sharedpositivity/support/zerodirection rejection",
+    "scorer_mean_contract_confirmed": true
   }
 }

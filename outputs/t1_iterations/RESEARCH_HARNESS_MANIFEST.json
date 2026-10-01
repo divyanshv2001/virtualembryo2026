@@ -70,6 +70,11 @@
       "script": "cm_projection_survival_audit.py",
       "run": "private/cm_projection_survival_audit_02",
       "report": "CM_PROJECTION_SURVIVAL_AUDIT_RESULTS.json"
+    },
+    "early_tangent_metric": {
+      "script": "early_tangent_metric_hindcast.py",
+      "run": "private/early_tangent_metric_hindcast_01",
+      "report": "EARLY_TANGENT_METRIC_HINDCAST_RESULTS.json"
     }
   }
 }

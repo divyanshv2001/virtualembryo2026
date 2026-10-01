@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-01T11:53:20.883027+00:00
+Updated: 2026-10-01T12:05:13.051361+00:00
 
 Run `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_playbook.py` first. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -8,9 +8,9 @@ Use `research_harness.py status` for compact live-process/report checks, `run --
 
 Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction': 56.3, 'mmd_u': 53.2, 'variogram': 51.7}. Covariance .25 reused-development mean55.98883; EB and lineage-standardized historical proxy screens failed. Local>72 mean/lower-tail >=64-replicate AND temporal gate unmet. Full32285-gene scorer/calibration unchanged.
 
-Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
+Checkpoint jobs: ['early_tangent_metric_hindcast_01']. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Implement/register early_tangent_metric_hindcast_01 per NEXT_EARLY_TANGENT_METRIC_EXPERIMENT.json. Newcutoff7.75 capture13/12 excludedrefits,target8.75; 12matchedforecasts2conditions24scores. Learned vsnormmatchedshuffled tangent, fixedsharedpositive s<=.25, strictforecast-onlymean/massprojection andidentity. Freezebeforefutureevaluation; trace metricrelevance ifpinnedAPIavailable, recordauxunavailableotherwise. No9/9.25strengthsearch; limitedoneearlytransition, originalreadinessunmet.
+Next: Monitor registered early_tangent_metric; newcutoff7.75 captures13/12 target8.75,12forecasts2conditions24scores. Aftercompletion ledger/fourspecialists/Jevsynthesis. PinnedDEmean invariance explicitlytraced, distributionnullcontrols normmatched; no duplicate/officialupload.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in outputs\t1_submissions\formula_progress_20260930_01\official_result.json. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 
