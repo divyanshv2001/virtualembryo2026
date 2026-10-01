@@ -1,0 +1,55 @@
+{
+  "status": "completed",
+  "updated_utc": "2026-10-01T05:19:49.470735+00:00",
+  "outcomes": [
+    {
+      "gsm": "GSM2035425",
+      "stage": "E8.5",
+      "status": "failed",
+      "error_type": "ValueError",
+      "error": "Expected one SRA experiment relation"
+    },
+    {
+      "gsm": "GSM2035596",
+      "stage": "E8.5",
+      "status": "failed",
+      "error_type": "ValueError",
+      "error": "Expected one SRA experiment relation"
+    },
+    {
+      "gsm": "GSM2033420",
+      "stage": "E9.5",
+      "status": "failed",
+      "error_type": "ValueError",
+      "error": "Expected one SRA experiment relation"
+    },
+    {
+      "gsm": "GSM2034877",
+      "stage": "E9.5",
+      "status": "failed",
+      "error_type": "ValueError",
+      "error": "Expected one SRA experiment relation"
+    }
+  ],
+  "plan_sha256": "65a2a68838a73bbd9145d6411512897acdbfec18c69109a2f86c4030b80feb9d",
+  "models_fit": 0,
+  "full_panel_scores": 0,
+  "training_ready": false,
+  "reward_delta": 0,
+  "next_gate": "Freeze prospective QC using explicit archive spot/paired-read units and assigned protein fractions; resolve stable-ID panel mapping and historical cohort selection before expanded early-cell acquisition.",
+  "report_sha256": "1ace489c259a22cd1dcd5f3852be9a8f9744da70d2e1ce1110ad577bc1efa705",
+  "retrieval_diagnosis": "All four local GEO requests returned CAPTCHA challenge HTML; parser failures preserved privately. No bypass attempted. Web tool retrieved one GEO/SRA record; other three unavailable.",
+  "verified_primary_web_evidence": {
+    "gsm": "GSM2033420",
+    "srx": "SRX1522565",
+    "run": "SRR3092152",
+    "url": "https://www.ncbi.nlm.nih.gov/sra?term=SRX1522565",
+    "archived_runs": 1,
+    "spots": 41099,
+    "layout": "PAIRED",
+    "paired_read_estimate": 82198,
+    "original_analysis_inclusion": null,
+    "accessed_utc": "2026-10-01T05:20:50.827812+00:00",
+    "method": "web tool primary SRA page; original private parser outcomes are unchanged"
+  }
+}

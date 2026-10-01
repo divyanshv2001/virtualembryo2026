@@ -1,16 +1,16 @@
 {
-  "updated_utc": "2026-10-01T05:08:53.614714+00:00",
+  "updated_utc": "2026-10-01T05:20:50.968739+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "7edc20f5820d0313d7d2f4eb24de634046ed6def2b4b05d88a133ca4e2c24d60",
+    "LOCAL_OPTIMIZATION_STATE.json": "d08eeb7696c7cca6f377fb6eda54a8f2d72534980202d19f02598c99d4b8d58b",
     "LOCAL_OPTIMIZATION_PROMPT.md": "dc34e90fa3519a22843971c550774ced585b0bab7dea86ab4fc00c5aee806f38",
-    "METRIC_RESEARCH_QUEUE.json": "9e19441fc51730c30e4317133fef49d2177903a9990eb69ee8c2329c25352a8f",
+    "METRIC_RESEARCH_QUEUE.json": "e68a04f0f78662594e1b8532613cc74ea31f62064ef8bcf50b387df71001e39e",
     "METRIC_CRITIQUE_POLICY.json": "025beff88fbd06be4f25b4643456853ca5f0c7ee68a66212ab0e1281bcd9a8e5",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [],
-  "next_experiment": "Recover bounded GRCm38.79 gene-only symbol/biotype annotation and audit available per-cell read/QC metadata for the four strict CD1 GSM pilots. Exact original QC remains unknown; four-cell mapped coverage79.36% is not a training gate. Do not enlarge/download mixed-stage expression or train until annotation/QC and prospective selection rules are frozen. Keep B6 controls separate; E9.5 excluded from E8.5-backtest fitting.",
+  "next_experiment": "Freeze prospective early-CD1 QC and conservative stable-ID/panel mapping from cached annotations; archive depth for GSM2033420 is below threshold (41099 paired spots). Three other pilot depth records remain unavailable after CAPTCHA responses. Investigate metadata-only source availability without bypass; do not enlarge expression acquisition or train until cohort/mapping rules are frozen. E9.5 never fits an E8.5 backtest.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -77,6 +77,8 @@
     "expression_acquired": true,
     "pilot_cells": 4,
     "latest_schema_report": "GSE76118_EARLY_SCHEMA_RESULTS.json",
-    "latest_mapping_report": "GSE76118_EARLY_MAPPING_RESULTS.json"
+    "latest_mapping_report": "GSE76118_EARLY_MAPPING_RESULTS.json",
+    "latest_biotype_report": "GSE76118_EARLY_BIOTYPE_RESULTS.json",
+    "latest_read_metadata_report": "GSE76118_EARLY_READ_METADATA_RESULTS.json"
   }
 }
