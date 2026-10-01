@@ -1,0 +1,20 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "purpose": "Diagnose scope before next experiment after completed early tangent hindcast",
+    "evidence": "24 valid combined outcomes, capture13 reused exactly after directory failure; only12 new scores. Anchor54.024627/53.258442, learned tangent54.001522/53.267982; shuffled54.001522/53.267979. Allpromotioncriteriafail. Bothnegativecontrols normmatched ratio>.999998. CMblock gene mean error <1e-5, yet fullpanel float64 pseudobulk changes max.005837 in capture13, far beyond roundoff. initialize starts candidate.copy and replaces CMblock; project protects nonCM relative to candidate, not anchor. Systematic Bernoulli switches use shared cumulative draws across cells; altering CM probabilities may change nonCM switches. No attribution proof yet; means-contract applies only if wholepanelmeans preserved.",
+    "constraints": "Preserve all existing scores/events. No future fitting or strengthselection from evaluated target; unchanged32285scorer/calibration. Frozen archivedmodels can be replayed without retraining. Forecastonlyguard<=7.75, Ddiskcache16GB2threads. Four critics suggest pastlearned mean/covariance alternatives but this scopeconfound must be resolved.",
+    "limits": "Two captures of one earlytransition, one nullseed; not independentembryos or familyexhaustion."
+  },
+  "questions": {
+    "next_decision": {
+      "type": "choice",
+      "instructions": "Choose next bounded action that resolves uncertainty before any new promotion claim.",
+      "criteria": {
+        "scope_audit_then_anchor_base": "Replay frozen capture13/12 predictions with exact hash checks and nofutureexpression. Partition fullpanelmean changes inside/outsideCM, verify systematic switch/backoff effects. Construct explicitly anchor-based CMblock transforms; test wholepanelmeans/identity/support/mass in forecastonly audit before separately registered fullpanel scoring.",
+        "new_mean_forecast": "Immediately learn gene-mean residual correction using past-only historical transitions, anchor/copy/shuffled controls; defer scope diagnosis.",
+        "multi_seed_tangent": "Repeat learned/shuffled tangent family with multiple seeds under existing candidate-based protection, without resolving fullpanelmean change."
+      }
+    }
+  }
+}

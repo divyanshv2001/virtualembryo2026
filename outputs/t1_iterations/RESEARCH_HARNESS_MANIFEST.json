@@ -72,9 +72,19 @@
       "report": "CM_PROJECTION_SURVIVAL_AUDIT_RESULTS.json"
     },
     "early_tangent_metric": {
-      "script": "early_tangent_metric_hindcast.py",
+      "script": "private/early_tangent_metric_hindcast_01/executed_source.py",
       "run": "private/early_tangent_metric_hindcast_01",
+      "report": "EARLY_TANGENT_PREFLIGHT_FAILURE_01.json"
+    },
+    "early_tangent_metric_resumed": {
+      "script": "early_tangent_metric_hindcast.py",
+      "run": "private/early_tangent_metric_hindcast_02",
       "report": "EARLY_TANGENT_METRIC_HINDCAST_RESULTS.json"
+    },
+    "early_scope_audit": {
+      "script": "forecast_scope_audit.py",
+      "run": "private/early_forecast_scope_audit_01",
+      "report": "EARLY_FORECAST_SCOPE_AUDIT_RESULTS.json"
     }
   }
 }

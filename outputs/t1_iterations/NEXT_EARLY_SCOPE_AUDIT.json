@@ -1,0 +1,27 @@
+{
+  "run": "early_forecast_scope_audit_01",
+  "seed": 20260928,
+  "declared_utc": "2026-10-01T14:43:14.432313+00:00",
+  "parent_report_sha256": "280c2ce6843a2bba1920bdc6d3920699c86a78370cdcd2e759786c9479ba7c51",
+  "conditions": [
+    {
+      "cutoff": 7.75,
+      "target": 8.75,
+      "held_capture": "13",
+      "folder": "private/early_tangent_metric_hindcast_01/cutoff_7.75"
+    },
+    {
+      "cutoff": 7.75,
+      "target": 8.75,
+      "held_capture": "12",
+      "folder": "private/early_tangent_metric_hindcast_02/cutoff_7.75_capture_12"
+    }
+  ],
+  "method": "Hash-exact frozen-model replay; partition mean changes CM/nonCM; anchor-based CM-only learned tangent and strict projection; no scoring/future expression",
+  "failure_criteria": [
+    "Any parent/source/panel/prediction hash mismatch",
+    "Future expression access",
+    "Anchor-base protected cells or full mean tolerance violated"
+  ],
+  "limitations": "Shared systematic switches and backoff are plausible pathways; partition establishes location, not uniquely causal attribution. No future tuning or score claim; invalid covariance projection remains unavailable."
+}

@@ -1,19 +1,19 @@
 {
-  "updated_utc": "2026-10-01T12:05:13.051361+00:00",
+  "updated_utc": "2026-10-01T14:44:51.706424+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "e521113f715cc2a474e58e840585f774249b1306da6ca9c793007e987ceddb93",
+    "LOCAL_OPTIMIZATION_STATE.json": "6c0099c05e65dfbf0f5824264758e871a18f771c04f526784dfe890cdaa4c0e3",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "123f3f4d3fcd7338c98a0751af8a5b344611dd5470ffb27793b9d5671947790e",
+    "METRIC_RESEARCH_QUEUE.json": "82fbf89dbf983ef0bef6901551c38c11964a38e5491f7458e968f2ece7043386",
     "METRIC_CRITIQUE_POLICY.json": "027368320281a1164dc91720fe8aa18a344ddf7c14b9c5a8fce8b2b075105b7b",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
-    "RESEARCH_HARNESS_MANIFEST.json": "7116fe71eeaa604799e3dd91fc9dabd0a526db1af4a09b8759742b33e2225298"
+    "RESEARCH_HARNESS_MANIFEST.json": "325c2de7e2bf11f1234edcf6ca05e08fa6fba93a0528221b0446372b3e389985"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [
-    "early_tangent_metric_hindcast_01"
+    "early_forecast_scope_audit_01"
   ],
-  "next_experiment": "Monitor registered early_tangent_metric; newcutoff7.75 captures13/12 target8.75,12forecasts2conditions24scores. Aftercompletion ledger/fourspecialists/Jevsynthesis. PinnedDEmean invariance explicitlytraced, distributionnullcontrols normmatched; no duplicate/officialupload.",
+  "next_experiment": "Monitor registered early_scope_audit; frozen13/12 models, CM/nonCM mean attribution and anchor-base isolation. No retraining, future expression or scorer. After completion four specialists/Jev; separately declare any new full-panel batch.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -30,7 +30,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -598,
+    "current_reward": -634,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -39,7 +39,7 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -598
+    "uncapped_reward": -634
   },
   "official_best": 52.16,
   "latest_official": {
@@ -56,16 +56,12 @@
     "attribution": "Inferred latest export; screenshot lacks filename"
   },
   "latest_jev": {
-    "packet": "JEV_SURVIVAL_SYNTHESIS_PACKET_20261001_01.json",
-    "route": "JEV_SURVIVAL_SYNTHESIS_ROUTE_20261001_01.json",
-    "decision": "early_metric_sensitivity_hindcast",
-    "confidence": 0.98,
+    "record": "JEV_EARLY_SCOPE_DECISION_ROUTE_20261001_01.json",
     "usage": {
-      "input_tokens": 1015,
-      "output_tokens": 66
+      "input_tokens": 836,
+      "output_tokens": 58
     },
-    "payload_bytes": 2306,
-    "scope": "Newconsequentialmethod selection; diagnosticnotbenchmark,no measuredcreditsavings."
+    "choice": "scope_audit_then_anchor_base"
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",

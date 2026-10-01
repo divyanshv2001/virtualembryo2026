@@ -1,5 +1,5 @@
 {
-  "records": 3007,
+  "records": 3043,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -95,6 +95,16 @@
       "path": "private/cm_mean_mass_projection_fullpanel_01/report.json",
       "sha256": "93306cf73e2bad5e6d94d2b0fc3203529c706cdd8d2579f7ceaf3a979795ac3d",
       "outcomes_indexed": 16
+    },
+    {
+      "path": "private/cm_projection_survival_audit_01/report.json",
+      "sha256": "2170343bc090225c159c659b0842e282784c7078836123aa2e140966c063ca0e",
+      "outcomes_indexed": 0
+    },
+    {
+      "path": "private/cm_projection_survival_audit_02/report.json",
+      "sha256": "268ce4c1b7773e4b6b56335153f0a0094f0fa20e3aea128631642073b1333526",
+      "outcomes_indexed": 0
     },
     {
       "path": "private/cnf_alignment_challenge_01/report.json",
@@ -460,6 +470,16 @@
       "path": "private/distribution_temporal_01/report.json",
       "sha256": "284c1cbfbe0ac11805c802f9a5a16ecbe2a9091f3e869c064a35381875909bf3",
       "outcomes_indexed": 12
+    },
+    {
+      "path": "private/early_tangent_metric_hindcast_01/report.json",
+      "sha256": "e6799ecf9dcf207baf05168b4412e12c28bfb791609640f4d0117308273560ec",
+      "outcomes_indexed": 12
+    },
+    {
+      "path": "private/early_tangent_metric_hindcast_02/report.json",
+      "sha256": "280c2ce6843a2bba1920bdc6d3920699c86a78370cdcd2e759786c9479ba7c51",
+      "outcomes_indexed": 24
     },
     {
       "path": "private/eb_gene_slope_screen_01/report.json",
@@ -874,5 +894,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "eb497435364f90b32f1010b098b72eb18d76b4df3c839155b1bdacc8d6bf47e4"
+  "ledger_sha256": "3b382efa8bd7c6b59c53ebbdd639868cc5f53135ebd013ce8366ca08e6bdb60c"
 }

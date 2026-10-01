@@ -19,7 +19,7 @@ from cm_anchor_support_projection_fullpanel import initialize, project
 from early_tangent_controls import construct
 from scipy.stats import rankdata
 
-RUN = 'early_tangent_metric_hindcast_01'
+RUN = 'early_tangent_metric_hindcast_02'
 PUBLIC = 'EARLY_TANGENT_METRIC_HINDCAST_RESULTS.json'
 NAMES = ['copy', 'anchor_unshrunk', 'cm_025', 'support_full_initial', 'support_full_projected', 'support_quarter_initial', 'support_quarter_projected', 'anchor_projected_identity', 'tangent_learned_initial', 'tangent_learned_projected', 'tangent_shuffle_initial', 'tangent_shuffle_projected']
 
@@ -51,6 +51,12 @@ def main():
     atlas = np.array([lookup[panel[i]] for i in mapped])
     spec = json.loads((HERE/'NEXT_EARLY_TANGENT_METRIC_EXPERIMENT.json').read_text())
     folds = spec['conditions']
+    resume_path=HERE/'private/early_tangent_metric_hindcast_01/report.json'
+    if digest(resume_path)!=spec['resume_report_sha256']:raise ValueError('Frozen failed attempt changed')
+    resume=json.loads(resume_path.read_text())
+    if resume['status']!='failed' or len(resume['folds'])!=1 or len(resume['folds'][0]['results'])!=12:raise ValueError('Incomplete reusable condition')
+    for key in ['seed','candidates','conditions','fit','tangent_formula','positivity','projection']:
+        if resume['plan'][key]!=spec[key]:raise ValueError('Scientific resume setting changed: '+key)
     if spec['candidates'] != NAMES: raise ValueError('Declared candidate mismatch')
     plan = {**spec,'created_utc':now(),'folds':folds,
             'predeclaration_sha256':digest(HERE/'NEXT_EARLY_TANGENT_METRIC_EXPERIMENT.json'),
@@ -74,7 +80,15 @@ def main():
               'scorer_manifest_sha256':digest(HERE/'private/scorer_source/manifest.json')}
     for fold in folds:
         cutoff,target,held = fold['cutoff'],fold['target'],fold['held_capture']
-        folder = out/f'cutoff_{cutoff}'; folder.mkdir()
+        completed=resume['folds'][0]
+        if completed['cutoff']==cutoff and completed['target']==target and completed['held_capture']==held:
+            if resume['plan']['prepared_report_sha256']!=plan['prepared_report_sha256'] or resume['plan']['panel_sha256']!=plan['panel_sha256']:raise ValueError('Resume inputs changed')
+            for name,sha in resume['plan']['source_sha256'].items():
+                if digest(HERE/name)!=sha:raise ValueError('Resume dependency changed: '+name)
+            record={**completed,'reused_completed_condition':{'source_report_sha256':digest(resume_path),'source_plan_sha256':digest(HERE/'private/early_tangent_metric_hindcast_01/plan.json'),'source_run':'early_tangent_metric_hindcast_01','fresh_training_or_scoring':False}}
+            report['folds'].append(record);append_event(events,'completed_condition_reused',cutoff=cutoff,held_capture=held,source_report_sha256=digest(resume_path),scored_outcomes_reused=12)
+            (out/'report.partial.json').write_text(json.dumps(report,indent=2));continue
+        folder = out/f'cutoff_{cutoff}_capture_{held}'; folder.mkdir()
         donor_rows = np.flatnonzero((stages == cutoff)&(samples == held))
         current_source = np.flatnonzero((stages == cutoff)&(samples != held))
         donors = values(donor_rows)
@@ -216,7 +230,7 @@ def main():
     state['metric_critique_reward'].update(current_reward=totals['reward_score'],uncapped_reward=totals['uncapped_reward'])
     checkpoint(active_jobs=[],local_process_running=False,active_run_path=None,metric_critique_reward=state['metric_critique_reward'],
                early_tangent_metric_job={'status':'completed','passing_candidates':passed,'report_sha256':public['report_sha256']})
-    append_event(events,'batch_completed',passing_candidates=passed,full_panel_scores=sum(r['local_score'] is not None for f in report['folds'] for r in f['results']))
+    append_event(events,'batch_completed',passing_candidates=passed,full_panel_scores=sum(r['local_score'] is not None for f in report['folds'] for r in f['results']),fresh_scored_conditions=1,reused_scored_conditions=1)
     from index_scores import main as index_scores
     index_scores()
 

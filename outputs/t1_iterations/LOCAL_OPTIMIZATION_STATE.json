@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T09:31:57.152356+00:00",
+  "updated_utc": "2026-10-01T14:43:14.432313+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -22,23 +22,22 @@
   "resume_verified_without_repeating_trials": false,
   "local_process_running": true,
   "quota_reset_evidence": {
-    "limit_observed": false,
-    "remaining_quota": null,
+    "limit_observed": true,
+    "observed_reset_text": "7:54 PM",
     "reset_at_utc": null,
-    "source": null,
-    "status": "not_exposed_to_session",
-    "automatic_wakeup_installed": false
+    "source": "Two metric agents returned actual Codex usage-limit errors",
+    "status": "Execution resumed; no inferred reset timezone/date"
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Monitor registered early_tangent_metric; newcutoff7.75 captures13/12 target8.75,12forecasts2conditions24scores. Aftercompletion ledger/fourspecialists/Jevsynthesis. PinnedDEmean invariance explicitlytraced, distributionnullcontrols normmatched; no duplicate/officialupload.",
+  "next_experiment": "Monitor registered early_scope_audit; frozen13/12 models, CM/nonCM mean attribution and anchor-base isolation. No retraining, future expression or scorer. After completion four specialists/Jev; separately declare any new full-panel batch.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "early_tangent_metric_hindcast_01"
+    "early_forecast_scope_audit_01"
   ],
-  "active_run_path": "private/early_tangent_metric_hindcast_01",
+  "active_run_path": "private/early_forecast_scope_audit_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -1229,7 +1228,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -598,
+    "current_reward": -634,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1238,7 +1237,7 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -598
+    "uncapped_reward": -634
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -1297,16 +1296,12 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "packet": "JEV_SURVIVAL_SYNTHESIS_PACKET_20261001_01.json",
-    "route": "JEV_SURVIVAL_SYNTHESIS_ROUTE_20261001_01.json",
-    "decision": "early_metric_sensitivity_hindcast",
-    "confidence": 0.98,
+    "record": "JEV_EARLY_SCOPE_DECISION_ROUTE_20261001_01.json",
     "usage": {
-      "input_tokens": 1015,
-      "output_tokens": 66
+      "input_tokens": 836,
+      "output_tokens": 58
     },
-    "payload_bytes": 2306,
-    "scope": "Newconsequentialmethod selection; diagnosticnotbenchmark,no measuredcreditsavings."
+    "choice": "scope_audit_then_anchor_base"
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -1971,6 +1966,37 @@
       "specialist_role_version": 2,
       "metric_availability": false,
       "reward_delta": 0
+    },
+    "early_tangent_metric_hindcast_01": {
+      "status": "completed",
+      "report_sha256": "e6799ecf9dcf207baf05168b4412e12c28bfb791609640f4d0117308273560ec",
+      "review": "METRIC_CRITIQUES_EARLY_TANGENT_20261001.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": true,
+      "partial_batch": true,
+      "reward_delta": 0
+    },
+    "early_tangent_metric_hindcast_02": {
+      "status": "completed",
+      "report_sha256": "280c2ce6843a2bba1920bdc6d3920699c86a78370cdcd2e759786c9479ba7c51",
+      "review": "METRIC_CRITIQUES_EARLY_TANGENT_20261001.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": true,
+      "reward_delta": -36,
+      "fresh_conditions": 1,
+      "reused_conditions": 1
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -2111,11 +2137,11 @@
     "collapse_hypothesis_supported": false
   },
   "early_tangent_metric_job": {
-    "status": "running",
-    "plan_sha256": "1e63534891db4578171600133cefde8893fca7976171dae72818b6df8a948c2b",
-    "planned_scores": 24,
-    "registered_experiment": "early_tangent_metric",
-    "controls": "passed deterministicshuffle/normmatch/sharedpositivity/support/zerodirection rejection",
-    "scorer_mean_contract_confirmed": true
+    "status": "completed",
+    "passing_candidates": [],
+    "report_sha256": "280c2ce6843a2bba1920bdc6d3920699c86a78370cdcd2e759786c9479ba7c51"
+  },
+  "early_scope_audit_job": {
+    "status": "running"
   }
 }

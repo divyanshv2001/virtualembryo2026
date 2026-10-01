@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T08:26:23.356763+00:00",
+  "updated_utc": "2026-10-01T14:43:14.432313+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -6254,11 +6254,19 @@
     },
     {
       "id": "early_tangent_metric_hindcast",
-      "status": "running",
+      "status": "completed_not_promoted",
       "research_family_exhausted": false,
       "plan": "NEXT_EARLY_TANGENT_METRIC_EXPERIMENT.json",
-      "next_action": "Monitor registered early_tangent_metric; newcutoff7.75 captures13/12 target8.75,12forecasts2conditions24scores. Aftercompletion ledger/fourspecialists/Jevsynthesis. PinnedDEmean invariance explicitlytraced, distributionnullcontrols normmatched; no duplicate/officialupload.",
-      "registered_experiment": "early_tangent_metric"
+      "next_action": "Run registered early_scope_audit: frozen13/12 replay, CM/nonCM mean attribution, anchor-base isolation; no future expression/scoring. Then four specialists/Jev and separately declare next full-panel method.",
+      "registered_experiment": "early_tangent_metric",
+      "report_sha256": "280c2ce6843a2bba1920bdc6d3920699c86a78370cdcd2e759786c9479ba7c51"
+    },
+    {
+      "id": "early_forecast_scope_audit",
+      "status": "declared",
+      "next_action": "Run registered early_scope_audit: frozen13/12 replay, CM/nonCM mean attribution, anchor-base isolation; no future expression/scoring. Then four specialists/Jev and separately declare next full-panel method.",
+      "research_family_exhausted": false,
+      "specification": "NEXT_EARLY_SCOPE_AUDIT.json"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",

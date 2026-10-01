@@ -1,6 +1,6 @@
 {
   "status": "predeclared_pending_implementation",
-  "run": "early_tangent_metric_hindcast_01",
+  "run": "early_tangent_metric_hindcast_02",
   "seed": 20260928,
   "conditions": [
     {
@@ -48,5 +48,7 @@
   "jev_route": "JEV_SURVIVAL_SYNTHESIS_ROUTE_20261001_01.json",
   "predeclared_before_execution": true,
   "resources": "Donlytemporaryforecastcache/2threads/oneconditionatatime/16GBRAM; sparse-support cellSchur<=83, no giant dense Jacobian. Archive smallmodels/evidence, notdataset/predictionmatrices.",
-  "scorer_contract_clarification": "Pinned DE_score takes pseudobulk delta gene ranking and DE_direction is partial Spearman of pseudobulk deltas controlling reference; neither uses within-gene cell ranks. Exact anchor gene means mathematicallypreserve bothcomponents, butfloat32 near-tie rankings canchange. Recordfloat32/64 mean drift, delta rank/sign/up-downmembership changes/overlap andstd gates. No presumedDEgain frommean-preservingredistribution; sensitivityexperiment still testsMMD/CSS versusmatchednull. No scorer orcalibrationchange."
+  "scorer_contract_clarification": "Pinned DE_score takes pseudobulk delta gene ranking and DE_direction is partial Spearman of pseudobulk deltas controlling reference; neither uses within-gene cell ranks. Exact anchor gene means mathematicallypreserve bothcomponents, butfloat32 near-tie rankings canchange. Recordfloat32/64 mean drift, delta rank/sign/up-downmembership changes/overlap andstd gates. No presumedDEgain frommean-preservingredistribution; sensitivityexperiment still testsMMD/CSS versusmatchednull. No scorer orcalibrationchange.",
+  "resume_report_sha256": "e6799ecf9dcf207baf05168b4412e12c28bfb791609640f4d0117308273560ec",
+  "resume_policy": "Reuse frozenfailedrun completedcapture13 scores/modelprovenance withouttraining/scoringagain; processremainingcapture12 withdistinctcutoff_capture outputfolder. Directoryrepair only,no scientificsetting/threshold changed. Preserveoriginalfailure andpartialall12rawmetrics/skills/calibration."
 }

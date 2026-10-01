@@ -1,0 +1,2158 @@
+{
+  "status": "completed",
+  "updated_utc": "2026-10-01T12:09:25.173822+00:00",
+  "summary": [
+    {
+      "candidate": "copy",
+      "scores": [
+        50.0,
+        50.0
+      ],
+      "raw_metrics": [
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.1691943109035492,
+          "variogram": 0.006627472583204508
+        },
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.16829626262187958,
+          "variogram": 0.006122429855167866
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "anchor_unshrunk",
+      "scores": [
+        54.02462749147748,
+        53.25844174332435
+      ],
+      "raw_metrics": [
+        {
+          "de_score": 0.09306260575296109,
+          "de_direction": 0.2158988413491357,
+          "mmd_u": 0.13967689871788025,
+          "variogram": 0.006417796481400728
+        },
+        {
+          "de_score": 0.03724394785847299,
+          "de_direction": 0.1844169267474856,
+          "mmd_u": 0.14118513464927673,
+          "variogram": 0.005903763696551323
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5256769374416433,
+          "de_direction": 0.5705479209067976,
+          "mmd_u": 0.5485218292382772,
+          "variogram": 0.5081675577809074
+        },
+        {
+          "de_score": 0.5100806451612903,
+          "de_direction": 0.559482697032726,
+          "mmd_u": 0.5444770636191247,
+          "variogram": 0.5092523139950099
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "cm_025",
+      "scores": [
+        54.011227751846135,
+        53.25876903002843
+      ],
+      "raw_metrics": [
+        {
+          "de_score": 0.08967851099830797,
+          "de_direction": 0.21754786769296222,
+          "mmd_u": 0.13974997401237488,
+          "variogram": 0.006418225821107626
+        },
+        {
+          "de_score": 0.035381750465549346,
+          "de_direction": 0.18558793964968515,
+          "mmd_u": 0.1411372721195221,
+          "variogram": 0.005903729237616062
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5246971109040074,
+          "de_direction": 0.5711634547111939,
+          "mmd_u": 0.5483900797172574,
+          "variogram": 0.508150560997419
+        },
+        {
+          "de_score": 0.5095669687814703,
+          "de_direction": 0.5599056542114824,
+          "mmd_u": 0.5445625824908595,
+          "variogram": 0.5092537990239413
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "support_full_initial",
+      "scores": [
+        54.00159888509748,
+        53.2658920969285
+      ],
+      "raw_metrics": [
+        {
+          "de_score": 0.08967851099830797,
+          "de_direction": 0.21619304281749036,
+          "mmd_u": 0.13971497118473053,
+          "variogram": 0.006416806951165199
+        },
+        {
+          "de_score": 0.03724394785847299,
+          "de_direction": 0.18514162217497718,
+          "mmd_u": 0.14116045832633972,
+          "variogram": 0.0059042442589998245
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5246971109040074,
+          "de_direction": 0.5706576405472419,
+          "mmd_u": 0.5484531794097922,
+          "variogram": 0.5082067358261239
+        },
+        {
+          "de_score": 0.5100806451612903,
+          "de_direction": 0.5597443737755031,
+          "mmd_u": 0.544521150940694,
+          "variogram": 0.5092316047643922
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "support_full_projected",
+      "scores": [
+        54.001522984053416,
+        53.26798233314628
+      ],
+      "raw_metrics": [
+        {
+          "de_score": 0.08967851099830797,
+          "de_direction": 0.2161873805824528,
+          "mmd_u": 0.13971534371376038,
+          "variogram": 0.006416810676455498
+        },
+        {
+          "de_score": 0.03724394785847299,
+          "de_direction": 0.18535192745206808,
+          "mmd_u": 0.14115741848945618,
+          "variogram": 0.005904212128371
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5246971109040074,
+          "de_direction": 0.5706555284722491,
+          "mmd_u": 0.5484525077742481,
+          "variogram": 0.5082065883209781
+        },
+        {
+          "de_score": 0.5100806451612903,
+          "de_direction": 0.559820357714255,
+          "mmd_u": 0.5445265824814945,
+          "variogram": 0.5092329893406409
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "support_quarter_initial",
+      "scores": [
+        54.00153843072783,
+        53.26814661981435
+      ],
+      "raw_metrics": [
+        {
+          "de_score": 0.08967851099830797,
+          "de_direction": 0.2161881552113214,
+          "mmd_u": 0.13971523940563202,
+          "variogram": 0.006416807416826487
+        },
+        {
+          "de_score": 0.03724394785847299,
+          "de_direction": 0.18537559916352075,
+          "mmd_u": 0.14115819334983826,
+          "variogram": 0.0059042214415967464
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5246971109040074,
+          "de_direction": 0.5706558174162834,
+          "mmd_u": 0.5484526958320346,
+          "variogram": 0.508206717387976
+        },
+        {
+          "de_score": 0.5100806451612903,
+          "de_direction": 0.559828911667585,
+          "mmd_u": 0.5445251979608043,
+          "variogram": 0.5092325880134171
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "support_quarter_projected",
+      "scores": [
+        54.00152436891008,
+        53.26798230496031
+      ],
+      "raw_metrics": [
+        {
+          "de_score": 0.08967851099830797,
+          "de_direction": 0.21618715850966133,
+          "mmd_u": 0.139715313911438,
+          "variogram": 0.006416808348149061
+        },
+        {
+          "de_score": 0.03724394785847299,
+          "de_direction": 0.18535201318219266,
+          "mmd_u": 0.14115741848945618,
+          "variogram": 0.005904213059693575
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5246971109040074,
+          "de_direction": 0.5706554456370113,
+          "mmd_u": 0.5484525615050311,
+          "variogram": 0.5082066805116842
+        },
+        {
+          "de_score": 0.5100806451612903,
+          "de_direction": 0.5598203886930171,
+          "mmd_u": 0.5445265824814945,
+          "variogram": 0.50923294920789
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "anchor_projected_identity",
+      "scores": [
+        54.02462749147748,
+        53.25844174332435
+      ],
+      "raw_metrics": [
+        {
+          "de_score": 0.09306260575296109,
+          "de_direction": 0.2158988413491357,
+          "mmd_u": 0.13967689871788025,
+          "variogram": 0.006417796481400728
+        },
+        {
+          "de_score": 0.03724394785847299,
+          "de_direction": 0.1844169267474856,
+          "mmd_u": 0.14118513464927673,
+          "variogram": 0.005903763696551323
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5256769374416433,
+          "de_direction": 0.5705479209067976,
+          "mmd_u": 0.5485218292382772,
+          "variogram": 0.5081675577809074
+        },
+        {
+          "de_score": 0.5100806451612903,
+          "de_direction": 0.559482697032726,
+          "mmd_u": 0.5444770636191247,
+          "variogram": 0.5092523139950099
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "tangent_learned_initial",
+      "scores": [
+        54.00152157840734,
+        53.267981984831025
+      ],
+      "raw_metrics": [
+        {
+          "de_score": 0.08967851099830797,
+          "de_direction": 0.2161871185516662,
+          "mmd_u": 0.13971535861492157,
+          "variogram": 0.006416808348149061
+        },
+        {
+          "de_score": 0.03724394785847299,
+          "de_direction": 0.18535197774536916,
+          "mmd_u": 0.14115741848945618,
+          "variogram": 0.005904213059693575
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5246971109040074,
+          "de_direction": 0.5706554307323063,
+          "mmd_u": 0.5484524809088606,
+          "variogram": 0.5082066805116842
+        },
+        {
+          "de_score": 0.5100806451612903,
+          "de_direction": 0.5598203758878455,
+          "mmd_u": 0.5445265824814945,
+          "variogram": 0.50923294920789
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "tangent_learned_projected",
+      "scores": [
+        54.00152157840734,
+        53.267981984831025
+      ],
+      "raw_metrics": [
+        {
+          "de_score": 0.08967851099830797,
+          "de_direction": 0.2161871185516662,
+          "mmd_u": 0.13971535861492157,
+          "variogram": 0.006416808348149061
+        },
+        {
+          "de_score": 0.03724394785847299,
+          "de_direction": 0.18535197774536916,
+          "mmd_u": 0.14115741848945618,
+          "variogram": 0.005904213059693575
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5246971109040074,
+          "de_direction": 0.5706554307323063,
+          "mmd_u": 0.5484524809088606,
+          "variogram": 0.5082066805116842
+        },
+        {
+          "de_score": 0.5100806451612903,
+          "de_direction": 0.5598203758878455,
+          "mmd_u": 0.5445265824814945,
+          "variogram": 0.50923294920789
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "tangent_shuffle_initial",
+      "scores": [
+        54.00152208067859,
+        53.26797937729235
+      ],
+      "raw_metrics": [
+        {
+          "de_score": 0.08967851099830797,
+          "de_direction": 0.2161871797519532,
+          "mmd_u": 0.13971537351608276,
+          "variogram": 0.006416807416826487
+        },
+        {
+          "de_score": 0.03724394785847299,
+          "de_direction": 0.18535191122834305,
+          "mmd_u": 0.14115741848945618,
+          "variogram": 0.0059042153880000114
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5246971109040074,
+          "de_direction": 0.5706554535605848,
+          "mmd_u": 0.5484524540434756,
+          "variogram": 0.508206717387976
+        },
+        {
+          "de_score": 0.5100806451612903,
+          "de_direction": 0.5598203518517779,
+          "mmd_u": 0.5445265824814945,
+          "variogram": 0.5092328488760406
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "tangent_shuffle_projected",
+      "scores": [
+        54.00152208067859,
+        53.26797937729235
+      ],
+      "raw_metrics": [
+        {
+          "de_score": 0.08967851099830797,
+          "de_direction": 0.2161871797519532,
+          "mmd_u": 0.13971537351608276,
+          "variogram": 0.006416807416826487
+        },
+        {
+          "de_score": 0.03724394785847299,
+          "de_direction": 0.18535191122834305,
+          "mmd_u": 0.14115741848945618,
+          "variogram": 0.0059042153880000114
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5246971109040074,
+          "de_direction": 0.5706554535605848,
+          "mmd_u": 0.5484524540434756,
+          "variogram": 0.508206717387976
+        },
+        {
+          "de_score": 0.5100806451612903,
+          "de_direction": 0.5598203518517779,
+          "mmd_u": 0.5445265824814945,
+          "variogram": 0.5092328488760406
+        }
+      ],
+      "all_calibrations_valid": true
+    }
+  ],
+  "folds": [
+    {
+      "cutoff": 7.75,
+      "target": 8.75,
+      "held_capture": "13",
+      "selection": "largestcurrentcapture bydonorcount, deterministicmetadataonly",
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.1691943109035492,
+        "variogram": 0.006627472583204508
+      },
+      "ceiling": {
+        "de_score": 0.9526226734348562,
+        "de_direction": 0.8730281025621764,
+        "mmd_u": 0.0023524463176727295,
+        "variogram": 0.00010467865649843588
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.1691943109035492,
+            "variogram": 0.006627472583204508
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true,
+          "metric_trace": {
+            "max_pseudobulk_float32_difference_vsanchor": 0.12045162916183472,
+            "max_pseudobulk_float64_difference_vsanchor": 0.12045185471389064,
+            "identical_float32_pseudobulk": false,
+            "delta_sign_changes_vsanchor": 16126,
+            "delta_gene_rank_changes_vsanchor": 32285,
+            "truth_up_genes": 389,
+            "truth_down_genes": 317,
+            "top_up_membership_changes_vsanchor": 770,
+            "bottom_down_membership_changes_vsanchor": 634,
+            "signed_overlap": 0.0084985835694051,
+            "prediction_delta_std": 0.0,
+            "truth_delta_std": 0.08158379048109055,
+            "auxiliary_outputs": "PinnedDEgeneeligibility/rankoverlapandpseudobulk available; no inventedgene-wise directioncontribution (correlationnonadditive)"
+          }
+        },
+        {
+          "candidate": "anchor_unshrunk",
+          "raw_metrics": {
+            "de_score": 0.09306260575296109,
+            "de_direction": 0.2158988413491357,
+            "mmd_u": 0.13967689871788025,
+            "variogram": 0.006417796481400728
+          },
+          "local_score": 54.02462749147748,
+          "skills": {
+            "de_score": 0.5256769374416433,
+            "de_direction": 0.5705479209067976,
+            "mmd_u": 0.5485218292382772,
+            "variogram": 0.5081675577809074
+          },
+          "calibration_valid": true,
+          "metric_trace": {
+            "max_pseudobulk_float32_difference_vsanchor": 0.0,
+            "max_pseudobulk_float64_difference_vsanchor": 0.0,
+            "identical_float32_pseudobulk": true,
+            "delta_sign_changes_vsanchor": 0,
+            "delta_gene_rank_changes_vsanchor": 0,
+            "truth_up_genes": 389,
+            "truth_down_genes": 317,
+            "top_up_membership_changes_vsanchor": 0,
+            "bottom_down_membership_changes_vsanchor": 0,
+            "signed_overlap": 0.24079320113314448,
+            "prediction_delta_std": 0.004015370737761259,
+            "truth_delta_std": 0.08158379048109055,
+            "auxiliary_outputs": "PinnedDEgeneeligibility/rankoverlapandpseudobulk available; no inventedgene-wise directioncontribution (correlationnonadditive)"
+          }
+        },
+        {
+          "candidate": "cm_025",
+          "raw_metrics": {
+            "de_score": 0.08967851099830797,
+            "de_direction": 0.21754786769296222,
+            "mmd_u": 0.13974997401237488,
+            "variogram": 0.006418225821107626
+          },
+          "local_score": 54.011227751846135,
+          "skills": {
+            "de_score": 0.5246971109040074,
+            "de_direction": 0.5711634547111939,
+            "mmd_u": 0.5483900797172574,
+            "variogram": 0.508150560997419
+          },
+          "calibration_valid": true,
+          "metric_trace": {
+            "max_pseudobulk_float32_difference_vsanchor": 0.004366636276245117,
+            "max_pseudobulk_float64_difference_vsanchor": 0.004366345527949678,
+            "identical_float32_pseudobulk": false,
+            "delta_sign_changes_vsanchor": 268,
+            "delta_gene_rank_changes_vsanchor": 32009,
+            "truth_up_genes": 389,
+            "truth_down_genes": 317,
+            "top_up_membership_changes_vsanchor": 14,
+            "bottom_down_membership_changes_vsanchor": 16,
+            "signed_overlap": 0.23796033994334279,
+            "prediction_delta_std": 0.004016651306301355,
+            "truth_delta_std": 0.08158379048109055,
+            "auxiliary_outputs": "PinnedDEgeneeligibility/rankoverlapandpseudobulk available; no inventedgene-wise directioncontribution (correlationnonadditive)"
+          }
+        },
+        {
+          "candidate": "support_full_initial",
+          "raw_metrics": {
+            "de_score": 0.08967851099830797,
+            "de_direction": 0.21619304281749036,
+            "mmd_u": 0.13971497118473053,
+            "variogram": 0.006416806951165199
+          },
+          "local_score": 54.00159888509748,
+          "skills": {
+            "de_score": 0.5246971109040074,
+            "de_direction": 0.5706576405472419,
+            "mmd_u": 0.5484531794097922,
+            "variogram": 0.5082067358261239
+          },
+          "calibration_valid": true,
+          "metric_trace": {
+            "max_pseudobulk_float32_difference_vsanchor": 0.005837395787239075,
+            "max_pseudobulk_float64_difference_vsanchor": 0.005837398568398822,
+            "identical_float32_pseudobulk": false,
+            "delta_sign_changes_vsanchor": 575,
+            "delta_gene_rank_changes_vsanchor": 32054,
+            "truth_up_genes": 389,
+            "truth_down_genes": 317,
+            "top_up_membership_changes_vsanchor": 28,
+            "bottom_down_membership_changes_vsanchor": 14,
+            "signed_overlap": 0.23796033994334279,
+            "prediction_delta_std": 0.0040278187952935696,
+            "truth_delta_std": 0.08158379048109055,
+            "auxiliary_outputs": "PinnedDEgeneeligibility/rankoverlapandpseudobulk available; no inventedgene-wise directioncontribution (correlationnonadditive)"
+          }
+        },
+        {
+          "candidate": "support_full_projected",
+          "raw_metrics": {
+            "de_score": 0.08967851099830797,
+            "de_direction": 0.2161873805824528,
+            "mmd_u": 0.13971534371376038,
+            "variogram": 0.006416810676455498
+          },
+          "local_score": 54.001522984053416,
+          "skills": {
+            "de_score": 0.5246971109040074,
+            "de_direction": 0.5706555284722491,
+            "mmd_u": 0.5484525077742481,
+            "variogram": 0.5082065883209781
+          },
+          "calibration_valid": true,
+          "metric_trace": {
+            "max_pseudobulk_float32_difference_vsanchor": 0.005836993455886841,
+            "max_pseudobulk_float64_difference_vsanchor": 0.005837001828641469,
+            "identical_float32_pseudobulk": false,
+            "delta_sign_changes_vsanchor": 575,
+            "delta_gene_rank_changes_vsanchor": 32050,
+            "truth_up_genes": 389,
+            "truth_down_genes": 317,
+            "top_up_membership_changes_vsanchor": 28,
+            "bottom_down_membership_changes_vsanchor": 14,
+            "signed_overlap": 0.23796033994334279,
+            "prediction_delta_std": 0.0040281787514686584,
+            "truth_delta_std": 0.08158379048109055,
+            "auxiliary_outputs": "PinnedDEgeneeligibility/rankoverlapandpseudobulk available; no inventedgene-wise directioncontribution (correlationnonadditive)"
+          }
+        },
+        {
+          "candidate": "support_quarter_initial",
+          "raw_metrics": {
+            "de_score": 0.08967851099830797,
+            "de_direction": 0.2161881552113214,
+            "mmd_u": 0.13971523940563202,
+            "variogram": 0.006416807416826487
+          },
+          "local_score": 54.00153843072783,
+          "skills": {
+            "de_score": 0.5246971109040074,
+            "de_direction": 0.5706558174162834,
+            "mmd_u": 0.5484526958320346,
+            "variogram": 0.508206717387976
+          },
+          "calibration_valid": true,
+          "metric_trace": {
+            "max_pseudobulk_float32_difference_vsanchor": 0.005837082862854004,
+            "max_pseudobulk_float64_difference_vsanchor": 0.005837100896479347,
+            "identical_float32_pseudobulk": false,
+            "delta_sign_changes_vsanchor": 575,
+            "delta_gene_rank_changes_vsanchor": 32063,
+            "truth_up_genes": 389,
+            "truth_down_genes": 317,
+            "top_up_membership_changes_vsanchor": 28,
+            "bottom_down_membership_changes_vsanchor": 14,
+            "signed_overlap": 0.23796033994334279,
+            "prediction_delta_std": 0.004028087016195059,
+            "truth_delta_std": 0.08158379048109055,
+            "auxiliary_outputs": "PinnedDEgeneeligibility/rankoverlapandpseudobulk available; no inventedgene-wise directioncontribution (correlationnonadditive)"
+          }
+        },
+        {
+          "candidate": "support_quarter_projected",
+          "raw_metrics": {
+            "de_score": 0.08967851099830797,
+            "de_direction": 0.21618715850966133,
+            "mmd_u": 0.139715313911438,
+            "variogram": 0.006416808348149061
+          },
+          "local_score": 54.00152436891008,
+          "skills": {
+            "de_score": 0.5246971109040074,
+            "de_direction": 0.5706554456370113,
+            "mmd_u": 0.5484525615050311,
+            "variogram": 0.5082066805116842
+          },
+          "calibration_valid": true,
+          "metric_trace": {
+            "max_pseudobulk_float32_difference_vsanchor": 0.005836978554725647,
+            "max_pseudobulk_float64_difference_vsanchor": 0.005837001711540002,
+            "identical_float32_pseudobulk": false,
+            "delta_sign_changes_vsanchor": 575,
+            "delta_gene_rank_changes_vsanchor": 32049,
+            "truth_up_genes": 389,
+            "truth_down_genes": 317,
+            "top_up_membership_changes_vsanchor": 28,
+            "bottom_down_membership_changes_vsanchor": 14,
+            "signed_overlap": 0.23796033994334279,
+            "prediction_delta_std": 0.004028175957500935,
+            "truth_delta_std": 0.08158379048109055,
+            "auxiliary_outputs": "PinnedDEgeneeligibility/rankoverlapandpseudobulk available; no inventedgene-wise directioncontribution (correlationnonadditive)"
+          }
+        },
+        {
+          "candidate": "anchor_projected_identity",
+          "raw_metrics": {
+            "de_score": 0.09306260575296109,
+            "de_direction": 0.2158988413491357,
+            "mmd_u": 0.13967689871788025,
+            "variogram": 0.006417796481400728
+          },
+          "local_score": 54.02462749147748,
+          "skills": {
+            "de_score": 0.5256769374416433,
+            "de_direction": 0.5705479209067976,
+            "mmd_u": 0.5485218292382772,
+            "variogram": 0.5081675577809074
+          },
+          "calibration_valid": true,
+          "metric_trace": {
+            "max_pseudobulk_float32_difference_vsanchor": 0.0,
+            "max_pseudobulk_float64_difference_vsanchor": 0.0,
+            "identical_float32_pseudobulk": true,
+            "delta_sign_changes_vsanchor": 0,
+            "delta_gene_rank_changes_vsanchor": 0,
+            "truth_up_genes": 389,
+            "truth_down_genes": 317,
+            "top_up_membership_changes_vsanchor": 0,
+            "bottom_down_membership_changes_vsanchor": 0,
+            "signed_overlap": 0.24079320113314448,
+            "prediction_delta_std": 0.004015370737761259,
+            "truth_delta_std": 0.08158379048109055,
+            "auxiliary_outputs": "PinnedDEgeneeligibility/rankoverlapandpseudobulk available; no inventedgene-wise directioncontribution (correlationnonadditive)"
+          }
+        },
+        {
+          "candidate": "tangent_learned_initial",
+          "raw_metrics": {
+            "de_score": 0.08967851099830797,
+            "de_direction": 0.2161871185516662,
+            "mmd_u": 0.13971535861492157,
+            "variogram": 0.006416808348149061
+          },
+          "local_score": 54.00152157840734,
+          "skills": {
+            "de_score": 0.5246971109040074,
+            "de_direction": 0.5706554307323063,
+            "mmd_u": 0.5484524809088606,
+            "variogram": 0.5082066805116842
+          },
+          "calibration_valid": true,
+          "metric_trace": {
+            "max_pseudobulk_float32_difference_vsanchor": 0.005836993455886841,
+            "max_pseudobulk_float64_difference_vsanchor": 0.005837001652989254,
+            "identical_float32_pseudobulk": false,
+            "delta_sign_changes_vsanchor": 575,
+            "delta_gene_rank_changes_vsanchor": 32049,
+            "truth_up_genes": 389,
+            "truth_down_genes": 317,
+            "top_up_membership_changes_vsanchor": 28,
+            "bottom_down_membership_changes_vsanchor": 14,
+            "signed_overlap": 0.23796033994334279,
+            "prediction_delta_std": 0.00402817502617836,
+            "truth_delta_std": 0.08158379048109055,
+            "auxiliary_outputs": "PinnedDEgeneeligibility/rankoverlapandpseudobulk available; no inventedgene-wise directioncontribution (correlationnonadditive)"
+          }
+        },
+        {
+          "candidate": "tangent_learned_projected",
+          "raw_metrics": {
+            "de_score": 0.08967851099830797,
+            "de_direction": 0.2161871185516662,
+            "mmd_u": 0.13971535861492157,
+            "variogram": 0.006416808348149061
+          },
+          "local_score": 54.00152157840734,
+          "skills": {
+            "de_score": 0.5246971109040074,
+            "de_direction": 0.5706554307323063,
+            "mmd_u": 0.5484524809088606,
+            "variogram": 0.5082066805116842
+          },
+          "calibration_valid": true,
+          "metric_trace": {
+            "max_pseudobulk_float32_difference_vsanchor": 0.005836993455886841,
+            "max_pseudobulk_float64_difference_vsanchor": 0.005837001652989254,
+            "identical_float32_pseudobulk": false,
+            "delta_sign_changes_vsanchor": 575,
+            "delta_gene_rank_changes_vsanchor": 32049,
+            "truth_up_genes": 389,
+            "truth_down_genes": 317,
+            "top_up_membership_changes_vsanchor": 28,
+            "bottom_down_membership_changes_vsanchor": 14,
+            "signed_overlap": 0.23796033994334279,
+            "prediction_delta_std": 0.00402817502617836,
+            "truth_delta_std": 0.08158379048109055,
+            "auxiliary_outputs": "PinnedDEgeneeligibility/rankoverlapandpseudobulk available; no inventedgene-wise directioncontribution (correlationnonadditive)"
+          }
+        },
+        {
+          "candidate": "tangent_shuffle_initial",
+          "raw_metrics": {
+            "de_score": 0.08967851099830797,
+            "de_direction": 0.2161871797519532,
+            "mmd_u": 0.13971537351608276,
+            "variogram": 0.006416807416826487
+          },
+          "local_score": 54.00152208067859,
+          "skills": {
+            "de_score": 0.5246971109040074,
+            "de_direction": 0.5706554535605848,
+            "mmd_u": 0.5484524540434756,
+            "variogram": 0.508206717387976
+          },
+          "calibration_valid": true,
+          "metric_trace": {
+            "max_pseudobulk_float32_difference_vsanchor": 0.005836978554725647,
+            "max_pseudobulk_float64_difference_vsanchor": 0.005837001770090722,
+            "identical_float32_pseudobulk": false,
+            "delta_sign_changes_vsanchor": 575,
+            "delta_gene_rank_changes_vsanchor": 32049,
+            "truth_up_genes": 389,
+            "truth_down_genes": 317,
+            "top_up_membership_changes_vsanchor": 28,
+            "bottom_down_membership_changes_vsanchor": 14,
+            "signed_overlap": 0.23796033994334279,
+            "prediction_delta_std": 0.004028175491839647,
+            "truth_delta_std": 0.08158379048109055,
+            "auxiliary_outputs": "PinnedDEgeneeligibility/rankoverlapandpseudobulk available; no inventedgene-wise directioncontribution (correlationnonadditive)"
+          }
+        },
+        {
+          "candidate": "tangent_shuffle_projected",
+          "raw_metrics": {
+            "de_score": 0.08967851099830797,
+            "de_direction": 0.2161871797519532,
+            "mmd_u": 0.13971537351608276,
+            "variogram": 0.006416807416826487
+          },
+          "local_score": 54.00152208067859,
+          "skills": {
+            "de_score": 0.5246971109040074,
+            "de_direction": 0.5706554535605848,
+            "mmd_u": 0.5484524540434756,
+            "variogram": 0.508206717387976
+          },
+          "calibration_valid": true,
+          "metric_trace": {
+            "max_pseudobulk_float32_difference_vsanchor": 0.005836978554725647,
+            "max_pseudobulk_float64_difference_vsanchor": 0.005837001770090722,
+            "identical_float32_pseudobulk": false,
+            "delta_sign_changes_vsanchor": 575,
+            "delta_gene_rank_changes_vsanchor": 32049,
+            "truth_up_genes": 389,
+            "truth_down_genes": 317,
+            "top_up_membership_changes_vsanchor": 28,
+            "bottom_down_membership_changes_vsanchor": 14,
+            "signed_overlap": 0.23796033994334279,
+            "prediction_delta_std": 0.004028175491839647,
+            "truth_delta_std": 0.08158379048109055,
+            "auxiliary_outputs": "PinnedDEgeneeligibility/rankoverlapandpseudobulk available; no inventedgene-wise directioncontribution (correlationnonadditive)"
+          }
+        }
+      ],
+      "generation": {
+        "copy": {
+          "audit": {
+            "method": "persistence"
+          },
+          "prediction_sha256": "6c2776eab9a5923c25c1ec73baea11a3cb37032692112da68ba596cb2acbe8af"
+        },
+        "anchor_unshrunk": {
+          "audit": {
+            "fit_cells": 3945,
+            "fit_max_stage": 7.75,
+            "supported_genes": 12890,
+            "method": "Conditional positive log1p response decoder",
+            "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+            "conditional_ridge_strength": 1.0,
+            "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+            "encoder_features": 4096,
+            "covariance_guard_features": 384,
+            "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+            "anchor_calibration_rows": 1018,
+            "anchor_supported_genes": 10812,
+            "anchor_slope_ridge": 1.0,
+            "limitation": "Cross-sectional associations are not temporal velocities; only 1500 past anchors.",
+            "anchor_positive_slope_strength": 0.5,
+            "anchor_detection_slope_strength": 0.5,
+            "response_units": "log1p normalized expression",
+            "response_fit_rows": 3945,
+            "response_fit_max_stage": 7.75,
+            "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+            "observation_scope": "none",
+            "observation_alpha": 0.0,
+            "calibration_endpoint_policy": "Same current-only offset applied to p0/p1; calibrated switching denominators",
+            "observation_calibrated_cells": 1018,
+            "mode": "joint",
+            "strength": 1.0,
+            "backoff": 1.0,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.2935434904325009,
+            "newly_detected_entries": 82400,
+            "removed_detection_entries": 40512,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true
+          },
+          "prediction_sha256": "24ceb15f2cf15aceb5bf904287a085848adcddd5c2f835070cda8fb2589289d0"
+        },
+        "cm_025": {
+          "audit": {
+            "fit_cells": 3945,
+            "fit_max_stage": 7.75,
+            "supported_genes": 12890,
+            "method": "Conditional positive log1p response decoder",
+            "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+            "conditional_ridge_strength": 1.0,
+            "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+            "encoder_features": 4096,
+            "covariance_guard_features": 384,
+            "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+            "anchor_calibration_rows": 1018,
+            "anchor_supported_genes": 10812,
+            "anchor_slope_ridge": 1.0,
+            "limitation": "Cross-sectional associations are not temporal velocities; only 1500 past anchors.",
+            "anchor_positive_slope_strength": 0.5,
+            "anchor_detection_slope_strength": 0.5,
+            "response_units": "log1p normalized expression",
+            "response_fit_rows": 3945,
+            "response_fit_max_stage": 7.75,
+            "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+            "observation_scope": "cm",
+            "observation_alpha": 0.25,
+            "calibration_endpoint_policy": "Same current-only offset applied to p0/p1; calibrated switching denominators",
+            "observation_calibrated_cells": 83,
+            "mode": "joint",
+            "strength": 1.0,
+            "backoff": 1.0,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.29237872400486775,
+            "newly_detected_entries": 82389,
+            "removed_detection_entries": 40520,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true
+          },
+          "prediction_sha256": "33f55dec0ca908baf5f58c2a6a7932b721e2ce32e00cb4ed9ce691e701da3d53"
+        },
+        "support_full_initial": {
+          "audit": {
+            "beta": 1.0
+          },
+          "prediction_sha256": "f8d3a8c413e94bfece54246e3c553a55a99991ac32fa8e2ae82a8e12c2e22282"
+        },
+        "support_full_projected": {
+          "audit": {
+            "valid": true,
+            "iterations": 5,
+            "history": [
+              {
+                "step": 0,
+                "objective": 0.0001637491670514375,
+                "damping": 0.001,
+                "max_gene_log_mean_error": 0.00011191059307891216,
+                "max_row_raw_mass_relative_error": 0.0024390058445969798
+              },
+              {
+                "step": 1,
+                "objective": 5.3121096352411755e-06,
+                "damping": 0.0003,
+                "max_gene_log_mean_error": 0.0001610288215943001,
+                "max_row_raw_mass_relative_error": 0.0007021981872071673
+              },
+              {
+                "step": 5,
+                "objective": 3.249137255333979e-12,
+                "damping": 2.4299999999999996e-06,
+                "max_gene_log_mean_error": 2.4257276995953703e-06,
+                "max_row_raw_mass_relative_error": 1.1793432708668555e-07
+              }
+            ],
+            "support_preserved": true,
+            "solver": "Structured damped Gauss-Newton",
+            "adaptive_damping": true,
+            "largest_dense_square_dimension": 83,
+            "post_cast_checks": {
+              "finite_nonnegative": true,
+              "support_preserved": true,
+              "protected_cells_unchanged": true,
+              "protected_genes_unchanged": true,
+              "gene_margin_passed": true,
+              "raw_mass_margin_passed": true,
+              "covariance_guard_passed": true
+            },
+            "max_gene_log_mean_error": 2.4416360506762658e-06,
+            "max_row_raw_mass_relative_error": 1.223818598107858e-07,
+            "covariance_change_vs_reference": 0.2927469630058126,
+            "constraints_source": "No-offset anchor FORECAST; no future truth",
+            "projected_cells": 83
+          },
+          "prediction_sha256": "3e25ac42f0088623b7655d0b09b873a8da2cd2b0dccfc9c459770bf2a97878cc"
+        },
+        "support_quarter_initial": {
+          "audit": {
+            "beta": 0.25
+          },
+          "prediction_sha256": "2e5c99d28bb6fb7f277676e34e822c9134ce79e59ddb3b2f6eb8d2654b56b2d6"
+        },
+        "support_quarter_projected": {
+          "audit": {
+            "valid": true,
+            "iterations": 4,
+            "history": [
+              {
+                "step": 0,
+                "objective": 1.0235144780243374e-05,
+                "damping": 0.001,
+                "max_gene_log_mean_error": 2.797684037547654e-05,
+                "max_row_raw_mass_relative_error": 0.0006102119513267671
+              },
+              {
+                "step": 1,
+                "objective": 3.32259856736737e-07,
+                "damping": 0.0003,
+                "max_gene_log_mean_error": 4.023344723069755e-05,
+                "max_row_raw_mass_relative_error": 0.00017597034940593725
+              },
+              {
+                "step": 4,
+                "objective": 7.912197737257577e-12,
+                "damping": 8.099999999999999e-06,
+                "max_gene_log_mean_error": 3.884377876239853e-06,
+                "max_row_raw_mass_relative_error": 1.8277676979412296e-07
+              }
+            ],
+            "support_preserved": true,
+            "solver": "Structured damped Gauss-Newton",
+            "adaptive_damping": true,
+            "largest_dense_square_dimension": 83,
+            "post_cast_checks": {
+              "finite_nonnegative": true,
+              "support_preserved": true,
+              "protected_cells_unchanged": true,
+              "protected_genes_unchanged": true,
+              "gene_margin_passed": true,
+              "raw_mass_margin_passed": true,
+              "covariance_guard_passed": true
+            },
+            "max_gene_log_mean_error": 3.889382603539104e-06,
+            "max_row_raw_mass_relative_error": 1.8136304190390893e-07,
+            "covariance_change_vs_reference": 0.2927490185102196,
+            "constraints_source": "No-offset anchor FORECAST; no future truth",
+            "projected_cells": 83
+          },
+          "prediction_sha256": "cfa8b09a7892958f83bc9874bdd8b02b3db3eeb94a17fe6f3ce0351d303bcadd"
+        },
+        "anchor_projected_identity": {
+          "audit": {
+            "valid": true,
+            "iterations": 0,
+            "history": [
+              {
+                "step": 0,
+                "objective": 0.0,
+                "damping": 0.001,
+                "max_gene_log_mean_error": 0.0,
+                "max_row_raw_mass_relative_error": 0.0
+              }
+            ],
+            "support_preserved": true,
+            "solver": "Structured damped Gauss-Newton",
+            "adaptive_damping": true,
+            "largest_dense_square_dimension": 83,
+            "post_cast_checks": {
+              "finite_nonnegative": true,
+              "support_preserved": true,
+              "protected_cells_unchanged": true,
+              "protected_genes_unchanged": true,
+              "gene_margin_passed": true,
+              "raw_mass_margin_passed": true,
+              "covariance_guard_passed": true
+            },
+            "max_gene_log_mean_error": 0.0,
+            "max_row_raw_mass_relative_error": 0.0,
+            "covariance_change_vs_reference": 0.2935434904325009,
+            "constraints_source": "No-offset anchor FORECAST; no future truth",
+            "projected_cells": 83
+          },
+          "prediction_sha256": "24ceb15f2cf15aceb5bf904287a085848adcddd5c2f835070cda8fb2589289d0"
+        },
+        "tangent_learned_initial": {
+          "audit": {
+            "shared_scale": 0.25,
+            "learned_tangent_norm": 0.2031676173313916,
+            "shuffled_tangent_norm": 0.20316761733139152,
+            "relative_norm_match_error": 4.0984251299786803e-16,
+            "learned_linear_audit": {
+              "damping": 1e-09,
+              "proposed_l2": 0.26029110312014114,
+              "surviving_l2": 0.2031676173313916,
+              "survival_ratio": 0.780539998855115,
+              "cosine": 0.7805402316435116,
+              "linear_constraint_l2_before": 0.012797107004710031,
+              "linear_constraint_l2_after": 3.5086299779880002e-09,
+              "linear_constraint_ratio": 2.7417368446607765e-07,
+              "finite": true,
+              "largest_dense_square_dimension": 83,
+              "interpretation": "Regularized linear tangent only; no nonlinear feasibility or benchmark score"
+            },
+            "shuffle_linear_audit": {
+              "damping": 1e-09,
+              "proposed_l2": 0.26029110312014114,
+              "surviving_l2": 0.2576260792198093,
+              "survival_ratio": 0.9897613715244744,
+              "cosine": 0.9897613729818593,
+              "linear_constraint_l2_before": 0.010227020950342676,
+              "linear_constraint_l2_after": 3.126164296665012e-10,
+              "linear_constraint_ratio": 3.056769231083138e-08,
+              "finite": true,
+              "largest_dense_square_dimension": 83,
+              "interpretation": "Regularized linear tangent only; no nonlinear feasibility or benchmark score"
+            },
+            "seed": 20260928
+          },
+          "prediction_sha256": "4a098c1bf8082596f9374d36035a778a627b444f44eb3d94a8d7fc67b2c7ce46"
+        },
+        "tangent_learned_projected": {
+          "audit": {
+            "valid": true,
+            "iterations": 0,
+            "history": [
+              {
+                "step": 0,
+                "objective": 4.0593910760645743e-13,
+                "damping": 0.001,
+                "max_gene_log_mean_error": 2.5852616936106187e-08,
+                "max_row_raw_mass_relative_error": 2.619044129173627e-07
+              }
+            ],
+            "support_preserved": true,
+            "solver": "Structured damped Gauss-Newton",
+            "adaptive_damping": true,
+            "largest_dense_square_dimension": 83,
+            "post_cast_checks": {
+              "finite_nonnegative": true,
+              "support_preserved": true,
+              "protected_cells_unchanged": true,
+              "protected_genes_unchanged": true,
+              "gene_margin_passed": true,
+              "raw_mass_margin_passed": true,
+              "covariance_guard_passed": true
+            },
+            "max_gene_log_mean_error": 2.5852616936106187e-08,
+            "max_row_raw_mass_relative_error": 2.619044129173627e-07,
+            "covariance_change_vs_reference": 0.29274897969318553,
+            "constraints_source": "No-offset anchor FORECAST; no future truth",
+            "projected_cells": 83,
+            "construction": {
+              "shared_scale": 0.25,
+              "learned_tangent_norm": 0.2031676173313916,
+              "shuffled_tangent_norm": 0.20316761733139152,
+              "relative_norm_match_error": 4.0984251299786803e-16,
+              "learned_linear_audit": {
+                "damping": 1e-09,
+                "proposed_l2": 0.26029110312014114,
+                "surviving_l2": 0.2031676173313916,
+                "survival_ratio": 0.780539998855115,
+                "cosine": 0.7805402316435116,
+                "linear_constraint_l2_before": 0.012797107004710031,
+                "linear_constraint_l2_after": 3.5086299779880002e-09,
+                "linear_constraint_ratio": 2.7417368446607765e-07,
+                "finite": true,
+                "largest_dense_square_dimension": 83,
+                "interpretation": "Regularized linear tangent only; no nonlinear feasibility or benchmark score"
+              },
+              "shuffle_linear_audit": {
+                "damping": 1e-09,
+                "proposed_l2": 0.26029110312014114,
+                "surviving_l2": 0.2576260792198093,
+                "survival_ratio": 0.9897613715244744,
+                "cosine": 0.9897613729818593,
+                "linear_constraint_l2_before": 0.010227020950342676,
+                "linear_constraint_l2_after": 3.126164296665012e-10,
+                "linear_constraint_ratio": 3.056769231083138e-08,
+                "finite": true,
+                "largest_dense_square_dimension": 83,
+                "interpretation": "Regularized linear tangent only; no nonlinear feasibility or benchmark score"
+              },
+              "seed": 20260928
+            }
+          },
+          "prediction_sha256": "4a098c1bf8082596f9374d36035a778a627b444f44eb3d94a8d7fc67b2c7ce46"
+        },
+        "tangent_shuffle_initial": {
+          "audit": {
+            "shared_scale": 0.25,
+            "learned_tangent_norm": 0.2031676173313916,
+            "shuffled_tangent_norm": 0.20316761733139152,
+            "relative_norm_match_error": 4.0984251299786803e-16,
+            "learned_linear_audit": {
+              "damping": 1e-09,
+              "proposed_l2": 0.26029110312014114,
+              "surviving_l2": 0.2031676173313916,
+              "survival_ratio": 0.780539998855115,
+              "cosine": 0.7805402316435116,
+              "linear_constraint_l2_before": 0.012797107004710031,
+              "linear_constraint_l2_after": 3.5086299779880002e-09,
+              "linear_constraint_ratio": 2.7417368446607765e-07,
+              "finite": true,
+              "largest_dense_square_dimension": 83,
+              "interpretation": "Regularized linear tangent only; no nonlinear feasibility or benchmark score"
+            },
+            "shuffle_linear_audit": {
+              "damping": 1e-09,
+              "proposed_l2": 0.26029110312014114,
+              "surviving_l2": 0.2576260792198093,
+              "survival_ratio": 0.9897613715244744,
+              "cosine": 0.9897613729818593,
+              "linear_constraint_l2_before": 0.010227020950342676,
+              "linear_constraint_l2_after": 3.126164296665012e-10,
+              "linear_constraint_ratio": 3.056769231083138e-08,
+              "finite": true,
+              "largest_dense_square_dimension": 83,
+              "interpretation": "Regularized linear tangent only; no nonlinear feasibility or benchmark score"
+            },
+            "seed": 20260928
+          },
+          "prediction_sha256": "79da33bc666008be9f8fa622a4c6c295cfdbe2037213f82a4eaa2c28dc8b0ad4"
+        },
+        "tangent_shuffle_projected": {
+          "audit": {
+            "valid": true,
+            "iterations": 0,
+            "history": [
+              {
+                "step": 0,
+                "objective": 2.1936100202373938e-13,
+                "damping": 0.001,
+                "max_gene_log_mean_error": 3.4470156506927196e-08,
+                "max_row_raw_mass_relative_error": 1.9237276692992545e-08
+              }
+            ],
+            "support_preserved": true,
+            "solver": "Structured damped Gauss-Newton",
+            "adaptive_damping": true,
+            "largest_dense_square_dimension": 83,
+            "post_cast_checks": {
+              "finite_nonnegative": true,
+              "support_preserved": true,
+              "protected_cells_unchanged": true,
+              "protected_genes_unchanged": true,
+              "gene_margin_passed": true,
+              "raw_mass_margin_passed": true,
+              "covariance_guard_passed": true
+            },
+            "max_gene_log_mean_error": 3.4470156506927196e-08,
+            "max_row_raw_mass_relative_error": 1.9237276692992545e-08,
+            "covariance_change_vs_reference": 0.29274932208212057,
+            "constraints_source": "No-offset anchor FORECAST; no future truth",
+            "projected_cells": 83,
+            "construction": {
+              "shared_scale": 0.25,
+              "learned_tangent_norm": 0.2031676173313916,
+              "shuffled_tangent_norm": 0.20316761733139152,
+              "relative_norm_match_error": 4.0984251299786803e-16,
+              "learned_linear_audit": {
+                "damping": 1e-09,
+                "proposed_l2": 0.26029110312014114,
+                "surviving_l2": 0.2031676173313916,
+                "survival_ratio": 0.780539998855115,
+                "cosine": 0.7805402316435116,
+                "linear_constraint_l2_before": 0.012797107004710031,
+                "linear_constraint_l2_after": 3.5086299779880002e-09,
+                "linear_constraint_ratio": 2.7417368446607765e-07,
+                "finite": true,
+                "largest_dense_square_dimension": 83,
+                "interpretation": "Regularized linear tangent only; no nonlinear feasibility or benchmark score"
+              },
+              "shuffle_linear_audit": {
+                "damping": 1e-09,
+                "proposed_l2": 0.26029110312014114,
+                "surviving_l2": 0.2576260792198093,
+                "survival_ratio": 0.9897613715244744,
+                "cosine": 0.9897613729818593,
+                "linear_constraint_l2_before": 0.010227020950342676,
+                "linear_constraint_l2_after": 3.126164296665012e-10,
+                "linear_constraint_ratio": 3.056769231083138e-08,
+                "finite": true,
+                "largest_dense_square_dimension": 83,
+                "interpretation": "Regularized linear tangent only; no nonlinear feasibility or benchmark score"
+              },
+              "seed": 20260928
+            }
+          },
+          "prediction_sha256": "79da33bc666008be9f8fa622a4c6c295cfdbe2037213f82a4eaa2c28dc8b0ad4"
+        }
+      },
+      "negative_control": {
+        "valid": true,
+        "surviving_norm_ratio": 0.9999989039784697,
+        "learned_surviving_norm": 0.05079187148726074,
+        "shuffle_surviving_norm": 0.05079192715630647,
+        "single_shuffle_seed": 20260928
+      },
+      "donor_rows_sha256": "f7da207bb2a6bb72c509e9c863105869793daf2a9692b5c340290f657c6a19c5",
+      "target_rows_sha256": "c705e4998f18da3b8f9cc7ab5ffe15681725991486818161dac9858adac60daa",
+      "reused_completed_condition": {
+        "source_report_sha256": "e6799ecf9dcf207baf05168b4412e12c28bfb791609640f4d0117308273560ec",
+        "source_plan_sha256": "1e63534891db4578171600133cefde8893fca7976171dae72818b6df8a948c2b",
+        "source_run": "early_tangent_metric_hindcast_01",
+        "fresh_training_or_scoring": false
+      }
+    },
+    {
+      "cutoff": 7.75,
+      "target": 8.75,
+      "held_capture": "12",
+      "selection": "secondlargestcurrentcapture bydonorcount, deterministicmetadataonly",
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.16829626262187958,
+        "variogram": 0.006122429855167866
+      },
+      "ceiling": {
+        "de_score": 0.942271880819367,
+        "de_direction": 0.8672949000480226,
+        "mmd_u": 0.0023524463176727295,
+        "variogram": 0.00010467865649843588
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.16829626262187958,
+            "variogram": 0.006122429855167866
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true,
+          "metric_trace": {
+            "max_pseudobulk_float32_difference_vsanchor": 0.2419489622116089,
+            "max_pseudobulk_float64_difference_vsanchor": 0.24194870820088732,
+            "identical_float32_pseudobulk": false,
+            "delta_sign_changes_vsanchor": 16145,
+            "delta_gene_rank_changes_vsanchor": 32285,
+            "truth_up_genes": 360,
+            "truth_down_genes": 292,
+            "top_up_membership_changes_vsanchor": 712,
+            "bottom_down_membership_changes_vsanchor": 584,
+            "signed_overlap": 0.007668711656441718,
+            "prediction_delta_std": 0.0,
+            "truth_delta_std": 0.0791928842663765,
+            "auxiliary_outputs": "PinnedDEgeneeligibility/rankoverlapandpseudobulk available; no inventedgene-wise directioncontribution (correlationnonadditive)"
+          }
+        },
+        {
+          "candidate": "anchor_unshrunk",
+          "raw_metrics": {
+            "de_score": 0.03724394785847299,
+            "de_direction": 0.1844169267474856,
+            "mmd_u": 0.14118513464927673,
+            "variogram": 0.005903763696551323
+          },
+          "local_score": 53.25844174332435,
+          "skills": {
+            "de_score": 0.5100806451612903,
+            "de_direction": 0.559482697032726,
+            "mmd_u": 0.5444770636191247,
+            "variogram": 0.5092523139950099
+          },
+          "calibration_valid": true,
+          "metric_trace": {
+            "max_pseudobulk_float32_difference_vsanchor": 0.0,
+            "max_pseudobulk_float64_difference_vsanchor": 0.0,
+            "identical_float32_pseudobulk": true,
+            "delta_sign_changes_vsanchor": 0,
+            "delta_gene_rank_changes_vsanchor": 0,
+            "truth_up_genes": 360,
+            "truth_down_genes": 292,
+            "top_up_membership_changes_vsanchor": 0,
+            "bottom_down_membership_changes_vsanchor": 0,
+            "signed_overlap": 0.20705521472392638,
+            "prediction_delta_std": 0.009057472459971905,
+            "truth_delta_std": 0.0791928842663765,
+            "auxiliary_outputs": "PinnedDEgeneeligibility/rankoverlapandpseudobulk available; no inventedgene-wise directioncontribution (correlationnonadditive)"
+          }
+        },
+        {
+          "candidate": "cm_025",
+          "raw_metrics": {
+            "de_score": 0.035381750465549346,
+            "de_direction": 0.18558793964968515,
+            "mmd_u": 0.1411372721195221,
+            "variogram": 0.005903729237616062
+          },
+          "local_score": 53.25876903002843,
+          "skills": {
+            "de_score": 0.5095669687814703,
+            "de_direction": 0.5599056542114824,
+            "mmd_u": 0.5445625824908595,
+            "variogram": 0.5092537990239413
+          },
+          "calibration_valid": true,
+          "metric_trace": {
+            "max_pseudobulk_float32_difference_vsanchor": 0.00961446762084961,
+            "max_pseudobulk_float64_difference_vsanchor": 0.009613780214661638,
+            "identical_float32_pseudobulk": false,
+            "delta_sign_changes_vsanchor": 217,
+            "delta_gene_rank_changes_vsanchor": 31903,
+            "truth_up_genes": 360,
+            "truth_down_genes": 292,
+            "top_up_membership_changes_vsanchor": 12,
+            "bottom_down_membership_changes_vsanchor": 12,
+            "signed_overlap": 0.20552147239263804,
+            "prediction_delta_std": 0.009063411504030228,
+            "truth_delta_std": 0.0791928842663765,
+            "auxiliary_outputs": "PinnedDEgeneeligibility/rankoverlapandpseudobulk available; no inventedgene-wise directioncontribution (correlationnonadditive)"
+          }
+        },
+        {
+          "candidate": "support_full_initial",
+          "raw_metrics": {
+            "de_score": 0.03724394785847299,
+            "de_direction": 0.18514162217497718,
+            "mmd_u": 0.14116045832633972,
+            "variogram": 0.0059042442589998245
+          },
+          "local_score": 53.2658920969285,
+          "skills": {
+            "de_score": 0.5100806451612903,
+            "de_direction": 0.5597443737755031,
+            "mmd_u": 0.544521150940694,
+            "variogram": 0.5092316047643922
+          },
+          "calibration_valid": true,
+          "metric_trace": {
+            "max_pseudobulk_float32_difference_vsanchor": 0.011624813079833984,
+            "max_pseudobulk_float64_difference_vsanchor": 0.011624155656224211,
+            "identical_float32_pseudobulk": false,
+            "delta_sign_changes_vsanchor": 327,
+            "delta_gene_rank_changes_vsanchor": 32021,
+            "truth_up_genes": 360,
+            "truth_down_genes": 292,
+            "top_up_membership_changes_vsanchor": 18,
+            "bottom_down_membership_changes_vsanchor": 20,
+            "signed_overlap": 0.20705521472392638,
+            "prediction_delta_std": 0.009069048799574375,
+            "truth_delta_std": 0.0791928842663765,
+            "auxiliary_outputs": "PinnedDEgeneeligibility/rankoverlapandpseudobulk available; no inventedgene-wise directioncontribution (correlationnonadditive)"
+          }
+        },
+        {
+          "candidate": "support_full_projected",
+          "raw_metrics": {
+            "de_score": 0.03724394785847299,
+            "de_direction": 0.18535192745206808,
+            "mmd_u": 0.14115741848945618,
+            "variogram": 0.005904212128371
+          },
+          "local_score": 53.26798233314628,
+          "skills": {
+            "de_score": 0.5100806451612903,
+            "de_direction": 0.559820357714255,
+            "mmd_u": 0.5445265824814945,
+            "variogram": 0.5092329893406409
+          },
+          "calibration_valid": true,
+          "metric_trace": {
+            "max_pseudobulk_float32_difference_vsanchor": 0.011640667915344238,
+            "max_pseudobulk_float64_difference_vsanchor": 0.011639991294472463,
+            "identical_float32_pseudobulk": false,
+            "delta_sign_changes_vsanchor": 311,
+            "delta_gene_rank_changes_vsanchor": 32012,
+            "truth_up_genes": 360,
+            "truth_down_genes": 292,
+            "top_up_membership_changes_vsanchor": 18,
+            "bottom_down_membership_changes_vsanchor": 20,
+            "signed_overlap": 0.20705521472392638,
+            "prediction_delta_std": 0.009067695587873459,
+            "truth_delta_std": 0.0791928842663765,
+            "auxiliary_outputs": "PinnedDEgeneeligibility/rankoverlapandpseudobulk available; no inventedgene-wise directioncontribution (correlationnonadditive)"
+          }
+        },
+        {
+          "candidate": "support_quarter_initial",
+          "raw_metrics": {
+            "de_score": 0.03724394785847299,
+            "de_direction": 0.18537559916352075,
+            "mmd_u": 0.14115819334983826,
+            "variogram": 0.0059042214415967464
+          },
+          "local_score": 53.26814661981435,
+          "skills": {
+            "de_score": 0.5100806451612903,
+            "de_direction": 0.559828911667585,
+            "mmd_u": 0.5445251979608043,
+            "variogram": 0.5092325880134171
+          },
+          "calibration_valid": true,
+          "metric_trace": {
+            "max_pseudobulk_float32_difference_vsanchor": 0.011636734008789062,
+            "max_pseudobulk_float64_difference_vsanchor": 0.011636034976090226,
+            "identical_float32_pseudobulk": false,
+            "delta_sign_changes_vsanchor": 316,
+            "delta_gene_rank_changes_vsanchor": 32020,
+            "truth_up_genes": 360,
+            "truth_down_genes": 292,
+            "top_up_membership_changes_vsanchor": 18,
+            "bottom_down_membership_changes_vsanchor": 20,
+            "signed_overlap": 0.20705521472392638,
+            "prediction_delta_std": 0.009068033657968044,
+            "truth_delta_std": 0.0791928842663765,
+            "auxiliary_outputs": "PinnedDEgeneeligibility/rankoverlapandpseudobulk available; no inventedgene-wise directioncontribution (correlationnonadditive)"
+          }
+        },
+        {
+          "candidate": "support_quarter_projected",
+          "raw_metrics": {
+            "de_score": 0.03724394785847299,
+            "de_direction": 0.18535201318219266,
+            "mmd_u": 0.14115741848945618,
+            "variogram": 0.005904213059693575
+          },
+          "local_score": 53.26798230496031,
+          "skills": {
+            "de_score": 0.5100806451612903,
+            "de_direction": 0.5598203886930171,
+            "mmd_u": 0.5445265824814945,
+            "variogram": 0.50923294920789
+          },
+          "calibration_valid": true,
+          "metric_trace": {
+            "max_pseudobulk_float32_difference_vsanchor": 0.011640548706054688,
+            "max_pseudobulk_float64_difference_vsanchor": 0.011639993998312281,
+            "identical_float32_pseudobulk": false,
+            "delta_sign_changes_vsanchor": 311,
+            "delta_gene_rank_changes_vsanchor": 32011,
+            "truth_up_genes": 360,
+            "truth_down_genes": 292,
+            "top_up_membership_changes_vsanchor": 18,
+            "bottom_down_membership_changes_vsanchor": 20,
+            "signed_overlap": 0.20705521472392638,
+            "prediction_delta_std": 0.009067694656550884,
+            "truth_delta_std": 0.0791928842663765,
+            "auxiliary_outputs": "PinnedDEgeneeligibility/rankoverlapandpseudobulk available; no inventedgene-wise directioncontribution (correlationnonadditive)"
+          }
+        },
+        {
+          "candidate": "anchor_projected_identity",
+          "raw_metrics": {
+            "de_score": 0.03724394785847299,
+            "de_direction": 0.1844169267474856,
+            "mmd_u": 0.14118513464927673,
+            "variogram": 0.005903763696551323
+          },
+          "local_score": 53.25844174332435,
+          "skills": {
+            "de_score": 0.5100806451612903,
+            "de_direction": 0.559482697032726,
+            "mmd_u": 0.5444770636191247,
+            "variogram": 0.5092523139950099
+          },
+          "calibration_valid": true,
+          "metric_trace": {
+            "max_pseudobulk_float32_difference_vsanchor": 0.0,
+            "max_pseudobulk_float64_difference_vsanchor": 0.0,
+            "identical_float32_pseudobulk": true,
+            "delta_sign_changes_vsanchor": 0,
+            "delta_gene_rank_changes_vsanchor": 0,
+            "truth_up_genes": 360,
+            "truth_down_genes": 292,
+            "top_up_membership_changes_vsanchor": 0,
+            "bottom_down_membership_changes_vsanchor": 0,
+            "signed_overlap": 0.20705521472392638,
+            "prediction_delta_std": 0.009057472459971905,
+            "truth_delta_std": 0.0791928842663765,
+            "auxiliary_outputs": "PinnedDEgeneeligibility/rankoverlapandpseudobulk available; no inventedgene-wise directioncontribution (correlationnonadditive)"
+          }
+        },
+        {
+          "candidate": "tangent_learned_initial",
+          "raw_metrics": {
+            "de_score": 0.03724394785847299,
+            "de_direction": 0.18535197774536916,
+            "mmd_u": 0.14115741848945618,
+            "variogram": 0.005904213059693575
+          },
+          "local_score": 53.267981984831025,
+          "skills": {
+            "de_score": 0.5100806451612903,
+            "de_direction": 0.5598203758878455,
+            "mmd_u": 0.5445265824814945,
+            "variogram": 0.50923294920789
+          },
+          "calibration_valid": true,
+          "metric_trace": {
+            "max_pseudobulk_float32_difference_vsanchor": 0.011640548706054688,
+            "max_pseudobulk_float64_difference_vsanchor": 0.011639996071256098,
+            "identical_float32_pseudobulk": false,
+            "delta_sign_changes_vsanchor": 311,
+            "delta_gene_rank_changes_vsanchor": 32011,
+            "truth_up_genes": 360,
+            "truth_down_genes": 292,
+            "top_up_membership_changes_vsanchor": 18,
+            "bottom_down_membership_changes_vsanchor": 20,
+            "signed_overlap": 0.20705521472392638,
+            "prediction_delta_std": 0.009067694656550884,
+            "truth_delta_std": 0.0791928842663765,
+            "auxiliary_outputs": "PinnedDEgeneeligibility/rankoverlapandpseudobulk available; no inventedgene-wise directioncontribution (correlationnonadditive)"
+          }
+        },
+        {
+          "candidate": "tangent_learned_projected",
+          "raw_metrics": {
+            "de_score": 0.03724394785847299,
+            "de_direction": 0.18535197774536916,
+            "mmd_u": 0.14115741848945618,
+            "variogram": 0.005904213059693575
+          },
+          "local_score": 53.267981984831025,
+          "skills": {
+            "de_score": 0.5100806451612903,
+            "de_direction": 0.5598203758878455,
+            "mmd_u": 0.5445265824814945,
+            "variogram": 0.50923294920789
+          },
+          "calibration_valid": true,
+          "metric_trace": {
+            "max_pseudobulk_float32_difference_vsanchor": 0.011640548706054688,
+            "max_pseudobulk_float64_difference_vsanchor": 0.011639996071256098,
+            "identical_float32_pseudobulk": false,
+            "delta_sign_changes_vsanchor": 311,
+            "delta_gene_rank_changes_vsanchor": 32011,
+            "truth_up_genes": 360,
+            "truth_down_genes": 292,
+            "top_up_membership_changes_vsanchor": 18,
+            "bottom_down_membership_changes_vsanchor": 20,
+            "signed_overlap": 0.20705521472392638,
+            "prediction_delta_std": 0.009067694656550884,
+            "truth_delta_std": 0.0791928842663765,
+            "auxiliary_outputs": "PinnedDEgeneeligibility/rankoverlapandpseudobulk available; no inventedgene-wise directioncontribution (correlationnonadditive)"
+          }
+        },
+        {
+          "candidate": "tangent_shuffle_initial",
+          "raw_metrics": {
+            "de_score": 0.03724394785847299,
+            "de_direction": 0.18535191122834305,
+            "mmd_u": 0.14115741848945618,
+            "variogram": 0.0059042153880000114
+          },
+          "local_score": 53.26797937729235,
+          "skills": {
+            "de_score": 0.5100806451612903,
+            "de_direction": 0.5598203518517779,
+            "mmd_u": 0.5445265824814945,
+            "variogram": 0.5092328488760406
+          },
+          "calibration_valid": true,
+          "metric_trace": {
+            "max_pseudobulk_float32_difference_vsanchor": 0.01164090633392334,
+            "max_pseudobulk_float64_difference_vsanchor": 0.011639995590573271,
+            "identical_float32_pseudobulk": false,
+            "delta_sign_changes_vsanchor": 311,
+            "delta_gene_rank_changes_vsanchor": 32014,
+            "truth_up_genes": 360,
+            "truth_down_genes": 292,
+            "top_up_membership_changes_vsanchor": 18,
+            "bottom_down_membership_changes_vsanchor": 20,
+            "signed_overlap": 0.20705521472392638,
+            "prediction_delta_std": 0.009067694656550884,
+            "truth_delta_std": 0.0791928842663765,
+            "auxiliary_outputs": "PinnedDEgeneeligibility/rankoverlapandpseudobulk available; no inventedgene-wise directioncontribution (correlationnonadditive)"
+          }
+        },
+        {
+          "candidate": "tangent_shuffle_projected",
+          "raw_metrics": {
+            "de_score": 0.03724394785847299,
+            "de_direction": 0.18535191122834305,
+            "mmd_u": 0.14115741848945618,
+            "variogram": 0.0059042153880000114
+          },
+          "local_score": 53.26797937729235,
+          "skills": {
+            "de_score": 0.5100806451612903,
+            "de_direction": 0.5598203518517779,
+            "mmd_u": 0.5445265824814945,
+            "variogram": 0.5092328488760406
+          },
+          "calibration_valid": true,
+          "metric_trace": {
+            "max_pseudobulk_float32_difference_vsanchor": 0.01164090633392334,
+            "max_pseudobulk_float64_difference_vsanchor": 0.011639995590573271,
+            "identical_float32_pseudobulk": false,
+            "delta_sign_changes_vsanchor": 311,
+            "delta_gene_rank_changes_vsanchor": 32014,
+            "truth_up_genes": 360,
+            "truth_down_genes": 292,
+            "top_up_membership_changes_vsanchor": 18,
+            "bottom_down_membership_changes_vsanchor": 20,
+            "signed_overlap": 0.20705521472392638,
+            "prediction_delta_std": 0.009067694656550884,
+            "truth_delta_std": 0.0791928842663765,
+            "auxiliary_outputs": "PinnedDEgeneeligibility/rankoverlapandpseudobulk available; no inventedgene-wise directioncontribution (correlationnonadditive)"
+          }
+        }
+      ],
+      "generation": {
+        "copy": {
+          "audit": {
+            "method": "persistence"
+          },
+          "prediction_sha256": "eaa55654f656f60d3421467408e8ed91ac72be75a61c40ee49aef680c2ce50cc"
+        },
+        "anchor_unshrunk": {
+          "audit": {
+            "fit_cells": 3971,
+            "fit_max_stage": 7.75,
+            "supported_genes": 12881,
+            "method": "Conditional positive log1p response decoder",
+            "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+            "conditional_ridge_strength": 1.0,
+            "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+            "encoder_features": 4096,
+            "covariance_guard_features": 384,
+            "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+            "anchor_calibration_rows": 992,
+            "anchor_supported_genes": 10864,
+            "anchor_slope_ridge": 1.0,
+            "limitation": "Cross-sectional associations are not temporal velocities; only 1500 past anchors.",
+            "anchor_positive_slope_strength": 0.5,
+            "anchor_detection_slope_strength": 0.5,
+            "response_units": "log1p normalized expression",
+            "response_fit_rows": 3971,
+            "response_fit_max_stage": 7.75,
+            "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+            "observation_scope": "none",
+            "observation_alpha": 0.0,
+            "calibration_endpoint_policy": "Same current-only offset applied to p0/p1; calibrated switching denominators",
+            "observation_calibrated_cells": 992,
+            "mode": "joint",
+            "strength": 1.0,
+            "backoff": 1.0,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.29423412039466856,
+            "newly_detected_entries": 50091,
+            "removed_detection_entries": 75175,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true
+          },
+          "prediction_sha256": "1d938e645cf39588eb4f53ede9566834dccb09beaf929c888f81a26691d01b1f"
+        },
+        "cm_025": {
+          "audit": {
+            "fit_cells": 3971,
+            "fit_max_stage": 7.75,
+            "supported_genes": 12881,
+            "method": "Conditional positive log1p response decoder",
+            "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+            "conditional_ridge_strength": 1.0,
+            "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+            "encoder_features": 4096,
+            "covariance_guard_features": 384,
+            "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+            "anchor_calibration_rows": 992,
+            "anchor_supported_genes": 10864,
+            "anchor_slope_ridge": 1.0,
+            "limitation": "Cross-sectional associations are not temporal velocities; only 1500 past anchors.",
+            "anchor_positive_slope_strength": 0.5,
+            "anchor_detection_slope_strength": 0.5,
+            "response_units": "log1p normalized expression",
+            "response_fit_rows": 3971,
+            "response_fit_max_stage": 7.75,
+            "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+            "observation_scope": "cm",
+            "observation_alpha": 0.25,
+            "calibration_endpoint_policy": "Same current-only offset applied to p0/p1; calibrated switching denominators",
+            "observation_calibrated_cells": 72,
+            "mode": "joint",
+            "strength": 1.0,
+            "backoff": 1.0,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.29485172451942304,
+            "newly_detected_entries": 50166,
+            "removed_detection_entries": 75157,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true
+          },
+          "prediction_sha256": "0f4b17bebf535c49f1df5144efeb13fd29b57fdc25e9f9d75009997ce6da9089"
+        },
+        "support_full_initial": {
+          "audit": {
+            "beta": 1.0
+          },
+          "prediction_sha256": "232e0f6b81fe6adb93064606f85361a9e272821bf2e378ea9fb44d9d80597894"
+        },
+        "support_full_projected": {
+          "audit": {
+            "valid": true,
+            "iterations": 3,
+            "history": [
+              {
+                "step": 0,
+                "objective": 0.0005529826056775763,
+                "damping": 0.001,
+                "max_gene_log_mean_error": 0.0002892000807652728,
+                "max_row_raw_mass_relative_error": 0.0029150298466969877
+              },
+              {
+                "step": 1,
+                "objective": 7.736942190313074e-06,
+                "damping": 0.0003,
+                "max_gene_log_mean_error": 9.206621481316901e-05,
+                "max_row_raw_mass_relative_error": 0.0008195487753426094
+              },
+              {
+                "step": 3,
+                "objective": 1.403527097642293e-10,
+                "damping": 2.6999999999999996e-05,
+                "max_gene_log_mean_error": 6.621352778068967e-06,
+                "max_row_raw_mass_relative_error": 3.954978296028656e-06
+              }
+            ],
+            "support_preserved": true,
+            "solver": "Structured damped Gauss-Newton",
+            "adaptive_damping": true,
+            "largest_dense_square_dimension": 72,
+            "post_cast_checks": {
+              "finite_nonnegative": true,
+              "support_preserved": true,
+              "protected_cells_unchanged": true,
+              "protected_genes_unchanged": true,
+              "gene_margin_passed": true,
+              "raw_mass_margin_passed": true,
+              "covariance_guard_passed": true
+            },
+            "max_gene_log_mean_error": 6.616115570068359e-06,
+            "max_row_raw_mass_relative_error": 3.955517161176195e-06,
+            "covariance_change_vs_reference": 0.29452995138951393,
+            "constraints_source": "No-offset anchor FORECAST; no future truth",
+            "projected_cells": 72
+          },
+          "prediction_sha256": "ece4ed4c999b35f55300ee022745ca6015ebfddbf6058bb5e2e969a5a2a3d973"
+        },
+        "support_quarter_initial": {
+          "audit": {
+            "beta": 0.25
+          },
+          "prediction_sha256": "e5a98dede50d8f0c05a1a9398c94a0f1f7e412aaf57b3ad7424503eec38e7a99"
+        },
+        "support_quarter_projected": {
+          "audit": {
+            "valid": true,
+            "iterations": 3,
+            "history": [
+              {
+                "step": 0,
+                "objective": 3.456467746721303e-05,
+                "damping": 0.001,
+                "max_gene_log_mean_error": 7.230705685090655e-05,
+                "max_row_raw_mass_relative_error": 0.0007293820373987216
+              },
+              {
+                "step": 1,
+                "objective": 4.83874569667298e-07,
+                "damping": 0.0003,
+                "max_gene_log_mean_error": 2.3013592516107906e-05,
+                "max_row_raw_mass_relative_error": 0.0002051064141130053
+              },
+              {
+                "step": 3,
+                "objective": 9.09454331367491e-12,
+                "damping": 2.6999999999999996e-05,
+                "max_gene_log_mean_error": 1.945643198553171e-06,
+                "max_row_raw_mass_relative_error": 1.0208064786616238e-06
+              }
+            ],
+            "support_preserved": true,
+            "solver": "Structured damped Gauss-Newton",
+            "adaptive_damping": true,
+            "largest_dense_square_dimension": 72,
+            "post_cast_checks": {
+              "finite_nonnegative": true,
+              "support_preserved": true,
+              "protected_cells_unchanged": true,
+              "protected_genes_unchanged": true,
+              "gene_margin_passed": true,
+              "raw_mass_margin_passed": true,
+              "covariance_guard_passed": true
+            },
+            "max_gene_log_mean_error": 1.9470850620706415e-06,
+            "max_row_raw_mass_relative_error": 1.0149915542201698e-06,
+            "covariance_change_vs_reference": 0.29452917808202705,
+            "constraints_source": "No-offset anchor FORECAST; no future truth",
+            "projected_cells": 72
+          },
+          "prediction_sha256": "718de8522c87508ecd8da69c822859c78c9db2f9623286beb0ff7b799e57e2da"
+        },
+        "anchor_projected_identity": {
+          "audit": {
+            "valid": true,
+            "iterations": 0,
+            "history": [
+              {
+                "step": 0,
+                "objective": 0.0,
+                "damping": 0.001,
+                "max_gene_log_mean_error": 0.0,
+                "max_row_raw_mass_relative_error": 0.0
+              }
+            ],
+            "support_preserved": true,
+            "solver": "Structured damped Gauss-Newton",
+            "adaptive_damping": true,
+            "largest_dense_square_dimension": 72,
+            "post_cast_checks": {
+              "finite_nonnegative": true,
+              "support_preserved": true,
+              "protected_cells_unchanged": true,
+              "protected_genes_unchanged": true,
+              "gene_margin_passed": true,
+              "raw_mass_margin_passed": true,
+              "covariance_guard_passed": true
+            },
+            "max_gene_log_mean_error": 0.0,
+            "max_row_raw_mass_relative_error": 0.0,
+            "covariance_change_vs_reference": 0.29423412039466856,
+            "constraints_source": "No-offset anchor FORECAST; no future truth",
+            "projected_cells": 72
+          },
+          "prediction_sha256": "1d938e645cf39588eb4f53ede9566834dccb09beaf929c888f81a26691d01b1f"
+        },
+        "tangent_learned_initial": {
+          "audit": {
+            "shared_scale": 0.25,
+            "learned_tangent_norm": 0.24161066159894,
+            "shuffled_tangent_norm": 0.24161066159894,
+            "relative_norm_match_error": 0.0,
+            "learned_linear_audit": {
+              "damping": 1e-09,
+              "proposed_l2": 0.31816936172710925,
+              "surviving_l2": 0.24161066159894,
+              "survival_ratio": 0.7593775223591991,
+              "cosine": 0.7593777238045257,
+              "linear_constraint_l2_before": 0.02351706546769642,
+              "linear_constraint_l2_after": 3.935191067130596e-09,
+              "linear_constraint_ratio": 1.673334231490772e-07,
+              "finite": true,
+              "largest_dense_square_dimension": 72,
+              "interpretation": "Regularized linear tangent only; no nonlinear feasibility or benchmark score"
+            },
+            "shuffle_linear_audit": {
+              "damping": 1e-09,
+              "proposed_l2": 0.31816936172710925,
+              "surviving_l2": 0.30498489448607485,
+              "survival_ratio": 0.958561480686055,
+              "cosine": 0.958561493378911,
+              "linear_constraint_l2_before": 0.02166433236421101,
+              "linear_constraint_l2_after": 1.1098084203255052e-09,
+              "linear_constraint_ratio": 5.122744618518149e-08,
+              "finite": true,
+              "largest_dense_square_dimension": 72,
+              "interpretation": "Regularized linear tangent only; no nonlinear feasibility or benchmark score"
+            },
+            "seed": 20260928
+          },
+          "prediction_sha256": "6638820ee8e51fa9415fb2aed9004202dccbe284303651512c52a815416ce861"
+        },
+        "tangent_learned_projected": {
+          "audit": {
+            "valid": true,
+            "iterations": 0,
+            "history": [
+              {
+                "step": 0,
+                "objective": 5.996017600066055e-13,
+                "damping": 0.001,
+                "max_gene_log_mean_error": 2.317958447406454e-08,
+                "max_row_raw_mass_relative_error": 3.5856715993939573e-07
+              }
+            ],
+            "support_preserved": true,
+            "solver": "Structured damped Gauss-Newton",
+            "adaptive_damping": true,
+            "largest_dense_square_dimension": 72,
+            "post_cast_checks": {
+              "finite_nonnegative": true,
+              "support_preserved": true,
+              "protected_cells_unchanged": true,
+              "protected_genes_unchanged": true,
+              "gene_margin_passed": true,
+              "raw_mass_margin_passed": true,
+              "covariance_guard_passed": true
+            },
+            "max_gene_log_mean_error": 2.317958447406454e-08,
+            "max_row_raw_mass_relative_error": 3.5856715993939573e-07,
+            "covariance_change_vs_reference": 0.29452919391704785,
+            "constraints_source": "No-offset anchor FORECAST; no future truth",
+            "projected_cells": 72,
+            "construction": {
+              "shared_scale": 0.25,
+              "learned_tangent_norm": 0.24161066159894,
+              "shuffled_tangent_norm": 0.24161066159894,
+              "relative_norm_match_error": 0.0,
+              "learned_linear_audit": {
+                "damping": 1e-09,
+                "proposed_l2": 0.31816936172710925,
+                "surviving_l2": 0.24161066159894,
+                "survival_ratio": 0.7593775223591991,
+                "cosine": 0.7593777238045257,
+                "linear_constraint_l2_before": 0.02351706546769642,
+                "linear_constraint_l2_after": 3.935191067130596e-09,
+                "linear_constraint_ratio": 1.673334231490772e-07,
+                "finite": true,
+                "largest_dense_square_dimension": 72,
+                "interpretation": "Regularized linear tangent only; no nonlinear feasibility or benchmark score"
+              },
+              "shuffle_linear_audit": {
+                "damping": 1e-09,
+                "proposed_l2": 0.31816936172710925,
+                "surviving_l2": 0.30498489448607485,
+                "survival_ratio": 0.958561480686055,
+                "cosine": 0.958561493378911,
+                "linear_constraint_l2_before": 0.02166433236421101,
+                "linear_constraint_l2_after": 1.1098084203255052e-09,
+                "linear_constraint_ratio": 5.122744618518149e-08,
+                "finite": true,
+                "largest_dense_square_dimension": 72,
+                "interpretation": "Regularized linear tangent only; no nonlinear feasibility or benchmark score"
+              },
+              "seed": 20260928
+            }
+          },
+          "prediction_sha256": "6638820ee8e51fa9415fb2aed9004202dccbe284303651512c52a815416ce861"
+        },
+        "tangent_shuffle_initial": {
+          "audit": {
+            "shared_scale": 0.25,
+            "learned_tangent_norm": 0.24161066159894,
+            "shuffled_tangent_norm": 0.24161066159894,
+            "relative_norm_match_error": 0.0,
+            "learned_linear_audit": {
+              "damping": 1e-09,
+              "proposed_l2": 0.31816936172710925,
+              "surviving_l2": 0.24161066159894,
+              "survival_ratio": 0.7593775223591991,
+              "cosine": 0.7593777238045257,
+              "linear_constraint_l2_before": 0.02351706546769642,
+              "linear_constraint_l2_after": 3.935191067130596e-09,
+              "linear_constraint_ratio": 1.673334231490772e-07,
+              "finite": true,
+              "largest_dense_square_dimension": 72,
+              "interpretation": "Regularized linear tangent only; no nonlinear feasibility or benchmark score"
+            },
+            "shuffle_linear_audit": {
+              "damping": 1e-09,
+              "proposed_l2": 0.31816936172710925,
+              "surviving_l2": 0.30498489448607485,
+              "survival_ratio": 0.958561480686055,
+              "cosine": 0.958561493378911,
+              "linear_constraint_l2_before": 0.02166433236421101,
+              "linear_constraint_l2_after": 1.1098084203255052e-09,
+              "linear_constraint_ratio": 5.122744618518149e-08,
+              "finite": true,
+              "largest_dense_square_dimension": 72,
+              "interpretation": "Regularized linear tangent only; no nonlinear feasibility or benchmark score"
+            },
+            "seed": 20260928
+          },
+          "prediction_sha256": "8dada0566b6be57f136c9135cd0b26fdcd4f11e85bda91f143f049e709911890"
+        },
+        "tangent_shuffle_projected": {
+          "audit": {
+            "valid": true,
+            "iterations": 0,
+            "history": [
+              {
+                "step": 0,
+                "objective": 2.416776464287575e-13,
+                "damping": 0.001,
+                "max_gene_log_mean_error": 4.635916805995066e-08,
+                "max_row_raw_mass_relative_error": 2.971315369938627e-08
+              }
+            ],
+            "support_preserved": true,
+            "solver": "Structured damped Gauss-Newton",
+            "adaptive_damping": true,
+            "largest_dense_square_dimension": 72,
+            "post_cast_checks": {
+              "finite_nonnegative": true,
+              "support_preserved": true,
+              "protected_cells_unchanged": true,
+              "protected_genes_unchanged": true,
+              "gene_margin_passed": true,
+              "raw_mass_margin_passed": true,
+              "covariance_guard_passed": true
+            },
+            "max_gene_log_mean_error": 4.635916805995066e-08,
+            "max_row_raw_mass_relative_error": 2.971315369938627e-08,
+            "covariance_change_vs_reference": 0.29452895059867407,
+            "constraints_source": "No-offset anchor FORECAST; no future truth",
+            "projected_cells": 72,
+            "construction": {
+              "shared_scale": 0.25,
+              "learned_tangent_norm": 0.24161066159894,
+              "shuffled_tangent_norm": 0.24161066159894,
+              "relative_norm_match_error": 0.0,
+              "learned_linear_audit": {
+                "damping": 1e-09,
+                "proposed_l2": 0.31816936172710925,
+                "surviving_l2": 0.24161066159894,
+                "survival_ratio": 0.7593775223591991,
+                "cosine": 0.7593777238045257,
+                "linear_constraint_l2_before": 0.02351706546769642,
+                "linear_constraint_l2_after": 3.935191067130596e-09,
+                "linear_constraint_ratio": 1.673334231490772e-07,
+                "finite": true,
+                "largest_dense_square_dimension": 72,
+                "interpretation": "Regularized linear tangent only; no nonlinear feasibility or benchmark score"
+              },
+              "shuffle_linear_audit": {
+                "damping": 1e-09,
+                "proposed_l2": 0.31816936172710925,
+                "surviving_l2": 0.30498489448607485,
+                "survival_ratio": 0.958561480686055,
+                "cosine": 0.958561493378911,
+                "linear_constraint_l2_before": 0.02166433236421101,
+                "linear_constraint_l2_after": 1.1098084203255052e-09,
+                "linear_constraint_ratio": 5.122744618518149e-08,
+                "finite": true,
+                "largest_dense_square_dimension": 72,
+                "interpretation": "Regularized linear tangent only; no nonlinear feasibility or benchmark score"
+              },
+              "seed": 20260928
+            }
+          },
+          "prediction_sha256": "8dada0566b6be57f136c9135cd0b26fdcd4f11e85bda91f143f049e709911890"
+        }
+      },
+      "negative_control": {
+        "valid": true,
+        "surviving_norm_ratio": 0.9999983886869411,
+        "learned_surviving_norm": 0.0604025556984975,
+        "shuffle_surviving_norm": 0.06040265302608111,
+        "single_shuffle_seed": 20260928
+      },
+      "donor_rows_sha256": "12c9df8e12690c41919c1f2267cef0b7bc9c0af21e8c6bb25fa8f7ed010daebc",
+      "target_rows_sha256": "c705e4998f18da3b8f9cc7ab5ffe15681725991486818161dac9858adac60daa"
+    }
+  ],
+  "passing_candidates": [],
+  "report_sha256": "280c2ce6843a2bba1920bdc6d3920699c86a78370cdcd2e759786c9479ba7c51",
+  "plan_sha256": "2bc79f757c720d9b2d45f03718e8015e3a633680127545ba7d95886ce3ce3252",
+  "official_score": null,
+  "local_72_gate_passed": false,
+  "submissions_used": 0
+}
