@@ -1,0 +1,21 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "purpose": "Next step after capture-dispersion gene-mean shrinkage audit",
+    "results": "76capture-lineage cases: shrunk30/76 better persistence, quarter37/76, unshrunk23/76, cellweighted26/76. Shrunk meanMSEexcess +.0002125,+.0007583,-.0001636 atcutoffs7.75/8/8.25; quarter+.0001385,+.0005339,-.0002832. FirstfoldCM/cardiopharyngeal/endothelial unsupported. Proxyonly; actual4metrics/rewardunavailable. Allforecasts frozen beforeeval.",
+    "method": "Equalcapture logmeans inclzeros, min20cells/capture and2captures/stage. delta=current-prev,v=sumvarcapture/n,tau2=max(mean(delta2-v),0),gain=tau2/(tau2+v). Priorcellbased positive-meanEB/reliability/lineagetime ridgealreadynegative; avoidrepeatgrid.",
+    "critics": "Fourmetric specialists requirepastonlycelldecoder identicalcontrols foractualDE/direction/MMD/CSS. DEproposespastinternalgaincap butonly4lineages earliestCVsupported. CSSnotspatial, scorerexists. No promotion.",
+    "constraints": "No exposedtarget tuning; capturesnotindependentembryos. Full32285scorer/calibration unchanged; >72/64replicate/temporalgatesunmet. D16GB2threads. Earlierdecoder massrepairsnegative; inspectfeasibilitybeforelaunch."
+  },
+  "questions": {
+    "next_step": {
+      "type": "choice",
+      "instructions": "Select nextdistinct informative bounded step; avoidendlessproxies andunsupportedpromotion.",
+      "criteria": {
+        "fullpanel_fixed_decoder_preflight": "Inspectexistingdonortransport/positive-slope decoder. Plan fixedcapture-shrink/quarter mean-changing decoder, persistence/incumbent controls, exactrowmass/protectedgene guards. Resource/feasibilitypreflight then separatedeclaredfullpanelscore ifviable. No exposedtargetgrid.",
+        "pastinternal_gaincap_audit": "Anotherproxy fittinggaincap onlyearliestinternaltransition withonly4supportedlineages; weakCVsupport, delaysactualmetrics.",
+        "stop_mean_family": "Declarewholefamilyexhausted fromsingleboundedproxy; unsupportedinference."
+      }
+    }
+  }
+}

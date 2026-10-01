@@ -1,0 +1,3643 @@
+{
+  "status": "completed",
+  "plan": {
+    "folds": [
+      [
+        7.75,
+        8.0
+      ],
+      [
+        8.0,
+        8.25
+      ],
+      [
+        8.25,
+        8.5
+      ]
+    ],
+    "lineages": [
+      "blood",
+      "mesenchymal",
+      "endoderm",
+      "ectoderm_other",
+      "cardiopharyngeal",
+      "endothelial",
+      "cardiomyocyte"
+    ],
+    "min_capture_cells": 20,
+    "candidates": [
+      "persistence",
+      "capture_linear",
+      "capture_quarter",
+      "capture_shrunk",
+      "cell_weighted_linear"
+    ],
+    "selection": "Fixed tau2=max(mean_gene(delta2-v),0), v=capture variance/n summed across fit stages. All mapped unique genes including zeros; no feature/sign/grid selection. One-step horizon ratio1.",
+    "scope": "Capture-balanced log-gene-mean MSE diagnostic, not actual DE/direction/MMD/CSS metrics. Previously exposed targets are development evidence only. No independent embryo inference or benchmark reward. Fit support requires2captures/stage; unsupported cases explicitly unavailable. Allfoldforecasts frozen before targets.",
+    "decoder": "No cell forecast decoder in this audit; separate predeclaration required before full-panel testing.",
+    "seed": null,
+    "resources": "D-only disk; memmap genechunks256, twoBLASthreads; no RAM cache",
+    "created_utc": "2026-10-01T16:02:33.585369+00:00",
+    "spec_sha256": "75a2bcc458d516ef85eac72f88a62bf242a98e6e5d327eb6ce4af447754b66a0",
+    "prepared_report_sha256": "1acd8a635f76c9f9ac89a1186f116db91309b007f448a8d11ec612627ab5bca4",
+    "panel_sha256": "2aeae4cd284933956242bbc9c5ab4f565c1d2acc7cc3fd3037977e4bce8be4bf",
+    "mapped_unique_genes": 26775,
+    "code_sha256": {
+      "capture_mean_shrinkage_audit.py": "9d3f611daab83551c6eaef0524f227be86ea0ad8d26c6dcde952054a048712c2",
+      "capture_mean_shrinkage.py": "30e172452fef8e64bb638e896542390d173df68d810c33043e3b965c8baa8f7f",
+      "test_capture_mean_shrinkage.py": "f636b730606cb16baa2908c7323f5b5e9895c9dc7dbda8151c82a977dbbed514",
+      "projection_survival_diagnostics.py": "7e574f7f12ea57dd34c09476229d545619631051a3e03a71f3e62950c5f87696",
+      "lineage_residual_screen.py": "caa26ef0300cd52f98e10f41686a92393c489309020d207915d70f5565bdaf7a"
+    }
+  },
+  "fit_cases": [
+    {
+      "cutoff": 7.75,
+      "target": 8.0,
+      "records": [
+        {
+          "lineage": "blood",
+          "status": "supported",
+          "support": [
+            [
+              {
+                "capture": "19",
+                "cells": 413
+              },
+              {
+                "capture": "2",
+                "cells": 29
+              },
+              {
+                "capture": "20",
+                "cells": 110
+              },
+              {
+                "capture": "3",
+                "cells": 21
+              },
+              {
+                "capture": "6",
+                "cells": 111
+              }
+            ],
+            [
+              {
+                "capture": "12",
+                "cells": 372
+              },
+              {
+                "capture": "13",
+                "cells": 394
+              },
+              {
+                "capture": "8",
+                "cells": 227
+              },
+              {
+                "capture": "9",
+                "cells": 284
+              }
+            ]
+          ],
+          "fit_audit": {
+            "tau2": 0.0013799689274891142,
+            "gain_quantiles": [
+              0.0044158982896511465,
+              0.8947114218675757,
+              0.9995292453270128,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "lineage": "mesenchymal",
+          "status": "supported",
+          "support": [
+            [
+              {
+                "capture": "19",
+                "cells": 397
+              },
+              {
+                "capture": "2",
+                "cells": 34
+              },
+              {
+                "capture": "20",
+                "cells": 114
+              },
+              {
+                "capture": "3",
+                "cells": 45
+              },
+              {
+                "capture": "4",
+                "cells": 21
+              },
+              {
+                "capture": "6",
+                "cells": 174
+              }
+            ],
+            [
+              {
+                "capture": "12",
+                "cells": 250
+              },
+              {
+                "capture": "13",
+                "cells": 245
+              },
+              {
+                "capture": "8",
+                "cells": 153
+              },
+              {
+                "capture": "9",
+                "cells": 129
+              }
+            ]
+          ],
+          "fit_audit": {
+            "tau2": 0.0004909778769169903,
+            "gain_quantiles": [
+              0.0028261571677820553,
+              0.7434498050576905,
+              0.9968509210546337,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "lineage": "endoderm",
+          "status": "supported",
+          "support": [
+            [
+              {
+                "capture": "19",
+                "cells": 99
+              },
+              {
+                "capture": "20",
+                "cells": 37
+              },
+              {
+                "capture": "6",
+                "cells": 66
+              }
+            ],
+            [
+              {
+                "capture": "12",
+                "cells": 81
+              },
+              {
+                "capture": "13",
+                "cells": 81
+              },
+              {
+                "capture": "8",
+                "cells": 32
+              },
+              {
+                "capture": "9",
+                "cells": 40
+              }
+            ]
+          ],
+          "fit_audit": {
+            "tau2": 0.0006604332164894634,
+            "gain_quantiles": [
+              0.005104546669262431,
+              0.6917570205076502,
+              0.9892733280854223,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "lineage": "ectoderm_other",
+          "status": "supported",
+          "support": [
+            [
+              {
+                "capture": "19",
+                "cells": 80
+              },
+              {
+                "capture": "6",
+                "cells": 35
+              }
+            ],
+            [
+              {
+                "capture": "12",
+                "cells": 116
+              },
+              {
+                "capture": "13",
+                "cells": 100
+              },
+              {
+                "capture": "8",
+                "cells": 28
+              },
+              {
+                "capture": "9",
+                "cells": 39
+              }
+            ]
+          ],
+          "fit_audit": {
+            "tau2": 0.0002958050332469067,
+            "gain_quantiles": [
+              0.0019954146858580527,
+              0.4945711570337107,
+              0.9815668982710231,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "lineage": "cardiopharyngeal",
+          "status": "unsupported",
+          "support": [
+            [
+              {
+                "capture": "19",
+                "cells": 24
+              }
+            ],
+            [
+              {
+                "capture": "12",
+                "cells": 52
+              },
+              {
+                "capture": "13",
+                "cells": 54
+              }
+            ]
+          ],
+          "reason": "Fewer than two eligible captures at a fit stage; no calibrated shrinkage forecast"
+        },
+        {
+          "lineage": "endothelial",
+          "status": "unsupported",
+          "support": [
+            [
+              {
+                "capture": "19",
+                "cells": 24
+              }
+            ],
+            [
+              {
+                "capture": "12",
+                "cells": 46
+              },
+              {
+                "capture": "13",
+                "cells": 54
+              }
+            ]
+          ],
+          "reason": "Fewer than two eligible captures at a fit stage; no calibrated shrinkage forecast"
+        },
+        {
+          "lineage": "cardiomyocyte",
+          "status": "unsupported",
+          "support": [
+            [],
+            [
+              {
+                "capture": "12",
+                "cells": 72
+              },
+              {
+                "capture": "13",
+                "cells": 83
+              }
+            ]
+          ],
+          "reason": "Fewer than two eligible captures at a fit stage; no calibrated shrinkage forecast"
+        }
+      ],
+      "forecast_sha256": "e04762e366bc0a56c7d47d54cf5bae922ba7611f1ccc1bee36d94d0069eda5e3"
+    },
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "records": [
+        {
+          "lineage": "blood",
+          "status": "supported",
+          "support": [
+            [
+              {
+                "capture": "12",
+                "cells": 372
+              },
+              {
+                "capture": "13",
+                "cells": 394
+              },
+              {
+                "capture": "8",
+                "cells": 227
+              },
+              {
+                "capture": "9",
+                "cells": 284
+              }
+            ],
+            [
+              {
+                "capture": "16",
+                "cells": 579
+              },
+              {
+                "capture": "33",
+                "cells": 282
+              },
+              {
+                "capture": "34",
+                "cells": 268
+              },
+              {
+                "capture": "35",
+                "cells": 236
+              }
+            ]
+          ],
+          "fit_audit": {
+            "tau2": 0.0009422498014725678,
+            "gain_quantiles": [
+              0.002049116838658856,
+              0.9396245987109876,
+              0.9994287816241691,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "lineage": "mesenchymal",
+          "status": "supported",
+          "support": [
+            [
+              {
+                "capture": "12",
+                "cells": 250
+              },
+              {
+                "capture": "13",
+                "cells": 245
+              },
+              {
+                "capture": "8",
+                "cells": 153
+              },
+              {
+                "capture": "9",
+                "cells": 129
+              }
+            ],
+            [
+              {
+                "capture": "16",
+                "cells": 153
+              },
+              {
+                "capture": "33",
+                "cells": 157
+              },
+              {
+                "capture": "34",
+                "cells": 153
+              },
+              {
+                "capture": "35",
+                "cells": 140
+              }
+            ]
+          ],
+          "fit_audit": {
+            "tau2": 0.0007518534647477301,
+            "gain_quantiles": [
+              0.006253529844952362,
+              0.8701060478149992,
+              0.9975303242668379,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "lineage": "endoderm",
+          "status": "supported",
+          "support": [
+            [
+              {
+                "capture": "12",
+                "cells": 81
+              },
+              {
+                "capture": "13",
+                "cells": 81
+              },
+              {
+                "capture": "8",
+                "cells": 32
+              },
+              {
+                "capture": "9",
+                "cells": 40
+              }
+            ],
+            [
+              {
+                "capture": "16",
+                "cells": 43
+              },
+              {
+                "capture": "33",
+                "cells": 40
+              },
+              {
+                "capture": "34",
+                "cells": 33
+              },
+              {
+                "capture": "35",
+                "cells": 37
+              }
+            ]
+          ],
+          "fit_audit": {
+            "tau2": 0.0007836612788185619,
+            "gain_quantiles": [
+              0.006629405392245107,
+              0.66843188410745,
+              0.987221472667917,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "lineage": "ectoderm_other",
+          "status": "supported",
+          "support": [
+            [
+              {
+                "capture": "12",
+                "cells": 116
+              },
+              {
+                "capture": "13",
+                "cells": 100
+              },
+              {
+                "capture": "8",
+                "cells": 28
+              },
+              {
+                "capture": "9",
+                "cells": 39
+              }
+            ],
+            [
+              {
+                "capture": "16",
+                "cells": 56
+              },
+              {
+                "capture": "33",
+                "cells": 72
+              },
+              {
+                "capture": "34",
+                "cells": 68
+              },
+              {
+                "capture": "35",
+                "cells": 78
+              }
+            ]
+          ],
+          "fit_audit": {
+            "tau2": 0.0007683284852436852,
+            "gain_quantiles": [
+              0.006006393016320915,
+              0.757011423897728,
+              0.9929833491938592,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "lineage": "cardiopharyngeal",
+          "status": "supported",
+          "support": [
+            [
+              {
+                "capture": "12",
+                "cells": 52
+              },
+              {
+                "capture": "13",
+                "cells": 54
+              }
+            ],
+            [
+              {
+                "capture": "16",
+                "cells": 64
+              },
+              {
+                "capture": "33",
+                "cells": 63
+              },
+              {
+                "capture": "34",
+                "cells": 50
+              },
+              {
+                "capture": "35",
+                "cells": 64
+              }
+            ]
+          ],
+          "fit_audit": {
+            "tau2": 0.00122452910270671,
+            "gain_quantiles": [
+              0.006805818361494627,
+              0.8097176589283456,
+              0.9963985651523399,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "lineage": "endothelial",
+          "status": "supported",
+          "support": [
+            [
+              {
+                "capture": "12",
+                "cells": 46
+              },
+              {
+                "capture": "13",
+                "cells": 54
+              }
+            ],
+            [
+              {
+                "capture": "16",
+                "cells": 52
+              },
+              {
+                "capture": "33",
+                "cells": 41
+              },
+              {
+                "capture": "34",
+                "cells": 43
+              },
+              {
+                "capture": "35",
+                "cells": 30
+              }
+            ]
+          ],
+          "fit_audit": {
+            "tau2": 0.0014352779100960734,
+            "gain_quantiles": [
+              0.008520936597543494,
+              0.7861259149256014,
+              0.9947678825961408,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "lineage": "cardiomyocyte",
+          "status": "supported",
+          "support": [
+            [
+              {
+                "capture": "12",
+                "cells": 72
+              },
+              {
+                "capture": "13",
+                "cells": 83
+              }
+            ],
+            [
+              {
+                "capture": "16",
+                "cells": 63
+              },
+              {
+                "capture": "33",
+                "cells": 44
+              },
+              {
+                "capture": "34",
+                "cells": 45
+              },
+              {
+                "capture": "35",
+                "cells": 46
+              }
+            ]
+          ],
+          "fit_audit": {
+            "tau2": 0.001426759844872074,
+            "gain_quantiles": [
+              0.007701672084899729,
+              0.8326494147077741,
+              0.995686688927395,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      ],
+      "forecast_sha256": "d7d534842c39be3b43f5c8edff78e0995b8b357b8aee1671dcaf57b4f50a5227"
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "records": [
+        {
+          "lineage": "blood",
+          "status": "supported",
+          "support": [
+            [
+              {
+                "capture": "16",
+                "cells": 579
+              },
+              {
+                "capture": "33",
+                "cells": 282
+              },
+              {
+                "capture": "34",
+                "cells": 268
+              },
+              {
+                "capture": "35",
+                "cells": 236
+              }
+            ],
+            [
+              {
+                "capture": "24",
+                "cells": 309
+              },
+              {
+                "capture": "25",
+                "cells": 356
+              },
+              {
+                "capture": "28",
+                "cells": 183
+              }
+            ]
+          ],
+          "fit_audit": {
+            "tau2": 0.0014790153868847245,
+            "gain_quantiles": [
+              0.004768637981130584,
+              0.9618290580394524,
+              0.9996668190065148,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "lineage": "mesenchymal",
+          "status": "supported",
+          "support": [
+            [
+              {
+                "capture": "16",
+                "cells": 153
+              },
+              {
+                "capture": "33",
+                "cells": 157
+              },
+              {
+                "capture": "34",
+                "cells": 153
+              },
+              {
+                "capture": "35",
+                "cells": 140
+              }
+            ],
+            [
+              {
+                "capture": "24",
+                "cells": 243
+              },
+              {
+                "capture": "25",
+                "cells": 274
+              },
+              {
+                "capture": "28",
+                "cells": 167
+              }
+            ]
+          ],
+          "fit_audit": {
+            "tau2": 0.0005110871202798173,
+            "gain_quantiles": [
+              0.0036363915502453372,
+              0.8135025479355547,
+              0.9961794691056984,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "lineage": "endoderm",
+          "status": "supported",
+          "support": [
+            [
+              {
+                "capture": "16",
+                "cells": 43
+              },
+              {
+                "capture": "33",
+                "cells": 40
+              },
+              {
+                "capture": "34",
+                "cells": 33
+              },
+              {
+                "capture": "35",
+                "cells": 37
+              }
+            ],
+            [
+              {
+                "capture": "24",
+                "cells": 52
+              },
+              {
+                "capture": "25",
+                "cells": 71
+              },
+              {
+                "capture": "28",
+                "cells": 35
+              }
+            ]
+          ],
+          "fit_audit": {
+            "tau2": 0.0010315515587380705,
+            "gain_quantiles": [
+              0.009586313290426878,
+              0.7130717674259003,
+              0.9896122348533771,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "lineage": "ectoderm_other",
+          "status": "supported",
+          "support": [
+            [
+              {
+                "capture": "16",
+                "cells": 56
+              },
+              {
+                "capture": "33",
+                "cells": 72
+              },
+              {
+                "capture": "34",
+                "cells": 68
+              },
+              {
+                "capture": "35",
+                "cells": 78
+              }
+            ],
+            [
+              {
+                "capture": "24",
+                "cells": 115
+              },
+              {
+                "capture": "25",
+                "cells": 109
+              },
+              {
+                "capture": "28",
+                "cells": 71
+              }
+            ]
+          ],
+          "fit_audit": {
+            "tau2": 0.0007040047955283403,
+            "gain_quantiles": [
+              0.005726468468533813,
+              0.7752317314940582,
+              0.9934020529305582,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "lineage": "cardiopharyngeal",
+          "status": "supported",
+          "support": [
+            [
+              {
+                "capture": "16",
+                "cells": 64
+              },
+              {
+                "capture": "33",
+                "cells": 63
+              },
+              {
+                "capture": "34",
+                "cells": 50
+              },
+              {
+                "capture": "35",
+                "cells": 64
+              }
+            ],
+            [
+              {
+                "capture": "24",
+                "cells": 129
+              },
+              {
+                "capture": "25",
+                "cells": 138
+              },
+              {
+                "capture": "28",
+                "cells": 81
+              }
+            ]
+          ],
+          "fit_audit": {
+            "tau2": 0.0006690116808888458,
+            "gain_quantiles": [
+              0.004490403446617564,
+              0.7547972928630192,
+              0.9936035672237152,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "lineage": "endothelial",
+          "status": "supported",
+          "support": [
+            [
+              {
+                "capture": "16",
+                "cells": 52
+              },
+              {
+                "capture": "33",
+                "cells": 41
+              },
+              {
+                "capture": "34",
+                "cells": 43
+              },
+              {
+                "capture": "35",
+                "cells": 30
+              }
+            ],
+            [
+              {
+                "capture": "24",
+                "cells": 97
+              },
+              {
+                "capture": "25",
+                "cells": 96
+              },
+              {
+                "capture": "28",
+                "cells": 54
+              }
+            ]
+          ],
+          "fit_audit": {
+            "tau2": 0.001002538289243154,
+            "gain_quantiles": [
+              0.007938047644713677,
+              0.7567745326689006,
+              0.9934241932042046,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "lineage": "cardiomyocyte",
+          "status": "supported",
+          "support": [
+            [
+              {
+                "capture": "16",
+                "cells": 63
+              },
+              {
+                "capture": "33",
+                "cells": 44
+              },
+              {
+                "capture": "34",
+                "cells": 45
+              },
+              {
+                "capture": "35",
+                "cells": 46
+              }
+            ],
+            [
+              {
+                "capture": "24",
+                "cells": 134
+              },
+              {
+                "capture": "25",
+                "cells": 130
+              },
+              {
+                "capture": "28",
+                "cells": 81
+              }
+            ]
+          ],
+          "fit_audit": {
+            "tau2": 0.0018919044400298839,
+            "gain_quantiles": [
+              0.012558116246299262,
+              0.8832747893797577,
+              0.9977049057371292,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      ],
+      "forecast_sha256": "2b08cbe7760e6aa5c8fbdba9967643de8ce507cf73d3da5371904d05efe58a5e"
+    }
+  ],
+  "results": [
+    {
+      "cutoff": 7.75,
+      "target": 8.0,
+      "lineage": "blood",
+      "held_capture": "16",
+      "cells": 579,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0024855762865761506,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.0028835711006670378,
+          "difference_vs_persistence": 0.0003979948140908872
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0021898988865342054,
+          "difference_vs_persistence": -0.00029567740004194515
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0025843454128908192,
+          "difference_vs_persistence": 9.876912631466865e-05
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.00418034473130183,
+          "difference_vs_persistence": 0.0016947684447256792
+        }
+      ]
+    },
+    {
+      "cutoff": 7.75,
+      "target": 8.0,
+      "lineage": "blood",
+      "held_capture": "33",
+      "cells": 282,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0016680149203439404,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.0032905198998403845,
+          "difference_vs_persistence": 0.0016225049794964441
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.001678465061653384,
+          "difference_vs_persistence": 1.0450141309443703e-05
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0019203206931023647,
+          "difference_vs_persistence": 0.0002523057727584243
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.004074919409222929,
+          "difference_vs_persistence": 0.002406904488878988
+        }
+      ]
+    },
+    {
+      "cutoff": 7.75,
+      "target": 8.0,
+      "lineage": "blood",
+      "held_capture": "34",
+      "cells": 268,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0017849179046786632,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.0032558915522529538,
+          "difference_vs_persistence": 0.0014709736475742906
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0017574852130075687,
+          "difference_vs_persistence": -2.743269167109451e-05
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.002017567695124175,
+          "difference_vs_persistence": 0.0002326497904455117
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.004111883747269404,
+          "difference_vs_persistence": 0.0023269658425907405
+        }
+      ]
+    },
+    {
+      "cutoff": 7.75,
+      "target": 8.0,
+      "lineage": "blood",
+      "held_capture": "35",
+      "cells": 236,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0017058035133618108,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.003096910520843502,
+          "difference_vs_persistence": 0.0013911070074816912
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0016584041616675665,
+          "difference_vs_persistence": -4.739935169424431e-05
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0019191484005029941,
+          "difference_vs_persistence": 0.0002133448871411833
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.003930799253531943,
+          "difference_vs_persistence": 0.0022249957401701322
+        }
+      ]
+    },
+    {
+      "cutoff": 7.75,
+      "target": 8.0,
+      "lineage": "mesenchymal",
+      "held_capture": "16",
+      "cells": 153,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.001919150617790469,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.0032461503508121143,
+          "difference_vs_persistence": 0.0013269997330216453
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.002051058775908115,
+          "difference_vs_persistence": 0.00013190815811764574
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.002070411088068005,
+          "difference_vs_persistence": 0.00015126047027753595
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.004440911584654919,
+          "difference_vs_persistence": 0.0025217609668644497
+        }
+      ]
+    },
+    {
+      "cutoff": 7.75,
+      "target": 8.0,
+      "lineage": "mesenchymal",
+      "held_capture": "33",
+      "cells": 157,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0017101039222575027,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.003160569976298677,
+          "difference_vs_persistence": 0.0014504660540411744
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0018728786606300304,
+          "difference_vs_persistence": 0.0001627747383725277
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0018848399544345248,
+          "difference_vs_persistence": 0.0001747360321770221
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.0034444138838337413,
+          "difference_vs_persistence": 0.0017343099615762386
+        }
+      ]
+    },
+    {
+      "cutoff": 7.75,
+      "target": 8.0,
+      "lineage": "mesenchymal",
+      "held_capture": "34",
+      "cells": 153,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0016454582959829402,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.0031910126127040433,
+          "difference_vs_persistence": 0.001545554316721103
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0018320051000254498,
+          "difference_vs_persistence": 0.00018654680404250955
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0018435967727749982,
+          "difference_vs_persistence": 0.00019813847679205792
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.0035406560343695954,
+          "difference_vs_persistence": 0.0018951977383866551
+        }
+      ]
+    },
+    {
+      "cutoff": 7.75,
+      "target": 8.0,
+      "lineage": "mesenchymal",
+      "held_capture": "35",
+      "cells": 140,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.001636740826054054,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.0028997100339418903,
+          "difference_vs_persistence": 0.0012629692078878364
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0017526413528882474,
+          "difference_vs_persistence": 0.0001159005268341934
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0018010918245067295,
+          "difference_vs_persistence": 0.00016435099845267553
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.0031888472020844888,
+          "difference_vs_persistence": 0.0015521063760304348
+        }
+      ]
+    },
+    {
+      "cutoff": 7.75,
+      "target": 8.0,
+      "lineage": "endoderm",
+      "held_capture": "16",
+      "cells": 43,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.002845579076880329,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.005000483441436109,
+          "difference_vs_persistence": 0.00215490436455578
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0031253125267806936,
+          "difference_vs_persistence": 0.0002797334499003647
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0031631963789079407,
+          "difference_vs_persistence": 0.00031761730202761176
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.005726097749443226,
+          "difference_vs_persistence": 0.0028805186725628967
+        }
+      ]
+    },
+    {
+      "cutoff": 7.75,
+      "target": 8.0,
+      "lineage": "endoderm",
+      "held_capture": "33",
+      "cells": 40,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0024336638344552844,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.004472682305437543,
+          "difference_vs_persistence": 0.0020390184709822585
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0026844258109622685,
+          "difference_vs_persistence": 0.00025076197650698417
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.002734826979842428,
+          "difference_vs_persistence": 0.00030116314538714386
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.005181833574960414,
+          "difference_vs_persistence": 0.0027481697405051294
+        }
+      ]
+    },
+    {
+      "cutoff": 7.75,
+      "target": 8.0,
+      "lineage": "endoderm",
+      "held_capture": "34",
+      "cells": 33,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0024762880284981714,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.004578602090632201,
+          "difference_vs_persistence": 0.0021023140621340294
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.002742873902793099,
+          "difference_vs_persistence": 0.0002665858742949274
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.002792619601949514,
+          "difference_vs_persistence": 0.0003163315734513428
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.005131077910367641,
+          "difference_vs_persistence": 0.0026547898818694697
+        }
+      ]
+    },
+    {
+      "cutoff": 7.75,
+      "target": 8.0,
+      "lineage": "endoderm",
+      "held_capture": "35",
+      "cells": 37,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0025380920758314245,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.004577377733574238,
+          "difference_vs_persistence": 0.002039285657742814
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.002788920849028548,
+          "difference_vs_persistence": 0.00025082877319712333
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.00285753134406808,
+          "difference_vs_persistence": 0.00031943926823665546
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.005137803496111536,
+          "difference_vs_persistence": 0.0025997114202801117
+        }
+      ]
+    },
+    {
+      "cutoff": 7.75,
+      "target": 8.0,
+      "lineage": "ectoderm_other",
+      "held_capture": "16",
+      "cells": 56,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0023271085356844734,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.004190521455504761,
+          "difference_vs_persistence": 0.0018634129198202873
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.002580923172143589,
+          "difference_vs_persistence": 0.00025381463645911565
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0024992901181156864,
+          "difference_vs_persistence": 0.00017218158243121305
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.005728196886009897,
+          "difference_vs_persistence": 0.0034010883503254236
+        }
+      ]
+    },
+    {
+      "cutoff": 7.75,
+      "target": 8.0,
+      "lineage": "ectoderm_other",
+      "held_capture": "33",
+      "cells": 72,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.002019505874149885,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.00382032523555191,
+          "difference_vs_persistence": 0.001800819361402025
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0022576721210044353,
+          "difference_vs_persistence": 0.00023816624685455041
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.002187468530482239,
+          "difference_vs_persistence": 0.00016796265633235415
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.005154549960590966,
+          "difference_vs_persistence": 0.003135044086441081
+        }
+      ]
+    },
+    {
+      "cutoff": 7.75,
+      "target": 8.0,
+      "lineage": "ectoderm_other",
+      "held_capture": "34",
+      "cells": 68,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.001967882459175817,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.003744822313162397,
+          "difference_vs_persistence": 0.0017769398539865802
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.002200078829176506,
+          "difference_vs_persistence": 0.000232196370000689
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0021278772612184117,
+          "difference_vs_persistence": 0.00015999480204259477
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.005060966729059905,
+          "difference_vs_persistence": 0.0030930842698840885
+        }
+      ]
+    },
+    {
+      "cutoff": 7.75,
+      "target": 8.0,
+      "lineage": "ectoderm_other",
+      "held_capture": "35",
+      "cells": 78,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.001889886738560209,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.003562829555089565,
+          "difference_vs_persistence": 0.001672942816529356
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0020960838491965923,
+          "difference_vs_persistence": 0.00020619711063638328
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.002049204300103866,
+          "difference_vs_persistence": 0.00015931756154365703
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.004660749752422984,
+          "difference_vs_persistence": 0.002770863013862775
+        }
+      ]
+    },
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "lineage": "blood",
+      "held_capture": "24",
+      "cells": 309,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.002833339034880751,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.00446239340104115,
+          "difference_vs_persistence": 0.0016290543661603993
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0029736439803082723,
+          "difference_vs_persistence": 0.00014030494542752138
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.003308415663590763,
+          "difference_vs_persistence": 0.00047507662871001206
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.0038261951750999147,
+          "difference_vs_persistence": 0.0009928561402191638
+        }
+      ]
+    },
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "lineage": "blood",
+      "held_capture": "25",
+      "cells": 356,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0027696246022805857,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.004431652648652081,
+          "difference_vs_persistence": 0.0016620280463714955
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.002918172967760881,
+          "difference_vs_persistence": 0.00014854836548029542
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.003255140016636761,
+          "difference_vs_persistence": 0.0004855154143561754
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.0038243311451643244,
+          "difference_vs_persistence": 0.0010547065428837387
+        }
+      ]
+    },
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "lineage": "blood",
+      "held_capture": "28",
+      "cells": 183,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.00172015886796709,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.0031415620384184096,
+          "difference_vs_persistence": 0.0014214031704513196
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0018085510144673412,
+          "difference_vs_persistence": 8.839214650025124e-05
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0020149569389905295,
+          "difference_vs_persistence": 0.0002947980710234395
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.0032227828506777682,
+          "difference_vs_persistence": 0.0015026239827106783
+        }
+      ]
+    },
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "lineage": "mesenchymal",
+      "held_capture": "24",
+      "cells": 243,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0012569868088924705,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.0037258439855077665,
+          "difference_vs_persistence": 0.002468857176615296
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0016530303011579046,
+          "difference_vs_persistence": 0.00039604349226543415
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0017736132530499643,
+          "difference_vs_persistence": 0.0005166264441574938
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.003884693199096568,
+          "difference_vs_persistence": 0.002627706390204098
+        }
+      ]
+    },
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "lineage": "mesenchymal",
+      "held_capture": "25",
+      "cells": 274,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.001275652739725245,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.0036375345894289735,
+          "difference_vs_persistence": 0.0023618818497037285
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0016449524002627876,
+          "difference_vs_persistence": 0.00036929966053754265
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0017552112346099632,
+          "difference_vs_persistence": 0.0004795584948847182
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.003803547278351852,
+          "difference_vs_persistence": 0.002527894538626607
+        }
+      ]
+    },
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "lineage": "mesenchymal",
+      "held_capture": "28",
+      "cells": 167,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0017895312205236664,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.0037103030374954758,
+          "difference_vs_persistence": 0.0019207718169718094
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.002048553372878229,
+          "difference_vs_persistence": 0.0002590221523545626
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0021195818764361053,
+          "difference_vs_persistence": 0.00033005065591243886
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.003973174627817805,
+          "difference_vs_persistence": 0.0021836434072941384
+        }
+      ]
+    },
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "lineage": "endoderm",
+      "held_capture": "24",
+      "cells": 52,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0026334055602426705,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.0061491985326432895,
+          "difference_vs_persistence": 0.003515792972400619
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0032277462614262887,
+          "difference_vs_persistence": 0.0005943407011836182
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0032358666746658362,
+          "difference_vs_persistence": 0.0006024611144231657
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.006272433427660331,
+          "difference_vs_persistence": 0.0036390278674176602
+        }
+      ]
+    },
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "lineage": "endoderm",
+      "held_capture": "25",
+      "cells": 71,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0025883636720507594,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.006117587971590416,
+          "difference_vs_persistence": 0.003529224299539656
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.003186062205019136,
+          "difference_vs_persistence": 0.0005976985329683767
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0031892851867722323,
+          "difference_vs_persistence": 0.0006009215147214728
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.006257458374883942,
+          "difference_vs_persistence": 0.0036690947028331826
+        }
+      ]
+    },
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "lineage": "endoderm",
+      "held_capture": "28",
+      "cells": 35,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.002876699231431179,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.005706922292749335,
+          "difference_vs_persistence": 0.002830223061318156
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0032996474548441807,
+          "difference_vs_persistence": 0.0004229482234130019
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0033154134140289124,
+          "difference_vs_persistence": 0.0004387141825977336
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.0061686990690397805,
+          "difference_vs_persistence": 0.0032919998376086017
+        }
+      ]
+    },
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "lineage": "ectoderm_other",
+      "held_capture": "24",
+      "cells": 115,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.001689672870412112,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.004590806905908983,
+          "difference_vs_persistence": 0.0029011340354968707
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0021646494209748048,
+          "difference_vs_persistence": 0.00047497655056269266
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.002240194454537036,
+          "difference_vs_persistence": 0.000550521584124924
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.005249912870524063,
+          "difference_vs_persistence": 0.0035602400001119514
+        }
+      ]
+    },
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "lineage": "ectoderm_other",
+      "held_capture": "25",
+      "cells": 109,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.00176325867524693,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.004686641689486475,
+          "difference_vs_persistence": 0.002923383014239545
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0022437974704952912,
+          "difference_vs_persistence": 0.0004805387952483613
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.00231417781617473,
+          "difference_vs_persistence": 0.0005509191409278
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.005298339381066485,
+          "difference_vs_persistence": 0.003535080705819555
+        }
+      ]
+    },
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "lineage": "ectoderm_other",
+      "held_capture": "28",
+      "cells": 71,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.002117410140020389,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.004380542610866137,
+          "difference_vs_persistence": 0.0022631324708457475
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0024328862994203015,
+          "difference_vs_persistence": 0.0003154761593999124
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.002484761570478768,
+          "difference_vs_persistence": 0.0003673514304583787
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.004820397323009409,
+          "difference_vs_persistence": 0.0027029871829890198
+        }
+      ]
+    },
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "lineage": "cardiopharyngeal",
+      "held_capture": "24",
+      "cells": 129,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0017562159579343985,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.005933352065409749,
+          "difference_vs_persistence": 0.00417713610747535
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.00244873017898961,
+          "difference_vs_persistence": 0.0006925142210552117
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.002840071074464025,
+          "difference_vs_persistence": 0.0010838551165296263
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.005842122552598786,
+          "difference_vs_persistence": 0.0040859065946643874
+        }
+      ]
+    },
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "lineage": "cardiopharyngeal",
+      "held_capture": "25",
+      "cells": 138,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0017526761012513733,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.005823566693998802,
+          "difference_vs_persistence": 0.004070890592747428
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.002418628943624605,
+          "difference_vs_persistence": 0.0006659528423732318
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0027884785447544807,
+          "difference_vs_persistence": 0.0010358024435031074
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.005736726329582067,
+          "difference_vs_persistence": 0.003984050228330693
+        }
+      ]
+    },
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "lineage": "cardiopharyngeal",
+      "held_capture": "28",
+      "cells": 81,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0020796988001213264,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.005451360036491112,
+          "difference_vs_persistence": 0.0033716612363697855
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0025708443034001475,
+          "difference_vs_persistence": 0.0004911455032788211
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0028872017629062055,
+          "difference_vs_persistence": 0.000807502962784879
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.00544719953395544,
+          "difference_vs_persistence": 0.003367500733834114
+        }
+      ]
+    },
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "lineage": "endothelial",
+      "held_capture": "24",
+      "cells": 97,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.002144460937667387,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.007304436928626738,
+          "difference_vs_persistence": 0.005159975990959352
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0030114571772082164,
+          "difference_vs_persistence": 0.0008669962395408295
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0033912978442485362,
+          "difference_vs_persistence": 0.0012468369065811494
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.006926015423106439,
+          "difference_vs_persistence": 0.004781554485439052
+        }
+      ]
+    },
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "lineage": "endothelial",
+      "held_capture": "25",
+      "cells": 96,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0022091638225855384,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.007338699825835447,
+          "difference_vs_persistence": 0.005129536003249908
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0030685500651990065,
+          "difference_vs_persistence": 0.0008593862426134681
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0034240010013598695,
+          "difference_vs_persistence": 0.0012148371787743311
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.006972608812776912,
+          "difference_vs_persistence": 0.004763444990191374
+        }
+      ]
+    },
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "lineage": "endothelial",
+      "held_capture": "28",
+      "cells": 54,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.002819268352510177,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.007714665298052104,
+          "difference_vs_persistence": 0.004895396945541927
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.003620119830696651,
+          "difference_vs_persistence": 0.0008008514781864739
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.00399831357489761,
+          "difference_vs_persistence": 0.0011790452223874332
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.007580281329552249,
+          "difference_vs_persistence": 0.004761012977042072
+        }
+      ]
+    },
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "lineage": "cardiomyocyte",
+      "held_capture": "24",
+      "cells": 134,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.002723828428283452,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.00782895408225559,
+          "difference_vs_persistence": 0.005105125653972139
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0036144874247548264,
+          "difference_vs_persistence": 0.0008906589964713745
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.003992857764123022,
+          "difference_vs_persistence": 0.0012690293358395698
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.007240364934135366,
+          "difference_vs_persistence": 0.004516536505851914
+        }
+      ]
+    },
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "lineage": "cardiomyocyte",
+      "held_capture": "25",
+      "cells": 130,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0031832150322333376,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.008362385130600464,
+          "difference_vs_persistence": 0.005179170098367127
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.00409238513980346,
+          "difference_vs_persistence": 0.0009091701075701225
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.004468113719973089,
+          "difference_vs_persistence": 0.0012848986877397515
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.007756861510230642,
+          "difference_vs_persistence": 0.004573646477997304
+        }
+      ]
+    },
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "lineage": "cardiomyocyte",
+      "held_capture": "28",
+      "cells": 81,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0034168421205577624,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.007947468640687927,
+          "difference_vs_persistence": 0.004530626520130165
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.004163876333568644,
+          "difference_vs_persistence": 0.0007470342130108812
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0045267757717187196,
+          "difference_vs_persistence": 0.0011099336511609572
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.007622241964506996,
+          "difference_vs_persistence": 0.004205399843949234
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "blood",
+      "held_capture": "17",
+      "cells": 84,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.005176793677104687,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.0035090070697101406,
+          "difference_vs_persistence": -0.0016677866073945466
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.004402100936775852,
+          "difference_vs_persistence": -0.0007746927403288351
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0046690740511192335,
+          "difference_vs_persistence": -0.0005077196259854538
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.003270411664455757,
+          "difference_vs_persistence": -0.0019063820126489304
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "blood",
+      "held_capture": "29",
+      "cells": 84,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0037034520591968517,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.002682850118836386,
+          "difference_vs_persistence": -0.0010206019403604656
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.003090555485626537,
+          "difference_vs_persistence": -0.0006128965735703149
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0032944157587537866,
+          "difference_vs_persistence": -0.00040903630044306517
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.002652024390955466,
+          "difference_vs_persistence": -0.0010514276682413856
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "blood",
+      "held_capture": "36",
+      "cells": 109,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.004140281577716462,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.003661903861089581,
+          "difference_vs_persistence": -0.0004783777166268814
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0036629410600795428,
+          "difference_vs_persistence": -0.0004773405176369196
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.004074102057975602,
+          "difference_vs_persistence": -6.617951974086014e-05
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.0035888893443045593,
+          "difference_vs_persistence": -0.000551392233411903
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "blood",
+      "held_capture": "37",
+      "cells": 102,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.004331376758757636,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.0038440490268100425,
+          "difference_vs_persistence": -0.00048732773194759375
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0038517987372905385,
+          "difference_vs_persistence": -0.00047957802146709767
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.004250407296903376,
+          "difference_vs_persistence": -8.096946185425988e-05
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.003850866898002122,
+          "difference_vs_persistence": -0.00048050986075551423
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "blood",
+      "held_capture": "88",
+      "cells": 179,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.010405695166779331,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.008871392903766772,
+          "difference_vs_persistence": -0.0015343022630125592
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.00966437351254599,
+          "difference_vs_persistence": -0.0007413216542333408
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.009806739774548955,
+          "difference_vs_persistence": -0.0005989553922303766
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.008423123510255457,
+          "difference_vs_persistence": -0.001982571656523874
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "blood",
+      "held_capture": "91",
+      "cells": 277,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.010684551028469717,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.00942044074694295,
+          "difference_vs_persistence": -0.001264110281526766
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.010010777369607825,
+          "difference_vs_persistence": -0.0006737736588618912
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.010157682600006983,
+          "difference_vs_persistence": -0.0005268684284627338
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.008927956183402285,
+          "difference_vs_persistence": -0.0017565948450674312
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "blood",
+      "held_capture": "94",
+      "cells": 162,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.006605425960633889,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.005691501408392313,
+          "difference_vs_persistence": -0.0009139245522415762
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0060191987340932965,
+          "difference_vs_persistence": -0.0005862272265405926
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.006130391743082176,
+          "difference_vs_persistence": -0.0004750342175517128
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.0053845855258136234,
+          "difference_vs_persistence": -0.0012208404348202657
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "blood",
+      "held_capture": "97",
+      "cells": 134,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.007094406410217437,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.005790365954128345,
+          "difference_vs_persistence": -0.001304040456089092
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.006410650207714965,
+          "difference_vs_persistence": -0.000683756202502472
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.006430160000468652,
+          "difference_vs_persistence": -0.0006642464097487855
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.00545208609888476,
+          "difference_vs_persistence": -0.0016423203113326776
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "mesenchymal",
+      "held_capture": "17",
+      "cells": 46,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0033850750494259264,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.0038794109188324257,
+          "difference_vs_persistence": 0.0004943358694064993
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0033318826604917195,
+          "difference_vs_persistence": -5.319238893420697e-05
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.003385207978837175,
+          "difference_vs_persistence": 1.3292941124839336e-07
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.0037033918999886096,
+          "difference_vs_persistence": 0.00031831685056268313
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "mesenchymal",
+      "held_capture": "29",
+      "cells": 68,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.002109424114036932,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.0028327648574127113,
+          "difference_vs_persistence": 0.0007233407433757792
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.002113482943595045,
+          "difference_vs_persistence": 4.058829558112667e-06
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.00214835588026114,
+          "difference_vs_persistence": 3.893176622420764e-05
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.002964836657417628,
+          "difference_vs_persistence": 0.0008554125433806957
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "mesenchymal",
+      "held_capture": "36",
+      "cells": 32,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0033439211229577552,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.004803771331046778,
+          "difference_vs_persistence": 0.0014598502080890225
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0035321073186941787,
+          "difference_vs_persistence": 0.0001881861957364235
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.00351864938843706,
+          "difference_vs_persistence": 0.00017472826547930463
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.004805850500026322,
+          "difference_vs_persistence": 0.0014619293770685667
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "mesenchymal",
+      "held_capture": "37",
+      "cells": 27,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0026959063438048935,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.004436608631462647,
+          "difference_vs_persistence": 0.0017407022876577533
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0029543055594335003,
+          "difference_vs_persistence": 0.00025839921562860685
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0029565623326511673,
+          "difference_vs_persistence": 0.0002606559888462738
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.004489479797664269,
+          "difference_vs_persistence": 0.0017935734538593756
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "mesenchymal",
+      "held_capture": "87",
+      "cells": 57,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.012492182964525776,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.012211931873666494,
+          "difference_vs_persistence": -0.00028025109085928236
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.012245343835525124,
+          "difference_vs_persistence": -0.0002468391290006526
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.012314268820995589,
+          "difference_vs_persistence": -0.00017791414353018724
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.011853976633276444,
+          "difference_vs_persistence": -0.0006382063312493323
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "mesenchymal",
+      "held_capture": "89",
+      "cells": 28,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.014701295554024026,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.013991076446684264,
+          "difference_vs_persistence": -0.0007102191073397619
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.014346964420903252,
+          "difference_vs_persistence": -0.0003543311331207742
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.014363995785645768,
+          "difference_vs_persistence": -0.00033729976837825783
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.013580725174400975,
+          "difference_vs_persistence": -0.0011205703796230513
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "mesenchymal",
+      "held_capture": "90",
+      "cells": 51,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.01346184187173111,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.013111281608694247,
+          "difference_vs_persistence": -0.0003505602630368629
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.013197425449686061,
+          "difference_vs_persistence": -0.00026441642204504817
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.013262085700184967,
+          "difference_vs_persistence": -0.00019975617154614246
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.012747703180729108,
+          "difference_vs_persistence": -0.0007141386910020017
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "mesenchymal",
+      "held_capture": "92",
+      "cells": 47,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.01344098617566743,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.012873008429005316,
+          "difference_vs_persistence": -0.0005679777466621148
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.01312221538271607,
+          "difference_vs_persistence": -0.0003187707929513603
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.01316645708506043,
+          "difference_vs_persistence": -0.0002745290906070001
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.01246622306253071,
+          "difference_vs_persistence": -0.0009747631131367205
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "mesenchymal",
+      "held_capture": "93",
+      "cells": 41,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.01323269578020017,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.012708111170509845,
+          "difference_vs_persistence": -0.0005245846096903241
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.012924773271491755,
+          "difference_vs_persistence": -0.00030792250870841434
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.012962543723971362,
+          "difference_vs_persistence": -0.00027015205622880727
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.012298652454164376,
+          "difference_vs_persistence": -0.0009340433260357928
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "mesenchymal",
+      "held_capture": "95",
+      "cells": 51,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.007814102159973468,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.007691828639322846,
+          "difference_vs_persistence": -0.00012227352065062244
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.007606757423524981,
+          "difference_vs_persistence": -0.0002073447364484872
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0076921727907033055,
+          "difference_vs_persistence": -0.00012192936927016285
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.007429667926875663,
+          "difference_vs_persistence": -0.0003844342330978053
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "mesenchymal",
+      "held_capture": "96",
+      "cells": 64,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.007963573051789423,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.007812402327791477,
+          "difference_vs_persistence": -0.00015117072399794661
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.007749004014504104,
+          "difference_vs_persistence": -0.00021456903728531932
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.00782373809123079,
+          "difference_vs_persistence": -0.00013983496055863277
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.007558565756965823,
+          "difference_vs_persistence": -0.0004050072948236002
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "endoderm",
+      "held_capture": "29",
+      "cells": 37,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.002592017689451849,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.003649907996109321,
+          "difference_vs_persistence": 0.0010578903066574717
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.00251484910895908,
+          "difference_vs_persistence": -7.716858049276916e-05
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.00270820256640896,
+          "difference_vs_persistence": 0.00011618487695711074
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.0038930534203445695,
+          "difference_vs_persistence": 0.0013010357308927203
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "endoderm",
+      "held_capture": "89",
+      "cells": 21,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.013696800144360683,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.013283829517477629,
+          "difference_vs_persistence": -0.0004129706268830545
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.013251916330482783,
+          "difference_vs_persistence": -0.0004448838138779009
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.013376931501296624,
+          "difference_vs_persistence": -0.00031986864306405953
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.012727567675440516,
+          "difference_vs_persistence": -0.000969232468920167
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "endoderm",
+      "held_capture": "96",
+      "cells": 47,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.008986779003793239,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.009013903735266322,
+          "difference_vs_persistence": 2.712473147308339e-05
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.008651919029504374,
+          "difference_vs_persistence": -0.0003348599742888647
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.008825276857567373,
+          "difference_vs_persistence": -0.00016150214622586562
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.008630618525324,
+          "difference_vs_persistence": -0.0003561604784692394
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "cardiopharyngeal",
+      "held_capture": "29",
+      "cells": 42,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.002503515275196188,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.0034066442689137623,
+          "difference_vs_persistence": 0.0009031289937175744
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.002494440128276317,
+          "difference_vs_persistence": -9.075146919870682e-06
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0025761231512228195,
+          "difference_vs_persistence": 7.260787602663158e-05
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.0036161591030637805,
+          "difference_vs_persistence": 0.0011126438278675926
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "cardiopharyngeal",
+      "held_capture": "89",
+      "cells": 41,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.013055210072217665,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.012433688642409345,
+          "difference_vs_persistence": -0.0006215214298083208
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.012664972319416322,
+          "difference_vs_persistence": -0.0003902377528013437
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.012722159177465785,
+          "difference_vs_persistence": -0.0003330508947518799
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.011977385402497837,
+          "difference_vs_persistence": -0.001077824669719828
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "cardiopharyngeal",
+      "held_capture": "92",
+      "cells": 20,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.013497132358318904,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.013038439794070805,
+          "difference_vs_persistence": -0.00045869256424809976
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.013147601821907615,
+          "difference_vs_persistence": -0.0003495305364112893
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.013199564343097032,
+          "difference_vs_persistence": -0.00029756801522187216
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.012621723263341593,
+          "difference_vs_persistence": -0.0008754090949773113
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "cardiopharyngeal",
+      "held_capture": "93",
+      "cells": 21,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.014836428916418445,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.014173748039200802,
+          "difference_vs_persistence": -0.0006626808772176428
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.014435901301764769,
+          "difference_vs_persistence": -0.0004005276146536764
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.014488361617229812,
+          "difference_vs_persistence": -0.0003480672991886327
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.01369262889957626,
+          "difference_vs_persistence": -0.0011438000168421843
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "cardiopharyngeal",
+      "held_capture": "95",
+      "cells": 44,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.008455652422794467,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.008385503101542673,
+          "difference_vs_persistence": -7.014932125179452e-05
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.008203257697132253,
+          "difference_vs_persistence": -0.0002523947256622139
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.008323944534706303,
+          "difference_vs_persistence": -0.00013170788808816378
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.008072019517221174,
+          "difference_vs_persistence": -0.0003836329055732935
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "cardiopharyngeal",
+      "held_capture": "96",
+      "cells": 61,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.008258923522474941,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.008159088385935436,
+          "difference_vs_persistence": -9.98351365395049e-05
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0079991073429908,
+          "difference_vs_persistence": -0.0002598161794841406
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.008109078908081975,
+          "difference_vs_persistence": -0.00014984461439296673
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.00783653298114116,
+          "difference_vs_persistence": -0.00042239054133378154
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "endothelial",
+      "held_capture": "17",
+      "cells": 24,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.0032989677976034506,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.004584704472828821,
+          "difference_vs_persistence": 0.00128573667522537
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0032981457239977738,
+          "difference_vs_persistence": -8.220736056768242e-07
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0034490207244652557,
+          "difference_vs_persistence": 0.0001500529268618051
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.004513173355235544,
+          "difference_vs_persistence": 0.0012142055576320932
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "endothelial",
+      "held_capture": "29",
+      "cells": 31,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.002243296587318076,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.004306761887446236,
+          "difference_vs_persistence": 0.00206346530012816
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.0024369066699380967,
+          "difference_vs_persistence": 0.0001936100826200205
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0025415519020382258,
+          "difference_vs_persistence": 0.00029825531472014956
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.004395775300113766,
+          "difference_vs_persistence": 0.0021524787127956894
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "endothelial",
+      "held_capture": "93",
+      "cells": 23,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.013839565583304913,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.014923113711503238,
+          "difference_vs_persistence": 0.0010835481281983254
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.013788196372942478,
+          "difference_vs_persistence": -5.136921036243483e-05
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.013823662093068241,
+          "difference_vs_persistence": -1.590349023667184e-05
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.014343526759923432,
+          "difference_vs_persistence": 0.0005039611766185191
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "endothelial",
+      "held_capture": "95",
+      "cells": 30,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.008185588422671267,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.009128633138443715,
+          "difference_vs_persistence": 0.0009430447157724488
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.008099093359202359,
+          "difference_vs_persistence": -8.649506346890788e-05
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.0081705041193222,
+          "difference_vs_persistence": -1.508430334906663e-05
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.00870257162376007,
+          "difference_vs_persistence": 0.000516983201088804
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "endothelial",
+      "held_capture": "96",
+      "cells": 53,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.007858402897726264,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.008897445369980042,
+          "difference_vs_persistence": 0.0010390424722537782
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.007795907273377688,
+          "difference_vs_persistence": -6.249562434857553e-05
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.007845306007581338,
+          "difference_vs_persistence": -1.3096890144925419e-05
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.008472293422812027,
+          "difference_vs_persistence": 0.0006138905250857637
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "cardiomyocyte",
+      "held_capture": "17",
+      "cells": 23,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.005489279269354614,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.005582963291161661,
+          "difference_vs_persistence": 9.368402180704675e-05
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.005041255422931922,
+          "difference_vs_persistence": -0.000448023846422692
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.005307370912605733,
+          "difference_vs_persistence": -0.00018190835674888103
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.005378737290600526,
+          "difference_vs_persistence": -0.00011054197875408778
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "cardiomyocyte",
+      "held_capture": "29",
+      "cells": 39,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.004092019979024456,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.004965446956940822,
+          "difference_vs_persistence": 0.000873426977916366
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.003838931871629095,
+          "difference_vs_persistence": -0.00025308810739536067
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.004072000814909533,
+          "difference_vs_persistence": -2.0019164114922633e-05
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.00498398628491165,
+          "difference_vs_persistence": 0.0008919663058871942
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "cardiomyocyte",
+      "held_capture": "37",
+      "cells": 21,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.003872406080681385,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.0061986952156918625,
+          "difference_vs_persistence": 0.0023262891350104777
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.003982533512559551,
+          "difference_vs_persistence": 0.00011012743187816627
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.004277631082101468,
+          "difference_vs_persistence": 0.00040522500142008274
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.006149102313936552,
+          "difference_vs_persistence": 0.0022766962332551673
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "cardiomyocyte",
+      "held_capture": "89",
+      "cells": 26,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.01355471388521795,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.013948270193001634,
+          "difference_vs_persistence": 0.0003935563077836837
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.013181658110289419,
+          "difference_vs_persistence": -0.0003730557749285317
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.013219719377572634,
+          "difference_vs_persistence": -0.0003349945076453163
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.013417902499195833,
+          "difference_vs_persistence": -0.00013681138602211762
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "cardiomyocyte",
+      "held_capture": "95",
+      "cells": 33,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.009621595087783643,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.009401235347500371,
+          "difference_vs_persistence": -0.00022035974028327202
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.009095060300838372,
+          "difference_vs_persistence": -0.0005265347869452715
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.009248629140309614,
+          "difference_vs_persistence": -0.0003729659474740292
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.009019678107436594,
+          "difference_vs_persistence": -0.0006019169803470493
+        }
+      ]
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "lineage": "cardiomyocyte",
+      "held_capture": "96",
+      "cells": 39,
+      "diagnostics": [
+        {
+          "candidate": "persistence",
+          "log_gene_mean_mse": 0.009273498347195763,
+          "difference_vs_persistence": 0.0
+        },
+        {
+          "candidate": "capture_linear",
+          "log_gene_mean_mse": 0.009224542889276339,
+          "difference_vs_persistence": -4.895545791942443e-05
+        },
+        {
+          "candidate": "capture_quarter",
+          "log_gene_mean_mse": 0.008789814630841455,
+          "difference_vs_persistence": -0.00048368371635430785
+        },
+        {
+          "candidate": "capture_shrunk",
+          "log_gene_mean_mse": 0.008924215899305482,
+          "difference_vs_persistence": -0.0003492824478902815
+        },
+        {
+          "candidate": "cell_weighted_linear",
+          "log_gene_mean_mse": 0.00882363417485833,
+          "difference_vs_persistence": -0.0004498641723374337
+        }
+      ]
+    }
+  ],
+  "headline_score": null,
+  "raw_metrics": null,
+  "skills": null,
+  "reward_delta": 0,
+  "full_panel_scoring_executed": false,
+  "summary": [
+    {
+      "candidate": "persistence",
+      "capture_lineage_cases": 76,
+      "better_than_persistence": 0
+    },
+    {
+      "candidate": "capture_linear",
+      "capture_lineage_cases": 76,
+      "better_than_persistence": 23
+    },
+    {
+      "candidate": "capture_quarter",
+      "capture_lineage_cases": 76,
+      "better_than_persistence": 37
+    },
+    {
+      "candidate": "capture_shrunk",
+      "capture_lineage_cases": 76,
+      "better_than_persistence": 30
+    },
+    {
+      "candidate": "cell_weighted_linear",
+      "capture_lineage_cases": 76,
+      "better_than_persistence": 26
+    }
+  ],
+  "report_sha256": "a4442fb533cc37a693ba07dfc43f8914423d19fd42d4d456b2584aa9c031bbb1"
+}

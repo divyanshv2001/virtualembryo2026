@@ -105,6 +105,11 @@
       "script": "cm_covariance_capture_audit.py",
       "run": "private/cm_covariance_capture_audit_01",
       "report": "CM_COVARIANCE_CAPTURE_AUDIT_RESULTS.json"
+    },
+    "capture_mean_shrinkage": {
+      "script": "capture_mean_shrinkage_audit.py",
+      "run": "private/capture_mean_shrinkage_audit_01",
+      "report": "CAPTURE_MEAN_SHRINKAGE_AUDIT_RESULTS.json"
     }
   }
 }

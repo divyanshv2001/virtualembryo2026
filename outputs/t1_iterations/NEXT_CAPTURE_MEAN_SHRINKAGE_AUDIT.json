@@ -1,0 +1,38 @@
+{
+  "folds": [
+    [
+      7.75,
+      8.0
+    ],
+    [
+      8.0,
+      8.25
+    ],
+    [
+      8.25,
+      8.5
+    ]
+  ],
+  "lineages": [
+    "blood",
+    "mesenchymal",
+    "endoderm",
+    "ectoderm_other",
+    "cardiopharyngeal",
+    "endothelial",
+    "cardiomyocyte"
+  ],
+  "min_capture_cells": 20,
+  "candidates": [
+    "persistence",
+    "capture_linear",
+    "capture_quarter",
+    "capture_shrunk",
+    "cell_weighted_linear"
+  ],
+  "selection": "Fixed tau2=max(mean_gene(delta2-v),0), v=capture variance/n summed across fit stages. All mapped unique genes including zeros; no feature/sign/grid selection. One-step horizon ratio1.",
+  "scope": "Capture-balanced log-gene-mean MSE diagnostic, not actual DE/direction/MMD/CSS metrics. Previously exposed targets are development evidence only. No independent embryo inference or benchmark reward. Fit support requires2captures/stage; unsupported cases explicitly unavailable. Allfoldforecasts frozen before targets.",
+  "decoder": "No cell forecast decoder in this audit; separate predeclaration required before full-panel testing.",
+  "seed": null,
+  "resources": "D-only disk; memmap genechunks256, twoBLASthreads; no RAM cache"
+}

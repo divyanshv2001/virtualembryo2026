@@ -1,0 +1,38 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "9d9e8d11be02918527327977a6fa41925b56d32d6f9151a889e8f27b19be7878",
+  "attempts": 1,
+  "payload_bytes": 2071,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "purpose": "Freeze distinct gene-mean estimator after metadata-only support preflight; no target expression read",
+      "evidence": "Min20cells per capture: CM has0/2/4/3 captures at7.5/7.75/8/8.25. Blood5/4/4/3; mesenchymal6/4/4/3; endoderm3/4/4/3; ectoderm2/4/4/3. Endothelial/cardio-pharyngeal1/2/4/3. Neuralcrest unsupported early. Assay captures are not established embryos.",
+      "prior": "Alreadynegative cell-weighted positive-mean normal-mixtureEB; categorical lineage-time ridge100/1000; cell-SE reliability gains; disjointmiddle cell-weighted contrast diagnostic. Needdistinct mechanism, no repeatedsamegrid. Covarianceformula1of7capturesbetterpersistence, DEunchanged whenmeanspreserved.",
+      "constraints": "Train<=cutoff7.75/8/8.25; freezeallforecasts before one-step targets8/8.25/8.5; exposeddevelopment diagnostic only. Equalcaptureweight, min2 qualifyingcaptures eachoflast2stages, unsupportedlineagespersist. Fullgenechunk256, Dcache16GB2threads. Proxy errors neverbenchmark skills; fullpanel requires laterdecoder. No independentembryoclaim."
+    },
+    "questions": {
+      "estimator": {
+        "type": "choice",
+        "instructions": "Choose informative single fixed estimator distinct from earlier controls; prioritize identifiability without unsupported uncertainty claims.",
+        "criteria": {
+          "capture_variance_normal_shrinkage": "Stage mean is equal average capture log-expression gene means inclzeros. v=between-capture variance/n atbothstages. delta=current-previous; tau2=max(mean_g(delta2-v),0) perlineage usingallmappedgenes. delta_shrunk=tau2/(tau2+v)*delta; one-step=current+delta_shrunk. Controls persistence, unshrunkcapturelinear, cellweightedlinear, fixed.25capturelinear. Unsupportedpersist. Conditional measurement regularization, not embryo confidence.",
+          "capture_balanced_sign_gate": "Same capturemeans; require signagreement across all previous/current capturepaircontrasts then fixed.25delta. Conservative butpairs dependent, hides effect magnitude.",
+          "repeat_prior_EB": "Reapply priorpositive-mean mixtureEB with celluncertainty, little distinctinformation."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 891,
+    "output_tokens": 59
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "estimator": {
+      "choice": "capture_variance_normal_shrinkage",
+      "confidence": 0.98
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}

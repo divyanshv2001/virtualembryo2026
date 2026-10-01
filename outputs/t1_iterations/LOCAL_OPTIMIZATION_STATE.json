@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T15:49:55.613788+00:00",
+  "updated_utc": "2026-10-01T16:07:28.461567+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Preflight hierarchical capture-balanced lineage gene-mean residual/velocity audit: inspect existingEB/source-slope coverage, identify viable past-only historicalsplits/support, freeze normalization/signreliability/shrinkage controls before targetexpression. Then separately declare exact method; covariance branch boundednegative/open, no repeated exposedtarget tuning.",
+  "next_experiment": "Preflight fixed full-panel decoder for capture-balanced log-gene-mean shrinkage and quarter-step controls. Inspect existing donor transport versus positive-slope decoder, resolve nonnegativity, row mass, protected genes and unsupported-lineage persistence without changing pinned scorer/calibration. Freeze one bounded implementation before evaluation; no exposed-target parameter grid. Mean/covariance families remain open; readiness unmet.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1294,13 +1294,13 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_CM_CAPTURE_SYNTHESIS_ROUTE_20261001_01.json",
+    "record": "JEV_MEAN_SYNTHESIS_ROUTE_20261001_01.json",
     "usage": {
-      "input_tokens": 967,
-      "output_tokens": 66
+      "input_tokens": 923,
+      "output_tokens": 60
     },
-    "choice": "hierarchical_mean_residual_audit",
-    "confidence": 0.47
+    "choice": "fullpanel_fixed_decoder_preflight",
+    "confidence": 0.99
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -2070,6 +2070,20 @@
       "specialist_role_version": 2,
       "metric_availability": false,
       "reward_delta": 0
+    },
+    "capture_mean_shrinkage_audit_01": {
+      "status": "completed",
+      "report_sha256": "a4442fb533cc37a693ba07dfc43f8914423d19fd42d4d456b2584aa9c031bbb1",
+      "review": "METRIC_CRITIQUES_CAPTURE_MEAN_20261001.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": false,
+      "reward_delta": 0
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -2240,5 +2254,39 @@
     "status": "completed",
     "report_sha256": "ccf051098aab0f958515e70c3498344326bb257410f538ed0d33df90ce236852",
     "metrics_available": false
+  },
+  "capture_mean_shrinkage_job": {
+    "status": "completed",
+    "report_sha256": "a4442fb533cc37a693ba07dfc43f8914423d19fd42d4d456b2584aa9c031bbb1",
+    "metrics_available": false,
+    "report": "CAPTURE_MEAN_SHRINKAGE_AUDIT_RESULTS.json",
+    "summary": [
+      {
+        "candidate": "persistence",
+        "capture_lineage_cases": 76,
+        "better_than_persistence": 0
+      },
+      {
+        "candidate": "capture_linear",
+        "capture_lineage_cases": 76,
+        "better_than_persistence": 23
+      },
+      {
+        "candidate": "capture_quarter",
+        "capture_lineage_cases": 76,
+        "better_than_persistence": 37
+      },
+      {
+        "candidate": "capture_shrunk",
+        "capture_lineage_cases": 76,
+        "better_than_persistence": 30
+      },
+      {
+        "candidate": "cell_weighted_linear",
+        "capture_lineage_cases": 76,
+        "better_than_persistence": 26
+      }
+    ],
+    "reward_delta": 0
   }
 }
