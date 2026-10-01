@@ -1,0 +1,217 @@
+"""Joint detection coupling on two frozen one-day source folds."""
+import json
+from collections import Counter
+import numpy as np
+import pandas as pd
+import torch
+from threadpoolctl import threadpool_limits
+
+from train_extended_atlas import HERE
+from run_t1 import digest
+from iterate import now, append_event
+from cnf_manifold_flow import DensityFlowNet
+from partial_anchor_forecast import PartialAnchorForecast
+from temporary_forecast_cache import TemporaryForecastCache
+from offline_backtest import load_core, Panel
+from joint_detection_coupling import JointDetectionCoupling
+from lineage_residual_screen import lineage
+from robust_population import covariance_change
+from metric_critique_reward import assess, total_reward
+
+
+def main():
+    root = HERE.parents[1]
+    source = HERE / 'private/associated_prepared_01'
+    archive = HERE / 'private/cnf_hurdle_temporal_01'
+    out = HERE / 'private/joint_detection_coupling_temporal_01'
+    if out.exists():
+        raise ValueError('Preserve frozen count-reliability run')
+    panel = (root / 'outputs/t1_run/T1__val.genes.txt').read_text().splitlines()
+    folds = [(8., 9.), (8.25, 9.25)]
+    names = ['copy', 'anchor_unshrunk', 'coupling_0.25', 'coupling_0.5']
+    plan = {
+        'created_utc': now(), 'code_sha256': digest(HERE / 'joint_detection_coupling_temporal.py'),
+        'model_source_sha256': {f: digest(HERE / f) for f in
+                                ['partial_anchor_forecast.py', 'log1p_positive_forecast.py',
+                                 'anchor_slope_calibration.py', 'feature_panel_forecast.py', 'joint_detection_coupling.py', 'metric_critique_reward.py', 'lineage_residual_screen.py',
+                                 'temporary_forecast_cache.py', 'offline_backtest.py']},
+        'prepared_report_sha256': digest(source / 'report.json'),
+        'panel_sha256': digest(root / 'outputs/t1_run/T1__val.genes.txt'),
+        'archive_sha256': {f'{cutoff}/{name}': digest(archive / f'cutoff_{cutoff}' / name)
+                           for cutoff, _ in folds for name in ['encoder.npz', 'training.pt', 'heads.npz']},
+        'folds': folds, 'candidates': names, 'seed': 20260928,
+        'donor_count': 1500, 'target_count': 2000, 'scored_truth_count': 1000,
+        'fit': 'Frozen past-only encoder/800-update CNF and .5/.5 anchor heads. Fit detection residual PCA8 on 3000 seeded past cells after supplied lineage centering, using original past-selected guard genes. Reorder detections within donor lineage at strengths .25/.5; fixed per-gene detection counts and positive values BEFORE mass repair. Restore original per-cell mapped mass; record resulting positive-margin/gene-mean changes. Frozen backoffs1/.5/.25/0 enforce max gene mean perturbation .01; covariance guard .4, protected genes exact. Identity is explicit guard fallback, not a gain.',
+        'hypothesis': 'Past-fitted within-lineage detection dependence might improve gene-pair variogram beyond independent switches; mass repair may counteract gains or alter mean effects. Not a calibrated temporal dependence predictor.',
+        'control': 'Same donors/targets, source cutoff, scorer and calibration: persistence and unshrunk .5/.5 anchor decoder.',
+        'scope': 'Two reused source-cohort one-day folds, four predictions per fold, full unchanged 32285-gene metric vector and calibration. These folds are not challenge-domain validation.',
+        'decision': 'Advance only if a coupled variant improves headline versus both controls on EACH fold, improves variogram on both and preserves all four skills versus incumbent. Separate reward +1/-10 uses paired mean skills, never substitutes this promotion rule. Final >72 temporal/64-replicate gate remains unmet.',
+        'retention': 'D-only temporary forecast handles; no full prediction arrays retained.',
+        'submissions_allowed': 0, 'jev_requests_allowed': 0,
+    }
+    out.mkdir(); (out / 'plan.json').write_text(json.dumps(plan, indent=2))
+    events = out / 'events.jsonl'; append_event(events, 'plan_frozen', sha256=digest(out / 'plan.json'))
+    state_path = HERE / 'LOCAL_OPTIMIZATION_STATE.json'; state = json.loads(state_path.read_text())
+    state['active_jobs'] = [out.name]; state['local_process_running'] = True
+    state['active_run_path'] = f'private/{out.name}'
+    state['detection_coupling_job'] = {'status': 'running', 'planned_scores': 8,
+                                     'completed_scores': 0, 'plan_sha256': digest(out / 'plan.json')}
+    state_path.write_text(json.dumps(state, indent=2))
+    prepared = json.loads((source / 'report.json').read_text())
+    for name, key in [('expression.npy', 'expression_sha256'),
+                      ('selected_metadata.csv', 'metadata_sha256'), ('genes.csv', 'genes_sha256')]:
+        if digest(source / name) != prepared[key]:
+            raise ValueError('Prepared input changed: ' + name)
+    x = np.load(source / 'expression.npy', mmap_mode='r')
+    metadata=pd.read_csv(source / 'selected_metadata.csv')
+    stages = metadata.numeric_stage.to_numpy(float)
+    labels=metadata.celltype_extended_atlas.map(lineage).to_numpy()
+    symbols = pd.read_csv(source / 'genes.csv').symbol.fillna('').tolist()
+    counts = Counter(symbols)
+    lookup = {s: i for i, s in enumerate(symbols) if s and counts[s] == 1}
+    official = np.array([i for i, s in enumerate(panel) if s in lookup])
+    atlas = np.array([lookup[panel[i]] for i in official])
+
+    def values(rows):
+        result = np.zeros((len(rows), len(panel)), dtype=np.float32)
+        result[:, official] = np.asarray(x[np.ix_(rows, atlas)])
+        return result
+
+    core, _ = load_core()
+    report = {'plan': plan, 'folds': [], 'status': 'running',
+              'scorer_manifest_sha256': digest(HERE / 'private/scorer_source/manifest.json'),
+              'official_score': None, 'local_gate_passed': False}
+    for cutoff, target in folds:
+        folder = out / f'cutoff_{cutoff}'; folder.mkdir()
+        donor_rows = np.sort(np.random.default_rng(plan['seed']).choice(
+            np.flatnonzero(stages == cutoff), plan['donor_count'], replace=False))
+        np.save(folder / 'donor_rows.npy', donor_rows)
+        donors = values(donor_rows)
+        arc = archive / f'cutoff_{cutoff}'
+        for name in ['encoder.npz', 'training.pt', 'heads.npz']:
+            if digest(arc / name) != plan['archive_sha256'][f'{cutoff}/{name}']:
+                raise ValueError('Archived past model changed: ' + name)
+        with np.load(arc / 'encoder.npz') as encoded:
+            features = encoded['features']; guard = encoded['guard_features']
+            center = encoded['center']; scale = encoded['scale']
+            net = DensityFlowNet(encoded['basis'], encoded['pca_center'], cutoff, 7.25)
+        net.load_state_dict(torch.load(arc / 'training.pt', weights_only=False, map_location='cpu')['net'])
+        net.eval()
+        program = PartialAnchorForecast(x, stages, cutoff, donors, panel, symbols, net,
+                                        center, scale, features, guard)
+        program.configure(.5, .5)
+        past_rows=np.sort(np.random.default_rng(plan['seed']).choice(np.flatnonzero(stages<=cutoff),3000,replace=False))
+        past=values(past_rows)
+        coupling=JointDetectionCoupling(past,labels[past_rows],np.intersect1d(guard,program.mapped),program.mapped)
+        del past
+        np.save(folder/'coupling_fit_rows.npy',past_rows)
+        np.savez_compressed(folder/'coupling_fit.npz',features=coupling.features,loading=coupling.loading,noise=coupling.noise)
+        append_event(events,'past_only_detection_model_fitted',cutoff=cutoff,fit_rows_sha256=digest(folder/'coupling_fit_rows.npy'),fit_sha256=digest(folder/'coupling_fit.npz'))
+        cache = TemporaryForecastCache(HERE / 'private/temporary_cache')
+        generation = {}
+        try:
+            for name in names:
+                if name == 'copy':
+                    pred, ids, audit = donors.copy(), np.arange(len(donors)), {'method': 'persistence'}
+                else:
+                    base,ids,audit=program.predict(target,'joint',1.,sampling='systematic')
+                    if name=='anchor_unshrunk':
+                        pred=base
+                    else:
+                        pred,coupling_audit=coupling.apply(base,labels[donor_rows][ids],float(name.rsplit('_',1)[1]))
+                        change=covariance_change(donors[:,guard],pred[:,guard])
+                        rejected=change>.4
+                        if rejected:pred=base.copy()
+                        audit=dict(audit,coupling=coupling_audit,covariance_change=change,covariance_guard_rejected=rejected,actual_detection_changes=int(((pred>0)!=(base>0)).sum()))
+                    del base
+                np.save(folder / f'{name}_indices.npy', ids)
+                generation[name] = {'prediction_sha256': cache.put(name, pred), 'audit': audit}
+                append_event(events, 'forecast_frozen', cutoff=cutoff, candidate=name,
+                             prediction_sha256=generation[name]['prediction_sha256'])
+                del pred
+            (folder / 'generation.json').write_text(json.dumps(generation, indent=2))
+            append_event(events, 'all_forecasts_frozen_before_target_read', cutoff=cutoff)
+            target_rows = np.sort(np.random.default_rng(plan['seed']).choice(
+                np.flatnonzero(stages == target), plan['target_count'], replace=False))
+            np.save(folder / 'target_rows.npy', target_rows)
+            future = values(target_rows)
+            order = np.random.default_rng(plan['seed']).permutation(len(future))
+            evaluator = Panel(core, future[order[:1000]], donors, plan['seed'])
+            floor = evaluator.metrics(donors)
+            ceiling = evaluator.metrics(future[order[1000:]])
+            rows = []
+            for name in names:
+                with cache.read(name, consume=True) as pred:
+                    raw = evaluator.metrics(pred)
+                row = {'candidate': name, 'prediction_sha256': generation[name]['prediction_sha256'],
+                       'raw_metrics': raw, **evaluator.aggregate(raw, floor, ceiling)}
+                rows.append(row)
+                append_event(events, 'candidate_scored', cutoff=cutoff, target=target, **row)
+                state = json.loads(state_path.read_text())
+                state['detection_coupling_job']['completed_scores'] += 1
+                state_path.write_text(json.dumps(state, indent=2))
+            report['folds'].append({'cutoff': cutoff, 'target': target, 'floor': floor,
+                                    'ceiling': ceiling, 'results': rows, 'generation': generation,
+                                    'donor_rows_sha256': digest(folder / 'donor_rows.npy'),
+                                    'target_rows_sha256': digest(folder / 'target_rows.npy')})
+            (out / 'report.partial.json').write_text(json.dumps(report, indent=2))
+        finally:
+            cache.close()
+        del program, net, donors, future, evaluator, coupling
+    assessments=[]
+    for name in names[2:]:
+        candidate=[next(r for r in f['results'] if r['candidate']==name) for f in report['folds']]
+        incumbent=[next(r for r in f['results'] if r['candidate']=='anchor_unshrunk') for f in report['folds']]
+        eligible=all(r['calibration_valid'] for r in candidate+incumbent)
+        assessment=assess([r['skills'] for r in candidate],[r['skills'] for r in incumbent],eligible=eligible)
+        assessments.append({'experiment_id':out.name+'/'+name,'assessment':assessment,'plan_sha256':digest(out/'plan.json')})
+    report['critic_assessments']=assessments
+    report['status'] = 'completed'
+    (out / 'report.json').write_text(json.dumps(report, indent=2))
+    summary = []
+    for name in names:
+        rows = [next(r for r in f['results'] if r['candidate'] == name) for f in report['folds']]
+        summary.append({'candidate': name, 'scores': [r['local_score'] for r in rows],
+                        'raw_metrics': [r['raw_metrics'] for r in rows],
+                        'skills': [r['skills'] for r in rows],
+                        'all_calibrations_valid': all(r['calibration_valid'] for r in rows)})
+    controls = {x['candidate']: x for x in summary}
+    passed = [x['candidate'] for x in summary if x['candidate'].startswith('coupling_') and
+              x['all_calibrations_valid'] and all(
+                  x['scores'][i] > max(controls['copy']['scores'][i],
+                                       controls['anchor_unshrunk']['scores'][i]) and
+                  all(x['skills'][i][m] >= controls['anchor_unshrunk']['skills'][i][m]
+                      for m in ['de_score', 'de_direction', 'mmd_u', 'variogram'])
+                  for i in range(len(folds)))]
+    public = {'updated_utc': now(), 'status': 'completed', 'summary': summary,
+              'folds': report['folds'], 'passing_candidates': passed,
+              'plan_sha256': digest(out / 'plan.json'),
+              'report_sha256': digest(out / 'report.json'),
+              'official_score': None, 'local_72_gate_passed': False,
+              'submissions_used': 0}
+    (HERE / 'JOINT_DETECTION_COUPLING_RESULTS.json').write_text(json.dumps(public, indent=2))
+    reward_path=HERE/'METRIC_CRITIQUE_REWARD_LEDGER.jsonl'
+    previous=[json.loads(line) for line in reward_path.read_text().splitlines() if line.strip()]
+    known={e['experiment_id'] for e in previous}
+    additions=[e for e in assessments if e['experiment_id'] not in known]
+    for e in additions:e['report_sha256']=public['report_sha256']
+    with reward_path.open('a') as handle:
+        for event in additions:handle.write(json.dumps(event)+'\n')
+    totals=total_reward(previous+additions)
+    state = json.loads(state_path.read_text()); state['active_jobs'] = []
+    state['metric_critique_reward'].update(current_reward=totals['reward_score'],uncapped_reward=totals['uncapped_reward'])
+    state['local_process_running'] = False
+    state['active_run_path']=None
+    state['detection_coupling_job'].update(status='completed', report_sha256=public['report_sha256'],
+                                          passing_candidates=passed)
+    state_path.write_text(json.dumps(state, indent=2))
+    append_event(events, 'temporal_batch_completed', passing_candidates=passed,
+                 full_panel_scores=len(folds)*len(names))
+    from index_scores import main as index_scores
+    index_scores()
+
+
+if __name__ == '__main__':
+    torch.set_num_threads(2)
+    with threadpool_limits(limits=2):
+        main()

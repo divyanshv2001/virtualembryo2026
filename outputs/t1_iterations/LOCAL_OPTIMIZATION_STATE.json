@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T04:39:39.578210+00:00",
+  "updated_utc": "2026-10-01T04:48:18.160042+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,7 +31,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Freeze joint detection coupling at fixed per-gene detection counts/positive-value margins on historical source folds, matched independent-switch/incumbent controls; stream one forecast at a time. Do not rerun rejected lineage-standardization proxy. Actual latent-state-adjusted residual regression remains distinct and untested.",
+  "next_experiment": "Implement actual latent-state-adjusted temporal residual gene regression, distinct from failed lineage-standardized pseudobulk and joint detection coupling. Use frozen past-only encoder at each historical cutoff, residualize latent/state effects before stage slope, alpha .1/.25, exact pooled trend/persistence controls; freeze before target reads and require both-fold signed ranking/direction improvement before full-panel expansion.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1228,7 +1228,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": 0,
+    "current_reward": -80,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1236,7 +1236,8 @@
       "de_direction",
       "mmd_u",
       "variogram"
-    ]
+    ],
+    "uncapped_reward": -80
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -1258,5 +1259,29 @@
     "rank": 130,
     "board_entries": 274,
     "attribution": "Inferred latest export; screenshot lacks filename"
+  },
+  "detection_coupling_job": {
+    "status": "completed_not_promoted",
+    "planned_scores": 8,
+    "completed_scores": 8,
+    "plan_sha256": "124b5407215bfb2b80585ab5d0641367eb4104ddaa9e2b2b27e0bb5a4f0b6852",
+    "report_sha256": "44c4f4e6d6509730b34876e8e306ff3376ce75a9ede73b97df0e6b6e1faf401a",
+    "passing_candidates": [],
+    "process_id": 19296,
+    "worker_process_id": 21604,
+    "working_set_observed_mb": 1632,
+    "tests_passed": [
+      "identity",
+      "seeded replay",
+      "counts",
+      "protected genes",
+      "mass"
+    ],
+    "future_read_policy": "All fold forecasts frozen before target read; temporary D-only arrays auto-close",
+    "declared_strict_css_review": "Require CSS strictly improved on both folds in final review, in addition to driver all-skill/headline gate.",
+    "strict_passing_candidates": [],
+    "diagnostic": "DETECTION_COUPLING_DIAGNOSTIC.json",
+    "exact_control_replay": true,
+    "temporary_cache_empty": true
   }
 }

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T04:38:17.016318+00:00",
+  "updated_utc": "2026-10-01T04:48:18.160042+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -5901,6 +5901,29 @@
       "results_report": "LINEAGE_RESIDUAL_SCREEN_RESULTS.json",
       "report_sha256": "d354edce363d9c6b960ae3e38df39352d7b361c96f4ee1809c4d40f5e09c6b69",
       "next_action": "Test distinct detection coupling or actual latent-state-adjusted residual regression with frozen historical controls. No full-panel/official score or research reward from this proxy."
+    },
+    {
+      "id": "joint_detection_coupling_temporal",
+      "metrics": [
+        "variogram",
+        "mmd_u",
+        "de_score",
+        "de_direction"
+      ],
+      "status": "completed_not_promoted",
+      "implementation": [
+        "joint_detection_coupling.py",
+        "joint_detection_coupling_temporal.py"
+      ],
+      "run": "joint_detection_coupling_temporal_01",
+      "hypothesis_and_limits": "Within-lineage detection dependence from past source cells might repair independent detection switches. Fixed detection counts and positive margins BEFORE per-cell mass reconciliation; final positive margins can change and must be audited. Supplied source annotations, reused one-day folds, not independent target domain.",
+      "declared_experiment_and_result": "Eight valid full-panel scores, exact copy/incumbent hashes/raw metrics/calibration replay. Incumbent49.70027/51.17725; coupling.25=49.15321/50.77429; coupling.5=49.13422/50.74692. Both settings worsen variogram and headline on both folds. Masserror<=3.73e-8; original counts exact, preprojection margins exact, final gene-mean perturbations<=.00403. Strict promotion fails; reward-80 separately. No challenge score.",
+      "next_action": "Reject this evaluated range; test actual latent-state-adjusted residual regression, not repeat coupling strengths. Family remains open.",
+      "research_family_exhausted": false,
+      "plan_sha256": "124b5407215bfb2b80585ab5d0641367eb4104ddaa9e2b2b27e0bb5a4f0b6852",
+      "results_report": "JOINT_DETECTION_COUPLING_RESULTS.json",
+      "diagnostic": "DETECTION_COUPLING_DIAGNOSTIC.json",
+      "report_sha256": "44c4f4e6d6509730b34876e8e306ff3376ce75a9ede73b97df0e6b6e1faf401a"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",

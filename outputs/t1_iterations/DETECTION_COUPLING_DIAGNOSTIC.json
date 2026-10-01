@@ -1,0 +1,171 @@
+{
+  "updated_utc": "2026-10-01T04:48:18.160042+00:00",
+  "report_sha256": "44c4f4e6d6509730b34876e8e306ff3376ce75a9ede73b97df0e6b6e1faf401a",
+  "exact_archived_control_replay": [
+    {
+      "cutoff": 8.0,
+      "calibration_exact": true,
+      "copy_incumbent_hashes_metrics_exact": true
+    },
+    {
+      "cutoff": 8.25,
+      "calibration_exact": true,
+      "copy_incumbent_hashes_metrics_exact": true
+    }
+  ],
+  "strict_passing_candidates": [],
+  "summary": [
+    {
+      "candidate": "copy",
+      "scores": [
+        50.0,
+        50.0
+      ],
+      "raw_metrics": [
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.26304274797439575,
+          "variogram": 0.009573637507855892
+        },
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.2375742495059967,
+          "variogram": 0.008673261851072311
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "anchor_unshrunk",
+      "scores": [
+        49.70027428098265,
+        51.17724668869285
+      ],
+      "raw_metrics": [
+        {
+          "de_score": -0.12330456226880394,
+          "de_direction": 0.019468342415917883,
+          "mmd_u": 0.25065070390701294,
+          "variogram": 0.009653712622821331
+        },
+        {
+          "de_score": -0.1601362862010221,
+          "de_direction": 0.10681215303588851,
+          "mmd_u": 0.20634937286376953,
+          "variogram": 0.008202877826988697
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.46909765142150806,
+          "de_direction": 0.5056754241496735,
+          "mmd_u": 0.5124371240306729,
+          "variogram": 0.497891683539146
+        },
+        {
+          "de_score": 0.4598290598290598,
+          "de_direction": 0.5332431748196738,
+          "mmd_u": 0.5355885135881767,
+          "variogram": 0.51413927074146
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "coupling_0.25",
+      "scores": [
+        49.15320507023054,
+        50.774286522096446
+      ],
+      "raw_metrics": [
+        {
+          "de_score": -0.12453760789149197,
+          "de_direction": 0.014235001695735567,
+          "mmd_u": 0.26738229393959045,
+          "variogram": 0.009657224640250206
+        },
+        {
+          "de_score": -0.1601362862010221,
+          "de_direction": 0.10504288781236215,
+          "mmd_u": 0.21717433631420135,
+          "variogram": 0.008205086924135685
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.4688079061148857,
+          "de_direction": 0.5041371736095033,
+          "mmd_u": 0.495786188076109,
+          "variogram": 0.49779962174187703
+        },
+        {
+          "de_score": 0.4598290598290598,
+          "de_direction": 0.5326565613349598,
+          "mmd_u": 0.5226908672445806,
+          "variogram": 0.5140709987829267
+        }
+      ],
+      "all_calibrations_valid": true
+    },
+    {
+      "candidate": "coupling_0.5",
+      "scores": [
+        49.134223390860384,
+        50.74691523907805
+      ],
+      "raw_metrics": [
+        {
+          "de_score": -0.12453760789149197,
+          "de_direction": 0.014807813995357582,
+          "mmd_u": 0.2681902348995209,
+          "variogram": 0.009656992740929127
+        },
+        {
+          "de_score": -0.16183986371379894,
+          "de_direction": 0.10609341703334703,
+          "mmd_u": 0.21785299479961395,
+          "variogram": 0.00820932723581791
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.4688079061148857,
+          "de_direction": 0.5043050856737502,
+          "mmd_u": 0.49500948683562035,
+          "variogram": 0.497805699553794
+        },
+        {
+          "de_score": 0.4594363791631084,
+          "de_direction": 0.5330047166139277,
+          "mmd_u": 0.5219029260863131,
+          "variogram": 0.5139400031031377
+        }
+      ],
+      "all_calibrations_valid": true
+    }
+  ],
+  "reward_score": -80,
+  "reward_scope": "Two eligible variants, no metric mean improves; -10x4x2. Separate benchmark-independent accounting.",
+  "score_ledger_records": 2885,
+  "score_ledger_errors": 0,
+  "temporary_cache_empty": true,
+  "maximum_mass_error": 3.72464563315329e-08,
+  "decision": "Reject these two bounded past-fitted detection PCA coupling settings; no family exhaustion or challenge scoring.",
+  "limitations": "Reused source-cohort one-day folds, supplied atlas labels, mean changes from mass repair; no independent hidden-domain validation."
+}

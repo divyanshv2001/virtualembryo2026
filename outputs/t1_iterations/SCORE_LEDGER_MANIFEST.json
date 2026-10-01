@@ -1,5 +1,5 @@
 {
-  "records": 2877,
+  "records": 2885,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -422,6 +422,11 @@
       "outcomes_indexed": 12
     },
     {
+      "path": "private/eb_gene_slope_screen_01/report.json",
+      "sha256": "abe0199bde8eae1d5cb72ac2c04199abe7fbb8eb84e9eff3cffbfcf7c1edf7c5",
+      "outcomes_indexed": 0
+    },
+    {
       "path": "private/empirical_bayes_horizon_01/report.json",
       "sha256": "a817b7d6d6e1586e621eb2d2d960f497e276b076095f8bf31c379d8eeb03815e",
       "outcomes_indexed": 18
@@ -492,9 +497,19 @@
       "outcomes_indexed": 24
     },
     {
+      "path": "private/joint_detection_coupling_temporal_01/report.json",
+      "sha256": "44c4f4e6d6509730b34876e8e306ff3376ce75a9ede73b97df0e6b6e1faf401a",
+      "outcomes_indexed": 8
+    },
+    {
       "path": "private/kernel_backtest_01/report.json",
       "sha256": "693e84e9b3ffce86940429972d89bdadbd8dcd009e8494b5f864798a90429dab",
       "outcomes_indexed": 24
+    },
+    {
+      "path": "private/lineage_residual_screen_01/report.json",
+      "sha256": "d354edce363d9c6b960ae3e38df39352d7b361c96f4ee1809c4d40f5e09c6b69",
+      "outcomes_indexed": 0
     },
     {
       "path": "private/matched_horizon_audit_01/report.json",
@@ -689,5 +704,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "9aa2f26b0abde53181d052e37c35b853e732c561dbb0059569e1768d838f6a39"
+  "ledger_sha256": "288052fa2a00aae0b88a77d288a23c920959fa3202ee1ba97f95c7282942ec10"
 }

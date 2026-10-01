@@ -219,3 +219,11 @@ Lineage-standardized source proxy completed12candidate/control evaluations acros
 ## 2026-10-01T04:39:39.578210+00:00
 
 User last-submission screenshot: official52.16,rank130/274,skillsDE47.2/direction56.3/MMD53.2/CSS51.7. Attribution inferred latest formula export; screenshot lacksfilename. Headline+.29 vs51.87, DE+2.3/direction-.7/MMD-.3/CSS0. Rawmetrics unavailable, not reconstructed. Original export report remains generation-time evidence; official_result.json records later feedback. Reward0 (no retroactive matched experiment). Best official52.16, >72 unmet; no upload performed by agent. Playbook now reads official score dynamically from state.
+
+## 2026-10-01T04:46:25.996792+00:00
+
+Detection coupling8-score batch started, launcher19296/worker21604, observedworker1.6GB. Past-only detection PCA8 within supplied lineage groups; original CNF/anchor/incumbent and fullpanel scorer unchanged. Coupling.25/.5 fixedcounts/positivevalues beforemassrepair; finalmarginalchanges disclosed and bounded, covarianceguard retained. Five invariant checks passed. Genuineplan/source snapshots/events preserved; forecasts temporaryDonly. StrictCSS both-fold gain required in final review, beyond driver all-skill gate. No Jev/agents/upload.
+
+## 2026-10-01T04:48:18.160042+00:00
+
+Detection coupling finished8/8validfullpanels. Incumbent49.70027/51.17725; .25=49.15321/50.77429; .5=49.13422/50.74692. CSS/headline regress bothfolds; no mean skill improvement. Strictdeclaredgate failed, exact archived copy/incumbent forecast hashes/rawmetrics/calibration replay verified. Massrelativeerror<=3.73e-8, counts preserved; preprojection positive margins exact, massrepair gene-mean perturbation<=.00403 recorded. Reward-80 separately (2variantsx4metricsx-10). Ledger2885records/0errors, cacheempty, no Python process. ReportSHA 44c4f4e6d6509730b34876e8e306ff3376ce75a9ede73b97df0e6b6e1faf401a. Next actual latent-state-adjusted residual regression; bounded failure does not exhaust family. No Jev/agents/upload; officialbest52.16.

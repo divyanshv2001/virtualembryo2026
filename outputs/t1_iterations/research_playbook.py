@@ -56,6 +56,8 @@ Completed export: {export.get('artifact', 'none')}. Format passed; SHA256 {expor
 
 Four metric critiques completed; consult METRIC_CRITIQUES_20261001.md when designing the next mechanism. Separate reward starts0: +1 positive paired mean skill gain / -10 tie or regression per metric, aggregate maximum100; negative balances visible. Pending/invalid/proxy0. Future unique declared experiments only; promotion gates unchanged.
 
+Current separate reward: {(compact['reward'] or {}).get('current_reward', 0)}. This is not a benchmark score.
+
 Use D-only temporary disk cache, two BLAS threads, one full forecast at a time;16GBRAM. Retain source reports/events, seeds/splits/hashes, raw4/skills4 and failed outcomes. Refresh SCORE_LEDGER.jsonl after full-panel batches; proxy/export is not a score batch. Commit small evidence/code, never datasets/secrets/artifact matrices. No automatic official upload or new agents.
 
 Jev: cached advisory <=3000bytes for a genuinely new uncertain decision; at most one per decision. Routine checks/policy updates use zero calls. Actual last formula calls815in/71out and730in/69out; no measured Codex credit savings. Do not invent quota resets.
