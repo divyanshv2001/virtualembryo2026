@@ -1,0 +1,404 @@
+{
+  "updated_utc": "2026-10-01T06:24:51.311488+00:00",
+  "plan_sha256": "cc2ff5ff39c3856bc52aad4609a9511a89cdc9432484d4be2c2fc4a79c5a4682",
+  "outcomes": [
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "past_stages": [
+        7.5,
+        7.75,
+        8.0,
+        8.25
+      ],
+      "past_stage_counts": [
+        1963,
+        3000,
+        3000,
+        3000
+      ],
+      "target_rows": 3000,
+      "curve_contrasts": {
+        "tanh_rate1.0_center-0.375": [
+          -0.24438102302718243,
+          -0.08480225029342425,
+          0.08480225029342434,
+          0.24438102302718243
+        ],
+        "tanh_rate1.0_center0.0": [
+          -0.3238421901704713,
+          -0.13681121749142447,
+          0.09795977201092561,
+          0.3626936356509702
+        ],
+        "tanh_rate2.0_center-0.375": [
+          -0.14606437794759988,
+          -0.05632362603653096,
+          0.05632362603653099,
+          0.1460643779475999
+        ],
+        "tanh_rate2.0_center0.0": [
+          -0.35914374475566513,
+          -0.2208977161560506,
+          0.06750579438869354,
+          0.5125356665230224
+        ],
+        "tanh_rate4.0_center-0.375": [
+          -0.03569693568407476,
+          -0.01822482270146463,
+          0.01822482270146463,
+          0.03569693568407476
+        ],
+        "tanh_rate4.0_center0.0": [
+          -0.3695211840216438,
+          -0.333110510458115,
+          -0.0955530256413221,
+          0.7981847201210809
+        ]
+      },
+      "results": {
+        "copy": {
+          "signed_top200_overlap": 0.0,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": -0.20481927710843376,
+          "partial_spearman": 0.0
+        },
+        "recent_linear": {
+          "signed_top200_overlap": 0.1925,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.027108433734939753,
+          "partial_spearman": 0.07671315505701229
+        },
+        "past_four_stage_linear": {
+          "signed_top200_overlap": 0.165,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": -0.006024096385542174,
+          "partial_spearman": 0.05506645431147931
+        },
+        "linear_blend_0.25": {
+          "signed_top200_overlap": 0.2075,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.04518072289156624,
+          "partial_spearman": 0.07945903417987393
+        },
+        "linear_blend_0.5": {
+          "signed_top200_overlap": 0.1975,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.03313253012048192,
+          "partial_spearman": 0.08140700670862278
+        },
+        "tanh_rate1.0_center-0.375": {
+          "signed_top200_overlap": 0.165,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": -0.006024096385542174,
+          "partial_spearman": 0.05174086607386012
+        },
+        "tanh_rate1.0_center-0.375_blend0.25": {
+          "signed_top200_overlap": 0.2025,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.0391566265060241,
+          "partial_spearman": 0.07868702030419242
+        },
+        "tanh_rate1.0_center-0.375_blend0.5": {
+          "signed_top200_overlap": 0.2,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.03614457831325301,
+          "partial_spearman": 0.08162195979231143
+        },
+        "tanh_rate1.0_center0.0": {
+          "signed_top200_overlap": 0.165,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": -0.006024096385542174,
+          "partial_spearman": 0.037135678300170415
+        },
+        "tanh_rate1.0_center0.0_blend0.25": {
+          "signed_top200_overlap": 0.205,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.04216867469879515,
+          "partial_spearman": 0.07795173394635102
+        },
+        "tanh_rate1.0_center0.0_blend0.5": {
+          "signed_top200_overlap": 0.1925,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.027108433734939753,
+          "partial_spearman": 0.07318286057147493
+        },
+        "tanh_rate2.0_center-0.375": {
+          "signed_top200_overlap": 0.165,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": -0.006024096385542174,
+          "partial_spearman": 0.04183681582879381
+        },
+        "tanh_rate2.0_center-0.375_blend0.25": {
+          "signed_top200_overlap": 0.1975,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.03313253012048192,
+          "partial_spearman": 0.07537608092018014
+        },
+        "tanh_rate2.0_center-0.375_blend0.5": {
+          "signed_top200_overlap": 0.205,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.04216867469879515,
+          "partial_spearman": 0.07769628195412938
+        },
+        "tanh_rate2.0_center0.0": {
+          "signed_top200_overlap": 0.1525,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": -0.02108433734939761,
+          "partial_spearman": 0.011781445648527292
+        },
+        "tanh_rate2.0_center0.0_blend0.25": {
+          "signed_top200_overlap": 0.1975,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.03313253012048192,
+          "partial_spearman": 0.07252612772340974
+        },
+        "tanh_rate2.0_center0.0_blend0.5": {
+          "signed_top200_overlap": 0.1875,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.021084337349397575,
+          "partial_spearman": 0.0584383822205366
+        },
+        "tanh_rate4.0_center-0.375": {
+          "signed_top200_overlap": 0.16,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": -0.012048192771084348,
+          "partial_spearman": 0.016877738344564415
+        },
+        "tanh_rate4.0_center-0.375_blend0.25": {
+          "signed_top200_overlap": 0.1925,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.027108433734939753,
+          "partial_spearman": 0.07279245027162896
+        },
+        "tanh_rate4.0_center-0.375_blend0.5": {
+          "signed_top200_overlap": 0.195,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.03012048192771084,
+          "partial_spearman": 0.07350345721486708
+        },
+        "tanh_rate4.0_center0.0": {
+          "signed_top200_overlap": 0.1525,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": -0.02108433734939761,
+          "partial_spearman": -0.009205440506535543
+        },
+        "tanh_rate4.0_center0.0_blend0.25": {
+          "signed_top200_overlap": 0.1925,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.027108433734939753,
+          "partial_spearman": 0.06430377015472466
+        },
+        "tanh_rate4.0_center0.0_blend0.5": {
+          "signed_top200_overlap": 0.1775,
+          "reference_magnitude_chance": 0.17,
+          "chance_adjusted_overlap": 0.009036144578313228,
+          "partial_spearman": 0.04463135316759748
+        }
+      }
+    },
+    {
+      "cutoff": 8.5,
+      "target": 8.75,
+      "past_stages": [
+        7.75,
+        8.0,
+        8.25,
+        8.5
+      ],
+      "past_stage_counts": [
+        3000,
+        3000,
+        3000,
+        3000
+      ],
+      "target_rows": 3000,
+      "curve_contrasts": {
+        "tanh_rate1.0_center-0.375": [
+          -0.24438102302718243,
+          -0.08480225029342425,
+          0.08480225029342434,
+          0.24438102302718243
+        ],
+        "tanh_rate1.0_center0.0": [
+          -0.3238421901704713,
+          -0.13681121749142447,
+          0.09795977201092561,
+          0.3626936356509702
+        ],
+        "tanh_rate2.0_center-0.375": [
+          -0.14606437794759988,
+          -0.05632362603653096,
+          0.05632362603653099,
+          0.1460643779475999
+        ],
+        "tanh_rate2.0_center0.0": [
+          -0.35914374475566513,
+          -0.2208977161560506,
+          0.06750579438869354,
+          0.5125356665230224
+        ],
+        "tanh_rate4.0_center-0.375": [
+          -0.03569693568407476,
+          -0.01822482270146463,
+          0.01822482270146463,
+          0.03569693568407476
+        ],
+        "tanh_rate4.0_center0.0": [
+          -0.3695211840216438,
+          -0.333110510458115,
+          -0.0955530256413221,
+          0.7981847201210809
+        ]
+      },
+      "results": {
+        "copy": {
+          "signed_top200_overlap": 0.0025,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": -0.10526315789473685,
+          "partial_spearman": 0.0
+        },
+        "recent_linear": {
+          "signed_top200_overlap": 0.47,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.4127423822714681,
+          "partial_spearman": 0.34914294477069935
+        },
+        "past_four_stage_linear": {
+          "signed_top200_overlap": 0.42,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.3573407202216067,
+          "partial_spearman": 0.3678697568287319
+        },
+        "linear_blend_0.25": {
+          "signed_top200_overlap": 0.465,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.40720221606648205,
+          "partial_spearman": 0.3534409964230207
+        },
+        "linear_blend_0.5": {
+          "signed_top200_overlap": 0.4625,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.40443213296398894,
+          "partial_spearman": 0.3650276384885851
+        },
+        "tanh_rate1.0_center-0.375": {
+          "signed_top200_overlap": 0.4175,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.3545706371191135,
+          "partial_spearman": 0.3680889689926039
+        },
+        "tanh_rate1.0_center-0.375_blend0.25": {
+          "signed_top200_overlap": 0.465,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.40720221606648205,
+          "partial_spearman": 0.35217514630269997
+        },
+        "tanh_rate1.0_center-0.375_blend0.5": {
+          "signed_top200_overlap": 0.4625,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.40443213296398894,
+          "partial_spearman": 0.36275044842930365
+        },
+        "tanh_rate1.0_center0.0": {
+          "signed_top200_overlap": 0.44,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.3795013850415513,
+          "partial_spearman": 0.37613117217606873
+        },
+        "tanh_rate1.0_center0.0_blend0.25": {
+          "signed_top200_overlap": 0.4675,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.4099722991689751,
+          "partial_spearman": 0.3555815860699636
+        },
+        "tanh_rate1.0_center0.0_blend0.5": {
+          "signed_top200_overlap": 0.465,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.40720221606648205,
+          "partial_spearman": 0.368827970454453
+        },
+        "tanh_rate2.0_center-0.375": {
+          "signed_top200_overlap": 0.4175,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.3545706371191135,
+          "partial_spearman": 0.3690357244562814
+        },
+        "tanh_rate2.0_center-0.375_blend0.25": {
+          "signed_top200_overlap": 0.4675,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.4099722991689751,
+          "partial_spearman": 0.3502980797224313
+        },
+        "tanh_rate2.0_center-0.375_blend0.5": {
+          "signed_top200_overlap": 0.465,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.40720221606648205,
+          "partial_spearman": 0.3577175510354319
+        },
+        "tanh_rate2.0_center0.0": {
+          "signed_top200_overlap": 0.4375,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.3767313019390581,
+          "partial_spearman": 0.38900402396202804
+        },
+        "tanh_rate2.0_center0.0_blend0.25": {
+          "signed_top200_overlap": 0.47,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.4127423822714681,
+          "partial_spearman": 0.35829325029415904
+        },
+        "tanh_rate2.0_center0.0_blend0.5": {
+          "signed_top200_overlap": 0.4675,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.4099722991689751,
+          "partial_spearman": 0.37395249781771517
+        },
+        "tanh_rate4.0_center-0.375": {
+          "signed_top200_overlap": 0.42,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.3573407202216067,
+          "partial_spearman": 0.3729608949978348
+        },
+        "tanh_rate4.0_center-0.375_blend0.25": {
+          "signed_top200_overlap": 0.4675,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.4099722991689751,
+          "partial_spearman": 0.3461382074434867
+        },
+        "tanh_rate4.0_center-0.375_blend0.5": {
+          "signed_top200_overlap": 0.4675,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.4099722991689751,
+          "partial_spearman": 0.34975207371550376
+        },
+        "tanh_rate4.0_center0.0": {
+          "signed_top200_overlap": 0.465,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.40720221606648205,
+          "partial_spearman": 0.39527180597265216
+        },
+        "tanh_rate4.0_center0.0_blend0.25": {
+          "signed_top200_overlap": 0.4725,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.41551246537396125,
+          "partial_spearman": 0.36151609048515637
+        },
+        "tanh_rate4.0_center0.0_blend0.5": {
+          "signed_top200_overlap": 0.4825,
+          "reference_magnitude_chance": 0.0975,
+          "chance_adjusted_overlap": 0.42659279778393355,
+          "partial_spearman": 0.3766568013236941
+        }
+      }
+    }
+  ],
+  "passing_candidates": [],
+  "proxy_evaluations": 46,
+  "mapped_panel_genes": 26775,
+  "full_panel_scores": 0,
+  "reward_delta": 0,
+  "independent_embryo_validation": false,
+  "next_action": "Reject this fixed saturating bank; next declared source-only state-by-time interaction with strong shrinkage and matched global controls. Scientific nonlinear family remains open.",
+  "report_sha256": "287ad15e5490f4bf27309ad30fc67a345dbc77ef383b68ddee5a68c7f82866d6"
+}

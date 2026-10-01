@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-01T06:17:36.576866+00:00
+Updated: 2026-10-01T06:27:16.276172+00:00
 
 Run `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_playbook.py` first. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -8,7 +8,7 @@ Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction':
 
 Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Declare source-only saturating-time gene-curve proxy with>=4past quarter-day snapshots. Freeze small tanh-rate bank and centers using sourcepast only, matched four-stage linear and recentlinear controls plus shrinkage blends; evaluate two temporal development folds with no externaldata or target-driven parameter selection. Reject unless rank/direction improves bothfolds before full-panel scoring. Preserve all candidates/seeds/splits/failures; retain external paths as open rather than exhaust scientific family.
+Next: Declare source-only state-by-time interaction proxy, distinct from previously failed global conditional time slope: past-frozen encoder/state and lineage controls, strongly penalized state*time terms, current-state mean integration, matched global slope and recentlinear controls. Freeze small ridge/shrinkage choices before target read; run two past-only temporal development folds and rank/direction screen before full-panel scoring. Check available encoder cutoffs and derive exact regression contrasts/invariance checks first; no externalE9.5 fitting or target-based tuning.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in outputs\t1_submissions\formula_progress_20260930_01\official_result.json. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 

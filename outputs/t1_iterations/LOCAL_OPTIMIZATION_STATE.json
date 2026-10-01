@@ -31,7 +31,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Declare source-only saturating-time gene-curve proxy with>=4past quarter-day snapshots. Freeze small tanh-rate bank and centers using sourcepast only, matched four-stage linear and recentlinear controls plus shrinkage blends; evaluate two temporal development folds with no externaldata or target-driven parameter selection. Reject unless rank/direction improves bothfolds before full-panel scoring. Preserve all candidates/seeds/splits/failures; retain external paths as open rather than exhaust scientific family.",
+  "next_experiment": "Declare source-only state-by-time interaction proxy, distinct from previously failed global conditional time slope: past-frozen encoder/state and lineage controls, strongly penalized state*time terms, current-state mean integration, matched global slope and recentlinear controls. Freeze small ridge/shrinkage choices before target read; run two past-only temporal development folds and rank/direction screen before full-panel scoring. Check available encoder cutoffs and derive exact regression contrasts/invariance checks first; no externalE9.5 fitting or target-based tuning.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1440,6 +1440,26 @@
     "proxy_evaluations": 16,
     "passing_alphas": [],
     "external_E9_5_expression_used": false,
+    "full_panel_scores": 0,
+    "reward_delta": 0
+  },
+  "saturating_time_proxy": {
+    "report": "SATURATING_TIME_PROXY_RESULTS.json",
+    "report_sha256": "287ad15e5490f4bf27309ad30fc67a345dbc77ef383b68ddee5a68c7f82866d6",
+    "proxy_evaluations": 46,
+    "curve_candidates": 18,
+    "passing_candidates": [],
+    "folds": [
+      [
+        8.25,
+        8.5
+      ],
+      [
+        8.5,
+        8.75
+      ]
+    ],
+    "mapped_panel_genes": 26775,
     "full_panel_scores": 0,
     "reward_delta": 0
   }
