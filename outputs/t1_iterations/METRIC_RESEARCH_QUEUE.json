@@ -6218,11 +6218,21 @@
     },
     {
       "id": "cm_anchor_support_projection_temporal",
-      "status": "running",
+      "status": "completed_no_promotion_all4valid",
       "research_family_exhausted": false,
       "plan": "NEXT_ANCHOR_SUPPORT_PROJECTION_EXPERIMENT.json",
-      "next_action": "Monitor registered cm_anchor_support_projection; on completion collect full24outcomes, four specialists, Jev synthesis/selection, ledger and compact journal. Exact-anchor support tests positive redistribution only; no duplicate runs or repaired parent failure.",
-      "registered_experiment": "cm_anchor_support_projection"
+      "next_action": "Implement/register cm_anchor_support_shrinkage_fullpanel_01 per NEXT_ANCHOR_SUPPORT_SHRINKAGE_EXPERIMENT.json: fixedbeta.25 anchor+.25*(exactanchor-supportinit-anchor), 6matchedcandidates4conditions, strictforecast-only mean/mass projection andidentityhash. Reuseddevelopment hypothesis ablation, no independentvalidation orfutureexpressionfit. Fullamplitude bothfailedheadline all4; originalconstraints/gates unchanged.",
+      "registered_experiment": "cm_anchor_support_projection",
+      "report": "CM_ANCHOR_SUPPORT_PROJECTION_FULLPANEL_RESULTS.json",
+      "report_sha256": "36ea00923e346b70a531d1181fbe15fe0361e12c73adc6b0096130c829327a08",
+      "critique": "METRIC_CRITIQUES_ANCHOR_SUPPORT_20261001.md"
+    },
+    {
+      "id": "cm_anchor_support_shrinkage_temporal",
+      "status": "predeclared_pending_implementation",
+      "research_family_exhausted": false,
+      "plan": "NEXT_ANCHOR_SUPPORT_SHRINKAGE_EXPERIMENT.json",
+      "next_action": "Implement/register cm_anchor_support_shrinkage_fullpanel_01 per NEXT_ANCHOR_SUPPORT_SHRINKAGE_EXPERIMENT.json: fixedbeta.25 anchor+.25*(exactanchor-supportinit-anchor), 6matchedcandidates4conditions, strictforecast-only mean/mass projection andidentityhash. Reuseddevelopment hypothesis ablation, no independentvalidation orfutureexpressionfit. Fullamplitude bothfailedheadline all4; originalconstraints/gates unchanged."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",

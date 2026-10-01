@@ -14,7 +14,7 @@ def main():
     raw=report_path.read_bytes();report=json.loads(raw);rows=[]
     for fold in report.get('folds',[]):
         for result in fold.get('results',[]):
-            rows.append({'cutoff':fold.get('cutoff'),'target':fold.get('target'),'candidate':result.get('candidate'),
+            rows.append({'cutoff':fold.get('cutoff'),'target':fold.get('target'),'held_capture':fold.get('held_capture'),'candidate':result.get('candidate'),
                 'headline':result.get('local_score'),'raw':result.get('raw_metrics',{}).get(args.metric),
                 'skill':result.get('skills',{}).get(args.metric),'calibration_valid':result.get('calibration_valid')})
     if not rows:
@@ -26,8 +26,8 @@ def main():
     packet={'report_sha256':hashlib.sha256(raw).hexdigest(),'metric':args.metric,'plan_sha256':report.get('plan_sha256'),
         'raw_direction':'lower_better' if args.metric in ('mmd_u','variogram') else 'higher_better',
         'skill_direction':'higher_better','outcomes':rows,'metric_available':any(any(v is not None for v in row.get('raw',[])) if isinstance(row.get('raw'),list) else row.get('raw') is not None for row in rows),
-        'passing_candidates':report.get('passing_candidates'),'instructions':'Critique verdict/risk/nextcheck in<=120words; missing metrics unavailable, never invent outcomes; no full history or repeated raw report reads. Readiness unchanged.'}
-    encoded=json.dumps(packet,indent=2)+'\n'
+        'passing_candidates':report.get('passing_candidates'),'specialist_role_version':2,'instructions':'In<=150words state Problem / Proposed solution / Validation: evidence vs uncertainty, concrete past-only remedy, matched controls, success/failure criteria. Missing metrics unavailable; never invent outcomes/credentials. No history rereads. Readiness unchanged.'}
+    encoded=json.dumps(packet,separators=(',',':'))+'\n'
     if len(encoded.encode())>6000:raise ValueError('Split large batch by predeclared experiment; do not pass oversized packet')
     out.parent.mkdir(parents=True,exist_ok=True);out.write_text(encoded)
     print(json.dumps({'metric':args.metric,'rows':len(rows),'bytes':len(encoded.encode()),'out':str(out)}))

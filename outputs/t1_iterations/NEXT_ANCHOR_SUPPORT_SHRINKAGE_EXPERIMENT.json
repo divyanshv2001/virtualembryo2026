@@ -1,0 +1,58 @@
+{
+  "status": "predeclared_pending_implementation",
+  "run": "cm_anchor_support_shrinkage_fullpanel_01",
+  "candidates": [
+    "copy",
+    "anchor_unshrunk",
+    "cm_025_replay",
+    "anchor_support_initial_025",
+    "anchor_projected_identity",
+    "anchor_support_projected_025"
+  ],
+  "conditions": [
+    {
+      "archive": "cm_capture_calibration_fullpanel_01",
+      "cutoff": 8.0,
+      "target": 9.0,
+      "held_capture": "16"
+    },
+    {
+      "archive": "cm_capture_replication_fullpanel_01",
+      "cutoff": 8.0,
+      "target": 9.0,
+      "held_capture": "33"
+    },
+    {
+      "archive": "cm_capture_calibration_fullpanel_01",
+      "cutoff": 8.25,
+      "target": 9.25,
+      "held_capture": "25"
+    },
+    {
+      "archive": "cm_capture_replication_fullpanel_01",
+      "cutoff": 8.25,
+      "target": 9.25,
+      "held_capture": "24"
+    }
+  ],
+  "seed": 20260928,
+  "truth_count": 1000,
+  "ceiling_count": 1000,
+  "minimum_scores": 20,
+  "maximum_scores": 24,
+  "method": "Same exact-anchor support witness initialization I as preceding run. NEW fixed beta=.25: CM mapped initialization B=anchor+.25*(I-anchor), computedfloat64 thenfloat32; anchorzero remainszero, othercells/protectedgenes unchanged. Project B to anchor FORECAST LOGgene means/RAWcellmasses withsame strictsolver. Sixmatchedcontrols,4samecaptureconditions. This is development positive-redistribution amplitude ablation, not detection/supportcorrection or independentvalidation. Reused development outcomes guide hypotheses; no futureexpression used to fit constraints or beta.",
+  "solver": "joint_margin_solver.solve(adaptive=True),fixed100steps including rejections,initial.001,accept*.3floor1e-9,reject*10ceiling1e3,existingpositivebackoffs/floor",
+  "mean_tolerance": 1e-05,
+  "raw_mass_relative_tolerance": 1e-05,
+  "post_cast_validation": "Recheck both margins afterfloat32cast,finite/nonnegative,locked support,protectedrows/genes exact and existingcovguard<=.4 relativeto donor guardpanel. Rejectviolations, never backoff/fallback counted asprojection success.",
+  "invalid_policy": "Nonconvergence/postcast/support/protection/covariance failure retained null; no fallback. Do not claim numerical convergence from existence of witness. Projected-anchor identity must replay exact anchor SHA; failed identity invalidates batch. Initialization separately scored even if projectedcandidate invalid.",
+  "reward": "Only newinitial_025/projected_025 all4valid eligible vsanchor; controls/identity not rewarded.",
+  "scope": "Fourcaptureconditions covertwo reused one-day temporalstages,notfourindependentfolds orindependentembryos. Source development only,noofficialupload.",
+  "decision": "Require all4valid, eachheadline beats copy/anchor/CMreplay andallfouranchorskills preserved. Compare projection vsinitial andarchivedfullamplitude to isolate effect. Original readinessgates unchanged.",
+  "predeclared_before_execution": true,
+  "jev_route": "JEV_ANCHOR_SUPPORT_SYNTHESIS_ROUTE_20261001_01.json",
+  "parent_failure_report_sha256": "93306cf73e2bad5e6d94d2b0fc3203529c706cdd8d2579f7ceaf3a979795ac3d",
+  "support_rule_tuning": "None: singlepredeclared beta.25, exactanchor support, no target-fitted threshold/grid selection orfallback.",
+  "beta": 0.25,
+  "parent_report_sha256": "36ea00923e346b70a531d1181fbe15fe0361e12c73adc6b0096130c829327a08"
+}

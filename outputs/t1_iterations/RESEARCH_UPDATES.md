@@ -492,3 +492,7 @@ All4projectedconditions invalid beforeoptimization: lockedcorrectedmask conflict
 ## 2026-10-01 Anchor-support temporal comparison launched
 
 Implemented separate predeclared24outcome/4condition comparison: copy,anchor,CMreplay,exactanchor-support initialization,projectedanchor identity,projectedinitialization. Past-onlyarchivedreplay,forecast-onlyconstraints,strictadaptive100/support/postcast1e-5/covarianceguard. Tested fill/mask/correctedpositives/protectedregions/identity/feasibleprojection. Registereduniqueharnesslaunch,2threads,Dcache. Cached Jevselection retained confidence.2; noadditionalroutineAPIcalls. Parentfailurepreserved; noofficialupload.
+
+## 2026-10-01 Anchor-support batch complete: feasible but no headline gain
+
+All24valid, archive/identityhashes exact; projected4/5/5/5steps, postcastmargins/support/protection/covguard pass. Bothnewcandidates belowanchor all4; projectedvsinit improves3of4. Allraw4/skills4 retained,ledger refreshed,2newrewards each-29,current-540 (notbenchmark). Four150word specialists Problem/Solution/Validation completed oncompactnewpackets. New Jevsynthesis1859bytes843input64output selected fixedquarteramplitude confidence.94. Singlebeta.25 experiment separatelypredeclared, reuseddevelopment/selectionlimitations explicit; nofutureexpressionfit,noofficialupload/improvedexport. Packetformat includescapture/role2actualpolicy,24rowDE4927bytes; nomeasuredcredit-savingclaim.

@@ -1,5 +1,5 @@
 {
-  "records": 2959,
+  "records": 2983,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -70,6 +70,11 @@
       "path": "private/challenge_identity_01/report.json",
       "sha256": "8dcc87f084eb86cff5433c2a131a8d0819b6e9954ce67a026636cac5facaad39",
       "outcomes_indexed": 27
+    },
+    {
+      "path": "private/cm_anchor_support_projection_fullpanel_01/report.json",
+      "sha256": "36ea00923e346b70a531d1181fbe15fe0361e12c73adc6b0096130c829327a08",
+      "outcomes_indexed": 24
     },
     {
       "path": "private/cm_capture_calibration_fullpanel_01/report.json",
@@ -864,5 +869,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "6086d45598299cbc375388633e2d3bbd211610bb1443511edd98e5008e9d6a18"
+  "ledger_sha256": "122f61e928e0671b750e977f20a0b31ec59b95a380b200c45f67028ba7d450d3"
 }
