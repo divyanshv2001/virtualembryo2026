@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T05:08:53.256290+00:00",
+  "updated_utc": "2026-10-01T07:34:15.148757+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -31,7 +31,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Audit forecast transform fidelity using frozen donor/fit inputs only: intended source gene-delta vectors versus realized means after nonnegative clipping and mapped log-mass repair. Quantify sign/rank distortion and reference-magnitude component; compare donor logsum with expm1 normalized-count sums under source normalization_target10000. Regenerate hashes exactly without target fitting. If log-space mass constraint is inconsistent with normalized counts, declare a matched count-space restoration ablation with same backoffs/guards/scorer/controls before scoring. No more slope banks or target-driven tuning before diagnosis.",
+  "next_experiment": "Declare and run matched recent-slope transform full-panel ablation: persistence, archived anchor, old mapped-log repair, clip-only, and mapped-expm1 count repair on cutoffs8/8.25 one-day horizons. Freeze donor-only backoffs [.25,.125,.0625,0], same mean<=.5/covariance<=.4 guards, unchanged32285-gene scorer/calibration and seed/splits. Declare transform-specific mass checks (log/count relative error<=1e-5; clip-only reports mass change without preservation). Select recent slope from donor-only audit; count repair worsened global/lineage sign fidelity. Freeze forecasts before target reads. This is reused-development evidence, not readiness validation.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1584,5 +1584,18 @@
     },
     "passing_candidates": [],
     "score_ledger_records": 2905
+  },
+  "forecast_transform_fidelity_audit": {
+    "status": "completed_donor_only",
+    "report": "FORECAST_TRANSFORM_FIDELITY_RESULTS.json",
+    "report_sha256": "3d82c762b0c0b3e1bbdc5c73727b0e940a61b14a586f773c4103193f38afcadb",
+    "plan_sha256": "fe04b47fc387b4a52ec9c5185b7240d57458cc5d3241d95f9fd3afdc97ab20cd",
+    "outcomes": 18,
+    "exact_prior_forecasts_replayed": 6,
+    "target_data_read": false,
+    "full_panel_scores": 0,
+    "reward_delta": 0,
+    "setup_failure_preserved": "private/forecast_transform_fidelity_setup_failed_01",
+    "next_action": "Declare and run matched recent-slope transform full-panel ablation: persistence, archived anchor, old mapped-log repair, clip-only, and mapped-expm1 count repair on cutoffs8/8.25 one-day horizons. Freeze donor-only backoffs [.25,.125,.0625,0], same mean<=.5/covariance<=.4 guards, unchanged32285-gene scorer/calibration and seed/splits. Declare transform-specific mass checks (log/count relative error<=1e-5; clip-only reports mass change without preservation). Select recent slope from donor-only audit; count repair worsened global/lineage sign fidelity. Freeze forecasts before target reads. This is reused-development evidence, not readiness validation."
   }
 }

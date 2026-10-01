@@ -274,3 +274,34 @@ Frozen10scores/2folds8->9,8.25->9.25, seed20260928,1500donors/1000truth+1000ceil
 
 ### 2026-10-01T07:18:42.048847+00:00 — nonzero full-panel slope backoff batch rejected
 Frozen past-only .25/.125/.0625/0 backoffs, thresholds unchangedmean.5/covariance.4/mass1e-5; all6formula/fold forecasts accept.125, no persistencefallback. ExactcontrolforecastSHA/all4rawmetrics/headline replayverified. Full32285/2one-dayfold/10eval:copy50/50,anchor49.700274/51.177247,recent44.213124/51.371901,global48.110160/47.070462,lineage47.803839/46.970236.0passing bothfold4skill/scoregate. Perattemptalpha/guard/raw4/skill4/calibration/fit/splits/hashes/genuineevents retained; metriccache reusescopyfloor, identicalhashesdeduplicated perpanel; Dtemporaryforecastsclose, sampledworkerRAM1.82GB. Ledger2905/0errors, separate reward-276, official52.16unchanged. No newJev/upload. Nextdonor-only transformfidelity/normalizationaudit:clipping+logmassrepair maydistortintendedgenechanges; comparephysicalexpm1normalizedcountmass before declaring matchedcountspace ablation. No targettuning or formula gain claimed.
+
+## 2026-10-01T07:34:15.148757+00:00 — forecast transform fidelity audit
+
+Completed18 donor/past-fit-only transform diagnostics; six old log-repair prediction hashes replayed exactly. No target reads, model fits, full-panel scores or reward changes. Source log1p normalization targets10,000 implied counts; mapped donor medians are approximately9,901 because mapping omits genes. Preserving sum(log1p) does not preserve implied count totals. Old repair changes mapped count mass by up to6.07%. Count repair improves recent-slope fidelity but worsens some global/lineage ranks/signs; no score improvement is certified. All18 mean/covariance guards pass at.125.
+
+| Cutoff | Formula | Transform | Rank rho | Sign agreement | Relative delta L2 error | Max count mass error |
+|---|---|---|---:|---:|---:|---:|
+| 8.0 | slope_recent | nonnegative_clip_only | 0.9844 | 0.9217 | 0.2791 | 0.04588164 |
+| 8.0 | slope_recent | mapped_log_sum_repair | 0.8928 | 0.8751 | 0.3715 | 0.06071527 |
+| 8.0 | slope_recent | mapped_expm1_sum_repair | 0.9423 | 0.8975 | 0.2782 | 0.00000003 |
+| 8.0 | slope_global | nonnegative_clip_only | 0.9861 | 0.9195 | 0.2881 | 0.04313130 |
+| 8.0 | slope_global | mapped_log_sum_repair | 0.9365 | 0.8949 | 0.3097 | 0.02502728 |
+| 8.0 | slope_global | mapped_expm1_sum_repair | 0.9213 | 0.8435 | 0.2859 | 0.00000003 |
+| 8.0 | slope_lineage1000 | nonnegative_clip_only | 0.9860 | 0.9195 | 0.2885 | 0.04637047 |
+| 8.0 | slope_lineage1000 | mapped_log_sum_repair | 0.9364 | 0.8947 | 0.3074 | 0.02758223 |
+| 8.0 | slope_lineage1000 | mapped_expm1_sum_repair | 0.9153 | 0.8393 | 0.2870 | 0.00000003 |
+| 8.25 | slope_recent | nonnegative_clip_only | 0.9884 | 0.9351 | 0.2701 | 0.01990496 |
+| 8.25 | slope_recent | mapped_log_sum_repair | 0.9602 | 0.9180 | 0.2764 | 0.04425126 |
+| 8.25 | slope_recent | mapped_expm1_sum_repair | 0.9741 | 0.9199 | 0.2653 | 0.00000002 |
+| 8.25 | slope_global | nonnegative_clip_only | 0.9857 | 0.9227 | 0.3127 | 0.05522592 |
+| 8.25 | slope_global | mapped_log_sum_repair | 0.9542 | 0.9060 | 0.3155 | 0.03444915 |
+| 8.25 | slope_global | mapped_expm1_sum_repair | 0.8685 | 0.7774 | 0.3152 | 0.00000003 |
+| 8.25 | slope_lineage1000 | nonnegative_clip_only | 0.9858 | 0.9228 | 0.3155 | 0.04956722 |
+| 8.25 | slope_lineage1000 | mapped_log_sum_repair | 0.9495 | 0.9041 | 0.3258 | 0.02754303 |
+| 8.25 | slope_lineage1000 | mapped_expm1_sum_repair | 0.8791 | 0.7861 | 0.3176 | 0.00000003 |
+
+Initial setup failed with ValueError from a dummy tuple-unpacking loop before plan creation. Removed the loop; original failed source/log retained in private/forecast_transform_fidelity_setup_failed_01. Successful plan/source/events/report retained separately in private/forecast_transform_fidelity_01.
+
+Declare and run matched recent-slope transform full-panel ablation: persistence, archived anchor, old mapped-log repair, clip-only, and mapped-expm1 count repair on cutoffs8/8.25 one-day horizons. Freeze donor-only backoffs [.25,.125,.0625,0], same mean<=.5/covariance<=.4 guards, unchanged32285-gene scorer/calibration and seed/splits. Declare transform-specific mass checks (log/count relative error<=1e-5; clip-only reports mass change without preservation). Select recent slope from donor-only audit; count repair worsened global/lineage sign fidelity. Freeze forecasts before target reads. This is reused-development evidence, not readiness validation.
+
+Jev calls0 for this deterministic audit; separate reward remains−276; official best52.16 and >72 readiness gates remain unmet.

@@ -1,16 +1,16 @@
 {
-  "updated_utc": "2026-10-01T07:18:42.185401+00:00",
+  "updated_utc": "2026-10-01T07:34:15.395269+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "2c3f05ce9546a42417660d55c61e08117fa2a66065302b539ca042780b98a06d",
+    "LOCAL_OPTIMIZATION_STATE.json": "84a434866abdc09cf2446054b4f5ceb451e62e5608b9fc79bcd8c966070cfb03",
     "LOCAL_OPTIMIZATION_PROMPT.md": "dc34e90fa3519a22843971c550774ced585b0bab7dea86ab4fc00c5aee806f38",
-    "METRIC_RESEARCH_QUEUE.json": "3fef666c4fca9103bcb0278625ead2a415c9d9b760c140a063fdc157f13ed305",
+    "METRIC_RESEARCH_QUEUE.json": "8448192779634de4207a2efc251ed2e4a72114d245a9c45f1c2bed33db08bd73",
     "METRIC_CRITIQUE_POLICY.json": "025beff88fbd06be4f25b4643456853ca5f0c7ee68a66212ab0e1281bcd9a8e5",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [],
-  "next_experiment": "Audit forecast transform fidelity using frozen donor/fit inputs only: intended source gene-delta vectors versus realized means after nonnegative clipping and mapped log-mass repair. Quantify sign/rank distortion and reference-magnitude component; compare donor logsum with expm1 normalized-count sums under source normalization_target10000. Regenerate hashes exactly without target fitting. If log-space mass constraint is inconsistent with normalized counts, declare a matched count-space restoration ablation with same backoffs/guards/scorer/controls before scoring. No more slope banks or target-driven tuning before diagnosis.",
+  "next_experiment": "Declare and run matched recent-slope transform full-panel ablation: persistence, archived anchor, old mapped-log repair, clip-only, and mapped-expm1 count repair on cutoffs8/8.25 one-day horizons. Freeze donor-only backoffs [.25,.125,.0625,0], same mean<=.5/covariance<=.4 guards, unchanged32285-gene scorer/calibration and seed/splits. Declare transform-specific mass checks (log/count relative error<=1e-5; clip-only reports mass change without preservation). Select recent slope from donor-only audit; count repair worsened global/lineage sign fidelity. Freeze forecasts before target reads. This is reused-development evidence, not readiness validation.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",

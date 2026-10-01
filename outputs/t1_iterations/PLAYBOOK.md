@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-01T07:18:42.185401+00:00
+Updated: 2026-10-01T07:34:15.395269+00:00
 
 Run `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_playbook.py` first. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -8,7 +8,7 @@ Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction':
 
 Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Audit forecast transform fidelity using frozen donor/fit inputs only: intended source gene-delta vectors versus realized means after nonnegative clipping and mapped log-mass repair. Quantify sign/rank distortion and reference-magnitude component; compare donor logsum with expm1 normalized-count sums under source normalization_target10000. Regenerate hashes exactly without target fitting. If log-space mass constraint is inconsistent with normalized counts, declare a matched count-space restoration ablation with same backoffs/guards/scorer/controls before scoring. No more slope banks or target-driven tuning before diagnosis.
+Next: Declare and run matched recent-slope transform full-panel ablation: persistence, archived anchor, old mapped-log repair, clip-only, and mapped-expm1 count repair on cutoffs8/8.25 one-day horizons. Freeze donor-only backoffs [.25,.125,.0625,0], same mean<=.5/covariance<=.4 guards, unchanged32285-gene scorer/calibration and seed/splits. Declare transform-specific mass checks (log/count relative error<=1e-5; clip-only reports mass change without preservation). Select recent slope from donor-only audit; count repair worsened global/lineage sign fidelity. Freeze forecasts before target reads. This is reused-development evidence, not readiness validation.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in outputs\t1_submissions\formula_progress_20260930_01\official_result.json. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 
