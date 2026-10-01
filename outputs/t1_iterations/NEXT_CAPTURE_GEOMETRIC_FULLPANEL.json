@@ -1,0 +1,15 @@
+{
+  "status": "predeclared_not_started",
+  "seed": 20260928,
+  "folds": [[8.0, 8.25], [8.25, 8.5]],
+  "cutoffs": [8.0, 8.25],
+  "source_report_sha256": "5cbf328178b043857f0af95e0f831b5f7196c04a790db466a37e621a748cbe1a",
+  "boundary_report_sha256": "0f272f4660ee03d46318b2d1a3f3fd70a711b6c6912ad29fa2be2cf73154f947",
+  "preflight_report_sha256": "f0fc2486757ec809b717d3aa7dc951c7fc0416a51467de187abb87e680651f73",
+  "candidates": ["copy", "anchor_unshrunk", "capture_OLS", "capture_recent", "capture_OLS_decay_support", "capture_recent_decay_support", "capture_geometric_decay"],
+  "formula": "Unchanged capture_geometric_rate.py, fixed full/allmandatory-omission same-sign strictly decelerating d2*(d2/d1), zero fallback; matched-mask OLS/recent, unmasked OLS/recent, donorcopy and archived incumbent. Exact14 preflight forecast replays required. No additional shrinkage or aggregate gate.",
+  "evaluation": "All14 forecasts from both folds frozen before any future expression read. Unchanged full32285gene Panel scorer, seed20260928 target2000 sampled rows split1000truth/1000ceiling; copy/anchor scores, raw4,skills4,calibration/splits exact prior scored replay4. Four raw metrics/skills and all invalid/failure outcomes retained. Guards checked before scoring. Nonnegative finite guard-failing controls may be scored ONLY as invalid diagnostic controls; not eligible for reward or promotion. Candidate geometric requires bothfold preflight guards and exact forecasts.",
+  "reward": "Only predeclared geometric candidate versus archived anchor eligible for separate future-only +1/-10 metric reward; invalid/proxy controls no reward. Never alters headline scorer. Promotion requires geometric score>copy/anchor eachfold, no metric deterioration versus anchor and all calibration/guards valid. Comparisons with invalid controls are diagnostic. Passing development batch does not satisfy original >72 mean/lower-tail64replicate and temporal gate.",
+  "limitations": "Historical folds reused development, untouched evaluation/independent embryo identity unverified. Captures not embryos. Near-copy later energy and conditional support require disclosure; smaller shifts do not imply accuracy. Fullpanel nonspatialCSS not encoder covariance. Amplitude-matched control remains unperformed declared follow-on; no claim damping isolated beyond same-mask controls.",
+  "resources": "D-only temporary forecast disk cache, consume after scoring, twoBLASthreads, one forecast in RAM;16GBRAM. Retain private originals/provenance/events and small evidence. No official upload."
+}

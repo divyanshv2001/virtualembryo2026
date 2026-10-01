@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T20:49:35.533587+00:00",
+  "updated_utc": "2026-10-01T21:06:23.412128+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,11 +30,18 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Run registered capture_geometric_rate preflight: fixed d2*(d2/d1) on same-sign strictly decelerating full/all-required-omission capture means. Matched eligibility-mask OLS/recent plus unmasked OLS/recent, copy/incumbent; exact prior OLS/control replays. Frozen decoder/guards, no future expression/scorer/reward. Family/readiness open.",
+  "next_experiment": "Run/finish registered capture_geometric_fullpanel: frozen fixed geometric/support/decoder, exact14preflight replays before all future reads; unchanged full32285gene scoring/copy-anchor calibration. Invalid matched controls diagnostic only; reward only guard-valid geometric. Reused development folds, no readiness/official claim. After completed batch four critics and score-ledger refresh.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
+  "active_jobs": [
+    {
+      "experiment": "capture_geometric_fullpanel",
+      "pid": 7688,
+      "status": "running",
+      "report": "CAPTURE_GEOMETRIC_RATE_FULLPANEL_RESULTS.json"
+    }
+  ],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -1145,13 +1152,13 @@
     "direct_nearest_source_transfer_allowed": false
   },
   "jev_latest": {
-    "route": "JEV_OLS_BOUNDARY_ROUTE_20261002_01.json",
+    "record": "JEV_GEOMETRIC_PREFLIGHT_ROUTE_20261002_01.json",
     "usage": {
-      "input_tokens": 873,
-      "output_tokens": 74
+      "input_tokens": 843,
+      "output_tokens": 70
     },
-    "choice": "geometric_rate_preflight",
-    "confidence": 0.38
+    "choice": "fixed_fullpanel_development",
+    "confidence": 0.98
   },
   "count_reliability_job": {
     "status": "completed_not_promoted",
@@ -1297,13 +1304,13 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_OLS_BOUNDARY_ROUTE_20261002_01.json",
-    "choice": "geometric_rate_preflight",
-    "confidence": 0.38,
+    "record": "JEV_GEOMETRIC_PREFLIGHT_ROUTE_20261002_01.json",
     "usage": {
-      "input_tokens": 873,
-      "output_tokens": 74
-    }
+      "input_tokens": 843,
+      "output_tokens": 70
+    },
+    "choice": "fixed_fullpanel_development",
+    "confidence": 0.98
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -2289,6 +2296,24 @@
       "reused_contexts": 4,
       "resource_limitation": "Previously observed agent thread limit; existing4 specialists reviewed new compact packets",
       "review_corrections": "Preclip negatives invalid diagnostics; guards upstream. Prior tanh bank checked. Fixed universal rule; matched support controls, donor copy fallback, no causal gene assertion or accuracy claim."
+    },
+    "capture_geometric_rate_preflight_01": {
+      "status": "completed",
+      "report_sha256": "f0fc2486757ec809b717d3aa7dc951c7fc0416a51467de187abb87e680651f73",
+      "review": "METRIC_CRITIQUES_GEOMETRIC_PREFLIGHT_20261002.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": false,
+      "reward_delta": 0,
+      "fresh_contexts": 2,
+      "reused_contexts": 2,
+      "resource_limitation": "Old MMD followup observed thread limit; fresh agents succeeded after earlier critics completed",
+      "review_corrections": "Public/private hashes separately verified; guards not accuracy; no untouched claim; amplitude matched followon not performed; invalid controls diagnostic not eligible."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -2675,10 +2700,23 @@
     "conclusion": "Early requested shifts already violate mean/covariance guards; clipping and repair attenuate. Hbb-bh1 drives global mean, not a causal or gene-specific exclusion claim."
   },
   "capture_geometric_rate_job": {
-    "status": "running",
+    "status": "completed",
     "spec": "NEXT_CAPTURE_GEOMETRIC_RATE_PREFLIGHT.json",
     "pid": 12088,
     "experiment": "capture_geometric_rate",
-    "report": "CAPTURE_GEOMETRIC_RATE_PREFLIGHT_RESULTS.json"
+    "report": "CAPTURE_GEOMETRIC_RATE_PREFLIGHT_RESULTS.json",
+    "report_sha256": "f0fc2486757ec809b717d3aa7dc951c7fc0416a51467de187abb87e680651f73",
+    "passing_both_fold_new_candidates": [
+      "capture_geometric_decay"
+    ],
+    "target_expression_read": false,
+    "reward_delta": 0
+  },
+  "capture_geometric_fullpanel_job": {
+    "status": "running",
+    "spec": "NEXT_CAPTURE_GEOMETRIC_FULLPANEL.json",
+    "report": "CAPTURE_GEOMETRIC_RATE_FULLPANEL_RESULTS.json",
+    "pid": 7688,
+    "experiment": "capture_geometric_fullpanel"
   }
 }

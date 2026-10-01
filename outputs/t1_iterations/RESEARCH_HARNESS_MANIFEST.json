@@ -175,6 +175,11 @@
       "script": "capture_geometric_rate_preflight.py",
       "run": "private/capture_geometric_rate_preflight_01",
       "report": "CAPTURE_GEOMETRIC_RATE_PREFLIGHT_RESULTS.json"
+    },
+    "capture_geometric_fullpanel": {
+      "script": "capture_geometric_rate_fullpanel.py",
+      "run": "private/capture_geometric_rate_fullpanel_01",
+      "report": "CAPTURE_GEOMETRIC_RATE_FULLPANEL_RESULTS.json"
     }
   }
 }
