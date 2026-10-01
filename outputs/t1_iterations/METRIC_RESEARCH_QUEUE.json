@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T07:34:15.148757+00:00",
+  "updated_utc": "2026-10-01T07:38:08.902587+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -6044,6 +6044,27 @@
       "report_sha256": "3d82c762b0c0b3e1bbdc5c73727b0e940a61b14a586f773c4103193f38afcadb",
       "declared_experiment_and_result": "18 transform diagnostics; six archived log-repair forecast hashes exactly replayed. Log repair changes mapped implied counts by up to6.07%; count repair improves recent-slope fidelity but worsens global/lineage sign fidelity. No targets read or benchmark scores generated.",
       "next_action": "Declare and run matched recent-slope transform full-panel ablation: persistence, archived anchor, old mapped-log repair, clip-only, and mapped-expm1 count repair on cutoffs8/8.25 one-day horizons. Freeze donor-only backoffs [.25,.125,.0625,0], same mean<=.5/covariance<=.4 guards, unchanged32285-gene scorer/calibration and seed/splits. Declare transform-specific mass checks (log/count relative error<=1e-5; clip-only reports mass change without preservation). Select recent slope from donor-only audit; count repair worsened global/lineage sign fidelity. Freeze forecasts before target reads. This is reused-development evidence, not readiness validation."
+    },
+    {
+      "id": "source_slope_transform_ablation",
+      "status": "running",
+      "research_family_exhausted": false,
+      "plan": "SOURCE_SLOPE_TRANSFORM_PLAN.json",
+      "private_run": "private/source_slope_transform_01",
+      "planned_full_panel_scores": 10,
+      "candidates": [
+        "copy",
+        "anchor_unshrunk",
+        "slope_recent",
+        "slope_clip",
+        "slope_count"
+      ],
+      "scope": "Two reused-development one-day folds; forecasts frozen before target read; same seed/splits/scorer/calibration. Donor-only guards and transform-specific mass validity. No target tuning.",
+      "reward_candidates": [
+        "slope_clip",
+        "slope_count"
+      ],
+      "next_action": "Inspect actual source_slope_transform_01 process/events first; do not duplicate. Finish the frozen10-score matched recent-slope clip/log/count transform ablation. On completion diagnose per-fold four raw metrics/skills, guard-selected backoffs, hashes, matched controls and separate new-candidate rewards; verify refreshed score ledger. Retain failures and logs. Update compact journal/playbook before selecting next viable path. No official upload; >72 readiness remains unmet."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",
