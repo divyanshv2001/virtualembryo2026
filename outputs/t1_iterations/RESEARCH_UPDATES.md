@@ -608,3 +608,7 @@ Fixedrank2capturebalancedSVD/OLS withfullomissionrefits implemented,testedandrun
 ## 2026-10-01T20:11:47.248986+00:00 — matched module/OLS stability and endpoint identity
 
 11fullprojected/OLS arrays andsupportedomittedprojected/stablemasks exactreplay fromfrozenmeans. Projectedmincosineworse6/7,stableenergyfractionworse5/7; no generalprojectionstabilityadvantage, forecastaccuracyunmeasured. Equalstage3stageOLS contrast[-.5,0,.5] verifiedmaxerror1.73e-15; middleomissionstabilitynot temporalconsistency. Fourreusedcriticcontexts recorded. Jev978in/54out selectedfixedOLS/omissiongate/adjacentintervalgate/rank2matcheddecoderpreflight samecoverage, no rank/strengthgrid. Specdeclarednotrun. Noexpression/newmetrics/reward;−848 unchanged. Families/readinessopen.
+
+## 2026-10-01T20:25:11.698102+00:00 — OLS gate decoder guard failure
+
+FourfixedOLS/omission/curvature/rank2methods samecompletecoverage. Allfailcut8 mean(.742–.784>.5);threecovariancefail,curvature.382passes. Allpasscut8.25mean.375–.422/cov.293–.337. Mass<=6.4e-8,finite/protected/fallbackpass;copy/incumbent exacthashreplay. Clippingcurvaturemuchlower butnoaccuracyclaim. Fourreusedcritics recorded; Jev1028in/59out chose fixedstage/boundaryattribution beforeanynewdecoder. NEXT_CAPTURE_OLS_DECODER_BOUNDARY_AUDIT.json declarednotstarted. No targetexpression/scorer/reward orguard/strengthretuning;−848/ledgerunchanged. Priorinfeasiblejointsolverfailurespreserved. Families/readinessopen.

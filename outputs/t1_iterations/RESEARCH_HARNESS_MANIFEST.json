@@ -160,6 +160,11 @@
       "script": "matched_module_ols_omission_audit.py",
       "run": "private/matched_capture_module_OLS_omission_audit_01",
       "report": "MATCHED_MODULE_OLS_OMISSION_AUDIT_RESULTS.json"
+    },
+    "capture_OLS_gate_decoder": {
+      "script": "capture_ols_gate_decoder_preflight.py",
+      "run": "private/capture_OLS_gate_decoder_preflight_01",
+      "report": "CAPTURE_OLS_GATE_DECODER_PREFLIGHT_RESULTS.json"
     }
   }
 }

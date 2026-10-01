@@ -1,0 +1,39 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "741bf3b3fd8aceec818438274dae4671a933f6abf564f6bec550c66f636cc95c",
+  "attempts": 1,
+  "payload_bytes": 2126,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "purpose": "Failure diagnosis choice after frozen OLSgateddecoder preflight; no targetgrid.",
+      "evidence": "4fixednewmethods sharecompletecasecoverage. Cut8ALLfailmaxglobalmeanchange.742-.784>.5; OLS/omission/rank2 encoderfeaturecovariance.425/.425/.410>.4,curvature.382passes. Cut8.25ALLguardspass mean.375-.422/cov.293-.337. Countmasserror<=6.4e-8,finite/protected/fallbackpass. Copy/incumbenthashreplay. No futureexpression/scorer/reward.",
+      "clipping": "EarlyentriesOLS7.105M/omission4.120M/curvature1.197M/rank2 7.229M;later6.842/4.169/.887/6.702M. Countsdo notdiagnosegene-sign reversal orcausal failure. Covguardonlyencoderfeatures notfullpanelCSS.",
+      "critics": "All4favor stagedtrace ofrequestedlogshift->clip->countmassrepair, means/signs/contrasts bylineage/boundary. DEsuggestsmultiplicative decoder onlyiffailureattributable; direction suggests exactgene-mean/massconstraints butpriorfamilyboundedsolvers alreadyinfeasible/nearanchor. Do notrepeatknownconstraint solver.",
+      "constraints": "D16GB2threads; samefrozendonors/shifts/hashes, no targetexpression/rank/strengthgrid, guards unchanged. Rawpreclipnegative logvalues areinvalidforecast; diagnostics onlynever score. Capturesnotindependentembryos. >72/64replicate/temporalgatesunmet; nofamilyexhaustion."
+    },
+    "questions": {
+      "next_step": {
+        "type": "choice",
+        "instructions": "Select informative bounded failureaudit beforeanynewdecoder.",
+        "criteria": {
+          "staged_mean_boundary_audit": "Replay12forecasts exacthashes. Traceprecliprawshift,afterclip,aftermassrepair. Reportglobal/lineagegene mean changes, guardcrossings, requested-realizedsign flips, topguarddrivinggenenames andpastcapturemean patterns. Fixedboundaryzero/positive strata andcovguardfeaturechanges; no fullpanelmetrics. Invalidpreclipvalues remain labeleddiagnostic. Rejectcausaldecoderclaimifguardalreadyfailsupstream.",
+          "immediate_multiplicative": "Newpositivecountmultiplicative method beforefailureoriginidentified; mayrepeatzero-blockedformula andmean/massconfounds.",
+          "repeat_exact_mean_mass_solver": "Reopenalreadyinfeasible/nearanchorjointsolverswithoutnewfeasibilityevidence; avoid."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 1028,
+    "output_tokens": 59
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "next_step": {
+      "choice": "staged_mean_boundary_audit",
+      "confidence": 1.0
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}

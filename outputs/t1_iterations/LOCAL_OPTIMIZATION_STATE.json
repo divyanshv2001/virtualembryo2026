@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T20:11:47.248986+00:00",
+  "updated_utc": "2026-10-01T20:25:11.698102+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement/run capture_OLS_gate_decoder_preflight_01: fromfrozenpastcapturemeans reconstruct fixedungatedOLS, allomissionOLSsigngate, adjacent-intervaltimeconsistentOLSgate, rank2projection. Identicalcompletecasecoverage3lineagescut8/4cut8.25; unsupportedcopyfallback. Fixedonequarter-day slope donorlogshift, clip/countmassrepair; copy/incumbentexactcontrols. Auditmean/mass/covariance/finite/protected/fallback/clipping/fidelity, no futureexpression/newscore/reward, no rank/strengthgrid orguardretuning. Separatelydeclarefullpanelonlyifviable. Families/readinessopen.",
+  "next_experiment": "Implement/run capture_OLS_decoder_boundary_audit_01: exact12currentforecastreplays past-only, trace requestedrawlogshift/preclip(negativeinvaliddiagnostic), afterclip, aftercountmassrepair. Global/lineagegene mean guardcrossings/signs/energy, top10guardgenes andfrozenpastcapturemeanpatterns, fixeddonorzero/positive/clipped-boundary strata andcovarianceguardfeatures. Separateupstreamshift fromclip/repairfailure; nofullpanelmetric/futureexpr/reward/rank/strengthgrid. Do notrepeatpriorinfeasibleexactmean/masssolver. Families/readinessopen.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1297,12 +1297,12 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_MATCHED_MODULE_ROUTE_20261002_01.json",
+    "record": "JEV_OLS_DECODER_FAILURE_ROUTE_20261002_01.json",
     "usage": {
-      "input_tokens": 978,
-      "output_tokens": 54
+      "input_tokens": 1028,
+      "output_tokens": 59
     },
-    "choice": "matched_gate_decoder_preflight",
+    "choice": "staged_mean_boundary_audit",
     "confidence": 1.0
   },
   "external_qc_audit": {
@@ -2253,6 +2253,24 @@
       "reused_contexts": 4,
       "resource_limitation": "Observedthreadlimit existing4specialists reviewednewpackets",
       "review_corrections": "EqualstageOLS ignoresmiddlemeans directly, verified1.73e-15; sharedmiddlenoise notcausal; donorcopyfallback frozen ratherthanmixedanchor; untouchedsplitunverified."
+    },
+    "capture_OLS_gate_decoder_preflight_01": {
+      "status": "completed",
+      "report_sha256": "8d2dbba3ed81cbca4abc748a7a11de89d9ad8b146382f9f8705519d3a7736afd",
+      "review": "METRIC_CRITIQUES_OLS_GATE_DECODER_20261002.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": false,
+      "reward_delta": 0,
+      "fresh_contexts": 0,
+      "reused_contexts": 4,
+      "resource_limitation": "Observedthreadlimit;existing4specialists reviewednewpackets",
+      "review_corrections": "Clippingcountsnotcause/signproof, priorjointconstraintsinfeasibilitynotignored, invalidpreclipneverscore, pooledversuswithin-lineagecovariance distinguished."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -2615,6 +2633,18 @@
     "complete_cases": 7,
     "projection_stable_energy_worse_cases": 5,
     "projection_minimum_cosine_worse_cases": 6,
+    "reward_delta": 0
+  },
+  "capture_OLS_gate_decoder_job": {
+    "status": "completed",
+    "pid": 15116,
+    "report": "CAPTURE_OLS_GATE_DECODER_PREFLIGHT_RESULTS.json",
+    "spec": "NEXT_CAPTURE_OLS_GATE_DECODER_PREFLIGHT.json",
+    "report_sha256": "8d2dbba3ed81cbca4abc748a7a11de89d9ad8b146382f9f8705519d3a7736afd",
+    "passing_both_fold_new_candidates": [],
+    "all_four_fail_early_mean_guard": true,
+    "all_four_pass_later_guards": true,
+    "target_expression_read": false,
     "reward_delta": 0
   }
 }
