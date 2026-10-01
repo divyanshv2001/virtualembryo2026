@@ -2890,5 +2890,17 @@
     "remaining_exact_count": null,
     "reason": "Queueentries include testedmethods and openfamilies, not125pendingexperiments; future variants depend on diagnostic evidence",
     "next_spec": "NEXT_PRODUCTION_COVERAGE_AUDIT.json"
+  },
+  "literature_priority_20261002": {
+    "review": "LITERATURE_PRIORITY_20261002.md",
+    "status": "review_complete_no_experiment_launched",
+    "first": "production_coverage_audit",
+    "prospective_mechanism": "soft_ot_flow_matching",
+    "eligibility": "past-only scratch adaptation; no pretrained weights approved",
+    "jev_usage": {
+      "input_tokens": 926,
+      "output_tokens": 64
+    },
+    "route": "JEV_LITERATURE_PRIORITY_ROUTE_20261002_01.json"
   }
 }

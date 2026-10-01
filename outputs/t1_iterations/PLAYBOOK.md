@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-01T22:01:32.404286+00:00
+Updated: 2026-10-01T22:09:43.236863+00:00
 
 Run `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_playbook.py` first. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
