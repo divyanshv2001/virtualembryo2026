@@ -31,7 +31,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Run cached-only64seeded within-stage/broad-region cell-bootstrap and leave-one-cell-out robustness for matched external CM-like rank signal (primaryrho.05873). Preserve each diagnostic replicate and all failures; report conditional cell uncertainty, never independent embryo uncertainty. Freeze positive lower-tail/leave-one-out sign gate before evaluation; externalE9.5 remains diagnostic only, no earlier validation training. These64diagnostic replicates are not the >72fullpanel readiness gate. If fragile return to source-only saturating-time proxy; no more external acquisition.",
+  "next_experiment": "Declare bounded external-E8.5-only static gene-program guidance proxy: freeze externalE8.5 eligible cell IDs and gene reliability/marker guidance, then fit source-only temporal slopes at cutoffs>=8.5 with matched shrinkage/zero/shuffled guidance controls. No externalE9.5 expression-derived trends, directions or magnitudes enter validation fits. Reused source temporal folds must be labeled development, not independent embryo validation. Screen rank/direction before full-panel scoring; preserve >72gate. One compact cached Jev advisory is permitted if new estimator choice is uncertain.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1327,7 +1327,8 @@
     "acquired_cohort_cells": 24,
     "prospective_qc_passing_cells": 18,
     "latest_compatibility_report": "GSE76118_EARLY_COMPATIBILITY_RESULTS.json",
-    "latest_matched_report": "GSE76118_MATCHED_LINEAGE_RESULTS.json"
+    "latest_matched_report": "GSE76118_MATCHED_LINEAGE_RESULTS.json",
+    "latest_robustness_report": "GSE76118_MATCHED_ROBUSTNESS_RESULTS.json"
   },
   "external_schema_audit": {
     "status": "completed_training_not_ready",
@@ -1413,6 +1414,20 @@
       "9.5": 111
     },
     "screen_gate_passed": true,
+    "predictive_transfer_validated": false,
+    "models_fit": 0,
+    "full_panel_scores": 0
+  },
+  "external_matched_robustness": {
+    "report": "GSE76118_MATCHED_ROBUSTNESS_RESULTS.json",
+    "report_sha256": "d366c8d26c4c52b00be8558d604671dad8ab37f0231f3968f65ae106983bc518",
+    "replicates": 64,
+    "leave_one_out_cells": 14,
+    "bootstrap_mean_rho": 0.051726180257169505,
+    "bootstrap_lower_tail_rho": 0.02358102733532534,
+    "leave_one_out_min_rho": 0.04844443691125151,
+    "conditional_stability_passed": true,
+    "independent_embryo_validation": false,
     "predictive_transfer_validated": false,
     "models_fit": 0,
     "full_panel_scores": 0
