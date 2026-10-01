@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T14:57:50.639188+00:00",
+  "updated_utc": "2026-10-01T15:14:22.634827+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -6270,10 +6270,18 @@
     },
     {
       "id": "isolated_scope_fullpanel",
-      "status": "declared",
+      "status": "completed_negative_repaired",
       "specification": "NEXT_ISOLATED_SCOPE_EXPERIMENT.json",
-      "next_action": "Launch registered isolated_scope_fullpanel: six forecasts2captures12scores, frozenmodels/no retrain, unchangedscorer, no future tuning. Reusedtargets diagnostic only; critics/Jev/ledger afterbatch.",
-      "research_family_exhausted": false
+      "next_action": "Preflight and declare past-only CM-conditional covariance sensitivity audit: cohort support/split eligibility, past-only basis fit, Ledoit-Wolf/Bures versus existing pooled OAS/coloring and identity/shuffled covariance. No future tuning/spatialmodel or scoreclaim. Do not rerun isolatedtangent grid.",
+      "research_family_exhausted": false,
+      "report_sha256": "3f1198f50f4b5fc16e5fd0ad41099c9f976039c4c31fc21de55e7ce64eb77258"
+    },
+    {
+      "id": "cm_conditional_covariance_sensitivity",
+      "status": "resource_preflight_pending",
+      "next_action": "Preflight and declare past-only CM-conditional covariance sensitivity audit: cohort support/split eligibility, past-only basis fit, Ledoit-Wolf/Bures versus existing pooled OAS/coloring and identity/shuffled covariance. No future tuning/spatialmodel or scoreclaim. Do not rerun isolatedtangent grid.",
+      "research_family_exhausted": false,
+      "limitations": "PriorpooledOAS/coloring isimplemented; conditionalBures comparison isboundedextension, not newwholefamily. No spatialinputs."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",

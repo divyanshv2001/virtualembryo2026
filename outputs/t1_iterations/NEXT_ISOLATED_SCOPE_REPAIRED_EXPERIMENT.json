@@ -1,0 +1,44 @@
+{
+  "run": "isolated_scope_fullpanel_02",
+  "seed": 20260928,
+  "declared_utc": "2026-10-01T15:02:16.159775+00:00",
+  "parent_report_sha256": "280c2ce6843a2bba1920bdc6d3920699c86a78370cdcd2e759786c9479ba7c51",
+  "conditions": [
+    {
+      "cutoff": 7.75,
+      "target": 8.75,
+      "held_capture": "13",
+      "folder": "private/early_tangent_metric_hindcast_01/cutoff_7.75"
+    },
+    {
+      "cutoff": 7.75,
+      "target": 8.75,
+      "held_capture": "12",
+      "folder": "private/early_tangent_metric_hindcast_02/cutoff_7.75_capture_12"
+    }
+  ],
+  "method": "Six frozen matched forecasts per capture; no refit, evaluate reused historical targets only after all forecasts frozen",
+  "failure_criteria": [
+    "Parent/source/panel/prediction/target split mismatch",
+    "NonCM changed in isolated candidates",
+    "Whole mean error >1e-5",
+    "Scored control replay differs",
+    "Future expression before forecasts frozen"
+  ],
+  "limitations": "Shared systematic switches and backoff are plausible pathways; partition establishes location, not uniquely causal attribution. No future tuning or score claim; invalid covariance projection remains unavailable.",
+  "scope_report_sha256": "37756100392093c722577f7f0a3906af7600d7100df893505c2d4eac64acf455",
+  "candidates": [
+    "copy",
+    "anchor_unshrunk",
+    "anchor_identity",
+    "legacy_tangent",
+    "isolated_learned",
+    "isolated_shuffle"
+  ],
+  "scoring": "Unchanged full32285 Panel/core/calibration, archived target rows/order seed20260928; control score replay tolerance1e-9 and raw metric1e-10",
+  "reward": "Only new isolated_learned once if all calibrated and normmatched; replay/identity/shuffle controls zero",
+  "promotion": "Reused diagnostic targets cannot establish readiness or independent promotion",
+  "negative_control": "Same shared positivity scale<=.25; learned/shuffled norms matched before projection and postprojection ratio[.9,1.1]; invalid comparison retained without reward/promotion",
+  "repair_of_report_sha256": "dbebc80393f4a40e2b77d8b7d648ebfe1ca172067ef335a0ea512f1669de6bb0",
+  "repair_policy": "Adapter unpacks load_core tuple; no changed scientific settings or scores. Prior batch failed before any scoring; frozen forecasts rederived without training. Original sources/events kept."
+}

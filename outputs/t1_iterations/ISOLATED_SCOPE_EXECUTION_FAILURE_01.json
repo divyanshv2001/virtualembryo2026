@@ -1,0 +1,80 @@
+{
+  "status": "failed",
+  "plan": {
+    "run": "isolated_scope_fullpanel_01",
+    "seed": 20260928,
+    "declared_utc": "2026-10-01T14:57:50.639188+00:00",
+    "parent_report_sha256": "280c2ce6843a2bba1920bdc6d3920699c86a78370cdcd2e759786c9479ba7c51",
+    "conditions": [
+      {
+        "cutoff": 7.75,
+        "target": 8.75,
+        "held_capture": "13",
+        "folder": "private/early_tangent_metric_hindcast_01/cutoff_7.75"
+      },
+      {
+        "cutoff": 7.75,
+        "target": 8.75,
+        "held_capture": "12",
+        "folder": "private/early_tangent_metric_hindcast_02/cutoff_7.75_capture_12"
+      }
+    ],
+    "method": "Six frozen matched forecasts per capture; no refit, evaluate reused historical targets only after all forecasts frozen",
+    "failure_criteria": [
+      "Parent/source/panel/prediction/target split mismatch",
+      "NonCM changed in isolated candidates",
+      "Whole mean error >1e-5",
+      "Scored control replay differs",
+      "Future expression before forecasts frozen"
+    ],
+    "limitations": "Shared systematic switches and backoff are plausible pathways; partition establishes location, not uniquely causal attribution. No future tuning or score claim; invalid covariance projection remains unavailable.",
+    "scope_report_sha256": "37756100392093c722577f7f0a3906af7600d7100df893505c2d4eac64acf455",
+    "candidates": [
+      "copy",
+      "anchor_unshrunk",
+      "anchor_identity",
+      "legacy_tangent",
+      "isolated_learned",
+      "isolated_shuffle"
+    ],
+    "scoring": "Unchanged full32285 Panel/core/calibration, archived target rows/order seed20260928; control score replay tolerance1e-9 and raw metric1e-10",
+    "reward": "Only new isolated_learned once if all calibrated and normmatched; replay/identity/shuffle controls zero",
+    "promotion": "Reused diagnostic targets cannot establish readiness or independent promotion",
+    "negative_control": "Same shared positivity scale<=.25; learned/shuffled norms matched before projection and postprojection ratio[.9,1.1]; invalid comparison retained without reward/promotion",
+    "created_utc": "2026-10-01T14:58:22.940552+00:00",
+    "spec_sha256": "4ef4d7e308e7e5a93c2e527ac711605a4965e215814e695b3176794297ee23c0",
+    "code_sha256": "bf8c8dce73c2c8c5df0dc1af0b9691a71260905c5a5625fc70ed74b852341eb4",
+    "archive_artifact_sha256": {
+      "private/early_tangent_metric_hindcast_01/cutoff_7.75/encoder.npz": "d3ca0045d182f42c393574e28d188ba2660d0b9ad6675bf4aff1c16ad62f1c00",
+      "private/early_tangent_metric_hindcast_01/cutoff_7.75/training.pt": "1425b8ad29eff64de638fde3e1b6b7ee071b9c724a2bda6c7914520859eed899",
+      "private/early_tangent_metric_hindcast_01/cutoff_7.75/donor_rows.npy": "f7da207bb2a6bb72c509e9c863105869793daf2a9692b5c340290f657c6a19c5",
+      "private/early_tangent_metric_hindcast_01/cutoff_7.75/observation_offsets.npz": "9e8c40ed7f809c6fc7af1990f68f1940510fe496b15dc7f56fa3a7283ebc48d1",
+      "private/early_tangent_metric_hindcast_02/cutoff_7.75_capture_12/encoder.npz": "01d4f0c9e5a565ee016e2ba98e3a6a90cac2568e6b0002617eaeadc013b181a6",
+      "private/early_tangent_metric_hindcast_02/cutoff_7.75_capture_12/training.pt": "4071db2c40b2f206be5e8c754c6afe1ac633db5ccbd7a9d33e2c436e604efbc2",
+      "private/early_tangent_metric_hindcast_02/cutoff_7.75_capture_12/donor_rows.npy": "12c9df8e12690c41919c1f2267cef0b7bc9c0af21e8c6bb25fa8f7ed010daebc",
+      "private/early_tangent_metric_hindcast_02/cutoff_7.75_capture_12/observation_offsets.npz": "033620a19502e8f931781fd3079c43677d19c85cfbcc61bc029be35bf6ae4f3d"
+    },
+    "source_sha256": {
+      "isolated_scope_scoring.py": "56b29cbbd7b45040b224d4f4769e258da2e211242a3a680d28d1cc1bad5f7d5e",
+      "forecast_scope_audit.py": "a7e635f1e870cbb664e7817d26e9558901a6048b9663cf5959a488de93cafd48",
+      "early_tangent_controls.py": "d370990a32c00c8ebefe6f0fc95883b67b3afd39a79f1d6be13b30dd8ac5f94f",
+      "cm_anchor_support_projection_fullpanel.py": "31ca7c5034a56cef4846fbcf07da8d5174c7eb06961ae96aa977e94c8ec45041",
+      "offline_backtest.py": "874b840c6bb3cce570b85482f2f11daacfcd164a04994301a33568c44ae3f3b6",
+      "metric_critique_reward.py": "db16970899173ae560d9c08faecf425ac8258613727c241dec8f34ffaf5d018a"
+    }
+  },
+  "failure": {
+    "type": "AttributeError",
+    "message": "tuple object has no attribute de_genes",
+    "stage": "Panel initialization before first metric score",
+    "evidence": "Genuine events.jsonl and harness stderr retained",
+    "report_materialized_after_failure": true
+  },
+  "outcomes": [],
+  "headline_score": null,
+  "raw_metrics": null,
+  "skills": null,
+  "reward_delta": 0,
+  "updated_utc": "2026-10-01T15:02:16.159775+00:00",
+  "report_sha256": "dbebc80393f4a40e2b77d8b7d648ebfe1ca172067ef335a0ea512f1669de6bb0"
+}

@@ -89,6 +89,11 @@
     "isolated_scope_fullpanel": {
       "script": "isolated_scope_fullpanel.py",
       "run": "private/isolated_scope_fullpanel_01",
+      "report": "ISOLATED_SCOPE_EXECUTION_FAILURE_01.json"
+    },
+    "isolated_scope_fullpanel_repaired": {
+      "script": "isolated_scope_fullpanel_repaired.py",
+      "run": "private/isolated_scope_fullpanel_02",
       "report": "ISOLATED_SCOPE_FULLPANEL_RESULTS.json"
     }
   }

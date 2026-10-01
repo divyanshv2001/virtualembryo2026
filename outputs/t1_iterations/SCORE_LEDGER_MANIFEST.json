@@ -1,5 +1,5 @@
 {
-  "records": 3043,
+  "records": 3055,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -472,6 +472,11 @@
       "outcomes_indexed": 12
     },
     {
+      "path": "private/early_forecast_scope_audit_01/report.json",
+      "sha256": "37756100392093c722577f7f0a3906af7600d7100df893505c2d4eac64acf455",
+      "outcomes_indexed": 0
+    },
+    {
       "path": "private/early_tangent_metric_hindcast_01/report.json",
       "sha256": "e6799ecf9dcf207baf05168b4412e12c28bfb791609640f4d0117308273560ec",
       "outcomes_indexed": 12
@@ -615,6 +620,16 @@
       "path": "private/importance_backtest_01/report.json",
       "sha256": "d6d0fe60a071fc5a9514792a6a5c753bb20380c9ba47802b84b08370fb9c78c9",
       "outcomes_indexed": 24
+    },
+    {
+      "path": "private/isolated_scope_fullpanel_01/report.json",
+      "sha256": "dbebc80393f4a40e2b77d8b7d648ebfe1ca172067ef335a0ea512f1669de6bb0",
+      "outcomes_indexed": 0
+    },
+    {
+      "path": "private/isolated_scope_fullpanel_02/report.json",
+      "sha256": "3f1198f50f4b5fc16e5fd0ad41099c9f976039c4c31fc21de55e7ce64eb77258",
+      "outcomes_indexed": 12
     },
     {
       "path": "private/joint_adaptive_solver_01/report.json",
@@ -894,5 +909,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "3b382efa8bd7c6b59c53ebbdd639868cc5f53135ebd013ce8366ca08e6bdb60c"
+  "ledger_sha256": "1104dafa4dce140cfd3b2a8d2ac357bf5d75c195d194f8b12247bb20c677ae82"
 }

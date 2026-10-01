@@ -1,17 +1,17 @@
 {
-  "updated_utc": "2026-10-01T14:59:28.581937+00:00",
+  "updated_utc": "2026-10-01T15:14:22.798624+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "9af4cce269c21d89beddcfbd5b35dac1ba1f195cd4d7605dcbb8fdc1ec859096",
+    "LOCAL_OPTIMIZATION_STATE.json": "1642f206e032cffd9fbda3e4ec1fdb9b78be6b6ec50a8a437583f214ccfc4b56",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "2d326fc9cc19f9b49603c380db6e2d5ad0418153109ded9fea1383713f7640a1",
+    "METRIC_RESEARCH_QUEUE.json": "b607d486a7a35c2f82fe5b454d7e9ed2d8142822435a5a905a2d693362bba128",
     "METRIC_CRITIQUE_POLICY.json": "027368320281a1164dc91720fe8aa18a344ddf7c14b9c5a8fce8b2b075105b7b",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
-    "RESEARCH_HARNESS_MANIFEST.json": "e4800f588334bf00df11ae5af562c4b06474110510ec8cc0a18128e83e6a841c"
+    "RESEARCH_HARNESS_MANIFEST.json": "9183a551646edcf7c47bc1dc6f90474cde479af8e0cd285941745d5012e9f2fd"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [],
-  "next_experiment": "Monitor registered isolated_scope_fullpanel: frozen models,6forecasts2captures12scores; no duplicated training or future tuning. Reused targets diagnostic only. Aftercompletion collect fourcritics/Jev,refreshledger; originalreadinessunmet.",
+  "next_experiment": "Preflight and declare past-only CM-conditional covariance sensitivity audit: cohort support/split eligibility, past-only basis fit, Ledoit-Wolf/Bures versus existing pooled OAS/coloring and identity/shuffled covariance. No future tuning/spatialmodel or scoreclaim. Do not rerun isolatedtangent grid.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -28,7 +28,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -634,
+    "current_reward": -663,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -37,7 +37,7 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -634
+    "uncapped_reward": -663
   },
   "official_best": 52.16,
   "latest_official": {
@@ -54,12 +54,13 @@
     "attribution": "Inferred latest export; screenshot lacks filename"
   },
   "latest_jev": {
-    "record": "JEV_SCOPE_SYNTHESIS_ROUTE_20261001_01.json",
+    "record": "JEV_ISOLATED_SYNTHESIS_ROUTE_20261001_01.json",
     "usage": {
-      "input_tokens": 812,
-      "output_tokens": 63
+      "input_tokens": 969,
+      "output_tokens": 70
     },
-    "choice": "isolated_scope_matched_fullpanel"
+    "choice": "past_cm_covariance_sensitivity",
+    "confidence": 0.54
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",

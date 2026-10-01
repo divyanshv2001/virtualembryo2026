@@ -524,3 +524,13 @@ Implemented12candidate2capture24score early7.75->8.75 experiment, capture13/12 e
 
 ### 2026-10-01T14:57:50.639188+00:00 — scope attribution completed
 Exactreplays13/12. Legacywholemeans .005837/.011640 fromnonCM; isolatedmeans2.1e-9/1.7e-9 andnonCMbitwiseunchanged. Bothbackoff1; notunique causalproof. Raw4/skills4 unavailable,reward0. Fourfresh specialistreviews saved. Jev812in63out chose sixforecast12score isolation diagnostic onreusedtargets,noindependentpromotion. Originalreadinessunmet.
+
+
+### 2026-10-01T15:02:16.159775+00:00 — scored adapter failure preserved
+Originalscored batch stopped at Panel construction because load_core returns tuple. Zero scores/no reward. Genuineforecastfreeze event retained; failure report materialized aftererror. Separate _02 repaired driver/helper unpacks tuple; frozenforecastreplay only,no retraining or scientificchange. Four failurecritics pending.
+
+Four failedbatch critiques completed/cached; missingmetrics/no reward. Corrected pinnedloader interface validated without data; _02 started. Ledger alias tests preserve distinctcapture outcomes/count identicalembedded snapshots once.
+
+
+### 2026-10-01T15:14:22.634827+00:00 — isolated diagnostic completed negative
+12valid outcomes; frozenmodels/no retraining, allcontrolscore replays exact. Isolatedlearned54.02462531/53.25844281 vsanchor54.02462749/53.25844174 andshuffle54.02462386/53.25844304. DE/MMDexactanchor; directionmixedtiny/CSSoneULP. Fourcriticscached, spatialCSSsuggestion rejected and exactmeanpreservation limitsDEproposals. Reward-29/balance-663 separate frombenchmark. Jev2330bytes969in70out selectedCMcovariance sensitivityaudit,confidence.54; priorpooledOAS/coloring acknowledged. Nextresource/pastsplit preflight. Ledger3055 records/181reports/0errors countsidenticalsnapshotsonce. No promotion/readiness/officialupload.

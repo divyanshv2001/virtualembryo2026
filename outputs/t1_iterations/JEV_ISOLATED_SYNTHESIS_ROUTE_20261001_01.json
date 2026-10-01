@@ -1,0 +1,39 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "7e8eab5b4ceb467dd2e47fdd09afea4da3741297bc776790743d55febaa6b546",
+  "attempts": 1,
+  "payload_bytes": 2330,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "purpose": "Select next distinct bounded mechanism after isolated tangent scored diagnostic",
+      "evidence": "Frozen-model6forecasts2captures12validscores, reusedtarget8.75. Controlscore replays exact. Isolatedlearned54.02462531/53.25844281 vsanchor54.02462749/53.25844174 andshuffle54.02462386/53.25844304. DEexactanchorboth; MMDexactanchorboth; directionmixed1e-7 andCSSonefloat32ULP. NonCMbitwiseunchanged,wholemeans~2e-9,normmatched. No promotion. Reward-29 balance-663, separate frombenchmark. Original>72/64replicate/temporalgates unmet.",
+      "critics": "DE recommends gene-structured residual with sensitivitycheck; direction proposes past residual but retaining means cannot substantiallychangeitsmetric. MMD recommends pastCMcovariance transport. CSS agent proposed spatial-distance residual despite CSSbeingcellstate/no spatialinputs: reject spatialproposal.",
+      "prior_coverage": "Earlier bounded EB/sign-gated trends, source slopes, globalcopula/covarianceshrinkage failed ornotpromoted. Familiesopen; avoidrerunning samegrid or treating diagnosticreusedtargets asfreshvalidation.",
+      "constraints": "Nextphase past-only beforeforecastselection. No futuretuning, unchangedfullpanel/calibration. Dcache16GB2threads. Distinguish genemean vs distributionchannel. Verify availablemetadataand prior coverage beforedeclaringexactimplementation."
+    },
+    "questions": {
+      "next_mechanism": {
+        "type": "choice",
+        "instructions": "Select a useful next bounded audit/design; no promisedscoregain.",
+        "criteria": {
+          "past_cm_covariance_sensitivity": "Past-only CMconditional covariance transport viability/sensitivity audit. Compare Ledoit-Wolf PSD covariance/Bures map, identity andnormmatchedshuffled covariance; exactCMscope. Fit historicaltransition only and test before anyfullpanelforecast. Distinct fromglobalshrinkage/copula but boundedfamilycoverage.",
+          "past_hierarchical_mean_residual": "Past-only hierarchical capture-balanced lineage pseudobulk residual velocity audit across historicalcutoffs. Quantify sign/transferreliability andlearn stage-dependent shrinkage beforedeclaring genemean-changing forecast; avoid fixedanchor-meanconstraint forDE. EarlierEB/source-slope negatives remain controls.",
+          "more_same_tangent_seeds": "More seeds ofsame tinyCMtangent perturbation onexposedtargets; limitedpower, avoid count-drivenruns."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 969,
+    "output_tokens": 70
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "next_mechanism": {
+      "choice": "past_cm_covariance_sensitivity",
+      "confidence": 0.54
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}

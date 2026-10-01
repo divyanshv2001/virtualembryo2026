@@ -9,7 +9,7 @@ HERE=Path(__file__).resolve().parent
 def outcomes(value,context=None,pointer=''):
     context=dict(context or {})
     if isinstance(value,dict):
-        for key in ['candidate','config','seed','cutoff','target','fold','replicate','prediction_sha256']:
+        for key in ['candidate','config','seed','cutoff','target','held_capture','fold','replicate','prediction_sha256']:
             if key in value:context[key]=value[key]
         for key in ['floor','ceiling']:
             if key in value:context[key]=value[key]
@@ -20,7 +20,7 @@ def outcomes(value,context=None,pointer=''):
                 context['candidate']='persistence'
             generation=context.pop('generation',{})
             entry=generation.get(context.get('candidate',''),{})
-            yield {**context,'prediction_sha256':value.get('prediction_sha256',entry.get('prediction_sha256')),
+            yield {**context,'prediction_sha256':value.get('prediction_sha256',entry.get('prediction_sha256',entry.get('sha256'))),
                 'json_pointer':pointer,'local_score':value['local_score'],
                 'raw_metrics':value.get('raw_metrics',value.get('raw',context.get('floor') if pointer.endswith('/persistence') else None)),
                 'diagnostics':entry.get('audit'),
@@ -28,6 +28,12 @@ def outcomes(value,context=None,pointer=''):
                 'invalid_calibration_metrics':value.get('invalid_calibration_metrics'),
                 'scope':'Local development; not an official leaderboard score'}
         for key,child in value.items():
+            if pointer=='' and key=='results' and isinstance(child,list) and isinstance(value.get('folds'),list):
+                # Final summaries can embed identical scored-fold snapshots.
+                # Index the canonical folds once; retain nonidentical snapshots.
+                child=[{k:v for k,v in item.items() if k!='scored_fold'}
+                       if isinstance(item,dict) and item.get('scored_fold') in value['folds'] else item
+                       for item in child]
             if isinstance(child,(dict,list)):
                 yield from outcomes(child,context,pointer+'/'+str(key))
     elif isinstance(value,list):
