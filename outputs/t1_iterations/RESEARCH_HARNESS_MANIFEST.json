@@ -195,6 +195,11 @@
       "script": "capture_decoded_energy_retry_preflight.py",
       "run": "private/capture_decoded_energy_retry_preflight_01",
       "report": "CAPTURE_DECODED_ENERGY_RETRY_PREFLIGHT_RESULTS.json"
+    },
+    "capture_decoded_matched_fullpanel": {
+      "script": "capture_decoded_matched_fullpanel.py",
+      "run": "private/capture_decoded_matched_fullpanel_01",
+      "report": "CAPTURE_DECODED_MATCHED_FULLPANEL_RESULTS.json"
     }
   }
 }

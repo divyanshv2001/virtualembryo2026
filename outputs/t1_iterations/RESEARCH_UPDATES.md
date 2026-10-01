@@ -640,3 +640,9 @@ Registered decodedenergy preflight launched uniquely after actual0-process check
 ## 2026-10-01T21:36:50.464126+00:00 — decodedenergy implementation failure/retry
 
 Original run failed TypeError: candidate-base string overwritten by OLS NumPy diagnosticsvector; nextlineage dictaccess failed. Onlycopy/anchor guards completed, four genuine events retained. Original executedsource/plan/events/stderr preserved and hashed; coordinator-recorded failure report does notinvent events/scores. Four freshmetric reviews saved; no raw4/skills4/futureexpression/reward. Deterministic rename in separate unique retry script/spec/run, scientificmethod/budgets/guards unchanged. Actual0-process check before launch PID4448; compile passed. Zero newJev calls (unambiguous implementationrepair, prior scientificdecisioncached). Separate reward-877, readiness/family open; no upload.
+
+## 2026-10-01T21:48:11.626340+00:00 — decoded matching retry complete
+
+All16guards,tenoriginalforecastreplays,21perlineage emittedenergy equality/upperbudget checks passed; no futureexpression/scorer/reward. Earlygeo/OLSblood818.14024/818.14023, geoamplitude.83006; gene-signreversalsgeo20early/4late remain, controlsOLS0/recent1early0late. Four freshreviews saved, scheduled after observedspawnlimit. Jev978in/65out selected fixedmatchedfullpanel confidence.89 before new signconstraint. Predeclared16freezes before anyfuture read, full32285gene unchangedscorer/calibration, sixcopy-anchor-originalgeo scoredreplays; uniformcontrols notrewarded. D105.15GBavailable16GBRAM diskcache. Separate reward-877 unchanged, originalfailure preserved, readiness/family open; no officialupload.
+
+Registered decodedmatched fullpanel launched uniquely after actual0-process check PID9000; compile validation passed. Temporaryforecasts diskcached onD andconsumed afterscoring.

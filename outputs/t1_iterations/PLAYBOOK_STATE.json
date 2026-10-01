@@ -1,24 +1,24 @@
 {
-  "updated_utc": "2026-10-01T21:36:50.639891+00:00",
+  "updated_utc": "2026-10-01T21:48:35.070895+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "409b4ca5a8e7c6847b2f1a88756192045dc510fb0b3834555e7485ca297d7045",
+    "LOCAL_OPTIMIZATION_STATE.json": "75056edcd13054eed8a2d553e77379d92f2b6b5d4ebaeeaba53f9b3811048844",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "7e1848748352e0fdaa30a7d1f7229c82d5cbb109a491fc0b8dffbabd532350a2",
+    "METRIC_RESEARCH_QUEUE.json": "152c60048b8f96fb52a9541331f0085d9a1a700b31abe94bbe972161ae31b170",
     "METRIC_CRITIQUE_POLICY.json": "027368320281a1164dc91720fe8aa18a344ddf7c14b9c5a8fce8b2b075105b7b",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
-    "RESEARCH_HARNESS_MANIFEST.json": "8b63eeeed408a3c548edfd1b8fd16f52160a72edd1404b1e0b5bf122f704f31d"
+    "RESEARCH_HARNESS_MANIFEST.json": "5c0e03068e57e54a050ca058c6925b0cfe9866319a7d71efa7eb4690e9f1c8a3"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [
     {
-      "experiment": "capture_decoded_energy_retry",
-      "pid": 4448,
+      "experiment": "capture_decoded_matched_fullpanel",
+      "pid": 9000,
       "status": "running",
-      "report": "CAPTURE_DECODED_ENERGY_RETRY_PREFLIGHT_RESULTS.json"
+      "report": "CAPTURE_DECODED_MATCHED_FULLPANEL_RESULTS.json"
     }
   ],
-  "next_experiment": "Finish registered capture_decoded_energy_retry (unique implementation retry after TypeError). Same method/budgets/guards; original failedrun source/events retained, diagnostic OLS reference renamed. Require ten preceding amplitude forecast replays and six new guards plus independent emitted-energy equality/upper tolerances; no future scoring/reward. After batch four critics; family/readiness open.",
+  "next_experiment": "Run/finish registered capture_decoded_matched_fullpanel: fixed sixenergy matched forecasts plus tenoriginal exactpreflight freezes before anyfuture read. Unchanged32285gene scorer/calibration, exactcopy-anchor-originalgeo6raw/skillscore replays. Reward onlynewgeo vsanchor, uniformvariantscontrols, no targetretuning. Aftercompletion fourcritics+ledger; signconstraint followon untested, families/readiness open.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -64,13 +64,13 @@
     "attribution": "Inferred latest export; screenshot lacks filename"
   },
   "latest_jev": {
-    "record": "JEV_AMPLITUDE_PREFLIGHT_ROUTE_20261002_01.json",
+    "record": "JEV_DECODED_MATCH_ROUTE_20261002_01.json",
     "usage": {
-      "input_tokens": 900,
-      "output_tokens": 64
+      "input_tokens": 978,
+      "output_tokens": 65
     },
-    "choice": "decoded_energy_match_preflight",
-    "confidence": 0.78
+    "choice": "fixed_matched_fullpanel",
+    "confidence": 0.89
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
