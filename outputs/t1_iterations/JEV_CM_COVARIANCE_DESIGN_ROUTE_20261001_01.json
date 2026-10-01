@@ -1,0 +1,38 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "07ae5d72ad06ec6259214d5a3b8dfae4255c812d34bc4d37656da83cb062fc16",
+  "attempts": 1,
+  "payload_bytes": 1716,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "purpose": "Choose bounded covariance audit dimensionality from actual CM support",
+      "counts": "CMtotal7.5=31 across5captures(2,1,4,19,5);7.75=175(5,15,72,83);8=198(63,44,45,46);8.25=345(134,130,81). No independentembryopairing established.",
+      "design": "Rolling cutoffs7.75->8 targetcapture16 and8->8.25 targetcapture25. Trainpastbasis/featureselection<=eachcutoff, samebasisfor allcontrols; futuretargetlatentcovariance only after forecasts frozen. Per-capture centered residualcovariances, equalcaptureweights, min5CM pergroup. Ledoit-Wolf covariance vs pooledOAS adaptation, identity/currentcovariance, gene-coordinate-shuffled temporalmap normmatched. Bures Gaussian OT symmetricmap verifiedauthor/POT formula; geodesic extrapolation withfixed eigenbounds. No fullpanelmetric/reward; originalcoverage remainsopen.",
+      "constraints": "Dmemmap chunkselectedfeatures,16GB2threads. No futurechoiceoftuning/settings. PriorpooledOAS/coloring exists, this conditionalcohortweighted lowdim audit isboundedextension notnewfamily. Need support/eigenfinite controls beforelaunch."
+    },
+    "questions": {
+      "dimension": {
+        "type": "choice",
+        "instructions": "Choose stable fixed auditdimension before reading targetexpression.",
+        "criteria": {
+          "four_latent_dimensions": "4D past-only PCA; min5CMcohorts enough forshrinkage but one7.5cohort19 dominatesrawsource. Capturebalancing/shrinkage and limitation retained.",
+          "eight_latent_dimensions": "8D matches priorpooledcovariance model but min5CMgroups singular withoutstrongshrinkage; moredirections yetunstable earlieststage.",
+          "defer_for_more_input": "Do notexecute untiladditional genuine earlyCM/embryodata available; currentcounts maystillpermitboundednonpromotionalaudit."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 833,
+    "output_tokens": 51
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "dimension": {
+      "choice": "four_latent_dimensions",
+      "confidence": 0.46
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}

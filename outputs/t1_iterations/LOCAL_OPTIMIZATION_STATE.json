@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T15:14:22.634827+00:00",
+  "updated_utc": "2026-10-01T15:32:43.303600+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Preflight and declare past-only CM-conditional covariance sensitivity audit: cohort support/split eligibility, past-only basis fit, Ledoit-Wolf/Bures versus existing pooled OAS/coloring and identity/shuffled covariance. No future tuning/spatialmodel or scoreclaim. Do not rerun isolatedtangent grid.",
+  "next_experiment": "Launch/monitor registered cm_covariance_sensitivity:4D past-only conditionalLW/Bures covariance,2rollingfolds6covariancecontrols, proxyonly/no reward. Fourcritics/Jev aftercompletion; retain originalbenchmarkgates.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1294,13 +1294,13 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_ISOLATED_SYNTHESIS_ROUTE_20261001_01.json",
+    "record": "JEV_CM_COVARIANCE_DESIGN_ROUTE_20261001_01.json",
     "usage": {
-      "input_tokens": 969,
-      "output_tokens": 70
+      "input_tokens": 833,
+      "output_tokens": 51
     },
-    "choice": "past_cm_covariance_sensitivity",
-    "confidence": 0.54
+    "choice": "four_latent_dimensions",
+    "confidence": 0.46
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -2202,5 +2202,10 @@
     "scored_outcomes": 0,
     "reward_delta": 0,
     "critics_status": "completed"
+  },
+  "cm_covariance_sensitivity_job": {
+    "status": "completed",
+    "report_sha256": "c0d39fcd556aa893cb6afc8545e58bf7affb7f99eadbe23010d8e382fa575d52",
+    "metrics_available": false
   }
 }

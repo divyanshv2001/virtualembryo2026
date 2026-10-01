@@ -1,0 +1,52 @@
+{
+  "run": "cm_covariance_sensitivity_audit_01",
+  "declared_utc": "2026-10-01T15:32:43.303600+00:00",
+  "seed": 20260928,
+  "dimensions": 4,
+  "features": 384,
+  "min_capture_cells": 5,
+  "conditions": [
+    {
+      "cutoff": 7.75,
+      "target": 8.0,
+      "held_capture": "16"
+    },
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "held_capture": "25"
+    }
+  ],
+  "fit": "CM-only top384variance features, standardization floor.1 and4D PCA fitted strictly<=cutoff; no target expression. Separate basis per rollingfold, samebasis across controls. CMper-capture residual Ledoit-Wolf, arithmetic equalcapture-weightcovariance,min5pergroup. Priorpooledwithin-coarse-type OAS adaptation iscontrol, notexactoldmodelreplay.",
+  "formula": "T=Cprev^(-1/2)(Cprev^(1/2) Ccurr Cprev^(1/2))^(1/2) Cprev^(-1/2); T eigenclip[.75,4/3]; M=I+r(T-I), r=(target-prev)/(curr-prev); Cforecast=M Cprev M.T. Covarianceeigfloor1e-6; intermediate square roots floor0.",
+  "controls": [
+    "CMcurrent persistence",
+    "exact identity",
+    "CM Bures",
+    "single coordinate-permuted covariance displacement, Frobeniusnormmatched before PSD projection,postratio[.9,1.1]elseinvalid",
+    "CM linearcovariance LW trend",
+    "pooledcoarse-type OAS linearcovariance trend"
+  ],
+  "evaluation": "Freeze basis,covariances,targetrowmetadata/hashes before targetexpression. Heldtargetcapture latentcovariance fromfixedLW estimator; Buresdistance2 andFrobeniuserror areproxies, headline/raw4/skills4 unavailable, reward0. No fullgene decoder or calibration alteration.",
+  "limitations": [
+    "Small7.5CMn31; onlycaptures19n19 and20n5 qualifycovariances; capturebalancing doesnotcreateindependentembryos",
+    "Future targetcapture IDs aredistinctfrompast; no pairedembryoprovance established",
+    "Differentpastbasis percutoff, proxiesnotcrossfoldcalibratedbenchmark",
+    "ClippedGaussiangeodesicextrapolation isassumption, notpublishedmethodreproduction",
+    "No exactgene support/mass/nonCMforecasts exist yet; covariance-only compliance cannotestablishgene-levelfeasibility",
+    "Single shuffle seed, thisboundedtestdoesnotexhaustcovariancefamily"
+  ],
+  "sources": [
+    {
+      "title": "POT Gaussian OT documentation",
+      "url": "https://pythonot.github.io/gen_modules/ot.gaussian.html",
+      "coverage": "Buresdistance/Gaussianmap definitions; customnumpyimplementation, noPOTdependency"
+    },
+    {
+      "title": "Peyre/Cuturi Computational Optimal Transport",
+      "url": "https://arxiv.org/abs/1803.00567",
+      "coverage": "Bibliographicreference viaauthor/POTsources; no claimwholepaperreview"
+    }
+  ],
+  "success_criteria": "FinitePSD/pastsplit/identity controls first; compare surrogate tocurrent/pooled/null bothheldhistoricalfolds; no proxyderivedpromotion or further exposed-targettuning."
+}

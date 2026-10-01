@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T15:14:22.634827+00:00",
+  "updated_utc": "2026-10-01T15:32:43.303600+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -6278,10 +6278,11 @@
     },
     {
       "id": "cm_conditional_covariance_sensitivity",
-      "status": "resource_preflight_pending",
-      "next_action": "Preflight and declare past-only CM-conditional covariance sensitivity audit: cohort support/split eligibility, past-only basis fit, Ledoit-Wolf/Bures versus existing pooled OAS/coloring and identity/shuffled covariance. No future tuning/spatialmodel or scoreclaim. Do not rerun isolatedtangent grid.",
+      "status": "declared_viable",
+      "next_action": "Launch/monitor registered cm_covariance_sensitivity:4D past-only conditionalLW/Bures covariance,2rollingfolds6covariancecontrols, proxyonly/no reward. Fourcritics/Jev aftercompletion; retain originalbenchmarkgates.",
       "research_family_exhausted": false,
-      "limitations": "PriorpooledOAS/coloring isimplemented; conditionalBures comparison isboundedextension, not newwholefamily. No spatialinputs."
+      "limitations": "PriorpooledOAS/coloring isimplemented; conditionalBures comparison isboundedextension, not newwholefamily. No spatialinputs.",
+      "specification": "NEXT_CM_COVARIANCE_SENSITIVITY_AUDIT.json"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",

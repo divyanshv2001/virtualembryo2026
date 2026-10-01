@@ -95,6 +95,11 @@
       "script": "isolated_scope_fullpanel_repaired.py",
       "run": "private/isolated_scope_fullpanel_02",
       "report": "ISOLATED_SCOPE_FULLPANEL_RESULTS.json"
+    },
+    "cm_covariance_sensitivity": {
+      "script": "cm_covariance_sensitivity_audit.py",
+      "run": "private/cm_covariance_sensitivity_audit_01",
+      "report": "CM_COVARIANCE_SENSITIVITY_AUDIT_RESULTS.json"
     }
   }
 }
