@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T17:00:11.409665+00:00",
+  "updated_utc": "2026-10-01T17:20:24.024742+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Predeclare fixed zero-creation-blocked capture decoder ablation: identical frozenquarter/shrunk lineage logdeltas applied only to donor-positive entries, donorzeros locked0; clipnonnegative thenmappedcountmassrepair. Maydestroypositives, notstrictsupportpreserving. Checkpastdonor guards and reportrealizedmean/magnitude confounds. Matchedcopy/incumbent/additiveexactreplay controls; full32285scorer/calibrationunchanged iffeasible. No exposedtarget strengthgrid. Readiness/familycoverage incomplete.",
+  "next_experiment": "Preflight existing externalWT QC/compatibility path: inspect GSE76118_WT_STAGE_MANIFEST.json, actual local acquisition manifest/files/processes and4cellpilot; do not reread allhistory. Identify supported gene/stage/count normalization and metadata before separatelydeclaring lowRAM QC. No new acquisition/training until sourcevalidation; enforce taskexclusions and eachfitcutoff (externalE8.5/E9.5 cannot enter earlierE8/E8.25 fits). Capture-mean/support families remain open/boundednegative; readiness unmet.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1226,7 +1226,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -721,
+    "current_reward": -790,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1235,7 +1235,7 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -721
+    "uncapped_reward": -790
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -1294,13 +1294,13 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_SUPPORT_SYNTHESIS_ROUTE_20261001_01.json",
+    "record": "JEV_BLOCKED_SYNTHESIS_ROUTE_20261001_01.json",
     "usage": {
-      "input_tokens": 1094,
-      "output_tokens": 51
+      "input_tokens": 1130,
+      "output_tokens": 65
     },
-    "choice": "block_zero_creation",
-    "confidence": 0.47
+    "choice": "external_wt_qc_preflight",
+    "confidence": 0.74
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -2127,6 +2127,20 @@
       "metric_availability": false,
       "reward_delta": 0,
       "review_corrections": "Direction interval reversed bycritic and creation vs totalpositive count corrected explicitly; no causalfutureerror attribution."
+    },
+    "zero_creation_blocked_fullpanel_01": {
+      "status": "completed",
+      "report_sha256": "910ccd0e40d1c95f4006a492f39c0d18d7f863a60ef38479048c0ae8a98884f0",
+      "review": "METRIC_CRITIQUES_ZERO_BLOCKED_20261001.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": true,
+      "reward_delta": -69
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -2376,5 +2390,14 @@
     "target_expression_read": false,
     "metrics_available": false,
     "reward_delta": 0
+  },
+  "zero_creation_blocked_job": {
+    "status": "completed",
+    "pid": 268,
+    "report": "ZERO_CREATION_BLOCKED_FULLPANEL_RESULTS.json",
+    "spec": "NEXT_ZERO_CREATION_BLOCKED_FULLPANEL.json",
+    "report_sha256": "910ccd0e40d1c95f4006a492f39c0d18d7f863a60ef38479048c0ae8a98884f0",
+    "passing_candidates": [],
+    "exact_control_metric_replays": true
   }
 }

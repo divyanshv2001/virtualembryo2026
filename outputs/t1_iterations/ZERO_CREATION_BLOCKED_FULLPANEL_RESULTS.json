@@ -1,0 +1,799 @@
+{
+  "status": "completed",
+  "plan": {
+    "folds": [
+      [
+        8.0,
+        8.25
+      ],
+      [
+        8.25,
+        8.5
+      ]
+    ],
+    "candidates": [
+      "copy",
+      "anchor_unshrunk",
+      "capture_quarter",
+      "capture_shrunk",
+      "blocked_quarter",
+      "blocked_shrunk"
+    ],
+    "seed": 20260928,
+    "donor_count": 1500,
+    "target_count": 2000,
+    "scored_truth_count": 1000,
+    "ceiling_count": 1000,
+    "fit": "Identical frozenquarter/shrunk pastlineage deltas; newvariantsapplyonlydonorpositiveentries andlockdonorzeros0, positiveclip/countmassrepair. No strengthfit/targetgrid; positiveentriesmaybe destroyed so notstrictsupportpreserving. Reportrealizedmeans/magnitudeconfounds. Fouroriginalcontrolforecasthashesmustreplayexact; allfoldforecasts freezeandguard beforetargetread.",
+    "incumbent": "Archived past-only CNF/PartialAnchorForecast positive/detection slopes .5/.5, jointsystematicsamplingstrength1, same donors and target time.",
+    "evaluation": "Allfold forecasts frozen beforetargetexpression. Full32285 pinnedscorer/weights/calibration unchanged, identical targetsplit/order reference seed. Fourrawmetrics/fourskills/calibration failures preserved. Reuseddevelopmenttargets, not independentchallenge/embryovalidation.",
+    "promotion": "Bothfoldsheadline>copy/incumbent andall4skills>=incumbent validcalibration; comparisonsagainstfixedadditivecontrol reported. Original>72mean/lower-tail64replicate/temporalgatesunchanged.",
+    "reward": "Only2newblockedvariants eligible for separate reward; copy/incumbent/additive controls earnno repeatreward.",
+    "resources": "D-onlytemporaryforecastcache singlepredictiongeneration/read atatime; genechunks256,2threads16GB. Retain private reports/splits/events/hashes; largecacheclosedafterconsumption. Noofficialupload.",
+    "guards": {
+      "zero_creation": 0,
+      "mapped_countmass_relative_error_max": 1e-05,
+      "meanchange_max": 0.5,
+      "covariance_change_max": 0.4,
+      "finite_nonnegative": true,
+      "protectedgenes_and_unsupportedlineages": "exactcopy"
+    },
+    "created_utc": "2026-10-01T17:11:23.599860+00:00",
+    "spec_sha256": "f0098fd0a24edc8ce505b1dcfb01a0f5775288e75683daf441ff1b7514b592c0",
+    "prepared_report_sha256": "1acd8a635f76c9f9ac89a1186f116db91309b007f448a8d11ec612627ab5bca4",
+    "panel_sha256": "2aeae4cd284933956242bbc9c5ab4f565c1d2acc7cc3fd3037977e4bce8be4bf",
+    "preflight_report_sha256": "dc28b09682f8ba20de9db3c157486d5492c21d5b9ab599395d61b6b0614d6617",
+    "mean_report_sha256": "a4442fb533cc37a693ba07dfc43f8914423d19fd42d4d456b2584aa9c031bbb1",
+    "scorer_manifest": {
+      "repository": "https://github.com/aristoteleo/veckit",
+      "commit": "46d41e63f42a9aab815db20b742feeccd249cb17",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/aristoteleo/veckit/46d41e63f42a9aab815db20b742feeccd249cb17/LICENSE",
+          "sha256": "22325e2f0ed62f603feb6b5888cad1f891fcd9b89b1cfab3c70b1dca0ac974f4"
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/aristoteleo/veckit/46d41e63f42a9aab815db20b742feeccd249cb17/README.md",
+          "sha256": "088e62cd3d528804dd3c3e5ed42fac44b154aedcf82104c30d8fa22975152a09"
+        },
+        {
+          "path": "common/core_metrics.py",
+          "url": "https://raw.githubusercontent.com/aristoteleo/veckit/46d41e63f42a9aab815db20b742feeccd249cb17/common/core_metrics.py",
+          "sha256": "3be7099a0c9a7ad5b609f86078871ed8290ed0bd8916b0cb3e14fb9831909f31"
+        },
+        {
+          "path": "T1/metrics.py",
+          "url": "https://raw.githubusercontent.com/aristoteleo/veckit/46d41e63f42a9aab815db20b742feeccd249cb17/T1/metrics.py",
+          "sha256": "c6252f964e782b4bb20f8b66352eb43ee244de402dafea5d3a0864ad5ed2fab8"
+        },
+        {
+          "path": "pyproject.toml",
+          "url": "https://raw.githubusercontent.com/aristoteleo/veckit/46d41e63f42a9aab815db20b742feeccd249cb17/pyproject.toml",
+          "sha256": "763c2670bd5ae014a5f04b640b9f854e228397c3af7ea4fb37ffbb776d77a320"
+        }
+      ],
+      "biological_data_downloaded": false
+    },
+    "control_report_sha256": "05612728b692f42c1eaf6ead74c0f10b29ef1a26eca3682f1f2993cdd283b8f5",
+    "code_sha256": {
+      "zero_creation_blocked_fullpanel.py": "12a2fed88e917ff9bd01b1e8aefe63a8784fe16e4a9c7dc6362d8ecd64ee576c",
+      "capture_mean_decoder_fullpanel.py": "723ac20e33201cd0aa538f5d217da711fc5a14ea3cb0b995ee16b058acafeb40",
+      "offline_backtest.py": "874b840c6bb3cce570b85482f2f11daacfcd164a04994301a33568c44ae3f3b6",
+      "partial_anchor_forecast.py": "8c9a4c362b634d648b0ecacf3e44f5953d5b18bce2ac551aefd16a4f17770225",
+      "log1p_positive_forecast.py": "48bc5e43ee5a6742a97d049c77978f23469d1db68575202d477396d5ad0ce4ee",
+      "feature_panel_forecast.py": "0375ab96375dcc50c7e6ece07dc1f3b07ef5bb58c9a54a1a632ce45f257d48f0",
+      "forecast_transform_fidelity.py": "a06d124dfa36ebd803f9263439ef1c7a4301eb57484a9fc3f97d911bf0bca870",
+      "temporary_forecast_cache.py": "52e855549a43fdb5ac346ebf4ca73e9d03a88967ff6cc1b355a9095e4b3bb301",
+      "projection_survival_diagnostics.py": "7e574f7f12ea57dd34c09476229d545619631051a3e03a71f3e62950c5f87696",
+      "metric_critique_reward.py": "db16970899173ae560d9c08faecf425ac8258613727c241dec8f34ffaf5d018a",
+      "zero_creation_blocked_decoder.py": "4307a87c3f43f05434244d74d4fdf7a152226a2e324f8bed0e0b3390bd15d835",
+      "robust_population.py": "86ae5926124b3704ed46596781a487735405291531c38d956cd7db359c8d56e6"
+    },
+    "archive_sha256": {
+      "8.0": {
+        "encoder.npz": "a6c2212ebd71b2b5e7f533bd159cf98357614bd3039adae77ba0fd6247d26bc5",
+        "training.pt": "b1eeaf7bdcdfee791d60966b52d458b4b21054efe0c927df9fb615f43c9bacca",
+        "heads.npz": "20fab0b1957084520deb90bb868a2c6ec93c0e1a01485a4312c4f44574653ac5"
+      },
+      "8.25": {
+        "encoder.npz": "53784ceb3050ff9e809eeceed2dbf78ffd71b12680bcec567468204c28cabefc",
+        "training.pt": "6d75f53164ab1686a13eec1fcf4fc6170082451382c52e5a934585d3b8bb1c39",
+        "heads.npz": "74ea78e995c2a93267ca51ce2bcadb4b0cca37aef90acc4f5c357fe00eeb37da"
+      }
+    }
+  },
+  "folds": [
+    {
+      "cutoff": 8.0,
+      "target": 8.25,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.046701036393642426,
+        "variogram": 0.000905122491531074
+      },
+      "ceiling": {
+        "de_score": 0.8571428571428572,
+        "de_direction": 0.6880143054493401,
+        "mmd_u": 0.005036866758018732,
+        "variogram": 9.857086843112484e-05
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "53908b256a2f04ded456a9239a8231ce0c0f551e3bd9de2c1424524db824cd4d",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.046701036393642426,
+            "variogram": 0.000905122491531074
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "anchor_unshrunk",
+          "prediction_sha256": "1b3d7ff9b7c635f2f03ac60bbd996173f07fc7d089157ef270a14767ee6e3405",
+          "raw_metrics": {
+            "de_score": 0.03174603174603175,
+            "de_direction": -0.03968307602750476,
+            "mmd_u": 0.04511524364352226,
+            "variogram": 0.0009226970723830163
+          },
+          "local_score": 50.068691056502665,
+          "skills": {
+            "de_score": 0.5094339622641509,
+            "de_direction": 0.48598476074119823,
+            "mmd_u": 0.5096999226082973,
+            "variogram": 0.4946112651560008
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "capture_quarter",
+          "prediction_sha256": "a3118114aa7677b1563f31f3c3aa717c1b93e60cea52560678439e693411c5d8",
+          "raw_metrics": {
+            "de_score": -0.03174603174603175,
+            "de_direction": -0.19302671812561148,
+            "mmd_u": 0.048247743397951126,
+            "variogram": 0.0015357410302385688
+          },
+          "local_score": 45.15102343549633,
+          "skills": {
+            "de_score": 0.49090909090909096,
+            "de_direction": 0.4384895119518685,
+            "mmd_u": 0.4908883289483746,
+            "variogram": 0.3594704247760551
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "capture_shrunk",
+          "prediction_sha256": "7c21aa9c80db104f039bb0b9404a996793b837b507bec8a9eb4eb4629ed970a9",
+          "raw_metrics": {
+            "de_score": -0.03174603174603175,
+            "de_direction": -0.1873876051574757,
+            "mmd_u": 0.05059954524040222,
+            "variogram": 0.0022319781128317118
+          },
+          "local_score": 43.09091881509883,
+          "skills": {
+            "de_score": 0.49090909090909096,
+            "de_direction": 0.44007110735035865,
+            "mmd_u": 0.4776530453015705,
+            "variogram": 0.2743411249782739
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "blocked_quarter",
+          "prediction_sha256": "c4da65312d7bcf2d6321c93d28477f845eaee99d7b8fd6e86d5b009dfd2e68a2",
+          "raw_metrics": {
+            "de_score": -0.03174603174603175,
+            "de_direction": -0.24708890823939605,
+            "mmd_u": 0.04762793704867363,
+            "variogram": 0.0010380165185779333
+          },
+          "local_score": 46.94368703882887,
+          "skills": {
+            "de_score": 0.49090909090909096,
+            "de_direction": 0.4238844675983142,
+            "mmd_u": 0.4944994480115289,
+            "variogram": 0.4619432317898936
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "blocked_shrunk",
+          "prediction_sha256": "5123305fa9a241038f101c738ad810fa9fff26390987d895e1d20d7a1288ca19",
+          "raw_metrics": {
+            "de_score": -0.03174603174603175,
+            "de_direction": -0.2709179112798638,
+            "mmd_u": 0.049691490828990936,
+            "variogram": 0.001076969550922513
+          },
+          "local_score": 46.23409366947407,
+          "skills": {
+            "de_score": 0.49090909090909096,
+            "de_direction": 0.4177514546976609,
+            "mmd_u": 0.482677848548757,
+            "variogram": 0.45186222864212805
+          },
+          "calibration_valid": true
+        }
+      ],
+      "generation": {
+        "copy": {
+          "prediction_sha256": "53908b256a2f04ded456a9239a8231ce0c0f551e3bd9de2c1424524db824cd4d",
+          "audit": {
+            "method": "persistence",
+            "exact_scored_control_replay": true,
+            "exact_preflight_replay": true
+          }
+        },
+        "anchor_unshrunk": {
+          "prediction_sha256": "1b3d7ff9b7c635f2f03ac60bbd996173f07fc7d089157ef270a14767ee6e3405",
+          "audit": {
+            "fit_cells": 7963,
+            "fit_max_stage": 8.0,
+            "supported_genes": 13935,
+            "method": "Conditional positive log1p response decoder",
+            "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+            "conditional_ridge_strength": 1.0,
+            "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+            "encoder_features": 4096,
+            "covariance_guard_features": 384,
+            "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+            "anchor_calibration_rows": 1500,
+            "anchor_supported_genes": 11177,
+            "anchor_slope_ridge": 1.0,
+            "limitation": "Cross-sectional associations are not temporal velocities; only 1500 past anchors.",
+            "anchor_positive_slope_strength": 0.5,
+            "anchor_detection_slope_strength": 0.5,
+            "response_units": "log1p normalized expression",
+            "response_fit_rows": 7963,
+            "response_fit_max_stage": 8.0,
+            "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+            "mode": "joint",
+            "strength": 1.0,
+            "backoff": 1.0,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.041118423547309144,
+            "newly_detected_entries": 14371,
+            "removed_detection_entries": 29346,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true,
+            "exact_scored_control_replay": true
+          }
+        },
+        "capture_quarter": {
+          "prediction_sha256": "a3118114aa7677b1563f31f3c3aa717c1b93e60cea52560678439e693411c5d8",
+          "audit": {
+            "method": "frozen_capture_mean_countmass_decoder",
+            "exact_scored_control_replay": true,
+            "exact_preflight_replay": true
+          }
+        },
+        "capture_shrunk": {
+          "prediction_sha256": "7c21aa9c80db104f039bb0b9404a996793b837b507bec8a9eb4eb4629ed970a9",
+          "audit": {
+            "method": "frozen_capture_mean_countmass_decoder",
+            "exact_scored_control_replay": true,
+            "exact_preflight_replay": true
+          }
+        },
+        "blocked_quarter": {
+          "prediction_sha256": "c4da65312d7bcf2d6321c93d28477f845eaee99d7b8fd6e86d5b009dfd2e68a2",
+          "audit": {
+            "method": "zero_creation_blocked_logshift_countmass",
+            "count_mass_relative_error": 3.2550678111106776e-08,
+            "max_mean_change": 0.15292978409926095,
+            "covariance_change": 0.0836445686544223,
+            "created_positive_entries": 0,
+            "destroyed_positive_entries": 0,
+            "lineage_shift_fidelity": [
+              {
+                "lineage": "blood",
+                "intended_norm": 1.5435692133995043,
+                "decoded_norm": 1.2406151403083918,
+                "relative_shift_error": 0.38722406271932824
+              },
+              {
+                "lineage": "mesenchymal",
+                "intended_norm": 1.404973098266966,
+                "decoded_norm": 1.1346914773090426,
+                "relative_shift_error": 0.3341420356839011
+              },
+              {
+                "lineage": "endoderm",
+                "intended_norm": 1.5937761171523104,
+                "decoded_norm": 1.2016205060572018,
+                "relative_shift_error": 0.41353626193135734
+              },
+              {
+                "lineage": "ectoderm_other",
+                "intended_norm": 1.4946536732401792,
+                "decoded_norm": 1.166908578568008,
+                "relative_shift_error": 0.3789896057819538
+              },
+              {
+                "lineage": "cardiopharyngeal",
+                "intended_norm": 1.771876270196825,
+                "decoded_norm": 1.397383846417852,
+                "relative_shift_error": 0.3775877739736527
+              },
+              {
+                "lineage": "endothelial",
+                "intended_norm": 1.943001541925828,
+                "decoded_norm": 1.5232875679105449,
+                "relative_shift_error": 0.3786226346858662
+              },
+              {
+                "lineage": "cardiomyocyte",
+                "intended_norm": 1.8551765608475956,
+                "decoded_norm": 1.4562422453904786,
+                "relative_shift_error": 0.3818951580021691
+              }
+            ]
+          }
+        },
+        "blocked_shrunk": {
+          "prediction_sha256": "5123305fa9a241038f101c738ad810fa9fff26390987d895e1d20d7a1288ca19",
+          "audit": {
+            "method": "zero_creation_blocked_logshift_countmass",
+            "count_mass_relative_error": 1.6100564205593776e-08,
+            "max_mean_change": 0.2930591957569124,
+            "covariance_change": 0.045238864659025595,
+            "created_positive_entries": 0,
+            "destroyed_positive_entries": 3,
+            "lineage_shift_fidelity": [
+              {
+                "lineage": "blood",
+                "intended_norm": 2.3036917549413776,
+                "decoded_norm": 1.4669535566948504,
+                "relative_shift_error": 0.5318344004167063
+              },
+              {
+                "lineage": "mesenchymal",
+                "intended_norm": 2.110668966858606,
+                "decoded_norm": 1.3337468084762711,
+                "relative_shift_error": 0.5306626995088493
+              },
+              {
+                "lineage": "endoderm",
+                "intended_norm": 1.9275450829912455,
+                "decoded_norm": 1.0341580467446112,
+                "relative_shift_error": 0.6525611903554396
+              },
+              {
+                "lineage": "ectoderm_other",
+                "intended_norm": 1.9674814037323731,
+                "decoded_norm": 1.1892674603421725,
+                "relative_shift_error": 0.5934000773121487
+              },
+              {
+                "lineage": "cardiopharyngeal",
+                "intended_norm": 2.975327178923529,
+                "decoded_norm": 1.9815980718745951,
+                "relative_shift_error": 0.5358979265814705
+              },
+              {
+                "lineage": "endothelial",
+                "intended_norm": 3.1564905611883134,
+                "decoded_norm": 2.1183660262422905,
+                "relative_shift_error": 0.5289538484210015
+              },
+              {
+                "lineage": "cardiomyocyte",
+                "intended_norm": 3.1488099746259897,
+                "decoded_norm": 2.1211130121427884,
+                "relative_shift_error": 0.5277064926305404
+              }
+            ]
+          }
+        }
+      },
+      "donor_rows_sha256": "7d951f227d44ea8091374db5278ed8dfd5fc3026d938288ca0e8ae98ed15a3b0",
+      "target_rows_sha256": "27dd7bbbfcf35cb903f1defe93a5123c998bfb3ea62b7a7a6ae3f641e92b6fcd"
+    },
+    {
+      "cutoff": 8.25,
+      "target": 8.5,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.15222033858299255,
+        "variogram": 0.0030451943166553974
+      },
+      "ceiling": {
+        "de_score": 0.9175257731958761,
+        "de_direction": 0.7961990239209324,
+        "mmd_u": 0.0019628286827355623,
+        "variogram": 0.00010568655852694064
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "f991bb722bc73fe1b4135b16a6a7a3db7132c306103559448dc13289eb73ae4e",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.15222033858299255,
+            "variogram": 0.0030451943166553974
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "anchor_unshrunk",
+          "prediction_sha256": "5d6aa4173f2633aed63027306766a422040cce2e2a2b4e4dd4564d52ea10457c",
+          "raw_metrics": {
+            "de_score": 0.006872852233676978,
+            "de_direction": 0.06363941941395837,
+            "mmd_u": 0.1463458240032196,
+            "variogram": 0.003018938936293125
+          },
+          "local_score": 50.91127297853878,
+          "skills": {
+            "de_score": 0.5018796992481203,
+            "de_direction": 0.5208140834761475,
+            "mmd_u": 0.5099689528012651,
+            "variogram": 0.5022429913197065
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "capture_quarter",
+          "prediction_sha256": "f578fe28fd43f97ff33f7aa7d51170c0b17ef0966fbc70cee0de230dbbabc064",
+          "raw_metrics": {
+            "de_score": 0.140893470790378,
+            "de_direction": 0.1825520589608911,
+            "mmd_u": 0.1385682076215744,
+            "variogram": 0.0028232361655682325
+          },
+          "local_score": 53.76432310688628,
+          "skills": {
+            "de_score": 0.5415821501014199,
+            "de_direction": 0.5647418442867602,
+            "mmd_u": 0.523795568357878,
+            "variogram": 0.5196178098222719
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "capture_shrunk",
+          "prediction_sha256": "b64c67130bd61d7615d3dd8a000d6a63a5c51c264bc9583e0d48f50f59a19432",
+          "raw_metrics": {
+            "de_score": 0.017182130584192462,
+            "de_direction": 0.21060296394677663,
+            "mmd_u": 0.13891205191612244,
+            "variogram": 0.003120612585917115
+          },
+          "local_score": 52.5917001669517,
+          "skills": {
+            "de_score": 0.5047258979206048,
+            "de_direction": 0.5762062936832558,
+            "mmd_u": 0.5231684795855351,
+            "variogram": 0.49366704946445644
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "blocked_quarter",
+          "prediction_sha256": "c804b5751a79d9264344d0785f74bd0146be8e2884351eaabc32722d504df6cc",
+          "raw_metrics": {
+            "de_score": 0.1374570446735395,
+            "de_direction": 0.006785318958239507,
+            "mmd_u": 0.13978998363018036,
+            "variogram": 0.0029441998340189457
+          },
+          "local_score": 51.88765188614957,
+          "skills": {
+            "de_score": 0.5404858299595141,
+            "de_direction": 0.5021396520205211,
+            "mmd_u": 0.5215741350886962,
+            "variogram": 0.50873953919939
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "blocked_shrunk",
+          "prediction_sha256": "0e9216f100f41254b59ab8063ea04920f9c457a7ff2bab6c0cd03804eb51acd9",
+          "raw_metrics": {
+            "de_score": 0.020618556701030934,
+            "de_direction": 0.10795465890601356,
+            "mmd_u": 0.14121398329734802,
+            "variogram": 0.002934226533398032
+          },
+          "local_score": 51.81373945300384,
+          "skills": {
+            "de_score": 0.5056818181818181,
+            "de_direction": 0.5363619992889734,
+            "mmd_u": 0.5190086802826573,
+            "variogram": 0.5096191803877166
+          },
+          "calibration_valid": true
+        }
+      ],
+      "generation": {
+        "copy": {
+          "prediction_sha256": "f991bb722bc73fe1b4135b16a6a7a3db7132c306103559448dc13289eb73ae4e",
+          "audit": {
+            "method": "persistence",
+            "exact_scored_control_replay": true,
+            "exact_preflight_replay": true
+          }
+        },
+        "anchor_unshrunk": {
+          "prediction_sha256": "5d6aa4173f2633aed63027306766a422040cce2e2a2b4e4dd4564d52ea10457c",
+          "audit": {
+            "fit_cells": 10963,
+            "fit_max_stage": 8.25,
+            "supported_genes": 14462,
+            "method": "Conditional positive log1p response decoder",
+            "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+            "conditional_ridge_strength": 1.0,
+            "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+            "encoder_features": 4096,
+            "covariance_guard_features": 384,
+            "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+            "anchor_calibration_rows": 1500,
+            "anchor_supported_genes": 11513,
+            "anchor_slope_ridge": 1.0,
+            "limitation": "Cross-sectional associations are not temporal velocities; only 1500 past anchors.",
+            "anchor_positive_slope_strength": 0.5,
+            "anchor_detection_slope_strength": 0.5,
+            "response_units": "log1p normalized expression",
+            "response_fit_rows": 10963,
+            "response_fit_max_stage": 8.25,
+            "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+            "mode": "joint",
+            "strength": 1.0,
+            "backoff": 1.0,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.06474211905825207,
+            "newly_detected_entries": 14513,
+            "removed_detection_entries": 34119,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true,
+            "exact_scored_control_replay": true
+          }
+        },
+        "capture_quarter": {
+          "prediction_sha256": "f578fe28fd43f97ff33f7aa7d51170c0b17ef0966fbc70cee0de230dbbabc064",
+          "audit": {
+            "method": "frozen_capture_mean_countmass_decoder",
+            "exact_scored_control_replay": true,
+            "exact_preflight_replay": true
+          }
+        },
+        "capture_shrunk": {
+          "prediction_sha256": "b64c67130bd61d7615d3dd8a000d6a63a5c51c264bc9583e0d48f50f59a19432",
+          "audit": {
+            "method": "frozen_capture_mean_countmass_decoder",
+            "exact_scored_control_replay": true,
+            "exact_preflight_replay": true
+          }
+        },
+        "blocked_quarter": {
+          "prediction_sha256": "c804b5751a79d9264344d0785f74bd0146be8e2884351eaabc32722d504df6cc",
+          "audit": {
+            "method": "zero_creation_blocked_logshift_countmass",
+            "count_mass_relative_error": 2.8179625904231535e-08,
+            "max_mean_change": 0.13868751369913412,
+            "covariance_change": 0.10940189385280619,
+            "created_positive_entries": 0,
+            "destroyed_positive_entries": 1,
+            "lineage_shift_fidelity": [
+              {
+                "lineage": "blood",
+                "intended_norm": 1.786864247693645,
+                "decoded_norm": 1.7202794644653492,
+                "relative_shift_error": 0.44815664941234257
+              },
+              {
+                "lineage": "mesenchymal",
+                "intended_norm": 1.2560768208398132,
+                "decoded_norm": 1.0094712536685202,
+                "relative_shift_error": 0.3638986559126271
+              },
+              {
+                "lineage": "endoderm",
+                "intended_norm": 1.7461807832030012,
+                "decoded_norm": 1.297173295123451,
+                "relative_shift_error": 0.4426371387242529
+              },
+              {
+                "lineage": "ectoderm_other",
+                "intended_norm": 1.4448009938133723,
+                "decoded_norm": 1.1456037244320485,
+                "relative_shift_error": 0.40103530280740435
+              },
+              {
+                "lineage": "cardiopharyngeal",
+                "intended_norm": 1.4477921996931002,
+                "decoded_norm": 1.1350457638045472,
+                "relative_shift_error": 0.39006585916202935
+              },
+              {
+                "lineage": "endothelial",
+                "intended_norm": 1.6959177348937868,
+                "decoded_norm": 1.2767410335488698,
+                "relative_shift_error": 0.41033008179623043
+              },
+              {
+                "lineage": "cardiomyocyte",
+                "intended_norm": 2.0512545680581646,
+                "decoded_norm": 1.6166080939590568,
+                "relative_shift_error": 0.3745671107251272
+              }
+            ]
+          }
+        },
+        "blocked_shrunk": {
+          "prediction_sha256": "0e9216f100f41254b59ab8063ea04920f9c457a7ff2bab6c0cd03804eb51acd9",
+          "audit": {
+            "method": "zero_creation_blocked_logshift_countmass",
+            "count_mass_relative_error": 3.638381413517363e-08,
+            "max_mean_change": 0.13161440070470176,
+            "covariance_change": 0.07005497672347598,
+            "created_positive_entries": 0,
+            "destroyed_positive_entries": 0,
+            "lineage_shift_fidelity": [
+              {
+                "lineage": "blood",
+                "intended_norm": 2.850464611275877,
+                "decoded_norm": 1.9820595875503286,
+                "relative_shift_error": 0.48941094889460235
+              },
+              {
+                "lineage": "mesenchymal",
+                "intended_norm": 1.6101614360386183,
+                "decoded_norm": 0.9385900138109909,
+                "relative_shift_error": 0.594775267561065
+              },
+              {
+                "lineage": "endoderm",
+                "intended_norm": 2.274277139755173,
+                "decoded_norm": 1.244930267419366,
+                "relative_shift_error": 0.6559823202191988
+              },
+              {
+                "lineage": "ectoderm_other",
+                "intended_norm": 1.89099701698007,
+                "decoded_norm": 1.0807995072189933,
+                "relative_shift_error": 0.6326621002558043
+              },
+              {
+                "lineage": "cardiopharyngeal",
+                "intended_norm": 1.8091094695736532,
+                "decoded_norm": 1.0186268875580136,
+                "relative_shift_error": 0.6322546285046527
+              },
+              {
+                "lineage": "endothelial",
+                "intended_norm": 2.2591854553681188,
+                "decoded_norm": 1.2689471541663824,
+                "relative_shift_error": 0.6222601226964594
+              },
+              {
+                "lineage": "cardiomyocyte",
+                "intended_norm": 3.258410420645425,
+                "decoded_norm": 2.065201078910966,
+                "relative_shift_error": 0.5438701129505096
+              }
+            ]
+          }
+        }
+      },
+      "donor_rows_sha256": "1faf5d3c2e23851202f3c24b72f3413ccd2b116b3cecb71b85668b5458681684",
+      "target_rows_sha256": "71a194288ba56e9eb2c51a69ef4921c9141c73b691de1672e511d358098a172a"
+    }
+  ],
+  "critic_assessments": [
+    {
+      "experiment_id": "zero_creation_blocked_fullpanel_01/blocked_quarter",
+      "assessment": {
+        "status": "evaluated",
+        "metrics": {
+          "de_score": {
+            "paired_mean_skill_gain": 0.010040629678166935,
+            "positive_pairs": 1,
+            "pairs": 2,
+            "reward": 1,
+            "stability_verified": false
+          },
+          "de_direction": {
+            "paired_mean_skill_gain": -0.040387362299255214,
+            "positive_pairs": 0,
+            "pairs": 2,
+            "reward": -10,
+            "stability_verified": false
+          },
+          "mmd_u": {
+            "paired_mean_skill_gain": -0.0017976461546686529,
+            "positive_pairs": 1,
+            "pairs": 2,
+            "reward": -10,
+            "stability_verified": false
+          },
+          "variogram": {
+            "paired_mean_skill_gain": -0.013085742743211864,
+            "positive_pairs": 1,
+            "pairs": 2,
+            "reward": -10,
+            "stability_verified": false
+          }
+        },
+        "reward_delta": -29
+      },
+      "plan_sha256": "791ed275757450b18a29da1a977830edcf4b7c941ec0eae86c74bb97e97410ef"
+    },
+    {
+      "experiment_id": "zero_creation_blocked_fullpanel_01/blocked_shrunk",
+      "assessment": {
+        "status": "evaluated",
+        "metrics": {
+          "de_score": {
+            "paired_mean_skill_gain": -0.007361376210681059,
+            "positive_pairs": 1,
+            "pairs": 2,
+            "reward": -10,
+            "stability_verified": false
+          },
+          "de_direction": {
+            "paired_mean_skill_gain": -0.026342695115355724,
+            "positive_pairs": 1,
+            "pairs": 2,
+            "reward": -10,
+            "stability_verified": false
+          },
+          "mmd_u": {
+            "paired_mean_skill_gain": -0.008991173289074034,
+            "positive_pairs": 1,
+            "pairs": 2,
+            "reward": -10,
+            "stability_verified": false
+          },
+          "variogram": {
+            "paired_mean_skill_gain": -0.017686423722931333,
+            "positive_pairs": 1,
+            "pairs": 2,
+            "reward": -10,
+            "stability_verified": false
+          }
+        },
+        "reward_delta": -40
+      },
+      "plan_sha256": "791ed275757450b18a29da1a977830edcf4b7c941ec0eae86c74bb97e97410ef"
+    }
+  ],
+  "passing_candidates": [],
+  "official_score": null,
+  "local_72_gate_passed": false,
+  "submissions_used": 0,
+  "report_sha256": "910ccd0e40d1c95f4006a492f39c0d18d7f863a60ef38479048c0ae8a98884f0",
+  "plan_sha256": "791ed275757450b18a29da1a977830edcf4b7c941ec0eae86c74bb97e97410ef"
+}

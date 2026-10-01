@@ -1,0 +1,39 @@
+{
+  "folds": [
+    [
+      8.0,
+      8.25
+    ],
+    [
+      8.25,
+      8.5
+    ]
+  ],
+  "candidates": [
+    "copy",
+    "anchor_unshrunk",
+    "capture_quarter",
+    "capture_shrunk",
+    "blocked_quarter",
+    "blocked_shrunk"
+  ],
+  "seed": 20260928,
+  "donor_count": 1500,
+  "target_count": 2000,
+  "scored_truth_count": 1000,
+  "ceiling_count": 1000,
+  "fit": "Identical frozenquarter/shrunk pastlineage deltas; newvariantsapplyonlydonorpositiveentries andlockdonorzeros0, positiveclip/countmassrepair. No strengthfit/targetgrid; positiveentriesmaybe destroyed so notstrictsupportpreserving. Reportrealizedmeans/magnitudeconfounds. Fouroriginalcontrolforecasthashesmustreplayexact; allfoldforecasts freezeandguard beforetargetread.",
+  "incumbent": "Archived past-only CNF/PartialAnchorForecast positive/detection slopes .5/.5, jointsystematicsamplingstrength1, same donors and target time.",
+  "evaluation": "Allfold forecasts frozen beforetargetexpression. Full32285 pinnedscorer/weights/calibration unchanged, identical targetsplit/order reference seed. Fourrawmetrics/fourskills/calibration failures preserved. Reuseddevelopmenttargets, not independentchallenge/embryovalidation.",
+  "promotion": "Bothfoldsheadline>copy/incumbent andall4skills>=incumbent validcalibration; comparisonsagainstfixedadditivecontrol reported. Original>72mean/lower-tail64replicate/temporalgatesunchanged.",
+  "reward": "Only2newblockedvariants eligible for separate reward; copy/incumbent/additive controls earnno repeatreward.",
+  "resources": "D-onlytemporaryforecastcache singlepredictiongeneration/read atatime; genechunks256,2threads16GB. Retain private reports/splits/events/hashes; largecacheclosedafterconsumption. Noofficialupload.",
+  "guards": {
+    "zero_creation": 0,
+    "mapped_countmass_relative_error_max": 1e-05,
+    "meanchange_max": 0.5,
+    "covariance_change_max": 0.4,
+    "finite_nonnegative": true,
+    "protectedgenes_and_unsupportedlineages": "exactcopy"
+  }
+}

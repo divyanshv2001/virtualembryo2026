@@ -125,6 +125,11 @@
       "script": "capture_decoder_support_audit.py",
       "run": "private/capture_decoder_support_audit_01",
       "report": "CAPTURE_DECODER_SUPPORT_AUDIT_RESULTS.json"
+    },
+    "zero_creation_blocked": {
+      "script": "zero_creation_blocked_fullpanel.py",
+      "run": "private/zero_creation_blocked_fullpanel_01",
+      "report": "ZERO_CREATION_BLOCKED_FULLPANEL_RESULTS.json"
     }
   }
 }

@@ -1,0 +1,21 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "purpose": "Next bounded path after zero-creation-blocked fullpanelfailure",
+    "evidence": "12scoresallcalibrationsvalid,4controlhashes/raw/scores/splitsexactreplay. Newblockedquarter46.9437/51.8877,shrunk46.2341/51.8137 vsanchor50.0687/50.9113; no2foldpass. Creates0destroys0-3; guards pass. EarlyCSSblocked46.194/45.186 improvesadditive35.947/27.434 butbelowanchor49.461. Directionblocked42.388/41.775 belowadditive43.849/44.007 andanchor48.598. Laterblockedquarterdirection50.214<anchor52.081, shrunk53.636>anchor.",
+    "confounds": "Blockedmean-shiftrelativeerrorquarter.334-.448/shrunk.489-.656 exceedsadditive.232-.491. Bothsupport andrealizedmeans/magnitudeschanged; cannotattributeallscorechanges solelytozero-filling. Priorjointmean/countmass exactconstraints infeasible ornearanchor; priorcellweightedEB/ridge/gaincalibrationnegative. Capturesnotembryos/reuseddevelopmentonly.",
+    "critics": "DE/MMD matchedmean/magnitude donorcontrols; directionpastcenterednormmatchedcorrection; CSS interval/depth/zerofraction/lineage matchedpasttransitions. No claimedvalidatedsolution, no exposedtargetgrid. Full32285 unchangedscorer/calibration, readiness>72/64replicate/temporalunmet.",
+    "other_open": "Playbook externalWT GSE76118 acquisitionavailable143E8.5/999E9.5 primaryCD1 candidates; only4cellpilot, QC/compatibilitypending, trainingreadinessfalse. Stage<=9.5 eligible futuretaskinputsbutmaynotfit earliercut8/8.25; stageexclusionstrict."
+  },
+  "questions": {
+    "next_path": {
+      "type": "choice",
+      "instructions": "Pick genuinely informative nextstep; leaveboundednegativefamiliesopen andavoidrepeatedtargettuning.",
+      "criteria": {
+        "donor_norm_match_feasibility": "Pastdonor-only preflight fixedmasked/additive mean/magnitude matching withcopy/incumbent controls. Checkanalyticfeasibility before anygrid; quantify support tradeoffs, no hardjointlogmean/countmass assumption. Couldisolateconfounds butdelaysindependentvalidation.",
+        "external_wt_qc_preflight": "Inspectactualmanifest/files/processes and4cellpilot, thenpredeclarelowRAMexternalWT normalization/gene/metadata/stagecompatibilityQC. No newdataacquisition withoutsourcevalidation, nofuturestageuseinearlierfits. Progressdistinctdeclaredopeninputpath.",
+        "retune_blocked_target_strength": "Optimizegain on observedtargetscore; prohibitedselection."
+      }
+    }
+  }
+}
