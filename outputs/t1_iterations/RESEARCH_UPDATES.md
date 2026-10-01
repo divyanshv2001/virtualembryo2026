@@ -600,3 +600,7 @@ All16forecasts frozen beforeANYfutureexpression,12originalcontrols exactforecast
 ## 2026-10-01T19:49:05.084765+00:00 — capture-module coverage/resources
 
 Relevantpriorcell-level8Dconditionalridge andindependentgeneEB aredifferentfrompredeclaredcapture-levelrank2basis/omissionrefit; limitedlocalcodecoverage recorded, no wholefamilyclaim. Metadata-only counts: everyomissionrequires3captures/stage;3lineagescut8 and4cut8.25 qualify, unsupportedcasesexplicit. DEsignedoverlapdiscreteness/scaling documented; actualtiedscoresgene-sets uninspected. Jev1026in/56out selectedfixedrank2capturemeanprojection. NEXT_CAPTURE_MODULE_STABILITY_AUDIT.json declared, notstarted. Noexpression/newexperimentmetrics/reward;ledgerunchanged.
+
+## 2026-10-01T20:01:52.058333+00:00 — capture-module stability diagnostic
+
+Fixedrank2capturebalancedSVD/OLS withfullomissionrefits implemented,testedandrun past-only. Sevencompletecases/fourfit-only unsupported/fivestagefitunsupported. Stableprojectedshiftenergy.902–.995; projectionretains.547–.972OLSenergy. Fourreusedcriticcontexts warnprojectionadvantageunprovenwithoutmatchedOLS omissionstability. Jev880in/65out chosematchedcontrolaudit usingfrozenmeans,newexpressionunneeded. NEXT_MATCHED_MODULE_OLS_OMISSION_AUDIT.json declared. No targetexpression/metrics/reward;−848 andledgerunchangeddiagnosticbatch. Allsupport/hashes/events retained;coverage/readinessopen.

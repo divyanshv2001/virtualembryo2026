@@ -1,0 +1,15 @@
+{
+  "status": "predeclared_not_started",
+  "source_run": "private/capture_module_stability_audit_01",
+  "source_report_sha256": "d3d9e1202e4bfc6ff2582a48ea61186541901b453cb6a9c58579fcf6851ed3a0",
+  "cutoffs": [
+    8.0,
+    8.25
+  ],
+  "rank": 2,
+  "scope": "Frozenpastcapturemeans only, no new expressionreads,target/scorer/reward. Exact12? actual11 fullfits plus corresponding supportedomitted projectedslopes replay; countfromfrozenreportnotassume12.",
+  "method": "For eachoriginalsupportedfullfit replayweightedSVD/projected/fullOLS fromcapturemeans/stages. Eachmandatoryeligiblecaptureomission: originalstageeligibility,min2persnapshot unchanged; refit same estimator, requireprojectedslopesexactsavedarray; recordunprojectedOLSgene-space signagreement/cosine/relativechange. Ifanyrequiredomission unsupported, bothstabilityaggregates unavailable, retainoriginalsupportreasons.",
+  "controls": "Samegenes/rows/weights/omissions, persistencezero andunprojectedOLS. Comparestableenergyfraction ineach ownfullslope vector, notcommonmeaninglessdenominator; report projectedretained/discardedOLSenergy andcosines. No claimimprovementfromrawfractionalone, no posthocpasscutoff. Numericalcontrolssamefrozenrank2helper.",
+  "resources": "D-onlysmallcapturemeans/slopes, no sourceexpressionneeded,2threads16GBRAM; retaincontrolarrays/hash provenance and genuineevents.",
+  "outputs": "Allcomplete/fitonly/unsupportedcases, projected/OLSstability, exactarrayreplayhashes, fourmetricavailabilitynull, reward0. Broadfamiliesnotexhausted. No officialsubmission."
+}

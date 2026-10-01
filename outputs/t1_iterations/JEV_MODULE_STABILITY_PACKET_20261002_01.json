@@ -1,0 +1,20 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "purpose": "Next distinct decision after past-only capture-module stability audit.",
+    "evidence": "Fixedrank2stage/capturebalancedSVD gene-OLSprojection, completebasisrefit everycaptureomission.7fullstabilitycases,4fitonlyunsupported,5nostagefit. Stableprojectednonzero-shiftenergy.902-.995; minimumomissioncosines.784-.979. Projection retains.547-.972 ofunprojectedOLSenergy. No futureexpression/scorer/reward. Allsmallcapturemeans/fullOLS/projected/omissions hashespreserved.",
+    "critics": "DE/direction/MMD say matchedunprojectedOLS omissionstability missing; highprojectedstabilitydoesnotproveadvantage/accuracy. Someproposehybrid/translationonlylater. CSSreviewpending. Capturesnotindependentembryos,jointannotation unresolved. Existingfullpanel repair/slopes failed; do notrepeatdecoder/targetstrengthgrid.",
+    "constraints": "Needmatchedcontrol beforefuturefit/decoder. D16GB2threads, no newdatasets. Unchanged32285scorer/calibration/readiness>72/64replicate/temporalunmet. Originalrank2 andeligibilityfixed; no rankgrid."
+  },
+  "questions": {
+    "next_step": {
+      "type": "choice",
+      "instructions": "Choose information-efficient nexttest; keepnegative/unsupportedcases.",
+      "criteria": {
+        "matched_OLS_omission_audit": "Fromfrozenpastcapturemeans replayrank2full/omitted projectedhasharrays; computeunprojectedOLS peridenticalomission. Compareweightedstableenergyfractions, cosines/signagreement plus projectedversusOLSdistance/retainedenergy. Everymandatoryomissionsame,min2eachstage;unsupportednotcherrypicked. Noexpressionreads/refit hyperparameters/newscore/reward. Separatelydeclaredecoderonlyafterevidence.",
+        "immediate_projected_fullpanel": "Skipmissingmatchedstabilitycontrol andreuseslopedecoder onexposedtargets; cannotattributeprojectionbenefit cleanly.",
+        "rank_target_grid": "Choose rank/strength usingfuturefullpanels; disallowed."
+      }
+    }
+  }
+}

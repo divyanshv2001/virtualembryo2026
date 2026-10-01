@@ -1,17 +1,17 @@
 {
-  "updated_utc": "2026-10-01T19:49:05.594369+00:00",
+  "updated_utc": "2026-10-01T20:01:52.220412+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "f70d4e6ad17402ad66d2ef9e29bec6580c103cbf28e1e820dda98d359a4a3eab",
+    "LOCAL_OPTIMIZATION_STATE.json": "ab9c876e0f3445f2b7428ee3aa89e9fbcfa39819f27bb5ade5defa842ad960b9",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "bdf27f013aca72c196cb08f1fd725299a8ba82857c515ae72ffa626cbcaf0e72",
+    "METRIC_RESEARCH_QUEUE.json": "f731209fcac992e90457e79d0cd02e540fa5da8391238bee29c3f43087eb81c7",
     "METRIC_CRITIQUE_POLICY.json": "027368320281a1164dc91720fe8aa18a344ddf7c14b9c5a8fce8b2b075105b7b",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
-    "RESEARCH_HARNESS_MANIFEST.json": "e01042e184183ea6b03a4c49069e6789a00876d952a276dfb6127049055fcbf0"
+    "RESEARCH_HARNESS_MANIFEST.json": "c797db68416b5077231a2a04e9f49cdb5e61001d0c1eb9342cb5d966e5bc724a"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [],
-  "next_experiment": "Implement/run predeclared capture_module_stability_audit_01: past3stage capturebalancedrank2SVD gene-slope projection andfullcaptureomissionrefits. Strict20cells/min2stagefit/min3everyomission support; unsupportedlineages/omissions recorded, no targetexpression/score/reward or rank/strengthgrid. Numericalrank2/identitycontrols; comparegene-space slope signs/energy/cosines. Onlyseparatelydeclareforecastafteridentifiability; no repeatprior8Dlatent/ridge method. Families/readinessopen.",
+  "next_experiment": "Implement/run matched_capture_module_OLS_omission_audit_01 fromfrozenpastcapturemeans only: exactfull/omittedrank2projectedslopes replay, calculateunprojectedOLS foridenticalmandatoryomissions andstage/captureweights. Reportpairedstabilityenergy/cosines/signs anddiscardedenergy, retainallunsupportedcases. Noexpression/target/scorer/reward, no threshold/rankgrid. Onlythen separatelydeclarefixeddecoder/evaluation withmatchedcontrols ifviable. Families/readinessopen.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -57,12 +57,12 @@
     "attribution": "Inferred latest export; screenshot lacks filename"
   },
   "latest_jev": {
-    "record": "JEV_MODULE_DESIGN_ROUTE_20261002_01.json",
+    "record": "JEV_MODULE_STABILITY_ROUTE_20261002_01.json",
     "usage": {
-      "input_tokens": 1026,
-      "output_tokens": 56
+      "input_tokens": 880,
+      "output_tokens": 65
     },
-    "choice": "rank2_capture_mean_projection",
+    "choice": "matched_OLS_omission_audit",
     "confidence": 1.0
   },
   "external_qc_audit": {

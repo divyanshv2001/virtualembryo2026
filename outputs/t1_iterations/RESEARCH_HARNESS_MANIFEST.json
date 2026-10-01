@@ -150,6 +150,11 @@
       "script": "repair_aware_energy_fullpanel.py",
       "run": "private/repair_aware_energy_fullpanel_01",
       "report": "REPAIR_AWARE_ENERGY_FULLPANEL_RESULTS.json"
+    },
+    "capture_module_stability": {
+      "script": "capture_module_stability_audit.py",
+      "run": "private/capture_module_stability_audit_01",
+      "report": "CAPTURE_MODULE_STABILITY_AUDIT_RESULTS.json"
     }
   }
 }

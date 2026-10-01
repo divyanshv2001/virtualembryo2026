@@ -1,0 +1,38 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "e216bbaae3ae17a0c9123429ad64956e8a508b1e07cc67df9538206905b541cb",
+  "attempts": 1,
+  "payload_bytes": 1846,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "purpose": "Next distinct decision after past-only capture-module stability audit.",
+      "evidence": "Fixedrank2stage/capturebalancedSVD gene-OLSprojection, completebasisrefit everycaptureomission.7fullstabilitycases,4fitonlyunsupported,5nostagefit. Stableprojectednonzero-shiftenergy.902-.995; minimumomissioncosines.784-.979. Projection retains.547-.972 ofunprojectedOLSenergy. No futureexpression/scorer/reward. Allsmallcapturemeans/fullOLS/projected/omissions hashespreserved.",
+      "critics": "DE/direction/MMD say matchedunprojectedOLS omissionstability missing; highprojectedstabilitydoesnotproveadvantage/accuracy. Someproposehybrid/translationonlylater. CSSreviewpending. Capturesnotindependentembryos,jointannotation unresolved. Existingfullpanel repair/slopes failed; do notrepeatdecoder/targetstrengthgrid.",
+      "constraints": "Needmatchedcontrol beforefuturefit/decoder. D16GB2threads, no newdatasets. Unchanged32285scorer/calibration/readiness>72/64replicate/temporalunmet. Originalrank2 andeligibilityfixed; no rankgrid."
+    },
+    "questions": {
+      "next_step": {
+        "type": "choice",
+        "instructions": "Choose information-efficient nexttest; keepnegative/unsupportedcases.",
+        "criteria": {
+          "matched_OLS_omission_audit": "Fromfrozenpastcapturemeans replayrank2full/omitted projectedhasharrays; computeunprojectedOLS peridenticalomission. Compareweightedstableenergyfractions, cosines/signagreement plus projectedversusOLSdistance/retainedenergy. Everymandatoryomissionsame,min2eachstage;unsupportednotcherrypicked. Noexpressionreads/refit hyperparameters/newscore/reward. Separatelydeclaredecoderonlyafterevidence.",
+          "immediate_projected_fullpanel": "Skipmissingmatchedstabilitycontrol andreuseslopedecoder onexposedtargets; cannotattributeprojectionbenefit cleanly.",
+          "rank_target_grid": "Choose rank/strength usingfuturefullpanels; disallowed."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 880,
+    "output_tokens": 65
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "next_step": {
+      "choice": "matched_OLS_omission_audit",
+      "confidence": 1.0
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}

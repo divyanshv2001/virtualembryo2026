@@ -1,0 +1,3068 @@
+{
+  "status": "completed",
+  "plan": {
+    "status": "predeclared_not_started",
+    "cutoffs": [
+      8.0,
+      8.25
+    ],
+    "min_capture_cells": 20,
+    "min_stage_captures_fit": 2,
+    "min_stage_captures_every_omission": 3,
+    "rank": 2,
+    "seed": 20260928,
+    "scope": "Past3stage capture-level coexpression identifiability diagnostic, nofutureexpression/scorer/reward. Capturesnotindependentembryos; metadataannotation provenance retained.",
+    "estimator": "Perlineage meanlog1p includingzeros foreacheligiblecapture atcutoff-.5,-.25,cutoff; stream256mappedgenes. Equalstage andequalcapture withinstage weightsw. Center weightedcapturemean matrix; SVD ofsqrt(w)*(means-weightedcenter), fixedrank2rightsingularvectors. CapturebalancedOLS perquarterday gene slope=weightedcov(time,means)/weightedvar(time); projectgene slope ontofixed2Dbasis. Numericalrank deficiency marksunsupported, no adaptive rank/grid.",
+    "omission": "Everyeligiblecapture omission refitsweights/center/SVD/OLS, compare reconstructedgene slopes tofullfit (notlatentaxis signs). Ifanyomission leaves<2eligiblecapturesatanypaststage, markfullstability unsupported, retainfitdiagnostic andrecordmissingomissions; do notselectfavorableomissions. Every-omission support thusrequires>=3initialcaptures eachstage. Keepstagecutoff strict.",
+    "controls": "Persistencezeros andunprojectedcapturebalancedOLS; identity/knownrank2synthetic numericalcontrols, temporalrowguard/hashes. No targetfit/strengthgrid, nohiddenrankoptimization.",
+    "outputs": "Capture/lineage/stagecounts, rank/singularvalues, projected/unprojectedenergy, allomissiongenedelta cosine/signagreement andstablegeneshiftenergyfraction; source/code/split hashes andgenuineevents. No claimaccuracy/promotionfromstability. Originalfullpanel/calibration/readinessunchanged; onlyseparatelydeclareforecastifidentifiable.",
+    "resources": "D-only source memmap/chunk256genes, tinycapture-by-mappedgene matrix,2threads16GBRAM; retainsmallmeans/slopes/hash evidence, nofullcellforecastorRAMatlas.",
+    "created_utc": "2026-10-01T19:57:17.281857+00:00",
+    "spec_sha256": "42f125306117155e7b84e6ec31492b86a902c93f06d5e706119d97ed8cb8066f",
+    "prepared_report_sha256": "1acd8a635f76c9f9ac89a1186f116db91309b007f448a8d11ec612627ab5bca4",
+    "panel_sha256": "2aeae4cd284933956242bbc9c5ab4f565c1d2acc7cc3fd3037977e4bce8be4bf",
+    "mapped_unique_genes": 26775,
+    "code_sha256": {
+      "capture_module_stability_audit.py": "89b22b1bceccd88de4b62dbfb5ee911979ed568484a1087b253068aaca9462e4",
+      "capture_module_estimator.py": "28576247b88d84245f50e8b717a819c5f3952fd91bdcfce463af7f5fa767e450",
+      "projection_survival_diagnostics.py": "7e574f7f12ea57dd34c09476229d545619631051a3e03a71f3e62950c5f87696",
+      "lineage_residual_screen.py": "caa26ef0300cd52f98e10f41686a92393c489309020d207915d70f5565bdaf7a"
+    }
+  },
+  "results": [
+    {
+      "cutoff": 8.0,
+      "lineage": "blood",
+      "stage_capture_counts": [
+        5,
+        4,
+        4
+      ],
+      "captures": [
+        {
+          "stage": 7.5,
+          "capture": "19",
+          "cells": 413
+        },
+        {
+          "stage": 7.5,
+          "capture": "2",
+          "cells": 29
+        },
+        {
+          "stage": 7.5,
+          "capture": "20",
+          "cells": 110
+        },
+        {
+          "stage": 7.5,
+          "capture": "3",
+          "cells": 21
+        },
+        {
+          "stage": 7.5,
+          "capture": "6",
+          "cells": 111
+        },
+        {
+          "stage": 7.75,
+          "capture": "12",
+          "cells": 372
+        },
+        {
+          "stage": 7.75,
+          "capture": "13",
+          "cells": 394
+        },
+        {
+          "stage": 7.75,
+          "capture": "8",
+          "cells": 227
+        },
+        {
+          "stage": 7.75,
+          "capture": "9",
+          "cells": 284
+        },
+        {
+          "stage": 8.0,
+          "capture": "16",
+          "cells": 579
+        },
+        {
+          "stage": 8.0,
+          "capture": "33",
+          "cells": 282
+        },
+        {
+          "stage": 8.0,
+          "capture": "34",
+          "cells": 268
+        },
+        {
+          "stage": 8.0,
+          "capture": "35",
+          "cells": 236
+        }
+      ],
+      "max_fit_stage": 8.0,
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0,
+      "status": "completed_stability",
+      "every_omission_supported": true,
+      "fit_diagnostic": {
+        "numerical_rank": 12,
+        "singular_values": [
+          4.886951345013212,
+          3.186605497031327,
+          2.2046577589616745,
+          1.7700828856157411,
+          1.7349749850671978,
+          1.6387203603945535,
+          1.1047844802858364,
+          0.8817969031738284,
+          0.696263402191934,
+          0.6559120396264783,
+          0.5057581448674416,
+          0.4830982657635485,
+          5.97218535978838e-15
+        ],
+        "weights": [
+          0.06666666666666667,
+          0.06666666666666667,
+          0.06666666666666667,
+          0.06666666666666667,
+          0.06666666666666667,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333
+        ],
+        "projected_energy": 28.745098319523933,
+        "unprojected_energy": 29.575304241209754,
+        "time_denominator": 0.6666666666666666
+      },
+      "omissions": [
+        {
+          "capture": "19",
+          "stage": 7.5,
+          "remaining_stage_counts": [
+            4,
+            4,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.99656082526248,
+          "nonzero_full_sign_agreement": 0.951881067961165,
+          "relative_projected_slope_difference": 0.09180366394348095,
+          "numerical_rank": 11
+        },
+        {
+          "capture": "2",
+          "stage": 7.5,
+          "remaining_stage_counts": [
+            4,
+            4,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.986842867458684,
+          "nonzero_full_sign_agreement": 0.9193567961165049,
+          "relative_projected_slope_difference": 0.1665090999169994,
+          "numerical_rank": 11
+        },
+        {
+          "capture": "20",
+          "stage": 7.5,
+          "remaining_stage_counts": [
+            4,
+            4,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9934153904437546,
+          "nonzero_full_sign_agreement": 0.9349514563106797,
+          "relative_projected_slope_difference": 0.12410635816486734,
+          "numerical_rank": 11
+        },
+        {
+          "capture": "3",
+          "stage": 7.5,
+          "remaining_stage_counts": [
+            4,
+            4,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9750419189335012,
+          "nonzero_full_sign_agreement": 0.8842233009708738,
+          "relative_projected_slope_difference": 0.2220241245682105,
+          "numerical_rank": 11
+        },
+        {
+          "capture": "6",
+          "stage": 7.5,
+          "remaining_stage_counts": [
+            4,
+            4,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9916657009828458,
+          "nonzero_full_sign_agreement": 0.9284587378640776,
+          "relative_projected_slope_difference": 0.12943632502259492,
+          "numerical_rank": 11
+        },
+        {
+          "capture": "12",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            5,
+            3,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9969988900052553,
+          "nonzero_full_sign_agreement": 0.9566140776699029,
+          "relative_projected_slope_difference": 0.07794526942812165,
+          "numerical_rank": 11
+        },
+        {
+          "capture": "13",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            5,
+            3,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9992950059894735,
+          "nonzero_full_sign_agreement": 0.9632281553398059,
+          "relative_projected_slope_difference": 0.03755130540397368,
+          "numerical_rank": 11
+        },
+        {
+          "capture": "8",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            5,
+            3,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9974602402253244,
+          "nonzero_full_sign_agreement": 0.9557645631067961,
+          "relative_projected_slope_difference": 0.07125433843007872,
+          "numerical_rank": 11
+        },
+        {
+          "capture": "9",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            5,
+            3,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9993006080071981,
+          "nonzero_full_sign_agreement": 0.9752427184466019,
+          "relative_projected_slope_difference": 0.0378145651633048,
+          "numerical_rank": 11
+        },
+        {
+          "capture": "16",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            5,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9854650463912542,
+          "nonzero_full_sign_agreement": 0.9344660194174758,
+          "relative_projected_slope_difference": 0.16995801636404143,
+          "numerical_rank": 11
+        },
+        {
+          "capture": "33",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            5,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9977910192983516,
+          "nonzero_full_sign_agreement": 0.9596480582524272,
+          "relative_projected_slope_difference": 0.07062336618295435,
+          "numerical_rank": 11
+        },
+        {
+          "capture": "34",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            5,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9979023244919207,
+          "nonzero_full_sign_agreement": 0.9584344660194175,
+          "relative_projected_slope_difference": 0.06533317659602472,
+          "numerical_rank": 11
+        },
+        {
+          "capture": "35",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            5,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9978010583591543,
+          "nonzero_full_sign_agreement": 0.9547330097087379,
+          "relative_projected_slope_difference": 0.06685969811896496,
+          "numerical_rank": 11
+        }
+      ],
+      "artifact_sha256": "d20c3f2a51eadd471ff26a68b0da5bd39f4280ab66a8305ccaaa50889a4d0dc7",
+      "stable_nonzero_genes": 10364,
+      "stable_shift_energy_fraction": 0.995139721801527
+    },
+    {
+      "cutoff": 8.0,
+      "lineage": "cardiomyocyte",
+      "stage_capture_counts": [
+        0,
+        2,
+        4
+      ],
+      "captures": [
+        {
+          "stage": 7.75,
+          "capture": "12",
+          "cells": 72
+        },
+        {
+          "stage": 7.75,
+          "capture": "13",
+          "cells": 83
+        },
+        {
+          "stage": 8.0,
+          "capture": "16",
+          "cells": 63
+        },
+        {
+          "stage": 8.0,
+          "capture": "33",
+          "cells": 44
+        },
+        {
+          "stage": 8.0,
+          "capture": "34",
+          "cells": 45
+        },
+        {
+          "stage": 8.0,
+          "capture": "35",
+          "cells": 46
+        }
+      ],
+      "max_fit_stage": 8.0,
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0,
+      "status": "unsupported_stage_captures",
+      "every_omission_supported": false
+    },
+    {
+      "cutoff": 8.0,
+      "lineage": "cardiopharyngeal",
+      "stage_capture_counts": [
+        1,
+        2,
+        4
+      ],
+      "captures": [
+        {
+          "stage": 7.5,
+          "capture": "19",
+          "cells": 24
+        },
+        {
+          "stage": 7.75,
+          "capture": "12",
+          "cells": 52
+        },
+        {
+          "stage": 7.75,
+          "capture": "13",
+          "cells": 54
+        },
+        {
+          "stage": 8.0,
+          "capture": "16",
+          "cells": 64
+        },
+        {
+          "stage": 8.0,
+          "capture": "33",
+          "cells": 63
+        },
+        {
+          "stage": 8.0,
+          "capture": "34",
+          "cells": 50
+        },
+        {
+          "stage": 8.0,
+          "capture": "35",
+          "cells": 64
+        }
+      ],
+      "max_fit_stage": 8.0,
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0,
+      "status": "unsupported_stage_captures",
+      "every_omission_supported": false
+    },
+    {
+      "cutoff": 8.0,
+      "lineage": "ectoderm_other",
+      "stage_capture_counts": [
+        2,
+        4,
+        4
+      ],
+      "captures": [
+        {
+          "stage": 7.5,
+          "capture": "19",
+          "cells": 80
+        },
+        {
+          "stage": 7.5,
+          "capture": "6",
+          "cells": 35
+        },
+        {
+          "stage": 7.75,
+          "capture": "12",
+          "cells": 116
+        },
+        {
+          "stage": 7.75,
+          "capture": "13",
+          "cells": 100
+        },
+        {
+          "stage": 7.75,
+          "capture": "8",
+          "cells": 28
+        },
+        {
+          "stage": 7.75,
+          "capture": "9",
+          "cells": 39
+        },
+        {
+          "stage": 8.0,
+          "capture": "16",
+          "cells": 56
+        },
+        {
+          "stage": 8.0,
+          "capture": "33",
+          "cells": 72
+        },
+        {
+          "stage": 8.0,
+          "capture": "34",
+          "cells": 68
+        },
+        {
+          "stage": 8.0,
+          "capture": "35",
+          "cells": 78
+        }
+      ],
+      "max_fit_stage": 8.0,
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0,
+      "status": "fit_only_stability_unsupported",
+      "every_omission_supported": false,
+      "fit_diagnostic": {
+        "numerical_rank": 9,
+        "singular_values": [
+          3.1357639558110626,
+          2.425680127247232,
+          2.178759661902828,
+          1.9477678441481887,
+          1.7536676445414647,
+          1.4287432841040189,
+          1.0991832598801512,
+          1.0141916096322716,
+          0.9120408920894453,
+          5.98443775203571e-15
+        ],
+        "weights": [
+          0.16666666666666666,
+          0.16666666666666666,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333
+        ],
+        "projected_energy": 10.835416821386103,
+        "unprojected_energy": 12.170487247783223,
+        "time_denominator": 0.6666666666666666
+      },
+      "omissions": [
+        {
+          "capture": "19",
+          "stage": 7.5,
+          "remaining_stage_counts": [
+            1,
+            4,
+            4
+          ],
+          "status": "unsupported_stage_captures"
+        },
+        {
+          "capture": "6",
+          "stage": 7.5,
+          "remaining_stage_counts": [
+            1,
+            4,
+            4
+          ],
+          "status": "unsupported_stage_captures"
+        },
+        {
+          "capture": "12",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            2,
+            3,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9928679462973043,
+          "nonzero_full_sign_agreement": 0.9427585308674133,
+          "relative_projected_slope_difference": 0.11974567432667665,
+          "numerical_rank": 8
+        },
+        {
+          "capture": "13",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            2,
+            3,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9954583740454397,
+          "nonzero_full_sign_agreement": 0.9471216462620474,
+          "relative_projected_slope_difference": 0.09756856029006702,
+          "numerical_rank": 8
+        },
+        {
+          "capture": "8",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            2,
+            3,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9864207084635287,
+          "nonzero_full_sign_agreement": 0.9208127116436572,
+          "relative_projected_slope_difference": 0.16541794667333834,
+          "numerical_rank": 8
+        },
+        {
+          "capture": "9",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            2,
+            3,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9941159124131227,
+          "nonzero_full_sign_agreement": 0.9482287053920292,
+          "relative_projected_slope_difference": 0.10838665510258987,
+          "numerical_rank": 8
+        },
+        {
+          "capture": "16",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            2,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9823943978778937,
+          "nonzero_full_sign_agreement": 0.9337066944516801,
+          "relative_projected_slope_difference": 0.22394493505225566,
+          "numerical_rank": 8
+        },
+        {
+          "capture": "33",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            2,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.98253309684339,
+          "nonzero_full_sign_agreement": 0.9271294607970826,
+          "relative_projected_slope_difference": 0.18689114792611947,
+          "numerical_rank": 8
+        },
+        {
+          "capture": "34",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            2,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.983949531606974,
+          "nonzero_full_sign_agreement": 0.9221151341495181,
+          "relative_projected_slope_difference": 0.17905964801571508,
+          "numerical_rank": 8
+        },
+        {
+          "capture": "35",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            2,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9842436791073033,
+          "nonzero_full_sign_agreement": 0.9208127116436572,
+          "relative_projected_slope_difference": 0.17720788650896063,
+          "numerical_rank": 8
+        }
+      ],
+      "artifact_sha256": "b99471daba933734ae54c69f59c932f0568e45e87cf2b72a50c06bdd5c675ddd",
+      "stable_nonzero_genes": null,
+      "stable_shift_energy_fraction": null
+    },
+    {
+      "cutoff": 8.0,
+      "lineage": "endoderm",
+      "stage_capture_counts": [
+        3,
+        4,
+        4
+      ],
+      "captures": [
+        {
+          "stage": 7.5,
+          "capture": "19",
+          "cells": 99
+        },
+        {
+          "stage": 7.5,
+          "capture": "20",
+          "cells": 37
+        },
+        {
+          "stage": 7.5,
+          "capture": "6",
+          "cells": 66
+        },
+        {
+          "stage": 7.75,
+          "capture": "12",
+          "cells": 81
+        },
+        {
+          "stage": 7.75,
+          "capture": "13",
+          "cells": 81
+        },
+        {
+          "stage": 7.75,
+          "capture": "8",
+          "cells": 32
+        },
+        {
+          "stage": 7.75,
+          "capture": "9",
+          "cells": 40
+        },
+        {
+          "stage": 8.0,
+          "capture": "16",
+          "cells": 43
+        },
+        {
+          "stage": 8.0,
+          "capture": "33",
+          "cells": 40
+        },
+        {
+          "stage": 8.0,
+          "capture": "34",
+          "cells": 33
+        },
+        {
+          "stage": 8.0,
+          "capture": "35",
+          "cells": 37
+        }
+      ],
+      "max_fit_stage": 8.0,
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0,
+      "status": "completed_stability",
+      "every_omission_supported": true,
+      "fit_diagnostic": {
+        "numerical_rank": 10,
+        "singular_values": [
+          3.3664879894051154,
+          2.5632105800912277,
+          2.3293798833273436,
+          2.2598310943221542,
+          1.7174706483730302,
+          1.5939874141046688,
+          1.4644724044588342,
+          1.3982941008909284,
+          1.3112647380029392,
+          1.0558495449710208,
+          6.635447159968928e-15
+        ],
+        "weights": [
+          0.1111111111111111,
+          0.1111111111111111,
+          0.1111111111111111,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333
+        ],
+        "projected_energy": 13.350880210709544,
+        "unprojected_energy": 14.703587804527942,
+        "time_denominator": 0.6666666666666666
+      },
+      "omissions": [
+        {
+          "capture": "19",
+          "stage": 7.5,
+          "remaining_stage_counts": [
+            2,
+            4,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9848391540691936,
+          "nonzero_full_sign_agreement": 0.9200802433184495,
+          "relative_projected_slope_difference": 0.2177857910852225,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "20",
+          "stage": 7.5,
+          "remaining_stage_counts": [
+            2,
+            4,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9707546008883238,
+          "nonzero_full_sign_agreement": 0.9023490584352553,
+          "relative_projected_slope_difference": 0.2508937467831842,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "6",
+          "stage": 7.5,
+          "remaining_stage_counts": [
+            2,
+            4,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9210052174168483,
+          "nonzero_full_sign_agreement": 0.8632627968679221,
+          "relative_projected_slope_difference": 0.3926536116825798,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "12",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            3,
+            3,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9714416031109352,
+          "nonzero_full_sign_agreement": 0.899048728402252,
+          "relative_projected_slope_difference": 0.2434291780331013,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "13",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            3,
+            3,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9866697153101096,
+          "nonzero_full_sign_agreement": 0.9255160810198667,
+          "relative_projected_slope_difference": 0.16332444206957766,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "8",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            3,
+            3,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9887925447775466,
+          "nonzero_full_sign_agreement": 0.9348346599365819,
+          "relative_projected_slope_difference": 0.14969734998967898,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "9",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            3,
+            3,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9890602386947855,
+          "nonzero_full_sign_agreement": 0.9381349899695852,
+          "relative_projected_slope_difference": 0.15001828381638993,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "16",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            3,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9842922567650216,
+          "nonzero_full_sign_agreement": 0.9368407428978192,
+          "relative_projected_slope_difference": 0.20968857555088755,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "33",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            3,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9669296674960791,
+          "nonzero_full_sign_agreement": 0.8994370025237818,
+          "relative_projected_slope_difference": 0.2580159082430387,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "34",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            3,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.970960549382343,
+          "nonzero_full_sign_agreement": 0.894324726590306,
+          "relative_projected_slope_difference": 0.24502681689559316,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "35",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            3,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9699056937548761,
+          "nonzero_full_sign_agreement": 0.8939364524687763,
+          "relative_projected_slope_difference": 0.24511605101748826,
+          "numerical_rank": 9
+        }
+      ],
+      "artifact_sha256": "12f348baafa390079cf0c5985ef4af98631cf572658bd2b8a4a6a67094890a3d",
+      "stable_nonzero_genes": 8687,
+      "stable_shift_energy_fraction": 0.9743814269408189
+    },
+    {
+      "cutoff": 8.0,
+      "lineage": "endothelial",
+      "stage_capture_counts": [
+        1,
+        2,
+        4
+      ],
+      "captures": [
+        {
+          "stage": 7.5,
+          "capture": "19",
+          "cells": 24
+        },
+        {
+          "stage": 7.75,
+          "capture": "12",
+          "cells": 46
+        },
+        {
+          "stage": 7.75,
+          "capture": "13",
+          "cells": 54
+        },
+        {
+          "stage": 8.0,
+          "capture": "16",
+          "cells": 52
+        },
+        {
+          "stage": 8.0,
+          "capture": "33",
+          "cells": 41
+        },
+        {
+          "stage": 8.0,
+          "capture": "34",
+          "cells": 43
+        },
+        {
+          "stage": 8.0,
+          "capture": "35",
+          "cells": 30
+        }
+      ],
+      "max_fit_stage": 8.0,
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0,
+      "status": "unsupported_stage_captures",
+      "every_omission_supported": false
+    },
+    {
+      "cutoff": 8.0,
+      "lineage": "mesenchymal",
+      "stage_capture_counts": [
+        6,
+        4,
+        4
+      ],
+      "captures": [
+        {
+          "stage": 7.5,
+          "capture": "19",
+          "cells": 397
+        },
+        {
+          "stage": 7.5,
+          "capture": "2",
+          "cells": 34
+        },
+        {
+          "stage": 7.5,
+          "capture": "20",
+          "cells": 114
+        },
+        {
+          "stage": 7.5,
+          "capture": "3",
+          "cells": 45
+        },
+        {
+          "stage": 7.5,
+          "capture": "4",
+          "cells": 21
+        },
+        {
+          "stage": 7.5,
+          "capture": "6",
+          "cells": 174
+        },
+        {
+          "stage": 7.75,
+          "capture": "12",
+          "cells": 250
+        },
+        {
+          "stage": 7.75,
+          "capture": "13",
+          "cells": 245
+        },
+        {
+          "stage": 7.75,
+          "capture": "8",
+          "cells": 153
+        },
+        {
+          "stage": 7.75,
+          "capture": "9",
+          "cells": 129
+        },
+        {
+          "stage": 8.0,
+          "capture": "16",
+          "cells": 153
+        },
+        {
+          "stage": 8.0,
+          "capture": "33",
+          "cells": 157
+        },
+        {
+          "stage": 8.0,
+          "capture": "34",
+          "cells": 153
+        },
+        {
+          "stage": 8.0,
+          "capture": "35",
+          "cells": 140
+        }
+      ],
+      "max_fit_stage": 8.0,
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0,
+      "status": "completed_stability",
+      "every_omission_supported": true,
+      "fit_diagnostic": {
+        "numerical_rank": 13,
+        "singular_values": [
+          3.6149112692332332,
+          2.7775729303891277,
+          2.266245062274745,
+          1.7422412563574716,
+          1.5850204348529089,
+          1.4560734198305774,
+          1.2067349458400112,
+          0.9413325325723031,
+          0.8213749534268745,
+          0.7878439511717963,
+          0.7106358619947617,
+          0.6594122873204509,
+          0.6212898839253955,
+          6.517661000493731e-15
+        ],
+        "weights": [
+          0.05555555555555555,
+          0.05555555555555555,
+          0.05555555555555555,
+          0.05555555555555555,
+          0.05555555555555555,
+          0.05555555555555555,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333
+        ],
+        "projected_energy": 11.447771237698426,
+        "unprojected_energy": 12.81669638350128,
+        "time_denominator": 0.6666666666666666
+      },
+      "omissions": [
+        {
+          "capture": "19",
+          "stage": 7.5,
+          "remaining_stage_counts": [
+            5,
+            4,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9961177579637653,
+          "nonzero_full_sign_agreement": 0.9619070436032583,
+          "relative_projected_slope_difference": 0.12852351804506876,
+          "numerical_rank": 12
+        },
+        {
+          "capture": "2",
+          "stage": 7.5,
+          "remaining_stage_counts": [
+            5,
+            4,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9785469473978916,
+          "nonzero_full_sign_agreement": 0.9235146142788692,
+          "relative_projected_slope_difference": 0.20602477048906595,
+          "numerical_rank": 12
+        },
+        {
+          "capture": "20",
+          "stage": 7.5,
+          "remaining_stage_counts": [
+            5,
+            4,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9925426023413784,
+          "nonzero_full_sign_agreement": 0.9580737901293723,
+          "relative_projected_slope_difference": 0.1761770204476799,
+          "numerical_rank": 12
+        },
+        {
+          "capture": "3",
+          "stage": 7.5,
+          "remaining_stage_counts": [
+            5,
+            4,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9860520636112348,
+          "nonzero_full_sign_agreement": 0.9205198850023958,
+          "relative_projected_slope_difference": 0.1717480693166865,
+          "numerical_rank": 12
+        },
+        {
+          "capture": "4",
+          "stage": 7.5,
+          "remaining_stage_counts": [
+            5,
+            4,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.939980693006709,
+          "nonzero_full_sign_agreement": 0.8405606133205559,
+          "relative_projected_slope_difference": 0.3414252384081109,
+          "numerical_rank": 12
+        },
+        {
+          "capture": "6",
+          "stage": 7.5,
+          "remaining_stage_counts": [
+            5,
+            4,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9885278053342331,
+          "nonzero_full_sign_agreement": 0.9441183517010062,
+          "relative_projected_slope_difference": 0.15818895691338794,
+          "numerical_rank": 12
+        },
+        {
+          "capture": "12",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            6,
+            3,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9848435666407617,
+          "nonzero_full_sign_agreement": 0.9300431241015812,
+          "relative_projected_slope_difference": 0.17626370447045292,
+          "numerical_rank": 12
+        },
+        {
+          "capture": "13",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            6,
+            3,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9989414093976022,
+          "nonzero_full_sign_agreement": 0.9676569238140872,
+          "relative_projected_slope_difference": 0.0464022314881394,
+          "numerical_rank": 12
+        },
+        {
+          "capture": "8",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            6,
+            3,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9844898354626391,
+          "nonzero_full_sign_agreement": 0.9355534259702923,
+          "relative_projected_slope_difference": 0.17770370146992848,
+          "numerical_rank": 12
+        },
+        {
+          "capture": "9",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            6,
+            3,
+            4
+          ],
+          "status": "supported",
+          "cosine": 0.9821295400388518,
+          "nonzero_full_sign_agreement": 0.935134163871586,
+          "relative_projected_slope_difference": 0.1900191209950289,
+          "numerical_rank": 12
+        },
+        {
+          "capture": "16",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            6,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9749205642665317,
+          "nonzero_full_sign_agreement": 0.9177647340680403,
+          "relative_projected_slope_difference": 0.25534759935457074,
+          "numerical_rank": 12
+        },
+        {
+          "capture": "33",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            6,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9906703482551266,
+          "nonzero_full_sign_agreement": 0.9350742692860565,
+          "relative_projected_slope_difference": 0.13645993762825928,
+          "numerical_rank": 12
+        },
+        {
+          "capture": "34",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            6,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9941050675779544,
+          "nonzero_full_sign_agreement": 0.9403449928126497,
+          "relative_projected_slope_difference": 0.108609156322233,
+          "numerical_rank": 12
+        },
+        {
+          "capture": "35",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            6,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9922959788398049,
+          "nonzero_full_sign_agreement": 0.9350143747005271,
+          "relative_projected_slope_difference": 0.12486149715350481,
+          "numerical_rank": 12
+        }
+      ],
+      "artifact_sha256": "a468405d13b24d34d480f3fb61d272b545ed98916eea2ddbead6dc8a2d1c99fc",
+      "stable_nonzero_genes": 9685,
+      "stable_shift_energy_fraction": 0.9849771529005898
+    },
+    {
+      "cutoff": 8.0,
+      "lineage": "neural_crest",
+      "stage_capture_counts": [
+        0,
+        0,
+        0
+      ],
+      "captures": [],
+      "max_fit_stage": 8.0,
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0,
+      "status": "unsupported_stage_captures",
+      "every_omission_supported": false
+    },
+    {
+      "cutoff": 8.25,
+      "lineage": "blood",
+      "stage_capture_counts": [
+        4,
+        4,
+        3
+      ],
+      "captures": [
+        {
+          "stage": 7.75,
+          "capture": "12",
+          "cells": 372
+        },
+        {
+          "stage": 7.75,
+          "capture": "13",
+          "cells": 394
+        },
+        {
+          "stage": 7.75,
+          "capture": "8",
+          "cells": 227
+        },
+        {
+          "stage": 7.75,
+          "capture": "9",
+          "cells": 284
+        },
+        {
+          "stage": 8.0,
+          "capture": "16",
+          "cells": 579
+        },
+        {
+          "stage": 8.0,
+          "capture": "33",
+          "cells": 282
+        },
+        {
+          "stage": 8.0,
+          "capture": "34",
+          "cells": 268
+        },
+        {
+          "stage": 8.0,
+          "capture": "35",
+          "cells": 236
+        },
+        {
+          "stage": 8.25,
+          "capture": "24",
+          "cells": 309
+        },
+        {
+          "stage": 8.25,
+          "capture": "25",
+          "cells": 356
+        },
+        {
+          "stage": 8.25,
+          "capture": "28",
+          "cells": 183
+        }
+      ],
+      "max_fit_stage": 8.25,
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0,
+      "status": "completed_stability",
+      "every_omission_supported": true,
+      "fit_diagnostic": {
+        "numerical_rank": 10,
+        "singular_values": [
+          4.4540844031949325,
+          2.679858070156374,
+          1.9959607544449065,
+          1.6436349938286297,
+          1.151478979282705,
+          0.8628425168653829,
+          0.6542717495331464,
+          0.5786963209065945,
+          0.5019591658942345,
+          0.495779135331948,
+          6.679989755573826e-15
+        ],
+        "weights": [
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.1111111111111111,
+          0.1111111111111111,
+          0.1111111111111111
+        ],
+        "projected_energy": 20.27787636636851,
+        "unprojected_energy": 21.31764923414992,
+        "time_denominator": 0.6666666666666667
+      },
+      "omissions": [
+        {
+          "capture": "12",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            3,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9997471459711122,
+          "nonzero_full_sign_agreement": 0.9721113090484673,
+          "relative_projected_slope_difference": 0.15132071230202837,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "13",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            3,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.998906362817498,
+          "nonzero_full_sign_agreement": 0.9205725167393575,
+          "relative_projected_slope_difference": 0.13340444621675537,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "8",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            3,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9786546731439512,
+          "nonzero_full_sign_agreement": 0.8688494379261625,
+          "relative_projected_slope_difference": 0.2548640037188379,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "9",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            3,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9878493321942197,
+          "nonzero_full_sign_agreement": 0.8861109404754591,
+          "relative_projected_slope_difference": 0.16558141877461421,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "16",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            4,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9997434196413121,
+          "nonzero_full_sign_agreement": 0.958474107746176,
+          "relative_projected_slope_difference": 0.022659546742885762,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "33",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            4,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9999215663216534,
+          "nonzero_full_sign_agreement": 0.9804656305669881,
+          "relative_projected_slope_difference": 0.012524768338885453,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "34",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            4,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9997785148399377,
+          "nonzero_full_sign_agreement": 0.9816942072608883,
+          "relative_projected_slope_difference": 0.021052460360904326,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "35",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            4,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9999929453045299,
+          "nonzero_full_sign_agreement": 0.9882670925732538,
+          "relative_projected_slope_difference": 0.003756323555275826,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "24",
+          "stage": 8.25,
+          "remaining_stage_counts": [
+            4,
+            4,
+            2
+          ],
+          "status": "supported",
+          "cosine": 0.9878502005979668,
+          "nonzero_full_sign_agreement": 0.8978438479022053,
+          "relative_projected_slope_difference": 0.1565059099839511,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "25",
+          "stage": 8.25,
+          "remaining_stage_counts": [
+            4,
+            4,
+            2
+          ],
+          "status": "supported",
+          "cosine": 0.9896424660135679,
+          "nonzero_full_sign_agreement": 0.9041710178757909,
+          "relative_projected_slope_difference": 0.1450548250637781,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "28",
+          "stage": 8.25,
+          "remaining_stage_counts": [
+            4,
+            4,
+            2
+          ],
+          "status": "supported",
+          "cosine": 0.9799650837021153,
+          "nonzero_full_sign_agreement": 0.9137539160882118,
+          "relative_projected_slope_difference": 0.24359231754968186,
+          "numerical_rank": 9
+        }
+      ],
+      "artifact_sha256": "a67e58aa09e3b3bf4d3b1e8ffe04d984c1cc1b9c5c0cedc824e0fa39496c8ebc",
+      "stable_nonzero_genes": 10094,
+      "stable_shift_energy_fraction": 0.9944940613679155
+    },
+    {
+      "cutoff": 8.25,
+      "lineage": "cardiomyocyte",
+      "stage_capture_counts": [
+        2,
+        4,
+        3
+      ],
+      "captures": [
+        {
+          "stage": 7.75,
+          "capture": "12",
+          "cells": 72
+        },
+        {
+          "stage": 7.75,
+          "capture": "13",
+          "cells": 83
+        },
+        {
+          "stage": 8.0,
+          "capture": "16",
+          "cells": 63
+        },
+        {
+          "stage": 8.0,
+          "capture": "33",
+          "cells": 44
+        },
+        {
+          "stage": 8.0,
+          "capture": "34",
+          "cells": 45
+        },
+        {
+          "stage": 8.0,
+          "capture": "35",
+          "cells": 46
+        },
+        {
+          "stage": 8.25,
+          "capture": "24",
+          "cells": 134
+        },
+        {
+          "stage": 8.25,
+          "capture": "25",
+          "cells": 130
+        },
+        {
+          "stage": 8.25,
+          "capture": "28",
+          "cells": 81
+        }
+      ],
+      "max_fit_stage": 8.25,
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0,
+      "status": "fit_only_stability_unsupported",
+      "every_omission_supported": false,
+      "fit_diagnostic": {
+        "numerical_rank": 8,
+        "singular_values": [
+          3.6317458140234113,
+          2.7763611022049455,
+          2.3129941662017655,
+          1.7322763105572287,
+          1.4035373344220767,
+          1.331614278897256,
+          1.2203989027451239,
+          0.9362484710951807,
+          6.841921616917223e-15
+        ],
+        "weights": [
+          0.16666666666666666,
+          0.16666666666666666,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.1111111111111111,
+          0.1111111111111111,
+          0.1111111111111111
+        ],
+        "projected_energy": 10.632033430998685,
+        "unprojected_energy": 11.308226466817036,
+        "time_denominator": 0.6666666666666667
+      },
+      "omissions": [
+        {
+          "capture": "12",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            1,
+            4,
+            3
+          ],
+          "status": "unsupported_stage_captures"
+        },
+        {
+          "capture": "13",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            1,
+            4,
+            3
+          ],
+          "status": "unsupported_stage_captures"
+        },
+        {
+          "capture": "16",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            2,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9975689856500003,
+          "nonzero_full_sign_agreement": 0.9684472374967269,
+          "relative_projected_slope_difference": 0.07002901861663988,
+          "numerical_rank": 7
+        },
+        {
+          "capture": "33",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            2,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9961698553504403,
+          "nonzero_full_sign_agreement": 0.9652395915161037,
+          "relative_projected_slope_difference": 0.08764072431544105,
+          "numerical_rank": 7
+        },
+        {
+          "capture": "34",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            2,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.996859963935368,
+          "nonzero_full_sign_agreement": 0.9626865671641791,
+          "relative_projected_slope_difference": 0.07941136283195602,
+          "numerical_rank": 7
+        },
+        {
+          "capture": "35",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            2,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9961506199107178,
+          "nonzero_full_sign_agreement": 0.961311861743912,
+          "relative_projected_slope_difference": 0.08834487447109397,
+          "numerical_rank": 7
+        },
+        {
+          "capture": "24",
+          "stage": 8.25,
+          "remaining_stage_counts": [
+            2,
+            4,
+            2
+          ],
+          "status": "supported",
+          "cosine": 0.9545037479994049,
+          "nonzero_full_sign_agreement": 0.8775857554333595,
+          "relative_projected_slope_difference": 0.31237169115655944,
+          "numerical_rank": 7
+        },
+        {
+          "capture": "25",
+          "stage": 8.25,
+          "remaining_stage_counts": [
+            2,
+            4,
+            2
+          ],
+          "status": "supported",
+          "cosine": 0.9200179092673417,
+          "nonzero_full_sign_agreement": 0.8460329929300864,
+          "relative_projected_slope_difference": 0.3929292925735897,
+          "numerical_rank": 7
+        },
+        {
+          "capture": "28",
+          "stage": 8.25,
+          "remaining_stage_counts": [
+            2,
+            4,
+            2
+          ],
+          "status": "supported",
+          "cosine": 0.8222706133600213,
+          "nonzero_full_sign_agreement": 0.8178188007331763,
+          "relative_projected_slope_difference": 0.6076820873082641,
+          "numerical_rank": 7
+        }
+      ],
+      "artifact_sha256": "dbb1d6d71c22bae1908bca82a98bc5cfed73da762e61b463883af1902a1d39ba",
+      "stable_nonzero_genes": null,
+      "stable_shift_energy_fraction": null
+    },
+    {
+      "cutoff": 8.25,
+      "lineage": "cardiopharyngeal",
+      "stage_capture_counts": [
+        2,
+        4,
+        3
+      ],
+      "captures": [
+        {
+          "stage": 7.75,
+          "capture": "12",
+          "cells": 52
+        },
+        {
+          "stage": 7.75,
+          "capture": "13",
+          "cells": 54
+        },
+        {
+          "stage": 8.0,
+          "capture": "16",
+          "cells": 64
+        },
+        {
+          "stage": 8.0,
+          "capture": "33",
+          "cells": 63
+        },
+        {
+          "stage": 8.0,
+          "capture": "34",
+          "cells": 50
+        },
+        {
+          "stage": 8.0,
+          "capture": "35",
+          "cells": 64
+        },
+        {
+          "stage": 8.25,
+          "capture": "24",
+          "cells": 129
+        },
+        {
+          "stage": 8.25,
+          "capture": "25",
+          "cells": 138
+        },
+        {
+          "stage": 8.25,
+          "capture": "28",
+          "cells": 81
+        }
+      ],
+      "max_fit_stage": 8.25,
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0,
+      "status": "fit_only_stability_unsupported",
+      "every_omission_supported": false,
+      "fit_diagnostic": {
+        "numerical_rank": 8,
+        "singular_values": [
+          3.0507161961398714,
+          2.4637564525719355,
+          2.16407343304582,
+          1.7986495280083248,
+          1.5270707449106826,
+          1.121762227926504,
+          1.0883374261853187,
+          0.9143230224670588,
+          6.979973227023198e-15
+        ],
+        "weights": [
+          0.16666666666666666,
+          0.16666666666666666,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.1111111111111111,
+          0.1111111111111111,
+          0.1111111111111111
+        ],
+        "projected_energy": 3.009347738403508,
+        "unprojected_energy": 7.574344440539472,
+        "time_denominator": 0.6666666666666667
+      },
+      "omissions": [
+        {
+          "capture": "12",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            1,
+            4,
+            3
+          ],
+          "status": "unsupported_stage_captures"
+        },
+        {
+          "capture": "13",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            1,
+            4,
+            3
+          ],
+          "status": "unsupported_stage_captures"
+        },
+        {
+          "capture": "16",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            2,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.4083412206655571,
+          "nonzero_full_sign_agreement": 0.671469548395704,
+          "relative_projected_slope_difference": 1.2438423364016244,
+          "numerical_rank": 7
+        },
+        {
+          "capture": "33",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            2,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9842017322918679,
+          "nonzero_full_sign_agreement": 0.8751917817357081,
+          "relative_projected_slope_difference": 0.18238682388243535,
+          "numerical_rank": 7
+        },
+        {
+          "capture": "34",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            2,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.98260860676645,
+          "nonzero_full_sign_agreement": 0.8561803748916016,
+          "relative_projected_slope_difference": 0.18838372174224668,
+          "numerical_rank": 7
+        },
+        {
+          "capture": "35",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            2,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9847272760933287,
+          "nonzero_full_sign_agreement": 0.8782602895070376,
+          "relative_projected_slope_difference": 0.17790869073811663,
+          "numerical_rank": 7
+        },
+        {
+          "capture": "24",
+          "stage": 8.25,
+          "remaining_stage_counts": [
+            2,
+            4,
+            2
+          ],
+          "status": "supported",
+          "cosine": 0.559185691296123,
+          "nonzero_full_sign_agreement": 0.6782069241544927,
+          "relative_projected_slope_difference": 1.0318119802750154,
+          "numerical_rank": 7
+        },
+        {
+          "capture": "25",
+          "stage": 8.25,
+          "remaining_stage_counts": [
+            2,
+            4,
+            2
+          ],
+          "status": "supported",
+          "cosine": 0.6399754452206572,
+          "nonzero_full_sign_agreement": 0.6992195317190314,
+          "relative_projected_slope_difference": 0.8772212556640137,
+          "numerical_rank": 7
+        },
+        {
+          "capture": "28",
+          "stage": 8.25,
+          "remaining_stage_counts": [
+            2,
+            4,
+            2
+          ],
+          "status": "supported",
+          "cosine": 0.7227885630389812,
+          "nonzero_full_sign_agreement": 0.7621906477219665,
+          "relative_projected_slope_difference": 1.0418537528695135,
+          "numerical_rank": 7
+        }
+      ],
+      "artifact_sha256": "ab097b5bfb294c11ed244e9ebb45f43451f396ebe7490ea49bc8420030ab8529",
+      "stable_nonzero_genes": null,
+      "stable_shift_energy_fraction": null
+    },
+    {
+      "cutoff": 8.25,
+      "lineage": "ectoderm_other",
+      "stage_capture_counts": [
+        4,
+        4,
+        3
+      ],
+      "captures": [
+        {
+          "stage": 7.75,
+          "capture": "12",
+          "cells": 116
+        },
+        {
+          "stage": 7.75,
+          "capture": "13",
+          "cells": 100
+        },
+        {
+          "stage": 7.75,
+          "capture": "8",
+          "cells": 28
+        },
+        {
+          "stage": 7.75,
+          "capture": "9",
+          "cells": 39
+        },
+        {
+          "stage": 8.0,
+          "capture": "16",
+          "cells": 56
+        },
+        {
+          "stage": 8.0,
+          "capture": "33",
+          "cells": 72
+        },
+        {
+          "stage": 8.0,
+          "capture": "34",
+          "cells": 68
+        },
+        {
+          "stage": 8.0,
+          "capture": "35",
+          "cells": 78
+        },
+        {
+          "stage": 8.25,
+          "capture": "24",
+          "cells": 115
+        },
+        {
+          "stage": 8.25,
+          "capture": "25",
+          "cells": 109
+        },
+        {
+          "stage": 8.25,
+          "capture": "28",
+          "cells": 71
+        }
+      ],
+      "max_fit_stage": 8.25,
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0,
+      "status": "completed_stability",
+      "every_omission_supported": true,
+      "fit_diagnostic": {
+        "numerical_rank": 10,
+        "singular_values": [
+          2.839144293893042,
+          2.711974548920268,
+          2.2331770143137746,
+          1.8388342810531795,
+          1.474175803328434,
+          1.4614312339590325,
+          1.0652717074178388,
+          1.0077754103570806,
+          0.9633553661649084,
+          0.8692296082929899,
+          6.673844149522186e-15
+        ],
+        "weights": [
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.1111111111111111,
+          0.1111111111111111,
+          0.1111111111111111
+        ],
+        "projected_energy": 5.805662925504079,
+        "unprojected_energy": 8.176148477540368,
+        "time_denominator": 0.6666666666666667
+      },
+      "omissions": [
+        {
+          "capture": "12",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            3,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9763132860375243,
+          "nonzero_full_sign_agreement": 0.9082310838445807,
+          "relative_projected_slope_difference": 0.3832995843492004,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "13",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            3,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.989367255449526,
+          "nonzero_full_sign_agreement": 0.945232617586912,
+          "relative_projected_slope_difference": 0.26180697732682257,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "8",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            3,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.8202487333405287,
+          "nonzero_full_sign_agreement": 0.8008691206543967,
+          "relative_projected_slope_difference": 0.5873376878992645,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "9",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            3,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.896992479259817,
+          "nonzero_full_sign_agreement": 0.8103911042944786,
+          "relative_projected_slope_difference": 0.4420983723464412,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "16",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            4,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9886410717191298,
+          "nonzero_full_sign_agreement": 0.9491308793456033,
+          "relative_projected_slope_difference": 0.1576775956506112,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "33",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            4,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9928094559013746,
+          "nonzero_full_sign_agreement": 0.9534764826175869,
+          "relative_projected_slope_difference": 0.1240552773715175,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "34",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            4,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.993065132972501,
+          "nonzero_full_sign_agreement": 0.9539877300613497,
+          "relative_projected_slope_difference": 0.1220424081620978,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "35",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            4,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9921026204171398,
+          "nonzero_full_sign_agreement": 0.9581416155419223,
+          "relative_projected_slope_difference": 0.13056116912866125,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "24",
+          "stage": 8.25,
+          "remaining_stage_counts": [
+            4,
+            4,
+            2
+          ],
+          "status": "supported",
+          "cosine": 0.9541022876823627,
+          "nonzero_full_sign_agreement": 0.8890593047034765,
+          "relative_projected_slope_difference": 0.33480541388916446,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "25",
+          "stage": 8.25,
+          "remaining_stage_counts": [
+            4,
+            4,
+            2
+          ],
+          "status": "supported",
+          "cosine": 0.9588094657004642,
+          "nonzero_full_sign_agreement": 0.8956416155419223,
+          "relative_projected_slope_difference": 0.3094934699627543,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "28",
+          "stage": 8.25,
+          "remaining_stage_counts": [
+            4,
+            4,
+            2
+          ],
+          "status": "supported",
+          "cosine": 0.8766821072991355,
+          "nonzero_full_sign_agreement": 0.8436860940695297,
+          "relative_projected_slope_difference": 0.5217869359390696,
+          "numerical_rank": 9
+        }
+      ],
+      "artifact_sha256": "22d9bf58d86f13f0c989287db36b068c54a4662c7d0a5932825fa3a44c26c21a",
+      "stable_nonzero_genes": 7478,
+      "stable_shift_energy_fraction": 0.9141221556621154
+    },
+    {
+      "cutoff": 8.25,
+      "lineage": "endoderm",
+      "stage_capture_counts": [
+        4,
+        4,
+        3
+      ],
+      "captures": [
+        {
+          "stage": 7.75,
+          "capture": "12",
+          "cells": 81
+        },
+        {
+          "stage": 7.75,
+          "capture": "13",
+          "cells": 81
+        },
+        {
+          "stage": 7.75,
+          "capture": "8",
+          "cells": 32
+        },
+        {
+          "stage": 7.75,
+          "capture": "9",
+          "cells": 40
+        },
+        {
+          "stage": 8.0,
+          "capture": "16",
+          "cells": 43
+        },
+        {
+          "stage": 8.0,
+          "capture": "33",
+          "cells": 40
+        },
+        {
+          "stage": 8.0,
+          "capture": "34",
+          "cells": 33
+        },
+        {
+          "stage": 8.0,
+          "capture": "35",
+          "cells": 37
+        },
+        {
+          "stage": 8.25,
+          "capture": "24",
+          "cells": 52
+        },
+        {
+          "stage": 8.25,
+          "capture": "25",
+          "cells": 71
+        },
+        {
+          "stage": 8.25,
+          "capture": "28",
+          "cells": 35
+        }
+      ],
+      "max_fit_stage": 8.25,
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0,
+      "status": "completed_stability",
+      "every_omission_supported": true,
+      "fit_diagnostic": {
+        "numerical_rank": 10,
+        "singular_values": [
+          3.190597035408267,
+          2.9986485393798827,
+          2.416518337332715,
+          2.03411340481819,
+          1.9316478556034182,
+          1.5489162329655843,
+          1.4448756375649758,
+          1.4118489535837382,
+          1.303259963706194,
+          1.013499200349171,
+          6.009534531871618e-15
+        ],
+        "weights": [
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.1111111111111111,
+          0.1111111111111111,
+          0.1111111111111111
+        ],
+        "projected_energy": 6.733781486222593,
+        "unprojected_energy": 10.483437809767661,
+        "time_denominator": 0.6666666666666667
+      },
+      "omissions": [
+        {
+          "capture": "12",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            3,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9836855560787161,
+          "nonzero_full_sign_agreement": 0.9240399584846912,
+          "relative_projected_slope_difference": 0.3864031012642913,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "13",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            3,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9824700138482051,
+          "nonzero_full_sign_agreement": 0.9180072651790347,
+          "relative_projected_slope_difference": 0.31665860688532543,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "8",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            3,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9290952834585144,
+          "nonzero_full_sign_agreement": 0.8551504929942917,
+          "relative_projected_slope_difference": 0.45253042304535956,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "9",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            3,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9430582027102974,
+          "nonzero_full_sign_agreement": 0.8580046704722366,
+          "relative_projected_slope_difference": 0.39143493035327226,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "16",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            4,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9922920111601796,
+          "nonzero_full_sign_agreement": 0.9517384535547483,
+          "relative_projected_slope_difference": 0.12552313058413814,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "33",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            4,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9938319052931375,
+          "nonzero_full_sign_agreement": 0.9440840685002595,
+          "relative_projected_slope_difference": 0.11128355456671574,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "34",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            4,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9945911591341321,
+          "nonzero_full_sign_agreement": 0.9510249091852621,
+          "relative_projected_slope_difference": 0.10735020592505191,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "35",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            4,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9951770577547265,
+          "nonzero_full_sign_agreement": 0.9503762324857291,
+          "relative_projected_slope_difference": 0.09896590059015045,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "24",
+          "stage": 8.25,
+          "remaining_stage_counts": [
+            4,
+            4,
+            2
+          ],
+          "status": "supported",
+          "cosine": 0.9574774977848967,
+          "nonzero_full_sign_agreement": 0.8957576543850545,
+          "relative_projected_slope_difference": 0.3211821665006037,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "25",
+          "stage": 8.25,
+          "remaining_stage_counts": [
+            4,
+            4,
+            2
+          ],
+          "status": "supported",
+          "cosine": 0.9687979639718839,
+          "nonzero_full_sign_agreement": 0.9004929942916451,
+          "relative_projected_slope_difference": 0.26994280223538364,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "28",
+          "stage": 8.25,
+          "remaining_stage_counts": [
+            4,
+            4,
+            2
+          ],
+          "status": "supported",
+          "cosine": 0.8580456805948067,
+          "nonzero_full_sign_agreement": 0.809743124026985,
+          "relative_projected_slope_difference": 0.6104022104942722,
+          "numerical_rank": 9
+        }
+      ],
+      "artifact_sha256": "60bd155ac92c11816bbe580859120335558221503ce4db9cfff9f480152f3372",
+      "stable_nonzero_genes": 7639,
+      "stable_shift_energy_fraction": 0.9475448485020145
+    },
+    {
+      "cutoff": 8.25,
+      "lineage": "endothelial",
+      "stage_capture_counts": [
+        2,
+        4,
+        3
+      ],
+      "captures": [
+        {
+          "stage": 7.75,
+          "capture": "12",
+          "cells": 46
+        },
+        {
+          "stage": 7.75,
+          "capture": "13",
+          "cells": 54
+        },
+        {
+          "stage": 8.0,
+          "capture": "16",
+          "cells": 52
+        },
+        {
+          "stage": 8.0,
+          "capture": "33",
+          "cells": 41
+        },
+        {
+          "stage": 8.0,
+          "capture": "34",
+          "cells": 43
+        },
+        {
+          "stage": 8.0,
+          "capture": "35",
+          "cells": 30
+        },
+        {
+          "stage": 8.25,
+          "capture": "24",
+          "cells": 97
+        },
+        {
+          "stage": 8.25,
+          "capture": "25",
+          "cells": 96
+        },
+        {
+          "stage": 8.25,
+          "capture": "28",
+          "cells": 54
+        }
+      ],
+      "max_fit_stage": 8.25,
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0,
+      "status": "fit_only_stability_unsupported",
+      "every_omission_supported": false,
+      "fit_diagnostic": {
+        "numerical_rank": 8,
+        "singular_values": [
+          3.4239487734654332,
+          2.6020136676980976,
+          2.4384066166137948,
+          1.825708848207521,
+          1.658919775671945,
+          1.4698889714012686,
+          1.2407535711377562,
+          1.0889976967993433,
+          6.424105230735402e-15
+        ],
+        "weights": [
+          0.16666666666666666,
+          0.16666666666666666,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.1111111111111111,
+          0.1111111111111111,
+          0.1111111111111111
+        ],
+        "projected_energy": 2.7462036857451118,
+        "unprojected_energy": 7.825259717698431,
+        "time_denominator": 0.6666666666666667
+      },
+      "omissions": [
+        {
+          "capture": "12",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            1,
+            4,
+            3
+          ],
+          "status": "unsupported_stage_captures"
+        },
+        {
+          "capture": "13",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            1,
+            4,
+            3
+          ],
+          "status": "unsupported_stage_captures"
+        },
+        {
+          "capture": "16",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            2,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.0984793714355235,
+          "nonzero_full_sign_agreement": 0.5521831735889244,
+          "relative_projected_slope_difference": 1.4347774204708552,
+          "numerical_rank": 7
+        },
+        {
+          "capture": "33",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            2,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.990670292333474,
+          "nonzero_full_sign_agreement": 0.9409611288604899,
+          "relative_projected_slope_difference": 0.16228617608152546,
+          "numerical_rank": 7
+        },
+        {
+          "capture": "34",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            2,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9898989496971561,
+          "nonzero_full_sign_agreement": 0.9373003194888179,
+          "relative_projected_slope_difference": 0.16518364292507587,
+          "numerical_rank": 7
+        },
+        {
+          "capture": "35",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            2,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9860301954716162,
+          "nonzero_full_sign_agreement": 0.9367678381256656,
+          "relative_projected_slope_difference": 0.1858050201971839,
+          "numerical_rank": 7
+        },
+        {
+          "capture": "24",
+          "stage": 8.25,
+          "remaining_stage_counts": [
+            2,
+            4,
+            2
+          ],
+          "status": "supported",
+          "cosine": -0.20331782091735887,
+          "nonzero_full_sign_agreement": 0.4689164004259851,
+          "relative_projected_slope_difference": 1.6335855083881108,
+          "numerical_rank": 7
+        },
+        {
+          "capture": "25",
+          "stage": 8.25,
+          "remaining_stage_counts": [
+            2,
+            4,
+            2
+          ],
+          "status": "supported",
+          "cosine": -0.21656846241691372,
+          "nonzero_full_sign_agreement": 0.46751863684771033,
+          "relative_projected_slope_difference": 1.5604115543333485,
+          "numerical_rank": 7
+        },
+        {
+          "capture": "28",
+          "stage": 8.25,
+          "remaining_stage_counts": [
+            2,
+            4,
+            2
+          ],
+          "status": "supported",
+          "cosine": 0.9134876327324399,
+          "nonzero_full_sign_agreement": 0.836328541001065,
+          "relative_projected_slope_difference": 0.8150995113854282,
+          "numerical_rank": 7
+        }
+      ],
+      "artifact_sha256": "49ba089b6c06b58cfd2b3a6af645430aaf14012812373d9f4b3c3f603ceff340",
+      "stable_nonzero_genes": null,
+      "stable_shift_energy_fraction": null
+    },
+    {
+      "cutoff": 8.25,
+      "lineage": "mesenchymal",
+      "stage_capture_counts": [
+        4,
+        4,
+        3
+      ],
+      "captures": [
+        {
+          "stage": 7.75,
+          "capture": "12",
+          "cells": 250
+        },
+        {
+          "stage": 7.75,
+          "capture": "13",
+          "cells": 245
+        },
+        {
+          "stage": 7.75,
+          "capture": "8",
+          "cells": 153
+        },
+        {
+          "stage": 7.75,
+          "capture": "9",
+          "cells": 129
+        },
+        {
+          "stage": 8.0,
+          "capture": "16",
+          "cells": 153
+        },
+        {
+          "stage": 8.0,
+          "capture": "33",
+          "cells": 157
+        },
+        {
+          "stage": 8.0,
+          "capture": "34",
+          "cells": 153
+        },
+        {
+          "stage": 8.0,
+          "capture": "35",
+          "cells": 140
+        },
+        {
+          "stage": 8.25,
+          "capture": "24",
+          "cells": 243
+        },
+        {
+          "stage": 8.25,
+          "capture": "25",
+          "cells": 274
+        },
+        {
+          "stage": 8.25,
+          "capture": "28",
+          "cells": 167
+        }
+      ],
+      "max_fit_stage": 8.25,
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0,
+      "status": "completed_stability",
+      "every_omission_supported": true,
+      "fit_diagnostic": {
+        "numerical_rank": 10,
+        "singular_values": [
+          2.7686349101968135,
+          2.439242074106838,
+          2.065220905847105,
+          1.6707311094647375,
+          1.3299973818388853,
+          0.9099766252306131,
+          0.803024178324466,
+          0.7392470666925052,
+          0.6803408432347382,
+          0.6446186629314491,
+          6.812782749281257e-15
+        ],
+        "weights": [
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.1111111111111111,
+          0.1111111111111111,
+          0.1111111111111111
+        ],
+        "projected_energy": 3.8485755657506604,
+        "unprojected_energy": 7.038202605142551,
+        "time_denominator": 0.6666666666666667
+      },
+      "omissions": [
+        {
+          "capture": "12",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            3,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9358740289159768,
+          "nonzero_full_sign_agreement": 0.8579470595280871,
+          "relative_projected_slope_difference": 0.6352062610197478,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "13",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            3,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9837366824193269,
+          "nonzero_full_sign_agreement": 0.9323272248173434,
+          "relative_projected_slope_difference": 0.36517430972667525,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "8",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            3,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.7835109405807736,
+          "nonzero_full_sign_agreement": 0.7473948975925261,
+          "relative_projected_slope_difference": 0.6377420146523455,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "9",
+          "stage": 7.75,
+          "remaining_stage_counts": [
+            3,
+            4,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.8892155209744803,
+          "nonzero_full_sign_agreement": 0.7779374775422206,
+          "relative_projected_slope_difference": 0.4836526126979611,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "16",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            4,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9777840246649246,
+          "nonzero_full_sign_agreement": 0.9226254641274404,
+          "relative_projected_slope_difference": 0.247474501030318,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "33",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            4,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9926927960131379,
+          "nonzero_full_sign_agreement": 0.9523895077254761,
+          "relative_projected_slope_difference": 0.1376538298074836,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "34",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            4,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9940656526913576,
+          "nonzero_full_sign_agreement": 0.9547850041921189,
+          "relative_projected_slope_difference": 0.12814727643094503,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "35",
+          "stage": 8.0,
+          "remaining_stage_counts": [
+            4,
+            3,
+            3
+          ],
+          "status": "supported",
+          "cosine": 0.9928456318390134,
+          "nonzero_full_sign_agreement": 0.9521499580788119,
+          "relative_projected_slope_difference": 0.1357836493706204,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "24",
+          "stage": 8.25,
+          "remaining_stage_counts": [
+            4,
+            4,
+            2
+          ],
+          "status": "supported",
+          "cosine": 0.9708459900696115,
+          "nonzero_full_sign_agreement": 0.9164570607258354,
+          "relative_projected_slope_difference": 0.3418329894464829,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "25",
+          "stage": 8.25,
+          "remaining_stage_counts": [
+            4,
+            4,
+            2
+          ],
+          "status": "supported",
+          "cosine": 0.9638682900371954,
+          "nonzero_full_sign_agreement": 0.8873517786561265,
+          "relative_projected_slope_difference": 0.3046100520724111,
+          "numerical_rank": 9
+        },
+        {
+          "capture": "28",
+          "stage": 8.25,
+          "remaining_stage_counts": [
+            4,
+            4,
+            2
+          ],
+          "status": "supported",
+          "cosine": 0.8381811422330898,
+          "nonzero_full_sign_agreement": 0.8170439573601629,
+          "relative_projected_slope_difference": 0.593922097343459,
+          "numerical_rank": 9
+        }
+      ],
+      "artifact_sha256": "1aa8ae2da570009cb2dd126c600fdc0ef775bc3228530f55cccd2f8fcbb70586",
+      "stable_nonzero_genes": 7810,
+      "stable_shift_energy_fraction": 0.9021804453493026
+    },
+    {
+      "cutoff": 8.25,
+      "lineage": "neural_crest",
+      "stage_capture_counts": [
+        0,
+        0,
+        2
+      ],
+      "captures": [
+        {
+          "stage": 8.25,
+          "capture": "24",
+          "cells": 29
+        },
+        {
+          "stage": 8.25,
+          "capture": "25",
+          "cells": 40
+        }
+      ],
+      "max_fit_stage": 8.25,
+      "headline_score": null,
+      "raw_metrics": null,
+      "skills": null,
+      "reward_delta": 0,
+      "status": "unsupported_stage_captures",
+      "every_omission_supported": false
+    }
+  ],
+  "target_expression_read": false,
+  "full_panel_scoring_executed": false,
+  "reward_delta": 0,
+  "passing_candidates": null,
+  "report_sha256": "d3d9e1202e4bfc6ff2582a48ea61186541901b453cb6a9c58579fcf6851ed3a0"
+}

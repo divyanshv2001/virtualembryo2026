@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T19:49:05.084765+00:00",
+  "updated_utc": "2026-10-01T20:01:52.058333+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement/run predeclared capture_module_stability_audit_01: past3stage capturebalancedrank2SVD gene-slope projection andfullcaptureomissionrefits. Strict20cells/min2stagefit/min3everyomission support; unsupportedlineages/omissions recorded, no targetexpression/score/reward or rank/strengthgrid. Numericalrank2/identitycontrols; comparegene-space slope signs/energy/cosines. Onlyseparatelydeclareforecastafteridentifiability; no repeatprior8Dlatent/ridge method. Families/readinessopen.",
+  "next_experiment": "Implement/run matched_capture_module_OLS_omission_audit_01 fromfrozenpastcapturemeans only: exactfull/omittedrank2projectedslopes replay, calculateunprojectedOLS foridenticalmandatoryomissions andstage/captureweights. Reportpairedstabilityenergy/cosines/signs anddiscardedenergy, retainallunsupportedcases. Noexpression/target/scorer/reward, no threshold/rankgrid. Onlythen separatelydeclarefixeddecoder/evaluation withmatchedcontrols ifviable. Families/readinessopen.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1297,12 +1297,12 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_MODULE_DESIGN_ROUTE_20261002_01.json",
+    "record": "JEV_MODULE_STABILITY_ROUTE_20261002_01.json",
     "usage": {
-      "input_tokens": 1026,
-      "output_tokens": 56
+      "input_tokens": 880,
+      "output_tokens": 65
     },
-    "choice": "rank2_capture_mean_projection",
+    "choice": "matched_OLS_omission_audit",
     "confidence": 1.0
   },
   "external_qc_audit": {
@@ -2217,6 +2217,24 @@
       "reused_contexts": 4,
       "resource_limitation": "Observedagentthreadlimit; existing4specialists reviewednewpackets",
       "review_corrections": "IdenticalDEdoesnotprove metricresolution; unexposednewsplitavailability unverified; module/compositionpriorcoveragecheckrequired."
+    },
+    "capture_module_stability_audit_01": {
+      "status": "completed",
+      "report_sha256": "d3d9e1202e4bfc6ff2582a48ea61186541901b453cb6a9c58579fcf6851ed3a0",
+      "review": "METRIC_CRITIQUES_CAPTURE_MODULE_20261002.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "specialist_role_version": 2,
+      "metric_availability": false,
+      "reward_delta": 0,
+      "fresh_contexts": 0,
+      "reused_contexts": 4,
+      "resource_limitation": "Observedagentthreadlimit;existingcriticsreviewednewpackets",
+      "review_corrections": "Stabilityconditionalonsubspace, unmatchedOLSstabilitymissing; clipping/repairmaychangecovariance; untouchedsplitunverified."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -2556,5 +2574,17 @@
     "new_experiment_batch": false,
     "reward_delta": 0,
     "expression_read": false
+  },
+  "capture_module_stability_job": {
+    "status": "completed",
+    "pid": 14236,
+    "report": "CAPTURE_MODULE_STABILITY_AUDIT_RESULTS.json",
+    "spec": "NEXT_CAPTURE_MODULE_STABILITY_AUDIT.json",
+    "report_sha256": "d3d9e1202e4bfc6ff2582a48ea61186541901b453cb6a9c58579fcf6851ed3a0",
+    "complete_stability_cases": 7,
+    "fit_only_unsupported": 4,
+    "stage_fit_unsupported": 5,
+    "target_expression_read": false,
+    "reward_delta": 0
   }
 }
