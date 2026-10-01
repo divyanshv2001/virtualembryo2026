@@ -542,3 +542,7 @@ CMcounts31/175/198/345 at7.5/7.75/8/8.25; min5percapture leavesearly19+5. Jev171
 
 ### 2026-10-01T15:43:06.362250+00:00 — conditional covariance audit completed
 Bures surrogate7.4943/13.8286 vsCMpersist1.8021/11.3090; bothworse. Identityexact, nullnorm1, basisfit<=7.75/8, futurecov evaluationafterfreeze. Early3/4eigenvaluesclipped,2supportedcaptures. Raw4/skills4/headline unavailable, reward0/balance-663. Fourfreshcritiquescached; count/eigenwording corrections retained. Jev2069bytes979in64out selectedfrozen all7capturediagnostic,42surrogates,norefit/targettuning. Familyopen/no promotion.
+
+
+### 2026-10-01T15:49:55.613788+00:00 — all-capture covariance diagnostic completed
+42surrogateoutcomes/7captures, original2replays match1e-9; no newtraining. BuresbeatsCMpersist1/4at8(capture34) and0/3at8.25, laterexcess2.17..2.52. Preserveonegain andallfailures, no familyexhaustion. Differentbasesnotabsoluteerroraggregated; captureIDsnotindependentembryos. Fourfreshcritiquescached. Raw4/skills4/headline unavailable,reward0/balance-663. Scoreravailable, genepaneldecoder absent. Jev2277bytes967in66out selects past-only gene-mean residual eligibility/priorcoverage preflight,confidence.47. All originalbenchmarkgates unchanged; no officialupload.
