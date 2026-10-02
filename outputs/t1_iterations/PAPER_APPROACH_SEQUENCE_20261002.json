@@ -1,5 +1,5 @@
 {
-  "status": "first_soft_ot_pilot_complete_not_promoted_one_anchoring_ablation_next",
+  "status": "soft_ot_branch_closed_not_promoted_scnode_protocol_preflight_next",
   "authorization": "User requests moving to the three identified papers; existing local research/export permission persists, no official upload.",
   "current_job": null,
   "research_sources": "LITERATURE_PRIORITY_20261002.md",
@@ -16,7 +16,13 @@
       "result_report": "SOFT_OT_PAPER_PILOT_RESULTS.json",
       "mean_score": 40.96461973056726,
       "promoted": false,
-      "next_spec": "NEXT_ANCHORED_SOFT_OT_PILOT.json"
+      "next_spec": "NEXT_ANCHORED_SOFT_OT_PILOT.json",
+      "anchored_result": {
+        "report": "ANCHORED_SOFT_OT_PAPER_PILOT_RESULTS.json",
+        "mean_score": 55.76649255048864,
+        "promoted": false,
+        "branch_closed": true
+      }
     },
     {
       "paper": "scNODE Bioinformatics2024",
@@ -25,7 +31,8 @@
       "hypothesis": "Joint representation and dynamic regularization could address a mismatch between learned latent changes and full-gene decoding.",
       "difference_from_prior": "Prior local neuralODE/hurdle implementations failed promotion and are not full author replication. A new trial must explicitly change representation/dynamic regularization with an ablation controlling decoder and objective; simply repeating oldODE is not new work.",
       "condition": "Pursue if one-day diagnostic or first newflowmatching trial identifies representation/decoder mismatch, within16GB budget. Encoder trainedonlyoneligiblepast; allgene residual/decoder coverage retained.",
-      "new_trial_started": false
+      "new_trial_started": false,
+      "next_spec": "NEXT_SCNODE_PROTOCOL_PREFLIGHT.json"
     },
     {
       "paper": "TIGON NatureMachineIntelligence2024",

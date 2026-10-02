@@ -30,18 +30,11 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Monitor anchored_soft_ot_paper_pilot unique run; do not duplicate. On completion/failure collect, four fresh specialists, bounded Jev synthesis, reward/ledger/checkpoint. One anchored ablation only, then reassess scNODE.",
+  "next_experiment": "scNODE author-code protocol/resource preflight, then one predeclared joint representation/dynamic-regularization trial with otherwiseidentical zero-regularizercontrol. Stop softOTbranch; no new scientificrun yet. Keep full32285 scorer, past-only cutoff fits, fixed matched controls/seed/budget. NEXT_SCNODE_PROTOCOL_PREFLIGHT.json.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    {
-      "experiment": "anchored_soft_ot_paper_pilot",
-      "pid": 23052,
-      "run": "private/anchored_soft_ot_paper_pilot_01",
-      "status": "launched_live_check_required"
-    }
-  ],
+  "active_jobs": [],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -1233,7 +1226,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -946,
+    "current_reward": -975,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1242,10 +1235,10 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -946,
-    "reward_score": -946,
+    "uncapped_reward": -975,
+    "reward_score": -975,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": -40
+    "last_batch_reward_delta": -29
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -1304,13 +1297,17 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "route": "JEV_SOFT_PILOT_SYNTHESIS_ROUTE_20261002_01.json",
-    "choice": "anchored_soft_ot",
-    "actual_usage": {
-      "input_tokens": 1183,
-      "output_tokens": 65
+    "route": "JEV_ANCHORED_SYNTHESIS_ROUTE_20261002_01.json",
+    "choice": "scnode_protocol_preflight",
+    "usage": {
+      "input_tokens": 809,
+      "output_tokens": 52
     },
-    "payload_bytes": 2430
+    "actual_usage": {
+      "input_tokens": 809,
+      "output_tokens": 52
+    },
+    "payload_bytes": 1568
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -2470,6 +2467,24 @@
         "soft_pilot_variogram"
       ],
       "review": "METRIC_CRITIQUES_SOFT_OT_PILOT_20261002.md"
+    },
+    "anchored_soft_ot_paper_pilot_01": {
+      "status": "completed",
+      "report_sha256": "4e35d7f3ee2bc8f2cd96124d8ac0eafe26a8f05b1b3cdc692cc243be38accb70",
+      "specialist_role_version": 2,
+      "markdown": "METRIC_CRITIQUES_ANCHORED_SOFT_OT_20261002.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "agents": [
+        "anchored_de_critic",
+        "anchored_direction_critic",
+        "anchored_mmd_critic",
+        "anchored_css_critic"
+      ]
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -2955,16 +2970,14 @@
     "submission_identity": "Notshown; bestscoreteam screenshot notproofnewupload"
   },
   "experiment_inventory_snapshot": {
-    "utc": "2026-10-02T06:04:43.286084+00:00",
-    "registered_harness_experiments": 45,
-    "completed_explicit": 37,
-    "failed_explicit": 6,
-    "legacy_no_explicit_status": 2,
+    "registered": 46,
+    "completed": 38,
+    "failed": 6,
+    "legacy_unspecified": 2,
+    "not_started": 0,
     "running": 0,
-    "scoring_records": 3142,
-    "report_batches": 207,
-    "index_errors": 0,
-    "remaining_count": "adaptivepapersequenceplusoriginalvalidation"
+    "score_ledger_records": 3154,
+    "scope": "Execution counts; rejected scientific batches count as completed. Ledger includes controls/replays."
   },
   "literature_priority_20261002": {
     "review": "LITERATURE_PRIORITY_20261002.md",
@@ -3077,11 +3090,16 @@
   },
   "paper_approach_sequence": "PAPER_APPROACH_SEQUENCE_20261002.json",
   "anchored_soft_ot_paper_pilot": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "spec": "NEXT_ANCHORED_SOFT_OT_PILOT.json",
     "run": "private/anchored_soft_ot_paper_pilot_01",
     "report": "ANCHORED_SOFT_OT_PAPER_PILOT_RESULTS.json",
     "pid": 23052,
-    "checks": "Compilation and auxiliary gradient cap/zero-norm verification passed; no new scientific result yet."
+    "checks": "Compilation and auxiliary gradient cap/zero-norm verification passed; no new scientific result yet.",
+    "mean_score": 55.76649255048864,
+    "incumbent_mean_score": 55.988829663381615,
+    "report_sha256": "4e35d7f3ee2bc8f2cd96124d8ac0eafe26a8f05b1b3cdc692cc243be38accb70",
+    "reward_delta": -29,
+    "critiques": "METRIC_CRITIQUES_ANCHORED_SOFT_OT_20261002.md"
   }
 }

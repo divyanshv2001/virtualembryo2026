@@ -1,24 +1,17 @@
 {
-  "updated_utc": "2026-10-02T06:12:24.215605+00:00",
+  "updated_utc": "2026-10-02T06:25:57.997905+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "251d74f52a73d363179cd3743a4609766d9695143fb677a0660a850b69ca6bd3",
+    "LOCAL_OPTIMIZATION_STATE.json": "33396c1c62a8293606149ca3aa67badeb55624e22a1b7a38a20ec82561558ba0",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "9745b3972472d392bbd014a5bd1fdfa7192c7a311c95b713fb939fdfa7509f53",
+    "METRIC_RESEARCH_QUEUE.json": "35bcc28eb569760b9c50c44461d5c56bbc17677cea679825f038c4e7e34eb246",
     "METRIC_CRITIQUE_POLICY.json": "027368320281a1164dc91720fe8aa18a344ddf7c14b9c5a8fce8b2b075105b7b",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
     "RESEARCH_HARNESS_MANIFEST.json": "4c1727119fe57bd32b8930f31ae4982910ff9a4243f0f26db874a96dea28f875"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [
-    {
-      "experiment": "anchored_soft_ot_paper_pilot",
-      "pid": 23052,
-      "run": "private/anchored_soft_ot_paper_pilot_01",
-      "status": "launched_live_check_required"
-    }
-  ],
-  "next_experiment": "Monitor anchored_soft_ot_paper_pilot unique run; do not duplicate. On completion/failure collect, four fresh specialists, bounded Jev synthesis, reward/ledger/checkpoint. One anchored ablation only, then reassess scNODE.",
+  "active_jobs_at_checkpoint": [],
+  "next_experiment": "scNODE author-code protocol/resource preflight, then one predeclared joint representation/dynamic-regularization trial with otherwiseidentical zero-regularizercontrol. Stop softOTbranch; no new scientificrun yet. Keep full32285 scorer, past-only cutoff fits, fixed matched controls/seed/budget. NEXT_SCNODE_PROTOCOL_PREFLIGHT.json.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -35,7 +28,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -946,
+    "current_reward": -975,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -44,10 +37,10 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -946,
-    "reward_score": -946,
+    "uncapped_reward": -975,
+    "reward_score": -975,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": -40
+    "last_batch_reward_delta": -29
   },
   "official_best": 52.16,
   "latest_official": {
@@ -64,13 +57,17 @@
     "attribution": "Inferred latest export; screenshot lacks filename"
   },
   "latest_jev": {
-    "route": "JEV_SOFT_PILOT_SYNTHESIS_ROUTE_20261002_01.json",
-    "choice": "anchored_soft_ot",
-    "actual_usage": {
-      "input_tokens": 1183,
-      "output_tokens": 65
+    "route": "JEV_ANCHORED_SYNTHESIS_ROUTE_20261002_01.json",
+    "choice": "scnode_protocol_preflight",
+    "usage": {
+      "input_tokens": 809,
+      "output_tokens": 52
     },
-    "payload_bytes": 2430
+    "actual_usage": {
+      "input_tokens": 809,
+      "output_tokens": 52
+    },
+    "payload_bytes": 1568
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",

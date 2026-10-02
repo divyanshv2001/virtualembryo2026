@@ -1,0 +1,37 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "cafd9907053e8e66c20235ad2b79b6063463fcece4cba30d74a9cac376dc86d5",
+  "attempts": 1,
+  "payload_bytes": 1568,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "decision": "Next bounded action after anchored softOT ablation failed promotion; avoid more OT grids.",
+      "evidence": "All12 full32285 scores/calibrations valid, exactcopy/incumbent/NLL replay. Candidate55.76649 vs incumbent55.98883 vs NLL55.08680. Direction meanskill+.00420325 vsinc, DEties, MMD-.00610955, variogram-.00720659. All3 candidateheadlines belowinc. FrozenPCA8D/4096features, fullgeneanchordecoder. Objective originalNLL/energy.1/manifold10 plus.01OT, auxiliarygradientcap.1,paramdriftcap.05. Past<=8.5; nohidden10.5. Reused3developmentpanels only.",
+      "critics": "DE/direction/MMD specialists recommend jointrepresentation+dynamicregularization with otherwiseidentical no-regularizercontrol, noOTgrid. Representationbottleneck remains hypothesis not provenrootcause. Variogramcritic pending.",
+      "resources": "16GBRAM,CPU2threads,Ddisk,fullscorer/calibrationfixed, noofficialupload. scNODE paper next,TIGON conditional compositionevidence. Needauthorprotocolreview and resourcepreflight before scientifictrial; earliercutoffrequiresfreshencoder fit."
+    },
+    "questions": {
+      "next": {
+        "type": "choice",
+        "criteria": {
+          "scnode_protocol_preflight": "Close boundedOTbranch, reviewauthorVAE/ODE/dynamicregularization and predeclare onepast-only resourcepreflight/matched regularizationablation beforetraining; fullgene residualdecode and fixedscorer.",
+          "more_ot_weights": "Tune moreOTweights onreused9.5; violates boundedsequence and risks overfit.",
+          "tigon_now": "Switchdynamicgrowth now despitecapturecountidentifiability and absentcompositiondiagnosis."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 809,
+    "output_tokens": 52
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "next": {
+      "choice": "scnode_protocol_preflight",
+      "confidence": 1.0
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}
