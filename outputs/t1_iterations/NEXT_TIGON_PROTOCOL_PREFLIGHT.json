@@ -1,0 +1,16 @@
+{
+  "status": "predeclared_protocol_and_resource_preflight_not_training",
+  "paper": "https://www.nature.com/articles/s42256-023-00763-w",
+  "author_repository": "https://github.com/yutongo/TIGON",
+  "cutoff": 8.0,
+  "future_expression_allowed": false,
+  "next_actions": [
+    "Pin author code commit/license and review only numerical/objective/population normalization relevant sources; do not download author datasets or pretrained weights.",
+    "Audit past relative composition across capture IDs; no capture-count mass as biological growth. Do not infer independent embryos from assay IDs.",
+    "Only if protocol supports equal-total-mass conditional density comparison, design an explicitly adapted relative-reweighting WFR experiment with balanced growth-disabled matched control, copy and fresh CNF.",
+    "Check gradients/solver/zero-growth reduction with small synthetic CPU benchmark and measured memory before declaring real training."
+  ],
+  "eligibility": "Full biological absolute-growth reproduction is inadmissible from capped counts. Equal-mass conditional adaptation may be viable but requires protocol/numerical review; neither sample composition changes nor paper success establishes local score gain.",
+  "resources": "D-only16GBRAM2CPUthreads; no live work duplication",
+  "gates": "No full training or export until objective/solver/mass/reweighting/control protocol predeclared and checked. Original32285scorer/calibration/raw4skills4 and >72mean/lower-tail64rep+temporal readiness unchanged."
+}

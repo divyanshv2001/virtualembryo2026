@@ -30,13 +30,11 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Monitorunique scnode_signed_drift_01 fresh<=7.75fit\u21928.0 ReLU/linearfinaldriftbeta.1+copy/freshCNF controls; identicalparameterinit/objective/draws/.0625Euler. Retrospectiveexposed8.0 notuntouched. Afterbatch fourcritics/Jev synthesis andvalidpairedreward; fullscorerunchanged. Closeactivationremedyifnotpassing, noautomaticgrid/export.",
+  "next_experiment": "Third paper TIGON: NEXT_TIGON_PROTOCOL_PREFLIGHT.json. Pin/review author numerical/objective/mass normalization code (no author data/weights); past<=8.0 composition screen shows cappedcounts/assayIDs not biologicalmass/independentembryos. Determine conditional equalmass WFR/reweighting viability, then syntheticCPU/gradient/memory preflight withgrowthdisabledcontrols before realtraining. Signeddriftbranchclosed; noactivationgrid/export. Originalfullpanel/readinessunchanged.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "scnode_signed_drift"
-  ],
+  "active_jobs": [],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -1228,7 +1226,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1124,
+    "current_reward": -1182,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1237,10 +1235,10 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1124,
-    "reward_score": -1124,
+    "uncapped_reward": -1182,
+    "reward_score": -1182,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": -69
+    "last_batch_reward_delta": -58
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -1299,13 +1297,13 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_SCNODE_COMPONENT_SYNTHESIS_ROUTE_20261002_01.json",
-    "decision": "signed_drift_beta_point1",
+    "record": "JEV_SIGNED_DRIFT_SYNTHESIS_ROUTE_20261002_01.json",
+    "decision": "tigon_protocol_relative_mass_preflight",
     "usage": {
-      "input_tokens": 1081,
-      "output_tokens": 69
+      "input_tokens": 1062,
+      "output_tokens": 74
     },
-    "payload_bytes": 2178,
+    "payload_bytes": 2069,
     "status": "validated"
   },
   "external_qc_audit": {
@@ -2598,6 +2596,18 @@
         "mmd_u",
         "variogram"
       ]
+    },
+    "scnode_signed_drift_01": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "3635b58a93d1e5dd35576699f569fa1821aa85311dd999222cdb7ffa099108e3",
+      "markdown": "METRIC_CRITIQUES_SCNODE_SIGNED_DRIFT_20261002.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ]
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3314,7 +3324,7 @@
     ]
   },
   "scnode_signed_drift": {
-    "status": "started",
+    "status": "completed_rejected_branch_closed",
     "started_utc": "2026-10-02T08:42:59.082950+00:00",
     "run": "private/scnode_signed_drift_01",
     "report": "SCNODE_SIGNED_DRIFT_RESULTS.json",
@@ -3322,6 +3332,24 @@
     "preflight": "SCNODE_SIGNED_DRIFT_PREFLIGHT.json",
     "harness": "scnode_signed_drift",
     "cutoff": 7.75,
-    "target": 8.0
+    "target": 8.0,
+    "report_sha256": "3635b58a93d1e5dd35576699f569fa1821aa85311dd999222cdb7ffa099108e3",
+    "mean_scores": {
+      "copy": 50.0,
+      "fresh_pca8_cnf_incumbent_covariance_0.25": 50.83777035137515,
+      "fresh_relu_drift_beta_0.1": 41.66602663459685,
+      "fresh_linear_drift_beta_0.1": 42.96906798316377
+    },
+    "matched_draw_sha256": "9dbf838dc5fe2f07e5b03866a34ed81d52cba181bae7f110f94836f57eff0ff7",
+    "passing_candidates": [],
+    "expand": false
+  },
+  "tigon_protocol_preflight": {
+    "status": "paper_and_past_metadata_review_completed_author_code_review_pending",
+    "spec": "NEXT_TIGON_PROTOCOL_PREFLIGHT.json",
+    "review": "TIGON_ELIGIBILITY_REVIEW_20261002.md",
+    "past_composition_screen": "TIGON_PAST_COMPOSITION_SCREEN_20261002.json",
+    "absolute_growth_identifiable": false,
+    "real_training_started": false
   }
 }

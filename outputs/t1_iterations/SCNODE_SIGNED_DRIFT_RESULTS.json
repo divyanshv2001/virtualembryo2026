@@ -1,0 +1,745 @@
+{
+  "status": "completed",
+  "panels": [
+    {
+      "seed": 20260928,
+      "cutoff": 7.75,
+      "target": 8.0,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.03609461337327957,
+        "variogram": 0.0009521230822429061
+      },
+      "ceiling": {
+        "de_score": 0.9322033898305084,
+        "de_direction": 0.6512549556776758,
+        "mmd_u": 0.006455099675804377,
+        "variogram": 0.00010098741040565073
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "d3a3a07340e7285669ca07676512e02c823d1107fbe2d03ca81a102ccb7bf3ea",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.03609461337327957,
+            "variogram": 0.0009521230822429061
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "fresh_pca8_cnf_incumbent_covariance_0.25",
+          "prediction_sha256": "af1edf4e9712d63bd3c5ef421dbeae4d21bfc26979716ad70402c002d410d9e2",
+          "raw_metrics": {
+            "de_score": 0.05084745762711864,
+            "de_direction": -0.031886917931658265,
+            "mmd_u": 0.03330253064632416,
+            "variogram": 0.0009458831627853215
+          },
+          "local_score": 50.829989203411316,
+          "skills": {
+            "de_score": 0.514018691588785,
+            "de_direction": 0.4880519358140652,
+            "mmd_u": 0.5247144074030382,
+            "variogram": 0.5018395648124461
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "fresh_relu_drift_beta_0.1",
+          "prediction_sha256": "eef57ef7da8e8563c39df8c87b647db06c831766e1b0710fd3c3a0aa846b0266",
+          "raw_metrics": {
+            "de_score": 0.03389830508474576,
+            "de_direction": -0.02975125660059431,
+            "mmd_u": 0.07066120952367783,
+            "variogram": 0.001610937062650919
+          },
+          "local_score": 41.637017585913824,
+          "skills": {
+            "de_score": 0.5092592592592592,
+            "de_direction": 0.4888343001671958,
+            "mmd_u": 0.31583266835189827,
+            "variogram": 0.3604849274847752
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "fresh_linear_drift_beta_0.1",
+          "prediction_sha256": "f7414525446d1ac9043840a0a0bf83d686ea8465ad931d65afc02b0bd60a75f5",
+          "raw_metrics": {
+            "de_score": 0.01694915254237288,
+            "de_direction": -0.025794925767561424,
+            "mmd_u": 0.061467647552490234,
+            "variogram": 0.0015005492605268955
+          },
+          "local_score": 42.939243558532915,
+          "skills": {
+            "de_score": 0.5045871559633027,
+            "de_direction": 0.49029028388414486,
+            "mmd_u": 0.3501333948200297,
+            "variogram": 0.37816528588729176
+          },
+          "calibration_valid": true
+        }
+      ]
+    },
+    {
+      "seed": 20260929,
+      "cutoff": 7.75,
+      "target": 8.0,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.03671926259994507,
+        "variogram": 0.0008971515926532447
+      },
+      "ceiling": {
+        "de_score": 0.9433962264150944,
+        "de_direction": 0.6441573671861803,
+        "mmd_u": 0.005692339036613703,
+        "variogram": 0.00010606469004414976
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "d3a3a07340e7285669ca07676512e02c823d1107fbe2d03ca81a102ccb7bf3ea",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.03671926259994507,
+            "variogram": 0.0008971515926532447
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "fresh_pca8_cnf_incumbent_covariance_0.25",
+          "prediction_sha256": "af1edf4e9712d63bd3c5ef421dbeae4d21bfc26979716ad70402c002d410d9e2",
+          "raw_metrics": {
+            "de_score": 0.07547169811320754,
+            "de_direction": -0.04471062980850188,
+            "mmd_u": 0.03417444974184036,
+            "variogram": 0.000894652446731925
+          },
+          "local_score": 50.758847040880674,
+          "skills": {
+            "de_score": 0.5208333333333334,
+            "de_direction": 0.48322964025670423,
+            "mmd_u": 0.5213817354741486,
+            "variogram": 0.5007910318452636
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "fresh_relu_drift_beta_0.1",
+          "prediction_sha256": "eef57ef7da8e8563c39df8c87b647db06c831766e1b0710fd3c3a0aa846b0266",
+          "raw_metrics": {
+            "de_score": 0.05660377358490567,
+            "de_direction": -0.0345425305961063,
+            "mmd_u": 0.07464180886745453,
+            "variogram": 0.001575737725943327
+          },
+          "local_score": 41.36888786560172,
+          "skills": {
+            "de_score": 0.5154639175257731,
+            "de_direction": 0.4869439691224246,
+            "mmd_u": 0.310342496963288,
+            "variogram": 0.34992078952490707
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "fresh_linear_drift_beta_0.1",
+          "prediction_sha256": "f7414525446d1ac9043840a0a0bf83d686ea8465ad931d65afc02b0bd60a75f5",
+          "raw_metrics": {
+            "de_score": 0.03773584905660377,
+            "de_direction": -0.033193870112628525,
+            "mmd_u": 0.06490318477153778,
+            "variogram": 0.001460762694478035
+          },
+          "local_score": 42.62958524005456,
+          "skills": {
+            "de_score": 0.5102040816326531,
+            "de_direction": 0.48744091790247374,
+            "mmd_u": 0.34383522337282785,
+            "variogram": 0.3686701775245777
+          },
+          "calibration_valid": true
+        }
+      ]
+    },
+    {
+      "seed": 20260930,
+      "cutoff": 7.75,
+      "target": 8.0,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.03697146102786064,
+        "variogram": 0.0008935613441281021
+      },
+      "ceiling": {
+        "de_score": 0.9636363636363636,
+        "de_direction": 0.6424504681068857,
+        "mmd_u": 0.0066793737933039665,
+        "variogram": 0.00010136260971194133
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "d3a3a07340e7285669ca07676512e02c823d1107fbe2d03ca81a102ccb7bf3ea",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.03697146102786064,
+            "variogram": 0.0008935613441281021
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "fresh_pca8_cnf_incumbent_covariance_0.25",
+          "prediction_sha256": "af1edf4e9712d63bd3c5ef421dbeae4d21bfc26979716ad70402c002d410d9e2",
+          "raw_metrics": {
+            "de_score": 0.07272727272727272,
+            "de_direction": -0.03535630716114981,
+            "mmd_u": 0.03413873165845871,
+            "variogram": 0.0008883072878234088
+          },
+          "local_score": 50.92447480983344,
+          "skills": {
+            "de_score": 0.5196078431372549,
+            "de_direction": 0.48661006885644126,
+            "mmd_u": 0.5245251817033414,
+            "variogram": 0.50166357794454
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "fresh_relu_drift_beta_0.1",
+          "prediction_sha256": "eef57ef7da8e8563c39df8c87b647db06c831766e1b0710fd3c3a0aa846b0266",
+          "raw_metrics": {
+            "de_score": 0.05454545454545454,
+            "de_direction": -0.02165630527188863,
+            "mmd_u": 0.07068128883838654,
+            "variogram": 0.0015104064950719476
+          },
+          "local_score": 41.992174452275,
+          "skills": {
+            "de_score": 0.5145631067961165,
+            "de_direction": 0.49171245446266715,
+            "mmd_u": 0.32125147413641597,
+            "variogram": 0.3598870598356465
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "fresh_linear_drift_beta_0.1",
+          "prediction_sha256": "f7414525446d1ac9043840a0a0bf83d686ea8465ad931d65afc02b0bd60a75f5",
+          "raw_metrics": {
+            "de_score": 0.03636363636363636,
+            "de_direction": -0.015204917172810644,
+            "mmd_u": 0.061385177075862885,
+            "variogram": 0.0014069840544834733
+          },
+          "local_score": 43.33837515090384,
+          "skills": {
+            "de_score": 0.5096153846153846,
+            "de_direction": 0.4941524310758219,
+            "mmd_u": 0.35638634147581477,
+            "variogram": 0.3776294757174621
+          },
+          "calibration_valid": true
+        }
+      ]
+    }
+  ],
+  "new_scoring_batch": true,
+  "cutoff": 7.75,
+  "target": 8.0,
+  "original_readiness_gate_passed": false,
+  "official_score": null,
+  "generation": {
+    "copy": {
+      "prediction_sha256": "d3a3a07340e7285669ca07676512e02c823d1107fbe2d03ca81a102ccb7bf3ea",
+      "audit": {
+        "method": "persistence",
+        "fit_max_stage": 7.75
+      }
+    },
+    "fresh_pca8_cnf_incumbent_covariance_0.25": {
+      "prediction_sha256": "af1edf4e9712d63bd3c5ef421dbeae4d21bfc26979716ad70402c002d410d9e2",
+      "audit": {
+        "fit_cells": 4963,
+        "fit_max_stage": 7.75,
+        "supported_genes": 13268,
+        "method": "Fresh cutoff production-family reference",
+        "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+        "conditional_ridge_strength": 1.0,
+        "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+        "encoder_features": 4096,
+        "covariance_guard_features": 384,
+        "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+        "anchor_calibration_rows": 3000,
+        "anchor_supported_genes": 12516,
+        "anchor_slope_ridge": 1.0,
+        "limitation": "Cross-sectional E8.5 associations are not temporal velocities.",
+        "anchor_positive_slope_strength": 0.25,
+        "anchor_detection_slope_strength": 0.75,
+        "response_units": "log1p normalized expression",
+        "response_fit_rows": 4963,
+        "response_fit_max_stage": 7.75,
+        "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+        "training_history": [
+          {
+            "step": 50,
+            "loss": 16.232513427734375,
+            "negative_log_likelihood": 10.824491500854492,
+            "energy": 0.04654262959957123,
+            "manifold_density": 0.5403369069099426,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 100,
+            "loss": 11.606083869934082,
+            "negative_log_likelihood": 11.604376792907715,
+            "energy": 0.017066895961761475,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 150,
+            "loss": 16.3428897857666,
+            "negative_log_likelihood": 10.858981132507324,
+            "energy": 0.12389856576919556,
+            "manifold_density": 0.5471518635749817,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 200,
+            "loss": 16.97895050048828,
+            "negative_log_likelihood": 10.748684883117676,
+            "energy": 0.7710663080215454,
+            "manifold_density": 0.6153159737586975,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 250,
+            "loss": 10.485373497009277,
+            "negative_log_likelihood": 10.455848693847656,
+            "energy": 0.2952498197555542,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 300,
+            "loss": 15.935508728027344,
+            "negative_log_likelihood": 9.548643112182617,
+            "energy": 1.0423297882080078,
+            "manifold_density": 0.6282632946968079,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 350,
+            "loss": 15.726046562194824,
+            "negative_log_likelihood": 9.2041597366333,
+            "energy": 1.6223766803741455,
+            "manifold_density": 0.6359648704528809,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 400,
+            "loss": 16.695390701293945,
+            "negative_log_likelihood": 9.922124862670898,
+            "energy": 1.3005611896514893,
+            "manifold_density": 0.6643210053443909,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 450,
+            "loss": 10.252668380737305,
+            "negative_log_likelihood": 10.167034149169922,
+            "energy": 0.8563379645347595,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 500,
+            "loss": 14.713204383850098,
+            "negative_log_likelihood": 8.455587387084961,
+            "energy": 1.7265881299972534,
+            "manifold_density": 0.608495831489563,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 550,
+            "loss": 16.222627639770508,
+            "negative_log_likelihood": 9.034225463867188,
+            "energy": 1.910508155822754,
+            "manifold_density": 0.699735164642334,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 600,
+            "loss": 9.877928733825684,
+            "negative_log_likelihood": 9.792743682861328,
+            "energy": 0.8518513441085815,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 650,
+            "loss": 9.815743446350098,
+            "negative_log_likelihood": 9.712444305419922,
+            "energy": 1.0329875946044922,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 700,
+            "loss": 15.299850463867188,
+            "negative_log_likelihood": 8.576837539672852,
+            "energy": 2.0498132705688477,
+            "manifold_density": 0.6518032550811768,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 750,
+            "loss": 10.04095458984375,
+            "negative_log_likelihood": 9.92619514465332,
+            "energy": 1.1475921869277954,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 800,
+            "loss": 14.934098243713379,
+            "negative_log_likelihood": 8.310820579528809,
+            "energy": 1.7770191431045532,
+            "manifold_density": 0.6445575952529907,
+            "sampled_past_stage": 7.75
+          }
+        ],
+        "anchor_population": "Same source E7.75 cohort; alignment effectively identity",
+        "mode": "joint",
+        "strength": 1.0,
+        "backoff": 1.0,
+        "seed": 20260928,
+        "sampling": "systematic",
+        "covariance_change_vs_reference": 0.07544880314217722,
+        "newly_detected_entries": 24693,
+        "removed_detection_entries": 24324,
+        "abundance_factor_cap": 2.0,
+        "detection_probability_delta_cap": 0.25,
+        "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+        "mapped_mass_conserved": true,
+        "protected_genes_unchanged": true
+      }
+    },
+    "fresh_relu_drift_beta_0.1": {
+      "prediction_sha256": "eef57ef7da8e8563c39df8c87b647db06c831766e1b0710fd3c3a0aa846b0266",
+      "audit": {
+        "fit_cells": 4963,
+        "fit_max_stage": 7.75,
+        "mapped_genes": 26775,
+        "supported_genes": 13268,
+        "method": "Fullmappedgene jointVAE/ODE with neural decoded log1p residual and .75 allanchor ridge detection; deterministic mean latent forecast",
+        "limitation": "Author adaptation; latestanchor transfer and conditionalpositive intercept approximate. No hidden future fitting.",
+        "mode": "joint",
+        "strength": 1.0,
+        "backoff": 1.0,
+        "seed": 20260928,
+        "sampling": "systematic",
+        "covariance_change_vs_reference": 0.3964117529994547,
+        "newly_detected_entries": 83127,
+        "removed_detection_entries": 192246,
+        "abundance_factor_cap": 2.0,
+        "detection_probability_delta_cap": 0.25,
+        "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+        "mapped_mass_conserved": true,
+        "protected_genes_unchanged": true,
+        "euler_max_step": 0.0625,
+        "forecast_substeps": 4
+      }
+    },
+    "fresh_linear_drift_beta_0.1": {
+      "prediction_sha256": "f7414525446d1ac9043840a0a0bf83d686ea8465ad931d65afc02b0bd60a75f5",
+      "audit": {
+        "fit_cells": 4963,
+        "fit_max_stage": 7.75,
+        "mapped_genes": 26775,
+        "supported_genes": 13268,
+        "method": "Fullmappedgene jointVAE/ODE with neural decoded log1p residual and .75 allanchor ridge detection; deterministic mean latent forecast",
+        "limitation": "Author adaptation; latestanchor transfer and conditionalpositive intercept approximate. No hidden future fitting.",
+        "mode": "joint",
+        "strength": 1.0,
+        "backoff": 1.0,
+        "seed": 20260928,
+        "sampling": "systematic",
+        "covariance_change_vs_reference": 0.39657003885043296,
+        "newly_detected_entries": 56274,
+        "removed_detection_entries": 178181,
+        "abundance_factor_cap": 2.0,
+        "detection_probability_delta_cap": 0.25,
+        "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+        "mapped_mass_conserved": true,
+        "protected_genes_unchanged": true,
+        "euler_max_step": 0.0625,
+        "forecast_substeps": 4
+      }
+    }
+  },
+  "completed_utc": "2026-10-02T08:56:14.208074+00:00",
+  "summary": [
+    {
+      "candidate": "copy",
+      "scores": [
+        50.0,
+        50.0,
+        50.0
+      ],
+      "mean_score": 50.0,
+      "raw_metrics": [
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.03609461337327957,
+          "variogram": 0.0009521230822429061
+        },
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.03671926259994507,
+          "variogram": 0.0008971515926532447
+        },
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.03697146102786064,
+          "variogram": 0.0008935613441281021
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.5,
+        "de_direction": 0.5,
+        "mmd_u": 0.5,
+        "variogram": 0.5
+      }
+    },
+    {
+      "candidate": "fresh_pca8_cnf_incumbent_covariance_0.25",
+      "scores": [
+        50.829989203411316,
+        50.758847040880674,
+        50.92447480983344
+      ],
+      "mean_score": 50.83777035137515,
+      "raw_metrics": [
+        {
+          "de_score": 0.05084745762711864,
+          "de_direction": -0.031886917931658265,
+          "mmd_u": 0.03330253064632416,
+          "variogram": 0.0009458831627853215
+        },
+        {
+          "de_score": 0.07547169811320754,
+          "de_direction": -0.04471062980850188,
+          "mmd_u": 0.03417444974184036,
+          "variogram": 0.000894652446731925
+        },
+        {
+          "de_score": 0.07272727272727272,
+          "de_direction": -0.03535630716114981,
+          "mmd_u": 0.03413873165845871,
+          "variogram": 0.0008883072878234088
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.514018691588785,
+          "de_direction": 0.4880519358140652,
+          "mmd_u": 0.5247144074030382,
+          "variogram": 0.5018395648124461
+        },
+        {
+          "de_score": 0.5208333333333334,
+          "de_direction": 0.48322964025670423,
+          "mmd_u": 0.5213817354741486,
+          "variogram": 0.5007910318452636
+        },
+        {
+          "de_score": 0.5196078431372549,
+          "de_direction": 0.48661006885644126,
+          "mmd_u": 0.5245251817033414,
+          "variogram": 0.50166357794454
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.5181532893531244,
+        "de_direction": 0.4859638816424035,
+        "mmd_u": 0.5235404415268428,
+        "variogram": 0.5014313915340832
+      }
+    },
+    {
+      "candidate": "fresh_relu_drift_beta_0.1",
+      "scores": [
+        41.637017585913824,
+        41.36888786560172,
+        41.992174452275
+      ],
+      "mean_score": 41.66602663459685,
+      "raw_metrics": [
+        {
+          "de_score": 0.03389830508474576,
+          "de_direction": -0.02975125660059431,
+          "mmd_u": 0.07066120952367783,
+          "variogram": 0.001610937062650919
+        },
+        {
+          "de_score": 0.05660377358490567,
+          "de_direction": -0.0345425305961063,
+          "mmd_u": 0.07464180886745453,
+          "variogram": 0.001575737725943327
+        },
+        {
+          "de_score": 0.05454545454545454,
+          "de_direction": -0.02165630527188863,
+          "mmd_u": 0.07068128883838654,
+          "variogram": 0.0015104064950719476
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5092592592592592,
+          "de_direction": 0.4888343001671958,
+          "mmd_u": 0.31583266835189827,
+          "variogram": 0.3604849274847752
+        },
+        {
+          "de_score": 0.5154639175257731,
+          "de_direction": 0.4869439691224246,
+          "mmd_u": 0.310342496963288,
+          "variogram": 0.34992078952490707
+        },
+        {
+          "de_score": 0.5145631067961165,
+          "de_direction": 0.49171245446266715,
+          "mmd_u": 0.32125147413641597,
+          "variogram": 0.3598870598356465
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.5130954278603829,
+        "de_direction": 0.4891635745840959,
+        "mmd_u": 0.31580887981720074,
+        "variogram": 0.35676425894844294
+      }
+    },
+    {
+      "candidate": "fresh_linear_drift_beta_0.1",
+      "scores": [
+        42.939243558532915,
+        42.62958524005456,
+        43.33837515090384
+      ],
+      "mean_score": 42.96906798316377,
+      "raw_metrics": [
+        {
+          "de_score": 0.01694915254237288,
+          "de_direction": -0.025794925767561424,
+          "mmd_u": 0.061467647552490234,
+          "variogram": 0.0015005492605268955
+        },
+        {
+          "de_score": 0.03773584905660377,
+          "de_direction": -0.033193870112628525,
+          "mmd_u": 0.06490318477153778,
+          "variogram": 0.001460762694478035
+        },
+        {
+          "de_score": 0.03636363636363636,
+          "de_direction": -0.015204917172810644,
+          "mmd_u": 0.061385177075862885,
+          "variogram": 0.0014069840544834733
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5045871559633027,
+          "de_direction": 0.49029028388414486,
+          "mmd_u": 0.3501333948200297,
+          "variogram": 0.37816528588729176
+        },
+        {
+          "de_score": 0.5102040816326531,
+          "de_direction": 0.48744091790247374,
+          "mmd_u": 0.34383522337282785,
+          "variogram": 0.3686701775245777
+        },
+        {
+          "de_score": 0.5096153846153846,
+          "de_direction": 0.4941524310758219,
+          "mmd_u": 0.35638634147581477,
+          "variogram": 0.3776294757174621
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.5081355407371134,
+        "de_direction": 0.4906278776208135,
+        "mmd_u": 0.35011831988955744,
+        "variogram": 0.37482164637644383
+      }
+    }
+  ],
+  "passing_candidates": [],
+  "expand_to_16_resamples": false,
+  "scope": "Prepared associated source-domain cohort. E8.0 previously used in training/audits; retrospective refit-cutoff test, not untouched validation or independent embryos.",
+  "plan_sha256": "2e6c16c2c61b7ccf6bf7acf3364f9bdba5e7ac008536dc90bed17904019489f9",
+  "report_sha256": "3635b58a93d1e5dd35576699f569fa1821aa85311dd999222cdb7ffa099108e3"
+}

@@ -1,5 +1,5 @@
 {
-  "records": 3178,
+  "records": 3190,
   "sources": [
     {
       "path": "private/anchored_soft_ot_paper_pilot_01/report.json",
@@ -942,6 +942,11 @@
       "outcomes_indexed": 12
     },
     {
+      "path": "private/scnode_component_audit_01/report.json",
+      "sha256": "71500248bb2b6248b9310f2cae50472b1eb8f0bf6c68494b82b714e5ef8448d0",
+      "outcomes_indexed": 0
+    },
+    {
       "path": "private/scnode_decoder_verification_01/report.json",
       "sha256": "2aafd3386faf515e2c892ae2ac3d762c90d38aa13cc8893aedef9f18e6b39d3a",
       "outcomes_indexed": 0
@@ -970,6 +975,11 @@
       "path": "private/scnode_resource_preflight_01/report.json",
       "sha256": "216d8e03cfa49be44866f748be182450a66c3808771f1fe257566021bd2d84da",
       "outcomes_indexed": 0
+    },
+    {
+      "path": "private/scnode_signed_drift_01/report.json",
+      "sha256": "3635b58a93d1e5dd35576699f569fa1821aa85311dd999222cdb7ffa099108e3",
+      "outcomes_indexed": 12
     },
     {
       "path": "private/soft_ot_paper_pilot_01/report.json",
@@ -1079,5 +1089,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "09c1dfc0bb37923ae60ccb735b425eb6c9bb5b3402077cec6da82b1572ea6283"
+  "ledger_sha256": "e28572ca01887476664df50f60d50ba87f7848c62b4c334d6705c9da1f4aa1d0"
 }

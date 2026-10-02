@@ -73,7 +73,12 @@ def main():
             sources.append({'path':path.relative_to(HERE).as_posix(),'sha256':sha,'outcomes_indexed':len(rows)})
         except (ValueError,OSError) as exc:errors.append({'path':str(path),'error':str(exc)})
     # This is a reproducible index; original reports/events remain the source history.
-    (HERE/'SCORE_LEDGER.jsonl').write_text(''.join(json.dumps(r,sort_keys=True)+'\n' for r in records))
+    ledger=HERE/'SCORE_LEDGER.jsonl'
+    content=''.join(json.dumps(r,sort_keys=True)+'\n' for r in records)
+    if not ledger.exists() or ledger.read_text()!=content:
+        temporary=ledger.with_suffix('.jsonl.tmp')
+        temporary.write_text(content)
+        temporary.replace(ledger)
     manifest={'records':len(records),'sources':sources,'index_errors':errors,
         'limitations':'Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.',
         'ledger_sha256':hashlib.sha256((HERE/'SCORE_LEDGER.jsonl').read_bytes()).hexdigest()}

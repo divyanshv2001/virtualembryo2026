@@ -1,19 +1,17 @@
 {
-  "updated_utc": "2026-10-02T08:42:59.240082+00:00",
+  "updated_utc": "2026-10-02T09:10:11.687499+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "3d1ef2790a577252b1d0f7460e2dcecd105fea2166c5d5b767b839f0e5173339",
+    "LOCAL_OPTIMIZATION_STATE.json": "97213fd9e541b6e4ab8907d8a5f460e06a1ada6eecd2b49985978e40f1c879e4",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "f815335400fc99c26e87bf3c31356ddc320a3ebd612bbf817f1d55f0a6bf8137",
+    "METRIC_RESEARCH_QUEUE.json": "461026b365767dfaf982f8d0fdf02fb431f802f5150e1833a008e1a02019b57a",
     "METRIC_CRITIQUE_POLICY.json": "027368320281a1164dc91720fe8aa18a344ddf7c14b9c5a8fce8b2b075105b7b",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
     "RESEARCH_HARNESS_MANIFEST.json": "08a8893d059968cdc1cf54463e2c7f2d29fcf1ea2eba69eb979fe54157174cae"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [
-    "scnode_signed_drift"
-  ],
-  "next_experiment": "Monitorunique scnode_signed_drift_01 fresh<=7.75fit\u21928.0 ReLU/linearfinaldriftbeta.1+copy/freshCNF controls; identicalparameterinit/objective/draws/.0625Euler. Retrospectiveexposed8.0 notuntouched. Afterbatch fourcritics/Jev synthesis andvalidpairedreward; fullscorerunchanged. Closeactivationremedyifnotpassing, noautomaticgrid/export.",
+  "active_jobs_at_checkpoint": [],
+  "next_experiment": "Third paper TIGON: NEXT_TIGON_PROTOCOL_PREFLIGHT.json. Pin/review author numerical/objective/mass normalization code (no author data/weights); past<=8.0 composition screen shows cappedcounts/assayIDs not biologicalmass/independentembryos. Determine conditional equalmass WFR/reweighting viability, then syntheticCPU/gradient/memory preflight withgrowthdisabledcontrols before realtraining. Signeddriftbranchclosed; noactivationgrid/export. Originalfullpanel/readinessunchanged.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -30,7 +28,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1124,
+    "current_reward": -1182,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -39,10 +37,10 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1124,
-    "reward_score": -1124,
+    "uncapped_reward": -1182,
+    "reward_score": -1182,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": -69
+    "last_batch_reward_delta": -58
   },
   "official_best": 52.16,
   "latest_official": {
@@ -59,13 +57,13 @@
     "attribution": "Inferred latest export; screenshot lacks filename"
   },
   "latest_jev": {
-    "record": "JEV_SCNODE_COMPONENT_SYNTHESIS_ROUTE_20261002_01.json",
-    "decision": "signed_drift_beta_point1",
+    "record": "JEV_SIGNED_DRIFT_SYNTHESIS_ROUTE_20261002_01.json",
+    "decision": "tigon_protocol_relative_mass_preflight",
     "usage": {
-      "input_tokens": 1081,
-      "output_tokens": 69
+      "input_tokens": 1062,
+      "output_tokens": 74
     },
-    "payload_bytes": 2178,
+    "payload_bytes": 2069,
     "status": "validated"
   },
   "external_qc_audit": {
