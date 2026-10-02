@@ -1,17 +1,17 @@
 {
-  "updated_utc": "2026-10-02T07:24:24.854725+00:00",
+  "updated_utc": "2026-10-02T07:37:28.106359+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "bc738ff9b0d51c5cad8e54e614085de850703bfd6ae98ea81fabb97f3b78901a",
+    "LOCAL_OPTIMIZATION_STATE.json": "2c50baa0f7898322e889908e7dc00c2c666b8a6ca8e93f6d9279bb6d31b9e436",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "9f9b408b340d76676889d2c04223eb8c65fb80dff6166c4120408559494cbb2d",
+    "METRIC_RESEARCH_QUEUE.json": "8adf36652c6f6080d8920d7892c0f0006a93439beb5eee3bd5e7f4a45c779282",
     "METRIC_CRITIQUE_POLICY.json": "027368320281a1164dc91720fe8aa18a344ddf7c14b9c5a8fce8b2b075105b7b",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
-    "RESEARCH_HARNESS_MANIFEST.json": "533732979bc3da670dbc415b064f24ae9a61c3e8846f0e4df1cf564f803ad78f"
+    "RESEARCH_HARNESS_MANIFEST.json": "f225eb628848d7e7fd6bf6be8dae369ae7559ab813a43944290bd0aee9a0f9bd"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [],
-  "next_experiment": "One predeclared no-retraining scNODE past decoder/transfer audit per NEXT_SCNODE_PAST_AUDIT.json, <=8.5source/E8.5anchor only. Verifycheckpoint/source/time hashes and compare reconstruction/identity/ODE decoder changes/latentclouds; descriptivefit proxies, no newscore/validation/reward. Earlier-cutoff forecasts requirefreshcutofftrainedrepresentation. No beta grid/automaticTIGON.",
+  "next_experiment": "Implement/register one frozencheckpoint past Eulerconvergence audit NEXT_SCNODE_EULER_AUDIT.json, substeps1/4/8/16 samepreviousE8.5source/anchor samples, no newscore/reward/validation. Currentneural decoder retains4.8%anchorvariance atzero-time; finerintegration cannotrepairthis. Separate numerics from model/decoder/transfer beforeone honestpastrepair; freshcutofffits forchronologicalvalidation.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -57,17 +57,17 @@
     "attribution": "Inferred latest export; screenshot lacks filename"
   },
   "latest_jev": {
-    "route": "JEV_SCNODE_FAILURE_SYNTHESIS_ROUTE_20261002_01.json",
-    "choice": "past_decoder_transfer_audit",
+    "route": "JEV_SCNODE_AUDIT_SYNTHESIS_ROUTE_20261002_01.json",
+    "choice": "euler_convergence_audit",
     "usage": {
-      "input_tokens": 1036,
-      "output_tokens": 65
+      "input_tokens": 826,
+      "output_tokens": 59
     },
     "actual_usage": {
-      "input_tokens": 1036,
-      "output_tokens": 65
+      "input_tokens": 826,
+      "output_tokens": 59
     },
-    "payload_bytes": 2201
+    "payload_bytes": 1665
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",

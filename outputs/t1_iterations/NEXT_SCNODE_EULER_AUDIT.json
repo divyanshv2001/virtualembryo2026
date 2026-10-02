@@ -1,0 +1,28 @@
+{
+  "status": "predeclared_not_implemented_not_started",
+  "checkpoint_run": "private/scnode_biological_pilot_01",
+  "sample_indices_run": "private/scnode_past_audit_01",
+  "arms": [
+    "scnode_beta_0.0",
+    "scnode_beta_0.1"
+  ],
+  "euler_substeps": [
+    1,
+    4,
+    8,
+    16
+  ],
+  "elapsed_days": 1.0,
+  "controls": [
+    "zeroEulerstep",
+    "originaloneEulerstep"
+  ],
+  "input_scope": "Exactlyprevious128sourceE8.5 and128E8.5anchor samples, same26775mappedgenes/encoder/decoder, no laterexpression/no retraining.",
+  "diagnostics": [
+    "Compare latent/displacement and decoded log1poutputs across steps, means/variance/zero fractions and ReLUdecoder preactivation saturation.",
+    "Report normalized difference4vs8 and8vs16. Define numerical convergence if8vs16 latent relativeRMS<=.05 anddecoded change-relativeRMS<=.05, finite everystep; denominatorfloor1e-8. No forecastaccuracy acceptance.",
+    "Separate zero-time reconstruction contraction from integration error. A passing numerical check cannot certify4substeps or improve benchmark. No claim correctedrootcause."
+  ],
+  "scoring": "None, allraw4/skills4 unavailable/reward0; descriptivepast numericalaudit only.",
+  "next_after": "Four specialists; any solver remedy needs separatelyfrozen honestpastvalidation withfreshcutoff-fitted representation and matchedcontrols. No beta grid or TIGON without evidence."
+}

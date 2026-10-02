@@ -1,0 +1,37 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "3cee9433be8387e4025234efbc17c0e8c5b096ea50c5c9139cbc494d722b9b1a",
+  "attempts": 1,
+  "payload_bytes": 1665,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "decision": "Next bounded diagnosis after past scNODE audit; Euler convergence vsdecoder rewrite.",
+      "evidence": "Exact8.5trained1000step checkpoints no future expression/scoring/reward. beta.1 source8.5 reconMSE.04133, anchor.10195, sourcevarretention11.4%, anchor4.8%, corr.8635/.6568. Anchorlatentcentroidshift1.432 source stdnorm. Actual1dayEuler drift8.668 vsmunorm13.258, decodedchange.05967. Zerotimedecoderidentityexact. InferenceEuler[0,1] usesone1daystep vs.25daytrainingintervals. Decoder/driftfinalReLUauthorstyle maycontract; currentanchoredresidualalreadyimplemented. Poorzerotimereconstruction persists independently ofintegration.",
+      "critics": "DE/direction/MMD request frozencheckpoint comparison1dayEuler vs.25/.125substeps, samecells/latents/decoder. Numerical convergence not accuracy; substepcannotrepairzerotimereconstruction. Variogramreviewpending. No causalofficialscoreclaim/noexpectedsavings.",
+      "constraints": "Only <=8.5source/E8.5anchor, original3futurepanelsnotreusedfortuning. No retraining in diagnosis, no scores/promote. Earlierhonestfold needsfreshcutoffmodels. CPU2threads16GBD."
+    },
+    "questions": {
+      "next": {
+        "type": "choice",
+        "criteria": {
+          "euler_convergence_audit": "One frozencheckpoint past numerical audit1,.25,.125day steps pluszeroelapsedcontrol; comparefinal latent/decoder convergence and variance proxies. No scientificfuturebenchmarkuntilpastvalidatedrecipe.",
+          "decoder_softplus_retrain": "Immediately replaceoutputReLUandtrainnewmodelbeforeisolatingtimeintegration; highercost/unmatchedchanges.",
+          "tigon_switch": "Startgrowthlearner withoutcomposition justification; ignore observedreconstruction defects."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 826,
+    "output_tokens": 59
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "next": {
+      "choice": "euler_convergence_audit",
+      "confidence": 1.0
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}
