@@ -30,11 +30,18 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement/register onebounded anchored_soft_ot_paper_pilot per NEXT_ANCHORED_SOFT_OT_PILOT.json; neverduplicate firstpilot. Firstisolatedobjective failed40.9646 vs55.9888incumbent/55.0868NLL all4skillsregress; reward-40. MatchNLLtorchstream, add.01OT/.1gradcap/.05parametercap tooriginalNLL/manifold, allpast<=8.5. ReplaypureNLLcheckpoint/exactcontrols beforefutureexpression; unchangedfullscorer. Afterthisoneablation reassessscNODE, TIGONconditional. Noofficialupload/newartifact/readinessclaim.",
+  "next_experiment": "Monitor anchored_soft_ot_paper_pilot unique run; do not duplicate. On completion/failure collect, four fresh specialists, bounded Jev synthesis, reward/ledger/checkpoint. One anchored ablation only, then reassess scNODE.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
+  "active_jobs": [
+    {
+      "experiment": "anchored_soft_ot_paper_pilot",
+      "pid": 23052,
+      "run": "private/anchored_soft_ot_paper_pilot_01",
+      "status": "launched_live_check_required"
+    }
+  ],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -3068,5 +3075,13 @@
     "reward_delta": -40,
     "scorer_manifest_sha256": "7b1571977e4cb2bb58a3e7bf9b9cb67090634d1a4e8781ff2519c38587f05d40"
   },
-  "paper_approach_sequence": "PAPER_APPROACH_SEQUENCE_20261002.json"
+  "paper_approach_sequence": "PAPER_APPROACH_SEQUENCE_20261002.json",
+  "anchored_soft_ot_paper_pilot": {
+    "status": "running",
+    "spec": "NEXT_ANCHORED_SOFT_OT_PILOT.json",
+    "run": "private/anchored_soft_ot_paper_pilot_01",
+    "report": "ANCHORED_SOFT_OT_PAPER_PILOT_RESULTS.json",
+    "pid": 23052,
+    "checks": "Compilation and auxiliary gradient cap/zero-norm verification passed; no new scientific result yet."
+  }
 }

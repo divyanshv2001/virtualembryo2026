@@ -1,17 +1,24 @@
 {
-  "updated_utc": "2026-10-02T06:04:44.668845+00:00",
+  "updated_utc": "2026-10-02T06:12:24.215605+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "6efd14069969634740c5aaff854c76bd5226f777c87dc525958e6d406de61163",
+    "LOCAL_OPTIMIZATION_STATE.json": "251d74f52a73d363179cd3743a4609766d9695143fb677a0660a850b69ca6bd3",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
     "METRIC_RESEARCH_QUEUE.json": "9745b3972472d392bbd014a5bd1fdfa7192c7a311c95b713fb939fdfa7509f53",
     "METRIC_CRITIQUE_POLICY.json": "027368320281a1164dc91720fe8aa18a344ddf7c14b9c5a8fce8b2b075105b7b",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
-    "RESEARCH_HARNESS_MANIFEST.json": "9d8f1020961379a08e8771f076f5aba79af83493cb8dd973e2b9e555ccff87f9"
+    "RESEARCH_HARNESS_MANIFEST.json": "4c1727119fe57bd32b8930f31ae4982910ff9a4243f0f26db874a96dea28f875"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [],
-  "next_experiment": "Implement/register onebounded anchored_soft_ot_paper_pilot per NEXT_ANCHORED_SOFT_OT_PILOT.json; neverduplicate firstpilot. Firstisolatedobjective failed40.9646 vs55.9888incumbent/55.0868NLL all4skillsregress; reward-40. MatchNLLtorchstream, add.01OT/.1gradcap/.05parametercap tooriginalNLL/manifold, allpast<=8.5. ReplaypureNLLcheckpoint/exactcontrols beforefutureexpression; unchangedfullscorer. Afterthisoneablation reassessscNODE, TIGONconditional. Noofficialupload/newartifact/readinessclaim.",
+  "active_jobs_at_checkpoint": [
+    {
+      "experiment": "anchored_soft_ot_paper_pilot",
+      "pid": 23052,
+      "run": "private/anchored_soft_ot_paper_pilot_01",
+      "status": "launched_live_check_required"
+    }
+  ],
+  "next_experiment": "Monitor anchored_soft_ot_paper_pilot unique run; do not duplicate. On completion/failure collect, four fresh specialists, bounded Jev synthesis, reward/ledger/checkpoint. One anchored ablation only, then reassess scNODE.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
