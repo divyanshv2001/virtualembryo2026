@@ -1,5 +1,5 @@
 {
-  "records": 3121,
+  "records": 3142,
   "sources": [
     {
       "path": "private/annotation_horizon_pilot_01/report.json",
@@ -832,8 +832,28 @@
       "outcomes_indexed": 30
     },
     {
+      "path": "private/one_day_decoder_diagnostic_01/report.json",
+      "sha256": "b42bce943712fa9392f72ca595ed81f8488e3b3fd3f010772414e81cb74f3196",
+      "outcomes_indexed": 0
+    },
+    {
+      "path": "private/one_day_decoder_diagnostic_retry_01/report.json",
+      "sha256": "afbcb04ce269201d81479a668218e3a0ee3ef54614aca30604fd377108581f37",
+      "outcomes_indexed": 9
+    },
+    {
       "path": "private/past_source_integrity_01/report.json",
       "sha256": "d48a78a2b669cc1949b93a083e7e65db1d75ae63a6fb9caf158763b80c61fa07",
+      "outcomes_indexed": 0
+    },
+    {
+      "path": "private/production_coverage_audit_01/report.json",
+      "sha256": "8cd4c4fcbcea533fae5504b844c4ece20f114ee6eb4b9dfaa80203ff8614fedf",
+      "outcomes_indexed": 0
+    },
+    {
+      "path": "private/production_coverage_audit_retry_01/report.json",
+      "sha256": "645b665c67e4c4a4c0109bbb20b7dc8e2cce134672309917a48b5d336d4995f2",
       "outcomes_indexed": 0
     },
     {
@@ -910,6 +930,11 @@
       "path": "private/saturating_time_proxy_01/report.json",
       "sha256": "287ad15e5490f4bf27309ad30fc67a345dbc77ef383b68ddee5a68c7f82866d6",
       "outcomes_indexed": 0
+    },
+    {
+      "path": "private/soft_ot_paper_pilot_01/report.json",
+      "sha256": "b1fc07d9c1eb4d8d1ac2ec4dcd59a8fad55a6b9f45c7db88c7dbb217ce5f993f",
+      "outcomes_indexed": 12
     },
     {
       "path": "private/source_challenge_observation_audit_01/report.json",
@@ -1014,5 +1039,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "e6dfc8a69fcb7eb65de6415af1d169fb86341ededfaca0f725c4ad35ea7cf1e6"
+  "ledger_sha256": "2925a03946738af7d7a5a9be1d7af28b61b3c0656a392102920709dcc8de8619"
 }

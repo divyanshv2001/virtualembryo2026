@@ -1,0 +1,16 @@
+{
+  "status": "predeclared_not_implemented_not_started",
+  "sequence_limit": "One bounded anchoring ablation afterrejectedfirstsoftOT; then reassessscNODE representation/dynamicregularization rather thanunboundedhypergrid.",
+  "cutoff": 8.5,
+  "target": 9.5,
+  "seed": 20260928,
+  "steps": 400,
+  "batch_size": 64,
+  "init": "Exactsamecnf_feature_challenge_01 800step field/encoder checkpoint, cov.25/fullpaneldecoder fixed. PureNLL400control can replay soft_ot_paper_pilot_01 likelihood.pt onlyaftercheckpointmetadata/pastfit hashes and exactpredictionSHA verified; do not retrainidenticalcontrol unnecessarily.",
+  "objective": "OriginalNLL+energy.1+manifold10 plusfixedOTweight.01 softpairedvelocityMSE. ComputeNLL minibatch/stage/Hutchinsonnoise withsameexplicitTorchseed20260928 sequenceasfrozenNLL400control; OT usesseparateNumPyseed20260928 generator, no consumption of NLLTorchstream. CapweightedOTgradient norm at.1timesNLLgradient norm (skipOTifNLLnormzero); afteroptimizerstepprojectfieldparameters withinrelativeL2distance.05 of800stepinit. Nohyperparametergrid or9.5tuning. Allgradientfinite/couplingmarginalchecks required. Documentprojection/gradientratios/checkpoints.",
+  "coupling": "Existingpast-onlysoft_coupling epsilon.1/medianminibatchsquaredcost/max300/marginalgaptolerance1e-4,64jointstochasticpairs adjacenteligibleobservedstages, actualelapseddayunits. No barycentriccollapse, fixedPCA8D; no bidirectionalclaim. NLL/manifoldanchors useonlyobservedthrough8.5; nofuturemarginal.",
+  "controls": ["copy", "incumbent_covariance_0.25", "likelihood_continue_400", "anchored_soft_ot_continue_400"],
+  "evaluation": "Originalthreeone-day samplingseeds/targetrows/floor/ceiling; exactcopy/incumbent/pureNLL replay hashes before9.5expression. Full32285scorer/calibration/guardsunchanged. Allraw4/skills4/failuresretained. Reusedhistoricalpanels exploratory, notindependentbiologicalvalidation. Earlierpseudo-cutoffvalidation wouldrequireencoder/init trained<=thatcutoff; cannotreuse8.5checkpointfor7.75validation.",
+  "acceptance": "Newarm mustbeatincumbentandpureNLL onallthreeheadlines andeverymeanmetricskill, allcalibrationsvalid. Noexpansionunlessmean>=60, original>72mean/lower-tail>=64replicate/temporalgatesunchanged. Onecandidate future-only separate+1/-10pairedmeanskillreward againstincumbent;controls0, invalid/unavailable0.",
+  "resources": "D-onlycache,16GBRAM,twoCPUthreads,oneforecastworker. Implementthenregisterunique script/run/report andcheckliveprocessbeforelaunch. Noofficialupload/newsubmissionpromise. Fourfreshspecialists aftercompletion/failure; cachedJev onlyfornewuncertaindecisions. No fullscFMreplicationclaim."
+}

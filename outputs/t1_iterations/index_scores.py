@@ -30,6 +30,10 @@ def outcomes(value,context=None,pointer=''):
                 'invalid_calibration_metrics':value.get('invalid_calibration_metrics'),
                 'scope':'Local development; not an official leaderboard score'}
         for key,child in value.items():
+            if pointer=='' and key=='panels' and isinstance(value.get('folds'),list) and child==value['folds']:
+                # The same scored batch can be exposed under both adapter names.
+                # Keep canonical folds once without discarding distinct panels.
+                continue
             if pointer=='' and key=='results' and isinstance(child,list) and isinstance(value.get('folds'),list):
                 # Final summaries can embed identical scored-fold snapshots.
                 # Index the canonical folds once; retain nonidentical snapshots.
@@ -63,7 +67,8 @@ def main():
                     source_sha256=plan_record.get('source_sha256'),
                     scorer_manifest_sha256=report.get('scorer_manifest_sha256'),
                     diagnostics=row.get('diagnostics') or entry.get('audit'),
-                    report_status=report.get('status','unspecified'))
+                    report_status=report.get('status','unspecified'),
+                    historical_score_replay=bool(report.get('scores_are_historical_replays',False)))
             records.extend(rows)
             sources.append({'path':path.relative_to(HERE).as_posix(),'sha256':sha,'outcomes_indexed':len(rows)})
         except (ValueError,OSError) as exc:errors.append({'path':str(path),'error':str(exc)})

@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-02T05:53:37.533477+00:00
+Updated: 2026-10-02T06:04:44.668845+00:00
 
 Run `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_playbook.py` first. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -8,15 +8,15 @@ Use `research_harness.py status` for compact live-process/report checks, `run --
 
 Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction': 56.3, 'mmd_u': 53.2, 'variogram': 51.7}. Covariance .25 reused-development mean55.98883; EB and lineage-standardized historical proxy screens failed. Local>72 mean/lower-tail >=64-replicate AND temporal gate unmet. Full32285-gene scorer/calibration unchanged.
 
-Checkpoint jobs: ['soft_ot_paper_pilot_01']. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
+Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Monitor registeredsoft_ot_paper_pilot actualprocess/events; neverduplicate. FirstscFM-inspired softOT400step objective versusmatchedlikelihood400step continuation, exactincumbent andcopy, fixedfullpanel1day scorer. Collectoncompleted/failedbatch, fourfreshmetriccritics, scoreledger andseparatefuture-onlyreward; noofficialupload/newfilepromise. scNODEdynamicregularizationnext ifrepresentationissue/TIGONconditional. Diagnostic3exactreplayscomplete, no newscore.
+Next: Implement/register onebounded anchored_soft_ot_paper_pilot per NEXT_ANCHORED_SOFT_OT_PILOT.json; neverduplicate firstpilot. Firstisolatedobjective failed40.9646 vs55.9888incumbent/55.0868NLL all4skillsregress; reward-40. MatchNLLtorchstream, add.01OT/.1gradcap/.05parametercap tooriginalNLL/manifold, allpast<=8.5. ReplaypureNLLcheckpoint/exactcontrols beforefutureexpression; unchangedfullscorer. Afterthisoneablation reassessscNODE, TIGONconditional. Noofficialupload/newartifact/readinessclaim.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in outputs\t1_submissions\formula_progress_20260930_01\official_result.json. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 
 Four metric critiques completed; consult METRIC_CRITIQUES_20261001.md when designing the next mechanism. Separate reward starts0: +1 positive paired mean skill gain / -10 tie or regression per metric, aggregate maximum100; negative balances visible. Pending/invalid/proxy0. Future unique declared experiments only; promotion gates unchanged.
 
-Current separate reward: -906. This is not a benchmark score.
+Current separate reward: -946. This is not a benchmark score.
 
 External acquisition entry point: GSE76118_WT_STAGE_MANIFEST.json. The old stage-only list is historical;127 mutants excluded,162 B6 WT controls separate,143E8.5/999E9.5 primary CD1 candidates. Expression acquired: True; acquired cohort cells: 24; prospective QC passes: 18; original pilot cells: 4; training readiness: False. Latest external status: 24-cell cohort/QC, compatibility, lineage matching, robustness and E8.5 static guidance already completed; static guidance had no passing alpha. Transfer/embryo replication not validated. Do not repeat acquisition or QC; per-cutoff stage restrictions remain.. Latest Jev actual usage: none.
 

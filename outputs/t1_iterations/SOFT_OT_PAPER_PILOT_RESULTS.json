@@ -1,0 +1,910 @@
+{
+  "status": "completed",
+  "panels": [
+    {
+      "seed": 20260928,
+      "cutoff": 8.5,
+      "target": 9.5,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.028085237368941307,
+        "variogram": 0.001146468217484653
+      },
+      "ceiling": {
+        "de_score": 0.7868852459016393,
+        "de_direction": 0.6964934686888657,
+        "mmd_u": 0.00414352398365736,
+        "variogram": 0.00017633264360483736
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "cf7afaf39793225289bc25ab6a41e263cfc348b4c15573d62c1b67cd6e2741e4",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.028085237368941307,
+            "variogram": 0.001146468217484653
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "incumbent_covariance_0.25",
+          "prediction_sha256": "870f73cb41624d65ece774fd58fc676c65d6096ffdf3e9e30990a0af031a83ee",
+          "raw_metrics": {
+            "de_score": 0.06557377049180327,
+            "de_direction": 0.2226034482419721,
+            "mmd_u": 0.022685134783387184,
+            "variogram": 0.0010325976181775331
+          },
+          "local_score": 55.45107767796282,
+          "skills": {
+            "de_score": 0.5217391304347826,
+            "de_direction": 0.5950985084411726,
+            "mmd_u": 0.5635555560816853,
+            "variogram": 0.5311735011806695
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "likelihood_continue_400",
+          "prediction_sha256": "26e43b3ef19e8084dd5a469fcd4a05e37500d1e0dba7248dab53961a92472281",
+          "raw_metrics": {
+            "de_score": 0.06557377049180327,
+            "de_direction": 0.2021598272963057,
+            "mmd_u": 0.023515835404396057,
+            "variogram": 0.001078116474673152
+          },
+          "local_score": 54.613094638573486,
+          "skills": {
+            "de_score": 0.5217391304347826,
+            "de_direction": 0.584882106556376,
+            "mmd_u": 0.5527473720695415,
+            "variogram": 0.5182571275854141
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "soft_ot_continue_400",
+          "prediction_sha256": "fd8c03d7ed1227e917c6c6ebcbee9d84933167e8b55adbc9096e870e523cdd88",
+          "raw_metrics": {
+            "de_score": 0.016393442622950817,
+            "de_direction": -0.030998053674355316,
+            "mmd_u": 0.05047309398651123,
+            "variogram": 0.0020327011588960886
+          },
+          "local_score": 41.9451565764996,
+          "skills": {
+            "de_score": 0.5052631578947369,
+            "de_direction": 0.48911573722014695,
+            "mmd_u": 0.34070408609223496,
+            "variogram": 0.3432280807930226
+          },
+          "calibration_valid": true
+        }
+      ]
+    },
+    {
+      "seed": 20260929,
+      "cutoff": 8.5,
+      "target": 9.5,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.03033139742910862,
+        "variogram": 0.0012352676130831242
+      },
+      "ceiling": {
+        "de_score": 0.7941176470588236,
+        "de_direction": 0.693116361715318,
+        "mmd_u": 0.006407752633094788,
+        "variogram": 0.00021435643429867923
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "cf7afaf39793225289bc25ab6a41e263cfc348b4c15573d62c1b67cd6e2741e4",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.03033139742910862,
+            "variogram": 0.0012352676130831242
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "incumbent_covariance_0.25",
+          "prediction_sha256": "870f73cb41624d65ece774fd58fc676c65d6096ffdf3e9e30990a0af031a83ee",
+          "raw_metrics": {
+            "de_score": 0.11764705882352941,
+            "de_direction": 0.2675800943722879,
+            "mmd_u": 0.023657772690057755,
+            "variogram": 0.0010327644413337111
+          },
+          "local_score": 57.5222218621088,
+          "skills": {
+            "de_score": 0.54,
+            "de_direction": 0.6195992783736314,
+            "mmd_u": 0.5810423940021017,
+            "variogram": 0.5550484041352484
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "likelihood_continue_400",
+          "prediction_sha256": "26e43b3ef19e8084dd5a469fcd4a05e37500d1e0dba7248dab53961a92472281",
+          "raw_metrics": {
+            "de_score": 0.10294117647058823,
+            "de_direction": 0.24764497045302145,
+            "mmd_u": 0.02432461455464363,
+            "variogram": 0.0010789448861032724
+          },
+          "local_score": 56.56764586182095,
+          "skills": {
+            "de_score": 0.5346534653465347,
+            "de_direction": 0.6087509372050528,
+            "mmd_u": 0.5717819087972903,
+            "variogram": 0.5414539267056275
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "soft_ot_continue_400",
+          "prediction_sha256": "fd8c03d7ed1227e917c6c6ebcbee9d84933167e8b55adbc9096e870e523cdd88",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": -0.08294493597656755,
+            "mmd_u": 0.05619538947939873,
+            "variogram": 0.0023839003406465054
+          },
+          "local_score": 40.43083905684411,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.4717716453672339,
+            "mmd_u": 0.32455879565495477,
+            "variogram": 0.31998920265073083
+          },
+          "calibration_valid": true
+        }
+      ]
+    },
+    {
+      "seed": 20260930,
+      "cutoff": 8.5,
+      "target": 9.5,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.02585575543344021,
+        "variogram": 0.0010369947412982583
+      },
+      "ceiling": {
+        "de_score": 0.8947368421052632,
+        "de_direction": 0.695865717267669,
+        "mmd_u": 0.004576236009597778,
+        "variogram": 0.00018742702377494425
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "cf7afaf39793225289bc25ab6a41e263cfc348b4c15573d62c1b67cd6e2741e4",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.02585575543344021,
+            "variogram": 0.0010369947412982583
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "incumbent_covariance_0.25",
+          "prediction_sha256": "870f73cb41624d65ece774fd58fc676c65d6096ffdf3e9e30990a0af031a83ee",
+          "raw_metrics": {
+            "de_score": 0.05263157894736842,
+            "de_direction": 0.21589721161323122,
+            "mmd_u": 0.021579276770353317,
+            "variogram": 0.0009342467528767884
+          },
+          "local_score": 54.993189450073245,
+          "skills": {
+            "de_score": 0.5151515151515151,
+            "de_direction": 0.5918059737522767,
+            "mmd_u": 0.5558541362237239,
+            "variogram": 0.5321814070383365
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "likelihood_continue_400",
+          "prediction_sha256": "26e43b3ef19e8084dd5a469fcd4a05e37500d1e0dba7248dab53961a92472281",
+          "raw_metrics": {
+            "de_score": 0.05263157894736842,
+            "de_direction": 0.19992447769968974,
+            "mmd_u": 0.022515922784805298,
+            "variogram": 0.0009832490468397737
+          },
+          "local_score": 54.07966642000478,
+          "skills": {
+            "de_score": 0.5151515151515151,
+            "de_direction": 0.5838745220243162,
+            "mmd_u": 0.5425790444569963,
+            "variogram": 0.5163322078449551
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "soft_ot_continue_400",
+          "prediction_sha256": "fd8c03d7ed1227e917c6c6ebcbee9d84933167e8b55adbc9096e870e523cdd88",
+          "raw_metrics": {
+            "de_score": 0.03508771929824561,
+            "de_direction": -0.05978549637375562,
+            "mmd_u": 0.05112956836819649,
+            "variogram": 0.0020046085119247437
+          },
+          "local_score": 40.51786355835806,
+          "skills": {
+            "de_score": 0.51,
+            "de_direction": 0.47940585634908456,
+            "mmd_u": 0.3137052160521244,
+            "variogram": 0.31857803340336044
+          },
+          "calibration_valid": true
+        }
+      ]
+    }
+  ],
+  "new_scoring_batch": true,
+  "plan_sha256": "689f0a08e7416b5e742f55cd80234856683f77b3b0cd54327f0b463e3150e547",
+  "generation": {
+    "copy": {
+      "prediction_sha256": "cf7afaf39793225289bc25ab6a41e263cfc348b4c15573d62c1b67cd6e2741e4",
+      "audit": {
+        "method": "persistence"
+      }
+    },
+    "incumbent_covariance_0.25": {
+      "prediction_sha256": "870f73cb41624d65ece774fd58fc676c65d6096ffdf3e9e30990a0af031a83ee",
+      "audit": {
+        "fit_cells": 13963,
+        "fit_max_stage": 8.5,
+        "supported_genes": 14982,
+        "method": "All-past-E8.5 conditional anchor slopes, source levels fixed",
+        "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+        "conditional_ridge_strength": 1.0,
+        "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+        "encoder_features": 4096,
+        "covariance_guard_features": 384,
+        "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+        "anchor_calibration_rows": 16787,
+        "anchor_supported_genes": 14729,
+        "anchor_slope_ridge": 1.0,
+        "limitation": "Cross-sectional E8.5 associations are not temporal velocities.",
+        "anchor_positive_slope_strength": 0.25,
+        "anchor_detection_slope_strength": 0.75,
+        "response_units": "log1p normalized expression",
+        "response_fit_rows": 13963,
+        "response_fit_max_stage": 8.5,
+        "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+        "mode": "joint",
+        "strength": 1.0,
+        "backoff": 1.0,
+        "seed": 20260928,
+        "sampling": "systematic",
+        "covariance_change_vs_reference": 0.32758431988385495,
+        "newly_detected_entries": 148973,
+        "removed_detection_entries": 129421,
+        "abundance_factor_cap": 2.0,
+        "detection_probability_delta_cap": 0.25,
+        "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+        "mapped_mass_conserved": true,
+        "protected_genes_unchanged": true
+      }
+    },
+    "likelihood_continue_400": {
+      "prediction_sha256": "26e43b3ef19e8084dd5a469fcd4a05e37500d1e0dba7248dab53961a92472281",
+      "audit": {
+        "fit_cells": 13963,
+        "fit_max_stage": 8.5,
+        "supported_genes": 14982,
+        "method": "All-past-E8.5 conditional anchor slopes, source levels fixed",
+        "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+        "conditional_ridge_strength": 1.0,
+        "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+        "encoder_features": 4096,
+        "covariance_guard_features": 384,
+        "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+        "anchor_calibration_rows": 16787,
+        "anchor_supported_genes": 14729,
+        "anchor_slope_ridge": 1.0,
+        "limitation": "Cross-sectional E8.5 associations are not temporal velocities.",
+        "anchor_positive_slope_strength": 0.25,
+        "anchor_detection_slope_strength": 0.75,
+        "response_units": "log1p normalized expression",
+        "response_fit_rows": 13963,
+        "response_fit_max_stage": 8.5,
+        "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+        "mode": "joint",
+        "strength": 1.0,
+        "backoff": 1.0,
+        "seed": 20260928,
+        "sampling": "systematic",
+        "covariance_change_vs_reference": 0.32072132713278007,
+        "newly_detected_entries": 180392,
+        "removed_detection_entries": 131363,
+        "abundance_factor_cap": 2.0,
+        "detection_probability_delta_cap": 0.25,
+        "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+        "mapped_mass_conserved": true,
+        "protected_genes_unchanged": true
+      }
+    },
+    "soft_ot_continue_400": {
+      "prediction_sha256": "fd8c03d7ed1227e917c6c6ebcbee9d84933167e8b55adbc9096e870e523cdd88",
+      "audit": {
+        "fit_cells": 13963,
+        "fit_max_stage": 8.5,
+        "supported_genes": 14982,
+        "method": "All-past-E8.5 conditional anchor slopes, source levels fixed",
+        "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+        "conditional_ridge_strength": 1.0,
+        "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+        "encoder_features": 4096,
+        "covariance_guard_features": 384,
+        "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+        "anchor_calibration_rows": 16787,
+        "anchor_supported_genes": 14729,
+        "anchor_slope_ridge": 1.0,
+        "limitation": "Cross-sectional E8.5 associations are not temporal velocities.",
+        "anchor_positive_slope_strength": 0.25,
+        "anchor_detection_slope_strength": 0.75,
+        "response_units": "log1p normalized expression",
+        "response_fit_rows": 13963,
+        "response_fit_max_stage": 8.5,
+        "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+        "mode": "joint",
+        "strength": 1.0,
+        "backoff": 0.5,
+        "seed": 20260928,
+        "sampling": "systematic",
+        "covariance_change_vs_reference": 0.26593535365718746,
+        "newly_detected_entries": 221730,
+        "removed_detection_entries": 167512,
+        "abundance_factor_cap": 2.0,
+        "detection_probability_delta_cap": 0.25,
+        "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+        "mapped_mass_conserved": true,
+        "protected_genes_unchanged": true
+      }
+    }
+  },
+  "completed_utc": "2026-10-02T05:54:34.658345+00:00",
+  "summary": [
+    {
+      "candidate": "copy",
+      "scores": [
+        50.0,
+        50.0,
+        50.0
+      ],
+      "mean_score": 50.0,
+      "raw_metrics": [
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.028085237368941307,
+          "variogram": 0.001146468217484653
+        },
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.03033139742910862,
+          "variogram": 0.0012352676130831242
+        },
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.02585575543344021,
+          "variogram": 0.0010369947412982583
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.5,
+        "de_direction": 0.5,
+        "mmd_u": 0.5,
+        "variogram": 0.5
+      }
+    },
+    {
+      "candidate": "incumbent_covariance_0.25",
+      "scores": [
+        55.45107767796282,
+        57.5222218621088,
+        54.993189450073245
+      ],
+      "mean_score": 55.988829663381615,
+      "raw_metrics": [
+        {
+          "de_score": 0.06557377049180327,
+          "de_direction": 0.2226034482419721,
+          "mmd_u": 0.022685134783387184,
+          "variogram": 0.0010325976181775331
+        },
+        {
+          "de_score": 0.11764705882352941,
+          "de_direction": 0.2675800943722879,
+          "mmd_u": 0.023657772690057755,
+          "variogram": 0.0010327644413337111
+        },
+        {
+          "de_score": 0.05263157894736842,
+          "de_direction": 0.21589721161323122,
+          "mmd_u": 0.021579276770353317,
+          "variogram": 0.0009342467528767884
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5217391304347826,
+          "de_direction": 0.5950985084411726,
+          "mmd_u": 0.5635555560816853,
+          "variogram": 0.5311735011806695
+        },
+        {
+          "de_score": 0.54,
+          "de_direction": 0.6195992783736314,
+          "mmd_u": 0.5810423940021017,
+          "variogram": 0.5550484041352484
+        },
+        {
+          "de_score": 0.5151515151515151,
+          "de_direction": 0.5918059737522767,
+          "mmd_u": 0.5558541362237239,
+          "variogram": 0.5321814070383365
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.5256302151954326,
+        "de_direction": 0.602167920189027,
+        "mmd_u": 0.5668173621025036,
+        "variogram": 0.5394677707847514
+      }
+    },
+    {
+      "candidate": "likelihood_continue_400",
+      "scores": [
+        54.613094638573486,
+        56.56764586182095,
+        54.07966642000478
+      ],
+      "mean_score": 55.08680230679974,
+      "raw_metrics": [
+        {
+          "de_score": 0.06557377049180327,
+          "de_direction": 0.2021598272963057,
+          "mmd_u": 0.023515835404396057,
+          "variogram": 0.001078116474673152
+        },
+        {
+          "de_score": 0.10294117647058823,
+          "de_direction": 0.24764497045302145,
+          "mmd_u": 0.02432461455464363,
+          "variogram": 0.0010789448861032724
+        },
+        {
+          "de_score": 0.05263157894736842,
+          "de_direction": 0.19992447769968974,
+          "mmd_u": 0.022515922784805298,
+          "variogram": 0.0009832490468397737
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5217391304347826,
+          "de_direction": 0.584882106556376,
+          "mmd_u": 0.5527473720695415,
+          "variogram": 0.5182571275854141
+        },
+        {
+          "de_score": 0.5346534653465347,
+          "de_direction": 0.6087509372050528,
+          "mmd_u": 0.5717819087972903,
+          "variogram": 0.5414539267056275
+        },
+        {
+          "de_score": 0.5151515151515151,
+          "de_direction": 0.5838745220243162,
+          "mmd_u": 0.5425790444569963,
+          "variogram": 0.5163322078449551
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.5238480369776108,
+        "de_direction": 0.5925025219285817,
+        "mmd_u": 0.5557027751079427,
+        "variogram": 0.5253477540453323
+      }
+    },
+    {
+      "candidate": "soft_ot_continue_400",
+      "scores": [
+        41.9451565764996,
+        40.43083905684411,
+        40.51786355835806
+      ],
+      "mean_score": 40.96461973056726,
+      "raw_metrics": [
+        {
+          "de_score": 0.016393442622950817,
+          "de_direction": -0.030998053674355316,
+          "mmd_u": 0.05047309398651123,
+          "variogram": 0.0020327011588960886
+        },
+        {
+          "de_score": 0.0,
+          "de_direction": -0.08294493597656755,
+          "mmd_u": 0.05619538947939873,
+          "variogram": 0.0023839003406465054
+        },
+        {
+          "de_score": 0.03508771929824561,
+          "de_direction": -0.05978549637375562,
+          "mmd_u": 0.05112956836819649,
+          "variogram": 0.0020046085119247437
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5052631578947369,
+          "de_direction": 0.48911573722014695,
+          "mmd_u": 0.34070408609223496,
+          "variogram": 0.3432280807930226
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.4717716453672339,
+          "mmd_u": 0.32455879565495477,
+          "variogram": 0.31998920265073083
+        },
+        {
+          "de_score": 0.51,
+          "de_direction": 0.47940585634908456,
+          "mmd_u": 0.3137052160521244,
+          "variogram": 0.31857803340336044
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.5050877192982456,
+        "de_direction": 0.4800977463121552,
+        "mmd_u": 0.32632269926643803,
+        "variogram": 0.3272651056157046
+      }
+    }
+  ],
+  "folds": [
+    {
+      "seed": 20260928,
+      "cutoff": 8.5,
+      "target": 9.5,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.028085237368941307,
+        "variogram": 0.001146468217484653
+      },
+      "ceiling": {
+        "de_score": 0.7868852459016393,
+        "de_direction": 0.6964934686888657,
+        "mmd_u": 0.00414352398365736,
+        "variogram": 0.00017633264360483736
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "cf7afaf39793225289bc25ab6a41e263cfc348b4c15573d62c1b67cd6e2741e4",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.028085237368941307,
+            "variogram": 0.001146468217484653
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "incumbent_covariance_0.25",
+          "prediction_sha256": "870f73cb41624d65ece774fd58fc676c65d6096ffdf3e9e30990a0af031a83ee",
+          "raw_metrics": {
+            "de_score": 0.06557377049180327,
+            "de_direction": 0.2226034482419721,
+            "mmd_u": 0.022685134783387184,
+            "variogram": 0.0010325976181775331
+          },
+          "local_score": 55.45107767796282,
+          "skills": {
+            "de_score": 0.5217391304347826,
+            "de_direction": 0.5950985084411726,
+            "mmd_u": 0.5635555560816853,
+            "variogram": 0.5311735011806695
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "likelihood_continue_400",
+          "prediction_sha256": "26e43b3ef19e8084dd5a469fcd4a05e37500d1e0dba7248dab53961a92472281",
+          "raw_metrics": {
+            "de_score": 0.06557377049180327,
+            "de_direction": 0.2021598272963057,
+            "mmd_u": 0.023515835404396057,
+            "variogram": 0.001078116474673152
+          },
+          "local_score": 54.613094638573486,
+          "skills": {
+            "de_score": 0.5217391304347826,
+            "de_direction": 0.584882106556376,
+            "mmd_u": 0.5527473720695415,
+            "variogram": 0.5182571275854141
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "soft_ot_continue_400",
+          "prediction_sha256": "fd8c03d7ed1227e917c6c6ebcbee9d84933167e8b55adbc9096e870e523cdd88",
+          "raw_metrics": {
+            "de_score": 0.016393442622950817,
+            "de_direction": -0.030998053674355316,
+            "mmd_u": 0.05047309398651123,
+            "variogram": 0.0020327011588960886
+          },
+          "local_score": 41.9451565764996,
+          "skills": {
+            "de_score": 0.5052631578947369,
+            "de_direction": 0.48911573722014695,
+            "mmd_u": 0.34070408609223496,
+            "variogram": 0.3432280807930226
+          },
+          "calibration_valid": true
+        }
+      ]
+    },
+    {
+      "seed": 20260929,
+      "cutoff": 8.5,
+      "target": 9.5,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.03033139742910862,
+        "variogram": 0.0012352676130831242
+      },
+      "ceiling": {
+        "de_score": 0.7941176470588236,
+        "de_direction": 0.693116361715318,
+        "mmd_u": 0.006407752633094788,
+        "variogram": 0.00021435643429867923
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "cf7afaf39793225289bc25ab6a41e263cfc348b4c15573d62c1b67cd6e2741e4",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.03033139742910862,
+            "variogram": 0.0012352676130831242
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "incumbent_covariance_0.25",
+          "prediction_sha256": "870f73cb41624d65ece774fd58fc676c65d6096ffdf3e9e30990a0af031a83ee",
+          "raw_metrics": {
+            "de_score": 0.11764705882352941,
+            "de_direction": 0.2675800943722879,
+            "mmd_u": 0.023657772690057755,
+            "variogram": 0.0010327644413337111
+          },
+          "local_score": 57.5222218621088,
+          "skills": {
+            "de_score": 0.54,
+            "de_direction": 0.6195992783736314,
+            "mmd_u": 0.5810423940021017,
+            "variogram": 0.5550484041352484
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "likelihood_continue_400",
+          "prediction_sha256": "26e43b3ef19e8084dd5a469fcd4a05e37500d1e0dba7248dab53961a92472281",
+          "raw_metrics": {
+            "de_score": 0.10294117647058823,
+            "de_direction": 0.24764497045302145,
+            "mmd_u": 0.02432461455464363,
+            "variogram": 0.0010789448861032724
+          },
+          "local_score": 56.56764586182095,
+          "skills": {
+            "de_score": 0.5346534653465347,
+            "de_direction": 0.6087509372050528,
+            "mmd_u": 0.5717819087972903,
+            "variogram": 0.5414539267056275
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "soft_ot_continue_400",
+          "prediction_sha256": "fd8c03d7ed1227e917c6c6ebcbee9d84933167e8b55adbc9096e870e523cdd88",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": -0.08294493597656755,
+            "mmd_u": 0.05619538947939873,
+            "variogram": 0.0023839003406465054
+          },
+          "local_score": 40.43083905684411,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.4717716453672339,
+            "mmd_u": 0.32455879565495477,
+            "variogram": 0.31998920265073083
+          },
+          "calibration_valid": true
+        }
+      ]
+    },
+    {
+      "seed": 20260930,
+      "cutoff": 8.5,
+      "target": 9.5,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.02585575543344021,
+        "variogram": 0.0010369947412982583
+      },
+      "ceiling": {
+        "de_score": 0.8947368421052632,
+        "de_direction": 0.695865717267669,
+        "mmd_u": 0.004576236009597778,
+        "variogram": 0.00018742702377494425
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "cf7afaf39793225289bc25ab6a41e263cfc348b4c15573d62c1b67cd6e2741e4",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.02585575543344021,
+            "variogram": 0.0010369947412982583
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "incumbent_covariance_0.25",
+          "prediction_sha256": "870f73cb41624d65ece774fd58fc676c65d6096ffdf3e9e30990a0af031a83ee",
+          "raw_metrics": {
+            "de_score": 0.05263157894736842,
+            "de_direction": 0.21589721161323122,
+            "mmd_u": 0.021579276770353317,
+            "variogram": 0.0009342467528767884
+          },
+          "local_score": 54.993189450073245,
+          "skills": {
+            "de_score": 0.5151515151515151,
+            "de_direction": 0.5918059737522767,
+            "mmd_u": 0.5558541362237239,
+            "variogram": 0.5321814070383365
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "likelihood_continue_400",
+          "prediction_sha256": "26e43b3ef19e8084dd5a469fcd4a05e37500d1e0dba7248dab53961a92472281",
+          "raw_metrics": {
+            "de_score": 0.05263157894736842,
+            "de_direction": 0.19992447769968974,
+            "mmd_u": 0.022515922784805298,
+            "variogram": 0.0009832490468397737
+          },
+          "local_score": 54.07966642000478,
+          "skills": {
+            "de_score": 0.5151515151515151,
+            "de_direction": 0.5838745220243162,
+            "mmd_u": 0.5425790444569963,
+            "variogram": 0.5163322078449551
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "soft_ot_continue_400",
+          "prediction_sha256": "fd8c03d7ed1227e917c6c6ebcbee9d84933167e8b55adbc9096e870e523cdd88",
+          "raw_metrics": {
+            "de_score": 0.03508771929824561,
+            "de_direction": -0.05978549637375562,
+            "mmd_u": 0.05112956836819649,
+            "variogram": 0.0020046085119247437
+          },
+          "local_score": 40.51786355835806,
+          "skills": {
+            "de_score": 0.51,
+            "de_direction": 0.47940585634908456,
+            "mmd_u": 0.3137052160521244,
+            "variogram": 0.31857803340336044
+          },
+          "calibration_valid": true
+        }
+      ]
+    }
+  ],
+  "passing_candidates": [],
+  "expand_to_16_resamples": false,
+  "original_readiness_gate_passed": false,
+  "official_score": null,
+  "scope": "First isolated soft-OT objective adaptation, not faithful scFM; exposed one-day development, no independent embryos or official forecast score.",
+  "report_sha256": "b1fc07d9c1eb4d8d1ac2ec4dcd59a8fad55a6b9f45c7db88c7dbb217ce5f993f"
+}
