@@ -30,11 +30,13 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement/register unique one_day_decoder_diagnostic per NEXT_ONE_DAY_DECODER_DIAGNOSTIC.json. Productionaudit passed exactartifact/source/donors/order andactual1daytiming. 2605activeprotectedgenes only1.396%abundance; detectionnetloss100182 notcausalproof. HistoricalCNFcovariance predictions notretained: reconstruct frozencontrols andrequireoriginalhashes beforetargetread; no relauncholdbatch. Then selecttargetedremedy/softOTflowmatching fromactualone-dayerror. No newsubmission/score; gates unchanged.",
+  "next_experiment": "Monitor registeredsoft_ot_paper_pilot actualprocess/events; neverduplicate. FirstscFM-inspired softOT400step objective versusmatchedlikelihood400step continuation, exactincumbent andcopy, fixedfullpanel1day scorer. Collectoncompleted/failedbatch, fourfreshmetriccritics, scoreledger andseparatefuture-onlyreward; noofficialupload/newfilepromise. scNODEdynamicregularizationnext ifrepresentationissue/TIGONconditional. Diagnostic3exactreplayscomplete, no newscore.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
+  "active_jobs": [
+    "soft_ot_paper_pilot_01"
+  ],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -1297,13 +1299,13 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "route": "JEV_PRODUCTION_AUDIT_SYNTHESIS_ROUTE_20261002_01.json",
-    "choice": "one_day_decoder_error_decomposition",
+    "route": "JEV_PAPER_PILOT_DESIGN_ROUTE_20261002_01.json",
+    "choice": "soft_ot_with_matched_continuation",
     "actual_usage": {
-      "input_tokens": 1116,
-      "output_tokens": 73
+      "input_tokens": 1132,
+      "output_tokens": 67
     },
-    "payload_bytes": 2539
+    "payload_bytes": 2381
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -2423,6 +2425,34 @@
       "review": "METRIC_CRITIQUES_PRODUCTION_AUDIT_20261002.md",
       "metrics_unavailable": true,
       "reward": 0
+    },
+    "one_day_decoder_diagnostic_01": {
+      "status": "completed",
+      "report_sha256": "b42bce943712fa9392f72ca595ed81f8488e3b3fd3f010772414e81cb74f3196",
+      "specialist_role_version": 2,
+      "agents": [
+        "one_day_failure_de",
+        "one_day_failure_direction",
+        "one_day_failure_mmd",
+        "one_day_failure_variogram"
+      ],
+      "review": "METRIC_CRITIQUES_ONE_DAY_DIAGNOSTIC_20261002.md",
+      "new_scores": 0,
+      "reward": 0
+    },
+    "one_day_decoder_diagnostic_retry_01": {
+      "status": "completed",
+      "report_sha256": "afbcb04ce269201d81479a668218e3a0ee3ef54614aca30604fd377108581f37",
+      "specialist_role_version": 2,
+      "agents": [
+        "one_day_retry_de",
+        "one_day_retry_direction",
+        "one_day_retry_mmd",
+        "one_day_retry_variogram"
+      ],
+      "review": "METRIC_CRITIQUES_ONE_DAY_DIAGNOSTIC_20261002.md",
+      "new_scores": 0,
+      "reward": 0
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -2908,14 +2938,15 @@
     "submission_identity": "Notshown; bestscoreteam screenshot notproofnewupload"
   },
   "experiment_inventory_snapshot": {
-    "utc": "2026-10-01T22:19:13.310857+00:00",
-    "registered_harness_experiments": 42,
-    "completed_explicit": 35,
-    "failed_explicit": 5,
+    "utc": "2026-10-02T05:53:35.657532+00:00",
+    "registered_harness_experiments": 45,
+    "completed_explicit": 36,
+    "failed_explicit": 6,
     "legacy_no_explicit_status": 2,
-    "scoring_records": 3121,
-    "scored_reports": 202,
-    "remaining_count": "not_fixed; next_unique_diagnostic_then_targeted_method_and_required_validation"
+    "running_at_launch": 1,
+    "scoring_records_at_prior_checkpoint": 3121,
+    "scored_reports_at_prior_checkpoint": 202,
+    "remaining_count": "adaptivepapersequenceandoriginalrequiredvalidation"
   },
   "literature_priority_20261002": {
     "review": "LITERATURE_PRIORITY_20261002.md",
@@ -2996,5 +3027,22 @@
     "skills": null,
     "reward": 0,
     "next_spec": "NEXT_ONE_DAY_DECODER_DIAGNOSTIC.json"
-  }
+  },
+  "one_day_decoder_diagnostic_job": {
+    "status": "completed_after_distinct_retry",
+    "report_sha256": "afbcb04ce269201d81479a668218e3a0ee3ef54614aca30604fd377108581f37",
+    "exact_replays": 3,
+    "new_scores": 0,
+    "reward": 0,
+    "report": "ONE_DAY_DECODER_DIAGNOSTIC_RETRY_RESULTS.json"
+  },
+  "soft_ot_paper_pilot_job": {
+    "status": "started",
+    "run": "private/soft_ot_paper_pilot_01",
+    "report": "SOFT_OT_PAPER_PILOT_RESULTS.json",
+    "planned_scores": 12,
+    "spec": "NEXT_SOFT_OT_PAPER_PILOT.json",
+    "collect": "research_harness.py collect --experiment soft_ot_paper_pilot"
+  },
+  "paper_approach_sequence": "PAPER_APPROACH_SEQUENCE_20261002.json"
 }

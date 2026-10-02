@@ -1,0 +1,18 @@
+{
+  "status": "predeclared",
+  "name": "soft_ot_paper_pilot_01",
+  "authorization": "User requested moving to threepaperapproaches; firstscFM-inspired isolatedobjective selected afterone-daydiagnostic/fourcriticreviews andcachedJev.",
+  "cutoff": 8.5,
+  "target": 9.5,
+  "seed": 20261002,
+  "steps": 400,
+  "batch_size": 64,
+  "candidates": ["copy", "incumbent_covariance_0.25", "likelihood_continue_400", "soft_ot_continue_400"],
+  "baseline": "Identical archivedcnf_feature_challenge_01 800stepcheckpoint,4096feature8DPCAencoder, fullanchor decoder .25positive/.75detection, covariancealignment.25, originalguards/protectedgenes/mappedmass.",
+  "objectives": "NewsoftOT: logSinkhorn epsilon.1 with medianpastminibatchsquaredcost scaling, max300iterations, absolutemarginalgap<=1e-4;64stochasticjointpairs betweenrandomadjacenteligibleobservedstages;velocitytarget dividedbyactualelapsedday, randominterpolationtime perpair. Originalcontinuation: existingNLL+energy.1+manifolddensity10,400steps/batch64 sameinitseed. Originaltrainer resets20260928 internally; matched counts/init/objective but randomstreams differ, explicitlyretained. No authorfaithfulreplicationclaim. Bidirectionality/globaldistributionregularization withheldforlaterisolatedablations.",
+  "fit_policy": "Allrepresentation/sourcez/couplings/training/conditionalheads through8.5 only. No9.5expressionbeforeallfourforecasts frozen andexactcopy/incumbentreplaySHAchecks. Stage.25sampling notmistakenforone-daytest; forecast E8.5toE9.5 oneactualday.",
+  "scoring": "Full32285officialgeneorder; unchangedcore/scorer/calibration. Originalseeds20260928,20260929,20260930 andexacttargetrows/floor/ceiling. Twelveoutcomes includesfourcontrols/candidates perthree reused panels. Noindependentembryovalidationclaim. Allraw4/skills4/invalidoutcomespreserved;refreshledgerafterfullbatch.",
+  "decision": "A scientific pilotpass requiressoftOTscore strictlybetterthanbothincumbentandmatchedcontinuation onallthreepanels, allcalibrationsvalid andeachmeanmetricskill>=bothcontrols. No >=64replicate expansion untilmean>=60; original>72mean/lower-tail+temporalreadinessunchanged. Failedprediction/integrity retainsreport, notpromotion.",
+  "reward": "Only newsoftOTcandidatefuture-only separate+1/-10 perpairedmeanskill againstincumbentcov.25,cap100. Otherarmscontrols0. Unavailable/invalid0. Noalteredbenchmarkscore.",
+  "resources": "OneCPUworker,torch/BLAS2threads,16GBRAM,Donlyshort-livedfullpredictioncache. Noofficialupload ornewartifact until genuinelychangedpredictions anddocumentedvalidation. Uniqueharnessregistration, retainseed/split/checkpoint/sourcehash/events, commitonlysmallcode/evidence. Fourmetricreviewsoncompleted/failedbatch."
+}

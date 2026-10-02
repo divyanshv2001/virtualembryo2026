@@ -1,0 +1,38 @@
+{
+  "status": "sequence_declared_first_design_pending_one_day_diagnostic",
+  "authorization": "User requests moving to the three identified papers; existing local research/export permission persists, no official upload.",
+  "current_job": "one_day_decoder_diagnostic_retry",
+  "research_sources": "LITERATURE_PRIORITY_20261002.md",
+  "common_controls": "Persistence and frozen production-family incumbent; exact original replay on exposed historical E8.5->E9.5 development. Frozen genes/scorer/calibration/donors/seeds, full32285 output. Historical training data only throughfoldcutoff; prospective fitting through9.5 for10.5 only after a new candidate selected and format validation. No hiddenfuture marginal used in losses. All outcomes retained, no seedsearch.",
+  "sequence": [
+    {
+      "paper": "scFM May2026 preprint",
+      "url": "https://arxiv.org/html/2605.22340v1",
+      "priority": 1,
+      "hypothesis": "An explicit past-to-past transition loss may learn developmental direction better than current snapshot likelihood. The current decoder may limit transfer; one-day diagnostic determines the first isolated test.",
+      "bounded_first_adaptation": "Reuse past-fitted 4096feature/8D representation and fullpanel anchor decoder. Train a small velocity field with soft entropic OT joint sampling across adjacent eligible observed stages, actual-day velocity units, fixed400step/64cell/seed pilot and twoCPUthreads. Use stochastic coupling pairs rather than collapsing cells to barycenters. Fixed past-only normalization/cost regularization; finite coupling marginal checks. Final detailed parameter/cost specification frozen before any new run after diagnostic.",
+      "ablation_order": "First isolate coupling-conditioned flowmatching. Bidirectional consistency and observed-distribution regularization are distinct later ablations, never hiddenfuture anchoring. Match architecture/decoder and expose any training-budget/init differences. A complete scFM reproduction is not claimed.",
+      "new_trial_started": false
+    },
+    {
+      "paper": "scNODE Bioinformatics2024",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11373355/",
+      "priority": 2,
+      "hypothesis": "Joint representation and dynamic regularization could address a mismatch between learned latent changes and full-gene decoding.",
+      "difference_from_prior": "Prior local neuralODE/hurdle implementations failed promotion and are not full author replication. A new trial must explicitly change representation/dynamic regularization with an ablation controlling decoder and objective; simply repeating oldODE is not new work.",
+      "condition": "Pursue if one-day diagnostic or first newflowmatching trial identifies representation/decoder mismatch, within16GB budget. Encoder trainedonlyoneligiblepast; allgene residual/decoder coverage retained.",
+      "new_trial_started": false
+    },
+    {
+      "paper": "TIGON NatureMachineIntelligence2024",
+      "url": "https://www.nature.com/articles/s42256-023-00763-w",
+      "priority": 3,
+      "hypothesis": "Joint relative population change and cellstate transport may improve composition forecasts.",
+      "difference_from_prior": "Growth-proxy reweighting and affineunbalancedOT alreadytested locally; a new dynamic velocity/growth learner is different, but higher-cost and poorly identifiable without population data.",
+      "condition": "Prioritize when composition diagnosis warrants it. Captured atlascellcounts and equalstage caps are not measured biological proliferation. Validate alternative sampling/growth assumptions and report relative occupancy only where absolutegrowth unidentified. A full TIGON reproduction is not claimed.",
+      "new_trial_started": false
+    }
+  ],
+  "success_and_limits": "Report allraw4/skills4 and skill regressions, require actualone-day matched fullpanel improvement before broadervalidation. Original >72mean/lower-tail >=64replicate plus temporalreadiness remains. A user-requested progressartifact may be exported only with changedpredictions/provenance/format and explicit unmetgate, never advertised as improvedofficialscore. Four fresh specialists after each completed/failedbatch; cachedJev for genuinelynewuncertain design/synthesis. Literature selection is not a benchmarkscore.",
+  "resource_policy": "D-only temporary caches and large/private artifacts;twoBLASthreads,16GBRAM,oneforecastjob. No newrun until active diagnostic finishes. Register unique script/run/report beforelaunch. Commit only small code/evidence, neverdatasets/secret/checkpoints."
+}

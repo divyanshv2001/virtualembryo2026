@@ -210,6 +210,21 @@
       "script": "production_coverage_audit_retry.py",
       "run": "private/production_coverage_audit_retry_01",
       "report": "PRODUCTION_COVERAGE_AUDIT_RETRY_RESULTS.json"
+    },
+    "one_day_decoder_diagnostic": {
+      "script": "one_day_decoder_diagnostic.py",
+      "run": "private/one_day_decoder_diagnostic_01",
+      "report": "ONE_DAY_DECODER_DIAGNOSTIC_RESULTS.json"
+    },
+    "one_day_decoder_diagnostic_retry": {
+      "script": "one_day_decoder_diagnostic_retry.py",
+      "run": "private/one_day_decoder_diagnostic_retry_01",
+      "report": "ONE_DAY_DECODER_DIAGNOSTIC_RETRY_RESULTS.json"
+    },
+    "soft_ot_paper_pilot": {
+      "script": "soft_ot_paper_pilot.py",
+      "run": "private/soft_ot_paper_pilot_01",
+      "report": "SOFT_OT_PAPER_PILOT_RESULTS.json"
     }
   }
 }

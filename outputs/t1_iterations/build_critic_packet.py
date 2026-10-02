@@ -29,6 +29,20 @@ def main():
         'passing_candidates':report.get('passing_candidates'),'specialist_role_version':2,'instructions':'In<=150words state Problem / Proposed solution / Validation: evidence vs uncertainty, concrete past-only remedy, matched controls, success/failure criteria. Missing metrics unavailable; never invent outcomes/credentials. No history rereads. Readiness unchanged.'}
     if report_path.name.startswith('PRODUCTION_COVERAGE_AUDIT'):
         packet['audit_context']={k:report.get(k) for k in ('status','error','time_policy','donor_provenance_passed','gene_order_passed','strata','source_anchor_comparison','unchanged_protected_genes_verified','mapped_mass_max_relative_error','mean_unmapped_anchor_abundance_fraction','reported_head_support_counts_only','scope')}
+    if report_path.name.startswith('ONE_DAY_DECODER_DIAGNOSTIC'):
+        packet['diagnostic_context']={k:report.get(k) for k in ('status','error','generation','scores_are_historical_replays','new_scores','reward','scope')}
+        selected={'de_score':['mean_absolute_expression_error','mean_absolute_detection_error'],
+                  'de_direction':['gene_mean_direction_agreement_epsilon1e6','predicted_detection_change_sum','actual_detection_change_sum'],
+                  'mmd_u':['mean_absolute_expression_error','mean_absolute_variance_error'],
+                  'variogram':['mean_absolute_variance_error','mean_absolute_detection_error']}[args.metric]
+        reduced=[]
+        diagnostics=report.get('diagnostics',[])
+        for candidate in sorted({r['candidate'] for r in diagnostics}):
+            group=[r for r in diagnostics if r['candidate']==candidate]
+            reduced.append({'candidate':candidate,'historical_panel_count':len(group),'strata_panel_means':{
+                label:{key:sum(row['strata'][label][key] for row in group)/len(group) for key in selected}
+                for label in group[0]['strata']}})
+        packet['diagnostic_context']['diagnostic_proxies_not_benchmark_metrics']=reduced
     encoded=json.dumps(packet,separators=(',',':'))+'\n'
     if len(encoded.encode())>6000:raise ValueError('Split large batch by predeclared experiment; do not pass oversized packet')
     out.parent.mkdir(parents=True,exist_ok=True);out.write_text(encoded)

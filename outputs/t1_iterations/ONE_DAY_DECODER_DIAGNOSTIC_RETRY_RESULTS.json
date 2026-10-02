@@ -1,0 +1,549 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-10-02T05:40:56.138404+00:00",
+  "plan_sha256": "c3abd2971dd3a287c719be5fa58d4c40dac0e572f0c9bbdf6198a26d0f13a996",
+  "generation": {
+    "copy": {
+      "prediction_sha256": "cf7afaf39793225289bc25ab6a41e263cfc348b4c15573d62c1b67cd6e2741e4",
+      "exact_replay": true
+    },
+    "mean_shift": {
+      "prediction_sha256": "8139242cc6ac3a7adef38e147171a1e82481ca321649781156bc184c7399f7b3",
+      "exact_replay": true
+    },
+    "covariance_0.25": {
+      "prediction_sha256": "870f73cb41624d65ece774fd58fc676c65d6096ffdf3e9e30990a0af031a83ee",
+      "exact_replay": true
+    }
+  },
+  "diagnostics": [
+    {
+      "seed": 20260928,
+      "candidate": "copy",
+      "strata": {
+        "all": {
+          "genes": 32285,
+          "mean_absolute_expression_error": 0.012574700090437428,
+          "mean_absolute_detection_error": 0.011149636053894997,
+          "mean_absolute_variance_error": 0.008011461299652646,
+          "predicted_detection_change_sum": 0.0,
+          "actual_detection_change_sum": 68.12266666666667,
+          "gene_mean_direction_agreement_epsilon1e6": 0.2747715657426049
+        },
+        "mapped": {
+          "genes": 26775,
+          "mean_absolute_expression_error": 0.0146468752822932,
+          "mean_absolute_detection_error": 0.012843423591658886,
+          "mean_absolute_variance_error": 0.009314589977830108,
+          "predicted_detection_change_sum": 0.0,
+          "actual_detection_change_sum": 65.798,
+          "gene_mean_direction_agreement_epsilon1e6": 0.23633986928104575
+        },
+        "protected": {
+          "genes": 5510,
+          "mean_absolute_expression_error": 0.0025052825292870987,
+          "mean_absolute_detection_error": 0.002918935269207502,
+          "mean_absolute_variance_error": 0.0016791073326469148,
+          "predicted_detection_change_sum": 0.0,
+          "actual_detection_change_sum": 2.3246666666666664,
+          "gene_mean_direction_agreement_epsilon1e6": 0.461524500907441
+        }
+      }
+    },
+    {
+      "seed": 20260928,
+      "candidate": "mean_shift",
+      "strata": {
+        "all": {
+          "genes": 32285,
+          "mean_absolute_expression_error": 0.01187131406791021,
+          "mean_absolute_detection_error": 0.010574219193639977,
+          "mean_absolute_variance_error": 0.008094485934044432,
+          "predicted_detection_change_sum": 27.806666666666665,
+          "actual_detection_change_sum": 68.12266666666667,
+          "gene_mean_direction_agreement_epsilon1e6": 0.6339476537091528
+        },
+        "mapped": {
+          "genes": 26775,
+          "mean_absolute_expression_error": 0.013798740166054497,
+          "mean_absolute_detection_error": 0.012149592281356987,
+          "mean_absolute_variance_error": 0.009414700167235853,
+          "predicted_detection_change_sum": 27.806666666666665,
+          "actual_detection_change_sum": 65.798,
+          "gene_mean_direction_agreement_epsilon1e6": 0.6694304388422035
+        },
+        "protected": {
+          "genes": 5510,
+          "mean_absolute_expression_error": 0.0025052825292870987,
+          "mean_absolute_detection_error": 0.002918935269207502,
+          "mean_absolute_variance_error": 0.0016791073326469148,
+          "predicted_detection_change_sum": 0.0,
+          "actual_detection_change_sum": 2.3246666666666664,
+          "gene_mean_direction_agreement_epsilon1e6": 0.461524500907441
+        }
+      }
+    },
+    {
+      "seed": 20260928,
+      "candidate": "covariance_0.25",
+      "strata": {
+        "all": {
+          "genes": 32285,
+          "mean_absolute_expression_error": 0.01178381017451241,
+          "mean_absolute_detection_error": 0.010560797067781735,
+          "mean_absolute_variance_error": 0.008026009106796511,
+          "predicted_detection_change_sum": 13.03466666666667,
+          "actual_detection_change_sum": 68.12266666666667,
+          "gene_mean_direction_agreement_epsilon1e6": 0.6306024469567911
+        },
+        "mapped": {
+          "genes": 26775,
+          "mean_absolute_expression_error": 0.013693228935490617,
+          "mean_absolute_detection_error": 0.012133408029878617,
+          "mean_absolute_variance_error": 0.00933213156340022,
+          "predicted_detection_change_sum": 13.03466666666667,
+          "actual_detection_change_sum": 65.798,
+          "gene_mean_direction_agreement_epsilon1e6": 0.6653968253968254
+        },
+        "protected": {
+          "genes": 5510,
+          "mean_absolute_expression_error": 0.0025052825292870987,
+          "mean_absolute_detection_error": 0.002918935269207502,
+          "mean_absolute_variance_error": 0.0016791073326469148,
+          "predicted_detection_change_sum": 0.0,
+          "actual_detection_change_sum": 2.3246666666666664,
+          "gene_mean_direction_agreement_epsilon1e6": 0.461524500907441
+        }
+      }
+    },
+    {
+      "seed": 20260929,
+      "candidate": "copy",
+      "strata": {
+        "all": {
+          "genes": 32285,
+          "mean_absolute_expression_error": 0.013204433925392386,
+          "mean_absolute_detection_error": 0.011570161581745909,
+          "mean_absolute_variance_error": 0.008329013341655877,
+          "predicted_detection_change_sum": 0.0,
+          "actual_detection_change_sum": 30.122666666666674,
+          "gene_mean_direction_agreement_epsilon1e6": 0.2743998761034536
+        },
+        "mapped": {
+          "genes": 26775,
+          "mean_absolute_expression_error": 0.015403400061165584,
+          "mean_absolute_detection_error": 0.013353862433862433,
+          "mean_absolute_variance_error": 0.009699755629393146,
+          "predicted_detection_change_sum": 0.0,
+          "actual_detection_change_sum": 28.955000000000013,
+          "gene_mean_direction_agreement_epsilon1e6": 0.23570494864612512
+        },
+        "protected": {
+          "genes": 5510,
+          "mean_absolute_expression_error": 0.002518895216621526,
+          "mean_absolute_detection_error": 0.0029025408348457354,
+          "mean_absolute_variance_error": 0.0016681014080505408,
+          "predicted_detection_change_sum": 0.0,
+          "actual_detection_change_sum": 1.1676666666666669,
+          "gene_mean_direction_agreement_epsilon1e6": 0.46243194192377496
+        }
+      }
+    },
+    {
+      "seed": 20260929,
+      "candidate": "mean_shift",
+      "strata": {
+        "all": {
+          "genes": 32285,
+          "mean_absolute_expression_error": 0.011926625212701915,
+          "mean_absolute_detection_error": 0.010611057766764753,
+          "mean_absolute_variance_error": 0.008300363594389567,
+          "predicted_detection_change_sum": 27.806666666666665,
+          "actual_detection_change_sum": 30.122666666666674,
+          "gene_mean_direction_agreement_epsilon1e6": 0.6458417221619948
+        },
+        "mapped": {
+          "genes": 26775,
+          "mean_absolute_expression_error": 0.013862632393968132,
+          "mean_absolute_detection_error": 0.012197385620915033,
+          "mean_absolute_variance_error": 0.009665210079794909,
+          "predicted_detection_change_sum": 27.806666666666665,
+          "actual_detection_change_sum": 28.955000000000013,
+          "gene_mean_direction_agreement_epsilon1e6": 0.6835854341736695
+        },
+        "protected": {
+          "genes": 5510,
+          "mean_absolute_expression_error": 0.002518895216621526,
+          "mean_absolute_detection_error": 0.0029025408348457354,
+          "mean_absolute_variance_error": 0.0016681014080505408,
+          "predicted_detection_change_sum": 0.0,
+          "actual_detection_change_sum": 1.1676666666666669,
+          "gene_mean_direction_agreement_epsilon1e6": 0.46243194192377496
+        }
+      }
+    },
+    {
+      "seed": 20260929,
+      "candidate": "covariance_0.25",
+      "strata": {
+        "all": {
+          "genes": 32285,
+          "mean_absolute_expression_error": 0.011836944275682732,
+          "mean_absolute_detection_error": 0.01056350214237778,
+          "mean_absolute_variance_error": 0.008221140323372438,
+          "predicted_detection_change_sum": 13.03466666666667,
+          "actual_detection_change_sum": 30.122666666666674,
+          "gene_mean_direction_agreement_epsilon1e6": 0.6426204119560167
+        },
+        "mapped": {
+          "genes": 26775,
+          "mean_absolute_expression_error": 0.013754496108191686,
+          "mean_absolute_detection_error": 0.01214004357298475,
+          "mean_absolute_variance_error": 0.00956968353246389,
+          "predicted_detection_change_sum": 13.03466666666667,
+          "actual_detection_change_sum": 28.955000000000013,
+          "gene_mean_direction_agreement_epsilon1e6": 0.6797012138188608
+        },
+        "protected": {
+          "genes": 5510,
+          "mean_absolute_expression_error": 0.002518895216621526,
+          "mean_absolute_detection_error": 0.0029025408348457354,
+          "mean_absolute_variance_error": 0.0016681014080505408,
+          "predicted_detection_change_sum": 0.0,
+          "actual_detection_change_sum": 1.1676666666666669,
+          "gene_mean_direction_agreement_epsilon1e6": 0.46243194192377496
+        }
+      }
+    },
+    {
+      "seed": 20260930,
+      "candidate": "copy",
+      "strata": {
+        "all": {
+          "genes": 32285,
+          "mean_absolute_expression_error": 0.01224090399990733,
+          "mean_absolute_detection_error": 0.010935914511382995,
+          "mean_absolute_variance_error": 0.007899010876697338,
+          "predicted_detection_change_sum": 0.0,
+          "actual_detection_change_sum": 59.63666666666667,
+          "gene_mean_direction_agreement_epsilon1e6": 0.2749264364255846
+        },
+        "mapped": {
+          "genes": 26775,
+          "mean_absolute_expression_error": 0.014244772550829874,
+          "mean_absolute_detection_error": 0.012580392156862746,
+          "mean_absolute_variance_error": 0.009185053615974974,
+          "predicted_detection_change_sum": 0.0,
+          "actual_detection_change_sum": 57.410000000000004,
+          "gene_mean_direction_agreement_epsilon1e6": 0.23607843137254902
+        },
+        "protected": {
+          "genes": 5510,
+          "mean_absolute_expression_error": 0.002503412085034165,
+          "mean_absolute_detection_error": 0.0029448275862068965,
+          "mean_absolute_variance_error": 0.0016496834095179023,
+          "predicted_detection_change_sum": 0.0,
+          "actual_detection_change_sum": 2.2266666666666666,
+          "gene_mean_direction_agreement_epsilon1e6": 0.46370235934664245
+        }
+      }
+    },
+    {
+      "seed": 20260930,
+      "candidate": "mean_shift",
+      "strata": {
+        "all": {
+          "genes": 32285,
+          "mean_absolute_expression_error": 0.011682946106807958,
+          "mean_absolute_detection_error": 0.01049199318568995,
+          "mean_absolute_variance_error": 0.008249852952230125,
+          "predicted_detection_change_sum": 27.806666666666665,
+          "actual_detection_change_sum": 59.63666666666667,
+          "gene_mean_direction_agreement_epsilon1e6": 0.6368592225491715
+        },
+        "mapped": {
+          "genes": 26775,
+          "mean_absolute_expression_error": 0.013571993070765889,
+          "mean_absolute_detection_error": 0.01204511671335201,
+          "mean_absolute_variance_error": 0.00960809512516549,
+          "predicted_detection_change_sum": 27.806666666666665,
+          "actual_detection_change_sum": 57.410000000000004,
+          "gene_mean_direction_agreement_epsilon1e6": 0.6724929971988796
+        },
+        "protected": {
+          "genes": 5510,
+          "mean_absolute_expression_error": 0.002503412085034165,
+          "mean_absolute_detection_error": 0.0029448275862068965,
+          "mean_absolute_variance_error": 0.0016496834095179023,
+          "predicted_detection_change_sum": 0.0,
+          "actual_detection_change_sum": 2.2266666666666666,
+          "gene_mean_direction_agreement_epsilon1e6": 0.46370235934664245
+        }
+      }
+    },
+    {
+      "seed": 20260930,
+      "candidate": "covariance_0.25",
+      "strata": {
+        "all": {
+          "genes": 32285,
+          "mean_absolute_expression_error": 0.011599299079319307,
+          "mean_absolute_detection_error": 0.01047625832429921,
+          "mean_absolute_variance_error": 0.008178906771853917,
+          "predicted_detection_change_sum": 13.03466666666667,
+          "actual_detection_change_sum": 59.63666666666667,
+          "gene_mean_direction_agreement_epsilon1e6": 0.631159981415518
+        },
+        "mapped": {
+          "genes": 26775,
+          "mean_absolute_expression_error": 0.013471132406621308,
+          "mean_absolute_detection_error": 0.012026143790849673,
+          "mean_absolute_variance_error": 0.009522549002534459,
+          "predicted_detection_change_sum": 13.03466666666667,
+          "actual_detection_change_sum": 57.410000000000004,
+          "gene_mean_direction_agreement_epsilon1e6": 0.6656209150326797
+        },
+        "protected": {
+          "genes": 5510,
+          "mean_absolute_expression_error": 0.002503412085034165,
+          "mean_absolute_detection_error": 0.0029448275862068965,
+          "mean_absolute_variance_error": 0.0016496834095179023,
+          "predicted_detection_change_sum": 0.0,
+          "actual_detection_change_sum": 2.2266666666666666,
+          "gene_mean_direction_agreement_epsilon1e6": 0.46370235934664245
+        }
+      }
+    }
+  ],
+  "historical_score_report_sha256": "39bf86fd8ee703401dfe710ea13e5c5ee718d9b09be75bfda94f92fde8102673",
+  "folds": [
+    {
+      "seed": 20260928,
+      "cutoff": 8.5,
+      "target": 9.5,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.028085237368941307,
+        "variogram": 0.001146468217484653
+      },
+      "ceiling": {
+        "de_score": 0.7868852459016393,
+        "de_direction": 0.6964934686888657,
+        "mmd_u": 0.00414352398365736,
+        "variogram": 0.00017633264360483736
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "cf7afaf39793225289bc25ab6a41e263cfc348b4c15573d62c1b67cd6e2741e4",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.028085237368941307,
+            "variogram": 0.001146468217484653
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "mean_shift",
+          "prediction_sha256": "8139242cc6ac3a7adef38e147171a1e82481ca321649781156bc184c7399f7b3",
+          "raw_metrics": {
+            "de_score": 0.06557377049180327,
+            "de_direction": 0.21821680856477654,
+            "mmd_u": 0.02302844449877739,
+            "variogram": 0.0010482502402737737
+          },
+          "local_score": 55.16972463596854,
+          "skills": {
+            "de_score": 0.5217391304347826,
+            "de_direction": 0.5928763862872788,
+            "mmd_u": 0.5590379444941179,
+            "variogram": 0.5266599191546735
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "covariance_0.25",
+          "prediction_sha256": "870f73cb41624d65ece774fd58fc676c65d6096ffdf3e9e30990a0af031a83ee",
+          "raw_metrics": {
+            "de_score": 0.06557377049180327,
+            "de_direction": 0.2226034482419721,
+            "mmd_u": 0.022685134783387184,
+            "variogram": 0.0010325976181775331
+          },
+          "local_score": 55.45107767796282,
+          "skills": {
+            "de_score": 0.5217391304347826,
+            "de_direction": 0.5950985084411726,
+            "mmd_u": 0.5635555560816853,
+            "variogram": 0.5311735011806695
+          },
+          "calibration_valid": true
+        }
+      ],
+      "target_rows_sha256": "6c744ec38a4fa0f2672d5048b01e44e1524bf9c72543d093b380969ce9495e3d"
+    },
+    {
+      "seed": 20260929,
+      "cutoff": 8.5,
+      "target": 9.5,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.03033139742910862,
+        "variogram": 0.0012352676130831242
+      },
+      "ceiling": {
+        "de_score": 0.7941176470588236,
+        "de_direction": 0.693116361715318,
+        "mmd_u": 0.006407752633094788,
+        "variogram": 0.00021435643429867923
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "cf7afaf39793225289bc25ab6a41e263cfc348b4c15573d62c1b67cd6e2741e4",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.03033139742910862,
+            "variogram": 0.0012352676130831242
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "mean_shift",
+          "prediction_sha256": "8139242cc6ac3a7adef38e147171a1e82481ca321649781156bc184c7399f7b3",
+          "raw_metrics": {
+            "de_score": 0.11764705882352941,
+            "de_direction": 0.26256033380494276,
+            "mmd_u": 0.024021362885832787,
+            "variogram": 0.0010450887493789196
+          },
+          "local_score": 57.22655504801636,
+          "skills": {
+            "de_score": 0.54,
+            "de_direction": 0.6168313541513663,
+            "mmd_u": 0.5759563256631886,
+            "variogram": 0.5513540712168274
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "covariance_0.25",
+          "prediction_sha256": "870f73cb41624d65ece774fd58fc676c65d6096ffdf3e9e30990a0af031a83ee",
+          "raw_metrics": {
+            "de_score": 0.11764705882352941,
+            "de_direction": 0.2675800943722879,
+            "mmd_u": 0.023657772690057755,
+            "variogram": 0.0010327644413337111
+          },
+          "local_score": 57.5222218621088,
+          "skills": {
+            "de_score": 0.54,
+            "de_direction": 0.6195992783736314,
+            "mmd_u": 0.5810423940021017,
+            "variogram": 0.5550484041352484
+          },
+          "calibration_valid": true
+        }
+      ],
+      "target_rows_sha256": "0cedbcdd55d82dda25240e7f0ebaf76519880b4f14c9544baa4372bd075098bd"
+    },
+    {
+      "seed": 20260930,
+      "cutoff": 8.5,
+      "target": 9.5,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.02585575543344021,
+        "variogram": 0.0010369947412982583
+      },
+      "ceiling": {
+        "de_score": 0.8947368421052632,
+        "de_direction": 0.695865717267669,
+        "mmd_u": 0.004576236009597778,
+        "variogram": 0.00018742702377494425
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "cf7afaf39793225289bc25ab6a41e263cfc348b4c15573d62c1b67cd6e2741e4",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.02585575543344021,
+            "variogram": 0.0010369947412982583
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "mean_shift",
+          "prediction_sha256": "8139242cc6ac3a7adef38e147171a1e82481ca321649781156bc184c7399f7b3",
+          "raw_metrics": {
+            "de_score": 0.05263157894736842,
+            "de_direction": 0.2180978903841568,
+            "mmd_u": 0.021832596510648727,
+            "variogram": 0.0009412578656338155
+          },
+          "local_score": 54.86477187162803,
+          "skills": {
+            "de_score": 0.5151515151515151,
+            "de_direction": 0.5929156683834791,
+            "mmd_u": 0.5522001694347273,
+            "variogram": 0.5298543600105677
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "covariance_0.25",
+          "prediction_sha256": "870f73cb41624d65ece774fd58fc676c65d6096ffdf3e9e30990a0af031a83ee",
+          "raw_metrics": {
+            "de_score": 0.05263157894736842,
+            "de_direction": 0.21589721161323122,
+            "mmd_u": 0.021579276770353317,
+            "variogram": 0.0009342467528767884
+          },
+          "local_score": 54.993189450073245,
+          "skills": {
+            "de_score": 0.5151515151515151,
+            "de_direction": 0.5918059737522767,
+            "mmd_u": 0.5558541362237239,
+            "variogram": 0.5321814070383365
+          },
+          "calibration_valid": true
+        }
+      ],
+      "target_rows_sha256": "1ac4dfe227251fb61d7b282ab708a56ee26b372452421d888013d1b24bcd5fc2"
+    }
+  ],
+  "scores_are_historical_replays": true,
+  "new_scores": 0,
+  "reward": 0,
+  "scope": "Exact original forecast reconstruction; diagnostic gene-space means/detection/variance are not new DE/MMD/variogram scores. Historical panels reused and overlapping. Original raw4/skills4/calibration copied as evidence only. No new fitting choice or E10.5 truth.",
+  "passing_candidates": null,
+  "report_sha256": "afbcb04ce269201d81479a668218e3a0ee3ef54614aca30604fd377108581f37"
+}
