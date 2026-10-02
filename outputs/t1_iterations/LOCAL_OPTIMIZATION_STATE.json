@@ -30,11 +30,13 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement/check/register onefresh8.0fit\u21928.5source-domain scNODE temporalhindcast NEXT_SCNODE_PAST_FOLD.json, newbeta0/.1+copy+freshPCA8/CNFincumbent, allfeatures/weights<=8.0, Eulermaxstep.0625bothtrain/infer. Preservefull32285scorer/calibration. Source8.5previouslyexposed, retrospectivecutofftest notuntouchedindependentvalidation. No9.5tuning/betagrid/additionaldispersionloss.",
+  "next_experiment": "Monitor unique scnode_past_fold_01 fresh E8.0 fit to E8.5 source-domain test; after completed/failed batch collect packets, four role-v2 specialists and cached Jev synthesis, preserve raw4/skills4 and apply separate reward only valid paired new arms. No duplicate worker; original readiness unchanged.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
+  "active_jobs": [
+    "scnode_past_fold"
+  ],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -3229,5 +3231,17 @@
     "reward_delta": 0,
     "raw_metrics": null,
     "skills": null
+  },
+  "scnode_past_fold": {
+    "status": "started",
+    "run": "private/scnode_past_fold_01",
+    "report": "SCNODE_PAST_FOLD_RESULTS.json",
+    "started_utc": "2026-10-02T08:01:39.979113+00:00",
+    "cutoff": 8.0,
+    "target": 8.5,
+    "spec": "NEXT_SCNODE_PAST_FOLD.json",
+    "preflight": "SCNODE_PAST_FOLD_PREFLIGHT.json",
+    "harness": "scnode_past_fold",
+    "scope": "Retrospective exposed source-domain temporal fit-boundary test; no independent embryo or official improvement claim"
   }
 }

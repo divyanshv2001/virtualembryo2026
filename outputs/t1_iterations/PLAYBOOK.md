@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-02T07:49:22.221781+00:00
+Updated: 2026-10-02T08:01:40.120275+00:00
 
 Run `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_playbook.py` first. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -8,9 +8,9 @@ Use `research_harness.py status` for compact live-process/report checks, `run --
 
 Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction': 56.3, 'mmd_u': 53.2, 'variogram': 51.7}. Covariance .25 reused-development mean55.98883; EB and lineage-standardized historical proxy screens failed. Local>72 mean/lower-tail >=64-replicate AND temporal gate unmet. Full32285-gene scorer/calibration unchanged.
 
-Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
+Checkpoint jobs: ['scnode_past_fold']. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Implement/check/register onefresh8.0fit→8.5source-domain scNODE temporalhindcast NEXT_SCNODE_PAST_FOLD.json, newbeta0/.1+copy+freshPCA8/CNFincumbent, allfeatures/weights<=8.0, Eulermaxstep.0625bothtrain/infer. Preservefull32285scorer/calibration. Source8.5previouslyexposed, retrospectivecutofftest notuntouchedindependentvalidation. No9.5tuning/betagrid/additionaldispersionloss.
+Next: Monitor unique scnode_past_fold_01 fresh E8.0 fit to E8.5 source-domain test; after completed/failed batch collect packets, four role-v2 specialists and cached Jev synthesis, preserve raw4/skills4 and apply separate reward only valid paired new arms. No duplicate worker; original readiness unchanged.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in outputs\t1_submissions\formula_progress_20260930_01\official_result.json. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 

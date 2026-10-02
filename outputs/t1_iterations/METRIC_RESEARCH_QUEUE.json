@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-01T20:25:11.698102+00:00",
+  "updated_utc": "2026-10-02T08:01:39.979113+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -6321,8 +6321,10 @@
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
-    "scnode_euler_audit": "completed_numerical_only",
-    "next": "NEXT_SCNODE_PAST_FOLD.json",
-    "tigon": "conditional_not_started"
+    "status": "fresh_past_fold_running",
+    "experiment": "scnode_past_fold",
+    "spec": "NEXT_SCNODE_PAST_FOLD.json",
+    "preflight": "SCNODE_PAST_FOLD_PREFLIGHT.json",
+    "next": "Await matched full-panel results; no extra Jev call for routine implementation/status"
   }
 }

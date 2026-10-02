@@ -1,17 +1,19 @@
 {
-  "updated_utc": "2026-10-02T07:49:22.221781+00:00",
+  "updated_utc": "2026-10-02T08:01:40.120275+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "19e51d995b2a504eed23f9350821de9cd1271e2e6b22182b937b26eb9a8ebd03",
+    "LOCAL_OPTIMIZATION_STATE.json": "cad254aac504e14bfad622df581a52f1a0314bcab5c290a4230508f3c83b6ab3",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "1e06780b68d9cca542c9c98a8c3b51a44987c36959602ab742937709afee7de0",
+    "METRIC_RESEARCH_QUEUE.json": "cef931b59260a43a646021c229f7d15a32a3dde4218b50f50ce1f9e858c20661",
     "METRIC_CRITIQUE_POLICY.json": "027368320281a1164dc91720fe8aa18a344ddf7c14b9c5a8fce8b2b075105b7b",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
-    "RESEARCH_HARNESS_MANIFEST.json": "227b05bc94a85646f67ff9ddb17a628d2be6ba8c118badde11e27999ed5dc468"
+    "RESEARCH_HARNESS_MANIFEST.json": "465e1ea716d5014d21f66b4d5237193366e901c553d2cd79073a1ed6cd05e761"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [],
-  "next_experiment": "Implement/check/register onefresh8.0fit\u21928.5source-domain scNODE temporalhindcast NEXT_SCNODE_PAST_FOLD.json, newbeta0/.1+copy+freshPCA8/CNFincumbent, allfeatures/weights<=8.0, Eulermaxstep.0625bothtrain/infer. Preservefull32285scorer/calibration. Source8.5previouslyexposed, retrospectivecutofftest notuntouchedindependentvalidation. No9.5tuning/betagrid/additionaldispersionloss.",
+  "active_jobs_at_checkpoint": [
+    "scnode_past_fold"
+  ],
+  "next_experiment": "Monitor unique scnode_past_fold_01 fresh E8.0 fit to E8.5 source-domain test; after completed/failed batch collect packets, four role-v2 specialists and cached Jev synthesis, preserve raw4/skills4 and apply separate reward only valid paired new arms. No duplicate worker; original readiness unchanged.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",

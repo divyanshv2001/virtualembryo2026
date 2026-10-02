@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "checks": [
+    "physical-day constant drift",
+    "eight .0625 Euler substeps",
+    "identical interval subdivision at training/forecast",
+    "finite solver gradient",
+    "duplicate times rejected",
+    "future expression read rejected",
+    "future mutation leaves features unchanged",
+    "constructed unmapped panel zero",
+    "reference .npy hash replay"
+  ],
+  "source_sha256": {
+    "scnode_past_fold.py": "4d837f84193c5d34c57f615d2518720c3543ff0e3cb48b7c3a0450afe5d206b7",
+    "scnode_past_fold_training.py": "6e8e1b82a94bf88eace8cd6c407444f952b6a9cf08b2801fb912108a06674efd"
+  },
+  "scope": "Synthetic implementation checks; no benchmark score or biological validation"
+}
