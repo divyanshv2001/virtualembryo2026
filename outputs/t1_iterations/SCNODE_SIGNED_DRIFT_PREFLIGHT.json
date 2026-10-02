@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "checks": [
+    "allinitialparameterstensorsidentical",
+    "signednegativevelocityallowed",
+    "ReLUnegativevelocityzero",
+    "physicalquarterday4substeps",
+    "finitejointlossandgradientsbotharms"
+  ],
+  "source_sha256": {
+    "scnode_signed_drift.py": "edb669fca5c9860aaa9f9abb7d0404cccc1d273ed5800d871f8f229bf3c00f9d",
+    "scnode_signed_drift_training.py": "24b61ed6a4c254edb867fc8b8c42d40b58c5185b5e03ab25b332c9b22505dc70"
+  },
+  "scope": "Synthetic implementation checks; not biological validation or scores"
+}

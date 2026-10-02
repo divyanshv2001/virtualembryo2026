@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-02T08:34:23.711910+00:00",
+  "updated_utc": "2026-10-02T08:42:59.082950+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -6321,12 +6321,12 @@
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
-    "status": "fresh_fold_rejected_component_audit_running",
-    "experiment": "scnode_component_audit",
-    "spec": "NEXT_SCNODE_COMPONENT_AUDIT.json",
-    "completed_report": "SCNODE_PAST_FOLD_RETRY_RESULTS.json",
-    "critics": "METRIC_CRITIQUES_SCNODE_FRESH_FOLD_20261002.md",
-    "jev_record": "JEV_SCNODE_FRESH_FOLD_SYNTHESIS_ROUTE_20261002_01.json",
-    "next": "Past-only descriptive attribution beforeonefresh earliercutoffremedy; no16rep expansion"
+    "status": "component_audit_completed_signed_drift_running",
+    "experiment": "scnode_signed_drift",
+    "spec": "NEXT_SCNODE_SIGNED_DRIFT.json",
+    "completed_report": "SCNODE_COMPONENT_AUDIT_RESULTS.json",
+    "critics": "METRIC_CRITIQUES_SCNODE_COMPONENT_20261002.md",
+    "jev_record": "JEV_SCNODE_COMPONENT_SYNTHESIS_ROUTE_20261002_01.json",
+    "next": "Isolatedactivationhypothesis; rejectandcloseifnotbeatingmatchedcontrols. Noautomaticarchitecturegrid."
   }
 }

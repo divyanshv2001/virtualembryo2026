@@ -30,12 +30,12 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Monitor unique scnode_component_audit_01 frozenfresh<=8.0 training-fit reconstruction/detection/abundance attribution; nofutureexpression/scorer/reward. Collect fourcritics aftercompletion. Useevidence foronefresh<=7.75fitto8.0remedy, not exposed8.5retuning. Noduplicateworkers/export.",
+  "next_experiment": "Monitorunique scnode_signed_drift_01 fresh<=7.75fit\u21928.0 ReLU/linearfinaldriftbeta.1+copy/freshCNF controls; identicalparameterinit/objective/draws/.0625Euler. Retrospectiveexposed8.0 notuntouched. Afterbatch fourcritics/Jev synthesis andvalidpairedreward; fullscorerunchanged. Closeactivationremedyifnotpassing, noautomaticgrid/export.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "scnode_component_audit"
+    "scnode_signed_drift"
   ],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
@@ -1299,13 +1299,13 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_SCNODE_FRESH_FOLD_SYNTHESIS_ROUTE_20261002_01.json",
-    "decision": "past_decoder_detection_attribution",
+    "record": "JEV_SCNODE_COMPONENT_SYNTHESIS_ROUTE_20261002_01.json",
+    "decision": "signed_drift_beta_point1",
     "usage": {
-      "input_tokens": 956,
-      "output_tokens": 65
+      "input_tokens": 1081,
+      "output_tokens": 69
     },
-    "payload_bytes": 1942,
+    "payload_bytes": 2178,
     "status": "validated"
   },
   "external_qc_audit": {
@@ -2586,6 +2586,18 @@
         "mmd_u",
         "variogram"
       ]
+    },
+    "scnode_component_audit_01": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "71500248bb2b6248b9310f2cae50472b1eb8f0bf6c68494b82b714e5ef8448d0",
+      "markdown": "METRIC_CRITIQUES_SCNODE_COMPONENT_20261002.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ]
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3288,11 +3300,28 @@
     "completion_audit": "SCNODE_PAST_FOLD_COMPLETION_AUDIT.json"
   },
   "scnode_component_audit": {
-    "status": "started",
+    "status": "completed_proxy_only",
     "run": "private/scnode_component_audit_01",
     "report": "SCNODE_COMPONENT_AUDIT_RESULTS.json",
     "spec": "NEXT_SCNODE_COMPONENT_AUDIT.json",
     "started_utc": "2026-10-02T08:34:23.711910+00:00",
-    "scope": "In-sample7.75to8.0 attribution only; model trainedthrough8.0. No benchmark score or causality established."
+    "scope": "In-sample7.75to8.0 attribution only; model trainedthrough8.0. No benchmark score or causality established.",
+    "report_sha256": "71500248bb2b6248b9310f2cae50472b1eb8f0bf6c68494b82b714e5ef8448d0",
+    "reward_delta": 0,
+    "decoded_variance_ratios": [
+      0.09550755294777562,
+      0.10759440326146028
+    ]
+  },
+  "scnode_signed_drift": {
+    "status": "started",
+    "started_utc": "2026-10-02T08:42:59.082950+00:00",
+    "run": "private/scnode_signed_drift_01",
+    "report": "SCNODE_SIGNED_DRIFT_RESULTS.json",
+    "spec": "NEXT_SCNODE_SIGNED_DRIFT.json",
+    "preflight": "SCNODE_SIGNED_DRIFT_PREFLIGHT.json",
+    "harness": "scnode_signed_drift",
+    "cutoff": 7.75,
+    "target": 8.0
   }
 }

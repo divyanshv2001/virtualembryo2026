@@ -1,0 +1,38 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "e7c8fb0aca8ca92419160acb10edece097ed0bac8d624765f7cfbebc184d43f9",
+  "attempts": 1,
+  "payload_bytes": 2178,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "decision": "Select one final bounded mechanistic scNODE remedy after fresh-model component audit, before switching paper.",
+      "evidence": "Frozen<=8.0model training-fit7.75to8.0 audit nofuture/no benchmark/reward. Freshdecodermeanvar observedratio beta0.0955/beta.1.1076,decodedDetection.1303/.1307 vsobs.1210. Latentnegativevelocity0/zero45%,finaldriftReLU. Decodedmeanchangecosine-.007/.386; guardedjoint.0188/.4166. Detector deletes13065/add1963 beta0 and10984/add3891 beta.1. Beta0jointbackoff.5 vscomponent1 confounds;beta.1 all1. Earlierfresh8.0->8.5 beta.1failedvscontrols, noofficialgain.",
+      "critics": "Direction/DE suggest signeddrift; latentpositivevelocity doesnotprovewrongdecodedmotion. MMD proposesstochastichurdle/residualdistribution4armtest; but existingforecaster alreadyanchoredobserveddonorresidual, contractionofmeanreconstructionnotfinalforecastvarianceproof. Existingmass/covguard. Preferoneisolatedchange. DEfit7.5onlyhasoneobservation andcannotlearnpastvelocity; notviable. MMDcalled8.0untouched incorrectly:8.0alreadytraining/auditexposed, anynewcutofftestretrospective.",
+      "constraints": "Freshcutoff7.75fits7.5/7.75only, forecasts8.0; full32285score/cal unchanged, copy+freshCNFreference,1500donors/3matchedseeds,<=16GB2threadsD. 200sharedpretrain+1000jointsteps perarm matchdraw/init. .0625Eulerbothtrain/infer. Fixedguards reportbackoffs; no strengthtuning. Noautomaticexport/gainclaim."
+    },
+    "questions": {
+      "remedy": {
+        "type": "choice",
+        "criteria": {
+          "signed_drift_beta_point1": "One ReLU-vslinear finaldriftactivation matchedbeta.1 experiment atfresh7.75cutoff. Sameparameterinitialization/objective/decoder/draws; predictioncontrols unchanged. Success mustbeatReLU/copy/freshCNFonallheadlines andmean4skillsnoninferior,calvalid; >=60forexpansion.",
+          "signed_drift_beta_zero": "Sameisolatedexperiment beta0, no dynamiclossweight; twoarms plusmatchedcontrols.",
+          "decoder_dispersion_four_arms": "Newstochastichurdlecalibration/dispersion/correlatedresidual4armtest now; moremechanisms/choices,costanduncertainty.",
+          "close_scnode_now": "No furtherscNODEremedy despiteunresolvedactivationhypothesis; selectTIGONonlywithpastcompositionevidence."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 1081,
+    "output_tokens": 69
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "remedy": {
+      "choice": "signed_drift_beta_point1",
+      "confidence": 0.84
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}

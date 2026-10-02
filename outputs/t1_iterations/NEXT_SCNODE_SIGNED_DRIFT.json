@@ -1,0 +1,26 @@
+{
+  "status": "predeclared",
+  "cutoff": 7.75,
+  "target": 8.0,
+  "fit_stages": [
+    7.5,
+    7.75
+  ],
+  "population": "Prepared associated source-domain cohort. E8.0 previously used in training/audits; retrospective refit-cutoff test, not untouched validation or independent embryos.",
+  "genes": "Original32285challengepanel inoriginalorder; unique26775source/challenge mappedsymbols; absent/ambiguousgenes zero/protected in source-domain constructedpanels. No futureexpression gene/featureselection.",
+  "candidate_arms": [
+    "copy",
+    "fresh_pca8_cnf_incumbent_covariance_0.25",
+    "fresh_relu_drift_beta_0.1",
+    "fresh_linear_drift_beta_0.1"
+  ],
+  "new_model": "Shared fresh200MSEpretrain; two1000jointstep beta.1 arms differ only finaldriftactivation ReLU vsIdentity(signedlinear). Samecoefficientsinitialization, architecture/objective/decoder/draws/seeds, .0625Eulerbothtrain/infer. Allfit<=7.75 only, no8.0weights/features.",
+  "solver": "Eulermaxstep.0625 physicalday bothtrain/infer; .25dayforecast4substeps, elapsedtimeoffset7.5.",
+  "fresh_incumbent": "Refit productionfamily representation/objective/decoder solely<=7.75: highestpastvariance4096eligiblegenes/PCA8,original384guardgenes selectedfrompast only; originaldensity800steps energy.1manifold10 batch64; samecutoffsourceanchor/fullmappedgene positive/detectionheads/covariance.25 andguards. Explicitdifferentarchitecture/init/budget vsnewarms; inc is reference, causalbetaeffectisolatedbetweennewarms. Implementation/eligibility andconfiguration hashes mustbevalidatedbeforelaunch.",
+  "controls": "Matched1500source7.75donors seed20260928, copy andfreshPCA8/CNF referencefit<=7.75. Reference repeatedpredictionfileSHA replay. Originalfullpanel/fullscorer/calibration/guards/mass/protected/sampling unchanged. Individualguardbackoffs recorded; activation is the intended treatment, effectiveforecastmagnitude may differ through fixedguardpolicy.",
+  "target_evaluation": "Onlyafterallforecastslocked, sample2000source8.0rows perseed20260928/29/30 withoutreplacement,1000truth/1000ceiling. Frozenfull32285scorer/calibration implementation; recordinvalidcalibration/failures ratherthanrepairscore. No compareheadline toold55.99differentpopulation/horizon.",
+  "acceptance": "Signedlinear mustbeatReLU/copy/freshCNFonall3headlines andeverymeanmetricskillnoninferior;calvalidmandatory. >=60onlyfor16rep expansion, original>72/lower-tail64rep+wholeembryogatesunchanged. Rejectandcloseactivationremedy ifnotpassing; noautomaticextraactivationgrid.",
+  "resources": "D-onlymemmaps/chunks,16GBRAM,twoCPUthreads,oneworker. Registeruniqueexperimentafterimplementation/checks, neverduplicateexistingbatches. Noofficialupload/export fromfailedtrials.",
+  "reward_comparison": "Bothfuturepredeclarednewarms againstfreshCNF; controls0. ReLUvslineardirectpairedcomparison recordedseparately. Invalid/unavailable0.",
+  "root_cause_uncertainty": "Latentpositivevelocity notnecessarilypositivegenechange; decodercontraction anddetectiondeletions coexist. Oneisolatedactivationtrial, noadditionalDEloss/decoderdispersion/detectioncalibration."
+}

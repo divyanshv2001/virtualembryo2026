@@ -265,6 +265,11 @@
       "script": "scnode_component_audit.py",
       "run": "private/scnode_component_audit_01",
       "report": "SCNODE_COMPONENT_AUDIT_RESULTS.json"
+    },
+    "scnode_signed_drift": {
+      "script": "scnode_signed_drift.py",
+      "run": "private/scnode_signed_drift_01",
+      "report": "SCNODE_SIGNED_DRIFT_RESULTS.json"
     }
   }
 }

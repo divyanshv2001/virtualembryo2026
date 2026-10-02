@@ -1,0 +1,288 @@
+{
+  "status": "completed",
+  "raw_metrics": null,
+  "skills": null,
+  "reward_delta": 0,
+  "new_scoring_batch": false,
+  "passing_candidates": [],
+  "arms": {
+    "scnode_beta_0.0": {
+      "reconstruction": {
+        "7.5": {
+          "reconstruction_mse": 0.03408275917172432,
+          "observed_detection_fraction": 0.13052900326797387,
+          "decoded_detection_fraction": 0.13173231792717086,
+          "observed_gene_variance_mean": 0.03169206272010691,
+          "decoded_gene_variance_mean": 0.0026390904332625883,
+          "decoded_to_observed_mean_variance_ratio": 0.08327291462755522,
+          "negative_latent_velocity_fraction": 0.0,
+          "zero_latent_velocity_fraction": 0.453125
+        },
+        "7.75": {
+          "reconstruction_mse": 0.03418903797864914,
+          "observed_detection_fraction": 0.12957457983193277,
+          "decoded_detection_fraction": 0.1311936858076564,
+          "observed_gene_variance_mean": 0.032690543876131274,
+          "decoded_gene_variance_mean": 0.0031211090581512754,
+          "decoded_to_observed_mean_variance_ratio": 0.09547436928481716,
+          "negative_latent_velocity_fraction": 0.0,
+          "zero_latent_velocity_fraction": 0.451416015625
+        },
+        "8.0": {
+          "reconstruction_mse": 0.03549959510564804,
+          "observed_detection_fraction": 0.1209608426704015,
+          "decoded_detection_fraction": 0.13030403828197945,
+          "observed_gene_variance_mean": 0.03447942224267379,
+          "decoded_gene_variance_mean": 0.0032930452454508798,
+          "decoded_to_observed_mean_variance_ratio": 0.09550755294777562,
+          "negative_latent_velocity_fraction": 0.0,
+          "zero_latent_velocity_fraction": 0.44775390625
+        }
+      },
+      "decoded_transition_alignment": {
+        "mean_change_cosine": -0.007153643388209341,
+        "past_change_sign_agreement_fraction": 0.08195287299764911,
+        "active_observed_genes": 18291
+      },
+      "components": {
+        "abundance": {
+          "audit": {
+            "fit_cells": 7963,
+            "fit_max_stage": 8.0,
+            "mapped_genes": 26775,
+            "supported_genes": 13935,
+            "method": "Fullmappedgene jointVAE/ODE with neural decoded log1p residual and .75 allanchor ridge detection; deterministic mean latent forecast",
+            "limitation": "Author adaptation; latestanchor transfer and conditionalpositive intercept approximate. No hidden future fitting.",
+            "mode": "abundance",
+            "strength": 1.0,
+            "backoff": 1.0,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.33126244788546283,
+            "newly_detected_entries": 0,
+            "removed_detection_entries": 0,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true
+          },
+          "prediction_array_sha256": "ba7ce9e67ee31db1c83dc4eadffa5dc6f68862227d098ee82f677010e8602d65",
+          "alignment_to_observed_training_transition": {
+            "mean_change_cosine": -0.08633336194187795,
+            "past_change_sign_agreement_fraction": 0.30288119840358646,
+            "active_observed_genes": 18291
+          },
+          "mapped_mass_max_relative_error": 1.5960967528143994e-08,
+          "observed_donor_detection_fraction": 0.12957457983193277,
+          "component_detection_fraction": 0.12957457983193277
+        },
+        "detection": {
+          "audit": {
+            "fit_cells": 7963,
+            "fit_max_stage": 8.0,
+            "mapped_genes": 26775,
+            "supported_genes": 13935,
+            "method": "Fullmappedgene jointVAE/ODE with neural decoded log1p residual and .75 allanchor ridge detection; deterministic mean latent forecast",
+            "limitation": "Author adaptation; latestanchor transfer and conditionalpositive intercept approximate. No hidden future fitting.",
+            "mode": "detection",
+            "strength": 1.0,
+            "backoff": 1.0,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.19677924359339158,
+            "newly_detected_entries": 1963,
+            "removed_detection_entries": 13065,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true
+          },
+          "prediction_array_sha256": "b48e433970d9d8dda25b785c161af71d7ca141c980da66a8bc99070c7e5a0f23",
+          "alignment_to_observed_training_transition": {
+            "mean_change_cosine": 0.2099511341470553,
+            "past_change_sign_agreement_fraction": 0.36214531736919797,
+            "active_observed_genes": 18291
+          },
+          "mapped_mass_max_relative_error": 1.9079368230713643e-08,
+          "observed_donor_detection_fraction": 0.12957457983193277,
+          "component_detection_fraction": 0.12633520074696544
+        },
+        "joint": {
+          "audit": {
+            "fit_cells": 7963,
+            "fit_max_stage": 8.0,
+            "mapped_genes": 26775,
+            "supported_genes": 13935,
+            "method": "Fullmappedgene jointVAE/ODE with neural decoded log1p residual and .75 allanchor ridge detection; deterministic mean latent forecast",
+            "limitation": "Author adaptation; latestanchor transfer and conditionalpositive intercept approximate. No hidden future fitting.",
+            "mode": "joint",
+            "strength": 1.0,
+            "backoff": 0.5,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.2566329124982773,
+            "newly_detected_entries": 992,
+            "removed_detection_entries": 6604,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true
+          },
+          "prediction_array_sha256": "46fffac9d9e2fc247b73ac4a50fbbcebc8d0233cfcd7e4f237a78386318832bc",
+          "alignment_to_observed_training_transition": {
+            "mean_change_cosine": 0.01879920967383806,
+            "past_change_sign_agreement_fraction": 0.33951123503362307,
+            "active_observed_genes": 18291
+          },
+          "mapped_mass_max_relative_error": 1.6071154781081025e-08,
+          "observed_donor_detection_fraction": 0.12957457983193277,
+          "component_detection_fraction": 0.12793709150326799
+        }
+      }
+    },
+    "scnode_beta_0.1": {
+      "reconstruction": {
+        "7.5": {
+          "reconstruction_mse": 0.03393062204122543,
+          "observed_detection_fraction": 0.13052900326797387,
+          "decoded_detection_fraction": 0.1323421451914099,
+          "observed_gene_variance_mean": 0.03169206272010691,
+          "decoded_gene_variance_mean": 0.0027022336096946802,
+          "decoded_to_observed_mean_variance_ratio": 0.08526531180882266,
+          "negative_latent_velocity_fraction": 0.0,
+          "zero_latent_velocity_fraction": 0.4736328125
+        },
+        "7.75": {
+          "reconstruction_mse": 0.03397107124328613,
+          "observed_detection_fraction": 0.12957457983193277,
+          "decoded_detection_fraction": 0.1317673319327731,
+          "observed_gene_variance_mean": 0.032690543876131274,
+          "decoded_gene_variance_mean": 0.0033442885527702445,
+          "decoded_to_observed_mean_variance_ratio": 0.10230140451141434,
+          "negative_latent_velocity_fraction": 0.0,
+          "zero_latent_velocity_fraction": 0.470703125
+        },
+        "8.0": {
+          "reconstruction_mse": 0.03536633774638176,
+          "observed_detection_fraction": 0.1209608426704015,
+          "decoded_detection_fraction": 0.13071924603174603,
+          "observed_gene_variance_mean": 0.03447942224267379,
+          "decoded_gene_variance_mean": 0.003709792861000407,
+          "decoded_to_observed_mean_variance_ratio": 0.10759440326146028,
+          "negative_latent_velocity_fraction": 0.0,
+          "zero_latent_velocity_fraction": 0.456298828125
+        }
+      },
+      "decoded_transition_alignment": {
+        "mean_change_cosine": 0.3862845324036696,
+        "past_change_sign_agreement_fraction": 0.11060084194412553,
+        "active_observed_genes": 18291
+      },
+      "components": {
+        "abundance": {
+          "audit": {
+            "fit_cells": 7963,
+            "fit_max_stage": 8.0,
+            "mapped_genes": 26775,
+            "supported_genes": 13935,
+            "method": "Fullmappedgene jointVAE/ODE with neural decoded log1p residual and .75 allanchor ridge detection; deterministic mean latent forecast",
+            "limitation": "Author adaptation; latestanchor transfer and conditionalpositive intercept approximate. No hidden future fitting.",
+            "mode": "abundance",
+            "strength": 1.0,
+            "backoff": 1.0,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.2726227923708888,
+            "newly_detected_entries": 0,
+            "removed_detection_entries": 0,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true
+          },
+          "prediction_array_sha256": "8971f4ea0d1b3dbbc4038f691afc030c5dadf3a8371dfded82d22a7eebb62ef0",
+          "alignment_to_observed_training_transition": {
+            "mean_change_cosine": 0.3765431854364744,
+            "past_change_sign_agreement_fraction": 0.33524684270952926,
+            "active_observed_genes": 18291
+          },
+          "mapped_mass_max_relative_error": 2.2397003200251453e-08,
+          "observed_donor_detection_fraction": 0.12957457983193277,
+          "component_detection_fraction": 0.12957457983193277
+        },
+        "detection": {
+          "audit": {
+            "fit_cells": 7963,
+            "fit_max_stage": 8.0,
+            "mapped_genes": 26775,
+            "supported_genes": 13935,
+            "method": "Fullmappedgene jointVAE/ODE with neural decoded log1p residual and .75 allanchor ridge detection; deterministic mean latent forecast",
+            "limitation": "Author adaptation; latestanchor transfer and conditionalpositive intercept approximate. No hidden future fitting.",
+            "mode": "detection",
+            "strength": 1.0,
+            "backoff": 1.0,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.22706783126473465,
+            "newly_detected_entries": 3891,
+            "removed_detection_entries": 10984,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true
+          },
+          "prediction_array_sha256": "9c593c6a0f350eae9fa57962b2436557b9f647d57cbdbb841b6c536a3e3da841",
+          "alignment_to_observed_training_transition": {
+            "mean_change_cosine": 0.3017547656374601,
+            "past_change_sign_agreement_fraction": 0.38609152041987865,
+            "active_observed_genes": 18291
+          },
+          "mapped_mass_max_relative_error": 2.4494450882976332e-08,
+          "observed_donor_detection_fraction": 0.12957457983193277,
+          "component_detection_fraction": 0.1275049603174603
+        },
+        "joint": {
+          "audit": {
+            "fit_cells": 7963,
+            "fit_max_stage": 8.0,
+            "mapped_genes": 26775,
+            "supported_genes": 13935,
+            "method": "Fullmappedgene jointVAE/ODE with neural decoded log1p residual and .75 allanchor ridge detection; deterministic mean latent forecast",
+            "limitation": "Author adaptation; latestanchor transfer and conditionalpositive intercept approximate. No hidden future fitting.",
+            "mode": "joint",
+            "strength": 1.0,
+            "backoff": 1.0,
+            "seed": 20260928,
+            "sampling": "systematic",
+            "covariance_change_vs_reference": 0.3810064648000493,
+            "newly_detected_entries": 3891,
+            "removed_detection_entries": 10984,
+            "abundance_factor_cap": 2.0,
+            "detection_probability_delta_cap": 0.25,
+            "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+            "mapped_mass_conserved": true,
+            "protected_genes_unchanged": true
+          },
+          "prediction_array_sha256": "8076bafda828bb3a4c727a1b87c0da17221de9c761ee37707cfc6ac4b67b9e34",
+          "alignment_to_observed_training_transition": {
+            "mean_change_cosine": 0.41658114795020235,
+            "past_change_sign_agreement_fraction": 0.3887157618500902,
+            "active_observed_genes": 18291
+          },
+          "mapped_mass_max_relative_error": 1.3662018470167987e-08,
+          "observed_donor_detection_fraction": 0.12957457983193277,
+          "component_detection_fraction": 0.1275049603174603
+        }
+      }
+    }
+  },
+  "completed_utc": "2026-10-02T08:34:27.869103+00:00",
+  "scope": "In-sample descriptive, training already saw endpoint8.0; no scorer or predictive validation",
+  "plan_sha256": "fcfd28d9c6d03b4b36ad0b5987703c2dd1bb21abe92d032b30c200f56cfa8fa3",
+  "report_sha256": "71500248bb2b6248b9310f2cae50472b1eb8f0bf6c68494b82b714e5ef8448d0"
+}
