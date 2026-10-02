@@ -1,0 +1,91 @@
+{
+  "status": "passed",
+  "matched_draw_sha256": "31decf282ea906a3fc430b92d2ac40f6efc9399a65c2f76076c7a78e575c48fb",
+  "source_row_fit_max": 8.0,
+  "all_forecasts_frozen_before_scoring": true,
+  "exact_reference_replay_passed": true,
+  "report_sha256": "5225e5a3de644e754b5089dc91662ebd4ce2ea7ab6d351e0b08ac0de8bda6872",
+  "scored_panels": 3,
+  "scored_outcomes": 12,
+  "original_readiness_gate_passed": false,
+  "reward_assessments": [
+    {
+      "experiment_id": "scnode_past_fold_retry_01/fresh_scnode_beta_0.0",
+      "assessment": {
+        "status": "evaluated",
+        "metrics": {
+          "de_score": {
+            "paired_mean_skill_gain": -0.005094262733678116,
+            "positive_pairs": 0,
+            "pairs": 3,
+            "reward": -10,
+            "stability_verified": false
+          },
+          "de_direction": {
+            "paired_mean_skill_gain": -0.013183574424350994,
+            "positive_pairs": 0,
+            "pairs": 3,
+            "reward": -10,
+            "stability_verified": false
+          },
+          "mmd_u": {
+            "paired_mean_skill_gain": 0.0025060499943295365,
+            "positive_pairs": 3,
+            "pairs": 3,
+            "reward": 1,
+            "stability_verified": false
+          },
+          "variogram": {
+            "paired_mean_skill_gain": -0.005579669309384139,
+            "positive_pairs": 0,
+            "pairs": 3,
+            "reward": -10,
+            "stability_verified": false
+          }
+        },
+        "reward_delta": -29
+      },
+      "report_sha256": "5225e5a3de644e754b5089dc91662ebd4ce2ea7ab6d351e0b08ac0de8bda6872",
+      "plan_sha256": "906ced57cfd18fb24a5eaf5be62c56118e8a0dc1639e838b3b2fbcb86eb7adeb"
+    },
+    {
+      "experiment_id": "scnode_past_fold_retry_01/fresh_scnode_beta_0.1",
+      "assessment": {
+        "status": "evaluated",
+        "metrics": {
+          "de_score": {
+            "paired_mean_skill_gain": -0.006338229766741255,
+            "positive_pairs": 0,
+            "pairs": 3,
+            "reward": -10,
+            "stability_verified": false
+          },
+          "de_direction": {
+            "paired_mean_skill_gain": -0.023244327130242437,
+            "positive_pairs": 0,
+            "pairs": 3,
+            "reward": -10,
+            "stability_verified": false
+          },
+          "mmd_u": {
+            "paired_mean_skill_gain": -0.0076678797432881045,
+            "positive_pairs": 0,
+            "pairs": 3,
+            "reward": -10,
+            "stability_verified": false
+          },
+          "variogram": {
+            "paired_mean_skill_gain": -0.03222495000989273,
+            "positive_pairs": 0,
+            "pairs": 3,
+            "reward": -10,
+            "stability_verified": false
+          }
+        },
+        "reward_delta": -40
+      },
+      "report_sha256": "5225e5a3de644e754b5089dc91662ebd4ce2ea7ab6d351e0b08ac0de8bda6872",
+      "plan_sha256": "906ced57cfd18fb24a5eaf5be62c56118e8a0dc1639e838b3b2fbcb86eb7adeb"
+    }
+  ]
+}

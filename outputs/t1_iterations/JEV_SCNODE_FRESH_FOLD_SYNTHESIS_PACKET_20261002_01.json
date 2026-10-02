@@ -1,0 +1,20 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "decision": "Choose next root-cause step after fresh chronological scNODE failure; no score-driven retries on exposed8.5/9.5.",
+    "evidence": "<=8.0freshfit source8.5 retrospective test full32285 unchanged scorer, all12calvalid. Copy50, freshCNF49.50783, scNODEbeta0 49.01448, beta.1 47.89373. Meanbeta0 gainsvsCNF DE-.00509,direction-.01318,MMD+.00251,variogram-.00558;beta.1 all4regress. Matchedbatch/noisehash verified, Euler.0625train/infer. Guards/masspreserved. Beta0 removes145883/add18343detections;beta.1 removes238922/add64900. No officialgain.",
+    "critics": "DE proposespasttransition directional/rankloss; direction proposesmatched signeddriftactivationtest (finalReLUrestrictslatentvelocity butunproven); MMD/variogram suspect detectionthinning needpast attribution. Existingforecastalreadyanchoredresidual. Olderdecodercontractionstatscannotattribute freshmodels. No newarm expansion becausebelowcopy/60gate.",
+    "constraints": "16GB2threadsD. Preserve frozen models/failedstorageattempt. Furthertraining needsfresh earlierfitcutoff; diagnosticaudit canread<=8.0training-only withno8.5expr,no rawbenchmark/proxyreward."
+  },
+  "questions": {
+    "next": {
+      "type": "choice",
+      "criteria": {
+        "past_decoder_detection_attribution": "Audit frozenfreshmodels on<=8.0 sampledtrainingstages: reconstructionvar, decodedpasttransition sign/rank vsobservedpast, and abundance-only/detection-only/joint forecast components withinpasttransition. No futuretarget/scorer/selection. Useevidence topredeclareonefresh earliercutoffremedy.",
+        "signed_drift_now": "Fresh7.75to8.0 fit beta0 ReLU-vslinear withcopy/freshCNF controls; costs200+1000twomoretraining, hypothesisnotisolatedfromdetection yet.",
+        "new_DE_loss_now": "Newrank/directiontrainingloss beforecomponentattribution; extraobjectivechoices/weights require earlierfoldselection.",
+        "switch_TIGON_now": "Growth model withoutmeasuredgrowth/compositionjustification; equalcellcounts notgrowth."
+      }
+    }
+  }
+}

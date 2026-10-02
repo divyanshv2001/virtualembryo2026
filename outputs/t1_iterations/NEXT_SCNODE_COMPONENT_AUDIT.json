@@ -1,0 +1,30 @@
+{
+  "status": "predeclared",
+  "purpose": "Descriptive component attribution on frozen fresh<=8.0 models, no forecast accuracy or reward",
+  "source_run": "private/scnode_past_fold_retry_01",
+  "arms": [
+    "scnode_beta_0.0",
+    "scnode_beta_0.1"
+  ],
+  "source_stages": [
+    7.5,
+    7.75,
+    8.0
+  ],
+  "sample_per_stage": 128,
+  "seed": 20261002,
+  "component_transition": [
+    7.75,
+    8.0
+  ],
+  "fit_max_stage": 8.0,
+  "future_expression_excluded": "No8.25/8.5/9.5 expression reads. Training already includes8.0: reconstructed7.75to8.0 comparison is in-sample descriptive, not hindcast.",
+  "modes": [
+    "abundance",
+    "detection",
+    "joint"
+  ],
+  "controls": "Identical frozencheckpoint, donorrows, sourceheads, panel/order, .0625Euler andsystematicseed per mode; zerochange/copy identity. Existingguard backoffs may differ and mustbe reported, so mode differences alone do not establish causal attribution.",
+  "measurements": "Observed/decoded detection and genevariance; latent drift signs; pastobserved mean change vs modeldecoded and guarded componentmeanchange cosine/sign fraction. No benchmark metrics/skills, no proxyreward; preservefinite/protected/mappedmass checks.",
+  "next": "Use findings topredeclareonefresh<=7.75fit to8.0 corrective trial; no exposed8.5scoretuning or automatic modelpromotion."
+}

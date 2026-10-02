@@ -30,12 +30,12 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Monitor unique scnode_past_fold_retry_01 storage-only CSR repair; preserve failed original. Fresh E8.0fit/E8.5source test, matched copy/freshCNF/beta0/.1, .0625 Euler bothtrain/infer, fullscorer unchanged. On completion/failure collect four fresh role-v2 specialists, Jev synthesis and valid-only separate reward; no duplicate or unsupported export.",
+  "next_experiment": "Monitor unique scnode_component_audit_01 frozenfresh<=8.0 training-fit reconstruction/detection/abundance attribution; nofutureexpression/scorer/reward. Collect fourcritics aftercompletion. Useevidence foronefresh<=7.75fitto8.0remedy, not exposed8.5retuning. Noduplicateworkers/export.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "scnode_past_fold_retry"
+    "scnode_component_audit"
   ],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
@@ -1228,7 +1228,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1055,
+    "current_reward": -1124,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1237,10 +1237,10 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1055,
-    "reward_score": -1055,
+    "uncapped_reward": -1124,
+    "reward_score": -1124,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": -80
+    "last_batch_reward_delta": -69
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -1299,13 +1299,13 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_SCNODE_PAST_FOLD_FAILURE_ROUTE_20261002_01.json",
-    "decision": "csr_storage_only",
+    "record": "JEV_SCNODE_FRESH_FOLD_SYNTHESIS_ROUTE_20261002_01.json",
+    "decision": "past_decoder_detection_attribution",
     "usage": {
-      "input_tokens": 628,
-      "output_tokens": 47
+      "input_tokens": 956,
+      "output_tokens": 65
     },
-    "payload_bytes": 1415,
+    "payload_bytes": 1942,
     "status": "validated"
   },
   "external_qc_audit": {
@@ -2574,6 +2574,18 @@
         "mmd_u",
         "variogram"
       ]
+    },
+    "scnode_past_fold_retry_01": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "5225e5a3de644e754b5089dc91662ebd4ce2ea7ab6d351e0b08ac0de8bda6872",
+      "markdown": "METRIC_CRITIQUES_SCNODE_FRESH_FOLD_20261002.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ]
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3257,12 +3269,30 @@
     "report_sha256": "a7fa4b63baa9c1854fd354b73becc7b2c22c0fcf7bcb3146a402f7d423143fe4"
   },
   "scnode_past_fold_retry": {
-    "status": "started",
+    "status": "completed_rejected",
     "started_utc": "2026-10-02T08:06:21.653588+00:00",
     "run": "private/scnode_past_fold_retry_01",
     "report": "SCNODE_PAST_FOLD_RETRY_RESULTS.json",
     "harness": "scnode_past_fold_retry",
     "repair": "CSR constructed anchor only; original scientific declaration unchanged",
-    "preflight": "SCNODE_PAST_FOLD_STORAGE_PREFLIGHT.json"
+    "preflight": "SCNODE_PAST_FOLD_STORAGE_PREFLIGHT.json",
+    "report_sha256": "5225e5a3de644e754b5089dc91662ebd4ce2ea7ab6d351e0b08ac0de8bda6872",
+    "scores": {
+      "copy": 50.0,
+      "fresh_pca8_cnf_incumbent_covariance_0.25": 49.507833797053884,
+      "fresh_scnode_beta_0.0": 49.01447598174536,
+      "fresh_scnode_beta_0.1": 47.8937344821328
+    },
+    "passing_candidates": [],
+    "expand": false,
+    "completion_audit": "SCNODE_PAST_FOLD_COMPLETION_AUDIT.json"
+  },
+  "scnode_component_audit": {
+    "status": "started",
+    "run": "private/scnode_component_audit_01",
+    "report": "SCNODE_COMPONENT_AUDIT_RESULTS.json",
+    "spec": "NEXT_SCNODE_COMPONENT_AUDIT.json",
+    "started_utc": "2026-10-02T08:34:23.711910+00:00",
+    "scope": "In-sample7.75to8.0 attribution only; model trainedthrough8.0. No benchmark score or causality established."
   }
 }

@@ -1,19 +1,19 @@
 {
-  "updated_utc": "2026-10-02T08:06:21.825795+00:00",
+  "updated_utc": "2026-10-02T08:34:23.867222+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "e5bd4f599dc764610c96f9235b7eaa4974604be56e8eee37d3c530c0412c078c",
+    "LOCAL_OPTIMIZATION_STATE.json": "d80a6e9fbe14a4f93fdafecda02322f4f780aee7f40fe514545246194d2eeaf0",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "f310e46210130ca6a502d8dae947e8ed418eb3001c902772500bdf67297cd2de",
+    "METRIC_RESEARCH_QUEUE.json": "104119e012eab7d6e1ea8b7bea95c23d6b5ff1d0c6462d0f913620fc70670ce9",
     "METRIC_CRITIQUE_POLICY.json": "027368320281a1164dc91720fe8aa18a344ddf7c14b9c5a8fce8b2b075105b7b",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
-    "RESEARCH_HARNESS_MANIFEST.json": "3049b0f71aadf85a35906aa2c5e2031807810218d86880769efce4c29b699a3a"
+    "RESEARCH_HARNESS_MANIFEST.json": "9532586f310ecaa4a45de6e7343c27662e128a640d0ae8205e29844b7fd25cc9"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [
-    "scnode_past_fold_retry"
+    "scnode_component_audit"
   ],
-  "next_experiment": "Monitor unique scnode_past_fold_retry_01 storage-only CSR repair; preserve failed original. Fresh E8.0fit/E8.5source test, matched copy/freshCNF/beta0/.1, .0625 Euler bothtrain/infer, fullscorer unchanged. On completion/failure collect four fresh role-v2 specialists, Jev synthesis and valid-only separate reward; no duplicate or unsupported export.",
+  "next_experiment": "Monitor unique scnode_component_audit_01 frozenfresh<=8.0 training-fit reconstruction/detection/abundance attribution; nofutureexpression/scorer/reward. Collect fourcritics aftercompletion. Useevidence foronefresh<=7.75fitto8.0remedy, not exposed8.5retuning. Noduplicateworkers/export.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -30,7 +30,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1055,
+    "current_reward": -1124,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -39,10 +39,10 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1055,
-    "reward_score": -1055,
+    "uncapped_reward": -1124,
+    "reward_score": -1124,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": -80
+    "last_batch_reward_delta": -69
   },
   "official_best": 52.16,
   "latest_official": {
@@ -59,13 +59,13 @@
     "attribution": "Inferred latest export; screenshot lacks filename"
   },
   "latest_jev": {
-    "record": "JEV_SCNODE_PAST_FOLD_FAILURE_ROUTE_20261002_01.json",
-    "decision": "csr_storage_only",
+    "record": "JEV_SCNODE_FRESH_FOLD_SYNTHESIS_ROUTE_20261002_01.json",
+    "decision": "past_decoder_detection_attribution",
     "usage": {
-      "input_tokens": 628,
-      "output_tokens": 47
+      "input_tokens": 956,
+      "output_tokens": 65
     },
-    "payload_bytes": 1415,
+    "payload_bytes": 1942,
     "status": "validated"
   },
   "external_qc_audit": {

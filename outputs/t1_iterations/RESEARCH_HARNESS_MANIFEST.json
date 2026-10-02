@@ -260,6 +260,11 @@
       "script": "scnode_past_fold_retry.py",
       "run": "private/scnode_past_fold_retry_01",
       "report": "SCNODE_PAST_FOLD_RETRY_RESULTS.json"
+    },
+    "scnode_component_audit": {
+      "script": "scnode_component_audit.py",
+      "run": "private/scnode_component_audit_01",
+      "report": "SCNODE_COMPONENT_AUDIT_RESULTS.json"
     }
   }
 }
