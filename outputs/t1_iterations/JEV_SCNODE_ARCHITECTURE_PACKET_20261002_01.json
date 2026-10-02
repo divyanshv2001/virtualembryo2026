@@ -1,0 +1,19 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "decision": "Lock scNODE adaptation resource-preflight architecture before new training; fullgene decoder vs4096feature plus oldanchor adapter.",
+    "author_protocol": "Pinnedauthorcommitba55e8ddecfb74874047517952ab799326b4126d MIT. StochasticVAE encoder, neuralODE Eulerautonomous drift, joint decoder Sinkhornloss gene space plus beta Sinkhorn(latentencoded observed vs ODElatent). Geomloss p2 blur.05 scaling.5 debiased. Adam betas.95/.99 lr.001. MSEpretrain200, KLdefault0, joint1000steps batch32,200observedcellsperstage; extrapolationbeta.1. Author pretrainconcatenatesallcells; must adapt boundedminibatches for16GB. Dataset-specific tunedarchitecture notvalidchallengehyperparams.",
+    "evidence": "Old frozen8D/4096latent and anchordecoder plateau55.99local; anchoredOT55.77 directiongain MMD/CSSregress. Representationbottleneck hypothesis. Full32285challengegeneevalmandatory. Source unique mapped~26775, absent/ambiguousprotected~5510. Need outputdomainadaptation; no9.5tuning/hidden10.5.",
+    "resources": "CPU2threads16GBD. Geomloss andtorchdiffeqinstalled. 26775x128 encoder/decoderweights ~7millionparametersplusAdam manageable; minibatches32,6paststages, Sinkhorn200x32 memory plausible butrequiresmeasurement. Newjointarms equalinitialization/randomstreams/budget; comparebeta0 vs.1 thenunchangedfullscorer andcopy/incumbent. Syntheticpreflight no benchmark/reward."
+  },
+  "questions": {
+    "architecture": {
+      "type": "choice",
+      "criteria": {
+        "full_mapped_gene_vae": "Resourcepreflight full32285syntheticdims, then jointmodel on uniquemappedgeneexpression, latestanchordonor residualadaptation andprotectedgenes unchanged; removesoldPCAfeaturebottleneck, retains fullscorer. Decoderadaptationstillneedsfixedpast-onlyspec.",
+        "features4096_old_adapter": "Use4096featureVAE andoldfullanchorprogram; smallerbutmayretainfullgenedecoderbottleneck confoundingpaperhypothesis.",
+        "pause_architecture": "No viable bounded architecture despite plausiblememory;stopbeforetesting."
+      }
+    }
+  }
+}

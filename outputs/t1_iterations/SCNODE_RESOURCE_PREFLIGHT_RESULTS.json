@@ -1,0 +1,96 @@
+{
+  "status": "completed",
+  "plan_sha256": "c5017dcd373b8ae93d444a44ad341653642bfe434748d30c0454badd4c722efd",
+  "raw_metrics": null,
+  "skills": null,
+  "passing_candidates": [],
+  "new_scoring_batch": false,
+  "reward_delta": 0,
+  "completed_utc": "2026-10-02T06:33:34.283866+00:00",
+  "history": [
+    {
+      "beta": 0.0,
+      "step": 1,
+      "loss": 7189.986328125,
+      "expression_loss": 7189.986328125,
+      "dynamic_loss": 349.6615905761719,
+      "gradient_norms": {
+        "encoder": 38015.81640625,
+        "decoder": 10227.63671875,
+        "drift": 2554.15869140625
+      },
+      "peak_working_set_bytes": 723341312
+    },
+    {
+      "beta": 0.0,
+      "step": 2,
+      "loss": 1531.1385498046875,
+      "expression_loss": 1531.1385498046875,
+      "dynamic_loss": 50.80380630493164,
+      "gradient_norms": {
+        "encoder": 8171.14794921875,
+        "decoder": 1431.75146484375,
+        "drift": 295.94110107421875
+      },
+      "peak_working_set_bytes": 753840128
+    },
+    {
+      "beta": 0.0,
+      "step": 3,
+      "loss": 2338.3681640625,
+      "expression_loss": 2338.3681640625,
+      "dynamic_loss": 129.84178161621094,
+      "gradient_norms": {
+        "encoder": 12236.6953125,
+        "decoder": 2061.620361328125,
+        "drift": 475.4427185058594
+      },
+      "peak_working_set_bytes": 773435392
+    },
+    {
+      "beta": 0.1,
+      "step": 1,
+      "loss": 7224.95263671875,
+      "expression_loss": 7189.986328125,
+      "dynamic_loss": 349.6615905761719,
+      "gradient_norms": {
+        "encoder": 38187.7109375,
+        "decoder": 10227.63671875,
+        "drift": 2557.0302734375
+      },
+      "peak_working_set_bytes": 773439488
+    },
+    {
+      "beta": 0.1,
+      "step": 2,
+      "loss": 1532.189697265625,
+      "expression_loss": 1527.1260986328125,
+      "dynamic_loss": 50.63541793823242,
+      "gradient_norms": {
+        "encoder": 8168.1748046875,
+        "decoder": 1425.1884765625,
+        "drift": 294.66168212890625
+      },
+      "peak_working_set_bytes": 773439488
+    },
+    {
+      "beta": 0.1,
+      "step": 3,
+      "loss": 2353.199951171875,
+      "expression_loss": 2340.221923828125,
+      "dynamic_loss": 129.78109741210938,
+      "gradient_norms": {
+        "encoder": 12282.5390625,
+        "decoder": 2060.933837890625,
+        "drift": 475.8592834472656
+      },
+      "peak_working_set_bytes": 777465856
+    }
+  ],
+  "peak_working_set_bytes": 777465856,
+  "elapsed_seconds": 5.274187600007281,
+  "capacity_preflight_passed": true,
+  "scientific_training_ready": false,
+  "scope": "Synthetic forward/backward and memory checks only. No biological accuracy/decoder transfer validation; detailed past-only fullgene adaptation remains required.",
+  "report_sha256": "216d8e03cfa49be44866f748be182450a66c3808771f1fe257566021bd2d84da"
+}

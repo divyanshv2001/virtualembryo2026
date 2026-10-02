@@ -230,6 +230,11 @@
       "script": "anchored_soft_ot_paper_pilot.py",
       "run": "private/anchored_soft_ot_paper_pilot_01",
       "report": "ANCHORED_SOFT_OT_PAPER_PILOT_RESULTS.json"
+    },
+    "scnode_resource_preflight": {
+      "script": "scnode_resource_preflight.py",
+      "run": "private/scnode_resource_preflight_01",
+      "report": "SCNODE_RESOURCE_PREFLIGHT_RESULTS.json"
     }
   }
 }
