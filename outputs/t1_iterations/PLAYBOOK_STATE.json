@@ -1,17 +1,17 @@
 {
-  "updated_utc": "2026-10-02T09:10:11.687499+00:00",
+  "updated_utc": "2026-10-02T10:52:04.210536+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "97213fd9e541b6e4ab8907d8a5f460e06a1ada6eecd2b49985978e40f1c879e4",
+    "LOCAL_OPTIMIZATION_STATE.json": "9f625b9fa7bab76a09f5283683ba553f5fed2543432281fd3531cbddd0796b85",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "461026b365767dfaf982f8d0fdf02fb431f802f5150e1833a008e1a02019b57a",
+    "METRIC_RESEARCH_QUEUE.json": "12e2ea1b0fb9bcd230a9da2a3627b0326ff5956cd77660066a8c64fdd6275aeb",
     "METRIC_CRITIQUE_POLICY.json": "027368320281a1164dc91720fe8aa18a344ddf7c14b9c5a8fce8b2b075105b7b",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
-    "RESEARCH_HARNESS_MANIFEST.json": "08a8893d059968cdc1cf54463e2c7f2d29fcf1ea2eba69eb979fe54157174cae"
+    "RESEARCH_HARNESS_MANIFEST.json": "07b9f9afd67dd2d4d1c47db0fe6e42a0a773511077358c873d06f1aa41add06b"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [],
-  "next_experiment": "Third paper TIGON: NEXT_TIGON_PROTOCOL_PREFLIGHT.json. Pin/review author numerical/objective/mass normalization code (no author data/weights); past<=8.0 composition screen shows cappedcounts/assayIDs not biologicalmass/independentembryos. Determine conditional equalmass WFR/reweighting viability, then syntheticCPU/gradient/memory preflight withgrowthdisabledcontrols before realtraining. Signeddriftbranchclosed; noactivationgrid/export. Originalfullpanel/readinessunchanged.",
+  "next_experiment": "Implement freshpast-only training and existinghead decoder adapter with explicit donor provenance; register unique run only after import/cutoff/identity checks. Fourcritics and scoreledger afterfullbatch. Spec NEXT_TIGON_CONDITIONAL_FULLPANEL_PILOT.json, retrospective7.75to8.0 conditionalg0/g1 fixed200steps; scorer/gates unchanged. No improved submission yet.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -57,14 +57,13 @@
     "attribution": "Inferred latest export; screenshot lacks filename"
   },
   "latest_jev": {
-    "record": "JEV_SIGNED_DRIFT_SYNTHESIS_ROUTE_20261002_01.json",
-    "decision": "tigon_protocol_relative_mass_preflight",
+    "record": "JEV_TIGON_PILOT_DESIGN_ROUTE_20261002_01.json",
     "usage": {
-      "input_tokens": 1062,
-      "output_tokens": 74
+      "input_tokens": 914,
+      "output_tokens": 59
     },
-    "payload_bytes": 2069,
-    "status": "validated"
+    "payload_bytes": 1969,
+    "new_requests": 1
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",

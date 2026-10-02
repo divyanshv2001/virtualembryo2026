@@ -1,0 +1,56 @@
+{
+  "status": "completed",
+  "raw_metrics": null,
+  "skills": null,
+  "reward_delta": 0,
+  "new_scoring_batch": false,
+  "passing_candidates": [],
+  "arms": {
+    "growth_disabled": {
+      "loss_history": [
+        16.68235206604004,
+        14.571267127990723,
+        11.015531539916992,
+        8.604475021362305,
+        6.091042995452881,
+        3.285837411880493,
+        4.296943664550781,
+        3.0151405334472656,
+        2.7814273834228516,
+        2.281294345855713
+      ],
+      "draw_sha256": "1e38f9f6af1ec553336bfaa9b5a48f7ca5b862d7fbeae0aca20549573635dc1b",
+      "velocity_gradient_squared_norm": 2273.8467460870743,
+      "growth_gradient_squared_norm": 0.0,
+      "conditional_weight_ess": 64.0,
+      "endpoint_mass_policy": "Eachinputmass1; normalizedforecastweights"
+    },
+    "conditional_growth": {
+      "loss_history": [
+        16.897762298583984,
+        14.510098457336426,
+        11.321444511413574,
+        8.611248970031738,
+        6.261392593383789,
+        3.4986836910247803,
+        4.130241870880127,
+        2.3026492595672607,
+        2.4861764907836914,
+        2.104499340057373
+      ],
+      "draw_sha256": "1e38f9f6af1ec553336bfaa9b5a48f7ca5b862d7fbeae0aca20549573635dc1b",
+      "velocity_gradient_squared_norm": 1843.3066999912262,
+      "growth_gradient_squared_norm": 53.13544887304306,
+      "conditional_weight_ess": 63.97258377075195,
+      "endpoint_mass_policy": "Eachinputmass1; normalizedforecastweights"
+    }
+  },
+  "checks_passed": true,
+  "completed_utc": "2026-10-02T10:48:15.084693+00:00",
+  "plan_sha256": "3b6b79cb2157903195f904d4c9dbbc7a3afb08aead51b6ff769c783c02b7184f",
+  "scope": "Syntheticnumerical/capacity checks only. No source expression/author data/weights, no benchmark or biologicalvalidation, no absolute growthclaim.",
+  "elapsed_seconds": 6.889692199998535,
+  "observed_peak_process_working_set_bytes": 398667776,
+  "rss_sampling_interval_seconds": 0.05,
+  "report_sha256": "aefb176042b20eddf9620cf8baa12650b24bf7ff0c69151e7fbd401f27627c71"
+}

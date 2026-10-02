@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Third paper TIGON: NEXT_TIGON_PROTOCOL_PREFLIGHT.json. Pin/review author numerical/objective/mass normalization code (no author data/weights); past<=8.0 composition screen shows cappedcounts/assayIDs not biologicalmass/independentembryos. Determine conditional equalmass WFR/reweighting viability, then syntheticCPU/gradient/memory preflight withgrowthdisabledcontrols before realtraining. Signeddriftbranchclosed; noactivationgrid/export. Originalfullpanel/readinessunchanged.",
+  "next_experiment": "Implement freshpast-only training and existinghead decoder adapter with explicit donor provenance; register unique run only after import/cutoff/identity checks. Fourcritics and scoreledger afterfullbatch. Spec NEXT_TIGON_CONDITIONAL_FULLPANEL_PILOT.json, retrospective7.75to8.0 conditionalg0/g1 fixed200steps; scorer/gates unchanged. No improved submission yet.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1297,14 +1297,13 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_SIGNED_DRIFT_SYNTHESIS_ROUTE_20261002_01.json",
-    "decision": "tigon_protocol_relative_mass_preflight",
+    "record": "JEV_TIGON_PILOT_DESIGN_ROUTE_20261002_01.json",
     "usage": {
-      "input_tokens": 1062,
-      "output_tokens": 74
+      "input_tokens": 914,
+      "output_tokens": 59
     },
-    "payload_bytes": 2069,
-    "status": "validated"
+    "payload_bytes": 1969,
+    "new_requests": 1
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -2608,6 +2607,30 @@
         "mmd_u",
         "variogram"
       ]
+    },
+    "tigon_numerical_preflight_01": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "7271de0ca4343c10a721a094e344cba2a85148be7b9a7dbfc63233031c66882e",
+      "markdown": "METRIC_CRITIQUES_TIGON_IMPORT_20261002.md",
+      "reviews": {
+        "de_score": "Problem: Missing psutil stopped execution before training, data processing or scoring; DE is unavailable. Proposed solution: Preserve the failure and use a separately registered retry with the existing Windows memory monitor, keeping scientific settings and seed unchanged. Validation: Require import and synthetic equation/gradient/resource checks before a matched past-only full-panel pilot. No DE improvement or readiness claim follows from import success.",
+        "de_direction": "Problem: Direction is unavailable because psutil import stopped execution before processing. Proposed solution: Use the existing Windows GetProcessMemoryInfo counter in a unique retry; preserve objective, times, unit masses and seed. Validation: Analytic divergence, time integration and finite-gradient checks must pass before matched past-only full-panel testing. Import success validates the monitor only; numerical failure blocks expansion.",
+        "mmd_u": "Problem: The preflight failed before computation; no MMD value or scientific conclusion is supported. Proposed solution: Replace the unavailable monitor with the existing Windows peak-memory helper, retaining seed, objective, unit-mass UOT and matched arms. Validation: Import success resolves only startup. For a subsequent full-panel pilot use identical samples, preprocessing, kernel and bandwidth. Unit-mass conditioning tests distributional shape, not absolute growth; failures or unmatched settings are inconclusive.",
+        "variogram": "Problem: The import failure leaves expression-dependence variogram performance unassessed; spatial coordinates are unnecessary. Proposed solution: Use a unique retry with the existing Windows peak-memory helper and unchanged scientific settings. Validation: Import success establishes startup only. Both arms must complete numerical checks; a later full-panel pilot must preserve the expression-dependence scorer and matched controls. No variogram improvement follows from unavailable outputs."
+      }
+    },
+    "tigon_numerical_preflight_retry_01": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "aefb176042b20eddf9620cf8baa12650b24bf7ff0c69151e7fbd401f27627c71",
+      "markdown": "METRIC_CRITIQUES_TIGON_NUMERICAL_RETRY_20261002.md",
+      "reviews": {
+        "de_score": "Problem: Numerical consistency does not establish differential-expression validity. Unit masses leave absolute growth unidentified; composition can resemble regulation. Proposed solution: Fresh past-only full32285 pilot versus copy, freshCNF and matched growth-disabled control, with fixed expression scale and separate composition interpretation. Validation: Past-only preprocessing, matched controls, finite forecasts and DE stability across seeds; no biological DE claim from synthetic checks.",
+        "de_direction": "Problem: Numerical signs do not prove developmental direction; relative growth may absorb capture differences. Proposed solution: Freeze preprocessing and models before future endpoint access; match source cohorts, parameters where compatible, queries, noise and budgets between TIGON arms; include copy/freshCNF. Validation: Audit leakage, finite gradients and time conventions; known-direction/reversed-time and sampling diagnostics before interpreting transport biologically. No future tuning.",
+        "mmd_u": "Problem: Synthetic losses are not MMD. Scaling, bandwidth, cohort selection and normalization can distort interpretation. Proposed solution: Past-only fixed preprocessing and matched TIGON/copy/freshCNF controls; reviewer suggests normalized weighted MMD separately. Validation: Finite outputs, ESS, documented estimator, seeds/resamples and held endpoint; no absolute growth inference.",
+        "variogram": "Problem: Latent transport and reweighting may distort expression dependence despite nearuniform ESS. Proposed solution: Retain existing donor-residual covariance controls. Reviewer proposes past-only decoder dependence constraint and separate ablations. Validation: Freeze scorer/pairs/draws, inspect dependence/pair coverage without spatial coordinates, evaluate future only after freezing. Synthetic checks establish no metric improvement."
+      }
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3345,11 +3368,52 @@
     "expand": false
   },
   "tigon_protocol_preflight": {
-    "status": "paper_and_past_metadata_review_completed_author_code_review_pending",
+    "status": "author_source_and_objective_review_completed",
     "spec": "NEXT_TIGON_PROTOCOL_PREFLIGHT.json",
     "review": "TIGON_ELIGIBILITY_REVIEW_20261002.md",
     "past_composition_screen": "TIGON_PAST_COMPOSITION_SCREEN_20261002.json",
     "absolute_growth_identifiable": false,
-    "real_training_started": false
+    "real_training_started": false,
+    "author_manifest": "TIGON_AUTHOR_SOURCE_MANIFEST_20261002.json",
+    "protocol_review": "TIGON_PROTOCOL_REVIEW_20261002.md",
+    "author_commit": "1ed92cfcc250415fc01b4d344a308b0680cc9635"
+  },
+  "tigon_numerical_preflight": {
+    "status": "failed_before_main",
+    "run": "private/tigon_numerical_preflight_01",
+    "report": "TIGON_NUMERICAL_PREFLIGHT_RESULTS.json",
+    "spec": "NEXT_TIGON_NUMERICAL_PREFLIGHT.json",
+    "started_utc": "2026-10-02T09:19:56.794305+00:00",
+    "synthetic_only": true,
+    "real_training_started": false,
+    "reward_delta": 0,
+    "error": "ModuleNotFoundError: No module named psutil (before experiment main)",
+    "report_sha256": "7271de0ca4343c10a721a094e344cba2a85148be7b9a7dbfc63233031c66882e"
+  },
+  "tigon_numerical_preflight_retry": {
+    "status": "completed",
+    "run": "private/tigon_numerical_preflight_retry_01",
+    "report": "TIGON_NUMERICAL_PREFLIGHT_RETRY_RESULTS.json",
+    "synthetic_only": true,
+    "monitor_import_passed": true,
+    "reward_delta": 0,
+    "checks_passed": true,
+    "report_sha256": "aefb176042b20eddf9620cf8baa12650b24bf7ff0c69151e7fbd401f27627c71",
+    "elapsed_seconds": 6.889692199998535,
+    "observed_peak_process_working_set_bytes": 398667776
+  },
+  "observed_codex_limit": {
+    "message": "try again at 4:04 PM",
+    "timezone": "unspecified in error",
+    "affected_agent": "tigon_import_mmd",
+    "resume_observation": {
+      "ordinaryUsageAllowed": true,
+      "observed_utc": "2026-10-02T10:48:57.529535+00:00"
+    },
+    "missing_reviews_resumed": true
+  },
+  "tigon_conditional_pilot": {
+    "status": "predeclared_implementation_pending",
+    "spec": "NEXT_TIGON_CONDITIONAL_FULLPANEL_PILOT.json"
   }
 }

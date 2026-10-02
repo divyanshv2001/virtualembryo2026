@@ -1,0 +1,25 @@
+{
+  "status": "predeclared_implementation_pending",
+  "cutoff": 7.75,
+  "target": 8.0,
+  "fit_stages": [
+    7.5,
+    7.75
+  ],
+  "scope": "Retrospective associated source-domain cohort; E8.0 previously exposed in other training/audits; not independent embryos or untouched validation. TIGON-inspired conditional adaptation, not author reproduction or absolute growth.",
+  "arms": [
+    "copy",
+    "fresh_pca8_cnf_incumbent_covariance_0.25",
+    "conditional_tigon_growth_disabled",
+    "conditional_tigon_growth_enabled"
+  ],
+  "representation": "Fresh solely<=7.75 4096pastvariance features/PCA8, existing fullmapped32285panel/anchorhead/guards; no target features or weights. Unitmass each source snapshot; isotropic KDE covariance0.1 alltrainingcenters.",
+  "tigon_training": "Sharedinit and exactquery/noise stream,200jointsteps,32queries/startparticles,Adam.003weightdecay.01,exact8Ddivergence,maxmidpoint.0625physicalday,movingcoupled(v2+g2)energy,origin+adjacent densityMSE1e4. gdisabled preserves architecture but setsgzero. Initialtime stage7.5=0.",
+  "reference": "Fresh existing800stepCNF/pastheads covariance.25; differentarchitecture/budget disclosed, causalcontrast isg1vsg0. Replay controls beforefuture scoring.",
+  "forecast": "1500same7.75donors fixedseed20260928; normalized growthweights for seeded systematic latentparticle resampling, carry selected original donor identity/residual into existing fullpanel anchor decoder. Uniformg0 weight control same resampling stream. Record selection/weight/forecast hashes, ESS and every guardbackoff; no changing benchmark weighting.",
+  "scoring": "After allforecasts frozen, fixed2000source8.0cells perseed20260928/29/30 split1000truth1000ceiling. Originalfull32285raw4/skills4/calibration, invalidoutcomes preserved.",
+  "gate": "All3headlines exceedcopy/freshCNF andall4meanskillnoninferior for progress; isolateg1vsg0 contrast. >=60 requiredfor16rep expansion; original>72mean/lower-tail64rep pluswholeembryotemporalreadiness unchanged. Failed fixedconfig no target strengthgrid/export.",
+  "reward": "EachnewTIGONarm pairedfreshCNF futureonlypolicy+1/-10 permetric; invalid0. Proxychecks0.",
+  "resources": "D-only16GiB,2threads1worker,chunkdensity/featurememmaps. Verify measured resource envelope on realpastinputs before long launch; lowerquerysize/budget requires newpredeclaration, not silent change.",
+  "next": "Implement freshpast-only training and existinghead decoder adapter with explicit donor provenance; register unique run only after import/cutoff/identity checks. Fourcritics and scoreledger afterfullbatch."
+}

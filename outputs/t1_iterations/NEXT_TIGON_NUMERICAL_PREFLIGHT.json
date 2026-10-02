@@ -1,0 +1,25 @@
+{
+  "status": "predeclared",
+  "author_commit": "1ed92cfcc250415fc01b4d344a308b0680cc9635",
+  "input": "Syntheticonly8D64cells3stages0/.25/.5;32querypointsperstep10jointstepsperarm",
+  "arms": [
+    "growth_disabled",
+    "conditional_growth"
+  ],
+  "architecture": "Velocity4hidden16Tanh,growth3hidden16Tanh,signedlinearoutputs; sharedinit/draws/Adam.003weightdecay.01",
+  "density": "Gaussianall-centers isotropiccovariance.1, endpointmass1; origin+adjacent densityMSE1e4+coupledpath(v2+g2)*exp(logweight)transportenergy",
+  "solver": "Localfixedmidpointmaxstep.0625physicalday; exact8Ddivergence; transparentsolver/costadaptationnotfaithfulauthorrun",
+  "checks": [
+    "Analyticlinearvelocity/constantgrowth densitysign,logweight,coupledenergy",
+    "Zero-growthuniformweights,balanceequivalence",
+    "Chunkdensityvalue/gradientagainstdirectMultivariateNormal",
+    "Finitevelocity/growthgradientappropriatearm",
+    "Pairedinput/noisehashes,normalizedconditionalweightsESS",
+    "ObservedpeakprocessRSS/time fits16GB"
+  ],
+  "raw_metrics": null,
+  "skills": null,
+  "reward_delta": 0,
+  "real_training_allowed": false,
+  "next": "Fourcritics+Jevreviewpreflight before fullpanelpilot specification; sourcefuture/notbiologicalgrowthexcluded"
+}

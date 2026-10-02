@@ -1,0 +1,38 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "e76eea4decb811cab420ccf2b6bb5c2ffc49a659a5475cbf7495d35ec05dfd2d",
+  "attempts": 1,
+  "payload_bytes": 1969,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "decision": "Choose one conditional TIGON full-panel pilot after synthetic checks passed",
+      "evidence": "Synthetic8D64cells10steps pairedg0/g1 passed exactdivergence/density/gradient/integration/weightchecks;6.89sec peak398667776bytes. No benchmark scores. Syntheticloss/ESS cannot establish biological gain. Source cohorts capped; totalgrowth unidentifiable. scNODE signeddrift trial42.97 belowfreshCNF50.84; activationbranchclosed.",
+      "specialists": "DE/compositionconfounding; directionneedsstrictpastcutoff/freeze; MMD unchangedkernel/scorer, normalizedweightresamplingnotnewweightedbenchmark; variogram fullpanelanchoredresidual/control covariance. No source data or secrets sent.",
+      "proposed": "One retrospective7.75to8.0 source-domain pilot, fit7.5/7.75 only, target previouslyexposed disclosed. FreshpastPCA8/4096features, existingfullpanelanchorheads/guards; equalstageunitmass. g0/g1 sharedinit/querynoise32/200stepsAdam.003decay.01/maxmidpoint.0625. Comparecopy/fresh800stepCNFreference (differentbudget/architecture disclosed). Weightedresample latentparticles with normalizedweights and carry originaldonoridentity/residual same drawstream; g0uniform. Fixed3seed1000truth/1000ceiling only after frozenforecasts. Raw4/skills4/scorer/calibration unchanged.",
+      "gate": "All3headlinebeatcopy/freshCNF, mean4skillsnoninferior, calvalid, stablefiniteweights/ESS; >=60 for16rep only, original>72/lower-tail64rep plusindependentembryogatesunchanged. No hidden target tuning/export/absolute growth claim."
+    },
+    "questions": {
+      "pilot": {
+        "type": "choice",
+        "criteria": {
+          "single_past_conditional_pilot": "Predeclare exactpastfit200stepg0/g1contrast pluscopy/freshCNF withoriginalfullpanel scorer andnoabsolute growth claims.",
+          "stop_tigon": "Syntheticchecks pass but only ifspecific blockingbiologicalorimplementation condition requires stop.",
+          "more_synthetic_only": "Only ifnumericalpassingresults leavecriticalequationambiguity, no countdriven extra checks."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 914,
+    "output_tokens": 59
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "pilot": {
+      "choice": "single_past_conditional_pilot",
+      "confidence": 0.87
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}

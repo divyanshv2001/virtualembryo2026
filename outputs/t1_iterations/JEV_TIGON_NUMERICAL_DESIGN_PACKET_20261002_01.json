@@ -1,0 +1,20 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "decision": "Freeze TIGON equal-mass numerical preflight after pinned source review",
+    "protocol": "MIT commit1ed92cfcc250415fc01b4d344a308b0680cc9635. RHS dz=v,dlogmass=g,dlogdensity=g-divv exacttrace. Velocity4hidden16Tanh,growth3hidden16Tanh,linearsignedoutputs. Isotropic Gaussian all-cell density multiplied capturedcount ratio; origin and adjacent density MSE*1e4 plusv2+g2transport. AuthorDopri5 andnestedmidpointenergy at frozenpositions.",
+    "adaptation": "Cappedcountsnotbiologicalmass; eachsnapshotmass1, g interpreted only conditionaldensity/reweighting. Localcore retainsRHS/densityobjective, coupledpathenergy/fixedmidpointmaxstep.0625; cost/solverdiffer author so notfaithfulreproduction. Synthetic8D64cells3times0/.25/.5,32queries10steps pairedgrowth/disabled sharedinit/draw. No realexpression or benchmarkmetrics.",
+    "checks": "Analyticconstantv/g densitysign; zerogrowth uniformmass/balancedflow; normalizedconditionalweightsESS; chunkGMMvalue/gradientvsdirect; finitebackward exactdivergence; CPU/RSS16GB. Latergrowthresampling/protectedrowprovenancepredeclared beforefullpilot.",
+    "constraints": "Authorcode reviewednotexecuted,nodata/weights. Existinglibraries/localmidpoint only,noinstalllegacyODEjustpreflight. Laterfresh<=8.0PCA8/features/fullpanelhead matchedcontrols onlyifnumericpass."
+  },
+  "questions": {
+    "numerics": {
+      "type": "choice",
+      "criteria": {
+        "local_coupled_midpoint_equalmass": "TransparentTIGON-inspiredadaptation withstatedsolver/costdifferences andmass/analytic/gradientchecks.",
+        "run_author_as_is": "Capturedcountmass/legacyDopri5/nestedenergy withoutcontrols invalidmassinterpretation.",
+        "only_weighted_counts": "Labelproportionextrapolationalone withoutdynamicdensityobjective isnotTIGONtest."
+      }
+    }
+  }
+}

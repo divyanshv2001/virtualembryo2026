@@ -270,6 +270,16 @@
       "script": "scnode_signed_drift.py",
       "run": "private/scnode_signed_drift_01",
       "report": "SCNODE_SIGNED_DRIFT_RESULTS.json"
+    },
+    "tigon_numerical_preflight": {
+      "script": "tigon_numerical_preflight.py",
+      "run": "private/tigon_numerical_preflight_01",
+      "report": "TIGON_NUMERICAL_PREFLIGHT_RESULTS.json"
+    },
+    "tigon_numerical_preflight_retry": {
+      "script": "tigon_numerical_preflight_retry.py",
+      "run": "private/tigon_numerical_preflight_retry_01",
+      "report": "TIGON_NUMERICAL_PREFLIGHT_RETRY_RESULTS.json"
     }
   }
 }

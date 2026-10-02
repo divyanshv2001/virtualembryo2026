@@ -1,0 +1,11 @@
+# TIGON pinned numerical protocol review
+
+[Author code](https://github.com/yutongo/TIGON), MIT, commit1ed92cfcc250415fc01b4d344a308b0680cc9635. Four code/documentation files retained privately with exact SHA256 manifest; no author data or pretrained models downloaded and no original source executed.
+
+utility.py UOT integrates coordinates, integrated growth and density change: dz=v, dlogmass=g, dlogdensity=g-div(v), with exact Jacobian divergence. Velocity has four16-wide Tanh hidden layers; growth has three16-wide Tanh layers; outputs are signed linear. Gaussian density is the equally weighted isotropic mixture centered at every training cell. train_model multiplies later normalized densities by collected-cell count ratios. Density MSE at origin-to-observation and adjacent intervals hasweight10000. Coupled velocity/growth energy is regularized. Author training uses Dopri5 for density; its energy helper freezes coordinates while nesting midpoint growth integration. Default5000iterations/100samples/Adam.003weightdecay.01.
+
+Capped local counts cannot justify biological masses. The new local conditional adaptation fixes all endpoint masses to1; growth represents relative density reweighting, not absolute cell birth/death. It retains density RHS/exact divergence/origin+adjacent MSE, but uses local midpointmaxstep.0625 and integrates energy on the same moving path. Solver and cost differ from author code: no faithful reproduction claim. Fixedcovariance.1/noadaptivebandwidth, synthetic10steps32queries/64cells8D before any real cohort fit.
+
+Preflight checks analytic growth/divergence signs, zero-growth balanced behavior, normalizedweights/ESS, chunked Gaussian value/gradient equivalence, finite training gradients and measured processRSS/time. Stage masses never use sampled-cell counts. Its synthetic losses are not benchmark metrics; no reward or biological score. Prior source metadata composition remains confounded by assay/domain/annotations.
+
+Jev selected local_coupled_midpoint_equalmass, confidence1; one1741byte summary request, observed865input/65outputtokens. Initial local packet quoting syntax error prevented creation/request, then corrected: zero additional paid calls. Real training requires review of this preflight and a frozen full-panel forecast/reweighting/control specification. No futureexpression/fulltraining/export yet.
