@@ -30,11 +30,18 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement/freeze biological scNODE fullmappedgene training and latestanchor residualdecoder past<=8.5, sameinitialization/batches/noise/budget beta0/.1. Syntheticcapacitypassed777465856bytes only; fourcriticscomplete; no scientificreadiness. Review fixed decoder/domainadaptation design throughboundedJev ifnewuncertainty, thenuniqueharnessregistration. SCNODE_PROTOCOL_REVIEW_20261002.md.",
+  "next_experiment": "Monitor unique scnode_biological_pilot, no duplicate. Fullmappedgene32latent VAE/ODE shared200step pretrain then matched1000steps beta0/.1. ActualdrawSHA verifiesnewarms. Fullgene neural log1pdelta/hurdle decoder andoriginalguards fixed; exactcopy/incumbent replay before9.5truth. On newcompletion/failure collectfourcritics/Jevevaluation/reward/ledger. Noofficialupload.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
+  "active_jobs": [
+    {
+      "experiment": "scnode_biological_pilot",
+      "pid": 21852,
+      "status": "launched_live_check_required",
+      "run": "private/scnode_biological_pilot_01"
+    }
+  ],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -1297,17 +1304,17 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "route": "JEV_SCNODE_ARCHITECTURE_ROUTE_20261002_01.json",
-    "choice": "full_mapped_gene_vae",
+    "route": "JEV_SCNODE_DECODER_ROUTE_20261002_01.json",
+    "choice": "anchor_neural_delta_hurdle",
     "usage": {
-      "input_tokens": 947,
-      "output_tokens": 58
+      "input_tokens": 957,
+      "output_tokens": 56
     },
     "actual_usage": {
-      "input_tokens": 947,
-      "output_tokens": 58
+      "input_tokens": 957,
+      "output_tokens": 56
     },
-    "payload_bytes": 1982
+    "payload_bytes": 2091
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -2990,12 +2997,12 @@
     "submission_identity": "Notshown; bestscoreteam screenshot notproofnewupload"
   },
   "experiment_inventory_snapshot": {
-    "registered": 47,
+    "registered": 48,
     "completed": 39,
     "failed": 6,
     "legacy_unspecified": 2,
     "not_started": 0,
-    "running": 0,
+    "running": 1,
     "score_ledger_records": 3154,
     "scope": "Execution counts; rejected scientific batches count as completed. Ledger includes controls/replays."
   },
@@ -3131,5 +3138,19 @@
     "report_sha256": "216d8e03cfa49be44866f748be182450a66c3808771f1fe257566021bd2d84da",
     "peak_working_set_bytes": 777465856,
     "elapsed_seconds": 5.274187600007281
+  },
+  "scnode_biological_pilot": {
+    "status": "running",
+    "pid": 21852,
+    "spec": "NEXT_SCNODE_BIOLOGICAL_PILOT.json",
+    "report": "SCNODE_BIOLOGICAL_PILOT_RESULTS.json",
+    "verification": "private/scnode_decoder_verification_01/report.json",
+    "checks": [
+      "zero drift exact persistence",
+      "protectedgene exact equality",
+      "futureexpression mutation cannotalterpast heads",
+      "compilation"
+    ],
+    "benchmark_score": null
   }
 }

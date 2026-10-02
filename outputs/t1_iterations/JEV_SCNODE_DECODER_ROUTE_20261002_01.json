@@ -1,0 +1,37 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "e8c649dc46f3fa4745b988c2e9e1989d167a36a7ca84fae620b9b4130bdb5bab",
+  "attempts": 1,
+  "payload_bytes": 2091,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "decision": "Freeze fullmappedgene scNODE challenge transfer decoder before biological pilot, no future tuning.",
+      "evidence": "Syntheticfull32285gene VAE32latent128width beta0/.1 resourcecheck passed777MB, no biologicalscore. Sourceeligiblecardiacassociatedatlas27669genes withuniquemappedchallenge~26775, challengingwholeembryodonors. Jointfullgene model onlog1p expression. Oldincumbentfull32285 scorer55.99local. Directatlasdecodedlevels may eraseanchorcellidentity/zeros; fullpanel oldhurdleguards needpreserving.",
+      "constraints": "All fitting<=8.5 andE8.5anchor only; allforecasts before9.5truth. Equalnewarm200minibatchMSEpretrain then1000jointsteps beta0/.1, sameweights/batches/noise/budget Adam.001. No extraCSSloss. Originalgene mapping/unsupported/protectedgenes unchanged; original2xpositiveabundancecap,.25detectiondeltacap,mappedmassconservation,384genecovarianceguard<=.4/backoffs1,.5,.25,.125,0. Fullscorer/calibrationunchanged.",
+      "implementation": "Neuraldecoder log1pchange decoder(zfuture)-decoder(zanchor) addedtoobserveddonorpositiveexpression thenconvert rawratios existingcap. For newdetections pastconditionalpositivegeneintercept plusneuraldecodedchange, no rawdensevalue replacement. Detectionridge1source probability change onnewlatent, .75allE8.5anchor slope mix, support20. Deterministiclatentmeanforecast (explicit authorstochasticdeviation), samebotharms. No oldPCA/fullpositivehead remains. Source/anchorencodechunk128, predictionchunk64; memmaplargedata."
+    },
+    "questions": {
+      "decoder": {
+        "type": "choice",
+        "criteria": {
+          "anchor_neural_delta_hurdle": "Use neuraldecoder differencesanchoredtodonors, source/anchor detectionridge andoriginalguards; explicitly conditionalpositive interceptapproximation, newfullgene representation/decodercontrolmatchedbeta0/.1. Resource/cutoff/mapping tests beforelaunch.",
+          "direct_dense_decoder": "Replacewholechallengegeneexpression withatlasneuraldecoderfuture, sparsity/massdomainrisk.",
+          "latent_ridge_only": "Keepoldconditionalpositive ridgeinsteadneuraldecoder; doesnotisolatelearnedfullgenedecoderpotential."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 957,
+    "output_tokens": 56
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "decoder": {
+      "choice": "anchor_neural_delta_hurdle",
+      "confidence": 1.0
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}

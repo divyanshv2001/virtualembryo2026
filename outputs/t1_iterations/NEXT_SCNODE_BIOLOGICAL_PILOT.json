@@ -1,0 +1,32 @@
+{
+  "candidates": [
+    "copy",
+    "incumbent_covariance_0.25",
+    "scnode_beta_0.0",
+    "scnode_beta_0.1"
+  ],
+  "seed": 20261002,
+  "cutoff": 8.5,
+  "target": 9.5,
+  "architecture": {
+    "latent": 32,
+    "encoder_hidden": 128,
+    "decoder_hidden": 128,
+    "drift_hidden": 64,
+    "autonomous": true,
+    "euler": true
+  },
+  "pretraining_steps": 200,
+  "joint_steps_each": 1000,
+  "batch": 32,
+  "expression_target_batch": 200,
+  "training_random_stream": "Common sharedpretrain then identicalTorch20261002/Numpy20261002 reset per beta, same draws; samplingwithreplacement explicitly differsauthorwholedata/no-replacement targets.",
+  "regularizers": [
+    0.0,
+    0.1
+  ],
+  "decoder": "JEV_SCNODE_DECODER_ROUTE_20261002_01.json; fullmappedgene neural decodedlog1pdelta anchoredtooriginaldonors, sourceconditionalpositiveintercept fornewdetections, source ridge1detection .75allE8.5anchor slopes, no oldPCA/fullpositivehead; no covariance alignment added. Deterministiclatentmean inference. Originalsupport20/2xfactor/.25detectiondelta/fullmappedmass/cov384guard.4/backoffunchanged.",
+  "eligibility": "Onlyuniquesource/challengegene symbols; ambiguous/absentprotectedunchanged. Sourcefitstage<=8.5/allanchorE8.5. Samefull32285scorer/calibration original3seeds/future splits. No futuredata until forecastsfreeze.",
+  "passing_rule": "beta.1 beats incumbent andbeta0 onall3headline andeverymeanmetricskillnoninferior; expandonlymean>=60. Original>72mean/lower-tail64replicate AND temporalreadinessunchanged. Historicalreuseddevelopment notindependent embryos. Bothnewarmsrewardfutureonlypairedmeanskillvsincumbent, controls0.",
+  "scope": "FirstscNODE-inspired fullmappedgene jointrepresentation/dynamicregularization adaptation, notfaithfulauthorreproduction. Noofficialupload/newartifactpromise."
+}

@@ -235,6 +235,11 @@
       "script": "scnode_resource_preflight.py",
       "run": "private/scnode_resource_preflight_01",
       "report": "SCNODE_RESOURCE_PREFLIGHT_RESULTS.json"
+    },
+    "scnode_biological_pilot": {
+      "script": "scnode_biological_pilot.py",
+      "run": "private/scnode_biological_pilot_01",
+      "report": "SCNODE_BIOLOGICAL_PILOT_RESULTS.json"
     }
   }
 }

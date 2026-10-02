@@ -30,12 +30,12 @@ class JointModel(nn.Module):
         return odeint(lambda t,y:self.drift(y),z,times,method='euler',rtol=1e-5,atol=1e-5).transpose(0,1)
 
 
-def joint_loss(model,batches,times,noises,beta):
+def joint_loss(model,batches,times,noises,beta,targets=None):
     if beta not in [0.,.1]: raise ValueError('Undeclared dynamic regularization')
     latent=model.trajectory(model.sample(batches[0],noises[0]),times)
     decoded=model.decoder(latent)
     sinkhorn=SamplesLoss('sinkhorn',p=2,blur=.05,scaling=.5,debias=True,backend='tensorized')
-    expression=sum(sinkhorn(x,decoded[:,i]) for i,x in enumerate(batches))/len(batches)
+    expression=sum(sinkhorn(x,decoded[:,i]) for i,x in enumerate(batches if targets is None else targets))/len(batches)
     # Computed in both arms to keep draw order and computation comparable.
     dynamic=sum(sinkhorn(model.sample(x,noises[i+1]),latent[:,i]) for i,x in enumerate(batches))/len(batches)
     return expression+beta*dynamic,expression,dynamic
