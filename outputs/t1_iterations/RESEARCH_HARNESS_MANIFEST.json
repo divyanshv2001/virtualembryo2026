@@ -255,6 +255,11 @@
       "script": "scnode_past_fold.py",
       "run": "private/scnode_past_fold_01",
       "report": "SCNODE_PAST_FOLD_RESULTS.json"
+    },
+    "scnode_past_fold_retry": {
+      "script": "scnode_past_fold_retry.py",
+      "run": "private/scnode_past_fold_retry_01",
+      "report": "SCNODE_PAST_FOLD_RETRY_RESULTS.json"
     }
   }
 }

@@ -30,12 +30,12 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Monitor unique scnode_past_fold_01 fresh E8.0 fit to E8.5 source-domain test; after completed/failed batch collect packets, four role-v2 specialists and cached Jev synthesis, preserve raw4/skills4 and apply separate reward only valid paired new arms. No duplicate worker; original readiness unchanged.",
+  "next_experiment": "Monitor unique scnode_past_fold_retry_01 storage-only CSR repair; preserve failed original. Fresh E8.0fit/E8.5source test, matched copy/freshCNF/beta0/.1, .0625 Euler bothtrain/infer, fullscorer unchanged. On completion/failure collect four fresh role-v2 specialists, Jev synthesis and valid-only separate reward; no duplicate or unsupported export.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "scnode_past_fold"
+    "scnode_past_fold_retry"
   ],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
@@ -1299,17 +1299,14 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "route": "JEV_SCNODE_PAST_FOLD_DESIGN_ROUTE_20261002_01.json",
-    "choice": "fresh_minimal_past_fold",
+    "record": "JEV_SCNODE_PAST_FOLD_FAILURE_ROUTE_20261002_01.json",
+    "decision": "csr_storage_only",
     "usage": {
-      "input_tokens": 1070,
-      "output_tokens": 67
+      "input_tokens": 628,
+      "output_tokens": 47
     },
-    "actual_usage": {
-      "input_tokens": 1070,
-      "output_tokens": 67
-    },
-    "payload_bytes": 2209
+    "payload_bytes": 1415,
+    "status": "validated"
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -2565,6 +2562,18 @@
       ],
       "benchmark_metrics_available": false,
       "reward_delta": 0
+    },
+    "scnode_past_fold_01": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "a7fa4b63baa9c1854fd354b73becc7b2c22c0fcf7bcb3146a402f7d423143fe4",
+      "markdown": "METRIC_CRITIQUES_SCNODE_PAST_FOLD_FAILURE_20261002.md",
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ]
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3233,7 +3242,7 @@
     "skills": null
   },
   "scnode_past_fold": {
-    "status": "started",
+    "status": "failed",
     "run": "private/scnode_past_fold_01",
     "report": "SCNODE_PAST_FOLD_RESULTS.json",
     "started_utc": "2026-10-02T08:01:39.979113+00:00",
@@ -3242,6 +3251,18 @@
     "spec": "NEXT_SCNODE_PAST_FOLD.json",
     "preflight": "SCNODE_PAST_FOLD_PREFLIGHT.json",
     "harness": "scnode_past_fold",
-    "scope": "Retrospective exposed source-domain temporal fit-boundary test; no independent embryo or official improvement claim"
+    "scope": "Retrospective exposed source-domain temporal fit-boundary test; no independent embryo or official improvement claim",
+    "error": "Dense backed H5AD requires increasing feature indices",
+    "completed_utc": "2026-10-02T08:05:40.227510+00:00",
+    "report_sha256": "a7fa4b63baa9c1854fd354b73becc7b2c22c0fcf7bcb3146a402f7d423143fe4"
+  },
+  "scnode_past_fold_retry": {
+    "status": "started",
+    "started_utc": "2026-10-02T08:06:21.653588+00:00",
+    "run": "private/scnode_past_fold_retry_01",
+    "report": "SCNODE_PAST_FOLD_RETRY_RESULTS.json",
+    "harness": "scnode_past_fold_retry",
+    "repair": "CSR constructed anchor only; original scientific declaration unchanged",
+    "preflight": "SCNODE_PAST_FOLD_STORAGE_PREFLIGHT.json"
   }
 }

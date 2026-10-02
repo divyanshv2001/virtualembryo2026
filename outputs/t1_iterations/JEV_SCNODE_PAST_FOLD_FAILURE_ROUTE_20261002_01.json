@@ -1,0 +1,37 @@
+{
+  "status": "validated",
+  "semantic_cache_key": "6b1e2eeee953ea656f7c03a52a2a703c935492f48cf18eb358bf5f1457863f79",
+  "attempts": 1,
+  "payload_bytes": 1415,
+  "input": {
+    "model": "jev-1.13.0",
+    "state": {
+      "decision": "Choose storage-only repair for failed fresh scNODE8.0to8.5 hindcast",
+      "evidence": "FreshCNF800steps completed; FullAnchorSlopeForecast dense backed H5AD fails unsorted source-selected-to-original-panel feature indices in h5py. No neural training/forecasts/scores. Existing input panel/order/genemap must remain fixed. Four metric reviews require exact matrix identity and no metric/reward claim.",
+      "options": "Constructed sourceE8.0 anchor is3000x32285float32 sparseexpression; CSR supports requested column order and preserves values. Sorting feature order and refitting PCA also works but changes representation ordering/provenance. Frozen historical model files must not be edited. Separate unique retry, retainedfailedrun, exact dense/CSR and unsortedbackedread preflight, cutoff<=8.0 and future-readguard.",
+      "resources": "D-only16GBRAM2CPUthreads; no official upload."
+    },
+    "questions": {
+      "repair": {
+        "type": "choice",
+        "criteria": {
+          "csr_storage_only": "Separate retry; CSR anchor preserving exact matrix/panel/feature order; verify unsorted backed read and equality first. Retrain same seeds/spec fresh reference and beta0/.1.",
+          "sort_encoder_features": "Reorder encoder inputs/basis/features to satisfy dense H5AD; representation/order changes need additional audit.",
+          "change_model_or_score": "Alter method/calibration to avoid loading; confounds computational failure with science."
+        }
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 628,
+    "output_tokens": 47
+  },
+  "scope": "Advisory routing only, no score certification or token savings guarantee.",
+  "answers": {
+    "repair": {
+      "choice": "csr_storage_only",
+      "confidence": 1.0
+    }
+  },
+  "returned_model": "jev-1.13.0"
+}
