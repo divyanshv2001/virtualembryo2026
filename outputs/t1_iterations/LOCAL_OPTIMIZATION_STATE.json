@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement/register one frozencheckpoint past Eulerconvergence audit NEXT_SCNODE_EULER_AUDIT.json, substeps1/4/8/16 samepreviousE8.5source/anchor samples, no newscore/reward/validation. Currentneural decoder retains4.8%anchorvariance atzero-time; finerintegration cannotrepairthis. Separate numerics from model/decoder/transfer beforeone honestpastrepair; freshcutofffits forchronologicalvalidation.",
+  "next_experiment": "Implement/check/register onefresh8.0fit\u21928.5source-domain scNODE temporalhindcast NEXT_SCNODE_PAST_FOLD.json, newbeta0/.1+copy+freshPCA8/CNFincumbent, allfeatures/weights<=8.0, Eulermaxstep.0625bothtrain/infer. Preservefull32285scorer/calibration. Source8.5previouslyexposed, retrospectivecutofftest notuntouchedindependentvalidation. No9.5tuning/betagrid/additionaldispersionloss.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1297,17 +1297,17 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "route": "JEV_SCNODE_AUDIT_SYNTHESIS_ROUTE_20261002_01.json",
-    "choice": "euler_convergence_audit",
+    "route": "JEV_SCNODE_PAST_FOLD_DESIGN_ROUTE_20261002_01.json",
+    "choice": "fresh_minimal_past_fold",
     "usage": {
-      "input_tokens": 826,
-      "output_tokens": 59
+      "input_tokens": 1070,
+      "output_tokens": 67
     },
     "actual_usage": {
-      "input_tokens": 826,
-      "output_tokens": 59
+      "input_tokens": 1070,
+      "output_tokens": 67
     },
-    "payload_bytes": 1665
+    "payload_bytes": 2209
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -2543,6 +2543,26 @@
       ],
       "benchmark_metrics_available": false,
       "reward_delta": 0
+    },
+    "scnode_euler_audit_01": {
+      "status": "completed",
+      "report_sha256": "78540e9a6b23d5b50a8f96afa8226e2697f6cff0ea2f7817136a1cd22bbdf896",
+      "specialist_role_version": 2,
+      "markdown": "METRIC_CRITIQUES_SCNODE_EULER_20261002.md",
+      "agents": [
+        "scnode_euler_de",
+        "scnode_euler_direction",
+        "scnode_euler_mmd",
+        "scnode_euler_css"
+      ],
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "benchmark_metrics_available": false,
+      "reward_delta": 0
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3028,8 +3048,8 @@
     "submission_identity": "Notshown; bestscoreteam screenshot notproofnewupload"
   },
   "experiment_inventory_snapshot": {
-    "registered": 49,
-    "completed": 41,
+    "registered": 50,
+    "completed": 42,
     "failed": 6,
     "legacy_unspecified": 2,
     "not_started": 0,
@@ -3200,5 +3220,14 @@
     "skills": null,
     "reward_delta": 0,
     "anchor_variance_retention": 0.04773761350618237
+  },
+  "scnode_euler_audit": {
+    "status": "completed_numerical_only",
+    "report": "SCNODE_EULER_AUDIT_RESULTS.json",
+    "report_sha256": "78540e9a6b23d5b50a8f96afa8226e2697f6cff0ea2f7817136a1cd22bbdf896",
+    "all_eight_vs_sixteen_converged": true,
+    "reward_delta": 0,
+    "raw_metrics": null,
+    "skills": null
   }
 }

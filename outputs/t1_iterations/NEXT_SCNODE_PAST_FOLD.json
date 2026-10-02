@@ -1,0 +1,25 @@
+{
+  "status": "predeclared_not_implemented_not_started",
+  "cutoff": 8.0,
+  "target": 8.5,
+  "fit_stages": [
+    7.5,
+    7.75,
+    8.0
+  ],
+  "population": "Prepared associated source-domain cohort, not wholeembryochallenge; 8.5previouslyobservedinprioraudits. Retrospective temporalfit-boundary test, not untouchedvalidation orindependentembryos.",
+  "genes": "Original32285challengepanel inoriginalorder; unique26775source/challenge mappedsymbols; absent/ambiguousgenes zero/protected in source-domain constructedpanels. No futureexpression gene/featureselection.",
+  "candidate_arms": [
+    "copy",
+    "fresh_pca8_cnf_incumbent_covariance_0.25",
+    "fresh_scnode_beta_0.0",
+    "fresh_scnode_beta_0.1"
+  ],
+  "new_model": "FreshfullmappedgeneVAE32latent/128hidden/64drift, sameReLUoutputs andobjectives, shared200minibatchMSEpretrain thenmatched1000jointsteps beta0/.1 Adam.001betas.95/.99,32predcells/200sourcecomparisoncells, Torch/NumPy20261002. Actualsamebatch/noisehashes retained. No old8.5weights/features/init reuse.",
+  "solver": "Newarms Eulermaximumstep.0625physicaldays inbothtrainingandforecast; preserveelapsedtime withsubdivision perinterval. Trainingtimes offsetfirsteligible7.5; .5dayforecast8substeps. No beta/solvergrid or additionaldispersionloss.",
+  "fresh_incumbent": "Refit productionfamily representation/objective/decoder solely<=8.0: highestpastvariance4096eligiblegenes/PCA8,original384guardgenes selectedfrompast only; originaldensity800steps energy.1manifold10 batch64; samecutoffsourceanchor/fullmappedgene positive/detectionheads/covariance.25 andguards. Explicitdifferentarchitecture/init/budget vsnewarms; inc is reference, causalbetaeffectisolatedbetweennewarms. Implementation/eligibility andconfiguration hashes mustbevalidatedbeforelaunch.",
+  "controls": "Copy/source8.0same1500donors seed20260928; donorindices saved. Exact repeatedreference predictionhash/controlseedreplay andsamefloor/ceiling fornewarms. Protected/nonnegative/2xfactor/.25detectiondelta/mappedmass/.4covguard samepolicy. Freshguardfeatures mustfit<=8.0, not8.5featurefile.",
+  "target_evaluation": "Onlyafterallforecastslocked, sample2000source8.5rows perseed20260928/29/30 withoutreplacement,1000truth/1000ceiling. Frozenfull32285scorer/calibration implementation; recordinvalidcalibration/failures ratherthanrepairscore. No compareheadline toold55.99differentpopulation/horizon.",
+  "acceptance": "beta.1 mustbeatcopy/freshincumbent/beta0 onallpairedheadlines andeverymeanmetricskillnoninferior; validcalibrations mandatory. Noexpansionmean<60; original>72mean/lower-tail>=64replicate andwholeembryotemporalreadiness remainunmet. Separatefuture-onlynewarmrewardvsfreshincumbent; copy/inc0, unavailable/invalid0.",
+  "resources": "D-onlymemmaps/chunks,16GBRAM,twoCPUthreads,oneworker. Registeruniqueexperimentafterimplementation/checks, neverduplicateexistingbatches. Noofficialupload/export fromfailedtrials."
+}

@@ -1,0 +1,21 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "decision": "Freeze next honest scNODE temporal test after past numericalaudit; avoid repeatedexposed9.5 comparisons.",
+    "evidence": "Frozen8.5models1vs4Euler decodedchangeRMSbeta.1 .272source/.164anchor,8vs16 .0221/.0162, allarms/cohorts<.05 numericalconvergence. Zero-timeanchorvariance4.8% unchanged; finalReLU contraction hypothesis. NeitherfirstscNODE41.65 norzero36.16 beat55.99incumbent; noofficialgain.",
+    "proposed_fold": "Freshtrainonlysource7.5/7.75/8.0 thenforecastsource8.5, full32285panel withunique26775mappedsourcegenes/protectedzeros; persistence atsource8.0and freshlycutofftrained incumbentPCA8/CNF/fullanchor decoder. Allfeatures/PCA/scales/init refit<=8.0, no reuse8.5models/features. Samegeneuniverse/scorer withsourcecohortfloor/ceiling; preserveinvalidcalibrationifoccurs, notsamechallengepopulation. Onecutoff temporaltest, notindependentembryos. Threepairedfixedevaluationseeds.",
+    "choices": "Minimaltest keepfullgene VAE32/128beta0/.1 objectives andsame200+1000budget newarms; Eulermaxstep.0625 consistentlytraining/inference sincehistorygaps.25forecast.5. Differentcutoff/horizon/domain cannotcompareheadline to55.99prior. Additionalsoftplus/signeddrift/dispersionlosswouldconfoundsolverchange andneedsseparatematchedarchitecturearm. CSScritic wronglysaidvariogramneedscoords; originalbenchmarkcomputeswithoutcoords andmustremainunchanged. Existingdecoder alreadyanchoredresidual.",
+    "resources": "16GBCPU2threadsD; <=8.0fitcells3stages, memmapminibatches. FreshincumbentPCAselection/guardpanel from<=8.0 only, no8.5featureselectionleak."
+  },
+  "questions": {
+    "design": {
+      "type": "choice",
+      "criteria": {
+        "fresh_minimal_past_fold": "One fresh8.0to8.5 matchedbeta0/.1+copy/freshincumbent test, fixEulermaxstep.0625 bothtrain/infer, no otherlosschanges. Predeclareallparameters/cohort/gene/scorercontrols before8.5expressionread.",
+        "decoder_change_now": "Addsoftplus/dispersionpenaltybeforehonestfold; multiplechanges needextraarchitecturecontrol andcost.",
+        "replay9.5_with_substeps": "Score8.5modelsagainonexposed9.5 to chooseEulersteps; numericalchecknotindependentvalidation.",
+        "tigon_without_validation": "SkipnewscNODEdiagnosis andgrowthmodel withoutcompositionjustification."
+      }
+    }
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "status": "completed",
+  "raw_metrics": null,
+  "skills": null,
+  "reward_delta": 0,
+  "new_scoring_batch": false,
+  "passing_candidates": [],
+  "plan_sha256": "e231d2b14b4f27f7da9b815903621b79935fbeb2f407439be52ae26d8d5e1427",
+  "arms": {
+    "scnode_beta_0.0": {
+      "source8.5": {
+        "steps": [
+          {
+            "substeps": 1,
+            "latent_displacement_rms": 1.7803573608398438,
+            "decoded_change_rms": 0.07901594787836075,
+            "decoded_gene_variance_mean": 0.008670645765960217,
+            "decoded_zero_fraction": 0.8596991896629333,
+            "decoder_preactivation_nonpositive_fraction": 0.8596991896629333
+          },
+          {
+            "substeps": 4,
+            "latent_displacement_rms": 1.8831558227539062,
+            "decoded_change_rms": 0.10201100260019302,
+            "decoded_gene_variance_mean": 0.009088842198252678,
+            "decoded_zero_fraction": 0.8610197901725769,
+            "decoder_preactivation_nonpositive_fraction": 0.8610197901725769
+          },
+          {
+            "substeps": 8,
+            "latent_displacement_rms": 1.9122995138168335,
+            "decoded_change_rms": 0.10777808725833893,
+            "decoded_gene_variance_mean": 0.009310581721365452,
+            "decoded_zero_fraction": 0.8614399433135986,
+            "decoder_preactivation_nonpositive_fraction": 0.8614399433135986
+          },
+          {
+            "substeps": 16,
+            "latent_displacement_rms": 1.9287036657333374,
+            "decoded_change_rms": 0.11086535453796387,
+            "decoded_gene_variance_mean": 0.009452508762478828,
+            "decoded_zero_fraction": 0.8616739511489868,
+            "decoder_preactivation_nonpositive_fraction": 0.8616739511489868
+          }
+        ],
+        "differences": [
+          {
+            "coarse": 1,
+            "fine": 4,
+            "latent_relative_rms": 0.182197559481843,
+            "decoded_change_relative_rms": 0.5201501860435732
+          },
+          {
+            "coarse": 4,
+            "fine": 8,
+            "latent_relative_rms": 0.03127457019269444,
+            "decoded_change_relative_rms": 0.08711693948386981
+          },
+          {
+            "coarse": 8,
+            "fine": 16,
+            "latent_relative_rms": 0.016073870115524774,
+            "decoded_change_relative_rms": 0.043493977626219614
+          }
+        ],
+        "eight_vs_sixteen_converged": true,
+        "zero_time_decoded_variance_mean": 0.003712899051606655,
+        "observed_variance_mean": 0.03898758813738823,
+        "zero_step_max_change": 0.0
+      },
+      "anchor8.5": {
+        "steps": [
+          {
+            "substeps": 1,
+            "latent_displacement_rms": 1.6698358058929443,
+            "decoded_change_rms": 0.13265486061573029,
+            "decoded_gene_variance_mean": 0.0038519883528351784,
+            "decoded_zero_fraction": 0.8679618835449219,
+            "decoder_preactivation_nonpositive_fraction": 0.8679618835449219
+          },
+          {
+            "substeps": 4,
+            "latent_displacement_rms": 1.8364709615707397,
+            "decoded_change_rms": 0.1623518168926239,
+            "decoded_gene_variance_mean": 0.003937151283025742,
+            "decoded_zero_fraction": 0.8707589507102966,
+            "decoder_preactivation_nonpositive_fraction": 0.8707589507102966
+          },
+          {
+            "substeps": 8,
+            "latent_displacement_rms": 1.8773980140686035,
+            "decoded_change_rms": 0.16868731379508972,
+            "decoded_gene_variance_mean": 0.0039808861911296844,
+            "decoded_zero_fraction": 0.87140291929245,
+            "decoder_preactivation_nonpositive_fraction": 0.87140291929245
+          },
+          {
+            "substeps": 16,
+            "latent_displacement_rms": 1.8998209238052368,
+            "decoded_change_rms": 0.1720465123653412,
+            "decoded_gene_variance_mean": 0.004005886148661375,
+            "decoded_zero_fraction": 0.8717501163482666,
+            "decoder_preactivation_nonpositive_fraction": 0.8717501163482666
+          }
+        ],
+        "differences": [
+          {
+            "coarse": 1,
+            "fine": 4,
+            "latent_relative_rms": 0.08741987414433379,
+            "decoded_change_relative_rms": 0.21795122845321713
+          },
+          {
+            "coarse": 4,
+            "fine": 8,
+            "latent_relative_rms": 0.01828394923502936,
+            "decoded_change_relative_rms": 0.043840487525456225
+          },
+          {
+            "coarse": 8,
+            "fine": 16,
+            "latent_relative_rms": 0.009646851157305797,
+            "decoded_change_relative_rms": 0.022794220752641252
+          }
+        ],
+        "eight_vs_sixteen_converged": true,
+        "zero_time_decoded_variance_mean": 0.0025352288503199816,
+        "observed_variance_mean": 0.06809104233980179,
+        "zero_step_max_change": 0.0
+      }
+    },
+    "scnode_beta_0.1": {
+      "source8.5": {
+        "steps": [
+          {
+            "substeps": 1,
+            "latent_displacement_rms": 1.4919461011886597,
+            "decoded_change_rms": 0.14546367526054382,
+            "decoded_gene_variance_mean": 0.009260284714400768,
+            "decoded_zero_fraction": 0.8663746118545532,
+            "decoder_preactivation_nonpositive_fraction": 0.8663746118545532
+          },
+          {
+            "substeps": 4,
+            "latent_displacement_rms": 1.688645839691162,
+            "decoded_change_rms": 0.17077261209487915,
+            "decoded_gene_variance_mean": 0.00853717140853405,
+            "decoded_zero_fraction": 0.8703705668449402,
+            "decoder_preactivation_nonpositive_fraction": 0.8703705668449402
+          },
+          {
+            "substeps": 8,
+            "latent_displacement_rms": 1.7250211238861084,
+            "decoded_change_rms": 0.175263449549675,
+            "decoded_gene_variance_mean": 0.008617930114269257,
+            "decoded_zero_fraction": 0.8711102604866028,
+            "decoder_preactivation_nonpositive_fraction": 0.8711102604866028
+          },
+          {
+            "substeps": 16,
+            "latent_displacement_rms": 1.7436398267745972,
+            "decoded_change_rms": 0.1775202602148056,
+            "decoded_gene_variance_mean": 0.008682492189109325,
+            "decoded_zero_fraction": 0.8715210556983948,
+            "decoder_preactivation_nonpositive_fraction": 0.8715210556983948
+          }
+        ],
+        "differences": [
+          {
+            "coarse": 1,
+            "fine": 4,
+            "latent_relative_rms": 0.16998499034440243,
+            "decoded_change_relative_rms": 0.27203696813606837
+          },
+          {
+            "coarse": 4,
+            "fine": 8,
+            "latent_relative_rms": 0.028300544779257874,
+            "decoded_change_relative_rms": 0.044757633889093366
+          },
+          {
+            "coarse": 8,
+            "fine": 16,
+            "latent_relative_rms": 0.01422615228346627,
+            "decoded_change_relative_rms": 0.022133786054491063
+          }
+        ],
+        "eight_vs_sixteen_converged": true,
+        "zero_time_decoded_variance_mean": 0.004448872525244951,
+        "observed_variance_mean": 0.03898758813738823,
+        "zero_step_max_change": 0.0
+      },
+      "anchor8.5": {
+        "steps": [
+          {
+            "substeps": 1,
+            "latent_displacement_rms": 1.549088954925537,
+            "decoded_change_rms": 0.22741632163524628,
+            "decoded_gene_variance_mean": 0.0064531005918979645,
+            "decoded_zero_fraction": 0.8827733993530273,
+            "decoder_preactivation_nonpositive_fraction": 0.8827733993530273
+          },
+          {
+            "substeps": 4,
+            "latent_displacement_rms": 1.8798773288726807,
+            "decoded_change_rms": 0.26543107628822327,
+            "decoded_gene_variance_mean": 0.006817480083554983,
+            "decoded_zero_fraction": 0.8872207403182983,
+            "decoder_preactivation_nonpositive_fraction": 0.8872207403182983
+          },
+          {
+            "substeps": 8,
+            "latent_displacement_rms": 1.9473378658294678,
+            "decoded_change_rms": 0.27280664443969727,
+            "decoded_gene_variance_mean": 0.006902285851538181,
+            "decoded_zero_fraction": 0.8879102468490601,
+            "decoder_preactivation_nonpositive_fraction": 0.8879102468490601
+          },
+          {
+            "substeps": 16,
+            "latent_displacement_rms": 1.982592225074768,
+            "decoded_change_rms": 0.27663302421569824,
+            "decoded_gene_variance_mean": 0.006947951391339302,
+            "decoded_zero_fraction": 0.8882603645324707,
+            "decoder_preactivation_nonpositive_fraction": 0.8882603645324707
+          }
+        ],
+        "differences": [
+          {
+            "coarse": 1,
+            "fine": 4,
+            "latent_relative_rms": 0.13139105561169065,
+            "decoded_change_relative_rms": 0.16424018757770406
+          },
+          {
+            "coarse": 4,
+            "fine": 8,
+            "latent_relative_rms": 0.025366725005993768,
+            "decoded_change_relative_rms": 0.03154376912851742
+          },
+          {
+            "coarse": 8,
+            "fine": 16,
+            "latent_relative_rms": 0.013062618254269912,
+            "decoded_change_relative_rms": 0.01617243177418785
+          }
+        ],
+        "eight_vs_sixteen_converged": true,
+        "zero_time_decoded_variance_mean": 0.0032505039125680923,
+        "observed_variance_mean": 0.06809104233980179,
+        "zero_step_max_change": 0.0
+      }
+    }
+  },
+  "completed_utc": "2026-10-02T07:41:27.835335+00:00",
+  "scope": "Numerical convergence on exactly past-fit source/anchor samples; no accuracy/biological validation, no benchmark metrics or reward. Time-zero reconstruction unaffected by integration refinement.",
+  "report_sha256": "78540e9a6b23d5b50a8f96afa8226e2697f6cff0ea2f7817136a1cd22bbdf896"
+}

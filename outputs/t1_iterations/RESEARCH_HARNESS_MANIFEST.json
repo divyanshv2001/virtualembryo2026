@@ -245,6 +245,11 @@
       "script": "scnode_past_audit.py",
       "run": "private/scnode_past_audit_01",
       "report": "SCNODE_PAST_AUDIT_RESULTS.json"
+    },
+    "scnode_euler_audit": {
+      "script": "scnode_euler_audit.py",
+      "run": "private/scnode_euler_audit_01",
+      "report": "SCNODE_EULER_AUDIT_RESULTS.json"
     }
   }
 }
