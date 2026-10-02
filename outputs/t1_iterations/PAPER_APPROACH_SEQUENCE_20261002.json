@@ -1,7 +1,7 @@
 {
-  "status": "scnode_biological_pilot_running",
+  "status": "scnode_biological_rejected_past_transfer_audit_next",
   "authorization": "User requests moving to the three identified papers; existing local research/export permission persists, no official upload.",
-  "current_job": "scnode_biological_pilot",
+  "current_job": null,
   "research_sources": "LITERATURE_PRIORITY_20261002.md",
   "common_controls": "Persistence and frozen production-family incumbent; exact original replay on exposed historical E8.5->E9.5 development. Frozen genes/scorer/calibration/donors/seeds, full32285 output. Historical training data only throughfoldcutoff; prospective fitting through9.5 for10.5 only after a new candidate selected and format validation. No hiddenfuture marginal used in losses. All outcomes retained, no seedsearch.",
   "sequence": [
@@ -32,11 +32,15 @@
       "difference_from_prior": "Prior local neuralODE/hurdle implementations failed promotion and are not full author replication. A new trial must explicitly change representation/dynamic regularization with an ablation controlling decoder and objective; simply repeating oldODE is not new work.",
       "condition": "Pursue if one-day diagnostic or first newflowmatching trial identifies representation/decoder mismatch, within16GB budget. Encoder trainedonlyoneligiblepast; allgene residual/decoder coverage retained.",
       "new_trial_started": true,
-      "next_spec": "NEXT_SCNODE_PROTOCOL_PREFLIGHT.json",
+      "next_spec": "NEXT_SCNODE_PAST_AUDIT.json",
       "protocol": "SCNODE_PROTOCOL_REVIEW_20261002.md",
       "capacity_report": "SCNODE_RESOURCE_PREFLIGHT_RESULTS.json",
       "biological_trial_started": true,
-      "spec": "NEXT_SCNODE_BIOLOGICAL_PILOT.json"
+      "spec": "NEXT_SCNODE_BIOLOGICAL_PILOT.json",
+      "result_report": "SCNODE_BIOLOGICAL_PILOT_RESULTS.json",
+      "regularized_mean_score": 41.65196326401459,
+      "unregularized_mean_score": 36.162666282631015,
+      "promoted": false
     },
     {
       "paper": "TIGON NatureMachineIntelligence2024",

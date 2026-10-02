@@ -1,0 +1,29 @@
+{
+  "status": "predeclared_not_implemented_not_started",
+  "scope": "No-retraining descriptive fit/transfer diagnosis, no biologicalvalidation/newbenchmarkscore/reward.",
+  "source_run": "private/scnode_biological_pilot_01",
+  "cutoff": 8.5,
+  "eligible_inputs": [
+    "Preparedsource rows<=8.5",
+    "E8.5challenge anchor only"
+  ],
+  "sampling_seed": 20261002,
+  "sample_cells_per_stage": 128,
+  "sample_anchor_cells": 128,
+  "arms": [
+    "scnode_beta_0.0",
+    "scnode_beta_0.1"
+  ],
+  "controls": [
+    "zero elapsed time decoded identity",
+    "raw observed cells/reconstruction baseline"
+  ],
+  "checks": [
+    "Pin bothcheckpoint/encoder/source/gene/metadata hashes and trainingdrawSHA; record1000steps/beta/seed.",
+    "Verify actual stageorigin/elapsedtime and trainedcutoff; no earlierpredictionvalidation using this8.5model.",
+    "Compare eligible source decodedreconstruction vsobserved mean/detection/variance proxies, latentnorm andposteriormean/std, sourcecutoff vsE8.5anchor latentcloud.",
+    "Compare zero-time and1day decodedchanges and drift magnitudes on sampledsourcecutoff vsanchor withoutfuturedata; negative/densechanges andzero support are diagnostic only.",
+    "Assess if jointdecoder reconstructspastfullmappedgenevariation; attribution remains uncertain. No automatichyperparamchange/scoregate relaxation."
+  ],
+  "next_after": "Four compact specialists afterdiagnostic; any remedy needs separatelyfrozen honestpastvalidation. No TIGON until composition justification."
+}

@@ -1,24 +1,17 @@
 {
-  "updated_utc": "2026-10-02T06:47:08.203164+00:00",
+  "updated_utc": "2026-10-02T07:24:24.854725+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "6068987ab924835790427f93e389a6d9df47e7cd3db446c6c4438f23d213e232",
+    "LOCAL_OPTIMIZATION_STATE.json": "bc738ff9b0d51c5cad8e54e614085de850703bfd6ae98ea81fabb97f3b78901a",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "c84ff22df6bc173483520b6123b603df2895d275c49431f9c6fe517a835ec717",
+    "METRIC_RESEARCH_QUEUE.json": "9f9b408b340d76676889d2c04223eb8c65fb80dff6166c4120408559494cbb2d",
     "METRIC_CRITIQUE_POLICY.json": "027368320281a1164dc91720fe8aa18a344ddf7c14b9c5a8fce8b2b075105b7b",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
     "RESEARCH_HARNESS_MANIFEST.json": "533732979bc3da670dbc415b064f24ae9a61c3e8846f0e4df1cf564f803ad78f"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [
-    {
-      "experiment": "scnode_biological_pilot",
-      "pid": 21852,
-      "status": "launched_live_check_required",
-      "run": "private/scnode_biological_pilot_01"
-    }
-  ],
-  "next_experiment": "Monitor unique scnode_biological_pilot, no duplicate. Fullmappedgene32latent VAE/ODE shared200step pretrain then matched1000steps beta0/.1. ActualdrawSHA verifiesnewarms. Fullgene neural log1pdelta/hurdle decoder andoriginalguards fixed; exactcopy/incumbent replay before9.5truth. On newcompletion/failure collectfourcritics/Jevevaluation/reward/ledger. Noofficialupload.",
+  "active_jobs_at_checkpoint": [],
+  "next_experiment": "One predeclared no-retraining scNODE past decoder/transfer audit per NEXT_SCNODE_PAST_AUDIT.json, <=8.5source/E8.5anchor only. Verifycheckpoint/source/time hashes and compare reconstruction/identity/ODE decoder changes/latentclouds; descriptivefit proxies, no newscore/validation/reward. Earlier-cutoff forecasts requirefreshcutofftrainedrepresentation. No beta grid/automaticTIGON.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -35,7 +28,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -975,
+    "current_reward": -1055,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -44,10 +37,10 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -975,
-    "reward_score": -975,
+    "uncapped_reward": -1055,
+    "reward_score": -1055,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": -29
+    "last_batch_reward_delta": -80
   },
   "official_best": 52.16,
   "latest_official": {
@@ -64,17 +57,17 @@
     "attribution": "Inferred latest export; screenshot lacks filename"
   },
   "latest_jev": {
-    "route": "JEV_SCNODE_DECODER_ROUTE_20261002_01.json",
-    "choice": "anchor_neural_delta_hurdle",
+    "route": "JEV_SCNODE_FAILURE_SYNTHESIS_ROUTE_20261002_01.json",
+    "choice": "past_decoder_transfer_audit",
     "usage": {
-      "input_tokens": 957,
-      "output_tokens": 56
+      "input_tokens": 1036,
+      "output_tokens": 65
     },
     "actual_usage": {
-      "input_tokens": 957,
-      "output_tokens": 56
+      "input_tokens": 1036,
+      "output_tokens": 65
     },
-    "payload_bytes": 2091
+    "payload_bytes": 2201
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
