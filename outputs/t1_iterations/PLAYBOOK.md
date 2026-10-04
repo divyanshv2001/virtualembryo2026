@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-04T11:15:15.831544+00:00
+Updated: 2026-10-04T11:24:18.663970+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -10,7 +10,7 @@ Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction':
 
 Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Audit remaining CellPace temporal diffusion forcing author source, raw-count/scVI data requirements, permitted stage restrictions, dependencies and 6GB RTX3060 feasibility. Distinct from tested state-dependent diffusion; no author pretrained/demo hidden-stage leakage, no old protein/attention grids.
+Next: Implement own frozen-PCA8 causal3token denoiser: matched9224parameter400RTX3060step clean-history conditional diffusion versus independent-history-noise forcing, same final-token loss/past stage windows. Predeclare fixed noise/reverse schedule and autoregressive past-only context initialization. Preserve frozen kinetic baseline, bounded latent correction, originalCPU decoder/scorer/calibration/readiness and exact prior/zero-bridge replays; no target tuning, author reproduction or independent-validation claim.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in outputs\t1_submissions\formula_progress_20260930_01\official_result.json. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 

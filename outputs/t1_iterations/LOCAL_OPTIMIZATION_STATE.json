@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Audit remaining CellPace temporal diffusion forcing author source, raw-count/scVI data requirements, permitted stage restrictions, dependencies and 6GB RTX3060 feasibility. Distinct from tested state-dependent diffusion; no author pretrained/demo hidden-stage leakage, no old protein/attention grids.",
+  "next_experiment": "Implement own frozen-PCA8 causal3token denoiser: matched9224parameter400RTX3060step clean-history conditional diffusion versus independent-history-noise forcing, same final-token loss/past stage windows. Predeclare fixed noise/reverse schedule and autoregressive past-only context initialization. Preserve frozen kinetic baseline, bounded latent correction, originalCPU decoder/scorer/calibration/readiness and exact prior/zero-bridge replays; no target tuning, author reproduction or independent-validation claim.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -4413,5 +4413,43 @@
     },
     "observed_support": "All10963cells and4stages7.5/7.75/8/8.25 used in present fit; sample/embryo_version not independent embryo IDs. New earlier-cutoff refits or fixed-model horizon tests would be historical development, not untouched independentvalidation.",
     "scope": "Data/support check only; no new score/reward. Retain small primary mechanism gain without promotion or whole-family rejection."
+  },
+  "temporal_diffusion_forcing_preflight": {
+    "status": "own_bounded_causal_denoiser_viable_author_defaults_incompatible_with_past_support",
+    "author_repository": "https://github.com/Emad-COMBINE-lab/CellPace-release",
+    "author_commit": "80f21819b7765253fb4dcf6060e691b0d3c8722f",
+    "license": "AGPL3; inspected source only, no author code/pretrained/demo copied or installed",
+    "inspected_source_sha256": {
+      "core.py": "b4f656a45df44c4908edba9756798719284f5747d1231efc43f261cc8eb4af9b",
+      "diffusion.py": "6e7d08f9ff505f40c1db44f666f91265232039fc1c09e987d44f7cd3b9375117",
+      "transformer.py": "128ec216a08fbdc236e22a87a79ba252c3c094a2b5fcc279e3374860fbabf7d5",
+      "data/dif.py": "9741613d6fc155308614f5db2161a9626af963e24188fac389920a5971104f6b",
+      "demo/configs/retinal.yaml": "d3094262f520a362aa8e27e32d04a316b684e7f901a39a867dc5bed267d202c1"
+    },
+    "mechanism": "Causal transformer, per-position diffusion noise levels, biological stage and gap conditioning; author samples independent cells across ordered stage windows, not tracked lineages. Distinct from prior SDE state-dependent diffusion.",
+    "author_default_limitations": {
+      "sequence_length": 9,
+      "permitted_past_stages": 4,
+      "latent_dim": 256,
+      "cached_sequences": 1000000,
+      "two_gpu_demo": true,
+      "missing_scvi_stack": true,
+      "note": "Default window9 cannot run on4past stages. Rawcounts available; fresh past-only scVI and smaller window required for author adaptation, compatibility/resources not validated. No hidden-stage-trained weights eligible."
+    },
+    "own_synthetic_probe": {
+      "sequence_length": 3,
+      "latent_rank": 8,
+      "batch_size": 64,
+      "parameters": 9224,
+      "optimizer_steps": 3,
+      "gpu_peak_bytes": 22760448,
+      "elapsed_seconds": 0.5035955999628641,
+      "causal_prefix_max_error": 0.0,
+      "finite_loss_gradients": true,
+      "device": "RTX3060"
+    },
+    "score": null,
+    "reward": 0,
+    "scope": "Source/data/resource preflight only. Own frozen-PCA adaptation would isolate temporal noise mechanism; not full scVI/CellPace reproduction or validated forecast."
   }
 }

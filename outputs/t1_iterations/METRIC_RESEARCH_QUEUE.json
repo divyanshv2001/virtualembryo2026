@@ -6395,9 +6395,9 @@
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
     "experiment": "collective_context_past_fold",
-    "status": "completed_incremental_primary_gain_not_promoted",
-    "next_experiment": "temporal_diffusion_forcing_preflight",
-    "next": "Audit remaining CellPace temporal diffusion forcing author source, raw-count/scVI data requirements, permitted stage restrictions, dependencies and 6GB RTX3060 feasibility. Distinct from tested state-dependent diffusion; no author pretrained/demo hidden-stage leakage, no old protein/attention grids.",
+    "status": "temporal_forcing_resource_preflight_completed",
+    "next_experiment": "temporal_diffusion_forcing_past_fold",
+    "next": "Implement own frozen-PCA8 causal3token denoiser: matched9224parameter400RTX3060step clean-history conditional diffusion versus independent-history-noise forcing, same final-token loss/past stage windows. Predeclare fixed noise/reverse schedule and autoregressive past-only context initialization. Preserve frozen kinetic baseline, bounded latent correction, originalCPU decoder/scorer/calibration/readiness and exact prior/zero-bridge replays; no target tuning, author reproduction or independent-validation claim.",
     "jev_choice": "protein_support_audit",
     "jev_confidence": 0.95,
     "scope": "Advisory low confidence; raw-count data availability verified deterministically, no score claim.",
