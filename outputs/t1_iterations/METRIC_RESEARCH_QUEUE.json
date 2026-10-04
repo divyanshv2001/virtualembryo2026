@@ -6394,10 +6394,9 @@
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
-    "status": "fixed_one_day_validation_completed_not_promoted",
-    "implementation_status": "completed_accounted_reviewed",
-    "experiment": "scfm_fixed_one_day_validation",
-    "next_experiment": null,
-    "next": "Bounded learned-diffusion feasibility preflight from unexplored literature shortlist: author CPU/solver dependencies, permitted past temporal support, tiny integration memory/runtime <=16GB, two threads and D-only. Then predeclare one matched drift-only vs learned-diffusion trial only if viable; unchanged full-panel scorer/gates. Jev rank tentative confidence0.13. No old grid or duplicate friend comparison."
+    "experiment": "learned_diffusion_past_fold_repair",
+    "status": "registered_repair",
+    "next_experiment": "learned_diffusion_past_fold_repair",
+    "next": "Collect unique learned_diffusion_past_fold_repair; finish four reviews/reward once, no duplicate run or further mechanism while active."
   }
 }

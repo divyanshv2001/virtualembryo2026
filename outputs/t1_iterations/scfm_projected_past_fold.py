@@ -45,6 +45,7 @@ def main():
             if inputs[filename]!=prep[key]:raise ValueError('Prepared input changed')
         core,scorer=load_core()
         sources=['scfm_projected_past_fold.py','fresh_fullpanel_context.py','frozen_fullpanel_scoring.py','anchored_soft_ot.py','soft_ot_flow_matching.py','cnf_manifold_flow.py','cnf_density_flow.py','full_anchor_slope_forecast.py','log1p_positive_forecast.py','tigon_conditional_fullpanel.py','offline_backtest.py']
+        if spec.get('learned_diffusion'): sources.append('learned_latent_diffusion.py')
         plan={'created_utc':now(),'protocol':spec,'source_sha256':{name:digest(HERE/name) for name in sources},'input_sha256':inputs,'scoring_seeds':spec['scoring_seeds'],'scorer_manifest':scorer,'submissions_allowed':0}
         save(RUN/'plan.json',plan);emit('plan_frozen',sha256=digest(RUN/'plan.json'))
         c=prepare(spec,RUN,emit);cutoff,target=spec['cutoff'],spec['target']
@@ -68,7 +69,18 @@ def main():
             plan['reused_checkpoint_sha256']={name:digest(previous/(name+'.pt')) for name in ['cnf800','projected_ot400']}
             save(RUN/'plan.json',plan);emit('reused_encoder_and_checkpoints_verified',sha256=digest(RUN/'plan.json'))
             flows={'cnf800':initial,'projected_ot400':baseline}
-            if spec.get('fixed_candidate_validation'):
+            if spec.get('learned_diffusion'):
+                from learned_latent_diffusion import DiffusionFlow, train_diffusion, smoke_test
+                report['diffusion_preflight']=smoke_test(initial)
+                emit('diffusion_preflight_passed', **report['diffusion_preflight'])
+                flows={'cnf800':initial}
+                for name,kind in [('constant_diffusion400','constant'),('state_diffusion400','state')]:
+                    torch.manual_seed(spec['diffusion_seed'])
+                    model=DiffusionFlow(initial,kind,seed=spec['diffusion_seed'])
+                    train_diffusion(model,c['coordinates'],c['stages'][c['past']],RUN/(name+'.pt'),emit,steps=spec['steps'],batch=spec['batch_size'])
+                    flows[name]=model.eval();emit('candidate_training_finished',candidate=name)
+                report['diffusion_scope']='Frozen past CNF drift/heads; learned diagonal diffusion; scDiffEq-inspired CPU adaptation, not author reproduction. Constant vs state dependence isolates mechanism; original CNF uses different RK4 step. No future loss, no growth inference.'
+            elif spec.get('fixed_candidate_validation'):
                 report['fixed_candidate_validation']={'training_steps':0,'reward_eligible':False,'reason':'New horizon evaluation of already-accounted frozen candidate; no repeat model reward.'}
             elif spec.get('representation_comparison'):
                 ci=incremental_context(c,RUN,emit,chunk=spec['ipca_chunk'])

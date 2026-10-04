@@ -767,3 +767,7 @@ Latest explicit check request supersedes earlier delay. Reviewed10T1/60records; 
 ## Unexplored paper shortlist — 4 October 2026
 
 Userrequests newmechanisms toward screenshotAgentTeam68.4. Shortlist learnedstate-dependentSDE(scDiffEq), networkkinetics(FLeCS), hiddenproteinkinetics(CardamomOT), expressiondifferenceattention(scDiformer); no matchingregisteredtrialfound, GRNpromptreferences stale/missingfiles so noveltyprovisional. JevselectedlearnedSDE confidence.13,2656bytes,1239in/63out; feasibilitynottraining declarednext. One linkedreportwithprimarysources/controls/limits; no scores/rewards/uploads. Health-1359.
+
+## Learned diffusion implementation repair — 4 October 2026
+
+First trial failed Unknown diffusion before model training/scoring: malformed runner name/kind tuple. Genuine report preserved, four fresh metric reviews cached, metrics unavailable/reward0/health-1359. Corrected tuple and logging keyword; both arms two-step optimizer/checkpoint/logging check passed. CPU finite-gradient/zero-noise RK4/replay smoke passed,552stateheadparams,initialpeak345MB; full preparation failurepeak2.30GB. Jev frozen-drift diffusion protocol.95,1151in/60out. Unique same-protocol repair registered; no scientific rejection, no scorer/gate change.

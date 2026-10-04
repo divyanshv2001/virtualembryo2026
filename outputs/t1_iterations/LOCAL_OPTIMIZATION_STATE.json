@@ -30,11 +30,13 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Bounded learned-diffusion feasibility preflight from unexplored literature shortlist: author CPU/solver dependencies, permitted past temporal support, tiny integration memory/runtime <=16GB, two threads and D-only. Then predeclare one matched drift-only vs learned-diffusion trial only if viable; unchanged full-panel scorer/gates. Jev rank tentative confidence0.13. No old grid or duplicate friend comparison.",
+  "next_experiment": "Collect unique learned_diffusion_past_fold_repair; finish four reviews/reward once, no duplicate run or further mechanism while active.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
+  "active_jobs": [
+    "learned_diffusion_past_fold_repair"
+  ],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -2782,6 +2784,18 @@
         "variogram": "Problem: One-day scFM variograms exceed CNF at all three scales; strict gates fail despite shorter-horizon gains. Proposed solution: Freeze both models. On historical development only, test a fixed horizon rule: scFM at0.5/0.75days, CNF atone day. Validation: Use one chronological held-out historical block, unchanged genes/scorer and exact replay. Require all gates; report as a diagnostic, without independent reward credit."
       },
       "coordinator": "Verified all3panels: DE/direction/variogram regress, MMDimproves. DEreview bothtrailcopy refers onlyDEskill, notaggregate; bothaggregate>50. Variogram scales means three samplingpanels, notspatialscales. Suggestedhorizongates/fallbacks unvalidated; cannotselectthem usingexposedtarget scores andclaimpast-only validation. Earliercutoff tests needeligiblefreshcutoff representations/models; do notfit gates onfutureevaluation outcomes. Short-horizon gains remain validdevelopment evidence; one-day fixedcandidate notpromoted. DEreview preserved frombefore interruption, directionretrievedfromsame reviewer; no duplicatefour-agentbatch."
+    },
+    "learned_diffusion_past_fold_01": {
+      "status": "completed",
+      "report_sha256": "48a03428f2ee3201b8c24ef78502099cbf126d8f3753f9cd16b2cf260dbe3991",
+      "specialist_role_version": 2,
+      "reviews": {
+        "de_score": "Problem: The learned-diffusion trial stopped before training or scoring because the runner supplied a malformed name/kind pair. This provides no scientific outcome; DE remains unavailable, readiness unchanged, reward 0. Proposed solution: Repair labels, then run the specified matched comparison with unchanged controls and scorer. Validation: CPU smoke checks passed finite gradients and replay; full-protocol validation remains pending.",
+        "de_direction": "Problem: The learned-diffusion trial stopped before training or scoring because the runner supplied a malformed name/kind pair. No scientific outcome is available; readiness is unchanged and reward is 0. Proposed solution: Repair labels, then rerun past-only matched constant/state diffusion with copy/CNF controls. Validation: CPU smoke gradients/replay passed. Retain the same protocol and unchanged full-panel scorer.",
+        "mmd_u": "Problem: The learned-diffusion trial stopped before training or scoring because the runner supplied a malformed name/kind pair. MMD is unavailable; readiness is unchanged and reward remains 0. Proposed solution: Repair labels, then rerun past-only matched constant/state diffusion with copy/CNF controls and the unchanged full-panel scorer. Validation: CPU smoke checks passed finite gradients/replay. Lower raw MMD/higher skill is better.",
+        "variogram": "Problem: Variogram is unavailable: malformed diffusion name/kind labels stopped the trial before training or scoring. This is no scientific failure; readiness is unchanged, reward 0. Proposed solution: Repair labels; rerun past-only matched constant/state diffusion with copy/CNF controls and unchanged full-panel scorer. Validation: CPU gradients/replay passed. Require completed scoring; lower raw variogram and higher skill are better."
+      },
+      "coordinator": "Four fresh read-only reviews agree metrics unavailable and implementation failure provides no scientific rejection. Labels repaired; additionally corrected event keyword conflict. Both arms two-step optimizer/checkpoint/logging checks passed after repair. Preserve failed report; unique same-protocol repair only."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3861,7 +3875,7 @@
     "next": "Reuse comparison when source hash unchanged; no duplicate analysis or unsupported experiment."
   },
   "unexplored_literature_20261004": {
-    "status": "shortlist_feasibility_unverified",
+    "status": "implementation_repaired_registered",
     "report": "C:\\Users\\vishw\\Documents\\Codex\\2026-10-04\\t1-research-continuation\\outputs\\unexplored-t1-papers.md",
     "screenshot_agent_overall_target": 68.4,
     "candidates": [
@@ -3873,6 +3887,21 @@
     "jev_choice": "learned_sde",
     "jev_confidence": 0.13,
     "next": "Bounded learned-diffusion CPU16GB/data-support feasibility preflight; no training authorized by feasibility alone; no older-method rerun.",
-    "reward_delta": 0
+    "reward_delta": 0,
+    "preflight": {
+      "cpu_smoke_seconds": 1.5118947,
+      "peak_process_bytes": 345128960,
+      "state_head_parameters": 552,
+      "finite_gradient": true,
+      "zero_diffusion_exact_rk4": true,
+      "seeded_replay_exact": true,
+      "author_cpu_documented": true,
+      "full_author_stack_installed": false,
+      "implementation": "Own tensorized geomloss/RK4 diffusion adaptation; no dependency changes",
+      "jev_protocol": "frozen_drift_diffusion",
+      "confidence": 0.95,
+      "jev_input_tokens": 1151,
+      "jev_output_tokens": 60
+    }
   }
 }

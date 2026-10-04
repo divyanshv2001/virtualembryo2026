@@ -507,6 +507,138 @@
         "reward_eligible": false,
         "scope": "Complete fixedPCA8/4096 E8.25 one-day9.25 horizon coverage, no modeltraining/parameterchange. Verify samepastencoder/input/checkpoints, matchedcopy/CNF800 and exactforecastreplays beforetargetexpression. Frozenprojected400 improved0.5/0.75day butregressed1.25;9.25 exposedotherfamilies, historicaldevelopment only andnotindependentvalidation. Original full32285scorer/calibration/readinessunchanged; raw4/skills4/failures retained. No targettuning orofficialupload. Reward0: samefrozencandidate alreadyaccounted, no repeatedmodel credit."
       }
+    },
+    "learned_diffusion_past_fold": {
+      "script": "scfm_projected_past_fold.py",
+      "args": [
+        "--experiment",
+        "learned_diffusion_past_fold"
+      ],
+      "run": "private/learned_diffusion_past_fold_01",
+      "report": "LEARNED_DIFFUSION_PAST_FOLD_RESULTS.json",
+      "protocol": {
+        "cutoff": 8.25,
+        "target": 9.25,
+        "fit_stages": [
+          7.5,
+          7.75,
+          8.0,
+          8.25
+        ],
+        "seed": 20260928,
+        "diffusion_seed": 20261004,
+        "scoring_seeds": [
+          20260928,
+          20260929,
+          20260930
+        ],
+        "steps": 400,
+        "batch_size": 64,
+        "reuse_run": "private/scfm_projected_past_fold_01",
+        "learned_diffusion": true,
+        "candidates": [
+          "copy",
+          "cnf800",
+          "constant_diffusion400",
+          "state_diffusion400"
+        ],
+        "control_candidates": [
+          "copy",
+          "cnf800",
+          "constant_diffusion400"
+        ],
+        "contrast_candidates": [
+          "constant_diffusion400",
+          "state_diffusion400"
+        ],
+        "contrast_label": "state_minus_constant_diffusion_mean_skills",
+        "reward_reference": "constant_diffusion400",
+        "reward_candidates": [
+          "state_diffusion400"
+        ],
+        "diffusion_protocol": {
+          "solver": "split RK4 drift / Euler-Maruyama diagonal noise",
+          "dt": 0.0625,
+          "sigma_cap": 0.5,
+          "initial_sigma": 0.05,
+          "loss": "tensorized Sinkhorn p2 blur.05 scaling.9",
+          "state_head": "8->32 tanh->8",
+          "constant_head": "8 learned logits",
+          "optimizer": "Adam lr.001 gradientclip5",
+          "data_rng": 20261004,
+          "noise_rng": 20261005,
+          "frozen_drift": true,
+          "forecast_rng": 20261004
+        },
+        "scope": "scDiffEq-inspired bounded CPU adaptation, not author reproduction. Frozen <=8.25 PCA8/4096features/CNF800 verified bit-exact, decoder unchanged. Learn diffusion using only adjacent past snapshots, matching draws/noise/400steps64cells/Sinkhorn; constant vs state dependence is primary contrast. Original CNF RK4step.125 vs stochasticstep.0625 makes CNF secondary reference, no solver-effect attribution. Forecasts locked and exact-replayed before9.25 target expression. Historical exposed development only, not independent embryo validation. Full32285 scorer/calibration/readiness gates unchanged. Only state-dependent versus constant diffusion new reward; all controls0. RAM<16GiB/two threads/D-only/no officialupload. No horizon or weight tuning."
+      }
+    },
+    "learned_diffusion_past_fold_repair": {
+      "script": "scfm_projected_past_fold.py",
+      "args": [
+        "--experiment",
+        "learned_diffusion_past_fold_repair"
+      ],
+      "run": "private/learned_diffusion_past_fold_repair_01",
+      "report": "LEARNED_DIFFUSION_PAST_FOLD_REPAIR_RESULTS.json",
+      "protocol": {
+        "cutoff": 8.25,
+        "target": 9.25,
+        "fit_stages": [
+          7.5,
+          7.75,
+          8.0,
+          8.25
+        ],
+        "seed": 20260928,
+        "diffusion_seed": 20261004,
+        "scoring_seeds": [
+          20260928,
+          20260929,
+          20260930
+        ],
+        "steps": 400,
+        "batch_size": 64,
+        "reuse_run": "private/scfm_projected_past_fold_01",
+        "learned_diffusion": true,
+        "candidates": [
+          "copy",
+          "cnf800",
+          "constant_diffusion400",
+          "state_diffusion400"
+        ],
+        "control_candidates": [
+          "copy",
+          "cnf800",
+          "constant_diffusion400"
+        ],
+        "contrast_candidates": [
+          "constant_diffusion400",
+          "state_diffusion400"
+        ],
+        "contrast_label": "state_minus_constant_diffusion_mean_skills",
+        "reward_reference": "constant_diffusion400",
+        "reward_candidates": [
+          "state_diffusion400"
+        ],
+        "diffusion_protocol": {
+          "solver": "split RK4 drift / Euler-Maruyama diagonal noise",
+          "dt": 0.0625,
+          "sigma_cap": 0.5,
+          "initial_sigma": 0.05,
+          "loss": "tensorized Sinkhorn p2 blur.05 scaling.9",
+          "state_head": "8->32 tanh->8",
+          "constant_head": "8 learned logits",
+          "optimizer": "Adam lr.001 gradientclip5",
+          "data_rng": 20261004,
+          "noise_rng": 20261005,
+          "frozen_drift": true,
+          "forecast_rng": 20261004
+        },
+        "scope": "scDiffEq-inspired bounded CPU adaptation, not author reproduction. Frozen <=8.25 PCA8/4096features/CNF800 verified bit-exact, decoder unchanged. Learn diffusion using only adjacent past snapshots, matching draws/noise/400steps64cells/Sinkhorn; constant vs state dependence is primary contrast. Original CNF RK4step.125 vs stochasticstep.0625 makes CNF secondary reference, no solver-effect attribution. Forecasts locked and exact-replayed before9.25 target expression. Historical exposed development only, not independent embryo validation. Full32285 scorer/calibration/readiness gates unchanged. Only state-dependent versus constant diffusion new reward; all controls0. RAM<16GiB/two threads/D-only/no officialupload. No horizon or weight tuning.",
+        "repair_of": "learned_diffusion_past_fold",
+        "repair_scope": "Correct runner labels and event keyword only; intended scientific protocol unchanged. Failed original preserved."
+      }
     }
   }
 }

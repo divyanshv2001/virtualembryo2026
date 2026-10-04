@@ -1,0 +1,19 @@
+{
+  "status": "failed",
+  "panels": [],
+  "new_scoring_batch": true,
+  "original_readiness_gate_passed": false,
+  "official_score": null,
+  "diffusion_preflight": {
+    "finite_gradient": true,
+    "zero_diffusion_exact_rk4": true,
+    "seeded_replay_exact": true,
+    "seconds": 1.6644351999857463,
+    "parameters": 552
+  },
+  "error": "ValueError: Unknown diffusion",
+  "failed_utc": "2026-10-04T06:58:57.094575+00:00",
+  "passing_candidates": [],
+  "resource_peak_process_working_set_bytes": 2302377984,
+  "report_sha256": "6f8609295962d0bbb7adfa8fcb06b749bad752e0759c90affeda1fee01130e69"
+}
