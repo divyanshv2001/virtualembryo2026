@@ -30,11 +30,13 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "One predeclared Gaussian-VAE independent trainingseed20261005 confirmation, unchanged18320parameter128gene/rank8 observation model+1640parameter latentOT,400+400RTX3060steps; no hyperparameter/seed grid. Evaluate fixed9.5horizon vsfrozenkinetics with originalCPU full-panel scorer/replays. Explicit confirmationreward0, retain seed20261004 gains separately. Independent training randomness is not independentembryo validation.",
+  "next_experiment": "Collect GaussianVAE trainingseed20261005 confirmation viaharness; no source edits while running. Four fresh metricreviews after scored completion/failure, confirmationreward0 and unchanged fullpanel/readiness gates.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
+  "active_jobs": [
+    "gaussian_vae_seed_confirmation"
+  ],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,

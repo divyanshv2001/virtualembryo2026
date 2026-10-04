@@ -121,7 +121,7 @@ def main():
                             if digest(HERE/source)!=old_plan['source_sha256'][source]:raise ValueError('Reused VAE model/solver changed')
                         report['fixed_candidate_validation']={'training_steps':0,'reward_eligible':False,'scope':'Frozen VAE new-horizon historical development; no retraining, target tuning or repeat reward.'}
                     else:
-                        packet={'context':str(context_path),'sha256':{str(path):digest(path) for path in [context_path,helper,HERE/'cnf_manifold_flow.py']}}
+                        packet={'context':str(context_path),'training_seed':spec.get('vae_training_seed',20261004),'vae_kinds':spec.get('vae_kinds',['log_gaussian','count_nb']),'sha256':{str(path):digest(path) for path in [context_path,helper,HERE/'cnf_manifold_flow.py']}}
                         save(RUN/'VAE_GPU_packet.json',packet)
                         python=HERE.parents[1]/'outputs/research_workflow/.venv_cuda/Scripts/python.exe'
                         with (RUN/'GPU_stdout.log').open('wb') as stdout,(RUN/'GPU_stderr.log').open('wb') as stderr:
@@ -132,10 +132,14 @@ def main():
                         if spec.get('reuse_vae_run') and digest(weight_path)!=spec['vae_checkpoint_sha256'][name]:raise ValueError('Frozen VAE checkpoint changed')
                         saved=torch.load(weight_path,weights_only=False,map_location='cpu')
                         if saved['kind']!=kind or saved['steps']!=400 or saved['dynamics_steps']!=400 or saved['vae_parameters']!=18320 or saved['dynamics_parameters']!=1640 or saved['fit_max_stage']!=cutoff or saved['batch_size']!=64 or saved['context_sha256']!=spec['count_context_sha256']:raise ValueError('VAE checkpoint metadata mismatch')
+                        if saved.get('training_seed',20261004)!=spec.get('vae_training_seed',20261004):raise ValueError('VAE training seed mismatch')
                         model=ObservationVAE(kind);model.load_state_dict(saved['vae']);model.eval()
                         dynamics=LatentDynamics();dynamics.load_state_dict(saved['dynamics']);dynamics.eval()
                         flows[name]=VAELatentBridge(flows['kinetic_none400'],model,dynamics,saved['center'],saved['scale'],c['donors'][:,c['features'][:128]],projection,expected_z).eval()
                     report['count_vae_scope']='Own18320param NBcounts vslogGaussian observation VAE rank8/128genes, sameKL.01/backgroundcategory/past-only batches400GPUsteps; matched1640param latentOT400steps, whitening onpast posterior means. Decoder change relative to own cutoff reconstruction projected through frozenPCA normcap1 into retainedkinetics; originalCPU full-panel decoder/scorer/guards retained. Not scVI reproduction or isolated PCA comparison; likelihood units/dispersion semantics differ, one trainingseed/3scoringresamples.'
+                    if spec.get('seed_confirmation'):
+                        report['count_vae_scope']='Single fresh GaussianVAE trainingseed20261005 confirmation; unchanged18320VAE/1640latentOT parameters400+400GPUsteps and bridge. Frozen kinetics baseline, original CPU full-panel scorer/replays. Earlierseed20261004 evidence separate; no grid/independentembryo validation or repeat reward.'
+                        report['seed_confirmation']={'training_seed':spec['vae_training_seed'],'previous_seed':20261004,'reward_eligible':False}
                 elif spec.get('temporal_forcing'):
                     from temporal_diffusion_forcing import TemporalDenoiser,TemporalBridgeFlow
                     report.pop('fixed_candidate_validation')

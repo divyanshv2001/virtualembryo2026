@@ -92,15 +92,19 @@ def train_packet(path):
     exposure = torch.tensor(libraries, dtype=torch.float32, device='cuda')
     observed = torch.log1p(10000. * x / exposure[:, None])
     objective = SamplesLoss('sinkhorn', p=2, blur=.05, scaling=.9, backend='tensorized')
-    for kind in ['log_gaussian', 'count_nb']:
+    seed = int(packet.get('training_seed', 20261004))
+    kinds = packet.get('vae_kinds', ['log_gaussian', 'count_nb'])
+    if seed not in (20261004, 20261005) or kinds not in (['log_gaussian', 'count_nb'], ['log_gaussian']):
+        raise ValueError('Undeclared seed or model selection')
+    for kind in kinds:
         checkpoint = path.parent / ('vae_' + kind + '400.pt')
         if checkpoint.exists():
             raise ValueError('Never retrain completed arm')
-        torch.manual_seed(20261004)
+        torch.manual_seed(seed)
         torch.cuda.reset_peak_memory_stats()
         model = ObservationVAE(kind).cuda()
         optimizer = torch.optim.Adam(model.parameters(), lr=.001)
-        rng = torch.Generator().manual_seed(20261004)
+        rng = torch.Generator().manual_seed(seed)
         history = []
         def record(phase, iteration, loss):
             if (iteration + 1) % 50 == 0:
@@ -128,10 +132,10 @@ def train_packet(path):
             scale = coordinates.std(0, unbiased=False).clamp_min(.1)
             coordinates = (coordinates - center) / scale
         groups = [coordinates[torch.tensor(stages == t, device='cuda')] for t in times]
-        torch.manual_seed(20261004)
+        torch.manual_seed(seed)
         dynamics = LatentDynamics().cuda()
         optimizer = torch.optim.Adam(dynamics.parameters(), lr=.001)
-        rng = torch.Generator().manual_seed(20261004)
+        rng = torch.Generator().manual_seed(seed)
         for iteration in range(400):
             j = int(torch.randint(3, (1,), generator=rng))
             a = groups[j][torch.randint(len(groups[j]), (64,), generator=rng).cuda()]
@@ -153,7 +157,7 @@ def train_packet(path):
             raise ValueError('GPU memory cap exceeded')
         torch.save({'vae': model.cpu().state_dict(), 'dynamics': dynamics.cpu().state_dict(),
             'center': center.cpu(), 'scale': scale.cpu(), 'kind': kind, 'steps': 400,
-            'dynamics_steps': 400, 'batch_size': 64, 'fit_max_stage': 8.25,
+            'dynamics_steps': 400, 'batch_size': 64, 'fit_max_stage': 8.25, 'training_seed': seed,
             'vae_parameters': sum(p.numel() for p in model.parameters()),
             'dynamics_parameters': sum(p.numel() for p in dynamics.parameters()),
             'context_sha256': digest(packet['context']), 'history': history,
