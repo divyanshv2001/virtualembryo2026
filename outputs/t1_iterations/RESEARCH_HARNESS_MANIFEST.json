@@ -1214,6 +1214,71 @@
         "scope": "Own past raw count offset/encoder bridge/resource preflight only; no target expression, scoring, promotion, official upload or author reproduction. RTX3060 required, 16GBhost/4.5GBGPU/two threads. Neutral encoder bridge exact; original full-panel forecasting/calibration gates unchanged.",
         "repair": "Out-of-place NB addition permits target/source mixture broadcast; initial resource failure preserved, no scoring/reward."
       }
+    },
+    "hidden_protein_past_fold": {
+      "script": "scfm_projected_past_fold.py",
+      "args": [
+        "--experiment",
+        "hidden_protein_past_fold"
+      ],
+      "run": "private/hidden_protein_past_fold_01",
+      "report": "HIDDEN_PROTEIN_PAST_FOLD_RESULTS.json",
+      "protocol": {
+        "cutoff": 8.25,
+        "target": 9.5,
+        "fit_stages": [
+          7.5,
+          7.75,
+          8.0,
+          8.25
+        ],
+        "seed": 20260928,
+        "scoring_seeds": [
+          20260928,
+          20260929,
+          20260930
+        ],
+        "steps": 400,
+        "batch_size": 64,
+        "reuse_run": "private/scfm_projected_past_fold_01",
+        "candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "protein_instantaneous400",
+          "protein_delayed400"
+        ],
+        "control_candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "protein_instantaneous400"
+        ],
+        "contrast_candidates": [
+          "protein_instantaneous400",
+          "protein_delayed400"
+        ],
+        "contrast_label": "delayed_minus_instantaneous_mean_skills",
+        "reward_reference": "protein_instantaneous400",
+        "reward_candidates": [
+          "protein_delayed400"
+        ],
+        "scope": "Own128gene raw count hidden-protein memory adaptation, not CardamomOT reproduction. Matched4480parameter lowrank16 production/positive RNA decay/NB dispersion; fixed1day protein relaxation vsinstantaneous, same400GPUsteps64cells/pairedseed20261004 Adam.001 clip5. Past-only NB mixture likelihood with targetlibrary exposure offset, original counts<=8.25. Frozen128feature ranking and exact encoder projection normcap1 added to frozenkinetic trajectory; all original32285gene heads/guards/scorer/calibration/readinessgates unchanged. Original2.14CPUparent/2.11CUDAchild, RTX3060training4.5GiB/host16GiB/two threads. Strict prior3baseline and zero-correction fullpanel checks before9.5expression. Historicaldevelopment only, no target selection/grid/officialupload/70claim. Primary delayed-vsinstantaneous reward once, controls0; four independent reviews after scored completion/failure. IndependentgeneNB/cardinality assumptions and doubled kinetic contribution disclosed.",
+        "frozen_kinetic_run": "private/graph_kinetics_past_fold_repair_01",
+        "prior_target": 9.25,
+        "frozen_checkpoint_sha256": {
+          "kinetic_none400": "11dc8d8620fa66997aa08d2f88ad9f4e9cdc2db788f8c1b3088f1b8eb01dd4c2"
+        },
+        "training_device": "cuda",
+        "prior_candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400"
+        ],
+        "driver_runtime": "cpu",
+        "hidden_protein": true,
+        "count_context_sha256": "49ac69cc7d42c6c8238d704d3e4b4c1207a458d71081aa110e40474e28175956"
+      }
     }
   }
 }

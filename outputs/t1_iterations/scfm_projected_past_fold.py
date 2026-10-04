@@ -50,6 +50,7 @@ def main():
         if spec.get('frozen_kinetic_run'): sources.append('graph_kinetic_residual.py')
         if spec.get('difference_attention'): sources.append('past_difference_attention.py')
         if spec.get('collective_context'): sources+=['collective_context_preflight.py','past_difference_attention.py']
+        if spec.get('hidden_protein'): sources+=['hidden_protein_count_bridge.py','prepare_balanced_atlas.py']
         graph_prior_inputs={}
         if spec.get('graph_kinetics'):
             sources.append('graph_kinetic_residual.py')
@@ -99,7 +100,37 @@ def main():
                     flows[name]=model.eval()
                 report['fixed_candidate_validation']={'training_steps':0,'reward_eligible':False,'past_decoder_reconstruction':'Same deterministic past-only procedure; prior full-panel predictions must replay bit-exact before new horizon.'}
                 emit('frozen_kinetic_checkpoints_verified',checkpoint_sha256=spec['frozen_checkpoint_sha256'])
-                if spec.get('collective_context'):
+                if spec.get('hidden_protein'):
+                    from hidden_protein_count_bridge import CountProteinFlow,CountBridgeFlow
+                    report.pop('fixed_candidate_validation')
+                    context_path=HERE/'private/hidden_protein_count_bridge_repair_01/past_counts_context.npz'
+                    if digest(context_path)!=spec['count_context_sha256']:raise ValueError('Frozen past count context changed')
+                    helper=HERE/'hidden_protein_count_bridge.py'
+                    packet={'context':str(context_path),'sha256':{str(path):digest(path) for path in [context_path,helper,HERE/'prepare_balanced_atlas.py']}}
+                    save(RUN/'count_GPU_packet.json',packet)
+                    plan['count_context_sha256']=digest(context_path);save(RUN/'plan.json',plan)
+                    python=HERE.parents[1]/'outputs/research_workflow/.venv_cuda/Scripts/python.exe'
+                    with (RUN/'GPU_stdout.log').open('wb') as stdout,(RUN/'GPU_stderr.log').open('wb') as stderr:
+                        subprocess.run([str(python),'-u',str(helper),'--train-packet',str(RUN/'count_GPU_packet.json')],stdout=stdout,stderr=stderr,cwd=HERE.parents[1],check=True,creationflags=subprocess.CREATE_NO_WINDOW)
+                    with np.load(context_path) as cc:
+                        np.testing.assert_array_equal(c['features'][:128],cc['panel_features'])
+                        np.testing.assert_allclose(cc['projection'],(c['basis'][:,:128]/c['scale'][:128]).T,rtol=0,atol=0)
+                        import pandas as pd
+                        metadata=pd.read_csv(prepared/'selected_metadata.csv')
+                        source_rows=metadata.source_row.to_numpy()[np.load(RUN/'donor_rows.npy')]
+                        lookup={int(value):i for i,value in enumerate(cc['source_rows'])}
+                        selected=np.array([lookup[int(value)] for value in source_rows])
+                        reference_count=float(cc['library_reference'])
+                        anchor_counts=cc['counts'][selected]*(reference_count/cc['libraries'][selected,None])
+                        projection=cc['projection'].copy()
+                    expected_z=flows['kinetic_none400'].encode(torch.tensor((c['donors'][:,c['features']]-c['center'])/c['scale']))[0].detach()
+                    for kind in ['instantaneous','delayed']:
+                        name='protein_'+kind+'400';saved=torch.load(RUN/(name+'.pt'),weights_only=False,map_location='cpu')
+                        if saved['kind']!=kind or saved['steps']!=400 or saved['parameters']!=4480 or saved['fit_max_stage']!=cutoff or saved['batch_size']!=64 or saved['context_sha256']!=spec['count_context_sha256']:raise ValueError('Count checkpoint metadata mismatch')
+                        model=CountProteinFlow(128,kind);model.load_state_dict(saved['net']);model.eval()
+                        flows[name]=CountBridgeFlow(flows['kinetic_none400'],model,anchor_counts,projection,reference_count,expected_z).eval()
+                    report['hidden_protein_scope']='Own128gene lowrank NB-mixture RNA production: instantaneous vs fixed1/day delayed protein; matched4480params/400GPUsteps. Original count library exposure offsets; first128 frozen pastfeature genes, no target selection. Countchanges projected through frozenencoder with normcap1 and added to frozenkinetic trajectory; original CPU full-panel head/guards/scorer retained. Not author CardamomOT reproduction; independent-gene NB assumptions disclosed.'
+                elif spec.get('collective_context'):
                     from collective_context_preflight import CollectiveContextFlow
                     report.pop('fixed_candidate_validation')
                     context_path=RUN/'collective_training_context.npz'
@@ -206,6 +237,15 @@ def main():
                 if cache.put('_prior_'+name,prior)!=previous_generation[name]['prediction_sha256']:raise ValueError('Original kinetic forecast reconstruction changed')
                 del prior
             emit('prior_horizon_forecasts_reconstructed_bit_exact',target=spec['prior_target'])
+        if spec.get('hidden_protein'):
+            reference.net=flows['kinetic_none400'];neutral,_,_=reference.predict(target,'joint',1.,sampling='systematic')
+            neutral_sha=cache.put('_neutral_kinetic',neutral);del neutral
+            for name in spec['contrast_candidates']:
+                reference.net=flows[name];reference.net.bridge_enabled=False
+                neutral,_,_=reference.predict(target,'joint',1.,sampling='systematic')
+                if cache.put('_neutral_'+name,neutral)!=neutral_sha:raise ValueError('Zero-count correction full-panel replay mismatch')
+                del neutral;reference.net.bridge_enabled=True
+                emit('neutral_count_bridge_fullpanel_exact_replay_passed',candidate=name)
         for name in spec['candidates']:
             if name=='copy':pred,ids,audit=c['donors'].copy(),np.arange(len(c['donors'])),{'method':'persistence'}
             else:

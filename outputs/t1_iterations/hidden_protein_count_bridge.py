@@ -66,10 +66,112 @@ def latent_count_delta(initial, predicted, library_reference, projection):
     return (after - before) @ np.asarray(projection, dtype=np.float64)
 
 
+class CountBridgeFlow(torch.nn.Module):
+    """Count-model residual through the existing encoder and unchanged decoder."""
+    def __init__(self, base, count_model, anchor_counts, projection, library_reference, expected_z):
+        super().__init__()
+        self.base = base
+        self.count_model = count_model
+        self.cutoff, self.origin = base.cutoff, base.origin
+        self.anchor_counts = np.asarray(anchor_counts, dtype=np.float32)
+        self.projection = projection
+        self.library_reference = float(library_reference)
+        self.expected_z = expected_z.clone()
+        self.bridge_enabled = True
+
+    def encode(self, values):
+        return self.base.encode(values)
+
+    def trajectory(self, z, times, step=.125):
+        original = self.base.trajectory(z, times, step)
+        if not self.bridge_enabled:
+            return original
+        torch.testing.assert_close(z, self.expected_z, rtol=0, atol=0)
+        if float(times[0]) != 0.:
+            raise ValueError('Count bridge requires original cutoff donor initialization')
+        history = []
+        with torch.no_grad():
+            for index, elapsed in enumerate(times):
+                if float(elapsed) == 0.:
+                    history.append(original[index])
+                    continue
+                predicted = self.count_model(torch.tensor(self.anchor_counts), float(elapsed)).numpy()
+                delta = latent_count_delta(self.anchor_counts, predicted, self.library_reference, self.projection)
+                delta /= np.maximum(np.linalg.norm(delta, axis=1, keepdims=True), 1.)
+                history.append(original[index] + torch.tensor(delta, dtype=z.dtype))
+        return torch.stack(history)
+
+
+def train_packet(packet_path):
+    packet_path = Path(packet_path).resolve()
+    run = packet_path.parent
+    if not run.is_relative_to(HERE / 'private'):
+        raise ValueError('GPU packet outside evidence root')
+    packet = json.loads(packet_path.read_text())
+    for path, sha in packet['sha256'].items():
+        if digest(path) != sha:
+            raise ValueError('GPU packet source/input changed')
+    if not torch.cuda.is_available() or torch.__version__ != '2.11.0+cu128':
+        raise ValueError('Pinned RTX3060 CUDA runtime required')
+    torch.set_num_threads(2)
+    torch.cuda.set_per_process_memory_fraction(.75)
+    torch.use_deterministic_algorithms(True)
+    with np.load(packet['context']) as context:
+        counts, libraries, stages = context['counts'], context['libraries'], context['stages']
+        reference = float(context['library_reference'])
+    if sorted(np.unique(stages)) != [7.5, 7.75, 8., 8.25]:
+        raise ValueError('Past cutoff support changed')
+    normalized = counts * (reference / libraries[:, None])
+    for kind in ['instantaneous', 'delayed']:
+        checkpoint = run / ('protein_' + kind + '400.pt')
+        if checkpoint.exists():
+            raise ValueError('Never duplicate trained arm')
+        torch.cuda.reset_peak_memory_stats()
+        model = CountProteinFlow(128, kind).cuda()
+        optimizer = torch.optim.Adam(model.parameters(), lr=.001)
+        rng = np.random.default_rng(20261004)
+        history = []
+        for iteration in range(400):
+            t = [7.5, 7.75, 8.][int(rng.integers(3))]
+            a = rng.choice(np.flatnonzero(stages == t), 64, replace=True)
+            b = rng.choice(np.flatnonzero(stages == t + .25), 64, replace=True)
+            optimizer.zero_grad()
+            loss = model.mixture_nll(torch.tensor(normalized[a], dtype=torch.float32, device='cuda'),
+                torch.tensor(counts[b], device='cuda'), torch.tensor(libraries[b] / reference, dtype=torch.float32, device='cuda'))
+            if not torch.isfinite(loss):
+                raise ValueError('Nonfinite count loss')
+            loss.backward()
+            norm = torch.nn.utils.clip_grad_norm_(model.parameters(), 5.)
+            if not torch.isfinite(norm):
+                raise ValueError('Nonfinite count gradients')
+            optimizer.step()
+            if (iteration + 1) % 50 == 0:
+                record = {'event': 'count_protein_training', 'kind': kind, 'step': iteration + 1, 'loss': float(loss.detach().cpu())}
+                history.append(record)
+                with (run / 'events.jsonl').open('a') as stream:
+                    stream.write(json.dumps(record) + '\n')
+        torch.cuda.synchronize()
+        peak = torch.cuda.max_memory_allocated()
+        if peak > 4.5 * 1024 ** 3:
+            raise ValueError('GPU memory cap exceeded')
+        torch.save({'net': model.cpu().state_dict(), 'kind': kind, 'steps': 400, 'batch_size': 64,
+            'fit_max_stage': 8.25, 'parameters': 4480, 'history': history, 'peak_allocated_bytes': peak,
+            'context_sha256': digest(packet['context']), 'torch': torch.__version__, 'gpu': torch.cuda.get_device_name(0)}, checkpoint)
+        del model, optimizer
+    for path, sha in packet['sha256'].items():
+        if digest(path) != sha:
+            raise ValueError('GPU source/input changed during training')
+    print(json.dumps({'status': 'completed', 'steps_per_arm': 400, 'trained_device': 'RTX3060'}))
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--experiment', default='hidden_protein_count_bridge_preflight')
+    parser.add_argument('--train-packet')
     args = parser.parse_args()
+    if args.train_packet:
+        train_packet(args.train_packet)
+        return
     entry = json.loads((HERE / 'RESEARCH_HARNESS_MANIFEST.json').read_text())['experiments'][args.experiment]
     run = (HERE / entry['run']).resolve()
     public = (HERE / entry['report']).resolve()
