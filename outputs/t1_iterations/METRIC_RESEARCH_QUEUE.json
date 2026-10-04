@@ -6395,16 +6395,16 @@
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
     "experiment": "collective_context_past_fold",
-    "status": "correlated_diffusion_past_fold_running",
-    "next_experiment": "correlated_diffusion_past_fold",
-    "next": "Collect correlated_diffusion_past_fold once finished; inspect fullpanel exact replays and matched contrast, four independent metric reviews, bounded Jev new decision, separate reward once. Do not duplicate active GPU training.",
-    "jev_choice": "correlated_diffusion_preflight",
-    "jev_confidence": 0.33,
+    "status": "correlated_diffusion_completed_small_gain_mixed_metrics",
+    "next_experiment": "correlated_diffusion_frozen_horizon_validation",
+    "next": "Frozen correlated/diagonal diffusion weights8.25->9.25 historical horizon validation, no retraining/repeat reward. Predeclare fixed helper/checkpoint hashes, prior3baselines and2noise-disabled/5newforecast exact replays, originalCPU fullpanel scorer/calibrations/readiness unchanged. Preserve9.5 tiny gains and distributional tradeoffs; not independent embryos or robust promotion. No seed/rank/noise grid.",
+    "jev_choice": "frozen_horizon",
+    "jev_confidence": 0.44,
     "scope": "Advisory low confidence; raw-count data availability verified deterministically, no score claim.",
     "support_audit": "Completed: no independent embryo/untouched validation established; historical-only options remain, no promotion.",
     "jev_usage": {
-      "input_tokens": 1173,
-      "output_tokens": 55
+      "input_tokens": 1322,
+      "output_tokens": 43
     }
   }
 }

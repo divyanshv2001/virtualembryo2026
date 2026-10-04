@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Collect correlated_diffusion_past_fold once finished; inspect fullpanel exact replays and matched contrast, four independent metric reviews, bounded Jev new decision, separate reward once. Do not duplicate active GPU training.",
+  "next_experiment": "Frozen correlated/diagonal diffusion weights8.25->9.25 historical horizon validation, no retraining/repeat reward. Predeclare fixed helper/checkpoint hashes, prior3baselines and2noise-disabled/5newforecast exact replays, originalCPU fullpanel scorer/calibrations/readiness unchanged. Preserve9.5 tiny gains and distributional tradeoffs; not independent embryos or robust promotion. No seed/rank/noise grid.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1226,7 +1226,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1359,
+    "current_reward": -1525,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1235,10 +1235,10 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1359,
-    "reward_score": -1359,
+    "uncapped_reward": -1525,
+    "reward_score": -1525,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": 0
+    "last_batch_reward_delta": -18
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -2957,6 +2957,18 @@
       },
       "reviewer_context": "Four fresh independent metric-only contexts, no tools/peers/writes.",
       "coordinator": "Seed20261005 Gaussian52.283768 vskinetrics52.334066, all4meansregress; DE0positive/1tie,other3metrics0positive. Preserve priorseed20261004 Gaussian52.352071 and9.25horizon51.841321 gains as seed-sensitive historical evidence, not robust promotion. Two-training-seed mean52.317919 trailskinetics; no seed search/cherrypicking.12validcalibrations4forecasts3prior2neutralexact; no independentembryovalidation. Confirmationreward0 recorded once, health-1507."
+    },
+    "correlated_diffusion_past_fold_01": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "61641a0a2d686fe480cbdcae38777f2bd225bfa472d898cde914ba3d1aa2a545",
+      "reviews": {
+        "de_score": "Problem: DE improves slightly but remains below persistence; one training seed limits inference. Proposed solution: Preserve gains and predeclare matched past-only seed confirmation rather than a seed grid. Validation: Correlated .485004 versus diagonal .484654;1/3positive,2ties;15validcalibrations, no readiness claim.",
+        "de_direction": "Problem: Tiny direction gains and independently trained amplitudes confound dependence effects. Proposed solution: Tied marginal amplitude comparison with frozen choices and matched training budgets. Validation: Direction positive3/3, but MMD/variogram regress; original full-panel scorer and future origins/embryos required for generalization.",
+        "mmd_u": "Problem: Correlated MMD regresses versus diagonal in all three resamples; later amplitudes differ. Proposed solution: Match marginal variances throughout using past-only calibration. Validation: Preserve paired training and unchanged full-panel scorer, report MMD/variogram tradeoffs; current mean -0.000122789, no independent validation.",
+        "variogram": "Problem: Correlated variogram trails diagonal by .0000173; one training seed cannot establish generalization. Proposed solution: Control covariance evolution beyond initialization and use predeclared matched seeds. Validation: Preserve32285gene scorer/exactreplays; independent embryos and reproducible variogram gains without MMD regression required."
+      },
+      "scope": "Four fresh independent narrow metric agents; no tools/peers/writes. Proposed remedies are unvalidated; no automatic seed grid."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3878,27 +3890,27 @@
   },
   "agent_health": {
     "redline": 0,
-    "score": -1435,
+    "score": -1525,
     "status": "below_redline",
     "metrics": {
       "de_score": {
-        "score": -378,
+        "score": -395,
         "status": "below_redline"
       },
       "de_direction": {
-        "score": -334,
+        "score": -351,
         "status": "below_redline"
       },
       "mmd_u": {
-        "score": -400,
+        "score": -428,
         "status": "below_redline"
       },
       "variogram": {
-        "score": -323,
+        "score": -351,
         "status": "below_redline"
       }
     },
-    "recorded_iterations": 60,
+    "recorded_iterations": 67,
     "action": "Prioritize supported matched-control improvements; preserve failures and gates. Proxy/pending iterations earn zero. No score reset, fabricated reward, agent termination or deployment implied."
   },
   "scfm_reopened": {
@@ -4653,9 +4665,24 @@
     }
   },
   "correlated_diffusion_past_fold": {
-    "status": "running",
+    "status": "completed",
     "experiment": "correlated_diffusion_past_fold",
     "report": "CORRELATED_DIFFUSION_PAST_FOLD_RESULTS.json",
-    "protocol": "Frozen kinetics diagonal vs rank2 correlated residual diffusion, matched1080parameters400RTX3060steps; past10963cells8D through8.25 only, originalCPU fullpanel scorer and exactreplays. Primary correlated-minus-diagonal, no score/reward yet."
+    "protocol": "Frozen kinetics diagonal vs rank2 correlated residual diffusion, matched1080parameters400RTX3060steps; past10963cells8D through8.25 only, originalCPU fullpanel scorer and exactreplays. Primary correlated-minus-diagonal, no score/reward yet.",
+    "mean_scores": {
+      "copy": 50.0,
+      "cnf800": 51.708692022607636,
+      "kinetic_none400": 52.334065831100055,
+      "diffusion_diagonal400": 52.35822162687949,
+      "diffusion_correlated400": 52.365660430102345
+    },
+    "primary_contrast": {
+      "de_score": 0.0003504232034072241,
+      "de_direction": 0.00010831578358727612,
+      "mmd_u": -0.00012278915111330058,
+      "variogram": -1.7299845930129898e-05
+    },
+    "reward_delta": -18,
+    "scope": "Small historical development gains retained; MMD and variogram regress versus diagonal; no robustness/readiness claim. All15calibrations and3prior/2neutral/5newreplays pass;75.40MiB GPU,5.03GiB host."
   }
 }

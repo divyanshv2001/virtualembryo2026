@@ -1,5 +1,5 @@
 {
-  "records": 3406,
+  "records": 3421,
   "sources": [
     {
       "path": "private/anchored_soft_ot_paper_pilot_01/report.json",
@@ -495,6 +495,11 @@
       "path": "private/copula_horizon_01/report.json",
       "sha256": "cdd92bd01a5deefcfad3ec237610c10b016f75ba32a6352d73838a72cb0a5ba6",
       "outcomes_indexed": 12
+    },
+    {
+      "path": "private/correlated_diffusion_past_fold_01/report.json",
+      "sha256": "61641a0a2d686fe480cbdcae38777f2bd225bfa472d898cde914ba3d1aa2a545",
+      "outcomes_indexed": 15
     },
     {
       "path": "private/count_vae_past_fold_01/report.json",
@@ -1219,5 +1224,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "d3ed4dc6ba9c14baee71db6cd6e72b9b0b85afcc16f72dbfd30a09104eb5a49b"
+  "ledger_sha256": "3c7493cbccdc8662c21b96e57f15d867df791bcf586c76bf5af9b21164072dba"
 }
