@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "FLeCS graph prior acquisition eligibility preflight: verify CellOracle derived adult mouse base-GRN licence/download provenance, bounded size/hash and past-selected gene coverage before acquisition/use. Stage chain8weeks is permittedpostE13.5; disclose. Then sparse-native kinetic prototype and physical past-stage matched graph/shuffled/no-edge protocol, no dense32285 adjacency or causal edge claim. No training yet; AgentTeam final requires separately frozen autonomous run after development.",
+  "next_experiment": "Implement bounded FLeCS-inspired native-Torch sigmoid-production/positive-decay prototype using pinned adult graph (127TFs,3539pastgenes,213112edges). Before training fix past-only gene-state scale/physical-stage objective and matched biological graph vs degree-matched shuffle/no-edge controls via compact Jev; verify small finite-gradient/solver/memory test and future guard. No external package stack/dense32285matrix; use graph only for noncommercial research under preserved licence. Not author reproduction/causal edge identification. Then register one fixed full-panel scored trial only if feasible, unchanged gates.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -3655,7 +3655,7 @@
       5,
       6
     ],
-    "policy_sha256": "31098957a20a7d61353505636f7dbbe1d96b5213df0cc4d6f61ff1daba83eee3",
+    "policy_sha256": "f766fa2359cd09d3af5279e5e35d4284c8334ff839e3c708fc0f86f2242691d3",
     "rules": [
       "Start with harness resume; inspect only changed policy and active evidence",
       "One necessary experiment; one checkpoint commit/push",
@@ -3896,7 +3896,7 @@
     ],
     "jev_choice": "learned_sde",
     "jev_confidence": 0.13,
-    "next": "Bounded FLeCS regulatory-kinetics feasibility preflight: inspect author CPU source/temporal loss and permitted past data; audit graph identifiability and sparse16GB implementation. Jev favors FLeCS confidence.33, advisory only. No training before fixed matched protocol and feasibility checks; no repeat diffusion/shrinkage grid.",
+    "next": "Implement bounded FLeCS-inspired native-Torch sigmoid-production/positive-decay prototype using pinned adult graph (127TFs,3539pastgenes,213112edges). Before training fix past-only gene-state scale/physical-stage objective and matched biological graph vs degree-matched shuffle/no-edge controls via compact Jev; verify small finite-gradient/solver/memory test and future guard. No external package stack/dense32285matrix; use graph only for noncommercial research under preserved licence. Not author reproduction/causal edge identification. Then register one fixed full-panel scored trial only if feasible, unchanged gates.",
     "reward_delta": 0,
     "preflight": {
       "cpu_smoke_seconds": 1.5118947,
@@ -3974,6 +3974,31 @@
       },
       "reward_delta": 0,
       "scope": "Code/data feasibility audit only, no new scientific scoring batch, no metric reviews needed."
+    },
+    "flecs_graph_audit": {
+      "status": "completed_graph_coverage_audit",
+      "prior_commit": "7948870a3b70f7d228e54734e1fa9ed3291fc23b",
+      "prior_sha256": "adb95f68f3b03c8522eb9cf55a0a4235bc663c991a10dc655902c1f1cd854129",
+      "bytes": 9448146,
+      "peak_rows_total": 91976,
+      "prior_columns": 1096,
+      "arrow_version": "25.0.1",
+      "encoder_sha256": "b0e2da2b810eff1d2c1a9ad3697959576b59fc4c04365ab1ec17ae1c860a9fb9",
+      "fit_cutoff": 8.25,
+      "feature_genes": 4096,
+      "tfs_with_past_feature_identity": 127,
+      "matched_target_genes": 3539,
+      "selected_peak_rows": 21225,
+      "directed_unique_edges": 213112,
+      "graph_sha256": "3662094d6ec424824c4c3b248d5b674ce14536871686245729da6e333d13d48e",
+      "graph_sparse_array_bytes": 1081948,
+      "peak_process_bytes": 416944128,
+      "gene_mapping": "Unique casefold symbol match; original identities retained; no substring matching",
+      "scope": "Adult ATAC-derived possible TF binding, not signed causal regulation. Past<=8.25 feature identities only, no targetexpression; no training/scoring/reward. Local noncommercial research only under source licence; no licence permission inferred for commercial distribution.",
+      "source_licence_sha256": "0854ce317785bc54adb282bc4086e5551f39b6d303ad9571a56bb0d1985edfec",
+      "source_licence_url": "https://raw.githubusercontent.com/morris-lab/CellOracle/7948870a3b70f7d228e54734e1fa9ed3291fc23b/LICENSE",
+      "licence_scope": "Modified Apache2, non-commercial academic purposes only; current use confined to local noncommercial research. No commercial/distribution permission claim. Dataset has no separately discovered licence; preserve repository notice and provenance.",
+      "private_evidence": "private/flecs_adult_graph_01/coverage_audit.json"
     }
   }
 }
