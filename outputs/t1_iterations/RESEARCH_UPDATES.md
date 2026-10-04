@@ -917,3 +917,7 @@ Existinggrossobservation-scale,lineageproxy anddomainmean-alignment audits alrea
 2026-10-04T18:13:14.847670+00:00 Observed population-transition preflight completed;11sharedtypes, exact fullgene decomposition; labelharmonization/temporalidentifiability gaps remain. Existing KMeans/markerresampling coverage excluded. Fixed stale harnesslatestdecision pointer tocompletedbatch/newpreflight. No new scores/reward/training/exports.
 
 2026-10-04T18:20:00.955145+00:00 UserOct8deadline: saved concrete5-8October milestones,2workinghourpreflight/2hypothesiscap,RTX3060oneworker,matchedcontrols/unchangedgates,incumbentfallback/lockedrunpackaging. CachedJevvalidationfirst.72/1437in43out; coordinatorretainsoneboundedpilot. No newscore/training/upload.
+
+2026-10-04T18:27:28.091889+00:00 Deadlinepilot: source/commonstate agreement too weak for branching. CachedJev fullgeneanchor .23/1411in40out. Registerednecessarysinglemodule realE8.5fullgene nonlinearvslinear/frozenincumbent/copy;400RTXsteps,all16787observedcells,12fullpaneloutcomes. CUDAfinitegradients101.9MB. Originallaunchmissingoptionalpsutil beforeplan/training/scoring; sharedmemoryhelper/repaireduniqueentry, no scientificreward or criticbatch yet.
+
+2026-10-04T18:30:25.659510+00:00 RTXdecoder completed400steps/194.3MBpeak. Corrected scorerloadersignature beforetarget scoring, preservedrun02checkpoint; unique03recovery exactmatrix/coordinate/genemean hashes required, no retraining. Scientificmetrics/rewardpending; fourreviewsafterbatch.

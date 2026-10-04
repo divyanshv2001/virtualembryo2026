@@ -1,20 +1,20 @@
 {
-  "updated_utc": "2026-10-04T18:20:01.126743+00:00",
+  "updated_utc": "2026-10-04T18:30:25.878027+00:00",
   "fingerprints": {
     "RESEARCH_CONTINUATION_POLICY.md": "9465f61a3832ff5b8f7365ef4c2d66f5a561d45ba094174f766370af86f4b6fa",
-    "LOCAL_OPTIMIZATION_STATE.json": "06168d1d404ebf828770cceb2b3cd7b44cf7c7aacc777e80b66b1ff4cb8b82c5",
+    "LOCAL_OPTIMIZATION_STATE.json": "62c5111e697d0230ce864967e195462cb3fa49529d842aff1a37ea0c8db84b01",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "679777c9cbb7326f585958a8e57b57fa0b1ce65a2fcbb35e3bcb5fe5eea36cec",
+    "METRIC_RESEARCH_QUEUE.json": "dc39e4c41602dbcc9078c17923c8e86349f3fc22449009b48e26d0a60a8051a3",
     "METRIC_CRITIQUE_POLICY.json": "3535989f1e3beac0f2d446b44df3c793d4be464dbd87f6e714c2f5afda864a6f",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
-    "RESEARCH_HARNESS_MANIFEST.json": "f0b8184d6d80e2e381fbb278d04b45b953dee8b5c53f3250df72766cc77d6d9b"
+    "RESEARCH_HARNESS_MANIFEST.json": "a33b563e4688ce41467d8ad388e13a7c83b27ad588f20b5a3829c4b379682753"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [
-    "potential_chronological_cutoff8"
+    "real_fullgene_decoder_pilot_03"
   ],
-  "next_experiment": "DeadlineOct8IST: two-working-hour commonstate/novelty decision, then one registered RTX3060 stateconditional populationtransition pilot if supported; fallback separate jointrealstage fullgene decoder ablation. Maximum2distincthypotheses, matchedpastcontrols3seed screen, temporal/trainingseed confirmationOct7, existing64replicate/readinessgates, freezeeligibleartifactOct8/noofficialupload. No oldgrids/broadsearch. See TEMPORAL_TASK_REVIEW_20261001.md deadlineplan.",
+  "next_experiment": "real_fullgene_decoder_pilot_recovery running;400RTXsteps complete194.3MBpeak, cachedcheckpoint reused onlyafter exactobservedmatrix/coordinates/genemean hashreplay. Two resource/APIstartup fixes beforeanytarget scoring; original logs/checkpointpreserved. Currentfour frozen candidates copy/incumbent/linearfullgene/neuralfullgene;12fullpanelactual9.5development outcomes pending, actual8.5all16787cells training, no9.5fit. Inspectnamedworker/report; fourfreshreviews/rewardafterbatch; gates/noofficialupload unchanged.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",

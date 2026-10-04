@@ -30,14 +30,14 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "DeadlineOct8IST: two-working-hour commonstate/novelty decision, then one registered RTX3060 stateconditional populationtransition pilot if supported; fallback separate jointrealstage fullgene decoder ablation. Maximum2distincthypotheses, matchedpastcontrols3seed screen, temporal/trainingseed confirmationOct7, existing64replicate/readinessgates, freezeeligibleartifactOct8/noofficialupload. No oldgrids/broadsearch. See TEMPORAL_TASK_REVIEW_20261001.md deadlineplan.",
+  "next_experiment": "real_fullgene_decoder_pilot_recovery running;400RTXsteps complete194.3MBpeak, cachedcheckpoint reused onlyafter exactobservedmatrix/coordinates/genemean hashreplay. Two resource/APIstartup fixes beforeanytarget scoring; original logs/checkpointpreserved. Currentfour frozen candidates copy/incumbent/linearfullgene/neuralfullgene;12fullpanelactual9.5development outcomes pending, actual8.5all16787cells training, no9.5fit. Inspectnamedworker/report; fourfreshreviews/rewardafterbatch; gates/noofficialupload unchanged.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "potential_chronological_cutoff8"
+    "real_fullgene_decoder_pilot_03"
   ],
-  "active_run_path": "private/potential_chronological_cutoff8_01",
+  "active_run_path": "private/real_fullgene_decoder_pilot_03",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -5176,7 +5176,7 @@
       "jev_scope": "Typed option selection/pinnedreport status only; report has no score summary and numeric auditresults were not transmitted, no evidence certification."
     }
   },
-  "next_action": "DeadlineOct8IST: two-working-hour commonstate/novelty decision, then one registered RTX3060 stateconditional populationtransition pilot if supported; fallback separate jointrealstage fullgene decoder ablation. Maximum2distincthypotheses, matchedpastcontrols3seed screen, temporal/trainingseed confirmationOct7, existing64replicate/readinessgates, freezeeligibleartifactOct8/noofficialupload. No oldgrids/broadsearch. See TEMPORAL_TASK_REVIEW_20261001.md deadlineplan.",
+  "next_action": "real_fullgene_decoder_pilot_recovery running;400RTXsteps complete194.3MBpeak, cachedcheckpoint reused onlyafter exactobservedmatrix/coordinates/genemean hashreplay. Two resource/APIstartup fixes beforeanytarget scoring; original logs/checkpointpreserved. Currentfour frozen candidates copy/incumbent/linearfullgene/neuralfullgene;12fullpanelactual9.5development outcomes pending, actual8.5all16787cells training, no9.5fit. Inspectnamedworker/report; fourfreshreviews/rewardafterbatch; gates/noofficialupload unchanged.",
   "potential_real_anchor_transfer_setup_failure": {
     "run": "potential_real_anchor_transfer_01",
     "error": "append_event kind argument collided with keyword at first50-step logging; no checkpoint or forecast completed",
@@ -5566,5 +5566,23 @@
       "input_tokens": 1437,
       "output_tokens": 43
     }
+  },
+  "deadline_pilot_preflight": {
+    "status": "training_completed_forecast_recovery_running",
+    "device": "RTX3060 Laptop",
+    "smoke_allocated_bytes": 101889536,
+    "real_observed_training_stage": 8.5,
+    "training_rows": 16787,
+    "predicted_genes": 32285,
+    "target_fit": false,
+    "commonstate_mechanism": "deferred; coarse crosscaptureagreementinsufficient",
+    "startup_failure": "psutilmissing beforeplan/training/scores; switchedexistingpeakmemoryhelper",
+    "new_scores": 0,
+    "reward_delta": 0,
+    "novelty": "Real-anchor nonlinearallgene conditionaldelta vsreal-anchor linearridge, samefrozenpath; not jointstagefit until productionrefitvalidated.",
+    "training_steps": 400,
+    "training_peak_allocated_bytes": 194297344,
+    "repair": "Scorer loader requires noarguments; stoppedbeforeanytargetscoring, newregisteredrecovery reusesverifiedcompletedtraining ratherthanretrain.",
+    "original_training_run": "private/real_fullgene_decoder_pilot_02"
   }
 }

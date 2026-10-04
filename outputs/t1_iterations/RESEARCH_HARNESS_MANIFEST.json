@@ -2055,6 +2055,39 @@
         "driver_runtime": "cpu",
         "purpose": "Distinct earlier chronologicalpotential coverage; cachedlowercutoffCNF/encoder, originalfullpanel scoring/calibration and archived8.5replay."
       }
+    },
+    "real_fullgene_decoder_pilot": {
+      "script": "real_fullgene_decoder_pilot.py",
+      "args": [],
+      "run": "private/real_fullgene_decoder_pilot_01",
+      "report": "REAL_FULLGENE_DECODER_PILOT_RESULTS.json",
+      "protocol": {
+        "training_device": "cuda",
+        "driver_runtime": "cpu",
+        "purpose": "Distinct realE8.5 all16787cells full32285gene conditional decoder; cached flow/path, exact incumbent/linear/copycontrols, originalCPU scoring;400RTXsteps, no9.5fit."
+      }
+    },
+    "real_fullgene_decoder_pilot_repair": {
+      "script": "real_fullgene_decoder_pilot.py",
+      "args": [],
+      "run": "private/real_fullgene_decoder_pilot_02",
+      "report": "REAL_FULLGENE_DECODER_PILOT_REPAIR_RESULTS.json",
+      "protocol": {
+        "training_device": "cuda",
+        "driver_runtime": "cpu",
+        "purpose": "Distinct realE8.5 all16787cells full32285gene conditional decoder; cached flow/path, exact incumbent/linear/copycontrols, originalCPU scoring;400RTXsteps, no9.5fit."
+      }
+    },
+    "real_fullgene_decoder_pilot_recovery": {
+      "script": "real_fullgene_decoder_pilot.py",
+      "args": [],
+      "run": "private/real_fullgene_decoder_pilot_03",
+      "report": "REAL_FULLGENE_DECODER_PILOT_RECOVERY_RESULTS.json",
+      "protocol": {
+        "training_device": "cuda",
+        "driver_runtime": "cpu",
+        "purpose": "Distinct realE8.5 all16787cells full32285gene conditional decoder; cached flow/path, exact incumbent/linear/copycontrols, originalCPU scoring;400RTXsteps, no9.5fit."
+      }
     }
   }
 }

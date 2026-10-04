@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-04T18:20:01.126743+00:00
+Updated: 2026-10-04T18:30:25.878027+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -8,9 +8,9 @@ Use `research_harness.py queue` for a compact next-step/pending summary; never d
 
 Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction': 56.3, 'mmd_u': 53.2, 'variogram': 51.7}. Covariance .25 reused-development mean55.98883; EB and lineage-standardized historical proxy screens failed. Local>72 mean/lower-tail >=64-replicate AND temporal gate unmet. Full32285-gene scorer/calibration unchanged.
 
-Checkpoint jobs: ['potential_chronological_cutoff8']. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
+Checkpoint jobs: ['real_fullgene_decoder_pilot_03']. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: DeadlineOct8IST: two-working-hour commonstate/novelty decision, then one registered RTX3060 stateconditional populationtransition pilot if supported; fallback separate jointrealstage fullgene decoder ablation. Maximum2distincthypotheses, matchedpastcontrols3seed screen, temporal/trainingseed confirmationOct7, existing64replicate/readinessgates, freezeeligibleartifactOct8/noofficialupload. No oldgrids/broadsearch. See TEMPORAL_TASK_REVIEW_20261001.md deadlineplan.
+Next: real_fullgene_decoder_pilot_recovery running;400RTXsteps complete194.3MBpeak, cachedcheckpoint reused onlyafter exactobservedmatrix/coordinates/genemean hashreplay. Two resource/APIstartup fixes beforeanytarget scoring; original logs/checkpointpreserved. Currentfour frozen candidates copy/incumbent/linearfullgene/neuralfullgene;12fullpanelactual9.5development outcomes pending, actual8.5all16787cells training, no9.5fit. Inspectnamedworker/report; fourfreshreviews/rewardafterbatch; gates/noofficialupload unchanged.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in export report. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 
