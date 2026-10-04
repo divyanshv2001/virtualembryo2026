@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Lowrank cross-coordinate residual diffusion feasibility: contrast new generative covariance with prior diagonal learned SDE and posthoc covariance coverage; past-only source/resource audit on6GB RTX3060, frozen retainedkinetics and originalfullpanel scorer/gates. No old seed/rank/noise grid, no robust Gaussian promotion; preserve small prior gains and failed confirmation.",
+  "next_experiment": "Predeclare matched1080parameter correlated rank2 versus equal-marginal diagonal residual SDE on frozenkinetics,400RTX3060steps perarm; originalCPU fullpanel scorer and zero-noise/prior/newforecasts exactreplays. Past-only8.25cutoff, fixedRK4/noise splitstep.125 andpaired26normal draws. No covariance/rank/noise grid, no author solver reproduction.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -4619,5 +4619,37 @@
     "gpu_peak_bytes": 80782848,
     "reward": 0,
     "health": -1507
+  },
+  "correlated_diffusion_preflight": {
+    "status": "completed",
+    "synthetic_only": true,
+    "arms": {
+      "diagonal": {
+        "steps": 3,
+        "seconds": 0.525401699997019,
+        "gpu_peak_bytes": 18372608,
+        "parameters": 1080
+      },
+      "correlated": {
+        "steps": 3,
+        "seconds": 0.313155000039842,
+        "gpu_peak_bytes": 18370560,
+        "parameters": 1080
+      }
+    },
+    "initial_marginal_covariance_max_error": 0.0,
+    "initial_offdiagonal_covariance_max_abs": 0.00017232666141353548,
+    "positive_definite": true,
+    "seeded_cpu_replay_exact": true,
+    "noise_disabled_exact_baseline": true,
+    "scope": "GPUresource/analytic covariance/toy drift only; no biological fit/score/reward or full-panel zero-noise replay yet. Equal marginal variances at identical parameters/states, not after separate training.",
+    "source_audit": {
+      "repository": "https://github.com/google-research/torchsde",
+      "commit": "eb3a00e31cbd56176270066ed2f62c394cf6acb7",
+      "documentation_sha256": "9084732ce51b468a0eea47d337ca25674e16f51ff685b97a2f776ba65625eb40",
+      "license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "license": "Apache-2.0",
+      "scope": "Documentation supports general non-diagonal diffusion and Euler compatibility; no author implementation copied or installed, no biological performance evidence."
+    }
   }
 }
