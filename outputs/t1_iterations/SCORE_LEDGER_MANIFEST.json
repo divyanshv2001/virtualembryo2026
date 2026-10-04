@@ -1,5 +1,5 @@
 {
-  "records": 3337,
+  "records": 3352,
   "sources": [
     {
       "path": "private/anchored_soft_ot_paper_pilot_01/report.json",
@@ -722,6 +722,11 @@
       "outcomes_indexed": 18
     },
     {
+      "path": "private/hidden_protein_past_fold_01/report.json",
+      "sha256": "f425236e416191d91ff64451c8689ab42debac2f808344aeec31b86a65063c1a",
+      "outcomes_indexed": 15
+    },
+    {
       "path": "private/hurdle_backtest_01/report.json",
       "sha256": "32ec2c899e9d51d6fc3007ac02a8f52f5aeb4bad6afc883c2c9f1a142796f093",
       "outcomes_indexed": 15
@@ -1194,5 +1199,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "ade149a5d59b2c5c983c202ada25931a14920d1934c466bf9d8b480f106ffae1"
+  "ledger_sha256": "16e2fc30024a74e915bf10f9a6503abc203ce30dc570d29df0cbcbe02318e68f"
 }

@@ -30,13 +30,11 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Collect hidden-protein matched trial via harness; no source edits while running. Four independent reviews after scored completion/failure; original baseline and neutral bridges must replay exactly before scoring.",
+  "next_experiment": "Audit remaining CellPace temporal diffusion forcing author source, raw-count/scVI data requirements, permitted stage restrictions, dependencies and 6GB RTX3060 feasibility. Distinct from tested state-dependent diffusion; no author pretrained/demo hidden-stage leakage, no old protein/attention grids.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "hidden_protein_past_fold"
-  ],
+  "active_jobs": [],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -2894,6 +2892,19 @@
       },
       "reviewer_context": "Four fresh independent metric-only contexts; no tools, peers or writes.",
       "coordinator": "Evolving gains direction/MMD/variogram versus frozen, DE regresses; both below copy and retained kinetics. Equal4776parameters400GPUsteps; context cardinality differs train64/forecast256. Fifteen calibrations/five exact forecasts/three prior baselines passed. Historical development only; no promotion/readiness. Reward-7 already accounted once; health-1442. Remedies unvalidated; no repeat attention grid."
+    },
+    "hidden_protein_past_fold_01": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "f425236e416191d91ff64451c8689ab42debac2f808344aeec31b86a65063c1a",
+      "reviews": {
+        "de_score": "Problem: Delayed coupling\u2019s tiny, inconsistent gain trails kinetics and copy. Proposed solution: Keep exploratory; prioritize the kinetic baseline and independent holdout testing. Validation: Three seeds provide weak directional evidence; reused calibrations/replays establish neither readiness nor author reproduction.",
+        "de_direction": "Problem: Delayed adaptation\u2019s tiny, inconsistent gain does not beat kinetics. Proposed solution: Freeze the count-protein specification and test a biologically justified delay mechanism. Validation: Use independent horizons and seeds; require reproducible superiority over kinetics before claiming readiness.",
+        "mmd_u": "Problem: Delayed MMD\u2019s tiny gain remains below kinetics. Proposed solution: Keep exploratory status and test independent horizons with uncertainty estimates. Validation: Three positive seeds support consistency, but existing calibrations/replays establish neither independent validation nor author reproduction.",
+        "variogram": "Problem: Delayed adaptation improves skill by 0.000683 but trails kinetics. Proposed solution: Freeze configuration; validate variogram performance on independent horizons. Validation: Three positive seeds at one horizon support consistency, not independent validation, readiness, or author reproduction."
+      },
+      "reviewer_context": "Four fresh independent metric-only contexts; no tools, peers or writes.",
+      "coordinator": "All4 primary delayed-minus-instantaneous means positive; DE/direction2of3 and MMD/variogram3of3. Both below retained kinetics in all4means, no promotion. DE reviewer wording reused calibrations corrected:15fresh valid calibrations under unchanged original scheme,5exactforecasts/3prior2neutralreplays; exposed historical development only. Neither readiness nor author reproduction established. Reward+4/health-1438 recorded once. No delay/rank/gene grid authorized."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -4373,5 +4384,34 @@
         "parameters": 4480
       }
     }
+  },
+  "latest_hidden_protein_result": {
+    "mean_instantaneous": 51.805913770212065,
+    "mean_delayed": 51.84712527775272,
+    "mean_kinetics": 52.334065831100055,
+    "delayed_minus_instantaneous": 0.041211507540655,
+    "primary_all4means_positive": true,
+    "promoted": false,
+    "calibrations_valid": 15,
+    "forecast_replays": 5,
+    "prior_baseline_replays": 3,
+    "neutral_bridge_replays": 2,
+    "host_peak_bytes": 5410369536,
+    "gpu_peak_bytes": 86735872,
+    "training_steps_per_arm": 400,
+    "trained_device": "RTX3060",
+    "reward": 4,
+    "health": -1438
+  },
+  "protein_support_audit": {
+    "status": "no_independent_validation_established",
+    "jev_choice": "protein_support_audit",
+    "jev_confidence": 0.95,
+    "jev_usage": {
+      "input_tokens": 1298,
+      "output_tokens": 44
+    },
+    "observed_support": "All10963cells and4stages7.5/7.75/8/8.25 used in present fit; sample/embryo_version not independent embryo IDs. New earlier-cutoff refits or fixed-model horizon tests would be historical development, not untouched independentvalidation.",
+    "scope": "Data/support check only; no new score/reward. Retain small primary mechanism gain without promotion or whole-family rejection."
   }
 }

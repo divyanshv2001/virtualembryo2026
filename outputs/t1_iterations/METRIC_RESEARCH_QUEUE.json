@@ -6395,11 +6395,12 @@
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
     "experiment": "collective_context_past_fold",
-    "status": "running",
-    "next_experiment": "hidden_protein_past_fold",
-    "next": "Collect hidden-protein matched trial via harness; no source edits while running. Four independent reviews after scored completion/failure; original baseline and neutral bridges must replay exactly before scoring.",
-    "jev_choice": "hidden_protein_counts_audit",
-    "jev_confidence": 0.03,
-    "scope": "Advisory low confidence; raw-count data availability verified deterministically, no score claim."
+    "status": "completed_incremental_primary_gain_not_promoted",
+    "next_experiment": "temporal_diffusion_forcing_preflight",
+    "next": "Audit remaining CellPace temporal diffusion forcing author source, raw-count/scVI data requirements, permitted stage restrictions, dependencies and 6GB RTX3060 feasibility. Distinct from tested state-dependent diffusion; no author pretrained/demo hidden-stage leakage, no old protein/attention grids.",
+    "jev_choice": "protein_support_audit",
+    "jev_confidence": 0.95,
+    "scope": "Advisory low confidence; raw-count data availability verified deterministically, no score claim.",
+    "support_audit": "Completed: no independent embryo/untouched validation established; historical-only options remain, no promotion."
   }
 }
