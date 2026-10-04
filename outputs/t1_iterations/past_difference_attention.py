@@ -10,6 +10,7 @@ import pandas as pd
 import torch
 from cnf_manifold_flow import DensityFlowNet,rk4_position
 from graph_kinetic_residual import KineticFlow
+from geomloss import SamplesLoss
 
 HERE=Path(__file__).resolve().parent
 
@@ -51,6 +52,38 @@ class PastAttentionFlow(torch.nn.Module):
             z=rk4_position(self.velocity,z,self.cutoff-self.origin+float(a),self.cutoff-self.origin+float(b),step)
             history.append(z)
         return torch.stack(history)
+
+def train_attention(model,coordinates,stages,checkpoint,emit,steps=400,batch=64):
+    if steps!=400 or batch!=64 or max(stages)>model.cutoff:raise ValueError('Outside fixed attention protocol')
+    if not torch.cuda.is_available():raise ValueError('CUDA training required')
+    torch.cuda.set_per_process_memory_fraction(.75,0);torch.use_deterministic_algorithms(True)
+    model.cuda();times=np.unique(stages)
+    groups=[torch.tensor(coordinates[stages==t],dtype=torch.float32,device='cuda') for t in times]
+    frozen={k:v.detach().cpu().clone() for k,v in model.base.state_dict().items()}
+    rng=torch.Generator().manual_seed(20261004)
+    parameters=[p for p in model.parameters() if p.requires_grad]
+    optimizer=torch.optim.Adam(parameters,lr=.001)
+    loss_fn=SamplesLoss('sinkhorn',p=2,blur=.05,scaling=.9,backend='tensorized');history=[]
+    for i in range(steps):
+        j=int(torch.randint(len(groups)-1,(1,),generator=rng))
+        model.context_stage=float(times[j])
+        a=groups[j][torch.randint(len(groups[j]),(batch,),generator=rng).cuda()]
+        b=groups[j+1][torch.randint(len(groups[j+1]),(batch,),generator=rng).cuda()]
+        pred=rk4_position(model.velocity,a,float(times[j]-model.origin),float(times[j+1]-model.origin),step=.125)
+        loss=loss_fn(pred,b)
+        if not torch.isfinite(loss):raise ValueError('Nonfinite attention loss')
+        optimizer.zero_grad();loss.backward();norm=torch.nn.utils.clip_grad_norm_(parameters,5.)
+        if not torch.isfinite(norm):raise ValueError('Nonfinite attention gradient')
+        optimizer.step()
+        if (i+1)%50==0:
+            record={'step':i+1,'loss':float(loss.detach()),'source_stage':float(times[j]),'destination_stage':float(times[j+1])}
+            history.append(record);emit('attention_training_checkpoint',attention_kind=model.kind,**record)
+    torch.cuda.synchronize();peak=torch.cuda.max_memory_allocated()
+    if peak>4.5*1024**3:raise ValueError('GPU allocation budget exceeded')
+    model.cpu().eval();model.context_stage=model.cutoff
+    for k,v in model.base.state_dict().items():torch.testing.assert_close(v,frozen[k],rtol=0,atol=0)
+    torch.save({'net':model.state_dict(),'kind':model.kind,'steps':steps,'batch_size':batch,'fit_max_stage':model.cutoff,'history':history,'frozen_base_exact':True,'torch':torch.__version__,'cuda':torch.version.cuda,'gpu':torch.cuda.get_device_name(0),'peak_allocated_bytes':peak},checkpoint)
+    return history
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--experiment',default='difference_attention_preflight');args=parser.parse_args()

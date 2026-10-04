@@ -6394,12 +6394,9 @@
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
-    "experiment": "difference_attention_cuda_preflight",
-    "status": "resource_preflight_completed",
-    "next_experiment": null,
-    "next": "Implement one fixed CUDA400-step past-prefix centroid attention comparison: difference vs level tokens with equal4776parameter residuals on frozen no-edge kinetics, plus copy/CNF/no-edge controls. Same past adjacent Sinkhorn objective, draws, batch64, RK4.125, normcap1, unchanged decoder/scorer/gates; no target tuning. Own adaptation, not cell trajectories or author reproduction. Forecast CPU with exactreplays; GPU runtime fixed for both trainedarms. Four fresh reviews after scoredbatch.",
-    "jev_choice": "past_centroid_prefix",
-    "jev_confidence": 0.92,
-    "jev_payload_bytes": 2408
+    "experiment": "difference_attention_past_fold_repair",
+    "status": "registered_source_lock_repair",
+    "next_experiment": "difference_attention_past_fold_repair",
+    "next": "Collect repaired fixedCUDA level/difference attention trial; four fresh metric reviews on completion, unchanged scorer/calibration/readiness; primary differencevslevel reward only."
   }
 }

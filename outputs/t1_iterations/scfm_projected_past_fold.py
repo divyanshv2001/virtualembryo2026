@@ -47,6 +47,7 @@ def main():
         sources=['scfm_projected_past_fold.py','fresh_fullpanel_context.py','frozen_fullpanel_scoring.py','anchored_soft_ot.py','soft_ot_flow_matching.py','cnf_manifold_flow.py','cnf_density_flow.py','full_anchor_slope_forecast.py','log1p_positive_forecast.py','tigon_conditional_fullpanel.py','offline_backtest.py']
         if spec.get('learned_diffusion'): sources.append('learned_latent_diffusion.py')
         if spec.get('frozen_kinetic_run'): sources.append('graph_kinetic_residual.py')
+        if spec.get('difference_attention'): sources.append('past_difference_attention.py')
         graph_prior_inputs={}
         if spec.get('graph_kinetics'):
             sources.append('graph_kinetic_residual.py')
@@ -56,6 +57,7 @@ def main():
         if graph_prior_inputs:plan['graph_prior_sha256']=graph_prior_inputs
         save(RUN/'plan.json',plan);emit('plan_frozen',sha256=digest(RUN/'plan.json'))
         c=prepare(spec,RUN,emit);cutoff,target=spec['cutoff'],spec['target']
+        if any(digest(HERE/name)!=expected for name,expected in plan['source_sha256'].items()):raise ValueError('Source changed after plan freeze')
         if len(np.flatnonzero(c['stages']==target))<2000:raise ValueError('Insufficient target metadata support')
         torch.manual_seed(spec['seed'])
         initial=DensityFlowNet(c['basis'],c['pca'].mean_,cutoff,float(c['stages'][c['past']].min())-.25)
@@ -95,6 +97,17 @@ def main():
                     flows[name]=model.eval()
                 report['fixed_candidate_validation']={'training_steps':0,'reward_eligible':False,'past_decoder_reconstruction':'Same deterministic past-only procedure; prior full-panel predictions must replay bit-exact before new horizon.'}
                 emit('frozen_kinetic_checkpoints_verified',checkpoint_sha256=spec['frozen_checkpoint_sha256'])
+                if spec.get('difference_attention'):
+                    from past_difference_attention import PastAttentionFlow,train_attention
+                    times=np.unique(c['stages'][c['past']])
+                    centroids=np.stack([c['coordinates'][c['stages'][c['past']]==t].mean(0) for t in times])
+                    report.pop('fixed_candidate_validation')
+                    report['attention_scope']='Own past-centroid level versus interval-normalized difference attention. Same4776parameters/frozenkinetics/CUDA400step budget; no individual-cell histories or author reproduction.'
+                    for name,kind in [('attention_level400','level'),('attention_difference400','difference')]:
+                        torch.manual_seed(20261004)
+                        model=PastAttentionFlow(flows['kinetic_none400'],times,centroids,kind)
+                        train_attention(model,c['coordinates'],c['stages'][c['past']],RUN/(name+'.pt'),emit,steps=spec['steps'],batch=spec['batch_size'])
+                        flows[name]=model;emit('candidate_training_finished',candidate=name,device='cuda:0')
             elif spec.get('graph_kinetics'):
                 from graph_kinetic_residual import prepare_kinetic_models, train_kinetics
                 kinetic_models,graph_audit=prepare_kinetic_models(initial,c,RUN,emit)
@@ -153,7 +166,7 @@ def main():
         generation={}
         if spec.get('frozen_kinetic_run'):
             previous_generation=json.loads((HERE/spec['frozen_kinetic_run']/'generation.json').read_text())
-            for name in spec['candidates']:
+            for name in spec.get('prior_candidates',spec['candidates']):
                 if name=='copy':prior=c['donors'].copy()
                 else:
                     reference.net=flows[name]
@@ -176,6 +189,7 @@ def main():
             generation[name]={'prediction_sha256':sha,'audit':copy.deepcopy(audit)}
             emit('forecast_frozen_exact_replay_passed',candidate=name,prediction_sha256=sha)
         save(RUN/'generation.json',generation);report['generation']=generation
+        if any(digest(HERE/name)!=expected for name,expected in plan['source_sha256'].items()):raise ValueError('Source changed before target scoring')
         emit('all_forecasts_frozen_before_target_expression',target=target)
         score_frozen_forecasts(core,c['raw_x'],c['stages'],c['donors'],c['mapped'],c['columns'],c['panel'],cutoff,target,plan,spec['candidates'],generation,cache,RUN,report,emit,spec)
         report[spec.get('contrast_label','projected_minus_raw_ot_mean_skills')]=report.pop('growth_enabled_minus_disabled_mean_skills')

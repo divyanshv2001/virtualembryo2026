@@ -30,11 +30,13 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement one fixed CUDA400-step past-prefix centroid attention comparison: difference vs level tokens with equal4776parameter residuals on frozen no-edge kinetics, plus copy/CNF/no-edge controls. Same past adjacent Sinkhorn objective, draws, batch64, RK4.125, normcap1, unchanged decoder/scorer/gates; no target tuning. Own adaptation, not cell trajectories or author reproduction. Forecast CPU with exactreplays; GPU runtime fixed for both trainedarms. Four fresh reviews after scoredbatch.",
+  "next_experiment": "Collect repaired fixedCUDA level/difference attention trial; four fresh metric reviews on completion, unchanged scorer/calibration/readiness; primary differencevslevel reward only.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
+  "active_jobs": [
+    "difference_attention_past_fold_repair"
+  ],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -2842,6 +2844,18 @@
         "variogram": "Problem: All three seeds favor no-edge over realgraph; seeds at one horizon do not establish cross-horizon readiness. Proposed solution: Fit a variogram-targeted dependence correction using past-only data, retaining no-edge as the baseline. Validation: Compare correction, no-edge, and realgraph under matched historical origins and seeds; preserve prior forecasts bit-exactly. Current results provide no independent validation."
       },
       "coordinator": "Correct direction claim: no-edge improves direction over CNF and copy in all3 seeds, an observed development gain despite absent independent evidence. MMD comparisons are3 seeds at one9.5 horizon, not3 horizons. DE remains belowcopy but improves vsCNF in all3seeds. Noedge improves all4 metrics vsCNF; realgraph leads MMD only. All12 calibrations valid;4 newhorizon exactreplays and4 priorhorizon reconstructions passed. Proposed remedies unvalidated; do not reopen older grids or change scorer/gates."
+    },
+    "difference_attention_past_fold_01": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "1a761689632dc1e4a443fc546b81a54bd172d8ee7b6514bc0feb208ddb76a957",
+      "reviews": {
+        "de_score": "Problem: Post-freeze source change invalidated the250step batch. Proposed solution: Restart with freshly repaired, locked source and unchanged matched controls/scorer. Validation: Confirm lock; scores/calibration unavailable. Zero reward.",
+        "de_direction": "Problem: Post-freeze logging drift invalidated the250step batch. Proposed solution: Restart with locked source, unchanged matched controls and scorer. Validation: Confirm stability; withhold reward/direction claims without metrics or calibration.",
+        "mmd_u": "Problem: Logging-keyword source change broke plan freeze at step250. Proposed solution: Restart locked repair with capacity-matched controls and unchanged scorer. Validation: Await target metrics/calibration; no MMD inference or reward.",
+        "variogram": "Problem: Post-freeze logging edit compromises provenance. Proposed solution: Lock repaired logging; preserve controls/scorer. Validation: Fresh rerun with provenance checks; variogram, reward, calibration, and readiness remain unassessed."
+      },
+      "coordinator": "No predictive result exists; reward0, no readiness reset. Logging change only, fresh repair cannot resume invalid partialarm; source hashes checked beforetraining and target scoring. Future completedbatch needs four new independent reviews."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
