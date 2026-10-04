@@ -1916,6 +1916,75 @@
         "batch_size": 64,
         "purpose": "User-authorized potential submission export only; no official upload or score batch."
       }
+    },
+    "scalar_potential_frozen_horizon_validation": {
+      "script": "scfm_projected_past_fold.py",
+      "args": [
+        "--experiment",
+        "scalar_potential_frozen_horizon_validation"
+      ],
+      "run": "private/scalar_potential_frozen_horizon_validation_01",
+      "report": "SCALAR_POTENTIAL_FROZEN_HORIZON_VALIDATION_RESULTS.json",
+      "protocol": {
+        "cutoff": 8.25,
+        "target": 9.25,
+        "fit_stages": [
+          7.5,
+          7.75,
+          8.0,
+          8.25
+        ],
+        "seed": 20260928,
+        "scoring_seeds": [
+          20260928,
+          20260929,
+          20260930
+        ],
+        "steps": 400,
+        "batch_size": 64,
+        "reuse_run": "private/scfm_projected_past_fold_01",
+        "candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "residual_vector400",
+          "residual_potential400"
+        ],
+        "control_candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "residual_vector400"
+        ],
+        "contrast_candidates": [
+          "residual_vector400",
+          "residual_potential400"
+        ],
+        "contrast_label": "potential_minus_vector_mean_skills",
+        "reward_reference": "residual_vector400",
+        "reward_candidates": [],
+        "scope": "Frozen scalargradient/vector residuals trained400RTX3060steps through8.25,1681allocatedparams,width/gaugeconfounds retained. New9.25historical horizon, zero retraining/repeat reward. Immutable helper/solver/checkpoint/context hashes,3originalbaseline plus5prior9.5candidate/2zeroresidual/5new fullpanel exactreplays beforetargetexpression. Original2.14CPU full32285gene scorer/head/calibration/readiness unchanged,15calibrations,one trainingseed3scoringresamples sameembryos/exposeddevelopment not independentvalidation. Fourreviews oncompletion/failure. Retain52.438460previous gain;no targettuning/grid/robustness/70claim/upload.",
+        "frozen_kinetic_run": "private/graph_kinetics_past_fold_repair_01",
+        "prior_target": 9.25,
+        "frozen_checkpoint_sha256": {
+          "kinetic_none400": "11dc8d8620fa66997aa08d2f88ad9f4e9cdc2db788f8c1b3088f1b8eb01dd4c2"
+        },
+        "training_device": "cpu",
+        "prior_candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400"
+        ],
+        "driver_runtime": "cpu",
+        "scalar_potential": true,
+        "reuse_potential_run": "private/scalar_potential_residual_past_fold_01",
+        "potential_prior_target": 9.5,
+        "potential_checkpoint_sha256": {
+          "residual_vector400": "77ed62e45f309633d48f8c914959ea6084114a022e5443f03d3c2abe747930d2",
+          "residual_potential400": "54e15e38296f632a719c42aa388a32ca44cc849196ac102878a2310204a4a80d"
+        },
+        "potential_context_sha256": "2e508a1ef631289f7f71a4244c4938b5d86b37a463950726deff3b195345af03"
+      }
     }
   }
 }
