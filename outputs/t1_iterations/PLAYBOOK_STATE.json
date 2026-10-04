@@ -1,18 +1,20 @@
 {
-  "updated_utc": "2026-10-04T11:55:15.460306+00:00",
+  "updated_utc": "2026-10-04T12:48:00.931068+00:00",
   "fingerprints": {
     "RESEARCH_CONTINUATION_POLICY.md": "1e6cc6f15c1e918ad60a1e01f26dd66c48022b33158bf8eb2240a9622066af00",
-    "LOCAL_OPTIMIZATION_STATE.json": "89ae25748ca34c0f015943bc6d61aba9afe6bdda858748439901faf6dbc1a277",
+    "LOCAL_OPTIMIZATION_STATE.json": "a8b9d9788084d26826733c0ebecd2ae1a953c6979c8e568d6ca0a41666b8c39c",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "5a8378f5425e36f41e013c851e7244b1895ef9179acab74997cdde9ad8a437a1",
+    "METRIC_RESEARCH_QUEUE.json": "24a7c7d6adbf264e570e20f365e530d3a91501ce62ca857047462b8aeff3e250",
     "METRIC_CRITIQUE_POLICY.json": "3535989f1e3beac0f2d446b44df3c793d4be464dbd87f6e714c2f5afda864a6f",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
-    "RESEARCH_HARNESS_MANIFEST.json": "f4c3a52ce853a897a0b015036ba7b219b473312d150183d89be77062881d4dab"
+    "RESEARCH_HARNESS_MANIFEST.json": "215f0235ff2007707db8f165e8f274f0f1c28958f5b459afea0da6f0810d9f3e"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [],
-  "next_experiment": "Predeclare matched own NB-count versus log-Gaussian VAE18320parameter rank8/128gene trial:400past-only representation steps each plus400same latent-OT dynamics steps, pairedseeds/batches and sameKL.01. Decode predicted gene fractions into original frozen encoder with bounded latent correction; preserve frozen kinetics, originalCPU full-panel head/scorer, prior and zero-correction exactreplay gates. No source pretrained models or rank grids; likelihoodunits/control assumptions disclosed.",
+  "active_jobs_at_checkpoint": [
+    "count_vae_past_fold"
+  ],
+  "next_experiment": "Collect matched count-VAE/latentOT trial via harness; no source edits while running. Four fresh independent metricreviews after scientific completion/failure, primary NB-minuslogGaussian reward only; original replay/scorer/readiness gates unchanged.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",

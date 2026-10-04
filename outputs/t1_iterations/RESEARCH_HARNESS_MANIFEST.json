@@ -1361,6 +1361,71 @@
         "reward_eligible": false,
         "scope": "Own matched NB/count vsGaussian/log observation VAEs, resource/replay only; no author scVI stack/weights, no target/score/reward."
       }
+    },
+    "count_vae_past_fold": {
+      "script": "scfm_projected_past_fold.py",
+      "args": [
+        "--experiment",
+        "count_vae_past_fold"
+      ],
+      "run": "private/count_vae_past_fold_01",
+      "report": "COUNT_VAE_PAST_FOLD_RESULTS.json",
+      "protocol": {
+        "cutoff": 8.25,
+        "target": 9.5,
+        "fit_stages": [
+          7.5,
+          7.75,
+          8.0,
+          8.25
+        ],
+        "seed": 20260928,
+        "scoring_seeds": [
+          20260928,
+          20260929,
+          20260930
+        ],
+        "steps": 400,
+        "batch_size": 64,
+        "reuse_run": "private/scfm_projected_past_fold_01",
+        "candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "vae_log_gaussian400",
+          "vae_count_nb400"
+        ],
+        "control_candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "vae_log_gaussian400"
+        ],
+        "contrast_candidates": [
+          "vae_log_gaussian400",
+          "vae_count_nb400"
+        ],
+        "contrast_label": "count_nb_minus_log_gaussian_mean_skills",
+        "reward_reference": "vae_log_gaussian400",
+        "reward_candidates": [
+          "vae_count_nb400"
+        ],
+        "scope": "Own matched NBrawcounts versus Gaussianlognormalized observation VAEs, not scVI or isolatedPCA comparison.128fixed pastfeature genes/rank8/hidden64/18320params each, paired400GPU representationsteps batch64 Adam.001 clip5 KL.01; observedlibrary exposure/fixed backgroundcategory. Likelihoodunits/dispersion meanings differ, no loss value scoreclaims. Frozen posterior mean whitening onpast<=8.25, matched1640parameter timeconditioned32wide latentODE400paired adjacentpast Sinkhornsteps p2blur.05scaling.9/RK4.125. Same800totalsteps perarm, one trainingseed20261004 and3scoringresamples. Cutoff reconstruction-subtracted fractionchange projected through frozenPCA into frozenkinetics with normcap1, unchanged original2.14CPU all32285gene head/guards/scorer/calibration/readiness. RTX3060child2.11CUDA4.5GB/host16GB/two threads; strictprior3baselines/neutral2fullpanel/newforecast exactreplays before9.5targetexpression. Historicaldevelopment only, no independentvalidation/authorweights/rankgrid/officialupload/70claim. PrimaryNB-minusGaussian reward only, controls0; four fresh independent metricreviews after scientificcompletion/failure.",
+        "frozen_kinetic_run": "private/graph_kinetics_past_fold_repair_01",
+        "prior_target": 9.25,
+        "frozen_checkpoint_sha256": {
+          "kinetic_none400": "11dc8d8620fa66997aa08d2f88ad9f4e9cdc2db788f8c1b3088f1b8eb01dd4c2"
+        },
+        "training_device": "cuda",
+        "prior_candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400"
+        ],
+        "driver_runtime": "cpu",
+        "count_vae": true,
+        "count_context_sha256": "49ac69cc7d42c6c8238d704d3e4b4c1207a458d71081aa110e40474e28175956"
+      }
     }
   }
 }

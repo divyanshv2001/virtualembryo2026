@@ -30,11 +30,13 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Predeclare matched own NB-count versus log-Gaussian VAE18320parameter rank8/128gene trial:400past-only representation steps each plus400same latent-OT dynamics steps, pairedseeds/batches and sameKL.01. Decode predicted gene fractions into original frozen encoder with bounded latent correction; preserve frozen kinetics, originalCPU full-panel head/scorer, prior and zero-correction exactreplay gates. No source pretrained models or rank grids; likelihoodunits/control assumptions disclosed.",
+  "next_experiment": "Collect matched count-VAE/latentOT trial via harness; no source edits while running. Four fresh independent metricreviews after scientific completion/failure, primary NB-minuslogGaussian reward only; original replay/scorer/readiness gates unchanged.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
+  "active_jobs": [
+    "count_vae_past_fold"
+  ],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,

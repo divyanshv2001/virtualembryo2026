@@ -52,6 +52,7 @@ def main():
         if spec.get('collective_context'): sources+=['collective_context_preflight.py','past_difference_attention.py']
         if spec.get('hidden_protein'): sources+=['hidden_protein_count_bridge.py','prepare_balanced_atlas.py']
         if spec.get('temporal_forcing'): sources.append('temporal_diffusion_forcing.py')
+        if spec.get('count_vae'): sources.append('count_vae_representation.py')
         graph_prior_inputs={}
         if spec.get('graph_kinetics'):
             sources.append('graph_kinetic_residual.py')
@@ -101,7 +102,30 @@ def main():
                     flows[name]=model.eval()
                 report['fixed_candidate_validation']={'training_steps':0,'reward_eligible':False,'past_decoder_reconstruction':'Same deterministic past-only procedure; prior full-panel predictions must replay bit-exact before new horizon.'}
                 emit('frozen_kinetic_checkpoints_verified',checkpoint_sha256=spec['frozen_checkpoint_sha256'])
-                if spec.get('temporal_forcing'):
+                if spec.get('count_vae'):
+                    from count_vae_representation import ObservationVAE,LatentDynamics,VAELatentBridge
+                    report.pop('fixed_candidate_validation')
+                    context_path=HERE/'private/hidden_protein_count_bridge_repair_01/past_counts_context.npz'
+                    if digest(context_path)!=spec['count_context_sha256']:raise ValueError('Count VAE context changed')
+                    with np.load(context_path) as cc:
+                        np.testing.assert_array_equal(c['features'][:128],cc['panel_features'])
+                        np.testing.assert_allclose(cc['projection'],(c['basis'][:,:128]/c['scale'][:128]).T,rtol=0,atol=0)
+                        projection=cc['projection'].copy()
+                    helper=HERE/'count_vae_representation.py'
+                    packet={'context':str(context_path),'sha256':{str(path):digest(path) for path in [context_path,helper,HERE/'cnf_manifold_flow.py']}}
+                    save(RUN/'VAE_GPU_packet.json',packet)
+                    python=HERE.parents[1]/'outputs/research_workflow/.venv_cuda/Scripts/python.exe'
+                    with (RUN/'GPU_stdout.log').open('wb') as stdout,(RUN/'GPU_stderr.log').open('wb') as stderr:
+                        subprocess.run([str(python),'-u',str(helper),'--train-packet',str(RUN/'VAE_GPU_packet.json')],stdout=stdout,stderr=stderr,cwd=HERE.parents[1],check=True,creationflags=subprocess.CREATE_NO_WINDOW)
+                    expected_z=flows['kinetic_none400'].encode(torch.tensor((c['donors'][:,c['features']]-c['center'])/c['scale']))[0].detach()
+                    for kind in ['log_gaussian','count_nb']:
+                        name='vae_'+kind+'400';saved=torch.load(RUN/(name+'.pt'),weights_only=False,map_location='cpu')
+                        if saved['kind']!=kind or saved['steps']!=400 or saved['dynamics_steps']!=400 or saved['vae_parameters']!=18320 or saved['dynamics_parameters']!=1640 or saved['fit_max_stage']!=cutoff or saved['batch_size']!=64 or saved['context_sha256']!=spec['count_context_sha256']:raise ValueError('VAE checkpoint metadata mismatch')
+                        model=ObservationVAE(kind);model.load_state_dict(saved['vae']);model.eval()
+                        dynamics=LatentDynamics();dynamics.load_state_dict(saved['dynamics']);dynamics.eval()
+                        flows[name]=VAELatentBridge(flows['kinetic_none400'],model,dynamics,saved['center'],saved['scale'],c['donors'][:,c['features'][:128]],projection,expected_z).eval()
+                    report['count_vae_scope']='Own18320param NBcounts vslogGaussian observation VAE rank8/128genes, sameKL.01/backgroundcategory/past-only batches400GPUsteps; matched1640param latentOT400steps, whitening onpast posterior means. Decoder change relative to own cutoff reconstruction projected through frozenPCA normcap1 into retainedkinetics; originalCPU full-panel decoder/scorer/guards retained. Not scVI reproduction or isolated PCA comparison; likelihood units/dispersion semantics differ, one trainingseed/3scoringresamples.'
+                elif spec.get('temporal_forcing'):
                     from temporal_diffusion_forcing import TemporalDenoiser,TemporalBridgeFlow
                     report.pop('fixed_candidate_validation')
                     context_path=RUN/'temporal_past_context.npz'
@@ -257,7 +281,7 @@ def main():
                 if cache.put('_prior_'+name,prior)!=previous_generation[name]['prediction_sha256']:raise ValueError('Original kinetic forecast reconstruction changed')
                 del prior
             emit('prior_horizon_forecasts_reconstructed_bit_exact',target=spec['prior_target'])
-        if spec.get('hidden_protein') or spec.get('temporal_forcing'):
+        if spec.get('hidden_protein') or spec.get('temporal_forcing') or spec.get('count_vae'):
             reference.net=flows['kinetic_none400'];neutral,_,_=reference.predict(target,'joint',1.,sampling='systematic')
             neutral_sha=cache.put('_neutral_kinetic',neutral);del neutral
             for name in spec['contrast_candidates']:

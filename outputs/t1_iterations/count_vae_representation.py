@@ -55,10 +55,159 @@ class ObservationVAE(torch.nn.Module):
         return reconstruction + .01 * kl
 
 
+class LatentDynamics(torch.nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.field = torch.nn.Sequential(torch.nn.Linear(9, 32), torch.nn.Tanh(),
+            torch.nn.Linear(32, 32), torch.nn.Tanh(), torch.nn.Linear(32, 8))
+        torch.nn.init.zeros_(self.field[-1].weight)
+        torch.nn.init.zeros_(self.field[-1].bias)
+
+    def velocity(self, time, z):
+        t = torch.full((len(z), 1), (float(time) - 7.5) / .75, dtype=z.dtype, device=z.device)
+        return self.field(torch.cat([z, t], dim=1))
+
+
+def train_packet(path):
+    from cnf_manifold_flow import rk4_position
+    from geomloss import SamplesLoss
+    path = Path(path).resolve()
+    if not path.parent.is_relative_to(HERE / 'private'):
+        raise ValueError('GPU packet outside evidence')
+    packet = json.loads(path.read_text())
+    for filename, sha in packet['sha256'].items():
+        if digest(filename) != sha:
+            raise ValueError('GPU source/input changed')
+    if not torch.cuda.is_available() or torch.__version__ != '2.11.0+cu128':
+        raise ValueError('Pinned RTX3060 runtime required')
+    torch.set_num_threads(2)
+    torch.cuda.set_per_process_memory_fraction(.75)
+    torch.use_deterministic_algorithms(True)
+    with np.load(packet['context']) as data:
+        counts, libraries, stages = data['counts'], data['libraries'], data['stages']
+    times = np.unique(stages)
+    if times.tolist() != [7.5, 7.75, 8., 8.25]:
+        raise ValueError('Past support changed')
+    x = torch.tensor(counts, device='cuda')
+    exposure = torch.tensor(libraries, dtype=torch.float32, device='cuda')
+    observed = torch.log1p(10000. * x / exposure[:, None])
+    objective = SamplesLoss('sinkhorn', p=2, blur=.05, scaling=.9, backend='tensorized')
+    for kind in ['log_gaussian', 'count_nb']:
+        checkpoint = path.parent / ('vae_' + kind + '400.pt')
+        if checkpoint.exists():
+            raise ValueError('Never retrain completed arm')
+        torch.manual_seed(20261004)
+        torch.cuda.reset_peak_memory_stats()
+        model = ObservationVAE(kind).cuda()
+        optimizer = torch.optim.Adam(model.parameters(), lr=.001)
+        rng = torch.Generator().manual_seed(20261004)
+        history = []
+        def record(phase, iteration, loss):
+            if (iteration + 1) % 50 == 0:
+                item = {'event': 'vae_training', 'kind': kind, 'phase': phase, 'step': iteration + 1, 'loss': float(loss.detach().cpu())}
+                history.append(item)
+                with (path.parent / 'events.jsonl').open('a') as stream:
+                    stream.write(json.dumps(item) + '\n')
+        for iteration in range(400):
+            rows = torch.randint(len(x), (64,), generator=rng).cuda()
+            epsilon = torch.randn(64, 8, generator=rng).cuda()
+            optimizer.zero_grad()
+            loss = model.loss(x[rows], exposure[rows], epsilon)
+            if not torch.isfinite(loss):
+                raise ValueError('Nonfinite VAE loss')
+            loss.backward()
+            norm = torch.nn.utils.clip_grad_norm_(model.parameters(), 5.)
+            if not torch.isfinite(norm):
+                raise ValueError('Nonfinite VAE gradient')
+            optimizer.step()
+            record('representation', iteration, loss)
+        model.eval()
+        with torch.no_grad():
+            coordinates = torch.cat([model.encode(block)[0] for block in observed.split(256)])
+            center = coordinates.mean(0)
+            scale = coordinates.std(0, unbiased=False).clamp_min(.1)
+            coordinates = (coordinates - center) / scale
+        groups = [coordinates[torch.tensor(stages == t, device='cuda')] for t in times]
+        torch.manual_seed(20261004)
+        dynamics = LatentDynamics().cuda()
+        optimizer = torch.optim.Adam(dynamics.parameters(), lr=.001)
+        rng = torch.Generator().manual_seed(20261004)
+        for iteration in range(400):
+            j = int(torch.randint(3, (1,), generator=rng))
+            a = groups[j][torch.randint(len(groups[j]), (64,), generator=rng).cuda()]
+            b = groups[j + 1][torch.randint(len(groups[j + 1]), (64,), generator=rng).cuda()]
+            optimizer.zero_grad()
+            pred = rk4_position(dynamics.velocity, a, float(times[j]), float(times[j + 1]), step=.125)
+            loss = objective(pred, b)
+            if not torch.isfinite(loss):
+                raise ValueError('Nonfinite latent OT loss')
+            loss.backward()
+            norm = torch.nn.utils.clip_grad_norm_(dynamics.parameters(), 5.)
+            if not torch.isfinite(norm):
+                raise ValueError('Nonfinite latent OT gradient')
+            optimizer.step()
+            record('latent_OT', iteration, loss)
+        torch.cuda.synchronize()
+        peak = torch.cuda.max_memory_allocated()
+        if peak > 4.5 * 1024 ** 3:
+            raise ValueError('GPU memory cap exceeded')
+        torch.save({'vae': model.cpu().state_dict(), 'dynamics': dynamics.cpu().state_dict(),
+            'center': center.cpu(), 'scale': scale.cpu(), 'kind': kind, 'steps': 400,
+            'dynamics_steps': 400, 'batch_size': 64, 'fit_max_stage': 8.25,
+            'vae_parameters': sum(p.numel() for p in model.parameters()),
+            'dynamics_parameters': sum(p.numel() for p in dynamics.parameters()),
+            'context_sha256': digest(packet['context']), 'history': history,
+            'peak_allocated_bytes': peak, 'torch': torch.__version__, 'gpu': torch.cuda.get_device_name(0)}, checkpoint)
+        del model, dynamics, optimizer
+    for filename, sha in packet['sha256'].items():
+        if digest(filename) != sha:
+            raise ValueError('GPU source/input changed during fit')
+
+
+class VAELatentBridge(torch.nn.Module):
+    def __init__(self, base, model, dynamics, center, scale, anchor_values, projection, expected_z):
+        super().__init__()
+        self.base, self.model, self.dynamics = base, model, dynamics
+        self.cutoff, self.origin = base.cutoff, base.origin
+        self.center, self.scale = center, scale
+        self.anchor_values = torch.tensor(anchor_values, dtype=torch.float32)
+        self.projection = torch.tensor(projection, dtype=torch.float32)
+        self.expected_z = expected_z.clone()
+        self.bridge_enabled = True
+
+    def encode(self, values):
+        return self.base.encode(values)
+
+    def trajectory(self, z, times, step=.125):
+        from cnf_manifold_flow import rk4_position
+        original = self.base.trajectory(z, times, step)
+        if not self.bridge_enabled:
+            return original
+        torch.testing.assert_close(z, self.expected_z, rtol=0, atol=0)
+        if float(times[0]) != 0.:
+            raise ValueError('Cutoff donor initialization required')
+        with torch.no_grad():
+            posterior = self.model.encode(self.anchor_values)[0]
+            latent = (posterior - self.center) / self.scale
+            initial = torch.log1p(10000. * self.model.decode_fractions(posterior))
+            history = [original[0]]
+            for i, (a, b) in enumerate(zip(times[:-1], times[1:]), start=1):
+                latent = rk4_position(self.dynamics.velocity, latent, self.cutoff + float(a), self.cutoff + float(b), step)
+                future = torch.log1p(10000. * self.model.decode_fractions(latent * self.scale + self.center))
+                delta = (future - initial) @ self.projection
+                delta = delta / torch.linalg.vector_norm(delta, dim=1, keepdim=True).clamp_min(1.)
+                history.append(original[i] + delta)
+        return torch.stack(history)
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--experiment', default='count_vae_representation_preflight')
+    parser.add_argument('--train-packet')
     args = parser.parse_args()
+    if args.train_packet:
+        train_packet(args.train_packet)
+        return
     entry = json.loads((HERE / 'RESEARCH_HARNESS_MANIFEST.json').read_text())['experiments'][args.experiment]
     run, public = (HERE / entry['run']).resolve(), (HERE / entry['report']).resolve()
     if not run.is_relative_to(HERE / 'private') or not public.is_relative_to(HERE):
