@@ -6395,9 +6395,9 @@
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
     "experiment": "collective_context_past_fold",
-    "status": "frozen_potential_observed_transfer_support_audit_completed",
-    "next_experiment": "potential_real_anchor_transfer_feasibility",
-    "next": "Inspect compact actual-challenge temporal validation coverage and sharedscorer contracts; predeclare genuinely distinct potential-versus-kinetics releasedE8.5-anchor->releasedE9.5 matched fullpanel transfer pilot if feasible. Fitonlysource<=8.5 plusobservedE8.5 heads, freeze model/config/predictions beforeE9.5scoring; no hiddenE10.5/E12.5training or tuning, no oldmean-alignment/latentgrid. Frozen8.25field auditshowslargerchallenge supportdistance andweakpotentialresidual, notproofcause/9.5refit behavior. Retainofficialbest52.16/latest49.15 separately;one worker,RTX3060training,originalCPU scorer/gates unchanged.",
+    "status": "real_anchor_transfer_feasibility_completed",
+    "next_experiment": "potential_real_anchor_transfer_pilot",
+    "next": "Implement/register one matched releasedE8.5->releasedE9.5 potential-vs-kinetics transfer pilot: reuse hash-verified past-only archived4096/8D CNF800; refit noedgekinetics400 then potential400 on13963 source<=8.5 RTX3060 cells, observedE8.5 fullanchor heads fixed(.25,.75). Freeze copy/CNF/kinetics/potential forecasts before releasedE9.5 scoring; replay archived CNF/calibration exactly; same3 seeds/full32285 sharedscorer, CPU2.14. No encoder/CNF retraining, grids, hiddenfuture fitting, upload or gate changes. Reused development only; four fresh narrow metric reviews after new batch.",
     "jev_choice": "real_anchor_pilot_audit",
     "jev_confidence": 0.5,
     "scope": "Advisory low confidence; raw-count data availability verified deterministically, no score claim.",
@@ -6408,6 +6408,9 @@
     },
     "coordinator_choice": "anchor_shift_audit",
     "coordinator_reason": "Low-confidence advisory; current scientific priority is source-to-challenge transfer after belowfloor officialreport, not further source-only capacity refinement.",
-    "jev_scope": "Typed option selection/pinnedreport status only; report has no score summary and numeric auditresults were not transmitted, no evidence certification."
-  }
+    "jev_scope": "Typed option selection/pinnedreport status only; report has no score summary and numeric auditresults were not transmitted, no evidence certification.",
+    "feasibility_basis": "Archived8.5 CNF/encoder hashes and cutoff verified; new8.5 kinetics/potential pair remains unevaluated; reuse avoids redundant CNF800 training. Existing head strengths and scorer fixed."
+  },
+  "next_experiment": "potential_real_anchor_transfer_pilot",
+  "next_action": "Implement/register one matched releasedE8.5->releasedE9.5 potential-vs-kinetics transfer pilot: reuse hash-verified past-only archived4096/8D CNF800; refit noedgekinetics400 then potential400 on13963 source<=8.5 RTX3060 cells, observedE8.5 fullanchor heads fixed(.25,.75). Freeze copy/CNF/kinetics/potential forecasts before releasedE9.5 scoring; replay archived CNF/calibration exactly; same3 seeds/full32285 sharedscorer, CPU2.14. No encoder/CNF retraining, grids, hiddenfuture fitting, upload or gate changes. Reused development only; four fresh narrow metric reviews after new batch."
 }

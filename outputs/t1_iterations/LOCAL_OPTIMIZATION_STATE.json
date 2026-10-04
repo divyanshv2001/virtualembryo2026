@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Inspect compact actual-challenge temporal validation coverage and sharedscorer contracts; predeclare genuinely distinct potential-versus-kinetics releasedE8.5-anchor->releasedE9.5 matched fullpanel transfer pilot if feasible. Fitonlysource<=8.5 plusobservedE8.5 heads, freeze model/config/predictions beforeE9.5scoring; no hiddenE10.5/E12.5training or tuning, no oldmean-alignment/latentgrid. Frozen8.25field auditshowslargerchallenge supportdistance andweakpotentialresidual, notproofcause/9.5refit behavior. Retainofficialbest52.16/latest49.15 separately;one worker,RTX3060training,originalCPU scorer/gates unchanged.",
+  "next_experiment": "Implement/register one matched releasedE8.5->releasedE9.5 potential-vs-kinetics transfer pilot: reuse hash-verified past-only archived4096/8D CNF800; refit noedgekinetics400 then potential400 on13963 source<=8.5 RTX3060 cells, observedE8.5 fullanchor heads fixed(.25,.75). Freeze copy/CNF/kinetics/potential forecasts before releasedE9.5 scoring; replay archived CNF/calibration exactly; same3 seeds/full32285 sharedscorer, CPU2.14. No encoder/CNF retraining, grids, hiddenfuture fitting, upload or gate changes. Reused development only; four fresh narrow metric reviews after new batch.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -5029,5 +5029,73 @@
     "new_scores": 0,
     "reward_delta": 0,
     "findings": "Challenge median nearest pastlatent4.3267 vs source1.3590(~3.184x); potential residual-to-base median3.6976e-6 vs source5.1125e-5(~13.8x lower). Vectorresidual magnitude comparabletobase/opposed. Descriptive frozen8.25field at8.5, not proof of fulltrajectory/head/officialfailurecause or9.5refit behavior."
-  }
+  },
+  "potential_real_anchor_transfer_feasibility": {
+    "status": "feasible_predeclared_not_scored",
+    "archive_integrity": {
+      "private\\cnf_feature_challenge_01\\encoder4096.npz": true,
+      "private\\cnf_feature_challenge_01\\features4096.pt": true,
+      "private\\cnf_feature_challenge_01\\features.npy": true
+    },
+    "archive_checkpoint_metadata": {
+      "step": 800,
+      "steps": 800,
+      "energy_weight": 0.1,
+      "density_weight": 10.0
+    },
+    "encoder_dimensions": {
+      "features": [
+        4096
+      ],
+      "guard_features": [
+        384
+      ],
+      "center": [
+        4096
+      ],
+      "scale": [
+        4096
+      ],
+      "basis": [
+        8,
+        4096
+      ],
+      "pca_center": [
+        4096
+      ],
+      "whitening": [
+        8
+      ],
+      "pca_rows": [
+        3000
+      ]
+    },
+    "past_rows": 13963,
+    "source_max_stage": 8.5,
+    "encoder_fit_max_stage": 8.5,
+    "zero_potential_composition_finite": true,
+    "target_data_loaded": false,
+    "fullpanel_coverage": 32285,
+    "training_device_required": "RTX3060",
+    "reward": 0,
+    "scientific_batch": false,
+    "previous_decision": {
+      "experiment": "collective_context_past_fold",
+      "status": "frozen_potential_observed_transfer_support_audit_completed",
+      "next_experiment": "potential_real_anchor_transfer_feasibility",
+      "next": "Inspect compact actual-challenge temporal validation coverage and sharedscorer contracts; predeclare genuinely distinct potential-versus-kinetics releasedE8.5-anchor->releasedE9.5 matched fullpanel transfer pilot if feasible. Fitonlysource<=8.5 plusobservedE8.5 heads, freeze model/config/predictions beforeE9.5scoring; no hiddenE10.5/E12.5training or tuning, no oldmean-alignment/latentgrid. Frozen8.25field auditshowslargerchallenge supportdistance andweakpotentialresidual, notproofcause/9.5refit behavior. Retainofficialbest52.16/latest49.15 separately;one worker,RTX3060training,originalCPU scorer/gates unchanged.",
+      "jev_choice": "real_anchor_pilot_audit",
+      "jev_confidence": 0.5,
+      "scope": "Advisory low confidence; raw-count data availability verified deterministically, no score claim.",
+      "support_audit": "Completed: no independent embryo/untouched validation established; historical-only options remain, no promotion.",
+      "jev_usage": {
+        "input_tokens": 610,
+        "output_tokens": 43
+      },
+      "coordinator_choice": "anchor_shift_audit",
+      "coordinator_reason": "Low-confidence advisory; current scientific priority is source-to-challenge transfer after belowfloor officialreport, not further source-only capacity refinement.",
+      "jev_scope": "Typed option selection/pinnedreport status only; report has no score summary and numeric auditresults were not transmitted, no evidence certification."
+    }
+  },
+  "next_action": "Implement/register one matched releasedE8.5->releasedE9.5 potential-vs-kinetics transfer pilot: reuse hash-verified past-only archived4096/8D CNF800; refit noedgekinetics400 then potential400 on13963 source<=8.5 RTX3060 cells, observedE8.5 fullanchor heads fixed(.25,.75). Freeze copy/CNF/kinetics/potential forecasts before releasedE9.5 scoring; replay archived CNF/calibration exactly; same3 seeds/full32285 sharedscorer, CPU2.14. No encoder/CNF retraining, grids, hiddenfuture fitting, upload or gate changes. Reused development only; four fresh narrow metric reviews after new batch."
 }

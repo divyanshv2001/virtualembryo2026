@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-04T16:12:45.257091+00:00
+Updated: 2026-10-04T16:28:55.699327+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -10,7 +10,7 @@ Official best: 52.16. Latest reported skills: {'de_score': 43.7, 'de_direction':
 
 Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Inspect compact actual-challenge temporal validation coverage and sharedscorer contracts; predeclare genuinely distinct potential-versus-kinetics releasedE8.5-anchor->releasedE9.5 matched fullpanel transfer pilot if feasible. Fitonlysource<=8.5 plusobservedE8.5 heads, freeze model/config/predictions beforeE9.5scoring; no hiddenE10.5/E12.5training or tuning, no oldmean-alignment/latentgrid. Frozen8.25field auditshowslargerchallenge supportdistance andweakpotentialresidual, notproofcause/9.5refit behavior. Retainofficialbest52.16/latest49.15 separately;one worker,RTX3060training,originalCPU scorer/gates unchanged.
+Next: Implement/register one matched releasedE8.5->releasedE9.5 potential-vs-kinetics transfer pilot: reuse hash-verified past-only archived4096/8D CNF800; refit noedgekinetics400 then potential400 on13963 source<=8.5 RTX3060 cells, observedE8.5 fullanchor heads fixed(.25,.75). Freeze copy/CNF/kinetics/potential forecasts before releasedE9.5 scoring; replay archived CNF/calibration exactly; same3 seeds/full32285 sharedscorer, CPU2.14. No encoder/CNF retraining, grids, hiddenfuture fitting, upload or gate changes. Reused development only; four fresh narrow metric reviews after new batch.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 49.15; attribution/screenshot evidence in export report. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 
