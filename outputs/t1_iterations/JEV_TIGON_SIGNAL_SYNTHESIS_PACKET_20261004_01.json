@@ -1,0 +1,18 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "decision": "Choose next bounded past-only check or retire fixedconditional path after objective diagnostic",
+    "evidence": "6s frozenpast7.5/7.75 first32query/noise,0training/targetreads/benchmark/reward. Exactcomponents equality passed. g0initial density.259679 energy.010399 gradnorms.002251/.072217; finaldensity.259791 energy.0000464 gradnorms.001381/.003407 andRMS .03605->.002409. g1similar/constantlogweights. Zerofield objective.259809 vs finalg0.259837. Pastcentroidtranslation density.252411 energy2.269224 objective2.521635. Weakdensitygradients/energy preference supported onlyononequery; nocausality/globaloptimum. Fullpanelpilotfailed both~49.995 vsCNF50.838/copy50, originalreadinessnotmet.",
+    "critics": "Fourrole2reviews: gradientbalance densityusinginitialpastgradientratio; densityfirstconstrainedoptimization; energyprojectedtrustregion; affinepastcovariance deformation. Allunvalidated andbenchmarkmetricsunavailable. No repeatedsigneddrift/targettuning.",
+    "proposed": "One bounded newpast-only gradientbalance test, scalaralpha fixedfromg0initial firstquery energy/densitygradientratio. Trainbalanceg0/g1 andcommonlossrescaleg0/g1 200steps each, sharedinit/originalquery/noisestream/Adam.003decay.01/kernel.1/step.0625. Reuse originalfinalg0/g1 cachedbaseline, no duplicatebaseline run. Evaluateoriginaldensity/energy on8fixed newnoiseseeds, samepastcenters (notheldoutcells/embryos). Predeclared diagnosticpass requires allqueries>=1percentdensityreductionvszero, energy<=owninitial, originalobjectivebelowzero/baseline/commonrescale; finite/ESS>=16of32. No automaticfullpanelretry, no benchmark/reward. Failedtest retires thisdensitybalancepath; noalpha grid."
+  },
+  "questions": {
+    "next": {
+      "type": "choice",
+      "criteria": {
+        "single_gradient_balance_audit": "Run one frozenratio calibratedloss experiment withcommonrescalecontrols andcachedbaseline, originalobjective validationonly.",
+        "retire_density_balance_path": "No furtherlossrepair justified; retire thisconditionaldensitypath untilnewpastonlysupport/independentcohort."
+      }
+    }
+  }
+}

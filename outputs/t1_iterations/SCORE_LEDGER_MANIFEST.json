@@ -1,5 +1,5 @@
 {
-  "records": 3190,
+  "records": 3202,
   "sources": [
     {
       "path": "private/anchored_soft_ot_paper_pilot_01/report.json",
@@ -1047,6 +1047,21 @@
       "outcomes_indexed": 0
     },
     {
+      "path": "private/tigon_conditional_fullpanel_01/report.json",
+      "sha256": "2e3756d7b592372ce3c30cc35c81e6f55b64436ece25b57e9c07aff5925751f6",
+      "outcomes_indexed": 12
+    },
+    {
+      "path": "private/tigon_numerical_preflight_01/report.json",
+      "sha256": "7271de0ca4343c10a721a094e344cba2a85148be7b9a7dbfc63233031c66882e",
+      "outcomes_indexed": 0
+    },
+    {
+      "path": "private/tigon_numerical_preflight_retry_01/report.json",
+      "sha256": "aefb176042b20eddf9620cf8baa12650b24bf7ff0c69151e7fbd401f27627c71",
+      "outcomes_indexed": 0
+    },
+    {
       "path": "private/transport_challenge_01/report.json",
       "sha256": "3c49f11ea661912540e52d83ecae3bc8eeb821a80e7810dd3ff99854d3d29ab2",
       "outcomes_indexed": 21
@@ -1089,5 +1104,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "e28572ca01887476664df50f60d50ba87f7848c62b4c334d6705c9da1f4aa1d0"
+  "ledger_sha256": "3c063b84810ca39b0dbb0cd311859e4ab8d346f7ba802a373cc3d764f5f5f563"
 }

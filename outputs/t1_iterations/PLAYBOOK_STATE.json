@@ -1,19 +1,19 @@
 {
-  "updated_utc": "2026-10-04T03:06:43.315109+00:00",
+  "updated_utc": "2026-10-04T03:22:24.224504+00:00",
   "fingerprints": {
-    "LOCAL_OPTIMIZATION_STATE.json": "f0c50e3732af37aff0b48ff3b2a90248b2c159b680d79af4ee1c4425e72b7aa6",
+    "LOCAL_OPTIMIZATION_STATE.json": "f9ece6cc92fd9962b2e315a8566cb5f0c0d70f26abc9c563a7adbb7567e9aab7",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "3babe34aeb62598aefc4cd38f64585c5b602d866359b46c1af5dabebbb37115b",
+    "METRIC_RESEARCH_QUEUE.json": "f4699d472c3ecb817952ad413dda293203323e5df808d4b7ee3bed2ac80bae79",
     "METRIC_CRITIQUE_POLICY.json": "027368320281a1164dc91720fe8aa18a344ddf7c14b9c5a8fce8b2b075105b7b",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
-    "RESEARCH_HARNESS_MANIFEST.json": "61e7374ee987e7516acc9491fc0a1bd26321361ba7291aae0c355ed8877d7e6b"
+    "RESEARCH_HARNESS_MANIFEST.json": "190c169e8e33a77d2355271f32cc1c4d4bc5b81eed0903fe9a597fa743eb97ea"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [
-    "tigon_conditional_fullpanel"
+    "tigon_gradient_balance_audit"
   ],
-  "next_experiment": "Monitor registered tigon_conditional_fullpanel; do not relaunch. On completion/failure collect four metric critics once, refresh fullpanel ledger/reward and cached Jev synthesis. Fixed configuration only; original promotion/temporal gates and no-upload policy unchanged.",
+  "next_experiment": "Monitor unique tigon_gradient_balance_audit; do not relaunch. Fourcritics/synthesis once on newcompletion; no target/scoring/reward. Failedfixedratio gate retires densitybalancepath; no alpha/budget grid.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -30,7 +30,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1182,
+    "current_reward": -1240,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -39,8 +39,8 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1182,
-    "reward_score": -1182,
+    "uncapped_reward": -1240,
+    "reward_score": -1240,
     "benchmark_score": "unchanged; separately reported",
     "last_batch_reward_delta": -58
   },
@@ -59,13 +59,18 @@
     "attribution": "Inferred latest export; screenshot lacks filename"
   },
   "latest_jev": {
-    "record": "JEV_TIGON_PILOT_DESIGN_ROUTE_20261002_01.json",
+    "record": "JEV_TIGON_SIGNAL_SYNTHESIS_ROUTE_20261004_01.json",
     "usage": {
-      "input_tokens": 914,
-      "output_tokens": 59
+      "input_tokens": 984,
+      "output_tokens": 43
     },
-    "payload_bytes": 1969,
-    "new_requests": 1
+    "payload_bytes": 2060,
+    "answers": {
+      "next": {
+        "choice": "single_gradient_balance_audit",
+        "confidence": 0.92
+      }
+    }
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",

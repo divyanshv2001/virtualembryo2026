@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-04T03:06:43.158594+00:00",
+  "updated_utc": "2026-10-04T03:22:24.077242+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,12 +30,12 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Monitor registered tigon_conditional_fullpanel; do not relaunch. On completion/failure collect four metric critics once, refresh fullpanel ledger/reward and cached Jev synthesis. Fixed configuration only; original promotion/temporal gates and no-upload policy unchanged.",
+  "next_experiment": "Monitor unique tigon_gradient_balance_audit; do not relaunch. Fourcritics/synthesis once on newcompletion; no target/scoring/reward. Failedfixedratio gate retires densitybalancepath; no alpha/budget grid.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "tigon_conditional_fullpanel"
+    "tigon_gradient_balance_audit"
   ],
   "active_run_path": "outputs/t1_iterations/private/tigon_conditional_fullpanel_01",
   "completed_batches_this_turn": 11,
@@ -1228,7 +1228,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1182,
+    "current_reward": -1240,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1237,8 +1237,8 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1182,
-    "reward_score": -1182,
+    "uncapped_reward": -1240,
+    "reward_score": -1240,
     "benchmark_score": "unchanged; separately reported",
     "last_batch_reward_delta": -58
   },
@@ -1299,13 +1299,18 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_TIGON_PILOT_DESIGN_ROUTE_20261002_01.json",
+    "record": "JEV_TIGON_SIGNAL_SYNTHESIS_ROUTE_20261004_01.json",
     "usage": {
-      "input_tokens": 914,
-      "output_tokens": 59
+      "input_tokens": 984,
+      "output_tokens": 43
     },
-    "payload_bytes": 1969,
-    "new_requests": 1
+    "payload_bytes": 2060,
+    "answers": {
+      "next": {
+        "choice": "single_gradient_balance_audit",
+        "confidence": 0.92
+      }
+    }
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",
@@ -2633,6 +2638,31 @@
         "mmd_u": "Problem: Synthetic losses are not MMD. Scaling, bandwidth, cohort selection and normalization can distort interpretation. Proposed solution: Past-only fixed preprocessing and matched TIGON/copy/freshCNF controls; reviewer suggests normalized weighted MMD separately. Validation: Finite outputs, ESS, documented estimator, seeds/resamples and held endpoint; no absolute growth inference.",
         "variogram": "Problem: Latent transport and reweighting may distort expression dependence despite nearuniform ESS. Proposed solution: Retain existing donor-residual covariance controls. Reviewer proposes past-only decoder dependence constraint and separate ablations. Validation: Freeze scorer/pairs/draws, inspect dependence/pair coverage without spatial coordinates, evaluate future only after freezing. Synthetic checks establish no metric improvement."
       }
+    },
+    "tigon_conditional_fullpanel_01": {
+      "status": "completed",
+      "report_sha256": "2e3756d7b592372ce3c30cc35c81e6f55b64436ece25b57e9c07aff5925751f6",
+      "specialist_role_version": 2,
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "reviews": "TIGON_CONDITIONAL_FULLPANEL_CRITIQUES.md",
+      "completed_utc": "2026-10-04T03:13:19.135062+00:00"
+    },
+    "tigon_objective_signal_01": {
+      "status": "completed",
+      "report_sha256": "e0963acdc8b33bda3d1bbe8f933d96c830615d81324938ec0d44dad334b69ff5",
+      "specialist_role_version": 2,
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "reviews": "TIGON_OBJECTIVE_SIGNAL_CRITIQUES.md"
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3415,13 +3445,35 @@
     "missing_reviews_resumed": true
   },
   "tigon_conditional_pilot": {
-    "status": "running",
+    "status": "completed_failed_progress_gate",
     "spec": "NEXT_TIGON_CONDITIONAL_FULLPANEL_PILOT.json",
     "implementation_checks": "TIGON_CONDITIONAL_IMPLEMENTATION_CHECKS.json",
     "script": "tigon_conditional_fullpanel.py",
     "run": "private/tigon_conditional_fullpanel_01",
     "report": "TIGON_CONDITIONAL_FULLPANEL_RESULTS.json",
     "pid": 18128,
-    "receipt": "private/harness_runs/tigon_conditional_fullpanel/receipt.json"
+    "receipt": "private/harness_runs/tigon_conditional_fullpanel/receipt.json",
+    "report_sha256": "2e3756d7b592372ce3c30cc35c81e6f55b64436ece25b57e9c07aff5925751f6",
+    "plan_sha256": "c20d0948dca2ca9f383451fee04297ceebc54601f2da118c48f4d19c2d24dd3e",
+    "means": {
+      "copy": 50.0,
+      "fresh_pca8_cnf_incumbent_covariance_0.25": 50.83777035137515,
+      "conditional_tigon_growth_disabled": 49.99452417350566,
+      "conditional_tigon_growth_enabled": 49.994537939136286
+    },
+    "passing_candidates": [],
+    "peak_bytes": 4675309568,
+    "reward_delta": -58
+  },
+  "tigon_objective_signal": {
+    "status": "completed",
+    "spec": "NEXT_TIGON_OBJECTIVE_SIGNAL.json",
+    "report": "TIGON_OBJECTIVE_SIGNAL_RESULTS.json",
+    "report_sha256": "e0963acdc8b33bda3d1bbe8f933d96c830615d81324938ec0d44dad334b69ff5",
+    "reward_delta": 0
+  },
+  "tigon_gradient_balance_audit": {
+    "status": "running",
+    "spec": "NEXT_TIGON_GRADIENT_BALANCE_AUDIT.json"
   }
 }

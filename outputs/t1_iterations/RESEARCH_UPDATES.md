@@ -713,3 +713,9 @@ Unique retry passed analytic integration/divergence, GaussianKDE values/gradient
 
 ## 2026-10-04T03:06:14.029108+00:00 — conditional TIGON implementation
 Fixed paired 200-step past-only pilot implemented and registered, not yet launched. Import/cutoff/uniform identity/weighted replay/selected latent identity checks passed. Existing full-panel anchor heads and guards retained; all backoffs now recorded, weighted particles carry selected original donor expression and identity. First real-past forward/backward gates resources before remaining training; no target reads or scores during implementation. Cached Jev pilot selection reused; no new advisory.
+
+## 2026-10-04T03:15:40.987587+00:00 — conditional pilot failed progress gate
+Means g0 49.994524 / g1 49.994538 vs copy50 and freshCNF50.837770; 12 outcomes indexed, allcalibrations valid, frozen/replayed, peak4675309568bytes. Four role2 critiques cached. No passing/expansion/export; separatefuture reward-58,total-1240. One cached Jev synthesis1956bytes/894in/50out selected boundedpast objective signal diagnostic (confidence.68), not target tuning or repeated signeddrift. Predeclared six frozenmodel/analytic controls,0training/targetreads/scores/reward.
+
+## 2026-10-04T03:22:24.077242+00:00 — past objective diagnostic and bounded repair
+Six frozen/analytic models inspected on past-only originalfirst RNG draws in stored encoder coordinates. Initialenergygradients32-34xdensity; traineddisplacementRMS~.0024 vsinitial.036; originaltotal~.259837 vszero.259809. Component equality passed, no causality/independence/benchmark claim. Fourrole2reviews cached,0reward. Jev2060bytes/984in/43out chose one fixedratio gradientbalance audit withcommonrescale controls, cachedbaselines and8newpastnoisequeries; no targetreads/scoring. Exact original PCA and stream byte checks required for thisnewtraining. Failure retiresdensitybalancepath.

@@ -1,0 +1,46 @@
+{
+  "status": "predeclared",
+  "cutoff": 7.75,
+  "fit_stages": [
+    7.5,
+    7.75
+  ],
+  "training_seed": 20261002,
+  "steps": 200,
+  "query_size": 32,
+  "query_noise_variance": 0.02,
+  "KDE_variance": 0.1,
+  "Adam_lr": 0.003,
+  "weight_decay": 0.01,
+  "midpoint_max_step": 0.0625,
+  "alpha": "Frozen g0 initial energy-gradient norm / density-gradient norm from TIGON_OBJECTIVE_SIGNAL_RESULTS.json; no grid or recalibration",
+  "arms": [
+    "gradient_balance_disabled",
+    "gradient_balance_enabled",
+    "common_rescale_disabled",
+    "common_rescale_enabled"
+  ],
+  "losses": {
+    "gradient_balance": "alpha * original density_MSE + original movingenergy",
+    "common_rescale": "alpha * (original density_MSE + original movingenergy)"
+  },
+  "controls": "cached original g0/g1 200step models, own sharedinitial and zerofield. Reconstruct exact original PCA/trainstream; fail on mismatch, no duplicate originalbaseline training.",
+  "diagnostic_seeds": [
+    20261004,
+    20261005,
+    20261006,
+    20261007,
+    20261008,
+    20261009,
+    20261010,
+    20261011
+  ],
+  "diagnostic_scope": "New noisequery streams on same past KDE centers, not heldoutcells/embryos or independentvalidation",
+  "gate": "Everyquery >=1percent density reduction versuszerofield, energy<=owninitial, originalobjective strictlybelowzero/cachedbaseline/commonrescale, finite and ESS>=16of32. Diagnosticonly, no automaticfullpanel retry.",
+  "failure_action": "Retire thisdensitybalancepath; noalpha/budget grid, repeat orfutureexport",
+  "target_expression_reads": 0,
+  "benchmark_scores": false,
+  "reward_delta": 0,
+  "resources": "D-only16GiB2threads1worker,32queries/chunk256",
+  "selection": "JEV_TIGON_SIGNAL_SYNTHESIS_ROUTE_20261004_01.json"
+}

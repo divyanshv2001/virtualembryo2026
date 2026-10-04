@@ -285,6 +285,16 @@
       "script": "tigon_conditional_fullpanel.py",
       "run": "private/tigon_conditional_fullpanel_01",
       "report": "TIGON_CONDITIONAL_FULLPANEL_RESULTS.json"
+    },
+    "tigon_objective_signal": {
+      "script": "tigon_objective_signal.py",
+      "run": "private/tigon_objective_signal_01",
+      "report": "TIGON_OBJECTIVE_SIGNAL_RESULTS.json"
+    },
+    "tigon_gradient_balance_audit": {
+      "script": "tigon_gradient_balance_audit.py",
+      "run": "private/tigon_gradient_balance_audit_01",
+      "report": "TIGON_GRADIENT_BALANCE_AUDIT_RESULTS.json"
     }
   }
 }

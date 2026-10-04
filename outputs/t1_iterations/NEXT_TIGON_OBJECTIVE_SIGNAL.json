@@ -1,0 +1,43 @@
+{
+  "status": "predeclared",
+  "cutoff": 7.75,
+  "fit_stages": [
+    7.5,
+    7.75
+  ],
+  "source_run": "private/tigon_conditional_fullpanel_01",
+  "seed": 20261002,
+  "queries": 32,
+  "query_noise_variance": 0.02,
+  "kernel_variance": 0.1,
+  "max_midpoint_step": 0.0625,
+  "density_multiplier": 10000,
+  "origin_and_adjacent_terms": 2,
+  "moving_energy_time_multiplier": 0.25,
+  "arms": [
+    "shared_initial_disabled",
+    "shared_initial_enabled",
+    "trained_disabled",
+    "trained_enabled",
+    "zero_field",
+    "past_centroid_translation"
+  ],
+  "measurements": [
+    "density_MSE",
+    "moving_energy",
+    "component_parameter_gradient_norms",
+    "gradient_cosine",
+    "past_displacement",
+    "normalized_ESS",
+    "KDE_density_range"
+  ],
+  "controls": "Same exact first original training stream; zero-field and solely past mean translation. Original pilot fixedconfiguration retained. Components must equal originalobjective.",
+  "training_steps": 0,
+  "target_expression_reads": 0,
+  "benchmark_scores": false,
+  "reward_delta": 0,
+  "resources": "D-only16GiB,2threads,allpastcenters/chunk256",
+  "criteria": "Descriptive falsification only: compare terms/gradients and pastdisplacement without selecting targetstrength. No numeric readiness or validated remedy claim; no automatic fullpanel retry.",
+  "scope": "Past-only mechanism diagnostic, sourcecohort retrospective. No embryo-independentvalidation.",
+  "jev_selection": "JEV_TIGON_FULLPANEL_SYNTHESIS_ROUTE_20261004_01.json"
+}
