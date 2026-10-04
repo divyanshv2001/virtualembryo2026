@@ -1,5 +1,5 @@
 {
-  "records": 3322,
+  "records": 3337,
   "sources": [
     {
       "path": "private/anchored_soft_ot_paper_pilot_01/report.json",
@@ -475,6 +475,11 @@
       "path": "private/cnf_width_challenge_01/report.json",
       "sha256": "59995f7590f25ba3dfa909f6f2162d116fa9edd2d6d6c47ef3187b1c1b7cd9c6",
       "outcomes_indexed": 33
+    },
+    {
+      "path": "private/collective_context_past_fold_01/report.json",
+      "sha256": "6082fea34d98f72886686b9fab0096e09cd5f7ecd580c0ac46b13b27de3276de",
+      "outcomes_indexed": 15
     },
     {
       "path": "private/conditioned_oneday_temporal_01/report.json",
@@ -1189,5 +1194,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "9c347a26fa399a25ec9fa57f450153394f7906aa28a7983d04cffbbb05ced7e7"
+  "ledger_sha256": "ade149a5d59b2c5c983c202ada25931a14920d1934c466bf9d8b480f106ffae1"
 }

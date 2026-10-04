@@ -30,13 +30,11 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Collect fixed collective-context trial; GPU child trains both400step arms, originalCPU scorer and priorbaseline strictreplay. Four independent metric reviews after completion/failure; evolving-vsfrozen primaryreward only, no repeated controls.",
+  "next_experiment": "Pin CardamomOT author source; audit count likelihood/hidden-protein dynamics, license and RTX3060 feasibility; then predeclare one matched hidden-memory trial if viable. Raw counts verified, no old attention grid.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "collective_context_past_fold"
-  ],
+  "active_jobs": [],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -2881,6 +2879,19 @@
       },
       "reviewer_context": "Spawn limit prevented new agent contexts; four distinct existing specialists received fresh metric-only inline packets, explicit disregard of old hypotheses, no tools/peers/writes. Do not claim four new contexts.",
       "coordinator": "All4means differencevslevel negative; direction1/3positive, othermetrics0/3. Both attentionarms below retained kinetics; no promotion.15calibrations/5forecastreplays plus3priorbaseline exact checks passed; historicaldevelopment only. Proposed gating remedies unvalidated and not authorization for an old attention parametergrid. GPUtrainedweights retained; originalCPUruntime recovery fixed exactbaseline replay. Agentreward-40, health-1435; officialscore unchanged."
+    },
+    "collective_context_past_fold_01": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "6082fea34d98f72886686b9fab0096e09cd5f7ecd580c0ac46b13b27de3276de",
+      "reviews": {
+        "de_score": "Problem: Evolving-context DE underperforms retained kinetics; current evidence establishes no readiness. Proposed solution: Test a gated residual context update as an unexplored remedy. Validation: Compare against kinetics with equal parameters, compute, and paired seeds; require independent validation before readiness claims.",
+        "de_direction": "Problem: Context adaptation remains near chance and trails copy/kinetics. Proposed solution: Gate context updates using independently estimated directional reliability. Validation: Test a preregistered new-horizon holdout with matched budgets, a frozen-gate ablation, and paired uncertainty against copy/kinetics.",
+        "mmd_u": "Problem: Evolving context still underperforms kinetics. Proposed solution: Strengthen context adaptation before expanding scope. Validation: Equal-budget comparisons show +0.0013867 over frozen context across 3/3 seeds, but one horizon and replay checks do not establish independent validation or readiness.",
+        "variogram": "Problem: Context models trail kinetics on variogram skill. Proposed solution: Evolving context adaptation. Validation: Three seeds at one horizon yield +0.001512 over frozen (3/3 positive), still below kinetics. Exact replays establish reproducibility, not independent validation or readiness."
+      },
+      "reviewer_context": "Four fresh independent metric-only contexts; no tools, peers or writes.",
+      "coordinator": "Evolving gains direction/MMD/variogram versus frozen, DE regresses; both below copy and retained kinetics. Equal4776parameters400GPUsteps; context cardinality differs train64/forecast256. Fifteen calibrations/five exact forecasts/three prior baselines passed. Historical development only; no promotion/readiness. Reward-7 already accounted once; health-1442. Remedies unvalidated; no repeat attention grid."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -4249,5 +4260,41 @@
     "query_chunk_max_error": 5.960464477539063e-08,
     "context_subset_max_error": 0.0011719614267349243,
     "predictive_score": null
+  },
+  "latest_collective_result": {
+    "mean_frozen": 49.63505310301486,
+    "mean_evolving": 49.73459084526905,
+    "mean_kinetics": 52.334065831100055,
+    "evolving_minus_frozen": 0.09953774225419,
+    "promoted": false,
+    "calibrations_valid": 15,
+    "forecast_replays": 5,
+    "prior_baseline_replays": 3,
+    "host_peak_bytes": 5400748032,
+    "gpu_peak_mib": 78.85400390625,
+    "training_steps_per_arm": 400,
+    "trained_device": "RTX3060",
+    "reward": -7,
+    "health": -1442
+  },
+  "unexplored_raw_counts_audit": {
+    "status": "raw_counts_available",
+    "source_hashes_verified": {
+      "dataset.json": "4ee07759a8cd1af0ee670c0ad8852a40f1877f52965826b36bc27412df3c942c",
+      "exprMatrix.json": "ed829add8ee19a8e636dfdb9535e1a617c24f3e78a7a2e8cd7a1d52f44a7f4e4",
+      "meta.tsv": "254b0d2a9bd47fb21841975773222c957f1685fe262fc358843c9b7d9b6e9303",
+      "exprMatrix.bin": "583c09465d844a0940b6461a49806cdeba3b291a56809e7ee9cbc74188bc163a"
+    },
+    "past_cells": 10963,
+    "past_stages": [
+      7.5,
+      7.75,
+      8.0,
+      8.25
+    ],
+    "genes": 27669,
+    "bounded_raw_gene_check": 32,
+    "raw_dense_float32_bytes": 1213340988,
+    "scope": "Data feasibility only; historical preparation checked every gene before normalization. Use original counts, never exponentiate normalized matrix. No training/scoring/reward/embryo independence."
   }
 }
