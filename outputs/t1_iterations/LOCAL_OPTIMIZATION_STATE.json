@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Fixedone-day validation fullyaccounted. RetainCNF one-day baseline andscientific short-horizon scFM evidence, no fittedhorizongate. Nextbounded cross-cutoff pastsupport review only for genuinelynew supported mechanism; no speculative temporalbasis/IPCAgrid. Friendregistry comparison at1:13PM IST4Oct2026 separatelyscheduled; do notread/analyze registry beforethat time.",
+  "next_experiment": "Fixedone-day validation fullyaccounted. RetainCNF one-day baseline andscientific short-horizon scFM evidence, no fittedhorizongate. Nextbounded cross-cutoff pastsupport review only for genuinelynew supported mechanism; no speculative temporalbasis/IPCAgrid. Friend registry T1 comparison completed on explicit user request; reuse saved comparison for unchanged source hash.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -312,7 +312,7 @@
     "evaluations": 27,
     "report_sha256": "27e707c61209b68b3b6a731e4f5ea0c2cf4870000155424c3b6d7dd0375264bb",
     "results_report": "RECENT_TRANSPORT_CHALLENGE_RESULTS.json",
-    "decision": "Latest1/2-interval velocity does not repair challenge transfer: all four means47.9632\u201348.2260, below persistence50 and archived16D global49.0279. Same panels/calibrations and bit-identical encoder/heads verified. Preserve all27 outcomes. Next test decoder stage nonstationarity; broader neural/density dynamics remain unresolved."
+    "decision": "Latest1/2-interval velocity does not repair challenge transfer: all four means47.9632–48.2260, below persistence50 and archived16D global49.0279. Same panels/calibrations and bit-identical encoder/heads verified. Preserve all27 outcomes. Next test decoder stage nonstationarity; broader neural/density dynamics remain unresolved."
   },
   "decoder_window_challenge_job": {
     "status": "completed_not_promoted",
@@ -2691,8 +2691,8 @@
         "variogram"
       ],
       "reviews": {
-        "de_score": "Problem: DE is unavailable; empty outcomes cannot establish benefit despite both mechanism gates passing. Proposed solution: Next cycle, freeze the unchanged head and run a full-panel contrast against copy and fresh-CNF controls, retaining past-only inputs and matched initialization/query streams. No target tuning. Validation: Compare matched controls under predefined criteria. Current evidence supports mechanism stability only: logloss ratios .124\u2013.294, energy within past-centroid bounds, ESSg1>=30.97/32, span<=.681. DE uncertainty and readiness remain unchanged.",
-        "de_direction": "Problem: DE direction is unavailable; mechanism gains cannot establish correct direction. E8.0 was previously exposed, with no independent embryos. Proposed solution: Next cycle, freeze the unchanged head and run a full-panel contrast against copy and fresh-CNF controls using matched past-only initialization/query streams; avoid target tuning. Validation: Both mechanism gates pass across eight noise seeds (loss ratios .124\u2013.294; energy<=past centroid; ESS>=30.97/32; span<=.681). Direction remains unresolved; readiness unchanged.",
+        "de_score": "Problem: DE is unavailable; empty outcomes cannot establish benefit despite both mechanism gates passing. Proposed solution: Next cycle, freeze the unchanged head and run a full-panel contrast against copy and fresh-CNF controls, retaining past-only inputs and matched initialization/query streams. No target tuning. Validation: Compare matched controls under predefined criteria. Current evidence supports mechanism stability only: logloss ratios .124–.294, energy within past-centroid bounds, ESSg1>=30.97/32, span<=.681. DE uncertainty and readiness remain unchanged.",
+        "de_direction": "Problem: DE direction is unavailable; mechanism gains cannot establish correct direction. E8.0 was previously exposed, with no independent embryos. Proposed solution: Next cycle, freeze the unchanged head and run a full-panel contrast against copy and fresh-CNF controls using matched past-only initialization/query streams; avoid target tuning. Validation: Both mechanism gates pass across eight noise seeds (loss ratios .124–.294; energy<=past centroid; ESS>=30.97/32; span<=.681). Direction remains unresolved; readiness unchanged.",
         "mmd_u": "Problem: MMD is unavailable; passing mechanism gates establish neither MMD improvement nor heldout-cell/embryo generalization. Readiness is unchanged. Proposed solution: Next cycle only, freeze the unchanged head and run the full-panel copy/fresh-CNF contrast with the original MMD scorer; no weighted benchmark or target tuning. Validation: Match initialization, query stream, past-only centers, and eight noise seeds. Success requires lower MMD versus matched controls while retaining mechanism gates; unavailable MMD leaves the contrast unresolved.",
         "variogram": "Problem: Variogram is unavailable; both mechanism gates pass, but gene-pair dependence remains untested. Readiness unchanged. Proposed solution: Next cycle only, freeze unchanged heads/full panel; use a residual-preserving donor contrast with copy/freshCNF controls, past-only data, covariance guards, and original scorer. No target tuning. Validation: Preserve exact initialization/query streams. Require covariance guards and available variogram under frozen criteria; missing scores remain unavailable, and guard failure rejects the contrast."
       },
@@ -3749,7 +3749,7 @@
     },
     "new_direction": "Likelihood-compatible OT gradient projection; actual score gain unvalidated.",
     "jev_decision": "private/harness_runs/anchored_soft_ot_paper_pilot/decisions/scfm_reopen_past_direction_20261004_route.json",
-    "next": "Fixedone-day validation fullyaccounted. RetainCNF one-day baseline andscientific short-horizon scFM evidence, no fittedhorizongate. Nextbounded cross-cutoff pastsupport review only for genuinelynew supported mechanism; no speculative temporalbasis/IPCAgrid. Friendregistry comparison at1:13PM IST4Oct2026 separatelyscheduled; do notread/analyze registry beforethat time.",
+    "next": "Fixedone-day validation fullyaccounted. RetainCNF one-day baseline andscientific short-horizon scFM evidence, no fittedhorizongate. Nextbounded cross-cutoff pastsupport review only for genuinelynew supported mechanism; no speculative temporalbasis/IPCAgrid. Friend registry T1 comparison completed on explicit user request; reuse saved comparison for unchanged source hash.",
     "latest_fold_result": {
       "experiment": "scfm_projected_past_fold",
       "status": "completed_incremental_gain_not_promoted",
@@ -3848,5 +3848,16 @@
       "payload_bytes": 2297
     },
     "decision": "PreservePCA; do not launch speculative temporalbasis withoutpasttransfer support."
+  },
+  "friend_registry_comparison": {
+    "status": "completed_reference_only",
+    "source_sha256": "c87c76c61011dc43c6b471b0155505bd8b703f1ea1ec7210e31bc2c62abd3acc",
+    "records": 60,
+    "t1_records": 10,
+    "report": "C:\\Users\\vishw\\Documents\\Codex\\2026-10-04\\t1-research-continuation\\outputs\\friend-t1-comparison.md",
+    "completed_utc": "2026-10-04T06:24:01.154127+00:00",
+    "authorization": "Latest explicit check request supersedes earlier delay",
+    "reward_delta": 0,
+    "next": "Reuse comparison when source hash unchanged; no duplicate analysis or unsupported experiment."
   }
 }
