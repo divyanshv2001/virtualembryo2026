@@ -6395,9 +6395,9 @@
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
     "experiment": "collective_context_past_fold",
-    "status": "completed_gaussian_incremental_retained",
+    "status": "running_frozen_validation",
     "next_experiment": "gaussian_vae_frozen_horizon_validation",
-    "next": "Frozen Gaussian-VAE horizon validation at8.25->9.25 versus retained kinetics; reuse already-trained400VAE+400OT weights with strict code/context/checkpoint hashes, zero retraining/target tuning/repeat reward. OriginalCPU full-panel head/scorer and prior/neutral exactreplays. Historical developmental validation only, not independentembryo evidence; retain52.3521 incremental candidate without weakening readinessgates.",
+    "next": "Collect frozen Gaussian-VAE9.25horizon validation; zero retraining/reward. Four fresh independent metricreviews after scored completion/failure, unchanged originalscorer/readiness/replay gates.",
     "jev_choice": "frozen_gaussian_horizon_validation",
     "jev_confidence": 0.99,
     "scope": "Advisory low confidence; raw-count data availability verified deterministically, no score claim.",

@@ -30,11 +30,13 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Frozen Gaussian-VAE horizon validation at8.25->9.25 versus retained kinetics; reuse already-trained400VAE+400OT weights with strict code/context/checkpoint hashes, zero retraining/target tuning/repeat reward. OriginalCPU full-panel head/scorer and prior/neutral exactreplays. Historical developmental validation only, not independentembryo evidence; retain52.3521 incremental candidate without weakening readinessgates.",
+  "next_experiment": "Collect frozen Gaussian-VAE9.25horizon validation; zero retraining/reward. Four fresh independent metricreviews after scored completion/failure, unchanged originalscorer/readiness/replay gates.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
+  "active_jobs": [
+    "gaussian_vae_frozen_horizon_validation"
+  ],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,

@@ -1,18 +1,20 @@
 {
-  "updated_utc": "2026-10-04T12:58:28.865925+00:00",
+  "updated_utc": "2026-10-04T13:04:30.021671+00:00",
   "fingerprints": {
     "RESEARCH_CONTINUATION_POLICY.md": "1e6cc6f15c1e918ad60a1e01f26dd66c48022b33158bf8eb2240a9622066af00",
-    "LOCAL_OPTIMIZATION_STATE.json": "7f7a83d6aa899116f0ca343f0bf786a3e4df4a865c4e4f0e80903838b1cf842a",
+    "LOCAL_OPTIMIZATION_STATE.json": "8b9948d05425c46297cfb405f543691eb3b2b9e077ba7ce69b7a20b467d7e79e",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "0c997746dafd9fabfdc7ef19a0629a32470db26a65b665465d48a807842d8b47",
+    "METRIC_RESEARCH_QUEUE.json": "71c1b71e0e40e8405c11bc57ced95a1431f861ba1a6ed11488f9d08dcacb50a1",
     "METRIC_CRITIQUE_POLICY.json": "3535989f1e3beac0f2d446b44df3c793d4be464dbd87f6e714c2f5afda864a6f",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
-    "RESEARCH_HARNESS_MANIFEST.json": "215f0235ff2007707db8f165e8f274f0f1c28958f5b459afea0da6f0810d9f3e"
+    "RESEARCH_HARNESS_MANIFEST.json": "d7593d4eb22e2c023bb34bfe1320f1138187d41454a88ad9a0433d3e8725bf5a"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [],
-  "next_experiment": "Frozen Gaussian-VAE horizon validation at8.25->9.25 versus retained kinetics; reuse already-trained400VAE+400OT weights with strict code/context/checkpoint hashes, zero retraining/target tuning/repeat reward. OriginalCPU full-panel head/scorer and prior/neutral exactreplays. Historical developmental validation only, not independentembryo evidence; retain52.3521 incremental candidate without weakening readinessgates.",
+  "active_jobs_at_checkpoint": [
+    "gaussian_vae_frozen_horizon_validation"
+  ],
+  "next_experiment": "Collect frozen Gaussian-VAE9.25horizon validation; zero retraining/reward. Four fresh independent metricreviews after scored completion/failure, unchanged originalscorer/readiness/replay gates.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",

@@ -112,14 +112,25 @@ def main():
                         np.testing.assert_allclose(cc['projection'],(c['basis'][:,:128]/c['scale'][:128]).T,rtol=0,atol=0)
                         projection=cc['projection'].copy()
                     helper=HERE/'count_vae_representation.py'
-                    packet={'context':str(context_path),'sha256':{str(path):digest(path) for path in [context_path,helper,HERE/'cnf_manifold_flow.py']}}
-                    save(RUN/'VAE_GPU_packet.json',packet)
-                    python=HERE.parents[1]/'outputs/research_workflow/.venv_cuda/Scripts/python.exe'
-                    with (RUN/'GPU_stdout.log').open('wb') as stdout,(RUN/'GPU_stderr.log').open('wb') as stderr:
-                        subprocess.run([str(python),'-u',str(helper),'--train-packet',str(RUN/'VAE_GPU_packet.json')],stdout=stdout,stderr=stderr,cwd=HERE.parents[1],check=True,creationflags=subprocess.CREATE_NO_WINDOW)
+                    weights_root=RUN
+                    if spec.get('reuse_vae_run'):
+                        weights_root=HERE/spec['reuse_vae_run']
+                        old_plan=json.loads((weights_root/'plan.json').read_text())
+                        if old_plan['input_sha256']!=inputs or old_plan['protocol']['cutoff']!=cutoff:raise ValueError('Reused VAE input/fit cutoff mismatch')
+                        for source in ['count_vae_representation.py','cnf_manifold_flow.py']:
+                            if digest(HERE/source)!=old_plan['source_sha256'][source]:raise ValueError('Reused VAE model/solver changed')
+                        report['fixed_candidate_validation']={'training_steps':0,'reward_eligible':False,'scope':'Frozen VAE new-horizon historical development; no retraining, target tuning or repeat reward.'}
+                    else:
+                        packet={'context':str(context_path),'sha256':{str(path):digest(path) for path in [context_path,helper,HERE/'cnf_manifold_flow.py']}}
+                        save(RUN/'VAE_GPU_packet.json',packet)
+                        python=HERE.parents[1]/'outputs/research_workflow/.venv_cuda/Scripts/python.exe'
+                        with (RUN/'GPU_stdout.log').open('wb') as stdout,(RUN/'GPU_stderr.log').open('wb') as stderr:
+                            subprocess.run([str(python),'-u',str(helper),'--train-packet',str(RUN/'VAE_GPU_packet.json')],stdout=stdout,stderr=stderr,cwd=HERE.parents[1],check=True,creationflags=subprocess.CREATE_NO_WINDOW)
                     expected_z=flows['kinetic_none400'].encode(torch.tensor((c['donors'][:,c['features']]-c['center'])/c['scale']))[0].detach()
-                    for kind in ['log_gaussian','count_nb']:
-                        name='vae_'+kind+'400';saved=torch.load(RUN/(name+'.pt'),weights_only=False,map_location='cpu')
+                    for kind in spec.get('vae_kinds',['log_gaussian','count_nb']):
+                        name='vae_'+kind+'400';weight_path=weights_root/(name+'.pt')
+                        if spec.get('reuse_vae_run') and digest(weight_path)!=spec['vae_checkpoint_sha256'][name]:raise ValueError('Frozen VAE checkpoint changed')
+                        saved=torch.load(weight_path,weights_only=False,map_location='cpu')
                         if saved['kind']!=kind or saved['steps']!=400 or saved['dynamics_steps']!=400 or saved['vae_parameters']!=18320 or saved['dynamics_parameters']!=1640 or saved['fit_max_stage']!=cutoff or saved['batch_size']!=64 or saved['context_sha256']!=spec['count_context_sha256']:raise ValueError('VAE checkpoint metadata mismatch')
                         model=ObservationVAE(kind);model.load_state_dict(saved['vae']);model.eval()
                         dynamics=LatentDynamics();dynamics.load_state_dict(saved['dynamics']);dynamics.eval()

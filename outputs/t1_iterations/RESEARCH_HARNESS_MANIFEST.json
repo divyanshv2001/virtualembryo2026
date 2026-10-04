@@ -1426,6 +1426,76 @@
         "count_vae": true,
         "count_context_sha256": "49ac69cc7d42c6c8238d704d3e4b4c1207a458d71081aa110e40474e28175956"
       }
+    },
+    "gaussian_vae_frozen_horizon_validation": {
+      "script": "scfm_projected_past_fold.py",
+      "args": [
+        "--experiment",
+        "gaussian_vae_frozen_horizon_validation"
+      ],
+      "run": "private/gaussian_vae_frozen_horizon_validation_01",
+      "report": "GAUSSIAN_VAE_FROZEN_HORIZON_VALIDATION_RESULTS.json",
+      "protocol": {
+        "cutoff": 8.25,
+        "target": 9.25,
+        "fit_stages": [
+          7.5,
+          7.75,
+          8.0,
+          8.25
+        ],
+        "seed": 20260928,
+        "scoring_seeds": [
+          20260928,
+          20260929,
+          20260930
+        ],
+        "steps": 400,
+        "batch_size": 64,
+        "reuse_run": "private/scfm_projected_past_fold_01",
+        "candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "vae_log_gaussian400"
+        ],
+        "control_candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400"
+        ],
+        "contrast_candidates": [
+          "kinetic_none400",
+          "vae_log_gaussian400"
+        ],
+        "contrast_label": "frozen_gaussian_minus_kinetics_mean_skills",
+        "reward_reference": "kinetic_none400",
+        "reward_candidates": [],
+        "scope": "Frozen GaussianVAE newhorizon8.25to9.25 validation. Original400representation+400latentOT RTX3060weights hashfixed, no new training/GPUworker/parameter selection/repeat reward. Preserve tiny9.5Gaussian incremental gain without larger-goal rejection. Same pastencoder, actualdonors, original2.14CPU full32285gene head/guards/scorer/calibration/readiness; prior3baseline andGaussian neutral/newforecast exactreplays beforetargetexpression. Newhorizon historicaldevelopment, not independentembryo validation. Four metricreviews after scoredbatch. No officialupload/readinessclaim or retrospectivemodel reward.",
+        "frozen_kinetic_run": "private/graph_kinetics_past_fold_repair_01",
+        "prior_target": 9.25,
+        "frozen_checkpoint_sha256": {
+          "kinetic_none400": "11dc8d8620fa66997aa08d2f88ad9f4e9cdc2db788f8c1b3088f1b8eb01dd4c2"
+        },
+        "training_device": "cuda",
+        "prior_candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400"
+        ],
+        "driver_runtime": "cpu",
+        "count_vae": true,
+        "count_context_sha256": "49ac69cc7d42c6c8238d704d3e4b4c1207a458d71081aa110e40474e28175956",
+        "reuse_vae_run": "private/count_vae_past_fold_01",
+        "vae_kinds": [
+          "log_gaussian"
+        ],
+        "vae_checkpoint_sha256": {
+          "vae_log_gaussian400": "95b236d6a1eec9351169135ef3873654e210c7777e41839a2710265c31355300"
+        },
+        "reward_eligible": false,
+        "fixed_candidate_validation": true
+      }
     }
   }
 }
