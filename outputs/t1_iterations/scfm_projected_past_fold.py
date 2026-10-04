@@ -106,8 +106,20 @@ def main():
                     for name,kind in [('attention_level400','level'),('attention_difference400','difference')]:
                         torch.manual_seed(20261004)
                         model=PastAttentionFlow(flows['kinetic_none400'],times,centroids,kind)
-                        train_attention(model,c['coordinates'],c['stages'][c['past']],RUN/(name+'.pt'),emit,steps=spec['steps'],batch=spec['batch_size'])
-                        flows[name]=model;emit('candidate_training_finished',candidate=name,device='cuda:0')
+                        if spec.get('reuse_attention_run'):
+                            prior_run=HERE/spec['reuse_attention_run'];path=prior_run/(name+'.pt')
+                            if digest(path)!=spec['attention_checkpoint_sha256'][name]:raise ValueError('Attention checkpoint changed')
+                            old_plan=json.loads((prior_run/'plan.json').read_text())
+                            if old_plan['input_sha256']!=inputs or old_plan['source_sha256']['past_difference_attention.py']!=digest(HERE/'past_difference_attention.py'):raise ValueError('Attention training provenance changed')
+                            saved=torch.load(path,weights_only=False,map_location='cpu')
+                            if saved['kind']!=kind or saved['steps']!=400 or saved['batch_size']!=64 or saved['fit_max_stage']!=cutoff or not saved['frozen_base_exact'] or saved['cuda']!='12.8':raise ValueError('Attention training metadata changed')
+                            model.load_state_dict(saved['net']);model.eval()
+                            for key,value in flows['kinetic_none400'].state_dict().items():torch.testing.assert_close(model.base.state_dict()[key],value,rtol=0,atol=0)
+                            np.testing.assert_array_equal(model.centroids.numpy(),centroids)
+                            emit('CUDA_trained_attention_checkpoint_reused',candidate=name,sha256=digest(path),optimizer_steps=0)
+                        else:
+                            train_attention(model,c['coordinates'],c['stages'][c['past']],RUN/(name+'.pt'),emit,steps=spec['steps'],batch=spec['batch_size'])
+                        flows[name]=model;emit('candidate_training_finished',candidate=name,device='cuda:0',reused=bool(spec.get('reuse_attention_run')))
             elif spec.get('graph_kinetics'):
                 from graph_kinetic_residual import prepare_kinetic_models, train_kinetics
                 kinetic_models,graph_audit=prepare_kinetic_models(initial,c,RUN,emit)

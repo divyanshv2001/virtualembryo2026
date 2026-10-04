@@ -1,20 +1,20 @@
 {
-  "updated_utc": "2026-10-04T09:56:44.602187+00:00",
+  "updated_utc": "2026-10-04T10:08:17.570264+00:00",
   "fingerprints": {
     "RESEARCH_CONTINUATION_POLICY.md": "1e6cc6f15c1e918ad60a1e01f26dd66c48022b33158bf8eb2240a9622066af00",
-    "LOCAL_OPTIMIZATION_STATE.json": "e1542a9dc80704a06ce1378a0b99c42fcbf945196e2b7f8c1b383aa8a8eaf6b3",
+    "LOCAL_OPTIMIZATION_STATE.json": "5d764ccd961e1db0c2688262ecb7a1c96336e44d5e6e1d20b3b34d73e824243c",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "bd9568c2fb3b175f50db71ebd667cea3d9b6a327c4620e80cbf5b9ce8f7d4f25",
+    "METRIC_RESEARCH_QUEUE.json": "51b2d950ed738fad1c4111ff440fee8a16d4c140acbda0b941aa644ddac014dd",
     "METRIC_CRITIQUE_POLICY.json": "3535989f1e3beac0f2d446b44df3c793d4be464dbd87f6e714c2f5afda864a6f",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
-    "RESEARCH_HARNESS_MANIFEST.json": "f4b0e518a3d43ed5948ce63309029667134534c5ef99b39a7da22aa110f4a80b"
+    "RESEARCH_HARNESS_MANIFEST.json": "6b3779609255d3b4a4e2377bfec76371f21c74b0246b4bd0c91e2902abc5c2cb"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [
-    "difference_attention_past_fold_repair"
+    "difference_attention_cpu_scoring_recovery"
   ],
-  "next_experiment": "Collect repaired fixedCUDA level/difference attention trial; four fresh metric reviews on completion, unchanged scorer/calibration/readiness; primary differencevslevel reward only.",
+  "next_experiment": "Collect CPU scoring recovery using already-trained RTX3060 attention checkpoints; no retraining, original2.14CPU baseline strictreplays and unchanged scoring/gates. Four fresh reviews after first valid scored batch; differencevslevel reward only.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",

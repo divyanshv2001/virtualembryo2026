@@ -1011,6 +1011,77 @@
         "repair_of": "difference_attention_past_fold",
         "repair_scope": "Correct logging keyword before fresh source lock; check all frozen source hashes after preparation and before target scoring. No scientific protocol change, fresh paired400step training, invalid partialrun never resumed."
       }
+    },
+    "difference_attention_cpu_scoring_recovery": {
+      "script": "scfm_projected_past_fold.py",
+      "args": [
+        "--experiment",
+        "difference_attention_cpu_scoring_recovery"
+      ],
+      "run": "private/difference_attention_cpu_scoring_recovery_01",
+      "report": "DIFFERENCE_ATTENTION_CPU_SCORING_RECOVERY_RESULTS.json",
+      "protocol": {
+        "cutoff": 8.25,
+        "target": 9.5,
+        "fit_stages": [
+          7.5,
+          7.75,
+          8.0,
+          8.25
+        ],
+        "seed": 20260928,
+        "scoring_seeds": [
+          20260928,
+          20260929,
+          20260930
+        ],
+        "steps": 400,
+        "batch_size": 64,
+        "reuse_run": "private/scfm_projected_past_fold_01",
+        "candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "attention_level400",
+          "attention_difference400"
+        ],
+        "control_candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "attention_level400"
+        ],
+        "contrast_candidates": [
+          "attention_level400",
+          "attention_difference400"
+        ],
+        "contrast_label": "difference_minus_level_attention_mean_skills",
+        "reward_reference": "attention_level400",
+        "reward_candidates": [
+          "attention_difference400"
+        ],
+        "scope": "Own scDiformer-inspired stage-centroid attention adaptation, not reproduction or inferred single-cell trajectories. Frozen verified<=8.25 encoder/CNF/noedge400 and same .25/.75fullpanel heads. Level vs interval-normalized difference centroid memories share4776parameters, zero initialresidual, fixed400GPU steps batch64, past adjacent Sinkhorn p2blur.05scaling.9, Adam.001clip5, paired RNG, RK4.125, normcap1. Each training transition memory ends at its source physicalstage; forecast memory through8.25 only. RTX3060 6GiB, allocation<=4.5GiB, hostRAM16GiB/2threads. CPU forecast/scorer unchanged; allprior9.25 predictions required bit-exact under newruntime, forecasts exactreplayed before9.5expression. Historical exposeddevelopment only; original readiness/gates unchanged. Primary differencevslevel reward only, controls0; no official upload, targettuning or grids.",
+        "frozen_kinetic_run": "private/graph_kinetics_past_fold_repair_01",
+        "prior_target": 9.25,
+        "frozen_checkpoint_sha256": {
+          "kinetic_none400": "11dc8d8620fa66997aa08d2f88ad9f4e9cdc2db788f8c1b3088f1b8eb01dd4c2"
+        },
+        "training_device": "cuda",
+        "difference_attention": true,
+        "prior_candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400"
+        ],
+        "repair_of": "difference_attention_past_fold_repair",
+        "repair_scope": "Fixed synthetic input audit confirms numeric differences between torch2.14CPU and2.11CUDAenv CPU kernels up to1.669e-6; retain completed CUDA-trained weights, zero retraining. Original2.14CPU driver/head/scorer and strict originalbaseline SHA replay required before target scoring. No tolerance relaxation or scientific settings change. Training remained RTX3060, never AMD.",
+        "driver_runtime": "cpu",
+        "reuse_attention_run": "private/difference_attention_past_fold_repair_01",
+        "attention_checkpoint_sha256": {
+          "attention_level400": "c7cad2da2e9262c856d7bba866efa5726d1f4d4fa1d3da36b06165aa01a36260",
+          "attention_difference400": "d64f4e78fcc872e6e5f3e61373280e31019a01be17735b219f147d0893a10d3f"
+        }
+      }
     }
   }
 }

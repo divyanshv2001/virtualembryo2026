@@ -30,12 +30,12 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Collect repaired fixedCUDA level/difference attention trial; four fresh metric reviews on completion, unchanged scorer/calibration/readiness; primary differencevslevel reward only.",
+  "next_experiment": "Collect CPU scoring recovery using already-trained RTX3060 attention checkpoints; no retraining, original2.14CPU baseline strictreplays and unchanged scoring/gates. Four fresh reviews after first valid scored batch; differencevslevel reward only.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "difference_attention_past_fold_repair"
+    "difference_attention_cpu_scoring_recovery"
   ],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
@@ -2856,6 +2856,18 @@
         "variogram": "Problem: Post-freeze logging edit compromises provenance. Proposed solution: Lock repaired logging; preserve controls/scorer. Validation: Fresh rerun with provenance checks; variogram, reward, calibration, and readiness remain unassessed."
       },
       "coordinator": "No predictive result exists; reward0, no readiness reset. Logging change only, fresh repair cannot resume invalid partialarm; source hashes checked beforetraining and target scoring. Future completedbatch needs four new independent reviews."
+    },
+    "difference_attention_past_fold_repair_01": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "0bbbb3f3565c94ad3d31c8a19b887b4215f229cc5615e88e4a7a47ad133be4ce",
+      "reviews": {
+        "de_score": "Problem: Torch-version replay drift invalidates scoring. Proposed solution: Use original CPU scorer on hash-verified saved GPU checkpoints, preserving all gates. Validation: Require exact baseline replay before target evaluation; report no metrics until it passes.",
+        "de_direction": "Problem: Runtime mismatch blocks comparable scoring; cause remains unisolated. Proposed solution: Recover historical CPU scoring using verified CUDA checkpoints without retraining. Validation: Reproduce baseline forecast SHA before scoring both arms under unchanged replay gate.",
+        "mmd_u": "Problem: MMD remains unscored; baseline forecast hashes differ across runtimes, with cause unisolated. Proposed solution: Recover original CPU scorer using verified saved CUDA weights, without retraining. Validation: Preserve exact-replay and full-panel gates.",
+        "variogram": "Problem: Baseline replay mismatch remains unexplained; no target variogram supports calibration. Proposed solution: Score hash-verified saved weights with original CPU scorer, without retraining. Validation: Require unchanged exact-replay gate; bit-exact frozen bases alone establish insufficient equivalence."
+      },
+      "coordinator": "Both400step CUDA checkpoints completed with frozenbase exact; no scores or target-expression access after baseline mismatch. Runtime change is a hypothesis, not isolated cause. Keep strict priorreplay/fullpanel gates. Recovery uses immutable GPUweights and originalCPU driver; no repeated training or control reward."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -4150,5 +4162,55 @@
     "new_scoring_batch": false,
     "initial_import_and_device_failures_preserved": true,
     "cpu_velocity_unchanged_verified": true
+  },
+  "attention_runtime_diagnostic": {
+    "synthetic_only": true,
+    "CPU_compute_under_torch_versions": [
+      "2.14.0+cpu",
+      "2.11.0+cu128"
+    ],
+    "comparison": {
+      "encode_False": {
+        "exact": false,
+        "different_entries": 998,
+        "max_absolute_error": 1.6689300537109375e-06
+      },
+      "drift_False": {
+        "exact": false,
+        "different_entries": 303,
+        "max_absolute_error": 2.384185791015625e-07
+      },
+      "kinetic_False": {
+        "exact": false,
+        "different_entries": 811,
+        "max_absolute_error": 5.960464477539062e-07
+      },
+      "forecast_False": {
+        "exact": false,
+        "different_entries": 533,
+        "max_absolute_error": 4.76837158203125e-07
+      },
+      "encode_True": {
+        "exact": false,
+        "different_entries": 998,
+        "max_absolute_error": 1.6689300537109375e-06
+      },
+      "drift_True": {
+        "exact": false,
+        "different_entries": 303,
+        "max_absolute_error": 2.384185791015625e-07
+      },
+      "kinetic_True": {
+        "exact": false,
+        "different_entries": 811,
+        "max_absolute_error": 5.960464477539062e-07
+      },
+      "forecast_True": {
+        "exact": false,
+        "different_entries": 533,
+        "max_absolute_error": 4.76837158203125e-07
+      }
+    },
+    "scope": "Isolates fixed-input model numerical differences; no target data or scoring; GPU training retained. Full prediction replay remains required."
   }
 }

@@ -6394,9 +6394,11 @@
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
-    "experiment": "difference_attention_past_fold_repair",
-    "status": "registered_source_lock_repair",
-    "next_experiment": "difference_attention_past_fold_repair",
-    "next": "Collect repaired fixedCUDA level/difference attention trial; four fresh metric reviews on completion, unchanged scorer/calibration/readiness; primary differencevslevel reward only."
+    "experiment": "difference_attention_cpu_scoring_recovery",
+    "status": "running_runtime_recovery",
+    "next_experiment": "difference_attention_cpu_scoring_recovery",
+    "next": "Collect CPU scoring recovery using already-trained RTX3060 attention checkpoints; no retraining, original2.14CPU baseline strictreplays and unchanged scoring/gates. Four fresh reviews after first valid scored batch; differencevslevel reward only.",
+    "jev_triage_choice": "diagnose_first",
+    "jev_confidence": 0.74
   }
 }
