@@ -1,5 +1,5 @@
 {
-  "records": 3229,
+  "records": 3244,
   "sources": [
     {
       "path": "private/anchored_soft_ot_paper_pilot_01/report.json",
@@ -942,6 +942,11 @@
       "outcomes_indexed": 0
     },
     {
+      "path": "private/scfm_latent_pair_fold_01/report.json",
+      "sha256": "65e9ea3973858367c7364a58380378b921a687cc58af7ae0192327e225767d39",
+      "outcomes_indexed": 15
+    },
+    {
       "path": "private/scfm_projected_past_fold_01/report.json",
       "sha256": "f183919e78ad10ee78614511c1dced9319feec324ae8002f170ac02cd78f3fb3",
       "outcomes_indexed": 15
@@ -1134,5 +1139,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "a94f07c0b0d29f6d5afc3745c1d3b4858e71d1bc4a19a99a0f4f3d3f9ec940bb"
+  "ledger_sha256": "c02466cfdbd7d10e322db2b6ee4ec38c60fa0ca83fa58753303a2d8fb18cdc14"
 }

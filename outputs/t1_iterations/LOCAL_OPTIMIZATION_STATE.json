@@ -30,13 +30,11 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Monitor scfm_latent_pair_fold once without duplication. On completion/failure collect four fresh inline metric reviews, retain all15raw/skill/calibration outcomes and scoreledger; apply only projected_pair800 reward vs matchedprojected_ot800 (allcontrols0), update health, then reassess separateIPCA. No new worker while active.",
+  "next_experiment": "Implement one queued controlled PCA/IPCA trial using shared runner/context. Same<=8.25 normalization/features/3000PCAfitrows/rank8, IPCAchunk512 and fixed row order. Reuse verified PCA/CNF800/projected400 checkpoints; fit only IPCA800+400projectedOT. New eligible horizon8.25->9.25 after metadata/coverage check; predictions frozen before target. Matched representation controls and unchanged fullgene scorer/readiness. No pairloss retuning or new weightgrid.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "scfm_latent_pair_fold"
-  ],
+  "active_jobs": [],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -1228,7 +1226,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1312,
+    "current_reward": -1319,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1237,10 +1235,10 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1312,
-    "reward_score": -1312,
+    "uncapped_reward": -1319,
+    "reward_score": -1319,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": 8
+    "last_batch_reward_delta": -7
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -2745,6 +2743,19 @@
         "variogram": "Problem: Projected OT improves variograms versus copy/CNF on all three panels, but trails NLL and regresses versus raw OT on one. Proposed solution: Add a past-only, lag-weighted variogram penalty to projected OT, preserving its incremental gains. Validation: Use identical calibrated panels and frozen PCA8/4096 budget; require panelwise improvement and strict gates. Treat exposed8.75 as development only."
       },
       "coordinator": "Facts checked against raw3panels: DE belowcopy; direction2/3 and tinygain vsraw; MMD3/3; variogram belowNLL3/3. Allfour mean skills improve vs declaredCNF800, reward+4 perOTarm. Critic remedies differ; none is proven or authorized to tune exposedtarget. Preserve incremental gains without promotion/generalization claims. User-requested IPCA remains a separate controlled direction."
+    },
+    "scfm_latent_pair_fold_01": {
+      "status": "completed",
+      "report_sha256": "65e9ea3973858367c7364a58380378b921a687cc58af7ae0192327e225767d39",
+      "packet_report_sha256": "ce92163fce9dd089d4ad61bb27a1e70dcdaf57c21b79ae33a33d3f83150b9a5f",
+      "specialist_role_version": 2,
+      "reviews": {
+        "de_score": "Problem: DE gains are tiny (+0.000146843 mean paired skill); strict gates remain unmet. Proposed solution: Calibrate one fixed pair-loss weight using gradient norms on past-only development data, keeping initialization, latent power, and optimization budget frozen. Validation: Compare against matched zero-loss controls on independent embryos with prespecified gates; retain all15 calibration/replay checks. Historical development cannot establish independent generalization.",
+        "de_direction": "Problem: Direction improved all three panels, but aggregate performance trails the shorter-trained checkpoint; strict gates remain unmet. All calibrations were valid. Proposed solution: Cap pair-loss gradient norm at the frozen past-only baseline-gradient median, preserving scorer and calibration. Validation: Predeclare the cap; compare400 additional steps with matched zero-loss control across all15 exact replays. Historical development is non-independent.",
+        "mmd_u": "Problem: MMD worsened all three paired comparisons; strict gates remain unmet. Proposed solution: Freeze kernel bandwidth at the median pairwise distance estimated exclusively from past latent samples. Validation: Repeat400 additional steps against matched zero-loss controls with identical initialization, seeds, and exact replays across all15 calibrations. Historical development cannot establish independent-embryo generalization.",
+        "variogram": "Problem: Variogram gains are negligible; strict gates remain unmet. Proposed solution: Normalize training pair-loss residuals by lag-specific variability estimated solely from historical development data, then freeze weights. Validation: Compare identical initialization and400 additional steps with matched zero-loss control; retain exact replays and unchanged scorer/kernel/genes. Treat historical validation as development evidence, not independent-embryo confirmation."
+      },
+      "coordinator": "Verified DEties2/improves1, directionimproves3, MMDregresses3, variogramimproves1/regresses2. First direction review invented calibration-penalty deterioration; requested correction and cached corrected review, allcalibrationsvalid. MMD bandwidth proposal would require a distinct past-only training loss; never alter scorer kernel or reinterpret current pairloss as MMD. Reviewer remedy differences remain uncertainty. Fixed penalty adds+.0072945headline overmatchedcontrol but trails shorterprojected400 by.0061720; retire onlythis fixedpenalty, preserve scFM baseline. Reward3positive-10MMD=-7."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3665,36 +3676,31 @@
   },
   "agent_health": {
     "redline": 0,
-    "score": -1312,
+    "score": -1319,
     "status": "below_redline",
     "metrics": {
       "de_score": {
-        "score": -339,
+        "score": -338,
         "status": "below_redline"
       },
       "de_direction": {
-        "score": -295,
+        "score": -294,
         "status": "below_redline"
       },
       "mmd_u": {
-        "score": -372,
+        "score": -382,
         "status": "below_redline"
       },
       "variogram": {
-        "score": -306,
+        "score": -305,
         "status": "below_redline"
       }
     },
-    "recorded_iterations": 48,
+    "recorded_iterations": 49,
     "action": "Prioritize supported matched-control improvements; preserve failures and gates. Proxy/pending iterations earn zero. No score reset, fabricated reward, agent termination or deployment implied.",
     "latest_iteration": {
-      "experiment": "scfm_projected_past_fold_01",
-      "reward_delta": 8
-    },
-    "pending_iteration": {
       "experiment": "scfm_latent_pair_fold_01",
-      "status": "running_at_checkpoint",
-      "reward_delta": 0
+      "reward_delta": -7
     }
   },
   "scfm_reopened": {
@@ -3716,7 +3722,7 @@
     },
     "new_direction": "Likelihood-compatible OT gradient projection; actual score gain unvalidated.",
     "jev_decision": "private/harness_runs/anchored_soft_ot_paper_pilot/decisions/scfm_reopen_past_direction_20261004_route.json",
-    "next": "Monitor scfm_latent_pair_fold once without duplication. On completion/failure collect four fresh inline metric reviews, retain all15raw/skill/calibration outcomes and scoreledger; apply only projected_pair800 reward vs matchedprojected_ot800 (allcontrols0), update health, then reassess separateIPCA. No new worker while active.",
+    "next": "Implement one queued controlled PCA/IPCA trial using shared runner/context. Same<=8.25 normalization/features/3000PCAfitrows/rank8, IPCAchunk512 and fixed row order. Reuse verified PCA/CNF800/projected400 checkpoints; fit only IPCA800+400projectedOT. New eligible horizon8.25->9.25 after metadata/coverage check; predictions frozen before target. Matched representation controls and unchanged fullgene scorer/readiness. No pairloss retuning or new weightgrid.",
     "latest_fold_result": {
       "experiment": "scfm_projected_past_fold",
       "status": "completed_incremental_gain_not_promoted",
@@ -3732,7 +3738,20 @@
       "health": -1312,
       "strict_gates_passed": false
     },
-    "running_experiment": "scfm_latent_pair_fold"
+    "latent_pair_result": {
+      "report": "SCFM_LATENT_PAIR_FOLD_RESULTS.json",
+      "status": "completed_fixed_penalty_not_promoted",
+      "projected_ot400": 51.94714455913516,
+      "matched_zero_continuation": 51.93367799984554,
+      "penalty": 51.940972517336625,
+      "penalty_minus_control": 0.00729451749108323,
+      "penalty_minus_shorter": -0.00617204179853692,
+      "reward_delta": -7,
+      "health": -1319,
+      "all15calibrations_valid": true,
+      "peak_bytes": 5325316096,
+      "next": "Implement one queued controlled PCA/IPCA trial using shared runner/context. Same<=8.25 normalization/features/3000PCAfitrows/rank8, IPCAchunk512 and fixed row order. Reuse verified PCA/CNF800/projected400 checkpoints; fit only IPCA800+400projectedOT. New eligible horizon8.25->9.25 after metadata/coverage check; predictions frozen before target. Matched representation controls and unchanged fullgene scorer/readiness. No pairloss retuning or new weightgrid."
+    }
   },
   "model_basics_request": {
     "tested_families": [
