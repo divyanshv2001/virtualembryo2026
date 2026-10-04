@@ -40,8 +40,8 @@ def multiscale_mmd(a,b,bandwidth):
     return (aa.sum()-aa.diagonal().sum())/(len(a)*(len(a)-1))+(bb.sum()-bb.diagonal().sum())/(len(b)*(len(b)-1))-2*ab.mean()
 
 
-def drift(encoder, checkpoint):
-    model = DensityFlowNet(encoder['basis'], encoder['pca_center'], 8.5, 7.25)
+def drift(encoder, checkpoint, cutoff=8.5):
+    model = DensityFlowNet(encoder['basis'], encoder['pca_center'], cutoff, 7.25)
     model.load_state_dict(torch.load(checkpoint, map_location='cpu', weights_only=False)['net'])
     return model.eval()
 
@@ -59,10 +59,12 @@ def train(packet_path):
     context = dict(np.load(packet['context']))
     encoder = dict(np.load(packet['encoder']))
     times = np.unique(context['stages'])
-    if times.tolist() != [7.5, 7.75, 8., 8.25, 8.5] or context['coordinates'].shape != (13963, 8):
+    cutoff=packet.get('cutoff',8.5)
+    expected_stages=packet.get('fit_stages',[7.5,7.75,8.,8.25,8.5])
+    if times.tolist() != expected_stages or times.max()!=cutoff or context['coordinates'].shape != (packet.get('fit_rows',13963),8):
         raise ValueError('Past support changed')
     empty = np.array([], dtype=int)
-    base = drift(encoder, packet['drift'])
+    base = drift(encoder, packet['drift'],cutoff)
     if not DIRECT:
         base = KineticFlow(base, np.maximum(encoder['center']/encoder['scale'] + encoder['pca_center'], 0.), empty, empty, 'none')
     groups = [torch.tensor(context['coordinates'][context['stages'] == t], dtype=torch.float32, device='cuda') for t in times]
@@ -96,7 +98,7 @@ def train(packet_path):
         peak = torch.cuda.max_memory_allocated()
         if peak > 4.5*1024**3: raise ValueError('GPU memory cap')
         model.cpu().eval()
-        torch.save({'net': model.state_dict(), 'fit_max_stage': 8.5, 'steps': 400, 'kind': kind,
+        torch.save({'net': model.state_dict(), 'fit_max_stage': cutoff, 'steps': 400, 'kind': kind,
                     'seed': 20261004, 'frozen_base_exact': True, 'peak_allocated_bytes': peak,
                     'objective':'past_multiscale_mmd' if MMD else 'sinkhorn', 'bandwidth':packet.get('bandwidth')}, checkpoint)
         if kind == 'kinetic': base = model

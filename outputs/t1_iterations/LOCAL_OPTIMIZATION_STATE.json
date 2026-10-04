@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": false,
+  "local_process_running": true,
   "quota_reset_evidence": {
     "limit_observed": true,
     "observed_reset_text": "7:54 PM",
@@ -30,12 +30,14 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Predeclare/preflight distinct potential chronological cutoff8.0 sourcefold, with frozen cachedCNF800/4096encoder/old.25alignment controls fromscnode_past_fold_retry_01. Refit only potential400 RTX3060 on7963 source7.5/7.75/8.0, same1681params/Sinkhorn/batch64/seed20261004; no encoder/CNF retraining. Fitallsource8.0 heads(.25,.75),freezealignment exactly; forecast8.25 and8.5 before either targetscore. Copy/CNF/potential controls,18full32285 outcomes/3fixedscoringresamples, archival8.5baseline49.507834 exactreplay plusdisabledpotential. Newchronologicalmechanismcoverage, not independentcrossfitting/embryos or guaranteedscoreboost; no oldcovariancegrid, futurehead/weights reuse, hiddenfuturefit, officialupload or gateschanges.",
+  "next_experiment": "Strict cutoff8 potential validation running via harness potential_chronological_cutoff8: cachedCNF800/encoder, newpotential400 RTX3060 only; frozen8.0sourceheads/alignment,8.25/8.5forecastsfrozen before18fullpanel scores. Inspectactivejob neverduplicate, four narrowreviews/reward/nextdecision aftercompletion. Latest userofficial52.16 repeatsbest, notnewimprovement.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
-  "active_run_path": "private/past_multiscale_mmd_01",
+  "active_jobs": [
+    "potential_chronological_cutoff8"
+  ],
+  "active_run_path": "private/potential_chronological_cutoff8_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -1220,7 +1222,25 @@
     "readiness_gate_passed": false,
     "reported_uploaded_by_user": true,
     "official_result": "outputs\\t1_submissions\\formula_progress_20260930_01\\official_result.json",
-    "artifact_attribution": "Inferred from user last-submission screenshot following delivery of latest export; screenshot does not show filename."
+    "artifact_attribution": "Inferred from user last-submission screenshot following delivery of latest export; screenshot does not show filename.",
+    "latest_user_reported_resubmission": {
+      "headline_score": 52.16,
+      "metric_skills_percent": {
+        "de_score": 47.2,
+        "de_direction": 56.3,
+        "mmd_u": 53.2,
+        "variogram": 51.7
+      },
+      "submission_url": "https://virtualembryo.ai/challenge/account/submissions/8d33c82a4b474d648dd47500b4b28566",
+      "rank": 139,
+      "board_entries": 289,
+      "source_image": "C:\\Users\\vishw\\AppData\\Local\\Temp\\codex-clipboard-49f590f3-e518-4302-b0de-b22c7db6b41c.png",
+      "source_sha256": "9ad988544c9281b0dd1bb08b937235a1b7a63e2a5612af974c66985a75e455f0",
+      "attribution": "Likely re-submitted formula_progress_20260930_01 immediately after its verified file delivery; image does not show filename/hash.",
+      "status": "reported_matches_previous_best",
+      "reward_delta": 0,
+      "scope": "User-reported official score; not validation of local55.98883 calibration or AgentTeam evidence eligibility. No hiddentruth read or upload byCodex."
+    }
   },
   "metric_critique_reward": {
     "policy": "METRIC_CRITIQUE_POLICY.json",
@@ -1249,23 +1269,22 @@
     "decision": "Second historical fold improved signed ranking/direction; first-fold overlap ties and direction remains negative. No both-fold promotion."
   },
   "latest_official_result": {
-    "headline_score": 49.15,
+    "headline_score": 52.16,
     "metric_skills_percent": {
-      "de_score": 43.7,
-      "de_direction": 51.8,
-      "mmd_u": 50.9,
-      "variogram": 50.0
+      "de_score": 47.2,
+      "de_direction": 56.3,
+      "mmd_u": 53.2,
+      "variogram": 51.7
     },
+    "submission_url": "https://virtualembryo.ai/challenge/account/submissions/8d33c82a4b474d648dd47500b4b28566",
     "rank": 139,
     "board_entries": 289,
-    "submission_url": "https://virtualembryo.ai/challenge/account/submissions/93dc7fd96c584453a5a958bc24ad36ec",
-    "source_image": "C:\\Users\\vishw\\AppData\\Local\\Temp\\codex-clipboard-75adb7d7-a865-42c1-a4d8-dc2b5aa48d47.png",
-    "source_sha256": "246ea64f3fbfbb8e064f1a1e62cba87eb2b2dd3c0930f9d2ba223309d241a30b",
-    "attribution": "Likely latest potential_progress_20261004_02 export from conversation timing; screenshot does not show uploaded filename/hash, attribution not independently verified. Rank is best-score-per-team, not this candidate-specific rank.",
-    "status": "reported_below_persistence_floor",
-    "best_reported_official_score_preserved": 52.16,
+    "source_image": "C:\\Users\\vishw\\AppData\\Local\\Temp\\codex-clipboard-49f590f3-e518-4302-b0de-b22c7db6b41c.png",
+    "source_sha256": "9ad988544c9281b0dd1bb08b937235a1b7a63e2a5612af974c66985a75e455f0",
+    "attribution": "Likely re-submitted formula_progress_20260930_01 immediately after its verified file delivery; image does not show filename/hash.",
+    "status": "reported_matches_previous_best",
     "reward_delta": 0,
-    "scope": "User-reported official result, separate from historical52.438460development and research rewards; no hidden truth accessed or new upload."
+    "scope": "User-reported official score; not validation of local55.98883 calibration or AgentTeam evidence eligibility. No hiddentruth read or upload byCodex."
   },
   "detection_coupling_job": {
     "status": "completed_not_promoted",
@@ -3528,17 +3547,16 @@
     "separate_from_benchmark": true
   },
   "official_latest_reported": {
-    "headline": 49.15,
-    "rank": 139,
-    "board_entries": 289,
+    "headline": 52.16,
     "skills_percent": {
-      "de_score": 43.7,
-      "de_direction": 51.8,
-      "mmd_u": 50.9,
-      "variogram": 50.0
+      "de_score": 47.2,
+      "de_direction": 56.3,
+      "mmd_u": 53.2,
+      "variogram": 51.7
     },
-    "source": "C:\\Users\\vishw\\AppData\\Local\\Temp\\codex-clipboard-75adb7d7-a865-42c1-a4d8-dc2b5aa48d47.png",
-    "submission_identity": "Likely latest potential_progress_20261004_02 export from conversation timing; screenshot does not show uploaded filename/hash, attribution not independently verified. Rank is best-score-per-team, not this candidate-specific rank."
+    "submission_url": "https://virtualembryo.ai/challenge/account/submissions/8d33c82a4b474d648dd47500b4b28566",
+    "source": "C:\\Users\\vishw\\AppData\\Local\\Temp\\codex-clipboard-49f590f3-e518-4302-b0de-b22c7db6b41c.png",
+    "submission_identity": "Likely re-submitted formula_progress_20260930_01 immediately after its verified file delivery; image does not show filename/hash."
   },
   "experiment_inventory_snapshot": {
     "registered": 50,
@@ -4303,23 +4321,22 @@
     "report_sha256": "8a11652e6f02ef2c8358828832dc4d7d70a1de85391f7f63fd14e11461d121ef"
   },
   "latest_user_reported_submission": {
-    "headline_score": 49.15,
+    "headline_score": 52.16,
     "metric_skills_percent": {
-      "de_score": 43.7,
-      "de_direction": 51.8,
-      "mmd_u": 50.9,
-      "variogram": 50.0
+      "de_score": 47.2,
+      "de_direction": 56.3,
+      "mmd_u": 53.2,
+      "variogram": 51.7
     },
+    "submission_url": "https://virtualembryo.ai/challenge/account/submissions/8d33c82a4b474d648dd47500b4b28566",
     "rank": 139,
     "board_entries": 289,
-    "submission_url": "https://virtualembryo.ai/challenge/account/submissions/93dc7fd96c584453a5a958bc24ad36ec",
-    "source_image": "C:\\Users\\vishw\\AppData\\Local\\Temp\\codex-clipboard-75adb7d7-a865-42c1-a4d8-dc2b5aa48d47.png",
-    "source_sha256": "246ea64f3fbfbb8e064f1a1e62cba87eb2b2dd3c0930f9d2ba223309d241a30b",
-    "attribution": "Likely latest potential_progress_20261004_02 export from conversation timing; screenshot does not show uploaded filename/hash, attribution not independently verified. Rank is best-score-per-team, not this candidate-specific rank.",
-    "status": "reported_below_persistence_floor",
-    "best_reported_official_score_preserved": 52.16,
+    "source_image": "C:\\Users\\vishw\\AppData\\Local\\Temp\\codex-clipboard-49f590f3-e518-4302-b0de-b22c7db6b41c.png",
+    "source_sha256": "9ad988544c9281b0dd1bb08b937235a1b7a63e2a5612af974c66985a75e455f0",
+    "attribution": "Likely re-submitted formula_progress_20260930_01 immediately after its verified file delivery; image does not show filename/hash.",
+    "status": "reported_matches_previous_best",
     "reward_delta": 0,
-    "scope": "User-reported official result, separate from historical52.438460development and research rewards; no hidden truth accessed or new upload."
+    "scope": "User-reported official score; not validation of local55.98883 calibration or AgentTeam evidence eligibility. No hiddentruth read or upload byCodex."
   },
   "gpu_training": {
     "preference": "RTX3060 for new model training",
@@ -4999,6 +5016,24 @@
       "best_reported_official_score_preserved": 52.16,
       "reward_delta": 0,
       "scope": "User-reported official result, separate from historical52.438460development and research rewards; no hidden truth accessed or new upload."
+    },
+    {
+      "headline_score": 52.16,
+      "metric_skills_percent": {
+        "de_score": 47.2,
+        "de_direction": 56.3,
+        "mmd_u": 53.2,
+        "variogram": 51.7
+      },
+      "submission_url": "https://virtualembryo.ai/challenge/account/submissions/8d33c82a4b474d648dd47500b4b28566",
+      "rank": 139,
+      "board_entries": 289,
+      "source_image": "C:\\Users\\vishw\\AppData\\Local\\Temp\\codex-clipboard-49f590f3-e518-4302-b0de-b22c7db6b41c.png",
+      "source_sha256": "9ad988544c9281b0dd1bb08b937235a1b7a63e2a5612af974c66985a75e455f0",
+      "attribution": "Likely re-submitted formula_progress_20260930_01 immediately after its verified file delivery; image does not show filename/hash.",
+      "status": "reported_matches_previous_best",
+      "reward_delta": 0,
+      "scope": "User-reported official score; not validation of local55.98883 calibration or AgentTeam evidence eligibility. No hiddentruth read or upload byCodex."
     }
   ],
   "best_user_confirmed_official_submission": {
@@ -5130,7 +5165,7 @@
       "jev_scope": "Typed option selection/pinnedreport status only; report has no score summary and numeric auditresults were not transmitted, no evidence certification."
     }
   },
-  "next_action": "Predeclare/preflight distinct potential chronological cutoff8.0 sourcefold, with frozen cachedCNF800/4096encoder/old.25alignment controls fromscnode_past_fold_retry_01. Refit only potential400 RTX3060 on7963 source7.5/7.75/8.0, same1681params/Sinkhorn/batch64/seed20261004; no encoder/CNF retraining. Fitallsource8.0 heads(.25,.75),freezealignment exactly; forecast8.25 and8.5 before either targetscore. Copy/CNF/potential controls,18full32285 outcomes/3fixedscoringresamples, archival8.5baseline49.507834 exactreplay plusdisabledpotential. Newchronologicalmechanismcoverage, not independentcrossfitting/embryos or guaranteedscoreboost; no oldcovariancegrid, futurehead/weights reuse, hiddenfuturefit, officialupload or gateschanges.",
+  "next_action": "Strict cutoff8 potential validation running via harness potential_chronological_cutoff8: cachedCNF800/encoder, newpotential400 RTX3060 only; frozen8.0sourceheads/alignment,8.25/8.5forecastsfrozen before18fullpanel scores. Inspectactivejob neverduplicate, four narrowreviews/reward/nextdecision aftercompletion. Latest userofficial52.16 repeatsbest, notnewimprovement.",
   "potential_real_anchor_transfer_setup_failure": {
     "run": "potential_real_anchor_transfer_01",
     "error": "append_event kind argument collided with keyword at first50-step logging; no checkpoint or forecast completed",
@@ -5336,5 +5371,31 @@
     "reward_delta": 0,
     "fixed_alignment_scope": "Prior .25 covariance wrapper retained only as frozen matched reference; no new alignment/grid research.",
     "forbidden_reuse": "8.25/8.5 checkpoint or observed8.5 head for8.0 fitting/8.25 forecast."
+  },
+  "potential_chronological_cutoff8_preflight": {
+    "status": "passed",
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "peak_MiB": 66.00390625,
+    "finite_mixed_derivatives": true,
+    "fit_cutoff": 8.0,
+    "previous_orchestrator_snapshot_verified": true,
+    "reward_delta": 0,
+    "original_cpu_disabled_exact": true,
+    "original_cpu_runtime": "2.14.0+cpu"
+  },
+  "potential_chronological_cutoff8_job": {
+    "status": "running",
+    "experiment": "potential_chronological_cutoff8",
+    "run": "potential_chronological_cutoff8_01",
+    "results_report": "POTENTIAL_CHRONOLOGICAL_CUTOFF8_RESULTS.json",
+    "training_device": "RTX3060",
+    "fit_max_stage": 8.0,
+    "source_rows": 7963,
+    "targets": [
+      8.25,
+      8.5
+    ],
+    "planned_evaluations": 18,
+    "reward_delta": 0
   }
 }

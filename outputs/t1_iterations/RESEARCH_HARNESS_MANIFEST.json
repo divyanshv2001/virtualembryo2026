@@ -2044,6 +2044,17 @@
         "driver_runtime": "cpu",
         "purpose": "New fixed past-only objective ablation; cachedCNF/encoder/Sinkhorn controls, one400step potential arm, originalfullpanel scorer and gates."
       }
+    },
+    "potential_chronological_cutoff8": {
+      "script": "potential_chronological_cutoff8.py",
+      "args": [],
+      "run": "private/potential_chronological_cutoff8_01",
+      "report": "POTENTIAL_CHRONOLOGICAL_CUTOFF8_RESULTS.json",
+      "protocol": {
+        "training_device": "cuda",
+        "driver_runtime": "cpu",
+        "purpose": "Distinct earlier chronologicalpotential coverage; cachedlowercutoffCNF/encoder, originalfullpanel scoring/calibration and archived8.5replay."
+      }
     }
   }
 }
