@@ -30,11 +30,13 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Retain PCA and horizon-specific CNF/scFM evidence. Jev representation_support(.50confidence): bounded review of time-informed/supervised latent basis coverage and fresh past-only support before defining one genuinelynew representation experiment. Prior rank16/24 andIPCA512 failed; no chunk/seed/rank grid or repeated exposedtarget tuning. Critic shrinkage/dependence suggestions remain alternatives only.",
+  "next_experiment": "Monitor scfm_fixed_one_day_validation withoutduplicate/refit. Oncompletion/failure collect fourfresh inline metric reviews, retain all9fullpanel metrics/calibrations/replays, update scoreledger andrecorditeration reward0 (already-accounted frozenmodel), healthunchangedunlessneweligibleevent. Originalgates/independentvalidationlimits unchanged. Temporalhybridbasis deferred byJev pendinggenuinepast support.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
+  "active_jobs": [
+    "scfm_fixed_one_day_validation"
+  ],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -3715,6 +3717,11 @@
     "latest_iteration": {
       "experiment": "scfm_ipca_fold_01",
       "reward_delta": -40
+    },
+    "pending_iteration": {
+      "experiment": "scfm_fixed_one_day_validation_01",
+      "status": "running_at_checkpoint",
+      "reward_delta": 0
     }
   },
   "scfm_reopened": {
@@ -3736,7 +3743,7 @@
     },
     "new_direction": "Likelihood-compatible OT gradient projection; actual score gain unvalidated.",
     "jev_decision": "private/harness_runs/anchored_soft_ot_paper_pilot/decisions/scfm_reopen_past_direction_20261004_route.json",
-    "next": "Retain PCA and horizon-specific CNF/scFM evidence. Jev representation_support(.50confidence): bounded review of time-informed/supervised latent basis coverage and fresh past-only support before defining one genuinelynew representation experiment. Prior rank16/24 andIPCA512 failed; no chunk/seed/rank grid or repeated exposedtarget tuning. Critic shrinkage/dependence suggestions remain alternatives only.",
+    "next": "Monitor scfm_fixed_one_day_validation withoutduplicate/refit. Oncompletion/failure collect fourfresh inline metric reviews, retain all9fullpanel metrics/calibrations/replays, update scoreledger andrecorditeration reward0 (already-accounted frozenmodel), healthunchangedunlessneweligibleevent. Originalgates/independentvalidationlimits unchanged. Temporalhybridbasis deferred byJev pendinggenuinepast support.",
     "latest_fold_result": {
       "experiment": "scfm_projected_past_fold",
       "status": "completed_incremental_gain_not_promoted",
@@ -3765,7 +3772,8 @@
       "all15calibrations_valid": true,
       "peak_bytes": 5325316096,
       "next": "Implement one queued controlled PCA/IPCA trial using shared runner/context. Same<=8.25 normalization/features/3000PCAfitrows/rank8, IPCAchunk512 and fixed row order. Reuse verified PCA/CNF800/projected400 checkpoints; fit only IPCA800+400projectedOT. New eligible horizon8.25->9.25 after metadata/coverage check; predictions frozen before target. Matched representation controls and unchanged fullgene scorer/readiness. No pairloss retuning or new weightgrid."
-    }
+    },
+    "running_experiment": "scfm_fixed_one_day_validation"
   },
   "model_basics_request": {
     "tested_families": [
@@ -3794,14 +3802,27 @@
     }
   },
   "latest_jev": {
-    "decision": "post_ipca_supported_direction_20261004",
-    "choice": "representation_support",
-    "confidence": 0.5,
+    "decision": "fixed_one_day_validation_20261004",
+    "choice": "fixed_one_day_validation",
+    "confidence": 0.7,
     "usage": {
-      "input_tokens": 1412,
-      "output_tokens": 47
+      "input_tokens": 1393,
+      "output_tokens": 39
     },
-    "payload_bytes": 2518,
-    "scope": "Advisory to review genuinelynew past support; no architecture specified or certified."
+    "payload_bytes": 2344,
+    "scope": "Frozen horizon coverage, no refit/generalization claim or repeatedmodelreward."
+  },
+  "representation_support_review": {
+    "prior_coverage": "ProgramTrend=annotation-conditioned positive-slopeSVD; CellProgramTrend=NMFusage dynamics; wider2048NMF failed. Distinctglobalstage-contrast encoder8D hypothesis nottested, butsupport insufficient.",
+    "jev_basis_decision": {
+      "choice": "defer_temporal_basis",
+      "confidence": 0.71,
+      "usage": {
+        "input_tokens": 1370,
+        "output_tokens": 45
+      },
+      "payload_bytes": 2297
+    },
+    "decision": "PreservePCA; do not launch speculative temporalbasis withoutpasttransfer support."
   }
 }

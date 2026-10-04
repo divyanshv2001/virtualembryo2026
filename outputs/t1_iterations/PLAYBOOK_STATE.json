@@ -1,18 +1,20 @@
 {
-  "updated_utc": "2026-10-04T05:19:12.361774+00:00",
+  "updated_utc": "2026-10-04T05:29:27.642407+00:00",
   "fingerprints": {
     "RESEARCH_CONTINUATION_POLICY.md": "31098957a20a7d61353505636f7dbbe1d96b5213df0cc4d6f61ff1daba83eee3",
-    "LOCAL_OPTIMIZATION_STATE.json": "377d417217448e7decf0c118c5511b3e83547097a3cbe88f9852645e9efd9293",
+    "LOCAL_OPTIMIZATION_STATE.json": "d98c0215749c2903c485a1061f375cbeb78a954ae61aecdcd166fb7f937b585e",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "6a0f5297c7c4331aafd97342a6ed8857ad3f5ad852ca6704052f4bbc455c7b90",
+    "METRIC_RESEARCH_QUEUE.json": "754e46844f2bae61fa89e786c04fa119cea4022cb48be936bcfdc522ee6c4a5a",
     "METRIC_CRITIQUE_POLICY.json": "3535989f1e3beac0f2d446b44df3c793d4be464dbd87f6e714c2f5afda864a6f",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
-    "RESEARCH_HARNESS_MANIFEST.json": "9890f7761a09540256136a5e9c3285b2c1bb2eb86eb93988d1d1593945eb4305"
+    "RESEARCH_HARNESS_MANIFEST.json": "a043d1fe78214689645ce3588e07bbd772d3c821b7c07d496981d0cd40758693"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [],
-  "next_experiment": "Retain PCA and horizon-specific CNF/scFM evidence. Jev representation_support(.50confidence): bounded review of time-informed/supervised latent basis coverage and fresh past-only support before defining one genuinelynew representation experiment. Prior rank16/24 andIPCA512 failed; no chunk/seed/rank grid or repeated exposedtarget tuning. Critic shrinkage/dependence suggestions remain alternatives only.",
+  "active_jobs_at_checkpoint": [
+    "scfm_fixed_one_day_validation"
+  ],
+  "next_experiment": "Monitor scfm_fixed_one_day_validation withoutduplicate/refit. Oncompletion/failure collect fourfresh inline metric reviews, retain all9fullpanel metrics/calibrations/replays, update scoreledger andrecorditeration reward0 (already-accounted frozenmodel), healthunchangedunlessneweligibleevent. Originalgates/independentvalidationlimits unchanged. Temporalhybridbasis deferred byJev pendinggenuinepast support.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",

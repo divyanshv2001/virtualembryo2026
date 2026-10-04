@@ -6378,18 +6378,26 @@
     },
     {
       "id": "time_informed_representation_support",
-      "status": "implementation_pending",
-      "next_action": "Retain PCA and horizon-specific CNF/scFM evidence. Jev representation_support(.50confidence): bounded review of time-informed/supervised latent basis coverage and fresh past-only support before defining one genuinelynew representation experiment. Prior rank16/24 andIPCA512 failed; no chunk/seed/rank grid or repeated exposedtarget tuning. Critic shrinkage/dependence suggestions remain alternatives only.",
+      "status": "reviewed_deferred_insufficient_support",
+      "next_action": "No temporalbasis experiment untilgenuinepasttransfer support; cachedJevconfidence.71 defer.",
       "preflight": "Inspect only relevant prior shared-gene-program/dynamic-basis coverage and active past stage support. Distinguish stage information from variance, fitlabels/data onlythroughcutoff. No claimed scoregain or independentvalidation."
+    },
+    {
+      "id": "scfm_fixed_one_day_validation",
+      "status": "registered_running",
+      "experiment": "scfm_fixed_one_day_validation",
+      "next_action": "Monitor scfm_fixed_one_day_validation withoutduplicate/refit. Oncompletion/failure collect fourfresh inline metric reviews, retain all9fullpanel metrics/calibrations/replays, update scoreledger andrecorditeration reward0 (already-accounted frozenmodel), healthunchangedunlessneweligibleevent. Originalgates/independentvalidationlimits unchanged. Temporalhybridbasis deferred byJev pendinggenuinepast support.",
+      "scope": "New frozenmodel horizon evidence onexposeddevelopment, nottargettuning/independentvalidation.",
+      "reward_eligible": false
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
-    "status": "ipca_fixed_config_failed_pca_retained",
-    "implementation_status": "completed_accounted_reviewed",
-    "experiment": "scfm_ipca_fold",
+    "status": "fixed_one_day_validation_running",
+    "implementation_status": "implemented_launched",
+    "experiment": "scfm_fixed_one_day_validation",
     "next_experiment": null,
-    "next": "Retain PCA and horizon-specific CNF/scFM evidence. Jev representation_support(.50confidence): bounded review of time-informed/supervised latent basis coverage and fresh past-only support before defining one genuinelynew representation experiment. Prior rank16/24 andIPCA512 failed; no chunk/seed/rank grid or repeated exposedtarget tuning. Critic shrinkage/dependence suggestions remain alternatives only."
+    "next": "Monitor scfm_fixed_one_day_validation withoutduplicate/refit. Oncompletion/failure collect fourfresh inline metric reviews, retain all9fullpanel metrics/calibrations/replays, update scoreledger andrecorditeration reward0 (already-accounted frozenmodel), healthunchangedunlessneweligibleevent. Originalgates/independentvalidationlimits unchanged. Temporalhybridbasis deferred byJev pendinggenuinepast support."
   }
 }

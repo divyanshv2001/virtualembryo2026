@@ -463,6 +463,50 @@
         ],
         "scope": "Controlled PCA vsIncrementalPCA end-to-end model: same<=8.25 selected3000fitrows/4096features/normalization/rank8, fixedIPCAchunk512 and samefitdraworder. Same800density+400projectedOT seed/batch64/loss/caps. Reuse PCAmodels only after exactencoder/input/metadata checks; trainIPCAonly. Each decoder refit onlypast withsamealgorithm/guards toavoidfeedingIPCAcoords toPCAheads. E8.25->9.5 is1.25day historicaldevelopment;9.25alreadycovered,9.5no matchingpublicresultfound. Notindependentembryo validation. Allforecasts/replays lockedbeforetargetread; full32285scorer/calibration/readinessunchanged. IPCA fitdiagnostics/memory are not scoregains. OnlyIPCAprojectedrewardagainstmatchedPCAprojected; controls0. No targettuning/grid/officialupload."
       }
+    },
+    "scfm_fixed_one_day_validation": {
+      "script": "scfm_projected_past_fold.py",
+      "args": [
+        "--experiment",
+        "scfm_fixed_one_day_validation"
+      ],
+      "run": "private/scfm_fixed_one_day_validation_01",
+      "report": "SCFM_FIXED_ONE_DAY_VALIDATION_RESULTS.json",
+      "protocol": {
+        "cutoff": 8.25,
+        "target": 9.25,
+        "fit_stages": [
+          7.5,
+          7.75,
+          8.0,
+          8.25
+        ],
+        "seed": 20260928,
+        "scoring_seeds": [
+          20260928,
+          20260929,
+          20260930
+        ],
+        "reuse_run": "private/scfm_projected_past_fold_01",
+        "fixed_candidate_validation": true,
+        "candidates": [
+          "copy",
+          "cnf800",
+          "projected_ot400"
+        ],
+        "control_candidates": [
+          "copy",
+          "cnf800"
+        ],
+        "contrast_candidates": [
+          "cnf800",
+          "projected_ot400"
+        ],
+        "contrast_label": "fixed_scfm_minus_cnf_mean_skills",
+        "reward_candidates": [],
+        "reward_eligible": false,
+        "scope": "Complete fixedPCA8/4096 E8.25 one-day9.25 horizon coverage, no modeltraining/parameterchange. Verify samepastencoder/input/checkpoints, matchedcopy/CNF800 and exactforecastreplays beforetargetexpression. Frozenprojected400 improved0.5/0.75day butregressed1.25;9.25 exposedotherfamilies, historicaldevelopment only andnotindependentvalidation. Original full32285scorer/calibration/readinessunchanged; raw4/skills4/failures retained. No targettuning orofficialupload. Reward0: samefrozencandidate alreadyaccounted, no repeatedmodel credit."
+      }
     }
   }
 }

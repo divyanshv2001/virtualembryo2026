@@ -68,7 +68,9 @@ def main():
             plan['reused_checkpoint_sha256']={name:digest(previous/(name+'.pt')) for name in ['cnf800','projected_ot400']}
             save(RUN/'plan.json',plan);emit('reused_encoder_and_checkpoints_verified',sha256=digest(RUN/'plan.json'))
             flows={'cnf800':initial,'projected_ot400':baseline}
-            if spec.get('representation_comparison'):
+            if spec.get('fixed_candidate_validation'):
+                report['fixed_candidate_validation']={'training_steps':0,'reward_eligible':False,'reason':'New horizon evaluation of already-accounted frozen candidate; no repeat model reward.'}
+            elif spec.get('representation_comparison'):
                 ci=incremental_context(c,RUN,emit,chunk=spec['ipca_chunk'])
                 torch.manual_seed(spec['seed'])
                 ipca=DensityFlowNet(ci['basis'],ci['pca'].mean_,cutoff,float(ci['stages'][ci['past']].min())-.25)
