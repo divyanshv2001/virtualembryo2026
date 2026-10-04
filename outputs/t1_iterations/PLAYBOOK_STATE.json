@@ -1,20 +1,18 @@
 {
-  "updated_utc": "2026-10-04T05:29:27.642407+00:00",
+  "updated_utc": "2026-10-04T05:42:02.369015+00:00",
   "fingerprints": {
     "RESEARCH_CONTINUATION_POLICY.md": "31098957a20a7d61353505636f7dbbe1d96b5213df0cc4d6f61ff1daba83eee3",
-    "LOCAL_OPTIMIZATION_STATE.json": "d98c0215749c2903c485a1061f375cbeb78a954ae61aecdcd166fb7f937b585e",
+    "LOCAL_OPTIMIZATION_STATE.json": "1f834c24da75e28e9797308562d8e00d5c82564892d063523e404756bf5f5234",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "754e46844f2bae61fa89e786c04fa119cea4022cb48be936bcfdc522ee6c4a5a",
+    "METRIC_RESEARCH_QUEUE.json": "2b9aaf5fa50da1968ca9ee65a7c6b096a18544018bb4dee1429a7066cc0d8e31",
     "METRIC_CRITIQUE_POLICY.json": "3535989f1e3beac0f2d446b44df3c793d4be464dbd87f6e714c2f5afda864a6f",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
     "RESEARCH_HARNESS_MANIFEST.json": "a043d1fe78214689645ce3588e07bbd772d3c821b7c07d496981d0cd40758693"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [
-    "scfm_fixed_one_day_validation"
-  ],
-  "next_experiment": "Monitor scfm_fixed_one_day_validation withoutduplicate/refit. Oncompletion/failure collect fourfresh inline metric reviews, retain all9fullpanel metrics/calibrations/replays, update scoreledger andrecorditeration reward0 (already-accounted frozenmodel), healthunchangedunlessneweligibleevent. Originalgates/independentvalidationlimits unchanged. Temporalhybridbasis deferred byJev pendinggenuinepast support.",
+  "active_jobs_at_checkpoint": [],
+  "next_experiment": "Fixedone-day validation fullyaccounted. RetainCNF one-day baseline andscientific short-horizon scFM evidence, no fittedhorizongate. Nextbounded cross-cutoff pastsupport review only for genuinelynew supported mechanism; no speculative temporalbasis/IPCAgrid. Friendregistry comparison at1:13PM IST4Oct2026 separatelyscheduled; do notread/analyze registry beforethat time.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -43,7 +41,7 @@
     "uncapped_reward": -1359,
     "reward_score": -1359,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": -40
+    "last_batch_reward_delta": 0
   },
   "official_best": 52.16,
   "latest_official": {

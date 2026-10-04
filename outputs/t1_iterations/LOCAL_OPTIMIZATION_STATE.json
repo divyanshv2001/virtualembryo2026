@@ -30,13 +30,11 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Monitor scfm_fixed_one_day_validation withoutduplicate/refit. Oncompletion/failure collect fourfresh inline metric reviews, retain all9fullpanel metrics/calibrations/replays, update scoreledger andrecorditeration reward0 (already-accounted frozenmodel), healthunchangedunlessneweligibleevent. Originalgates/independentvalidationlimits unchanged. Temporalhybridbasis deferred byJev pendinggenuinepast support.",
+  "next_experiment": "Fixedone-day validation fullyaccounted. RetainCNF one-day baseline andscientific short-horizon scFM evidence, no fittedhorizongate. Nextbounded cross-cutoff pastsupport review only for genuinelynew supported mechanism; no speculative temporalbasis/IPCAgrid. Friendregistry comparison at1:13PM IST4Oct2026 separatelyscheduled; do notread/analyze registry beforethat time.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "scfm_fixed_one_day_validation"
-  ],
+  "active_jobs": [],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -1240,7 +1238,7 @@
     "uncapped_reward": -1359,
     "reward_score": -1359,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": -40
+    "last_batch_reward_delta": 0
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -2771,6 +2769,19 @@
         "variogram": "Problem: IPCA worsens all three variogram scores; strict gates remain unmet. Proposed solution: Retain PCA and test a past-only residual covariance correction, with shrinkage fixed using historical development data. Validation: Compare corrected and unchanged PCA under matched training, decoding, and all15 calibration/replay checks. Keep evaluation genes/scorer unchanged; use no target grid and make no independent improvement claim."
       },
       "coordinator": "All4metric skills regress all3panels vsPCAprojected, rawvalues verified. All15calibrationsvalid. Existing fitorder alreadyseededrandom; reshuffle improvement unproven. Previous latent16/24, timeclamp/ballistic, weak/strongtransitionMMD andcovariance trials prohibit presenting those as untested. Reviewer proposals stay unvalidated; no exposedtarget grid. RetainPCA, and long-horizonCNF800 beatsbothOT arms, unlike earlier short horizons. Do not compare these scores directly to official52.16."
+    },
+    "scfm_fixed_one_day_validation_01": {
+      "status": "completed",
+      "report_sha256": "5d184bc6f5f02468babfb1b240824622499096c466a76b97d3d9cb2156e249ac",
+      "packet_report_sha256": "0a50e0ec56452588218e72af50ec659973c7e12a25448e97543667497f281d3a",
+      "specialist_role_version": 2,
+      "reviews": {
+        "de_score": "Problem: One-day DE deltas remain negative; scFM trails CNF, and both trail copy. Proposed solution: Use historical development data only to define a deterministic fallback to copy when DE gates fail; retain accepted shorter-horizon behavior. Validation: Verify fallback selection chronologically on past-only splits and exact replays. Existing calibrations establish reproducibility, not an independent gain; no target tuning or replay grid.",
+        "de_direction": "Problem: One-day scFM underperforms CNF and fails direction gates despite valid calibration/replay. Proposed solution: Use exposed historical development families to set a past-only horizon gate; retain shorter-horizon gains and route rejected one-day cases to CNF. Freeze the gate before target evaluation. Validation: Chronologically held-out development families must pass existing strict gates. Treat target replay as confirmation, not an independent claim.",
+        "mmd_u": "Problem: Small MMD gains coexist with three metric regressions; one-day strict gates fail. Proposed solution: Retain CNF for one-day forecasts and preserve the existing shorter-horizon configuration. Validation: Audit paired, past-only forecast residuals using the frozen scorer/kernel and block-bootstrap uncertainty. Confirm MMD gains persist across historical periods without target tuning, retraining, a replay grid, or additional reward claims.",
+        "variogram": "Problem: One-day scFM variograms exceed CNF at all three scales; strict gates fail despite shorter-horizon gains. Proposed solution: Freeze both models. On historical development only, test a fixed horizon rule: scFM at0.5/0.75days, CNF atone day. Validation: Use one chronological held-out historical block, unchanged genes/scorer and exact replay. Require all gates; report as a diagnostic, without independent reward credit."
+      },
+      "coordinator": "Verified all3panels: DE/direction/variogram regress, MMDimproves. DEreview bothtrailcopy refers onlyDEskill, notaggregate; bothaggregate>50. Variogram scales means three samplingpanels, notspatialscales. Suggestedhorizongates/fallbacks unvalidated; cannotselectthem usingexposedtarget scores andclaimpast-only validation. Earliercutoff tests needeligiblefreshcutoff representations/models; do notfit gates onfutureevaluation outcomes. Short-horizon gains remain validdevelopment evidence; one-day fixedcandidate notpromoted. DEreview preserved frombefore interruption, directionretrievedfromsame reviewer; no duplicatefour-agentbatch."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3712,15 +3723,10 @@
         "status": "below_redline"
       }
     },
-    "recorded_iterations": 50,
+    "recorded_iterations": 51,
     "action": "Prioritize supported matched-control improvements; preserve failures and gates. Proxy/pending iterations earn zero. No score reset, fabricated reward, agent termination or deployment implied.",
     "latest_iteration": {
-      "experiment": "scfm_ipca_fold_01",
-      "reward_delta": -40
-    },
-    "pending_iteration": {
       "experiment": "scfm_fixed_one_day_validation_01",
-      "status": "running_at_checkpoint",
       "reward_delta": 0
     }
   },
@@ -3743,7 +3749,7 @@
     },
     "new_direction": "Likelihood-compatible OT gradient projection; actual score gain unvalidated.",
     "jev_decision": "private/harness_runs/anchored_soft_ot_paper_pilot/decisions/scfm_reopen_past_direction_20261004_route.json",
-    "next": "Monitor scfm_fixed_one_day_validation withoutduplicate/refit. Oncompletion/failure collect fourfresh inline metric reviews, retain all9fullpanel metrics/calibrations/replays, update scoreledger andrecorditeration reward0 (already-accounted frozenmodel), healthunchangedunlessneweligibleevent. Originalgates/independentvalidationlimits unchanged. Temporalhybridbasis deferred byJev pendinggenuinepast support.",
+    "next": "Fixedone-day validation fullyaccounted. RetainCNF one-day baseline andscientific short-horizon scFM evidence, no fittedhorizongate. Nextbounded cross-cutoff pastsupport review only for genuinelynew supported mechanism; no speculative temporalbasis/IPCAgrid. Friendregistry comparison at1:13PM IST4Oct2026 separatelyscheduled; do notread/analyze registry beforethat time.",
     "latest_fold_result": {
       "experiment": "scfm_projected_past_fold",
       "status": "completed_incremental_gain_not_promoted",
@@ -3773,7 +3779,25 @@
       "peak_bytes": 5325316096,
       "next": "Implement one queued controlled PCA/IPCA trial using shared runner/context. Same<=8.25 normalization/features/3000PCAfitrows/rank8, IPCAchunk512 and fixed row order. Reuse verified PCA/CNF800/projected400 checkpoints; fit only IPCA800+400projectedOT. New eligible horizon8.25->9.25 after metadata/coverage check; predictions frozen before target. Matched representation controls and unchanged fullgene scorer/readiness. No pairloss retuning or new weightgrid."
     },
-    "running_experiment": "scfm_fixed_one_day_validation"
+    "fixed_one_day_result": {
+      "report": "SCFM_FIXED_ONE_DAY_VALIDATION_RESULTS.json",
+      "copy": 50.0,
+      "cnf800": 51.194605628785325,
+      "scfm": 50.87014448431023,
+      "all9calibrations_valid": true,
+      "mean_skill_changes": {
+        "de_score": -0.007358876685133964,
+        "de_direction": -0.0034555333524142196,
+        "mmd_u": 0.0004968581812472284,
+        "variogram": -0.003450331948690266
+      },
+      "new_training_steps": 0,
+      "reward_delta": 0,
+      "health": -1359,
+      "peak_bytes": 5243146240,
+      "readiness": "unchanged/unmet",
+      "scope": "Historicaldevelopment only; short-horizon gains preserved separately."
+    }
   },
   "model_basics_request": {
     "tested_families": [
