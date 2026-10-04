@@ -6395,8 +6395,10 @@
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
     "experiment": "kinetic_frozen_horizon_validation",
-    "status": "running",
-    "next_experiment": "kinetic_frozen_horizon_validation",
-    "next": "Collect fixed kinetic horizon validation; four fresh independent metric reviews, unchanged scoring/gates and reward0. Past encoder/decoder reconstructed deterministically with required bit-exact prior forecast replay, zero optimizer steps. Then difference-sequence attention feasibility."
+    "status": "completed_incremental_gain_readiness_unmet",
+    "next_experiment": null,
+    "next": "Inspect unexplored difference-sequence attention feasibility from primary scDiformer sources; require past-only physical-stage protocol, CPU/16GiB budget and matched baseline before implementation. No kinetic grid.",
+    "noedge_mean": 52.334065831100055,
+    "gain_vs_cnf": 0.625373808492419
   }
 }

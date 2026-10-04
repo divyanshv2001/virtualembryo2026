@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-04T03:51:02.852910+00:00",
+  "updated_utc": "2026-10-04T09:29:49.732704+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,13 +30,11 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Collect fixed kinetic horizon validation; four fresh metric reviews after completion. No repeated model reward. Then inspect difference-sequence attention feasibility.",
+  "next_experiment": "Inspect unexplored difference-sequence attention feasibility from primary scDiformer sources; require past-only physical-stage protocol, CPU/16GiB budget and matched baseline before implementation. No kinetic grid.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "kinetic_frozen_horizon_validation"
-  ],
+  "active_jobs": [],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -2832,6 +2830,18 @@
         "variogram": "Problem: Real edges improve variogram skill only marginally over shuffled edges; no-edge wins all three comparisons. The cutoff change used exposed development data. Proposed solution: Use past-only selection and retain no-edge as the benchmark; avoid target tuning, scorer changes, and causal graph claims. Validation: All 15 calibrations/replays are valid, but neither strict passage nor independent validation is established."
       },
       "coordinator": "Reject MMD reviewer headline correction: four-metric aggregate is valid; tiny MMD/variogram gains are outweighed by DE/direction losses, no contradiction and no scorer change. Clarify calibrations15 and forecastreplays5, not15replays. No-edge leadsDE/direction/variogram, graphleadsMMD, no jointwinner. Allnewarms improve all4mean skills vsCNF butDEbelowcopy; preserve incremental evidence. Primaryreal/shuffle equalcapacity, partialshuffle and reconstructedstates limitgraph inference. Remedies unvalidated, no exposedtarget grid or retroactive control reward."
+    },
+    "kinetic_frozen_horizon_validation_01": {
+      "status": "completed",
+      "report_sha256": "8a11652e6f02ef2c8358828832dc4d7d70a1de85391f7f63fd14e11461d121ef",
+      "specialist_role_version": 2,
+      "reviews": {
+        "de_score": "Problem: DE shows no positive raw skill; valid calibration and unchanged predictions do not establish independent performance. Proposed solution: Using past data only, diagnose DE errors and revise graph features or calibration against the copy baseline. Validation: Freeze changes before matched rolling holdouts; compare identical horizons, samples, and scores across all variants, reporting uncertainty.",
+        "de_direction": "Problem: Direction evidence remains weak: copy scores .5; CNF, no-edge, and realgraph do not establish added value or readiness. Proposed solution: Develop a past-only direction remedy while preserving bit-exact prior9.25 forecasts and valid calibrations. Validation: Compare matched chronological horizons, graph ablations, and copy baselines with uncertainty estimates. Frozen8.25-to9.5 is historical development, not independent validation.",
+        "mmd_u": "Problem: Realgraph has lowest raw MMD at all three horizons, but this historical development result does not establish readiness; no-edge higher aggregate score is consistent with it. Proposed solution: Use past-only calibration without optimization; preserve prior9.25 forecasts bit-exact. Validation: Confirm valid calibrations and compare matched horizons and samples. Independent validation remains absent; readiness remains unmet.",
+        "variogram": "Problem: All three seeds favor no-edge over realgraph; seeds at one horizon do not establish cross-horizon readiness. Proposed solution: Fit a variogram-targeted dependence correction using past-only data, retaining no-edge as the baseline. Validation: Compare correction, no-edge, and realgraph under matched historical origins and seeds; preserve prior forecasts bit-exactly. Current results provide no independent validation."
+      },
+      "coordinator": "Correct direction claim: no-edge improves direction over CNF and copy in all3 seeds, an observed development gain despite absent independent evidence. MMD comparisons are3 seeds at one9.5 horizon, not3 horizons. DE remains belowcopy but improves vsCNF in all3seeds. Noedge improves all4 metrics vsCNF; realgraph leads MMD only. All12 calibrations valid;4 newhorizon exactreplays and4 priorhorizon reconstructions passed. Proposed remedies unvalidated; do not reopen older grids or change scorer/gates."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3753,32 +3763,28 @@
   },
   "agent_health": {
     "redline": 0,
-    "score": -1359,
+    "score": -1395,
     "status": "below_redline",
     "metrics": {
       "de_score": {
-        "score": -348,
+        "score": -368,
         "status": "below_redline"
       },
       "de_direction": {
-        "score": -304,
+        "score": -324,
         "status": "below_redline"
       },
       "mmd_u": {
-        "score": -392,
+        "score": -390,
         "status": "below_redline"
       },
       "variogram": {
-        "score": -315,
+        "score": -313,
         "status": "below_redline"
       }
     },
-    "recorded_iterations": 51,
-    "action": "Prioritize supported matched-control improvements; preserve failures and gates. Proxy/pending iterations earn zero. No score reset, fabricated reward, agent termination or deployment implied.",
-    "latest_iteration": {
-      "experiment": "scfm_fixed_one_day_validation_01",
-      "reward_delta": 0
-    }
+    "recorded_iterations": 57,
+    "action": "Prioritize supported matched-control improvements; preserve failures and gates. Proxy/pending iterations earn zero. No score reset, fabricated reward, agent termination or deployment implied."
   },
   "scfm_reopened": {
     "authorization": "User asks to build on scFM and seek score improvement; previous family retirement is superseded.",
@@ -4072,5 +4078,30 @@
       "health": -1395,
       "decision": "Retain kinetics incremental gains vsCNF separately; no evidencegraphidentity boostsheadline, no strictpass or independentvalidation. No control retrocredits or parametergrid."
     }
+  },
+  "latest_kinetic_horizon_validation": {
+    "mean_noedge": 52.334065831100055,
+    "mean_cnf": 51.708692022607636,
+    "gain": 0.625373808492419,
+    "mean_realgraph": 52.19176835013625,
+    "readiness_passed": false,
+    "independent_validation": false,
+    "report_sha256": "8a11652e6f02ef2c8358828832dc4d7d70a1de85391f7f63fd14e11461d121ef"
+  },
+  "latest_user_reported_submission": {
+    "headline": 50.97,
+    "rank": 139,
+    "teams": 288,
+    "skills_percent": {
+      "de_score": 44.8,
+      "de_direction": 54.2,
+      "mmd_u": 52.9,
+      "variogram": 51.7
+    },
+    "source": "User screenshot codex-clipboard-c23ded29-df61-436e-96ea-77260510f12f.png",
+    "artifact_association": "Latest kinetic export inferred from conversation; screenshot does not identify artifact",
+    "previous_recorded_best": 52.16,
+    "same_board_verified": false,
+    "no_score_or_model_tuning_from_hidden_results": true
   }
 }

@@ -1,5 +1,5 @@
 {
-  "records": 3295,
+  "records": 3307,
   "sources": [
     {
       "path": "private/anchored_soft_ot_paper_pilot_01/report.json",
@@ -742,6 +742,11 @@
       "outcomes_indexed": 24
     },
     {
+      "path": "private/kinetic_frozen_horizon_validation_01/report.json",
+      "sha256": "8a11652e6f02ef2c8358828832dc4d7d70a1de85391f7f63fd14e11461d121ef",
+      "outcomes_indexed": 12
+    },
+    {
       "path": "private/latent_residual_gene_screen_01/report.json",
       "sha256": "82c4dffe7dce2d94451c74d31889b830de6a44f8fbf3f00d8eeb673355ad2b56",
       "outcomes_indexed": 0
@@ -1169,5 +1174,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "588e7c4d624fa6b47bdc631d58bf2b0eb8a0956f9a4d719086d4554737909c61"
+  "ledger_sha256": "d6f970827d745ebfa72df3cc060986f157c1a62d2958cfac64a5810aee0b1622"
 }
