@@ -1,20 +1,18 @@
 {
-  "updated_utc": "2026-10-04T16:36:49.841762+00:00",
+  "updated_utc": "2026-10-04T16:54:00.974926+00:00",
   "fingerprints": {
     "RESEARCH_CONTINUATION_POLICY.md": "1e6cc6f15c1e918ad60a1e01f26dd66c48022b33158bf8eb2240a9622066af00",
-    "LOCAL_OPTIMIZATION_STATE.json": "9d52894bbf19f7d8de1b7aab03dfed1959dd854422ed5416b16faf73212c7de9",
+    "LOCAL_OPTIMIZATION_STATE.json": "29c4c68e0203f18e580f2aa52473ef6f808c348ad4288d43d456efb1d87318c9",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "e4495addb953acd35ad9f2ce327bd9643ad67785417404fce315bae09e946ce9",
+    "METRIC_RESEARCH_QUEUE.json": "6661c6bed1402fc577c7598f588e02a720ce6e9b44923e56e7bbbf5d2ac6994f",
     "METRIC_CRITIQUE_POLICY.json": "3535989f1e3beac0f2d446b44df3c793d4be464dbd87f6e714c2f5afda864a6f",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
     "RESEARCH_HARNESS_MANIFEST.json": "5949da8e876f654a29cf3ed3b525a6dfba5413cde744a15289d4311970b17e4b"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [
-    "potential_real_anchor_transfer_02"
-  ],
-  "next_experiment": "Matched actual-anchor potential transfer repair running on RTX3060; inspect active status/report and collect only after completion. Same frozen scientific protocol, source<=8.5, cached CNF800, four32285-gene forecasts/three reused E9.5 panels; no duplicate launch or official upload.",
+  "active_jobs_at_checkpoint": [],
+  "next_experiment": "Predeclare/preflight new direct-CNF scalar-potential residual ablation at cutoff8.5: reuse cached CNF800/encoder/context, train only potential400 RTX3060 on13963 source<=8.5; no kinetic scaffold. Same frozen(.25,.75) fullanchor heads,copy/CNF/previouskinetic/previouspotential controls and32285-gene scorer/calibration,3fixed development seeds. Verify zero/disabled/archived exact replays and freeze beforeE9.5score; preserve readiness gates and no official upload. Different mechanism composition; no oldgrid or repeated completed training.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -31,7 +29,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1517,
+    "current_reward": -1535,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -40,10 +38,10 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1517,
-    "reward_score": -1517,
+    "uncapped_reward": -1535,
+    "reward_score": -1535,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": 0
+    "last_batch_reward_delta": -18
   },
   "official_best": 52.16,
   "latest_official": {

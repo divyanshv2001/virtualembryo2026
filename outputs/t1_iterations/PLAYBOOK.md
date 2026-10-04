@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-04T16:36:49.841762+00:00
+Updated: 2026-10-04T16:54:00.974926+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -8,15 +8,15 @@ Use `research_harness.py queue` for a compact next-step/pending summary; never d
 
 Official best: 52.16. Latest reported skills: {'de_score': 43.7, 'de_direction': 51.8, 'mmd_u': 50.9, 'variogram': 50.0}. Covariance .25 reused-development mean55.98883; EB and lineage-standardized historical proxy screens failed. Local>72 mean/lower-tail >=64-replicate AND temporal gate unmet. Full32285-gene scorer/calibration unchanged.
 
-Checkpoint jobs: ['potential_real_anchor_transfer_02']. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
+Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Matched actual-anchor potential transfer repair running on RTX3060; inspect active status/report and collect only after completion. Same frozen scientific protocol, source<=8.5, cached CNF800, four32285-gene forecasts/three reused E9.5 panels; no duplicate launch or official upload.
+Next: Predeclare/preflight new direct-CNF scalar-potential residual ablation at cutoff8.5: reuse cached CNF800/encoder/context, train only potential400 RTX3060 on13963 source<=8.5; no kinetic scaffold. Same frozen(.25,.75) fullanchor heads,copy/CNF/previouskinetic/previouspotential controls and32285-gene scorer/calibration,3fixed development seeds. Verify zero/disabled/archived exact replays and freeze beforeE9.5score; preserve readiness gates and no official upload. Different mechanism composition; no oldgrid or repeated completed training.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 49.15; attribution/screenshot evidence in export report. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 
 Four metric critiques completed; consult METRIC_CRITIQUES_20261001.md when designing the next mechanism. Separate reward starts0: +1 positive paired mean skill gain / -10 tie or regression per metric, aggregate maximum100; negative balances visible. Pending/invalid/proxy0. Future unique declared experiments only; promotion gates unchanged.
 
-Current separate reward: -1517. This is not a benchmark score.
+Current separate reward: -1535. This is not a benchmark score.
 
 External acquisition entry point: GSE76118_WT_STAGE_MANIFEST.json. The old stage-only list is historical;127 mutants excluded,162 B6 WT controls separate,143E8.5/999E9.5 primary CD1 candidates. Expression acquired: True; acquired cohort cells: 24; prospective QC passes: 18; original pilot cells: 4; training readiness: False. Latest external status: 24-cell cohort/QC, compatibility, lineage matching, robustness and E8.5 static guidance already completed; static guidance had no passing alpha. Transfer/embryo replication not validated. Do not repeat acquisition or QC; per-cutoff stage restrictions remain.. Latest Jev actual usage: {'input_tokens': 792, 'output_tokens': 45}.
 

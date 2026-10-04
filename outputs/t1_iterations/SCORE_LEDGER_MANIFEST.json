@@ -1,5 +1,5 @@
 {
-  "records": 3484,
+  "records": 3496,
   "sources": [
     {
       "path": "private/anchored_soft_ot_paper_pilot_01/report.json",
@@ -927,6 +927,16 @@
       "outcomes_indexed": 0
     },
     {
+      "path": "private/potential_real_anchor_transfer_01/report.json",
+      "sha256": "aa7eaa1870e37a70c3db25dd238940856f696b07a81312855a1f1c1dcb76e9e7",
+      "outcomes_indexed": 0
+    },
+    {
+      "path": "private/potential_real_anchor_transfer_02/report.json",
+      "sha256": "b53186969ff74214f937678712a6b9fe9eeb911188fe9d53b1735d3d24fd9301",
+      "outcomes_indexed": 12
+    },
+    {
       "path": "private/production_coverage_audit_01/report.json",
       "sha256": "8cd4c4fcbcea533fae5504b844c4ece20f114ee6eb4b9dfaa80203ff8614fedf",
       "outcomes_indexed": 0
@@ -1244,5 +1254,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "9875b7eb1e34434db509859bdd929a66af9a977b9fab0084da4d65ce2f259b8e"
+  "ledger_sha256": "d5008c697401898b82eea47a0ee910b450f7ad95a2b8b17116dcf95dfc218426"
 }

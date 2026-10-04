@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": true,
+  "local_process_running": false,
   "quota_reset_evidence": {
     "limit_observed": true,
     "observed_reset_text": "7:54 PM",
@@ -30,13 +30,11 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Matched actual-anchor potential transfer repair running on RTX3060; inspect active status/report and collect only after completion. Same frozen scientific protocol, source<=8.5, cached CNF800, four32285-gene forecasts/three reused E9.5 panels; no duplicate launch or official upload.",
+  "next_experiment": "Predeclare/preflight new direct-CNF scalar-potential residual ablation at cutoff8.5: reuse cached CNF800/encoder/context, train only potential400 RTX3060 on13963 source<=8.5; no kinetic scaffold. Same frozen(.25,.75) fullanchor heads,copy/CNF/previouskinetic/previouspotential controls and32285-gene scorer/calibration,3fixed development seeds. Verify zero/disabled/archived exact replays and freeze beforeE9.5score; preserve readiness gates and no official upload. Different mechanism composition; no oldgrid or repeated completed training.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "potential_real_anchor_transfer_02"
-  ],
+  "active_jobs": [],
   "active_run_path": "private/potential_real_anchor_transfer_02",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -1228,7 +1226,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1517,
+    "current_reward": -1535,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1237,10 +1235,10 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1517,
-    "reward_score": -1517,
+    "uncapped_reward": -1535,
+    "reward_score": -1535,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": 0
+    "last_batch_reward_delta": -18
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -3025,6 +3023,17 @@
         "variogram": "Problem: Smallvariogram advantage mayreflectcapacity/embryooverlap. Proposed solution: Distinctpast-onlysource-challenge transfer withcalibrationfixed. Validation: Potentials skills exceedkinetics+.000762447 andvector+.016371229,3/3positive;independenttransferuntested."
       },
       "scope": "Fresh independent narrowreviewers,no tools/peers/writes;calibrations andforecastreplays are separate. Direction reviewer suggested currenthorizon again; alreadycompleted, do not duplicate. Remedies notvalidated."
+    },
+    "potential_real_anchor_transfer_02": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "b53186969ff74214f937678712a6b9fe9eeb911188fe9d53b1735d3d24fd9301",
+      "reviews": {
+        "de_score": "Problem: Potential ties kinetics in all three resamples and underperforms CNF on DE skill. Proposed solution: Untested gene-wise dispersion shrinkage from past-only pseudobulk splits. Validation: Archived replay passed; no independent validation. Coordinator: historical EB/shrinkage work already exists; do not repeat that family without a distinct mechanism.",
+        "de_direction": "Problem: Potential improves direction skill slightly over kinetics but trails CNF on reused development. Proposed solution: Untested neighborhood-conditioned angular regularization against transport directions estimated exclusively from past snapshots. Validation: Untouched transition and multiple training seeds required; scoring resamples are not independent validation.",
+        "mmd_u": "Problem: Potential trails kinetic calibrated MMD skill by0.000059115 across all three resamples; reused development prevents independent claims. Proposed solution: Untested past-only multiscale MMD regularization targeting distributional shape. Validation: Freeze tuning before fresh held-out scoring; require improvement across seeds and resamples.",
+        "variogram": "Problem: Potential variogram skill improves kinetic by0.000141 but trails CNF by0.000264. Proposed solution: Untested past-only lag-conditioned residual copula correction without covariance grids. Validation: Reused-development replay spans12validcalibrations, one training seed and three scoring resamples; no independent validation."
+      }
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3946,27 +3955,27 @@
   },
   "agent_health": {
     "redline": 0,
-    "score": -1517,
+    "score": -1535,
     "status": "below_redline",
     "metrics": {
       "de_score": {
-        "score": -393,
+        "score": -403,
         "status": "below_redline"
       },
       "de_direction": {
-        "score": -349,
+        "score": -348,
         "status": "below_redline"
       },
       "mmd_u": {
-        "score": -426,
+        "score": -436,
         "status": "below_redline"
       },
       "variogram": {
-        "score": -349,
+        "score": -348,
         "status": "below_redline"
       }
     },
-    "recorded_iterations": 71,
+    "recorded_iterations": 72,
     "action": "Prioritize supported matched-control improvements; preserve failures and gates. Proxy/pending iterations earn zero. No score reset, fabricated reward, agent termination or deployment implied."
   },
   "scfm_reopened": {
@@ -5099,7 +5108,7 @@
       "jev_scope": "Typed option selection/pinnedreport status only; report has no score summary and numeric auditresults were not transmitted, no evidence certification."
     }
   },
-  "next_action": "Matched actual-anchor potential transfer repair running on RTX3060; inspect active status/report and collect only after completion. Same frozen scientific protocol, source<=8.5, cached CNF800, four32285-gene forecasts/three reused E9.5 panels; no duplicate launch or official upload.",
+  "next_action": "Predeclare/preflight new direct-CNF scalar-potential residual ablation at cutoff8.5: reuse cached CNF800/encoder/context, train only potential400 RTX3060 on13963 source<=8.5; no kinetic scaffold. Same frozen(.25,.75) fullanchor heads,copy/CNF/previouskinetic/previouspotential controls and32285-gene scorer/calibration,3fixed development seeds. Verify zero/disabled/archived exact replays and freeze beforeE9.5score; preserve readiness gates and no official upload. Different mechanism composition; no oldgrid or repeated completed training.",
   "potential_real_anchor_transfer_setup_failure": {
     "run": "potential_real_anchor_transfer_01",
     "error": "append_event kind argument collided with keyword at first50-step logging; no checkpoint or forecast completed",
@@ -5109,7 +5118,7 @@
     "repair": "Rename payload kind to arm; preserve failed attempt, same scientific protocol."
   },
   "potential_real_anchor_transfer_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "experiment": "potential_real_anchor_transfer_repair",
     "run": "potential_real_anchor_transfer_02",
     "results_report": "POTENTIAL_REAL_ANCHOR_TRANSFER_REPAIR_RESULTS.json",
@@ -5118,6 +5127,30 @@
     "planned_evaluations": 12,
     "fit_max_stage": 8.5,
     "past_rows": 13963,
-    "next": "Collect completed batch, reconcile four compact metric reviews, bounded Jev next-route and separate paired reward; do not duplicate running work."
+    "next": "Collect completed batch, reconcile four compact metric reviews, bounded Jev next-route and separate paired reward; do not duplicate running work.",
+    "evaluations": 12,
+    "report_sha256": "b53186969ff74214f937678712a6b9fe9eeb911188fe9d53b1735d3d24fd9301",
+    "means": {
+      "copy": 50.0,
+      "cnf800": 55.11730206916419,
+      "kinetic400": 54.94066821844431,
+      "potential400": 54.957393181969174
+    },
+    "paired_potential_minus_kinetic_skills": {
+      "de_score": 0.0,
+      "de_direction": 0.0006269087058504708,
+      "mmd_u": -5.911479573750267e-05,
+      "variogram": 0.00014128448753658596
+    },
+    "reward_delta": -18,
+    "gpu_peak_MiB": 93.49,
+    "host_peak_GiB": 5.2771,
+    "exact_archive_calibration_and_disabled_replays": true,
+    "independent_validation": false,
+    "official_score": null
+  },
+  "last_jev_usage": {
+    "input_tokens": 1254,
+    "output_tokens": 61
   }
 }
