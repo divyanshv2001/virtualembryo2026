@@ -1996,6 +1996,28 @@
         "driver_runtime": "cpu",
         "purpose": "Observed-only frozen field support diagnostic; no score/reward."
       }
+    },
+    "potential_real_anchor_transfer": {
+      "script": "potential_real_anchor_transfer.py",
+      "args": [],
+      "run": "private/potential_real_anchor_transfer_01",
+      "report": "POTENTIAL_REAL_ANCHOR_TRANSFER_RESULTS.json",
+      "protocol": {
+        "training_device": "cuda",
+        "driver_runtime": "cpu",
+        "purpose": "Predeclared matched actual E8.5-to-E9.5 potential versus kinetics; cached CNF800; original fullpanel scorer/calibration."
+      }
+    },
+    "potential_real_anchor_transfer_repair": {
+      "script": "potential_real_anchor_transfer.py",
+      "args": [],
+      "run": "private/potential_real_anchor_transfer_02",
+      "report": "POTENTIAL_REAL_ANCHOR_TRANSFER_REPAIR_RESULTS.json",
+      "protocol": {
+        "training_device": "cuda",
+        "driver_runtime": "cpu",
+        "purpose": "Predeclared matched actual E8.5-to-E9.5 potential versus kinetics; cached CNF800; original fullpanel scorer/calibration."
+      }
     }
   }
 }
