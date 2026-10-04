@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Collect correlated_diffusion_frozen_horizon_validation after completion; no duplicate worker. Four fresh metric reviews and bounded cached Jev next decision; confirmation reward0. Preserve prior tiny gains/tradeoffs and unchanged fullpanel readiness gates.",
+  "next_experiment": "Tied-marginal dependence-only diffusion feasibility: freeze retained diagonal amplitude schedule, normalize rank2 correlation so analytic total marginal variance equals frozen diagonal at identical cell/state throughout; past-only resource/covariance positive-definiteness/zero-noise replay preflight before predeclared matched training. Divergent stochastic paths need not have identical state/variances. No old noise/seed/rank/horizon grid; originalfullpanel scorer/gates, retainedkinetics and historical small gains unchanged.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1238,7 +1238,7 @@
     "uncapped_reward": -1525,
     "reward_score": -1525,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": -18
+    "last_batch_reward_delta": 0
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -2969,6 +2969,18 @@
         "variogram": "Problem: Correlated variogram trails diagonal by .0000173; one training seed cannot establish generalization. Proposed solution: Control covariance evolution beyond initialization and use predeclared matched seeds. Validation: Preserve32285gene scorer/exactreplays; independent embryos and reproducible variogram gains without MMD regression required."
       },
       "scope": "Four fresh independent narrow metric agents; no tools/peers/writes. Proposed remedies are unvalidated; no automatic seed grid."
+    },
+    "correlated_diffusion_frozen_horizon_validation_01": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "a5d6df7fb86b60cb009ff39f4a2be699b239b4a01a9d21e014bac5c505130bee",
+      "reviews": {
+        "de_score": "Problem: Frozen9.25 shows no DE advantage over diagonal; initial-only variance matching leaves amplitude confounding. Proposed solution: One past-only dependence diagnostic with matched marginals throughout transport. Validation: Preserve32285gene scorer/gates, paired DE effects across original scoring resamples, not independent splits.",
+        "de_direction": "Problem: Direction loses to both baselines in all3resamples; prior gains are horizon-sensitive. Proposed solution: Distinct past-only tied-marginal diagnostic without target tuning, preserve earlier results. Validation: Frozen scorer/gates/replays and confirmed matching throughout; independent training seeds before robustness claims.",
+        "mmd_u": "Problem: Full-panel distribution MMD worsens in all3resamples; these are not independent embryos. Proposed solution: Distinct past-only dependence diagnostic, preserve independently trained amplitudes as frozen evidence and original validation reward0. Validation: Calibration/exactreplay checks; distinguish covariance effects from marginal-amplitude changes, no horizon grid.",
+        "variogram": "Problem: Variogram declines versus both comparators; initial variance matching cannot isolate covariance effects. Proposed solution: Distinct past-only covariance-isolation diagnostic without target tuning. Validation: Preserve15calibrations/32285gene scorer gates and paired differences;3scoringresamples do not establish embryo replication."
+      },
+      "scope": "Independent narrow specialists, no tools/peers/writes. Corrected terminology: full-panel MMD measures joint distribution, not only marginal distributions; scoring resamples not independent splits. New diagnostic training would be separately predeclared, original confirmation reward remains0."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3910,7 +3922,7 @@
         "status": "below_redline"
       }
     },
-    "recorded_iterations": 67,
+    "recorded_iterations": 68,
     "action": "Prioritize supported matched-control improvements; preserve failures and gates. Proxy/pending iterations earn zero. No score reset, fabricated reward, agent termination or deployment implied."
   },
   "scfm_reopened": {
@@ -4686,11 +4698,24 @@
     "scope": "Small historical development gains retained; MMD and variogram regress versus diagonal; no robustness/readiness claim. All15calibrations and3prior/2neutral/5newreplays pass;75.40MiB GPU,5.03GiB host."
   },
   "correlated_diffusion_frozen_horizon_validation": {
-    "status": "running",
+    "status": "completed",
     "experiment": "correlated_diffusion_frozen_horizon_validation",
     "report": "CORRELATED_DIFFUSION_FROZEN_HORIZON_VALIDATION_RESULTS.json",
     "training_steps": 0,
     "reward_eligible": false,
-    "scope": "Fixed checkpoint/helper/context hashes,8.25->9.25 historical horizon, same embryos; prior frozen9.5 predictions must replay exactly before newtarget scorer. OriginalCPU scorer, no retraining needed."
+    "scope": "Frozen correlated fails horizon confirmation, all4means lower than diagonal; preserve9.5gain without robustness claim. Diagonal +.003445headline vs kinetics on9.25 but variogram mean declines.15validcalibrations,3original+5frozenprior/2neutral/5new exactreplays; no retraining/reward.",
+    "mean_scores": {
+      "copy": 50.0,
+      "cnf800": 51.194605628785325,
+      "kinetic_none400": 51.79786886562122,
+      "diffusion_diagonal400": 51.80131410750533,
+      "diffusion_correlated400": 51.78001932410225
+    },
+    "primary_contrast": {
+      "de_score": -0.0001401093422630506,
+      "de_direction": -0.0006085466667958839,
+      "mmd_u": -5.2082757468485674e-05,
+      "variogram": -5.0795022627281305e-05
+    }
   }
 }

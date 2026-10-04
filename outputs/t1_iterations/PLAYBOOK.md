@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-04T14:14:43.456910+00:00
+Updated: 2026-10-04T14:26:39.794575+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -10,7 +10,7 @@ Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction':
 
 Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Collect correlated_diffusion_frozen_horizon_validation after completion; no duplicate worker. Four fresh metric reviews and bounded cached Jev next decision; confirmation reward0. Preserve prior tiny gains/tradeoffs and unchanged fullpanel readiness gates.
+Next: Tied-marginal dependence-only diffusion feasibility: freeze retained diagonal amplitude schedule, normalize rank2 correlation so analytic total marginal variance equals frozen diagonal at identical cell/state throughout; past-only resource/covariance positive-definiteness/zero-noise replay preflight before predeclared matched training. Divergent stochastic paths need not have identical state/variances. No old noise/seed/rank/horizon grid; originalfullpanel scorer/gates, retainedkinetics and historical small gains unchanged.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in outputs\t1_submissions\formula_progress_20260930_01\official_result.json. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 
