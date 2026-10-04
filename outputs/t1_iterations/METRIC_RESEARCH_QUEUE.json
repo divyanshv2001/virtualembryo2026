@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-04T18:30:25.659510+00:00",
+  "updated_utc": "2026-10-04T18:40:08.603379+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -6419,16 +6419,16 @@
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
     "experiment": "potential_chronological_cutoff8",
-    "status": "running_recovery",
-    "next_experiment": "real_fullgene_decoder_pilot_recovery",
-    "next": "real_fullgene_decoder_pilot_recovery running;400RTXsteps complete194.3MBpeak, cachedcheckpoint reused onlyafter exactobservedmatrix/coordinates/genemean hashreplay. Two resource/APIstartup fixes beforeanytarget scoring; original logs/checkpointpreserved. Currentfour frozen candidates copy/incumbent/linearfullgene/neuralfullgene;12fullpanelactual9.5development outcomes pending, actual8.5all16787cells training, no9.5fit. Inspectnamedworker/report; fourfreshreviews/rewardafterbatch; gates/noofficialupload unchanged.",
-    "jev_choice": "fullgene_anchor_decoder",
-    "jev_confidence": 0.23,
+    "status": "batch_completed_density_audit_done",
+    "next_experiment": "fullgene_hurdle_novelty_preflight",
+    "next": "Deadline pilot complete: neural41.21755 vslinear53.10552 vsincumbent55.98883;12validcalibs, fourfreshreviews,reward-40,officialbest52.16unchanged. Preserve linearpositiveDE/DCS/MMDpartialgains; CSSregressed. Exactreplaydiagnostic adds10633/12303positivegenes percell; libraryrescalingmeasured, notcausalproof. Next bounded fullgene_hurdle_novelty_preflight: compare observed-real allgene detection/conditionalpositive heads withprior sourcecalibrated/zero-lock/hurdlecoverage before any secondhypothesis; no oldgrids or denseMSE retraining. CachedJev .11confidence advisory only. Oct8deadline/gates intact.",
+    "jev_choice": "fullgene_hurdle_novelty_preflight",
+    "jev_confidence": 0.11,
     "scope": "Advisory low confidence; raw-count data availability verified deterministically, no score claim.",
     "support_audit": "Completed: no independent embryo/untouched validation established; historical-only options remain, no promotion.",
     "jev_usage": {
-      "input_tokens": 1411,
-      "output_tokens": 40
+      "input_tokens": 1089,
+      "output_tokens": 54
     },
     "coordinator_choice": "past_block_crossfit",
     "coordinator_reason": "Objective swap regresses allnonDE metrics and DEties; audit untested chronologicalcoverage before further same-exposedpanel objectives. No guarantee validationraisesofficialscore. Preserve proposed newneuralOT-CFM candidate, no oldaffineOT repeat.",
@@ -6436,6 +6436,6 @@
     "feasibility_basis": "Archived8.5 CNF/encoder hashes and cutoff verified; new8.5 kinetics/potential pair remains unevaluated; reuse avoids redundant CNF800 training. Existing head strengths and scorer fixed.",
     "coverage": "485cutoff8outcomes/58reports but0potential; cachedlowercutoff4096/PCA8/CNF800 andfixedalignment available.7963strictpastrows,targets3000each; no independentembryos."
   },
-  "next_experiment": "real_fullgene_decoder_pilot_recovery running;400RTXsteps complete194.3MBpeak, cachedcheckpoint reused onlyafter exactobservedmatrix/coordinates/genemean hashreplay. Two resource/APIstartup fixes beforeanytarget scoring; original logs/checkpointpreserved. Currentfour frozen candidates copy/incumbent/linearfullgene/neuralfullgene;12fullpanelactual9.5development outcomes pending, actual8.5all16787cells training, no9.5fit. Inspectnamedworker/report; fourfreshreviews/rewardafterbatch; gates/noofficialupload unchanged.",
-  "next_action": "real_fullgene_decoder_pilot_recovery running;400RTXsteps complete194.3MBpeak, cachedcheckpoint reused onlyafter exactobservedmatrix/coordinates/genemean hashreplay. Two resource/APIstartup fixes beforeanytarget scoring; original logs/checkpointpreserved. Currentfour frozen candidates copy/incumbent/linearfullgene/neuralfullgene;12fullpanelactual9.5development outcomes pending, actual8.5all16787cells training, no9.5fit. Inspectnamedworker/report; fourfreshreviews/rewardafterbatch; gates/noofficialupload unchanged."
+  "next_experiment": "Deadline pilot complete: neural41.21755 vslinear53.10552 vsincumbent55.98883;12validcalibs, fourfreshreviews,reward-40,officialbest52.16unchanged. Preserve linearpositiveDE/DCS/MMDpartialgains; CSSregressed. Exactreplaydiagnostic adds10633/12303positivegenes percell; libraryrescalingmeasured, notcausalproof. Next bounded fullgene_hurdle_novelty_preflight: compare observed-real allgene detection/conditionalpositive heads withprior sourcecalibrated/zero-lock/hurdlecoverage before any secondhypothesis; no oldgrids or denseMSE retraining. CachedJev .11confidence advisory only. Oct8deadline/gates intact.",
+  "next_action": "Deadline pilot complete: neural41.21755 vslinear53.10552 vsincumbent55.98883;12validcalibs, fourfreshreviews,reward-40,officialbest52.16unchanged. Preserve linearpositiveDE/DCS/MMDpartialgains; CSSregressed. Exactreplaydiagnostic adds10633/12303positivegenes percell; libraryrescalingmeasured, notcausalproof. Next bounded fullgene_hurdle_novelty_preflight: compare observed-real allgene detection/conditionalpositive heads withprior sourcecalibrated/zero-lock/hurdlecoverage before any secondhypothesis; no oldgrids or denseMSE retraining. CachedJev .11confidence advisory only. Oct8deadline/gates intact."
 }

@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-04T18:30:25.878027+00:00
+Updated: 2026-10-04T18:40:11.515465+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -8,15 +8,15 @@ Use `research_harness.py queue` for a compact next-step/pending summary; never d
 
 Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction': 56.3, 'mmd_u': 53.2, 'variogram': 51.7}. Covariance .25 reused-development mean55.98883; EB and lineage-standardized historical proxy screens failed. Local>72 mean/lower-tail >=64-replicate AND temporal gate unmet. Full32285-gene scorer/calibration unchanged.
 
-Checkpoint jobs: ['real_fullgene_decoder_pilot_03']. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
+Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: real_fullgene_decoder_pilot_recovery running;400RTXsteps complete194.3MBpeak, cachedcheckpoint reused onlyafter exactobservedmatrix/coordinates/genemean hashreplay. Two resource/APIstartup fixes beforeanytarget scoring; original logs/checkpointpreserved. Currentfour frozen candidates copy/incumbent/linearfullgene/neuralfullgene;12fullpanelactual9.5development outcomes pending, actual8.5all16787cells training, no9.5fit. Inspectnamedworker/report; fourfreshreviews/rewardafterbatch; gates/noofficialupload unchanged.
+Next: Deadline pilot complete: neural41.21755 vslinear53.10552 vsincumbent55.98883;12validcalibs, fourfreshreviews,reward-40,officialbest52.16unchanged. Preserve linearpositiveDE/DCS/MMDpartialgains; CSSregressed. Exactreplaydiagnostic adds10633/12303positivegenes percell; libraryrescalingmeasured, notcausalproof. Next bounded fullgene_hurdle_novelty_preflight: compare observed-real allgene detection/conditionalpositive heads withprior sourcecalibrated/zero-lock/hurdlecoverage before any secondhypothesis; no oldgrids or denseMSE retraining. CachedJev .11confidence advisory only. Oct8deadline/gates intact.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in export report. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 
 Four metric critiques completed; consult METRIC_CRITIQUES_20261001.md when designing the next mechanism. Separate reward starts0: +1 positive paired mean skill gain / -10 tie or regression per metric, aggregate maximum100; negative balances visible. Pending/invalid/proxy0. Future unique declared experiments only; promotion gates unchanged.
 
-Current separate reward: -1644. This is not a benchmark score.
+Current separate reward: -1684. This is not a benchmark score.
 
 External acquisition entry point: GSE76118_WT_STAGE_MANIFEST.json. The old stage-only list is historical;127 mutants excluded,162 B6 WT controls separate,143E8.5/999E9.5 primary CD1 candidates. Expression acquired: True; acquired cohort cells: 24; prospective QC passes: 18; original pilot cells: 4; training readiness: False. Latest external status: 24-cell cohort/QC, compatibility, lineage matching, robustness and E8.5 static guidance already completed; static guidance had no passing alpha. Transfer/embryo replication not validated. Do not repeat acquisition or QC; per-cutoff stage restrictions remain.. Latest Jev actual usage: {'input_tokens': 792, 'output_tokens': 45}.
 

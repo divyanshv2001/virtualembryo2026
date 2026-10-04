@@ -35,3 +35,16 @@ predeclared paired mean gains earn+1 per metric; ties/regressions earn-10.
 Invalid, pending or proxy evidence earns0. Negative balances remain visible.
 No retroactive award for these three reused panels. Actual benchmark scores and
 the >72 temporal/64-replicate mean/lower-tail gates remain unchanged.
+
+## Real full-gene decoder — 5 October 2026 IST
+Report hash: cb96904c91a185a00d8a57716cda8d0aa48904ca597393de01652ba3a71477df; four fresh narrow reviews; primary nonlinear/linear reward-40.
+
+- de_score: Problem: NeuralDE trailslinear/incumbent; exposeddevelopment notindependent. Proposed solution: Preserve linearpartialgains; inspectdetectionmismatch beforetraining. Validation: Frozencontrols/freshpasttransfer, no weightgrids.
+
+- de_direction: Problem: NeuralDCS .556592 trailslinear .609334/incumbent .602168. Proposed solution: Preserve linearDE/DCS/MMDgains, diagnose zerofilling/covariateshift. Validation: Matchedpastforecasts/allfourmetrics, CSS mustrecover.
+
+- mmd_u: Problem: NeuralMMD regresses; linearMMDpartialgain retained. Proposed solution: Diagnose detectiondensity/librarynormalization/covariance beforetraining. Validation: Pairedfullpanel outcomes acrossallfourmetrics; no oldzero-lock/mass grids.
+
+- variogram: Problem: NeuralCSS .126780 vslinear .370882/incumbent .539468. Proposed solution: Quantify newlypositiveentries/clipping/libraryrescaling beforemodelchanges. Validation: Exactforecastreplay withfixedsettings; no hiddenfuture. Coordinator: reviewer lowermeanerror claim was unsupported and excluded; newzeros means newlypositive donorzeros.
+
+Exact replay subsequently measured10633/12303newpositivegenes/cell, preserving observed donor reference. CachedJev .11/1089in54out chooses hurdle novelty preflight; no repeated zero-lock/mass grid authorized. Partial linearDE/DCS/MMDgains retained; no readiness or officialscore claim.

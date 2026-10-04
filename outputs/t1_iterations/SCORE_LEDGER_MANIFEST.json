@@ -1,5 +1,5 @@
 {
-  "records": 3559,
+  "records": 3571,
   "sources": [
     {
       "path": "private/anchored_soft_ot_paper_pilot_01/report.json",
@@ -977,6 +977,11 @@
       "outcomes_indexed": 10
     },
     {
+      "path": "private/real_fullgene_decoder_pilot_03/report.json",
+      "sha256": "cb96904c91a185a00d8a57716cda8d0aa48904ca597393de01652ba3a71477df",
+      "outcomes_indexed": 12
+    },
+    {
       "path": "private/recent_transport_challenge_01/report.json",
       "sha256": "27e707c61209b68b3b6a731e4f5ea0c2cf4870000155424c3b6d7dd0375264bb",
       "outcomes_indexed": 27
@@ -1279,5 +1284,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "e0b9c3a13c46cf94729dabe948189e84f0c438e272afc1191b17f540ffd61e2f"
+  "ledger_sha256": "2dc665bb7d9250fca470c252270c20176e4209c6d88b5cd4b726d302ad9b8c72"
 }

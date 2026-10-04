@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": true,
+  "local_process_running": false,
   "quota_reset_evidence": {
     "limit_observed": true,
     "observed_reset_text": "7:54 PM",
@@ -30,13 +30,11 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "real_fullgene_decoder_pilot_recovery running;400RTXsteps complete194.3MBpeak, cachedcheckpoint reused onlyafter exactobservedmatrix/coordinates/genemean hashreplay. Two resource/APIstartup fixes beforeanytarget scoring; original logs/checkpointpreserved. Currentfour frozen candidates copy/incumbent/linearfullgene/neuralfullgene;12fullpanelactual9.5development outcomes pending, actual8.5all16787cells training, no9.5fit. Inspectnamedworker/report; fourfreshreviews/rewardafterbatch; gates/noofficialupload unchanged.",
+  "next_experiment": "Deadline pilot complete: neural41.21755 vslinear53.10552 vsincumbent55.98883;12validcalibs, fourfreshreviews,reward-40,officialbest52.16unchanged. Preserve linearpositiveDE/DCS/MMDpartialgains; CSSregressed. Exactreplaydiagnostic adds10633/12303positivegenes percell; libraryrescalingmeasured, notcausalproof. Next bounded fullgene_hurdle_novelty_preflight: compare observed-real allgene detection/conditionalpositive heads withprior sourcecalibrated/zero-lock/hurdlecoverage before any secondhypothesis; no oldgrids or denseMSE retraining. CachedJev .11confidence advisory only. Oct8deadline/gates intact.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "real_fullgene_decoder_pilot_03"
-  ],
+  "active_jobs": [],
   "active_run_path": "private/real_fullgene_decoder_pilot_03",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -1246,7 +1244,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1644,
+    "current_reward": -1684,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1255,8 +1253,8 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1644,
-    "reward_score": -1644,
+    "uncapped_reward": -1684,
+    "reward_score": -1684,
     "benchmark_score": "unchanged; separately reported",
     "last_batch_reward_delta": -40
   },
@@ -3086,6 +3084,17 @@
         "mmd_u": "Problem: MMD skill regresses at both horizons; no validated emerging-state mechanism. Proposed solution: Untested past-only mixture transition. Validation: Held-out-past forecasts against copy/CNF across all four metrics.",
         "variogram": "Problem: CSS regresses at both horizons,5510 genes lack decoder support. Proposed solution: Observed-data conditional fullgene decoder. Validation: Unchanged wrapper,copy/CNF,allfourmetrics,no future leakage."
       }
+    },
+    "real_fullgene_decoder_pilot_03": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "cb96904c91a185a00d8a57716cda8d0aa48904ca597393de01652ba3a71477df",
+      "reviews": {
+        "de_score": "Problem: NeuralDE trailslinear/incumbent; exposeddevelopment notindependent. Proposed solution: Preserve linearpartialgains; inspectdetectionmismatch beforetraining. Validation: Frozencontrols/freshpasttransfer, no weightgrids.",
+        "de_direction": "Problem: NeuralDCS .556592 trailslinear .609334/incumbent .602168. Proposed solution: Preserve linearDE/DCS/MMDgains, diagnose zerofilling/covariateshift. Validation: Matchedpastforecasts/allfourmetrics, CSS mustrecover.",
+        "mmd_u": "Problem: NeuralMMD regresses; linearMMDpartialgain retained. Proposed solution: Diagnose detectiondensity/librarynormalization/covariance beforetraining. Validation: Pairedfullpanel outcomes acrossallfourmetrics; no oldzero-lock/mass grids.",
+        "variogram": "Problem: NeuralCSS .126780 vslinear .370882/incumbent .539468. Proposed solution: Quantify newlypositiveentries/clipping/libraryrescaling beforemodelchanges. Validation: Exactforecastreplay withfixedsettings; no hiddenfuture. Coordinator: reviewer lowermeanerror claim was unsupported and excluded; newzeros means newlypositive donorzeros."
+      }
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -4006,27 +4015,27 @@
   },
   "agent_health": {
     "redline": 0,
-    "score": -1644,
+    "score": -1684,
     "status": "below_redline",
     "metrics": {
       "de_score": {
-        "score": -433,
+        "score": -443,
         "status": "below_redline"
       },
       "de_direction": {
-        "score": -378,
+        "score": -388,
         "status": "below_redline"
       },
       "mmd_u": {
-        "score": -466,
+        "score": -476,
         "status": "below_redline"
       },
       "variogram": {
-        "score": -367,
+        "score": -377,
         "status": "below_redline"
       }
     },
-    "recorded_iterations": 75,
+    "recorded_iterations": 76,
     "action": "Prioritize supported matched-control improvements; preserve failures and gates. Proxy/pending iterations earn zero. No score reset, fabricated reward, agent termination or deployment implied."
   },
   "scfm_reopened": {
@@ -5176,7 +5185,7 @@
       "jev_scope": "Typed option selection/pinnedreport status only; report has no score summary and numeric auditresults were not transmitted, no evidence certification."
     }
   },
-  "next_action": "real_fullgene_decoder_pilot_recovery running;400RTXsteps complete194.3MBpeak, cachedcheckpoint reused onlyafter exactobservedmatrix/coordinates/genemean hashreplay. Two resource/APIstartup fixes beforeanytarget scoring; original logs/checkpointpreserved. Currentfour frozen candidates copy/incumbent/linearfullgene/neuralfullgene;12fullpanelactual9.5development outcomes pending, actual8.5all16787cells training, no9.5fit. Inspectnamedworker/report; fourfreshreviews/rewardafterbatch; gates/noofficialupload unchanged.",
+  "next_action": "Deadline pilot complete: neural41.21755 vslinear53.10552 vsincumbent55.98883;12validcalibs, fourfreshreviews,reward-40,officialbest52.16unchanged. Preserve linearpositiveDE/DCS/MMDpartialgains; CSSregressed. Exactreplaydiagnostic adds10633/12303positivegenes percell; libraryrescalingmeasured, notcausalproof. Next bounded fullgene_hurdle_novelty_preflight: compare observed-real allgene detection/conditionalpositive heads withprior sourcecalibrated/zero-lock/hurdlecoverage before any secondhypothesis; no oldgrids or denseMSE retraining. CachedJev .11confidence advisory only. Oct8deadline/gates intact.",
   "potential_real_anchor_transfer_setup_failure": {
     "run": "potential_real_anchor_transfer_01",
     "error": "append_event kind argument collided with keyword at first50-step logging; no checkpoint or forecast completed",
@@ -5568,7 +5577,7 @@
     }
   },
   "deadline_pilot_preflight": {
-    "status": "training_completed_forecast_recovery_running",
+    "status": "completed_scored_not_promoted",
     "device": "RTX3060 Laptop",
     "smoke_allocated_bytes": 101889536,
     "real_observed_training_stage": 8.5,
@@ -5584,5 +5593,59 @@
     "training_peak_allocated_bytes": 194297344,
     "repair": "Scorer loader requires noarguments; stoppedbeforeanytargetscoring, newregisteredrecovery reusesverifiedcompletedtraining ratherthanretrain.",
     "original_training_run": "private/real_fullgene_decoder_pilot_02"
+  },
+  "fullgene_decoder_density_audit": {
+    "status": "completed_exact_observed_only_replay",
+    "diagnostics": {
+      "linear_fullgene": {
+        "prediction_exact_replay": true,
+        "new_positive_per_cell_mean": 10633.497333333333,
+        "donor_positive_per_cell_mean": 3890.8793333333333,
+        "prediction_positive_per_cell_mean": 14524.36,
+        "library_restore_factor_quantiles": [
+          0.9391271714501677,
+          0.9967128129190214,
+          1.0071820010693335
+        ],
+        "delta_clipped_fraction": 0.0018344948634556812
+      },
+      "neural_fullgene": {
+        "prediction_exact_replay": true,
+        "new_positive_per_cell_mean": 12302.809333333333,
+        "donor_positive_per_cell_mean": 3890.8793333333333,
+        "prediction_positive_per_cell_mean": 16193.680666666667,
+        "library_restore_factor_quantiles": [
+          0.915341495468626,
+          0.9443663986790691,
+          0.9823525973595001
+        ],
+        "delta_clipped_fraction": 0.009545919157503484
+      }
+    },
+    "interpretation": "Newly positive values are a measured structural change, not confirmed causal explanation of CSS loss. Do not repeat old zero-lock/mass grids. No targetexpression read, fitting, scores or reward.",
+    "new_scores": 0,
+    "reward_delta": 0
+  },
+  "fullgene_decoder_completed": {
+    "status": "completed_failed_promotion",
+    "official_best_unchanged": 52.16,
+    "means": {
+      "copy": 50.0,
+      "incumbent": 55.988829663381615,
+      "linear_fullgene": 53.1055222554668,
+      "neural_fullgene": 41.21754843007718
+    },
+    "linear_partial_gains_vs_incumbent": {
+      "de_score": 0.00012895412809310614,
+      "de_direction": 0.007165882522812583,
+      "mmd_u": 0.010201039462739647,
+      "variogram": -0.16858547540348284
+    },
+    "reward_basis": "neuralvslinear primarycontrast only; auxiliarycontrol gains retained without extra reward",
+    "report": "REAL_FULLGENE_DECODER_PILOT_RECOVERY_RESULTS.json",
+    "calibrations_valid": 12,
+    "reviews": 4,
+    "neural_minibatch_unique_rows": 15987,
+    "eligible_training_rows": 16787
   }
 }
