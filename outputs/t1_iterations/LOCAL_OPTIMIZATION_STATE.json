@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Strict cutoff8 potential validation running via harness potential_chronological_cutoff8: cachedCNF800/encoder, newpotential400 RTX3060 only; frozen8.0sourceheads/alignment,8.25/8.5forecastsfrozen before18fullpanel scores. Inspectactivejob neverduplicate, four narrowreviews/reward/nextdecision aftercompletion. Latest userofficial52.16 repeatsbest, notnewimprovement.",
+  "next_experiment": "Chronological potential completed belowcopy at both horizons; no promotion. Official best52.16. Latest official basics audit identifies missing jointrealE8.5/E9.5temporal supervision,5510copiedgenes and unvalidatedpopulationemergence. CachedJev selects population_transition_preflight (.63); next predeclare observed-stage stateconditionalmixture transition withfullgene support and past-only matchedcontrols, beforetraining; no oldresampling/shift/covariancegrids. Retain allreadiness/calibration gates.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1246,7 +1246,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1604,
+    "current_reward": -1644,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1255,8 +1255,8 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1604,
-    "reward_score": -1604,
+    "uncapped_reward": -1644,
+    "reward_score": -1644,
     "benchmark_score": "unchanged; separately reported",
     "last_batch_reward_delta": -40
   },
@@ -3075,6 +3075,17 @@
         "mmd_u": "Problem: MMD underperformed Sinkhorn3/3. Proposed solution: Untested past-only cross-fitted residual-shrinkage recalibrator keeping trainingfixed. Validation: Reusedseedreplays notindependent; inspect skill/direction/variance. Coordinator: oldshrinkage paths alreadytested; no repeatscheduled.",
         "variogram": "Problem: Variogramskill declines3/3. Proposed solution: Untested past-only lag-dependent covariance shrinkage. Validation: Freshseeds/exactcontrols/disabledreplay,requiregainwithout otherregressions. Coordinator: oldcovariance grids/shrinkage notrescheduled."
       }
+    },
+    "potential_chronological_cutoff8_01": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "e55747345c541f685dbdd2783d90a5e6978c9cb8b24f571247b356b61e77664d",
+      "reviews": {
+        "de_score": "Problem: Inconsistent DE gains, both horizons below copying. Proposed solution: Past-only full-transcriptome temporal supervision. Validation: Three matched seeds/horizon; valid calibration does not establish improvement.",
+        "de_direction": "Problem: DCS mean gains negative at both horizons. Proposed solution: Past-only real-stage state-conditional temporal supervision. Validation: Matched copy/CNF, fresh training seeds, unchanged calibration; no hidden targets or old shift grids.",
+        "mmd_u": "Problem: MMD skill regresses at both horizons; no validated emerging-state mechanism. Proposed solution: Untested past-only mixture transition. Validation: Held-out-past forecasts against copy/CNF across all four metrics.",
+        "variogram": "Problem: CSS regresses at both horizons,5510 genes lack decoder support. Proposed solution: Observed-data conditional fullgene decoder. Validation: Unchanged wrapper,copy/CNF,allfourmetrics,no future leakage."
+      }
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3995,27 +4006,27 @@
   },
   "agent_health": {
     "redline": 0,
-    "score": -1604,
+    "score": -1644,
     "status": "below_redline",
     "metrics": {
       "de_score": {
-        "score": -423,
+        "score": -433,
         "status": "below_redline"
       },
       "de_direction": {
-        "score": -368,
+        "score": -378,
         "status": "below_redline"
       },
       "mmd_u": {
-        "score": -456,
+        "score": -466,
         "status": "below_redline"
       },
       "variogram": {
-        "score": -357,
+        "score": -367,
         "status": "below_redline"
       }
     },
-    "recorded_iterations": 74,
+    "recorded_iterations": 75,
     "action": "Prioritize supported matched-control improvements; preserve failures and gates. Proxy/pending iterations earn zero. No score reset, fabricated reward, agent termination or deployment implied."
   },
   "scfm_reopened": {
@@ -5165,7 +5176,7 @@
       "jev_scope": "Typed option selection/pinnedreport status only; report has no score summary and numeric auditresults were not transmitted, no evidence certification."
     }
   },
-  "next_action": "Strict cutoff8 potential validation running via harness potential_chronological_cutoff8: cachedCNF800/encoder, newpotential400 RTX3060 only; frozen8.0sourceheads/alignment,8.25/8.5forecastsfrozen before18fullpanel scores. Inspectactivejob neverduplicate, four narrowreviews/reward/nextdecision aftercompletion. Latest userofficial52.16 repeatsbest, notnewimprovement.",
+  "next_action": "Chronological potential completed belowcopy at both horizons; no promotion. Official best52.16. Latest official basics audit identifies missing jointrealE8.5/E9.5temporal supervision,5510copiedgenes and unvalidatedpopulationemergence. CachedJev selects population_transition_preflight (.63); next predeclare observed-stage stateconditionalmixture transition withfullgene support and past-only matchedcontrols, beforetraining; no oldresampling/shift/covariancegrids. Retain allreadiness/calibration gates.",
   "potential_real_anchor_transfer_setup_failure": {
     "run": "potential_real_anchor_transfer_01",
     "error": "append_event kind argument collided with keyword at first50-step logging; no checkpoint or forecast completed",
@@ -5207,8 +5218,8 @@
     "official_score": null
   },
   "last_jev_usage": {
-    "input_tokens": 1249,
-    "output_tokens": 54
+    "input_tokens": 1262,
+    "output_tokens": 48
   },
   "direct_cnf_potential_preflight": {
     "status": "passed",
@@ -5397,5 +5408,106 @@
     ],
     "planned_evaluations": 18,
     "reward_delta": 0
+  },
+  "t1_basics_audit_20261004": {
+    "status": "completed_observed_only",
+    "mapped_genes": 26775,
+    "copied_unsupported_genes": 5510,
+    "observed_only_abs_mean_change_ge_0_25": {
+      "all_genes": 55,
+      "unsupported_genes": 4
+    },
+    "observed_E9_5_types_absent_by_name_at_E8_5": [
+      "BEC",
+      "Endocardium",
+      "Epithelium",
+      "Hepatocyte",
+      "NCC-derived",
+      "Proepicardium",
+      "ST",
+      "V-CM",
+      "aPHM",
+      "pPHM"
+    ],
+    "their_observed_E9_5_fraction": 0.48050653690566925,
+    "type_name_difference_not_lineage_proof": true,
+    "stage_metadata": {
+      "E8.5": {
+        "cells": 16787,
+        "types": {
+          "Foregut": 2405,
+          "pSHF": 2192,
+          "Surface Ectoderm": 1423,
+          "OFT/RV-CM": 1176,
+          "Endothelium": 1139,
+          "JCF": 1119,
+          "IFT-CM": 949,
+          "Paraxial Mesoderm": 934,
+          "EXEM": 863,
+          "aSHF": 822,
+          "Neural Tube": 773,
+          "Pericardium": 745,
+          "AVC-CM": 598,
+          "RV-CM": 442,
+          "LV-CM": 344,
+          "SV-CM": 310,
+          "NCC": 287,
+          "Blood": 266
+        },
+        "gene_order_correct": true
+      },
+      "E9.5": {
+        "cells": 17057,
+        "types": {
+          "OFT/RV-CM": 1830,
+          "Endocardium": 1555,
+          "SV-CM": 1273,
+          "pPHM": 1194,
+          "Hepatocyte": 1190,
+          "V-CM": 1144,
+          "pSHF": 1110,
+          "aSHF": 1050,
+          "Pericardium": 897,
+          "Proepicardium": 883,
+          "ST": 879,
+          "Foregut": 871,
+          "IFT-CM": 690,
+          "NCC-derived": 621,
+          "Surface Ectoderm": 554,
+          "AVC-CM": 326,
+          "BEC": 271,
+          "Epithelium": 233,
+          "aPHM": 226,
+          "Blood": 213,
+          "NCC": 47
+        },
+        "gene_order_correct": true
+      }
+    },
+    "no_hidden_target_used": true,
+    "new_scores": 0,
+    "reward_delta": 0,
+    "current_model_gaps": [
+      "5510 external-unmapped genes copied, despite complete official observed matrices",
+      "Official-stage E8.5/E9.5 are not jointly used to supervise best-export temporal field",
+      "No validated mechanism for emergent states/proportions",
+      "Fullpanel/source/exposeddevelopment gains not independently validated for E10.5/E12.5"
+    ],
+    "resources_verified_in_browser": true,
+    "scoring_verified": true,
+    "report": "TEMPORAL_TASK_REVIEW_20261001.md"
+  },
+  "task_basics_required_before_next_model": {
+    "status": "audit_completed_preflight_pending",
+    "after_active_job": "Chronological potential completed belowcopy at both horizons; no promotion. Official best52.16. Latest official basics audit identifies missing jointrealE8.5/E9.5temporal supervision,5510copiedgenes and unvalidatedpopulationemergence. CachedJev selects population_transition_preflight (.63); next predeclare observed-stage stateconditionalmixture transition withfullgene support and past-only matchedcontrols, beforetraining; no oldresampling/shift/covariancegrids. Retain allreadiness/calibration gates.",
+    "official_task_url": "https://virtualembryo.ai/challenge/tasks/temporal"
+  },
+  "latest_basics_decision": {
+    "choice": "population_transition_preflight",
+    "confidence": 0.63,
+    "cached": true,
+    "input_tokens": 1262,
+    "output_tokens": 48,
+    "score_certification": false
   }
 }

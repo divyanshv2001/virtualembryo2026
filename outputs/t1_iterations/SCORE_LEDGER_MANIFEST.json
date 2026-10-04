@@ -1,5 +1,5 @@
 {
-  "records": 3523,
+  "records": 3559,
   "sources": [
     {
       "path": "private/anchored_soft_ot_paper_pilot_01/report.json",
@@ -937,6 +937,11 @@
       "outcomes_indexed": 0
     },
     {
+      "path": "private/potential_chronological_cutoff8_01/report.json",
+      "sha256": "e55747345c541f685dbdd2783d90a5e6978c9cb8b24f571247b356b61e77664d",
+      "outcomes_indexed": 18
+    },
+    {
       "path": "private/potential_real_anchor_transfer_01/report.json",
       "sha256": "aa7eaa1870e37a70c3db25dd238940856f696b07a81312855a1f1c1dcb76e9e7",
       "outcomes_indexed": 0
@@ -1260,9 +1265,19 @@
       "path": "private/zero_creation_blocked_fullpanel_01/report.json",
       "sha256": "910ccd0e40d1c95f4006a492f39c0d18d7f863a60ef38479048c0ae8a98884f0",
       "outcomes_indexed": 12
+    },
+    {
+      "path": "private/potential_chronological_cutoff8_01/horizon_8.25/report.partial.json",
+      "sha256": "f71feb611a5146cbe784ddf264662ae8e422a6f02f47251d7e690f53fe1cd1cd",
+      "outcomes_indexed": 9
+    },
+    {
+      "path": "private/potential_chronological_cutoff8_01/horizon_8.5/report.partial.json",
+      "sha256": "660620afa2eaa5d1ed8a342f7929ff0c680f97346959b180ac9fb6632b0f674c",
+      "outcomes_indexed": 9
     }
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "05b2cfdcfe506a5948d8f30bfa804d4359033ff7d2c88663a0c7118a28412f4f"
+  "ledger_sha256": "e0b9c3a13c46cf94729dabe948189e84f0c438e272afc1191b17f540ffd61e2f"
 }
