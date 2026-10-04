@@ -1082,6 +1082,22 @@
           "attention_difference400": "d64f4e78fcc872e6e5f3e61373280e31019a01be17735b219f147d0893a10d3f"
         }
       }
+    },
+    "collective_context_preflight": {
+      "script": "collective_context_preflight.py",
+      "args": [
+        "--experiment",
+        "collective_context_preflight"
+      ],
+      "run": "private/collective_context_preflight_01",
+      "report": "COLLECTIVE_CONTEXT_PREFLIGHT.json",
+      "protocol": {
+        "training_device": "cuda",
+        "cutoff": 8.25,
+        "resource_preflight_only": true,
+        "reward_candidates": [],
+        "scope": "Past8->8.25 three-step optimizer/resource audit, frozen versus evolving population context, equal4776parameter residuals, self-exclusion, global context<=256 and querychunk stability. Own adaptation, not author reproduction. No target scoring/reward/readiness claim; GPU4.5GiB/host16GiB."
+      }
     }
   }
 }

@@ -1,0 +1,45 @@
+{
+  "status": "completed",
+  "new_scoring_batch": false,
+  "plan": {
+    "source_commit": "5b763a719a6a87a15a290ab7707850aaba05d5b6",
+    "cutoff": 8.25,
+    "source_stage": 8.0,
+    "destination_stage": 8.25,
+    "source_sha256": "9fdd1720c25b3a2347a89926af1d089f9c275a7c32251c3e63147062a459f1e0",
+    "kind": "resource_only",
+    "context_cap": 256,
+    "query_chunk": 128,
+    "seed": 20261004,
+    "scope": "Own frozen versus evolving context residual. No author code copied; no target score, spatial/causal claim or readiness."
+  },
+  "arms": [
+    {
+      "kind": "frozen",
+      "parameters": 4776,
+      "losses": [
+        2.3584952354431152,
+        2.357424020767212,
+        2.3561806678771973
+      ],
+      "query_chunk_max_error": 5.960464477539063e-08,
+      "context_subset_max_error": 0.0011492222547531128,
+      "checkpoint_replay_exact": true
+    },
+    {
+      "kind": "evolving",
+      "parameters": 4776,
+      "losses": [
+        2.3584952354431152,
+        2.3574323654174805,
+        2.356199026107788
+      ],
+      "query_chunk_max_error": 5.960464477539063e-08,
+      "context_subset_max_error": 0.0011719614267349243,
+      "checkpoint_replay_exact": true
+    }
+  ],
+  "seconds": 2.606094499991741,
+  "gpu_peak_mib": 92.10888671875,
+  "scope": "Finite gradient/runtime and query-chunk checks; context subset sensitivity measured, not biological validation or predictive score."
+}

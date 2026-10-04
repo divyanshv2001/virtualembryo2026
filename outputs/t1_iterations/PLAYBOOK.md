@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-04T10:16:39.686862+00:00
+Updated: 2026-10-04T10:22:37.663711+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -10,7 +10,7 @@ Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction':
 
 Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Unexplored scIMF collective-context feasibility: inspect author interaction drift and predeclare a bounded population-attention residual vs capacity-matched independent residual on retained kinetics. Context-subset/batch-stability audit and causal past physical stages; RTX3060 training, historical2.14CPU head/scorer driver, exactbaselinereplays; no attention-token/grid repeat. Jev0.40 tentative; original readiness unchanged.
+Next: Implement one fixed frozen-vs-evolving population-context trial: equal4776params,400steps64cells, past adjacent Sinkhorn, same RNG/initialcontext/selfmask/RK4.125/normcap1, retained kinetics/copy/CNF controls. GPU-only child trains both arms under pinned2.11CUDA; parent/head/forecast/scorer stays historical2.14CPU. Freeze256context indices/globalpopulation and128querychunk; measure context-subset sensitivity without selecting settings on target. Exactpriorbaseline and newforecastreplays before scoring, original gates/4reviews, primary evolving-vsfrozen reward only. Own scIMF-inspired adaptation, no causalcommunication/authorreproduction/70claim.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in outputs\t1_submissions\formula_progress_20260930_01\official_result.json. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 

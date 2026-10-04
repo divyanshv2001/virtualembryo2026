@@ -1,18 +1,18 @@
 {
-  "updated_utc": "2026-10-04T10:16:39.686862+00:00",
+  "updated_utc": "2026-10-04T10:22:37.663711+00:00",
   "fingerprints": {
     "RESEARCH_CONTINUATION_POLICY.md": "1e6cc6f15c1e918ad60a1e01f26dd66c48022b33158bf8eb2240a9622066af00",
-    "LOCAL_OPTIMIZATION_STATE.json": "c32f2244f68e1bb810af6d1340c50216382583794dea7cc1fc3892e16051fe1f",
+    "LOCAL_OPTIMIZATION_STATE.json": "5eafc486f934ef00d78616e970894294208088248ea3b611b1f8efb13b8fde88",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "2c76fe714fb6d50f2d5585ac693aa78203660272b1a29a71fe226dee27d63371",
+    "METRIC_RESEARCH_QUEUE.json": "0bab8d0eee61215e5c77a8b74db6a7d13294bc90f36e53e4ef84bc28cf8b85b5",
     "METRIC_CRITIQUE_POLICY.json": "3535989f1e3beac0f2d446b44df3c793d4be464dbd87f6e714c2f5afda864a6f",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
-    "RESEARCH_HARNESS_MANIFEST.json": "6b3779609255d3b4a4e2377bfec76371f21c74b0246b4bd0c91e2902abc5c2cb"
+    "RESEARCH_HARNESS_MANIFEST.json": "7a9d590f44fdacafba2a168246b3dae95e2d56dce8e03ee7fa09866fcf21964a"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [],
-  "next_experiment": "Unexplored scIMF collective-context feasibility: inspect author interaction drift and predeclare a bounded population-attention residual vs capacity-matched independent residual on retained kinetics. Context-subset/batch-stability audit and causal past physical stages; RTX3060 training, historical2.14CPU head/scorer driver, exactbaselinereplays; no attention-token/grid repeat. Jev0.40 tentative; original readiness unchanged.",
+  "next_experiment": "Implement one fixed frozen-vs-evolving population-context trial: equal4776params,400steps64cells, past adjacent Sinkhorn, same RNG/initialcontext/selfmask/RK4.125/normcap1, retained kinetics/copy/CNF controls. GPU-only child trains both arms under pinned2.11CUDA; parent/head/forecast/scorer stays historical2.14CPU. Freeze256context indices/globalpopulation and128querychunk; measure context-subset sensitivity without selecting settings on target. Exactpriorbaseline and newforecastreplays before scoring, original gates/4reviews, primary evolving-vsfrozen reward only. Own scIMF-inspired adaptation, no causalcommunication/authorreproduction/70claim.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",

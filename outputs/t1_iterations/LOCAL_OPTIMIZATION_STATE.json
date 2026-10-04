@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Unexplored scIMF collective-context feasibility: inspect author interaction drift and predeclare a bounded population-attention residual vs capacity-matched independent residual on retained kinetics. Context-subset/batch-stability audit and causal past physical stages; RTX3060 training, historical2.14CPU head/scorer driver, exactbaselinereplays; no attention-token/grid repeat. Jev0.40 tentative; original readiness unchanged.",
+  "next_experiment": "Implement one fixed frozen-vs-evolving population-context trial: equal4776params,400steps64cells, past adjacent Sinkhorn, same RNG/initialcontext/selfmask/RK4.125/normcap1, retained kinetics/copy/CNF controls. GPU-only child trains both arms under pinned2.11CUDA; parent/head/forecast/scorer stays historical2.14CPU. Freeze256context indices/globalpopulation and128querychunk; measure context-subset sensitivity without selecting settings on target. Exactpriorbaseline and newforecastreplays before scoring, original gates/4reviews, primary evolving-vsfrozen reward only. Own scIMF-inspired adaptation, no causalcommunication/authorreproduction/70claim.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -4238,5 +4238,14 @@
     "trained_device": "RTX3060",
     "training_steps_per_arm": 400,
     "gpu_peak_mib": 79.32666015625
+  },
+  "collective_context_preflight": {
+    "status": "completed",
+    "report_sha256": "95fd337f23e240d9c4eb1c293019765eacd2b179217706aef1d53661c5556bc0",
+    "gpu_peak_mib": 92.10888671875,
+    "seconds": 2.606094499991741,
+    "query_chunk_max_error": 5.960464477539063e-08,
+    "context_subset_max_error": 0.0011719614267349243,
+    "predictive_score": null
   }
 }
