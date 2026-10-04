@@ -30,13 +30,11 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Collect frozen Gaussian-VAE9.25horizon validation; zero retraining/reward. Four fresh independent metricreviews after scored completion/failure, unchanged originalscorer/readiness/replay gates.",
+  "next_experiment": "One predeclared Gaussian-VAE independent trainingseed20261005 confirmation, unchanged18320parameter128gene/rank8 observation model+1640parameter latentOT,400+400RTX3060steps; no hyperparameter/seed grid. Evaluate fixed9.5horizon vsfrozenkinetics with originalCPU full-panel scorer/replays. Explicit confirmationreward0, retain seed20261004 gains separately. Independent training randomness is not independentembryo validation.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "gaussian_vae_frozen_horizon_validation"
-  ],
+  "active_jobs": [],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -2933,6 +2931,19 @@
       },
       "reviewer_context": "Four fresh independent metric-only contexts, no tools/peers/writes.",
       "coordinator": "PrimaryNB-Gaussian all4means negative,0/3positive each. Gaussian-vskinetrics all4means positive/headline+0.018005,3/3headline andDE/direction/MMD but2/3variogram. Retain incremental Gaussian candidate despite larger ultimate goal, no full readiness promotion or retroactive reward.15calibrations5forecasts3prior2neutralexact; one trainingseed/3scoringresamples/historicaldevelopment. Not scVI reproduction or isolatedPCA comparison. Primaryreward-40/health-1507 recorded once, controls0. Proposed seed replication unvalidated; no parameter grid."
+    },
+    "gaussian_vae_frozen_horizon_validation_01": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "e532efde890243d579707dd7ce94b332702a2f7892fe4e3624af60de316c9c01",
+      "reviews": {
+        "de_score": "Problem: Tiny gains lack independent embryo validation; both horizons were historically exposed. Proposed solution: Retain frozen Gaussian+OT as an incremental candidate; no parameter grid or readiness upgrade. Validation: +0.000985185 versus kinetics, positive3/3scoring resamples; full-panel readiness unchanged.",
+        "de_direction": "Problem: Small, dependent direction evidence across exposed horizons. Proposed solution: Retain frozen Gaussian as an incremental candidate; no readiness upgrade or parameter grid. Validation: Gain+0.000640422;3/3scoring resamples positive, but shared encoder/donors and one training seed limit independence.",
+        "mmd_u": "Problem: Tiny, historically exposed MMD gain lacks independent confirmation. Proposed solution: Retain the frozen9.25incremental candidate; avoid parameter expansion. Validation: Three positive scoring resamples support direction, not independent replication; full-panel readiness remains unchanged.",
+        "variogram": "Problem: Tiny gain rests on scoring resamples, not independent embryos; both horizons were exposed. Proposed solution: Retain the frozen incremental candidate without expanding readiness claims. Validation: Report+0.0000284695,2/3positive, alongside unchanged full-panel results and calibration coverage."
+      },
+      "reviewer_context": "Four fresh independent metric-only contexts; no tools/peers/writes.",
+      "coordinator": "Gaussian headline51.841321 vskinetrics51.797869(+.043453), all3headline/DE/direction/MMDpairs positive,2of3variogram; all4meanspositive. Together9.5mean52.352071vs52.334066 retain small incremental candidate, no larger-goal rejection/readinesspromotion. Same trainedseed/encoder/donors and exposedhorizons not independentvalidation.12calibrations4forecasts3prior2neutral exact; no retraining, zero reward alreadyrecorded once, health-1507."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -4562,5 +4573,21 @@
     "gpu_peak_bytes": 81491456,
     "reward": -40,
     "health": -1507
+  },
+  "latest_gaussian_horizon_result": {
+    "mean_gaussian": 51.841321382743246,
+    "mean_kinetics": 51.79786886562122,
+    "gain": 0.04345251712203,
+    "all4mean_skills_improved": true,
+    "incremental_retained": true,
+    "full_readiness_promoted": false,
+    "training_steps": 0,
+    "reward": 0,
+    "health": -1507,
+    "calibrations_valid": 12,
+    "forecast_replays": 4,
+    "prior_baseline_replays": 3,
+    "neutral_bridge_replays": 2,
+    "host_peak_bytes": 5403009024
   }
 }

@@ -1,20 +1,18 @@
 {
-  "updated_utc": "2026-10-04T13:04:30.021671+00:00",
+  "updated_utc": "2026-10-04T13:17:34.046689+00:00",
   "fingerprints": {
     "RESEARCH_CONTINUATION_POLICY.md": "1e6cc6f15c1e918ad60a1e01f26dd66c48022b33158bf8eb2240a9622066af00",
-    "LOCAL_OPTIMIZATION_STATE.json": "8b9948d05425c46297cfb405f543691eb3b2b9e077ba7ce69b7a20b467d7e79e",
+    "LOCAL_OPTIMIZATION_STATE.json": "35a429378f1c74eb22b8053b254569653cf9d28621f8dea5cb4d2eccb953edba",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "71c1b71e0e40e8405c11bc57ced95a1431f861ba1a6ed11488f9d08dcacb50a1",
+    "METRIC_RESEARCH_QUEUE.json": "1382f5bab3b4c0f1a6d4cfc91919e4942b06abaa33c55558f1eb2fe947321252",
     "METRIC_CRITIQUE_POLICY.json": "3535989f1e3beac0f2d446b44df3c793d4be464dbd87f6e714c2f5afda864a6f",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
     "RESEARCH_HARNESS_MANIFEST.json": "d7593d4eb22e2c023bb34bfe1320f1138187d41454a88ad9a0433d3e8725bf5a"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [
-    "gaussian_vae_frozen_horizon_validation"
-  ],
-  "next_experiment": "Collect frozen Gaussian-VAE9.25horizon validation; zero retraining/reward. Four fresh independent metricreviews after scored completion/failure, unchanged originalscorer/readiness/replay gates.",
+  "active_jobs_at_checkpoint": [],
+  "next_experiment": "One predeclared Gaussian-VAE independent trainingseed20261005 confirmation, unchanged18320parameter128gene/rank8 observation model+1640parameter latentOT,400+400RTX3060steps; no hyperparameter/seed grid. Evaluate fixed9.5horizon vsfrozenkinetics with originalCPU full-panel scorer/replays. Explicit confirmationreward0, retain seed20261004 gains separately. Independent training randomness is not independentembryo validation.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",

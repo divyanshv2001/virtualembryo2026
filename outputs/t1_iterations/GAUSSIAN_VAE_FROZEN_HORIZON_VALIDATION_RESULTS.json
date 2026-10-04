@@ -1,0 +1,1059 @@
+{
+  "status": "completed",
+  "panels": [
+    {
+      "seed": 20260928,
+      "cutoff": 8.25,
+      "target": 9.25,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.240848571062088,
+        "variogram": 0.008574867621064186
+      },
+      "ceiling": {
+        "de_score": 0.9112627986348123,
+        "de_direction": 0.8616407624154524,
+        "mmd_u": 0.0021655200980603695,
+        "variogram": 0.00010426319931866601
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "86b6be07734acc4a7b159a62210928e037955177f57e6288aa89ba7b454eb50e",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.240848571062088,
+            "variogram": 0.008574867621064186
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "cnf800",
+          "prediction_sha256": "f04b2477926d75c9f205d9875d5bae009ef625fef2d4674614c8b4ad3ec01c26",
+          "raw_metrics": {
+            "de_score": -0.151877133105802,
+            "de_direction": 0.10129762674346661,
+            "mmd_u": 0.2093033790588379,
+            "variogram": 0.008129519410431385
+          },
+          "local_score": 51.15046188221171,
+          "skills": {
+            "de_score": 0.46153846153846156,
+            "de_direction": 0.5312264588023691,
+            "mmd_u": 0.5353787712745133,
+            "variogram": 0.513498786772777
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "kinetic_none400",
+          "prediction_sha256": "73bb3eea0273e81ee419547f427fd539bb7e4df2ed5fcfe54f2b58de1258c7d9",
+          "raw_metrics": {
+            "de_score": -0.10068259385665523,
+            "de_direction": 0.1210120913860169,
+            "mmd_u": 0.20718760788440704,
+            "variogram": 0.008009495213627815
+          },
+          "local_score": 51.772874084287544,
+          "skills": {
+            "de_score": 0.4738243123336291,
+            "de_direction": 0.5377627160763594,
+            "mmd_u": 0.5379316805666053,
+            "variogram": 0.5172623978519836
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "vae_log_gaussian400",
+          "prediction_sha256": "378530fbbfd730f6ee7a98cb79797d7d51b287307c726e7d38237248fe537f7e",
+          "raw_metrics": {
+            "de_score": -0.098976109215017,
+            "de_direction": 0.12308489482255423,
+            "mmd_u": 0.20714648067951202,
+            "variogram": 0.008007329888641834
+          },
+          "local_score": 51.80367291290111,
+          "skills": {
+            "de_score": 0.47424511545293074,
+            "de_direction": 0.5384593032238519,
+            "mmd_u": 0.5379815462890224,
+            "variogram": 0.5173308028655434
+          },
+          "calibration_valid": true
+        }
+      ]
+    },
+    {
+      "seed": 20260929,
+      "cutoff": 8.25,
+      "target": 9.25,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.23272649943828583,
+        "variogram": 0.008608187548816204
+      },
+      "ceiling": {
+        "de_score": 0.9061976549413736,
+        "de_direction": 0.8617330447175314,
+        "mmd_u": 0.0016847193473950028,
+        "variogram": 0.00012206732935737818
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "86b6be07734acc4a7b159a62210928e037955177f57e6288aa89ba7b454eb50e",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.23272649943828583,
+            "variogram": 0.008608187548816204
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "cnf800",
+          "prediction_sha256": "f04b2477926d75c9f205d9875d5bae009ef625fef2d4674614c8b4ad3ec01c26",
+          "raw_metrics": {
+            "de_score": -0.1323283082077051,
+            "de_direction": 0.09976119052649239,
+            "mmd_u": 0.20275655388832092,
+            "variogram": 0.008195187896490097
+          },
+          "local_score": 51.20720286091826,
+          "skills": {
+            "de_score": 0.46597760551248923,
+            "de_direction": 0.530720234506144,
+            "mmd_u": 0.5346783166916655,
+            "variogram": 0.5124703679851229
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "kinetic_none400",
+          "prediction_sha256": "73bb3eea0273e81ee419547f427fd539bb7e4df2ed5fcfe54f2b58de1258c7d9",
+          "raw_metrics": {
+            "de_score": -0.08877721943048572,
+            "de_direction": 0.11862373313699502,
+            "mmd_u": 0.2008148431777954,
+            "variogram": 0.00808109063655138
+          },
+          "local_score": 51.77352189969376,
+          "skills": {
+            "de_score": 0.4766519823788546,
+            "de_direction": 0.5369580640339738,
+            "mmd_u": 0.5370917486353657,
+            "variogram": 0.5160259140156044
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "vae_log_gaussian400",
+          "prediction_sha256": "378530fbbfd730f6ee7a98cb79797d7d51b287307c726e7d38237248fe537f7e",
+          "raw_metrics": {
+            "de_score": -0.08375209380234497,
+            "de_direction": 0.12037282494795812,
+            "mmd_u": 0.2007448375225067,
+            "variogram": 0.008079450577497482
+          },
+          "local_score": 51.823400665411114,
+          "skills": {
+            "de_score": 0.4779151943462898,
+            "de_direction": 0.5375439244910277,
+            "mmd_u": 0.5371791685234549,
+            "variogram": 0.5160773819387264
+          },
+          "calibration_valid": true
+        }
+      ]
+    },
+    {
+      "seed": 20260930,
+      "cutoff": 8.25,
+      "target": 9.25,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.2376340925693512,
+        "variogram": 0.008026303723454475
+      },
+      "ceiling": {
+        "de_score": 0.9145299145299144,
+        "de_direction": 0.8587444096851142,
+        "mmd_u": 0.0044671655632555485,
+        "variogram": 0.0001327065983787179
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "86b6be07734acc4a7b159a62210928e037955177f57e6288aa89ba7b454eb50e",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.2376340925693512,
+            "variogram": 0.008026303723454475
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "cnf800",
+          "prediction_sha256": "f04b2477926d75c9f205d9875d5bae009ef625fef2d4674614c8b4ad3ec01c26",
+          "raw_metrics": {
+            "de_score": -0.1435897435897437,
+            "de_direction": 0.10635068794585611,
+            "mmd_u": 0.20703384280204773,
+            "variogram": 0.007629980333149433
+          },
+          "local_score": 51.22615214322603,
+          "skills": {
+            "de_score": 0.46360485268630847,
+            "de_direction": 0.5330048323826319,
+            "mmd_u": 0.5351134838685815,
+            "variogram": 0.5128752750222542
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "kinetic_none400",
+          "prediction_sha256": "73bb3eea0273e81ee419547f427fd539bb7e4df2ed5fcfe54f2b58de1258c7d9",
+          "raw_metrics": {
+            "de_score": -0.0940170940170941,
+            "de_direction": 0.12654143123950373,
+            "mmd_u": 0.2049243152141571,
+            "variogram": 0.0075181396678090096
+          },
+          "local_score": 51.84721061288236,
+          "skills": {
+            "de_score": 0.4755555555555555,
+            "de_direction": 0.5397692067580508,
+            "mmd_u": 0.5377167448903766,
+            "variogram": 0.5166294604165449
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "vae_log_gaussian400",
+          "prediction_sha256": "378530fbbfd730f6ee7a98cb79797d7d51b287307c726e7d38237248fe537f7e",
+          "raw_metrics": {
+            "de_score": -0.08888888888888892,
+            "de_direction": 0.12842209911953675,
+            "mmd_u": 0.20485416054725647,
+            "variogram": 0.007519159000366926
+          },
+          "local_score": 51.89689056991751,
+          "skills": {
+            "de_score": 0.4768270944741533,
+            "de_direction": 0.540408026133502,
+            "mmd_u": 0.5378037544576099,
+            "variogram": 0.5165949960498916
+          },
+          "calibration_valid": true
+        }
+      ]
+    }
+  ],
+  "new_scoring_batch": true,
+  "original_readiness_gate_passed": false,
+  "official_score": null,
+  "fixed_candidate_validation": {
+    "training_steps": 0,
+    "reward_eligible": false,
+    "scope": "Frozen VAE new-horizon historical development; no retraining, target tuning or repeat reward."
+  },
+  "count_vae_scope": "Own18320param NBcounts vslogGaussian observation VAE rank8/128genes, sameKL.01/backgroundcategory/past-only batches400GPUsteps; matched1640param latentOT400steps, whitening onpast posterior means. Decoder change relative to own cutoff reconstruction projected through frozenPCA normcap1 into retainedkinetics; originalCPU full-panel decoder/scorer/guards retained. Not scVI reproduction or isolated PCA comparison; likelihood units/dispersion semantics differ, one trainingseed/3scoringresamples.",
+  "generation": {
+    "copy": {
+      "prediction_sha256": "86b6be07734acc4a7b159a62210928e037955177f57e6288aa89ba7b454eb50e",
+      "audit": {
+        "method": "persistence"
+      }
+    },
+    "cnf800": {
+      "prediction_sha256": "f04b2477926d75c9f205d9875d5bae009ef625fef2d4674614c8b4ad3ec01c26",
+      "audit": {
+        "fit_cells": 10963,
+        "fit_max_stage": 8.25,
+        "supported_genes": 14462,
+        "method": "Fresh source-domain PCA8 paired scFM",
+        "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+        "conditional_ridge_strength": 1.0,
+        "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+        "encoder_features": 4096,
+        "covariance_guard_features": 384,
+        "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+        "anchor_calibration_rows": 3000,
+        "anchor_supported_genes": 12632,
+        "anchor_slope_ridge": 1.0,
+        "limitation": "Cross-sectional E8.5 associations are not temporal velocities.",
+        "anchor_positive_slope_strength": 0.25,
+        "anchor_detection_slope_strength": 0.75,
+        "response_units": "log1p normalized expression",
+        "response_fit_rows": 10963,
+        "response_fit_max_stage": 8.25,
+        "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+        "training_history": [
+          {
+            "step": 50,
+            "loss": 16.843494415283203,
+            "negative_log_likelihood": 11.672325134277344,
+            "energy": 0.04773598909378052,
+            "manifold_density": 0.5166397094726562,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 100,
+            "loss": 15.920294761657715,
+            "negative_log_likelihood": 11.130638122558594,
+            "energy": 0.11241413652896881,
+            "manifold_density": 0.4778415560722351,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 150,
+            "loss": 15.727624893188477,
+            "negative_log_likelihood": 11.081382751464844,
+            "energy": 0.1510162055492401,
+            "manifold_density": 0.46311402320861816,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 200,
+            "loss": 16.06167221069336,
+            "negative_log_likelihood": 10.555394172668457,
+            "energy": 1.0633054971694946,
+            "manifold_density": 0.5399948358535767,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 250,
+            "loss": 10.301850318908691,
+            "negative_log_likelihood": 10.292337417602539,
+            "energy": 0.09512510895729065,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 300,
+            "loss": 15.303577423095703,
+            "negative_log_likelihood": 10.09225845336914,
+            "energy": 0.5865103602409363,
+            "manifold_density": 0.5152668356895447,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 350,
+            "loss": 14.742975234985352,
+            "negative_log_likelihood": 9.706710815429688,
+            "energy": 0.5053786635398865,
+            "manifold_density": 0.4985726475715637,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 400,
+            "loss": 13.146016120910645,
+            "negative_log_likelihood": 8.452956199645996,
+            "energy": 1.8419196605682373,
+            "manifold_density": 0.4508868157863617,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 450,
+            "loss": 10.254532814025879,
+            "negative_log_likelihood": 10.225359916687012,
+            "energy": 0.2917267084121704,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 500,
+            "loss": 13.714691162109375,
+            "negative_log_likelihood": 8.565732955932617,
+            "energy": 0.6395222544670105,
+            "manifold_density": 0.5085006356239319,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 550,
+            "loss": 15.57801342010498,
+            "negative_log_likelihood": 9.888898849487305,
+            "energy": 0.8087888360023499,
+            "manifold_density": 0.5608235597610474,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 600,
+            "loss": 12.020439147949219,
+            "negative_log_likelihood": 7.435694694519043,
+            "energy": 1.701054334640503,
+            "manifold_density": 0.4414639472961426,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 650,
+            "loss": 9.724220275878906,
+            "negative_log_likelihood": 9.684272766113281,
+            "energy": 0.39947614073753357,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 700,
+            "loss": 13.563961029052734,
+            "negative_log_likelihood": 8.222131729125977,
+            "energy": 3.2839787006378174,
+            "manifold_density": 0.5013431310653687,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 750,
+            "loss": 12.76112174987793,
+            "negative_log_likelihood": 7.8102216720581055,
+            "energy": 1.5856904983520508,
+            "manifold_density": 0.4792330861091614,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 800,
+            "loss": 13.62104320526123,
+            "negative_log_likelihood": 8.243542671203613,
+            "energy": 1.0870897769927979,
+            "manifold_density": 0.5268791317939758,
+            "sampled_past_stage": 7.75
+          }
+        ],
+        "mode": "joint",
+        "strength": 1.0,
+        "backoff": 1.0,
+        "seed": 20260928,
+        "sampling": "systematic",
+        "guard_backoffs": [
+          {
+            "backoff": 1.0,
+            "covariance_change": 0.2610331073772279,
+            "finite": true
+          }
+        ],
+        "covariance_change_vs_reference": 0.2610331073772279,
+        "newly_detected_entries": 60305,
+        "removed_detection_entries": 146858,
+        "abundance_factor_cap": 2.0,
+        "detection_probability_delta_cap": 0.25,
+        "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+        "mapped_mass_conserved": true,
+        "protected_genes_unchanged": true
+      }
+    },
+    "kinetic_none400": {
+      "prediction_sha256": "73bb3eea0273e81ee419547f427fd539bb7e4df2ed5fcfe54f2b58de1258c7d9",
+      "audit": {
+        "fit_cells": 10963,
+        "fit_max_stage": 8.25,
+        "supported_genes": 14462,
+        "method": "Fresh source-domain PCA8 paired scFM",
+        "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+        "conditional_ridge_strength": 1.0,
+        "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+        "encoder_features": 4096,
+        "covariance_guard_features": 384,
+        "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+        "anchor_calibration_rows": 3000,
+        "anchor_supported_genes": 12632,
+        "anchor_slope_ridge": 1.0,
+        "limitation": "Cross-sectional E8.5 associations are not temporal velocities.",
+        "anchor_positive_slope_strength": 0.25,
+        "anchor_detection_slope_strength": 0.75,
+        "response_units": "log1p normalized expression",
+        "response_fit_rows": 10963,
+        "response_fit_max_stage": 8.25,
+        "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+        "training_history": [
+          {
+            "step": 50,
+            "loss": 16.843494415283203,
+            "negative_log_likelihood": 11.672325134277344,
+            "energy": 0.04773598909378052,
+            "manifold_density": 0.5166397094726562,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 100,
+            "loss": 15.920294761657715,
+            "negative_log_likelihood": 11.130638122558594,
+            "energy": 0.11241413652896881,
+            "manifold_density": 0.4778415560722351,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 150,
+            "loss": 15.727624893188477,
+            "negative_log_likelihood": 11.081382751464844,
+            "energy": 0.1510162055492401,
+            "manifold_density": 0.46311402320861816,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 200,
+            "loss": 16.06167221069336,
+            "negative_log_likelihood": 10.555394172668457,
+            "energy": 1.0633054971694946,
+            "manifold_density": 0.5399948358535767,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 250,
+            "loss": 10.301850318908691,
+            "negative_log_likelihood": 10.292337417602539,
+            "energy": 0.09512510895729065,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 300,
+            "loss": 15.303577423095703,
+            "negative_log_likelihood": 10.09225845336914,
+            "energy": 0.5865103602409363,
+            "manifold_density": 0.5152668356895447,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 350,
+            "loss": 14.742975234985352,
+            "negative_log_likelihood": 9.706710815429688,
+            "energy": 0.5053786635398865,
+            "manifold_density": 0.4985726475715637,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 400,
+            "loss": 13.146016120910645,
+            "negative_log_likelihood": 8.452956199645996,
+            "energy": 1.8419196605682373,
+            "manifold_density": 0.4508868157863617,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 450,
+            "loss": 10.254532814025879,
+            "negative_log_likelihood": 10.225359916687012,
+            "energy": 0.2917267084121704,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 500,
+            "loss": 13.714691162109375,
+            "negative_log_likelihood": 8.565732955932617,
+            "energy": 0.6395222544670105,
+            "manifold_density": 0.5085006356239319,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 550,
+            "loss": 15.57801342010498,
+            "negative_log_likelihood": 9.888898849487305,
+            "energy": 0.8087888360023499,
+            "manifold_density": 0.5608235597610474,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 600,
+            "loss": 12.020439147949219,
+            "negative_log_likelihood": 7.435694694519043,
+            "energy": 1.701054334640503,
+            "manifold_density": 0.4414639472961426,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 650,
+            "loss": 9.724220275878906,
+            "negative_log_likelihood": 9.684272766113281,
+            "energy": 0.39947614073753357,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 700,
+            "loss": 13.563961029052734,
+            "negative_log_likelihood": 8.222131729125977,
+            "energy": 3.2839787006378174,
+            "manifold_density": 0.5013431310653687,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 750,
+            "loss": 12.76112174987793,
+            "negative_log_likelihood": 7.8102216720581055,
+            "energy": 1.5856904983520508,
+            "manifold_density": 0.4792330861091614,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 800,
+            "loss": 13.62104320526123,
+            "negative_log_likelihood": 8.243542671203613,
+            "energy": 1.0870897769927979,
+            "manifold_density": 0.5268791317939758,
+            "sampled_past_stage": 7.75
+          }
+        ],
+        "mode": "joint",
+        "strength": 1.0,
+        "backoff": 1.0,
+        "seed": 20260928,
+        "sampling": "systematic",
+        "guard_backoffs": [
+          {
+            "backoff": 1.0,
+            "covariance_change": 0.26502169781171775,
+            "finite": true
+          }
+        ],
+        "covariance_change_vs_reference": 0.26502169781171775,
+        "newly_detected_entries": 67336,
+        "removed_detection_entries": 144031,
+        "abundance_factor_cap": 2.0,
+        "detection_probability_delta_cap": 0.25,
+        "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+        "mapped_mass_conserved": true,
+        "protected_genes_unchanged": true
+      }
+    },
+    "vae_log_gaussian400": {
+      "prediction_sha256": "378530fbbfd730f6ee7a98cb79797d7d51b287307c726e7d38237248fe537f7e",
+      "audit": {
+        "fit_cells": 10963,
+        "fit_max_stage": 8.25,
+        "supported_genes": 14462,
+        "method": "Fresh source-domain PCA8 paired scFM",
+        "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+        "conditional_ridge_strength": 1.0,
+        "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+        "encoder_features": 4096,
+        "covariance_guard_features": 384,
+        "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+        "anchor_calibration_rows": 3000,
+        "anchor_supported_genes": 12632,
+        "anchor_slope_ridge": 1.0,
+        "limitation": "Cross-sectional E8.5 associations are not temporal velocities.",
+        "anchor_positive_slope_strength": 0.25,
+        "anchor_detection_slope_strength": 0.75,
+        "response_units": "log1p normalized expression",
+        "response_fit_rows": 10963,
+        "response_fit_max_stage": 8.25,
+        "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+        "training_history": [
+          {
+            "step": 50,
+            "loss": 16.843494415283203,
+            "negative_log_likelihood": 11.672325134277344,
+            "energy": 0.04773598909378052,
+            "manifold_density": 0.5166397094726562,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 100,
+            "loss": 15.920294761657715,
+            "negative_log_likelihood": 11.130638122558594,
+            "energy": 0.11241413652896881,
+            "manifold_density": 0.4778415560722351,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 150,
+            "loss": 15.727624893188477,
+            "negative_log_likelihood": 11.081382751464844,
+            "energy": 0.1510162055492401,
+            "manifold_density": 0.46311402320861816,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 200,
+            "loss": 16.06167221069336,
+            "negative_log_likelihood": 10.555394172668457,
+            "energy": 1.0633054971694946,
+            "manifold_density": 0.5399948358535767,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 250,
+            "loss": 10.301850318908691,
+            "negative_log_likelihood": 10.292337417602539,
+            "energy": 0.09512510895729065,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 300,
+            "loss": 15.303577423095703,
+            "negative_log_likelihood": 10.09225845336914,
+            "energy": 0.5865103602409363,
+            "manifold_density": 0.5152668356895447,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 350,
+            "loss": 14.742975234985352,
+            "negative_log_likelihood": 9.706710815429688,
+            "energy": 0.5053786635398865,
+            "manifold_density": 0.4985726475715637,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 400,
+            "loss": 13.146016120910645,
+            "negative_log_likelihood": 8.452956199645996,
+            "energy": 1.8419196605682373,
+            "manifold_density": 0.4508868157863617,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 450,
+            "loss": 10.254532814025879,
+            "negative_log_likelihood": 10.225359916687012,
+            "energy": 0.2917267084121704,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 500,
+            "loss": 13.714691162109375,
+            "negative_log_likelihood": 8.565732955932617,
+            "energy": 0.6395222544670105,
+            "manifold_density": 0.5085006356239319,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 550,
+            "loss": 15.57801342010498,
+            "negative_log_likelihood": 9.888898849487305,
+            "energy": 0.8087888360023499,
+            "manifold_density": 0.5608235597610474,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 600,
+            "loss": 12.020439147949219,
+            "negative_log_likelihood": 7.435694694519043,
+            "energy": 1.701054334640503,
+            "manifold_density": 0.4414639472961426,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 650,
+            "loss": 9.724220275878906,
+            "negative_log_likelihood": 9.684272766113281,
+            "energy": 0.39947614073753357,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 700,
+            "loss": 13.563961029052734,
+            "negative_log_likelihood": 8.222131729125977,
+            "energy": 3.2839787006378174,
+            "manifold_density": 0.5013431310653687,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 750,
+            "loss": 12.76112174987793,
+            "negative_log_likelihood": 7.8102216720581055,
+            "energy": 1.5856904983520508,
+            "manifold_density": 0.4792330861091614,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 800,
+            "loss": 13.62104320526123,
+            "negative_log_likelihood": 8.243542671203613,
+            "energy": 1.0870897769927979,
+            "manifold_density": 0.5268791317939758,
+            "sampled_past_stage": 7.75
+          }
+        ],
+        "mode": "joint",
+        "strength": 1.0,
+        "backoff": 1.0,
+        "seed": 20260928,
+        "sampling": "systematic",
+        "guard_backoffs": [
+          {
+            "backoff": 1.0,
+            "covariance_change": 0.2646267157003499,
+            "finite": true
+          }
+        ],
+        "covariance_change_vs_reference": 0.2646267157003499,
+        "newly_detected_entries": 67261,
+        "removed_detection_entries": 144415,
+        "abundance_factor_cap": 2.0,
+        "detection_probability_delta_cap": 0.25,
+        "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+        "mapped_mass_conserved": true,
+        "protected_genes_unchanged": true
+      }
+    }
+  },
+  "completed_utc": "2026-10-04T13:07:40.129016+00:00",
+  "summary": [
+    {
+      "candidate": "copy",
+      "scores": [
+        50.0,
+        50.0,
+        50.0
+      ],
+      "mean_score": 50.0,
+      "raw_metrics": [
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.240848571062088,
+          "variogram": 0.008574867621064186
+        },
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.23272649943828583,
+          "variogram": 0.008608187548816204
+        },
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.2376340925693512,
+          "variogram": 0.008026303723454475
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.5,
+        "de_direction": 0.5,
+        "mmd_u": 0.5,
+        "variogram": 0.5
+      }
+    },
+    {
+      "candidate": "cnf800",
+      "scores": [
+        51.15046188221171,
+        51.20720286091826,
+        51.22615214322603
+      ],
+      "mean_score": 51.194605628785325,
+      "raw_metrics": [
+        {
+          "de_score": -0.151877133105802,
+          "de_direction": 0.10129762674346661,
+          "mmd_u": 0.2093033790588379,
+          "variogram": 0.008129519410431385
+        },
+        {
+          "de_score": -0.1323283082077051,
+          "de_direction": 0.09976119052649239,
+          "mmd_u": 0.20275655388832092,
+          "variogram": 0.008195187896490097
+        },
+        {
+          "de_score": -0.1435897435897437,
+          "de_direction": 0.10635068794585611,
+          "mmd_u": 0.20703384280204773,
+          "variogram": 0.007629980333149433
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.46153846153846156,
+          "de_direction": 0.5312264588023691,
+          "mmd_u": 0.5353787712745133,
+          "variogram": 0.513498786772777
+        },
+        {
+          "de_score": 0.46597760551248923,
+          "de_direction": 0.530720234506144,
+          "mmd_u": 0.5346783166916655,
+          "variogram": 0.5124703679851229
+        },
+        {
+          "de_score": 0.46360485268630847,
+          "de_direction": 0.5330048323826319,
+          "mmd_u": 0.5351134838685815,
+          "variogram": 0.5128752750222542
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.46370697324575305,
+        "de_direction": 0.531650508563715,
+        "mmd_u": 0.5350568572782534,
+        "variogram": 0.5129481432600514
+      }
+    },
+    {
+      "candidate": "kinetic_none400",
+      "scores": [
+        51.772874084287544,
+        51.77352189969376,
+        51.84721061288236
+      ],
+      "mean_score": 51.79786886562122,
+      "raw_metrics": [
+        {
+          "de_score": -0.10068259385665523,
+          "de_direction": 0.1210120913860169,
+          "mmd_u": 0.20718760788440704,
+          "variogram": 0.008009495213627815
+        },
+        {
+          "de_score": -0.08877721943048572,
+          "de_direction": 0.11862373313699502,
+          "mmd_u": 0.2008148431777954,
+          "variogram": 0.00808109063655138
+        },
+        {
+          "de_score": -0.0940170940170941,
+          "de_direction": 0.12654143123950373,
+          "mmd_u": 0.2049243152141571,
+          "variogram": 0.0075181396678090096
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.4738243123336291,
+          "de_direction": 0.5377627160763594,
+          "mmd_u": 0.5379316805666053,
+          "variogram": 0.5172623978519836
+        },
+        {
+          "de_score": 0.4766519823788546,
+          "de_direction": 0.5369580640339738,
+          "mmd_u": 0.5370917486353657,
+          "variogram": 0.5160259140156044
+        },
+        {
+          "de_score": 0.4755555555555555,
+          "de_direction": 0.5397692067580508,
+          "mmd_u": 0.5377167448903766,
+          "variogram": 0.5166294604165449
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.4753439500893464,
+        "de_direction": 0.5381633289561281,
+        "mmd_u": 0.5375800580307826,
+        "variogram": 0.5166392574280443
+      }
+    },
+    {
+      "candidate": "vae_log_gaussian400",
+      "scores": [
+        51.80367291290111,
+        51.823400665411114,
+        51.89689056991751
+      ],
+      "mean_score": 51.841321382743246,
+      "raw_metrics": [
+        {
+          "de_score": -0.098976109215017,
+          "de_direction": 0.12308489482255423,
+          "mmd_u": 0.20714648067951202,
+          "variogram": 0.008007329888641834
+        },
+        {
+          "de_score": -0.08375209380234497,
+          "de_direction": 0.12037282494795812,
+          "mmd_u": 0.2007448375225067,
+          "variogram": 0.008079450577497482
+        },
+        {
+          "de_score": -0.08888888888888892,
+          "de_direction": 0.12842209911953675,
+          "mmd_u": 0.20485416054725647,
+          "variogram": 0.007519159000366926
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.47424511545293074,
+          "de_direction": 0.5384593032238519,
+          "mmd_u": 0.5379815462890224,
+          "variogram": 0.5173308028655434
+        },
+        {
+          "de_score": 0.4779151943462898,
+          "de_direction": 0.5375439244910277,
+          "mmd_u": 0.5371791685234549,
+          "variogram": 0.5160773819387264
+        },
+        {
+          "de_score": 0.4768270944741533,
+          "de_direction": 0.540408026133502,
+          "mmd_u": 0.5378037544576099,
+          "variogram": 0.5165949960498916
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.4763291347577913,
+        "de_direction": 0.5388037512827939,
+        "mmd_u": 0.537654823090029,
+        "variogram": 0.5166677269513871
+      }
+    }
+  ],
+  "passing_candidates": [],
+  "expand_to_16_resamples": false,
+  "scope": "Frozen GaussianVAE newhorizon8.25to9.25 validation. Original400representation+400latentOT RTX3060weights hashfixed, no new training/GPUworker/parameter selection/repeat reward. Preserve tiny9.5Gaussian incremental gain without larger-goal rejection. Same pastencoder, actualdonors, original2.14CPU full32285gene head/guards/scorer/calibration/readiness; prior3baseline andGaussian neutral/newforecast exactreplays beforetargetexpression. Newhorizon historicaldevelopment, not independentembryo validation. Four metricreviews after scoredbatch. No officialupload/readinessclaim or retrospectivemodel reward.",
+  "plan_sha256": "5f8facc4080363c6e274a1f6266ef55cb024cd61f4a1dd9a2050f0d41915393d",
+  "resource_peak_process_working_set_bytes": 5403009024,
+  "frozen_gaussian_minus_kinetics_mean_skills": {
+    "de_score": 0.0009851846684449383,
+    "de_direction": 0.0006404223266658349,
+    "mmd_u": 7.476505924641774e-05,
+    "variogram": 2.846952334278896e-05
+  },
+  "report_sha256": "e532efde890243d579707dd7ce94b332702a2f7892fe4e3624af60de316c9c01"
+}

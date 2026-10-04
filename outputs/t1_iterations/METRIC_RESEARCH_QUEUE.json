@@ -6395,16 +6395,16 @@
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
     "experiment": "collective_context_past_fold",
-    "status": "running_frozen_validation",
-    "next_experiment": "gaussian_vae_frozen_horizon_validation",
-    "next": "Collect frozen Gaussian-VAE9.25horizon validation; zero retraining/reward. Four fresh independent metricreviews after scored completion/failure, unchanged originalscorer/readiness/replay gates.",
-    "jev_choice": "frozen_gaussian_horizon_validation",
-    "jev_confidence": 0.99,
+    "status": "completed_incremental_gaussian_horizon_confirmed",
+    "next_experiment": "gaussian_vae_seed_confirmation",
+    "next": "One predeclared Gaussian-VAE independent trainingseed20261005 confirmation, unchanged18320parameter128gene/rank8 observation model+1640parameter latentOT,400+400RTX3060steps; no hyperparameter/seed grid. Evaluate fixed9.5horizon vsfrozenkinetics with originalCPU full-panel scorer/replays. Explicit confirmationreward0, retain seed20261004 gains separately. Independent training randomness is not independentembryo validation.",
+    "jev_choice": "gaussian_training_seed_confirmation",
+    "jev_confidence": 0.52,
     "scope": "Advisory low confidence; raw-count data availability verified deterministically, no score claim.",
     "support_audit": "Completed: no independent embryo/untouched validation established; historical-only options remain, no promotion.",
     "jev_usage": {
-      "input_tokens": 1319,
-      "output_tokens": 54
+      "input_tokens": 1175,
+      "output_tokens": 48
     }
   }
 }
