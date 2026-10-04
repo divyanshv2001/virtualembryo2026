@@ -280,6 +280,11 @@
       "script": "tigon_numerical_preflight_retry.py",
       "run": "private/tigon_numerical_preflight_retry_01",
       "report": "TIGON_NUMERICAL_PREFLIGHT_RETRY_RESULTS.json"
+    },
+    "tigon_conditional_fullpanel": {
+      "script": "tigon_conditional_fullpanel.py",
+      "run": "private/tigon_conditional_fullpanel_01",
+      "report": "TIGON_CONDITIONAL_FULLPANEL_RESULTS.json"
     }
   }
 }

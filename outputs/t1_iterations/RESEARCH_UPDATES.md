@@ -710,3 +710,6 @@ Original preflight failed before main on unavailable psutil; original receipt/st
 
 ## 2026-10-02T10:52:04.049244+00:00 TIGON numerical check passed
 Unique retry passed analytic integration/divergence, GaussianKDE values/gradients, sharedstream pairedg0/g1 finitegradient/normalizedweight checks;6.8897seconds peak398667776bytes. Four fresh role2 metric reviews completed/cached, benchmarkmetrics unavailable/reward0. Fixedscorer and currentreward-1182 unchanged. Jev one1969byte decision914input/59output selects one retrospective7.75to8.0 fixed200step conditionalpilot. Predeclared exactcontrols/weightsampling/donorprovenance/gates; implementation pending. No improved submission/officialupload/absolute growth or readiness claim.
+
+## 2026-10-04T03:06:14.029108+00:00 — conditional TIGON implementation
+Fixed paired 200-step past-only pilot implemented and registered, not yet launched. Import/cutoff/uniform identity/weighted replay/selected latent identity checks passed. Existing full-panel anchor heads and guards retained; all backoffs now recorded, weighted particles carry selected original donor expression and identity. First real-past forward/backward gates resources before remaining training; no target reads or scores during implementation. Cached Jev pilot selection reused; no new advisory.

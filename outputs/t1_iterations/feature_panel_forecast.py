@@ -29,6 +29,7 @@ class FeaturePanelForecast(RidgeConditionalPositiveForecast):
         h0=z0.numpy().astype(float)-self.zcenter;h1=z1.numpy().astype(float)-self.zcenter
         donor_mass=np.expm1(self.donors[:,self.mapped].astype(float)).sum(1)
         empty=donor_mass==0
+        guard_backoffs=[]
         for backoff in [1.,.5,.25,.125,0.]:
             result=self.donors.copy();rng=np.random.default_rng(seed)
             for start in range(0,len(self.mapped),512):
@@ -65,10 +66,11 @@ class FeaturePanelForecast(RidgeConditionalPositiveForecast):
             ratio=np.divide(donor_mass,new_mass,out=np.ones_like(new_mass),where=new_mass>0)
             result[:,self.mapped]=np.log1p(proposed*ratio[:,None]).astype(np.float32)
             change=covariance_change(self.donors[:,self.guard_features],result[:,self.guard_features])
+            guard_backoffs.append({"backoff":backoff,"covariance_change":float(change),"finite":bool(np.isfinite(result).all())})
             if np.isfinite(result).all() and change<=.4:break
         if not np.isfinite(result).all() or (result<0).any():raise ValueError('Invalid hurdle output')
         return result,np.arange(len(result)),{**self.audit,'mode':mode,'strength':strength,'backoff':backoff,
-            'seed':seed,'sampling':sampling,'covariance_change_vs_reference':change,'newly_detected_entries':int(((self.donors==0)&(result>0)).sum()),
+            'seed':seed,'sampling':sampling,'guard_backoffs':guard_backoffs,'covariance_change_vs_reference':change,'newly_detected_entries':int(((self.donors==0)&(result>0)).sum()),
             'removed_detection_entries':int(((self.donors>0)&(result==0)).sum()),
             'abundance_factor_cap':2.,'detection_probability_delta_cap':.25,
             'common_uniform_policy':'Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.',

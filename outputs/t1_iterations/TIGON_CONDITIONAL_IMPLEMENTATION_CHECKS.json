@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-10-04T03:06:14.029108+00:00",
+  "status": "passed",
+  "scope": "Implementation checks only; no target reads, training, benchmark metrics or rewards",
+  "checks": [
+    "imports",
+    "compiled modules",
+    "future-row rejection",
+    "uniform systematic resampling preserves all 1500 donor positions",
+    "weighted resampling deterministic replay",
+    "selected donor latent trajectory identity"
+  ],
+  "prepared_shape": [
+    25963,
+    27669
+  ],
+  "observed_peak_process_working_set_bytes": 379904000,
+  "real_past_resource_gate": "First full objective/backward before remaining steps; failure retained without budget change",
+  "query_noise_variance": 0.02,
+  "sampler_provenance": "Passed numerical pilot sampler; fixed before target scoring"
+}
