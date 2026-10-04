@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Chronological potential completed belowcopy at both horizons; no promotion. Official best52.16. Latest official basics audit identifies missing jointrealE8.5/E9.5temporal supervision,5510copiedgenes and unvalidatedpopulationemergence. CachedJev selects population_transition_preflight (.63); next predeclare observed-stage stateconditionalmixture transition withfullgene support and past-only matchedcontrols, beforetraining; no oldresampling/shift/covariancegrids. Retain allreadiness/calibration gates.",
+  "next_experiment": "Population transition observed-only preflight complete:11shared names,17types stage-specific; exact shiftdecomposition verified. Stage names alone cannot identify lineage transitions. Next bounded feasibility: inspect permitted externalpast metadata and marker-validated commonstate representation supporting realE8.5/E9.5 fullgene supervision and historical matchedcontrols; no KMeans24/oldmarkerresampling repeats. Preserve completed cutoff8 failure, officialbest52.16 and readinessgates.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -5176,7 +5176,7 @@
       "jev_scope": "Typed option selection/pinnedreport status only; report has no score summary and numeric auditresults were not transmitted, no evidence certification."
     }
   },
-  "next_action": "Chronological potential completed belowcopy at both horizons; no promotion. Official best52.16. Latest official basics audit identifies missing jointrealE8.5/E9.5temporal supervision,5510copiedgenes and unvalidatedpopulationemergence. CachedJev selects population_transition_preflight (.63); next predeclare observed-stage stateconditionalmixture transition withfullgene support and past-only matchedcontrols, beforetraining; no oldresampling/shift/covariancegrids. Retain allreadiness/calibration gates.",
+  "next_action": "Population transition observed-only preflight complete:11shared names,17types stage-specific; exact shiftdecomposition verified. Stage names alone cannot identify lineage transitions. Next bounded feasibility: inspect permitted externalpast metadata and marker-validated commonstate representation supporting realE8.5/E9.5 fullgene supervision and historical matchedcontrols; no KMeans24/oldmarkerresampling repeats. Preserve completed cutoff8 failure, officialbest52.16 and readinessgates.",
   "potential_real_anchor_transfer_setup_failure": {
     "run": "potential_real_anchor_transfer_01",
     "error": "append_event kind argument collided with keyword at first50-step logging; no checkpoint or forecast completed",
@@ -5508,6 +5508,46 @@
     "cached": true,
     "input_tokens": 1262,
     "output_tokens": 48,
-    "score_certification": false
+    "score_certification": false,
+    "preflight_status": "observed_decomposition_complete_common_state_support_pending"
+  },
+  "population_transition_preflight_20261004": {
+    "status": "completed_observed_only",
+    "plan": {
+      "stages": [
+        8.5,
+        9.5
+      ],
+      "batch_cells": 512,
+      "all_genes": 32285,
+      "labels": "observed celltype names only; no inferred lineage map",
+      "purpose": "Observed-only identifiability and decomposition preflight; no forecasting, hidden targets, scores or reward",
+      "method": "Exact symmetric shared-name decomposition of pseudobulk shift into within-type and proportion terms; unmatched-type contributions retained separately."
+    },
+    "shared_type_names": [
+      "AVC-CM",
+      "Blood",
+      "Foregut",
+      "IFT-CM",
+      "NCC",
+      "OFT/RV-CM",
+      "Pericardium",
+      "SV-CM",
+      "Surface Ectoderm",
+      "aSHF",
+      "pSHF"
+    ],
+    "shared_types": 11,
+    "minimum_shared_type_cells": 47,
+    "decomposition_max_error": 9.992007221626409e-16,
+    "l2_norms": {
+      "observed_shift": 5.588031694648865,
+      "shared_within": 3.400593695528512,
+      "shared_composition": 8.413485064255092,
+      "unmatched": 8.571031277166087
+    },
+    "interpretation": "Terms can cancel; norms are not percentages or causal effects. Inconsistent stage labels preclude a defensible lineage transition from names alone. Two observed stages cannot identify unique future transition rates. Prior KMeans24 state slopes and marker-weighted donor resampling already covered; do not repeat. Novel candidate requires independently frozen, marker-validated common state space and fullgene supervision with past-only temporal controls.",
+    "new_scores": 0,
+    "reward_delta": 0
   }
 }
