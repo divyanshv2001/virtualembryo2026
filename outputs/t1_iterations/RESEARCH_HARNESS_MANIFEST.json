@@ -779,6 +779,61 @@
         "repair_of": "graph_kinetics_past_fold",
         "repair_scope": "Separate newgraph provenance from original reused-input equality guard only; no scientific protocol change."
       }
+    },
+    "kinetic_frozen_horizon_validation": {
+      "script": "scfm_projected_past_fold.py",
+      "args": [
+        "--experiment",
+        "kinetic_frozen_horizon_validation"
+      ],
+      "run": "private/kinetic_frozen_horizon_validation_01",
+      "report": "KINETIC_FROZEN_HORIZON_VALIDATION_RESULTS.json",
+      "protocol": {
+        "cutoff": 8.25,
+        "target": 9.5,
+        "fit_stages": [
+          7.5,
+          7.75,
+          8.0,
+          8.25
+        ],
+        "seed": 20260928,
+        "scoring_seeds": [
+          20260928,
+          20260929,
+          20260930
+        ],
+        "steps": 0,
+        "batch_size": 64,
+        "reuse_run": "private/scfm_projected_past_fold_01",
+        "candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "kinetic_real400"
+        ],
+        "control_candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "kinetic_real400"
+        ],
+        "contrast_candidates": [
+          "cnf800",
+          "kinetic_none400"
+        ],
+        "contrast_label": "none_minus_cnf_mean_skills",
+        "reward_reference": "cnf800",
+        "reward_candidates": [],
+        "scope": "Frozen E8.25-to-E9.5 horizon validation, no optimizer or parameter/protocol change. Same deterministic past encoder/decoder reconstruction required to reproduce previous E9.25 full-panel predictions bit-exact before new target. Verified CNF800/no-edge400/realgraph400 checkpoints, copy control, original full-panel scorer/calibration/readiness. Historical exposed development only; not independent-embryo validation. All candidates reward0, no repeated credit, no official upload, D-only 2threads 16GiB.",
+        "fixed_candidate_validation": true,
+        "frozen_kinetic_run": "private/graph_kinetics_past_fold_repair_01",
+        "prior_target": 9.25,
+        "frozen_checkpoint_sha256": {
+          "kinetic_none400": "11dc8d8620fa66997aa08d2f88ad9f4e9cdc2db788f8c1b3088f1b8eb01dd4c2",
+          "kinetic_real400": "d9d2be1c069f118ce5a6c3accf52a9e55d7bbf87acce491abb5c802ea1f2e116"
+        }
+      }
     }
   }
 }

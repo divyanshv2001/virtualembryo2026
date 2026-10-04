@@ -4763,7 +4763,7 @@
       "submissions_used": 0,
       "jev_requests_used": 0,
       "results_report": "RECENT_TRANSPORT_CHALLENGE_RESULTS.json",
-      "decision": "Latest1/2-interval velocity does not repair challenge transfer: all four means47.9632–48.2260, below persistence50 and archived16D global49.0279. Same panels/calibrations and bit-identical encoder/heads verified. Preserve all27 outcomes. Next test decoder stage nonstationarity; broader neural/density dynamics remain unresolved."
+      "decision": "Latest1/2-interval velocity does not repair challenge transfer: all four means47.9632\u201348.2260, below persistence50 and archived16D global49.0279. Same panels/calibrations and bit-identical encoder/heads verified. Preserve all27 outcomes. Next test decoder stage nonstationarity; broader neural/density dynamics remain unresolved."
     },
     {
       "id": "conditional_decoder_stage_window",
@@ -4780,7 +4780,7 @@
         "decoder_window_challenge.py"
       ],
       "hypothesis": "Conditional gene heads may average stage-dependent relationships and decode extrapolated states incorrectly. Restrict their fit to latest1/2/3 stages while keeping representation and velocity fixed.",
-      "trial_scope": "Neutral8D/16D ×head-stage windows1/2/3; compare five archived persistence/unit16/global/moment controls on three identical challenge panels.33 evaluations, no seed or panel selection. Global heads/drift must reproduce bit-identically.",
+      "trial_scope": "Neutral8D/16D \u00d7head-stage windows1/2/3; compare five archived persistence/unit16/global/moment controls on three identical challenge panels.33 evaluations, no seed or panel selection. Global heads/drift must reproduce bit-identically.",
       "limitations": "Window changes head centering/support as well as coefficients; coupled effects disclosed. Fewer cells can increase noise. Prepared cohort remains sampled; no blind challenge or independent embryo validation. No continuous neural/density-model reproduction claim.",
       "research_family_exhausted": false,
       "submissions_used": 0,
@@ -4830,7 +4830,7 @@
       ],
       "primary_reference": "CNF_MANIFOLD_REFERENCE.json",
       "hypothesis": "Discourage unsupported intermediate paths using five-neighbor hinge density relative to all permitted past cells. Check whether this improves direction and joint score with likelihood/energy fixed.",
-      "trial_scope": "Density weights1/10 vs0, energy.1,400 updates, abundance strengths.5/1. Nine candidates×three unchanged panels=27 evaluations. Zero-density400-step replay must be bit-identical before scoring. Midpoint is half-quarter inverse transition; skip earliest stage with no earlier observed stage.",
+      "trial_scope": "Density weights1/10 vs0, energy.1,400 updates, abundance strengths.5/1. Nine candidates\u00d7three unchanged panels=27 evaluations. Zero-density400-step replay must be bit-identical before scoring. Midpoint is half-quarter inverse transition; skip earliest stage with no earlier observed stage.",
       "limitations": "Own CPU adaptation differs from author random intermediate sampling/likelihood accumulation. References are cells, not independent embryos. No growth/velocity evidence, no extrapolation guarantee; source and target development already exposed.",
       "research_family_exhausted": false,
       "submissions_used": 0,
@@ -4853,7 +4853,7 @@
         "cell_mixture.py"
       ],
       "hypothesis": "Earlier flow energy.1/strength.5 slightly improves DE recovery while state control leads remaining metrics. Whole-cell mixtures may retain both distributions without averaging expression or best scores.",
-      "trial_scope": "DE-flow weights.1/.25/.5/.75, seed2026092812 fixed. Four actual mixtures plus five archive controls×three unchanged panels=27 outcomes. Preserve exact per-cell constituent/donor provenance.",
+      "trial_scope": "DE-flow weights.1/.25/.5/.75, seed2026092812 fixed. Four actual mixtures plus five archive controls\u00d7three unchanged panels=27 outcomes. Preserve exact per-cell constituent/donor provenance.",
       "limitations": "Constituent/weight selection uses reusedE9.5 development results; not new blind validation. Unit16 is rejected for official use; this local integration does not reverse that failure or authorize submission. Small DE difference may be sampling noise.",
       "research_family_exhausted": false,
       "submissions_used": 0,
@@ -5731,7 +5731,7 @@
       "hypothesis_and_limits": "More past source cells might improve 8D latent stage dynamics. Matched 200-update pilot exposes only a small fraction of full cells; not full-coverage training or 32,285-gene scoring.",
       "implementation": "full_source_flow_pilot.py",
       "run": "full_source_flow_pilot_01",
-      "declared_experiment_and_result": "Past-only E7.5–E8.0 fits sampled 7,963 vs full 42,168 eligible cells. On held-out E8.25/E8.5, lower 8D MMD: persistence .07657/.22550; sampled CNF .10189/.28565; full CNF .09356/.27454. Full-source improves over sampled but loses to persistence on both; frozen two-target promotion rule failed.",
+      "declared_experiment_and_result": "Past-only E7.5\u2013E8.0 fits sampled 7,963 vs full 42,168 eligible cells. On held-out E8.25/E8.5, lower 8D MMD: persistence .07657/.22550; sampled CNF .10189/.28565; full CNF .09356/.27454. Full-source improves over sampled but loses to persistence on both; frozen two-target promotion rule failed.",
       "next_action": "Do not run full-coverage version of this exact flow or E9.5 forecast. Investigate state-dependent residual or conditional decoder with matched source temporal/persistence controls.",
       "research_family_exhausted": false,
       "report_sha256": "7f8fa932e0b9667cbd00f5e3ac938a2df72f591521d15693f7de608cfcea48df"
@@ -5777,7 +5777,7 @@
       "implementation": "cnf_count_reliability_temporal.py",
       "run": "cnf_count_reliability_temporal_01",
       "hypothesis_and_limits": "Past-only count/(count+k) shrinkage of challenge-analog anchor positive/detection slope deltas may reduce unstable low-count gene effects; two reused source-cohort folds are not challenge-domain or independent embryo validation.",
-      "declared_experiment_and_result": "Eight full-panel local scores on source 8→9 and 8.25→9.25. Copy 50/50; unshrunk 49.7003/51.1772; k100 49.5874/51.2920; k500 49.4025/51.3167. Both count-shrunk variants worsen the first fold below persistence despite slight second-fold gain; no candidate passes frozen both-fold/all-skill rule. All raw metrics and skills preserved.",
+      "declared_experiment_and_result": "Eight full-panel local scores on source 8\u21929 and 8.25\u21929.25. Copy 50/50; unshrunk 49.7003/51.1772; k100 49.5874/51.2920; k500 49.4025/51.3167. Both count-shrunk variants worsen the first fold below persistence despite slight second-fold gain; no candidate passes frozen both-fold/all-skill rule. All raw metrics and skills preserved.",
       "next_action": "Reject this bounded count/(count+k) attenuation. Source-cohort folds and one-day challenge domain differ; seek a mechanism with measured target-domain support before more expensive model fitting.",
       "research_family_exhausted": false,
       "results_report": "CNF_COUNT_RELIABILITY_TEMPORAL_RESULTS.json",
@@ -5812,7 +5812,7 @@
       "implementation": "cnf_domain_mean_alignment.py",
       "run": "cnf_domain_mean_alignment_01",
       "hypothesis_and_limits": "Shift source-trained 8D CNF coordinate frame toward challenge E8.5 anchor mean without future target expression. Global mean shift may erase cell-composition biology; three reused E9.5 panels are development only.",
-      "declared_experiment_and_result": "12/12 valid unchanged full-panel challenge E9.5 development scores across three reused panels. Persistence mean50; exact-replay unshifted mean55.1173; half-shift55.6276; full-shift55.7537. Full shift beats both controls on every panel and improves mean skill in all four metrics (DE .52385→.52563, direction .59151→.60087, MMD .55489→.56240, variogram .52933→.53596). This is a development gain, not official or 72 readiness.",
+      "declared_experiment_and_result": "12/12 valid unchanged full-panel challenge E9.5 development scores across three reused panels. Persistence mean50; exact-replay unshifted mean55.1173; half-shift55.6276; full-shift55.7537. Full shift beats both controls on every panel and improves mean skill in all four metrics (DE .52385\u2192.52563, direction .59151\u2192.60087, MMD .55489\u2192.56240, variogram .52933\u2192.53596). This is a development gain, not official or 72 readiness.",
       "next_action": "Freeze full-shift candidate and run a bounded paired 16-replicate challenge E9.5 resampling pilot against exact unshifted and persistence with fixed predictor; do not expand to 64 unless meaningful gain and >72 plausibility. Check available temporal/domain validation separately.",
       "research_family_exhausted": false,
       "results_report": "CNF_DOMAIN_MEAN_ALIGNMENT_RESULTS.json",
@@ -6394,9 +6394,9 @@
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
-    "experiment": "graph_kinetics_past_fold_repair",
-    "status": "completed_incremental_gain_graph_not_promoted",
-    "next_experiment": null,
-    "next": "Implement one fixed kinetic-horizon validation8.25->9.5 using verified no-edge400 and realgraph400 checkpoints plus copy/CNF controls. No optimizer/head/encoder refit or graph change; exact replays beforetarget, unchanged32285scorer/gates. Reward0 for alreadyaccounted/frozencontrols; historicaldevelopment only, no independentvalidationclaim. Jev .79 supports retaining+0.6033 increment ratherthan rejecting for distantgoal. No kineticparametergrid; difference-sequence attention remains next unexplored branch after validation."
+    "experiment": "kinetic_frozen_horizon_validation",
+    "status": "running",
+    "next_experiment": "kinetic_frozen_horizon_validation",
+    "next": "Collect fixed kinetic horizon validation; four fresh independent metric reviews, unchanged scoring/gates and reward0. Past encoder/decoder reconstructed deterministically with required bit-exact prior forecast replay, zero optimizer steps. Then difference-sequence attention feasibility."
   }
 }

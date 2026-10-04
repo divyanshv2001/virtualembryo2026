@@ -46,6 +46,7 @@ def main():
         core,scorer=load_core()
         sources=['scfm_projected_past_fold.py','fresh_fullpanel_context.py','frozen_fullpanel_scoring.py','anchored_soft_ot.py','soft_ot_flow_matching.py','cnf_manifold_flow.py','cnf_density_flow.py','full_anchor_slope_forecast.py','log1p_positive_forecast.py','tigon_conditional_fullpanel.py','offline_backtest.py']
         if spec.get('learned_diffusion'): sources.append('learned_latent_diffusion.py')
+        if spec.get('frozen_kinetic_run'): sources.append('graph_kinetic_residual.py')
         graph_prior_inputs={}
         if spec.get('graph_kinetics'):
             sources.append('graph_kinetic_residual.py')
@@ -75,7 +76,26 @@ def main():
             plan['reused_checkpoint_sha256']={name:digest(previous/(name+'.pt')) for name in ['cnf800','projected_ot400']}
             save(RUN/'plan.json',plan);emit('reused_encoder_and_checkpoints_verified',sha256=digest(RUN/'plan.json'))
             flows={'cnf800':initial,'projected_ot400':baseline}
-            if spec.get('graph_kinetics'):
+            if spec.get('frozen_kinetic_run'):
+                from graph_kinetic_residual import KineticFlow
+                frozen=HERE/spec['frozen_kinetic_run']
+                frozen_plan=json.loads((frozen/'plan.json').read_text())
+                if frozen_plan['input_sha256']!=inputs or frozen_plan['protocol']['cutoff']!=cutoff:raise ValueError('Frozen kinetic inputs changed')
+                if digest(HERE/'graph_kinetic_residual.py')!=frozen_plan['source_sha256']['graph_kinetic_residual.py']:raise ValueError('Frozen kinetic mechanism changed')
+                flows={'cnf800':initial}
+                for name,expected in spec['frozen_checkpoint_sha256'].items():
+                    path=frozen/(name+'.pt')
+                    if digest(path)!=expected:raise ValueError('Frozen checkpoint hash mismatch')
+                    saved=torch.load(path,weights_only=False,map_location='cpu')
+                    if saved['steps']!=400 or saved['batch_size']!=64 or saved['fit_max_stage']!=cutoff or not saved['frozen_drift_exact']:raise ValueError('Frozen kinetic metadata mismatch')
+                    state=saved['net'];edges=state['edges'].numpy()
+                    model=KineticFlow(initial,state['gene_mean'].numpy(),edges[1],edges[0],saved['kind'])
+                    model.load_state_dict(state)
+                    for key,value in initial.state_dict().items():torch.testing.assert_close(model.drift.state_dict()[key],value,rtol=0,atol=0)
+                    flows[name]=model.eval()
+                report['fixed_candidate_validation']={'training_steps':0,'reward_eligible':False,'past_decoder_reconstruction':'Same deterministic past-only procedure; prior full-panel predictions must replay bit-exact before new horizon.'}
+                emit('frozen_kinetic_checkpoints_verified',checkpoint_sha256=spec['frozen_checkpoint_sha256'])
+            elif spec.get('graph_kinetics'):
                 from graph_kinetic_residual import prepare_kinetic_models, train_kinetics
                 kinetic_models,graph_audit=prepare_kinetic_models(initial,c,RUN,emit)
                 report['kinetic_graph_audit']=graph_audit
@@ -131,6 +151,16 @@ def main():
             ipca_reference.audit.update(fit_max_stage=cutoff,method='Fresh source-domain IncrementalPCA8 paired scFM')
             for name in ['ipca_cnf800','ipca_projected400']:references[name]=ipca_reference
         generation={}
+        if spec.get('frozen_kinetic_run'):
+            previous_generation=json.loads((HERE/spec['frozen_kinetic_run']/'generation.json').read_text())
+            for name in spec['candidates']:
+                if name=='copy':prior=c['donors'].copy()
+                else:
+                    reference.net=flows[name]
+                    prior,_,_=reference.predict(spec['prior_target'],'joint',1.,sampling='systematic')
+                if cache.put('_prior_'+name,prior)!=previous_generation[name]['prediction_sha256']:raise ValueError('Original kinetic forecast reconstruction changed')
+                del prior
+            emit('prior_horizon_forecasts_reconstructed_bit_exact',target=spec['prior_target'])
         for name in spec['candidates']:
             if name=='copy':pred,ids,audit=c['donors'].copy(),np.arange(len(c['donors'])),{'method':'persistence'}
             else:
