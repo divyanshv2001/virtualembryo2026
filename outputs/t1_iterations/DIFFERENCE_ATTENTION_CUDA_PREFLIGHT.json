@@ -1,0 +1,43 @@
+{
+  "status": "completed",
+  "new_scoring_batch": false,
+  "plan": {
+    "cutoff": 8.25,
+    "times": [
+      7.5,
+      7.75,
+      8.0,
+      8.25
+    ],
+    "kind": "resource_preflight_only",
+    "optimizer_steps": 2,
+    "batch": 64,
+    "device": "cuda:0",
+    "checkpoint_sha256": "11dc8d8620fa66997aa08d2f88ad9f4e9cdc2db788f8c1b3088f1b8eb01dd4c2",
+    "encoder_sha256": "b0e2da2b810eff1d2c1a9ad3697959576b59fc4c04365ab1ec17ae1c860a9fb9",
+    "scope": "Past centroid attention; no individual trajectories or author reproduction. No target expression or scientific score."
+  },
+  "arms": [
+    {
+      "kind": "level",
+      "losses": [
+        2.517054319381714,
+        2.516404390335083
+      ],
+      "learned_parameters": 4776,
+      "checkpoint_replay_exact": true
+    },
+    {
+      "kind": "difference",
+      "losses": [
+        2.517054319381714,
+        2.515169143676758
+      ],
+      "learned_parameters": 4776,
+      "checkpoint_replay_exact": true
+    }
+  ],
+  "seconds": 2.4768090000143275,
+  "peak_allocated_mib": 78,
+  "scope": "Resource/optimizer smoke only; no predictive score, reward or readiness claim."
+}

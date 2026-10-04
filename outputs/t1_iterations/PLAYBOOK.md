@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-04T09:42:57.515200+00:00
+Updated: 2026-10-04T09:49:18.769860+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -10,7 +10,7 @@ Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction':
 
 Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Validate CUDA runtime, then preflight one scDiformer-inspired difference-attention vs matched level-attention residual with retained kinetic control. Jev0.57; no70 score guarantee. scIMF collective context and CellPace temporal diffusion forcing are unexplored reserves, with rawcount/stage audits before full-model use.
+Next: Implement one fixed CUDA400-step past-prefix centroid attention comparison: difference vs level tokens with equal4776parameter residuals on frozen no-edge kinetics, plus copy/CNF/no-edge controls. Same past adjacent Sinkhorn objective, draws, batch64, RK4.125, normcap1, unchanged decoder/scorer/gates; no target tuning. Own adaptation, not cell trajectories or author reproduction. Forecast CPU with exactreplays; GPU runtime fixed for both trainedarms. Four fresh reviews after scoredbatch.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in outputs\t1_submissions\formula_progress_20260930_01\official_result.json. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 

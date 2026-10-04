@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Validate CUDA runtime, then preflight one scDiformer-inspired difference-attention vs matched level-attention residual with retained kinetic control. Jev0.57; no70 score guarantee. scIMF collective context and CellPace temporal diffusion forcing are unexplored reserves, with rawcount/stage audits before full-model use.",
+  "next_experiment": "Implement one fixed CUDA400-step past-prefix centroid attention comparison: difference vs level tokens with equal4776parameter residuals on frozen no-edge kinetics, plus copy/CNF/no-edge controls. Same past adjacent Sinkhorn objective, draws, batch64, RK4.125, normcap1, unchanged decoder/scorer/gates; no target tuning. Own adaptation, not cell trajectories or author reproduction. Forecast CPU with exactreplays; GPU runtime fixed for both trainedarms. Four fresh reviews after scoredbatch.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -4128,5 +4128,13 @@
       "checkpoint_replay_exact": true,
       "scope": "Synthetic GPU training/runtime check, not scientific score or performance speedup benchmark"
     }
+  },
+  "difference_attention_preflight": {
+    "status": "completed",
+    "report_sha256": "368c5d91b093c618523b6f1c833ee4674daefa858b341a1693867a7c9cdc718d",
+    "scientific_score": null,
+    "new_scoring_batch": false,
+    "initial_import_and_device_failures_preserved": true,
+    "cpu_velocity_unchanged_verified": true
   }
 }

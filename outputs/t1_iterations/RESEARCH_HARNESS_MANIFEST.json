@@ -834,6 +834,55 @@
           "kinetic_real400": "d9d2be1c069f118ce5a6c3accf52a9e55d7bbf87acce491abb5c802ea1f2e116"
         }
       }
+    },
+    "difference_attention_preflight": {
+      "script": "past_difference_attention.py",
+      "args": [],
+      "run": "private/difference_attention_preflight_01",
+      "report": "DIFFERENCE_ATTENTION_PREFLIGHT.json",
+      "protocol": {
+        "training_device": "cuda",
+        "cutoff": 8.25,
+        "resource_preflight_only": true,
+        "reward_candidates": [],
+        "scope": "Two-step capacity-matched level/difference centroid attention on frozen no-edge kinetics. Past stages only, no target data or predictive scoring. Own adaptation, no scDiformer reproduction. CUDA6GiB, allocatedcap4.5GiB, hostRAM16GiB."
+      }
+    },
+    "difference_attention_preflight_repair": {
+      "script": "past_difference_attention.py",
+      "args": [
+        "--experiment",
+        "difference_attention_preflight_repair"
+      ],
+      "run": "private/difference_attention_preflight_repair_01",
+      "report": "DIFFERENCE_ATTENTION_PREFLIGHT_REPAIR.json",
+      "protocol": {
+        "training_device": "cuda",
+        "cutoff": 8.25,
+        "resource_preflight_only": true,
+        "reward_candidates": [],
+        "scope": "Two-step capacity-matched level/difference centroid attention on frozen no-edge kinetics. Past stages only, no target data or predictive scoring. Own adaptation, no scDiformer reproduction. CUDA6GiB, allocatedcap4.5GiB, hostRAM16GiB.",
+        "repair_of": "difference_attention_preflight",
+        "repair_scope": "Standard-library SHA hashing and manifest-driven paths only, no scientific protocol change"
+      }
+    },
+    "difference_attention_cuda_preflight": {
+      "script": "past_difference_attention.py",
+      "args": [
+        "--experiment",
+        "difference_attention_cuda_preflight"
+      ],
+      "run": "private/difference_attention_cuda_preflight_01",
+      "report": "DIFFERENCE_ATTENTION_CUDA_PREFLIGHT.json",
+      "protocol": {
+        "training_device": "cuda",
+        "cutoff": 8.25,
+        "resource_preflight_only": true,
+        "reward_candidates": [],
+        "scope": "Two-step capacity-matched level/difference centroid attention on frozen no-edge kinetics. Past stages only, no target data or predictive scoring. Own adaptation, no scDiformer reproduction. CUDA6GiB, allocatedcap4.5GiB, hostRAM16GiB.",
+        "repair_of": "difference_attention_preflight_repair",
+        "repair_scope": "Allocate inherited CNF clock on input tensor device; CPU values and scientific protocol unchanged."
+      }
     }
   }
 }

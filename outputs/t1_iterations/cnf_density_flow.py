@@ -39,7 +39,7 @@ class DensityFlowNet(nn.Module):
     def encode(self,values):
         z=(values-self.pca_center)@self.basis.T;return z,torch.zeros_like(z)
     def velocity(self,time,z):
-        return self.field(torch.cat([z,torch.full((len(z),1),float(time),dtype=z.dtype)],1))
+        return self.field(torch.cat([z,torch.full((len(z),1),float(time),dtype=z.dtype,device=z.device)],1))
     def trajectory(self,z,times,step=.125):
         history=[z]
         for previous,target in zip(times[:-1],times[1:]):
