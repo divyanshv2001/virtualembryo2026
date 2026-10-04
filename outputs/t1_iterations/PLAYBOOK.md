@@ -1,18 +1,18 @@
 # T1 resume playbook
 
-Updated: 2026-10-04T15:52:10.229164+00:00
+Updated: 2026-10-04T15:56:00.859317+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
 Use `research_harness.py queue` for a compact next-step/pending summary; never dump METRIC_RESEARCH_QUEUE.json. Use `research_harness.py status --experiment NAME` for the current experiment; omit NAME only for a needed global audit. This gives compact live-process/report checks, `run --experiment NAME` for registered launches and `collect --experiment NAME` for cached critic packets. Commands use the same project Python runtime. Register a new predeclared script/run/report before launch. Collection prepares packets; the coordinator still runs four critics and Jev decisions. See RESEARCH_HARNESS.md only when changing orchestration. Official task review: TEMPORAL_TASK_REVIEW_20261001.md.
 
-Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction': 56.3, 'mmd_u': 53.2, 'variogram': 51.7}. Covariance .25 reused-development mean55.98883; EB and lineage-standardized historical proxy screens failed. Local>72 mean/lower-tail >=64-replicate AND temporal gate unmet. Full32285-gene scorer/calibration unchanged.
+Official best: 52.16. Latest reported skills: {'de_score': 43.7, 'de_direction': 51.8, 'mmd_u': 50.9, 'variogram': 50.0}. Covariance .25 reused-development mean55.98883; EB and lineage-standardized historical proxy screens failed. Local>72 mean/lower-tail >=64-replicate AND temporal gate unmet. Full32285-gene scorer/calibration unchanged.
 
 Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
 Next: Collect scalar_potential_frozen_horizon_validation aftercompletion; no duplicate worker. Verify3original+5prior/2zeroresidual/5new fullpanel exactreplays,15calibrations; four fresh metric reviews, confirmationreward0, bounded cached Jev next decision. Preserve52.438460historical gain and delivered user export; scorer/calibration/readiness gates unchanged.
 
-Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in outputs\t1_submissions\formula_progress_20260930_01\official_result.json. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
+Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 49.15; attribution/screenshot evidence in export report. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 
 Four metric critiques completed; consult METRIC_CRITIQUES_20261001.md when designing the next mechanism. Separate reward starts0: +1 positive paired mean skill gain / -10 tie or regression per metric, aggregate maximum100; negative balances visible. Pending/invalid/proxy0. Future unique declared experiments only; promotion gates unchanged.
 

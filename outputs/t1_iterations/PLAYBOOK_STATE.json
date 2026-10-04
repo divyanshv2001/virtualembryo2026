@@ -1,8 +1,8 @@
 {
-  "updated_utc": "2026-10-04T15:52:10.229164+00:00",
+  "updated_utc": "2026-10-04T15:56:00.859317+00:00",
   "fingerprints": {
     "RESEARCH_CONTINUATION_POLICY.md": "1e6cc6f15c1e918ad60a1e01f26dd66c48022b33158bf8eb2240a9622066af00",
-    "LOCAL_OPTIMIZATION_STATE.json": "cd4938fd78d6db19e5d464d9753382b9ac18b11990eee6a5da945c2cad296241",
+    "LOCAL_OPTIMIZATION_STATE.json": "0ec0591c89a9686703d424b356c600a63d80d03072f2787d38898d6f6ff7fe39",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
     "METRIC_RESEARCH_QUEUE.json": "cc5c2db35677f21e801e18f7f72fb94d55624cf3bff87a9b68f00f0fef634a0a",
     "METRIC_CRITIQUE_POLICY.json": "3535989f1e3beac0f2d446b44df3c793d4be464dbd87f6e714c2f5afda864a6f",
@@ -45,17 +45,23 @@
   },
   "official_best": 52.16,
   "latest_official": {
-    "headline_score": 52.16,
+    "headline_score": 49.15,
     "metric_skills_percent": {
-      "de_score": 47.2,
-      "de_direction": 56.3,
-      "mmd_u": 53.2,
-      "variogram": 51.7
+      "de_score": 43.7,
+      "de_direction": 51.8,
+      "mmd_u": 50.9,
+      "variogram": 50.0
     },
-    "report": "outputs\\t1_submissions\\formula_progress_20260930_01\\official_result.json",
-    "rank": 130,
-    "board_entries": 274,
-    "attribution": "Inferred latest export; screenshot lacks filename"
+    "rank": 139,
+    "board_entries": 289,
+    "submission_url": "https://virtualembryo.ai/challenge/account/submissions/93dc7fd96c584453a5a958bc24ad36ec",
+    "source_image": "C:\\Users\\vishw\\AppData\\Local\\Temp\\codex-clipboard-75adb7d7-a865-42c1-a4d8-dc2b5aa48d47.png",
+    "source_sha256": "246ea64f3fbfbb8e064f1a1e62cba87eb2b2dd3c0930f9d2ba223309d241a30b",
+    "attribution": "Likely latest potential_progress_20261004_02 export from conversation timing; screenshot does not show uploaded filename/hash, attribution not independently verified. Rank is best-score-per-team, not this candidate-specific rank.",
+    "status": "reported_below_persistence_floor",
+    "best_reported_official_score_preserved": 52.16,
+    "reward_delta": 0,
+    "scope": "User-reported official result, separate from historical52.438460development and research rewards; no hidden truth accessed or new upload."
   },
   "latest_jev": {
     "record": "private/decisions/tigon_log_density_01/route.json",
