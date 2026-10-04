@@ -771,3 +771,7 @@ Userrequests newmechanisms toward screenshotAgentTeam68.4. Shortlist learnedstat
 ## Learned diffusion implementation repair — 4 October 2026
 
 First trial failed Unknown diffusion before model training/scoring: malformed runner name/kind tuple. Genuine report preserved, four fresh metric reviews cached, metrics unavailable/reward0/health-1359. Corrected tuple and logging keyword; both arms two-step optimizer/checkpoint/logging check passed. CPU finite-gradient/zero-noise RK4/replay smoke passed,552stateheadparams,initialpeak345MB; full preparation failurepeak2.30GB. Jev frozen-drift diffusion protocol.95,1151in/60out. Unique same-protocol repair registered; no scientific rejection, no scorer/gate change.
+
+## Learned diffusion scored — 4 October 2026
+
+E8.25->9.25 copy50,CNF51.194606,constantdiffusion51.242752,statediffusion51.236187. All12calibrationsvalid/four exactreplays,peak5.326GB,frozendriftverified. State-vsconstant meanDE-.00027003,direction-.00003939,MMD+.00003900,variogram+1.016e-08; reward-18/health-1377. Fourfreshreviews cached; correctedrounded variogramnegative claim, preserve strict+1 tinygain without robustnessclaim. No strictpass/promotion/independentvalidation/officialupload; originalCNF differentRK4dt confounds secondary gains. Do notretirefamilyor repeatgrid. Jev nextFLeCSfeasibility .33,1239in/43out/2505bytes; next sparsepast-only regulatorykinetics audit only.

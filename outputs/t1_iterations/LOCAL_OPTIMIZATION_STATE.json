@@ -30,13 +30,11 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Collect unique learned_diffusion_past_fold_repair; finish four reviews/reward once, no duplicate run or further mechanism while active.",
+  "next_experiment": "Bounded FLeCS regulatory-kinetics feasibility preflight: inspect author CPU source/temporal loss and permitted past data; audit graph identifiability and sparse16GB implementation. Jev favors FLeCS confidence.33, advisory only. No training before fixed matched protocol and feasibility checks; no repeat diffusion/shrinkage grid.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "learned_diffusion_past_fold_repair"
-  ],
+  "active_jobs": [],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -2796,6 +2794,18 @@
         "variogram": "Problem: Variogram is unavailable: malformed diffusion name/kind labels stopped the trial before training or scoring. This is no scientific failure; readiness is unchanged, reward 0. Proposed solution: Repair labels; rerun past-only matched constant/state diffusion with copy/CNF controls and unchanged full-panel scorer. Validation: CPU gradients/replay passed. Require completed scoring; lower raw variogram and higher skill are better."
       },
       "coordinator": "Four fresh read-only reviews agree metrics unavailable and implementation failure provides no scientific rejection. Labels repaired; additionally corrected event keyword conflict. Both arms two-step optimizer/checkpoint/logging checks passed after repair. Preserve failed report; unique same-protocol repair only."
+    },
+    "learned_diffusion_past_fold_repair_01": {
+      "status": "completed",
+      "report_sha256": "1c4678542900b4a4f215f41113228de5730b5fa8dd32ea70fb30fa6a7f836bc9",
+      "specialist_role_version": 2,
+      "reviews": {
+        "de_score": "Problem: State-dependent diffusion ties one panel and regresses two versus constant diffusion; all trail copying. The extended cutoff is exposed development, with no strict pass. Proposed solution: Regularize diagonal diffusion toward constant variance and tune only on expanding past-only folds with matched noise budgets. Validation: Freeze settings before a sealed future block; retain copy/constant controls, matched seeds, unchanged scorer, and exact forecast replays.",
+        "de_direction": "Problem: State-dependent diffusion trails constant diffusion on all three skill panels; the extended cutoff is development evidence. Proposed solution: Fit diagonal residual variance using past-only data, shrink toward constant diffusion, and tune shrinkage for directional skill. Validation: Compare matched 400-step controls on untouched future windows with frozen drift, PCA, decoder, and scorer. No strict pass or family rejection follows.",
+        "mmd_u": "Problem: Tiny three-panel MMD skill gains use exposed development data; headline and DE/direction regress. Proposed solution: Select diffusion and MMD bandwidth using past-only rolling folds, matched 400-step controls, and identical forecast randomness; require headline and directional safeguards. Validation: Freeze choices before a genuinely unseen cutoff; replay the unchanged 32,285-component scorer and report paired uncertainty. No strict pass or score certification.",
+        "variogram": "Problem: State-dependent diagonal diffusion slightly underperforms constant diffusion on mean calibrated variogram skill; exposed cutoff tuning provides no independent validation. Proposed solution: Estimate shrinkage-regularized, low-rank residual covariance using past-only data, targeting cross-variable dependence. Validation: Compare against matched constant and diagonal controls with identical integration steps and replay seeds on an untouched cutoff; retain the unchanged full scorer."
+      },
+      "coordinator": "Correct rounded-packet variogram error: exact mean skill gain +1.0160718378e-08, not negative; one panel regresses/two improve. Strict reward +1 applies with no epsilon; not robust evidence. MMD bandwidth proposal may concern training only; scorer/calibration bandwidth unchanged. No tuning on exposed future, no new cutoff label implies independent embryos. All recipes unvalidated; no automatic shrinkage/covariance grid. CNF secondary comparison has different solver dt, so cannot attribute gain solely to diffusion."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3886,7 +3896,7 @@
     ],
     "jev_choice": "learned_sde",
     "jev_confidence": 0.13,
-    "next": "Bounded learned-diffusion CPU16GB/data-support feasibility preflight; no training authorized by feasibility alone; no older-method rerun.",
+    "next": "Bounded FLeCS regulatory-kinetics feasibility preflight: inspect author CPU source/temporal loss and permitted past data; audit graph identifiability and sparse16GB implementation. Jev favors FLeCS confidence.33, advisory only. No training before fixed matched protocol and feasibility checks; no repeat diffusion/shrinkage grid.",
     "reward_delta": 0,
     "preflight": {
       "cpu_smoke_seconds": 1.5118947,
@@ -3902,6 +3912,34 @@
       "confidence": 0.95,
       "jev_input_tokens": 1151,
       "jev_output_tokens": 60
+    },
+    "diffusion_result": {
+      "report": "LEARNED_DIFFUSION_PAST_FOLD_REPAIR_RESULTS.json",
+      "scores": {
+        "copy": 50.0,
+        "cnf800": 51.194605628785325,
+        "constant_diffusion400": 51.242751986413,
+        "state_diffusion400": 51.23618687396023
+      },
+      "contrast": {
+        "de_score": -0.0002700275738159452,
+        "de_direction": -3.9388460452705054e-05,
+        "mmd_u": 3.90028396526354e-05,
+        "variogram": 1.0160718377782985e-08
+      },
+      "all12calibrations_valid": true,
+      "exact_replays": 4,
+      "peak_bytes": 5326274560,
+      "reward_delta": -18,
+      "health": -1377,
+      "decision": "Do not promote fixed state-dependent configuration; keep small constant-noise gain separate and solver-confounded. No fullfamily rejection or new diffusion grid."
+    },
+    "next_jev": {
+      "choice": "flecs_feasibility",
+      "confidence": 0.33,
+      "input_tokens": 1239,
+      "output_tokens": 43,
+      "payload_bytes": 2505
     }
   }
 }

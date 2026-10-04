@@ -1,5 +1,5 @@
 {
-  "records": 3268,
+  "records": 3280,
   "sources": [
     {
       "path": "private/anchored_soft_ot_paper_pilot_01/report.json",
@@ -737,6 +737,16 @@
       "outcomes_indexed": 0
     },
     {
+      "path": "private/learned_diffusion_past_fold_01/report.json",
+      "sha256": "6f8609295962d0bbb7adfa8fcb06b749bad752e0759c90affeda1fee01130e69",
+      "outcomes_indexed": 0
+    },
+    {
+      "path": "private/learned_diffusion_past_fold_repair_01/report.json",
+      "sha256": "1837041312f65278640019474ce9e14d536c189ee1d0e3c5a2d5f254d58e5457",
+      "outcomes_indexed": 12
+    },
+    {
       "path": "private/lineage_residual_screen_01/report.json",
       "sha256": "d354edce363d9c6b960ae3e38df39352d7b361c96f4ee1809c4d40f5e09c6b69",
       "outcomes_indexed": 0
@@ -1149,5 +1159,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "39e2bb4750234209bf6ff6ec8971dee3a3b035d1e6811141412cb032f3ba3080"
+  "ledger_sha256": "3b4a746fed2b9934318f3d3d3d2cf0eb98585a0c117550bfca00d9144b7ec696"
 }

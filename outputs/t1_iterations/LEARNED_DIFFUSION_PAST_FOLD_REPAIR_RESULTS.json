@@ -1,0 +1,1061 @@
+{
+  "status": "completed",
+  "panels": [
+    {
+      "seed": 20260928,
+      "cutoff": 8.25,
+      "target": 9.25,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.240848571062088,
+        "variogram": 0.008574867621064186
+      },
+      "ceiling": {
+        "de_score": 0.9112627986348123,
+        "de_direction": 0.8616407624154524,
+        "mmd_u": 0.0021655200980603695,
+        "variogram": 0.00010426319931866601
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "86b6be07734acc4a7b159a62210928e037955177f57e6288aa89ba7b454eb50e",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.240848571062088,
+            "variogram": 0.008574867621064186
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "cnf800",
+          "prediction_sha256": "f04b2477926d75c9f205d9875d5bae009ef625fef2d4674614c8b4ad3ec01c26",
+          "raw_metrics": {
+            "de_score": -0.151877133105802,
+            "de_direction": 0.10129762674346661,
+            "mmd_u": 0.2093033790588379,
+            "variogram": 0.008129519410431385
+          },
+          "local_score": 51.15046188221171,
+          "skills": {
+            "de_score": 0.46153846153846156,
+            "de_direction": 0.5312264588023691,
+            "mmd_u": 0.5353787712745133,
+            "variogram": 0.513498786772777
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "constant_diffusion400",
+          "prediction_sha256": "aa4ecebb777aefcbb11639ce5ab37fb5a13729db3adbad9887a136d733c58562",
+          "raw_metrics": {
+            "de_score": -0.14505119453924908,
+            "de_direction": 0.10191109067671295,
+            "mmd_u": 0.20932860672473907,
+            "variogram": 0.008129341527819633
+          },
+          "local_score": 51.19471806060122,
+          "skills": {
+            "de_score": 0.46313963573287076,
+            "de_direction": 0.5314274543713005,
+            "mmd_u": 0.5353484775125323,
+            "variogram": 0.5135043241310486
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "state_diffusion400",
+          "prediction_sha256": "b6b2ac35a50da8e8d79034a322e88e57e0e42c757716c0d2753e56335d9b12c6",
+          "raw_metrics": {
+            "de_score": -0.14505119453924908,
+            "de_direction": 0.10172122936179177,
+            "mmd_u": 0.20929083228111267,
+            "variogram": 0.008130128495395184
+          },
+          "local_score": 51.19403340372555,
+          "skills": {
+            "de_score": 0.46313963573287076,
+            "de_direction": 0.5313652318837654,
+            "mmd_u": 0.535393838911187,
+            "variogram": 0.5134798272987016
+          },
+          "calibration_valid": true
+        }
+      ]
+    },
+    {
+      "seed": 20260929,
+      "cutoff": 8.25,
+      "target": 9.25,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.23272649943828583,
+        "variogram": 0.008608187548816204
+      },
+      "ceiling": {
+        "de_score": 0.9061976549413736,
+        "de_direction": 0.8617330447175314,
+        "mmd_u": 0.0016847193473950028,
+        "variogram": 0.00012206732935737818
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "86b6be07734acc4a7b159a62210928e037955177f57e6288aa89ba7b454eb50e",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.23272649943828583,
+            "variogram": 0.008608187548816204
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "cnf800",
+          "prediction_sha256": "f04b2477926d75c9f205d9875d5bae009ef625fef2d4674614c8b4ad3ec01c26",
+          "raw_metrics": {
+            "de_score": -0.1323283082077051,
+            "de_direction": 0.09976119052649239,
+            "mmd_u": 0.20275655388832092,
+            "variogram": 0.008195187896490097
+          },
+          "local_score": 51.20720286091826,
+          "skills": {
+            "de_score": 0.46597760551248923,
+            "de_direction": 0.530720234506144,
+            "mmd_u": 0.5346783166916655,
+            "variogram": 0.5124703679851229
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "constant_diffusion400",
+          "prediction_sha256": "aa4ecebb777aefcbb11639ce5ab37fb5a13729db3adbad9887a136d733c58562",
+          "raw_metrics": {
+            "de_score": -0.12395309882747066,
+            "de_direction": 0.09942950700692409,
+            "mmd_u": 0.2027602642774582,
+            "variogram": 0.008194327354431152
+          },
+          "local_score": 51.25527486716328,
+          "skills": {
+            "de_score": 0.4679930795847751,
+            "de_direction": 0.5306118433792496,
+            "mmd_u": 0.5346737256593155,
+            "variogram": 0.5124970011641599
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "state_diffusion400",
+          "prediction_sha256": "b6b2ac35a50da8e8d79034a322e88e57e0e42c757716c0d2753e56335d9b12c6",
+          "raw_metrics": {
+            "de_score": -0.12562814070351752,
+            "de_direction": 0.0993097703343401,
+            "mmd_u": 0.20272870361804962,
+            "variogram": 0.008194169029593468
+          },
+          "local_score": 51.24545433329272,
+          "skills": {
+            "de_score": 0.46758859118409685,
+            "de_direction": 0.5305727254102385,
+            "mmd_u": 0.5347127796081887,
+            "variogram": 0.5125019015094334
+          },
+          "calibration_valid": true
+        }
+      ]
+    },
+    {
+      "seed": 20260930,
+      "cutoff": 8.25,
+      "target": 9.25,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.2376340925693512,
+        "variogram": 0.008026303723454475
+      },
+      "ceiling": {
+        "de_score": 0.9145299145299144,
+        "de_direction": 0.8587444096851142,
+        "mmd_u": 0.0044671655632555485,
+        "variogram": 0.0001327065983787179
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "86b6be07734acc4a7b159a62210928e037955177f57e6288aa89ba7b454eb50e",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.2376340925693512,
+            "variogram": 0.008026303723454475
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "cnf800",
+          "prediction_sha256": "f04b2477926d75c9f205d9875d5bae009ef625fef2d4674614c8b4ad3ec01c26",
+          "raw_metrics": {
+            "de_score": -0.1435897435897437,
+            "de_direction": 0.10635068794585611,
+            "mmd_u": 0.20703384280204773,
+            "variogram": 0.007629980333149433
+          },
+          "local_score": 51.22615214322603,
+          "skills": {
+            "de_score": 0.46360485268630847,
+            "de_direction": 0.5330048323826319,
+            "mmd_u": 0.5351134838685815,
+            "variogram": 0.5128752750222542
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "constant_diffusion400",
+          "prediction_sha256": "aa4ecebb777aefcbb11639ce5ab37fb5a13729db3adbad9887a136d733c58562",
+          "raw_metrics": {
+            "de_score": -0.13333333333333341,
+            "de_direction": 0.10544984321626821,
+            "mmd_u": 0.20703820884227753,
+            "variogram": 0.007631266955286264
+          },
+          "local_score": 51.278263031474495,
+          "skills": {
+            "de_score": 0.46602787456445993,
+            "de_direction": 0.5327069769329812,
+            "mmd_u": 0.535108122098074,
+            "variogram": 0.5128324040548119
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "state_diffusion400",
+          "prediction_sha256": "b6b2ac35a50da8e8d79034a322e88e57e0e42c757716c0d2753e56335d9b12c6",
+          "raw_metrics": {
+            "de_score": -0.13504273504273503,
+            "de_direction": 0.10539892724857985,
+            "mmd_u": 0.20701166987419128,
+            "variogram": 0.00763067789375782
+          },
+          "local_score": 51.269072884862425,
+          "skills": {
+            "de_score": 0.4656222802436902,
+            "de_direction": 0.5326901520081693,
+            "mmd_u": 0.5351407152695042,
+            "variogram": 0.5128520310240405
+          },
+          "calibration_valid": true
+        }
+      ]
+    }
+  ],
+  "new_scoring_batch": true,
+  "original_readiness_gate_passed": false,
+  "official_score": null,
+  "diffusion_preflight": {
+    "finite_gradient": true,
+    "zero_diffusion_exact_rk4": true,
+    "seeded_replay_exact": true,
+    "seconds": 1.7984691000310704,
+    "parameters": 552
+  },
+  "diffusion_scope": "Frozen past CNF drift/heads; learned diagonal diffusion; scDiffEq-inspired CPU adaptation, not author reproduction. Constant vs state dependence isolates mechanism; original CNF uses different RK4 step. No future loss, no growth inference.",
+  "generation": {
+    "copy": {
+      "prediction_sha256": "86b6be07734acc4a7b159a62210928e037955177f57e6288aa89ba7b454eb50e",
+      "audit": {
+        "method": "persistence"
+      }
+    },
+    "cnf800": {
+      "prediction_sha256": "f04b2477926d75c9f205d9875d5bae009ef625fef2d4674614c8b4ad3ec01c26",
+      "audit": {
+        "fit_cells": 10963,
+        "fit_max_stage": 8.25,
+        "supported_genes": 14462,
+        "method": "Fresh source-domain PCA8 paired scFM",
+        "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+        "conditional_ridge_strength": 1.0,
+        "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+        "encoder_features": 4096,
+        "covariance_guard_features": 384,
+        "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+        "anchor_calibration_rows": 3000,
+        "anchor_supported_genes": 12632,
+        "anchor_slope_ridge": 1.0,
+        "limitation": "Cross-sectional E8.5 associations are not temporal velocities.",
+        "anchor_positive_slope_strength": 0.25,
+        "anchor_detection_slope_strength": 0.75,
+        "response_units": "log1p normalized expression",
+        "response_fit_rows": 10963,
+        "response_fit_max_stage": 8.25,
+        "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+        "training_history": [
+          {
+            "step": 50,
+            "loss": 16.843494415283203,
+            "negative_log_likelihood": 11.672325134277344,
+            "energy": 0.04773598909378052,
+            "manifold_density": 0.5166397094726562,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 100,
+            "loss": 15.920294761657715,
+            "negative_log_likelihood": 11.130638122558594,
+            "energy": 0.11241413652896881,
+            "manifold_density": 0.4778415560722351,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 150,
+            "loss": 15.727624893188477,
+            "negative_log_likelihood": 11.081382751464844,
+            "energy": 0.1510162055492401,
+            "manifold_density": 0.46311402320861816,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 200,
+            "loss": 16.06167221069336,
+            "negative_log_likelihood": 10.555394172668457,
+            "energy": 1.0633054971694946,
+            "manifold_density": 0.5399948358535767,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 250,
+            "loss": 10.301850318908691,
+            "negative_log_likelihood": 10.292337417602539,
+            "energy": 0.09512510895729065,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 300,
+            "loss": 15.303577423095703,
+            "negative_log_likelihood": 10.09225845336914,
+            "energy": 0.5865103602409363,
+            "manifold_density": 0.5152668356895447,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 350,
+            "loss": 14.742975234985352,
+            "negative_log_likelihood": 9.706710815429688,
+            "energy": 0.5053786635398865,
+            "manifold_density": 0.4985726475715637,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 400,
+            "loss": 13.146016120910645,
+            "negative_log_likelihood": 8.452956199645996,
+            "energy": 1.8419196605682373,
+            "manifold_density": 0.4508868157863617,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 450,
+            "loss": 10.254532814025879,
+            "negative_log_likelihood": 10.225359916687012,
+            "energy": 0.2917267084121704,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 500,
+            "loss": 13.714691162109375,
+            "negative_log_likelihood": 8.565732955932617,
+            "energy": 0.6395222544670105,
+            "manifold_density": 0.5085006356239319,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 550,
+            "loss": 15.57801342010498,
+            "negative_log_likelihood": 9.888898849487305,
+            "energy": 0.8087888360023499,
+            "manifold_density": 0.5608235597610474,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 600,
+            "loss": 12.020439147949219,
+            "negative_log_likelihood": 7.435694694519043,
+            "energy": 1.701054334640503,
+            "manifold_density": 0.4414639472961426,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 650,
+            "loss": 9.724220275878906,
+            "negative_log_likelihood": 9.684272766113281,
+            "energy": 0.39947614073753357,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 700,
+            "loss": 13.563961029052734,
+            "negative_log_likelihood": 8.222131729125977,
+            "energy": 3.2839787006378174,
+            "manifold_density": 0.5013431310653687,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 750,
+            "loss": 12.76112174987793,
+            "negative_log_likelihood": 7.8102216720581055,
+            "energy": 1.5856904983520508,
+            "manifold_density": 0.4792330861091614,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 800,
+            "loss": 13.62104320526123,
+            "negative_log_likelihood": 8.243542671203613,
+            "energy": 1.0870897769927979,
+            "manifold_density": 0.5268791317939758,
+            "sampled_past_stage": 7.75
+          }
+        ],
+        "mode": "joint",
+        "strength": 1.0,
+        "backoff": 1.0,
+        "seed": 20260928,
+        "sampling": "systematic",
+        "guard_backoffs": [
+          {
+            "backoff": 1.0,
+            "covariance_change": 0.2610331073772279,
+            "finite": true
+          }
+        ],
+        "covariance_change_vs_reference": 0.2610331073772279,
+        "newly_detected_entries": 60305,
+        "removed_detection_entries": 146858,
+        "abundance_factor_cap": 2.0,
+        "detection_probability_delta_cap": 0.25,
+        "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+        "mapped_mass_conserved": true,
+        "protected_genes_unchanged": true
+      }
+    },
+    "constant_diffusion400": {
+      "prediction_sha256": "aa4ecebb777aefcbb11639ce5ab37fb5a13729db3adbad9887a136d733c58562",
+      "audit": {
+        "fit_cells": 10963,
+        "fit_max_stage": 8.25,
+        "supported_genes": 14462,
+        "method": "Fresh source-domain PCA8 paired scFM",
+        "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+        "conditional_ridge_strength": 1.0,
+        "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+        "encoder_features": 4096,
+        "covariance_guard_features": 384,
+        "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+        "anchor_calibration_rows": 3000,
+        "anchor_supported_genes": 12632,
+        "anchor_slope_ridge": 1.0,
+        "limitation": "Cross-sectional E8.5 associations are not temporal velocities.",
+        "anchor_positive_slope_strength": 0.25,
+        "anchor_detection_slope_strength": 0.75,
+        "response_units": "log1p normalized expression",
+        "response_fit_rows": 10963,
+        "response_fit_max_stage": 8.25,
+        "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+        "training_history": [
+          {
+            "step": 50,
+            "loss": 16.843494415283203,
+            "negative_log_likelihood": 11.672325134277344,
+            "energy": 0.04773598909378052,
+            "manifold_density": 0.5166397094726562,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 100,
+            "loss": 15.920294761657715,
+            "negative_log_likelihood": 11.130638122558594,
+            "energy": 0.11241413652896881,
+            "manifold_density": 0.4778415560722351,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 150,
+            "loss": 15.727624893188477,
+            "negative_log_likelihood": 11.081382751464844,
+            "energy": 0.1510162055492401,
+            "manifold_density": 0.46311402320861816,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 200,
+            "loss": 16.06167221069336,
+            "negative_log_likelihood": 10.555394172668457,
+            "energy": 1.0633054971694946,
+            "manifold_density": 0.5399948358535767,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 250,
+            "loss": 10.301850318908691,
+            "negative_log_likelihood": 10.292337417602539,
+            "energy": 0.09512510895729065,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 300,
+            "loss": 15.303577423095703,
+            "negative_log_likelihood": 10.09225845336914,
+            "energy": 0.5865103602409363,
+            "manifold_density": 0.5152668356895447,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 350,
+            "loss": 14.742975234985352,
+            "negative_log_likelihood": 9.706710815429688,
+            "energy": 0.5053786635398865,
+            "manifold_density": 0.4985726475715637,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 400,
+            "loss": 13.146016120910645,
+            "negative_log_likelihood": 8.452956199645996,
+            "energy": 1.8419196605682373,
+            "manifold_density": 0.4508868157863617,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 450,
+            "loss": 10.254532814025879,
+            "negative_log_likelihood": 10.225359916687012,
+            "energy": 0.2917267084121704,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 500,
+            "loss": 13.714691162109375,
+            "negative_log_likelihood": 8.565732955932617,
+            "energy": 0.6395222544670105,
+            "manifold_density": 0.5085006356239319,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 550,
+            "loss": 15.57801342010498,
+            "negative_log_likelihood": 9.888898849487305,
+            "energy": 0.8087888360023499,
+            "manifold_density": 0.5608235597610474,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 600,
+            "loss": 12.020439147949219,
+            "negative_log_likelihood": 7.435694694519043,
+            "energy": 1.701054334640503,
+            "manifold_density": 0.4414639472961426,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 650,
+            "loss": 9.724220275878906,
+            "negative_log_likelihood": 9.684272766113281,
+            "energy": 0.39947614073753357,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 700,
+            "loss": 13.563961029052734,
+            "negative_log_likelihood": 8.222131729125977,
+            "energy": 3.2839787006378174,
+            "manifold_density": 0.5013431310653687,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 750,
+            "loss": 12.76112174987793,
+            "negative_log_likelihood": 7.8102216720581055,
+            "energy": 1.5856904983520508,
+            "manifold_density": 0.4792330861091614,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 800,
+            "loss": 13.62104320526123,
+            "negative_log_likelihood": 8.243542671203613,
+            "energy": 1.0870897769927979,
+            "manifold_density": 0.5268791317939758,
+            "sampled_past_stage": 7.75
+          }
+        ],
+        "mode": "joint",
+        "strength": 1.0,
+        "backoff": 1.0,
+        "seed": 20260928,
+        "sampling": "systematic",
+        "guard_backoffs": [
+          {
+            "backoff": 1.0,
+            "covariance_change": 0.26081196600159734,
+            "finite": true
+          }
+        ],
+        "covariance_change_vs_reference": 0.26081196600159734,
+        "newly_detected_entries": 60867,
+        "removed_detection_entries": 147204,
+        "abundance_factor_cap": 2.0,
+        "detection_probability_delta_cap": 0.25,
+        "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+        "mapped_mass_conserved": true,
+        "protected_genes_unchanged": true
+      }
+    },
+    "state_diffusion400": {
+      "prediction_sha256": "b6b2ac35a50da8e8d79034a322e88e57e0e42c757716c0d2753e56335d9b12c6",
+      "audit": {
+        "fit_cells": 10963,
+        "fit_max_stage": 8.25,
+        "supported_genes": 14462,
+        "method": "Fresh source-domain PCA8 paired scFM",
+        "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+        "conditional_ridge_strength": 1.0,
+        "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+        "encoder_features": 4096,
+        "covariance_guard_features": 384,
+        "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+        "anchor_calibration_rows": 3000,
+        "anchor_supported_genes": 12632,
+        "anchor_slope_ridge": 1.0,
+        "limitation": "Cross-sectional E8.5 associations are not temporal velocities.",
+        "anchor_positive_slope_strength": 0.25,
+        "anchor_detection_slope_strength": 0.75,
+        "response_units": "log1p normalized expression",
+        "response_fit_rows": 10963,
+        "response_fit_max_stage": 8.25,
+        "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+        "training_history": [
+          {
+            "step": 50,
+            "loss": 16.843494415283203,
+            "negative_log_likelihood": 11.672325134277344,
+            "energy": 0.04773598909378052,
+            "manifold_density": 0.5166397094726562,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 100,
+            "loss": 15.920294761657715,
+            "negative_log_likelihood": 11.130638122558594,
+            "energy": 0.11241413652896881,
+            "manifold_density": 0.4778415560722351,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 150,
+            "loss": 15.727624893188477,
+            "negative_log_likelihood": 11.081382751464844,
+            "energy": 0.1510162055492401,
+            "manifold_density": 0.46311402320861816,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 200,
+            "loss": 16.06167221069336,
+            "negative_log_likelihood": 10.555394172668457,
+            "energy": 1.0633054971694946,
+            "manifold_density": 0.5399948358535767,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 250,
+            "loss": 10.301850318908691,
+            "negative_log_likelihood": 10.292337417602539,
+            "energy": 0.09512510895729065,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 300,
+            "loss": 15.303577423095703,
+            "negative_log_likelihood": 10.09225845336914,
+            "energy": 0.5865103602409363,
+            "manifold_density": 0.5152668356895447,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 350,
+            "loss": 14.742975234985352,
+            "negative_log_likelihood": 9.706710815429688,
+            "energy": 0.5053786635398865,
+            "manifold_density": 0.4985726475715637,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 400,
+            "loss": 13.146016120910645,
+            "negative_log_likelihood": 8.452956199645996,
+            "energy": 1.8419196605682373,
+            "manifold_density": 0.4508868157863617,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 450,
+            "loss": 10.254532814025879,
+            "negative_log_likelihood": 10.225359916687012,
+            "energy": 0.2917267084121704,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 500,
+            "loss": 13.714691162109375,
+            "negative_log_likelihood": 8.565732955932617,
+            "energy": 0.6395222544670105,
+            "manifold_density": 0.5085006356239319,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 550,
+            "loss": 15.57801342010498,
+            "negative_log_likelihood": 9.888898849487305,
+            "energy": 0.8087888360023499,
+            "manifold_density": 0.5608235597610474,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 600,
+            "loss": 12.020439147949219,
+            "negative_log_likelihood": 7.435694694519043,
+            "energy": 1.701054334640503,
+            "manifold_density": 0.4414639472961426,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 650,
+            "loss": 9.724220275878906,
+            "negative_log_likelihood": 9.684272766113281,
+            "energy": 0.39947614073753357,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 700,
+            "loss": 13.563961029052734,
+            "negative_log_likelihood": 8.222131729125977,
+            "energy": 3.2839787006378174,
+            "manifold_density": 0.5013431310653687,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 750,
+            "loss": 12.76112174987793,
+            "negative_log_likelihood": 7.8102216720581055,
+            "energy": 1.5856904983520508,
+            "manifold_density": 0.4792330861091614,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 800,
+            "loss": 13.62104320526123,
+            "negative_log_likelihood": 8.243542671203613,
+            "energy": 1.0870897769927979,
+            "manifold_density": 0.5268791317939758,
+            "sampled_past_stage": 7.75
+          }
+        ],
+        "mode": "joint",
+        "strength": 1.0,
+        "backoff": 1.0,
+        "seed": 20260928,
+        "sampling": "systematic",
+        "guard_backoffs": [
+          {
+            "backoff": 1.0,
+            "covariance_change": 0.2613031480034576,
+            "finite": true
+          }
+        ],
+        "covariance_change_vs_reference": 0.2613031480034576,
+        "newly_detected_entries": 60881,
+        "removed_detection_entries": 147127,
+        "abundance_factor_cap": 2.0,
+        "detection_probability_delta_cap": 0.25,
+        "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+        "mapped_mass_conserved": true,
+        "protected_genes_unchanged": true
+      }
+    }
+  },
+  "completed_utc": "2026-10-04T07:47:29.681036+00:00",
+  "summary": [
+    {
+      "candidate": "copy",
+      "scores": [
+        50.0,
+        50.0,
+        50.0
+      ],
+      "mean_score": 50.0,
+      "raw_metrics": [
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.240848571062088,
+          "variogram": 0.008574867621064186
+        },
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.23272649943828583,
+          "variogram": 0.008608187548816204
+        },
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.2376340925693512,
+          "variogram": 0.008026303723454475
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.5,
+        "de_direction": 0.5,
+        "mmd_u": 0.5,
+        "variogram": 0.5
+      }
+    },
+    {
+      "candidate": "cnf800",
+      "scores": [
+        51.15046188221171,
+        51.20720286091826,
+        51.22615214322603
+      ],
+      "mean_score": 51.194605628785325,
+      "raw_metrics": [
+        {
+          "de_score": -0.151877133105802,
+          "de_direction": 0.10129762674346661,
+          "mmd_u": 0.2093033790588379,
+          "variogram": 0.008129519410431385
+        },
+        {
+          "de_score": -0.1323283082077051,
+          "de_direction": 0.09976119052649239,
+          "mmd_u": 0.20275655388832092,
+          "variogram": 0.008195187896490097
+        },
+        {
+          "de_score": -0.1435897435897437,
+          "de_direction": 0.10635068794585611,
+          "mmd_u": 0.20703384280204773,
+          "variogram": 0.007629980333149433
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.46153846153846156,
+          "de_direction": 0.5312264588023691,
+          "mmd_u": 0.5353787712745133,
+          "variogram": 0.513498786772777
+        },
+        {
+          "de_score": 0.46597760551248923,
+          "de_direction": 0.530720234506144,
+          "mmd_u": 0.5346783166916655,
+          "variogram": 0.5124703679851229
+        },
+        {
+          "de_score": 0.46360485268630847,
+          "de_direction": 0.5330048323826319,
+          "mmd_u": 0.5351134838685815,
+          "variogram": 0.5128752750222542
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.46370697324575305,
+        "de_direction": 0.531650508563715,
+        "mmd_u": 0.5350568572782534,
+        "variogram": 0.5129481432600514
+      }
+    },
+    {
+      "candidate": "constant_diffusion400",
+      "scores": [
+        51.19471806060122,
+        51.25527486716328,
+        51.278263031474495
+      ],
+      "mean_score": 51.242751986413,
+      "raw_metrics": [
+        {
+          "de_score": -0.14505119453924908,
+          "de_direction": 0.10191109067671295,
+          "mmd_u": 0.20932860672473907,
+          "variogram": 0.008129341527819633
+        },
+        {
+          "de_score": -0.12395309882747066,
+          "de_direction": 0.09942950700692409,
+          "mmd_u": 0.2027602642774582,
+          "variogram": 0.008194327354431152
+        },
+        {
+          "de_score": -0.13333333333333341,
+          "de_direction": 0.10544984321626821,
+          "mmd_u": 0.20703820884227753,
+          "variogram": 0.007631266955286264
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.46313963573287076,
+          "de_direction": 0.5314274543713005,
+          "mmd_u": 0.5353484775125323,
+          "variogram": 0.5135043241310486
+        },
+        {
+          "de_score": 0.4679930795847751,
+          "de_direction": 0.5306118433792496,
+          "mmd_u": 0.5346737256593155,
+          "variogram": 0.5124970011641599
+        },
+        {
+          "de_score": 0.46602787456445993,
+          "de_direction": 0.5327069769329812,
+          "mmd_u": 0.535108122098074,
+          "variogram": 0.5128324040548119
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.4657201966273686,
+        "de_direction": 0.5315820915611771,
+        "mmd_u": 0.5350434417566406,
+        "variogram": 0.5129445764500068
+      }
+    },
+    {
+      "candidate": "state_diffusion400",
+      "scores": [
+        51.19403340372555,
+        51.24545433329272,
+        51.269072884862425
+      ],
+      "mean_score": 51.23618687396023,
+      "raw_metrics": [
+        {
+          "de_score": -0.14505119453924908,
+          "de_direction": 0.10172122936179177,
+          "mmd_u": 0.20929083228111267,
+          "variogram": 0.008130128495395184
+        },
+        {
+          "de_score": -0.12562814070351752,
+          "de_direction": 0.0993097703343401,
+          "mmd_u": 0.20272870361804962,
+          "variogram": 0.008194169029593468
+        },
+        {
+          "de_score": -0.13504273504273503,
+          "de_direction": 0.10539892724857985,
+          "mmd_u": 0.20701166987419128,
+          "variogram": 0.00763067789375782
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.46313963573287076,
+          "de_direction": 0.5313652318837654,
+          "mmd_u": 0.535393838911187,
+          "variogram": 0.5134798272987016
+        },
+        {
+          "de_score": 0.46758859118409685,
+          "de_direction": 0.5305727254102385,
+          "mmd_u": 0.5347127796081887,
+          "variogram": 0.5125019015094334
+        },
+        {
+          "de_score": 0.4656222802436902,
+          "de_direction": 0.5326901520081693,
+          "mmd_u": 0.5351407152695042,
+          "variogram": 0.5128520310240405
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.46545016905355263,
+        "de_direction": 0.5315427031007244,
+        "mmd_u": 0.5350824445962933,
+        "variogram": 0.5129445866107252
+      }
+    }
+  ],
+  "passing_candidates": [],
+  "expand_to_16_resamples": false,
+  "scope": "scDiffEq-inspired bounded CPU adaptation, not author reproduction. Frozen <=8.25 PCA8/4096features/CNF800 verified bit-exact, decoder unchanged. Learn diffusion using only adjacent past snapshots, matching draws/noise/400steps64cells/Sinkhorn; constant vs state dependence is primary contrast. Original CNF RK4step.125 vs stochasticstep.0625 makes CNF secondary reference, no solver-effect attribution. Forecasts locked and exact-replayed before9.25 target expression. Historical exposed development only, not independent embryo validation. Full32285 scorer/calibration/readiness gates unchanged. Only state-dependent versus constant diffusion new reward; all controls0. RAM<16GiB/two threads/D-only/no officialupload. No horizon or weight tuning.",
+  "plan_sha256": "d604fdddd587c09a9b65d6354fc5402bb43cf966b4065e7cf1a0f4e25815b2b1",
+  "resource_peak_process_working_set_bytes": 5326274560,
+  "state_minus_constant_diffusion_mean_skills": {
+    "de_score": -0.0002700275738159452,
+    "de_direction": -3.9388460452705054e-05,
+    "mmd_u": 3.90028396526354e-05,
+    "variogram": 1.0160718377782985e-08
+  },
+  "report_sha256": "1837041312f65278640019474ce9e14d536c189ee1d0e3c5a2d5f254d58e5457"
+}
