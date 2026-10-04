@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-04T16:01:04.087716+00:00
+Updated: 2026-10-04T16:02:58.644242+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
