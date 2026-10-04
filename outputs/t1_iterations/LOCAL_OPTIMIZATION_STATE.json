@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Audit chronological past-block crossfit feasibility/coverage using compact saved score manifest and prepared metadata only: identify untested strict trainingcutoff<=8.0 sourcefold vs8.25/8.5; never reuse8.5 pretrainedweights/observed8.5head for8.25forecast. Verify cached lowercutoff baselines and embargo/seed contracts, donorhead fitting only<=cutoff, full32285 scorer/gates unchanged. Alreadyexposed source targets not independentembryos; newvalidation no guaranteedscoreboost, no duplicate completedfold or hiddenfuturefit/upload. Predeclare bounded viable matched fold only after audit. Retain originalmatchedCNF55.1173/officialbest52.16. OT-CFM neuralobjective remains undeclared untested candidate, not oldaffineOT rerun.",
+  "next_experiment": "Predeclare/preflight distinct potential chronological cutoff8.0 sourcefold, with frozen cachedCNF800/4096encoder/old.25alignment controls fromscnode_past_fold_retry_01. Refit only potential400 RTX3060 on7963 source7.5/7.75/8.0, same1681params/Sinkhorn/batch64/seed20261004; no encoder/CNF retraining. Fitallsource8.0 heads(.25,.75),freezealignment exactly; forecast8.25 and8.5 before either targetscore. Copy/CNF/potential controls,18full32285 outcomes/3fixedscoringresamples, archival8.5baseline49.507834 exactreplay plusdisabledpotential. Newchronologicalmechanismcoverage, not independentcrossfitting/embryos or guaranteedscoreboost; no oldcovariancegrid, futurehead/weights reuse, hiddenfuturefit, officialupload or gateschanges.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -5130,7 +5130,7 @@
       "jev_scope": "Typed option selection/pinnedreport status only; report has no score summary and numeric auditresults were not transmitted, no evidence certification."
     }
   },
-  "next_action": "Audit chronological past-block crossfit feasibility/coverage using compact saved score manifest and prepared metadata only: identify untested strict trainingcutoff<=8.0 sourcefold vs8.25/8.5; never reuse8.5 pretrainedweights/observed8.5head for8.25forecast. Verify cached lowercutoff baselines and embargo/seed contracts, donorhead fitting only<=cutoff, full32285 scorer/gates unchanged. Alreadyexposed source targets not independentembryos; newvalidation no guaranteedscoreboost, no duplicate completedfold or hiddenfuturefit/upload. Predeclare bounded viable matched fold only after audit. Retain originalmatchedCNF55.1173/officialbest52.16. OT-CFM neuralobjective remains undeclared untested candidate, not oldaffineOT rerun.",
+  "next_action": "Predeclare/preflight distinct potential chronological cutoff8.0 sourcefold, with frozen cachedCNF800/4096encoder/old.25alignment controls fromscnode_past_fold_retry_01. Refit only potential400 RTX3060 on7963 source7.5/7.75/8.0, same1681params/Sinkhorn/batch64/seed20261004; no encoder/CNF retraining. Fitallsource8.0 heads(.25,.75),freezealignment exactly; forecast8.25 and8.5 before either targetscore. Copy/CNF/potential controls,18full32285 outcomes/3fixedscoringresamples, archival8.5baseline49.507834 exactreplay plusdisabledpotential. Newchronologicalmechanismcoverage, not independentcrossfitting/embryos or guaranteedscoreboost; no oldcovariancegrid, futurehead/weights reuse, hiddenfuturefit, officialupload or gateschanges.",
   "potential_real_anchor_transfer_setup_failure": {
     "run": "potential_real_anchor_transfer_01",
     "error": "append_event kind argument collided with keyword at first50-step logging; no checkpoint or forecast completed",
@@ -5298,5 +5298,43 @@
     "status": "candidate_feasibility_not_implemented",
     "novelty_scope": "Potential neuralphysicaltime velocity supervision at interpolatedpastlocations, contrasted with alreadytested affine barycentrictransport regression; requires localnovelty/sourceaudit before claims.",
     "priority": "Deferred pending chronologicalcrossfit feasibility selected byboundedJev."
+  },
+  "chronological_crossfit_feasibility": {
+    "status": "feasible_unexplored_potential_fold",
+    "indexed_cutoff8_outcomes": 485,
+    "indexed_cutoff8_reports": 58,
+    "target_counts": {
+      "9.0": 392,
+      "8.25": 81,
+      "8.5": 12
+    },
+    "indexed_potential_cutoff8_outcomes": 0,
+    "source_fit_rows": 7963,
+    "source_fit_stages": [
+      7.5,
+      7.75,
+      8.0
+    ],
+    "source_target_rows": {
+      "8.25": 3000,
+      "8.5": 3000
+    },
+    "encoder_pca_max_stage": 8.0,
+    "cached_reference_steps": 800,
+    "cached_baseline_mean": 49.507833797053884,
+    "cache_sha256": {
+      "private\\scnode_past_fold_retry_01\\fresh_reference.pt": "31d1750743e75937e97161ca1b5f6390cd9393cc76abd5e69f771142985f8b2e",
+      "private\\scnode_past_fold_retry_01\\fresh_encoder.npz": "521fb21c7fe7858e2877bd82f4815db08259eabce90bb6c074b4118b27f887e0",
+      "private\\scnode_past_fold_retry_01\\fresh_alignment.npz": "e4035f9de19c2cb097c84f1a527997ced3c06dc6f511f4f90e71e42587f6f4ef",
+      "private\\scnode_past_fold_retry_01\\report.json": "5225e5a3de644e754b5089dc91662ebd4ce2ea7ab6d351e0b08ac0de8bda6872",
+      "private\\scnode_past_fold_retry_01\\plan.json": "906ced57cfd18fb24a5eaf5be62c56118e8a0dc1639e838b3b2fbcb86eb7adeb"
+    },
+    "source_domain_only": true,
+    "independent_validation": false,
+    "embryo_identity_available": false,
+    "new_scores": 0,
+    "reward_delta": 0,
+    "fixed_alignment_scope": "Prior .25 covariance wrapper retained only as frozen matched reference; no new alignment/grid research.",
+    "forbidden_reuse": "8.25/8.5 checkpoint or observed8.5 head for8.0 fitting/8.25 forecast."
   }
 }

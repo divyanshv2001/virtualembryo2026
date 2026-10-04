@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-04T17:37:59.328146+00:00
+Updated: 2026-10-04T17:46:48.383751+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -10,7 +10,7 @@ Official best: 52.16. Latest reported skills: {'de_score': 43.7, 'de_direction':
 
 Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Audit chronological past-block crossfit feasibility/coverage using compact saved score manifest and prepared metadata only: identify untested strict trainingcutoff<=8.0 sourcefold vs8.25/8.5; never reuse8.5 pretrainedweights/observed8.5head for8.25forecast. Verify cached lowercutoff baselines and embargo/seed contracts, donorhead fitting only<=cutoff, full32285 scorer/gates unchanged. Alreadyexposed source targets not independentembryos; newvalidation no guaranteedscoreboost, no duplicate completedfold or hiddenfuturefit/upload. Predeclare bounded viable matched fold only after audit. Retain originalmatchedCNF55.1173/officialbest52.16. OT-CFM neuralobjective remains undeclared untested candidate, not oldaffineOT rerun.
+Next: Predeclare/preflight distinct potential chronological cutoff8.0 sourcefold, with frozen cachedCNF800/4096encoder/old.25alignment controls fromscnode_past_fold_retry_01. Refit only potential400 RTX3060 on7963 source7.5/7.75/8.0, same1681params/Sinkhorn/batch64/seed20261004; no encoder/CNF retraining. Fitallsource8.0 heads(.25,.75),freezealignment exactly; forecast8.25 and8.5 before either targetscore. Copy/CNF/potential controls,18full32285 outcomes/3fixedscoringresamples, archival8.5baseline49.507834 exactreplay plusdisabledpotential. Newchronologicalmechanismcoverage, not independentcrossfitting/embryos or guaranteedscoreboost; no oldcovariancegrid, futurehead/weights reuse, hiddenfuturefit, officialupload or gateschanges.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 49.15; attribution/screenshot evidence in export report. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 
