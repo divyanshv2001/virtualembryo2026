@@ -6395,10 +6395,11 @@
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
     "experiment": "difference_attention_cpu_scoring_recovery",
-    "status": "running_runtime_recovery",
-    "next_experiment": "difference_attention_cpu_scoring_recovery",
-    "next": "Collect CPU scoring recovery using already-trained RTX3060 attention checkpoints; no retraining, original2.14CPU baseline strictreplays and unchanged scoring/gates. Four fresh reviews after first valid scored batch; differencevslevel reward only.",
-    "jev_triage_choice": "diagnose_first",
-    "jev_confidence": 0.74
+    "status": "completed_not_promoted",
+    "next_experiment": null,
+    "next": "Unexplored scIMF collective-context feasibility: inspect author interaction drift and predeclare a bounded population-attention residual vs capacity-matched independent residual on retained kinetics. Context-subset/batch-stability audit and causal past physical stages; RTX3060 training, historical2.14CPU head/scorer driver, exactbaselinereplays; no attention-token/grid repeat. Jev0.40 tentative; original readiness unchanged.",
+    "jev_choice": "collective_context_preflight",
+    "jev_confidence": 0.4,
+    "jev_payload_bytes": 2500
   }
 }

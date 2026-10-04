@@ -1,5 +1,5 @@
 {
-  "records": 3307,
+  "records": 3322,
   "sources": [
     {
       "path": "private/anchored_soft_ot_paper_pilot_01/report.json",
@@ -520,6 +520,21 @@
       "path": "private/detection_backtest_01/report.json",
       "sha256": "56312bd40befca5bbc3604fac89c568cc8bef5db9dbcabd8771f80cbb296e6ca",
       "outcomes_indexed": 15
+    },
+    {
+      "path": "private/difference_attention_cpu_scoring_recovery_01/report.json",
+      "sha256": "b36f07bb5bf85bb5e7399defc37508df5bfca3e5fc853aa2504f81698195977a",
+      "outcomes_indexed": 15
+    },
+    {
+      "path": "private/difference_attention_past_fold_01/report.json",
+      "sha256": "d2aa5178a19983ee68c54ef3c1dca24fd3fe9be2e0b23903e53f0e83afb56169",
+      "outcomes_indexed": 0
+    },
+    {
+      "path": "private/difference_attention_past_fold_repair_01/report.json",
+      "sha256": "3760b16fa88eb84bbe7c0bffa943599c3c090eb511ca8433f447cce876d3e052",
+      "outcomes_indexed": 0
     },
     {
       "path": "private/dimensional_transport_horizon_01/report.json",
@@ -1174,5 +1189,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "d6f970827d745ebfa72df3cc060986f157c1a62d2958cfac64a5810aee0b1622"
+  "ledger_sha256": "9c347a26fa399a25ec9fa57f450153394f7906aa28a7983d04cffbbb05ced7e7"
 }

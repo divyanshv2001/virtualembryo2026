@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-04T09:29:49.732704+00:00",
+  "updated_utc": "2026-10-04T10:16:37.235015+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,13 +30,11 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Collect CPU scoring recovery using already-trained RTX3060 attention checkpoints; no retraining, original2.14CPU baseline strictreplays and unchanged scoring/gates. Four fresh reviews after first valid scored batch; differencevslevel reward only.",
+  "next_experiment": "Unexplored scIMF collective-context feasibility: inspect author interaction drift and predeclare a bounded population-attention residual vs capacity-matched independent residual on retained kinetics. Context-subset/batch-stability audit and causal past physical stages; RTX3060 training, historical2.14CPU head/scorer driver, exactbaselinereplays; no attention-token/grid repeat. Jev0.40 tentative; original readiness unchanged.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "difference_attention_cpu_scoring_recovery"
-  ],
+  "active_jobs": [],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -2868,6 +2866,19 @@
         "variogram": "Problem: Baseline replay mismatch remains unexplained; no target variogram supports calibration. Proposed solution: Score hash-verified saved weights with original CPU scorer, without retraining. Validation: Require unchanged exact-replay gate; bit-exact frozen bases alone establish insufficient equivalence."
       },
       "coordinator": "Both400step CUDA checkpoints completed with frozenbase exact; no scores or target-expression access after baseline mismatch. Runtime change is a hypothesis, not isolated cause. Keep strict priorreplay/fullpanel gates. Recovery uses immutable GPUweights and originalCPU driver; no repeated training or control reward."
+    },
+    "difference_attention_cpu_scoring_recovery_01": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "f2fb48158fb9f618b295df2c4b1f1cf0c0ed07b98c0955a4162c7b4d8e31620f",
+      "reviews": {
+        "de_score": "Problem: Historical three-seed attention skills(.477170/.468950) lack independent validation; centroid-memory variants are not author reproductions. Proposed solution: Test uncertainty-gated centroid retrieval. Validation: Use held-out data, unchanged controls/scorer,4776parameters,400RTX3060steps, exactreplays. Readiness unestablished.",
+        "de_direction": "Problem: Difference attention lacks consistent improvement over level attention across three seeds at one horizon. Proposed solution: Test causal noise-aware multi-lag change estimator with shrinkage; preserve full scorer and matched budgets. Validation: Independent horizons and paired seeds before readiness claims.",
+        "mmd_u": "Problem: Difference attention trails level attention on MMD; one horizon provides limited evidence. Proposed solution: Add learned shrinkage gate suppressing unreliable difference features. Validation: Freeze design, preserve exactreplay, evaluate untouched horizons and seeds against level attention.",
+        "variogram": "Problem: Difference attention trails level attention by.005616;0/3seed pairs improve. Proposed solution: Lag-conditioned gate mixing difference attention with level memory. Validation: Freeze specification; paired variogram on independent horizons, matched parameters/steps and unchanged baselines."
+      },
+      "reviewer_context": "Spawn limit prevented new agent contexts; four distinct existing specialists received fresh metric-only inline packets, explicit disregard of old hypotheses, no tools/peers/writes. Do not claim four new contexts.",
+      "coordinator": "All4means differencevslevel negative; direction1/3positive, othermetrics0/3. Both attentionarms below retained kinetics; no promotion.15calibrations/5forecastreplays plus3priorbaseline exact checks passed; historicaldevelopment only. Proposed gating remedies unvalidated and not authorization for an old attention parametergrid. GPUtrainedweights retained; originalCPUruntime recovery fixed exactbaseline replay. Agentreward-40, health-1435; officialscore unchanged."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3789,27 +3800,27 @@
   },
   "agent_health": {
     "redline": 0,
-    "score": -1395,
+    "score": -1435,
     "status": "below_redline",
     "metrics": {
       "de_score": {
-        "score": -368,
+        "score": -378,
         "status": "below_redline"
       },
       "de_direction": {
-        "score": -324,
+        "score": -334,
         "status": "below_redline"
       },
       "mmd_u": {
-        "score": -390,
+        "score": -400,
         "status": "below_redline"
       },
       "variogram": {
-        "score": -313,
+        "score": -323,
         "status": "below_redline"
       }
     },
-    "recorded_iterations": 57,
+    "recorded_iterations": 60,
     "action": "Prioritize supported matched-control improvements; preserve failures and gates. Proxy/pending iterations earn zero. No score reset, fabricated reward, agent termination or deployment implied."
   },
   "scfm_reopened": {
@@ -4212,5 +4223,20 @@
       }
     },
     "scope": "Isolates fixed-input model numerical differences; no target data or scoring; GPU training retained. Full prediction replay remains required."
+  },
+  "latest_attention_result": {
+    "mean_difference": 50.908848239825865,
+    "mean_level": 51.472959155069105,
+    "mean_kinetics": 52.334065831100055,
+    "difference_minus_level": -0.56411091524324,
+    "promoted": false,
+    "original_baseline_replay_passed": true,
+    "calibrations_valid": 15,
+    "forecast_replays": 5,
+    "prior_baseline_replays": 3,
+    "host_peak_bytes": 5399883776,
+    "trained_device": "RTX3060",
+    "training_steps_per_arm": 400,
+    "gpu_peak_mib": 79.32666015625
   }
 }
