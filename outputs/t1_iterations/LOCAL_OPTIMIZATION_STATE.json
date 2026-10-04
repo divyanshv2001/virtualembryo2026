@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Frozen correlated/diagonal diffusion weights8.25->9.25 historical horizon validation, no retraining/repeat reward. Predeclare fixed helper/checkpoint hashes, prior3baselines and2noise-disabled/5newforecast exact replays, originalCPU fullpanel scorer/calibrations/readiness unchanged. Preserve9.5 tiny gains and distributional tradeoffs; not independent embryos or robust promotion. No seed/rank/noise grid.",
+  "next_experiment": "Collect correlated_diffusion_frozen_horizon_validation after completion; no duplicate worker. Four fresh metric reviews and bounded cached Jev next decision; confirmation reward0. Preserve prior tiny gains/tradeoffs and unchanged fullpanel readiness gates.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -4684,5 +4684,13 @@
     },
     "reward_delta": -18,
     "scope": "Small historical development gains retained; MMD and variogram regress versus diagonal; no robustness/readiness claim. All15calibrations and3prior/2neutral/5newreplays pass;75.40MiB GPU,5.03GiB host."
+  },
+  "correlated_diffusion_frozen_horizon_validation": {
+    "status": "running",
+    "experiment": "correlated_diffusion_frozen_horizon_validation",
+    "report": "CORRELATED_DIFFUSION_FROZEN_HORIZON_VALIDATION_RESULTS.json",
+    "training_steps": 0,
+    "reward_eligible": false,
+    "scope": "Fixed checkpoint/helper/context hashes,8.25->9.25 historical horizon, same embryos; prior frozen9.5 predictions must replay exactly before newtarget scorer. OriginalCPU scorer, no retraining needed."
   }
 }

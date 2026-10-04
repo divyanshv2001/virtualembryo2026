@@ -1627,6 +1627,75 @@
         "driver_runtime": "cpu",
         "correlated_diffusion": true
       }
+    },
+    "correlated_diffusion_frozen_horizon_validation": {
+      "script": "scfm_projected_past_fold.py",
+      "args": [
+        "--experiment",
+        "correlated_diffusion_frozen_horizon_validation"
+      ],
+      "run": "private/correlated_diffusion_frozen_horizon_validation_01",
+      "report": "CORRELATED_DIFFUSION_FROZEN_HORIZON_VALIDATION_RESULTS.json",
+      "protocol": {
+        "cutoff": 8.25,
+        "target": 9.25,
+        "fit_stages": [
+          7.5,
+          7.75,
+          8.0,
+          8.25
+        ],
+        "seed": 20260928,
+        "scoring_seeds": [
+          20260928,
+          20260929,
+          20260930
+        ],
+        "steps": 400,
+        "batch_size": 64,
+        "reuse_run": "private/scfm_projected_past_fold_01",
+        "candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "diffusion_diagonal400",
+          "diffusion_correlated400"
+        ],
+        "control_candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "diffusion_diagonal400"
+        ],
+        "contrast_candidates": [
+          "diffusion_diagonal400",
+          "diffusion_correlated400"
+        ],
+        "contrast_label": "correlated_minus_diagonal_mean_skills",
+        "reward_reference": "diffusion_diagonal400",
+        "reward_candidates": [],
+        "scope": "Fixed1080parameter diagonal/correlated SDE weights trained400RTX3060steps through8.25; new9.25historical horizon, zero retraining/repeat reward. Prior3original9.25baselines plus5frozen9.5candidate fullpanel bitexact replays,2zero-noisecontrols and5newforecast exactreplays beforetargetexpression. Helper/solver/checkpoint/context hashes frozen; original2.14CPU full32285gene head/scorer/calibrations/readiness unchanged.3scoringresamples,one trainingseed,same embryos/exposed development, no independence/robustness/70claim or upload. Four reviews on completion/failure.",
+        "frozen_kinetic_run": "private/graph_kinetics_past_fold_repair_01",
+        "prior_target": 9.25,
+        "frozen_checkpoint_sha256": {
+          "kinetic_none400": "11dc8d8620fa66997aa08d2f88ad9f4e9cdc2db788f8c1b3088f1b8eb01dd4c2"
+        },
+        "training_device": "cpu",
+        "prior_candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400"
+        ],
+        "driver_runtime": "cpu",
+        "correlated_diffusion": true,
+        "reuse_diffusion_run": "private/correlated_diffusion_past_fold_01",
+        "diffusion_prior_target": 9.5,
+        "diffusion_checkpoint_sha256": {
+          "diffusion_diagonal400": "178ffb611e2b44b6a1639d5b0f11c30e357b8a1b0470ca767fc15bfa94bb4f11",
+          "diffusion_correlated400": "0f1b836d03f52887acbb26dda3354a276359ac4d73870154e247794c0ba2ca3e"
+        },
+        "diffusion_context_sha256": "2e508a1ef631289f7f71a4244c4938b5d86b37a463950726deff3b195345af03"
+      }
     }
   }
 }

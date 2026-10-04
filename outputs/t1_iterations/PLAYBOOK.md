@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-04T14:06:47.122255+00:00
+Updated: 2026-10-04T14:14:43.456910+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -10,7 +10,7 @@ Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction':
 
 Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Frozen correlated/diagonal diffusion weights8.25->9.25 historical horizon validation, no retraining/repeat reward. Predeclare fixed helper/checkpoint hashes, prior3baselines and2noise-disabled/5newforecast exact replays, originalCPU fullpanel scorer/calibrations/readiness unchanged. Preserve9.5 tiny gains and distributional tradeoffs; not independent embryos or robust promotion. No seed/rank/noise grid.
+Next: Collect correlated_diffusion_frozen_horizon_validation after completion; no duplicate worker. Four fresh metric reviews and bounded cached Jev next decision; confirmation reward0. Preserve prior tiny gains/tradeoffs and unchanged fullpanel readiness gates.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in outputs\t1_submissions\formula_progress_20260930_01\official_result.json. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 

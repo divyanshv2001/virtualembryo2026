@@ -106,17 +106,32 @@ def main():
                 if spec.get('correlated_diffusion'):
                     from correlated_latent_diffusion import CorrelatedDiffusionFlow
                     report.pop('fixed_candidate_validation')
-                    context_path=RUN/'diffusion_past_context.npz'
-                    np.savez_compressed(context_path,coordinates=c['coordinates'],stages=c['stages'][c['past']])
+                    weights_root=HERE/spec['reuse_diffusion_run'] if spec.get('reuse_diffusion_run') else RUN
+                    context_path=weights_root/'diffusion_past_context.npz'
+                    if spec.get('reuse_diffusion_run'):
+                        old_plan=json.loads((weights_root/'plan.json').read_text())
+                        if old_plan['input_sha256']!=inputs or old_plan['protocol']['cutoff']!=cutoff:raise ValueError('Frozen diffusion inputs/cutoff changed')
+                        for source in ['correlated_latent_diffusion.py','cnf_manifold_flow.py','cnf_density_flow.py','graph_kinetic_residual.py']:
+                            if digest(HERE/source)!=old_plan['source_sha256'][source]:raise ValueError('Frozen diffusion mechanism/solver changed')
+                        if digest(context_path)!=spec['diffusion_context_sha256']:raise ValueError('Frozen diffusion context changed')
+                        with np.load(context_path) as old:
+                            np.testing.assert_array_equal(old['coordinates'],c['coordinates'])
+                            np.testing.assert_array_equal(old['stages'],c['stages'][c['past']])
+                        report['fixed_candidate_validation']={'training_steps':0,'reward_eligible':False,'scope':'Frozen diffusion weights, historical new horizon; no retraining, repeat reward or independent-embryo claim.'}
+                    else:
+                        np.savez_compressed(context_path,coordinates=c['coordinates'],stages=c['stages'][c['past']])
                     helper=HERE/'correlated_latent_diffusion.py';base_checkpoint=frozen/'kinetic_none400.pt'
                     packet={'context':str(context_path),'base_checkpoint':str(base_checkpoint),'sha256':{str(path):digest(path) for path in [context_path,base_checkpoint,helper,HERE/'cnf_manifold_flow.py',HERE/'cnf_density_flow.py',HERE/'graph_kinetic_residual.py']}}
-                    save(RUN/'diffusion_GPU_packet.json',packet)
                     plan['diffusion_context_sha256']=digest(context_path);save(RUN/'plan.json',plan)
-                    python=HERE.parents[1]/'outputs/research_workflow/.venv_cuda/Scripts/python.exe'
-                    with (RUN/'GPU_stdout.log').open('wb') as stdout,(RUN/'GPU_stderr.log').open('wb') as stderr:
-                        subprocess.run([str(python),'-u',str(helper),'--train-packet',str(RUN/'diffusion_GPU_packet.json')],stdout=stdout,stderr=stderr,cwd=HERE.parents[1],check=True,creationflags=subprocess.CREATE_NO_WINDOW)
+                    if not spec.get('reuse_diffusion_run'):
+                        save(RUN/'diffusion_GPU_packet.json',packet)
+                        python=HERE.parents[1]/'outputs/research_workflow/.venv_cuda/Scripts/python.exe'
+                        with (RUN/'GPU_stdout.log').open('wb') as stdout,(RUN/'GPU_stderr.log').open('wb') as stderr:
+                            subprocess.run([str(python),'-u',str(helper),'--train-packet',str(RUN/'diffusion_GPU_packet.json')],stdout=stdout,stderr=stderr,cwd=HERE.parents[1],check=True,creationflags=subprocess.CREATE_NO_WINDOW)
                     for kind in ['diagonal','correlated']:
-                        saved=torch.load(RUN/('diffusion_'+kind+'400.pt'),weights_only=False,map_location='cpu')
+                        weight_path=weights_root/('diffusion_'+kind+'400.pt')
+                        if spec.get('reuse_diffusion_run') and digest(weight_path)!=spec['diffusion_checkpoint_sha256']['diffusion_'+kind+'400']:raise ValueError('Frozen diffusion checkpoint changed')
+                        saved=torch.load(weight_path,weights_only=False,map_location='cpu')
                         if saved['kind']!=kind or saved['steps']!=400 or saved['batch_size']!=64 or saved['fit_max_stage']!=cutoff or saved['parameters']!=1080 or saved['training_seed']!=20261004 or saved['split_step']!=.125 or saved['normals_per_step']!=26 or not saved['frozen_base_exact'] or saved['context_sha256']!=digest(context_path) or saved['base_checkpoint_sha256']!=digest(base_checkpoint):raise ValueError('Diffusion checkpoint metadata mismatch')
                         model=CorrelatedDiffusionFlow(flows['kinetic_none400'],kind);model.noise_net.load_state_dict(saved['noise_net'])
                         flows['diffusion_'+kind+'400']=model.eval()
@@ -315,6 +330,15 @@ def main():
                 if cache.put('_prior_'+name,prior)!=previous_generation[name]['prediction_sha256']:raise ValueError('Original kinetic forecast reconstruction changed')
                 del prior
             emit('prior_horizon_forecasts_reconstructed_bit_exact',target=spec['prior_target'])
+        if spec.get('reuse_diffusion_run'):
+            previous_generation=json.loads((HERE/spec['reuse_diffusion_run']/'generation.json').read_text())
+            for name in spec['candidates']:
+                if name=='copy':prior=c['donors'].copy()
+                else:
+                    reference.net=flows[name];prior,_,_=reference.predict(spec['diffusion_prior_target'],'joint',1.,sampling='systematic')
+                if cache.put('_diffusion_prior_'+name,prior)!=previous_generation[name]['prediction_sha256']:raise ValueError('Frozen diffusion prior full-panel replay mismatch')
+                del prior
+            emit('frozen_diffusion_prior_fullpanel_replay_passed',target=spec['diffusion_prior_target'],candidates=spec['candidates'])
         if spec.get('hidden_protein') or spec.get('temporal_forcing') or spec.get('count_vae'):
             reference.net=flows['kinetic_none400'];neutral,_,_=reference.predict(target,'joint',1.,sampling='systematic')
             neutral_sha=cache.put('_neutral_kinetic',neutral);del neutral
