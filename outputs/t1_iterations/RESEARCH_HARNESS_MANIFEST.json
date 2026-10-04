@@ -1279,6 +1279,70 @@
         "hidden_protein": true,
         "count_context_sha256": "49ac69cc7d42c6c8238d704d3e4b4c1207a458d71081aa110e40474e28175956"
       }
+    },
+    "temporal_diffusion_forcing_past_fold": {
+      "script": "scfm_projected_past_fold.py",
+      "args": [
+        "--experiment",
+        "temporal_diffusion_forcing_past_fold"
+      ],
+      "run": "private/temporal_diffusion_forcing_past_fold_01",
+      "report": "TEMPORAL_DIFFUSION_FORCING_PAST_FOLD_RESULTS.json",
+      "protocol": {
+        "cutoff": 8.25,
+        "target": 9.5,
+        "fit_stages": [
+          7.5,
+          7.75,
+          8.0,
+          8.25
+        ],
+        "seed": 20260928,
+        "scoring_seeds": [
+          20260928,
+          20260929,
+          20260930
+        ],
+        "steps": 400,
+        "batch_size": 64,
+        "reuse_run": "private/scfm_projected_past_fold_01",
+        "candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "temporal_conditional400",
+          "temporal_forcing400"
+        ],
+        "control_candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "temporal_conditional400"
+        ],
+        "contrast_candidates": [
+          "temporal_conditional400",
+          "temporal_forcing400"
+        ],
+        "contrast_label": "forcing_minus_conditional_mean_skills",
+        "reward_reference": "temporal_conditional400",
+        "reward_candidates": [
+          "temporal_forcing400"
+        ],
+        "scope": "Own frozen-PCA8 causal3token denoiser, not CellPace/scVI reproduction. Conditionalclean history(-1) vsindependently noised history(0..99), matched9224params400GPUsteps64sequences/finaltoken x0MSE, pairedseed20261004 same ids/noiselevels/noise draws, Adam.001clip5. Independentlysampled cells in ordered pastwindows7.5/7.75/8 and7.75/8/8.25, not trackedlineages. Width32head4FF64dropout0 causaltransformer, physicalstageembedding(no gap), beta100linear.0001..1,20DDIMreverse steps99to0then-1,x0cap8. Fivequarterautoregressive rollout startsseeded8.0pastcontext plusactual8.25donorlatent; generatedhistory andstageextrapolation unvalidated. Generationseed20261004 matchedarms; correctiontowardgeneratedlatent normcap1 adds tofrozenkinetic trajectory, unchanged original2.14CPU full32285gene head/guards/scorer/calibration/readiness. RTX3060child2.11CUDA trainsboth,4.5GBGPU16GBhost2threads. Prior3baseline andneutral2fullpanel exactreplays beforetarget9.5expression. Historicaldevelopment3scoringresamples, one trainingseed not independentvalidation. Primaryforcing-minusconditional reward once controls0, four independent reviews on scientificcompletion/failure. No targettuning/oldgrid/pretrainedhiddenstage/officialupload/70claim.",
+        "frozen_kinetic_run": "private/graph_kinetics_past_fold_repair_01",
+        "prior_target": 9.25,
+        "frozen_checkpoint_sha256": {
+          "kinetic_none400": "11dc8d8620fa66997aa08d2f88ad9f4e9cdc2db788f8c1b3088f1b8eb01dd4c2"
+        },
+        "training_device": "cuda",
+        "prior_candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400"
+        ],
+        "driver_runtime": "cpu",
+        "temporal_forcing": true
+      }
     }
   }
 }

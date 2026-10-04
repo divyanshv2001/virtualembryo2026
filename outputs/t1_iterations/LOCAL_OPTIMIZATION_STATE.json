@@ -30,11 +30,13 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement own frozen-PCA8 causal3token denoiser: matched9224parameter400RTX3060step clean-history conditional diffusion versus independent-history-noise forcing, same final-token loss/past stage windows. Predeclare fixed noise/reverse schedule and autoregressive past-only context initialization. Preserve frozen kinetic baseline, bounded latent correction, originalCPU decoder/scorer/calibration/readiness and exact prior/zero-bridge replays; no target tuning, author reproduction or independent-validation claim.",
+  "next_experiment": "Collect matched temporal-forcing trial via harness; no source edits while running. Four fresh independent metric reviews after scientific completion/failure, primary forcing-minusconditional reward only.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
+  "active_jobs": [
+    "temporal_diffusion_forcing_past_fold"
+  ],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,

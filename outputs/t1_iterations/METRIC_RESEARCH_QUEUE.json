@@ -6395,9 +6395,9 @@
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
     "experiment": "collective_context_past_fold",
-    "status": "temporal_forcing_resource_preflight_completed",
+    "status": "running",
     "next_experiment": "temporal_diffusion_forcing_past_fold",
-    "next": "Implement own frozen-PCA8 causal3token denoiser: matched9224parameter400RTX3060step clean-history conditional diffusion versus independent-history-noise forcing, same final-token loss/past stage windows. Predeclare fixed noise/reverse schedule and autoregressive past-only context initialization. Preserve frozen kinetic baseline, bounded latent correction, originalCPU decoder/scorer/calibration/readiness and exact prior/zero-bridge replays; no target tuning, author reproduction or independent-validation claim.",
+    "next": "Collect matched temporal-forcing trial via harness; no source edits while running. Four fresh independent metric reviews after scientific completion/failure, primary forcing-minusconditional reward only.",
     "jev_choice": "protein_support_audit",
     "jev_confidence": 0.95,
     "scope": "Advisory low confidence; raw-count data availability verified deterministically, no score claim.",
