@@ -1,0 +1,1090 @@
+{
+  "status": "completed",
+  "panels": [
+    {
+      "seed": 20260928,
+      "cutoff": 8.25,
+      "target": 9.5,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.14807894825935364,
+        "variogram": 0.006175024434924126
+      },
+      "ceiling": {
+        "de_score": 0.90020366598778,
+        "de_direction": 0.828410102661572,
+        "mmd_u": 0.006817817687988281,
+        "variogram": 0.00012814102228730917
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "86b6be07734acc4a7b159a62210928e037955177f57e6288aa89ba7b454eb50e",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.14807894825935364,
+            "variogram": 0.006175024434924126
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "cnf800",
+          "prediction_sha256": "70e532044f0a62c400fa969cc60fafe7f3d12b8ac9f41368e8346af5e04a98f9",
+          "raw_metrics": {
+            "de_score": -0.1140529531568228,
+            "de_direction": 0.06738070000280084,
+            "mmd_u": 0.11988191306591034,
+            "variogram": 0.005886268801987171
+          },
+          "local_score": 51.692882564637976,
+          "skills": {
+            "de_score": 0.4702127659574469,
+            "de_direction": 0.5211963713552031,
+            "mmd_u": 0.5554349948735833,
+            "variogram": 0.5122302142807117
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "projected_ot400",
+          "prediction_sha256": "0c0a20a60fbfd3b670dd9e444788276c25eea9d87bdb0fa78192cc1711715afc",
+          "raw_metrics": {
+            "de_score": -0.13441955193482688,
+            "de_direction": 0.06451814429588464,
+            "mmd_u": 0.12012825161218643,
+            "variogram": 0.00601189536973834
+          },
+          "local_score": 51.421720665791696,
+          "skills": {
+            "de_score": 0.4652631578947369,
+            "de_direction": 0.520259392321034,
+            "mmd_u": 0.5548975230256997,
+            "variogram": 0.5068365609813211
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "ipca_cnf800",
+          "prediction_sha256": "8af00703afed9d5d33b9ad761065305368ca989418b64334921d84720f1f05ac",
+          "raw_metrics": {
+            "de_score": -0.12016293279022401,
+            "de_direction": 0.07009727320943292,
+            "mmd_u": 0.12013740837574005,
+            "variogram": 0.005879060365259647
+          },
+          "local_score": 51.667329520609414,
+          "skills": {
+            "de_score": 0.4687168610816543,
+            "de_direction": 0.5220886935553565,
+            "mmd_u": 0.5548775644624994,
+            "variogram": 0.5125431860404585
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "ipca_projected400",
+          "prediction_sha256": "43084b49572e7c43132d67c6fe5360df126220c5a3bb186b5271498872aa061a",
+          "raw_metrics": {
+            "de_score": -0.14460285132382894,
+            "de_direction": 0.06080275427439035,
+            "mmd_u": 0.1207658052444458,
+            "variogram": 0.00603485619649291
+          },
+          "local_score": 51.269486734185534,
+          "skills": {
+            "de_score": 0.4628272251308901,
+            "de_direction": 0.5190482736371198,
+            "mmd_u": 0.5535112993126443,
+            "variogram": 0.505863014280298
+          },
+          "calibration_valid": true
+        }
+      ]
+    },
+    {
+      "seed": 20260929,
+      "cutoff": 8.25,
+      "target": 9.5,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.14782758057117462,
+        "variogram": 0.006332268472760916
+      },
+      "ceiling": {
+        "de_score": 0.909448818897638,
+        "de_direction": 0.8283913147424005,
+        "mmd_u": 0.004662859253585339,
+        "variogram": 0.00011435374472057447
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "86b6be07734acc4a7b159a62210928e037955177f57e6288aa89ba7b454eb50e",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.14782758057117462,
+            "variogram": 0.006332268472760916
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "cnf800",
+          "prediction_sha256": "70e532044f0a62c400fa969cc60fafe7f3d12b8ac9f41368e8346af5e04a98f9",
+          "raw_metrics": {
+            "de_score": -0.09055118110236225,
+            "de_direction": 0.0667758929541202,
+            "mmd_u": 0.12063825130462646,
+            "variogram": 0.006046107038855553
+          },
+          "local_score": 51.74153240858848,
+          "skills": {
+            "de_score": 0.4762886597938144,
+            "de_direction": 0.5209986195089406,
+            "mmd_u": 0.5524606725549104,
+            "variogram": 0.5117765124686151
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "projected_ot400",
+          "prediction_sha256": "0c0a20a60fbfd3b670dd9e444788276c25eea9d87bdb0fa78192cc1711715afc",
+          "raw_metrics": {
+            "de_score": -0.11023622047244097,
+            "de_direction": 0.06428292497681094,
+            "mmd_u": 0.12050585448741913,
+            "variogram": 0.00615776889026165
+          },
+          "local_score": 51.51489914638191,
+          "skills": {
+            "de_score": 0.4714285714285714,
+            "de_direction": 0.5201830257157478,
+            "mmd_u": 0.5527430735414616,
+            "variogram": 0.5071158505765042
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "ipca_cnf800",
+          "prediction_sha256": "8af00703afed9d5d33b9ad761065305368ca989418b64334921d84720f1f05ac",
+          "raw_metrics": {
+            "de_score": -0.09251968503937008,
+            "de_direction": 0.06985798801322617,
+            "mmd_u": 0.12084726989269257,
+            "variogram": 0.006040788255631924
+          },
+          "local_score": 51.74569177694829,
+          "skills": {
+            "de_score": 0.47579814624098865,
+            "de_direction": 0.5220104931852485,
+            "mmd_u": 0.5520154250660592,
+            "variogram": 0.512000651965529
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "ipca_projected400",
+          "prediction_sha256": "43084b49572e7c43132d67c6fe5360df126220c5a3bb186b5271498872aa061a",
+          "raw_metrics": {
+            "de_score": -0.12007874015748031,
+            "de_direction": 0.059694971767443344,
+            "mmd_u": 0.12101180851459503,
+            "variogram": 0.006179365329444408
+          },
+          "local_score": 51.36755299808088,
+          "skills": {
+            "de_score": 0.46903553299492384,
+            "de_direction": 0.5186886961022423,
+            "mmd_u": 0.5516654324930022,
+            "variogram": 0.5062242147930829
+          },
+          "calibration_valid": true
+        }
+      ]
+    },
+    {
+      "seed": 20260930,
+      "cutoff": 8.25,
+      "target": 9.5,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.13861127197742462,
+        "variogram": 0.005635063163936138
+      },
+      "ceiling": {
+        "de_score": 0.9031620553359685,
+        "de_direction": 0.8287729359961504,
+        "mmd_u": 0.0036884546279907227,
+        "variogram": 0.0001370680402033031
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "86b6be07734acc4a7b159a62210928e037955177f57e6288aa89ba7b454eb50e",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.13861127197742462,
+            "variogram": 0.005635063163936138
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "cnf800",
+          "prediction_sha256": "70e532044f0a62c400fa969cc60fafe7f3d12b8ac9f41368e8346af5e04a98f9",
+          "raw_metrics": {
+            "de_score": -0.09683794466403163,
+            "de_direction": 0.07055918720038752,
+            "mmd_u": 0.11259569972753525,
+            "variogram": 0.00544966384768486
+          },
+          "local_score": 51.691661094596455,
+          "skills": {
+            "de_score": 0.474558670820353,
+            "de_direction": 0.5222305542562379,
+            "mmd_u": 0.5533477537359306,
+            "variogram": 0.5085748927801883
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "projected_ot400",
+          "prediction_sha256": "0c0a20a60fbfd3b670dd9e444788276c25eea9d87bdb0fa78192cc1711715afc",
+          "raw_metrics": {
+            "de_score": -0.11462450592885375,
+            "de_direction": 0.06979685567289885,
+            "mmd_u": 0.11213164031505585,
+            "variogram": 0.005520386155694723
+          },
+          "local_score": 51.541086453105386,
+          "skills": {
+            "de_score": 0.47016460905349794,
+            "de_direction": 0.5219798138608508,
+            "mmd_u": 0.554402897964342,
+            "variogram": 0.5052694470658208
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "ipca_cnf800",
+          "prediction_sha256": "8af00703afed9d5d33b9ad761065305368ca989418b64334921d84720f1f05ac",
+          "raw_metrics": {
+            "de_score": -0.10079051383399211,
+            "de_direction": 0.07312337167181283,
+            "mmd_u": 0.11270757019519806,
+            "variogram": 0.005440644919872284
+          },
+          "local_score": 51.689081609254416,
+          "skills": {
+            "de_score": 0.47357512953367875,
+            "de_direction": 0.5230757173850478,
+            "mmd_u": 0.553093991411223,
+            "variogram": 0.5089995346974785
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "ipca_projected400",
+          "prediction_sha256": "43084b49572e7c43132d67c6fe5360df126220c5a3bb186b5271498872aa061a",
+          "raw_metrics": {
+            "de_score": -0.11660079051383401,
+            "de_direction": 0.06380398007691312,
+            "mmd_u": 0.112540602684021,
+            "variogram": 0.005529753398150206
+          },
+          "local_score": 51.443342578265636,
+          "skills": {
+            "de_score": 0.4696813977389517,
+            "de_direction": 0.5200170367612764,
+            "mmd_u": 0.5534728191839572,
+            "variogram": 0.5048348570120611
+          },
+          "calibration_valid": true
+        }
+      ]
+    }
+  ],
+  "new_scoring_batch": true,
+  "original_readiness_gate_passed": false,
+  "official_score": null,
+  "representation_diagnostics": {
+    "same_fit_rows": true,
+    "fit_rows": 3000,
+    "features": 4096,
+    "rank": 8,
+    "ipca_chunk": 512,
+    "past_fit_explained_variance_ratio_sum": {
+      "pca": 0.11516620218753815,
+      "ipca": 0.11486444635351055
+    },
+    "interpretation": "Fit diagnostic only, not benchmark score or independent validation."
+  },
+  "generation": {
+    "copy": {
+      "prediction_sha256": "86b6be07734acc4a7b159a62210928e037955177f57e6288aa89ba7b454eb50e",
+      "audit": {
+        "method": "persistence"
+      }
+    },
+    "cnf800": {
+      "prediction_sha256": "70e532044f0a62c400fa969cc60fafe7f3d12b8ac9f41368e8346af5e04a98f9",
+      "audit": {
+        "fit_cells": 10963,
+        "fit_max_stage": 8.25,
+        "supported_genes": 14462,
+        "method": "Fresh source-domain PCA8 paired scFM",
+        "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+        "conditional_ridge_strength": 1.0,
+        "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+        "encoder_features": 4096,
+        "covariance_guard_features": 384,
+        "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+        "anchor_calibration_rows": 3000,
+        "anchor_supported_genes": 12632,
+        "anchor_slope_ridge": 1.0,
+        "limitation": "Cross-sectional E8.5 associations are not temporal velocities.",
+        "anchor_positive_slope_strength": 0.25,
+        "anchor_detection_slope_strength": 0.75,
+        "response_units": "log1p normalized expression",
+        "response_fit_rows": 10963,
+        "response_fit_max_stage": 8.25,
+        "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+        "training_history": [
+          {
+            "step": 50,
+            "loss": 16.843494415283203,
+            "negative_log_likelihood": 11.672325134277344,
+            "energy": 0.04773598909378052,
+            "manifold_density": 0.5166397094726562,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 100,
+            "loss": 15.920294761657715,
+            "negative_log_likelihood": 11.130638122558594,
+            "energy": 0.11241413652896881,
+            "manifold_density": 0.4778415560722351,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 150,
+            "loss": 15.727624893188477,
+            "negative_log_likelihood": 11.081382751464844,
+            "energy": 0.1510162055492401,
+            "manifold_density": 0.46311402320861816,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 200,
+            "loss": 16.06167221069336,
+            "negative_log_likelihood": 10.555394172668457,
+            "energy": 1.0633054971694946,
+            "manifold_density": 0.5399948358535767,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 250,
+            "loss": 10.301850318908691,
+            "negative_log_likelihood": 10.292337417602539,
+            "energy": 0.09512510895729065,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 300,
+            "loss": 15.303577423095703,
+            "negative_log_likelihood": 10.09225845336914,
+            "energy": 0.5865103602409363,
+            "manifold_density": 0.5152668356895447,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 350,
+            "loss": 14.742975234985352,
+            "negative_log_likelihood": 9.706710815429688,
+            "energy": 0.5053786635398865,
+            "manifold_density": 0.4985726475715637,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 400,
+            "loss": 13.146016120910645,
+            "negative_log_likelihood": 8.452956199645996,
+            "energy": 1.8419196605682373,
+            "manifold_density": 0.4508868157863617,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 450,
+            "loss": 10.254532814025879,
+            "negative_log_likelihood": 10.225359916687012,
+            "energy": 0.2917267084121704,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 500,
+            "loss": 13.714691162109375,
+            "negative_log_likelihood": 8.565732955932617,
+            "energy": 0.6395222544670105,
+            "manifold_density": 0.5085006356239319,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 550,
+            "loss": 15.57801342010498,
+            "negative_log_likelihood": 9.888898849487305,
+            "energy": 0.8087888360023499,
+            "manifold_density": 0.5608235597610474,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 600,
+            "loss": 12.020439147949219,
+            "negative_log_likelihood": 7.435694694519043,
+            "energy": 1.701054334640503,
+            "manifold_density": 0.4414639472961426,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 650,
+            "loss": 9.724220275878906,
+            "negative_log_likelihood": 9.684272766113281,
+            "energy": 0.39947614073753357,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 700,
+            "loss": 13.563961029052734,
+            "negative_log_likelihood": 8.222131729125977,
+            "energy": 3.2839787006378174,
+            "manifold_density": 0.5013431310653687,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 750,
+            "loss": 12.76112174987793,
+            "negative_log_likelihood": 7.8102216720581055,
+            "energy": 1.5856904983520508,
+            "manifold_density": 0.4792330861091614,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 800,
+            "loss": 13.62104320526123,
+            "negative_log_likelihood": 8.243542671203613,
+            "energy": 1.0870897769927979,
+            "manifold_density": 0.5268791317939758,
+            "sampled_past_stage": 7.75
+          }
+        ],
+        "mode": "joint",
+        "strength": 1.0,
+        "backoff": 1.0,
+        "seed": 20260928,
+        "sampling": "systematic",
+        "guard_backoffs": [
+          {
+            "backoff": 1.0,
+            "covariance_change": 0.3257887706950979,
+            "finite": true
+          }
+        ],
+        "covariance_change_vs_reference": 0.3257887706950979,
+        "newly_detected_entries": 77236,
+        "removed_detection_entries": 189102,
+        "abundance_factor_cap": 2.0,
+        "detection_probability_delta_cap": 0.25,
+        "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+        "mapped_mass_conserved": true,
+        "protected_genes_unchanged": true
+      }
+    },
+    "projected_ot400": {
+      "prediction_sha256": "0c0a20a60fbfd3b670dd9e444788276c25eea9d87bdb0fa78192cc1711715afc",
+      "audit": {
+        "fit_cells": 10963,
+        "fit_max_stage": 8.25,
+        "supported_genes": 14462,
+        "method": "Fresh source-domain PCA8 paired scFM",
+        "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+        "conditional_ridge_strength": 1.0,
+        "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+        "encoder_features": 4096,
+        "covariance_guard_features": 384,
+        "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+        "anchor_calibration_rows": 3000,
+        "anchor_supported_genes": 12632,
+        "anchor_slope_ridge": 1.0,
+        "limitation": "Cross-sectional E8.5 associations are not temporal velocities.",
+        "anchor_positive_slope_strength": 0.25,
+        "anchor_detection_slope_strength": 0.75,
+        "response_units": "log1p normalized expression",
+        "response_fit_rows": 10963,
+        "response_fit_max_stage": 8.25,
+        "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+        "training_history": [
+          {
+            "step": 50,
+            "loss": 16.843494415283203,
+            "negative_log_likelihood": 11.672325134277344,
+            "energy": 0.04773598909378052,
+            "manifold_density": 0.5166397094726562,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 100,
+            "loss": 15.920294761657715,
+            "negative_log_likelihood": 11.130638122558594,
+            "energy": 0.11241413652896881,
+            "manifold_density": 0.4778415560722351,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 150,
+            "loss": 15.727624893188477,
+            "negative_log_likelihood": 11.081382751464844,
+            "energy": 0.1510162055492401,
+            "manifold_density": 0.46311402320861816,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 200,
+            "loss": 16.06167221069336,
+            "negative_log_likelihood": 10.555394172668457,
+            "energy": 1.0633054971694946,
+            "manifold_density": 0.5399948358535767,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 250,
+            "loss": 10.301850318908691,
+            "negative_log_likelihood": 10.292337417602539,
+            "energy": 0.09512510895729065,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 300,
+            "loss": 15.303577423095703,
+            "negative_log_likelihood": 10.09225845336914,
+            "energy": 0.5865103602409363,
+            "manifold_density": 0.5152668356895447,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 350,
+            "loss": 14.742975234985352,
+            "negative_log_likelihood": 9.706710815429688,
+            "energy": 0.5053786635398865,
+            "manifold_density": 0.4985726475715637,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 400,
+            "loss": 13.146016120910645,
+            "negative_log_likelihood": 8.452956199645996,
+            "energy": 1.8419196605682373,
+            "manifold_density": 0.4508868157863617,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 450,
+            "loss": 10.254532814025879,
+            "negative_log_likelihood": 10.225359916687012,
+            "energy": 0.2917267084121704,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 500,
+            "loss": 13.714691162109375,
+            "negative_log_likelihood": 8.565732955932617,
+            "energy": 0.6395222544670105,
+            "manifold_density": 0.5085006356239319,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 550,
+            "loss": 15.57801342010498,
+            "negative_log_likelihood": 9.888898849487305,
+            "energy": 0.8087888360023499,
+            "manifold_density": 0.5608235597610474,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 600,
+            "loss": 12.020439147949219,
+            "negative_log_likelihood": 7.435694694519043,
+            "energy": 1.701054334640503,
+            "manifold_density": 0.4414639472961426,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 650,
+            "loss": 9.724220275878906,
+            "negative_log_likelihood": 9.684272766113281,
+            "energy": 0.39947614073753357,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 700,
+            "loss": 13.563961029052734,
+            "negative_log_likelihood": 8.222131729125977,
+            "energy": 3.2839787006378174,
+            "manifold_density": 0.5013431310653687,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 750,
+            "loss": 12.76112174987793,
+            "negative_log_likelihood": 7.8102216720581055,
+            "energy": 1.5856904983520508,
+            "manifold_density": 0.4792330861091614,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 800,
+            "loss": 13.62104320526123,
+            "negative_log_likelihood": 8.243542671203613,
+            "energy": 1.0870897769927979,
+            "manifold_density": 0.5268791317939758,
+            "sampled_past_stage": 7.75
+          }
+        ],
+        "mode": "joint",
+        "strength": 1.0,
+        "backoff": 1.0,
+        "seed": 20260928,
+        "sampling": "systematic",
+        "guard_backoffs": [
+          {
+            "backoff": 1.0,
+            "covariance_change": 0.34070632676787216,
+            "finite": true
+          }
+        ],
+        "covariance_change_vs_reference": 0.34070632676787216,
+        "newly_detected_entries": 90680,
+        "removed_detection_entries": 153749,
+        "abundance_factor_cap": 2.0,
+        "detection_probability_delta_cap": 0.25,
+        "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+        "mapped_mass_conserved": true,
+        "protected_genes_unchanged": true
+      }
+    },
+    "ipca_cnf800": {
+      "prediction_sha256": "8af00703afed9d5d33b9ad761065305368ca989418b64334921d84720f1f05ac",
+      "audit": {
+        "fit_cells": 10963,
+        "fit_max_stage": 8.25,
+        "supported_genes": 14462,
+        "method": "Fresh source-domain IncrementalPCA8 paired scFM",
+        "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+        "conditional_ridge_strength": 1.0,
+        "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+        "encoder_features": 4096,
+        "covariance_guard_features": 384,
+        "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+        "anchor_calibration_rows": 3000,
+        "anchor_supported_genes": 12632,
+        "anchor_slope_ridge": 1.0,
+        "limitation": "Cross-sectional E8.5 associations are not temporal velocities.",
+        "anchor_positive_slope_strength": 0.25,
+        "anchor_detection_slope_strength": 0.75,
+        "response_units": "log1p normalized expression",
+        "response_fit_rows": 10963,
+        "response_fit_max_stage": 8.25,
+        "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+        "mode": "joint",
+        "strength": 1.0,
+        "backoff": 1.0,
+        "seed": 20260928,
+        "sampling": "systematic",
+        "guard_backoffs": [
+          {
+            "backoff": 1.0,
+            "covariance_change": 0.3155183977002156,
+            "finite": true
+          }
+        ],
+        "covariance_change_vs_reference": 0.3155183977002156,
+        "newly_detected_entries": 75801,
+        "removed_detection_entries": 187487,
+        "abundance_factor_cap": 2.0,
+        "detection_probability_delta_cap": 0.25,
+        "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+        "mapped_mass_conserved": true,
+        "protected_genes_unchanged": true
+      }
+    },
+    "ipca_projected400": {
+      "prediction_sha256": "43084b49572e7c43132d67c6fe5360df126220c5a3bb186b5271498872aa061a",
+      "audit": {
+        "fit_cells": 10963,
+        "fit_max_stage": 8.25,
+        "supported_genes": 14462,
+        "method": "Fresh source-domain IncrementalPCA8 paired scFM",
+        "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+        "conditional_ridge_strength": 1.0,
+        "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+        "encoder_features": 4096,
+        "covariance_guard_features": 384,
+        "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+        "anchor_calibration_rows": 3000,
+        "anchor_supported_genes": 12632,
+        "anchor_slope_ridge": 1.0,
+        "limitation": "Cross-sectional E8.5 associations are not temporal velocities.",
+        "anchor_positive_slope_strength": 0.25,
+        "anchor_detection_slope_strength": 0.75,
+        "response_units": "log1p normalized expression",
+        "response_fit_rows": 10963,
+        "response_fit_max_stage": 8.25,
+        "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+        "mode": "joint",
+        "strength": 1.0,
+        "backoff": 1.0,
+        "seed": 20260928,
+        "sampling": "systematic",
+        "guard_backoffs": [
+          {
+            "backoff": 1.0,
+            "covariance_change": 0.32994771790204547,
+            "finite": true
+          }
+        ],
+        "covariance_change_vs_reference": 0.32994771790204547,
+        "newly_detected_entries": 92155,
+        "removed_detection_entries": 150469,
+        "abundance_factor_cap": 2.0,
+        "detection_probability_delta_cap": 0.25,
+        "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+        "mapped_mass_conserved": true,
+        "protected_genes_unchanged": true
+      }
+    }
+  },
+  "completed_utc": "2026-10-04T05:12:53.923759+00:00",
+  "summary": [
+    {
+      "candidate": "copy",
+      "scores": [
+        50.0,
+        50.0,
+        50.0
+      ],
+      "mean_score": 50.0,
+      "raw_metrics": [
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.14807894825935364,
+          "variogram": 0.006175024434924126
+        },
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.14782758057117462,
+          "variogram": 0.006332268472760916
+        },
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.13861127197742462,
+          "variogram": 0.005635063163936138
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.5,
+        "de_direction": 0.5,
+        "mmd_u": 0.5,
+        "variogram": 0.5
+      }
+    },
+    {
+      "candidate": "cnf800",
+      "scores": [
+        51.692882564637976,
+        51.74153240858848,
+        51.691661094596455
+      ],
+      "mean_score": 51.708692022607636,
+      "raw_metrics": [
+        {
+          "de_score": -0.1140529531568228,
+          "de_direction": 0.06738070000280084,
+          "mmd_u": 0.11988191306591034,
+          "variogram": 0.005886268801987171
+        },
+        {
+          "de_score": -0.09055118110236225,
+          "de_direction": 0.0667758929541202,
+          "mmd_u": 0.12063825130462646,
+          "variogram": 0.006046107038855553
+        },
+        {
+          "de_score": -0.09683794466403163,
+          "de_direction": 0.07055918720038752,
+          "mmd_u": 0.11259569972753525,
+          "variogram": 0.00544966384768486
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.4702127659574469,
+          "de_direction": 0.5211963713552031,
+          "mmd_u": 0.5554349948735833,
+          "variogram": 0.5122302142807117
+        },
+        {
+          "de_score": 0.4762886597938144,
+          "de_direction": 0.5209986195089406,
+          "mmd_u": 0.5524606725549104,
+          "variogram": 0.5117765124686151
+        },
+        {
+          "de_score": 0.474558670820353,
+          "de_direction": 0.5222305542562379,
+          "mmd_u": 0.5533477537359306,
+          "variogram": 0.5085748927801883
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.47368669885720477,
+        "de_direction": 0.5214751817067939,
+        "mmd_u": 0.5537478070548081,
+        "variogram": 0.5108605398431717
+      }
+    },
+    {
+      "candidate": "projected_ot400",
+      "scores": [
+        51.421720665791696,
+        51.51489914638191,
+        51.541086453105386
+      ],
+      "mean_score": 51.492568755093,
+      "raw_metrics": [
+        {
+          "de_score": -0.13441955193482688,
+          "de_direction": 0.06451814429588464,
+          "mmd_u": 0.12012825161218643,
+          "variogram": 0.00601189536973834
+        },
+        {
+          "de_score": -0.11023622047244097,
+          "de_direction": 0.06428292497681094,
+          "mmd_u": 0.12050585448741913,
+          "variogram": 0.00615776889026165
+        },
+        {
+          "de_score": -0.11462450592885375,
+          "de_direction": 0.06979685567289885,
+          "mmd_u": 0.11213164031505585,
+          "variogram": 0.005520386155694723
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.4652631578947369,
+          "de_direction": 0.520259392321034,
+          "mmd_u": 0.5548975230256997,
+          "variogram": 0.5068365609813211
+        },
+        {
+          "de_score": 0.4714285714285714,
+          "de_direction": 0.5201830257157478,
+          "mmd_u": 0.5527430735414616,
+          "variogram": 0.5071158505765042
+        },
+        {
+          "de_score": 0.47016460905349794,
+          "de_direction": 0.5219798138608508,
+          "mmd_u": 0.554402897964342,
+          "variogram": 0.5052694470658208
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.4689521127922687,
+        "de_direction": 0.5208074106325441,
+        "mmd_u": 0.5540144981771679,
+        "variogram": 0.506407286207882
+      }
+    },
+    {
+      "candidate": "ipca_cnf800",
+      "scores": [
+        51.667329520609414,
+        51.74569177694829,
+        51.689081609254416
+      ],
+      "mean_score": 51.700700968937376,
+      "raw_metrics": [
+        {
+          "de_score": -0.12016293279022401,
+          "de_direction": 0.07009727320943292,
+          "mmd_u": 0.12013740837574005,
+          "variogram": 0.005879060365259647
+        },
+        {
+          "de_score": -0.09251968503937008,
+          "de_direction": 0.06985798801322617,
+          "mmd_u": 0.12084726989269257,
+          "variogram": 0.006040788255631924
+        },
+        {
+          "de_score": -0.10079051383399211,
+          "de_direction": 0.07312337167181283,
+          "mmd_u": 0.11270757019519806,
+          "variogram": 0.005440644919872284
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.4687168610816543,
+          "de_direction": 0.5220886935553565,
+          "mmd_u": 0.5548775644624994,
+          "variogram": 0.5125431860404585
+        },
+        {
+          "de_score": 0.47579814624098865,
+          "de_direction": 0.5220104931852485,
+          "mmd_u": 0.5520154250660592,
+          "variogram": 0.512000651965529
+        },
+        {
+          "de_score": 0.47357512953367875,
+          "de_direction": 0.5230757173850478,
+          "mmd_u": 0.553093991411223,
+          "variogram": 0.5089995346974785
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.4726967122854406,
+        "de_direction": 0.5223916347085509,
+        "mmd_u": 0.5533289936465938,
+        "variogram": 0.5111811242344887
+      }
+    },
+    {
+      "candidate": "ipca_projected400",
+      "scores": [
+        51.269486734185534,
+        51.36755299808088,
+        51.443342578265636
+      ],
+      "mean_score": 51.36012743684402,
+      "raw_metrics": [
+        {
+          "de_score": -0.14460285132382894,
+          "de_direction": 0.06080275427439035,
+          "mmd_u": 0.1207658052444458,
+          "variogram": 0.00603485619649291
+        },
+        {
+          "de_score": -0.12007874015748031,
+          "de_direction": 0.059694971767443344,
+          "mmd_u": 0.12101180851459503,
+          "variogram": 0.006179365329444408
+        },
+        {
+          "de_score": -0.11660079051383401,
+          "de_direction": 0.06380398007691312,
+          "mmd_u": 0.112540602684021,
+          "variogram": 0.005529753398150206
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.4628272251308901,
+          "de_direction": 0.5190482736371198,
+          "mmd_u": 0.5535112993126443,
+          "variogram": 0.505863014280298
+        },
+        {
+          "de_score": 0.46903553299492384,
+          "de_direction": 0.5186886961022423,
+          "mmd_u": 0.5516654324930022,
+          "variogram": 0.5062242147930829
+        },
+        {
+          "de_score": 0.4696813977389517,
+          "de_direction": 0.5200170367612764,
+          "mmd_u": 0.5534728191839572,
+          "variogram": 0.5048348570120611
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.46718138528825515,
+        "de_direction": 0.5192513355002129,
+        "mmd_u": 0.5528831836632012,
+        "variogram": 0.505640695361814
+      }
+    }
+  ],
+  "passing_candidates": [],
+  "expand_to_16_resamples": false,
+  "scope": "Controlled PCA vsIncrementalPCA end-to-end model: same<=8.25 selected3000fitrows/4096features/normalization/rank8, fixedIPCAchunk512 and samefitdraworder. Same800density+400projectedOT seed/batch64/loss/caps. Reuse PCAmodels only after exactencoder/input/metadata checks; trainIPCAonly. Each decoder refit onlypast withsamealgorithm/guards toavoidfeedingIPCAcoords toPCAheads. E8.25->9.5 is1.25day historicaldevelopment;9.25alreadycovered,9.5no matchingpublicresultfound. Notindependentembryo validation. Allforecasts/replays lockedbeforetargetread; full32285scorer/calibration/readinessunchanged. IPCA fitdiagnostics/memory are not scoregains. OnlyIPCAprojectedrewardagainstmatchedPCAprojected; controls0. No targettuning/grid/officialupload.",
+  "plan_sha256": "c9710015447a4b117b94c704cca9062210b8d2c0e522da78299f7ae8740f3373",
+  "resource_peak_process_working_set_bytes": 5358718976,
+  "ipca_minus_pca_projected_mean_skills": {
+    "de_score": -0.0017707275040135806,
+    "de_direction": -0.0015560751323312472,
+    "mmd_u": -0.0011313145139666414,
+    "variogram": -0.0007665908460680049
+  },
+  "report_sha256": "4099b11d13be19f7562d2e6d4a2b90adcef9151e3846ef7f5d67965b4a218eec"
+}
