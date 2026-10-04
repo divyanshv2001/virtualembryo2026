@@ -30,13 +30,11 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Collect matched temporal-forcing trial via harness; no source edits while running. Four fresh independent metric reviews after scientific completion/failure, primary forcing-minusconditional reward only.",
+  "next_experiment": "Fresh count-VAE/scVI representation feasibility audit: compare past-only learned count representation to prior PCA/IPCA coverage; pin primary source/license/dependencies, check6GB RTX3060 memory and16GBhost. Define matched representation controls and unchanged full-panel head/scorer bridge before any training batch. No hidden-stage pretrained weights, repeated rank/noise grids or unsupported >70 claims.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "temporal_diffusion_forcing_past_fold"
-  ],
+  "active_jobs": [],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -2907,6 +2905,19 @@
       },
       "reviewer_context": "Four fresh independent metric-only contexts; no tools, peers or writes.",
       "coordinator": "All4 primary delayed-minus-instantaneous means positive; DE/direction2of3 and MMD/variogram3of3. Both below retained kinetics in all4means, no promotion. DE reviewer wording reused calibrations corrected:15fresh valid calibrations under unchanged original scheme,5exactforecasts/3prior2neutralreplays; exposed historical development only. Neither readiness nor author reproduction established. Reward+4/health-1438 recorded once. No delay/rank/gene grid authorized."
+    },
+    "temporal_diffusion_forcing_past_fold_01": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "2f78e7aae22364205436cd227443eec53b9394e337ecff24dcfcc10d1fde011b",
+      "reviews": {
+        "de_score": "Problem: Forcing\u2019s +0.00016408 gain is inconsistent and below kinetics; readiness remains unvalidated. Proposed solution: Test forcing\u2013kinetics interaction in causal three-token PCA8 final-token denoising. Validation: Use held-out calibrations and independent training seeds, comparing conditional and kinetics baselines under matched budgets.",
+        "de_direction": "Problem: Forcing adds no demonstrated advantage over conditional. Proposed solution: Retain conditional; do not promote forcing. Validation: Matched comparisons show forcing\u2013conditional -0.00013556 with only1/3positive resamples; one training seed limits causal confidence.",
+        "mmd_u": "Problem: Forcing underperforms conditional MMD(-0.000513;0/3positive); both trail kinetics. Proposed solution: Test a new supported denoising mechanism, avoiding repeat grids. Validation: One training seed and three scoring resamples establish neither independent validation nor readiness.",
+        "variogram": "Problem: Forcing underperformed conditional and kinetics baselines; validation is insufficient. Proposed solution: Test causal three-token increment semivariograms as explicit denoising conditions. Validation: Use independent training seeds and held-out trajectories; require improved forecast skill and variogram fidelity before claiming readiness."
+      },
+      "reviewer_context": "Four fresh independent metric-only contexts; no tools/peers/writes.",
+      "coordinator": "Primaryforcing-vsconditional:DEmeanpositive2/3pairs; directionnegative1/3, MMD/variogramnegative0/3. Both have directionmeans above kinetics, but headline/other3means below; preserve direction signal without promotion or whole-family rejection. One trainingseed/3scoringresamples;15calibrations5exactforecasts3prior2neutralexact. Historicaldevelopment only, not independentvalidation/fullCellPace. Suggested semivariogram/interaction remedies unvalidated and no repeat grid authorized. Reward-29/health-1467 recorded once."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -4453,5 +4464,23 @@
     "score": null,
     "reward": 0,
     "scope": "Source/data/resource preflight only. Own frozen-PCA adaptation would isolate temporal noise mechanism; not full scVI/CellPace reproduction or validated forecast."
+  },
+  "latest_temporal_forcing_result": {
+    "mean_conditional": 50.9960284905353,
+    "mean_forcing": 50.97421185345934,
+    "mean_kinetics": 52.334065831100055,
+    "forcing_minus_conditional": -0.02181663707596,
+    "direction_conditional_minus_kinetics": 0.0076825110987246,
+    "direction_forcing_minus_kinetics": 0.0075469492637962,
+    "promoted": false,
+    "calibrations_valid": 15,
+    "forecast_replays": 5,
+    "prior_baseline_replays": 3,
+    "neutral_bridge_replays": 2,
+    "host_peak_bytes": 5401858048,
+    "gpu_peak_bytes": 73192960,
+    "training_steps_per_arm": 400,
+    "reward": -29,
+    "health": -1467
   }
 }

@@ -6395,12 +6395,16 @@
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
     "experiment": "collective_context_past_fold",
-    "status": "running",
-    "next_experiment": "temporal_diffusion_forcing_past_fold",
-    "next": "Collect matched temporal-forcing trial via harness; no source edits while running. Four fresh independent metric reviews after scientific completion/failure, primary forcing-minusconditional reward only.",
-    "jev_choice": "protein_support_audit",
-    "jev_confidence": 0.95,
+    "status": "completed_mixed_primary_not_promoted",
+    "next_experiment": "count_vae_representation_preflight",
+    "next": "Fresh count-VAE/scVI representation feasibility audit: compare past-only learned count representation to prior PCA/IPCA coverage; pin primary source/license/dependencies, check6GB RTX3060 memory and16GBhost. Define matched representation controls and unchanged full-panel head/scorer bridge before any training batch. No hidden-stage pretrained weights, repeated rank/noise grids or unsupported >70 claims.",
+    "jev_choice": "count_vae_representation_preflight",
+    "jev_confidence": 0.13,
     "scope": "Advisory low confidence; raw-count data availability verified deterministically, no score claim.",
-    "support_audit": "Completed: no independent embryo/untouched validation established; historical-only options remain, no promotion."
+    "support_audit": "Completed: no independent embryo/untouched validation established; historical-only options remain, no promotion.",
+    "jev_usage": {
+      "input_tokens": 1339,
+      "output_tokens": 58
+    }
   }
 }
