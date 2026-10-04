@@ -1,5 +1,5 @@
 {
-  "records": 3454,
+  "records": 3469,
   "sources": [
     {
       "path": "private/anchored_soft_ot_paper_pilot_01/report.json",
@@ -1012,6 +1012,11 @@
       "outcomes_indexed": 0
     },
     {
+      "path": "private/scalar_potential_residual_past_fold_01/report.json",
+      "sha256": "d90c3e93bdaf01f5f8a2386a8811ab66607c37afc53addad4af6eb62502c881c",
+      "outcomes_indexed": 15
+    },
+    {
       "path": "private/scfm_fixed_one_day_validation_01/report.json",
       "sha256": "5d184bc6f5f02468babfb1b240824622499096c466a76b97d3d9cb2156e249ac",
       "outcomes_indexed": 9
@@ -1234,5 +1239,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "49a1bd6ccb426e945bf8e4dde4f1185a073a2521b916fdf5bf5644146a41a4d9"
+  "ledger_sha256": "a448c30e80b76f239a11ddba619806273cdf08a7684d9a459f7fc5a6cf105b8d"
 }

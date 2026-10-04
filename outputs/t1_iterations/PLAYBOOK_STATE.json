@@ -1,10 +1,10 @@
 {
-  "updated_utc": "2026-10-04T15:19:18.462530+00:00",
+  "updated_utc": "2026-10-04T15:36:36.803771+00:00",
   "fingerprints": {
     "RESEARCH_CONTINUATION_POLICY.md": "1e6cc6f15c1e918ad60a1e01f26dd66c48022b33158bf8eb2240a9622066af00",
-    "LOCAL_OPTIMIZATION_STATE.json": "acbc69d695be2179d9259b3bdaad1cb7c8f9645bbc62e76e830c5d928c1c93b6",
+    "LOCAL_OPTIMIZATION_STATE.json": "9c8ed16c2d70ca82d586f5cecfdaefed47858f014a673aa26108fd23a7ceb53f",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "6c8181369956ad4b0f7a07d6a59fb49e60d0a229a31f9f476dbecabeb0452578",
+    "METRIC_RESEARCH_QUEUE.json": "3dba4c5c1dea79ed3ac4c3dc62ece8ded2bc24c0cd2b4a9d6bf31b20d7b2dca5",
     "METRIC_CRITIQUE_POLICY.json": "3535989f1e3beac0f2d446b44df3c793d4be464dbd87f6e714c2f5afda864a6f",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
     "RESEARCH_HARNESS_MANIFEST.json": "16842993f82e042a3269057859e0dc4eead6e568e553d537896e17a1979872b0"
@@ -12,7 +12,7 @@
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [],
-  "next_experiment": "Collect scalar_potential_residual_past_fold aftercompletion; no duplicate worker. Verify frozenbase/prior/zeroresidual/newforecast fullpanel exactreplays,15calibrations; four fresh independent metric reviews, unique primary potential-minus-vector reward, bounded cached Jev next decision. Preserve52.377365tiny historical best, failed prior confirmations and all readiness gates.",
+  "next_experiment": "Frozen scalar-potential/vector residual weights8.25->9.25 historical horizon validation, zero retraining/repeat reward. Pin checkpoint/helper/solver/context hashes, reconstruct all5original9.5fullpanel forecasts exactly before3original/2zeroresidual/5new replay/scoring; originalCPU scorer/head/gates unchanged. Retain52.438460 potentialgain and failedvector50.028988, disclosewidth/gauge capacityconfounds andDEbelowcopy; no robustness/independentembryo claim or oldseed/rankgrid/targettuning/upload.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -29,7 +29,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1521,
+    "current_reward": -1517,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -38,8 +38,8 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1521,
-    "reward_score": -1521,
+    "uncapped_reward": -1517,
+    "reward_score": -1517,
     "benchmark_score": "unchanged; separately reported",
     "last_batch_reward_delta": 4
   },

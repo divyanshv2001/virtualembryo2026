@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Collect scalar_potential_residual_past_fold aftercompletion; no duplicate worker. Verify frozenbase/prior/zeroresidual/newforecast fullpanel exactreplays,15calibrations; four fresh independent metric reviews, unique primary potential-minus-vector reward, bounded cached Jev next decision. Preserve52.377365tiny historical best, failed prior confirmations and all readiness gates.",
+  "next_experiment": "Frozen scalar-potential/vector residual weights8.25->9.25 historical horizon validation, zero retraining/repeat reward. Pin checkpoint/helper/solver/context hashes, reconstruct all5original9.5fullpanel forecasts exactly before3original/2zeroresidual/5new replay/scoring; originalCPU scorer/head/gates unchanged. Retain52.438460 potentialgain and failedvector50.028988, disclosewidth/gauge capacityconfounds andDEbelowcopy; no robustness/independentembryo claim or oldseed/rankgrid/targettuning/upload.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1226,7 +1226,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1521,
+    "current_reward": -1517,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1235,8 +1235,8 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1521,
-    "reward_score": -1521,
+    "uncapped_reward": -1517,
+    "reward_score": -1517,
     "benchmark_score": "unchanged; separately reported",
     "last_batch_reward_delta": 4
   },
@@ -2993,6 +2993,18 @@
         "variogram": "Problem: Tiny comparator-sensitive variogram gains;resamples not embryos. Proposed solution: Preserve primary correlated-vs-tied-diagonal gain and fixed horizon confirmation. Validation: Primary+.0000234169,3/3positive;old diagonal negative3/3.18validcalibrations and separate exactreplays pass;independent replication needed."
       },
       "scope": "Four fresh independent narrow reviewers, no tools/peers/writes. Corrected specialist terminology:18calibrations are valid, forecast replays are separately verified; preserve correlated-over-tied-diagonal gain, not ambiguous tied-diagonal promotion."
+    },
+    "scalar_potential_residual_past_fold_01": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "d90c3e93bdaf01f5f8a2386a8811ab66607c37afc53addad4af6eb62502c881c",
+      "reviews": {
+        "de_score": "Problem: DE.485356 remains belowcopy.5; width/gaugeconfounds and one trainingseed limit inference. Proposed solution: Preservecomparative gains and frozenweighthorizonvalidation, no seedgrid/ActionMatchingclaims. Validation: Primary+.025896161 positive3/3,vskin+.001386371 positive2/3;15validcalibs,replays exact.",
+        "de_direction": "Problem: Direction gains remainconfounded byeffectivecapacity and correlated scoringresamples. Proposed solution: Preserve checkpoint aspreliminary improvement withoutActionMatchingclaim. Validation: Fixedweight prespecifiedhorizon withpairedvector/kineticcontrols; independentheldoutembryos needed forgeneralization, currentdata historical.",
+        "mmd_u": "Problem: Calibrated MMDskill improves versusvector+.024457634 andkinetics+.000443155, butcapacityconfounds/one trainingseed limitattribution. Proposed solution: Preservegain provisionally whileisolatingpotentialgradientstructure. Validation: Fixedweights/horizon, capacitycontrols andindependenttraining/heldoutembryos needed; currenthistoricalresamples insufficient.",
+        "variogram": "Problem: Variogramskill.515558 improves butwidth/gaugeconfound attribution;DEbelowcopy. Proposed solution: Preservecurrentweights and fixedhorizoncomparison; separatelypredeclare gaugefixed/capacitycontrols ifneeded. Validation: Primary+.020757650 andkinetic+.000869303 positive3/3;one trainingseedresamples not independentembryos."
+      },
+      "scope": "Four independent narrow reviewers once complete, no tools/peers/writes. DE specialist factual inversion versuscopy was identified and corrected bysame reviewer; no incorrect claim retained. Independent embryos are a validation requirement, not currently available evidence. MMD specialist confused raw-MMD direction with calibrated higher-better skill; same reviewer corrected it before caching."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3914,27 +3926,27 @@
   },
   "agent_health": {
     "redline": 0,
-    "score": -1521,
+    "score": -1517,
     "status": "below_redline",
     "metrics": {
       "de_score": {
-        "score": -394,
+        "score": -393,
         "status": "below_redline"
       },
       "de_direction": {
-        "score": -350,
+        "score": -349,
         "status": "below_redline"
       },
       "mmd_u": {
-        "score": -427,
+        "score": -426,
         "status": "below_redline"
       },
       "variogram": {
-        "score": -350,
+        "score": -349,
         "status": "below_redline"
       }
     },
-    "recorded_iterations": 69,
+    "recorded_iterations": 70,
     "action": "Prioritize supported matched-control improvements; preserve failures and gates. Proxy/pending iterations earn zero. No score reset, fabricated reward, agent termination or deployment implied."
   },
   "scfm_reopened": {
@@ -4833,9 +4845,27 @@
     "limitations": "Equal1681allocated trainable parameters do not imply equal effectivecapacity; second widths40vs33 differ and scalar output bias is a gradient-invariant gauge (no velocity gradient). No vector norm cap applied: preserves potential-gradient structure; overall frozen kinetic plus residual is not guaranteed conservative."
   },
   "scalar_potential_residual_past_fold": {
-    "status": "running",
+    "status": "completed",
     "experiment": "scalar_potential_residual_past_fold",
     "report": "SCALAR_POTENTIAL_RESIDUAL_PAST_FOLD_RESULTS.json",
-    "scope": "Matched1681allocatedparams scalargradient/vector residual400RTX3060steps perarm, frozenkinetics/past10963cells8D, originalCPU fullpanel scorer/replays/gates. Widthandgauge effectivecapacity confounds disclosed; no ActionMatching objective/reproduction. No score/reward yet."
+    "scope": "Potential52.438460, +.104395vskin,+.061096prior tiedbest;all4meanspositivevskin,DE2/3others3/3. Primaryall4meanspositive3/3vsfailedvector50.028988.15validcalibs,3prior/2neutral/5newexactreplays,78.94MiBGPU5.03GiBhost,frozenbaseexact. One trainingseed3scoringresamples,DEbelowcopy,width/gaugeconfounds,no robust readiness.",
+    "mean_scores": {
+      "copy": 50.0,
+      "cnf800": 51.708692022607636,
+      "kinetic_none400": 52.334065831100055,
+      "residual_vector400": 50.02898785591018,
+      "residual_potential400": 52.43846044214097
+    },
+    "primary_contrast": {
+      "de_score": 0.025896160979169136,
+      "de_direction": 0.02452746119025262,
+      "mmd_u": 0.024457634079904644,
+      "variogram": 0.02075765047990502
+    },
+    "reward_delta": 4,
+    "checkpoint_sha256": {
+      "residual_vector400": "77ed62e45f309633d48f8c914959ea6084114a022e5443f03d3c2abe747930d2",
+      "residual_potential400": "54e15e38296f632a719c42aa388a32ca44cc849196ac102878a2310204a4a80d"
+    }
   }
 }
