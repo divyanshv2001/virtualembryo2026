@@ -54,6 +54,7 @@ def main():
         if spec.get('temporal_forcing'): sources.append('temporal_diffusion_forcing.py')
         if spec.get('count_vae'): sources.append('count_vae_representation.py')
         if spec.get('correlated_diffusion'): sources.append('correlated_latent_diffusion.py')
+        if spec.get('tied_marginal_diffusion'): sources+=['tied_marginal_diffusion.py','correlated_latent_diffusion.py']
         graph_prior_inputs={}
         if spec.get('graph_kinetics'):
             sources.append('graph_kinetic_residual.py')
@@ -103,7 +104,29 @@ def main():
                     flows[name]=model.eval()
                 report['fixed_candidate_validation']={'training_steps':0,'reward_eligible':False,'past_decoder_reconstruction':'Same deterministic past-only procedure; prior full-panel predictions must replay bit-exact before new horizon.'}
                 emit('frozen_kinetic_checkpoints_verified',checkpoint_sha256=spec['frozen_checkpoint_sha256'])
-                if spec.get('correlated_diffusion'):
+                if spec.get('tied_marginal_diffusion'):
+                    from correlated_latent_diffusion import CorrelatedDiffusionFlow
+                    from tied_marginal_diffusion import TiedMarginalDiffusionFlow
+                    report.pop('fixed_candidate_validation')
+                    prior=HERE/spec['amplitude_run'];context_path=prior/'diffusion_past_context.npz';amplitude_checkpoint=prior/'diffusion_diagonal400.pt';base_checkpoint=frozen/'kinetic_none400.pt';helper=HERE/'tied_marginal_diffusion.py'
+                    old_plan=json.loads((prior/'plan.json').read_text())
+                    if old_plan['input_sha256']!=inputs or old_plan['protocol']['cutoff']!=cutoff:raise ValueError('Amplitude inputs/cutoff changed')
+                    for source in ['correlated_latent_diffusion.py','cnf_manifold_flow.py','cnf_density_flow.py','graph_kinetic_residual.py']:
+                        if digest(HERE/source)!=old_plan['source_sha256'][source]:raise ValueError('Amplitude mechanism/solver changed')
+                    if digest(context_path)!=spec['amplitude_context_sha256'] or digest(amplitude_checkpoint)!=spec['amplitude_checkpoint_sha256']:raise ValueError('Frozen amplitude/context changed')
+                    with np.load(context_path) as old:
+                        np.testing.assert_array_equal(old['coordinates'],c['coordinates']);np.testing.assert_array_equal(old['stages'],c['stages'][c['past']])
+                    packet={'context':str(context_path),'base_checkpoint':str(base_checkpoint),'amplitude_checkpoint':str(amplitude_checkpoint),'sha256':{str(path):digest(path) for path in [context_path,base_checkpoint,amplitude_checkpoint,helper,HERE/'correlated_latent_diffusion.py',HERE/'cnf_manifold_flow.py',HERE/'cnf_density_flow.py',HERE/'graph_kinetic_residual.py']}}
+                    save(RUN/'tied_GPU_packet.json',packet);python=HERE.parents[1]/'outputs/research_workflow/.venv_cuda/Scripts/python.exe'
+                    with (RUN/'GPU_stdout.log').open('wb') as stdout,(RUN/'GPU_stderr.log').open('wb') as stderr:
+                        subprocess.run([str(python),'-u',str(helper),'--train-packet',str(RUN/'tied_GPU_packet.json')],stdout=stdout,stderr=stderr,cwd=HERE.parents[1],check=True,creationflags=subprocess.CREATE_NO_WINDOW)
+                    amplitude=torch.load(amplitude_checkpoint,weights_only=False,map_location='cpu');reference_noise=CorrelatedDiffusionFlow(flows['kinetic_none400'],'diagonal');reference_noise.noise_net.load_state_dict(amplitude['noise_net']);flows['diffusion_diagonal400']=reference_noise.eval()
+                    for kind in ['diagonal','correlated']:
+                        saved=torch.load(RUN/('tied_'+kind+'400.pt'),weights_only=False,map_location='cpu')
+                        if saved['kind']!=kind or saved['steps']!=400 or saved['batch_size']!=64 or saved['fit_max_stage']!=cutoff or saved['parameters']!=816 or saved['training_seed']!=20261004 or saved['split_step']!=.125 or saved['normals_per_step']!=26 or not saved['frozen_base_amplitude_exact'] or saved['marginal_variance_max_error']>1e-8 or saved['context_sha256']!=digest(context_path) or saved['base_checkpoint_sha256']!=digest(base_checkpoint) or saved['amplitude_checkpoint_sha256']!=digest(amplitude_checkpoint):raise ValueError('Tied diffusion metadata mismatch')
+                        model=TiedMarginalDiffusionFlow(flows['kinetic_none400'],reference_noise.noise_net,kind);model.factor_net.load_state_dict(saved['factor_net']);flows['tied_'+kind+'400']=model.eval()
+                    report['tied_marginal_scope']=spec['scope']
+                elif spec.get('correlated_diffusion'):
                     from correlated_latent_diffusion import CorrelatedDiffusionFlow
                     report.pop('fixed_candidate_validation')
                     weights_root=HERE/spec['reuse_diffusion_run'] if spec.get('reuse_diffusion_run') else RUN
@@ -348,7 +371,12 @@ def main():
                 if cache.put('_neutral_'+name,neutral)!=neutral_sha:raise ValueError('Zero-count correction full-panel replay mismatch')
                 del neutral;reference.net.bridge_enabled=True
                 emit('neutral_count_bridge_fullpanel_exact_replay_passed',candidate=name)
-        if spec.get('correlated_diffusion'):
+        if spec.get('tied_marginal_diffusion'):
+            old_generation=json.loads((HERE/spec['amplitude_run']/'generation.json').read_text())
+            reference.net=flows['diffusion_diagonal400'];prior,_,_=reference.predict(9.5,'joint',1.,sampling='systematic')
+            if cache.put('_prior_amplitude_diagonal',prior)!=old_generation['diffusion_diagonal400']['prediction_sha256']:raise ValueError('Frozen amplitude forecast changed')
+            del prior;emit('frozen_amplitude_fullpanel_prior_exact_replay_passed')
+        if spec.get('correlated_diffusion') or spec.get('tied_marginal_diffusion'):
             reference.net=flows['kinetic_none400'];neutral,_,_=reference.predict(target,'joint',1.,sampling='systematic')
             neutral_sha=cache.put('_neutral_kinetic',neutral);del neutral
             for name in spec['contrast_candidates']:

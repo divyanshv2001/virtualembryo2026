@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Predeclare tied-marginal diagonal vs rank2 correlated residual SDE,816trainablefactorparameters400RTX3060steps perarm, frozen trained diagonal amplitude weights and frozen retainedkinetics. Lock hashes/past10963cells8D through8.25, paired26normal draws and.125splitstep. Verify cell variance ties at identical states after training, frozen amplitude/drift and originalCPU prior/neutral/new fullpanel replay/scorer/gates. Diagonal orientation is Gaussian distribution-neutral but alters finite sample realization; disclose control and no purecausal/robustness claim. No targettuning/oldgrid.",
+  "next_experiment": "Collect tied_marginal_diffusion_past_fold aftercompletion; no duplicate worker. Verify frozen amplitude/drift and same-state marginal variance gate, prior/neutral/new fullpanel replays; four fresh independent metric reviews, unique primary reward, bounded cached Jev next decision. Preserve small prior gains and failed horizon confirmation.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -4746,5 +4746,11 @@
     "scope": "Toy drift plus frozen trained diagonal amplitude weights; no biological fit or benchmark score/reward. Cell marginal variance tied at identical states throughout factor updates, trajectories may differ.",
     "reference_checkpoint_sha256": "178ffb611e2b44b6a1639d5b0f11c30e357b8a1b0470ca767fc15bfa94bb4f11",
     "limitations": "Diagonal factor orientation is distribution-neutral at identical state with exact Gaussian noise; factor gradients can change finite Monte Carlo draws. This is a matched stochastic implementation control, not a learned diagonal variance model. Numerical equality verified within9.32e-10, not bit-exact floating point variance. Divergent states can yield different frozen amplitude values."
+  },
+  "tied_marginal_diffusion_past_fold": {
+    "status": "running",
+    "experiment": "tied_marginal_diffusion_past_fold",
+    "report": "TIED_MARGINAL_DIFFUSION_PAST_FOLD_RESULTS.json",
+    "scope": "Matched816factorparameters400RTX3060steps perarm, frozen amplitude/kinetics, past-only10963cells, originalCPU fullpanel scorer/replay/gates. Same-state analytic marginal checks aftertraining; diagonal distribution-neutral implementation control disclosed. No score/reward yet."
   }
 }

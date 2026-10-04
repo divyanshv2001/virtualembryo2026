@@ -1696,6 +1696,75 @@
         },
         "diffusion_context_sha256": "2e508a1ef631289f7f71a4244c4938b5d86b37a463950726deff3b195345af03"
       }
+    },
+    "tied_marginal_diffusion_past_fold": {
+      "script": "scfm_projected_past_fold.py",
+      "args": [
+        "--experiment",
+        "tied_marginal_diffusion_past_fold"
+      ],
+      "run": "private/tied_marginal_diffusion_past_fold_01",
+      "report": "TIED_MARGINAL_DIFFUSION_PAST_FOLD_RESULTS.json",
+      "protocol": {
+        "cutoff": 8.25,
+        "target": 9.5,
+        "fit_stages": [
+          7.5,
+          7.75,
+          8.0,
+          8.25
+        ],
+        "seed": 20260928,
+        "scoring_seeds": [
+          20260928,
+          20260929,
+          20260930
+        ],
+        "steps": 400,
+        "batch_size": 64,
+        "reuse_run": "private/scfm_projected_past_fold_01",
+        "candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "diffusion_diagonal400",
+          "tied_diagonal400",
+          "tied_correlated400"
+        ],
+        "control_candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "diffusion_diagonal400",
+          "tied_diagonal400"
+        ],
+        "contrast_candidates": [
+          "tied_diagonal400",
+          "tied_correlated400"
+        ],
+        "contrast_label": "tied_correlated_minus_diagonal_mean_skills",
+        "reward_reference": "tied_diagonal400",
+        "reward_candidates": [
+          "tied_correlated400"
+        ],
+        "scope": "Own816parameter dependence-only rank2 residual SDE, frozen retainedkinetics and trained diagonal amplitude schedule. Diagonal independent rankcoordinates vscorrelated sharedcoordinates; normalizedrows keep total analytic marginal variance equal frozenreference at identical cell/state throughout factortraining, not across divergentstates. Matched400RTX3060steps perarm,Adam.001clip5,Sinkhornp2blur.05scaling.9,batch64,seed20261004,paired26normaldraws,splitRK4/noise.125. Diagonal factor orientation Gaussian distribution-neutral but alters finite MonteCarlo realization; matched implementation control, not learned variance/purecausalclaim. Past10963cells8D7.5..8.25 only, frozenreference hashes/context verified, original2.14CPU full32285gene scorer/head/calibrations/readiness unchanged.3originalprior+1amplitude prior/2neutral/6new exactreplays before9.5targetexpression;18calibrations,one trainingseed3scoringresamples historicaldevelopment notindependentembryos.4.5GiBGPU16GiBhosttwo threads. Primarytiedcorrelated-minus-tieddiagonal reward once,controls0;fourreviews afterbatch. No oldgrid/targettuning/upload/70claim.",
+        "frozen_kinetic_run": "private/graph_kinetics_past_fold_repair_01",
+        "prior_target": 9.25,
+        "frozen_checkpoint_sha256": {
+          "kinetic_none400": "11dc8d8620fa66997aa08d2f88ad9f4e9cdc2db788f8c1b3088f1b8eb01dd4c2"
+        },
+        "training_device": "cuda",
+        "prior_candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400"
+        ],
+        "driver_runtime": "cpu",
+        "tied_marginal_diffusion": true,
+        "amplitude_run": "private/correlated_diffusion_past_fold_01",
+        "amplitude_context_sha256": "2e508a1ef631289f7f71a4244c4938b5d86b37a463950726deff3b195345af03",
+        "amplitude_checkpoint_sha256": "178ffb611e2b44b6a1639d5b0f11c30e357b8a1b0470ca767fc15bfa94bb4f11"
+      }
     }
   }
 }
