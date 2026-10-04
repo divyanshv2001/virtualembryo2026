@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Audit genuinely unexplored drift mechanism from primary sources against saved coverage, with past-only feasibility/RTX3060 and fullpanel matched controls; use bounded cached Jev selection. Retain tied correlated52.377365 small historical gain, defer frozen horizon confirmation rather than claim robustness. No old covariance/noise/seed/rank/horizon grids, no targettuning/upload/readiness weakening. GPU covariance audit allocated3GiB within4.5GiB; chunk future non-scoring probes where source pins permit, no change to existing frozen mechanisms.",
+  "next_experiment": "Scalar-potential gradient residual resource preflight on frozenkinetics versus unconstrained vector residual, same past-only Sinkhorn objective. Match1681trainableparameters: scalar9->32->40->1 versusvector9->32->33->8, Tanh/zero-output init; disclose secondwidth differences and gradient-vs-vector architecture confound, not exactcapacity equivalence. Verify CUDA higher-order gradients/finite losses, frozenbase and zeroresidual CPU exactreplay within6GBRTX3060/16GBhost. No ActionMatching objective/reproduction claim; only inspired conservative architecture from pinned primarysource. No oldgrid/targettuning/upload; retained52.377365 gain and scorer/gates unchanged.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -4779,5 +4779,25 @@
       "variogram": 2.341686407925092e-05
     },
     "reward_delta": 4
+  },
+  "unexplored_drift_primary_source_audit": {
+    "status": "completed",
+    "coverage_check": "No action-matching/scalar-potential/conservative-drift mechanism recorded in active state or research queue; existing flow matching/Sinkhorn/NLL/kinetics/diffusion coverage distinct.",
+    "paper": "https://proceedings.mlr.press/v202/neklyudov23a.html",
+    "repository": "https://github.com/necludov/jam",
+    "commit": "f0b27cd4163cd301344408a7a32cb2c59ed606bf",
+    "license": "MIT",
+    "license_sha256": "b4a4ef49b813961c8ce97b26da84a3ff28cff23236f6e74b9b2bc2352fb8013e",
+    "requirements_sha256": "0459ef8e9ec86d514354cb8105521ece39920e7f44e8c78fbb616f1d9fdd3c1e",
+    "losses_sha256": "9e7aa54f555ae431fb14b9731489ebd02838538a907cac43b00751d88d42044a",
+    "source_findings": "Action Matching learns scalar potential and gradient velocity from uncorrelated temporal marginals, endpoint potential difference plus time-derivative/gradient-energy expectation. Published training avoids differentiating through ODE/OT solvers.",
+    "author_runtime": "Pinned JAX0.3.25/jaxlib0.3.25+cuda11.cudnn82/flax0.6.2/diffrax0.2.2; no author stack installed or pretrained data/weights used.",
+    "proposed_scope": "Own small PyTorch scalar-potential gradient residual, matched objective controls on frozen kinetics, only four past snapshots. Interpolated path assumption and future extrapolation unvalidated; not full author reproduction or evidence of >70.",
+    "jev_selection": {
+      "choice": "potential_architecture",
+      "confidence": 0.65,
+      "input_tokens": 1472,
+      "output_tokens": 42
+    }
   }
 }
