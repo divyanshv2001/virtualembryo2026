@@ -1,5 +1,5 @@
 {
-  "records": 3394,
+  "records": 3406,
   "sources": [
     {
       "path": "private/anchored_soft_ot_paper_pilot_01/report.json",
@@ -657,6 +657,11 @@
       "outcomes_indexed": 12
     },
     {
+      "path": "private/gaussian_vae_seed_confirmation_01/report.json",
+      "sha256": "4fa97a4d1ca12c5a334c7a6643110438c39228b08e17b38eb6597625480b72cb",
+      "outcomes_indexed": 12
+    },
+    {
       "path": "private/geo_early_biotype_audit_01/report.json",
       "sha256": "844e577cf1ad3d698d6e6687c4662f8a2d82f2dc4e75b9e698c2c688cb0e9119",
       "outcomes_indexed": 0
@@ -1214,5 +1219,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "7583983ed890c8165218c652230a1e12fa2944918ef96e8cb7d564d40ee8018c"
+  "ledger_sha256": "d3ed4dc6ba9c14baee71db6cd6e72b9b0b85afcc16f72dbfd30a09104eb5a49b"
 }

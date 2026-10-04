@@ -1,20 +1,18 @@
 {
-  "updated_utc": "2026-10-04T13:25:10.242587+00:00",
+  "updated_utc": "2026-10-04T13:37:14.625188+00:00",
   "fingerprints": {
     "RESEARCH_CONTINUATION_POLICY.md": "1e6cc6f15c1e918ad60a1e01f26dd66c48022b33158bf8eb2240a9622066af00",
-    "LOCAL_OPTIMIZATION_STATE.json": "235aa6d673481e038195a978100252809068716c93bafcc0503bf7a7f4862076",
+    "LOCAL_OPTIMIZATION_STATE.json": "7d3f9b9b46af100c7eb8886081e1af56d74a90abfc8c109ad03a9f443ec64b47",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "b956b8276d3ac29de65920ee168b49a7980a9802a99fc95f0e37f6c26e3cb52d",
+    "METRIC_RESEARCH_QUEUE.json": "24e528369006c64480566af9b7b4285a21d17706a21b2c38c947fd5e00116ccd",
     "METRIC_CRITIQUE_POLICY.json": "3535989f1e3beac0f2d446b44df3c793d4be464dbd87f6e714c2f5afda864a6f",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
     "RESEARCH_HARNESS_MANIFEST.json": "5c351234cdd25d07a9159942fd0caa2c1362d6804f4e6ec6965883b009f4c9fa"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [
-    "gaussian_vae_seed_confirmation"
-  ],
-  "next_experiment": "Collect GaussianVAE trainingseed20261005 confirmation viaharness; no source edits while running. Four fresh metricreviews after scored completion/failure, confirmationreward0 and unchanged fullpanel/readiness gates.",
+  "active_jobs_at_checkpoint": [],
+  "next_experiment": "Lowrank cross-coordinate residual diffusion feasibility: contrast new generative covariance with prior diagonal learned SDE and posthoc covariance coverage; past-only source/resource audit on6GB RTX3060, frozen retainedkinetics and originalfullpanel scorer/gates. No old seed/rank/noise grid, no robust Gaussian promotion; preserve small prior gains and failed confirmation.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",

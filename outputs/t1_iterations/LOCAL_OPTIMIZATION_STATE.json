@@ -30,13 +30,11 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Collect GaussianVAE trainingseed20261005 confirmation viaharness; no source edits while running. Four fresh metricreviews after scored completion/failure, confirmationreward0 and unchanged fullpanel/readiness gates.",
+  "next_experiment": "Lowrank cross-coordinate residual diffusion feasibility: contrast new generative covariance with prior diagonal learned SDE and posthoc covariance coverage; past-only source/resource audit on6GB RTX3060, frozen retainedkinetics and originalfullpanel scorer/gates. No old seed/rank/noise grid, no robust Gaussian promotion; preserve small prior gains and failed confirmation.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "gaussian_vae_seed_confirmation"
-  ],
+  "active_jobs": [],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -2946,6 +2944,19 @@
       },
       "reviewer_context": "Four fresh independent metric-only contexts; no tools/peers/writes.",
       "coordinator": "Gaussian headline51.841321 vskinetrics51.797869(+.043453), all3headline/DE/direction/MMDpairs positive,2of3variogram; all4meanspositive. Together9.5mean52.352071vs52.334066 retain small incremental candidate, no larger-goal rejection/readinesspromotion. Same trainedseed/encoder/donors and exposedhorizons not independentvalidation.12calibrations4forecasts3prior2neutral exact; no retraining, zero reward alreadyrecorded once, health-1507."
+    },
+    "gaussian_vae_seed_confirmation_01": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "4fa97a4d1ca12c5a334c7a6643110438c39228b08e17b38eb6597625480b72cb",
+      "reviews": {
+        "de_score": "Problem: DE\u2019s earlier gains reverse under the new seed; robustness is unsupported. Proposed solution: Preserve historical gains, label seed sensitivity, and avoid readiness claims or seed/rank searches. Validation: Mean-0.000693905;0/3positive, one tie; confirmationreward0.",
+        "de_direction": "Problem: Direction gains fail seed confirmation(mean-0.000933;0/3positive). Proposed solution: Preserve prior developmental gains, reject robustness claims, and avoid seed/rank grids. Validation: Confirmation reward remains zero; independent embryo validation and readiness remain unestablished.",
+        "mmd_u": "Problem: MMD gains reverse under the new training seed. Proposed solution: Preserve prior gains as seed-sensitive historical development; make no robustness/readiness claim. Validation: MMD.556305versus.556429; mean-.000123681,0/3positive,reward0; no independent embryo validation.",
+        "variogram": "Problem: Variogram\u2019s tiny earlier gain reverses underseed20261005. Proposed solution: Preserve historical gains, but withdraw robustness claims; avoid seed/rank grids. Validation: Mean difference-0.000295746,0/3positive resamples,reward0; no independent embryo validation or readiness evidence."
+      },
+      "reviewer_context": "Four fresh independent metric-only contexts, no tools/peers/writes.",
+      "coordinator": "Seed20261005 Gaussian52.283768 vskinetrics52.334066, all4meansregress; DE0positive/1tie,other3metrics0positive. Preserve priorseed20261004 Gaussian52.352071 and9.25horizon51.841321 gains as seed-sensitive historical evidence, not robust promotion. Two-training-seed mean52.317919 trailskinetics; no seed search/cherrypicking.12validcalibrations4forecasts3prior2neutralexact; no independentembryovalidation. Confirmationreward0 recorded once, health-1507."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -4591,5 +4602,22 @@
     "prior_baseline_replays": 3,
     "neutral_bridge_replays": 2,
     "host_peak_bytes": 5403009024
+  },
+  "latest_gaussian_seed_confirmation": {
+    "training_seed": 20261005,
+    "mean_gaussian": 52.283768248611445,
+    "mean_kinetics": 52.334065831100055,
+    "two_seed_mean": 52.317919404800236,
+    "robust_gain_confirmed": false,
+    "prior_gain_preserved": true,
+    "full_readiness_promoted": false,
+    "calibrations_valid": 12,
+    "forecast_replays": 4,
+    "prior_baseline_replays": 3,
+    "neutral_bridge_replays": 2,
+    "host_peak_bytes": 5393207296,
+    "gpu_peak_bytes": 80782848,
+    "reward": 0,
+    "health": -1507
   }
 }

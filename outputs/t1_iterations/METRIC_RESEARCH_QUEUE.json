@@ -6395,16 +6395,16 @@
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
     "experiment": "collective_context_past_fold",
-    "status": "running_seed_confirmation",
-    "next_experiment": "gaussian_vae_seed_confirmation",
-    "next": "Collect GaussianVAE trainingseed20261005 confirmation viaharness; no source edits while running. Four fresh metricreviews after scored completion/failure, confirmationreward0 and unchanged fullpanel/readiness gates.",
-    "jev_choice": "gaussian_training_seed_confirmation",
-    "jev_confidence": 0.52,
+    "status": "completed_seed_sensitive_gain_not_robust",
+    "next_experiment": "correlated_diffusion_preflight",
+    "next": "Lowrank cross-coordinate residual diffusion feasibility: contrast new generative covariance with prior diagonal learned SDE and posthoc covariance coverage; past-only source/resource audit on6GB RTX3060, frozen retainedkinetics and originalfullpanel scorer/gates. No old seed/rank/noise grid, no robust Gaussian promotion; preserve small prior gains and failed confirmation.",
+    "jev_choice": "correlated_diffusion_preflight",
+    "jev_confidence": 0.33,
     "scope": "Advisory low confidence; raw-count data availability verified deterministically, no score claim.",
     "support_audit": "Completed: no independent embryo/untouched validation established; historical-only options remain, no promotion.",
     "jev_usage": {
-      "input_tokens": 1175,
-      "output_tokens": 48
+      "input_tokens": 1173,
+      "output_tokens": 55
     }
   }
 }
