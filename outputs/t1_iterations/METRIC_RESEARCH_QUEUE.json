@@ -6395,18 +6395,19 @@
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
     "experiment": "collective_context_past_fold",
-    "status": "potential_frozen_horizon_all_metrics_positive_transfer_unresolved",
-    "next_experiment": "potential_source_challenge_support_audit",
-    "next": "Inspect compact saved transfer coverage then audit frozenpotential encoder/head support on released E8.5 challenge anchors versus source stages through8.5; past-only feature/scaling/latent/slope distributions, no futuretruth fitting or score/reward. Predeclare genuinely distinct matched potential-versus-kinetic source-to-challenge pilot only if feasible; no repeat source-only horizon/seed/rankgrid. Twohistoricalhorizongains retained, officialreported49.15belowcopy and filenameunverified; need transferable evidence. Jev capacity_control confidence.10 is advisory; coordinator prioritizes anchor_shift_audit because localcapacity gains do not resolve officialtransfergap. One worker/RTX3060 when training/originalCPU scorer/gates unchanged.",
-    "jev_choice": "capacity_control",
-    "jev_confidence": 0.1,
+    "status": "frozen_potential_observed_transfer_support_audit_completed",
+    "next_experiment": "potential_real_anchor_transfer_feasibility",
+    "next": "Inspect compact actual-challenge temporal validation coverage and sharedscorer contracts; predeclare genuinely distinct potential-versus-kinetics releasedE8.5-anchor->releasedE9.5 matched fullpanel transfer pilot if feasible. Fitonlysource<=8.5 plusobservedE8.5 heads, freeze model/config/predictions beforeE9.5scoring; no hiddenE10.5/E12.5training or tuning, no oldmean-alignment/latentgrid. Frozen8.25field auditshowslargerchallenge supportdistance andweakpotentialresidual, notproofcause/9.5refit behavior. Retainofficialbest52.16/latest49.15 separately;one worker,RTX3060training,originalCPU scorer/gates unchanged.",
+    "jev_choice": "real_anchor_pilot_audit",
+    "jev_confidence": 0.5,
     "scope": "Advisory low confidence; raw-count data availability verified deterministically, no score claim.",
     "support_audit": "Completed: no independent embryo/untouched validation established; historical-only options remain, no promotion.",
     "jev_usage": {
-      "input_tokens": 1379,
-      "output_tokens": 36
+      "input_tokens": 610,
+      "output_tokens": 43
     },
     "coordinator_choice": "anchor_shift_audit",
-    "coordinator_reason": "Low-confidence advisory; current scientific priority is source-to-challenge transfer after belowfloor officialreport, not further source-only capacity refinement."
+    "coordinator_reason": "Low-confidence advisory; current scientific priority is source-to-challenge transfer after belowfloor officialreport, not further source-only capacity refinement.",
+    "jev_scope": "Typed option selection/pinnedreport status only; report has no score summary and numeric auditresults were not transmitted, no evidence certification."
   }
 }

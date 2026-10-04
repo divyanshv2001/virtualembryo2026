@@ -1,0 +1,46 @@
+{
+  "status": "completed",
+  "plan_sha256": "af7137d427bef4224cce619d73a6fe7fa7b0488848b9f784390920e740b52331",
+  "results": {
+    "source": {
+      "cells": 1500,
+      "latent_norm_median": 4.350280284881592,
+      "nearest_past_latent_distance_median": 1.3589722593800682,
+      "nearest_past_latent_distance_p95": 2.577938626918669,
+      "fields": {
+        "vector": {
+          "residual_norm_median": 2.828585147857666,
+          "residual_to_base_norm_median": 1.5516929626464844,
+          "residual_base_cosine_median": -0.2503436803817749
+        },
+        "potential": {
+          "residual_norm_median": 8.961492130765691e-05,
+          "residual_to_base_norm_median": 5.112535654916428e-05,
+          "residual_base_cosine_median": 0.44898006319999695
+        }
+      }
+    },
+    "challenge": {
+      "cells": 1500,
+      "latent_norm_median": 7.6158318519592285,
+      "nearest_past_latent_distance_median": 4.32670062164396,
+      "nearest_past_latent_distance_p95": 5.889679997861784,
+      "fields": {
+        "vector": {
+          "residual_norm_median": 2.8270206451416016,
+          "residual_to_base_norm_median": 1.791970133781433,
+          "residual_base_cosine_median": -0.30211687088012695
+        },
+        "potential": {
+          "residual_norm_median": 5.4524621191376355e-06,
+          "residual_to_base_norm_median": 3.697570946314954e-06,
+          "residual_base_cosine_median": -0.017806749790906906
+        }
+      }
+    }
+  },
+  "new_scoring_batch": false,
+  "reward_delta": 0,
+  "scope": "New frozen-potential field support diagnostic at observed E8.5; existing gross-scale/lineage/mean-alignment audits not repeated. No E9.5 expression, model fitting, full-panel forecasts, score or reward.",
+  "limitations": "Descriptive pointwise latent/field support, not full-panel head-transfer validation or causal explanation of official49.15; only one sampled source/challenge cohort, no independent embryos, no threshold-based promotion."
+}

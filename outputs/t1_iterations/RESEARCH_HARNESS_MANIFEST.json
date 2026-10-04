@@ -1985,6 +1985,17 @@
         },
         "potential_context_sha256": "2e508a1ef631289f7f71a4244c4938b5d86b37a463950726deff3b195345af03"
       }
+    },
+    "potential_transfer_support_audit": {
+      "script": "potential_transfer_support_audit.py",
+      "args": [],
+      "run": "private/potential_transfer_support_audit_01",
+      "report": "POTENTIAL_TRANSFER_SUPPORT_AUDIT_RESULTS.json",
+      "protocol": {
+        "training_device": "cpu",
+        "driver_runtime": "cpu",
+        "purpose": "Observed-only frozen field support diagnostic; no score/reward."
+      }
     }
   }
 }

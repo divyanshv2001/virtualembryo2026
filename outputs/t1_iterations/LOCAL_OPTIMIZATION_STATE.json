@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Inspect compact saved transfer coverage then audit frozenpotential encoder/head support on released E8.5 challenge anchors versus source stages through8.5; past-only feature/scaling/latent/slope distributions, no futuretruth fitting or score/reward. Predeclare genuinely distinct matched potential-versus-kinetic source-to-challenge pilot only if feasible; no repeat source-only horizon/seed/rankgrid. Twohistoricalhorizongains retained, officialreported49.15belowcopy and filenameunverified; need transferable evidence. Jev capacity_control confidence.10 is advisory; coordinator prioritizes anchor_shift_audit because localcapacity gains do not resolve officialtransfergap. One worker/RTX3060 when training/originalCPU scorer/gates unchanged.",
+  "next_experiment": "Inspect compact actual-challenge temporal validation coverage and sharedscorer contracts; predeclare genuinely distinct potential-versus-kinetics releasedE8.5-anchor->releasedE9.5 matched fullpanel transfer pilot if feasible. Fitonlysource<=8.5 plusobservedE8.5 heads, freeze model/config/predictions beforeE9.5scoring; no hiddenE10.5/E12.5training or tuning, no oldmean-alignment/latentgrid. Frozen8.25field auditshowslargerchallenge supportdistance andweakpotentialresidual, notproofcause/9.5refit behavior. Retainofficialbest52.16/latest49.15 separately;one worker,RTX3060training,originalCPU scorer/gates unchanged.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -4983,5 +4983,51 @@
     "source_sha256": "473b052efac60796753addec77e38c52aaba2b0f679d7662e6ec6ba7a07a61ba",
     "status": "User explicitly identifies this as best submission",
     "artifact_attribution": "Prior formula_progress_20260930_01 inferred from earlier context; screenshot confirms submission URL/score, not uploaded local filename/hash."
+  },
+  "potential_source_challenge_support_audit": {
+    "status": "completed_observed_only",
+    "report": "POTENTIAL_TRANSFER_SUPPORT_AUDIT_RESULTS.json",
+    "plan_sha256": "af7137d427bef4224cce619d73a6fe7fa7b0488848b9f784390920e740b52331",
+    "results": {
+      "source": {
+        "cells": 1500,
+        "latent_norm_median": 4.350280284881592,
+        "nearest_past_latent_distance_median": 1.3589722593800682,
+        "nearest_past_latent_distance_p95": 2.577938626918669,
+        "fields": {
+          "vector": {
+            "residual_norm_median": 2.828585147857666,
+            "residual_to_base_norm_median": 1.5516929626464844,
+            "residual_base_cosine_median": -0.2503436803817749
+          },
+          "potential": {
+            "residual_norm_median": 8.961492130765691e-05,
+            "residual_to_base_norm_median": 5.112535654916428e-05,
+            "residual_base_cosine_median": 0.44898006319999695
+          }
+        }
+      },
+      "challenge": {
+        "cells": 1500,
+        "latent_norm_median": 7.6158318519592285,
+        "nearest_past_latent_distance_median": 4.32670062164396,
+        "nearest_past_latent_distance_p95": 5.889679997861784,
+        "fields": {
+          "vector": {
+            "residual_norm_median": 2.8270206451416016,
+            "residual_to_base_norm_median": 1.791970133781433,
+            "residual_base_cosine_median": -0.30211687088012695
+          },
+          "potential": {
+            "residual_norm_median": 5.4524621191376355e-06,
+            "residual_to_base_norm_median": 3.697570946314954e-06,
+            "residual_base_cosine_median": -0.017806749790906906
+          }
+        }
+      }
+    },
+    "new_scores": 0,
+    "reward_delta": 0,
+    "findings": "Challenge median nearest pastlatent4.3267 vs source1.3590(~3.184x); potential residual-to-base median3.6976e-6 vs source5.1125e-5(~13.8x lower). Vectorresidual magnitude comparabletobase/opposed. Descriptive frozen8.25field at8.5, not proof of fulltrajectory/head/officialfailurecause or9.5refit behavior."
   }
 }
