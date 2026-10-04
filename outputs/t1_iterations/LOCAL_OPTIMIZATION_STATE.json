@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Bounded FLeCS regulatory-kinetics feasibility preflight: inspect author CPU source/temporal loss and permitted past data; audit graph identifiability and sparse16GB implementation. Jev favors FLeCS confidence.33, advisory only. No training before fixed matched protocol and feasibility checks; no repeat diffusion/shrinkage grid.",
+  "next_experiment": "FLeCS graph prior acquisition eligibility preflight: verify CellOracle derived adult mouse base-GRN licence/download provenance, bounded size/hash and past-selected gene coverage before acquisition/use. Stage chain8weeks is permittedpostE13.5; disclose. Then sparse-native kinetic prototype and physical past-stage matched graph/shuffled/no-edge protocol, no dense32285 adjacency or causal edge claim. No training yet; AgentTeam final requires separately frozen autonomous run after development.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -3940,6 +3940,40 @@
       "input_tokens": 1239,
       "output_tokens": 43,
       "payload_bytes": 2505
+    },
+    "flecs_preflight": {
+      "status": "author_scope_audited_not_training_ready",
+      "author_commit": "75a8a9237c6f963bd1b2d3178b12cb679fe2b4cb",
+      "required_inputs": "adata.varp grn_adj_mat; gene expression trajectories; tutorial uses pseudotime kNN paths, not directly physical-stage forecasting",
+      "mechanism": "sigmoid(weighted sparse graph messages+bias) minus learned alpha*gene state",
+      "missing_dependencies": [
+        "torch_scatter",
+        "torch_geometric",
+        "scanpy"
+      ],
+      "installed": [
+        "torch",
+        "torchdiffeq",
+        "networkx"
+      ],
+      "author_dense_adjacency_bytes_32285_float64": 8338569800,
+      "prior_chain": "FLeCS datasets/Paul15/INFO.md -> CellOracle load_mouse_scATAC_atlas_base_GRN -> Cusanovich2018 atlas17samples/13tissues/8week mice",
+      "stage_eligibility": "Officialrules section10 expressly permits postE13.5 data, conditional on licence and disclosure; original adultatlas stage eligible, derived artifact provenance/licence and gene coverage pending. No data downloaded/used. Adult graph transfer to embryo is unvalidated.",
+      "sources": [
+        "https://raw.githubusercontent.com/Bertinus/FLeCS/75a8a9237c6f963bd1b2d3178b12cb679fe2b4cb/flecs/sc/model.py",
+        "https://raw.githubusercontent.com/Bertinus/FLeCS/75a8a9237c6f963bd1b2d3178b12cb679fe2b4cb/datasets/Paul15/INFO.md",
+        "https://shendurelab.github.io/mouse-atac/",
+        "https://virtualembryo.ai/challenge/rules"
+      ],
+      "jev": {
+        "choice": "author_prior_audit",
+        "confidence": 0.07,
+        "payload_bytes": 2734,
+        "input_tokens": 1334,
+        "output_tokens": 59
+      },
+      "reward_delta": 0,
+      "scope": "Code/data feasibility audit only, no new scientific scoring batch, no metric reviews needed."
     }
   }
 }
