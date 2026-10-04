@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-04T15:05:43.810107+00:00
+Updated: 2026-10-04T15:08:29.844013+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -10,7 +10,7 @@ Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction':
 
 Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Scalar-potential gradient residual resource preflight on frozenkinetics versus unconstrained vector residual, same past-only Sinkhorn objective. Match1681trainableparameters: scalar9->32->40->1 versusvector9->32->33->8, Tanh/zero-output init; disclose secondwidth differences and gradient-vs-vector architecture confound, not exactcapacity equivalence. Verify CUDA higher-order gradients/finite losses, frozenbase and zeroresidual CPU exactreplay within6GBRTX3060/16GBhost. No ActionMatching objective/reproduction claim; only inspired conservative architecture from pinned primarysource. No oldgrid/targettuning/upload; retained52.377365 gain and scorer/gates unchanged.
+Next: Predeclare scalar-potential gradient versus unconstrained vector residual on frozenkinetics:1681allocatedparameters each(width40vs33 and scalarconstantbias gauge disclosed),400RTX3060steps/arm matched64cell adjacent paststage Sinkhornp2blur.05scaling.9,Adam.001clip5,.1fixed residualscale andRK4.125,seed20261004. Past10963cells8D through8.25 only, originalCPU fullpanel scorer/head/gates, prior/zeroresidual/new forecast exactreplays, no ActionMatching objective/reproduction/causalcapacity claim. One worker, no oldgrid/targettuning/upload. Retain52.377365 historical best and health-1521.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in outputs\t1_submissions\formula_progress_20260930_01\official_result.json. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 
