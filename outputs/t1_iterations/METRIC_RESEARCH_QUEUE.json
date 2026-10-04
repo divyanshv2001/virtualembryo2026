@@ -6394,12 +6394,9 @@
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
-    "experiment": "collective_context_preflight",
-    "status": "resource_preflight_completed_context_sensitivity_unvalidated",
-    "next_experiment": null,
-    "next": "Implement one fixed frozen-vs-evolving population-context trial: equal4776params,400steps64cells, past adjacent Sinkhorn, same RNG/initialcontext/selfmask/RK4.125/normcap1, retained kinetics/copy/CNF controls. GPU-only child trains both arms under pinned2.11CUDA; parent/head/forecast/scorer stays historical2.14CPU. Freeze256context indices/globalpopulation and128querychunk; measure context-subset sensitivity without selecting settings on target. Exactpriorbaseline and newforecastreplays before scoring, original gates/4reviews, primary evolving-vsfrozen reward only. Own scIMF-inspired adaptation, no causalcommunication/authorreproduction/70claim.",
-    "jev_choice": "frozen_vs_evolving_context",
-    "jev_confidence": 0.3,
-    "source_commit": "5b763a719a6a87a15a290ab7707850aaba05d5b6"
+    "experiment": "collective_context_past_fold",
+    "status": "running",
+    "next_experiment": "collective_context_past_fold",
+    "next": "Collect fixed collective-context trial; GPU child trains both400step arms, originalCPU scorer and priorbaseline strictreplay. Four independent metric reviews after completion/failure; evolving-vsfrozen primaryreward only, no repeated controls."
   }
 }

@@ -30,11 +30,13 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement one fixed frozen-vs-evolving population-context trial: equal4776params,400steps64cells, past adjacent Sinkhorn, same RNG/initialcontext/selfmask/RK4.125/normcap1, retained kinetics/copy/CNF controls. GPU-only child trains both arms under pinned2.11CUDA; parent/head/forecast/scorer stays historical2.14CPU. Freeze256context indices/globalpopulation and128querychunk; measure context-subset sensitivity without selecting settings on target. Exactpriorbaseline and newforecastreplays before scoring, original gates/4reviews, primary evolving-vsfrozen reward only. Own scIMF-inspired adaptation, no causalcommunication/authorreproduction/70claim.",
+  "next_experiment": "Collect fixed collective-context trial; GPU child trains both400step arms, originalCPU scorer and priorbaseline strictreplay. Four independent metric reviews after completion/failure; evolving-vsfrozen primaryreward only, no repeated controls.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
+  "active_jobs": [
+    "collective_context_past_fold"
+  ],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,

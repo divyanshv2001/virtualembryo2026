@@ -11,6 +11,7 @@ import torch
 from cnf_manifold_flow import DensityFlowNet,rk4_position
 from graph_kinetic_residual import KineticFlow
 from past_difference_attention import PastAttentionFlow
+from geomloss import SamplesLoss
 
 HERE=Path(__file__).resolve().parent
 
@@ -45,7 +46,9 @@ class CollectiveContextFlow(PastAttentionFlow):
         return super().trajectory(z,times,step)
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--experiment',default='collective_context_preflight');args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--experiment',default='collective_context_preflight');parser.add_argument('--train-packet');args=parser.parse_args()
+    if args.train_packet:
+        train_packet(Path(args.train_packet));return
     entry=json.loads((HERE/'RESEARCH_HARNESS_MANIFEST.json').read_text())['experiments'][args.experiment]
     run=HERE/entry['run'];public=HERE/entry['report']
     if run.exists() or public.exists():raise ValueError('Never duplicate preflight')
@@ -83,5 +86,55 @@ def main():
     torch.cuda.synchronize();assert out[0]['parameters']==out[1]['parameters']
     report={'status':'completed','new_scoring_batch':False,'plan':plan,'arms':out,'seconds':time.perf_counter()-start,'gpu_peak_mib':torch.cuda.max_memory_allocated()/2**20,'scope':'Finite gradient/runtime and query-chunk checks; context subset sensitivity measured, not biological validation or predictive score.'}
     public.write_text(json.dumps(report,indent=2));print(json.dumps(report))
+
+def train_packet(path):
+    packet=json.loads(path.read_text());run=path.parent
+    if not run.resolve().is_relative_to(HERE/'private'):raise ValueError('GPU packet outside D evidence')
+    for filename,expected in packet['sha256'].items():
+        if hashlib.sha256(Path(filename).read_bytes()).hexdigest()!=expected:raise ValueError('GPU input/source hash changed')
+    if not torch.cuda.is_available() or torch.__version__!='2.11.0+cu128':raise ValueError('Pinned CUDA runtime required')
+    torch.set_num_threads(2);torch.cuda.set_per_process_memory_fraction(.75,0);torch.use_deterministic_algorithms(True)
+    c=dict(np.load(packet['context']));stages=c['stages'];times=np.unique(stages)
+    if times.tolist()!=[7.5,7.75,8.,8.25]:raise ValueError('Past-stage support changed')
+    saved=torch.load(packet['kinetic_checkpoint'],weights_only=False,map_location='cpu')
+    if saved['kind']!='none' or saved['steps']!=400 or saved['fit_max_stage']!=8.25:raise ValueError('Frozen base metadata changed')
+    base=KineticFlow(DensityFlowNet(c['basis'],c['pca_center'],8.25,7.25),saved['net']['gene_mean'].numpy(),np.array([],int),np.array([],int),'none');base.load_state_dict(saved['net'])
+    frozen={k:v.clone() for k,v in base.state_dict().items()}
+    groups=[torch.tensor(c['coordinates'][stages==t],dtype=torch.float32,device='cuda') for t in times]
+    loss_fn=SamplesLoss('sinkhorn',p=2,blur=.05,scaling=.9,backend='tensorized')
+    def emit(value):
+        from datetime import datetime,timezone
+        value['timestamp_utc']=datetime.now(timezone.utc).isoformat()
+        with (run/'events.jsonl').open('a') as f:f.write(json.dumps(value)+'\n')
+    for kind in ('frozen','evolving'):
+        checkpoint=run/('collective_'+kind+'400.pt')
+        if checkpoint.exists():raise ValueError('Never retrain completed arm')
+        torch.manual_seed(20261004);model=CollectiveContextFlow(base,kind).cuda()
+        parameters=[p for p in model.parameters() if p.requires_grad];opt=torch.optim.Adam(parameters,lr=.001)
+        rng=torch.Generator().manual_seed(20261004);history=[]
+        for i in range(400):
+            j=int(torch.randint(len(groups)-1,(1,),generator=rng))
+            a=groups[j][torch.randint(len(groups[j]),(64,),generator=rng).cuda()]
+            b=groups[j+1][torch.randint(len(groups[j+1]),(64,),generator=rng).cuda()]
+            model.set_context(a)
+            pred=rk4_position(model.velocity,a,float(times[j]-model.origin),float(times[j+1]-model.origin),step=.125)
+            loss=loss_fn(pred,b)
+            if not torch.isfinite(loss):raise ValueError('Nonfinite collective loss')
+            opt.zero_grad();loss.backward();norm=torch.nn.utils.clip_grad_norm_(parameters,5.)
+            if not torch.isfinite(norm):raise ValueError('Nonfinite collective gradient')
+            opt.step()
+            if (i+1)%50==0:
+                record={'event':'collective_training_checkpoint','context_kind':kind,'step':i+1,'loss':float(loss.detach()),'source_stage':float(times[j]),'destination_stage':float(times[j+1])}
+                history.append(record.copy());emit(record)
+        torch.cuda.synchronize();peak=torch.cuda.max_memory_allocated()
+        if peak>4.5*1024**3:raise ValueError('GPU allocation cap exceeded')
+        model.cpu().eval()
+        for k,v in model.base.state_dict().items():torch.testing.assert_close(v,frozen[k],rtol=0,atol=0)
+        torch.save({'net':model.state_dict(),'kind':kind,'steps':400,'batch_size':64,'fit_max_stage':8.25,'history':history,'frozen_base_exact':True,'torch':torch.__version__,'cuda':torch.version.cuda,'gpu':torch.cuda.get_device_name(0),'peak_allocated_bytes':peak,'parameters':sum(p.numel() for p in parameters)},checkpoint)
+        emit({'event':'collective_arm_completed','context_kind':kind,'sha256':hashlib.sha256(checkpoint.read_bytes()).hexdigest()})
+        del model,opt
+    for filename,expected in packet['sha256'].items():
+        if hashlib.sha256(Path(filename).read_bytes()).hexdigest()!=expected:raise ValueError('GPU source changed during training')
+    print(json.dumps({'status':'completed','trained_device':'RTX3060','steps_per_arm':400}))
 
 if __name__=='__main__':main()

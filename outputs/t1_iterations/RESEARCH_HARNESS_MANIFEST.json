@@ -1098,6 +1098,70 @@
         "reward_candidates": [],
         "scope": "Past8->8.25 three-step optimizer/resource audit, frozen versus evolving population context, equal4776parameter residuals, self-exclusion, global context<=256 and querychunk stability. Own adaptation, not author reproduction. No target scoring/reward/readiness claim; GPU4.5GiB/host16GiB."
       }
+    },
+    "collective_context_past_fold": {
+      "script": "scfm_projected_past_fold.py",
+      "args": [
+        "--experiment",
+        "collective_context_past_fold"
+      ],
+      "run": "private/collective_context_past_fold_01",
+      "report": "COLLECTIVE_CONTEXT_PAST_FOLD_RESULTS.json",
+      "protocol": {
+        "cutoff": 8.25,
+        "target": 9.5,
+        "fit_stages": [
+          7.5,
+          7.75,
+          8.0,
+          8.25
+        ],
+        "seed": 20260928,
+        "scoring_seeds": [
+          20260928,
+          20260929,
+          20260930
+        ],
+        "steps": 400,
+        "batch_size": 64,
+        "reuse_run": "private/scfm_projected_past_fold_01",
+        "candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "collective_frozen400",
+          "collective_evolving400"
+        ],
+        "control_candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "collective_frozen400"
+        ],
+        "contrast_candidates": [
+          "collective_frozen400",
+          "collective_evolving400"
+        ],
+        "contrast_label": "evolving_minus_frozen_context_mean_skills",
+        "reward_reference": "collective_frozen400",
+        "reward_candidates": [
+          "collective_evolving400"
+        ],
+        "scope": "Own scIMF-inspired frozeninitial vs evolvingcurrent population context; conditionally independent frozen-control trajectories, not no-context control or author reproduction. Both4776params,400GPUsteps batch64, fixed pastadjacent Sinkhorn p2blur.05scaling.9, Adam.001clip5, pairedRNG, RK4.125,normcap1. Same sampleindices/self-exclusion, contextcap256, querychunks128 useglobalcontext; training actualcontext64, forecast256 domainshift disclosed. Retain frozen<=8.25 encoder/CNF/noedge400 and .25/.75decoder; original2.14CPU parent/head/forecast/scorer, isolated2.11CUDA child trainsbothRTX3060arms, GPUallocation4.5GiB/host16GiB2threads. No targetdata to child, source/input hashes verified before/after training and targetscoring. Exactprior baseline/newreplays before9.5expression; historicaldevelopment not independentvalidation. All4scorer/calibration/readinessgates unchanged; only evolvingvsfrozen primaryreward, controls0. No officialupload/targettuning/capacitygrid/causalcommunication/70claim.",
+        "frozen_kinetic_run": "private/graph_kinetics_past_fold_repair_01",
+        "prior_target": 9.25,
+        "frozen_checkpoint_sha256": {
+          "kinetic_none400": "11dc8d8620fa66997aa08d2f88ad9f4e9cdc2db788f8c1b3088f1b8eb01dd4c2"
+        },
+        "training_device": "cuda",
+        "prior_candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400"
+        ],
+        "driver_runtime": "cpu",
+        "collective_context": true
+      }
     }
   }
 }

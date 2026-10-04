@@ -3,6 +3,7 @@ import copy
 import argparse
 import json
 import traceback
+import subprocess
 from pathlib import Path
 import numpy as np
 import torch
@@ -48,6 +49,7 @@ def main():
         if spec.get('learned_diffusion'): sources.append('learned_latent_diffusion.py')
         if spec.get('frozen_kinetic_run'): sources.append('graph_kinetic_residual.py')
         if spec.get('difference_attention'): sources.append('past_difference_attention.py')
+        if spec.get('collective_context'): sources+=['collective_context_preflight.py','past_difference_attention.py']
         graph_prior_inputs={}
         if spec.get('graph_kinetics'):
             sources.append('graph_kinetic_residual.py')
@@ -97,6 +99,24 @@ def main():
                     flows[name]=model.eval()
                 report['fixed_candidate_validation']={'training_steps':0,'reward_eligible':False,'past_decoder_reconstruction':'Same deterministic past-only procedure; prior full-panel predictions must replay bit-exact before new horizon.'}
                 emit('frozen_kinetic_checkpoints_verified',checkpoint_sha256=spec['frozen_checkpoint_sha256'])
+                if spec.get('collective_context'):
+                    from collective_context_preflight import CollectiveContextFlow
+                    report.pop('fixed_candidate_validation')
+                    context_path=RUN/'collective_training_context.npz'
+                    np.savez_compressed(context_path,coordinates=c['coordinates'],stages=c['stages'][c['past']],basis=c['basis'],pca_center=c['pca'].mean_)
+                    helper=HERE/'collective_context_preflight.py';base_checkpoint=frozen/'kinetic_none400.pt'
+                    packet={'context':str(context_path),'kinetic_checkpoint':str(base_checkpoint),'sha256':{str(path):digest(path) for path in [context_path,base_checkpoint,helper,HERE/'past_difference_attention.py',HERE/'cnf_density_flow.py',HERE/'graph_kinetic_residual.py']}}
+                    save(RUN/'collective_GPU_packet.json',packet)
+                    python=HERE.parents[1]/'outputs/research_workflow/.venv_cuda/Scripts/python.exe'
+                    with (RUN/'GPU_stdout.log').open('wb') as stdout,(RUN/'GPU_stderr.log').open('wb') as stderr:
+                        subprocess.run([str(python),'-u',str(helper),'--train-packet',str(RUN/'collective_GPU_packet.json')],stdout=stdout,stderr=stderr,cwd=HERE.parents[1],check=True,creationflags=subprocess.CREATE_NO_WINDOW)
+                    for name,kind in [('collective_frozen400','frozen'),('collective_evolving400','evolving')]:
+                        saved=torch.load(RUN/(name+'.pt'),weights_only=False,map_location='cpu')
+                        if saved['kind']!=kind or saved['steps']!=400 or saved['batch_size']!=64 or saved['parameters']!=4776 or not saved['frozen_base_exact']:raise ValueError('Collective checkpoint metadata mismatch')
+                        model=CollectiveContextFlow(flows['kinetic_none400'],kind);model.load_state_dict(saved['net']);model.eval()
+                        for key,value in flows['kinetic_none400'].state_dict().items():torch.testing.assert_close(model.base.state_dict()[key],value,rtol=0,atol=0)
+                        flows[name]=model
+                    report['collective_scope']='Own frozeninitial versus evolving population context, equal4776parameters/400RTX3060steps. Original2.14CPU forecast/head/scorer; fixed256context cap/128query chunk/self-exclusion. No causal communication or author reproduction claim.'
                 if spec.get('difference_attention'):
                     from past_difference_attention import PastAttentionFlow,train_attention
                     times=np.unique(c['stages'][c['past']])
