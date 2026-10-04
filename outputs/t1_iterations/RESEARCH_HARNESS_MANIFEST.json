@@ -639,6 +639,146 @@
         "repair_of": "learned_diffusion_past_fold",
         "repair_scope": "Correct runner labels and event keyword only; intended scientific protocol unchanged. Failed original preserved."
       }
+    },
+    "graph_kinetics_past_fold": {
+      "script": "scfm_projected_past_fold.py",
+      "args": [
+        "--experiment",
+        "graph_kinetics_past_fold"
+      ],
+      "run": "private/graph_kinetics_past_fold_01",
+      "report": "GRAPH_KINETICS_PAST_FOLD_RESULTS.json",
+      "protocol": {
+        "cutoff": 8.25,
+        "target": 9.25,
+        "fit_stages": [
+          7.5,
+          7.75,
+          8.0,
+          8.25
+        ],
+        "seed": 20260928,
+        "scoring_seeds": [
+          20260928,
+          20260929,
+          20260930
+        ],
+        "steps": 400,
+        "batch_size": 64,
+        "reuse_run": "private/scfm_projected_past_fold_01",
+        "candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "kinetic_shuffle400",
+          "kinetic_real400"
+        ],
+        "control_candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "kinetic_shuffle400"
+        ],
+        "contrast_candidates": [
+          "kinetic_shuffle400",
+          "kinetic_real400"
+        ],
+        "contrast_label": "real_minus_shuffled_graph_mean_skills",
+        "reward_reference": "kinetic_shuffle400",
+        "reward_candidates": [
+          "kinetic_real400"
+        ],
+        "scope": "FLeCS-inspired approximate kinetic residual on frozen past<=8.25 PCA8/4096gene CNF800/decoder, not author reproduction or direct count ODE. Physical past adjacent snapshots only, same draws/400steps64cells/loss/RK4/caps. Adult candidate binding graph stage8weeksmice permitted; source licence limits local use to noncommercial academic research. Primary real vs exact-degree target-relabel graph has equal221304parameters; 24.14% edges differ, controls retain muchstructure; no causal signed edge claim. No-edge8192parameters is secondary control with capacityconfound. Initialresidual exactzero/CNF replay and all3arm finite optimizer/checkpoint/logging smoke passed. Allforecasts/replays locked before9.25expression; exposed historicaldevelopment only, not independentvalidation. Same32285 scorer/calibration/readiness. Onlyreal-vsshuffle reward; othercontrols0. No officialupload/targettuning/newcapacitygrid, D-only2threads16GiB.",
+        "graph_kinetics": true,
+        "kinetic_protocol": {
+          "source_commit": "7948870a3b70f7d228e54734e1fa9ed3291fc23b",
+          "adult_graph_sha256": "3662094d6ec424824c4c3b248d5b674ce14536871686245729da6e333d13d48e",
+          "state": "q=max(center/scale+pca_center+z@pinv(basis.T),0), approximate normalized nonnegative gene state",
+          "production_residual": "amplitude .2*past_gene_mean*(sigmoid(sparse_messages+bias)-.5)",
+          "decay_residual": "(softplus(alpha)-initial_alpha)*q; initial alpha .1",
+          "edge_weight": "tanh signed learned weights/sqrt(target indegree)",
+          "latent_projection": "gene residual @ frozen basis.T; norm cap1",
+          "initial_residual": 0.0,
+          "solver": "same RK4 .125 as CNF",
+          "objective": "past adjacent physical-stage tensorized Sinkhorn p2 blur.05 scaling.9",
+          "optimizer": "Adam lr.001 gradientclip5",
+          "graph_control": "target label permutation within exact indegree classes; nodewise in/out degrees preserved; 24.1366% edges differ, not uniform graph randomization",
+          "training_draw_seed": 20261004,
+          "shuffle_seed": 20261005,
+          "local_licence_scope": "Noncommercial academic research only; source notice preserved; no commercial distribution permission claim"
+        }
+      }
+    },
+    "graph_kinetics_past_fold_repair": {
+      "script": "scfm_projected_past_fold.py",
+      "args": [
+        "--experiment",
+        "graph_kinetics_past_fold_repair"
+      ],
+      "run": "private/graph_kinetics_past_fold_repair_01",
+      "report": "GRAPH_KINETICS_PAST_FOLD_REPAIR_RESULTS.json",
+      "protocol": {
+        "cutoff": 8.25,
+        "target": 9.25,
+        "fit_stages": [
+          7.5,
+          7.75,
+          8.0,
+          8.25
+        ],
+        "seed": 20260928,
+        "scoring_seeds": [
+          20260928,
+          20260929,
+          20260930
+        ],
+        "steps": 400,
+        "batch_size": 64,
+        "reuse_run": "private/scfm_projected_past_fold_01",
+        "candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "kinetic_shuffle400",
+          "kinetic_real400"
+        ],
+        "control_candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "kinetic_shuffle400"
+        ],
+        "contrast_candidates": [
+          "kinetic_shuffle400",
+          "kinetic_real400"
+        ],
+        "contrast_label": "real_minus_shuffled_graph_mean_skills",
+        "reward_reference": "kinetic_shuffle400",
+        "reward_candidates": [
+          "kinetic_real400"
+        ],
+        "scope": "FLeCS-inspired approximate kinetic residual on frozen past<=8.25 PCA8/4096gene CNF800/decoder, not author reproduction or direct count ODE. Physical past adjacent snapshots only, same draws/400steps64cells/loss/RK4/caps. Adult candidate binding graph stage8weeksmice permitted; source licence limits local use to noncommercial academic research. Primary real vs exact-degree target-relabel graph has equal221304parameters; 24.14% edges differ, controls retain muchstructure; no causal signed edge claim. No-edge8192parameters is secondary control with capacityconfound. Initialresidual exactzero/CNF replay and all3arm finite optimizer/checkpoint/logging smoke passed. Allforecasts/replays locked before9.25expression; exposed historicaldevelopment only, not independentvalidation. Same32285 scorer/calibration/readiness. Onlyreal-vsshuffle reward; othercontrols0. No officialupload/targettuning/newcapacitygrid, D-only2threads16GiB.",
+        "graph_kinetics": true,
+        "kinetic_protocol": {
+          "source_commit": "7948870a3b70f7d228e54734e1fa9ed3291fc23b",
+          "adult_graph_sha256": "3662094d6ec424824c4c3b248d5b674ce14536871686245729da6e333d13d48e",
+          "state": "q=max(center/scale+pca_center+z@pinv(basis.T),0), approximate normalized nonnegative gene state",
+          "production_residual": "amplitude .2*past_gene_mean*(sigmoid(sparse_messages+bias)-.5)",
+          "decay_residual": "(softplus(alpha)-initial_alpha)*q; initial alpha .1",
+          "edge_weight": "tanh signed learned weights/sqrt(target indegree)",
+          "latent_projection": "gene residual @ frozen basis.T; norm cap1",
+          "initial_residual": 0.0,
+          "solver": "same RK4 .125 as CNF",
+          "objective": "past adjacent physical-stage tensorized Sinkhorn p2 blur.05 scaling.9",
+          "optimizer": "Adam lr.001 gradientclip5",
+          "graph_control": "target label permutation within exact indegree classes; nodewise in/out degrees preserved; 24.1366% edges differ, not uniform graph randomization",
+          "training_draw_seed": 20261004,
+          "shuffle_seed": 20261005,
+          "local_licence_scope": "Noncommercial academic research only; source notice preserved; no commercial distribution permission claim"
+        },
+        "repair_of": "graph_kinetics_past_fold",
+        "repair_scope": "Separate newgraph provenance from original reused-input equality guard only; no scientific protocol change."
+      }
     }
   }
 }

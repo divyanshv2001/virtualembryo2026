@@ -1,18 +1,20 @@
 {
-  "updated_utc": "2026-10-04T08:19:45.451726+00:00",
+  "updated_utc": "2026-10-04T08:35:13.200375+00:00",
   "fingerprints": {
     "RESEARCH_CONTINUATION_POLICY.md": "f766fa2359cd09d3af5279e5e35d4284c8334ff839e3c708fc0f86f2242691d3",
-    "LOCAL_OPTIMIZATION_STATE.json": "4e304d50c82974e69d57c6f221331090527a71fce81a9f9338342096bc94e75c",
+    "LOCAL_OPTIMIZATION_STATE.json": "4ede170c1a42927c2174f2471ff0338e98e13d66a4de41deb9cd0d7c44020eb4",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "2e3aab02502e8ebd8da13ddb3b057b809a4648022580a2a3d3b53328e3b68e63",
+    "METRIC_RESEARCH_QUEUE.json": "a18305219955ea16f586e2c2eae9d90708364efbd237de96fc11c13af3908e7c",
     "METRIC_CRITIQUE_POLICY.json": "3535989f1e3beac0f2d446b44df3c793d4be464dbd87f6e714c2f5afda864a6f",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
-    "RESEARCH_HARNESS_MANIFEST.json": "15d137541345dfb8109a631f7bef887ba18df5a856fd4af2d1d7155bc66a44eb"
+    "RESEARCH_HARNESS_MANIFEST.json": "947b659360ac6d2fda65a2cdc659a8bb51b7277734dbac071e4989708640857e"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [],
-  "next_experiment": "Implement bounded FLeCS-inspired native-Torch sigmoid-production/positive-decay prototype using pinned adult graph (127TFs,3539pastgenes,213112edges). Before training fix past-only gene-state scale/physical-stage objective and matched biological graph vs degree-matched shuffle/no-edge controls via compact Jev; verify small finite-gradient/solver/memory test and future guard. No external package stack/dense32285matrix; use graph only for noncommercial research under preserved licence. Not author reproduction/causal edge identification. Then register one fixed full-panel scored trial only if feasible, unchanged gates.",
+  "active_jobs_at_checkpoint": [
+    "graph_kinetics_past_fold_repair"
+  ],
+  "next_experiment": "Collect graph_kinetics_past_fold_repair final metrics; four fresh reviewers and real-vs-shuffle reward once. Preserve original pretraining failure; no duplicate run or second mechanism.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",

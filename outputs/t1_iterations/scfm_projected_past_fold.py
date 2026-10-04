@@ -46,7 +46,13 @@ def main():
         core,scorer=load_core()
         sources=['scfm_projected_past_fold.py','fresh_fullpanel_context.py','frozen_fullpanel_scoring.py','anchored_soft_ot.py','soft_ot_flow_matching.py','cnf_manifold_flow.py','cnf_density_flow.py','full_anchor_slope_forecast.py','log1p_positive_forecast.py','tigon_conditional_fullpanel.py','offline_backtest.py']
         if spec.get('learned_diffusion'): sources.append('learned_latent_diffusion.py')
+        graph_prior_inputs={}
+        if spec.get('graph_kinetics'):
+            sources.append('graph_kinetic_residual.py')
+            for name in ['adult_mouse_base_grn.parquet','past4096_adult_graph.npz','past4096_panel_features.npy','SOURCE_LICENSE.txt']:
+                graph_prior_inputs[name]=digest(HERE/'private/flecs_adult_graph_01'/name)
         plan={'created_utc':now(),'protocol':spec,'source_sha256':{name:digest(HERE/name) for name in sources},'input_sha256':inputs,'scoring_seeds':spec['scoring_seeds'],'scorer_manifest':scorer,'submissions_allowed':0}
+        if graph_prior_inputs:plan['graph_prior_sha256']=graph_prior_inputs
         save(RUN/'plan.json',plan);emit('plan_frozen',sha256=digest(RUN/'plan.json'))
         c=prepare(spec,RUN,emit);cutoff,target=spec['cutoff'],spec['target']
         if len(np.flatnonzero(c['stages']==target))<2000:raise ValueError('Insufficient target metadata support')
@@ -69,7 +75,16 @@ def main():
             plan['reused_checkpoint_sha256']={name:digest(previous/(name+'.pt')) for name in ['cnf800','projected_ot400']}
             save(RUN/'plan.json',plan);emit('reused_encoder_and_checkpoints_verified',sha256=digest(RUN/'plan.json'))
             flows={'cnf800':initial,'projected_ot400':baseline}
-            if spec.get('learned_diffusion'):
+            if spec.get('graph_kinetics'):
+                from graph_kinetic_residual import prepare_kinetic_models, train_kinetics
+                kinetic_models,graph_audit=prepare_kinetic_models(initial,c,RUN,emit)
+                report['kinetic_graph_audit']=graph_audit
+                flows={'cnf800':initial}
+                for name,model in kinetic_models.items():
+                    train_kinetics(model,c['coordinates'],c['stages'][c['past']],RUN/(name+'.pt'),emit,steps=spec['steps'],batch=spec['batch_size'])
+                    flows[name]=model.eval();emit('candidate_training_finished',candidate=name)
+                report['kinetic_scope']='FLeCS-inspired approximate reconstructed-gene kinetic residual in frozen PCA/CNF/decoder. Real vs degree-preserving shuffled graph is primary; no-edge has fewer parameters. Possible adult binding, not signed causal regulation or author reproduction. Past physical stages only.'
+            elif spec.get('learned_diffusion'):
                 from learned_latent_diffusion import DiffusionFlow, train_diffusion, smoke_test
                 report['diffusion_preflight']=smoke_test(initial)
                 emit('diffusion_preflight_passed', **report['diffusion_preflight'])

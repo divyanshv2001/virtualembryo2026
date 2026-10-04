@@ -30,11 +30,13 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement bounded FLeCS-inspired native-Torch sigmoid-production/positive-decay prototype using pinned adult graph (127TFs,3539pastgenes,213112edges). Before training fix past-only gene-state scale/physical-stage objective and matched biological graph vs degree-matched shuffle/no-edge controls via compact Jev; verify small finite-gradient/solver/memory test and future guard. No external package stack/dense32285matrix; use graph only for noncommercial research under preserved licence. Not author reproduction/causal edge identification. Then register one fixed full-panel scored trial only if feasible, unchanged gates.",
+  "next_experiment": "Collect graph_kinetics_past_fold_repair final metrics; four fresh reviewers and real-vs-shuffle reward once. Preserve original pretraining failure; no duplicate run or second mechanism.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
+  "active_jobs": [
+    "graph_kinetics_past_fold_repair"
+  ],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -2806,6 +2808,18 @@
         "variogram": "Problem: State-dependent diagonal diffusion slightly underperforms constant diffusion on mean calibrated variogram skill; exposed cutoff tuning provides no independent validation. Proposed solution: Estimate shrinkage-regularized, low-rank residual covariance using past-only data, targeting cross-variable dependence. Validation: Compare against matched constant and diagonal controls with identical integration steps and replay seeds on an untouched cutoff; retain the unchanged full scorer."
       },
       "coordinator": "Correct rounded-packet variogram error: exact mean skill gain +1.0160718378e-08, not negative; one panel regresses/two improve. Strict reward +1 applies with no epsilon; not robust evidence. MMD bandwidth proposal may concern training only; scorer/calibration bandwidth unchanged. No tuning on exposed future, no new cutoff label implies independent embryos. All recipes unvalidated; no automatic shrinkage/covariance grid. CNF secondary comparison has different solver dt, so cannot attribute gain solely to diffusion."
+    },
+    "graph_kinetics_past_fold_01": {
+      "status": "completed",
+      "report_sha256": "c4bef432c0b6de85e584ea52200001f9793a3519669c05684b181fd063990821",
+      "specialist_role_version": 2,
+      "reviews": {
+        "de_score": "Problem: Graphkinetic launch stopped before training/scoring because graph provenance hashes altered the reused input dictionary. No DE or metrics exist; reward 0 and readiness unchanged do not establish scientific failure. Proposed solution: Separate graph provenance in the plan; preserve exact original-input comparison. Validation: One unique repaired run, same protocol, real/shuffled/no-edge controls, past-only inputs, unchanged full-panel scorer.",
+        "de_direction": "Problem: Launch failed before training or scoring because graph provenance hashes altered the exact reused source-input dictionary. This provides no scientific direction or metrics. Proposed solution: Store graph provenance separately in the plan; preserve exact source-input comparison. Validation: Run one unique repaired experiment under the same protocol, with real/shuffled/no-edge controls, past-only inputs, and unchanged full-panel scoring.",
+        "mmd_u": "Problem: Graphkinetic launch failed on reused-input mismatch before training/scoring; MMD is unavailable, reward is 0, and readiness is unchanged. This is not scientific failure. Proposed solution: Separate graph provenance in the plan; preserve exact original-input comparison. Validation: One unique repaired same-protocol run, real/shuffled/no-edge controls, past-only inputs, unchanged full-panel scorer. Lower raw MMD and higher skill are better.",
+        "variogram": "Problem: Launch stopped before training or scoring because graph provenance altered the exact reused-input dictionary; no variogram exists, so scientific performance is unknown. Proposed solution: Store graph provenance separately in the plan, preserving exact input comparison. Validation: One unique repaired run with real/shuffled/no-edge controls, past-only inputs, unchanged full-panel scorer. Lower raw variogram and higher skill are better."
+      },
+      "coordinator": "Four reviewers agree no scientific outcome. Root cause additional graph hashes entered old exactinputdict, not changed source expression. Repair separates graph_prior_sha256 from input_sha256; direct baseline sourcehash comparison passed. No scorer/parameter/graph change; preserve failed evidence and use unique repair."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3999,6 +4013,29 @@
       "source_licence_url": "https://raw.githubusercontent.com/morris-lab/CellOracle/7948870a3b70f7d228e54734e1fa9ed3291fc23b/LICENSE",
       "licence_scope": "Modified Apache2, non-commercial academic purposes only; current use confined to local noncommercial research. No commercial/distribution permission claim. Dataset has no separately discovered licence; preserve repository notice and provenance.",
       "private_evidence": "private/flecs_adult_graph_01/coverage_audit.json"
+    },
+    "kinetic_preflight": {
+      "status": "passed",
+      "zero_residual_exact_cnf": true,
+      "finite_gradient": true,
+      "all3arm_optimizer_checkpoint_logging": true,
+      "degree_preserving_shuffle": {
+        "strategy": "target_labels_within_exact_indegree_classes",
+        "changed_edges": 51438,
+        "shared_edges": 161674,
+        "changed_fraction": 0.24136604226885394,
+        "permuted_target_labels": 3972,
+        "limitation": "Not uniform degree-matched graph sampling; singleton degrees and common edges persist."
+      },
+      "parameters": 221304,
+      "peak_bytes": 550608896,
+      "seconds": 8.114879500004463,
+      "previous_preflight_failure": "double-edge swap budget insufficient; replaced before scoring with exact-indegree target relabel control, not scientific outcome",
+      "jev_choice": "latent_kinetic_residual",
+      "jev_confidence": 0.52,
+      "jev_input_tokens": 1330,
+      "jev_output_tokens": 57,
+      "jev_payload_bytes": 2650
     }
   }
 }
