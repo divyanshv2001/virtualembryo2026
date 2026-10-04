@@ -95,7 +95,9 @@ def main():
     parser=argparse.ArgumentParser();parser.add_argument('command',choices=['status','run','collect']);parser.add_argument('--experiment');args=parser.parse_args()
     manifest=read(HERE/'RESEARCH_HARNESS_MANIFEST.json')['experiments'];live=processes()
     if args.command=='status':
-        result={'live_project_python_processes':len(live),'experiments':[status(name,entry,live) for name,entry in manifest.items()]}
+        if args.experiment and args.experiment not in manifest:raise ValueError('Unknown registered experiment')
+        selected={args.experiment:manifest[args.experiment]} if args.experiment else manifest
+        result={'live_project_python_processes':len(live),'experiments':[status(name,entry,live) for name,entry in selected.items()]}
     else:
         if args.experiment not in manifest:raise ValueError('Register experiment in manifest before execution')
         result=(run if args.command=='run' else collect)(args.experiment,manifest[args.experiment],live)

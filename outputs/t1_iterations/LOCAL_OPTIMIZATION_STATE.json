@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-04T03:22:24.077242+00:00",
+  "updated_utc": "2026-10-04T03:26:16.759086+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": true,
+  "local_process_running": false,
   "quota_reset_evidence": {
     "limit_observed": true,
     "observed_reset_text": "7:54 PM",
@@ -30,14 +30,12 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Monitor unique tigon_gradient_balance_audit; do not relaunch. Fourcritics/synthesis once on newcompletion; no target/scoring/reward. Failedfixedratio gate retires densitybalancepath; no alpha/budget grid.",
+  "next_experiment": "Efficiency checkpoint: fixed TIGON pilot and gradient-balance repair retired, no queued rerun/expansion/export. Next cycle select at most one genuinely new viable past-only mechanism from compact queue; require supporting evidence and one cached consequential advisory only if unresolved. Do not chain diagnostics, revisit failed signed-drift or tune against exposed targets. Usage target 5\u20136pp/cycle; original scientific gates unchanged.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "tigon_gradient_balance_audit"
-  ],
-  "active_run_path": "outputs/t1_iterations/private/tigon_conditional_fullpanel_01",
+  "active_jobs": [],
+  "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -2663,6 +2661,24 @@
         "variogram"
       ],
       "reviews": "TIGON_OBJECTIVE_SIGNAL_CRITIQUES.md"
+    },
+    "tigon_gradient_balance_audit_01": {
+      "status": "completed",
+      "report_sha256": "5ab5efbd23a5b68acbce708fee59dc888e68a29211fa91a1c360137e6f1be68c",
+      "specialist_role_version": 2,
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "reviews": {
+        "de_score": "Problem: DE score is unavailable; neither candidate passes energy and original-objective criteria, and g0 also fails the 1% density criterion. Proposed solution: Close the density-balance path under its predeclared failure rule. Consider only genuinely new past-only support in a later cycle; no target tuning or unchanged repeats. Validation: Matched cached-baseline/common-rescale controls and eight new noise seeds support closure. Exact PCA, training-stream, finite/ESS checks passed; no target, benchmark, or reward access. Readiness unchanged.",
+        "de_direction": "Problem: DE-direction is unavailable; neither g0 nor g1 supports a gain. Both fail energy and original-objective criteria; g0 also fails density. Proposed solution: Close the predeclared density-balance path without repeats. Any future remedy requires genuinely new past-only support, excluding signed-drift repeats and target tuning. Validation: Exact PCA/training-stream checks passed with zero target access. Eight new noise-query seeds reused centers, not held-out cells. Cached baseline and common-rescale controls do not establish DE-direction improvement. Readiness remains unchanged.",
+        "mmd_u": "Problem: MMD is unavailable; neither candidate passes energy and original-objective criteria, and g0 also fails density improvement. Proposed solution: Retire the density-balance path under its predeclared failure rule. Any future remedy requires genuinely new past-only support, without kernel/scorer changes or target tuning. Validation: Exact PCA/training-stream and finite ESS gates passed. Cached baseline/common-rescale controls and eight new noise seeds share centers, so they do not establish held-out-cell generalization. Benchmark readiness remains unchanged; no further experiments.",
+        "variogram": "Problem: Variogram is unavailable; no improvement or benchmark-readiness claim is supported. Both balance candidates failed energy and objective criteria; g0 also failed density improvement. Proposed solution: Close and retire density balancing under the predeclared rule, without repeats. Any future remedy must introduce genuinely new past-only support. Validation: Training-stream and PCA checks and finite ESS passed. Eight new noise seeds reused centers, not held-out cells. Retain cached-baseline and common-rescale controls and predeclared criteria; variogram remains unassessed."
+      },
+      "completed_utc": "2026-10-04T03:26:16.759086+00:00"
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3473,7 +3489,34 @@
     "reward_delta": 0
   },
   "tigon_gradient_balance_audit": {
-    "status": "running",
-    "spec": "NEXT_TIGON_GRADIENT_BALANCE_AUDIT.json"
+    "status": "completed_failed_predeclared_gate_path_retired",
+    "spec": "NEXT_TIGON_GRADIENT_BALANCE_AUDIT.json",
+    "report": "TIGON_GRADIENT_BALANCE_AUDIT_RESULTS.json",
+    "report_sha256": "5ab5efbd23a5b68acbce708fee59dc888e68a29211fa91a1c360137e6f1be68c",
+    "alpha": 32.08515874785922,
+    "failure_reasons": {
+      "gradient_balance_disabled": [
+        "density_reduction_under_1percent",
+        "energy_above_initial",
+        "original_objective_not_below_all_controls"
+      ],
+      "gradient_balance_enabled": [
+        "energy_above_initial",
+        "original_objective_not_below_all_controls"
+      ]
+    },
+    "reward_delta": 0,
+    "retired": true
+  },
+  "efficiency_policy": {
+    "target_five_hour_window_percentage_points_per_cycle": [
+      5,
+      6
+    ],
+    "observed_account_used_percent": 18,
+    "usage_scope": "account-wide snapshot, not attributable iteration usage",
+    "one_experiment_per_cycle": true,
+    "one_commit_per_completed_checkpoint": true,
+    "policy": "RESEARCH_CONTINUATION_POLICY.md"
   }
 }
