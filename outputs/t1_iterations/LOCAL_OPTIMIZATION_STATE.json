@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Pin CardamomOT author source; audit count likelihood/hidden-protein dynamics, license and RTX3060 feasibility; then predeclare one matched hidden-memory trial if viable. Raw counts verified, no old attention grid.",
+  "next_experiment": "Prepare fixed past-only128gene raw-count GPU prototype; verify library-offset count objective and full-panel forecast bridge before predeclaring matched instantaneous versus delayed-protein experiment. No full author-stack installation or target tuning.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -4296,5 +4296,45 @@
     "bounded_raw_gene_check": 32,
     "raw_dense_float32_bytes": 1213340988,
     "scope": "Data feasibility only; historical preparation checked every gene before normalization. Use original counts, never exponentiate normalized matrix. No training/scoring/reward/embryo independence."
+  },
+  "hidden_protein_feasibility": {
+    "status": "bounded_own_gpu_prototype_viable_full_author_stack_unverified",
+    "author_repository": "https://github.com/eliasventre/CardamomOT",
+    "author_commit": "cde2ee788ad34c7eeb8185691a3c1538788de0ee",
+    "inspected_sources": {
+      "CardamomOT/inference/simulations.py": "633aa675e5653b58beb080d4335847f5b09e69c177ceab331861ecf2cf12a624",
+      "CardamomOT/inference/trajectory.py": "d497ece7f05d59ec568de37d60dd71e6153dd2d1c94e37c88bf9a478ef648c55",
+      "CardamomOT/inference/mixture.py": "371f349c6ddacdb8805f435140642ad191b02fe59362b38f21949aa4f5c8a26c"
+    },
+    "license_status": "pyproject declares MIT; no standalone root LICENSE found in recursive tree; no author code copied or installed.",
+    "author_mechanism": "Negative-binomial mixtures and hidden protein relaxation driven by mRNA with protein-mediated regulatory production. Inspected inference/network/trajectory/simulation paths use NumPy/SciPy/Numba CPU; torch dependency alone does not establish GPU implementation.",
+    "missing_author_dependencies": [
+      "numba",
+      "harissa",
+      "pot",
+      "scanpy",
+      "omnipath"
+    ],
+    "synthetic_gpu_probe": {
+      "device": "NVIDIA GeForce RTX3060 Laptop GPU",
+      "torch": "2.11.0+cu128",
+      "genes": 128,
+      "rank": 16,
+      "cells": 64,
+      "parameters": 4480,
+      "optimizer_steps": 3,
+      "integration_substeps": 16,
+      "elapsed_seconds": 1.2199150000233203,
+      "gpu_peak_bytes": 19232256,
+      "finite_loss": 2.7441067695617676,
+      "finite_gradients": true
+    },
+    "scope": "Resource-only own RNA/protein+NB prototype; no real data fit, score, reward, author reproduction or validation. No GPU replacement.",
+    "next_requirements": [
+      "Select genes and obtain integer counts using past<=8.25 only; verify all extracted values and cell library offsets.",
+      "Specify matched instantaneous-protein versus delayed-protein controls and loss; no target-informed selection.",
+      "Verify bridge into frozen full-panel forecast/scorer before scored batch; preserve original CPU scorer/replay and RTX3060 training.",
+      "Bound pairwise training to64cells/128genes, two CPUthreads, host16GB and GPU4.5GB; do not run unbounded author gene-by-cell OT stack."
+    ]
   }
 }
