@@ -1,0 +1,30 @@
+{
+  "created_before_training_utc": "2026-10-04T15:45:15.423272+00:00",
+  "authorization": "User requested upgraded submission file; export only.",
+  "candidate": "potential residual",
+  "observed_cutoff": 9.5,
+  "forecast_target": 10.5,
+  "reuse_scope": "Exact prior E9.5 encoder/CNF800/kinetics400, refit potential400 on all25963 sampled source cells through9.5; full17057 observedE9.5 head cells,1500 donors.",
+  "source_sha256": {
+    "D:\\Neurl IPS 2026-20260927T150309Z-1-001\\virtualembryo\\outputs\\t1_iterations\\export_potential_submission.py": "1d8cef89bbe6116e8ab8b42c76239dc04993c14d2ba130dcd4e4fb2d317b11f3",
+    "D:\\Neurl IPS 2026-20260927T150309Z-1-001\\virtualembryo\\outputs\\t1_iterations\\scalar_potential_residual.py": "40c4fbdae5bad94612dcb599eefd3b8219e3cab5545453fc896385f50668ca62",
+    "D:\\Neurl IPS 2026-20260927T150309Z-1-001\\virtualembryo\\outputs\\t1_iterations\\cnf_manifold_flow.py": "55d1ec30848dcc75690129ef405c9d7e6cb692c2483032a109947de1b5b63596",
+    "D:\\Neurl IPS 2026-20260927T150309Z-1-001\\virtualembryo\\outputs\\t1_iterations\\cnf_density_flow.py": "8e212ab5a8ee63788abc56d55b70384d4787badf90639191c9e309e917c02e9c",
+    "D:\\Neurl IPS 2026-20260927T150309Z-1-001\\virtualembryo\\outputs\\t1_iterations\\graph_kinetic_residual.py": "1a531e6943c65901066486845f31b8f6c87851ffb81201034c9502801ec4eac8",
+    "D:\\Neurl IPS 2026-20260927T150309Z-1-001\\virtualembryo\\outputs\\t1_iterations\\private\\kinetic_none_progress_20261004_01\\encoder.npz": "2285106730de53d0fd6837c6785210bc1412abecdb277d9bd8d2cb5dc6d75b03",
+    "D:\\Neurl IPS 2026-20260927T150309Z-1-001\\virtualembryo\\outputs\\t1_iterations\\private\\kinetic_none_progress_20261004_01\\kinetic_none400.pt": "1224118943e7e85658dc21d08c065e32d18394797a7cb975caadad3e668d3ec6",
+    "D:\\Neurl IPS 2026-20260927T150309Z-1-001\\virtualembryo\\outputs\\t1_iterations\\private\\associated_prepared_01\\selected_metadata.csv": "3db3903c24447cfa250622780a60dc4799881f0501869a9458afb124914193bf"
+  },
+  "development_report_sha256": "4898ffbfb781409a349efa0f7fd82fb969aacabbb2b4e5a4c6de86e6d4bc19a7",
+  "local_development_mean": 52.43846044214097,
+  "training_steps": 400,
+  "seed": 20261004,
+  "residual_scale": 0.1,
+  "step": 0.125,
+  "batch_size": 64,
+  "readiness_gate_passed": false,
+  "uploaded": false,
+  "agent_team_lock_certified": false,
+  "external_data_disclosure": "Development2024 dev201867 associated prepared cohort:25963 cells selected from430339-cell public atlas, CC-BY. Not full atlas training.",
+  "scope": "Actual E9.5-to-E10.5 progress forecast; no hidden truth or official score estimate. Potential architecture with Sinkhorn objective, not Action Matching reproduction."
+}

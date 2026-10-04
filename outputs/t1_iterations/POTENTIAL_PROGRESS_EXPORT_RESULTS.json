@@ -1,0 +1,73 @@
+{
+  "status": "completed",
+  "artifact": "D:\\Neurl IPS 2026-20260927T150309Z-1-001\\virtualembryo\\outputs\\t1_submissions\\potential_progress_20261004_02\\T1_val__potential_progress_20261004_02.h5ad",
+  "format_validation": {
+    "passed": true,
+    "shape": [
+      1500,
+      32285
+    ],
+    "dtype": "float32",
+    "panel_exact_order": true,
+    "finite_nonnegative": true,
+    "coordinates_absent": true,
+    "obs_columns": [],
+    "sha256": "98c33afcef433a6057755c5432053f9c0d8699eac7caa225ff4252de9183756d",
+    "bytes": 30524651,
+    "scope": "Local format validation only; not official predictive score or competition eligibility"
+  },
+  "plan_sha256": "69ccfc00d971f56cbd4f5aee55d8e143af15efc343f5bff3531675aa435c1746",
+  "forecast_audit": {
+    "fit_cells": 25963,
+    "fit_max_stage": 9.5,
+    "supported_genes": 16325,
+    "method": "All-past-E8.5 conditional anchor slopes, source levels fixed",
+    "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+    "conditional_ridge_strength": 1.0,
+    "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+    "encoder_features": 4096,
+    "covariance_guard_features": 384,
+    "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+    "anchor_calibration_rows": 17057,
+    "anchor_supported_genes": 15784,
+    "anchor_slope_ridge": 1.0,
+    "limitation": "Cross-sectional E8.5 associations are not temporal velocities.",
+    "anchor_positive_slope_strength": 0.25,
+    "anchor_detection_slope_strength": 0.75,
+    "response_units": "log1p normalized expression",
+    "response_fit_rows": 25963,
+    "response_fit_max_stage": 9.5,
+    "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+    "mode": "joint",
+    "strength": 1.0,
+    "backoff": 1.0,
+    "seed": 20260928,
+    "sampling": "systematic",
+    "guard_backoffs": [
+      {
+        "backoff": 1.0,
+        "covariance_change": 0.30892537016837385,
+        "finite": true
+      }
+    ],
+    "covariance_change_vs_reference": 0.30892537016837385,
+    "newly_detected_entries": 88235,
+    "removed_detection_entries": 188165,
+    "abundance_factor_cap": 2.0,
+    "detection_probability_delta_cap": 0.25,
+    "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+    "mapped_mass_conserved": true,
+    "protected_genes_unchanged": true
+  },
+  "mass_error": 5.2663595220125355e-08,
+  "baseline_replay_exact": true,
+  "candidate_replay_exact": true,
+  "protected_genes_exact": true,
+  "gpu_peak_allocated_bytes": 83257856,
+  "host_peak_bytes": 5166243840,
+  "local_development_mean": 52.43846044214097,
+  "official_score": null,
+  "readiness_gate_passed": false,
+  "uploaded": false,
+  "agent_team_lock_certified": false
+}

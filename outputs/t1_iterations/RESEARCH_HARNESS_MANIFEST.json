@@ -1829,6 +1829,93 @@
         "driver_runtime": "cpu",
         "scalar_potential": true
       }
+    },
+    "potential_progress_export": {
+      "script": "export_potential_submission.py",
+      "args": [],
+      "run": "private/potential_progress_20261004_01",
+      "report": "POTENTIAL_PROGRESS_EXPORT_INITIAL_FAILURE.json",
+      "protocol": {
+        "training_device": "cuda",
+        "driver_runtime": "cpu",
+        "cutoff": 9.5,
+        "target": 10.5,
+        "steps": 400,
+        "batch_size": 64,
+        "purpose": "User-authorized potential submission export only; no official upload or score batch."
+      }
+    },
+    "potential_progress_export_repair": {
+      "script": "export_potential_submission.py",
+      "args": [
+        "--experiment",
+        "potential_progress_export_repair"
+      ],
+      "run": "private/potential_progress_20261004_01",
+      "report": "POTENTIAL_PROGRESS_EXPORT_SOURCE_AUDIT_FAILURE.json",
+      "protocol": {
+        "training_device": "cuda",
+        "driver_runtime": "cpu",
+        "cutoff": 9.5,
+        "target": 10.5,
+        "steps": 400,
+        "batch_size": 64,
+        "purpose": "User-authorized potential submission export only; no official upload or score batch."
+      }
+    },
+    "potential_progress_export_repair_02": {
+      "script": "export_potential_submission.py",
+      "args": [
+        "--experiment",
+        "potential_progress_export_repair_02"
+      ],
+      "run": "private/potential_progress_20261004_01",
+      "report": "POTENTIAL_PROGRESS_EXPORT_DEVICE_AUDIT_FAILURE.json",
+      "protocol": {
+        "training_device": "cuda",
+        "driver_runtime": "cpu",
+        "cutoff": 9.5,
+        "target": 10.5,
+        "steps": 400,
+        "batch_size": 64,
+        "purpose": "User-authorized potential submission export only; no official upload or score batch."
+      }
+    },
+    "potential_progress_export_repair_03": {
+      "script": "export_potential_submission.py",
+      "args": [
+        "--experiment",
+        "potential_progress_export_repair_03"
+      ],
+      "run": "private/potential_progress_20261004_01",
+      "report": "POTENTIAL_PROGRESS_EXPORT_PACKET_FAILURE.json",
+      "protocol": {
+        "training_device": "cuda",
+        "driver_runtime": "cpu",
+        "cutoff": 9.5,
+        "target": 10.5,
+        "steps": 400,
+        "batch_size": 64,
+        "purpose": "User-authorized potential submission export only; no official upload or score batch."
+      }
+    },
+    "potential_progress_export_02": {
+      "script": "export_potential_submission.py",
+      "args": [
+        "--experiment",
+        "potential_progress_export_02"
+      ],
+      "run": "private/potential_progress_20261004_02",
+      "report": "POTENTIAL_PROGRESS_EXPORT_RESULTS.json",
+      "protocol": {
+        "training_device": "cuda",
+        "driver_runtime": "cpu",
+        "cutoff": 9.5,
+        "target": 10.5,
+        "steps": 400,
+        "batch_size": 64,
+        "purpose": "User-authorized potential submission export only; no official upload or score batch."
+      }
     }
   }
 }
