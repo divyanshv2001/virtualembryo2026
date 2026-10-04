@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-04T03:52:54.023441+00:00
+Updated: 2026-10-04T04:08:28.121797+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -20,7 +20,7 @@ Current separate reward: -1320. This is not a benchmark score.
 
 External acquisition entry point: GSE76118_WT_STAGE_MANIFEST.json. The old stage-only list is historical;127 mutants excluded,162 B6 WT controls separate,143E8.5/999E9.5 primary CD1 candidates. Expression acquired: True; acquired cohort cells: 24; prospective QC passes: 18; original pilot cells: 4; training readiness: False. Latest external status: 24-cell cohort/QC, compatibility, lineage matching, robustness and E8.5 static guidance already completed; static guidance had no passing alpha. Transfer/embryo replication not validated. Do not repeat acquisition or QC; per-cutoff stage restrictions remain.. Latest Jev actual usage: {'input_tokens': 792, 'output_tokens': 45}.
 
-Use D-only temporary disk cache, two BLAS threads, one full forecast at a time;16GBRAM. Retain source reports/events, seeds/splits/hashes, raw4/skills4 and failed outcomes. Refresh SCORE_LEDGER.jsonl after full-panel batches; proxy/export is not a score batch. Commit small evidence/code, never datasets/secrets/artifact matrices. No automatic official upload. Run four compact metric critics after each new experiment batch once; max150words each, fresh context, no routine agents. Each metric specialist must state Problem / Proposed solution / Validation, with evidence, uncertainty, concrete past-only remedy, matched controls and failure criteria; proposed solutions are unvalidated until tested.
+Use D-only temporary disk cache, two BLAS threads, one full forecast at a time;16GBRAM. Retain source reports/events, seeds/splits/hashes, raw4/skills4 and failed outcomes. Refresh SCORE_LEDGER.jsonl after full-panel batches; proxy/export is not a score batch. Commit small evidence/code, never datasets/secrets/artifact matrices. No automatic official upload. Use harness critics for inline evidence and harness wait for bounded local waiting. Reuse frozen_fullpanel_scoring.py; Jev selects typed configurations, never writes arbitrary code. Run four compact metric critics after each new experiment batch once; max60words each, fresh context, no routine agents. Each metric specialist must state Problem / Proposed solution / Validation, with evidence, uncertainty, concrete past-only remedy, matched controls and failure criteria; proposed solutions are unvalidated until tested.
 
 Jev: cached advisory <=3000bytes for a genuinely new uncertain decision; at most one per decision. Prefer Jev for distinct consequential selection/design/diagnosis/critique-synthesis decisions; multiple decisions per batch allowed. Routine checks use zero calls. Actual last formula calls815in/71out and730in/69out; no measured Codex credit savings. Do not invent quota resets.
 

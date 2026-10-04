@@ -60,7 +60,7 @@ def main():
                         'cnf_covariance_alignment.py','full_anchor_slope_forecast.py',
                         'partial_anchor_forecast.py','log1p_positive_forecast.py',
                         'feature_panel_forecast.py','ridge_conditional_head.py',
-                        'offline_backtest.py','temporary_forecast_cache.py','scnode_resource_preflight.py','anchor_slope_calibration.py','neural_hurdle_forecast.py','robust_population.py']
+                        'frozen_fullpanel_scoring.py','tigon_conditional_fullpanel.py','offline_backtest.py','temporary_forecast_cache.py','scnode_resource_preflight.py','anchor_slope_calibration.py','neural_hurdle_forecast.py','robust_population.py']
         core,scorer_manifest = load_core()
         plan = {'created_utc':now(),'spec_sha256':digest(spec_path),
                 'source_sha256':{f:digest(HERE/f) for f in source_files},
@@ -194,48 +194,9 @@ def main():
         save(RUN/'generation.json',generation);report['generation']=generation
         emit('all_forecasts_frozen_before_target_expression',target=target)
         # This is the first permitted future expression access in this worker.
-        available=np.flatnonzero(stages==target)
-        for seed in plan['scoring_seeds']:
-            rows=np.random.default_rng(seed).choice(available,2000,replace=False)
-            np.save(RUN/f'target_rows_{seed}.npy',rows)
-            future=panel_values(raw_x,rows,mapped,columns,len(panel))
-            order=np.random.default_rng(seed).permutation(len(future));np.save(RUN/f'target_order_{seed}.npy',order)
-            evaluator=Panel(core,future[order[:1000]],donors,seed)
-            floor,ceiling=evaluator.metrics(donors),evaluator.metrics(future[order[1000:]])
-            outcomes=[]
-            for name in names:
-                with cache.read(name,consume=False) as pred:raw=evaluator.metrics(pred)
-                row={'candidate':name,'prediction_sha256':generation[name]['prediction_sha256'],
-                     'raw_metrics':raw,**evaluator.aggregate(raw,floor,ceiling)}
-                outcomes.append(row);emit('candidate_scored',seed=seed,**row)
-            report['panels'].append({'seed':seed,'cutoff':cutoff,'target':target,'floor':floor,'ceiling':ceiling,'results':outcomes})
-            save(RUN/'report.partial.json',report)
-            del future,evaluator
-        summary=[]
-        for name in names:
-            rows=[next(r for r in p['results'] if r['candidate']==name) for p in report['panels']]
-            valid=all(r['calibration_valid'] for r in rows)
-            summary.append({'candidate':name,'scores':[r['local_score'] for r in rows],
-                            'mean_score':float(np.mean([r['local_score'] for r in rows])) if valid else None,
-                            'raw_metrics':[r['raw_metrics'] for r in rows],'skills':[r['skills'] for r in rows],
-                            'all_calibrations_valid':valid,
-                            'mean_skills':{m:float(np.mean([r['skills'][m] for r in rows])) for m in rows[0]['skills']} if valid else None})
-        by={r['candidate']:r for r in summary}
-        controls=[by[n] for n in names[:2]];passing=[]
-        for name in names[2:]:
-            new=by[name]
-            passed=new['all_calibrations_valid'] and all(c['all_calibrations_valid'] for c in controls) and all(
-                new['scores'][i]>max(c['scores'][i] for c in controls) for i in range(3)) and all(
-                new['mean_skills'][m]>=max(c['mean_skills'][m] for c in controls) for m in new['mean_skills'])
-            if passed:passing.append(name)
-        contrast=None
-        if all(by[n]['all_calibrations_valid'] for n in names[2:]):
-            contrast={m:by[names[3]]['mean_skills'][m]-by[names[2]]['mean_skills'][m] for m in by[names[3]]['mean_skills']}
-        report.update(status='completed',completed_utc=now(),summary=summary,
-                      passing_candidates=passing, growth_enabled_minus_disabled_mean_skills=contrast,
-                      expand_to_16_resamples=any(by[n]['mean_score']>=60 for n in passing),
-                      scope=spec['scope'],plan_sha256=digest(RUN/'plan.json'),
-                      resource_peak_process_working_set_bytes=peak_memory())
+        from frozen_fullpanel_scoring import score_frozen_forecasts
+        score_frozen_forecasts(core, raw_x, stages, donors, mapped, columns, panel,
+                               cutoff, target, plan, names, generation, cache, RUN, report, emit, spec)
     except Exception as exc:
         (RUN/'traceback.txt').write_text(traceback.format_exc())
         report.update(status='failed',error=type(exc).__name__+': '+str(exc),failed_utc=now(),passing_candidates=[])

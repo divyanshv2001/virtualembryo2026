@@ -728,3 +728,6 @@ New fixed log-ratio loss g0/g1 trained200steps on past7.5/7.75, exactPCA/init/qu
 
 ## 2026-10-04T03:51:02.852910+00:00 — frozen log-density fullpanel rejected
 Means g0 45.934911/g1 45.886242 vs copy50/CNF50.837770; all12 calibrations valid, frozen/replay/control hashes passed, peak4640534528bytes. Four distinct read-only <=60word reviews evidence-checked and consolidated instate. Botharmsreward-40,total-1320; no passing/expansion/export. Deterministic gate outcome needs no Jev. One requested token-report deliverable outside repository; no new research experiment chained.
+
+### Codex orchestration optimization — 2026-10-04
+Added cached inline critic delivery, bounded local wait and compact cached Jev design advisories; Jev cannot generate arbitrary code. Extracted shared frozen scorer: replay of all 12 saved raw panels exactly preserves scores/skills/summaries/gates; incomplete forecast hashes rejected. No new science runs or Jev requests. Four fresh metric reviews remain mandatory per new batch with independent read-only remits. Actual allowance savings remain unmeasured.

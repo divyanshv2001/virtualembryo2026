@@ -5,6 +5,7 @@ import json
 import os
 import subprocess
 import sys
+import time
 from datetime import datetime,timezone
 from pathlib import Path
 
@@ -91,8 +92,48 @@ def collect(name,entry,live):
     save(folder/'collected.json',receipt)
     return receipt
 
+def inline_critics(name,entry):
+    report=read(resolve(entry['report']))
+    checkpoint=read(HERE/'LOCAL_OPTIMIZATION_STATE.json')
+    review=checkpoint.get('post_batch_agent_critiques',{}).get(Path(entry['run']).name,{})
+    if critics_cached(review,report):return {'experiment':name,'status':'cached','critic_agents_needed':False}
+    report_hash=digest(resolve(entry['report']))
+    packets={}
+    for metric in METRICS:
+        packet=read(HERE/'private/harness_runs'/name/('critic_'+metric+'.json'))
+        if packet.get('report_sha256')!=report_hash:raise ValueError('Collect current report before requesting inline critics')
+        packets[metric]=packet
+    return {'experiment':name,'report_sha256':report_hash,'critic_agents_needed':True,
+            'delivery':'Spawn four fresh metric-only reviewers with their packet inline; no tools, files, peers or writes; <=60words. Coordinator validates facts.',
+            'packets':packets}
+
+def advise(name,entry,decision,options,dry_run=False):
+    import re
+    if not decision or not re.fullmatch(r'[a-z0-9_-]{1,64}',decision):raise ValueError('Use a short stable decision id')
+    choices=options if isinstance(options,dict) else json.loads(options or '{}')
+    if not isinstance(choices,dict) or not 2<=len(choices)<=6 or not all(isinstance(v,str) and len(v)<=300 for v in choices.values()):raise ValueError('Provide 2-6 concise options with criteria')
+    report=read(resolve(entry['report']))
+    if report.get('status') not in ('completed','failed'):raise ValueError('Advisory requires final preserved evidence')
+    checkpoint=read(HERE/'LOCAL_OPTIMIZATION_STATE.json')
+    review=checkpoint.get('post_batch_agent_critiques',{}).get(Path(entry['run']).name,{})
+    packet={'model':'jev-1.13.0','state':{'decision':decision,'report_sha256':digest(resolve(entry['report'])),
+        'status':report.get('status'),'error':report.get('error'),'passing':report.get('passing_candidates'),
+        'summary':[{'candidate':r.get('candidate'),'mean':r.get('mean_score'),'skills':r.get('mean_skills'),'valid':r.get('all_calibrations_valid')} for r in report.get('summary',[])],
+        'critic_problems':{m:v.split('Proposed solution:')[0] for m,v in review.get('reviews',{}).items()} if isinstance(review.get('reviews'),dict) else {},
+        'constraints':'Past-only fit; unchanged full-panel scorer/calibration/gates. Previously exposed development is not independent validation. No target tuning, repeat, absolute-growth claim or official upload; remedies unvalidated.'},
+        'questions':{'next':{'type':'choice','criteria':choices}}}
+    size=len(json.dumps(packet,separators=(',',':'),sort_keys=True).encode())
+    if size>3000:raise ValueError('Advisory exceeds3000bytes; narrow options rather than transmit more context')
+    if dry_run:return {'experiment':name,'decision':decision,'payload_bytes':size,'requests':0,'mode':'dry_run'}
+    folder=HERE/'private/harness_runs'/name/'decisions';folder.mkdir(parents=True,exist_ok=True)
+    path=folder/(decision+'_packet.json');record=folder/(decision+'_route.json')
+    if path.exists() and read(path)!=packet:raise ValueError('Decision id already has different evidence; preserve original')
+    if not path.exists():save(path,packet)
+    result=subprocess.run([sys.executable,str(HERE/'jev_compact_route.py'),'--packet',str(path),'--record',str(record)],cwd=HERE.parents[1],capture_output=True,text=True,check=True)
+    return json.loads(result.stdout)
+
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('command',choices=['status','run','collect','queue','resume']);parser.add_argument('--experiment');args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('command',choices=['status','run','collect','queue','resume','wait','critics','advise']);parser.add_argument('--experiment');parser.add_argument('--wait-seconds',type=int,default=20);parser.add_argument('--decision');parser.add_argument('--options');parser.add_argument('--dry-run',action='store_true');args=parser.parse_args()
     if args.command=='resume':
         checkpoint=read(HERE/'LOCAL_OPTIMIZATION_STATE.json')
         manifest=read(HERE/'RESEARCH_HARNESS_MANIFEST.json')['experiments']
@@ -125,7 +166,17 @@ def main():
         result={'live_project_python_processes':len(live),'experiments':[status(name,entry,live) for name,entry in selected.items()]}
     else:
         if args.experiment not in manifest:raise ValueError('Register experiment in manifest before execution')
-        result=(run if args.command=='run' else collect)(args.experiment,manifest[args.experiment],live)
+        entry=manifest[args.experiment]
+        if args.command=='critics':result=inline_critics(args.experiment,entry)
+        elif args.command=='advise':result=advise(args.experiment,entry,args.decision,args.options,args.dry_run)
+        elif args.command=='wait':
+            if not 0<=args.wait_seconds<=45:raise ValueError('Wait must be between0and45seconds')
+            deadline=time.monotonic()+args.wait_seconds
+            while True:
+                result=status(args.experiment,entry,live)
+                if result['status']!='running' or time.monotonic()>=deadline:break
+                time.sleep(min(5,max(0,deadline-time.monotonic())));live=processes()
+        else:result=(run if args.command=='run' else collect)(args.experiment,entry,live)
     print(json.dumps(result,separators=(',',':')))
 
 if __name__=='__main__':

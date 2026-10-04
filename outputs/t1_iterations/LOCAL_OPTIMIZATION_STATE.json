@@ -3566,15 +3566,26 @@
       5,
       6
     ],
-    "policy_sha256": "d49c5f4b947a06aa356f99bd2ff62947427dbf7c48ef1995ff3bf68634b91260",
+    "policy_sha256": "797fa31c5a613a9e039ddcfe0fbdcd3824da3997270b54424f8494c5a80fc995",
     "rules": [
-      "Start with research_harness.py resume; read policy only if changed",
-      "One necessary experiment; checkpoint before another",
-      "Four mandatory fresh reviews <=60words; metric-only packets",
-      "Routine tool output <=1200characters; aggregate locally",
-      "No routine Jev, usage polling, new files or commits",
-      "Safe checkpoint at soft budget; no model/chat changes"
-    ]
+      "Start with harness resume; inspect only changed policy and active evidence",
+      "One necessary experiment; one checkpoint commit/push",
+      "Four fresh inline metric reviews <=60words; no tools/peers/writes; verify factual conflicts",
+      "Use one bounded local wait; routine output <=1200characters",
+      "Use cached <=3000byte Jev typed advisories for unresolved decisions; no arbitrary code generation",
+      "Reuse shared scorer and existing configurations; Codex verifies necessary novel code",
+      "No routine usage polling/files; soft budget only; no model/chat changes"
+    ],
+    "orchestration_validation": {
+      "utc": "2026-10-04T04:08:27.978000+00:00",
+      "saved_raw_panel_replay": "12/12 scores and skills exact; summaries/gates exact",
+      "missing_frozen_forecast_hash": "rejected",
+      "inline_packets": "four matching report hashes; no agent/model calls",
+      "advisory_dry_run_payload_bytes": 1932,
+      "jev_requests": 0,
+      "new_science_runs": 0,
+      "allowance_savings": "unmeasured"
+    }
   },
   "tigon_log_density_audit": {
     "status": "completed_past_mechanism_gate_passed",

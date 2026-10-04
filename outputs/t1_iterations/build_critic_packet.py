@@ -26,7 +26,7 @@ def main():
     packet={'report_sha256':hashlib.sha256(raw).hexdigest(),'metric':args.metric,'plan_sha256':report.get('plan_sha256'),
         'raw_direction':'lower_better' if args.metric in ('mmd_u','variogram') else 'higher_better',
         'skill_direction':'higher_better','outcomes':rows,'metric_available':any(any(v is not None for v in row.get('raw',[])) if isinstance(row.get('raw'),list) else row.get('raw') is not None for row in rows),
-        'passing_candidates':report.get('passing_candidates'),'specialist_role_version':2,'instructions':'In<=150words state Problem / Proposed solution / Validation: evidence vs uncertainty, concrete past-only remedy, matched controls, success/failure criteria. Missing metrics unavailable; never invent outcomes/credentials. No history rereads. Readiness unchanged.'}
+        'passing_candidates':report.get('passing_candidates'),'specialist_role_version':2,'instructions':'In<=60words state Problem / Proposed solution / Validation: evidence vs uncertainty, concrete past-only remedy, matched controls, success/failure criteria. Missing metrics unavailable; never invent outcomes/credentials. No history rereads. Readiness unchanged.'}
     if report_path.name.startswith('PRODUCTION_COVERAGE_AUDIT'):
         packet['audit_context']={k:report.get(k) for k in ('status','error','time_policy','donor_provenance_passed','gene_order_passed','strata','source_anchor_comparison','unchanged_protected_genes_verified','mapped_mass_max_relative_error','mean_unmapped_anchor_abundance_fraction','reported_head_support_counts_only','scope')}
     if report_path.name.startswith('ONE_DAY_DECODER_DIAGNOSTIC'):
