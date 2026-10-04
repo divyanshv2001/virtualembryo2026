@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-04T17:19:08.319390+00:00
+Updated: 2026-10-04T17:26:59.574874+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -8,9 +8,9 @@ Use `research_harness.py queue` for a compact next-step/pending summary; never d
 
 Official best: 52.16. Latest reported skills: {'de_score': 43.7, 'de_direction': 51.8, 'mmd_u': 50.9, 'variogram': 50.0}. Covariance .25 reused-development mean55.98883; EB and lineage-standardized historical proxy screens failed. Local>72 mean/lower-tail >=64-replicate AND temporal gate unmet. Full32285-gene scorer/calibration unchanged.
 
-Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
+Checkpoint jobs: ['past_multiscale_mmd']. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Predeclare/preflight new direct-CNF potential objective ablation: replace Sinkhorn with multiscale latentMMD using five fixed scales(.5,1,2,4,8) times median past-only pair distance, frozen before fitting. Same zero-init potential1681params/400steps/batch64/seed20261004, cachedCNF800/encoder/13963 source<=8.5 context, RTX3060 and originalCPU scorer. Primary contrast newMMD vs archivedSinkhorn-directpotential; copy/CNF strongest controls, fixedhead(.25,.75), full32285 and3reused9.5development panels. Verify finite mixedderivatives/memory and disabled/archivedexactreplays; freeze forecasts beforetarget scoring. No futurebandwidthfit/grid/hiddenfuturefit/upload/promotion or completedtraining repeats.
+Next: Past-only multiscaleMMD objective ablation running: one400step directCNF potential RTX3060 arm, frozenbandwidth3.6970534325/fivefixedscales, cachedsource<=8.5. Inspect harness past_multiscale_mmd/report/events; neverduplicate. Collect12fullpanel outcomes, four narrowreviews/reward/newboundedJev only after completion.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 49.15; attribution/screenshot evidence in export report. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 

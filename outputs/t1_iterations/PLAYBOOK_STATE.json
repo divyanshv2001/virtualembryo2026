@@ -1,18 +1,20 @@
 {
-  "updated_utc": "2026-10-04T17:19:08.319390+00:00",
+  "updated_utc": "2026-10-04T17:26:59.574874+00:00",
   "fingerprints": {
     "RESEARCH_CONTINUATION_POLICY.md": "1e6cc6f15c1e918ad60a1e01f26dd66c48022b33158bf8eb2240a9622066af00",
-    "LOCAL_OPTIMIZATION_STATE.json": "a35098dadb214224be0d664e44f59723ff1ffde27efd76e690a9a79fbb87b8cf",
+    "LOCAL_OPTIMIZATION_STATE.json": "359b9e1638c2aade3668e854774da920b1d6e10fb31eaefec40184ce71986e1e",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "1ce56817df7f368b8dfa03c94b9e5d5aafcec123f877264fb83c9c19acfdd4ae",
+    "METRIC_RESEARCH_QUEUE.json": "1d00bc749f7183da611ccbbc3e4d7a3948cdd0f21a82d839e877c9e67e638e6b",
     "METRIC_CRITIQUE_POLICY.json": "3535989f1e3beac0f2d446b44df3c793d4be464dbd87f6e714c2f5afda864a6f",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
-    "RESEARCH_HARNESS_MANIFEST.json": "f3a7244f86d0628fd67a1a6b9c79fe125bf5b3a70d170ca66eddf05fe7bb7829"
+    "RESEARCH_HARNESS_MANIFEST.json": "cb78c6267bc7e93d6283d4651df6061951f1600984a6e4942f45ce13ffc05031"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [],
-  "next_experiment": "Predeclare/preflight new direct-CNF potential objective ablation: replace Sinkhorn with multiscale latentMMD using five fixed scales(.5,1,2,4,8) times median past-only pair distance, frozen before fitting. Same zero-init potential1681params/400steps/batch64/seed20261004, cachedCNF800/encoder/13963 source<=8.5 context, RTX3060 and originalCPU scorer. Primary contrast newMMD vs archivedSinkhorn-directpotential; copy/CNF strongest controls, fixedhead(.25,.75), full32285 and3reused9.5development panels. Verify finite mixedderivatives/memory and disabled/archivedexactreplays; freeze forecasts beforetarget scoring. No futurebandwidthfit/grid/hiddenfuturefit/upload/promotion or completedtraining repeats.",
+  "active_jobs_at_checkpoint": [
+    "past_multiscale_mmd"
+  ],
+  "next_experiment": "Past-only multiscaleMMD objective ablation running: one400step directCNF potential RTX3060 arm, frozenbandwidth3.6970534325/fivefixedscales, cachedsource<=8.5. Inspect harness past_multiscale_mmd/report/events; neverduplicate. Collect12fullpanel outcomes, four narrowreviews/reward/newboundedJev only after completion.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",

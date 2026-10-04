@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": false,
+  "local_process_running": true,
   "quota_reset_evidence": {
     "limit_observed": true,
     "observed_reset_text": "7:54 PM",
@@ -30,12 +30,14 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Predeclare/preflight new direct-CNF potential objective ablation: replace Sinkhorn with multiscale latentMMD using five fixed scales(.5,1,2,4,8) times median past-only pair distance, frozen before fitting. Same zero-init potential1681params/400steps/batch64/seed20261004, cachedCNF800/encoder/13963 source<=8.5 context, RTX3060 and originalCPU scorer. Primary contrast newMMD vs archivedSinkhorn-directpotential; copy/CNF strongest controls, fixedhead(.25,.75), full32285 and3reused9.5development panels. Verify finite mixedderivatives/memory and disabled/archivedexactreplays; freeze forecasts beforetarget scoring. No futurebandwidthfit/grid/hiddenfuturefit/upload/promotion or completedtraining repeats.",
+  "next_experiment": "Past-only multiscaleMMD objective ablation running: one400step directCNF potential RTX3060 arm, frozenbandwidth3.6970534325/fivefixedscales, cachedsource<=8.5. Inspect harness past_multiscale_mmd/report/events; neverduplicate. Collect12fullpanel outcomes, four narrowreviews/reward/newboundedJev only after completion.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
-  "active_run_path": "private/direct_cnf_potential_01",
+  "active_jobs": [
+    "past_multiscale_mmd"
+  ],
+  "active_run_path": "private/past_multiscale_mmd_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -5119,7 +5121,7 @@
       "jev_scope": "Typed option selection/pinnedreport status only; report has no score summary and numeric auditresults were not transmitted, no evidence certification."
     }
   },
-  "next_action": "Predeclare/preflight new direct-CNF potential objective ablation: replace Sinkhorn with multiscale latentMMD using five fixed scales(.5,1,2,4,8) times median past-only pair distance, frozen before fitting. Same zero-init potential1681params/400steps/batch64/seed20261004, cachedCNF800/encoder/13963 source<=8.5 context, RTX3060 and originalCPU scorer. Primary contrast newMMD vs archivedSinkhorn-directpotential; copy/CNF strongest controls, fixedhead(.25,.75), full32285 and3reused9.5development panels. Verify finite mixedderivatives/memory and disabled/archivedexactreplays; freeze forecasts beforetarget scoring. No futurebandwidthfit/grid/hiddenfuturefit/upload/promotion or completedtraining repeats.",
+  "next_action": "Past-only multiscaleMMD objective ablation running: one400step directCNF potential RTX3060 arm, frozenbandwidth3.6970534325/fivefixedscales, cachedsource<=8.5. Inspect harness past_multiscale_mmd/report/events; neverduplicate. Collect12fullpanel outcomes, four narrowreviews/reward/newboundedJev only after completion.",
   "potential_real_anchor_transfer_setup_failure": {
     "run": "potential_real_anchor_transfer_01",
     "error": "append_event kind argument collided with keyword at first50-step logging; no checkpoint or forecast completed",
@@ -5222,5 +5224,45 @@
     "exact_archive_calibration_and_disabled_replays": true,
     "independent_validation": false,
     "official_score": null
+  },
+  "past_multiscale_mmd_preflight": {
+    "status": "passed",
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "peak_MiB": 66.701171875,
+    "bandwidth": 3.6970534324645996,
+    "scales": [
+      0.5,
+      1,
+      2,
+      4,
+      8
+    ],
+    "loss": 0.03635203838348389,
+    "mixed_derivatives_finite_nonzero": true,
+    "kernel_symmetry_verified": true,
+    "frozen_prior_orchestrator_verified": true,
+    "new_scores": 0,
+    "reward_delta": 0,
+    "original_cpu_disabled_exact": true,
+    "original_cpu_runtime": "2.14.0+cpu",
+    "cross_runtime_bandwidth_exact": true
+  },
+  "past_multiscale_mmd_job": {
+    "status": "running",
+    "experiment": "past_multiscale_mmd",
+    "run": "past_multiscale_mmd_01",
+    "results_report": "PAST_MULTISCALE_MMD_RESULTS.json",
+    "planned_evaluations": 12,
+    "new_training_steps": 400,
+    "fit_max_stage": 8.5,
+    "past_rows": 13963,
+    "training_device": "RTX3060",
+    "primary_contrast": [
+      "sinkhorn_direct400",
+      "mmd_direct400"
+    ],
+    "strongest_matched_control": "cnf800",
+    "bandwidth": 3.6970534324645996,
+    "reward_delta": 0
   }
 }

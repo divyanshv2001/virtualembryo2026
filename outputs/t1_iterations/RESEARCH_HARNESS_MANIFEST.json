@@ -2031,6 +2031,19 @@
         "driver_runtime": "cpu",
         "purpose": "Distinct scaffold-removal ablation; originalCPU scorer, cached CNF/kinetic/potential controls; only directpotential400 trained."
       }
+    },
+    "past_multiscale_mmd": {
+      "script": "potential_real_anchor_transfer.py",
+      "args": [
+        "--past-mmd"
+      ],
+      "run": "private/past_multiscale_mmd_01",
+      "report": "PAST_MULTISCALE_MMD_RESULTS.json",
+      "protocol": {
+        "training_device": "cuda",
+        "driver_runtime": "cpu",
+        "purpose": "New fixed past-only objective ablation; cachedCNF/encoder/Sinkhorn controls, one400step potential arm, originalfullpanel scorer and gates."
+      }
     }
   }
 }

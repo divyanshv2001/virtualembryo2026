@@ -13,10 +13,31 @@ from cnf_manifold_flow import DensityFlowNet, rk4_position
 from graph_kinetic_residual import KineticFlow
 from scalar_potential_residual import PotentialResidualFlow
 
-DIRECT = '--direct-cnf' in sys.argv
+MMD = '--past-mmd' in sys.argv
+DIRECT = '--direct-cnf' in sys.argv or MMD
 PREVIOUS = HERE / 'private/potential_real_anchor_transfer_02'
-RUN = HERE / ('private/direct_cnf_potential_01' if DIRECT else 'private/potential_real_anchor_transfer_02')
-PUBLIC = HERE / ('DIRECT_CNF_POTENTIAL_RESULTS.json' if DIRECT else 'POTENTIAL_REAL_ANCHOR_TRANSFER_REPAIR_RESULTS.json')
+DIRECT_PREVIOUS = HERE / 'private/direct_cnf_potential_01'
+RUN = HERE / ('private/past_multiscale_mmd_01' if MMD else 'private/direct_cnf_potential_01' if DIRECT else 'private/potential_real_anchor_transfer_02')
+PUBLIC = HERE / ('PAST_MULTISCALE_MMD_RESULTS.json' if MMD else 'DIRECT_CNF_POTENTIAL_RESULTS.json' if DIRECT else 'POTENTIAL_REAL_ANCHOR_TRANSFER_REPAIR_RESULTS.json')
+
+
+def past_bandwidth(coordinates):
+    rng=np.random.default_rng(20261004)
+    pairs=rng.integers(len(coordinates),size=(4096,2))
+    distance=np.linalg.norm(coordinates[pairs[:,0]]-coordinates[pairs[:,1]],axis=1)
+    value=float(np.median(distance[distance>0]))
+    if not np.isfinite(value) or value<=0: raise ValueError('Invalid past bandwidth')
+    return value
+
+
+def multiscale_mmd(a,b,bandwidth):
+    # Own unbiased latent RBF estimator; signed minibatch values are valid.
+    if min(len(a),len(b))<2: raise ValueError('MMD needs two samples per set')
+    def kernel(x,y):
+        distance=(x[:,None,:]-y[None,:,:]).square().sum(-1)
+        return torch.stack([torch.exp(-distance/(2*(bandwidth*s)**2)) for s in [.5,1.,2.,4.,8.]]).mean(0)
+    aa,bb,ab=kernel(a,a),kernel(b,b),kernel(a,b)
+    return (aa.sum()-aa.diagonal().sum())/(len(a)*(len(a)-1))+(bb.sum()-bb.diagonal().sum())/(len(b)*(len(b)-1))-2*ab.mean()
 
 
 def drift(encoder, checkpoint):
@@ -46,6 +67,9 @@ def train(packet_path):
         base = KineticFlow(base, np.maximum(encoder['center']/encoder['scale'] + encoder['pca_center'], 0.), empty, empty, 'none')
     groups = [torch.tensor(context['coordinates'][context['stages'] == t], dtype=torch.float32, device='cuda') for t in times]
     objective = SamplesLoss('sinkhorn', p=2, blur=.05, scaling=.9, backend='tensorized')
+    if MMD:
+        if packet['bandwidth']!=past_bandwidth(context['coordinates']): raise ValueError('Frozen past bandwidth mismatch')
+        objective=lambda a,b:multiscale_mmd(a,b,packet['bandwidth'])
     for kind in (['potential'] if DIRECT else ['kinetic', 'potential']):
         checkpoint = RUN / (kind + '400.pt')
         if checkpoint.exists(): raise ValueError('Never duplicate training')
@@ -73,7 +97,8 @@ def train(packet_path):
         if peak > 4.5*1024**3: raise ValueError('GPU memory cap')
         model.cpu().eval()
         torch.save({'net': model.state_dict(), 'fit_max_stage': 8.5, 'steps': 400, 'kind': kind,
-                    'seed': 20261004, 'frozen_base_exact': True, 'peak_allocated_bytes': peak}, checkpoint)
+                    'seed': 20261004, 'frozen_base_exact': True, 'peak_allocated_bytes': peak,
+                    'objective':'past_multiscale_mmd' if MMD else 'sinkhorn', 'bandwidth':packet.get('bandwidth')}, checkpoint)
         if kind == 'kinetic': base = model
         del optimizer, frozen
     for filename, sha in packet['sha256'].items():
@@ -120,6 +145,13 @@ def main():
         plan['cached_controls_sha256']=prior['checkpoint_sha256']
         plan['cached_context_sha256']=digest(PREVIOUS/'context.npz')
         plan['previous_report_sha256']=digest(PREVIOUS/'report.json')
+    if MMD:
+        plan.update(hypothesis='Fixed past-only multiscale latentMMD versus Sinkhorn potential objective; same frozen CNF and training budget.',
+                    candidates=['copy','cnf800','sinkhorn_direct400','mmd_direct400'],primary_contrast=['sinkhorn_direct400','mmd_direct400'],
+                    bandwidth=past_bandwidth(np.load(PREVIOUS/'context.npz')['coordinates']),kernel_scales=[.5,1.,2.,4.,8.],
+                    bandwidth_fit='Median of positive Euclidean distances of4096 seeded past-only random pairs; no future bandwidth fitting.',
+                    mmd_estimator='Unbiased signed latent minibatch RBF mixture; unchanged official full-panel scorer.',
+                    direct_control_report_sha256=digest(DIRECT_PREVIOUS/'report.json'))
     for filename, sha in plan['input_sha256'].items():
         if digest(root/filename) != sha: raise ValueError('Challenge input integrity')
     RUN.mkdir()
@@ -148,11 +180,16 @@ def main():
         np.savez_compressed(context_path,coordinates=coordinates,stages=stages[past])
         del raw,normalized,coordinates
     packet = {'context':str(context_path),'encoder':str(old/'encoder4096.npz'),'drift':str(old/'features4096.pt')}
+    if MMD:
+        packet['bandwidth']=plan['bandwidth']
+        direct_reference=json.loads((DIRECT_PREVIOUS/'report.json').read_text())
+        if digest(DIRECT_PREVIOUS/'potential400.pt')!=direct_reference['checkpoint_sha256']['potential']: raise ValueError('Direct control changed')
     packet['sha256'] = {str(p):digest(p) for p in source_files+[Path(packet[k]) for k in ['context','encoder','drift']]}
     (RUN/'training_packet.json').write_text(json.dumps(packet,indent=2))
     command=[str(root/'outputs/research_workflow/.venv_cuda/Scripts/python.exe'),str(Path(__file__)),
                     '--train-packet',str(RUN/'training_packet.json')]
     if DIRECT: command.append('--direct-cnf')
+    if MMD: command.append('--past-mmd')
     subprocess.run(command,check=True)
     donors, rows = read_cells(root/'data/E8.5_RNA.h5ad',panel,1500,20260928)
     np.save(RUN/'anchor_rows.npy',rows)
@@ -169,6 +206,10 @@ def main():
         direct=PotentialResidualFlow(initial,'potential')
         direct.load_state_dict(torch.load(RUN/'potential400.pt',map_location='cpu',weights_only=False)['net']);direct.eval()
         models.append(('direct_potential400',direct))
+        if MMD:
+            sinkhorn=PotentialResidualFlow(initial,'potential')
+            sinkhorn.load_state_dict(torch.load(DIRECT_PREVIOUS/'potential400.pt',map_location='cpu',weights_only=False)['net']);sinkhorn.eval()
+            models=[('copy',None),('cnf800',initial),('sinkhorn_direct400',sinkhorn),('mmd_direct400',direct)]
     cache = TemporaryForecastCache(HERE/'private/temporary_cache')
     generation = {}
     try:
@@ -178,7 +219,7 @@ def main():
                 program=FullAnchorSlopeForecast(x,stages,8.5,donors,panel,symbols,model,encoder['center'],encoder['scale'],
                     encoder['features'],encoder['guard_features'],anchor_path=root/'data/E8.5_RNA.h5ad')
                 program.configure(.25,.75)
-                if name==('direct_potential400' if DIRECT else 'potential400'):
+                if name==('mmd_direct400' if MMD else 'direct_potential400' if DIRECT else 'potential400'):
                     model.residual_enabled=False
                     baseline,_,_=program.predict(9.5,'joint',1.,sampling='systematic')
                     if cache.put('disabled_potential_replay',baseline)!=generation['cnf800' if DIRECT else 'kinetic400']['prediction_sha256']:
@@ -197,6 +238,8 @@ def main():
             if DIRECT and name in previous_report['generation']:
                 if generation[name]['prediction_sha256']!=previous_report['generation'][name]['prediction_sha256']:
                     raise ValueError('Prior control forecast exact replay failed')
+            if MMD and name=='sinkhorn_direct400' and generation[name]['prediction_sha256']!=direct_reference['generation']['direct_potential400']['prediction_sha256']:
+                raise ValueError('Sinkhorn direct forecast exact replay failed')
             emit('forecast_frozen',candidate=name,sha256=generation[name]['prediction_sha256'])
             del pred
         (RUN/'generation.json').write_text(json.dumps(generation,indent=2))
@@ -220,8 +263,8 @@ def main():
             core,_=load_core()
             score_frozen_forecasts(core,HistoricalSortedRows(),np.full(target.n_obs,9.5),donors,np.arange(len(panel)),np.arange(len(panel)),panel,
                 8.5,9.5,plan,list(generation),generation,cache,RUN,report,emit,
-                {'control_candidates':['copy','cnf800','kinetic400','potential400'] if DIRECT else ['copy','cnf800','kinetic400'],
-                 'contrast_candidates':['cnf800','direct_potential400'] if DIRECT else ['kinetic400','potential400'],'scope':plan['scope']})
+                {'control_candidates':['copy','cnf800','sinkhorn_direct400'] if MMD else ['copy','cnf800','kinetic400','potential400'] if DIRECT else ['copy','cnf800','kinetic400'],
+                 'contrast_candidates':['sinkhorn_direct400','mmd_direct400'] if MMD else ['cnf800','direct_potential400'] if DIRECT else ['kinetic400','potential400'],'scope':plan['scope']})
             for current,prior in zip(report['panels'],reference['panels']):
                 if current['floor']!=prior['floor'] or current['ceiling']!=prior['ceiling']: raise ValueError('Historical calibration exact replay failed')
                 cnf=next(r for r in current['results'] if r['candidate']=='cnf800')
@@ -230,8 +273,14 @@ def main():
                 if DIRECT:
                     prior_panel=next(p for p in previous_report['panels'] if p['seed']==current['seed'])
                     for old_row in prior_panel['results']:
+                        if MMD and old_row['candidate'] not in ['copy','cnf800']: continue
                         row=next(r for r in current['results'] if r['candidate']==old_row['candidate'])
                         if row['raw_metrics']!=old_row['raw_metrics']: raise ValueError('Prior control scorer exact replay failed')
+                    if MMD:
+                        prior_direct=next(p for p in direct_reference['panels'] if p['seed']==current['seed'])
+                        expected=next(r for r in prior_direct['results'] if r['candidate']=='direct_potential400')['raw_metrics']
+                        actual=next(r for r in current['results'] if r['candidate']=='sinkhorn_direct400')['raw_metrics']
+                        if actual!=expected: raise ValueError('Sinkhorn direct scorer exact replay failed')
                 np.save(RUN/f"target_rows_sorted_{current['seed']}.npy",np.sort(np.load(RUN/f"target_rows_{current['seed']}.npy")))
             report['checkpoint_sha256']={n:digest(RUN/(n+'400.pt')) for n in (['potential'] if DIRECT else ['kinetic','potential'])}
             report['local_72_gate_passed']=False
