@@ -763,3 +763,7 @@ Copy50,CNF80051.194606,scFMprojected40050.870144; all9calibrationsvalid/exactrep
 ## Friend registry T1 comparison — 4 October 2026
 
 Latest explicit check request supersedes earlier delay. Reviewed10T1/60records; sourceSHA c87c76c61011dc43c6b471b0155505bd8b703f1ea1ec7210e31bc2c62abd3acc. Registryofficial49.23/49.22 vs savedours52.16, board equivalence unverified; local67.1114 is copybaseline. Sparse latermean-5.9777, growthmean-0.5217, Hox tie/-0.01; conflicting sparse versions preserved. Nonstationarity doesnot invalidate alltransport. Retain short-horizon scFM/CNF controls; externalatlas alignment is potential distinct past-support lead, not approved scoregain. One linkedcomparison deliverable; no training/critics/reward/newworker. Health-1359/readiness unchanged. Reuse cachedcomparison for unchanged sourcehash.
+
+## Unexplored paper shortlist — 4 October 2026
+
+Userrequests newmechanisms toward screenshotAgentTeam68.4. Shortlist learnedstate-dependentSDE(scDiffEq), networkkinetics(FLeCS), hiddenproteinkinetics(CardamomOT), expressiondifferenceattention(scDiformer); no matchingregisteredtrialfound, GRNpromptreferences stale/missingfiles so noveltyprovisional. JevselectedlearnedSDE confidence.13,2656bytes,1239in/63out; feasibilitynottraining declarednext. One linkedreportwithprimarysources/controls/limits; no scores/rewards/uploads. Health-1359.

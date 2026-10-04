@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Fixedone-day validation fullyaccounted. RetainCNF one-day baseline andscientific short-horizon scFM evidence, no fittedhorizongate. Nextbounded cross-cutoff pastsupport review only for genuinelynew supported mechanism; no speculative temporalbasis/IPCAgrid. Friend registry T1 comparison completed on explicit user request; reuse saved comparison for unchanged source hash.",
+  "next_experiment": "Bounded learned-diffusion feasibility preflight from unexplored literature shortlist: author CPU/solver dependencies, permitted past temporal support, tiny integration memory/runtime <=16GB, two threads and D-only. Then predeclare one matched drift-only vs learned-diffusion trial only if viable; unchanged full-panel scorer/gates. Jev rank tentative confidence0.13. No old grid or duplicate friend comparison.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -3859,5 +3859,20 @@
     "authorization": "Latest explicit check request supersedes earlier delay",
     "reward_delta": 0,
     "next": "Reuse comparison when source hash unchanged; no duplicate analysis or unsupported experiment."
+  },
+  "unexplored_literature_20261004": {
+    "status": "shortlist_feasibility_unverified",
+    "report": "C:\\Users\\vishw\\Documents\\Codex\\2026-10-04\\t1-research-continuation\\outputs\\unexplored-t1-papers.md",
+    "screenshot_agent_overall_target": 68.4,
+    "candidates": [
+      "learned_state_dependent_sde",
+      "flecs_regulatory_kinetics",
+      "cardamom_hidden_protein_kinetics",
+      "difference_sequence_transformer"
+    ],
+    "jev_choice": "learned_sde",
+    "jev_confidence": 0.13,
+    "next": "Bounded learned-diffusion CPU16GB/data-support feasibility preflight; no training authorized by feasibility alone; no older-method rerun.",
+    "reward_delta": 0
   }
 }
