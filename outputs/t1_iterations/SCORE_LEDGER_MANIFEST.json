@@ -1,5 +1,5 @@
 {
-  "records": 3280,
+  "records": 3295,
   "sources": [
     {
       "path": "private/anchored_soft_ot_paper_pilot_01/report.json",
@@ -677,6 +677,16 @@
       "outcomes_indexed": 0
     },
     {
+      "path": "private/graph_kinetics_past_fold_01/report.json",
+      "sha256": "ed7fffed1e0cafaa21e73ee36efc6e344a69247cdb0a368088dfee49b20de86b",
+      "outcomes_indexed": 0
+    },
+    {
+      "path": "private/graph_kinetics_past_fold_repair_01/report.json",
+      "sha256": "792e832e0c08477356eba3efce55322d51d3e959213f40bea2c5cb17faf39794",
+      "outcomes_indexed": 15
+    },
+    {
       "path": "private/growth_composition_horizon_01/report.json",
       "sha256": "d2f032413afa5f4f378fc1c5ca3c4323ab1ae307686465e723377cc4a7dec4ab",
       "outcomes_indexed": 20
@@ -1159,5 +1169,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "3b4a746fed2b9934318f3d3d3d2cf0eb98585a0c117550bfca00d9144b7ec696"
+  "ledger_sha256": "588e7c4d624fa6b47bdc631d58bf2b0eb8a0956f9a4d719086d4554737909c61"
 }

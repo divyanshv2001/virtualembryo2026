@@ -6395,8 +6395,8 @@
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
     "experiment": "graph_kinetics_past_fold_repair",
-    "status": "registered_provenance_repair",
-    "next_experiment": "graph_kinetics_past_fold_repair",
-    "next": "Collect graph_kinetics_past_fold_repair final metrics; four fresh reviewers and real-vs-shuffle reward once. Preserve original pretraining failure; no duplicate run or second mechanism."
+    "status": "completed_incremental_gain_graph_not_promoted",
+    "next_experiment": null,
+    "next": "Implement one fixed kinetic-horizon validation8.25->9.5 using verified no-edge400 and realgraph400 checkpoints plus copy/CNF controls. No optimizer/head/encoder refit or graph change; exact replays beforetarget, unchanged32285scorer/gates. Reward0 for alreadyaccounted/frozencontrols; historicaldevelopment only, no independentvalidationclaim. Jev .79 supports retaining+0.6033 increment ratherthan rejecting for distantgoal. No kineticparametergrid; difference-sequence attention remains next unexplored branch after validation."
   }
 }

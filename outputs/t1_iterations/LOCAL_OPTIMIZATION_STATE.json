@@ -30,13 +30,11 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Collect graph_kinetics_past_fold_repair final metrics; four fresh reviewers and real-vs-shuffle reward once. Preserve original pretraining failure; no duplicate run or second mechanism.",
+  "next_experiment": "Implement one fixed kinetic-horizon validation8.25->9.5 using verified no-edge400 and realgraph400 checkpoints plus copy/CNF controls. No optimizer/head/encoder refit or graph change; exact replays beforetarget, unchanged32285scorer/gates. Reward0 for alreadyaccounted/frozencontrols; historicaldevelopment only, no independentvalidationclaim. Jev .79 supports retaining+0.6033 increment ratherthan rejecting for distantgoal. No kineticparametergrid; difference-sequence attention remains next unexplored branch after validation.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "graph_kinetics_past_fold_repair"
-  ],
+  "active_jobs": [],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -2820,6 +2818,18 @@
         "variogram": "Problem: Launch stopped before training or scoring because graph provenance altered the exact reused-input dictionary; no variogram exists, so scientific performance is unknown. Proposed solution: Store graph provenance separately in the plan, preserving exact input comparison. Validation: One unique repaired run with real/shuffled/no-edge controls, past-only inputs, unchanged full-panel scorer. Lower raw variogram and higher skill are better."
       },
       "coordinator": "Four reviewers agree no scientific outcome. Root cause additional graph hashes entered old exactinputdict, not changed source expression. Repair separates graph_prior_sha256 from input_sha256; direct baseline sourcehash comparison passed. No scorer/parameter/graph change; preserve failed evidence and use unique repair."
+    },
+    "graph_kinetics_past_fold_repair_01": {
+      "status": "completed",
+      "report_sha256": "e2805e514368209df95bc6aad6f1fce41accb497d3aef15e932e159146afc770",
+      "specialist_role_version": 2,
+      "reviews": {
+        "de_score": "Problem: The exposed 8.25→9.25 cutoff is development data. Real graphs tie shuffled graphs twice and regress once; all variants underperform copying. No-edge capacity differs, and shuffling changes only 24.14% of edges. Proposed solution: Use past-only calibration, capacity-matched controls, and stronger degree-preserving shuffles. Validation: All 15 calibrations/replays are valid; neither strict passage nor causal graph benefit is established.",
+        "de_direction": "Problem: Exposed development and real-graph underperformance prevent independent validation or a causal graph claim. Proposed solution: Prefer the no-edge residual provisionally; it leads all three direction metrics. Freeze settings and use past-only development. Validation: All 15 calibrations/replays are valid, but no strict pass exists. Confirm improvement on untouched future targets before promotion.",
+        "mmd_u": "Problem: Real edges beat shuffled edges only negligibly; exposed cutoff development prevents independent validation, and the headline contradicts MMD ordering. Proposed solution: Correct the headline, freeze scoring and selection, and evaluate a past-only protocol without causal graph claims. Validation: All 15 calibrations/replays are valid. Real improves MMD skill in 3/3 comparisons, but no strict pass or independent validation is established.",
+        "variogram": "Problem: Real edges improve variogram skill only marginally over shuffled edges; no-edge wins all three comparisons. The cutoff change used exposed development data. Proposed solution: Use past-only selection and retain no-edge as the benchmark; avoid target tuning, scorer changes, and causal graph claims. Validation: All 15 calibrations/replays are valid, but neither strict passage nor independent validation is established."
+      },
+      "coordinator": "Reject MMD reviewer headline correction: four-metric aggregate is valid; tiny MMD/variogram gains are outweighed by DE/direction losses, no contradiction and no scorer change. Clarify calibrations15 and forecastreplays5, not15replays. No-edge leadsDE/direction/variogram, graphleadsMMD, no jointwinner. Allnewarms improve all4mean skills vsCNF butDEbelowcopy; preserve incremental evidence. Primaryreal/shuffle equalcapacity, partialshuffle and reconstructedstates limitgraph inference. Remedies unvalidated, no exposedtarget grid or retroactive control reward."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3910,7 +3920,7 @@
     ],
     "jev_choice": "learned_sde",
     "jev_confidence": 0.13,
-    "next": "Implement bounded FLeCS-inspired native-Torch sigmoid-production/positive-decay prototype using pinned adult graph (127TFs,3539pastgenes,213112edges). Before training fix past-only gene-state scale/physical-stage objective and matched biological graph vs degree-matched shuffle/no-edge controls via compact Jev; verify small finite-gradient/solver/memory test and future guard. No external package stack/dense32285matrix; use graph only for noncommercial research under preserved licence. Not author reproduction/causal edge identification. Then register one fixed full-panel scored trial only if feasible, unchanged gates.",
+    "next": "Implement one fixed kinetic-horizon validation8.25->9.5 using verified no-edge400 and realgraph400 checkpoints plus copy/CNF controls. No optimizer/head/encoder refit or graph change; exact replays beforetarget, unchanged32285scorer/gates. Reward0 for alreadyaccounted/frozencontrols; historicaldevelopment only, no independentvalidationclaim. Jev .79 supports retaining+0.6033 increment ratherthan rejecting for distantgoal. No kineticparametergrid; difference-sequence attention remains next unexplored branch after validation.",
     "reward_delta": 0,
     "preflight": {
       "cpu_smoke_seconds": 1.5118947,
@@ -3949,11 +3959,11 @@
       "decision": "Do not promote fixed state-dependent configuration; keep small constant-noise gain separate and solver-confounded. No fullfamily rejection or new diffusion grid."
     },
     "next_jev": {
-      "choice": "flecs_feasibility",
-      "confidence": 0.33,
-      "input_tokens": 1239,
-      "output_tokens": 43,
-      "payload_bytes": 2505
+      "choice": "frozen_kinetics_validation",
+      "confidence": 0.79,
+      "input_tokens": 1456,
+      "output_tokens": 45,
+      "payload_bytes": 2759
     },
     "flecs_preflight": {
       "status": "author_scope_audited_not_training_ready",
@@ -4036,6 +4046,29 @@
       "jev_input_tokens": 1330,
       "jev_output_tokens": 57,
       "jev_payload_bytes": 2650
+    },
+    "kinetic_result": {
+      "status": "completed_incremental_rates_gain_no_graph_promotion",
+      "report": "GRAPH_KINETICS_PAST_FOLD_REPAIR_RESULTS.json",
+      "scores": {
+        "copy": 50.0,
+        "cnf800": 51.194605628785325,
+        "kinetic_none400": 51.79786886562122,
+        "kinetic_shuffle400": 51.779063022158745,
+        "kinetic_real400": 51.77129758355278
+      },
+      "primary_contrast": {
+        "de_score": -0.00013863903111555054,
+        "de_direction": -0.00019544773215240951,
+        "mmd_u": 8.670672717703276e-06,
+        "variogram": 1.633051470983915e-05
+      },
+      "all15calibrations_valid": true,
+      "exact_replays": 5,
+      "peak_bytes": 5364277248,
+      "reward_delta": -18,
+      "health": -1395,
+      "decision": "Retain kinetics incremental gains vsCNF separately; no evidencegraphidentity boostsheadline, no strictpass or independentvalidation. No control retrocredits or parametergrid."
     }
   }
 }
