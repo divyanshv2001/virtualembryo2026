@@ -7,7 +7,7 @@ from pathlib import Path
 import numpy as np
 import torch
 from threadpoolctl import threadpool_limits
-from fresh_fullpanel_context import prepare
+from fresh_fullpanel_context import prepare, incremental_context
 from frozen_fullpanel_scoring import score_frozen_forecasts
 from anchored_soft_ot import train_anchored
 from cnf_manifold_flow import DensityFlowNet, train_manifold_density
@@ -68,10 +68,20 @@ def main():
             plan['reused_checkpoint_sha256']={name:digest(previous/(name+'.pt')) for name in ['cnf800','projected_ot400']}
             save(RUN/'plan.json',plan);emit('reused_encoder_and_checkpoints_verified',sha256=digest(RUN/'plan.json'))
             flows={'cnf800':initial,'projected_ot400':baseline}
-            for name,weight in [('projected_ot800',0.),('projected_pair800',1.)]:
-                model=copy.deepcopy(baseline)
-                train_anchored(model,c['coordinates'],c['stages'][c['past']],cutoff,RUN/(name+'.pt'),emit,conflict_projection=True,latent_variogram_weight=weight)
-                flows[name]=model.eval();emit('candidate_training_finished',candidate=name)
+            if spec.get('representation_comparison'):
+                ci=incremental_context(c,RUN,emit,chunk=spec['ipca_chunk'])
+                torch.manual_seed(spec['seed'])
+                ipca=DensityFlowNet(ci['basis'],ci['pca'].mean_,cutoff,float(ci['stages'][ci['past']].min())-.25)
+                train_manifold_density(ipca,ci['coordinates'],ci['stages'][ci['past']],.1,RUN/'ipca_cnf800.pt',emit,steps=800,density_weight=10.)
+                flows['ipca_cnf800']=ipca.eval();model=copy.deepcopy(ipca)
+                train_anchored(model,ci['coordinates'],ci['stages'][ci['past']],cutoff,RUN/'ipca_projected400.pt',emit,conflict_projection=True)
+                flows['ipca_projected400']=model.eval()
+                report['representation_diagnostics']={'same_fit_rows':True,'fit_rows':3000,'features':4096,'rank':8,'ipca_chunk':spec['ipca_chunk'],'past_fit_explained_variance_ratio_sum':{'pca':float(c['pca'].explained_variance_ratio_.sum()),'ipca':float(ci['pca'].explained_variance_ratio_.sum())},'interpretation':'Fit diagnostic only, not benchmark score or independent validation.'}
+            else:
+                for name,weight in [('projected_ot800',0.),('projected_pair800',1.)]:
+                    model=copy.deepcopy(baseline)
+                    train_anchored(model,c['coordinates'],c['stages'][c['past']],cutoff,RUN/(name+'.pt'),emit,conflict_projection=True,latent_variogram_weight=weight)
+                    flows[name]=model.eval();emit('candidate_training_finished',candidate=name)
         else:
             history=train_manifold_density(initial,c['coordinates'],c['stages'][c['past']],.1,RUN/'cnf800.pt',emit,steps=800,density_weight=10.)
             initial.eval();flows={'cnf800':initial}
@@ -85,11 +95,17 @@ def main():
         reference=FullAnchorSlopeForecast(c['x'],c['stages'],cutoff,c['donors'],c['panel'],c['symbols'],initial,c['center'],c['scale'],c['features'],c['guard'],anchor_path=c['anchor_path'])
         reference.configure(.25,.75)
         reference.audit.update(fit_max_stage=cutoff,method='Fresh source-domain PCA8 paired scFM',training_history=history)
+        references={name:reference for name in flows}
+        if spec.get('representation_comparison'):
+            ipca_reference=FullAnchorSlopeForecast(ci['x'],ci['stages'],cutoff,ci['donors'],ci['panel'],ci['symbols'],flows['ipca_cnf800'],ci['center'],ci['scale'],ci['features'],ci['guard'],anchor_path=ci['anchor_path'])
+            ipca_reference.configure(.25,.75)
+            ipca_reference.audit.update(fit_max_stage=cutoff,method='Fresh source-domain IncrementalPCA8 paired scFM')
+            for name in ['ipca_cnf800','ipca_projected400']:references[name]=ipca_reference
         generation={}
         for name in spec['candidates']:
             if name=='copy':pred,ids,audit=c['donors'].copy(),np.arange(len(c['donors'])),{'method':'persistence'}
             else:
-                reference.net=flows[name];pred,ids,audit=reference.predict(target,'joint',1.,sampling='systematic')
+                reference=references[name];reference.net=flows[name];pred,ids,audit=reference.predict(target,'joint',1.,sampling='systematic')
             np.testing.assert_array_equal(pred[:,c['protected']],c['donors'][ids][:,c['protected']])
             if not np.isfinite(pred).all() or (pred<0).any():raise ValueError('Invalid forecast')
             sha=cache.put(name,pred);del pred

@@ -6358,13 +6358,13 @@
     },
     {
       "id": "controlled_incremental_pca",
-      "status": "implementation_pending",
-      "next_action": "Implement one queued controlled PCA/IPCA trial using shared runner/context. Same<=8.25 normalization/features/3000PCAfitrows/rank8, IPCAchunk512 and fixed row order. Reuse verified PCA/CNF800/projected400 checkpoints; fit only IPCA800+400projectedOT. New eligible horizon8.25->9.25 after metadata/coverage check; predictions frozen before target. Matched representation controls and unchanged fullgene scorer/readiness. No pairloss retuning or new weightgrid.",
+      "status": "registered_running",
+      "next_action": "Monitor scfm_ipca_fold without duplication. On completion/failure collect fourfresh inline metric reviews and all15 fullpanel outcomes; reward onlyipca_projected400 vsprojected_ot400 (controls0), update health/scoreledger, preserve originalgates. New1.25day horizon8.25->9.5, not officialscore/independentembryos.",
       "score": "unavailable",
       "user_requested": true,
       "protocol": {
         "cutoff": 8.25,
-        "target": 9.25,
+        "target": 9.5,
         "fit_rows": 3000,
         "features": 4096,
         "rank": 8,
@@ -6373,16 +6373,17 @@
         "reference": "SavedPCA projectedOT400; same800density+400projectedOT training budget forIPCA",
         "reward": "OnlyIPCAprojected400 eligible vsPCAprojected400; allothercontrols0",
         "interpretation": "New horizon historicaldevelopment, not independentembryos; memory and representationdiagnostics are not score improvements."
-      }
+      },
+      "experiment": "scfm_ipca_fold"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
-    "status": "fixed_latent_pair_loss_mixed_no_promotion",
-    "implementation_status": "completed_accounted_reviewed",
-    "experiment": "scfm_latent_pair_fold",
+    "status": "controlled_ipca_running",
+    "implementation_status": "implemented_launched",
+    "experiment": "scfm_ipca_fold",
     "next_experiment": null,
-    "next": "Implement one queued controlled PCA/IPCA trial using shared runner/context. Same<=8.25 normalization/features/3000PCAfitrows/rank8, IPCAchunk512 and fixed row order. Reuse verified PCA/CNF800/projected400 checkpoints; fit only IPCA800+400projectedOT. New eligible horizon8.25->9.25 after metadata/coverage check; predictions frozen before target. Matched representation controls and unchanged fullgene scorer/readiness. No pairloss retuning or new weightgrid."
+    "next": "Monitor scfm_ipca_fold without duplication. On completion/failure collect fourfresh inline metric reviews and all15 fullpanel outcomes; reward onlyipca_projected400 vsprojected_ot400 (controls0), update health/scoreledger, preserve originalgates. New1.25day horizon8.25->9.5, not officialscore/independentembryos."
   }
 }

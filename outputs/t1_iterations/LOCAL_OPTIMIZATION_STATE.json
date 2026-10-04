@@ -30,11 +30,13 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Implement one queued controlled PCA/IPCA trial using shared runner/context. Same<=8.25 normalization/features/3000PCAfitrows/rank8, IPCAchunk512 and fixed row order. Reuse verified PCA/CNF800/projected400 checkpoints; fit only IPCA800+400projectedOT. New eligible horizon8.25->9.25 after metadata/coverage check; predictions frozen before target. Matched representation controls and unchanged fullgene scorer/readiness. No pairloss retuning or new weightgrid.",
+  "next_experiment": "Monitor scfm_ipca_fold without duplication. On completion/failure collect fourfresh inline metric reviews and all15 fullpanel outcomes; reward onlyipca_projected400 vsprojected_ot400 (controls0), update health/scoreledger, preserve originalgates. New1.25day horizon8.25->9.5, not officialscore/independentembryos.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
+  "active_jobs": [
+    "scfm_ipca_fold"
+  ],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -3605,7 +3607,7 @@
       5,
       6
     ],
-    "policy_sha256": "63caeff70fcf18c91756a8d822ac36ae58a80c1f6e2ae37a643c85f89e7c32ee",
+    "policy_sha256": "31098957a20a7d61353505636f7dbbe1d96b5213df0cc4d6f61ff1daba83eee3",
     "rules": [
       "Start with harness resume; inspect only changed policy and active evidence",
       "One necessary experiment; one checkpoint commit/push",
@@ -3624,7 +3626,8 @@
       "jev_requests": 0,
       "new_science_runs": 0,
       "allowance_savings": "unmeasured"
-    }
+    },
+    "jev_delegation_preference": "Default Jev for genuinely unresolved bounded research decisions/synthesis; bundle typed questions within3000bytes, cached one attempt perdecision. Codex for necessary implementation/factual verification. Deterministic status/scoring/health local; no artificial calls."
   },
   "tigon_log_density_audit": {
     "status": "completed_past_mechanism_gate_passed",
@@ -3701,6 +3704,11 @@
     "latest_iteration": {
       "experiment": "scfm_latent_pair_fold_01",
       "reward_delta": -7
+    },
+    "pending_iteration": {
+      "experiment": "scfm_ipca_fold_01",
+      "status": "running_at_checkpoint",
+      "reward_delta": 0
     }
   },
   "scfm_reopened": {
@@ -3722,7 +3730,7 @@
     },
     "new_direction": "Likelihood-compatible OT gradient projection; actual score gain unvalidated.",
     "jev_decision": "private/harness_runs/anchored_soft_ot_paper_pilot/decisions/scfm_reopen_past_direction_20261004_route.json",
-    "next": "Implement one queued controlled PCA/IPCA trial using shared runner/context. Same<=8.25 normalization/features/3000PCAfitrows/rank8, IPCAchunk512 and fixed row order. Reuse verified PCA/CNF800/projected400 checkpoints; fit only IPCA800+400projectedOT. New eligible horizon8.25->9.25 after metadata/coverage check; predictions frozen before target. Matched representation controls and unchanged fullgene scorer/readiness. No pairloss retuning or new weightgrid.",
+    "next": "Monitor scfm_ipca_fold without duplication. On completion/failure collect fourfresh inline metric reviews and all15 fullpanel outcomes; reward onlyipca_projected400 vsprojected_ot400 (controls0), update health/scoreledger, preserve originalgates. New1.25day horizon8.25->9.5, not officialscore/independentembryos.",
     "latest_fold_result": {
       "experiment": "scfm_projected_past_fold",
       "status": "completed_incremental_gain_not_promoted",
@@ -3751,7 +3759,8 @@
       "all15calibrations_valid": true,
       "peak_bytes": 5325316096,
       "next": "Implement one queued controlled PCA/IPCA trial using shared runner/context. Same<=8.25 normalization/features/3000PCAfitrows/rank8, IPCAchunk512 and fixed row order. Reuse verified PCA/CNF800/projected400 checkpoints; fit only IPCA800+400projectedOT. New eligible horizon8.25->9.25 after metadata/coverage check; predictions frozen before target. Matched representation controls and unchanged fullgene scorer/readiness. No pairloss retuning or new weightgrid."
-    }
+    },
+    "running_experiment": "scfm_ipca_fold"
   },
   "model_basics_request": {
     "tested_families": [
@@ -3763,19 +3772,19 @@
       "TIGON"
     ],
     "inspected_representation": "PCA8D,384/1024/4096 feature ablations",
-    "incremental_pca": "No evidence found in inspected research code; no score claim",
+    "incremental_pca": "Implemented controlled same3000pastrows/rank8/chunk512; model trial running, score unavailable.",
     "evaluation_rule": "Matched past-fit splits and same full-panel calibration; architecture and representation effects separate",
     "next": "Bounded scFM/model-basics eligibility preflight: identify fresh cutoff-fit support and matched baseline evidence; inventory PCA vs IPCA coverage before fixing one paired projected-OT training trial. Reuse runners; no old-target grid or earlier validation with8.5-fitted artifacts."
   },
   "latest_jev": {
-    "decision": "latent_dependence_penalty_20261004",
-    "choice": "latent_variogram",
-    "confidence": 0.85,
+    "decision": "ipca_decoder_protocol_20261004",
+    "choice": "refit_representation_heads",
+    "confidence": 0.72,
     "usage": {
-      "input_tokens": 1414,
-      "output_tokens": 38
+      "input_tokens": 1412,
+      "output_tokens": 47
     },
-    "payload_bytes": 2536,
-    "scope": "Advisory: surrogate benefit must be tested with unchangedfullgene scorer."
+    "payload_bytes": 2507,
+    "scope": "Past-only decoder strategy advisory; planned9.25horizon alreadycovered, metadata/coverage selecteduncovered9.5. No source/targetexpression sent."
   }
 }

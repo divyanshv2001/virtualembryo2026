@@ -411,6 +411,58 @@
         ],
         "scope": "Fresh target horizonE8.25->E9.0; past-only matched400additional steps from verified projectedOT400. Zero penalty control versus fixed latentpairweight1 insideauxloss, outerOTweight.01/cap.1 and radius.05 unchanged. All28 latentcoordinate pairs smooth(|difference|+1e-6)^.5 expectedcontrasts, normalizedbytargetcontrast clamped.05; same past stages/pairs/RNG. No genescorer-loss equivalence claim. Saved PCA8/4096/CNF800/projected400 reused only after exactencoder/input/checkpoint metadata verification. No target tuning, no official upload or independent-embryo claim. Original scorer/calibration/readiness retained; only new penaltyarm eligible+1/-10 vs matchedzero400continuation, controls0."
       }
+    },
+    "scfm_ipca_fold": {
+      "script": "scfm_projected_past_fold.py",
+      "args": [
+        "--experiment",
+        "scfm_ipca_fold"
+      ],
+      "run": "private/scfm_ipca_fold_01",
+      "report": "SCFM_IPCA_FOLD_RESULTS.json",
+      "protocol": {
+        "cutoff": 8.25,
+        "target": 9.5,
+        "fit_stages": [
+          7.5,
+          7.75,
+          8.0,
+          8.25
+        ],
+        "seed": 20260928,
+        "scoring_seeds": [
+          20260928,
+          20260929,
+          20260930
+        ],
+        "steps": 400,
+        "batch_size": 64,
+        "reuse_run": "private/scfm_projected_past_fold_01",
+        "representation_comparison": true,
+        "ipca_chunk": 512,
+        "candidates": [
+          "copy",
+          "cnf800",
+          "projected_ot400",
+          "ipca_cnf800",
+          "ipca_projected400"
+        ],
+        "control_candidates": [
+          "copy",
+          "cnf800",
+          "projected_ot400"
+        ],
+        "contrast_candidates": [
+          "projected_ot400",
+          "ipca_projected400"
+        ],
+        "contrast_label": "ipca_minus_pca_projected_mean_skills",
+        "reward_reference": "projected_ot400",
+        "reward_candidates": [
+          "ipca_projected400"
+        ],
+        "scope": "Controlled PCA vsIncrementalPCA end-to-end model: same<=8.25 selected3000fitrows/4096features/normalization/rank8, fixedIPCAchunk512 and samefitdraworder. Same800density+400projectedOT seed/batch64/loss/caps. Reuse PCAmodels only after exactencoder/input/metadata checks; trainIPCAonly. Each decoder refit onlypast withsamealgorithm/guards toavoidfeedingIPCAcoords toPCAheads. E8.25->9.5 is1.25day historicaldevelopment;9.25alreadycovered,9.5no matchingpublicresultfound. Notindependentembryo validation. Allforecasts/replays lockedbeforetargetread; full32285scorer/calibration/readinessunchanged. IPCA fitdiagnostics/memory are not scoregains. OnlyIPCAprojectedrewardagainstmatchedPCAprojected; controls0. No targettuning/grid/officialupload."
+      }
     }
   }
 }

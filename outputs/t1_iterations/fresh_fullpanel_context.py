@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 import torch
 from scipy import sparse
-from sklearn.decomposition import PCA
+from sklearn.decomposition import PCA, IncrementalPCA
 from scnode_past_fold_training import PastOnlyMatrix, past_features
 from tigon_conditional_fullpanel import panel_values
 from run_t1 import digest
@@ -59,3 +59,26 @@ def prepare(spec,RUN,emit):
                         scale=scale,basis=basis,pca_center=pca.mean_,whitening=whitening,pca_rows=past[fit])
     del values,normalized
     return {k:v for k,v in locals().items() if k in ("raw_x","stages","x","past","anchor_rows","mapped","columns","protected","donors","panel","symbols","atlas_features","features","guard","coordinates","basis","pca","center","scale","anchor_path")}
+
+
+def incremental_context(c,RUN,emit,chunk=512):
+    """Same PCA rows/features/scaling; only the decomposition algorithm changes."""
+    if chunk!=512:raise ValueError('Undeclared IPCA chunk')
+    with np.load(RUN/'fresh_encoder.npz') as saved:fit_rows=saved['pca_rows'].copy()
+    fit=np.searchsorted(c['past'],fit_rows)
+    np.testing.assert_array_equal(c['past'][fit],fit_rows)
+    values=np.asarray(c['x'][np.ix_(c['past'],c['atlas_features'])],np.float32)
+    normalized=(values-c['center'])/c['scale']
+    pca=IncrementalPCA(n_components=8,batch_size=chunk)
+    for start in range(0,len(fit),chunk):
+        block=normalized[fit[start:start+chunk]]
+        if len(block)<8:raise ValueError('IPCA trailing chunk smaller than rank')
+        pca.partial_fit(block)
+    coordinates=pca.transform(normalized)
+    whitening=np.maximum(coordinates.std(0),.1)
+    basis=pca.components_/whitening[:,None];coordinates=coordinates/whitening
+    if not np.isfinite(coordinates).all():raise ValueError('Nonfinite IPCA coordinates')
+    np.savez_compressed(RUN/'ipca_encoder.npz',features=c['features'],guard_features=c['guard'],center=c['center'],scale=c['scale'],basis=basis,pca_center=pca.mean_,whitening=whitening,pca_rows=fit_rows)
+    result=dict(c);result.update(coordinates=coordinates,basis=basis,pca=pca)
+    emit('ipca_encoder_frozen',fit_rows=len(fit),rank=8,chunk=chunk,sha256=digest(RUN/'ipca_encoder.npz'))
+    return result
