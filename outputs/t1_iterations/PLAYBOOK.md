@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-04T15:08:29.844013+00:00
+Updated: 2026-10-04T15:19:18.462530+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -10,7 +10,7 @@ Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction':
 
 Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Predeclare scalar-potential gradient versus unconstrained vector residual on frozenkinetics:1681allocatedparameters each(width40vs33 and scalarconstantbias gauge disclosed),400RTX3060steps/arm matched64cell adjacent paststage Sinkhornp2blur.05scaling.9,Adam.001clip5,.1fixed residualscale andRK4.125,seed20261004. Past10963cells8D through8.25 only, originalCPU fullpanel scorer/head/gates, prior/zeroresidual/new forecast exactreplays, no ActionMatching objective/reproduction/causalcapacity claim. One worker, no oldgrid/targettuning/upload. Retain52.377365 historical best and health-1521.
+Next: Collect scalar_potential_residual_past_fold aftercompletion; no duplicate worker. Verify frozenbase/prior/zeroresidual/newforecast fullpanel exactreplays,15calibrations; four fresh independent metric reviews, unique primary potential-minus-vector reward, bounded cached Jev next decision. Preserve52.377365tiny historical best, failed prior confirmations and all readiness gates.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in outputs\t1_submissions\formula_progress_20260930_01\official_result.json. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 

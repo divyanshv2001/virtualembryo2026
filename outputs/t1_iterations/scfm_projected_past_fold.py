@@ -55,6 +55,7 @@ def main():
         if spec.get('count_vae'): sources.append('count_vae_representation.py')
         if spec.get('correlated_diffusion'): sources.append('correlated_latent_diffusion.py')
         if spec.get('tied_marginal_diffusion'): sources+=['tied_marginal_diffusion.py','correlated_latent_diffusion.py']
+        if spec.get('scalar_potential'): sources.append('scalar_potential_residual.py')
         graph_prior_inputs={}
         if spec.get('graph_kinetics'):
             sources.append('graph_kinetic_residual.py')
@@ -104,7 +105,21 @@ def main():
                     flows[name]=model.eval()
                 report['fixed_candidate_validation']={'training_steps':0,'reward_eligible':False,'past_decoder_reconstruction':'Same deterministic past-only procedure; prior full-panel predictions must replay bit-exact before new horizon.'}
                 emit('frozen_kinetic_checkpoints_verified',checkpoint_sha256=spec['frozen_checkpoint_sha256'])
-                if spec.get('tied_marginal_diffusion'):
+                if spec.get('scalar_potential'):
+                    from scalar_potential_residual import PotentialResidualFlow
+                    report.pop('fixed_candidate_validation')
+                    context_path=RUN/'residual_past_context.npz';np.savez_compressed(context_path,coordinates=c['coordinates'],stages=c['stages'][c['past']])
+                    helper=HERE/'scalar_potential_residual.py';base_checkpoint=frozen/'kinetic_none400.pt'
+                    packet={'context':str(context_path),'base_checkpoint':str(base_checkpoint),'sha256':{str(path):digest(path) for path in [context_path,base_checkpoint,helper,HERE/'cnf_manifold_flow.py',HERE/'cnf_density_flow.py',HERE/'graph_kinetic_residual.py']}}
+                    save(RUN/'residual_GPU_packet.json',packet);python=HERE.parents[1]/'outputs/research_workflow/.venv_cuda/Scripts/python.exe'
+                    with (RUN/'GPU_stdout.log').open('wb') as stdout,(RUN/'GPU_stderr.log').open('wb') as stderr:
+                        subprocess.run([str(python),'-u',str(helper),'--train-packet',str(RUN/'residual_GPU_packet.json')],stdout=stdout,stderr=stderr,cwd=HERE.parents[1],check=True,creationflags=subprocess.CREATE_NO_WINDOW)
+                    for kind in ['vector','potential']:
+                        saved=torch.load(RUN/('residual_'+kind+'400.pt'),weights_only=False,map_location='cpu')
+                        if saved['kind']!=kind or saved['steps']!=400 or saved['batch_size']!=64 or saved['fit_max_stage']!=cutoff or saved['parameters']!=1681 or saved['training_seed']!=20261004 or saved['step']!=.125 or saved['residual_scale']!=.1 or not saved['frozen_base_exact'] or saved['context_sha256']!=digest(context_path) or saved['base_checkpoint_sha256']!=digest(base_checkpoint):raise ValueError('Scalar residual checkpoint metadata mismatch')
+                        model=PotentialResidualFlow(flows['kinetic_none400'],kind);model.residual_net.load_state_dict(saved['residual_net']);flows['residual_'+kind+'400']=model.eval()
+                    report['scalar_potential_scope']=spec['scope']
+                elif spec.get('tied_marginal_diffusion'):
                     from correlated_latent_diffusion import CorrelatedDiffusionFlow
                     from tied_marginal_diffusion import TiedMarginalDiffusionFlow
                     report.pop('fixed_candidate_validation')
@@ -376,6 +391,14 @@ def main():
             reference.net=flows['diffusion_diagonal400'];prior,_,_=reference.predict(9.5,'joint',1.,sampling='systematic')
             if cache.put('_prior_amplitude_diagonal',prior)!=old_generation['diffusion_diagonal400']['prediction_sha256']:raise ValueError('Frozen amplitude forecast changed')
             del prior;emit('frozen_amplitude_fullpanel_prior_exact_replay_passed')
+        if spec.get('scalar_potential'):
+            reference.net=flows['kinetic_none400'];neutral,_,_=reference.predict(target,'joint',1.,sampling='systematic')
+            neutral_sha=cache.put('_neutral_kinetic',neutral);del neutral
+            for name in spec['contrast_candidates']:
+                reference.net=flows[name];reference.net.residual_enabled=False
+                neutral,_,_=reference.predict(target,'joint',1.,sampling='systematic')
+                if cache.put('_neutral_'+name,neutral)!=neutral_sha:raise ValueError('Zero-residual full-panel replay mismatch')
+                del neutral;reference.net.residual_enabled=True;emit('neutral_potential_residual_fullpanel_exact_replay_passed',candidate=name)
         if spec.get('correlated_diffusion') or spec.get('tied_marginal_diffusion'):
             reference.net=flows['kinetic_none400'];neutral,_,_=reference.predict(target,'joint',1.,sampling='systematic')
             neutral_sha=cache.put('_neutral_kinetic',neutral);del neutral

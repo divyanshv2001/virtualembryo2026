@@ -1765,6 +1765,70 @@
         "amplitude_context_sha256": "2e508a1ef631289f7f71a4244c4938b5d86b37a463950726deff3b195345af03",
         "amplitude_checkpoint_sha256": "178ffb611e2b44b6a1639d5b0f11c30e357b8a1b0470ca767fc15bfa94bb4f11"
       }
+    },
+    "scalar_potential_residual_past_fold": {
+      "script": "scfm_projected_past_fold.py",
+      "args": [
+        "--experiment",
+        "scalar_potential_residual_past_fold"
+      ],
+      "run": "private/scalar_potential_residual_past_fold_01",
+      "report": "SCALAR_POTENTIAL_RESIDUAL_PAST_FOLD_RESULTS.json",
+      "protocol": {
+        "cutoff": 8.25,
+        "target": 9.5,
+        "fit_stages": [
+          7.5,
+          7.75,
+          8.0,
+          8.25
+        ],
+        "seed": 20260928,
+        "scoring_seeds": [
+          20260928,
+          20260929,
+          20260930
+        ],
+        "steps": 400,
+        "batch_size": 64,
+        "reuse_run": "private/scfm_projected_past_fold_01",
+        "candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "residual_vector400",
+          "residual_potential400"
+        ],
+        "control_candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "residual_vector400"
+        ],
+        "contrast_candidates": [
+          "residual_vector400",
+          "residual_potential400"
+        ],
+        "contrast_label": "potential_minus_vector_mean_skills",
+        "reward_reference": "residual_vector400",
+        "reward_candidates": [
+          "residual_potential400"
+        ],
+        "scope": "Own scalargradient versus unconstrainedvector residual architecture on frozenkinetics; identical adjacent-stage Sinkhorn objective, not ActionMatching objective or author reproduction.1681allocatedparams each: scalar9-32-40-1 vs vector9-32-33-8,Tanh,zerooutput init,fixed.1scale,no normcap preserving scalargradient. Widthdifference/scalarconstantbias gauge mean equalcount not equaleffectivecapacity; total frozenbase+residual need notbeconservative.400RTX3060steps/arm,batch64,Adam.001clip5,pairedseed20261004cell draws,Sinkhornp2blur.05scaling.9,RK4.125;scalar mixed secondderivatives training/localfirstderivatives underno_grad forecast.10963pastcells8D7.5..8.25 only; original2.14CPU full32285gene scorer/head/guards/calibration/readiness unchanged.3originalprior/2zeroresidual/5newfullpanel exactreplays before9.5targetexpression;15calibrations,one trainingseed3scoringresamples historicaldevelopment notindependentembryos.4.5GiBGPU16GiBhosttwo threads. Primarypotential-minus-vector rewardonce,controls0,fourreviews aftercompletion/failure. No targettuning/oldgrid/causalcapacity/70claim/upload.",
+        "frozen_kinetic_run": "private/graph_kinetics_past_fold_repair_01",
+        "prior_target": 9.25,
+        "frozen_checkpoint_sha256": {
+          "kinetic_none400": "11dc8d8620fa66997aa08d2f88ad9f4e9cdc2db788f8c1b3088f1b8eb01dd4c2"
+        },
+        "training_device": "cuda",
+        "prior_candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400"
+        ],
+        "driver_runtime": "cpu",
+        "scalar_potential": true
+      }
     }
   }
 }
