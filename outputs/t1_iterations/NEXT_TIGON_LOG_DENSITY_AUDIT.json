@@ -1,0 +1,40 @@
+{
+  "status": "predeclared",
+  "fit_stages": [
+    7.5,
+    7.75
+  ],
+  "cutoff": 7.75,
+  "loss": "Sum origin+adjacent squared log KDE density ratio divided by8^2 plus original movingenergy. Fixed coefficient1; no scalarbalance/grid.",
+  "arms": [
+    "log_density_disabled",
+    "log_density_enabled"
+  ],
+  "steps": 200,
+  "query_size": 32,
+  "query_noise_variance": 0.02,
+  "KDE_variance": 0.1,
+  "midpoint_max_step": 0.0625,
+  "Adam_lr": 0.003,
+  "weight_decay": 0.01,
+  "training_seed": 20261002,
+  "controls": "Cached original200step g0/g1/sharedinitial/zerofield/pastcentroidtranslation; exact originalPCA/init/querybytes. No baseline rerun.",
+  "diagnostic_seeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019
+  ],
+  "gate": "Each of8noisequeries logloss<=.9*min(zero,cachedoriginalsamegrowth), movingenergy<=pastcentroid, finite originaldiagnostics and ESS>=16of32, logweightspan<=log4. Mechanism gateonly; nofullpanel retry thiscycle.",
+  "failure_action": "Retire fixedlogdensity config; no strength/budget grid",
+  "scope": "Past-only source development; samecenters,newnoise, notheldoutcells/embryos. NotTIGONauthorreproduction, notabsolutegrowth.",
+  "target_expression_reads": 0,
+  "benchmark_scores": false,
+  "reward_delta": 0,
+  "resources": "D-only16GiB2threads1worker",
+  "jev": "private/decisions/tigon_log_density_01/route.json"
+}

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-04T03:26:16.759086+00:00",
+  "updated_utc": "2026-10-04T03:35:35.618820+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -6321,16 +6321,13 @@
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
-    "status": "numeric_pass_fullpanel_pilot_predeclared",
-    "experiment": "tigon_numerical_preflight_retry",
-    "spec": "NEXT_TIGON_CONDITIONAL_FULLPANEL_PILOT.json",
-    "protocol": "TIGON_PROTOCOL_REVIEW_20261002.md",
-    "jev_record": "JEV_TIGON_NUMERICAL_DESIGN_ROUTE_20261002_01.json",
-    "next": "Implement freshpast-only training and existinghead decoder adapter with explicit donor provenance; register unique run only after import/cutoff/identity checks. Fourcritics and scoreledger afterfullbatch. Spec NEXT_TIGON_CONDITIONAL_FULLPANEL_PILOT.json, retrospective7.75to8.0 conditionalg0/g1 fixed200steps; scorer/gates unchanged. No improved submission yet.",
-    "implementation_status": "fixed_conditional_and_density_balance_paths_retired",
-    "next_experiment": null,
-    "synthesis": "JEV_TIGON_SIGNAL_SYNTHESIS_ROUTE_20261004_01.json",
-    "retirement_evidence": "TIGON_GRADIENT_BALANCE_AUDIT_RESULTS.json",
+    "status": "past_log_density_mechanism_passed_fullpanel_implementation_pending",
+    "implementation_status": "not_registered_or_launched",
+    "experiment": "tigon_log_density_audit",
+    "next_experiment": "tigon_log_density_fullpanel",
+    "next": "One frozen-model fullpanel pilot nextcycle; exact copy/freshCNF replay and unchangedpastheads/scorer. See compact state design; no retraining or targetstrengthgrid.",
+    "report": "TIGON_LOG_DENSITY_AUDIT_RESULTS.json",
+    "jev_record": "private/decisions/tigon_log_density_01/route.json",
     "efficiency_policy": "RESEARCH_CONTINUATION_POLICY.md"
   }
 }

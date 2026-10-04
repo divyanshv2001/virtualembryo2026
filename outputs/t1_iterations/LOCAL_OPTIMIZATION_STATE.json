@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-04T03:26:16.759086+00:00",
+  "updated_utc": "2026-10-04T03:35:35.618820+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Efficiency checkpoint: fixed TIGON pilot and gradient-balance repair retired, no queued rerun/expansion/export. Next cycle select at most one genuinely new viable past-only mechanism from compact queue; require supporting evidence and one cached consequential advisory only if unresolved. Do not chain diagnostics, revisit failed signed-drift or tune against exposed targets. Usage target 5\u20136pp/cycle; original scientific gates unchanged.",
+  "next_experiment": "Next cycle implement/register one frozen log-density fullpanel pilot, no retraining: reuse past<=7.75 originalencoder/head/referencecheckpoint and cachedlogg0/g1 models; exactcopy/freshCNF replay against originalprediction hashes before targetaccess. Same1500donors/selectedidentity-residual decoder/guards, three originalscoring seeds/fixed32285scorer/calibration. RetrospectiveE8.0 exposure disclosed; no strengthgrid/export. Freeze spec before launch, onebatch then fourbriefcritics/reward/ledger and onecheckpoint. Pastmechanism pass is not benchmark/readiness.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1297,16 +1297,16 @@
     "decision": "Residual blends slightly improve first-fold direction but regress second-fold signed ranking/direction versus recent-linear. Neither beats both matched controls across both folds."
   },
   "latest_jev_advisory": {
-    "record": "JEV_TIGON_SIGNAL_SYNTHESIS_ROUTE_20261004_01.json",
+    "record": "private/decisions/tigon_log_density_01/route.json",
+    "payload_bytes": 1612,
     "usage": {
-      "input_tokens": 984,
-      "output_tokens": 43
+      "input_tokens": 792,
+      "output_tokens": 45
     },
-    "payload_bytes": 2060,
     "answers": {
       "next": {
-        "choice": "single_gradient_balance_audit",
-        "confidence": 0.92
+        "choice": "log_density_past_audit",
+        "confidence": 0.93
       }
     }
   },
@@ -2679,6 +2679,25 @@
         "variogram": "Problem: Variogram is unavailable; no improvement or benchmark-readiness claim is supported. Both balance candidates failed energy and objective criteria; g0 also failed density improvement. Proposed solution: Close and retire density balancing under the predeclared rule, without repeats. Any future remedy must introduce genuinely new past-only support. Validation: Training-stream and PCA checks and finite ESS passed. Eight new noise seeds reused centers, not held-out cells. Retain cached-baseline and common-rescale controls and predeclared criteria; variogram remains unassessed."
       },
       "completed_utc": "2026-10-04T03:26:16.759086+00:00"
+    },
+    "tigon_log_density_audit_01": {
+      "status": "completed",
+      "report_sha256": "af436e8c3f76416fe90d0e7f07212a4b3d708c62ccecb6b6521ec826f23ac0b5",
+      "specialist_role_version": 2,
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "reviews": {
+        "de_score": "Problem: DE is unavailable; empty outcomes cannot establish benefit despite both mechanism gates passing. Proposed solution: Next cycle, freeze the unchanged head and run a full-panel contrast against copy and fresh-CNF controls, retaining past-only inputs and matched initialization/query streams. No target tuning. Validation: Compare matched controls under predefined criteria. Current evidence supports mechanism stability only: logloss ratios .124\u2013.294, energy within past-centroid bounds, ESSg1>=30.97/32, span<=.681. DE uncertainty and readiness remain unchanged.",
+        "de_direction": "Problem: DE direction is unavailable; mechanism gains cannot establish correct direction. E8.0 was previously exposed, with no independent embryos. Proposed solution: Next cycle, freeze the unchanged head and run a full-panel contrast against copy and fresh-CNF controls using matched past-only initialization/query streams; avoid target tuning. Validation: Both mechanism gates pass across eight noise seeds (loss ratios .124\u2013.294; energy<=past centroid; ESS>=30.97/32; span<=.681). Direction remains unresolved; readiness unchanged.",
+        "mmd_u": "Problem: MMD is unavailable; passing mechanism gates establish neither MMD improvement nor heldout-cell/embryo generalization. Readiness is unchanged. Proposed solution: Next cycle only, freeze the unchanged head and run the full-panel copy/fresh-CNF contrast with the original MMD scorer; no weighted benchmark or target tuning. Validation: Match initialization, query stream, past-only centers, and eight noise seeds. Success requires lower MMD versus matched controls while retaining mechanism gates; unavailable MMD leaves the contrast unresolved.",
+        "variogram": "Problem: Variogram is unavailable; both mechanism gates pass, but gene-pair dependence remains untested. Readiness unchanged. Proposed solution: Next cycle only, freeze unchanged heads/full panel; use a residual-preserving donor contrast with copy/freshCNF controls, past-only data, covariance guards, and original scorer. No target tuning. Validation: Preserve exact initialization/query streams. Require covariance guards and available variogram under frozen criteria; missing scores remain unavailable, and guard failure rejects the contrast."
+      },
+      "coordinator_clarifications": "E8.0 is one previously exposed target, eight noise seeds are not eight targets; variogram here concerns gene-pair dependence, no spatial coordinates.",
+      "completed_utc": "2026-10-04T03:35:35.618820+00:00"
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3513,10 +3532,41 @@
       5,
       6
     ],
-    "observed_account_used_percent": 18,
-    "usage_scope": "account-wide snapshot, not attributable iteration usage",
+    "observed_account_used_percent": 27,
+    "usage_scope": "Account-wide change between checkpoints; not isolated cycle billing. Concurrent usage/reset attribution unavailable.",
     "one_experiment_per_cycle": true,
     "one_commit_per_completed_checkpoint": true,
-    "policy": "RESEARCH_CONTINUATION_POLICY.md"
+    "policy": "RESEARCH_CONTINUATION_POLICY.md",
+    "previous_checkpoint_used_percent": 21,
+    "observed_account_delta_percentage_points": 6
+  },
+  "tigon_log_density_audit": {
+    "status": "completed_past_mechanism_gate_passed",
+    "spec": "NEXT_TIGON_LOG_DENSITY_AUDIT.json",
+    "run": "private/tigon_log_density_audit_01",
+    "report": "TIGON_LOG_DENSITY_AUDIT_RESULTS.json",
+    "report_sha256": "af436e8c3f76416fe90d0e7f07212a4b3d708c62ccecb6b6521ec826f23ac0b5",
+    "passing_candidates": [
+      "log_density_disabled",
+      "log_density_enabled"
+    ],
+    "reward_delta": 0,
+    "peak_bytes": 1081778176,
+    "elapsed_seconds": 64.8510528000188,
+    "next_fullpanel_design": {
+      "cutoff": 7.75,
+      "target": 8.0,
+      "scoring_seeds": [
+        20260928,
+        20260929,
+        20260930
+      ],
+      "training_steps": 0,
+      "controls": "copy and exact replay of original fresh_pca8_cnf_incumbent_covariance_0.25",
+      "candidate_checkpoints": "private/tigon_log_density_audit_01/log_density_disabled.pt and log_density_enabled.pt",
+      "past_heads_reference": "private/tigon_conditional_fullpanel_01/fresh_reference.pt and fresh_encoder.npz",
+      "gate": "Original all3headline beat controls/all4mean skills noninferior; >=60 for16rep only. Original>72/lower-tail64rep+wholeembryo temporal gates unchanged. No target tuning."
+    },
+    "training_history_units": "original_density field in generated audit denotes new per-dimension log-density loss; original_energy remains unchanged movingenergy. Raw benchmark metrics remain unavailable."
   }
 }

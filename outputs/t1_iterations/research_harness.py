@@ -92,7 +92,15 @@ def collect(name,entry,live):
     return receipt
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('command',choices=['status','run','collect']);parser.add_argument('--experiment');args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('command',choices=['status','run','collect','queue']);parser.add_argument('--experiment');args=parser.parse_args()
+    if args.command=='queue':
+        queue=read(HERE/'METRIC_RESEARCH_QUEUE.json')
+        latest=queue.get('latest_paper_decision',{})
+        pending=[p for p in queue.get('paths',[]) if p.get('status') in ('predeclared','registered','not_started','implementation_pending')]
+        result={'latest':{k:latest.get(k) for k in ('status','implementation_status','next_experiment','next')},
+                'pending_count':len(pending),'pending':[{'id':p.get('id'),'status':p.get('status'),'next_action':str(p.get('next_action',''))[:200]} for p in pending[:5]],
+                'scope':'Completed-family histories and nested results omitted; open-family flags do not authorize repeats.'}
+        print(json.dumps(result,separators=(',',':')));return
     manifest=read(HERE/'RESEARCH_HARNESS_MANIFEST.json')['experiments'];live=processes()
     if args.command=='status':
         if args.experiment and args.experiment not in manifest:raise ValueError('Unknown registered experiment')
