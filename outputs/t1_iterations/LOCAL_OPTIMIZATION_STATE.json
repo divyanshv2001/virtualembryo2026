@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Inspect unexplored difference-sequence attention feasibility from primary scDiformer sources; require past-only physical-stage protocol, CPU/16GiB budget and matched baseline before implementation. No kinetic grid.",
+  "next_experiment": "Validate CUDA runtime, then preflight one scDiformer-inspired difference-attention vs matched level-attention residual with retained kinetic control. Jev0.57; no70 score guarantee. scIMF collective context and CellPace temporal diffusion forcing are unexplored reserves, with rawcount/stage audits before full-model use.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -3691,7 +3691,7 @@
       5,
       6
     ],
-    "policy_sha256": "f766fa2359cd09d3af5279e5e35d4284c8334ff839e3c708fc0f86f2242691d3",
+    "policy_sha256": "1e6cc6f15c1e918ad60a1e01f26dd66c48022b33158bf8eb2240a9622066af00",
     "rules": [
       "Start with harness resume; inspect only changed policy and active evidence",
       "One necessary experiment; one checkpoint commit/push",
@@ -4103,5 +4103,30 @@
     "previous_recorded_best": 52.16,
     "same_board_verified": false,
     "no_score_or_model_tuning_from_hidden_results": true
+  },
+  "gpu_training": {
+    "preference": "RTX3060 for new model training",
+    "name": "NVIDIA GeForce RTX3060 Laptop GPU",
+    "vram_mib": 6144,
+    "driver": "591.74",
+    "original_torch": "2.14.0+cpu",
+    "runtime": "outputs/research_workflow/.venv_cuda/Scripts/python.exe",
+    "cuda_install_status": "completed",
+    "target_torch": "2.11.0+cu128",
+    "smoke_passed": true,
+    "max_allocated_vram_gib": 4.5,
+    "verified_runtime": {
+      "torch": "2.11.0+cu128",
+      "cuda": "12.8",
+      "device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+      "vram_mib": 6143,
+      "smoke_optimizer_steps": 40,
+      "first_loss": 0.1775967925786972,
+      "last_loss": 0.003486351575702429,
+      "seconds": 0.4180791000253521,
+      "peak_allocated_mib": 65,
+      "checkpoint_replay_exact": true,
+      "scope": "Synthetic GPU training/runtime check, not scientific score or performance speedup benchmark"
+    }
   }
 }

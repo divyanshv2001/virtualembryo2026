@@ -6397,8 +6397,15 @@
     "experiment": "kinetic_frozen_horizon_validation",
     "status": "completed_incremental_gain_readiness_unmet",
     "next_experiment": null,
-    "next": "Inspect unexplored difference-sequence attention feasibility from primary scDiformer sources; require past-only physical-stage protocol, CPU/16GiB budget and matched baseline before implementation. No kinetic grid.",
+    "next": "Validate CUDA runtime, then preflight one scDiformer-inspired difference-attention vs matched level-attention residual with retained kinetic control. Jev0.57; no70 score guarantee. scIMF collective context and CellPace temporal diffusion forcing are unexplored reserves, with rawcount/stage audits before full-model use.",
     "noedge_mean": 52.334065831100055,
-    "gain_vs_cnf": 0.625373808492419
+    "gain_vs_cnf": 0.625373808492419,
+    "jev_choice": "difference_attention",
+    "jev_confidence": 0.57,
+    "jev_payload_bytes": 2666,
+    "new_unexplored_mechanisms": [
+      "scIMF collective cell context",
+      "CellPace temporal diffusion forcing"
+    ]
   }
 }

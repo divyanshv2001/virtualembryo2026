@@ -52,11 +52,16 @@ def _run(name,entry,live):
     if HERE.drive.upper()!='D:':raise ValueError('Experiment/cache must stay on D:')
     script=resolve(entry['script'])
     if not script.is_file():raise ValueError('Registered script missing')
+    device=entry.get('protocol',{}).get('training_device','cpu')
+    python=HERE.parents[1]/'outputs/research_workflow/.venv_cuda/Scripts/python.exe' if device=='cuda' else Path(sys.executable)
+    if device not in ('cpu','cuda') or not python.is_file():raise ValueError('Declared training runtime unavailable')
     folder=HERE/'private/harness_runs'/name;folder.mkdir(parents=True,exist_ok=False)
     env=os.environ.copy();env.update(OMP_NUM_THREADS='2',MKL_NUM_THREADS='2',OPENBLAS_NUM_THREADS='2')
+    if device=='cuda':env.update(CUDA_VISIBLE_DEVICES='0',CUBLAS_WORKSPACE_CONFIG=':4096:8')
     with (folder/'stdout.log').open('wb') as stdout,(folder/'stderr.log').open('wb') as stderr:
-        worker=subprocess.Popen([sys.executable,'-u',str(script)]+entry.get('args',[]),cwd=HERE.parents[1],stdout=stdout,stderr=stderr,env=env,creationflags=subprocess.CREATE_NO_WINDOW)
+        worker=subprocess.Popen([str(python),'-u',str(script)]+entry.get('args',[]),cwd=HERE.parents[1],stdout=stdout,stderr=stderr,env=env,creationflags=subprocess.CREATE_NO_WINDOW)
     receipt={'experiment':name,'started_utc':now(),'pid':worker.pid,'script_sha256':digest(script),'registered_run':entry['run'],'registered_report':entry['report'],'logs':str(folder.relative_to(HERE)),'status':'started'}
+    receipt.update(training_device=device,python=str(python))
     save(folder/'receipt.json',receipt)
     return {'experiment':name,'status':'started','pid':worker.pid,'logs':receipt['logs']}
 
