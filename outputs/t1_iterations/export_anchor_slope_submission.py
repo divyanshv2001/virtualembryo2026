@@ -1,5 +1,6 @@
 """User-authorized progress export, refitted at observed E9.5 for E10.5."""
 import json
+import argparse
 from pathlib import Path
 import numpy as np
 import pandas as pd
@@ -17,7 +18,10 @@ from anchor_slope_calibration import AnchorSlopeCalibration
 
 
 def main():
-    root=HERE.parents[1];name='anchorslope_progress_20260929_01'
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--kinetic-none',action='store_true')
+    kinetic=parser.parse_args().kinetic_none
+    root=HERE.parents[1];name='kinetic_none_progress_20261004_01' if kinetic else 'anchorslope_progress_20260929_01'
     out=root/'outputs/t1_submissions'/name;private=HERE/'private'/name
     if out.exists() or private.exists():raise ValueError('Preserve prior export; use a new version')
     data=HERE/'private/associated_prepared_01'
@@ -26,9 +30,12 @@ def main():
         if digest(data/f)!=prepared[k]:raise ValueError('Prepared data changed')
     panel_path=root/'outputs/t1_run/T1__val.genes.txt';panel=panel_path.read_text().splitlines()
     anchor=root/'data/E9.5_RNA.h5ad';index_path=root/'outputs/t1_run/index.json'
-    development=HERE/'CNF_ANCHOR_SLOPE_RESULTS.json'
-    candidate=next(s for s in json.loads(development.read_text())['summaries'] if s['candidate']=='anchorslope_both_0.5')
+    development=HERE/('GRAPH_KINETICS_PAST_FOLD_REPAIR_RESULTS.json' if kinetic else 'CNF_ANCHOR_SLOPE_RESULTS.json')
+    candidate_name='kinetic_none400' if kinetic else 'anchorslope_both_0.5'
+    development_report=json.loads(development.read_text())
+    candidate=next(s for s in development_report['summary' if kinetic else 'summaries'] if s['candidate']==candidate_name)
     sources=['export_anchor_slope_submission.py','past_encoder_panel.py','anchor_slope_calibration.py','feature_panel_forecast.py','ridge_conditional_head.py','cnf_manifold_flow.py','cnf_density_flow.py','hurdle_backtest.py','neural_hurdle_forecast.py','robust_population.py']
+    if kinetic:sources+=['graph_kinetic_residual.py','full_anchor_slope_forecast.py','partial_anchor_forecast.py','log1p_positive_forecast.py']
     plan={'created_before_training_utc':now(),'authorization':'User requested a submission file to check the score. Export only; no upload.',
         'observed_cutoff':9.5,'forecast_target':10.5,'source_max_stage':9.5,'source_cohort':'associated_prepared_01',
         'candidate':'anchorslope_both_0.5','seed':20260928,'donor_count':1500,'encoder_genes':4096,'dimensions':8,
@@ -39,6 +46,10 @@ def main():
         'scope':'Refit past-only encoder, flow and conditional heads on sampled external atlas throughE9.5; adapt slopes using1500 observed challengeE9.5 anchors. PredictE10.5 without hidden expression. Local54.91 does not estimate official score. Temporal checks pending at request.',
         'external_data_disclosure':'Development2024 dev201867 associated prepared cohort:25963 cells selected from430339-cell public atlas, CC-BY. Not full atlas training.',
         'guard_features_sha256':digest(HERE/'private/transport_challenge_01/features.npy')}
+    if kinetic:
+        plan.update(candidate=candidate_name,kinetic_steps=400,positive_alpha=.25,detection_alpha=.75,
+            agent_team_lock_certified=False,
+            scope='Refit the no-edge kinetic protocol through observed E9.5, then forecast E10.5. Local E8.25-to-E9.25 development score is not an official score. Interactive development is not a certified locked Agent Team run.')
     out.mkdir(parents=True);private.mkdir(parents=True);(out/'plan.json').write_text(json.dumps(plan,indent=2))
     for f in sources:(private/f).write_bytes((HERE/f).read_bytes())
     events=out/'trajectory.jsonl';append_event(events,'progress_export_plan_frozen',plan_sha256=digest(out/'plan.json'))
@@ -53,26 +64,42 @@ def main():
     torch.manual_seed(20260928);net=DensityFlowNet(encoded['basis'],encoded['pca_center'],9.5,float(stages[encoded['past_rows']].min())-.25)
     history=train_manifold_density(net,encoded['coordinates'],stages[encoded['past_rows']],.1,private/'training.pt',lambda kind,**kw:append_event(events,kind,**kw),steps=800,density_weight=10.)
     guards=np.load(HERE/'private/transport_challenge_01/features.npy')
-    model=AnchorSlopeCalibration(x,stages,9.5,donors,panel,symbols,net,encoded['center'],encoded['scale'],encoded['features'],guards)
-    model.configure(.5,.5)
+    kinetic_history=[]
+    if kinetic:
+        from graph_kinetic_residual import KineticFlow,train_kinetics
+        from full_anchor_slope_forecast import FullAnchorSlopeForecast
+        mean=np.maximum(encoded['center']/encoded['scale']+encoded['pca_center'],0.)
+        net=KineticFlow(net,mean,np.array([],dtype=int),np.array([],dtype=int),'none')
+        kinetic_history=train_kinetics(net,encoded['coordinates'],stages[encoded['past_rows']],private/'kinetic_none400.pt',lambda kind,**kw:append_event(events,kind,**kw),steps=400,batch=64)
+        model=FullAnchorSlopeForecast(x,stages,9.5,donors,panel,symbols,net,encoded['center'],encoded['scale'],encoded['features'],guards,anchor_path=anchor)
+        model.configure(.25,.75)
+    else:
+        model=AnchorSlopeCalibration(x,stages,9.5,donors,panel,symbols,net,encoded['center'],encoded['scale'],encoded['features'],guards)
+        model.configure(.5,.5)
     np.savez_compressed(private/'heads.npz',positive_coef=model.positive_coef,detection=model.detection,positive_delta=model.anchor_positive_delta,detection_delta=model.anchor_detection_delta,positive_center=model.anchor_positive_center,latent_mean=model.anchor_latent_mean,support=model.support)
     append_event(events,'past_only_model_and_anchor_slopes_fitted',checkpoint_sha256=digest(private/'training.pt'),heads_sha256=digest(private/'heads.npz'))
     pred,indices,audit=model.predict(10.5,'joint',1.,sampling='systematic');np.save(private/'donor_indices.npy',indices)
+    if kinetic:
+        audit.update(method='All-past-E9.5 conditional anchor slopes, source levels fixed',
+            limitation='Cross-sectional E9.5 associations are not temporal velocities.')
     protected=np.setdiff1d(np.arange(len(panel)),model.mapped)
     exact=bool(np.array_equal(pred[:,protected],donors[indices][:,protected]))
     before=np.expm1(donors[indices][:,model.mapped].astype(float)).sum(1);after=np.expm1(pred[:,model.mapped].astype(float)).sum(1)
     error=float(np.max(abs(after-before)/np.maximum(before,1e-12)))
     if not exact or error>1e-5:raise ValueError('Protected gene or mass guard failed')
     append_event(events,'E10_5_forecast_generated',shape=list(pred.shape),audit=audit,protected_genes_exact=exact,mapped_mass_max_relative_error=error)
-    artifact=out/'T1_val__anchorslope_progress_20260929_01.h5ad'
+    artifact=out/f'T1_val__{name}.h5ad'
     a=ad.AnnData(sparse.csr_matrix(pred.astype(np.float32)),obs=pd.DataFrame(index=[f'forecast_{i:05d}' for i in range(len(pred))]),var=pd.DataFrame(index=panel))
     a.uns['forecast_target_stage']='E10.5';a.uns['observed_cutoff_stage']='E9.5';a.uns['purpose']='User-requested progress export; local readiness unmet'
     a.write_h5ad(artifact,compression='gzip')
     validation=validate(artifact,panel,json.loads(index_path.read_text())['T1:val'])
     if not validation['passed']:raise ValueError('Submission format failed')
     report={'artifact':artifact.name,'plan_sha256':digest(out/'plan.json'),'format_validation':validation,'forecast_audit':audit,'training_history':history,'protected_genes_exact':exact,'mapped_mass_max_relative_error':error,'local_development_mean':candidate['mean_score'],'readiness_gate_passed':False,'official_score':None,'uploaded':False,'external_data_disclosure':plan['external_data_disclosure'],'evidence_scope':'Genuine trajectory records this export only, not the entire research history.'}
+    if kinetic:report.update(kinetic_history=kinetic_history,agent_team_lock_certified=False)
     (out/'report.json').write_text(json.dumps(report,indent=2))
     (out/'README.md').write_text(f'# T1 E10.5 progress submission\n\nUpload `{artifact.name}` for T1:val. 1500 cells, exact32285gene order, finite nonnegativefloat32, no coordinates. Refitted using observedE9.5 and sampled public source atlas throughE9.5.\n\nLocal E8.5-to-E9.5 development mean54.91 is not an official E10.5 score. Local>72 gate unmet; no upload performed. Disclose the external Development2024 dev201867 atlas. Export trajectory is genuine but covers this export only.\n')
+    if kinetic:
+        (out/'README.md').write_text(f'# T1 E10.5 kinetic progress file\n\nFile: `{artifact.name}`. Format validated for T1:val; 1500 cells and the exact official gene panel. Refit CNF800 plus no-edge kinetics400 through E9.5, with observed E9.5 anchors and fixed .25/.75 full-panel head calibration. No GRN data used.\n\nLocal E8.25-to-E9.25 development mean {candidate["mean_score"]:.6f} is not this file\'s official E10.5 score. Readiness gates remain unmet. No upload performed. Interactive development and this export do not establish a certified locked Agent Team run.\n\nExternal data: {plan["external_data_disclosure"]}. The plan and trajectory record this export, not a retrospective agent configuration lock.\n')
     append_event(events,'progress_submission_validated',artifact_sha256=digest(artifact),validation=validation)
     print(json.dumps({'artifact':str(artifact),'validation':validation,'local_score':candidate['mean_score']}))
 

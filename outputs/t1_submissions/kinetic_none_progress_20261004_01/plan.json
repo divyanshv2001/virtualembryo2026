@@ -1,0 +1,106 @@
+{
+  "created_before_training_utc": "2026-10-04T09:12:14.786101+00:00",
+  "authorization": "User requested a submission file to check the score. Export only; no upload.",
+  "observed_cutoff": 9.5,
+  "forecast_target": 10.5,
+  "source_max_stage": 9.5,
+  "source_cohort": "associated_prepared_01",
+  "candidate": "kinetic_none400",
+  "seed": 20260928,
+  "donor_count": 1500,
+  "encoder_genes": 4096,
+  "dimensions": 8,
+  "training_steps": 800,
+  "batch_size": 64,
+  "energy_weight": 0.1,
+  "density_weight": 10.0,
+  "positive_alpha": 0.25,
+  "detection_alpha": 0.75,
+  "input_sha256": {
+    "anchor": "0296e0043842f944a663f3c11ac1542d1bbee733c1cd657bd56f75af65958361",
+    "panel": "2aeae4cd284933956242bbc9c5ab4f565c1d2acc7cc3fd3037977e4bce8be4bf",
+    "index": "26830523bcba077fe27481ee53cddcf49c6b35cf5bdd7acabc5f6b7c94ea7f78",
+    "prepared_report": "1acd8a635f76c9f9ac89a1186f116db91309b007f448a8d11ec612627ab5bca4"
+  },
+  "source_sha256": {
+    "export_anchor_slope_submission.py": "7598e253ed70652e27a1d685d44419d5ac6551938e20ec3890352dc8f0eca187",
+    "past_encoder_panel.py": "aa1acb4435cadd8189fa64cea86f9d31ea8267ee0b859f8144495952a58271ed",
+    "anchor_slope_calibration.py": "1eedfe08bd2ae6301eab5c4d675775998b5062e52b1c8a312a025c4f2ef0551b",
+    "feature_panel_forecast.py": "637eabf36fdb967c39373b53af217d464b7b4b611947b36ebc2e2758f0419438",
+    "ridge_conditional_head.py": "c812203e0109f8c8fff7d93653a2e05cbd228d21c56d6b6b8f41cbef46cfe835",
+    "cnf_manifold_flow.py": "55d1ec30848dcc75690129ef405c9d7e6cb692c2483032a109947de1b5b63596",
+    "cnf_density_flow.py": "740b6a25319a9e78739942571a80cef5bf81c373f0c0c31093ae89a779faca3a",
+    "hurdle_backtest.py": "c4f8236e49b7947f55ffd2734a7807834461c454c4447eedc44b757f5492c8f9",
+    "neural_hurdle_forecast.py": "941afefe0c34e346ca8ffb3af15e3c5d8d4474c37906fe9b3b62989efa73a987",
+    "robust_population.py": "86ae5926124b3704ed46596781a487735405291531c38d956cd7db359c8d56e6",
+    "graph_kinetic_residual.py": "1a531e6943c65901066486845f31b8f6c87851ffb81201034c9502801ec4eac8",
+    "full_anchor_slope_forecast.py": "4a0f5503996215370693f2409f31fa6b28bd2c5233ef2d2fc3c50000314bd612",
+    "partial_anchor_forecast.py": "8c9a4c362b634d648b0ecacf3e44f5953d5b18bce2ac551aefd16a4f17770225",
+    "log1p_positive_forecast.py": "48bc5e43ee5a6742a97d049c77978f23469d1db68575202d477396d5ad0ce4ee"
+  },
+  "development_report_sha256": "e2805e514368209df95bc6aad6f1fce41accb497d3aef15e932e159146afc770",
+  "local_development": {
+    "candidate": "kinetic_none400",
+    "scores": [
+      51.772874084287544,
+      51.77352189969376,
+      51.84721061288236
+    ],
+    "mean_score": 51.79786886562122,
+    "raw_metrics": [
+      {
+        "de_score": -0.10068259385665523,
+        "de_direction": 0.1210120913860169,
+        "mmd_u": 0.20718760788440704,
+        "variogram": 0.008009495213627815
+      },
+      {
+        "de_score": -0.08877721943048572,
+        "de_direction": 0.11862373313699502,
+        "mmd_u": 0.2008148431777954,
+        "variogram": 0.00808109063655138
+      },
+      {
+        "de_score": -0.0940170940170941,
+        "de_direction": 0.12654143123950373,
+        "mmd_u": 0.2049243152141571,
+        "variogram": 0.0075181396678090096
+      }
+    ],
+    "skills": [
+      {
+        "de_score": 0.4738243123336291,
+        "de_direction": 0.5377627160763594,
+        "mmd_u": 0.5379316805666053,
+        "variogram": 0.5172623978519836
+      },
+      {
+        "de_score": 0.4766519823788546,
+        "de_direction": 0.5369580640339738,
+        "mmd_u": 0.5370917486353657,
+        "variogram": 0.5160259140156044
+      },
+      {
+        "de_score": 0.4755555555555555,
+        "de_direction": 0.5397692067580508,
+        "mmd_u": 0.5377167448903766,
+        "variogram": 0.5166294604165449
+      }
+    ],
+    "all_calibrations_valid": true,
+    "mean_skills": {
+      "de_score": 0.4753439500893464,
+      "de_direction": 0.5381633289561281,
+      "mmd_u": 0.5375800580307826,
+      "variogram": 0.5166392574280443
+    }
+  },
+  "readiness_gate_passed": false,
+  "official_score": null,
+  "uploaded": false,
+  "scope": "Refit the no-edge kinetic protocol through observed E9.5, then forecast E10.5. Local E8.25-to-E9.25 development score is not an official score. Interactive development is not a certified locked Agent Team run.",
+  "external_data_disclosure": "Development2024 dev201867 associated prepared cohort:25963 cells selected from430339-cell public atlas, CC-BY. Not full atlas training.",
+  "guard_features_sha256": "46445f860914c5809d83b0560d6914756ed20f0254245a78b07e211b0e58c127",
+  "kinetic_steps": 400,
+  "agent_team_lock_certified": false
+}
