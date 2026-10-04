@@ -38,16 +38,18 @@ def score_frozen_forecasts(core, raw_x, stages, donors, mapped, columns, panel,
                         'all_calibrations_valid':valid,
                         'mean_skills':{m:float(np.mean([r['skills'][m] for r in rows])) for m in rows[0]['skills']} if valid else None})
     by={r['candidate']:r for r in summary}
-    controls=[by[n] for n in names[:2]];passing=[]
-    for name in names[2:]:
+    control_names=spec.get("control_candidates",names[:2])
+    controls=[by[n] for n in control_names];passing=[]
+    for name in [n for n in names if n not in control_names]:
         new=by[name]
         passed=new['all_calibrations_valid'] and all(c['all_calibrations_valid'] for c in controls) and all(
             new['scores'][i]>max(c['scores'][i] for c in controls) for i in range(3)) and all(
             new['mean_skills'][m]>=max(c['mean_skills'][m] for c in controls) for m in new['mean_skills'])
         if passed:passing.append(name)
     contrast=None
-    if all(by[n]['all_calibrations_valid'] for n in names[2:]):
-        contrast={m:by[names[3]]['mean_skills'][m]-by[names[2]]['mean_skills'][m] for m in by[names[3]]['mean_skills']}
+    contrast_names=spec.get('contrast_candidates',names[2:4])
+    if all(by[n]['all_calibrations_valid'] for n in contrast_names):
+        contrast={m:by[contrast_names[1]]['mean_skills'][m]-by[contrast_names[0]]['mean_skills'][m] for m in by[contrast_names[1]]['mean_skills']}
     report.update(status='completed',completed_utc=now(),summary=summary,
                   passing_candidates=passing, growth_enabled_minus_disabled_mean_skills=contrast,
                   expand_to_16_resamples=any(by[n]['mean_score']>=60 for n in passing),

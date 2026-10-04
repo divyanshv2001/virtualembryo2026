@@ -30,11 +30,13 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Bounded scFM/model-basics eligibility preflight: identify fresh cutoff-fit support and matched baseline evidence; inventory PCA vs IPCA coverage before fixing one paired projected-OT training trial. Reuse runners; no old-target grid or earlier validation with8.5-fitted artifacts.",
+  "next_experiment": "Monitor registered scfm_projected_past_fold without duplication. On completion/failure collect four fresh inline metric reviews; apply declared raw/projected-arm rewards against cnf800 (controls0), update health and ledger, then reassess IPCA as a separate matched representation experiment. No new parallel worker.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
+  "active_jobs": [
+    "scfm_projected_past_fold"
+  ],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -3676,6 +3678,11 @@
       "experiment": "scfm_gradient_projection_audit_01",
       "reward_delta": 0,
       "reason": "No full-panel score; proxy cannot earn health credit."
+    },
+    "pending_iteration": {
+      "experiment": "scfm_projected_past_fold_01",
+      "status": "running_at_checkpoint",
+      "reward_delta": 0
     }
   },
   "scfm_reopened": {
@@ -3697,7 +3704,8 @@
     },
     "new_direction": "Likelihood-compatible OT gradient projection; actual score gain unvalidated.",
     "jev_decision": "private/harness_runs/anchored_soft_ot_paper_pilot/decisions/scfm_reopen_past_direction_20261004_route.json",
-    "next": "Bounded scFM/model-basics eligibility preflight: identify fresh cutoff-fit support and matched baseline evidence; inventory PCA vs IPCA coverage before fixing one paired projected-OT training trial. Reuse runners; no old-target grid or earlier validation with8.5-fitted artifacts."
+    "next": "Bounded scFM/model-basics eligibility preflight: identify fresh cutoff-fit support and matched baseline evidence; inventory PCA vs IPCA coverage before fixing one paired projected-OT training trial. Reuse runners; no old-target grid or earlier validation with8.5-fitted artifacts.",
+    "running_experiment": "scfm_projected_past_fold"
   },
   "model_basics_request": {
     "tested_families": [

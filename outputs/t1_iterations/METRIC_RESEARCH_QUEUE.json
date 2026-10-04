@@ -6319,9 +6319,9 @@
     },
     {
       "id": "scfm_projected_auxiliary",
-      "status": "implementation_pending",
+      "status": "registered_running",
       "report": "SCFM_GRADIENT_PROJECTION_AUDIT_RESULTS.json",
-      "next_action": "Bounded scFM/model-basics eligibility preflight: identify fresh cutoff-fit support and matched baseline evidence; inventory PCA vs IPCA coverage before fixing one paired projected-OT training trial. Reuse runners; no old-target grid or earlier validation with8.5-fitted artifacts.",
+      "next_action": "Monitor registered scfm_projected_past_fold without duplication. On completion/failure collect four fresh inline metric reviews; apply declared raw/projected-arm rewards against cnf800 (controls0), update health and ledger, then reassess IPCA as a separate matched representation experiment. No new parallel worker.",
       "training_protocol": {
         "steps": 400,
         "batch_size": 64,
@@ -6336,18 +6336,22 @@
           "projected_anchored_ot"
         ],
         "cutoff_selection": "Eligibility preflight required; freeze one past fold with fresh encoder/init, no target-informed parameter selection.",
-        "acceptance": "Compare paired full-panel four metrics to matched incumbent; incremental improvement distinct from unchanged >72/lower-tail64 and temporal readiness. Retain every failed arm; proxy reward0."
+        "acceptance": "Compare paired full-panel four metrics to matched incumbent; incremental improvement distinct from unchanged >72/lower-tail64 and temporal readiness. Retain every failed arm; proxy reward0.",
+        "cutoff": 8.25,
+        "target": 8.75,
+        "reward": "raw_ot400/projected_ot400 paired mean skills vs cnf800; likelihood/copy/reference controls0; ineligible0"
       },
-      "representation_preflight": "Check PCA/IPCA and fresh-fold support; no unmeasured IPCA score claims, single controlled change."
+      "representation_preflight": "Check PCA/IPCA and fresh-fold support; no unmeasured IPCA score claims, single controlled change.",
+      "experiment": "scfm_projected_past_fold"
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
-    "status": "scfm_reopened_gradient_projection_supported",
-    "implementation_status": "gradient_audit_completed",
-    "experiment": "scfm_gradient_projection_audit",
+    "status": "scfm_projected_past_fold_running",
+    "implementation_status": "implemented_launched",
+    "experiment": "scfm_projected_past_fold",
     "next_experiment": null,
-    "next": "Bounded scFM/model-basics eligibility preflight: identify fresh cutoff-fit support and matched baseline evidence; inventory PCA vs IPCA coverage before fixing one paired projected-OT training trial. Reuse runners; no old-target grid or earlier validation with8.5-fitted artifacts."
+    "next": "Monitor registered scfm_projected_past_fold without duplication. On completion/failure collect four fresh inline metric reviews; apply declared raw/projected-arm rewards against cnf800 (controls0), update health and ledger, then reassess IPCA as a separate matched representation experiment. No new parallel worker."
   }
 }

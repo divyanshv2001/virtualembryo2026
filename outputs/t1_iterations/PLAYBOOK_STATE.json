@@ -1,18 +1,20 @@
 {
-  "updated_utc": "2026-10-04T04:23:58.288095+00:00",
+  "updated_utc": "2026-10-04T04:31:22.711063+00:00",
   "fingerprints": {
     "RESEARCH_CONTINUATION_POLICY.md": "63caeff70fcf18c91756a8d822ac36ae58a80c1f6e2ae37a643c85f89e7c32ee",
-    "LOCAL_OPTIMIZATION_STATE.json": "94b0b2d2079190bf6a636f84bb12df621cd9e4e64669845cb8a21e3291274a77",
+    "LOCAL_OPTIMIZATION_STATE.json": "a5bcacad5a965f029386c6ef415da3980a71c84240ab8ded8bc668f9a9493fa6",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "8423ee594831f750d4fdc1a87887b4c51b42413e175c7b771f9ccbbd1c5b278e",
+    "METRIC_RESEARCH_QUEUE.json": "9436e9ad9e99b8c54637a6a80ac66f1ac70ef70c457b84d71014fc61058e763b",
     "METRIC_CRITIQUE_POLICY.json": "3535989f1e3beac0f2d446b44df3c793d4be464dbd87f6e714c2f5afda864a6f",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
-    "RESEARCH_HARNESS_MANIFEST.json": "a6b3a6d6c6172fa62977ae0994e22517ba9658a5c480a7145d9087d094748ca4"
+    "RESEARCH_HARNESS_MANIFEST.json": "6bd975060205b33779fc12c60b2b173eaff9eaf0f0e04609ecaf3d6690c95bf6"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [],
-  "next_experiment": "Bounded scFM/model-basics eligibility preflight: identify fresh cutoff-fit support and matched baseline evidence; inventory PCA vs IPCA coverage before fixing one paired projected-OT training trial. Reuse runners; no old-target grid or earlier validation with8.5-fitted artifacts.",
+  "active_jobs_at_checkpoint": [
+    "scfm_projected_past_fold"
+  ],
+  "next_experiment": "Monitor registered scfm_projected_past_fold without duplication. On completion/failure collect four fresh inline metric reviews; apply declared raw/projected-arm rewards against cnf800 (controls0), update health and ledger, then reassess IPCA as a separate matched representation experiment. No new parallel worker.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",

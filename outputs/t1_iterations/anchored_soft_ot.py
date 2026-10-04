@@ -22,7 +22,7 @@ def project_auxiliary(base, auxiliary):
     coefficient=min(float(dot)/max(float(squared),1e-30),0.) if float(squared)>0 else 0.
     return [a-coefficient*b for b,a in zip(base,auxiliary)]
 
-def train_anchored(net, z, stages, cutoff, checkpoint, emit, steps=400, batch_size=64, seed=20260928):
+def train_anchored(net, z, stages, cutoff, checkpoint, emit, steps=400, batch_size=64, seed=20260928, conflict_projection=False):
     z, stages = np.asarray(z,dtype=np.float32), np.asarray(stages,dtype=float)
     if stages.max()>cutoff or not np.isfinite(z).all() or not np.isfinite(stages).all():
         raise ValueError('Invalid past-only training data')
@@ -65,12 +65,14 @@ def train_anchored(net, z, stages, cutoff, checkpoint, emit, steps=400, batch_si
         clock=float(times[pair])+fraction*elapsed
         auxiliary_loss=((net.field(torch.cat([point,clock],dim=1))-(finish-start)/elapsed)**2).mean()
         auxiliary=torch.autograd.grad(auxiliary_loss,parameters)
+        if conflict_projection:auxiliary=project_auxiliary(base,auxiliary)
         gradients,factor,base_norm,aux_norm=combine_gradients(base,auxiliary)
         if not all(torch.isfinite(g).all() for g in gradients) or not torch.isfinite(loss) or not torch.isfinite(auxiliary_loss):
             raise ValueError('Nonfinite anchored gradient/loss')
         optimizer.zero_grad()
         for p,g in zip(parameters,gradients): p.grad=g
         torch.nn.utils.clip_grad_norm_(parameters,5.)
+        before=[p.detach().clone() for p in parameters]
         optimizer.step()
         with torch.no_grad():
             displacement=torch.sqrt(sum(((p-i)**2).sum() for p,i in zip(parameters,initial)))
@@ -82,7 +84,8 @@ def train_anchored(net, z, stages, cutoff, checkpoint, emit, steps=400, batch_si
             raise ValueError('Declared bound violated')
         record={'step':step+1,'loss':float(loss.detach()),'ot_loss':float(auxiliary_loss.detach()),
                 'effective_ot_weight':factor,'nll_gradient_norm':base_norm,'ot_gradient_norm':aux_norm,
-                'relative_parameter_distance':relative,'projected':projected,**audit}
+                'relative_parameter_distance':relative,'projected':projected,'conflict_projection':conflict_projection,
+                'actual_update_dot_base_gradient':float(sum((b*(p.detach()-previous)).sum() for b,p,previous in zip(base,parameters,before))),**audit}
         history.append(record)
         if (step+1)%50==0:
             torch.save({'net':net.state_dict(),'optimizer':optimizer.state_dict(),'rng':torch.get_rng_state(),

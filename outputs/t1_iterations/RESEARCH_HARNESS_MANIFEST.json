@@ -320,6 +320,46 @@
         "fit": "frozen checkpoint gradients only; no optimizer steps or target reads",
         "scope": "User reopens promising anchored scFM direction gain. Mathematical local descent compatibility is a proxy, not scorer improvement or independent validation. Original readiness/promotion gates unchanged. Reward0; no official upload."
       }
+    },
+    "scfm_projected_past_fold": {
+      "script": "scfm_projected_past_fold.py",
+      "run": "private/scfm_projected_past_fold_01",
+      "report": "SCFM_PROJECTED_PAST_FOLD_RESULTS.json",
+      "protocol": {
+        "cutoff": 8.25,
+        "target": 8.75,
+        "fit_stages": [
+          7.5,
+          7.75,
+          8.0,
+          8.25
+        ],
+        "seed": 20260928,
+        "scoring_seeds": [
+          20260928,
+          20260929,
+          20260930
+        ],
+        "steps": 400,
+        "batch_size": 64,
+        "candidates": [
+          "copy",
+          "cnf800",
+          "likelihood400",
+          "raw_ot400",
+          "projected_ot400"
+        ],
+        "control_candidates": [
+          "copy",
+          "cnf800",
+          "likelihood400"
+        ],
+        "contrast_candidates": [
+          "raw_ot400",
+          "projected_ot400"
+        ],
+        "scope": "One fixed fresh E8.25->E8.75 source-domain development trial. PCA8/4096 past-variance genes, cutoff-only encoder/whitening/heads; no reused8.5 models. Same shared800step initial field, paired400step raw/projectedOT with identical randomness and originalgradient/parameter caps. Likelihood400 budget control; copy and CNF800 reference. All forecasts/exact replays frozen before target reads. No target-informed grid or official uploads. Historical atlas development only: no independent-embryo/generalization claim. Original scorer/calibration/readiness unchanged; IPCA separate future change."
+      }
     }
   }
 }
