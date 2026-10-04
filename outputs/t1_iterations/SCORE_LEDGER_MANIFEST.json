@@ -1,5 +1,5 @@
 {
-  "records": 3496,
+  "records": 3511,
   "sources": [
     {
       "path": "private/anchored_soft_ot_paper_pilot_01/report.json",
@@ -560,6 +560,11 @@
       "path": "private/dimensional_transport_horizon_01/report.json",
       "sha256": "9ef176c3737af9f254633a1a3e700bdd4dcaad162edb4ed2cdebfdf8c408bbee",
       "outcomes_indexed": 22
+    },
+    {
+      "path": "private/direct_cnf_potential_01/report.json",
+      "sha256": "cca0cdb0a5d3d56d628d89e824ae5a1b2c2c30f369d5747ff6c6b99d470833c0",
+      "outcomes_indexed": 15
     },
     {
       "path": "private/disjoint_capture_contrasts_01/report.json",
@@ -1254,5 +1259,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "d5008c697401898b82eea47a0ee910b450f7ad95a2b8b17116dcf95dfc218426"
+  "ledger_sha256": "ad02de680840b1bd7168311b05d61d3b2173965c8959ebb1d9d24b902d2b1c04"
 }

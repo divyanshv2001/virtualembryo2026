@@ -6397,28 +6397,36 @@
       "results_report": "POTENTIAL_REAL_ANCHOR_TRANSFER_REPAIR_RESULTS.json",
       "research_family_exhausted": false,
       "limitations": "Reused actual9.5 development, one trainingseed,3resamples; potential improvesdirection/variogram vs kinetics,DEtie/MMDregression, both belowCNF."
+    },
+    {
+      "id": "direct_cnf_potential",
+      "run": "direct_cnf_potential_01",
+      "status": "implemented_evaluated_not_promoted",
+      "results_report": "DIRECT_CNF_POTENTIAL_RESULTS.json",
+      "research_family_exhausted": false,
+      "limitations": "Single training seed,3reuseddevelopment resamples; lowermean than CNF3/3,DE1negative2ties,direction/MMD3negative,var3positive."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
     "experiment": "direct_cnf_potential",
-    "status": "preflight_passed_launch_registered",
-    "next_experiment": "direct_cnf_potential",
-    "next": "Direct-CNF potential ablation running: cachedCNF/encoder/context, one400-step RTX3060 potential arm;15fullpanel outcomes and exact priorcontrols required. Inspect harness direct_cnf_potential, never duplicate.",
-    "jev_choice": "direct_cnf_potential",
-    "jev_confidence": 0.83,
+    "status": "completed_not_promoted",
+    "next_experiment": "past_multiscale_mmd_preflight",
+    "next": "Predeclare/preflight new direct-CNF potential objective ablation: replace Sinkhorn with multiscale latentMMD using five fixed scales(.5,1,2,4,8) times median past-only pair distance, frozen before fitting. Same zero-init potential1681params/400steps/batch64/seed20261004, cachedCNF800/encoder/13963 source<=8.5 context, RTX3060 and originalCPU scorer. Primary contrast newMMD vs archivedSinkhorn-directpotential; copy/CNF strongest controls, fixedhead(.25,.75), full32285 and3reused9.5development panels. Verify finite mixedderivatives/memory and disabled/archivedexactreplays; freeze forecasts beforetarget scoring. No futurebandwidthfit/grid/hiddenfuturefit/upload/promotion or completedtraining repeats.",
+    "jev_choice": "past_multiscale_mmd",
+    "jev_confidence": 0.91,
     "scope": "Advisory low confidence; raw-count data availability verified deterministically, no score claim.",
     "support_audit": "Completed: no independent embryo/untouched validation established; historical-only options remain, no promotion.",
     "jev_usage": {
-      "input_tokens": 1254,
-      "output_tokens": 61
+      "input_tokens": 1377,
+      "output_tokens": 53
     },
-    "coordinator_choice": "direct_cnf_potential",
-    "coordinator_reason": "Potential small gain over kinetics but kinetic scaffold trails archivedCNF; isolate residual directly on strongest matched base. Advisory not evidence certification.",
+    "coordinator_choice": "past_multiscale_mmd",
+    "coordinator_reason": "Kinetic scaffold removal improves over kinetic arm but still loses to original CNF; directSinkhorn potential regresses DE/direction/MMD. Distinct fixed past-only objective ablation, not repeated architecture/grid or certified improvement.",
     "jev_scope": "Typed option selection/pinnedreport status only; report has no score summary and numeric auditresults were not transmitted, no evidence certification.",
     "feasibility_basis": "Archived8.5 CNF/encoder hashes and cutoff verified; new8.5 kinetics/potential pair remains unevaluated; reuse avoids redundant CNF800 training. Existing head strengths and scorer fixed."
   },
-  "next_experiment": "direct_cnf_potential",
-  "next_action": "Direct-CNF potential ablation running: cachedCNF/encoder/context, one400-step RTX3060 potential arm;15fullpanel outcomes and exact priorcontrols required. Inspect harness direct_cnf_potential, never duplicate."
+  "next_experiment": "past_multiscale_mmd_preflight",
+  "next_action": "Predeclare/preflight new direct-CNF potential objective ablation: replace Sinkhorn with multiscale latentMMD using five fixed scales(.5,1,2,4,8) times median past-only pair distance, frozen before fitting. Same zero-init potential1681params/400steps/batch64/seed20261004, cachedCNF800/encoder/13963 source<=8.5 context, RTX3060 and originalCPU scorer. Primary contrast newMMD vs archivedSinkhorn-directpotential; copy/CNF strongest controls, fixedhead(.25,.75), full32285 and3reused9.5development panels. Verify finite mixedderivatives/memory and disabled/archivedexactreplays; freeze forecasts beforetarget scoring. No futurebandwidthfit/grid/hiddenfuturefit/upload/promotion or completedtraining repeats."
 }

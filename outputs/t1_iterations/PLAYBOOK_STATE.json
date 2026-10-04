@@ -1,20 +1,18 @@
 {
-  "updated_utc": "2026-10-04T17:00:15.894102+00:00",
+  "updated_utc": "2026-10-04T17:19:08.319390+00:00",
   "fingerprints": {
     "RESEARCH_CONTINUATION_POLICY.md": "1e6cc6f15c1e918ad60a1e01f26dd66c48022b33158bf8eb2240a9622066af00",
-    "LOCAL_OPTIMIZATION_STATE.json": "26b35d177ca11f0b0e47ec043f50adb880efd496c675445666ac678afd4f3186",
+    "LOCAL_OPTIMIZATION_STATE.json": "a35098dadb214224be0d664e44f59723ff1ffde27efd76e690a9a79fbb87b8cf",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "3f1dc2d8d1cfb14c0a5c9f1e12a4a898a0aa5cbb2438616aee13312347ca8655",
+    "METRIC_RESEARCH_QUEUE.json": "1ce56817df7f368b8dfa03c94b9e5d5aafcec123f877264fb83c9c19acfdd4ae",
     "METRIC_CRITIQUE_POLICY.json": "3535989f1e3beac0f2d446b44df3c793d4be464dbd87f6e714c2f5afda864a6f",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
     "RESEARCH_HARNESS_MANIFEST.json": "f3a7244f86d0628fd67a1a6b9c79fe125bf5b3a70d170ca66eddf05fe7bb7829"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [
-    "direct_cnf_potential"
-  ],
-  "next_experiment": "Direct-CNF potential ablation running: cachedCNF/encoder/context, one400-step RTX3060 potential arm;15fullpanel outcomes and exact priorcontrols required. Inspect harness direct_cnf_potential, never duplicate.",
+  "active_jobs_at_checkpoint": [],
+  "next_experiment": "Predeclare/preflight new direct-CNF potential objective ablation: replace Sinkhorn with multiscale latentMMD using five fixed scales(.5,1,2,4,8) times median past-only pair distance, frozen before fitting. Same zero-init potential1681params/400steps/batch64/seed20261004, cachedCNF800/encoder/13963 source<=8.5 context, RTX3060 and originalCPU scorer. Primary contrast newMMD vs archivedSinkhorn-directpotential; copy/CNF strongest controls, fixedhead(.25,.75), full32285 and3reused9.5development panels. Verify finite mixedderivatives/memory and disabled/archivedexactreplays; freeze forecasts beforetarget scoring. No futurebandwidthfit/grid/hiddenfuturefit/upload/promotion or completedtraining repeats.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -31,7 +29,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1535,
+    "current_reward": -1564,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -40,10 +38,10 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1535,
-    "reward_score": -1535,
+    "uncapped_reward": -1564,
+    "reward_score": -1564,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": -18
+    "last_batch_reward_delta": -29
   },
   "official_best": 52.16,
   "latest_official": {

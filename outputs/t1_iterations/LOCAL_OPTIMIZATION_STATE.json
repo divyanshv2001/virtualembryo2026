@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": true,
+  "local_process_running": false,
   "quota_reset_evidence": {
     "limit_observed": true,
     "observed_reset_text": "7:54 PM",
@@ -30,13 +30,11 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Direct-CNF potential ablation running: cachedCNF/encoder/context, one400-step RTX3060 potential arm;15fullpanel outcomes and exact priorcontrols required. Inspect harness direct_cnf_potential, never duplicate.",
+  "next_experiment": "Predeclare/preflight new direct-CNF potential objective ablation: replace Sinkhorn with multiscale latentMMD using five fixed scales(.5,1,2,4,8) times median past-only pair distance, frozen before fitting. Same zero-init potential1681params/400steps/batch64/seed20261004, cachedCNF800/encoder/13963 source<=8.5 context, RTX3060 and originalCPU scorer. Primary contrast newMMD vs archivedSinkhorn-directpotential; copy/CNF strongest controls, fixedhead(.25,.75), full32285 and3reused9.5development panels. Verify finite mixedderivatives/memory and disabled/archivedexactreplays; freeze forecasts beforetarget scoring. No futurebandwidthfit/grid/hiddenfuturefit/upload/promotion or completedtraining repeats.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "direct_cnf_potential"
-  ],
+  "active_jobs": [],
   "active_run_path": "private/direct_cnf_potential_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -1228,7 +1226,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1535,
+    "current_reward": -1564,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1237,10 +1235,10 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1535,
-    "reward_score": -1535,
+    "uncapped_reward": -1564,
+    "reward_score": -1564,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": -18
+    "last_batch_reward_delta": -29
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -3036,6 +3034,17 @@
         "mmd_u": "Problem: Potential trails kinetic calibrated MMD skill by0.000059115 across all three resamples; reused development prevents independent claims. Proposed solution: Untested past-only multiscale MMD regularization targeting distributional shape. Validation: Freeze tuning before fresh held-out scoring; require improvement across seeds and resamples.",
         "variogram": "Problem: Potential variogram skill improves kinetic by0.000141 but trails CNF by0.000264. Proposed solution: Untested past-only lag-conditioned residual copula correction without covariance grids. Validation: Reused-development replay spans12validcalibrations, one training seed and three scoring resamples; no independent validation."
       }
+    },
+    "direct_cnf_potential_01": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "cca0cdb0a5d3d56d628d89e824ae5a1b2c2c30f369d5747ff6c6b99d470833c0",
+      "reviews": {
+        "de_score": "Problem: Reused development and dependent resamples leave DE regression unresolved. Proposed solution: Untested past-only change-point gate for potential updates. Validation: Freeze design, evaluate independent seeds/held-out streams with CNF/disabled controls.",
+        "de_direction": "Problem: Direction/MMD regressed3/3; DE worsened once,tied twice. Proposed solution: Untested past-only gradient projection against conflicting direction-training updates. Validation: Untouched future horizons/newseeds; no completed-trial reruns or independent-evidence claim.",
+        "mmd_u": "Problem: MMD skill regresses0.000421 across3/3 reused-development resamples. Proposed solution: Untested past-only robust kernel-bandwidth adaptation. Validation: Freeze adaptation,compare skill/rawMMD on untouchedwindows across trainingseeds with exactcontrols.",
+        "variogram": "Problem: Small variogram gain on reuseddevelopment; overall performance regresses. Proposed solution: Untested past-only lag-balanced variogram training with fixedweights. Validation: Fresh heldoutperiods/multipletrainingseeds; require variogram improvement without aggregate/direction/MMD regression."
+      }
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3957,27 +3966,27 @@
   },
   "agent_health": {
     "redline": 0,
-    "score": -1535,
+    "score": -1564,
     "status": "below_redline",
     "metrics": {
       "de_score": {
-        "score": -403,
+        "score": -413,
         "status": "below_redline"
       },
       "de_direction": {
-        "score": -348,
+        "score": -358,
         "status": "below_redline"
       },
       "mmd_u": {
-        "score": -436,
+        "score": -446,
         "status": "below_redline"
       },
       "variogram": {
-        "score": -348,
+        "score": -347,
         "status": "below_redline"
       }
     },
-    "recorded_iterations": 72,
+    "recorded_iterations": 73,
     "action": "Prioritize supported matched-control improvements; preserve failures and gates. Proxy/pending iterations earn zero. No score reset, fabricated reward, agent termination or deployment implied."
   },
   "scfm_reopened": {
@@ -5110,7 +5119,7 @@
       "jev_scope": "Typed option selection/pinnedreport status only; report has no score summary and numeric auditresults were not transmitted, no evidence certification."
     }
   },
-  "next_action": "Direct-CNF potential ablation running: cachedCNF/encoder/context, one400-step RTX3060 potential arm;15fullpanel outcomes and exact priorcontrols required. Inspect harness direct_cnf_potential, never duplicate.",
+  "next_action": "Predeclare/preflight new direct-CNF potential objective ablation: replace Sinkhorn with multiscale latentMMD using five fixed scales(.5,1,2,4,8) times median past-only pair distance, frozen before fitting. Same zero-init potential1681params/400steps/batch64/seed20261004, cachedCNF800/encoder/13963 source<=8.5 context, RTX3060 and originalCPU scorer. Primary contrast newMMD vs archivedSinkhorn-directpotential; copy/CNF strongest controls, fixedhead(.25,.75), full32285 and3reused9.5development panels. Verify finite mixedderivatives/memory and disabled/archivedexactreplays; freeze forecasts beforetarget scoring. No futurebandwidthfit/grid/hiddenfuturefit/upload/promotion or completedtraining repeats.",
   "potential_real_anchor_transfer_setup_failure": {
     "run": "potential_real_anchor_transfer_01",
     "error": "append_event kind argument collided with keyword at first50-step logging; no checkpoint or forecast completed",
@@ -5152,8 +5161,8 @@
     "official_score": null
   },
   "last_jev_usage": {
-    "input_tokens": 1254,
-    "output_tokens": 61
+    "input_tokens": 1377,
+    "output_tokens": 53
   },
   "direct_cnf_potential_preflight": {
     "status": "passed",
@@ -5167,7 +5176,7 @@
     "original_cpu_runtime": "2.14.0+cpu"
   },
   "direct_cnf_potential_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "experiment": "direct_cnf_potential",
     "run": "direct_cnf_potential_01",
     "results_report": "DIRECT_CNF_POTENTIAL_RESULTS.json",
@@ -5193,6 +5202,25 @@
       "reward_delta": 0,
       "original_cpu_runtime": "2.14.0+cpu"
     },
-    "reward_delta": 0
+    "reward_delta": -29,
+    "evaluations": 15,
+    "report_sha256": "cca0cdb0a5d3d56d628d89e824ae5a1b2c2c30f369d5747ff6c6b99d470833c0",
+    "means": {
+      "copy": 50.0,
+      "cnf800": 55.11730206916419,
+      "kinetic400": 54.94066821844431,
+      "potential400": 54.957393181969174,
+      "direct_potential400": 55.0540246492945
+    },
+    "paired_direct_minus_cnf_skills": {
+      "de_score": -0.0018700327255727345,
+      "de_direction": -0.00024810275001552196,
+      "mmd_u": -0.00042130949251872885,
+      "variogram": 0.00011576258977885612
+    },
+    "host_peak_GiB": 5.204387664794922,
+    "exact_archive_calibration_and_disabled_replays": true,
+    "independent_validation": false,
+    "official_score": null
   }
 }
