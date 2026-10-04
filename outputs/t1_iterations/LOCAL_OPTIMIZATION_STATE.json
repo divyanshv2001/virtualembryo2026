@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": false,
+  "local_process_running": true,
   "quota_reset_evidence": {
     "limit_observed": true,
     "observed_reset_text": "7:54 PM",
@@ -30,12 +30,14 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Predeclare/preflight new direct-CNF scalar-potential residual ablation at cutoff8.5: reuse cached CNF800/encoder/context, train only potential400 RTX3060 on13963 source<=8.5; no kinetic scaffold. Same frozen(.25,.75) fullanchor heads,copy/CNF/previouskinetic/previouspotential controls and32285-gene scorer/calibration,3fixed development seeds. Verify zero/disabled/archived exact replays and freeze beforeE9.5score; preserve readiness gates and no official upload. Different mechanism composition; no oldgrid or repeated completed training.",
+  "next_experiment": "Direct-CNF potential ablation running: cachedCNF/encoder/context, one400-step RTX3060 potential arm;15fullpanel outcomes and exact priorcontrols required. Inspect harness direct_cnf_potential, never duplicate.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
-  "active_run_path": "private/potential_real_anchor_transfer_02",
+  "active_jobs": [
+    "direct_cnf_potential"
+  ],
+  "active_run_path": "private/direct_cnf_potential_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -5108,7 +5110,7 @@
       "jev_scope": "Typed option selection/pinnedreport status only; report has no score summary and numeric auditresults were not transmitted, no evidence certification."
     }
   },
-  "next_action": "Predeclare/preflight new direct-CNF scalar-potential residual ablation at cutoff8.5: reuse cached CNF800/encoder/context, train only potential400 RTX3060 on13963 source<=8.5; no kinetic scaffold. Same frozen(.25,.75) fullanchor heads,copy/CNF/previouskinetic/previouspotential controls and32285-gene scorer/calibration,3fixed development seeds. Verify zero/disabled/archived exact replays and freeze beforeE9.5score; preserve readiness gates and no official upload. Different mechanism composition; no oldgrid or repeated completed training.",
+  "next_action": "Direct-CNF potential ablation running: cachedCNF/encoder/context, one400-step RTX3060 potential arm;15fullpanel outcomes and exact priorcontrols required. Inspect harness direct_cnf_potential, never duplicate.",
   "potential_real_anchor_transfer_setup_failure": {
     "run": "potential_real_anchor_transfer_01",
     "error": "append_event kind argument collided with keyword at first50-step logging; no checkpoint or forecast completed",
@@ -5152,5 +5154,45 @@
   "last_jev_usage": {
     "input_tokens": 1254,
     "output_tokens": 61
+  },
+  "direct_cnf_potential_preflight": {
+    "status": "passed",
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "peak_MiB": 66.00390625,
+    "disabled_cpu_exact": true,
+    "mixed_derivatives_finite": true,
+    "frozen_previous_orchestrator_verified": true,
+    "new_scores": 0,
+    "reward_delta": 0,
+    "original_cpu_runtime": "2.14.0+cpu"
+  },
+  "direct_cnf_potential_job": {
+    "status": "running",
+    "experiment": "direct_cnf_potential",
+    "run": "direct_cnf_potential_01",
+    "results_report": "DIRECT_CNF_POTENTIAL_RESULTS.json",
+    "planned_evaluations": 15,
+    "new_training_steps": 400,
+    "fit_max_stage": 8.5,
+    "past_rows": 13963,
+    "training_device": "RTX3060",
+    "driver_runtime": "original CPU2.14",
+    "primary_contrast": [
+      "cnf800",
+      "direct_potential400"
+    ],
+    "reuse": "Existing8.5 encoder,CNF800,kinetic400,potential400 and context; train only direct scalar residual.",
+    "preflight": {
+      "status": "passed",
+      "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+      "peak_MiB": 66.00390625,
+      "disabled_cpu_exact": true,
+      "mixed_derivatives_finite": true,
+      "frozen_previous_orchestrator_verified": true,
+      "new_scores": 0,
+      "reward_delta": 0,
+      "original_cpu_runtime": "2.14.0+cpu"
+    },
+    "reward_delta": 0
   }
 }

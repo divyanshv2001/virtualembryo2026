@@ -1,18 +1,20 @@
 {
-  "updated_utc": "2026-10-04T16:54:00.974926+00:00",
+  "updated_utc": "2026-10-04T17:00:15.894102+00:00",
   "fingerprints": {
     "RESEARCH_CONTINUATION_POLICY.md": "1e6cc6f15c1e918ad60a1e01f26dd66c48022b33158bf8eb2240a9622066af00",
-    "LOCAL_OPTIMIZATION_STATE.json": "29c4c68e0203f18e580f2aa52473ef6f808c348ad4288d43d456efb1d87318c9",
+    "LOCAL_OPTIMIZATION_STATE.json": "26b35d177ca11f0b0e47ec043f50adb880efd496c675445666ac678afd4f3186",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "6661c6bed1402fc577c7598f588e02a720ce6e9b44923e56e7bbbf5d2ac6994f",
+    "METRIC_RESEARCH_QUEUE.json": "3f1dc2d8d1cfb14c0a5c9f1e12a4a898a0aa5cbb2438616aee13312347ca8655",
     "METRIC_CRITIQUE_POLICY.json": "3535989f1e3beac0f2d446b44df3c793d4be464dbd87f6e714c2f5afda864a6f",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
-    "RESEARCH_HARNESS_MANIFEST.json": "5949da8e876f654a29cf3ed3b525a6dfba5413cde744a15289d4311970b17e4b"
+    "RESEARCH_HARNESS_MANIFEST.json": "f3a7244f86d0628fd67a1a6b9c79fe125bf5b3a70d170ca66eddf05fe7bb7829"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [],
-  "next_experiment": "Predeclare/preflight new direct-CNF scalar-potential residual ablation at cutoff8.5: reuse cached CNF800/encoder/context, train only potential400 RTX3060 on13963 source<=8.5; no kinetic scaffold. Same frozen(.25,.75) fullanchor heads,copy/CNF/previouskinetic/previouspotential controls and32285-gene scorer/calibration,3fixed development seeds. Verify zero/disabled/archived exact replays and freeze beforeE9.5score; preserve readiness gates and no official upload. Different mechanism composition; no oldgrid or repeated completed training.",
+  "active_jobs_at_checkpoint": [
+    "direct_cnf_potential"
+  ],
+  "next_experiment": "Direct-CNF potential ablation running: cachedCNF/encoder/context, one400-step RTX3060 potential arm;15fullpanel outcomes and exact priorcontrols required. Inspect harness direct_cnf_potential, never duplicate.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
