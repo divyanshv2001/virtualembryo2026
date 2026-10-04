@@ -1,5 +1,6 @@
 """Fresh cutoff, matched scFM gradient-projection experiment; no official upload."""
 import copy
+import argparse
 import json
 import traceback
 from pathlib import Path
@@ -18,20 +19,25 @@ from run_t1 import digest
 from iterate import now, append_event
 
 HERE=Path(__file__).resolve().parent
-RUN=HERE/'private/scfm_projected_past_fold_01'
-PUBLIC=HERE/'SCFM_PROJECTED_PAST_FOLD_RESULTS.json'
+RUN=None
+PUBLIC=None
 
 
 def save(path,value):path.write_text(json.dumps(value,indent=2)+'\n')
 
 
 def main():
+    global RUN,PUBLIC
+    parser=argparse.ArgumentParser();parser.add_argument('--experiment',default='scfm_projected_past_fold');args=parser.parse_args()
+    entry=json.loads((HERE/'RESEARCH_HARNESS_MANIFEST.json').read_text())['experiments'][args.experiment]
+    RUN=(HERE/entry['run']).resolve();PUBLIC=(HERE/entry['report']).resolve()
+    if not RUN.is_relative_to(HERE/'private') or not PUBLIC.is_relative_to(HERE):raise ValueError('Evidence outside project')
     if RUN.exists() or PUBLIC.exists():raise ValueError('Never duplicate experiment')
     RUN.mkdir(parents=True);emit=lambda kind,**kw:append_event(RUN/'events.jsonl',kind,**kw)
     report={'status':'running','panels':[],'new_scoring_batch':True,'original_readiness_gate_passed':False,'official_score':None}
     cache=TemporaryForecastCache(HERE/'private/temporary_cache')
     try:
-        spec=json.loads((HERE/'RESEARCH_HARNESS_MANIFEST.json').read_text())['experiments']['scfm_projected_past_fold']['protocol']
+        spec=entry['protocol']
         prepared=HERE/'private/associated_prepared_01';prep=json.loads((prepared/'report.json').read_text())
         inputs={}
         for filename,key in [('expression.npy','expression_sha256'),('genes.csv','genes_sha256'),('selected_metadata.csv','metadata_sha256')]:
@@ -45,15 +51,37 @@ def main():
         if len(np.flatnonzero(c['stages']==target))<2000:raise ValueError('Insufficient target metadata support')
         torch.manual_seed(spec['seed'])
         initial=DensityFlowNet(c['basis'],c['pca'].mean_,cutoff,float(c['stages'][c['past']].min())-.25)
-        history=train_manifold_density(initial,c['coordinates'],c['stages'][c['past']],.1,RUN/'cnf800.pt',emit,steps=800,density_weight=10.)
-        initial.eval();flows={'cnf800':initial}
-        for name in ['likelihood400','raw_ot400','projected_ot400']:
-            model=copy.deepcopy(initial)
-            if name=='likelihood400':
-                train_manifold_density(model,c['coordinates'],c['stages'][c['past']],.1,RUN/(name+'.pt'),emit,steps=400,density_weight=10.)
-            else:
-                train_anchored(model,c['coordinates'],c['stages'][c['past']],cutoff,RUN/(name+'.pt'),emit,conflict_projection=name=='projected_ot400')
-            flows[name]=model.eval();emit('candidate_training_finished',candidate=name)
+        reuse=spec.get('reuse_run')
+        if reuse:
+            previous=HERE/reuse
+            with np.load(previous/'fresh_encoder.npz') as old,np.load(RUN/'fresh_encoder.npz') as fresh:
+                for key in old.files:np.testing.assert_array_equal(old[key],fresh[key])
+            previous_plan=json.loads((previous/'plan.json').read_text())
+            if previous_plan['input_sha256']!=inputs:raise ValueError('Reused input mismatch')
+            saved=torch.load(previous/'cnf800.pt',weights_only=False,map_location='cpu')
+            initial.load_state_dict(saved['net']);history=saved['history']
+            if saved['steps']!=800 or saved['batch_size']!=64 or saved['density_weight']!=10.:raise ValueError('Reference metadata mismatch')
+            initial.eval();baseline=copy.deepcopy(initial)
+            saved=torch.load(previous/'projected_ot400.pt',weights_only=False,map_location='cpu')
+            if saved['fit_max_stage']!=cutoff or saved['steps']!=400 or saved['batch_size']!=64:raise ValueError('Past projected checkpoint mismatch')
+            baseline.load_state_dict(saved['net']);baseline.eval()
+            plan['reused_checkpoint_sha256']={name:digest(previous/(name+'.pt')) for name in ['cnf800','projected_ot400']}
+            save(RUN/'plan.json',plan);emit('reused_encoder_and_checkpoints_verified',sha256=digest(RUN/'plan.json'))
+            flows={'cnf800':initial,'projected_ot400':baseline}
+            for name,weight in [('projected_ot800',0.),('projected_pair800',1.)]:
+                model=copy.deepcopy(baseline)
+                train_anchored(model,c['coordinates'],c['stages'][c['past']],cutoff,RUN/(name+'.pt'),emit,conflict_projection=True,latent_variogram_weight=weight)
+                flows[name]=model.eval();emit('candidate_training_finished',candidate=name)
+        else:
+            history=train_manifold_density(initial,c['coordinates'],c['stages'][c['past']],.1,RUN/'cnf800.pt',emit,steps=800,density_weight=10.)
+            initial.eval();flows={'cnf800':initial}
+            for name in ['likelihood400','raw_ot400','projected_ot400']:
+                model=copy.deepcopy(initial)
+                if name=='likelihood400':
+                    train_manifold_density(model,c['coordinates'],c['stages'][c['past']],.1,RUN/(name+'.pt'),emit,steps=400,density_weight=10.)
+                else:
+                    train_anchored(model,c['coordinates'],c['stages'][c['past']],cutoff,RUN/(name+'.pt'),emit,conflict_projection=name=='projected_ot400')
+                flows[name]=model.eval();emit('candidate_training_finished',candidate=name)
         reference=FullAnchorSlopeForecast(c['x'],c['stages'],cutoff,c['donors'],c['panel'],c['symbols'],initial,c['center'],c['scale'],c['features'],c['guard'],anchor_path=c['anchor_path'])
         reference.configure(.25,.75)
         reference.audit.update(fit_max_stage=cutoff,method='Fresh source-domain PCA8 paired scFM',training_history=history)
@@ -75,7 +103,7 @@ def main():
         save(RUN/'generation.json',generation);report['generation']=generation
         emit('all_forecasts_frozen_before_target_expression',target=target)
         score_frozen_forecasts(core,c['raw_x'],c['stages'],c['donors'],c['mapped'],c['columns'],c['panel'],cutoff,target,plan,spec['candidates'],generation,cache,RUN,report,emit,spec)
-        report['projected_minus_raw_ot_mean_skills']=report.pop('growth_enabled_minus_disabled_mean_skills')
+        report[spec.get('contrast_label','projected_minus_raw_ot_mean_skills')]=report.pop('growth_enabled_minus_disabled_mean_skills')
     except Exception as exc:
         (RUN/'traceback.txt').write_text(traceback.format_exc());report.update(status='failed',error=type(exc).__name__+': '+str(exc),failed_utc=now(),passing_candidates=[])
     finally:cache.close()

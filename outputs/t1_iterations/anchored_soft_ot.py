@@ -22,10 +22,20 @@ def project_auxiliary(base, auxiliary):
     coefficient=min(float(dot)/max(float(squared),1e-30),0.) if float(squared)>0 else 0.
     return [a-coefficient*b for b,a in zip(base,auxiliary)]
 
-def train_anchored(net, z, stages, cutoff, checkpoint, emit, steps=400, batch_size=64, seed=20260928, conflict_projection=False):
+
+def latent_pair_contrast_loss(predicted, target):
+    """Smooth power-.5 pair contrast; a latent surrogate, not the gene scorer."""
+    pairs=torch.triu_indices(predicted.shape[1],predicted.shape[1],offset=1)
+    def contrasts(values):
+        return (torch.abs(values[:,pairs[0]]-values[:,pairs[1]])+1e-6).sqrt().mean(0)
+    actual=contrasts(target)
+    return (((contrasts(predicted)-actual)/actual.clamp_min(.05))**2).mean()
+
+def train_anchored(net, z, stages, cutoff, checkpoint, emit, steps=400, batch_size=64, seed=20260928, conflict_projection=False, latent_variogram_weight=0.):
     z, stages = np.asarray(z,dtype=np.float32), np.asarray(stages,dtype=float)
     if stages.max()>cutoff or not np.isfinite(z).all() or not np.isfinite(stages).all():
         raise ValueError('Invalid past-only training data')
+    if latent_variogram_weight not in (0.,1.):raise ValueError('Undeclared latent penalty weight')
     if steps!=400 or batch_size!=64 or seed!=20260928:
         raise ValueError('Outside declared ablation')
     torch.manual_seed(seed)
@@ -64,6 +74,11 @@ def train_anchored(net, z, stages, cutoff, checkpoint, emit, steps=400, batch_si
         point=start+fraction*(finish-start)
         clock=float(times[pair])+fraction*elapsed
         auxiliary_loss=((net.field(torch.cat([point,clock],dim=1))-(finish-start)/elapsed)**2).mean()
+        pair_loss=torch.tensor(0.)
+        if latent_variogram_weight:
+            transported=rk4_position(net.velocity,start,float(times[pair]),float(times[pair+1]))
+            pair_loss=latent_pair_contrast_loss(transported,torch.from_numpy(right))
+            auxiliary_loss=auxiliary_loss+latent_variogram_weight*pair_loss
         auxiliary=torch.autograd.grad(auxiliary_loss,parameters)
         if conflict_projection:auxiliary=project_auxiliary(base,auxiliary)
         gradients,factor,base_norm,aux_norm=combine_gradients(base,auxiliary)
@@ -84,6 +99,7 @@ def train_anchored(net, z, stages, cutoff, checkpoint, emit, steps=400, batch_si
             raise ValueError('Declared bound violated')
         record={'step':step+1,'loss':float(loss.detach()),'ot_loss':float(auxiliary_loss.detach()),
                 'effective_ot_weight':factor,'nll_gradient_norm':base_norm,'ot_gradient_norm':aux_norm,
+                'latent_pair_contrast_loss':float(pair_loss.detach()),'latent_variogram_weight':latent_variogram_weight,
                 'relative_parameter_distance':relative,'projected':projected,'conflict_projection':conflict_projection,
                 'actual_update_dot_base_gradient':float(sum((b*(p.detach()-previous)).sum() for b,p,previous in zip(base,parameters,before))),**audit}
         history.append(record)

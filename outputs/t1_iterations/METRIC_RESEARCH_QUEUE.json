@@ -6346,9 +6346,15 @@
     },
     {
       "id": "scfm_distribution_preservation",
-      "status": "implementation_pending",
-      "next_action": "Bounded prior-loss coverage review and one distinct fixed past-only loss specification before registration; no repeat or target-informed weighting.",
-      "support": "Direction/MMD improves; variogram trails matchedNLL onall3; projected-vsraw effect tiny. Jev recommendationconfidence.51; proposed loss remains unvalidated."
+      "status": "registered_running",
+      "next_action": "Monitor scfm_latent_pair_fold once without duplication. On completion/failure collect four fresh inline metric reviews, retain all15raw/skill/calibration outcomes and scoreledger; apply only projected_pair800 reward vs matchedprojected_ot800 (allcontrols0), update health, then reassess separateIPCA. No new worker while active.",
+      "support": "Direction/MMD improves; variogram trails matchedNLL onall3; projected-vsraw effect tiny. Jev recommendationconfidence.51; proposed loss remains unvalidated.",
+      "experiment": "scfm_latent_pair_fold",
+      "prior_coverage": "Whole-cell variogram reweighting failed; weak/strong latentMMD warmstarts failed. Newloss is latentpaircontrast during projectedOT, not those implementations.",
+      "reward_reference": "projected_ot800",
+      "reward_candidates": [
+        "projected_pair800"
+      ]
     },
     {
       "id": "controlled_incremental_pca",
@@ -6361,10 +6367,10 @@
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
-    "status": "scfm_incremental_gain_preserved",
-    "implementation_status": "completed_accounted_reviewed",
-    "experiment": "scfm_projected_past_fold",
+    "status": "scfm_latent_pair_fold_running",
+    "implementation_status": "implemented_launched",
+    "experiment": "scfm_latent_pair_fold",
     "next_experiment": null,
-    "next": "Keep positive scFM incremental gains. Before one fixed distribution-preserving scFM objective, check existing transition-MMD/direct-variogram coverage and freeze a genuinely distinct past-only loss with matched controls. Jev advisory chose past_distribution_loss(confidence.51), not proof. User-requested controlled PCA/IPCA remains queued separately; no exposed8.75 grid or parallel worker."
+    "next": "Monitor scfm_latent_pair_fold once without duplication. On completion/failure collect four fresh inline metric reviews, retain all15raw/skill/calibration outcomes and scoreledger; apply only projected_pair800 reward vs matchedprojected_ot800 (allcontrols0), update health, then reassess separateIPCA. No new worker while active."
   }
 }

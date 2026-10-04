@@ -360,6 +360,57 @@
         ],
         "scope": "One fixed fresh E8.25->E8.75 source-domain development trial. PCA8/4096 past-variance genes, cutoff-only encoder/whitening/heads; no reused8.5 models. Same shared800step initial field, paired400step raw/projectedOT with identical randomness and originalgradient/parameter caps. Likelihood400 budget control; copy and CNF800 reference. All forecasts/exact replays frozen before target reads. No target-informed grid or official uploads. Historical atlas development only: no independent-embryo/generalization claim. Original scorer/calibration/readiness unchanged; IPCA separate future change."
       }
+    },
+    "scfm_latent_pair_fold": {
+      "script": "scfm_projected_past_fold.py",
+      "args": [
+        "--experiment",
+        "scfm_latent_pair_fold"
+      ],
+      "run": "private/scfm_latent_pair_fold_01",
+      "report": "SCFM_LATENT_PAIR_FOLD_RESULTS.json",
+      "protocol": {
+        "cutoff": 8.25,
+        "target": 9.0,
+        "fit_stages": [
+          7.5,
+          7.75,
+          8.0,
+          8.25
+        ],
+        "seed": 20260928,
+        "scoring_seeds": [
+          20260928,
+          20260929,
+          20260930
+        ],
+        "steps": 400,
+        "batch_size": 64,
+        "reuse_run": "private/scfm_projected_past_fold_01",
+        "candidates": [
+          "copy",
+          "cnf800",
+          "projected_ot400",
+          "projected_ot800",
+          "projected_pair800"
+        ],
+        "control_candidates": [
+          "copy",
+          "cnf800",
+          "projected_ot400",
+          "projected_ot800"
+        ],
+        "contrast_candidates": [
+          "projected_ot800",
+          "projected_pair800"
+        ],
+        "contrast_label": "latent_pair_minus_zero_penalty_mean_skills",
+        "reward_reference": "projected_ot800",
+        "reward_candidates": [
+          "projected_pair800"
+        ],
+        "scope": "Fresh target horizonE8.25->E9.0; past-only matched400additional steps from verified projectedOT400. Zero penalty control versus fixed latentpairweight1 insideauxloss, outerOTweight.01/cap.1 and radius.05 unchanged. All28 latentcoordinate pairs smooth(|difference|+1e-6)^.5 expectedcontrasts, normalizedbytargetcontrast clamped.05; same past stages/pairs/RNG. No genescorer-loss equivalence claim. Saved PCA8/4096/CNF800/projected400 reused only after exactencoder/input/checkpoint metadata verification. No target tuning, no official upload or independent-embryo claim. Original scorer/calibration/readiness retained; only new penaltyarm eligible+1/-10 vs matchedzero400continuation, controls0."
+      }
     }
   }
 }

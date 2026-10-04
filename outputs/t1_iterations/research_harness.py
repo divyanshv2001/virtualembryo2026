@@ -39,7 +39,7 @@ def processes():
 
 def status(name,entry,live):
     report=resolve(entry['report']);run=resolve(entry['run']);receipt=read(HERE/'private/harness_runs'/name/'receipt.json')
-    matching=[r for r in live if str(resolve(entry['script'])).lower().replace('/',chr(92)) in r['CommandLine'].lower().replace('/',chr(92))]
+    matching=[r for r in live if str(resolve(entry['script'])).lower().replace('/',chr(92)) in r['CommandLine'].lower().replace('/',chr(92)) and (all(str(arg).lower() in r['CommandLine'].lower() for arg in entry['args']) if entry.get('args') else '--experiment' not in r['CommandLine'].lower())]
     if matching:return {'experiment':name,'status':'running','pids':[r['ProcessId'] for r in matching]}
     if report.exists():return {'experiment':name,'status':'completed','report':entry['report'],'report_sha256':digest(report)}
     if run.exists() or receipt:return {'experiment':name,'status':'interrupted_or_failed','evidence':entry['run'],'reason':'Process absent and final report missing; inspect saved stderr/events before recovery.'}
@@ -55,7 +55,7 @@ def _run(name,entry,live):
     folder=HERE/'private/harness_runs'/name;folder.mkdir(parents=True,exist_ok=False)
     env=os.environ.copy();env.update(OMP_NUM_THREADS='2',MKL_NUM_THREADS='2',OPENBLAS_NUM_THREADS='2')
     with (folder/'stdout.log').open('wb') as stdout,(folder/'stderr.log').open('wb') as stderr:
-        worker=subprocess.Popen([sys.executable,'-u',str(script)],cwd=HERE.parents[1],stdout=stdout,stderr=stderr,env=env,creationflags=subprocess.CREATE_NO_WINDOW)
+        worker=subprocess.Popen([sys.executable,'-u',str(script)]+entry.get('args',[]),cwd=HERE.parents[1],stdout=stdout,stderr=stderr,env=env,creationflags=subprocess.CREATE_NO_WINDOW)
     receipt={'experiment':name,'started_utc':now(),'pid':worker.pid,'script_sha256':digest(script),'registered_run':entry['run'],'registered_report':entry['report'],'logs':str(folder.relative_to(HERE)),'status':'started'}
     save(folder/'receipt.json',receipt)
     return {'experiment':name,'status':'started','pid':worker.pid,'logs':receipt['logs']}
