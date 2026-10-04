@@ -53,6 +53,7 @@ def main():
         if spec.get('hidden_protein'): sources+=['hidden_protein_count_bridge.py','prepare_balanced_atlas.py']
         if spec.get('temporal_forcing'): sources.append('temporal_diffusion_forcing.py')
         if spec.get('count_vae'): sources.append('count_vae_representation.py')
+        if spec.get('correlated_diffusion'): sources.append('correlated_latent_diffusion.py')
         graph_prior_inputs={}
         if spec.get('graph_kinetics'):
             sources.append('graph_kinetic_residual.py')
@@ -102,7 +103,25 @@ def main():
                     flows[name]=model.eval()
                 report['fixed_candidate_validation']={'training_steps':0,'reward_eligible':False,'past_decoder_reconstruction':'Same deterministic past-only procedure; prior full-panel predictions must replay bit-exact before new horizon.'}
                 emit('frozen_kinetic_checkpoints_verified',checkpoint_sha256=spec['frozen_checkpoint_sha256'])
-                if spec.get('count_vae'):
+                if spec.get('correlated_diffusion'):
+                    from correlated_latent_diffusion import CorrelatedDiffusionFlow
+                    report.pop('fixed_candidate_validation')
+                    context_path=RUN/'diffusion_past_context.npz'
+                    np.savez_compressed(context_path,coordinates=c['coordinates'],stages=c['stages'][c['past']])
+                    helper=HERE/'correlated_latent_diffusion.py';base_checkpoint=frozen/'kinetic_none400.pt'
+                    packet={'context':str(context_path),'base_checkpoint':str(base_checkpoint),'sha256':{str(path):digest(path) for path in [context_path,base_checkpoint,helper,HERE/'cnf_manifold_flow.py',HERE/'cnf_density_flow.py',HERE/'graph_kinetic_residual.py']}}
+                    save(RUN/'diffusion_GPU_packet.json',packet)
+                    plan['diffusion_context_sha256']=digest(context_path);save(RUN/'plan.json',plan)
+                    python=HERE.parents[1]/'outputs/research_workflow/.venv_cuda/Scripts/python.exe'
+                    with (RUN/'GPU_stdout.log').open('wb') as stdout,(RUN/'GPU_stderr.log').open('wb') as stderr:
+                        subprocess.run([str(python),'-u',str(helper),'--train-packet',str(RUN/'diffusion_GPU_packet.json')],stdout=stdout,stderr=stderr,cwd=HERE.parents[1],check=True,creationflags=subprocess.CREATE_NO_WINDOW)
+                    for kind in ['diagonal','correlated']:
+                        saved=torch.load(RUN/('diffusion_'+kind+'400.pt'),weights_only=False,map_location='cpu')
+                        if saved['kind']!=kind or saved['steps']!=400 or saved['batch_size']!=64 or saved['fit_max_stage']!=cutoff or saved['parameters']!=1080 or saved['training_seed']!=20261004 or saved['split_step']!=.125 or saved['normals_per_step']!=26 or not saved['frozen_base_exact'] or saved['context_sha256']!=digest(context_path) or saved['base_checkpoint_sha256']!=digest(base_checkpoint):raise ValueError('Diffusion checkpoint metadata mismatch')
+                        model=CorrelatedDiffusionFlow(flows['kinetic_none400'],kind);model.noise_net.load_state_dict(saved['noise_net'])
+                        flows['diffusion_'+kind+'400']=model.eval()
+                    report['correlated_diffusion_scope']='Own1080parameter residual SDE on frozen kinetics; diagonal vs rank2 correlated, matched initial marginal variance/paired26normal draws/400GPUsteps and past-only adjacent-stage Sinkhorn. FixedRK4/noise splitstep.125, seed20261004; independently trained arms need not retain equal marginal variances. No author solver reproduction or posthoc covariance grid. OriginalCPU fullpanel scorer/head/calibration/readiness gates,3scoringresamples,one trainingseed; historical development, not independent validation.'
+                elif spec.get('count_vae'):
                     from count_vae_representation import ObservationVAE,LatentDynamics,VAELatentBridge
                     report.pop('fixed_candidate_validation')
                     context_path=HERE/'private/hidden_protein_count_bridge_repair_01/past_counts_context.npz'
@@ -305,6 +324,15 @@ def main():
                 if cache.put('_neutral_'+name,neutral)!=neutral_sha:raise ValueError('Zero-count correction full-panel replay mismatch')
                 del neutral;reference.net.bridge_enabled=True
                 emit('neutral_count_bridge_fullpanel_exact_replay_passed',candidate=name)
+        if spec.get('correlated_diffusion'):
+            reference.net=flows['kinetic_none400'];neutral,_,_=reference.predict(target,'joint',1.,sampling='systematic')
+            neutral_sha=cache.put('_neutral_kinetic',neutral);del neutral
+            for name in spec['contrast_candidates']:
+                reference.net=flows[name];reference.net.noise_enabled=False
+                neutral,_,_=reference.predict(target,'joint',1.,sampling='systematic')
+                if cache.put('_neutral_'+name,neutral)!=neutral_sha:raise ValueError('Zero-noise full-panel replay mismatch')
+                del neutral;reference.net.noise_enabled=True
+                emit('neutral_diffusion_fullpanel_exact_replay_passed',candidate=name)
         for name in spec['candidates']:
             if name=='copy':pred,ids,audit=c['donors'].copy(),np.arange(len(c['donors'])),{'method':'persistence'}
             else:

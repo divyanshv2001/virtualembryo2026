@@ -6395,9 +6395,9 @@
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
     "experiment": "collective_context_past_fold",
-    "status": "correlated_diffusion_resource_preflight_completed",
+    "status": "correlated_diffusion_past_fold_running",
     "next_experiment": "correlated_diffusion_past_fold",
-    "next": "Predeclare matched1080parameter correlated rank2 versus equal-marginal diagonal residual SDE on frozenkinetics,400RTX3060steps perarm; originalCPU fullpanel scorer and zero-noise/prior/newforecasts exactreplays. Past-only8.25cutoff, fixedRK4/noise splitstep.125 andpaired26normal draws. No covariance/rank/noise grid, no author solver reproduction.",
+    "next": "Collect correlated_diffusion_past_fold once finished; inspect fullpanel exact replays and matched contrast, four independent metric reviews, bounded Jev new decision, separate reward once. Do not duplicate active GPU training.",
     "jev_choice": "correlated_diffusion_preflight",
     "jev_confidence": 0.33,
     "scope": "Advisory low confidence; raw-count data availability verified deterministically, no score claim.",

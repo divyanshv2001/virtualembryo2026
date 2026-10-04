@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Predeclare matched1080parameter correlated rank2 versus equal-marginal diagonal residual SDE on frozenkinetics,400RTX3060steps perarm; originalCPU fullpanel scorer and zero-noise/prior/newforecasts exactreplays. Past-only8.25cutoff, fixedRK4/noise splitstep.125 andpaired26normal draws. No covariance/rank/noise grid, no author solver reproduction.",
+  "next_experiment": "Collect correlated_diffusion_past_fold once finished; inspect fullpanel exact replays and matched contrast, four independent metric reviews, bounded Jev new decision, separate reward once. Do not duplicate active GPU training.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -4651,5 +4651,11 @@
       "license": "Apache-2.0",
       "scope": "Documentation supports general non-diagonal diffusion and Euler compatibility; no author implementation copied or installed, no biological performance evidence."
     }
+  },
+  "correlated_diffusion_past_fold": {
+    "status": "running",
+    "experiment": "correlated_diffusion_past_fold",
+    "report": "CORRELATED_DIFFUSION_PAST_FOLD_RESULTS.json",
+    "protocol": "Frozen kinetics diagonal vs rank2 correlated residual diffusion, matched1080parameters400RTX3060steps; past10963cells8D through8.25 only, originalCPU fullpanel scorer and exactreplays. Primary correlated-minus-diagonal, no score/reward yet."
   }
 }

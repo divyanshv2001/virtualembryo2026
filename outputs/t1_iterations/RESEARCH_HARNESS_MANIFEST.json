@@ -1563,6 +1563,70 @@
         "seed_confirmation": true,
         "reward_eligible": false
       }
+    },
+    "correlated_diffusion_past_fold": {
+      "script": "scfm_projected_past_fold.py",
+      "args": [
+        "--experiment",
+        "correlated_diffusion_past_fold"
+      ],
+      "run": "private/correlated_diffusion_past_fold_01",
+      "report": "CORRELATED_DIFFUSION_PAST_FOLD_RESULTS.json",
+      "protocol": {
+        "cutoff": 8.25,
+        "target": 9.5,
+        "fit_stages": [
+          7.5,
+          7.75,
+          8.0,
+          8.25
+        ],
+        "seed": 20260928,
+        "scoring_seeds": [
+          20260928,
+          20260929,
+          20260930
+        ],
+        "steps": 400,
+        "batch_size": 64,
+        "reuse_run": "private/scfm_projected_past_fold_01",
+        "candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "diffusion_diagonal400",
+          "diffusion_correlated400"
+        ],
+        "control_candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400",
+          "diffusion_diagonal400"
+        ],
+        "contrast_candidates": [
+          "diffusion_diagonal400",
+          "diffusion_correlated400"
+        ],
+        "contrast_label": "correlated_minus_diagonal_mean_skills",
+        "reward_reference": "diffusion_diagonal400",
+        "reward_candidates": [
+          "diffusion_correlated400"
+        ],
+        "scope": "Own1080parameter frozen-kinetic residual SDE: diagonal versus rank2 correlated noise, equal initial cell marginal covariance but independently trained marginal amplitudes thereafter. Shared seed20261004, paired64cell adjacent paststage draws and26standardnormal draws/step,400steps/arm Adam.001clip5 Sinkhornp2blur.05scaling.9. Past10963cells8D from7.5,7.75,8,8.25 only; no future training. RK4frozen drift/noise split.125; sigma=.5sigmoid, factor=.1tanh, two shared rankcoordinates vs16independent factorcoordinates. Original2.14CPU full32285gene head/guards/scorer/calibration/readiness unchanged;2.11CUDA RTX3060 child,4.5GiBVRAM16GiBhost two threads. Frozen prior3baselines, zero-noise2 and new5forecasts exact replay beforetarget9.5 expression; one trainingseed3scoringresamples, historicaldevelopment not independentvalidation. Primarycorrelated-minusdiagonal reward once;controls0; fourmetricreviews afterbatch. No targettuning/oldcovariancegrid/authorreproduction/upload/70claim.",
+        "frozen_kinetic_run": "private/graph_kinetics_past_fold_repair_01",
+        "prior_target": 9.25,
+        "frozen_checkpoint_sha256": {
+          "kinetic_none400": "11dc8d8620fa66997aa08d2f88ad9f4e9cdc2db788f8c1b3088f1b8eb01dd4c2"
+        },
+        "training_device": "cuda",
+        "prior_candidates": [
+          "copy",
+          "cnf800",
+          "kinetic_none400"
+        ],
+        "driver_runtime": "cpu",
+        "correlated_diffusion": true
+      }
     }
   }
 }
