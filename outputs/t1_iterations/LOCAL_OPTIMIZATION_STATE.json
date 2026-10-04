@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Collect scalar_potential_frozen_horizon_validation aftercompletion; no duplicate worker. Verify3original+5prior/2zeroresidual/5new fullpanel exactreplays,15calibrations; four fresh metric reviews, confirmationreward0, bounded cached Jev next decision. Preserve52.438460historical gain and delivered user export; scorer/calibration/readiness gates unchanged.",
+  "next_experiment": "Inspect compact saved transfer coverage then audit frozenpotential encoder/head support on released E8.5 challenge anchors versus source stages through8.5; past-only feature/scaling/latent/slope distributions, no futuretruth fitting or score/reward. Predeclare genuinely distinct matched potential-versus-kinetic source-to-challenge pilot only if feasible; no repeat source-only horizon/seed/rankgrid. Twohistoricalhorizongains retained, officialreported49.15belowcopy and filenameunverified; need transferable evidence. Jev capacity_control confidence.10 is advisory; coordinator prioritizes anchor_shift_audit because localcapacity gains do not resolve officialtransfergap. One worker/RTX3060 when training/originalCPU scorer/gates unchanged.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1238,7 +1238,7 @@
     "uncapped_reward": -1517,
     "reward_score": -1517,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": 4
+    "last_batch_reward_delta": 0
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -3011,6 +3011,18 @@
         "variogram": "Problem: Variogramskill.515558 improves butwidth/gaugeconfound attribution;DEbelowcopy. Proposed solution: Preservecurrentweights and fixedhorizoncomparison; separatelypredeclare gaugefixed/capacitycontrols ifneeded. Validation: Primary+.020757650 andkinetic+.000869303 positive3/3;one trainingseedresamples not independentembryos."
       },
       "scope": "Four independent narrow reviewers once complete, no tools/peers/writes. DE specialist factual inversion versuscopy was identified and corrected bysame reviewer; no incorrect claim retained. Independent embryos are a validation requirement, not currently available evidence. MMD specialist confused raw-MMD direction with calibrated higher-better skill; same reviewer corrected it before caching."
+    },
+    "scalar_potential_frozen_horizon_validation_01": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "4b7d1576f60c2dc49f5009c4ac81061e445646f5f5896fd6ba152da000104856",
+      "reviews": {
+        "de_score": "Problem: DEskill.476471 remainsbelowcopy.5 despite consistent comparative gains. Proposed solution: Past-onlysource-challenge transfer diagnostic withfrozenweights. Validation:15calibrationsvalid andseparateforecastsreplayexact;one trainingseed/sharedembryos limitinference, no hidden-truth fitting.",
+        "de_direction": "Problem: Direction gain isconfounded byone trainingseed/sharedembryos andwidth/gaugecapacity. Proposed solution: Past-onlytransfercases andverifyexportidentity. Validation: Preserveprior/neutral/newexactreplays;9.25horizonalreadycompleted, do not rerun itsuggestedagain.",
+        "mmd_u": "Problem: Calibrated MMDskillgain+.000321193(3/3) is small withcapacity/seedconfounds. Proposed solution: Distinctpast-onlysource-challenge transferdiagnostic. Validation: Independentheldouttransfer/trainingseedreplication required forrobustness;exactprior/neutral/newreplays retained.",
+        "variogram": "Problem: Smallvariogram advantage mayreflectcapacity/embryooverlap. Proposed solution: Distinctpast-onlysource-challenge transfer withcalibrationfixed. Validation: Potentials skills exceedkinetics+.000762447 andvector+.016371229,3/3positive;independenttransferuntested."
+      },
+      "scope": "Fresh independent narrowreviewers,no tools/peers/writes;calibrations andforecastreplays are separate. Direction reviewer suggested currenthorizon again; alreadycompleted, do not duplicate. Remedies notvalidated."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3952,7 +3964,7 @@
         "status": "below_redline"
       }
     },
-    "recorded_iterations": 70,
+    "recorded_iterations": 71,
     "action": "Prioritize supported matched-control improvements; preserve failures and gates. Proxy/pending iterations earn zero. No score reset, fabricated reward, agent termination or deployment implied."
   },
   "scfm_reopened": {
@@ -4915,12 +4927,25 @@
     }
   },
   "scalar_potential_frozen_horizon_validation": {
-    "status": "running",
+    "status": "completed",
     "experiment": "scalar_potential_frozen_horizon_validation",
     "report": "SCALAR_POTENTIAL_FROZEN_HORIZON_VALIDATION_RESULTS.json",
     "training_steps": 0,
     "reward_eligible": false,
-    "scope": "Frozen8.25potential/vector weights at9.25historical horizon; source/context/checkpoint hashes and5original9.5forecast replays required. CPUfullpanel scoring only, no GPU retraining/independentembryo claim."
+    "scope": "Potential51.911435, +.113566vs kinetics;all4meanspositive3/3. Historical second horizon confirmation, one trainingseed/sameembryos notrobustindependentvalidation.15validcalibs,3original+5prior/2neutral/5newreplayspass;5.03GiBhost,zero training/reward. Officialreported49.15 separate from these development scores.",
+    "mean_scores": {
+      "copy": 50.0,
+      "cnf800": 51.194605628785325,
+      "kinetic_none400": 51.79786886562122,
+      "residual_vector400": 49.38160400253781,
+      "residual_potential400": 51.91143527848439
+    },
+    "primary_contrast": {
+      "de_score": 0.03944847715239974,
+      "de_direction": 0.030294381210949517,
+      "mmd_u": 0.015294507749669672,
+      "variogram": 0.016371229218638206
+    }
   },
   "user_reported_official_history": [
     {
