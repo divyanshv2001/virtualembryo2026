@@ -1343,6 +1343,24 @@
         "driver_runtime": "cpu",
         "temporal_forcing": true
       }
+    },
+    "count_vae_representation_preflight": {
+      "script": "count_vae_representation.py",
+      "args": [],
+      "run": "private/count_vae_representation_preflight_01",
+      "report": "COUNT_VAE_REPRESENTATION_PREFLIGHT.json",
+      "protocol": {
+        "training_device": "cuda",
+        "driver_runtime": "cuda",
+        "fit_max_stage": 8.25,
+        "steps_per_arm": 3,
+        "batch_size": 64,
+        "genes": 128,
+        "rank": 8,
+        "new_scoring_batch": false,
+        "reward_eligible": false,
+        "scope": "Own matched NB/count vsGaussian/log observation VAEs, resource/replay only; no author scVI stack/weights, no target/score/reward."
+      }
     }
   }
 }

@@ -1,0 +1,34 @@
+{
+  "status": "completed",
+  "new_scoring_batch": false,
+  "score": null,
+  "reward": 0,
+  "arms": {
+    "log_gaussian": {
+      "parameters": 18320,
+      "losses": [
+        13.859111785888672,
+        13.83614730834961,
+        13.759010314941406
+      ],
+      "seconds": 0.5326404999941587,
+      "gpu_peak_bytes": 68758016,
+      "checkpoint_replay_exact": true
+    },
+    "count_nb": {
+      "parameters": 18320,
+      "losses": [
+        3.9216487407684326,
+        3.9269845485687256,
+        3.951101541519165
+      ],
+      "seconds": 0.8715506999869831,
+      "gpu_peak_bytes": 68923392,
+      "checkpoint_replay_exact": true
+    }
+  },
+  "past_cells": 10963,
+  "genes": 128,
+  "scope": "Resource/finite-gradient and representation encode/decode checks only; not scVI author implementation or predictive validation.",
+  "next_requirement": "Freeze paired representation/temporal objective and count-to-original-encoder bridge before scoring; neither3step model is trained for prediction."
+}

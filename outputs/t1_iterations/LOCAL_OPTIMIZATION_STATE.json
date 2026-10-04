@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Fresh count-VAE/scVI representation feasibility audit: compare past-only learned count representation to prior PCA/IPCA coverage; pin primary source/license/dependencies, check6GB RTX3060 memory and16GBhost. Define matched representation controls and unchanged full-panel head/scorer bridge before any training batch. No hidden-stage pretrained weights, repeated rank/noise grids or unsupported >70 claims.",
+  "next_experiment": "Predeclare matched own NB-count versus log-Gaussian VAE18320parameter rank8/128gene trial:400past-only representation steps each plus400same latent-OT dynamics steps, pairedseeds/batches and sameKL.01. Decode predicted gene fractions into original frozen encoder with bounded latent correction; preserve frozen kinetics, originalCPU full-panel head/scorer, prior and zero-correction exactreplay gates. No source pretrained models or rank grids; likelihoodunits/control assumptions disclosed.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -4482,5 +4482,54 @@
     "training_steps_per_arm": 400,
     "reward": -29,
     "health": -1467
+  },
+  "count_vae_representation_preflight": {
+    "status": "completed",
+    "author_repository": "https://github.com/scverse/scvi-tools",
+    "author_commit": "fa9470f9b59f47a1df1677eda44161ac14845db3",
+    "author_license": "BSD3-Clause",
+    "source_sha256": {
+      "LICENSE": "66399db0284d2539790efb348886ab0c1f745bbe5fea6ac38a00465a14adc8f5",
+      "pyproject.toml": "7ce47a0834fbc9988b98abbfa5158a96977feb244d79deae4a6778c42f77ccb3",
+      "src/scvi/module/_vae.py": "fdff88c882872df625c3563aaa3fa0333ff33f244accb8629fa6d30c3f575d1c"
+    },
+    "primary_docs": "https://docs.scvi-tools.org/en/stable/user_guide/models/scvi.html",
+    "author_mechanism": "Library-scaled count likelihood, Gaussian latent posterior/prior and KL regularization. Author supports NB/normal likelihood; own implementation is smaller and not scVI.",
+    "runtime_note": "Current source Python>=3.12, Lightning/torch stack; source inspected only, no author dependencies/models installed. Own torch runtime already available.",
+    "actual_past_count_probe": {
+      "status": "completed",
+      "new_scoring_batch": false,
+      "score": null,
+      "reward": 0,
+      "arms": {
+        "log_gaussian": {
+          "parameters": 18320,
+          "losses": [
+            13.859111785888672,
+            13.83614730834961,
+            13.759010314941406
+          ],
+          "seconds": 0.5326404999941587,
+          "gpu_peak_bytes": 68758016,
+          "checkpoint_replay_exact": true
+        },
+        "count_nb": {
+          "parameters": 18320,
+          "losses": [
+            3.9216487407684326,
+            3.9269845485687256,
+            3.951101541519165
+          ],
+          "seconds": 0.8715506999869831,
+          "gpu_peak_bytes": 68923392,
+          "checkpoint_replay_exact": true
+        }
+      },
+      "past_cells": 10963,
+      "genes": 128,
+      "scope": "Resource/finite-gradient and representation encode/decode checks only; not scVI author implementation or predictive validation.",
+      "next_requirement": "Freeze paired representation/temporal objective and count-to-original-encoder bridge before scoring; neither3step model is trained for prediction."
+    },
+    "scope": "Three optimizersteps resource/finite-gradient/replay only, not trained predictive model. Losses in different observation units cannot be compared as scores; backgroundcategory represents excluded genes."
   }
 }
