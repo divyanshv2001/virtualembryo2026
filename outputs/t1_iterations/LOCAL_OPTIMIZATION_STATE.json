@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Tied-marginal dependence-only diffusion feasibility: freeze retained diagonal amplitude schedule, normalize rank2 correlation so analytic total marginal variance equals frozen diagonal at identical cell/state throughout; past-only resource/covariance positive-definiteness/zero-noise replay preflight before predeclared matched training. Divergent stochastic paths need not have identical state/variances. No old noise/seed/rank/horizon grid; originalfullpanel scorer/gates, retainedkinetics and historical small gains unchanged.",
+  "next_experiment": "Predeclare tied-marginal diagonal vs rank2 correlated residual SDE,816trainablefactorparameters400RTX3060steps perarm, frozen trained diagonal amplitude weights and frozen retainedkinetics. Lock hashes/past10963cells8D through8.25, paired26normal draws and.125splitstep. Verify cell variance ties at identical states after training, frozen amplitude/drift and originalCPU prior/neutral/new fullpanel replay/scorer/gates. Diagonal orientation is Gaussian distribution-neutral but alters finite sample realization; disclose control and no purecausal/robustness claim. No targettuning/oldgrid.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -4717,5 +4717,34 @@
       "mmd_u": -5.2082757468485674e-05,
       "variogram": -5.0795022627281305e-05
     }
+  },
+  "tied_marginal_diffusion_preflight": {
+    "status": "completed",
+    "synthetic_only": true,
+    "arms": {
+      "diagonal": {
+        "trainable_parameters": 816,
+        "steps": 3,
+        "max_marginal_covariance_error": 9.313225746154785e-10,
+        "max_offdiagonal_covariance": 0.0,
+        "peak_allocated_bytes": 87122944,
+        "frozen_amplitude_exact": true,
+        "seeded_replay_exact": true,
+        "noise_disabled_exact": true
+      },
+      "correlated": {
+        "trainable_parameters": 816,
+        "steps": 3,
+        "max_marginal_covariance_error": 9.313225746154785e-10,
+        "max_offdiagonal_covariance": 1.8625340089784004e-05,
+        "peak_allocated_bytes": 87123456,
+        "frozen_amplitude_exact": true,
+        "seeded_replay_exact": true,
+        "noise_disabled_exact": true
+      }
+    },
+    "scope": "Toy drift plus frozen trained diagonal amplitude weights; no biological fit or benchmark score/reward. Cell marginal variance tied at identical states throughout factor updates, trajectories may differ.",
+    "reference_checkpoint_sha256": "178ffb611e2b44b6a1639d5b0f11c30e357b8a1b0470ca767fc15bfa94bb4f11",
+    "limitations": "Diagonal factor orientation is distribution-neutral at identical state with exact Gaussian noise; factor gradients can change finite Monte Carlo draws. This is a matched stochastic implementation control, not a learned diagonal variance model. Numerical equality verified within9.32e-10, not bit-exact floating point variance. Divergent states can yield different frozen amplitude values."
   }
 }
