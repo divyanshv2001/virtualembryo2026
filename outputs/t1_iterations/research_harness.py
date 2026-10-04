@@ -92,7 +92,24 @@ def collect(name,entry,live):
     return receipt
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('command',choices=['status','run','collect','queue']);parser.add_argument('--experiment');args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('command',choices=['status','run','collect','queue','resume']);parser.add_argument('--experiment');args=parser.parse_args()
+    if args.command=='resume':
+        checkpoint=read(HERE/'LOCAL_OPTIMIZATION_STATE.json')
+        manifest=read(HERE/'RESEARCH_HARNESS_MANIFEST.json')['experiments']
+        latest=read(HERE/'METRIC_RESEARCH_QUEUE.json').get('latest_paper_decision',{})
+        live=processes();efficiency=checkpoint.get('efficiency_policy',{})
+        policy_hash=digest(HERE/'RESEARCH_CONTINUATION_POLICY.md')
+        names=[args.experiment] if args.experiment else checkpoint.get('active_jobs',[])
+        if not names and latest.get('experiment'):names=[latest['experiment']]
+        result={'policy_changed':policy_hash!=efficiency.get('policy_sha256'),
+                'live_workers':len(live),
+                'jobs':[status(n,manifest[n],live) if n in manifest else {'experiment':n,'status':'not_registered'} for n in names],
+                'next_experiment':latest.get('next_experiment'),
+                'next_action':latest.get('next') or checkpoint.get('next_experiment'),
+                'efficiency':{k:efficiency.get(k) for k in ('routine_cycle_soft_target_percentage_points','rules')},
+                'read_if_changed':'RESEARCH_CONTINUATION_POLICY.md',
+                'scope':'Read-only compact resume; no experiments, critics, Jev or files written.'}
+        print(json.dumps(result,separators=(',',':')));return
     if args.command=='queue':
         queue=read(HERE/'METRIC_RESEARCH_QUEUE.json')
         latest=queue.get('latest_paper_decision',{})

@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-TRACKED = ('LOCAL_OPTIMIZATION_STATE.json', 'LOCAL_OPTIMIZATION_PROMPT.md',
+TRACKED = ('RESEARCH_CONTINUATION_POLICY.md', 'LOCAL_OPTIMIZATION_STATE.json', 'LOCAL_OPTIMIZATION_PROMPT.md',
            'METRIC_RESEARCH_QUEUE.json', 'METRIC_CRITIQUE_POLICY.json',
            'METRIC_CRITIQUES_20261001.md', 'RESEARCH_HARNESS_MANIFEST.json')
 
@@ -46,7 +46,7 @@ def main():
 
 Updated: {compact['updated_utc']}
 
-Run `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_playbook.py` first. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
+Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
 Use `research_harness.py queue` for a compact next-step/pending summary; never dump METRIC_RESEARCH_QUEUE.json. Use `research_harness.py status --experiment NAME` for the current experiment; omit NAME only for a needed global audit. This gives compact live-process/report checks, `run --experiment NAME` for registered launches and `collect --experiment NAME` for cached critic packets. Commands use the same project Python runtime. Register a new predeclared script/run/report before launch. Collection prepares packets; the coordinator still runs four critics and Jev decisions. See RESEARCH_HARNESS.md only when changing orchestration. Official task review: TEMPORAL_TASK_REVIEW_20261001.md.
 

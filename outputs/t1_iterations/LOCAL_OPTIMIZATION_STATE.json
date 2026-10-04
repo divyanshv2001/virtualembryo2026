@@ -3538,7 +3538,24 @@
     "one_commit_per_completed_checkpoint": true,
     "policy": "RESEARCH_CONTINUATION_POLICY.md",
     "previous_checkpoint_used_percent": 21,
-    "observed_account_delta_percentage_points": 6
+    "observed_account_delta_percentage_points": 6,
+    "routine_cycle_soft_target_percentage_points": [
+      2,
+      3
+    ],
+    "complex_cycle_soft_target_percentage_points": [
+      5,
+      6
+    ],
+    "policy_sha256": "bc7a97ff64f03840c3f5dbdf2ee8eeaa623cc1eef17eb5fc7cacb8af575beb86",
+    "rules": [
+      "Start with research_harness.py resume; read policy only if changed",
+      "One necessary experiment; checkpoint before another",
+      "Four mandatory fresh reviews <=60words; metric-only packets",
+      "Routine tool output <=1200characters; aggregate locally",
+      "No routine Jev, usage polling, new files or commits",
+      "Safe checkpoint at soft budget; no model/chat changes"
+    ]
   },
   "tigon_log_density_audit": {
     "status": "completed_past_mechanism_gate_passed",
