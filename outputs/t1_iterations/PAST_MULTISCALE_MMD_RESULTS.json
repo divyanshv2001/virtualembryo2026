@@ -1,0 +1,738 @@
+{
+  "plan": {
+    "created_utc": "2026-10-04T17:26:42.151056+00:00",
+    "cutoff": 8.5,
+    "target": 9.5,
+    "scoring_seeds": [
+      20260928,
+      20260929,
+      20260930
+    ],
+    "source_sha256": {
+      "D:\\Neurl IPS 2026-20260927T150309Z-1-001\\virtualembryo\\outputs\\t1_iterations\\potential_real_anchor_transfer.py": "3c62ad23ac072d1cbc1dbe851276c31d901271d3675a62eaecc3dc25fcb81b93",
+      "D:\\Neurl IPS 2026-20260927T150309Z-1-001\\virtualembryo\\outputs\\t1_iterations\\scalar_potential_residual.py": "40c4fbdae5bad94612dcb599eefd3b8219e3cab5545453fc896385f50668ca62",
+      "D:\\Neurl IPS 2026-20260927T150309Z-1-001\\virtualembryo\\outputs\\t1_iterations\\graph_kinetic_residual.py": "1a531e6943c65901066486845f31b8f6c87851ffb81201034c9502801ec4eac8",
+      "D:\\Neurl IPS 2026-20260927T150309Z-1-001\\virtualembryo\\outputs\\t1_iterations\\cnf_manifold_flow.py": "55d1ec30848dcc75690129ef405c9d7e6cb692c2483032a109947de1b5b63596",
+      "D:\\Neurl IPS 2026-20260927T150309Z-1-001\\virtualembryo\\outputs\\t1_iterations\\full_anchor_slope_forecast.py": "4a0f5503996215370693f2409f31fa6b28bd2c5233ef2d2fc3c50000314bd612",
+      "D:\\Neurl IPS 2026-20260927T150309Z-1-001\\virtualembryo\\outputs\\t1_iterations\\offline_backtest.py": "874b840c6bb3cce570b85482f2f11daacfcd164a04994301a33568c44ae3f3b6",
+      "D:\\Neurl IPS 2026-20260927T150309Z-1-001\\virtualembryo\\outputs\\t1_iterations\\frozen_fullpanel_scoring.py": "afd92f55139803fb28b0160a9a1ca0860e05bae984e9393c6398909844ebd507",
+      "D:\\Neurl IPS 2026-20260927T150309Z-1-001\\virtualembryo\\outputs\\t1_iterations\\hurdle_backtest.py": "c4f8236e49b7947f55ffd2734a7807834461c454c4447eedc44b757f5492c8f9"
+    },
+    "archive_sha256": {
+      "private\\cnf_feature_challenge_01\\encoder4096.npz": "aeb62eff48c22185288e2e6843b47ff6f9bace0a0530e46acf82cae5c3b7ecaf",
+      "private\\cnf_feature_challenge_01\\features4096.pt": "db16e4d24942f76e3180959830dda86205a2cf81355764faa1a04f0322a7ae84",
+      "private\\cnf_feature_challenge_01\\features.npy": "46445f860914c5809d83b0560d6914756ed20f0254245a78b07e211b0e58c127",
+      "private\\cnf_log1p_positive_challenge_01\\log1p_joint_a0.5.npy": "69e5ac43d283ab29146a48446d9ef8a024d9790cddffa1a9f7c5890d323e6ee6"
+    },
+    "input_sha256": {
+      "data\\E8.5_RNA.h5ad": "8eab2d0ccaa89f92861b09816b76b6a731b8ed6b5995e4af196d9ed8ff76e504",
+      "data\\E9.5_RNA.h5ad": "0296e0043842f944a663f3c11ac1542d1bbee733c1cd657bd56f75af65958361",
+      "outputs\\t1_run\\T1__val.genes.txt": "2aeae4cd284933956242bbc9c5ab4f565c1d2acc7cc3fd3037977e4bce8be4bf"
+    },
+    "training_seed": 20261004,
+    "steps_per_arm": 400,
+    "hypothesis": "Fixed past-only multiscale latentMMD versus Sinkhorn potential objective; same frozen CNF and training budget.",
+    "scope": "Reused released E8.5->E9.5 development; single training seed, three scoring resamples. No independent embryos or hidden future fitting.",
+    "heads": [
+      0.25,
+      0.75
+    ],
+    "fit_max_stage": 8.5,
+    "source_rows": 13963,
+    "panel_genes": 32285,
+    "target_row_order": "Adapter sorts each sampled set to preserve historical read_cells calibration exactly.",
+    "official_score": null,
+    "promotion_gates_unchanged": true,
+    "candidates": [
+      "copy",
+      "cnf800",
+      "sinkhorn_direct400",
+      "mmd_direct400"
+    ],
+    "primary_contrast": [
+      "sinkhorn_direct400",
+      "mmd_direct400"
+    ],
+    "training_base": "Frozen CNF800 directly",
+    "cached_controls_sha256": {
+      "kinetic": "8da259f4a9aa82e97516bf35563bf14435a9993582ae43ce83b4a479679e37d5",
+      "potential": "cbd4bd34860f16c7b427a332317c72ef08e4cb75c4f241d734a8b7bf77fb34ad"
+    },
+    "cached_context_sha256": "10e389bd278f50c250bb48f24d0d4fc46d8881e364a1626533d29a54b66df793",
+    "previous_report_sha256": "b53186969ff74214f937678712a6b9fe9eeb911188fe9d53b1735d3d24fd9301",
+    "bandwidth": 3.6970534324645996,
+    "kernel_scales": [
+      0.5,
+      1.0,
+      2.0,
+      4.0,
+      8.0
+    ],
+    "bandwidth_fit": "Median of positive Euclidean distances of4096 seeded past-only random pairs; no future bandwidth fitting.",
+    "mmd_estimator": "Unbiased signed latent minibatch RBF mixture; unchanged official full-panel scorer.",
+    "direct_control_report_sha256": "cca0cdb0a5d3d56d628d89e824ae5a1b2c2c30f369d5747ff6c6b99d470833c0"
+  },
+  "generation": {
+    "copy": {
+      "prediction_sha256": "cf7afaf39793225289bc25ab6a41e263cfc348b4c15573d62c1b67cd6e2741e4",
+      "audit": {
+        "method": "persistence"
+      }
+    },
+    "cnf800": {
+      "prediction_sha256": "ad3996fafc2a3050753c221f18c597424d8d3f1c743ca3ae049e7216fd766421",
+      "audit": {
+        "fit_cells": 13963,
+        "fit_max_stage": 8.5,
+        "supported_genes": 14982,
+        "method": "All-past-E8.5 conditional anchor slopes, source levels fixed",
+        "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+        "conditional_ridge_strength": 1.0,
+        "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+        "encoder_features": 4096,
+        "covariance_guard_features": 384,
+        "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+        "anchor_calibration_rows": 16787,
+        "anchor_supported_genes": 14729,
+        "anchor_slope_ridge": 1.0,
+        "limitation": "Cross-sectional E8.5 associations are not temporal velocities.",
+        "anchor_positive_slope_strength": 0.25,
+        "anchor_detection_slope_strength": 0.75,
+        "response_units": "log1p normalized expression",
+        "response_fit_rows": 13963,
+        "response_fit_max_stage": 8.5,
+        "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+        "mode": "joint",
+        "strength": 1.0,
+        "backoff": 1.0,
+        "seed": 20260928,
+        "sampling": "systematic",
+        "guard_backoffs": [
+          {
+            "backoff": 1.0,
+            "covariance_change": 0.3479098724360976,
+            "finite": true
+          }
+        ],
+        "covariance_change_vs_reference": 0.3479098724360976,
+        "newly_detected_entries": 131497,
+        "removed_detection_entries": 133387,
+        "abundance_factor_cap": 2.0,
+        "detection_probability_delta_cap": 0.25,
+        "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+        "mapped_mass_conserved": true,
+        "protected_genes_unchanged": true
+      }
+    },
+    "sinkhorn_direct400": {
+      "prediction_sha256": "645958b8f713136ef060d1ded98df09fad8463a8f3f748c5d275b7ca61f537a1",
+      "audit": {
+        "fit_cells": 13963,
+        "fit_max_stage": 8.5,
+        "supported_genes": 14982,
+        "method": "All-past-E8.5 conditional anchor slopes, source levels fixed",
+        "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+        "conditional_ridge_strength": 1.0,
+        "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+        "encoder_features": 4096,
+        "covariance_guard_features": 384,
+        "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+        "anchor_calibration_rows": 16787,
+        "anchor_supported_genes": 14729,
+        "anchor_slope_ridge": 1.0,
+        "limitation": "Cross-sectional E8.5 associations are not temporal velocities.",
+        "anchor_positive_slope_strength": 0.25,
+        "anchor_detection_slope_strength": 0.75,
+        "response_units": "log1p normalized expression",
+        "response_fit_rows": 13963,
+        "response_fit_max_stage": 8.5,
+        "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+        "mode": "joint",
+        "strength": 1.0,
+        "backoff": 1.0,
+        "seed": 20260928,
+        "sampling": "systematic",
+        "guard_backoffs": [
+          {
+            "backoff": 1.0,
+            "covariance_change": 0.3494845131464903,
+            "finite": true
+          }
+        ],
+        "covariance_change_vs_reference": 0.3494845131464903,
+        "newly_detected_entries": 131406,
+        "removed_detection_entries": 133290,
+        "abundance_factor_cap": 2.0,
+        "detection_probability_delta_cap": 0.25,
+        "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+        "mapped_mass_conserved": true,
+        "protected_genes_unchanged": true
+      }
+    },
+    "mmd_direct400": {
+      "prediction_sha256": "e3d3b88c97fab232d078d974a135effc937e0a9cc5bcb3ffd4a1466fcb32e168",
+      "audit": {
+        "fit_cells": 13963,
+        "fit_max_stage": 8.5,
+        "supported_genes": 14982,
+        "method": "All-past-E8.5 conditional anchor slopes, source levels fixed",
+        "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+        "conditional_ridge_strength": 1.0,
+        "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+        "encoder_features": 4096,
+        "covariance_guard_features": 384,
+        "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+        "anchor_calibration_rows": 16787,
+        "anchor_supported_genes": 14729,
+        "anchor_slope_ridge": 1.0,
+        "limitation": "Cross-sectional E8.5 associations are not temporal velocities.",
+        "anchor_positive_slope_strength": 0.25,
+        "anchor_detection_slope_strength": 0.75,
+        "response_units": "log1p normalized expression",
+        "response_fit_rows": 13963,
+        "response_fit_max_stage": 8.5,
+        "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+        "mode": "joint",
+        "strength": 1.0,
+        "backoff": 1.0,
+        "seed": 20260928,
+        "sampling": "systematic",
+        "guard_backoffs": [
+          {
+            "backoff": 1.0,
+            "covariance_change": 0.3475379540282494,
+            "finite": true
+          }
+        ],
+        "covariance_change_vs_reference": 0.3475379540282494,
+        "newly_detected_entries": 130753,
+        "removed_detection_entries": 133811,
+        "abundance_factor_cap": 2.0,
+        "detection_probability_delta_cap": 0.25,
+        "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+        "mapped_mass_conserved": true,
+        "protected_genes_unchanged": true
+      }
+    }
+  },
+  "panels": [
+    {
+      "seed": 20260928,
+      "cutoff": 8.5,
+      "target": 9.5,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.028085237368941307,
+        "variogram": 0.001146468217484653
+      },
+      "ceiling": {
+        "de_score": 0.7868852459016393,
+        "de_direction": 0.6964934686888657,
+        "mmd_u": 0.00414352398365736,
+        "variogram": 0.00017633264360483736
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "cf7afaf39793225289bc25ab6a41e263cfc348b4c15573d62c1b67cd6e2741e4",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.028085237368941307,
+            "variogram": 0.001146468217484653
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "cnf800",
+          "prediction_sha256": "ad3996fafc2a3050753c221f18c597424d8d3f1c743ca3ae049e7216fd766421",
+          "raw_metrics": {
+            "de_score": 0.06557377049180327,
+            "de_direction": 0.20414215696717106,
+            "mmd_u": 0.023476213216781616,
+            "variogram": 0.0010471062269061804
+          },
+          "local_score": 54.82726055815776,
+          "skills": {
+            "de_score": 0.5217391304347826,
+            "de_direction": 0.5858573635225415,
+            "mmd_u": 0.5532534694101021,
+            "variogram": 0.5269872063460801
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "sinkhorn_direct400",
+          "prediction_sha256": "645958b8f713136ef060d1ded98df09fad8463a8f3f748c5d275b7ca61f537a1",
+          "raw_metrics": {
+            "de_score": 0.04918032786885246,
+            "de_direction": 0.20340328555597134,
+            "mmd_u": 0.023513084277510643,
+            "variogram": 0.0010469690896570683
+          },
+          "local_score": 54.664566547498175,
+          "skills": {
+            "de_score": 0.5161290322580645,
+            "de_direction": 0.5854934771692911,
+            "mmd_u": 0.5527824825160134,
+            "variogram": 0.5270264668166941
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "mmd_direct400",
+          "prediction_sha256": "e3d3b88c97fab232d078d974a135effc937e0a9cc5bcb3ffd4a1466fcb32e168",
+          "raw_metrics": {
+            "de_score": 0.04918032786885246,
+            "de_direction": 0.20177850394680652,
+            "mmd_u": 0.02352280542254448,
+            "variogram": 0.001047169091179967
+          },
+          "local_score": 54.63973513576259,
+          "skills": {
+            "de_score": 0.5161290322580645,
+            "de_direction": 0.5846948771868761,
+            "mmd_u": 0.5526584392269219,
+            "variogram": 0.5269692111415709
+          },
+          "calibration_valid": true
+        }
+      ]
+    },
+    {
+      "seed": 20260929,
+      "cutoff": 8.5,
+      "target": 9.5,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.03033139742910862,
+        "variogram": 0.0012352676130831242
+      },
+      "ceiling": {
+        "de_score": 0.7941176470588236,
+        "de_direction": 0.693116361715318,
+        "mmd_u": 0.006407752633094788,
+        "variogram": 0.00021435643429867923
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "cf7afaf39793225289bc25ab6a41e263cfc348b4c15573d62c1b67cd6e2741e4",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.03033139742910862,
+            "variogram": 0.0012352676130831242
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "cnf800",
+          "prediction_sha256": "ad3996fafc2a3050753c221f18c597424d8d3f1c743ca3ae049e7216fd766421",
+          "raw_metrics": {
+            "de_score": 0.10294117647058823,
+            "de_direction": 0.24234762579116922,
+            "mmd_u": 0.02458406426012516,
+            "variogram": 0.00107570958789438
+          },
+          "local_score": 56.41006919561096,
+          "skills": {
+            "de_score": 0.5346534653465347,
+            "de_direction": 0.6059318048164454,
+            "mmd_u": 0.5682581842987081,
+            "variogram": 0.5423845956287608
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "sinkhorn_direct400",
+          "prediction_sha256": "645958b8f713136ef060d1ded98df09fad8463a8f3f748c5d275b7ca61f537a1",
+          "raw_metrics": {
+            "de_score": 0.10294117647058823,
+            "de_direction": 0.24186216267175037,
+            "mmd_u": 0.02460830844938755,
+            "variogram": 0.0010754952672868967
+          },
+          "local_score": 56.39506663220606,
+          "skills": {
+            "de_score": 0.5346534653465347,
+            "de_direction": 0.6056747573580363,
+            "mmd_u": 0.5679311286212168,
+            "variogram": 0.5424463602977642
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "mmd_direct400",
+          "prediction_sha256": "e3d3b88c97fab232d078d974a135effc937e0a9cc5bcb3ffd4a1466fcb32e168",
+          "raw_metrics": {
+            "de_score": 0.10294117647058823,
+            "de_direction": 0.24012455365654845,
+            "mmd_u": 0.024630237370729446,
+            "variogram": 0.001076329848729074
+          },
+          "local_score": 56.3584364184034,
+          "skills": {
+            "de_score": 0.5346534653465347,
+            "de_direction": 0.6047564968077489,
+            "mmd_u": 0.5676356301452011,
+            "variogram": 0.5422059230095138
+          },
+          "calibration_valid": true
+        }
+      ]
+    },
+    {
+      "seed": 20260930,
+      "cutoff": 8.5,
+      "target": 9.5,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.02585575543344021,
+        "variogram": 0.0010369947412982583
+      },
+      "ceiling": {
+        "de_score": 0.8947368421052632,
+        "de_direction": 0.695865717267669,
+        "mmd_u": 0.004576236009597778,
+        "variogram": 0.00018742702377494425
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "cf7afaf39793225289bc25ab6a41e263cfc348b4c15573d62c1b67cd6e2741e4",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.02585575543344021,
+            "variogram": 0.0010369947412982583
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "cnf800",
+          "prediction_sha256": "ad3996fafc2a3050753c221f18c597424d8d3f1c743ca3ae049e7216fd766421",
+          "raw_metrics": {
+            "de_score": 0.05263157894736842,
+            "de_direction": 0.19759825875922066,
+            "mmd_u": 0.022473666816949844,
+            "variogram": 0.0009759855456650257
+          },
+          "local_score": 54.11457645372384,
+          "skills": {
+            "de_score": 0.5151515151515151,
+            "de_direction": 0.582737111223291,
+            "mmd_u": 0.5431642661888136,
+            "variogram": 0.5186216404344636
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "sinkhorn_direct400",
+          "prediction_sha256": "645958b8f713136ef060d1ded98df09fad8463a8f3f748c5d275b7ca61f537a1",
+          "raw_metrics": {
+            "de_score": 0.05263157894736842,
+            "de_direction": 0.19734538880333166,
+            "mmd_u": 0.02250729873776436,
+            "variogram": 0.0009752080659382045
+          },
+          "local_score": 54.102440768179264,
+          "skills": {
+            "de_score": 0.5151515151515151,
+            "de_direction": 0.5826137367849036,
+            "mmd_u": 0.5426983802828376,
+            "variogram": 0.5188679030641832
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "mmd_direct400",
+          "prediction_sha256": "e3d3b88c97fab232d078d974a135effc937e0a9cc5bcb3ffd4a1466fcb32e168",
+          "raw_metrics": {
+            "de_score": 0.05263157894736842,
+            "de_direction": 0.1955796021267456,
+            "mmd_u": 0.02251158282160759,
+            "variogram": 0.0009761854307726026
+          },
+          "local_score": 54.072969691188256,
+          "skills": {
+            "de_score": 0.5151515151515151,
+            "de_direction": 0.5817536690693034,
+            "mmd_u": 0.5426390924263208,
+            "variogram": 0.5185583656439086
+          },
+          "calibration_valid": true
+        }
+      ]
+    }
+  ],
+  "scorer_manifest_sha256": "7b1571977e4cb2bb58a3e7bf9b9cb67090634d1a4e8781ff2519c38587f05d40",
+  "status": "completed",
+  "completed_utc": "2026-10-04T17:31:57.803434+00:00",
+  "summary": [
+    {
+      "candidate": "copy",
+      "scores": [
+        50.0,
+        50.0,
+        50.0
+      ],
+      "mean_score": 50.0,
+      "raw_metrics": [
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.028085237368941307,
+          "variogram": 0.001146468217484653
+        },
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.03033139742910862,
+          "variogram": 0.0012352676130831242
+        },
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.02585575543344021,
+          "variogram": 0.0010369947412982583
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.5,
+        "de_direction": 0.5,
+        "mmd_u": 0.5,
+        "variogram": 0.5
+      }
+    },
+    {
+      "candidate": "cnf800",
+      "scores": [
+        54.82726055815776,
+        56.41006919561096,
+        54.11457645372384
+      ],
+      "mean_score": 55.11730206916419,
+      "raw_metrics": [
+        {
+          "de_score": 0.06557377049180327,
+          "de_direction": 0.20414215696717106,
+          "mmd_u": 0.023476213216781616,
+          "variogram": 0.0010471062269061804
+        },
+        {
+          "de_score": 0.10294117647058823,
+          "de_direction": 0.24234762579116922,
+          "mmd_u": 0.02458406426012516,
+          "variogram": 0.00107570958789438
+        },
+        {
+          "de_score": 0.05263157894736842,
+          "de_direction": 0.19759825875922066,
+          "mmd_u": 0.022473666816949844,
+          "variogram": 0.0009759855456650257
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5217391304347826,
+          "de_direction": 0.5858573635225415,
+          "mmd_u": 0.5532534694101021,
+          "variogram": 0.5269872063460801
+        },
+        {
+          "de_score": 0.5346534653465347,
+          "de_direction": 0.6059318048164454,
+          "mmd_u": 0.5682581842987081,
+          "variogram": 0.5423845956287608
+        },
+        {
+          "de_score": 0.5151515151515151,
+          "de_direction": 0.582737111223291,
+          "mmd_u": 0.5431642661888136,
+          "variogram": 0.5186216404344636
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.5238480369776108,
+        "de_direction": 0.5915087598540926,
+        "mmd_u": 0.5548919732992079,
+        "variogram": 0.5293311474697683
+      }
+    },
+    {
+      "candidate": "sinkhorn_direct400",
+      "scores": [
+        54.664566547498175,
+        56.39506663220606,
+        54.102440768179264
+      ],
+      "mean_score": 55.0540246492945,
+      "raw_metrics": [
+        {
+          "de_score": 0.04918032786885246,
+          "de_direction": 0.20340328555597134,
+          "mmd_u": 0.023513084277510643,
+          "variogram": 0.0010469690896570683
+        },
+        {
+          "de_score": 0.10294117647058823,
+          "de_direction": 0.24186216267175037,
+          "mmd_u": 0.02460830844938755,
+          "variogram": 0.0010754952672868967
+        },
+        {
+          "de_score": 0.05263157894736842,
+          "de_direction": 0.19734538880333166,
+          "mmd_u": 0.02250729873776436,
+          "variogram": 0.0009752080659382045
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5161290322580645,
+          "de_direction": 0.5854934771692911,
+          "mmd_u": 0.5527824825160134,
+          "variogram": 0.5270264668166941
+        },
+        {
+          "de_score": 0.5346534653465347,
+          "de_direction": 0.6056747573580363,
+          "mmd_u": 0.5679311286212168,
+          "variogram": 0.5424463602977642
+        },
+        {
+          "de_score": 0.5151515151515151,
+          "de_direction": 0.5826137367849036,
+          "mmd_u": 0.5426983802828376,
+          "variogram": 0.5188679030641832
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.5219780042520381,
+        "de_direction": 0.591260657104077,
+        "mmd_u": 0.5544706638066892,
+        "variogram": 0.5294469100595471
+      }
+    },
+    {
+      "candidate": "mmd_direct400",
+      "scores": [
+        54.63973513576259,
+        56.3584364184034,
+        54.072969691188256
+      ],
+      "mean_score": 55.02371374845142,
+      "raw_metrics": [
+        {
+          "de_score": 0.04918032786885246,
+          "de_direction": 0.20177850394680652,
+          "mmd_u": 0.02352280542254448,
+          "variogram": 0.001047169091179967
+        },
+        {
+          "de_score": 0.10294117647058823,
+          "de_direction": 0.24012455365654845,
+          "mmd_u": 0.024630237370729446,
+          "variogram": 0.001076329848729074
+        },
+        {
+          "de_score": 0.05263157894736842,
+          "de_direction": 0.1955796021267456,
+          "mmd_u": 0.02251158282160759,
+          "variogram": 0.0009761854307726026
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5161290322580645,
+          "de_direction": 0.5846948771868761,
+          "mmd_u": 0.5526584392269219,
+          "variogram": 0.5269692111415709
+        },
+        {
+          "de_score": 0.5346534653465347,
+          "de_direction": 0.6047564968077489,
+          "mmd_u": 0.5676356301452011,
+          "variogram": 0.5422059230095138
+        },
+        {
+          "de_score": 0.5151515151515151,
+          "de_direction": 0.5817536690693034,
+          "mmd_u": 0.5426390924263208,
+          "variogram": 0.5185583656439086
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.5219780042520381,
+        "de_direction": 0.5904016810213095,
+        "mmd_u": 0.5543110539328145,
+        "variogram": 0.5292444999316644
+      }
+    }
+  ],
+  "passing_candidates": [],
+  "growth_enabled_minus_disabled_mean_skills": {
+    "de_score": 0.0,
+    "de_direction": -0.0008589760827675263,
+    "mmd_u": -0.00015960987387464431,
+    "variogram": -0.00020241012788269064
+  },
+  "expand_to_16_resamples": false,
+  "scope": "Reused released E8.5->E9.5 development; single training seed, three scoring resamples. No independent embryos or hidden future fitting.",
+  "plan_sha256": "ef69f1865a3222d9a7049adf8f13273d929e29e7c169f7f4503324836a4d29f0",
+  "resource_peak_process_working_set_bytes": 5578903552,
+  "checkpoint_sha256": {
+    "potential": "d91fc86ffd6708472ec5bdb9129d23c32260193772c1d3135037f0ada9595e59"
+  },
+  "local_72_gate_passed": false,
+  "report_sha256": "79c7d8364f1e8197fd83d52e0235f895a8cf8be1c5b6f37404fab93142eb293f"
+}

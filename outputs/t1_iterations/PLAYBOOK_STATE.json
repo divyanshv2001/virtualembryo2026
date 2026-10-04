@@ -1,20 +1,18 @@
 {
-  "updated_utc": "2026-10-04T17:26:59.574874+00:00",
+  "updated_utc": "2026-10-04T17:37:59.328146+00:00",
   "fingerprints": {
     "RESEARCH_CONTINUATION_POLICY.md": "1e6cc6f15c1e918ad60a1e01f26dd66c48022b33158bf8eb2240a9622066af00",
-    "LOCAL_OPTIMIZATION_STATE.json": "359b9e1638c2aade3668e854774da920b1d6e10fb31eaefec40184ce71986e1e",
+    "LOCAL_OPTIMIZATION_STATE.json": "b10b10abedb4405458edebfc05b6a539d508e5f4afee6d857e328b253353a68d",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "1d00bc749f7183da611ccbbc3e4d7a3948cdd0f21a82d839e877c9e67e638e6b",
+    "METRIC_RESEARCH_QUEUE.json": "a0f931fc2685c35a7afbee3f50c61d4d24955ba4f3c4b94f20bc06a1cbeca400",
     "METRIC_CRITIQUE_POLICY.json": "3535989f1e3beac0f2d446b44df3c793d4be464dbd87f6e714c2f5afda864a6f",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
     "RESEARCH_HARNESS_MANIFEST.json": "cb78c6267bc7e93d6283d4651df6061951f1600984a6e4942f45ce13ffc05031"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [
-    "past_multiscale_mmd"
-  ],
-  "next_experiment": "Past-only multiscaleMMD objective ablation running: one400step directCNF potential RTX3060 arm, frozenbandwidth3.6970534325/fivefixedscales, cachedsource<=8.5. Inspect harness past_multiscale_mmd/report/events; neverduplicate. Collect12fullpanel outcomes, four narrowreviews/reward/newboundedJev only after completion.",
+  "active_jobs_at_checkpoint": [],
+  "next_experiment": "Audit chronological past-block crossfit feasibility/coverage using compact saved score manifest and prepared metadata only: identify untested strict trainingcutoff<=8.0 sourcefold vs8.25/8.5; never reuse8.5 pretrainedweights/observed8.5head for8.25forecast. Verify cached lowercutoff baselines and embargo/seed contracts, donorhead fitting only<=cutoff, full32285 scorer/gates unchanged. Alreadyexposed source targets not independentembryos; newvalidation no guaranteedscoreboost, no duplicate completedfold or hiddenfuturefit/upload. Predeclare bounded viable matched fold only after audit. Retain originalmatchedCNF55.1173/officialbest52.16. OT-CFM neuralobjective remains undeclared untested candidate, not oldaffineOT rerun.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -31,7 +29,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1564,
+    "current_reward": -1604,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -40,10 +38,10 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1564,
-    "reward_score": -1564,
+    "uncapped_reward": -1604,
+    "reward_score": -1604,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": -29
+    "last_batch_reward_delta": -40
   },
   "official_best": 52.16,
   "latest_official": {

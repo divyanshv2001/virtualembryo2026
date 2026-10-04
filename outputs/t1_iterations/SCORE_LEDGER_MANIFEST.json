@@ -1,5 +1,5 @@
 {
-  "records": 3511,
+  "records": 3523,
   "sources": [
     {
       "path": "private/anchored_soft_ot_paper_pilot_01/report.json",
@@ -927,6 +927,11 @@
       "outcomes_indexed": 9
     },
     {
+      "path": "private/past_multiscale_mmd_01/report.json",
+      "sha256": "79c7d8364f1e8197fd83d52e0235f895a8cf8be1c5b6f37404fab93142eb293f",
+      "outcomes_indexed": 12
+    },
+    {
       "path": "private/past_source_integrity_01/report.json",
       "sha256": "d48a78a2b669cc1949b93a083e7e65db1d75ae63a6fb9caf158763b80c61fa07",
       "outcomes_indexed": 0
@@ -1259,5 +1264,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "ad02de680840b1bd7168311b05d61d3b2173965c8959ebb1d9d24b902d2b1c04"
+  "ledger_sha256": "05b2cfdcfe506a5948d8f30bfa804d4359033ff7d2c88663a0c7118a28412f4f"
 }

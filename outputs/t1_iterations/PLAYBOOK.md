@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-04T17:26:59.574874+00:00
+Updated: 2026-10-04T17:37:59.328146+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -8,15 +8,15 @@ Use `research_harness.py queue` for a compact next-step/pending summary; never d
 
 Official best: 52.16. Latest reported skills: {'de_score': 43.7, 'de_direction': 51.8, 'mmd_u': 50.9, 'variogram': 50.0}. Covariance .25 reused-development mean55.98883; EB and lineage-standardized historical proxy screens failed. Local>72 mean/lower-tail >=64-replicate AND temporal gate unmet. Full32285-gene scorer/calibration unchanged.
 
-Checkpoint jobs: ['past_multiscale_mmd']. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
+Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Past-only multiscaleMMD objective ablation running: one400step directCNF potential RTX3060 arm, frozenbandwidth3.6970534325/fivefixedscales, cachedsource<=8.5. Inspect harness past_multiscale_mmd/report/events; neverduplicate. Collect12fullpanel outcomes, four narrowreviews/reward/newboundedJev only after completion.
+Next: Audit chronological past-block crossfit feasibility/coverage using compact saved score manifest and prepared metadata only: identify untested strict trainingcutoff<=8.0 sourcefold vs8.25/8.5; never reuse8.5 pretrainedweights/observed8.5head for8.25forecast. Verify cached lowercutoff baselines and embargo/seed contracts, donorhead fitting only<=cutoff, full32285 scorer/gates unchanged. Alreadyexposed source targets not independentembryos; newvalidation no guaranteedscoreboost, no duplicate completedfold or hiddenfuturefit/upload. Predeclare bounded viable matched fold only after audit. Retain originalmatchedCNF55.1173/officialbest52.16. OT-CFM neuralobjective remains undeclared untested candidate, not oldaffineOT rerun.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 49.15; attribution/screenshot evidence in export report. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 
 Four metric critiques completed; consult METRIC_CRITIQUES_20261001.md when designing the next mechanism. Separate reward starts0: +1 positive paired mean skill gain / -10 tie or regression per metric, aggregate maximum100; negative balances visible. Pending/invalid/proxy0. Future unique declared experiments only; promotion gates unchanged.
 
-Current separate reward: -1564. This is not a benchmark score.
+Current separate reward: -1604. This is not a benchmark score.
 
 External acquisition entry point: GSE76118_WT_STAGE_MANIFEST.json. The old stage-only list is historical;127 mutants excluded,162 B6 WT controls separate,143E8.5/999E9.5 primary CD1 candidates. Expression acquired: True; acquired cohort cells: 24; prospective QC passes: 18; original pilot cells: 4; training readiness: False. Latest external status: 24-cell cohort/QC, compatibility, lineage matching, robustness and E8.5 static guidance already completed; static guidance had no passing alpha. Transfer/embryo replication not validated. Do not repeat acquisition or QC; per-cutoff stage restrictions remain.. Latest Jev actual usage: {'input_tokens': 792, 'output_tokens': 45}.
 

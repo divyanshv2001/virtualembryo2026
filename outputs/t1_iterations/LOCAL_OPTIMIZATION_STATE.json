@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": true,
+  "local_process_running": false,
   "quota_reset_evidence": {
     "limit_observed": true,
     "observed_reset_text": "7:54 PM",
@@ -30,13 +30,11 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Past-only multiscaleMMD objective ablation running: one400step directCNF potential RTX3060 arm, frozenbandwidth3.6970534325/fivefixedscales, cachedsource<=8.5. Inspect harness past_multiscale_mmd/report/events; neverduplicate. Collect12fullpanel outcomes, four narrowreviews/reward/newboundedJev only after completion.",
+  "next_experiment": "Audit chronological past-block crossfit feasibility/coverage using compact saved score manifest and prepared metadata only: identify untested strict trainingcutoff<=8.0 sourcefold vs8.25/8.5; never reuse8.5 pretrainedweights/observed8.5head for8.25forecast. Verify cached lowercutoff baselines and embargo/seed contracts, donorhead fitting only<=cutoff, full32285 scorer/gates unchanged. Alreadyexposed source targets not independentembryos; newvalidation no guaranteedscoreboost, no duplicate completedfold or hiddenfuturefit/upload. Predeclare bounded viable matched fold only after audit. Retain originalmatchedCNF55.1173/officialbest52.16. OT-CFM neuralobjective remains undeclared untested candidate, not oldaffineOT rerun.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "past_multiscale_mmd"
-  ],
+  "active_jobs": [],
   "active_run_path": "private/past_multiscale_mmd_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -1228,7 +1226,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1564,
+    "current_reward": -1604,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1237,10 +1235,10 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1564,
-    "reward_score": -1564,
+    "uncapped_reward": -1604,
+    "reward_score": -1604,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": -29
+    "last_batch_reward_delta": -40
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -3047,6 +3045,17 @@
         "mmd_u": "Problem: MMD skill regresses0.000421 across3/3 reused-development resamples. Proposed solution: Untested past-only robust kernel-bandwidth adaptation. Validation: Freeze adaptation,compare skill/rawMMD on untouchedwindows across trainingseeds with exactcontrols.",
         "variogram": "Problem: Small variogram gain on reuseddevelopment; overall performance regresses. Proposed solution: Untested past-only lag-balanced variogram training with fixedweights. Validation: Fresh heldoutperiods/multipletrainingseeds; require variogram improvement without aggregate/direction/MMD regression."
       }
+    },
+    "past_multiscale_mmd_01": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "79c7d8364f1e8197fd83d52e0235f895a8cf8be1c5b6f37404fab93142eb293f",
+      "reviews": {
+        "de_score": "Problem: MMD ties Sinkhorn onDE; reuseddevelopment limits evidence. Proposed solution: Untested past-only chronological block cross-fitting. Validation: Fresh trainingseeds/heldoutpastcalibration/exactcontrols; noindependentclaim.",
+        "de_direction": "Problem: MMD regresses direction3/3. Proposed solution: Untested past-only regime-balanced minibatch sampling with unchanged Sinkhorn objective. Validation: One trainingseed/resamples supportnoindependentclaim.",
+        "mmd_u": "Problem: MMD underperformed Sinkhorn3/3. Proposed solution: Untested past-only cross-fitted residual-shrinkage recalibrator keeping trainingfixed. Validation: Reusedseedreplays notindependent; inspect skill/direction/variance. Coordinator: oldshrinkage paths alreadytested; no repeatscheduled.",
+        "variogram": "Problem: Variogramskill declines3/3. Proposed solution: Untested past-only lag-dependent covariance shrinkage. Validation: Freshseeds/exactcontrols/disabledreplay,requiregainwithout otherregressions. Coordinator: oldcovariance grids/shrinkage notrescheduled."
+      }
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3968,27 +3977,27 @@
   },
   "agent_health": {
     "redline": 0,
-    "score": -1564,
+    "score": -1604,
     "status": "below_redline",
     "metrics": {
       "de_score": {
-        "score": -413,
+        "score": -423,
         "status": "below_redline"
       },
       "de_direction": {
-        "score": -358,
+        "score": -368,
         "status": "below_redline"
       },
       "mmd_u": {
-        "score": -446,
+        "score": -456,
         "status": "below_redline"
       },
       "variogram": {
-        "score": -347,
+        "score": -357,
         "status": "below_redline"
       }
     },
-    "recorded_iterations": 73,
+    "recorded_iterations": 74,
     "action": "Prioritize supported matched-control improvements; preserve failures and gates. Proxy/pending iterations earn zero. No score reset, fabricated reward, agent termination or deployment implied."
   },
   "scfm_reopened": {
@@ -5121,7 +5130,7 @@
       "jev_scope": "Typed option selection/pinnedreport status only; report has no score summary and numeric auditresults were not transmitted, no evidence certification."
     }
   },
-  "next_action": "Past-only multiscaleMMD objective ablation running: one400step directCNF potential RTX3060 arm, frozenbandwidth3.6970534325/fivefixedscales, cachedsource<=8.5. Inspect harness past_multiscale_mmd/report/events; neverduplicate. Collect12fullpanel outcomes, four narrowreviews/reward/newboundedJev only after completion.",
+  "next_action": "Audit chronological past-block crossfit feasibility/coverage using compact saved score manifest and prepared metadata only: identify untested strict trainingcutoff<=8.0 sourcefold vs8.25/8.5; never reuse8.5 pretrainedweights/observed8.5head for8.25forecast. Verify cached lowercutoff baselines and embargo/seed contracts, donorhead fitting only<=cutoff, full32285 scorer/gates unchanged. Alreadyexposed source targets not independentembryos; newvalidation no guaranteedscoreboost, no duplicate completedfold or hiddenfuturefit/upload. Predeclare bounded viable matched fold only after audit. Retain originalmatchedCNF55.1173/officialbest52.16. OT-CFM neuralobjective remains undeclared untested candidate, not oldaffineOT rerun.",
   "potential_real_anchor_transfer_setup_failure": {
     "run": "potential_real_anchor_transfer_01",
     "error": "append_event kind argument collided with keyword at first50-step logging; no checkpoint or forecast completed",
@@ -5163,8 +5172,8 @@
     "official_score": null
   },
   "last_jev_usage": {
-    "input_tokens": 1377,
-    "output_tokens": 53
+    "input_tokens": 1249,
+    "output_tokens": 54
   },
   "direct_cnf_potential_preflight": {
     "status": "passed",
@@ -5248,7 +5257,7 @@
     "cross_runtime_bandwidth_exact": true
   },
   "past_multiscale_mmd_job": {
-    "status": "running",
+    "status": "completed_not_promoted",
     "experiment": "past_multiscale_mmd",
     "run": "past_multiscale_mmd_01",
     "results_report": "PAST_MULTISCALE_MMD_RESULTS.json",
@@ -5263,6 +5272,31 @@
     ],
     "strongest_matched_control": "cnf800",
     "bandwidth": 3.6970534324645996,
-    "reward_delta": 0
+    "reward_delta": -40,
+    "evaluations": 12,
+    "report_sha256": "79c7d8364f1e8197fd83d52e0235f895a8cf8be1c5b6f37404fab93142eb293f",
+    "means": {
+      "copy": 50.0,
+      "cnf800": 55.11730206916419,
+      "sinkhorn_direct400": 55.0540246492945,
+      "mmd_direct400": 55.02371374845142
+    },
+    "paired_mmd_minus_sinkhorn_skills": {
+      "de_score": 0.0,
+      "de_direction": -0.0008589760827675263,
+      "mmd_u": -0.00015960987387464431,
+      "variogram": -0.00020241012788269064
+    },
+    "host_peak_GiB": 5.195758819580078,
+    "exact_archive_calibration_and_disabled_replays": true,
+    "independent_validation": false,
+    "official_score": null
+  },
+  "unexplored_ot_cfm_reference": {
+    "primary_source": "https://arxiv.org/abs/2302.00482",
+    "title": "Improving and generalizing flow-based generative models with minibatch optimal transport",
+    "status": "candidate_feasibility_not_implemented",
+    "novelty_scope": "Potential neuralphysicaltime velocity supervision at interpolatedpastlocations, contrasted with alreadytested affine barycentrictransport regression; requires localnovelty/sourceaudit before claims.",
+    "priority": "Deferred pending chronologicalcrossfit feasibility selected byboundedJev."
   }
 }
