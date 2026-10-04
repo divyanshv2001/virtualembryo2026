@@ -14,6 +14,14 @@ def combine_gradients(base, auxiliary, weight=.01, cap=.1):
     return [b+factor*a for b,a in zip(base,auxiliary)], factor, float(base_norm), float(auxiliary_norm)
 
 
+
+def project_auxiliary(base, auxiliary):
+    """Remove only the component opposing the past likelihood objective."""
+    squared=sum((b*b).sum() for b in base)
+    dot=sum((b*a).sum() for b,a in zip(base,auxiliary))
+    coefficient=min(float(dot)/max(float(squared),1e-30),0.) if float(squared)>0 else 0.
+    return [a-coefficient*b for b,a in zip(base,auxiliary)]
+
 def train_anchored(net, z, stages, cutoff, checkpoint, emit, steps=400, batch_size=64, seed=20260928):
     z, stages = np.asarray(z,dtype=np.float32), np.asarray(stages,dtype=float)
     if stages.max()>cutoff or not np.isfinite(z).all() or not np.isfinite(stages).all():

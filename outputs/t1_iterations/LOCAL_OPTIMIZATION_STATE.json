@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Fixed log-density fullpanel configuration retired: all3 scores belowcopy/CNF, no expansion/export or repeated exposed-target tuning. Next cycle use compact queue to select only a genuinely new mechanism with supporting past-only evidence; no diagnostic chain. Prior softOT/scNODE/densitybalance failures preserved. Keep four read-only metric roles, shared hash and coordinator evidence checks. Token report identifies coordinator/context/code as dominant; reuse runner/configs and avoid broad reads.",
+  "next_experiment": "Bounded scFM/model-basics eligibility preflight: identify fresh cutoff-fit support and matched baseline evidence; inventory PCA vs IPCA coverage before fixing one paired projected-OT training trial. Reuse runners; no old-target grid or earlier validation with8.5-fitted artifacts.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1238,7 +1238,7 @@
     "uncapped_reward": -1320,
     "reward_score": -1320,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": -80
+    "last_batch_reward_delta": 0
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -2717,6 +2717,19 @@
       },
       "evidence_verified": "All statements checked against frozen raw/skill summaries; distinct read-only metric roles, coordinator-only writes.",
       "completed_utc": "2026-10-04T03:51:02.852910+00:00"
+    },
+    "scfm_gradient_projection_audit_01": {
+      "status": "completed",
+      "report_sha256": "f4842a5743745ed581a53f44d0961ab6ec7447d2e705058b0f0354c4a2e2b6fe",
+      "packet_report_sha256": "5f7a75680b3ca896cecb052391c0db01126940d629e8706f6818c1677b1019c1",
+      "specialist_role_version": 2,
+      "reviews": {
+        "de_score": "Problem: DE benefit is unmeasured; raw-gradient compatibility does not guarantee finite-update improvement. Proposed solution: Fix past-only paired training with projected OT gradients versus unprojected OT and likelihood-only controls, matching initialization, batches, optimizer, and budget. Validation: Measure DE recovery on held-out past data and actual update compatibility. Fail on degraded DE or opposing updates. No metrics yet; readiness unchanged.",
+        "de_direction": "Problem: Conflicting likelihood/OT gradients risk worsening likelihood; projection alone cannot certify finite Adam updates. Proposed solution: Test a fixed, past-only paired training protocol at cutoff 8.5: projected OT versus likelihood-only and unprojected OT, with matched initialization, batches, optimizer, and budget. Validation: Compare held-out past likelihood and direction scores. Fail on likelihood degradation or absent direction improvement; metrics remain unavailable.",
+        "mmd_u": "Problem: MMD metrics are unavailable; gradient compatibility alone establishes no benefit. Proposed solution: Pair likelihood-only training with likelihood plus projected MMD, fixing its weight beforehand and matching initialization, past-only batches, Adam settings, and step budget. Validation: Compare held-out past-only MMD and likelihood. Fail on absent MMD improvement, likelihood degradation, or opposing finite updates. Reward remains zero; readiness unchanged.",
+        "variogram": "Problem: Gradient compatibility alone does not establish variogram improvement. Proposed solution: Freeze past-only data at cutoff 8.5; train paired likelihood-only, raw-OT, and projected-OT arms with matched initialization, batches, optimizer, steps, and fixed OT weight. Validation: Compare past-only held-out variograms and likelihood; inspect actual-update compatibility. Fail on future-data leakage, opposing updates, likelihood degradation, or absent variogram improvement. Metrics remain unavailable."
+      },
+      "coordinator": "All agree scorer metrics unavailable and finite-update behavior unproven. MMD specialist proposes a distinct MMD loss, not audited OT; retain as alternative, do not silently substitute. Earlier cutoff validation requires fresh past-fit encoder and initialization; 8.5-fitted checkpoint cannot validate earlier withheld stages. No forced consensus or score invention."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3566,7 +3579,7 @@
       5,
       6
     ],
-    "policy_sha256": "797fa31c5a613a9e039ddcfe0fbdcd3824da3997270b54424f8494c5a80fc995",
+    "policy_sha256": "63caeff70fcf18c91756a8d822ac36ae58a80c1f6e2ae37a643c85f89e7c32ee",
     "rules": [
       "Start with harness resume; inspect only changed policy and active evidence",
       "One necessary experiment; one checkpoint commit/push",
@@ -3634,5 +3647,70 @@
     "write_owner": "coordinator",
     "reviewers": "read-only, distinct metrics, identical frozen report hash",
     "conflict_resolution": "Validate conflicting factual claims against frozen evidence; retain methodological uncertainty, no forced agreement or invented scores."
+  },
+  "agent_health": {
+    "redline": 0,
+    "score": -1320,
+    "status": "below_redline",
+    "metrics": {
+      "de_score": {
+        "score": -341,
+        "status": "below_redline"
+      },
+      "de_direction": {
+        "score": -297,
+        "status": "below_redline"
+      },
+      "mmd_u": {
+        "score": -374,
+        "status": "below_redline"
+      },
+      "variogram": {
+        "score": -308,
+        "status": "below_redline"
+      }
+    },
+    "evaluated_iterations": 46,
+    "action": "Prioritize supported matched-control improvements; preserve failures and gates. Proxy/pending iterations earn zero. No score reset, fabricated reward, agent termination or deployment implied.",
+    "latest_iteration": {
+      "experiment": "scfm_gradient_projection_audit_01",
+      "reward_delta": 0,
+      "reason": "No full-panel score; proxy cannot earn health credit."
+    }
+  },
+  "scfm_reopened": {
+    "authorization": "User asks to build on scFM and seek score improvement; previous family retirement is superseded.",
+    "local_anchored_score": 55.76649255048864,
+    "matched_incumbent_local_score": 55.988829663381615,
+    "official_score_is_separate": 52.16,
+    "audit_context": {
+      "probes": 32,
+      "conflicting_probes": 22,
+      "mean_retained_auxiliary_norm_fraction": 0.9887758089657426,
+      "all_projected_gradients_nonopposing_within_tolerance": true,
+      "past_only_max_stage": 8.5,
+      "optimizer_steps": 0,
+      "future_expression_reads": 0,
+      "score_metrics_available": false,
+      "supports_fixed_training_trial": true,
+      "limits": "First-order raw-gradient compatibility only; Adam/preconditioning and finite updates may still regress likelihood. No score improvement demonstrated."
+    },
+    "new_direction": "Likelihood-compatible OT gradient projection; actual score gain unvalidated.",
+    "jev_decision": "private/harness_runs/anchored_soft_ot_paper_pilot/decisions/scfm_reopen_past_direction_20261004_route.json",
+    "next": "Bounded scFM/model-basics eligibility preflight: identify fresh cutoff-fit support and matched baseline evidence; inventory PCA vs IPCA coverage before fixing one paired projected-OT training trial. Reuse runners; no old-target grid or earlier validation with8.5-fitted artifacts."
+  },
+  "model_basics_request": {
+    "tested_families": [
+      "statistical/ridge",
+      "CNF",
+      "neuralODE",
+      "soft-OT flowmatching",
+      "scNODE",
+      "TIGON"
+    ],
+    "inspected_representation": "PCA8D,384/1024/4096 feature ablations",
+    "incremental_pca": "No evidence found in inspected research code; no score claim",
+    "evaluation_rule": "Matched past-fit splits and same full-panel calibration; architecture and representation effects separate",
+    "next": "Bounded scFM/model-basics eligibility preflight: identify fresh cutoff-fit support and matched baseline evidence; inventory PCA vs IPCA coverage before fixing one paired projected-OT training trial. Reuse runners; no old-target grid or earlier validation with8.5-fitted artifacts."
   }
 }

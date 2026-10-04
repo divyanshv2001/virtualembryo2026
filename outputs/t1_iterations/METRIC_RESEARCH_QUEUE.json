@@ -6316,18 +6316,38 @@
       "report_sha256": "08fd1b1b94126ec37386ad2303600dde625b8d136a5e3a37ae4fe202ffccfcc9",
       "production_audit_report": "PRODUCTION_COVERAGE_AUDIT_RETRY_RESULTS.json",
       "soft_ot_paper_pilot_report": "SOFT_OT_PAPER_PILOT_RESULTS.json"
+    },
+    {
+      "id": "scfm_projected_auxiliary",
+      "status": "implementation_pending",
+      "report": "SCFM_GRADIENT_PROJECTION_AUDIT_RESULTS.json",
+      "next_action": "Bounded scFM/model-basics eligibility preflight: identify fresh cutoff-fit support and matched baseline evidence; inventory PCA vs IPCA coverage before fixing one paired projected-OT training trial. Reuse runners; no old-target grid or earlier validation with8.5-fitted artifacts.",
+      "training_protocol": {
+        "steps": 400,
+        "batch_size": 64,
+        "seed": 20260928,
+        "ot_weight": 0.01,
+        "ot_gradient_cap": 0.1,
+        "relative_parameter_radius": 0.05,
+        "arms": [
+          "persistence",
+          "likelihood_only",
+          "raw_anchored_ot",
+          "projected_anchored_ot"
+        ],
+        "cutoff_selection": "Eligibility preflight required; freeze one past fold with fresh encoder/init, no target-informed parameter selection.",
+        "acceptance": "Compare paired full-panel four metrics to matched incumbent; incremental improvement distinct from unchanged >72/lower-tail64 and temporal readiness. Retain every failed arm; proxy reward0."
+      },
+      "representation_preflight": "Check PCA/IPCA and fresh-fold support; no unmeasured IPCA score claims, single controlled change."
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
-    "status": "log_density_fullpanel_failed_fixed_configuration_retired",
-    "implementation_status": "completed",
-    "experiment": "tigon_log_density_fullpanel",
+    "status": "scfm_reopened_gradient_projection_supported",
+    "implementation_status": "gradient_audit_completed",
+    "experiment": "scfm_gradient_projection_audit",
     "next_experiment": null,
-    "next": "No queued rerun. Select genuinely new past-supported mechanism next cycle, no target tuning or diagnostic chain.",
-    "report": "TIGON_LOG_DENSITY_FULLPANEL_RESULTS.json",
-    "jev_record": "private/decisions/tigon_log_density_01/route.json",
-    "efficiency_policy": "RESEARCH_CONTINUATION_POLICY.md"
+    "next": "Bounded scFM/model-basics eligibility preflight: identify fresh cutoff-fit support and matched baseline evidence; inventory PCA vs IPCA coverage before fixing one paired projected-OT training trial. Reuse runners; no old-target grid or earlier validation with8.5-fitted artifacts."
   }
 }

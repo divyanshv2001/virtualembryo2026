@@ -1,5 +1,5 @@
 {
-  "status": "scnode_biological_rejected_past_transfer_audit_next",
+  "status": "scfm_reopened_by_user_gradient_projection_supported",
   "authorization": "User requests moving to the three identified papers; existing local research/export permission persists, no official upload.",
   "current_job": null,
   "research_sources": "LITERATURE_PRIORITY_20261002.md",
@@ -22,7 +22,11 @@
         "mean_score": 55.76649255048864,
         "promoted": false,
         "branch_closed": true
-      }
+      },
+      "reopened": true,
+      "reopening_reason": "User requests building on useful scFM signal, not abandoning it solely because final target is higher.",
+      "next_experiment": "scfm_projected_auxiliary",
+      "gradient_audit": "SCFM_GRADIENT_PROJECTION_AUDIT_RESULTS.json"
     },
     {
       "paper": "scNODE Bioinformatics2024",
@@ -49,7 +53,9 @@
       "hypothesis": "Joint relative population change and cellstate transport may improve composition forecasts.",
       "difference_from_prior": "Growth-proxy reweighting and affineunbalancedOT alreadytested locally; a new dynamic velocity/growth learner is different, but higher-cost and poorly identifiable without population data.",
       "condition": "Prioritize when composition diagnosis warrants it. Captured atlascellcounts and equalstage caps are not measured biological proliferation. Validate alternative sampling/growth assumptions and report relative occupancy only where absolutegrowth unidentified. A full TIGON reproduction is not claimed.",
-      "new_trial_started": false
+      "new_trial_started": true,
+      "result_report": "TIGON_LOG_DENSITY_FULLPANEL_RESULTS.json",
+      "promoted": false
     }
   ],
   "success_and_limits": "Report allraw4/skills4 and skill regressions, require actualone-day matched fullpanel improvement before broadervalidation. Original >72mean/lower-tail >=64replicate plus temporalreadiness remains. A user-requested progressartifact may be exported only with changedpredictions/provenance/format and explicit unmetgate, never advertised as improvedofficialscore. Four fresh specialists after each completed/failedbatch; cachedJev for genuinelynewuncertain design/synthesis. Literature selection is not a benchmarkscore.",

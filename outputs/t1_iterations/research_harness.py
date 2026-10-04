@@ -140,10 +140,14 @@ def main():
         latest=read(HERE/'METRIC_RESEARCH_QUEUE.json').get('latest_paper_decision',{})
         live=processes();efficiency=checkpoint.get('efficiency_policy',{})
         policy_hash=digest(HERE/'RESEARCH_CONTINUATION_POLICY.md')
+        from metric_critique_reward import health_snapshot
+        ledger=HERE/'METRIC_CRITIQUE_REWARD_LEDGER.jsonl'
+        health=health_snapshot([json.loads(line) for line in ledger.read_text().splitlines() if line.strip()])
         names=[args.experiment] if args.experiment else checkpoint.get('active_jobs',[])
         if not names and latest.get('experiment'):names=[latest['experiment']]
         result={'policy_changed':policy_hash!=efficiency.get('policy_sha256'),
                 'live_workers':len(live),
+                'agent_health':{k:health[k] for k in ('score','redline','status')},
                 'jobs':[status(n,manifest[n],live) if n in manifest else {'experiment':n,'status':'not_registered'} for n in names],
                 'next_experiment':latest.get('next_experiment'),
                 'next_action':latest.get('next') or checkpoint.get('next_experiment'),

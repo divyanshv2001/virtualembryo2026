@@ -43,6 +43,17 @@ def total_reward(events):
             'maximum': 100, 'benchmark_score': 'unchanged; separately reported'}
 
 
+def health_snapshot(events, redline=0):
+    """Derived health indicator; immutable reward events remain authoritative."""
+    total=total_reward(events)
+    balances={metric:sum(event['assessment'].get('metrics',{}).get(metric,{}).get('reward',0) for event in events) for metric in METRICS}
+    return {'redline':redline,'score':total['reward_score'],
+            'status':'below_redline' if total['reward_score']<redline else 'healthy',
+            'metrics':{metric:{'score':score,'status':'below_redline' if score<redline else 'healthy'} for metric,score in balances.items()},
+            'recorded_iterations':len(events),
+            'action':'Prioritize supported matched-control improvements; preserve failures and gates. Proxy/pending iterations earn zero. No score reset, fabricated reward, agent termination or deployment implied.'}
+
+
 if __name__ == '__main__':
     base = dict.fromkeys(METRICS, .5)
     improved = dict.fromkeys(METRICS, .51)

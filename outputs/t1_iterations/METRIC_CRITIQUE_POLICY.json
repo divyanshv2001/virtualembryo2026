@@ -19,7 +19,7 @@
   },
   "eligibility": "Future predeclared scored experiments only; no retroactive rewards, repeated seeds, duplicate variants, changing comparison or proxy claims. Validity is assessed before reward.",
   "promotion_rule": "Original full-panel four-metric, temporal and >72 mean/lower-tail >=64-replicate readiness gates unchanged. Critiques must discuss uncertainty/tradeoffs even when reward is positive.",
-  "agents": "Four metric methodological specialists after each new completed or failed experimental batch; fresh compact packets, max150words each. Each must provide Problem, Proposed solution and Validation: evidence-supported diagnosis, uncertainties, a concrete past-only remedy, matched controls and measurable success/failure criterion. No claimed human credentials or certified solutions. User-requested role changes permit revisiting a batch without changing its scores/reward. Cache normal reviews by report hash and role-policy version. Missing/proxy metrics stay unavailable. No routine agents.",
+  "agents": "Four metric methodological specialists after each new completed or failed experimental batch; fresh compact packets, max60words each. Each must provide Problem, Proposed solution and Validation: evidence-supported diagnosis, uncertainties, a concrete past-only remedy, matched controls and measurable success/failure criterion. No claimed human credentials or certified solutions. User-requested role changes permit revisiting a batch without changing its scores/reward. Cache normal reviews by report hash and role-policy version. Missing/proxy metrics stay unavailable. No routine agents.",
   "implementation": "metric_critique_reward.py",
   "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
   "updated_utc": "2026-10-01T10:01:14.715229+00:00",
@@ -30,5 +30,11 @@
     "de_direction": "Partial rank correlation and temporal direction",
     "mmd_u": "Population distributions, kernels and cell-state coverage",
     "variogram": "Nonspatial CSS cell-state contrasts and covariance structure"
+  },
+  "health_redline": {
+    "initial_redline": 0,
+    "source": "Immutable reward ledger",
+    "update": "Every recorded iteration; proxy/invalid/pending0",
+    "below_redline_action": "Prioritize supported matched-control improvement; no evidence suppression, retroactive rewards or automatic termination."
   }
 }

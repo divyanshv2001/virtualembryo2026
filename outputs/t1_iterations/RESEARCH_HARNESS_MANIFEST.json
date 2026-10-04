@@ -305,6 +305,21 @@
       "script": "tigon_log_density_fullpanel.py",
       "run": "private/tigon_log_density_fullpanel_01",
       "report": "TIGON_LOG_DENSITY_FULLPANEL_RESULTS.json"
+    },
+    "scfm_gradient_projection_audit": {
+      "script": "scfm_gradient_projection_audit.py",
+      "run": "private/scfm_gradient_projection_audit_01",
+      "report": "SCFM_GRADIENT_PROJECTION_AUDIT_RESULTS.json",
+      "protocol": {
+        "cutoff": 8.5,
+        "seed": 20261004,
+        "probes": 32,
+        "batch_size": 64,
+        "minimum_conflicting_probes": 8,
+        "minimum_mean_retained_auxiliary_norm_fraction": 0.25,
+        "fit": "frozen checkpoint gradients only; no optimizer steps or target reads",
+        "scope": "User reopens promising anchored scFM direction gain. Mathematical local descent compatibility is a proxy, not scorer improvement or independent validation. Original readiness/promotion gates unchanged. Reward0; no official upload."
+      }
     }
   }
 }
