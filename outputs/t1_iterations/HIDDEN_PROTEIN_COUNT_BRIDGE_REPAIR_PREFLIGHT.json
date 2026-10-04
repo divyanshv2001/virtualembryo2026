@@ -1,0 +1,37 @@
+{
+  "status": "completed",
+  "new_scoring_batch": false,
+  "score": null,
+  "reward": 0,
+  "scope": "Past-only count/encoder bridge and GPU resource checks; no scientific batch or author reproduction.",
+  "past_cells": 10963,
+  "genes": 128,
+  "normalization_max_error": 2.3418261640983928e-07,
+  "library_reference": 15079.0,
+  "neutral_bridge_exact": true,
+  "projection_bridge_max_error": 3.813681141717762e-17,
+  "context_sha256": "49ac69cc7d42c6c8238d704d3e4b4c1207a458d71081aa110e40474e28175956",
+  "gpu_results": {
+    "instantaneous": {
+      "losses": [
+        1.8004341125488281,
+        1.7162261009216309,
+        1.7943254709243774
+      ],
+      "seconds": 1.5051173000247218,
+      "gpu_peak_bytes": 86735360,
+      "parameters": 4480
+    },
+    "delayed": {
+      "losses": [
+        1.8004353046417236,
+        1.7162256240844727,
+        1.7943264245986938
+      ],
+      "seconds": 0.09954500000458211,
+      "gpu_peak_bytes": 86735360,
+      "parameters": 4480
+    }
+  },
+  "next_requirement": "Predeclare matched400step trial and frozen full-panel head/replay adapter; resource checks do not establish predictive improvement."
+}

@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-04T10:50:16.365256+00:00
+Updated: 2026-10-04T10:56:26.612547+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -10,7 +10,7 @@ Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction':
 
 Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Prepare fixed past-only128gene raw-count GPU prototype; verify library-offset count objective and full-panel forecast bridge before predeclaring matched instantaneous versus delayed-protein experiment. No full author-stack installation or target tuning.
+Next: Predeclare own matched4480parameter400step instantaneous versus delayed-protein128gene NB-mixture trial, fit<=8.25 only; RTX3060 child and original2.14CPU parent/full-panel scorer. Implement bounded projection bridge into frozen kinetic latent forecast; verify zero-correction and prior-baseline full-panel exact replays before target scoring. No author reproduction or readiness claim.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in outputs\t1_submissions\formula_progress_20260930_01\official_result.json. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 

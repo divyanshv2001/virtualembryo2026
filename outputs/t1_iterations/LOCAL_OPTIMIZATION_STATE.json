@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Prepare fixed past-only128gene raw-count GPU prototype; verify library-offset count objective and full-panel forecast bridge before predeclaring matched instantaneous versus delayed-protein experiment. No full author-stack installation or target tuning.",
+  "next_experiment": "Predeclare own matched4480parameter400step instantaneous versus delayed-protein128gene NB-mixture trial, fit<=8.25 only; RTX3060 child and original2.14CPU parent/full-panel scorer. Implement bounded projection bridge into frozen kinetic latent forecast; verify zero-correction and prior-baseline full-panel exact replays before target scoring. No author reproduction or readiness claim.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -4336,5 +4336,40 @@
       "Verify bridge into frozen full-panel forecast/scorer before scored batch; preserve original CPU scorer/replay and RTX3060 training.",
       "Bound pairwise training to64cells/128genes, two CPUthreads, host16GB and GPU4.5GB; do not run unbounded author gene-by-cell OT stack."
     ]
+  },
+  "hidden_protein_count_bridge_preflight": {
+    "status": "completed_after_resource_broadcast_repair",
+    "report": "HIDDEN_PROTEIN_COUNT_BRIDGE_REPAIR_PREFLIGHT.json",
+    "initial_failure_report": "HIDDEN_PROTEIN_COUNT_BRIDGE_PREFLIGHT.json",
+    "new_scoring_batch": false,
+    "reward": 0,
+    "past_cells": 10963,
+    "genes": 128,
+    "normalization_max_error": 2.3418261640983928e-07,
+    "neutral_bridge_exact": true,
+    "projection_bridge_max_error": 3.813681141717762e-17,
+    "context_sha256": "49ac69cc7d42c6c8238d704d3e4b4c1207a458d71081aa110e40474e28175956",
+    "gpu_results": {
+      "instantaneous": {
+        "losses": [
+          1.8004341125488281,
+          1.7162261009216309,
+          1.7943254709243774
+        ],
+        "seconds": 1.5051173000247218,
+        "gpu_peak_bytes": 86735360,
+        "parameters": 4480
+      },
+      "delayed": {
+        "losses": [
+          1.8004353046417236,
+          1.7162256240844727,
+          1.7943264245986938
+        ],
+        "seconds": 0.09954500000458211,
+        "gpu_peak_bytes": 86735360,
+        "parameters": 4480
+      }
+    }
   }
 }

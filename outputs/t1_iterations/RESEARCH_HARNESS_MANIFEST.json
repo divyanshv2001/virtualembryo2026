@@ -1162,6 +1162,58 @@
         "driver_runtime": "cpu",
         "collective_context": true
       }
+    },
+    "hidden_protein_count_bridge_preflight": {
+      "script": "hidden_protein_count_bridge.py",
+      "args": [],
+      "run": "private/hidden_protein_count_bridge_preflight_01",
+      "report": "HIDDEN_PROTEIN_COUNT_BRIDGE_PREFLIGHT.json",
+      "protocol": {
+        "cutoff": 8.25,
+        "fit_stages": [
+          7.5,
+          7.75,
+          8.0,
+          8.25
+        ],
+        "training_device": "cuda",
+        "driver_runtime": "cuda",
+        "steps": 3,
+        "batch_size": 64,
+        "genes": 128,
+        "rank": 16,
+        "new_scoring_batch": false,
+        "reward_eligible": false,
+        "scope": "Own past raw count offset/encoder bridge/resource preflight only; no target expression, scoring, promotion, official upload or author reproduction. RTX3060 required, 16GBhost/4.5GBGPU/two threads. Neutral encoder bridge exact; original full-panel forecasting/calibration gates unchanged."
+      }
+    },
+    "hidden_protein_count_bridge_repair": {
+      "script": "hidden_protein_count_bridge.py",
+      "args": [
+        "--experiment",
+        "hidden_protein_count_bridge_repair"
+      ],
+      "run": "private/hidden_protein_count_bridge_repair_01",
+      "report": "HIDDEN_PROTEIN_COUNT_BRIDGE_REPAIR_PREFLIGHT.json",
+      "protocol": {
+        "cutoff": 8.25,
+        "fit_stages": [
+          7.5,
+          7.75,
+          8.0,
+          8.25
+        ],
+        "training_device": "cuda",
+        "driver_runtime": "cuda",
+        "steps": 3,
+        "batch_size": 64,
+        "genes": 128,
+        "rank": 16,
+        "new_scoring_batch": false,
+        "reward_eligible": false,
+        "scope": "Own past raw count offset/encoder bridge/resource preflight only; no target expression, scoring, promotion, official upload or author reproduction. RTX3060 required, 16GBhost/4.5GBGPU/two threads. Neutral encoder bridge exact; original full-panel forecasting/calibration gates unchanged.",
+        "repair": "Out-of-place NB addition permits target/source mixture broadcast; initial resource failure preserved, no scoring/reward."
+      }
     }
   }
 }
