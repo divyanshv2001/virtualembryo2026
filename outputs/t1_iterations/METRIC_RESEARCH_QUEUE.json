@@ -6395,16 +6395,16 @@
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
     "experiment": "collective_context_past_fold",
-    "status": "running",
-    "next_experiment": "count_vae_past_fold",
-    "next": "Collect matched count-VAE/latentOT trial via harness; no source edits while running. Four fresh independent metricreviews after scientific completion/failure, primary NB-minuslogGaussian reward only; original replay/scorer/readiness gates unchanged.",
-    "jev_choice": "count_vae_representation_preflight",
-    "jev_confidence": 0.13,
+    "status": "completed_gaussian_incremental_retained",
+    "next_experiment": "gaussian_vae_frozen_horizon_validation",
+    "next": "Frozen Gaussian-VAE horizon validation at8.25->9.25 versus retained kinetics; reuse already-trained400VAE+400OT weights with strict code/context/checkpoint hashes, zero retraining/target tuning/repeat reward. OriginalCPU full-panel head/scorer and prior/neutral exactreplays. Historical developmental validation only, not independentembryo evidence; retain52.3521 incremental candidate without weakening readinessgates.",
+    "jev_choice": "frozen_gaussian_horizon_validation",
+    "jev_confidence": 0.99,
     "scope": "Advisory low confidence; raw-count data availability verified deterministically, no score claim.",
     "support_audit": "Completed: no independent embryo/untouched validation established; historical-only options remain, no promotion.",
     "jev_usage": {
-      "input_tokens": 1339,
-      "output_tokens": 58
+      "input_tokens": 1319,
+      "output_tokens": 54
     }
   }
 }

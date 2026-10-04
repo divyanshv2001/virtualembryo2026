@@ -30,13 +30,11 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Collect matched count-VAE/latentOT trial via harness; no source edits while running. Four fresh independent metricreviews after scientific completion/failure, primary NB-minuslogGaussian reward only; original replay/scorer/readiness gates unchanged.",
+  "next_experiment": "Frozen Gaussian-VAE horizon validation at8.25->9.25 versus retained kinetics; reuse already-trained400VAE+400OT weights with strict code/context/checkpoint hashes, zero retraining/target tuning/repeat reward. OriginalCPU full-panel head/scorer and prior/neutral exactreplays. Historical developmental validation only, not independentembryo evidence; retain52.3521 incremental candidate without weakening readinessgates.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "count_vae_past_fold"
-  ],
+  "active_jobs": [],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -2920,6 +2918,19 @@
       },
       "reviewer_context": "Four fresh independent metric-only contexts; no tools/peers/writes.",
       "coordinator": "Primaryforcing-vsconditional:DEmeanpositive2/3pairs; directionnegative1/3, MMD/variogramnegative0/3. Both have directionmeans above kinetics, but headline/other3means below; preserve direction signal without promotion or whole-family rejection. One trainingseed/3scoringresamples;15calibrations5exactforecasts3prior2neutralexact. Historicaldevelopment only, not independentvalidation/fullCellPace. Suggested semivariogram/interaction remedies unvalidated and no repeat grid authorized. Reward-29/health-1467 recorded once."
+    },
+    "count_vae_past_fold_01": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "1d84732f51794a0058c717265d63d656612afebe65aca4b9b60922d01361fd0f",
+      "reviews": {
+        "de_score": "Problem: NB trails Gaussian on DE; gains over kinetics lack independent validation. Proposed solution: Retain Gaussian as the baseline and test distribution choices across independent training seeds. Validation: Matched budgets support comparison; three scoring resamples cannot establish robustness or readiness.",
+        "de_direction": "Problem: NB underperforms Gaussian; tiny kinetics differences and one training seed provide weak evidence. Proposed solution: Retain Gaussian provisionally; avoid readiness claims. Validation: Repeat training seeds and test independent held-out forecasts before selecting architecture or claiming robust gains.",
+        "mmd_u": "Problem: NB shows no MMD advantage over Gaussian; evidence rests on one training seed. Proposed solution: Retain Gaussian and repeat matched-seed comparisons. Validation: NB-Gaussian -0.000252228,0/3positive resamples; Gaussian beats kinetics3/3. Independent validation remains absent.",
+        "variogram": "Problem: Variogram gains are negligible and inconsistent; NB loses to Gaussian in all three resamples. Proposed solution: Retain Gaussian as baseline and repeat independent training seeds. Validation: Use held-out variogram scoring with uncertainty intervals; current resamples do not establish readiness."
+      },
+      "reviewer_context": "Four fresh independent metric-only contexts, no tools/peers/writes.",
+      "coordinator": "PrimaryNB-Gaussian all4means negative,0/3positive each. Gaussian-vskinetrics all4means positive/headline+0.018005,3/3headline andDE/direction/MMD but2/3variogram. Retain incremental Gaussian candidate despite larger ultimate goal, no full readiness promotion or retroactive reward.15calibrations5forecasts3prior2neutralexact; one trainingseed/3scoringresamples/historicaldevelopment. Not scVI reproduction or isolatedPCA comparison. Primaryreward-40/health-1507 recorded once, controls0. Proposed seed replication unvalidated; no parameter grid."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -4533,5 +4544,21 @@
       "next_requirement": "Freeze paired representation/temporal objective and count-to-original-encoder bridge before scoring; neither3step model is trained for prediction."
     },
     "scope": "Three optimizersteps resource/finite-gradient/replay only, not trained predictive model. Losses in different observation units cannot be compared as scores; backgroundcategory represents excluded genes."
+  },
+  "latest_count_vae_result": {
+    "mean_gaussian": 52.35207056098903,
+    "mean_count_nb": 52.28943469527627,
+    "mean_kinetics": 52.334065831100055,
+    "gaussian_minus_kinetics": 0.018004729888971838,
+    "incremental_gaussian_retained": true,
+    "full_readiness_promoted": false,
+    "calibrations_valid": 15,
+    "forecast_replays": 5,
+    "prior_baseline_replays": 3,
+    "neutral_bridge_replays": 2,
+    "host_peak_bytes": 5402046464,
+    "gpu_peak_bytes": 81491456,
+    "reward": -40,
+    "health": -1507
   }
 }
