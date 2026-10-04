@@ -1,20 +1,18 @@
 {
-  "updated_utc": "2026-10-04T04:31:22.711063+00:00",
+  "updated_utc": "2026-10-04T04:40:11.186385+00:00",
   "fingerprints": {
     "RESEARCH_CONTINUATION_POLICY.md": "63caeff70fcf18c91756a8d822ac36ae58a80c1f6e2ae37a643c85f89e7c32ee",
-    "LOCAL_OPTIMIZATION_STATE.json": "a5bcacad5a965f029386c6ef415da3980a71c84240ab8ded8bc668f9a9493fa6",
+    "LOCAL_OPTIMIZATION_STATE.json": "32d106ca9829703dafb41a435cf4dccbe48a886b3c9987da7e44436beb4a1cc6",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "9436e9ad9e99b8c54637a6a80ac66f1ac70ef70c457b84d71014fc61058e763b",
+    "METRIC_RESEARCH_QUEUE.json": "b16e1e2947deb2230939e815161fdb22787847cf9cb4015f423c3b87a62e2b97",
     "METRIC_CRITIQUE_POLICY.json": "3535989f1e3beac0f2d446b44df3c793d4be464dbd87f6e714c2f5afda864a6f",
     "METRIC_CRITIQUES_20261001.md": "3050d4a78b54d42cedc1897ceb547dd1f85465f3de25bd47f2137ed2f4fd0ef4",
     "RESEARCH_HARNESS_MANIFEST.json": "6bd975060205b33779fc12c60b2b173eaff9eaf0f0e04609ecaf3d6690c95bf6"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [
-    "scfm_projected_past_fold"
-  ],
-  "next_experiment": "Monitor registered scfm_projected_past_fold without duplication. On completion/failure collect four fresh inline metric reviews; apply declared raw/projected-arm rewards against cnf800 (controls0), update health and ledger, then reassess IPCA as a separate matched representation experiment. No new parallel worker.",
+  "active_jobs_at_checkpoint": [],
+  "next_experiment": "Keep positive scFM incremental gains. Before one fixed distribution-preserving scFM objective, check existing transition-MMD/direct-variogram coverage and freeze a genuinely distinct past-only loss with matched controls. Jev advisory chose past_distribution_loss(confidence.51), not proof. User-requested controlled PCA/IPCA remains queued separately; no exposed8.75 grid or parallel worker.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -31,7 +29,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1320,
+    "current_reward": -1312,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -40,10 +38,10 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1320,
-    "reward_score": -1320,
+    "uncapped_reward": -1312,
+    "reward_score": -1312,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": 0
+    "last_batch_reward_delta": 8
   },
   "official_best": 52.16,
   "latest_official": {

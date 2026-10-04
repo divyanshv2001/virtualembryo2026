@@ -1,0 +1,1338 @@
+{
+  "status": "completed",
+  "panels": [
+    {
+      "seed": 20260928,
+      "cutoff": 8.25,
+      "target": 8.75,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.1383129358291626,
+        "variogram": 0.00709889829158783
+      },
+      "ceiling": {
+        "de_score": 0.9475409836065575,
+        "de_direction": 0.8558202817805236,
+        "mmd_u": 0.003321141004562378,
+        "variogram": 0.00010049087723018602
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "86b6be07734acc4a7b159a62210928e037955177f57e6288aa89ba7b454eb50e",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.1383129358291626,
+            "variogram": 0.00709889829158783
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "cnf800",
+          "prediction_sha256": "c398ffdc1dd3aee7e6f451ae8d50fece5b4e4e41b4d1e04cf79b11672b32e9e8",
+          "raw_metrics": {
+            "de_score": -0.03442622950819671,
+            "de_direction": 0.07285232336800936,
+            "mmd_u": 0.1292792558670044,
+            "variogram": 0.007122359238564968
+          },
+          "local_score": 50.83520588397838,
+          "skills": {
+            "de_score": 0.49107901444350044,
+            "de_direction": 0.5222274976050072,
+            "mmd_u": 0.5173092222430586,
+            "variogram": 0.4991633207736964
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "likelihood400",
+          "prediction_sha256": "b946ed4a7608531a381d5be91a64d407af95b5821dd8c77038d0b77c9f2a88c3",
+          "raw_metrics": {
+            "de_score": -0.029508196721311483,
+            "de_direction": 0.08183014140862768,
+            "mmd_u": 0.12834185361862183,
+            "variogram": 0.007089657709002495
+          },
+          "local_score": 51.017785633792634,
+          "skills": {
+            "de_score": 0.4923339011925043,
+            "de_direction": 0.5251041901243207,
+            "mmd_u": 0.5191742357103593,
+            "variogram": 0.5003303139780614
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "raw_ot400",
+          "prediction_sha256": "cf0b69fd326c7b853ae7b2c5c2c98c588a38ed6c25df5e3101743b64e03c9b79",
+          "raw_metrics": {
+            "de_score": -0.026229508196721322,
+            "de_direction": 0.08526996880687371,
+            "mmd_u": 0.12827220559120178,
+            "variogram": 0.007090785074979067
+          },
+          "local_score": 51.06992167491116,
+          "skills": {
+            "de_score": 0.4931740614334471,
+            "de_direction": 0.5262148027890784,
+            "mmd_u": 0.519313341133322,
+            "variogram": 0.5002899917674183
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "projected_ot400",
+          "prediction_sha256": "b24054fb3130c23f76ca1b75077440952e7b4a1bb01bf36a11302048ab10b0de",
+          "raw_metrics": {
+            "de_score": -0.026229508196721322,
+            "de_direction": 0.08601964252179257,
+            "mmd_u": 0.12824273109436035,
+            "variogram": 0.00709085538983345
+          },
+          "local_score": 51.07770485330487,
+          "skills": {
+            "de_score": 0.4931740614334471,
+            "de_direction": 0.5264574727750183,
+            "mmd_u": 0.5193722319035605,
+            "variogram": 0.5002874770493212
+          },
+          "calibration_valid": true
+        }
+      ]
+    },
+    {
+      "seed": 20260929,
+      "cutoff": 8.25,
+      "target": 8.75,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.13696233928203583,
+        "variogram": 0.007407503202557564
+      },
+      "ceiling": {
+        "de_score": 0.9377990430622009,
+        "de_direction": 0.8522989036306703,
+        "mmd_u": 0.0020518838427960873,
+        "variogram": 0.00010707423643907532
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "86b6be07734acc4a7b159a62210928e037955177f57e6288aa89ba7b454eb50e",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.13696233928203583,
+            "variogram": 0.007407503202557564
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "cnf800",
+          "prediction_sha256": "c398ffdc1dd3aee7e6f451ae8d50fece5b4e4e41b4d1e04cf79b11672b32e9e8",
+          "raw_metrics": {
+            "de_score": -0.022328548644338135,
+            "de_direction": 0.07083104909240262,
+            "mmd_u": 0.12859909236431122,
+            "variogram": 0.007437027990818024
+          },
+          "local_score": 50.85449629751775,
+          "skills": {
+            "de_score": 0.49411764705882355,
+            "de_direction": 0.5216772218978758,
+            "mmd_u": 0.5159935011868306,
+            "variogram": 0.4989909768997671
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "likelihood400",
+          "prediction_sha256": "b946ed4a7608531a381d5be91a64d407af95b5821dd8c77038d0b77c9f2a88c3",
+          "raw_metrics": {
+            "de_score": -0.006379585326953758,
+            "de_direction": 0.08775511850281521,
+            "mmd_u": 0.12736935913562775,
+            "variogram": 0.007396312430500984
+          },
+          "local_score": 51.196698957541166,
+          "skills": {
+            "de_score": 0.49830508474576274,
+            "de_direction": 0.5271378035454386,
+            "mmd_u": 0.5184318803124268,
+            "variogram": 0.5003835170444163
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "raw_ot400",
+          "prediction_sha256": "cf0b69fd326c7b853ae7b2c5c2c98c588a38ed6c25df5e3101743b64e03c9b79",
+          "raw_metrics": {
+            "de_score": -0.0031897926634768623,
+            "de_direction": 0.0915859354495567,
+            "mmd_u": 0.12729860842227936,
+            "variogram": 0.007398058194667101
+          },
+          "local_score": 51.252179864562144,
+          "skills": {
+            "de_score": 0.4991511035653651,
+            "de_direction": 0.5283897276424521,
+            "mmd_u": 0.5185728697917562,
+            "variogram": 0.5003236495307012
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "projected_ot400",
+          "prediction_sha256": "b24054fb3130c23f76ca1b75077440952e7b4a1bb01bf36a11302048ab10b0de",
+          "raw_metrics": {
+            "de_score": -0.00478468899521531,
+            "de_direction": 0.0914843560931046,
+            "mmd_u": 0.12727481126785278,
+            "variogram": 0.007398015353828669
+          },
+          "local_score": 51.24221638890831,
+          "skills": {
+            "de_score": 0.49872773536895676,
+            "de_direction": 0.5283564544164115,
+            "mmd_u": 0.5186203091420156,
+            "variogram": 0.5003251185006821
+          },
+          "calibration_valid": true
+        }
+      ]
+    },
+    {
+      "seed": 20260930,
+      "cutoff": 8.25,
+      "target": 8.75,
+      "floor": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 0.1384391039609909,
+        "variogram": 0.006954986602067947
+      },
+      "ceiling": {
+        "de_score": 0.944353518821604,
+        "de_direction": 0.8582380042072699,
+        "mmd_u": 0.0035778165329247713,
+        "variogram": 0.00010321001900592819
+      },
+      "results": [
+        {
+          "candidate": "copy",
+          "prediction_sha256": "86b6be07734acc4a7b159a62210928e037955177f57e6288aa89ba7b454eb50e",
+          "raw_metrics": {
+            "de_score": 0.0,
+            "de_direction": 0.0,
+            "mmd_u": 0.1384391039609909,
+            "variogram": 0.006954986602067947
+          },
+          "local_score": 50.0,
+          "skills": {
+            "de_score": 0.5,
+            "de_direction": 0.5,
+            "mmd_u": 0.5,
+            "variogram": 0.5
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "cnf800",
+          "prediction_sha256": "c398ffdc1dd3aee7e6f451ae8d50fece5b4e4e41b4d1e04cf79b11672b32e9e8",
+          "raw_metrics": {
+            "de_score": -0.02291325695581016,
+            "de_direction": 0.06929426132454239,
+            "mmd_u": 0.12953698635101318,
+            "variogram": 0.006984826643019915
+          },
+          "local_score": 50.866265983479664,
+          "skills": {
+            "de_score": 0.4940068493150685,
+            "de_direction": 0.5210341880751658,
+            "mmd_u": 0.517065604638474,
+            "variogram": 0.4989135954784797
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "likelihood400",
+          "prediction_sha256": "b946ed4a7608531a381d5be91a64d407af95b5821dd8c77038d0b77c9f2a88c3",
+          "raw_metrics": {
+            "de_score": -0.026186579378068748,
+            "de_direction": 0.07851837034991582,
+            "mmd_u": 0.1285436749458313,
+            "variogram": 0.0069510419853031635
+          },
+          "local_score": 51.00241853258653,
+          "skills": {
+            "de_score": 0.49316239316239313,
+            "de_direction": 0.5239683763869167,
+            "mmd_u": 0.5190423309757174,
+            "variogram": 0.500143968229113
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "raw_ot400",
+          "prediction_sha256": "cf0b69fd326c7b853ae7b2c5c2c98c588a38ed6c25df5e3101743b64e03c9b79",
+          "raw_metrics": {
+            "de_score": -0.01963993453355157,
+            "de_direction": 0.0820747239131016,
+            "mmd_u": 0.12846072018146515,
+            "variogram": 0.00695289159193635
+          },
+          "local_score": 51.07683950199736,
+          "skills": {
+            "de_score": 0.4948542024013722,
+            "de_direction": 0.5251084983508618,
+            "mmd_u": 0.5192080980486351,
+            "variogram": 0.5000764520866227
+          },
+          "calibration_valid": true
+        },
+        {
+          "candidate": "projected_ot400",
+          "prediction_sha256": "b24054fb3130c23f76ca1b75077440952e7b4a1bb01bf36a11302048ab10b0de",
+          "raw_metrics": {
+            "de_score": -0.01963993453355157,
+            "de_direction": 0.08256514522291131,
+            "mmd_u": 0.1284310519695282,
+            "variogram": 0.006952603347599506
+          },
+          "local_score": 51.08276955576123,
+          "skills": {
+            "de_score": 0.4948542024013722,
+            "de_direction": 0.5252661106192877,
+            "mmd_u": 0.519267409232786,
+            "variogram": 0.5000869726630576
+          },
+          "calibration_valid": true
+        }
+      ]
+    }
+  ],
+  "new_scoring_batch": true,
+  "original_readiness_gate_passed": false,
+  "official_score": null,
+  "generation": {
+    "copy": {
+      "prediction_sha256": "86b6be07734acc4a7b159a62210928e037955177f57e6288aa89ba7b454eb50e",
+      "audit": {
+        "method": "persistence"
+      }
+    },
+    "cnf800": {
+      "prediction_sha256": "c398ffdc1dd3aee7e6f451ae8d50fece5b4e4e41b4d1e04cf79b11672b32e9e8",
+      "audit": {
+        "fit_cells": 10963,
+        "fit_max_stage": 8.25,
+        "supported_genes": 14462,
+        "method": "Fresh source-domain PCA8 paired scFM",
+        "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+        "conditional_ridge_strength": 1.0,
+        "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+        "encoder_features": 4096,
+        "covariance_guard_features": 384,
+        "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+        "anchor_calibration_rows": 3000,
+        "anchor_supported_genes": 12632,
+        "anchor_slope_ridge": 1.0,
+        "limitation": "Cross-sectional E8.5 associations are not temporal velocities.",
+        "anchor_positive_slope_strength": 0.25,
+        "anchor_detection_slope_strength": 0.75,
+        "response_units": "log1p normalized expression",
+        "response_fit_rows": 10963,
+        "response_fit_max_stage": 8.25,
+        "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+        "training_history": [
+          {
+            "step": 50,
+            "loss": 16.843494415283203,
+            "negative_log_likelihood": 11.672325134277344,
+            "energy": 0.04773598909378052,
+            "manifold_density": 0.5166397094726562,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 100,
+            "loss": 15.920294761657715,
+            "negative_log_likelihood": 11.130638122558594,
+            "energy": 0.11241413652896881,
+            "manifold_density": 0.4778415560722351,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 150,
+            "loss": 15.727624893188477,
+            "negative_log_likelihood": 11.081382751464844,
+            "energy": 0.1510162055492401,
+            "manifold_density": 0.46311402320861816,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 200,
+            "loss": 16.06167221069336,
+            "negative_log_likelihood": 10.555394172668457,
+            "energy": 1.0633054971694946,
+            "manifold_density": 0.5399948358535767,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 250,
+            "loss": 10.301850318908691,
+            "negative_log_likelihood": 10.292337417602539,
+            "energy": 0.09512510895729065,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 300,
+            "loss": 15.303577423095703,
+            "negative_log_likelihood": 10.09225845336914,
+            "energy": 0.5865103602409363,
+            "manifold_density": 0.5152668356895447,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 350,
+            "loss": 14.742975234985352,
+            "negative_log_likelihood": 9.706710815429688,
+            "energy": 0.5053786635398865,
+            "manifold_density": 0.4985726475715637,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 400,
+            "loss": 13.146016120910645,
+            "negative_log_likelihood": 8.452956199645996,
+            "energy": 1.8419196605682373,
+            "manifold_density": 0.4508868157863617,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 450,
+            "loss": 10.254532814025879,
+            "negative_log_likelihood": 10.225359916687012,
+            "energy": 0.2917267084121704,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 500,
+            "loss": 13.714691162109375,
+            "negative_log_likelihood": 8.565732955932617,
+            "energy": 0.6395222544670105,
+            "manifold_density": 0.5085006356239319,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 550,
+            "loss": 15.57801342010498,
+            "negative_log_likelihood": 9.888898849487305,
+            "energy": 0.8087888360023499,
+            "manifold_density": 0.5608235597610474,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 600,
+            "loss": 12.020439147949219,
+            "negative_log_likelihood": 7.435694694519043,
+            "energy": 1.701054334640503,
+            "manifold_density": 0.4414639472961426,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 650,
+            "loss": 9.724220275878906,
+            "negative_log_likelihood": 9.684272766113281,
+            "energy": 0.39947614073753357,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 700,
+            "loss": 13.563961029052734,
+            "negative_log_likelihood": 8.222131729125977,
+            "energy": 3.2839787006378174,
+            "manifold_density": 0.5013431310653687,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 750,
+            "loss": 12.76112174987793,
+            "negative_log_likelihood": 7.8102216720581055,
+            "energy": 1.5856904983520508,
+            "manifold_density": 0.4792330861091614,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 800,
+            "loss": 13.62104320526123,
+            "negative_log_likelihood": 8.243542671203613,
+            "energy": 1.0870897769927979,
+            "manifold_density": 0.5268791317939758,
+            "sampled_past_stage": 7.75
+          }
+        ],
+        "mode": "joint",
+        "strength": 1.0,
+        "backoff": 1.0,
+        "seed": 20260928,
+        "sampling": "systematic",
+        "guard_backoffs": [
+          {
+            "backoff": 1.0,
+            "covariance_change": 0.12962113906551573,
+            "finite": true
+          }
+        ],
+        "covariance_change_vs_reference": 0.12962113906551573,
+        "newly_detected_entries": 29525,
+        "removed_detection_entries": 70376,
+        "abundance_factor_cap": 2.0,
+        "detection_probability_delta_cap": 0.25,
+        "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+        "mapped_mass_conserved": true,
+        "protected_genes_unchanged": true
+      }
+    },
+    "likelihood400": {
+      "prediction_sha256": "b946ed4a7608531a381d5be91a64d407af95b5821dd8c77038d0b77c9f2a88c3",
+      "audit": {
+        "fit_cells": 10963,
+        "fit_max_stage": 8.25,
+        "supported_genes": 14462,
+        "method": "Fresh source-domain PCA8 paired scFM",
+        "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+        "conditional_ridge_strength": 1.0,
+        "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+        "encoder_features": 4096,
+        "covariance_guard_features": 384,
+        "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+        "anchor_calibration_rows": 3000,
+        "anchor_supported_genes": 12632,
+        "anchor_slope_ridge": 1.0,
+        "limitation": "Cross-sectional E8.5 associations are not temporal velocities.",
+        "anchor_positive_slope_strength": 0.25,
+        "anchor_detection_slope_strength": 0.75,
+        "response_units": "log1p normalized expression",
+        "response_fit_rows": 10963,
+        "response_fit_max_stage": 8.25,
+        "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+        "training_history": [
+          {
+            "step": 50,
+            "loss": 16.843494415283203,
+            "negative_log_likelihood": 11.672325134277344,
+            "energy": 0.04773598909378052,
+            "manifold_density": 0.5166397094726562,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 100,
+            "loss": 15.920294761657715,
+            "negative_log_likelihood": 11.130638122558594,
+            "energy": 0.11241413652896881,
+            "manifold_density": 0.4778415560722351,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 150,
+            "loss": 15.727624893188477,
+            "negative_log_likelihood": 11.081382751464844,
+            "energy": 0.1510162055492401,
+            "manifold_density": 0.46311402320861816,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 200,
+            "loss": 16.06167221069336,
+            "negative_log_likelihood": 10.555394172668457,
+            "energy": 1.0633054971694946,
+            "manifold_density": 0.5399948358535767,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 250,
+            "loss": 10.301850318908691,
+            "negative_log_likelihood": 10.292337417602539,
+            "energy": 0.09512510895729065,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 300,
+            "loss": 15.303577423095703,
+            "negative_log_likelihood": 10.09225845336914,
+            "energy": 0.5865103602409363,
+            "manifold_density": 0.5152668356895447,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 350,
+            "loss": 14.742975234985352,
+            "negative_log_likelihood": 9.706710815429688,
+            "energy": 0.5053786635398865,
+            "manifold_density": 0.4985726475715637,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 400,
+            "loss": 13.146016120910645,
+            "negative_log_likelihood": 8.452956199645996,
+            "energy": 1.8419196605682373,
+            "manifold_density": 0.4508868157863617,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 450,
+            "loss": 10.254532814025879,
+            "negative_log_likelihood": 10.225359916687012,
+            "energy": 0.2917267084121704,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 500,
+            "loss": 13.714691162109375,
+            "negative_log_likelihood": 8.565732955932617,
+            "energy": 0.6395222544670105,
+            "manifold_density": 0.5085006356239319,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 550,
+            "loss": 15.57801342010498,
+            "negative_log_likelihood": 9.888898849487305,
+            "energy": 0.8087888360023499,
+            "manifold_density": 0.5608235597610474,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 600,
+            "loss": 12.020439147949219,
+            "negative_log_likelihood": 7.435694694519043,
+            "energy": 1.701054334640503,
+            "manifold_density": 0.4414639472961426,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 650,
+            "loss": 9.724220275878906,
+            "negative_log_likelihood": 9.684272766113281,
+            "energy": 0.39947614073753357,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 700,
+            "loss": 13.563961029052734,
+            "negative_log_likelihood": 8.222131729125977,
+            "energy": 3.2839787006378174,
+            "manifold_density": 0.5013431310653687,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 750,
+            "loss": 12.76112174987793,
+            "negative_log_likelihood": 7.8102216720581055,
+            "energy": 1.5856904983520508,
+            "manifold_density": 0.4792330861091614,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 800,
+            "loss": 13.62104320526123,
+            "negative_log_likelihood": 8.243542671203613,
+            "energy": 1.0870897769927979,
+            "manifold_density": 0.5268791317939758,
+            "sampled_past_stage": 7.75
+          }
+        ],
+        "mode": "joint",
+        "strength": 1.0,
+        "backoff": 1.0,
+        "seed": 20260928,
+        "sampling": "systematic",
+        "guard_backoffs": [
+          {
+            "backoff": 1.0,
+            "covariance_change": 0.13702573013932276,
+            "finite": true
+          }
+        ],
+        "covariance_change_vs_reference": 0.13702573013932276,
+        "newly_detected_entries": 36680,
+        "removed_detection_entries": 50966,
+        "abundance_factor_cap": 2.0,
+        "detection_probability_delta_cap": 0.25,
+        "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+        "mapped_mass_conserved": true,
+        "protected_genes_unchanged": true
+      }
+    },
+    "raw_ot400": {
+      "prediction_sha256": "cf0b69fd326c7b853ae7b2c5c2c98c588a38ed6c25df5e3101743b64e03c9b79",
+      "audit": {
+        "fit_cells": 10963,
+        "fit_max_stage": 8.25,
+        "supported_genes": 14462,
+        "method": "Fresh source-domain PCA8 paired scFM",
+        "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+        "conditional_ridge_strength": 1.0,
+        "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+        "encoder_features": 4096,
+        "covariance_guard_features": 384,
+        "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+        "anchor_calibration_rows": 3000,
+        "anchor_supported_genes": 12632,
+        "anchor_slope_ridge": 1.0,
+        "limitation": "Cross-sectional E8.5 associations are not temporal velocities.",
+        "anchor_positive_slope_strength": 0.25,
+        "anchor_detection_slope_strength": 0.75,
+        "response_units": "log1p normalized expression",
+        "response_fit_rows": 10963,
+        "response_fit_max_stage": 8.25,
+        "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+        "training_history": [
+          {
+            "step": 50,
+            "loss": 16.843494415283203,
+            "negative_log_likelihood": 11.672325134277344,
+            "energy": 0.04773598909378052,
+            "manifold_density": 0.5166397094726562,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 100,
+            "loss": 15.920294761657715,
+            "negative_log_likelihood": 11.130638122558594,
+            "energy": 0.11241413652896881,
+            "manifold_density": 0.4778415560722351,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 150,
+            "loss": 15.727624893188477,
+            "negative_log_likelihood": 11.081382751464844,
+            "energy": 0.1510162055492401,
+            "manifold_density": 0.46311402320861816,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 200,
+            "loss": 16.06167221069336,
+            "negative_log_likelihood": 10.555394172668457,
+            "energy": 1.0633054971694946,
+            "manifold_density": 0.5399948358535767,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 250,
+            "loss": 10.301850318908691,
+            "negative_log_likelihood": 10.292337417602539,
+            "energy": 0.09512510895729065,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 300,
+            "loss": 15.303577423095703,
+            "negative_log_likelihood": 10.09225845336914,
+            "energy": 0.5865103602409363,
+            "manifold_density": 0.5152668356895447,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 350,
+            "loss": 14.742975234985352,
+            "negative_log_likelihood": 9.706710815429688,
+            "energy": 0.5053786635398865,
+            "manifold_density": 0.4985726475715637,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 400,
+            "loss": 13.146016120910645,
+            "negative_log_likelihood": 8.452956199645996,
+            "energy": 1.8419196605682373,
+            "manifold_density": 0.4508868157863617,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 450,
+            "loss": 10.254532814025879,
+            "negative_log_likelihood": 10.225359916687012,
+            "energy": 0.2917267084121704,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 500,
+            "loss": 13.714691162109375,
+            "negative_log_likelihood": 8.565732955932617,
+            "energy": 0.6395222544670105,
+            "manifold_density": 0.5085006356239319,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 550,
+            "loss": 15.57801342010498,
+            "negative_log_likelihood": 9.888898849487305,
+            "energy": 0.8087888360023499,
+            "manifold_density": 0.5608235597610474,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 600,
+            "loss": 12.020439147949219,
+            "negative_log_likelihood": 7.435694694519043,
+            "energy": 1.701054334640503,
+            "manifold_density": 0.4414639472961426,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 650,
+            "loss": 9.724220275878906,
+            "negative_log_likelihood": 9.684272766113281,
+            "energy": 0.39947614073753357,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 700,
+            "loss": 13.563961029052734,
+            "negative_log_likelihood": 8.222131729125977,
+            "energy": 3.2839787006378174,
+            "manifold_density": 0.5013431310653687,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 750,
+            "loss": 12.76112174987793,
+            "negative_log_likelihood": 7.8102216720581055,
+            "energy": 1.5856904983520508,
+            "manifold_density": 0.4792330861091614,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 800,
+            "loss": 13.62104320526123,
+            "negative_log_likelihood": 8.243542671203613,
+            "energy": 1.0870897769927979,
+            "manifold_density": 0.5268791317939758,
+            "sampled_past_stage": 7.75
+          }
+        ],
+        "mode": "joint",
+        "strength": 1.0,
+        "backoff": 1.0,
+        "seed": 20260928,
+        "sampling": "systematic",
+        "guard_backoffs": [
+          {
+            "backoff": 1.0,
+            "covariance_change": 0.1369641628127326,
+            "finite": true
+          }
+        ],
+        "covariance_change_vs_reference": 0.1369641628127326,
+        "newly_detected_entries": 35358,
+        "removed_detection_entries": 54516,
+        "abundance_factor_cap": 2.0,
+        "detection_probability_delta_cap": 0.25,
+        "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+        "mapped_mass_conserved": true,
+        "protected_genes_unchanged": true
+      }
+    },
+    "projected_ot400": {
+      "prediction_sha256": "b24054fb3130c23f76ca1b75077440952e7b4a1bb01bf36a11302048ab10b0de",
+      "audit": {
+        "fit_cells": 10963,
+        "fit_max_stage": 8.25,
+        "supported_genes": 14462,
+        "method": "Fresh source-domain PCA8 paired scFM",
+        "scope": "Adaptation and mechanistic ablation, not scNODE reproduction or calibrated biological detection probabilities. All heads fit permitted past cells only. Positive abundance uses diagonal conditional regression with ridge1, not a full covariance solve.",
+        "conditional_ridge_strength": 1.0,
+        "positive_regression": "Full conditional covariance with predeclared ridge; support20. Own shrinkage sensitivity, not a published biological model reproduction.",
+        "encoder_features": 4096,
+        "covariance_guard_features": 384,
+        "guard_panel_policy": "Original384 past-selected genes; encoder expansion does not alter covariance acceptance panel.",
+        "anchor_calibration_rows": 3000,
+        "anchor_supported_genes": 12632,
+        "anchor_slope_ridge": 1.0,
+        "limitation": "Cross-sectional E8.5 associations are not temporal velocities.",
+        "anchor_positive_slope_strength": 0.25,
+        "anchor_detection_slope_strength": 0.75,
+        "response_units": "log1p normalized expression",
+        "response_fit_rows": 10963,
+        "response_fit_max_stage": 8.25,
+        "limitations": "Own scoring-scale adaptation; fitting scale alone does not guarantee DE improvement. Conditional positives omit zeros; detection model unchanged.",
+        "training_history": [
+          {
+            "step": 50,
+            "loss": 16.843494415283203,
+            "negative_log_likelihood": 11.672325134277344,
+            "energy": 0.04773598909378052,
+            "manifold_density": 0.5166397094726562,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 100,
+            "loss": 15.920294761657715,
+            "negative_log_likelihood": 11.130638122558594,
+            "energy": 0.11241413652896881,
+            "manifold_density": 0.4778415560722351,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 150,
+            "loss": 15.727624893188477,
+            "negative_log_likelihood": 11.081382751464844,
+            "energy": 0.1510162055492401,
+            "manifold_density": 0.46311402320861816,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 200,
+            "loss": 16.06167221069336,
+            "negative_log_likelihood": 10.555394172668457,
+            "energy": 1.0633054971694946,
+            "manifold_density": 0.5399948358535767,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 250,
+            "loss": 10.301850318908691,
+            "negative_log_likelihood": 10.292337417602539,
+            "energy": 0.09512510895729065,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 300,
+            "loss": 15.303577423095703,
+            "negative_log_likelihood": 10.09225845336914,
+            "energy": 0.5865103602409363,
+            "manifold_density": 0.5152668356895447,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 350,
+            "loss": 14.742975234985352,
+            "negative_log_likelihood": 9.706710815429688,
+            "energy": 0.5053786635398865,
+            "manifold_density": 0.4985726475715637,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 400,
+            "loss": 13.146016120910645,
+            "negative_log_likelihood": 8.452956199645996,
+            "energy": 1.8419196605682373,
+            "manifold_density": 0.4508868157863617,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 450,
+            "loss": 10.254532814025879,
+            "negative_log_likelihood": 10.225359916687012,
+            "energy": 0.2917267084121704,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 500,
+            "loss": 13.714691162109375,
+            "negative_log_likelihood": 8.565732955932617,
+            "energy": 0.6395222544670105,
+            "manifold_density": 0.5085006356239319,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 550,
+            "loss": 15.57801342010498,
+            "negative_log_likelihood": 9.888898849487305,
+            "energy": 0.8087888360023499,
+            "manifold_density": 0.5608235597610474,
+            "sampled_past_stage": 7.75
+          },
+          {
+            "step": 600,
+            "loss": 12.020439147949219,
+            "negative_log_likelihood": 7.435694694519043,
+            "energy": 1.701054334640503,
+            "manifold_density": 0.4414639472961426,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 650,
+            "loss": 9.724220275878906,
+            "negative_log_likelihood": 9.684272766113281,
+            "energy": 0.39947614073753357,
+            "manifold_density": 0.0,
+            "sampled_past_stage": 7.5
+          },
+          {
+            "step": 700,
+            "loss": 13.563961029052734,
+            "negative_log_likelihood": 8.222131729125977,
+            "energy": 3.2839787006378174,
+            "manifold_density": 0.5013431310653687,
+            "sampled_past_stage": 8.25
+          },
+          {
+            "step": 750,
+            "loss": 12.76112174987793,
+            "negative_log_likelihood": 7.8102216720581055,
+            "energy": 1.5856904983520508,
+            "manifold_density": 0.4792330861091614,
+            "sampled_past_stage": 8.0
+          },
+          {
+            "step": 800,
+            "loss": 13.62104320526123,
+            "negative_log_likelihood": 8.243542671203613,
+            "energy": 1.0870897769927979,
+            "manifold_density": 0.5268791317939758,
+            "sampled_past_stage": 7.75
+          }
+        ],
+        "mode": "joint",
+        "strength": 1.0,
+        "backoff": 1.0,
+        "seed": 20260928,
+        "sampling": "systematic",
+        "guard_backoffs": [
+          {
+            "backoff": 1.0,
+            "covariance_change": 0.13680935376792375,
+            "finite": true
+          }
+        ],
+        "covariance_change_vs_reference": 0.13680935376792375,
+        "newly_detected_entries": 35336,
+        "removed_detection_entries": 54495,
+        "abundance_factor_cap": 2.0,
+        "detection_probability_delta_cap": 0.25,
+        "common_uniform_policy": "Fixed seed reset across modes/strengths/backoffs; no seed selection. Systematic draws use random cell order and per-gene offsets, with dependent within-gene switches.",
+        "mapped_mass_conserved": true,
+        "protected_genes_unchanged": true
+      }
+    }
+  },
+  "completed_utc": "2026-10-04T04:34:37.196088+00:00",
+  "summary": [
+    {
+      "candidate": "copy",
+      "scores": [
+        50.0,
+        50.0,
+        50.0
+      ],
+      "mean_score": 50.0,
+      "raw_metrics": [
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.1383129358291626,
+          "variogram": 0.00709889829158783
+        },
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.13696233928203583,
+          "variogram": 0.007407503202557564
+        },
+        {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.1384391039609909,
+          "variogram": 0.006954986602067947
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        },
+        {
+          "de_score": 0.5,
+          "de_direction": 0.5,
+          "mmd_u": 0.5,
+          "variogram": 0.5
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.5,
+        "de_direction": 0.5,
+        "mmd_u": 0.5,
+        "variogram": 0.5
+      }
+    },
+    {
+      "candidate": "cnf800",
+      "scores": [
+        50.83520588397838,
+        50.85449629751775,
+        50.866265983479664
+      ],
+      "mean_score": 50.85198938832527,
+      "raw_metrics": [
+        {
+          "de_score": -0.03442622950819671,
+          "de_direction": 0.07285232336800936,
+          "mmd_u": 0.1292792558670044,
+          "variogram": 0.007122359238564968
+        },
+        {
+          "de_score": -0.022328548644338135,
+          "de_direction": 0.07083104909240262,
+          "mmd_u": 0.12859909236431122,
+          "variogram": 0.007437027990818024
+        },
+        {
+          "de_score": -0.02291325695581016,
+          "de_direction": 0.06929426132454239,
+          "mmd_u": 0.12953698635101318,
+          "variogram": 0.006984826643019915
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.49107901444350044,
+          "de_direction": 0.5222274976050072,
+          "mmd_u": 0.5173092222430586,
+          "variogram": 0.4991633207736964
+        },
+        {
+          "de_score": 0.49411764705882355,
+          "de_direction": 0.5216772218978758,
+          "mmd_u": 0.5159935011868306,
+          "variogram": 0.4989909768997671
+        },
+        {
+          "de_score": 0.4940068493150685,
+          "de_direction": 0.5210341880751658,
+          "mmd_u": 0.517065604638474,
+          "variogram": 0.4989135954784797
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.4930678369391308,
+        "de_direction": 0.5216463025260163,
+        "mmd_u": 0.5167894426894545,
+        "variogram": 0.49902263105064776
+      }
+    },
+    {
+      "candidate": "likelihood400",
+      "scores": [
+        51.017785633792634,
+        51.196698957541166,
+        51.00241853258653
+      ],
+      "mean_score": 51.07230104130678,
+      "raw_metrics": [
+        {
+          "de_score": -0.029508196721311483,
+          "de_direction": 0.08183014140862768,
+          "mmd_u": 0.12834185361862183,
+          "variogram": 0.007089657709002495
+        },
+        {
+          "de_score": -0.006379585326953758,
+          "de_direction": 0.08775511850281521,
+          "mmd_u": 0.12736935913562775,
+          "variogram": 0.007396312430500984
+        },
+        {
+          "de_score": -0.026186579378068748,
+          "de_direction": 0.07851837034991582,
+          "mmd_u": 0.1285436749458313,
+          "variogram": 0.0069510419853031635
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.4923339011925043,
+          "de_direction": 0.5251041901243207,
+          "mmd_u": 0.5191742357103593,
+          "variogram": 0.5003303139780614
+        },
+        {
+          "de_score": 0.49830508474576274,
+          "de_direction": 0.5271378035454386,
+          "mmd_u": 0.5184318803124268,
+          "variogram": 0.5003835170444163
+        },
+        {
+          "de_score": 0.49316239316239313,
+          "de_direction": 0.5239683763869167,
+          "mmd_u": 0.5190423309757174,
+          "variogram": 0.500143968229113
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.49460045970022004,
+        "de_direction": 0.5254034566855587,
+        "mmd_u": 0.5188828156661679,
+        "variogram": 0.5002859330838635
+      }
+    },
+    {
+      "candidate": "raw_ot400",
+      "scores": [
+        51.06992167491116,
+        51.252179864562144,
+        51.07683950199736
+      ],
+      "mean_score": 51.13298034715689,
+      "raw_metrics": [
+        {
+          "de_score": -0.026229508196721322,
+          "de_direction": 0.08526996880687371,
+          "mmd_u": 0.12827220559120178,
+          "variogram": 0.007090785074979067
+        },
+        {
+          "de_score": -0.0031897926634768623,
+          "de_direction": 0.0915859354495567,
+          "mmd_u": 0.12729860842227936,
+          "variogram": 0.007398058194667101
+        },
+        {
+          "de_score": -0.01963993453355157,
+          "de_direction": 0.0820747239131016,
+          "mmd_u": 0.12846072018146515,
+          "variogram": 0.00695289159193635
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.4931740614334471,
+          "de_direction": 0.5262148027890784,
+          "mmd_u": 0.519313341133322,
+          "variogram": 0.5002899917674183
+        },
+        {
+          "de_score": 0.4991511035653651,
+          "de_direction": 0.5283897276424521,
+          "mmd_u": 0.5185728697917562,
+          "variogram": 0.5003236495307012
+        },
+        {
+          "de_score": 0.4948542024013722,
+          "de_direction": 0.5251084983508618,
+          "mmd_u": 0.5192080980486351,
+          "variogram": 0.5000764520866227
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.4957264558000614,
+        "de_direction": 0.5265710095941308,
+        "mmd_u": 0.519031436324571,
+        "variogram": 0.5002300311282474
+      }
+    },
+    {
+      "candidate": "projected_ot400",
+      "scores": [
+        51.07770485330487,
+        51.24221638890831,
+        51.08276955576123
+      ],
+      "mean_score": 51.13423026599147,
+      "raw_metrics": [
+        {
+          "de_score": -0.026229508196721322,
+          "de_direction": 0.08601964252179257,
+          "mmd_u": 0.12824273109436035,
+          "variogram": 0.00709085538983345
+        },
+        {
+          "de_score": -0.00478468899521531,
+          "de_direction": 0.0914843560931046,
+          "mmd_u": 0.12727481126785278,
+          "variogram": 0.007398015353828669
+        },
+        {
+          "de_score": -0.01963993453355157,
+          "de_direction": 0.08256514522291131,
+          "mmd_u": 0.1284310519695282,
+          "variogram": 0.006952603347599506
+        }
+      ],
+      "skills": [
+        {
+          "de_score": 0.4931740614334471,
+          "de_direction": 0.5264574727750183,
+          "mmd_u": 0.5193722319035605,
+          "variogram": 0.5002874770493212
+        },
+        {
+          "de_score": 0.49872773536895676,
+          "de_direction": 0.5283564544164115,
+          "mmd_u": 0.5186203091420156,
+          "variogram": 0.5003251185006821
+        },
+        {
+          "de_score": 0.4948542024013722,
+          "de_direction": 0.5252661106192877,
+          "mmd_u": 0.519267409232786,
+          "variogram": 0.5000869726630576
+        }
+      ],
+      "all_calibrations_valid": true,
+      "mean_skills": {
+        "de_score": 0.49558533306792535,
+        "de_direction": 0.5266933459369059,
+        "mmd_u": 0.5190866500927874,
+        "variogram": 0.5002331894043537
+      }
+    }
+  ],
+  "passing_candidates": [],
+  "expand_to_16_resamples": false,
+  "scope": "One fixed fresh E8.25->E8.75 source-domain development trial. PCA8/4096 past-variance genes, cutoff-only encoder/whitening/heads; no reused8.5 models. Same shared800step initial field, paired400step raw/projectedOT with identical randomness and originalgradient/parameter caps. Likelihood400 budget control; copy and CNF800 reference. All forecasts/exact replays frozen before target reads. No target-informed grid or official uploads. Historical atlas development only: no independent-embryo/generalization claim. Original scorer/calibration/readiness unchanged; IPCA separate future change.",
+  "plan_sha256": "65cce13d80e8849d332121e751f0ed5e1fc0ec50a2389589590e9a7a35d972a7",
+  "resource_peak_process_working_set_bytes": 5337128960,
+  "projected_minus_raw_ot_mean_skills": {
+    "de_score": -0.00014112273213606752,
+    "de_direction": 0.00012233634277503125,
+    "mmd_u": 5.52137682163778e-05,
+    "variogram": 3.1582761063075893e-06
+  },
+  "report_sha256": "f183919e78ad10ee78614511c1dced9319feec324ae8002f170ac02cd78f3fb3"
+}

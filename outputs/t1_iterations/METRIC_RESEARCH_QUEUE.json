@@ -6319,9 +6319,9 @@
     },
     {
       "id": "scfm_projected_auxiliary",
-      "status": "registered_running",
+      "status": "completed_incremental_gain_not_promoted",
       "report": "SCFM_GRADIENT_PROJECTION_AUDIT_RESULTS.json",
-      "next_action": "Monitor registered scfm_projected_past_fold without duplication. On completion/failure collect four fresh inline metric reviews; apply declared raw/projected-arm rewards against cnf800 (controls0), update health and ledger, then reassess IPCA as a separate matched representation experiment. No new parallel worker.",
+      "next_action": "Keep positive scFM incremental gains. Before one fixed distribution-preserving scFM objective, check existing transition-MMD/direct-variogram coverage and freeze a genuinely distinct past-only loss with matched controls. Jev advisory chose past_distribution_loss(confidence.51), not proof. User-requested controlled PCA/IPCA remains queued separately; no exposed8.75 grid or parallel worker.",
       "training_protocol": {
         "steps": 400,
         "batch_size": 64,
@@ -6343,15 +6343,28 @@
       },
       "representation_preflight": "Check PCA/IPCA and fresh-fold support; no unmeasured IPCA score claims, single controlled change.",
       "experiment": "scfm_projected_past_fold"
+    },
+    {
+      "id": "scfm_distribution_preservation",
+      "status": "implementation_pending",
+      "next_action": "Bounded prior-loss coverage review and one distinct fixed past-only loss specification before registration; no repeat or target-informed weighting.",
+      "support": "Direction/MMD improves; variogram trails matchedNLL onall3; projected-vsraw effect tiny. Jev recommendationconfidence.51; proposed loss remains unvalidated."
+    },
+    {
+      "id": "controlled_incremental_pca",
+      "status": "predeclared",
+      "next_action": "Separate PCA/IPCA comparison: same cutoff-fit features/normalization/3000rows/rank8, fixed chunk512/order, matched800+400projectedOT training budget. Reuse frozen PCA models after exactencoder/control verification. Check a new eligible horizon before launch; no claimed boost or independent validation.",
+      "score": "unavailable",
+      "user_requested": true
     }
   ],
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
-    "status": "scfm_projected_past_fold_running",
-    "implementation_status": "implemented_launched",
+    "status": "scfm_incremental_gain_preserved",
+    "implementation_status": "completed_accounted_reviewed",
     "experiment": "scfm_projected_past_fold",
     "next_experiment": null,
-    "next": "Monitor registered scfm_projected_past_fold without duplication. On completion/failure collect four fresh inline metric reviews; apply declared raw/projected-arm rewards against cnf800 (controls0), update health and ledger, then reassess IPCA as a separate matched representation experiment. No new parallel worker."
+    "next": "Keep positive scFM incremental gains. Before one fixed distribution-preserving scFM objective, check existing transition-MMD/direct-variogram coverage and freeze a genuinely distinct past-only loss with matched controls. Jev advisory chose past_distribution_loss(confidence.51), not proof. User-requested controlled PCA/IPCA remains queued separately; no exposed8.75 grid or parallel worker."
   }
 }

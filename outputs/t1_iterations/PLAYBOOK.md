@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-04T04:31:22.711063+00:00
+Updated: 2026-10-04T04:40:11.186385+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -8,15 +8,15 @@ Use `research_harness.py queue` for a compact next-step/pending summary; never d
 
 Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction': 56.3, 'mmd_u': 53.2, 'variogram': 51.7}. Covariance .25 reused-development mean55.98883; EB and lineage-standardized historical proxy screens failed. Local>72 mean/lower-tail >=64-replicate AND temporal gate unmet. Full32285-gene scorer/calibration unchanged.
 
-Checkpoint jobs: ['scfm_projected_past_fold']. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
+Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Monitor registered scfm_projected_past_fold without duplication. On completion/failure collect four fresh inline metric reviews; apply declared raw/projected-arm rewards against cnf800 (controls0), update health and ledger, then reassess IPCA as a separate matched representation experiment. No new parallel worker.
+Next: Keep positive scFM incremental gains. Before one fixed distribution-preserving scFM objective, check existing transition-MMD/direct-variogram coverage and freeze a genuinely distinct past-only loss with matched controls. Jev advisory chose past_distribution_loss(confidence.51), not proof. User-requested controlled PCA/IPCA remains queued separately; no exposed8.75 grid or parallel worker.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in outputs\t1_submissions\formula_progress_20260930_01\official_result.json. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 
 Four metric critiques completed; consult METRIC_CRITIQUES_20261001.md when designing the next mechanism. Separate reward starts0: +1 positive paired mean skill gain / -10 tie or regression per metric, aggregate maximum100; negative balances visible. Pending/invalid/proxy0. Future unique declared experiments only; promotion gates unchanged.
 
-Current separate reward: -1320. This is not a benchmark score.
+Current separate reward: -1312. This is not a benchmark score.
 
 External acquisition entry point: GSE76118_WT_STAGE_MANIFEST.json. The old stage-only list is historical;127 mutants excluded,162 B6 WT controls separate,143E8.5/999E9.5 primary CD1 candidates. Expression acquired: True; acquired cohort cells: 24; prospective QC passes: 18; original pilot cells: 4; training readiness: False. Latest external status: 24-cell cohort/QC, compatibility, lineage matching, robustness and E8.5 static guidance already completed; static guidance had no passing alpha. Transfer/embryo replication not validated. Do not repeat acquisition or QC; per-cutoff stage restrictions remain.. Latest Jev actual usage: {'input_tokens': 792, 'output_tokens': 45}.
 

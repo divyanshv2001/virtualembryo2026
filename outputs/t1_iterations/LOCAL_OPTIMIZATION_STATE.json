@@ -30,13 +30,11 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Monitor registered scfm_projected_past_fold without duplication. On completion/failure collect four fresh inline metric reviews; apply declared raw/projected-arm rewards against cnf800 (controls0), update health and ledger, then reassess IPCA as a separate matched representation experiment. No new parallel worker.",
+  "next_experiment": "Keep positive scFM incremental gains. Before one fixed distribution-preserving scFM objective, check existing transition-MMD/direct-variogram coverage and freeze a genuinely distinct past-only loss with matched controls. Jev advisory chose past_distribution_loss(confidence.51), not proof. User-requested controlled PCA/IPCA remains queued separately; no exposed8.75 grid or parallel worker.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "scfm_projected_past_fold"
-  ],
+  "active_jobs": [],
   "active_run_path": null,
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -1228,7 +1226,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1320,
+    "current_reward": -1312,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1237,10 +1235,10 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1320,
-    "reward_score": -1320,
+    "uncapped_reward": -1312,
+    "reward_score": -1312,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": 0
+    "last_batch_reward_delta": 8
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -2732,6 +2730,19 @@
         "variogram": "Problem: Gradient compatibility alone does not establish variogram improvement. Proposed solution: Freeze past-only data at cutoff 8.5; train paired likelihood-only, raw-OT, and projected-OT arms with matched initialization, batches, optimizer, steps, and fixed OT weight. Validation: Compare past-only held-out variograms and likelihood; inspect actual-update compatibility. Fail on future-data leakage, opposing updates, likelihood degradation, or absent variogram improvement. Metrics remain unavailable."
       },
       "coordinator": "All agree scorer metrics unavailable and finite-update behavior unproven. MMD specialist proposes a distinct MMD loss, not audited OT; retain as alternative, do not silently substitute. Earlier cutoff validation requires fresh past-fit encoder and initialization; 8.5-fitted checkpoint cannot validate earlier withheld stages. No forced consensus or score invention."
+    },
+    "scfm_projected_past_fold_01": {
+      "status": "completed",
+      "report_sha256": "f183919e78ad10ee78614511c1dced9319feec324ae8002f170ac02cd78f3fb3",
+      "packet_report_sha256": "ae0b7b46ddd2ec0f23c31e29c69562dff198f8d64e2112a7e6ee43c25d77dda1",
+      "specialist_role_version": 2,
+      "reviews": {
+        "de_score": "Problem: Projected OT preserves CNF gains but remains below copy and regresses one panel versus raw OT. Proposed solution: Shrink forecast innovations toward persistence using a coefficient fitted exclusively on past rolling origins. Validation: Re-run all three calibrated matched panels under frozen SHA and PCA8/4096<=E8.25; require copy-beating skill without panel regression. Target8.75 remains development evidence.",
+        "de_direction": "Problem: Projection preserves a small mean gain (+0.00012234) but regresses one panel; strict gates remain unmet. Proposed solution: Learn a shrinkage blend of raw and projected OT using past-only rolling origins, then freeze its weight. Validation: Compare the frozen blend against raw OT, projected OT, and CNF on three calibrated matched panels. Treat target8.75 as exposed development evidence.",
+        "mmd_u": "Problem: ProjectedOT improves MMD on all three matched panels, but the mean gain over rawOT is only0.00005521; strict gates remain unmet. Proposed solution: Add multiscale MMD regularization, choosing bandwidths and weight using only past folds at E<=8.25. Validation: Freeze settings; rerun three matched panels against all controls. Treat exposed target8.75 as development, preserving incremental gains without claiming independent validation.",
+        "variogram": "Problem: Projected OT improves variograms versus copy/CNF on all three panels, but trails NLL and regresses versus raw OT on one. Proposed solution: Add a past-only, lag-weighted variogram penalty to projected OT, preserving its incremental gains. Validation: Use identical calibrated panels and frozen PCA8/4096 budget; require panelwise improvement and strict gates. Treat exposed8.75 as development only."
+      },
+      "coordinator": "Facts checked against raw3panels: DE belowcopy; direction2/3 and tinygain vsraw; MMD3/3; variogram belowNLL3/3. Allfour mean skills improve vs declaredCNF800, reward+4 perOTarm. Critic remedies differ; none is proven or authorized to tune exposedtarget. Preserve incremental gains without promotion/generalization claims. User-requested IPCA remains a separate controlled direction."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3652,37 +3663,31 @@
   },
   "agent_health": {
     "redline": 0,
-    "score": -1320,
+    "score": -1312,
     "status": "below_redline",
     "metrics": {
       "de_score": {
-        "score": -341,
+        "score": -339,
         "status": "below_redline"
       },
       "de_direction": {
-        "score": -297,
+        "score": -295,
         "status": "below_redline"
       },
       "mmd_u": {
-        "score": -374,
+        "score": -372,
         "status": "below_redline"
       },
       "variogram": {
-        "score": -308,
+        "score": -306,
         "status": "below_redline"
       }
     },
-    "evaluated_iterations": 46,
+    "recorded_iterations": 48,
     "action": "Prioritize supported matched-control improvements; preserve failures and gates. Proxy/pending iterations earn zero. No score reset, fabricated reward, agent termination or deployment implied.",
     "latest_iteration": {
-      "experiment": "scfm_gradient_projection_audit_01",
-      "reward_delta": 0,
-      "reason": "No full-panel score; proxy cannot earn health credit."
-    },
-    "pending_iteration": {
       "experiment": "scfm_projected_past_fold_01",
-      "status": "running_at_checkpoint",
-      "reward_delta": 0
+      "reward_delta": 8
     }
   },
   "scfm_reopened": {
@@ -3704,8 +3709,22 @@
     },
     "new_direction": "Likelihood-compatible OT gradient projection; actual score gain unvalidated.",
     "jev_decision": "private/harness_runs/anchored_soft_ot_paper_pilot/decisions/scfm_reopen_past_direction_20261004_route.json",
-    "next": "Bounded scFM/model-basics eligibility preflight: identify fresh cutoff-fit support and matched baseline evidence; inventory PCA vs IPCA coverage before fixing one paired projected-OT training trial. Reuse runners; no old-target grid or earlier validation with8.5-fitted artifacts.",
-    "running_experiment": "scfm_projected_past_fold"
+    "next": "Keep positive scFM incremental gains. Before one fixed distribution-preserving scFM objective, check existing transition-MMD/direct-variogram coverage and freeze a genuinely distinct past-only loss with matched controls. Jev advisory chose past_distribution_loss(confidence.51), not proof. User-requested controlled PCA/IPCA remains queued separately; no exposed8.75 grid or parallel worker.",
+    "latest_fold_result": {
+      "experiment": "scfm_projected_past_fold",
+      "status": "completed_incremental_gain_not_promoted",
+      "copy": 50.0,
+      "cnf800": 50.85198938832527,
+      "likelihood400": 51.07230104130678,
+      "raw_ot400": 51.13298034715689,
+      "projected_ot400": 51.13423026599147,
+      "projected_minus_raw": 0.001249918834578256,
+      "all15_calibrations_valid": true,
+      "peak_bytes": 5337128960,
+      "reward_delta": 8,
+      "health": -1312,
+      "strict_gates_passed": false
+    }
   },
   "model_basics_request": {
     "tested_families": [
@@ -3720,5 +3739,16 @@
     "incremental_pca": "No evidence found in inspected research code; no score claim",
     "evaluation_rule": "Matched past-fit splits and same full-panel calibration; architecture and representation effects separate",
     "next": "Bounded scFM/model-basics eligibility preflight: identify fresh cutoff-fit support and matched baseline evidence; inventory PCA vs IPCA coverage before fixing one paired projected-OT training trial. Reuse runners; no old-target grid or earlier validation with8.5-fitted artifacts."
+  },
+  "latest_jev": {
+    "decision": "representation_or_regularizer_20261004",
+    "choice": "past_distribution_loss",
+    "confidence": 0.51,
+    "usage": {
+      "input_tokens": 1452,
+      "output_tokens": 50
+    },
+    "payload_bytes": 2708,
+    "scope": "Advisory only, no score certification."
   }
 }

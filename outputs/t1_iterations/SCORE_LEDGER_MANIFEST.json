@@ -1,5 +1,5 @@
 {
-  "records": 3214,
+  "records": 3229,
   "sources": [
     {
       "path": "private/anchored_soft_ot_paper_pilot_01/report.json",
@@ -937,6 +937,16 @@
       "outcomes_indexed": 0
     },
     {
+      "path": "private/scfm_gradient_projection_audit_01/report.json",
+      "sha256": "f4842a5743745ed581a53f44d0961ab6ec7447d2e705058b0f0354c4a2e2b6fe",
+      "outcomes_indexed": 0
+    },
+    {
+      "path": "private/scfm_projected_past_fold_01/report.json",
+      "sha256": "f183919e78ad10ee78614511c1dced9319feec324ae8002f170ac02cd78f3fb3",
+      "outcomes_indexed": 15
+    },
+    {
       "path": "private/scnode_biological_pilot_01/report.json",
       "sha256": "7def27fc662d8e0534bbac598a5385b35c2cb22559cb0aef5d4d75173a7657c3",
       "outcomes_indexed": 12
@@ -1124,5 +1134,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "790397a60c44e299989b64b732d5b5ca8a88424e30ff9659c283ffcbb34278bf"
+  "ledger_sha256": "a94f07c0b0d29f6d5afc3745c1d3b4858e71d1bc4a19a99a0f4f3d3f9ec940bb"
 }
