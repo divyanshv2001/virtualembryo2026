@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-04T03:35:35.618820+00:00",
+  "updated_utc": "2026-10-04T03:51:02.852910+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Next cycle implement/register one frozen log-density fullpanel pilot, no retraining: reuse past<=7.75 originalencoder/head/referencecheckpoint and cachedlogg0/g1 models; exactcopy/freshCNF replay against originalprediction hashes before targetaccess. Same1500donors/selectedidentity-residual decoder/guards, three originalscoring seeds/fixed32285scorer/calibration. RetrospectiveE8.0 exposure disclosed; no strengthgrid/export. Freeze spec before launch, onebatch then fourbriefcritics/reward/ledger and onecheckpoint. Pastmechanism pass is not benchmark/readiness.",
+  "next_experiment": "Fixed log-density fullpanel configuration retired: all3 scores belowcopy/CNF, no expansion/export or repeated exposed-target tuning. Next cycle use compact queue to select only a genuinely new mechanism with supporting past-only evidence; no diagnostic chain. Prior softOT/scNODE/densitybalance failures preserved. Keep four read-only metric roles, shared hash and coordinator evidence checks. Token report identifies coordinator/context/code as dominant; reuse runner/configs and avoid broad reads.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1226,7 +1226,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1240,
+    "current_reward": -1320,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1235,10 +1235,10 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1240,
-    "reward_score": -1240,
+    "uncapped_reward": -1320,
+    "reward_score": -1320,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": -58
+    "last_batch_reward_delta": -80
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -2698,6 +2698,25 @@
       },
       "coordinator_clarifications": "E8.0 is one previously exposed target, eight noise seeds are not eight targets; variogram here concerns gene-pair dependence, no spatial coordinates.",
       "completed_utc": "2026-10-04T03:35:35.618820+00:00"
+    },
+    "tigon_log_density_fullpanel_01": {
+      "status": "completed",
+      "report_sha256": "87c925e05cbbffa8fa828fc48b50fc91681d725b428421d5d160fbdad4518f3e",
+      "specialist_role_version": 2,
+      "metrics": [
+        "de_score",
+        "de_direction",
+        "mmd_u",
+        "variogram"
+      ],
+      "reviews": {
+        "de_score": "Problem: Both variants have identical DE scores/skills, but headline means trail CNF/copy; valid calibrations, neither passes. Proposed solution: Investigate DE alignment using genuinely new past-only support; remedy unvalidated. Validation: Freeze heads/scorer and replay matched controls; require predefined improvement over both. Exposed E8.0 cannot establish independent-embryo validation.",
+        "de_direction": "Problem: Both arms have negative direction agreement; enabled improves over disabled but remains below CNF/copy. Proposed solution: Diagnose directional bias using genuinely new past-only support; avoid E8.0 tuning. Validation: Preserve frozen models, replay, heads/scorer and matched controls. Require direction improvement over both controls; neither arm passes. Independent generalization remains unverified.",
+        "mmd_u": "Problem: Both arms have higher raw MMD than copy/CNF across all three entries; enabling growth further worsens each. Proposed solution: Require genuinely new past-only support before revising density estimation; retain frozen controls, heads, scorer. Validation: Require lower raw MMD against matched copy/CNF. Exposed E8.0 cannot establish independent-embryo generalization.",
+        "variogram": "Problem: Both arms underperform copy/CNF on gene-pair dependence; enabled growth worsens raw variogram across all three evaluations. Proposed solution: A dependence-preserving objective needs genuinely new past-only support. Validation: Unvalidated remedy. Freeze heads/scorer; compare matched controls on untouched support. Require reproducible improvement; otherwise reject. No E8.0 tuning or repeat; readiness unchanged."
+      },
+      "evidence_verified": "All statements checked against frozen raw/skill summaries; distinct read-only metric roles, coordinator-only writes.",
+      "completed_utc": "2026-10-04T03:51:02.852910+00:00"
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3547,7 +3566,7 @@
       5,
       6
     ],
-    "policy_sha256": "bc7a97ff64f03840c3f5dbdf2ee8eeaa623cc1eef17eb5fc7cacb8af575beb86",
+    "policy_sha256": "d49c5f4b947a06aa356f99bd2ff62947427dbf7c48ef1995ff3bf68634b91260",
     "rules": [
       "Start with research_harness.py resume; read policy only if changed",
       "One necessary experiment; checkpoint before another",
@@ -3585,5 +3604,24 @@
       "gate": "Original all3headline beat controls/all4mean skills noninferior; >=60 for16rep only. Original>72/lower-tail64rep+wholeembryo temporal gates unchanged. No target tuning."
     },
     "training_history_units": "original_density field in generated audit denotes new per-dimension log-density loss; original_energy remains unchanged movingenergy. Raw benchmark metrics remain unavailable."
+  },
+  "tigon_log_density_fullpanel": {
+    "status": "completed_failed_progress_gate",
+    "spec": "NEXT_TIGON_LOG_DENSITY_FULLPANEL.json",
+    "report": "TIGON_LOG_DENSITY_FULLPANEL_RESULTS.json",
+    "report_sha256": "87c925e05cbbffa8fa828fc48b50fc91681d725b428421d5d160fbdad4518f3e",
+    "means": {
+      "copy": 50.0,
+      "fresh_pca8_cnf_incumbent_covariance_0.25": 50.83777035137515,
+      "log_density_disabled": 45.934910971924545,
+      "log_density_enabled": 45.886242302650295
+    },
+    "passing_candidates": [],
+    "reward_delta": -80
+  },
+  "critic_coordination": {
+    "write_owner": "coordinator",
+    "reviewers": "read-only, distinct metrics, identical frozen report hash",
+    "conflict_resolution": "Validate conflicting factual claims against frozen evidence; retain methodological uncertainty, no forced agreement or invented scores."
   }
 }

@@ -725,3 +725,6 @@ Fixedalpha32.085 audit completed114.72seconds/peak1081262080bytes, exactPCA and 
 
 ## 2026-10-04T03:35:35.618820+00:00 — one-cycle log-density mechanism pass
 New fixed log-ratio loss g0/g1 trained200steps on past7.5/7.75, exactPCA/init/query stream verified. Bothpass eight newnoise-seed mechanism gates: logloss ratios .124-.294, energyboundedbycentroid, ESS>=30.97/32/span<=.681.64.85seconds/peak1081778176bytes. No futureexpression/benchmark/reward/readiness. Four<=80wordreviews cached inexistingstate. OnecachedJev1612bytes/792in/45out selectednewloss; no extraadvisory. Nextcycle frozenfullpanel design retained inexistingstate, notregistered/launched. Added harnessqueue compactlatest/pending selector, replacing largequeue output. Onefinalcheckpoint only.
+
+## 2026-10-04T03:51:02.852910+00:00 — frozen log-density fullpanel rejected
+Means g0 45.934911/g1 45.886242 vs copy50/CNF50.837770; all12 calibrations valid, frozen/replay/control hashes passed, peak4640534528bytes. Four distinct read-only <=60word reviews evidence-checked and consolidated instate. Botharmsreward-40,total-1320; no passing/expansion/export. Deterministic gate outcome needs no Jev. One requested token-report deliverable outside repository; no new research experiment chained.

@@ -1,0 +1,26 @@
+{
+  "status": "predeclared_frozen_models",
+  "cutoff": 7.75,
+  "target": 8.0,
+  "fit_stages": [
+    7.5,
+    7.75
+  ],
+  "scope": "Retrospective associated source-domain cohort; E8.0 previously exposed in other training/audits; not independent embryos or untouched validation. TIGON-inspired conditional adaptation, not author reproduction or absolute growth.",
+  "arms": [
+    "copy",
+    "fresh_pca8_cnf_incumbent_covariance_0.25",
+    "log_density_disabled",
+    "log_density_enabled"
+  ],
+  "representation": "Fresh solely<=7.75 4096pastvariance features/PCA8, existing fullmapped32285panel/anchorhead/guards; no target features or weights. Unitmass each source snapshot; isotropic KDE covariance0.1 alltrainingcenters.",
+  "tigon_training": "None this batch. Frozen past log-density models:200steps each, exact shared originalinit/query stream, log KDE ratio squared/8^2 plus movingenergy. Originalconditional/densitybalance failures preserved.",
+  "reference": "Frozen original800step CNF checkpoint; exact encoder and control prediction hashes required, no retraining. Different original architecture/budget disclosed.",
+  "forecast": "1500same7.75donors fixedseed20260928; normalized growthweights for seeded systematic latentparticle resampling, carry selected original donor identity/residual into existing fullpanel anchor decoder. Uniformg0 weight control same resampling stream. Record selection/weight/forecast hashes, ESS and every guardbackoff; no changing benchmark weighting.",
+  "scoring": "After allforecasts frozen, fixed2000source8.0cells perseed20260928/29/30 split1000truth1000ceiling. Originalfull32285raw4/skills4/calibration, invalidoutcomes preserved.",
+  "gate": "All3headlines exceedcopy/freshCNF andall4meanskillnoninferior for progress; isolateg1vsg0 contrast. >=60 requiredfor16rep expansion; original>72mean/lower-tail64rep pluswholeembryotemporalreadiness unchanged. Failed fixedconfig no target strengthgrid/export.",
+  "reward": "EachnewTIGONarm pairedfreshCNF futureonlypolicy+1/-10 permetric; invalid0. Proxychecks0.",
+  "resources": "D-only16GiB,2threads1worker,chunkdensity/featurememmaps. Verify measured resource envelope on realpastinputs before long launch; lowerquerysize/budget requires newpredeclaration, not silent change.",
+  "next": "One frozen-model fullpanel batch only; four briefcritics then ledger/reward and compact checkpoint. No subsequent experiment thiscycle.",
+  "forecast_stability": "Before target expression: ESS>=750of1500 and logweightspan<=log4; finite weights, original guards. Failure retained, no silent clipping/tuning."
+}

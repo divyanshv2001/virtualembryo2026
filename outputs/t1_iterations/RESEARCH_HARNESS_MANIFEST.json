@@ -300,6 +300,11 @@
       "script": "tigon_log_density_audit.py",
       "run": "private/tigon_log_density_audit_01",
       "report": "TIGON_LOG_DENSITY_AUDIT_RESULTS.json"
+    },
+    "tigon_log_density_fullpanel": {
+      "script": "tigon_log_density_fullpanel.py",
+      "run": "private/tigon_log_density_fullpanel_01",
+      "report": "TIGON_LOG_DENSITY_FULLPANEL_RESULTS.json"
     }
   }
 }

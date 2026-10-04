@@ -1,5 +1,5 @@
 {
-  "records": 3202,
+  "records": 3214,
   "sources": [
     {
       "path": "private/anchored_soft_ot_paper_pilot_01/report.json",
@@ -1052,6 +1052,21 @@
       "outcomes_indexed": 12
     },
     {
+      "path": "private/tigon_gradient_balance_audit_01/report.json",
+      "sha256": "5ab5efbd23a5b68acbce708fee59dc888e68a29211fa91a1c360137e6f1be68c",
+      "outcomes_indexed": 0
+    },
+    {
+      "path": "private/tigon_log_density_audit_01/report.json",
+      "sha256": "af436e8c3f76416fe90d0e7f07212a4b3d708c62ccecb6b6521ec826f23ac0b5",
+      "outcomes_indexed": 0
+    },
+    {
+      "path": "private/tigon_log_density_fullpanel_01/report.json",
+      "sha256": "87c925e05cbbffa8fa828fc48b50fc91681d725b428421d5d160fbdad4518f3e",
+      "outcomes_indexed": 12
+    },
+    {
       "path": "private/tigon_numerical_preflight_01/report.json",
       "sha256": "7271de0ca4343c10a721a094e344cba2a85148be7b9a7dbfc63233031c66882e",
       "outcomes_indexed": 0
@@ -1059,6 +1074,11 @@
     {
       "path": "private/tigon_numerical_preflight_retry_01/report.json",
       "sha256": "aefb176042b20eddf9620cf8baa12650b24bf7ff0c69151e7fbd401f27627c71",
+      "outcomes_indexed": 0
+    },
+    {
+      "path": "private/tigon_objective_signal_01/report.json",
+      "sha256": "e0963acdc8b33bda3d1bbe8f933d96c830615d81324938ec0d44dad334b69ff5",
       "outcomes_indexed": 0
     },
     {
@@ -1104,5 +1124,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "3c063b84810ca39b0dbb0cd311859e4ab8d346f7ba802a373cc3d764f5f5f563"
+  "ledger_sha256": "790397a60c44e299989b64b732d5b5ca8a88424e30ff9659c283ffcbb34278bf"
 }

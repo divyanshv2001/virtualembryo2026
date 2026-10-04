@@ -6321,12 +6321,12 @@
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
-    "status": "past_log_density_mechanism_passed_fullpanel_implementation_pending",
-    "implementation_status": "not_registered_or_launched",
-    "experiment": "tigon_log_density_audit",
-    "next_experiment": "tigon_log_density_fullpanel",
-    "next": "One frozen-model fullpanel pilot nextcycle; exact copy/freshCNF replay and unchangedpastheads/scorer. See compact state design; no retraining or targetstrengthgrid.",
-    "report": "TIGON_LOG_DENSITY_AUDIT_RESULTS.json",
+    "status": "log_density_fullpanel_failed_fixed_configuration_retired",
+    "implementation_status": "completed",
+    "experiment": "tigon_log_density_fullpanel",
+    "next_experiment": null,
+    "next": "No queued rerun. Select genuinely new past-supported mechanism next cycle, no target tuning or diagnostic chain.",
+    "report": "TIGON_LOG_DENSITY_FULLPANEL_RESULTS.json",
     "jev_record": "private/decisions/tigon_log_density_01/route.json",
     "efficiency_policy": "RESEARCH_CONTINUATION_POLICY.md"
   }
