@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-04T14:46:48.329664+00:00
+Updated: 2026-10-04T14:57:28.730761+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -10,13 +10,13 @@ Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction':
 
 Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Collect tied_marginal_diffusion_past_fold aftercompletion; no duplicate worker. Verify frozen amplitude/drift and same-state marginal variance gate, prior/neutral/new fullpanel replays; four fresh independent metric reviews, unique primary reward, bounded cached Jev next decision. Preserve small prior gains and failed horizon confirmation.
+Next: Audit genuinely unexplored drift mechanism from primary sources against saved coverage, with past-only feasibility/RTX3060 and fullpanel matched controls; use bounded cached Jev selection. Retain tied correlated52.377365 small historical gain, defer frozen horizon confirmation rather than claim robustness. No old covariance/noise/seed/rank/horizon grids, no targettuning/upload/readiness weakening. GPU covariance audit allocated3GiB within4.5GiB; chunk future non-scoring probes where source pins permit, no change to existing frozen mechanisms.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in outputs\t1_submissions\formula_progress_20260930_01\official_result.json. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 
 Four metric critiques completed; consult METRIC_CRITIQUES_20261001.md when designing the next mechanism. Separate reward starts0: +1 positive paired mean skill gain / -10 tie or regression per metric, aggregate maximum100; negative balances visible. Pending/invalid/proxy0. Future unique declared experiments only; promotion gates unchanged.
 
-Current separate reward: -1525. This is not a benchmark score.
+Current separate reward: -1521. This is not a benchmark score.
 
 External acquisition entry point: GSE76118_WT_STAGE_MANIFEST.json. The old stage-only list is historical;127 mutants excluded,162 B6 WT controls separate,143E8.5/999E9.5 primary CD1 candidates. Expression acquired: True; acquired cohort cells: 24; prospective QC passes: 18; original pilot cells: 4; training readiness: False. Latest external status: 24-cell cohort/QC, compatibility, lineage matching, robustness and E8.5 static guidance already completed; static guidance had no passing alpha. Transfer/embryo replication not validated. Do not repeat acquisition or QC; per-cutoff stage restrictions remain.. Latest Jev actual usage: {'input_tokens': 792, 'output_tokens': 45}.
 

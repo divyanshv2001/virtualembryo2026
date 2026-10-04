@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Collect tied_marginal_diffusion_past_fold aftercompletion; no duplicate worker. Verify frozen amplitude/drift and same-state marginal variance gate, prior/neutral/new fullpanel replays; four fresh independent metric reviews, unique primary reward, bounded cached Jev next decision. Preserve small prior gains and failed horizon confirmation.",
+  "next_experiment": "Audit genuinely unexplored drift mechanism from primary sources against saved coverage, with past-only feasibility/RTX3060 and fullpanel matched controls; use bounded cached Jev selection. Retain tied correlated52.377365 small historical gain, defer frozen horizon confirmation rather than claim robustness. No old covariance/noise/seed/rank/horizon grids, no targettuning/upload/readiness weakening. GPU covariance audit allocated3GiB within4.5GiB; chunk future non-scoring probes where source pins permit, no change to existing frozen mechanisms.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -1226,7 +1226,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1525,
+    "current_reward": -1521,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1235,10 +1235,10 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1525,
-    "reward_score": -1525,
+    "uncapped_reward": -1521,
+    "reward_score": -1521,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": 0
+    "last_batch_reward_delta": 4
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -2981,6 +2981,18 @@
         "variogram": "Problem: Variogram declines versus both comparators; initial variance matching cannot isolate covariance effects. Proposed solution: Distinct past-only covariance-isolation diagnostic without target tuning. Validation: Preserve15calibrations/32285gene scorer gates and paired differences;3scoringresamples do not establish embryo replication."
       },
       "scope": "Independent narrow specialists, no tools/peers/writes. Corrected terminology: full-panel MMD measures joint distribution, not only marginal distributions; scoring resamples not independent splits. New diagnostic training would be separately predeclared, original confirmation reward remains0."
+    },
+    "tied_marginal_diffusion_past_fold_01": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "736eb36b3997480055e8fa04a1be7a2bc0a53793d5ab747d08fb338fbe5fe817",
+      "reviews": {
+        "de_score": "Problem: Small inconsistent DE gains remain below persistence. Proposed solution: Preserve candidate, frozen-weight historical horizon confirmation against tied/old diagonal and kinetics. Validation: Primary+.000866861,2/3positive; one trainingseed/exposed development does not establish generalization.",
+        "de_direction": "Problem: Tiny direction gains use one trainingseed and3resamples, not independent embryos. Proposed solution: Fixed-weight horizon confirmation before broader claims. Validation: Primary+.0000771859,2/3positive;all4primarymeanspositive and replays pass; robustness untested.",
+        "mmd_u": "Problem: MMD gain is tiny and comparator-dependent. Proposed solution: Preserve candidate, frozen horizon confirmation without grids/target tuning. Validation: Primary+.0000066769,2/3positive;old diagonal comparison mean negative;independent training/embryo replication before efficacy claims.",
+        "variogram": "Problem: Tiny comparator-sensitive variogram gains;resamples not embryos. Proposed solution: Preserve primary correlated-vs-tied-diagonal gain and fixed horizon confirmation. Validation: Primary+.0000234169,3/3positive;old diagonal negative3/3.18validcalibrations and separate exactreplays pass;independent replication needed."
+      },
+      "scope": "Four fresh independent narrow reviewers, no tools/peers/writes. Corrected specialist terminology:18calibrations are valid, forecast replays are separately verified; preserve correlated-over-tied-diagonal gain, not ambiguous tied-diagonal promotion."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3902,27 +3914,27 @@
   },
   "agent_health": {
     "redline": 0,
-    "score": -1525,
+    "score": -1521,
     "status": "below_redline",
     "metrics": {
       "de_score": {
-        "score": -395,
+        "score": -394,
         "status": "below_redline"
       },
       "de_direction": {
-        "score": -351,
+        "score": -350,
         "status": "below_redline"
       },
       "mmd_u": {
-        "score": -428,
+        "score": -427,
         "status": "below_redline"
       },
       "variogram": {
-        "score": -351,
+        "score": -350,
         "status": "below_redline"
       }
     },
-    "recorded_iterations": 68,
+    "recorded_iterations": 69,
     "action": "Prioritize supported matched-control improvements; preserve failures and gates. Proxy/pending iterations earn zero. No score reset, fabricated reward, agent termination or deployment implied."
   },
   "scfm_reopened": {
@@ -4748,9 +4760,24 @@
     "limitations": "Diagonal factor orientation is distribution-neutral at identical state with exact Gaussian noise; factor gradients can change finite Monte Carlo draws. This is a matched stochastic implementation control, not a learned diagonal variance model. Numerical equality verified within9.32e-10, not bit-exact floating point variance. Divergent states can yield different frozen amplitude values."
   },
   "tied_marginal_diffusion_past_fold": {
-    "status": "running",
+    "status": "completed",
     "experiment": "tied_marginal_diffusion_past_fold",
     "report": "TIED_MARGINAL_DIFFUSION_PAST_FOLD_RESULTS.json",
-    "scope": "Matched816factorparameters400RTX3060steps perarm, frozen amplitude/kinetics, past-only10963cells, originalCPU fullpanel scorer/replay/gates. Same-state analytic marginal checks aftertraining; diagonal distribution-neutral implementation control disclosed. No score/reward yet."
+    "scope": "All4primarymeanspositive;correlated52.377365, +.043299vs kinetics, tiny historical gains retained notrobust. MMD/variogram below olddiagonal,DEbelowcopy.18validcalibrations allreplayspass;one trainingseed3scoringresamples. Same-state marginal error1.86e-9/frozenamplitude-drift exact;3078.19MiBGPU5.03GiBhost.",
+    "mean_scores": {
+      "copy": 50.0,
+      "cnf800": 51.708692022607636,
+      "kinetic_none400": 52.334065831100055,
+      "diffusion_diagonal400": 52.35822162687949,
+      "tied_diagonal400": 52.35309497205257,
+      "tied_correlated400": 52.37736478035914
+    },
+    "primary_contrast": {
+      "de_score": 0.0008668606150001312,
+      "de_direction": 7.718591679484188e-05,
+      "mmd_u": 6.676924337201129e-06,
+      "variogram": 2.341686407925092e-05
+    },
+    "reward_delta": 4
   }
 }

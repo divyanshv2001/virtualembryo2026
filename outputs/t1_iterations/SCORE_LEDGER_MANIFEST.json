@@ -1,5 +1,5 @@
 {
-  "records": 3436,
+  "records": 3454,
   "sources": [
     {
       "path": "private/anchored_soft_ot_paper_pilot_01/report.json",
@@ -1152,6 +1152,11 @@
       "outcomes_indexed": 15
     },
     {
+      "path": "private/tied_marginal_diffusion_past_fold_01/report.json",
+      "sha256": "736eb36b3997480055e8fa04a1be7a2bc0a53793d5ab747d08fb338fbe5fe817",
+      "outcomes_indexed": 18
+    },
+    {
       "path": "private/tigon_conditional_fullpanel_01/report.json",
       "sha256": "2e3756d7b592372ce3c30cc35c81e6f55b64436ece25b57e9c07aff5925751f6",
       "outcomes_indexed": 12
@@ -1229,5 +1234,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "73c72f598021f6473d4c1dd1c6880591ac4ee67c440cb5062d16a317a6bdda6a"
+  "ledger_sha256": "49a1bd6ccb426e945bf8e4dde4f1185a073a2521b916fdf5bf5644146a41a4d9"
 }

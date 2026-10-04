@@ -6395,16 +6395,16 @@
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
     "experiment": "collective_context_past_fold",
-    "status": "tied_marginal_diffusion_past_fold_running",
-    "next_experiment": "tied_marginal_diffusion_past_fold",
-    "next": "Collect tied_marginal_diffusion_past_fold aftercompletion; no duplicate worker. Verify frozen amplitude/drift and same-state marginal variance gate, prior/neutral/new fullpanel replays; four fresh independent metric reviews, unique primary reward, bounded cached Jev next decision. Preserve small prior gains and failed horizon confirmation.",
-    "jev_choice": "tied_marginal_preflight",
-    "jev_confidence": 0.39,
+    "status": "tied_marginal_completed_all_primary_means_positive",
+    "next_experiment": "unexplored_drift_primary_source_audit",
+    "next": "Audit genuinely unexplored drift mechanism from primary sources against saved coverage, with past-only feasibility/RTX3060 and fullpanel matched controls; use bounded cached Jev selection. Retain tied correlated52.377365 small historical gain, defer frozen horizon confirmation rather than claim robustness. No old covariance/noise/seed/rank/horizon grids, no targettuning/upload/readiness weakening. GPU covariance audit allocated3GiB within4.5GiB; chunk future non-scoring probes where source pins permit, no change to existing frozen mechanisms.",
+    "jev_choice": "new_drift_audit",
+    "jev_confidence": 0.37,
     "scope": "Advisory low confidence; raw-count data availability verified deterministically, no score claim.",
     "support_audit": "Completed: no independent embryo/untouched validation established; historical-only options remain, no promotion.",
     "jev_usage": {
-      "input_tokens": 1339,
-      "output_tokens": 52
+      "input_tokens": 1469,
+      "output_tokens": 43
     }
   }
 }
