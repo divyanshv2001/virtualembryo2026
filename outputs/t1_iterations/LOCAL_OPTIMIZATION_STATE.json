@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": true,
+  "local_process_running": false,
   "quota_reset_evidence": {
     "limit_observed": true,
     "observed_reset_text": "7:54 PM",
@@ -30,13 +30,11 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "observed_fullgene_hurdle running viaharness, seconddeadlinehypothesis. CUDA float64 conditionalridge equivalent pinnedCPU maxerror6.94e-17/smoke8.67MB; zero-velocity decoder preservesdonors/zeros exactly. Full16787actual8.5cells/32285genes, fixedCNF/cov.25trajectory, real-linear/incumbentexactreplays, no9.5fit;12fullpanel outcomespending. Inspectnamedworker; fourfreshmetricreviews/rewardaftercompletion. No duplicate/oldweightgrid, readiness/noofficialupload unchanged.",
+  "next_experiment": "Positive hurdle56.68901 vsinc55.98883 (+.70018);all4meanincumbentgains/3aggregatewins,12validcalibs/fourfreshreviews. Freeze mechanism. Next register one matched fixed-disjoint actual8.5headtraining-stability confirmation, exactfullfit/incumbent controls, forecastsfrozenbeforetargetscoring. Notindependentembryos/thirdhypothesis; no retuning/grids, no16expansionbelow60,64/>72/temporalreadiness unchanged. Official52.16/noautomaticupload. Primaryvsdense reward-18 remainsseparate.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [
-    "observed_fullgene_hurdle"
-  ],
+  "active_jobs": [],
   "active_run_path": "private/observed_fullgene_hurdle_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -1246,7 +1244,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1684,
+    "current_reward": -1702,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1255,10 +1253,10 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1684,
-    "reward_score": -1684,
+    "uncapped_reward": -1702,
+    "reward_score": -1702,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": -40
+    "last_batch_reward_delta": -18
   },
   "lineage_residual_screen": {
     "status": "completed_proxy_gate_failed",
@@ -3097,6 +3095,17 @@
         "mmd_u": "Problem: NeuralMMD regresses; linearMMDpartialgain retained. Proposed solution: Diagnose detectiondensity/librarynormalization/covariance beforetraining. Validation: Pairedfullpanel outcomes acrossallfourmetrics; no oldzero-lock/mass grids.",
         "variogram": "Problem: NeuralCSS .126780 vslinear .370882/incumbent .539468. Proposed solution: Quantify newlypositiveentries/clipping/libraryrescaling beforemodelchanges. Validation: Exactforecastreplay withfixedsettings; no hiddenfuture. Coordinator: reviewer lowermeanerror claim was unsupported and excluded; newzeros means newlypositive donorzeros."
       }
+    },
+    "observed_fullgene_hurdle_01": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "03c1b7ec9ef8808ea3bb53e805e3b5f0c9a5e8aa1545302cd75a4a3c8947d976",
+      "reviews": {
+        "de_score": "Problem: Small DEgain and dependentresamples. Proposed solution: Freeze hurdle, confirm permissible temporal/training support. Validation: Matchedcopy/incumbent, no retuning orofficialclaim.",
+        "de_direction": "Problem: DCSbeatsinc buttrailsdense. Proposed solution: FreezeCNF/.25map,confirm newpast/trainingsupport. Validation:3exposedresamples/12validcalibs do notestablishindependence.",
+        "mmd_u": "Problem: MMDimprovesoverinc buttrailsdense. Proposed solution: Freeze gains; confirm matcheduncertainty/temporal support. Validation:3exposedresamples/12calibrations are notindependentembryos.",
+        "variogram": "Problem: Promotion lacksconfirmed temporal/training support. Proposed solution: Freeze decoder/covariance;confirm support. Validation: CSS.555417>.539468,allfourmeansimprove,12validcalibs/guardpass. Coordinator: reviewer full-grid meansCSS, no gridrun."
+      }
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -4017,27 +4026,27 @@
   },
   "agent_health": {
     "redline": 0,
-    "score": -1684,
+    "score": -1702,
     "status": "below_redline",
     "metrics": {
       "de_score": {
-        "score": -443,
+        "score": -442,
         "status": "below_redline"
       },
       "de_direction": {
-        "score": -388,
+        "score": -398,
         "status": "below_redline"
       },
       "mmd_u": {
-        "score": -476,
+        "score": -486,
         "status": "below_redline"
       },
       "variogram": {
-        "score": -377,
+        "score": -376,
         "status": "below_redline"
       }
     },
-    "recorded_iterations": 76,
+    "recorded_iterations": 77,
     "action": "Prioritize supported matched-control improvements; preserve failures and gates. Proxy/pending iterations earn zero. No score reset, fabricated reward, agent termination or deployment implied."
   },
   "scfm_reopened": {
@@ -5187,7 +5196,7 @@
       "jev_scope": "Typed option selection/pinnedreport status only; report has no score summary and numeric auditresults were not transmitted, no evidence certification."
     }
   },
-  "next_action": "observed_fullgene_hurdle running viaharness, seconddeadlinehypothesis. CUDA float64 conditionalridge equivalent pinnedCPU maxerror6.94e-17/smoke8.67MB; zero-velocity decoder preservesdonors/zeros exactly. Full16787actual8.5cells/32285genes, fixedCNF/cov.25trajectory, real-linear/incumbentexactreplays, no9.5fit;12fullpanel outcomespending. Inspectnamedworker; fourfreshmetricreviews/rewardaftercompletion. No duplicate/oldweightgrid, readiness/noofficialupload unchanged.",
+  "next_action": "Positive hurdle56.68901 vsinc55.98883 (+.70018);all4meanincumbentgains/3aggregatewins,12validcalibs/fourfreshreviews. Freeze mechanism. Next register one matched fixed-disjoint actual8.5headtraining-stability confirmation, exactfullfit/incumbent controls, forecastsfrozenbeforetargetscoring. Notindependentembryos/thirdhypothesis; no retuning/grids, no16expansionbelow60,64/>72/temporalreadiness unchanged. Official52.16/noautomaticupload. Primaryvsdense reward-18 remainsseparate.",
   "potential_real_anchor_transfer_setup_failure": {
     "run": "potential_real_anchor_transfer_01",
     "error": "append_event kind argument collided with keyword at first50-step logging; no checkpoint or forecast completed",
@@ -5673,5 +5682,49 @@
     "new_scores": 0,
     "reward_delta": 0,
     "deadline_hypothesis_number": 2
+  },
+  "observed_fullgene_hurdle_result": {
+    "status": "positive_development_pilot_not_ready",
+    "mean": 56.689013375127274,
+    "incumbent_mean": 55.988829663381615,
+    "paired_mean_gain": 0.7001837117456589,
+    "all_four_mean_skill_gains_vs_incumbent": {
+      "de_score": 0.00372931416409672,
+      "de_direction": 0.0027717349895051147,
+      "mmd_u": 0.007288875155103902,
+      "variogram": 0.01594956141262427
+    },
+    "report": "OBSERVED_FULLGENE_HURDLE_RESULTS.json",
+    "report_sha256": "03c1b7ec9ef8808ea3bb53e805e3b5f0c9a5e8aa1545302cd75a4a3c8947d976",
+    "calibrations_valid": 12,
+    "reviews_complete": true,
+    "official_best_unchanged": 52.16,
+    "readiness_gates_passed": false,
+    "replicates": 3,
+    "independent_embryos": false
+  },
+  "hurdle_confirmation_protocol": {
+    "status": "declared_requires_implementation",
+    "seed": 20261005,
+    "fit_stage": 8.5,
+    "target": 9.5,
+    "split": "fixed disjoint halves8393/8394of16787observedcells",
+    "controls": [
+      "copy",
+      "incumbent",
+      "frozen_fullfit_hurdle"
+    ],
+    "candidates": [
+      "hurdle_half0",
+      "hurdle_half1"
+    ],
+    "scoring_seeds": [
+      20260928,
+      20260929,
+      20260930
+    ],
+    "scope": "Training-sample stability; notindependentembryos/newhypothesis. No source missinggene zeros represented as realmeasurement.",
+    "success": "Both half-fit arms improve incumbent aggregate3/3 with no meanfour-skillregression. Fullfit exactreplay required; no retuning iffailed.",
+    "recipe": "Same ridge1/support20, CNF/.25map, detection/abundance/mass/covariance guards; no16resampleexpansion below60;original64/>72/temporalreadiness unchanged."
   }
 }

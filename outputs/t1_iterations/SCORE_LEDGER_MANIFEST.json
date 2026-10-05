@@ -1,5 +1,5 @@
 {
-  "records": 3571,
+  "records": 3583,
   "sources": [
     {
       "path": "private/anchored_soft_ot_paper_pilot_01/report.json",
@@ -902,6 +902,11 @@
       "outcomes_indexed": 12
     },
     {
+      "path": "private/observed_fullgene_hurdle_01/report.json",
+      "sha256": "03c1b7ec9ef8808ea3bb53e805e3b5f0c9a5e8aa1545302cd75a4a3c8947d976",
+      "outcomes_indexed": 12
+    },
+    {
       "path": "private/observed_lineage_support_01/report.json",
       "sha256": "9cc75371456d087279ccbf0fc784cd3018b39b8dda890122b85ffbf80a895815",
       "outcomes_indexed": 0
@@ -1284,5 +1289,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "2dc665bb7d9250fca470c252270c20176e4209c6d88b5cd4b726d302ad9b8c72"
+  "ledger_sha256": "3a06b215a6d3de7f7d1bd522d442ae70ade6a6f0e3b326fbab2f24d0cf654203"
 }

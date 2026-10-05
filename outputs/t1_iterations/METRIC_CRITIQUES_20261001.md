@@ -48,3 +48,14 @@ Report hash: cb96904c91a185a00d8a57716cda8d0aa48904ca597393de01652ba3a71477df; f
 - variogram: Problem: NeuralCSS .126780 vslinear .370882/incumbent .539468. Proposed solution: Quantify newlypositiveentries/clipping/libraryrescaling beforemodelchanges. Validation: Exactforecastreplay withfixedsettings; no hiddenfuture. Coordinator: reviewer lowermeanerror claim was unsupported and excluded; newzeros means newlypositive donorzeros.
 
 Exact replay subsequently measured10633/12303newpositivegenes/cell, preserving observed donor reference. CachedJev .11/1089in54out chooses hurdle novelty preflight; no repeated zero-lock/mass grid authorized. Partial linearDE/DCS/MMDgains retained; no readiness or officialscore claim.
+
+## Observed full-gene hurdle — 5 October 2026 IST
+Report 03c1b7ec9ef8808ea3bb53e805e3b5f0c9a5e8aa1545302cd75a4a3c8947d976; four fresh narrow specialists.
+
+- de_score: Problem: Small DEgain and dependentresamples. Proposed solution: Freeze hurdle, confirm permissible temporal/training support. Validation: Matchedcopy/incumbent, no retuning orofficialclaim.
+
+- de_direction: Problem: DCSbeatsinc buttrailsdense. Proposed solution: FreezeCNF/.25map,confirm newpast/trainingsupport. Validation:3exposedresamples/12validcalibs do notestablishindependence.
+
+- mmd_u: Problem: MMDimprovesoverinc buttrailsdense. Proposed solution: Freeze gains; confirm matcheduncertainty/temporal support. Validation:3exposedresamples/12calibrations are notindependentembryos.
+
+- variogram: Problem: Promotion lacksconfirmed temporal/training support. Proposed solution: Freeze decoder/covariance;confirm support. Validation: CSS.555417>.539468,allfourmeansimprove,12validcalibs/guardpass. Coordinator: reviewer full-grid meansCSS, no gridrun.
