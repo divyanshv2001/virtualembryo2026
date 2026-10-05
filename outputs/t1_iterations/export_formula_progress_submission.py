@@ -3,6 +3,8 @@
 This only exports and locally validates a user-requested file. It never uploads.
 """
 import json
+import sys
+HURDLE_EXPORT = "--hurdle-export" in sys.argv
 from collections import Counter
 
 import anndata as ad
@@ -21,16 +23,51 @@ from full_anchor_slope_forecast import FullAnchorSlopeForecast
 from cnf_covariance_alignment import CovarianceAlignedTrajectory, symmetric_power
 
 
+def fit_real_hurdle_export(anchor_path, panel, coordinates, private, events):
+    import real_fullgene_decoder_pilot as runner
+    if not torch.cuda.is_available():raise RuntimeError('Declared CUDA unavailable')
+    torch.cuda.set_per_process_memory_fraction(.75)
+    a=ad.read_h5ad(anchor_path,backed='r')
+    matrix=private/'real9_5_expression.npy'
+    if a.var_names.tolist()!=panel or a.n_obs!=len(coordinates):raise ValueError('Real9.5 fit input mismatch')
+    y=np.lib.format.open_memmap(matrix,mode='w+',dtype='float32',shape=a.shape)
+    try:
+        for start in range(0,a.n_obs,256):
+            block=a.X[start:start+256]
+            y[start:start+len(block)]=block.toarray() if sparse.issparse(block) else np.asarray(block)
+        y.flush()
+    finally:a.file.close()
+    center=coordinates.astype(np.float32).mean(0)
+    h=torch.tensor(coordinates-center,device='cuda',dtype=torch.float64)
+    outputs=[[],[],[],[],[],[]]
+    for start in range(0,len(panel),256):
+        response=torch.tensor(np.asarray(y[:,start:start+256],dtype=np.float64),device='cuda')
+        runner.HEAD_RIDGE=1.;one=runner.hurdle_block(h,response)
+        runner.HEAD_RIDGE=2.;two=runner.hurdle_block(h,response)
+        fitted=(one[0],two[1],one[2],one[3],one[4],one[5])
+        if not all(torch.isfinite(v).all() for v in fitted):raise ValueError('Nonfinite prospective heads')
+        for destination,value in zip(outputs,fitted):destination.append(value.cpu().numpy())
+        if runner.peak_memory()>16*1024**3:raise MemoryError('HostRAM exceeded16GiB')
+    arrays=[np.concatenate(v,axis=1 if i<3 else 0) for i,v in enumerate(outputs)]
+    result=dict(zip(['coef','detection','centroid','mean','probability','counts'],arrays));result['center']=center
+    np.savez_compressed(private/'real9_5_heads.npz',**result)
+    append_event(events,'real9_5_hurdle_fit',rows=len(coordinates),genes=len(panel),positive_ridge=1,detection_ridge=2,support=20,device=torch.cuda.get_device_name(0),peak_allocated_bytes=torch.cuda.max_memory_allocated(),heads_sha256=digest(private/'real9_5_heads.npz'))
+    del y
+    if matrix.resolve().parent!=private.resolve() or matrix.drive.upper()!='D:':raise ValueError('Unsafe stage path')
+    matrix.unlink()
+    return result
+
+
 def main():
     root = HERE.parents[1]
-    name = 'formula_progress_20260930_01'
+    name = 'hurdle_progress_20261005_01' if HURDLE_EXPORT else 'formula_progress_20260930_01'
     out = root / 'outputs/t1_submissions' / name
     private = HERE / 'private' / name
     if out.exists() or private.exists():
         raise ValueError('Preserve prior formula export; use another version')
     prepared = HERE / 'private/associated_prepared_01'
     previous = HERE / 'private/anchorslope_progress_20260929_01'
-    dev = HERE / 'CNF_COVARIANCE_ALIGNMENT_RESULTS.json'
+    dev = HERE / ('HURDLE_DETECTION_RIDGE2_RESULTS.json' if HURDLE_EXPORT else 'CNF_COVARIANCE_ALIGNMENT_RESULTS.json')
     anchor_path = root / 'data/E9.5_RNA.h5ad'
     panel_path = root / 'outputs/t1_run/T1__val.genes.txt'
     index_path = root / 'outputs/t1_run/index.json'
@@ -59,6 +96,8 @@ def main():
         'external_data_disclosure': 'Development2024 dev201867 public atlas, associated_prepared_01 sample (25,963 cells), through E9.5; no GSE76118 expression used.',
         'official_score': None, 'uploaded': False, 'submissions_allowed': 0,
     }
+    if HURDLE_EXPORT:
+        plan.update(authorization='User requests a separate submission file after local56.689 is achieved; stabilized recipe56.761532 passed fixed-halves development gate. Export only, no upload.',candidate='Observed fullgene hurdle positive ridge1/detection ridge2 on frozen aligned CNF path',candidate_selection='Frozen channel fullfit selected, no posthoc half selection;56.761532development, originalreadiness unmet.',method='Reuse external encoder/CNF throughE9.5 and fixedcovariance.25 map; refit realE9.5 fullgene positive1/detection2 heads, predictE10.5, fullmassrestore/covarianceguard. No target data.',head_ridges={'positive':1,'detection':2},training_device='RTX3060 CUDA',source_runner_sha256=digest(HERE/'real_fullgene_decoder_pilot.py'),runtime={'torch':torch.__version__,'cuda':torch.version.cuda})
     out.mkdir(parents=True)
     private.mkdir(parents=True)
     (out / 'plan.json').write_text(json.dumps(plan, indent=2))
@@ -137,12 +176,22 @@ def main():
                  map_eigenvalues=eigenvalues.tolist(),
                  alignment_sha256=digest(private / 'alignment.npz'))
     program.net = CovarianceAlignedTrajectory(net, source_mean, challenge_mean, transform)
-    pred, indices, audit = program.predict(10.5, 'joint', 1., sampling='systematic')
+    if HURDLE_EXPORT:
+        from real_fullgene_decoder_pilot import predict_hurdle
+        fitted=fit_real_hurdle_export(anchor_path,panel,challenge_z,private,events)
+        with torch.no_grad():
+            z0=net.encode(torch.tensor((donors[:,features]-center)/scale,dtype=torch.float32))[0]
+            z1=program.net.trajectory(z0,torch.tensor([0.,1.]))[-1]
+        pred,attempts=predict_hurdle(donors,z0,z1,fitted,guards)
+        indices=np.arange(len(donors));audit={'method':'realE9.5 fullgene positive1/detection2','guard_attempts':attempts,'fit_stage':9.5,'target':10.5,'genes':len(panel),'copied_unsupported_gene_count':0}
+    else:
+        pred, indices, audit = program.predict(10.5, 'joint', 1., sampling='systematic')
     np.save(private / 'donor_indices.npy', indices)
-    protected = np.setdiff1d(np.arange(len(panel)), program.mapped)
+    protected = np.array([],dtype=int) if HURDLE_EXPORT else np.setdiff1d(np.arange(len(panel)), program.mapped)
+    mass_columns=np.arange(len(panel)) if HURDLE_EXPORT else program.mapped
     exact = bool(np.array_equal(pred[:, protected], donors[indices][:, protected]))
-    before = np.expm1(donors[indices][:, program.mapped].astype(float)).sum(1)
-    after = np.expm1(pred[:, program.mapped].astype(float)).sum(1)
+    before = np.expm1(donors[indices][:, mass_columns].astype(float)).sum(1)
+    after = np.expm1(pred[:, mass_columns].astype(float)).sum(1)
     error = float(np.max(np.abs(after-before)/np.maximum(before, 1e-12)))
     if not exact or error > 1e-5 or not np.isfinite(pred).all() or (pred < 0).any():
         raise ValueError('Prospective forecast guard failed')
@@ -167,10 +216,13 @@ def main():
               'forecast_audit': audit, 'protected_genes_exact': exact,
               'mapped_mass_max_relative_error': error,
               'alignment_sha256': digest(private / 'alignment.npz'),
-              'development_local_mean': 55.988830, 'development_scope': 'E8.5->E9.5 reused panels',
+              'development_local_mean': 56.761532131103856 if HURDLE_EXPORT else 55.988830, 'development_scope': 'E8.5->E9.5 reused panels',
               'readiness_gate_passed': False, 'official_score': None, 'uploaded': False,
               'external_data_disclosure': plan['external_data_disclosure'],
               'evidence_scope': 'Trajectory describes this export only, not the complete research workflow.'}
+    if HURDLE_EXPORT:
+        report.update(status='completed',protected_gene_count=0,mass_guard_scope='all32285genes',prediction_device='cpu',training_device='cuda',historical_recipe_bit_exact_compatibility='not claimed across runtime/stage',source_development_report_sha256=digest(dev))
+        (HERE/'HURDLE_PROGRESS_EXPORT_RESULTS.json').write_text(json.dumps(report,indent=2))
     (out / 'report.json').write_text(json.dumps(report, indent=2))
     (out / 'README.md').write_text(
         f'# Prospective T1 E10.5 progress file\n\nUpload `{artifact.name}` for `T1:val` if you choose to spend an official attempt. '
@@ -180,6 +232,8 @@ def main():
         'The >72 local readiness gate was not met; that value does not predict its official E10.5 score. '
         'No upload was performed. Disclose the Development2024 dev201867 atlas if submitting. '
         'The trajectory is genuine for this export, but is not the complete Agent Team research trajectory.\n')
+    if HURDLE_EXPORT:
+        (out/'README.md').write_text('T1:val E10.5 prospective hurdle file,1500cells/32285genes. Fitted only realE9.5 plus disclosed externalatlas throughE9.5. Local56.761532 is exposed E8.5->E9.5 development, not an official score. Original >72/64/temporal readiness remains unmet; no locked AgentTeam eligibility claim; no upload. Full-panel finite/nonnegativefloat32/order validated.\n')
     append_event(events, 'submission_artifact_format_validated',
                  artifact_sha256=report['artifact_sha256'], validation=validation)
     print(json.dumps({'artifact': str(artifact), 'validation': validation,

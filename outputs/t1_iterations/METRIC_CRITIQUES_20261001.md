@@ -83,3 +83,16 @@ Report 738da7c337aabaaf3aaecc3805202de009a9383057d6cfe4f9c36e7d693f9da6; four fr
 - variogram: Problem: Ridge2 variogram mean improves versus incumbent (.554715 versus .539468), trails original (.555417); aggregate likewise trails (56.498 versus 56.689). MMD mean regresses versus incumbent, improves versus copy only. Proposed solution: Preserve variogram gains; use past-only tuning, matched controls, locked failure criteria; no promotion. Validation: Keep calibration unchanged; require both-halves/all-four and full-mean gates, quantify uncertainty. Independent embryos unavailable.
 
 Coordinator: nested tuning and independent embryo suggestions remain unvalidated/unavailable; no score-informed grid or calibration change. All18 calibrations valid; both halves repair mean direction versus incumbent but allthree newarms regress MMD. Primary fullfit versus originalfullfit +1/+1/-10/-10=-18; half-fit diagnostics earn no separate reward.
+
+## Frozen detection channel comparison — 5 October 2026 IST
+Report c0212a2b082c7cea8caed5634338e68708a0e71fd70317d1ef8e8ef538736215; four fresh narrow read-only reviews, factual comparator corrections verified.
+
+- de_score: Problem: DE improves, but MMD/variogram remain slightly below old-full; no independent embryos establish temporal readiness. Proposed solution: Export the frozen candidate for prospective submission only, retaining controls and failure criteria; do not upload. Validation: All18 calibrations and retention gates pass. Fixed E8.5 cell halves support robustness, while exposed E9.5 targets limit independent validation.
+
+- de_direction: Problem: Mean-based gate passes, but half0 seed3 regresses; independent embryo and temporal stability remain untested. Proposed solution: Export prospectively with frozen settings, retain the original failure, and add independent embryo/temporal controls plus prespecified per-seed regression limits. Validation: Confirm gains across both halves and aggregate; fail readiness if independent controls or any prespecified regression limit fails.
+
+- mmd_u: Problem: MMD improves over incumbent but slightly regresses versus old full; exposed E9.5 and fixed E8.5 halves cannot establish independent readiness. Proposed solution: Export only; validate on untouched past embryos with controls frozen. Validation: Current retention gates pass across18 valid calibrations. Fail readiness if independent embryos are unavailable or prespecified gates fail; no causal certification.
+
+- variogram: Problem: Full variogram skill slightly trails old-full despite aggregate improvement; embryo independence and temporal readiness remain unproven. Proposed solution: Export frozen positive1/detection2 controls with past-only calibration; reject updates failing either-half/all-four improvement versus incumbent or full-retention gates. Validation: Current gates pass across18 valid calibrations. Exposed E9.5/E8.5 halves limit generalization; no biological causal claim.
+
+Coordinator: Independent embryos remain unavailable; per-seed criteria are suggestions, not changes to the current gate. All18 calibrations valid; fullfit/bothhalves pass declareddevelopmentgate. Slight fullMMD/CSSloss vsoriginal retained; no officialreadinessclaim. Primary fullfit versus originalfullfit +1/+1/-10/-10=-18; half-fit diagnostics earn no separate reward.

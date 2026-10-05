@@ -1,5 +1,5 @@
 {
-  "records": 3616,
+  "records": 3634,
   "sources": [
     {
       "path": "private/anchored_soft_ot_paper_pilot_01/report.json",
@@ -762,6 +762,11 @@
       "outcomes_indexed": 15
     },
     {
+      "path": "private/hurdle_detection_ridge2_01/report.json",
+      "sha256": "58349ed3e317b8404f04615a77304858a6cfef578518582ac4cd4204711c7f01",
+      "outcomes_indexed": 18
+    },
+    {
       "path": "private/hurdle_head_stability_01/report.json",
       "sha256": "1e053dc8a8375ed99f4aaeb80131401c46882cbb06040cc8377a22029f42b0fa",
       "outcomes_indexed": 15
@@ -1299,5 +1304,5 @@
   ],
   "index_errors": [],
   "limitations": "Null means not present in the original report. Reports without local_score require schema-specific indexing; original reports/events remain preserved. Partial index hashes change as live work progresses.",
-  "ledger_sha256": "b374eed0f57e338c84cd2a42e60debe7d6513d2e1bf093e935c9e7c63963b558"
+  "ledger_sha256": "8862644f35c2ee5e8b164c4cc7773ea77fa2b3b2f5fbf5c50e0ea44ae4447a2d"
 }

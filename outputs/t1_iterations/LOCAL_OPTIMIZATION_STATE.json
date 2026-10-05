@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-05T04:08:07.709368+00:00",
+  "updated_utc": "2026-10-05T04:18:08.318905+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,12 +30,12 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "User continued stabilization: one frozen positive-ridge1/detection-ridge2 channel ablation, fullfit/both original halves; cached CUDA heads exactstats/coordinates/hashes; no newfit/grid.18scores, original56.689retention and both-halves/all4 criterion unchanged. After completion four fresh reviews/accounting, preserve all prior failures/advisory and official52.16; no promotion/upload.",
+  "next_experiment": "Userrequested submission file: execute hurdle_progress_export from stabilizedfull56.761532; prospective E10.5 using real9.5/externalthrough9.5 only. Export/schema validation only, no officialupload/readinesspromotion; retain52.16fallback and original56.689pilot.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
   "active_jobs": [
-    "hurdle_detection_ridge2"
+    "hurdle_progress_export"
   ],
   "active_run_path": "private/hurdle_head_stability_01",
   "completed_batches_this_turn": 11,
@@ -1246,7 +1246,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1720,
+    "current_reward": -1738,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -1255,8 +1255,8 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1720,
-    "reward_score": -1720,
+    "uncapped_reward": -1738,
+    "reward_score": -1738,
     "benchmark_score": "unchanged; separately reported",
     "last_batch_reward_delta": -18
   },
@@ -3127,6 +3127,18 @@
         "variogram": "Problem: Ridge2 variogram mean improves versus incumbent (.554715 versus .539468), trails original (.555417); aggregate likewise trails (56.498 versus 56.689). MMD mean regresses versus incumbent, improves versus copy only. Proposed solution: Preserve variogram gains; use past-only tuning, matched controls, locked failure criteria; no promotion. Validation: Keep calibration unchanged; require both-halves/all-four and full-mean gates, quantify uncertainty. Independent embryos unavailable."
       },
       "coordinator_validation": "MMD/variogram comparator ambiguity corrected against raw report before recording. Suggested nested tuning/untouched embryo validation is unvalidated and currently unsupported; calibration unchanged, no new grid authorized by reviews."
+    },
+    "hurdle_detection_ridge2_01": {
+      "status": "completed",
+      "specialist_role_version": 2,
+      "report_sha256": "c0212a2b082c7cea8caed5634338e68708a0e71fd70317d1ef8e8ef538736215",
+      "reviews": {
+        "de_score": "Problem: DE improves, but MMD/variogram remain slightly below old-full; no independent embryos establish temporal readiness. Proposed solution: Export the frozen candidate for prospective submission only, retaining controls and failure criteria; do not upload. Validation: All18 calibrations and retention gates pass. Fixed E8.5 cell halves support robustness, while exposed E9.5 targets limit independent validation.",
+        "de_direction": "Problem: Mean-based gate passes, but half0 seed3 regresses; independent embryo and temporal stability remain untested. Proposed solution: Export prospectively with frozen settings, retain the original failure, and add independent embryo/temporal controls plus prespecified per-seed regression limits. Validation: Confirm gains across both halves and aggregate; fail readiness if independent controls or any prespecified regression limit fails.",
+        "mmd_u": "Problem: MMD improves over incumbent but slightly regresses versus old full; exposed E9.5 and fixed E8.5 halves cannot establish independent readiness. Proposed solution: Export only; validate on untouched past embryos with controls frozen. Validation: Current retention gates pass across18 valid calibrations. Fail readiness if independent embryos are unavailable or prespecified gates fail; no causal certification.",
+        "variogram": "Problem: Full variogram skill slightly trails old-full despite aggregate improvement; embryo independence and temporal readiness remain unproven. Proposed solution: Export frozen positive1/detection2 controls with past-only calibration; reject updates failing either-half/all-four improvement versus incumbent or full-retention gates. Validation: Current gates pass across18 valid calibrations. Exposed E9.5/E8.5 halves limit generalization; no biological causal claim."
+      },
+      "coordinator_validation": "Reviewer comparator wording clarified to incumbent. Per-seed limits are suggestions, not modifications of current gate. Independent embryos unavailable; calibration pinned; fullfit/bothhalves declaredmeangate passes, original readiness unmet."
     }
   },
   "continuation_automation_policy_updated": "2026-10-01T09:31:57.152356+00:00",
@@ -3975,7 +3987,7 @@
       5,
       6
     ],
-    "policy_sha256": "01318817d5a406a0b5e4522c636876a441d2730424d127e40389d967c2fbc0a6",
+    "policy_sha256": "cb19e02e96b9b21b444465909230c9cc7315416f87b81afc13b02eca29ef0e43",
     "rules": [
       "Start with harness resume; inspect only changed policy and active evidence",
       "One necessary experiment; one checkpoint commit/push",
@@ -4047,27 +4059,27 @@
   },
   "agent_health": {
     "redline": 0,
-    "score": -1720,
+    "score": -1738,
     "status": "below_redline",
     "metrics": {
       "de_score": {
-        "score": -441,
+        "score": -440,
         "status": "below_redline"
       },
       "de_direction": {
-        "score": -397,
+        "score": -396,
         "status": "below_redline"
       },
       "mmd_u": {
-        "score": -496,
+        "score": -506,
         "status": "below_redline"
       },
       "variogram": {
-        "score": -386,
+        "score": -396,
         "status": "below_redline"
       }
     },
-    "recorded_iterations": 79,
+    "recorded_iterations": 80,
     "action": "Prioritize supported matched-control improvements; preserve failures and gates. Proxy/pending iterations earn zero. No score reset, fabricated reward, agent termination or deployment implied."
   },
   "scfm_reopened": {
@@ -5217,7 +5229,7 @@
       "jev_scope": "Typed option selection/pinnedreport status only; report has no score summary and numeric auditresults were not transmitted, no evidence certification."
     }
   },
-  "next_action": "User continued stabilization: one frozen positive-ridge1/detection-ridge2 channel ablation, fullfit/both original halves; cached CUDA heads exactstats/coordinates/hashes; no newfit/grid.18scores, original56.689retention and both-halves/all4 criterion unchanged. After completion four fresh reviews/accounting, preserve all prior failures/advisory and official52.16; no promotion/upload.",
+  "next_action": "Userrequested submission file: execute hurdle_progress_export from stabilizedfull56.761532; prospective E10.5 using real9.5/externalthrough9.5 only. Export/schema validation only, no officialupload/readinesspromotion; retain52.16fallback and original56.689pilot.",
   "potential_real_anchor_transfer_setup_failure": {
     "run": "potential_real_anchor_transfer_01",
     "error": "append_event kind argument collided with keyword at first50-step logging; no checkpoint or forecast completed",
@@ -5894,7 +5906,7 @@
     }
   },
   "hurdle_detection_ridge2_protocol": {
-    "status": "running",
+    "status": "completed_development_gate_passed",
     "user_authorization": "continue, following failed ridge2 stabilization",
     "primary_contrast": [
       "fullfit_hurdle",
@@ -5908,5 +5920,42 @@
     "script_sha256": "8abd735092cb7f308a07e19db26a8bb30c0ebe4321dce2aa15de0c7d9c629619",
     "pid_at_launch": 15232,
     "cached_alignment_smoke": "All3 matched statistics, unchanged positive coefficients, ridge2 detection slopes, corruptcenter rejected"
+  },
+  "hurdle_detection_ridge2_result": {
+    "status": "completed_development_gate_passed",
+    "report": "HURDLE_DETECTION_RIDGE2_RESULTS.json",
+    "report_sha256": "c0212a2b082c7cea8caed5634338e68708a0e71fd70317d1ef8e8ef538736215",
+    "means": {
+      "copy": 50.0,
+      "incumbent": 55.988829663381615,
+      "fullfit_hurdle": 56.689013375127274,
+      "stabilized_full": 56.761532131103856,
+      "hurdle_half0": 56.69598531672693,
+      "hurdle_half1": 56.714409966916975
+    },
+    "all_calibrations_valid": true,
+    "calibrations_valid": 18,
+    "stabilization_gate_passed": true,
+    "direction_half0_repaired_on_exposed_panel": true,
+    "mmd_all_new_arms_improve_incumbent": true,
+    "reward_delta": -18,
+    "training": {
+      "device": "cached RTX3060 heads; no new training",
+      "peak_allocated_bytes": 0,
+      "fit_rows": 16787,
+      "fit_stage": 8.5,
+      "solver": "Frozen positive ridge1 + detection ridge2; exact shared fitted sufficient statistics"
+    },
+    "peak_host_bytes": 6131040256,
+    "old56_689_pilot_retained": true
+  },
+  "submission_export_request": {
+    "authorization": "User: once56.689 is achieved create submission file as well",
+    "selected_development_recipe": "frozen positive1/detection2 fullfit56.761532",
+    "status": "running",
+    "experiment": "hurdle_progress_export",
+    "readiness_unmet": true,
+    "upload_authorized": false,
+    "pid_at_launch": 12476
   }
 }

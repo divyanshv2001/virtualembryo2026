@@ -39,3 +39,6 @@ User requests continuing stabilization of local56.689. Authorizes one bounded sa
 
 ## Human continuation after ridge2 failure — 5 October 2026
 User says continue after failedridge2 stabilization. Execute one frozen-channel diagnostic (positive1/detection2) with cached fullfit/both-half heads, exact input checks, matchedcontrols and unchanged gates. Prior Jev retain_provisional recommendation and failures remain evidence. No target-informed grid, new architecture or upload; reviewers cannot authorize gate changes.
+
+## User submission-file request — 5 October 2026
+User authorizes a separate prospective T1 submission file once local56.689 is achieved. Channelfull56.761532 passes declaredfixed-halfdevelopmentgate; export that frozenrecipe using observedE9.5 and allowed externalthroughE9.5 only. File/schema validation is not independent readiness or official score; retain52.16fallback and prior failures. No officialupload or lockedAgentTeameligibilityclaim.

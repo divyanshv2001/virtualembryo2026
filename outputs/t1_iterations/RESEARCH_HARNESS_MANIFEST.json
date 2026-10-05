@@ -2142,6 +2142,19 @@
         "new_training": false,
         "cached_head_training_device": "RTX3060 CUDA"
       }
+    },
+    "hurdle_progress_export": {
+      "script": "export_formula_progress_submission.py",
+      "args": [
+        "--hurdle-export"
+      ],
+      "run": "private/hurdle_progress_20261005_01",
+      "report": "HURDLE_PROGRESS_EXPORT_RESULTS.json",
+      "protocol": {
+        "training_device": "cuda",
+        "driver_runtime": "cuda",
+        "purpose": "Userauthorized prospective E10.5 file from frozen56.761532recipe; real9.5onlyheads and externalthrough9.5, no scoring/upload/readinesspromotion."
+      }
     }
   }
 }

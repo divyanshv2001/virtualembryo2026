@@ -1,20 +1,20 @@
 {
-  "updated_utc": "2026-10-05T04:10:08.610749+00:00",
+  "updated_utc": "2026-10-05T04:19:27.548466+00:00",
   "fingerprints": {
-    "RESEARCH_CONTINUATION_POLICY.md": "01318817d5a406a0b5e4522c636876a441d2730424d127e40389d967c2fbc0a6",
-    "LOCAL_OPTIMIZATION_STATE.json": "6d6758e3e824b264f2757076c87345feea47e7614736ba8e40488afa01ac1eab",
+    "RESEARCH_CONTINUATION_POLICY.md": "cb19e02e96b9b21b444465909230c9cc7315416f87b81afc13b02eca29ef0e43",
+    "LOCAL_OPTIMIZATION_STATE.json": "99d429bd10b9a969562f24f0ca478746dc929ec34e356c88d30989b9a3751524",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "7922665d3d59020e0a521cb1e52a7cb8af14bfb23fe3c170f27cfc0d9e50918f",
+    "METRIC_RESEARCH_QUEUE.json": "9860620cd3061a5704fbd89813da81e2c12ba1360f6ddbbea07e3b14ba48d019",
     "METRIC_CRITIQUE_POLICY.json": "3535989f1e3beac0f2d446b44df3c793d4be464dbd87f6e714c2f5afda864a6f",
-    "METRIC_CRITIQUES_20261001.md": "d47f50a2d27f4339f537da6060445d8d3143115386221ae6ae440ed74c115614",
-    "RESEARCH_HARNESS_MANIFEST.json": "76cafc805b85ecec51391fc0d042b0c97a2bb9fd61cccc2b83cfb41316c566fb"
+    "METRIC_CRITIQUES_20261001.md": "5505c333c47705b2b032b1bfa8d7f808d087bf3cc5bde92548decd2e3c361c25",
+    "RESEARCH_HARNESS_MANIFEST.json": "2b53b2af04b05915b5b608e9004adbc0cc2f70bb690475b7327671bcd12298c3"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [
-    "hurdle_detection_ridge2"
+    "hurdle_progress_export"
   ],
-  "next_experiment": "User continued stabilization: one frozen positive-ridge1/detection-ridge2 channel ablation, fullfit/both original halves; cached CUDA heads exactstats/coordinates/hashes; no newfit/grid.18scores, original56.689retention and both-halves/all4 criterion unchanged. After completion four fresh reviews/accounting, preserve all prior failures/advisory and official52.16; no promotion/upload.",
+  "next_experiment": "Userrequested submission file: execute hurdle_progress_export from stabilizedfull56.761532; prospective E10.5 using real9.5/externalthrough9.5 only. Export/schema validation only, no officialupload/readinesspromotion; retain52.16fallback and original56.689pilot.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -49,7 +49,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1720,
+    "current_reward": -1738,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -58,8 +58,8 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1720,
-    "reward_score": -1720,
+    "uncapped_reward": -1738,
+    "reward_score": -1738,
     "benchmark_score": "unchanged; separately reported",
     "last_batch_reward_delta": -18
   },
