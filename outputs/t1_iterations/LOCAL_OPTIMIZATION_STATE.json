@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-04T10:16:37.235015+00:00",
+  "updated_utc": "2026-10-05T02:15:22.218892+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Stabilityconfirmationcomplete:full56.68901,half0 56.59017,half1 56.70664 vsinc55.98883;15validcalibs/exactcontrols/4freshreviews. Bothaggregate gains retained, buthalf0DCS-.000654588 failsdeclaredboth-halves all4gate. Do notselecthalf1posthoc orclaimstable/promoted; retainfullfitdevelopmentpilot56.69 andofficial52.16fallback. Confirmationreward0/health-1702. Next bounded frozen_run_evidence_preflight: inspect genuine producingrun/configlock and actualjointE8.5/E9.5training/export paths, confirm officialstarter/control coverage and reusable observed-data inputs; no forgedtrajectory/hiddenfuturefit/automaticupload. No newmethod/grid untilthischeck;originalreadiness/60expansion/temporal gates intact.",
+  "next_experiment": "Frozen-run evidence preflight complete: genuine export trajectory but no recorded autonomous configuration lock; original two-real-stage shift baseline exists, exact official starter parity unverified, synthetic checks are arithmetic only. Best export uses external temporal field plus real9.5 anchors, not joint real8.5/9.5 field supervision. No independent embryo/additional real horizon; two deadline hypotheses exhausted and hurdle stability failed. Next deadline_fallback_preservation: preserve verified52.16 fallback and local56.68901 pilot, existing producing-run evidence; no third architecture/grid, promotion, readiness expansion or official upload. Original gates/rewards unchanged; future AgentTeam artifact needs genuine prospective lock/run and scientific eligibility, never retrospective certification.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -5207,7 +5207,7 @@
       "jev_scope": "Typed option selection/pinnedreport status only; report has no score summary and numeric auditresults were not transmitted, no evidence certification."
     }
   },
-  "next_action": "Stabilityconfirmationcomplete:full56.68901,half0 56.59017,half1 56.70664 vsinc55.98883;15validcalibs/exactcontrols/4freshreviews. Bothaggregate gains retained, buthalf0DCS-.000654588 failsdeclaredboth-halves all4gate. Do notselecthalf1posthoc orclaimstable/promoted; retainfullfitdevelopmentpilot56.69 andofficial52.16fallback. Confirmationreward0/health-1702. Next bounded frozen_run_evidence_preflight: inspect genuine producingrun/configlock and actualjointE8.5/E9.5training/export paths, confirm officialstarter/control coverage and reusable observed-data inputs; no forgedtrajectory/hiddenfuturefit/automaticupload. No newmethod/grid untilthischeck;originalreadiness/60expansion/temporal gates intact.",
+  "next_action": "Frozen-run evidence preflight complete: genuine export trajectory but no recorded autonomous configuration lock; original two-real-stage shift baseline exists, exact official starter parity unverified, synthetic checks are arithmetic only. Best export uses external temporal field plus real9.5 anchors, not joint real8.5/9.5 field supervision. No independent embryo/additional real horizon; two deadline hypotheses exhausted and hurdle stability failed. Next deadline_fallback_preservation: preserve verified52.16 fallback and local56.68901 pilot, existing producing-run evidence; no third architecture/grid, promotion, readiness expansion or official upload. Original gates/rewards unchanged; future AgentTeam artifact needs genuine prospective lock/run and scientific eligibility, never retrospective certification.",
   "potential_real_anchor_transfer_setup_failure": {
     "run": "potential_real_anchor_transfer_01",
     "error": "append_event kind argument collided with keyword at first50-step logging; no checkpoint or forecast completed",
@@ -5780,5 +5780,45 @@
       "celltype"
     ],
     "additional_fullgene_past_horizon_verified": false
+  },
+  "frozen_run_evidence_preflight": {
+    "status": "completed_read_only_source_audit_no_declared_viable_model",
+    "completed_utc": "2026-10-05T02:15:22.218892+00:00",
+    "source_sha256": {
+      "outputs/agent_evidence/README.md": "2a9d2919b0f03990caf9bcc3ce9536cdda14b22b104838877a101adbfae2c83e",
+      "outputs/t1_run/run_t1.py": "3427e48269ae175c0391daf8b98fb31f38b7ba92282d9e2483d6ba32532a01b5",
+      "outputs/t1_run/run_report.json": "929c045f20274e8c0a18cf502d417b57e2e7b59b1142aed8f316168c5c089bb7",
+      "outputs/t1_run/README.md": "aa8fdc96448ecb6c02370c9a0e3e50144fa8e9df41bed5b91988dde5f1ab5565",
+      "outputs/research_workflow/baseline_contract_checks.py": "edc40f105bb5c2bdaf97691ff1249ce28cdab5204cd46a7275ab0476f4f3fadd",
+      "outputs/research_workflow/baseline_contract_results.json": "77740387fd7a8e828fa1ae25554df11a12aaee7ba88f812c8b5cfdd2c860f407",
+      "outputs/t1_iterations/export_formula_progress_submission.py": "2aed1fd5ecb8d90be9d3869a59f754d73c6b02c331078321cd48b457958834ee",
+      "outputs/t1_iterations/export_anchor_slope_submission.py": "6a7a128990f43ec802978cc48e5051d8f84a89a3c16f36fe053987301a054194",
+      "outputs/t1_iterations/real_fullgene_decoder_pilot.py": "20bb0b6e494c5a1edd47e3590164513cab8278de6c0a8acdfdc326c1824d05ca",
+      "outputs/t1_iterations/HURDLE_HEAD_STABILITY_RESULTS.json": "3f3d0dbb8092f5d96176afa1f9fcd10e931603186875aeabb71d71cff23c7b7b",
+      "outputs/t1_iterations/private/hurdle_head_stability_01/report.json": "1e053dc8a8375ed99f4aaeb80131401c46882cbb06040cc8377a22029f42b0fa",
+      "outputs/t1_submissions/formula_progress_20260930_01/plan.json": "e19d93a820e7479d418a5bf8e9b1b8d1c747e87880c97c6b97b2a994644eaae0",
+      "outputs/t1_submissions/formula_progress_20260930_01/report.json": "53bea7614f76e2b75dbc2a051424456a680e8faf0de556c374c14086f8f59821",
+      "outputs/t1_submissions/formula_progress_20260930_01/trajectory.jsonl": "909001f446c34c4dbfe6ccb04db7328e83e3792b3fc5e1ee2704dbc324b714c3"
+    },
+    "live_workers_at_resume": 0,
+    "stability_hash_scope": "Reviewed hash is private raw report digest; public report adds that report_sha256 field. Public content equals raw content apart from this field; both byte hashes retained.",
+    "configuration_lock": "Current interactive development has no recorded pre-run Agent Team configuration lock; export-plan freeze is genuine but narrower than framework/model/prompts/tools/permissions/budget lock.",
+    "producing_run_evidence": "Formula plan/report/trajectory agree on export plan hash; trajectory covers that export only. Existing archives cannot certify autonomous eligibility and must not be retrofitted.",
+    "two_real_stage_baseline": "run_t1.py reads both observed stages; optional exact-label E9.5 minus E8.5 celltype means, negative clipping, unchanged unmatched types; cached report verifies 11 shared/10 last-only types and format only.",
+    "starter_control_coverage": "Sampled persistence and public-style shift implemented; exact official starter/baked-floor parity and biological predictive validation are not established. Current batch frozen copy/incumbent/fullfit hashes checked by existing runner.",
+    "synthetic_contract_scope": "baseline_contract_results.json: synthetic arithmetic/ledger checks only; no estimator, biological or model validation.",
+    "best_export_training": "Reused external through-E9.5 encoder/CNF field; real E9.5 anchors/alignment. Not joint real E8.5/E9.5 temporal-field supervision; 5510 unsupported genes retain donor values.",
+    "real_inputs": [
+      "data/E8.5_RNA.h5ad",
+      "data/E9.5_RNA.h5ad"
+    ],
+    "real_input_limit": "Both full32285 panels; cached inspection celltype-only metadata, no embryo IDs or additional real temporal stage. E9.5 assessed development target cannot become independent confirmation.",
+    "scientific_decision": "Two deadline hypotheses tested; hurdle stability gate failed. No third broad architecture/grid or 60-score expansion is viable under current declarations. Retain positive pilot, failed confirmation, official fallback; do not promote/export an upgrade.",
+    "no_new_batch": true,
+    "review_agents": 0,
+    "jev_calls": 0,
+    "reward_delta": 0,
+    "readiness_gates_unchanged": true,
+    "official_upload": false
   }
 }

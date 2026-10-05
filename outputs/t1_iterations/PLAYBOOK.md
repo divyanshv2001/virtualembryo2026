@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-05T02:01:33.847978+00:00
+Updated: 2026-10-05T02:15:22.382180+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -10,7 +10,7 @@ Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction':
 
 Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Stabilityconfirmationcomplete:full56.68901,half0 56.59017,half1 56.70664 vsinc55.98883;15validcalibs/exactcontrols/4freshreviews. Bothaggregate gains retained, buthalf0DCS-.000654588 failsdeclaredboth-halves all4gate. Do notselecthalf1posthoc orclaimstable/promoted; retainfullfitdevelopmentpilot56.69 andofficial52.16fallback. Confirmationreward0/health-1702. Next bounded frozen_run_evidence_preflight: inspect genuine producingrun/configlock and actualjointE8.5/E9.5training/export paths, confirm officialstarter/control coverage and reusable observed-data inputs; no forgedtrajectory/hiddenfuturefit/automaticupload. No newmethod/grid untilthischeck;originalreadiness/60expansion/temporal gates intact.
+Next: Frozen-run evidence preflight complete: genuine export trajectory but no recorded autonomous configuration lock; original two-real-stage shift baseline exists, exact official starter parity unverified, synthetic checks are arithmetic only. Best export uses external temporal field plus real9.5 anchors, not joint real8.5/9.5 field supervision. No independent embryo/additional real horizon; two deadline hypotheses exhausted and hurdle stability failed. Next deadline_fallback_preservation: preserve verified52.16 fallback and local56.68901 pilot, existing producing-run evidence; no third architecture/grid, promotion, readiness expansion or official upload. Original gates/rewards unchanged; future AgentTeam artifact needs genuine prospective lock/run and scientific eligibility, never retrospective certification.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in export report. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 
