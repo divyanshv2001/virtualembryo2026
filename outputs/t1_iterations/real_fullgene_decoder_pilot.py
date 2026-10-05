@@ -9,10 +9,12 @@ from train_extended_atlas import HERE
 from run_t1 import digest
 from iterate import now, append_event
 
-STABILITY = '--head-stability' in sys.argv
+STABILIZE = '--stabilize-ridge2' in sys.argv
+STABILITY = '--head-stability' in sys.argv or STABILIZE
+HEAD_RIDGE = 2. if STABILIZE else 1.
 HURDLE = '--hurdle' in sys.argv or STABILITY
-RUN = HERE / ('private/hurdle_head_stability_01' if STABILITY else ('private/observed_fullgene_hurdle_01' if HURDLE else 'private/real_fullgene_decoder_pilot_03'))
-PUBLIC = HERE / ('HURDLE_HEAD_STABILITY_RESULTS.json' if STABILITY else ('OBSERVED_FULLGENE_HURDLE_RESULTS.json' if HURDLE else 'REAL_FULLGENE_DECODER_PILOT_RECOVERY_RESULTS.json'))
+RUN = HERE / ('private/hurdle_ridge2_stabilization_01' if STABILIZE else ('private/hurdle_head_stability_01' if STABILITY else ('private/observed_fullgene_hurdle_01' if HURDLE else 'private/real_fullgene_decoder_pilot_03')))
+PUBLIC = HERE / ('HURDLE_RIDGE2_STABILIZATION_RESULTS.json' if STABILIZE else ('HURDLE_HEAD_STABILITY_RESULTS.json' if STABILITY else ('OBSERVED_FULLGENE_HURDLE_RESULTS.json' if HURDLE else 'REAL_FULLGENE_DECODER_PILOT_RECOVERY_RESULTS.json')))
 
 
 def hurdle_block(h, response):
@@ -25,10 +27,10 @@ def hurdle_block(h, response):
     second=(pairs.T@positive/den).T.reshape(len(counts),8,8)
     covariance=second-torch.einsum('ig,jg->gij',centroid,centroid)
     rhs=(h.T@response/den-centroid*means).T
-    coefficient=torch.linalg.solve(covariance+torch.eye(8,device=h.device,dtype=h.dtype)[None],rhs[:,:,None])[:,:,0].T
+    coefficient=torch.linalg.solve(covariance+HEAD_RIDGE*torch.eye(8,device=h.device,dtype=h.dtype)[None],rhs[:,:,None])[:,:,0].T
     coefficient[:,counts<20]=0
     centered=h-h.mean(0)
-    detection=torch.linalg.solve(centered.T@centered/len(h)+torch.eye(8,device=h.device,dtype=h.dtype),centered.T@(positive-positive.mean(0))/len(h))
+    detection=torch.linalg.solve(centered.T@centered/len(h)+HEAD_RIDGE*torch.eye(8,device=h.device,dtype=h.dtype),centered.T@(positive-positive.mean(0))/len(h))
     detection[:,counts<20]=0
     return coefficient,detection,centroid,means,positive.mean(0),counts
 
@@ -43,6 +45,7 @@ def fit_hurdle():
     y=np.load(RUN/'observed_expression.npy',mmap_mode='r')
     order=np.random.default_rng(20261005).permutation(len(z))
     groups=[('half0',order[:len(z)//2]),('half1',order[len(z)//2:])] if STABILITY else [('hurdle',np.arange(len(z)))]
+    if STABILIZE:groups=[('stabilized_full',np.arange(len(z)))]+groups
     for label,rows in groups:
         center=z[rows].mean(0)
         h=torch.tensor(z[rows].astype(np.float64)-center,device='cuda')
@@ -57,7 +60,7 @@ def fit_hurdle():
         arrays=[np.concatenate(v,axis=1 if i<3 else 0) for i,v in enumerate(outputs)]
         np.savez_compressed(RUN/(label+'.npz'),coef=arrays[0],detection=arrays[1],centroid=arrays[2],mean=arrays[3],probability=arrays[4],counts=arrays[5],center=center)
         append_event(RUN/'events.jsonl','cuda_hurdle_heads_fit',label=label,rows=len(rows),fit_stage=8.5)
-    (RUN/'hurdle_device.json').write_text(json.dumps({'device':torch.cuda.get_device_name(0),'peak_allocated_bytes':torch.cuda.max_memory_allocated(),'fit_rows':len(z),'fit_stage':8.5,'solver':'CUDA float64 conditionalridge1/detectionridge1'}))
+    (RUN/'hurdle_device.json').write_text(json.dumps({'device':torch.cuda.get_device_name(0),'peak_allocated_bytes':torch.cuda.max_memory_allocated(),'fit_rows':len(z),'fit_stage':8.5,'solver':f'CUDA float64 conditionalridge{HEAD_RIDGE:g}/detectionridge{HEAD_RIDGE:g}'}))
 
 
 def predict_hurdle(donors,z0,z1,fitted,guard):
@@ -186,6 +189,15 @@ def main():
                     hypothesis='Fixed-method training-sample stability confirmation; no new scientific mechanism or tuning.',
                     scope='Two disjoint observed E8.5 cell training halves, historically exposed real E9.5 target. Not independent embryos/targets. Fixed confirmation earns no new-method reward.',
                     fullfit_heads_sha256=digest(HERE/'private/observed_fullgene_hurdle_01/hurdle.npz'))
+    if STABILIZE:
+        plan.update(candidates=['copy','incumbent','fullfit_hurdle','stabilized_full','hurdle_half0','hurdle_half1'],
+                    primary_contrast=['fullfit_hurdle','stabilized_full'],
+                    head_ridge=2., support=20,
+                    fit='Same observed E8.5 fullgene CUDA analytic hurdle heads; only positive/detection ridge changes1->2 for new fullfit and fixed halves. Original fullfit is immutable exact-replay control.',
+                    hypothesis='One fixed stronger ridge reduces training-sample sensitivity while retaining fullfit development gain; user-authorized stabilization, no grid.',
+                    stabilization_success='All three new arms beat incumbent aggregate3/3 and have no mean skill regression on any of4metrics; stabilized full mean must also be>=original fullfit mean. Both halves required; no posthoc selection.',
+                    scope='Previously exposed E9.5 development stabilization; fixed original disjoint E8.5 halves. Not independent embryos/targets; no readiness promotion.',
+                    old_stability_report_sha256=digest(HERE/'HURDLE_HEAD_STABILITY_RESULTS.json'))
     RUN.mkdir()
     (RUN/'plan.json').write_text(json.dumps(plan,indent=2))
     (RUN/'executed_source.py').write_bytes(Path(__file__).read_bytes())
@@ -244,7 +256,7 @@ def main():
             subprocess.run([str(cuda),'-u',str(Path(__file__)),'--train'],check=True)
             saved=torch.load(RUN/'decoder.pt',weights_only=False,map_location='cpu')
         if HURDLE:
-            flags=['--head-stability'] if STABILITY else ['--hurdle']
+            flags=['--stabilize-ridge2'] if STABILIZE else (['--head-stability'] if STABILITY else ['--hurdle'])
             subprocess.run([str(cuda),'-u',str(Path(__file__))]+flags+['--fit-hurdle'],check=True)
             fitted=dict(np.load(HERE/'private/observed_fullgene_hurdle_01/hurdle.npz' if STABILITY else RUN/'hurdle.npz'))
             device_info=json.loads((RUN/'hurdle_device.json').read_text())
@@ -282,10 +294,10 @@ def main():
                     original=json.loads((HERE/'OBSERVED_FULLGENE_HURDLE_RESULTS.json').read_text())
                     if generation[full_name]['prediction_sha256']!=original['generation']['hurdle_fullgene']['prediction_sha256']:
                         raise ValueError('Fullfit hurdle exact replay failed')
-                    for label in ['half0','half1']:
+                    for label in (['stabilized_full','half0','half1'] if STABILIZE else ['half0','half1']):
                         model=dict(np.load(RUN/(label+'.npz')))
                         pred,attempts=predict_hurdle(donors,z0,z1,model,np.load(archive/'features.npy'))
-                        name='hurdle_'+label
+                        name=label if label=='stabilized_full' else 'hurdle_'+label
                         generation[name]={'prediction_sha256':cache.put(name,pred),'guard_attempts':attempts}
                         del pred
             x=np.load(data/'expression.npy',mmap_mode='r')
@@ -326,6 +338,10 @@ def main():
             peak=peak_memory()
             if peak>16*1024**3:raise MemoryError('Host memory ceiling exceeded')
             report.update(status='completed',summary=summary,generation=generation,passing_candidates=passing,official_score=None,local_72_gate_passed=False,scope=plan['scope'],resource_peak_process_working_set_bytes=peak,training=device_info if HURDLE else {'device':saved['device'],'peak_allocated_bytes':saved['peak_allocated_bytes']})
+            if STABILIZE:
+                arms=['stabilized_full','hurdle_half0','hurdle_half1']
+                report['stabilization_gate_passed']=all(n in passing for n in arms) and by['stabilized_full']['mean_score']>=by['fullfit_hurdle']['mean_score']
+                report['old_stability_failure_retained']=True
             (RUN/'report.json').write_text(json.dumps(report,indent=2))
             report['report_sha256']=digest(RUN/'report.json')
             PUBLIC.write_text(json.dumps(report,indent=2))

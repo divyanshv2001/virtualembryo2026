@@ -2114,6 +2114,19 @@
         "driver_runtime": "cpu",
         "purpose": "Frozen method confirmation on fixed disjointactual8.5 cellhalves, exactfullfit/incumbentcontrols, originalCPU fullpanel scorer; notthirdhypothesis/independentembryos."
       }
+    },
+    "hurdle_ridge2_stabilization": {
+      "script": "real_fullgene_decoder_pilot.py",
+      "args": [
+        "--stabilize-ridge2"
+      ],
+      "run": "private/hurdle_ridge2_stabilization_01",
+      "report": "HURDLE_RIDGE2_STABILIZATION_RESULTS.json",
+      "protocol": {
+        "training_device": "cuda",
+        "driver_runtime": "cpu",
+        "purpose": "User-authorized single fixed ridge2 fullfit/both-halves stabilization with immutable oldfull/incumbent/copy, original fullpanel scorer/gates; no grid or independent validation claim."
+      }
     }
   }
 }
