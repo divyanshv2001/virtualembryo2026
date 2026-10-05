@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": false,
+  "local_process_running": true,
   "quota_reset_evidence": {
     "limit_observed": true,
     "observed_reset_text": "7:54 PM",
@@ -30,12 +30,14 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Fullgene_hurdle coverage preflight complete: sparsehurdle family exists but prioractualanchor support remains externalmapped. Second/last deadlinehypothesis eligible onlyfor observed-only all32285gene positive+detection heads onall16787real8.5cells, frozenCNFpath vsdense real-linear/incumbent/copy. Next implement withinexisting real_fullgene_decoder_pilot.py separateflag/registeredrun, CUDAconditionalridge numericalequivalence/resource smoke beforelaunch; exactcontrols/frozenforecasts12scores. No source-map/zero-lock/weightgrid rerun, no hiddenfuturefit or upload.",
+  "next_experiment": "observed_fullgene_hurdle running viaharness, seconddeadlinehypothesis. CUDA float64 conditionalridge equivalent pinnedCPU maxerror6.94e-17/smoke8.67MB; zero-velocity decoder preservesdonors/zeros exactly. Full16787actual8.5cells/32285genes, fixedCNF/cov.25trajectory, real-linear/incumbentexactreplays, no9.5fit;12fullpanel outcomespending. Inspectnamedworker; fourfreshmetricreviews/rewardaftercompletion. No duplicate/oldweightgrid, readiness/noofficialupload unchanged.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
-  "active_run_path": "private/real_fullgene_decoder_pilot_03",
+  "active_jobs": [
+    "observed_fullgene_hurdle"
+  ],
+  "active_run_path": "private/observed_fullgene_hurdle_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -5185,7 +5187,7 @@
       "jev_scope": "Typed option selection/pinnedreport status only; report has no score summary and numeric auditresults were not transmitted, no evidence certification."
     }
   },
-  "next_action": "Fullgene_hurdle coverage preflight complete: sparsehurdle family exists but prioractualanchor support remains externalmapped. Second/last deadlinehypothesis eligible onlyfor observed-only all32285gene positive+detection heads onall16787real8.5cells, frozenCNFpath vsdense real-linear/incumbent/copy. Next implement withinexisting real_fullgene_decoder_pilot.py separateflag/registeredrun, CUDAconditionalridge numericalequivalence/resource smoke beforelaunch; exactcontrols/frozenforecasts12scores. No source-map/zero-lock/weightgrid rerun, no hiddenfuturefit or upload.",
+  "next_action": "observed_fullgene_hurdle running viaharness, seconddeadlinehypothesis. CUDA float64 conditionalridge equivalent pinnedCPU maxerror6.94e-17/smoke8.67MB; zero-velocity decoder preservesdonors/zeros exactly. Full16787actual8.5cells/32285genes, fixedCNF/cov.25trajectory, real-linear/incumbentexactreplays, no9.5fit;12fullpanel outcomespending. Inspectnamedworker; fourfreshmetricreviews/rewardaftercompletion. No duplicate/oldweightgrid, readiness/noofficialupload unchanged.",
   "potential_real_anchor_transfer_setup_failure": {
     "run": "potential_real_anchor_transfer_01",
     "error": "append_event kind argument collided with keyword at first50-step logging; no checkpoint or forecast completed",
@@ -5656,5 +5658,20 @@
     "decision": "Eligible for one bounded second deadline hypothesis only after CUDA conditionalridge equivalence/resource smoke and exact incumbent/linear replays; retain scorer/gates.",
     "new_scores": 0,
     "reward_delta": 0
+  },
+  "observed_fullgene_hurdle_feasibility": {
+    "status": "passed_launched",
+    "cuda_device": "RTX3060 Laptop",
+    "conditionalridge_max_error": 6.938893903907228e-17,
+    "smoke_peak_bytes": 8673280,
+    "zero_velocity_exact_donor_replay": true,
+    "training_rows": 16787,
+    "genes": 32285,
+    "fit_stage": 8.5,
+    "target_fit": false,
+    "planned_scores": 12,
+    "new_scores": 0,
+    "reward_delta": 0,
+    "deadline_hypothesis_number": 2
   }
 }

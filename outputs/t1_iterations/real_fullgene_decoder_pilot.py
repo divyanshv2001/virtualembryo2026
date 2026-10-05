@@ -9,8 +9,83 @@ from train_extended_atlas import HERE
 from run_t1 import digest
 from iterate import now, append_event
 
-RUN = HERE / 'private/real_fullgene_decoder_pilot_03'
-PUBLIC = HERE / 'REAL_FULLGENE_DECODER_PILOT_RECOVERY_RESULTS.json'
+HURDLE = '--hurdle' in sys.argv
+RUN = HERE / ('private/observed_fullgene_hurdle_01' if HURDLE else 'private/real_fullgene_decoder_pilot_03')
+PUBLIC = HERE / ('OBSERVED_FULLGENE_HURDLE_RESULTS.json' if HURDLE else 'REAL_FULLGENE_DECODER_PILOT_RECOVERY_RESULTS.json')
+
+
+def hurdle_block(h, response):
+    """Match pinned conditional_ridge(ridge=1) with GPU double precision."""
+    positive=(response>0).to(h.dtype)
+    counts=positive.sum(0); den=counts.clamp_min(1)
+    centroid=h.T@positive/den
+    means=response.sum(0)/den
+    pairs=(h[:,:,None]*h[:,None,:]).reshape(len(h),-1)
+    second=(pairs.T@positive/den).T.reshape(len(counts),8,8)
+    covariance=second-torch.einsum('ig,jg->gij',centroid,centroid)
+    rhs=(h.T@response/den-centroid*means).T
+    coefficient=torch.linalg.solve(covariance+torch.eye(8,device=h.device,dtype=h.dtype)[None],rhs[:,:,None])[:,:,0].T
+    coefficient[:,counts<20]=0
+    centered=h-h.mean(0)
+    detection=torch.linalg.solve(centered.T@centered/len(h)+torch.eye(8,device=h.device,dtype=h.dtype),centered.T@(positive-positive.mean(0))/len(h))
+    detection[:,counts<20]=0
+    return coefficient,detection,centroid,means,positive.mean(0),counts
+
+
+def fit_hurdle():
+    if not torch.cuda.is_available():raise RuntimeError('RTX3060 unavailable')
+    torch.cuda.set_per_process_memory_fraction(.75)
+    packet=json.loads((RUN/'training.json').read_text())
+    for filename,expected in packet['sha256'].items():
+        if digest(Path(filename))!=expected:raise ValueError('Hurdle fit input changed')
+    z=np.load(RUN/'coordinates.npy');center=z.mean(0)
+    h=torch.tensor(z.astype(np.float64)-center,device='cuda')
+    y=np.load(RUN/'observed_expression.npy',mmap_mode='r')
+    outputs=[[],[],[],[],[],[]]
+    for start in range(0,32285,256):
+        response=torch.tensor(np.asarray(y[:,start:start+256],dtype=np.float64),device='cuda')
+        fitted=hurdle_block(h,response)
+        if not all(torch.isfinite(v).all() for v in fitted):raise ValueError('Nonfinite hurdle fit')
+        for destination,value in zip(outputs,fitted):destination.append(value.cpu().numpy())
+        del response,fitted
+    arrays=[np.concatenate(v,axis=1 if i<3 else 0) for i,v in enumerate(outputs)]
+    np.savez_compressed(RUN/'hurdle.npz',coef=arrays[0],detection=arrays[1],centroid=arrays[2],mean=arrays[3],probability=arrays[4],counts=arrays[5],center=center)
+    (RUN/'hurdle_device.json').write_text(json.dumps({'device':torch.cuda.get_device_name(0),'peak_allocated_bytes':torch.cuda.max_memory_allocated(),'fit_rows':len(z),'fit_stage':8.5,'solver':'CUDA float64 conditionalridge1/detectionridge1'}))
+
+
+def predict_hurdle(donors,z0,z1,fitted,guard):
+    from neural_hurdle_forecast import systematic_bernoulli
+    from robust_population import covariance_change
+    h0=z0.numpy().astype(float)-fitted['center'];h1=z1.numpy().astype(float)-fitted['center']
+    mass=np.expm1(donors.astype(float)).sum(1)
+    attempts=[]
+    for backoff in [1.,.5,.25,.125,0.]:
+        pred=donors.copy();rng=np.random.default_rng(20260928)
+        for start in range(0,32285,512):
+            sl=slice(start,min(start+512,32285));original=np.expm1(donors[:,sl].astype(float));positive=original>0
+            change=backoff*(h1-h0)@fitted['coef'][:,sl]
+            proposed=np.maximum(donors[:,sl]+change,1e-8)
+            future=np.expm1(np.minimum(proposed,np.log1p(10000.)))
+            ratio=np.divide(future,original,out=np.ones_like(future),where=positive)
+            updated=original*np.clip(ratio,.5,2.)
+            p0=np.clip(fitted['probability'][sl]+h0@fitted['detection'][:,sl],1e-4,1-1e-4)
+            p1=np.clip(fitted['probability'][sl]+h1@fitted['detection'][:,sl],1e-4,1-1e-4)
+            dp=np.clip(backoff*(p1-p0),-.25,.25)*(fitted['counts'][sl]>=20)
+            added=systematic_bernoulli(np.where((~positive)&(dp>0),np.clip(dp/(1-p0),0,1),0),rng)
+            removed=systematic_bernoulli(np.where(positive&(dp<0),np.clip(-dp/p0,0,1),0),rng)
+            value=fitted['mean'][sl]+h1@fitted['coef'][:,sl]-(fitted['centroid'][:,sl]*fitted['coef'][:,sl]).sum(0)
+            imputed=np.expm1(np.clip(value,1e-8,np.log1p(10000.)))
+            updated[added]=imputed[added];updated[removed]=0
+            pred[:,sl]=np.log1p(updated).astype(np.float32)
+        abundance=np.expm1(pred.astype(float));total=abundance.sum(1)
+        erased=(total==0)&(mass>0);abundance[erased]=np.expm1(donors[erased].astype(float));total=abundance.sum(1)
+        factor=np.divide(mass,total,out=np.ones_like(mass),where=total>0)
+        pred=np.log1p(abundance*factor[:,None]).astype(np.float32)
+        covariance=float(covariance_change(donors[:,guard],pred[:,guard]))
+        attempts.append({'backoff':backoff,'covariance_change':covariance})
+        if np.isfinite(pred).all() and covariance<=.4:
+            return pred,attempts
+    raise ValueError('Hurdle covariance guard failed')
 
 
 def head():
@@ -93,6 +168,10 @@ def main():
             'scope':'Previously exposed real E9.5 development; one training seed and three scoring resamples, not independent embryo validation.',
             'readiness_gates_unchanged':True,'official_uploads':0,
             'sources':{str(f):digest(f) for f in [Path(__file__), archive/'encoder4096.npz', archive/'features4096.pt', alignment/'alignment.npz', alignment/'report.json', HERE/'offline_backtest.py', root/'outputs/t1_run/T1__val.genes.txt']}}
+    if HURDLE:
+        plan.update(steps=0,candidates=['copy','incumbent','linear_fullgene','hurdle_fullgene'],primary_contrast=['linear_fullgene','hurdle_fullgene'],
+                    fit='All16787 real E8.5 cells, all32285genes. CUDA float64 conditionalpositive ridge1 and detectionridge1; support20. No E9.5fit. Fixed frozenCNF/covariance.25 path; bounded systematic detection changes, abundancefactor.5-2, fullmassrestore and existing384gene covariance.4 backoff.',
+                    hypothesis='Observed-only full-panel hurdle decoding preserves cell sparsity/co-expression better than the matched dense real-linear decoder; includes5510source-unmapped genes. Established mechanism, distinct observed-fullgene integration; no biologicalbirth claim.')
     RUN.mkdir()
     (RUN/'plan.json').write_text(json.dumps(plan,indent=2))
     (RUN/'executed_source.py').write_bytes(Path(__file__).read_bytes())
@@ -150,6 +229,10 @@ def main():
         else:
             subprocess.run([str(cuda),'-u',str(Path(__file__)),'--train'],check=True)
             saved=torch.load(RUN/'decoder.pt',weights_only=False,map_location='cpu')
+        if HURDLE:
+            subprocess.run([str(cuda),'-u',str(Path(__file__)),'--hurdle','--fit-hurdle'],check=True)
+            fitted=dict(np.load(RUN/'hurdle.npz'))
+            device_info=json.loads((RUN/'hurdle_device.json').read_text())
         decoder=head();decoder.load_state_dict(saved['net']);decoder.eval()
         al=dict(np.load(alignment/'alignment.npz'))
         transform=np.eye(8)+.25*(al['full_map']-np.eye(8))
@@ -161,7 +244,9 @@ def main():
         cache=TemporaryForecastCache(HERE/'private/temporary_cache')
         try:
             generation={'copy':{'prediction_sha256':cache.put('copy',donors)}}
-            for name,delta in [('linear_fullgene',(z1.numpy()-z0.numpy())@coef),('neural_fullgene',change.numpy())]:
+            variants=[('linear_fullgene',(z1.numpy()-z0.numpy())@coef)]
+            if not HURDLE:variants.append(('neural_fullgene',change.numpy()))
+            for name,delta in variants:
                 pred=np.maximum(donors+np.clip(delta,-.25,.25),0).astype(np.float32)
                 mass=np.expm1(donors.astype(np.float64)).sum(1)
                 abundance=np.expm1(pred.astype(np.float64))
@@ -170,6 +255,13 @@ def main():
                 generation[name]={'prediction_sha256':cache.put(name,pred)}
                 emit('forecast_frozen',candidate=name,**generation[name])
                 del pred,abundance
+            if HURDLE:
+                pred,attempts=predict_hurdle(donors,z0,z1,fitted,np.load(archive/'features.npy'))
+                generation['hurdle_fullgene']={'prediction_sha256':cache.put('hurdle_fullgene',pred),'guard_attempts':attempts}
+                del pred
+                old_decoder=json.loads((HERE/'REAL_FULLGENE_DECODER_PILOT_RECOVERY_RESULTS.json').read_text())
+                if generation['linear_fullgene']['prediction_sha256']!=old_decoder['generation']['linear_fullgene']['prediction_sha256']:
+                    raise ValueError('Dense real-linear exact replay failed')
             x=np.load(data/'expression.npy',mmap_mode='r')
             stages=pd.read_csv(data/'selected_metadata.csv').numeric_stage.to_numpy(float)
             symbols=pd.read_csv(data/'genes.csv').symbol.fillna('').tolist()
@@ -204,10 +296,10 @@ def main():
                 rows=[next(v for v in panel_['results'] if v['candidate']==name) for panel_ in report['panels']]
                 summary.append({'candidate':name,'scores':[v['local_score'] for v in rows], 'mean_score':float(np.mean([v['local_score'] for v in rows])), 'skills':[v['skills'] for v in rows], 'raw_metrics':[v['raw_metrics'] for v in rows], 'all_calibrations_valid':all(v['calibration_valid'] for v in rows), 'mean_skills':{m:float(np.mean([v['skills'][m] for v in rows])) for m in rows[0]['skills']}})
             by={v['candidate']:v for v in summary}
-            passing=[n for n in ['linear_fullgene','neural_fullgene'] if by[n]['all_calibrations_valid'] and all(by[n]['scores'][i]>max(by[c]['scores'][i] for c in ['copy','incumbent']) for i in range(3)) and all(by[n]['mean_skills'][m]>=max(by[c]['mean_skills'][m] for c in ['copy','incumbent']) for m in by[n]['mean_skills'])]
+            passing=[n for n in plan['candidates'][2:] if by[n]['all_calibrations_valid'] and all(by[n]['scores'][i]>max(by[c]['scores'][i] for c in ['copy','incumbent']) for i in range(3)) and all(by[n]['mean_skills'][m]>=max(by[c]['mean_skills'][m] for c in ['copy','incumbent']) for m in by[n]['mean_skills'])]
             peak=peak_memory()
             if peak>16*1024**3:raise MemoryError('Host memory ceiling exceeded')
-            report.update(status='completed',summary=summary,generation=generation,passing_candidates=passing,official_score=None,local_72_gate_passed=False,scope=plan['scope'],resource_peak_process_working_set_bytes=peak,training={'device':saved['device'],'peak_allocated_bytes':saved['peak_allocated_bytes']})
+            report.update(status='completed',summary=summary,generation=generation,passing_candidates=passing,official_score=None,local_72_gate_passed=False,scope=plan['scope'],resource_peak_process_working_set_bytes=peak,training=device_info if HURDLE else {'device':saved['device'],'peak_allocated_bytes':saved['peak_allocated_bytes']})
             (RUN/'report.json').write_text(json.dumps(report,indent=2))
             report['report_sha256']=digest(RUN/'report.json')
             PUBLIC.write_text(json.dumps(report,indent=2))
@@ -222,5 +314,6 @@ def main():
 
 if __name__=='__main__':
     torch.set_num_threads(2)
-    if '--train' in sys.argv: train()
+    if '--fit-hurdle' in sys.argv: fit_hurdle()
+    elif '--train' in sys.argv: train()
     else: main()

@@ -1,18 +1,20 @@
 {
-  "updated_utc": "2026-10-05T01:06:13.726564+00:00",
+  "updated_utc": "2026-10-05T01:18:49.827615+00:00",
   "fingerprints": {
     "RESEARCH_CONTINUATION_POLICY.md": "9465f61a3832ff5b8f7365ef4c2d66f5a561d45ba094174f766370af86f4b6fa",
-    "LOCAL_OPTIMIZATION_STATE.json": "6b6b19c52ae249d136616f16d65b87d60920831cc29f9cb07a372803f9059e48",
+    "LOCAL_OPTIMIZATION_STATE.json": "8290c3a7a3b8ca5e5ff4583cd600607fb017a042ef36ed05bd93cee8f6589d10",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "6cc5596883c3dcbfa33a2317695d9129c9bdfd3a93e1b8db74ebc8002c16a078",
+    "METRIC_RESEARCH_QUEUE.json": "9edfbea5123d770625ffe1b4145fb0cf9c44db22ab4dda8211dbd32daed6265d",
     "METRIC_CRITIQUE_POLICY.json": "3535989f1e3beac0f2d446b44df3c793d4be464dbd87f6e714c2f5afda864a6f",
     "METRIC_CRITIQUES_20261001.md": "a34c842965a4632c4cc50c191e248697164342411a1cadde85464f9effb3593f",
-    "RESEARCH_HARNESS_MANIFEST.json": "a33b563e4688ce41467d8ad388e13a7c83b27ad588f20b5a3829c4b379682753"
+    "RESEARCH_HARNESS_MANIFEST.json": "6ca8d6ad8d1887e58ba5f707de16c93c473e90107d5697524d83937861d475a5"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [],
-  "next_experiment": "Fullgene_hurdle coverage preflight complete: sparsehurdle family exists but prioractualanchor support remains externalmapped. Second/last deadlinehypothesis eligible onlyfor observed-only all32285gene positive+detection heads onall16787real8.5cells, frozenCNFpath vsdense real-linear/incumbent/copy. Next implement withinexisting real_fullgene_decoder_pilot.py separateflag/registeredrun, CUDAconditionalridge numericalequivalence/resource smoke beforelaunch; exactcontrols/frozenforecasts12scores. No source-map/zero-lock/weightgrid rerun, no hiddenfuturefit or upload.",
+  "active_jobs_at_checkpoint": [
+    "observed_fullgene_hurdle"
+  ],
+  "next_experiment": "observed_fullgene_hurdle running viaharness, seconddeadlinehypothesis. CUDA float64 conditionalridge equivalent pinnedCPU maxerror6.94e-17/smoke8.67MB; zero-velocity decoder preservesdonors/zeros exactly. Full16787actual8.5cells/32285genes, fixedCNF/cov.25trajectory, real-linear/incumbentexactreplays, no9.5fit;12fullpanel outcomespending. Inspectnamedworker; fourfreshmetricreviews/rewardaftercompletion. No duplicate/oldweightgrid, readiness/noofficialupload unchanged.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",

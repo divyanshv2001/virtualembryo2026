@@ -2088,6 +2088,19 @@
         "driver_runtime": "cpu",
         "purpose": "Distinct realE8.5 all16787cells full32285gene conditional decoder; cached flow/path, exact incumbent/linear/copycontrols, originalCPU scoring;400RTXsteps, no9.5fit."
       }
+    },
+    "observed_fullgene_hurdle": {
+      "script": "real_fullgene_decoder_pilot.py",
+      "args": [
+        "--hurdle"
+      ],
+      "run": "private/observed_fullgene_hurdle_01",
+      "report": "OBSERVED_FULLGENE_HURDLE_RESULTS.json",
+      "protocol": {
+        "training_device": "cuda",
+        "driver_runtime": "cpu",
+        "purpose": "Seconddeadlinehypothesis: realE8.5only fullgene detection/positive heads, CUDAanalyticfit, exactdense-linear/incumbentcontrols, fullpanelCPU scorer."
+      }
     }
   }
 }

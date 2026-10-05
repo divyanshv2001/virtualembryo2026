@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-05T01:06:13.726564+00:00
+Updated: 2026-10-05T01:18:49.827615+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -8,9 +8,9 @@ Use `research_harness.py queue` for a compact next-step/pending summary; never d
 
 Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction': 56.3, 'mmd_u': 53.2, 'variogram': 51.7}. Covariance .25 reused-development mean55.98883; EB and lineage-standardized historical proxy screens failed. Local>72 mean/lower-tail >=64-replicate AND temporal gate unmet. Full32285-gene scorer/calibration unchanged.
 
-Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
+Checkpoint jobs: ['observed_fullgene_hurdle']. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Fullgene_hurdle coverage preflight complete: sparsehurdle family exists but prioractualanchor support remains externalmapped. Second/last deadlinehypothesis eligible onlyfor observed-only all32285gene positive+detection heads onall16787real8.5cells, frozenCNFpath vsdense real-linear/incumbent/copy. Next implement withinexisting real_fullgene_decoder_pilot.py separateflag/registeredrun, CUDAconditionalridge numericalequivalence/resource smoke beforelaunch; exactcontrols/frozenforecasts12scores. No source-map/zero-lock/weightgrid rerun, no hiddenfuturefit or upload.
+Next: observed_fullgene_hurdle running viaharness, seconddeadlinehypothesis. CUDA float64 conditionalridge equivalent pinnedCPU maxerror6.94e-17/smoke8.67MB; zero-velocity decoder preservesdonors/zeros exactly. Full16787actual8.5cells/32285genes, fixedCNF/cov.25trajectory, real-linear/incumbentexactreplays, no9.5fit;12fullpanel outcomespending. Inspectnamedworker; fourfreshmetricreviews/rewardaftercompletion. No duplicate/oldweightgrid, readiness/noofficialupload unchanged.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in export report. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 
