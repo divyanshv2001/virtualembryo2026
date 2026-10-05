@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-05T01:45:32.260231+00:00
+Updated: 2026-10-05T02:01:33.847978+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -8,9 +8,9 @@ Use `research_harness.py queue` for a compact next-step/pending summary; never d
 
 Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction': 56.3, 'mmd_u': 53.2, 'variogram': 51.7}. Covariance .25 reused-development mean55.98883; EB and lineage-standardized historical proxy screens failed. Local>72 mean/lower-tail >=64-replicate AND temporal gate unmet. Full32285-gene scorer/calibration unchanged.
 
-Checkpoint jobs: ['hurdle_head_stability_confirmation']. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
+Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: hurdle_head_stability_confirmation running: fixed disjointactual8.5halves8393/8394, samepositive/detectionridge1/support20,CNF/.25map/decoder/guards. Cachedfullfit hurdle and incumbentmustreplayexactly;15fullpanel scoreson3existingreal9.5resamples afterallforecasts frozen. Confirmation notthirdhypothesis/independentembryos/newmethodreward. Fourfreshreviewsafterbatch, no oldgrids/16resampleexpansionbelow60,original64/>72/temporalgates intact. Official52.16/noofficialupload.
+Next: Stabilityconfirmationcomplete:full56.68901,half0 56.59017,half1 56.70664 vsinc55.98883;15validcalibs/exactcontrols/4freshreviews. Bothaggregate gains retained, buthalf0DCS-.000654588 failsdeclaredboth-halves all4gate. Do notselecthalf1posthoc orclaimstable/promoted; retainfullfitdevelopmentpilot56.69 andofficial52.16fallback. Confirmationreward0/health-1702. Next bounded frozen_run_evidence_preflight: inspect genuine producingrun/configlock and actualjointE8.5/E9.5training/export paths, confirm officialstarter/control coverage and reusable observed-data inputs; no forgedtrajectory/hiddenfuturefit/automaticupload. No newmethod/grid untilthischeck;originalreadiness/60expansion/temporal gates intact.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in export report. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 

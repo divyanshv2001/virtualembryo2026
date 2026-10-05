@@ -59,3 +59,14 @@ Report 03c1b7ec9ef8808ea3bb53e805e3b5f0c9a5e8aa1545302cd75a4a3c8947d976; four fr
 - mmd_u: Problem: MMDimprovesoverinc buttrailsdense. Proposed solution: Freeze gains; confirm matcheduncertainty/temporal support. Validation:3exposedresamples/12calibrations are notindependentembryos.
 
 - variogram: Problem: Promotion lacksconfirmed temporal/training support. Proposed solution: Freeze decoder/covariance;confirm support. Validation: CSS.555417>.539468,allfourmeansimprove,12validcalibs/guardpass. Coordinator: reviewer full-grid meansCSS, no gridrun.
+
+## Fixed hurdle head stability — 5 October 2026 IST
+Report 1e053dc8a8375ed99f4aaeb80131401c46882cbb06040cc8377a22029f42b0fa; four fresh narrow reviews.
+
+- de_score: Problem: Half0DCSregression failsdeclaredstability. Proposed solution: Retainfrozenfullfit;no posthochalf1selection/independentembryoclaim. Validation: Exactreplay/DEgains do notestablishstability.
+
+- de_direction: Problem: Half0DCS.601513<inc.602168. Proposed solution: Retainpilot withoutstability/promotionclaims;rejecthalf1posthocselection. Validation: Bothhalves mustpass; biologicalreplication remainsunverified.
+
+- mmd_u: Problem: DespiteMMD/aggregate gains,half0DCS failsboth-halves/allfourcriterion. Proposed solution: Preservepilot,rejectpromotion/posthochalfselection. Validation:15validcalibs/exactreplays notindependentembryo/temporalrobustness.
+
+- variogram: Problem: Half0DCSfailsdeclaredstability. Proposed solution: Preservefullfitprovisionally,seekgenuine temporal/embryo support;no grids. Validation: Exactreplays/3exposedresamples cannotestablishgeneralization.

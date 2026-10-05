@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-05T01:45:32.021277+00:00",
+  "updated_utc": "2026-10-05T02:01:27.555308+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -6419,16 +6419,16 @@
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
     "experiment": "potential_chronological_cutoff8",
-    "status": "fixed_stability_confirmation_running",
-    "next_experiment": "hurdle_head_stability_confirmation",
-    "next": "hurdle_head_stability_confirmation running: fixed disjointactual8.5halves8393/8394, samepositive/detectionridge1/support20,CNF/.25map/decoder/guards. Cachedfullfit hurdle and incumbentmustreplayexactly;15fullpanel scoreson3existingreal9.5resamples afterallforecasts frozen. Confirmation notthirdhypothesis/independentembryos/newmethodreward. Fourfreshreviewsafterbatch, no oldgrids/16resampleexpansionbelow60,original64/>72/temporalgates intact. Official52.16/noofficialupload.",
-    "jev_choice": "head_training_stability",
-    "jev_confidence": 0.27,
+    "status": "confirmation_gate_failed_preflight_next",
+    "next_experiment": "frozen_run_evidence_preflight",
+    "next": "Stabilityconfirmationcomplete:full56.68901,half0 56.59017,half1 56.70664 vsinc55.98883;15validcalibs/exactcontrols/4freshreviews. Bothaggregate gains retained, buthalf0DCS-.000654588 failsdeclaredboth-halves all4gate. Do notselecthalf1posthoc orclaimstable/promoted; retainfullfitdevelopmentpilot56.69 andofficial52.16fallback. Confirmationreward0/health-1702. Next bounded frozen_run_evidence_preflight: inspect genuine producingrun/configlock and actualjointE8.5/E9.5training/export paths, confirm officialstarter/control coverage and reusable observed-data inputs; no forgedtrajectory/hiddenfuturefit/automaticupload. No newmethod/grid untilthischeck;originalreadiness/60expansion/temporal gates intact.",
+    "jev_choice": "frozen_run_evidence_preflight",
+    "jev_confidence": 0.2,
     "scope": "Advisory low confidence; raw-count data availability verified deterministically, no score claim.",
     "support_audit": "Completed: no independent embryo/untouched validation established; historical-only options remain, no promotion.",
     "jev_usage": {
-      "input_tokens": 1141,
-      "output_tokens": 57
+      "input_tokens": 1280,
+      "output_tokens": 50
     },
     "coordinator_choice": "past_block_crossfit",
     "coordinator_reason": "Objective swap regresses allnonDE metrics and DEties; audit untested chronologicalcoverage before further same-exposedpanel objectives. No guarantee validationraisesofficialscore. Preserve proposed newneuralOT-CFM candidate, no oldaffineOT repeat.",
@@ -6436,6 +6436,6 @@
     "feasibility_basis": "Archived8.5 CNF/encoder hashes and cutoff verified; new8.5 kinetics/potential pair remains unevaluated; reuse avoids redundant CNF800 training. Existing head strengths and scorer fixed.",
     "coverage": "485cutoff8outcomes/58reports but0potential; cachedlowercutoff4096/PCA8/CNF800 andfixedalignment available.7963strictpastrows,targets3000each; no independentembryos."
   },
-  "next_experiment": "hurdle_head_stability_confirmation running: fixed disjointactual8.5halves8393/8394, samepositive/detectionridge1/support20,CNF/.25map/decoder/guards. Cachedfullfit hurdle and incumbentmustreplayexactly;15fullpanel scoreson3existingreal9.5resamples afterallforecasts frozen. Confirmation notthirdhypothesis/independentembryos/newmethodreward. Fourfreshreviewsafterbatch, no oldgrids/16resampleexpansionbelow60,original64/>72/temporalgates intact. Official52.16/noofficialupload.",
-  "next_action": "hurdle_head_stability_confirmation running: fixed disjointactual8.5halves8393/8394, samepositive/detectionridge1/support20,CNF/.25map/decoder/guards. Cachedfullfit hurdle and incumbentmustreplayexactly;15fullpanel scoreson3existingreal9.5resamples afterallforecasts frozen. Confirmation notthirdhypothesis/independentembryos/newmethodreward. Fourfreshreviewsafterbatch, no oldgrids/16resampleexpansionbelow60,original64/>72/temporalgates intact. Official52.16/noofficialupload."
+  "next_experiment": "Stabilityconfirmationcomplete:full56.68901,half0 56.59017,half1 56.70664 vsinc55.98883;15validcalibs/exactcontrols/4freshreviews. Bothaggregate gains retained, buthalf0DCS-.000654588 failsdeclaredboth-halves all4gate. Do notselecthalf1posthoc orclaimstable/promoted; retainfullfitdevelopmentpilot56.69 andofficial52.16fallback. Confirmationreward0/health-1702. Next bounded frozen_run_evidence_preflight: inspect genuine producingrun/configlock and actualjointE8.5/E9.5training/export paths, confirm officialstarter/control coverage and reusable observed-data inputs; no forgedtrajectory/hiddenfuturefit/automaticupload. No newmethod/grid untilthischeck;originalreadiness/60expansion/temporal gates intact.",
+  "next_action": "Stabilityconfirmationcomplete:full56.68901,half0 56.59017,half1 56.70664 vsinc55.98883;15validcalibs/exactcontrols/4freshreviews. Bothaggregate gains retained, buthalf0DCS-.000654588 failsdeclaredboth-halves all4gate. Do notselecthalf1posthoc orclaimstable/promoted; retainfullfitdevelopmentpilot56.69 andofficial52.16fallback. Confirmationreward0/health-1702. Next bounded frozen_run_evidence_preflight: inspect genuine producingrun/configlock and actualjointE8.5/E9.5training/export paths, confirm officialstarter/control coverage and reusable observed-data inputs; no forgedtrajectory/hiddenfuturefit/automaticupload. No newmethod/grid untilthischeck;originalreadiness/60expansion/temporal gates intact."
 }
