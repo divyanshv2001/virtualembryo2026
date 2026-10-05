@@ -42,3 +42,6 @@ User says continue after failedridge2 stabilization. Execute one frozen-channel 
 
 ## User submission-file request — 5 October 2026
 User authorizes a separate prospective T1 submission file once local56.689 is achieved. Channelfull56.761532 passes declaredfixed-halfdevelopmentgate; export that frozenrecipe using observedE9.5 and allowed externalthroughE9.5 only. File/schema validation is not independent readiness or official score; retain52.16fallback and prior failures. No officialupload or lockedAgentTeameligibilityclaim.
+
+## Explicit metric-maximization reopening — 5 October 2026
+User again requests maximizing publishedmetric score. Reopens one bounded supported same-mechanism pilot: past-only latent support guard with cached decoder/controls. No third broad architecture/search or oldgrid, targetreconstruction, readinessrelaxation or automaticupload. Preserveofficial52.16 fallback and49.80screenshot attribution caveat; freshbatchreviews/accounting required.

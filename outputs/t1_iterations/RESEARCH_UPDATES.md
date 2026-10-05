@@ -959,3 +959,5 @@ Export02 failed before savedheads: memorychecker is localmain import, not module
 2026-10-05T04:44:03.404795+00:00 User requests metric diagnosis/maximization after49.80screenshot. Public4metrics/25,25,30,20weights verified; roundedskills imply49.82. Local56.761532 exactarchivedcalibrationreproduction, differentstage/anchors. Read-only observed-donor old/newexport audit complete; no hidden-target inversion, newscored batch/reward, or upload. Bestofficial52.16 remainsfallback.
 
 Officialgap/metric audit complete:4publishedweights reconstructrounded49.82; rawcomponentparity passes afterpairRNGalignment,oldproductionunchanged. No independentreal fullgene horizon/embryos; no supported newgrid declared. Bestofficial52.16retained,49.80screenshotlatestattributionunverified. Diagnosis delivered, no newmodelscore/reward/reviews/upload.
+
+2026-10-05T04:53:52.625643+00:00 Userreopens metricoptimization; cachedJev latent_support_trust(.01),1568in41out. Predeclared fixedobservedE8.5 ellipsoidguard/cachedfullgeneheads,15matchedscores and exact56.761532control, originalgates. Lowconfidencehypothesis unvalidated, no hidden-target propertyfit/grid/upload.

@@ -9,7 +9,8 @@ from train_extended_atlas import HERE
 from run_t1 import digest
 from iterate import now, append_event
 
-CHANNEL = '--frozen-detection-ridge2' in sys.argv
+TRUST = '--latent-support-trust' in sys.argv
+CHANNEL = '--frozen-detection-ridge2' in sys.argv or TRUST
 STABILIZE = '--stabilize-ridge2' in sys.argv or CHANNEL
 STABILITY = '--head-stability' in sys.argv or STABILIZE
 HEAD_RIDGE = 2. if STABILIZE else 1.
@@ -19,6 +20,9 @@ PUBLIC = HERE / ('HURDLE_RIDGE2_STABILIZATION_RESULTS.json' if STABILIZE else ('
 if CHANNEL:
     RUN=HERE/'private/hurdle_detection_ridge2_01'
     PUBLIC=HERE/'HURDLE_DETECTION_RIDGE2_RESULTS.json'
+if TRUST:
+    RUN=HERE/'private/hurdle_latent_trust_01'
+    PUBLIC=HERE/'HURDLE_LATENT_TRUST_RESULTS.json'
 
 
 def channel_head_paths():
@@ -102,10 +106,36 @@ def fit_hurdle():
     (RUN/'hurdle_device.json').write_text(json.dumps({'device':torch.cuda.get_device_name(0),'peak_allocated_bytes':torch.cuda.max_memory_allocated(),'fit_rows':len(z),'fit_stage':8.5,'solver':f'CUDA float64 conditionalridge{HEAD_RIDGE:g}/detectionridge{HEAD_RIDGE:g}'}))
 
 
-def predict_hurdle(donors,z0,z1,fitted,guard):
+def observed_support_step(start, end, past):
+    """Bound endpoint radius by max(past99th percentile, donor starting radius)."""
+    center=past.mean(0);cov=np.cov(past,rowvar=False)
+    ridge=.05*np.trace(cov)/cov.shape[0]
+    inverse=np.linalg.inv(cov+ridge*np.eye(cov.shape[0]))
+    h=start-center;delta=end-start
+    radii=np.einsum('ni,ij,nj->n',past-center,inverse,past-center)
+    radius=float(np.quantile(radii,.99))
+    r0=np.einsum('ni,ij,nj->n',h,inverse,h)
+    bound=np.maximum(radius,r0)
+    a=np.einsum('ni,ij,nj->n',delta,inverse,delta)
+    b=np.einsum('ni,ij,nj->n',h,inverse,delta)
+    c=r0-bound
+    root=np.divide(-b+np.sqrt(np.maximum(b*b-a*c,0)),a,out=np.ones_like(a),where=a>1e-14)
+    factor=np.clip(root,0,1)
+    result=start+factor[:,None]*delta
+    final_radius=np.einsum('ni,ij,nj->n',result-center,inverse,result-center)
+    if not np.isfinite(result).all() or np.any(final_radius>bound+1e-7):raise ValueError('Observed support bound failed')
+    return result,{'quantile':.99,'covariance_ridge_fraction':.05,'training_rows':len(past),
+                   'radius_squared':radius,'limited_rows':int((factor<1).sum()),'minimum_step_fraction':float(factor.min()),
+                   'mean_step_fraction':float(factor.mean()),'maximum_radius_excess':float(np.max(final_radius-bound))}
+
+
+def predict_hurdle(donors,z0,z1,fitted,guard,trust=None):
     from neural_hurdle_forecast import systematic_bernoulli
     from robust_population import covariance_change
-    h0=z0.numpy().astype(float)-fitted['center'];h1=z1.numpy().astype(float)-fitted['center']
+    start=z0.numpy().astype(float);end=z1.numpy().astype(float)
+    trust_audit=None
+    if trust is not None:end,trust_audit=observed_support_step(start,end,trust)
+    h0=start-fitted['center'];h1=end-fitted['center']
     mass=np.expm1(donors.astype(float)).sum(1)
     attempts=[]
     for backoff in [1.,.5,.25,.125,0.]:
@@ -131,7 +161,7 @@ def predict_hurdle(donors,z0,z1,fitted,guard):
         factor=np.divide(mass,total,out=np.ones_like(mass),where=total>0)
         pred=np.log1p(abundance*factor[:,None]).astype(np.float32)
         covariance=float(covariance_change(donors[:,guard],pred[:,guard]))
-        attempts.append({'backoff':backoff,'covariance_change':covariance})
+        attempts.append({'backoff':backoff,'covariance_change':covariance,**({'observed_support':trust_audit} if trust_audit is not None else {})})
         if np.isfinite(pred).all() and covariance<=.4:
             return pred,attempts
     raise ValueError('Hurdle covariance guard failed')
@@ -244,6 +274,14 @@ def main():
                     hypothesis='Frozen channel attribution: test whether ridge2 detection alone retains direction gains without the combined-ridge MMD loss. One prespecified hybrid, no grid or causal claim.',
                     cached_head_sha256={str(p):digest(p) for p in cached},
                     prior_advisory='Prior cached Jev recommended retain_provisional(.95); human subsequently requests continuation. Preserve prior advice and failed results; this diagnostic has no assumed benefit.')
+    if TRUST:
+        plan.update(candidates=['copy','incumbent','fullfit_hurdle','stabilized_full','support_trust'],
+                    primary_contrast=['stabilized_full','support_trust'],
+                    hypothesis='One fixed observed-support ellipsoid clips extrapolated latent steps; same positive1/detection2 heads, detection sampler and mass/covariance guards. No objective grid or hidden-target use.',
+                    scope='Exposed realE9.5 development, E8.5-only support fit. Not independent embryos or official E10.5 validation.',
+                    support_quantile=.99,support_covariance_ridge_fraction=.05,
+                    success='Support-trust beats stabilizedfull aggregate all3panels and no meanfour-skillregression; exactcurrentfullfit replay required. Original gates unchanged.',
+                    fixed_channel_report_sha256=digest(HERE/'HURDLE_DETECTION_RIDGE2_RESULTS.json'))
     RUN.mkdir()
     (RUN/'plan.json').write_text(json.dumps(plan,indent=2))
     (RUN/'executed_source.py').write_bytes(Path(__file__).read_bytes())
@@ -341,12 +379,19 @@ def main():
                     original=json.loads((HERE/'OBSERVED_FULLGENE_HURDLE_RESULTS.json').read_text())
                     if generation[full_name]['prediction_sha256']!=original['generation']['hurdle_fullgene']['prediction_sha256']:
                         raise ValueError('Fullfit hurdle exact replay failed')
-                    for label in (['stabilized_full','half0','half1'] if STABILIZE else ['half0','half1']):
+                    for label in (['stabilized_full'] if TRUST else (['stabilized_full','half0','half1'] if STABILIZE else ['half0','half1'])):
                         model=dict(np.load(RUN/(label+'.npz')))
                         pred,attempts=predict_hurdle(donors,z0,z1,model,np.load(archive/'features.npy'))
                         name=label if label=='stabilized_full' else 'hurdle_'+label
                         generation[name]={'prediction_sha256':cache.put(name,pred),'guard_attempts':attempts}
                         del pred
+            if TRUST:
+                archived_channel=json.loads((HERE/'HURDLE_DETECTION_RIDGE2_RESULTS.json').read_text())
+                if generation['stabilized_full']['prediction_sha256']!=archived_channel['generation']['stabilized_full']['prediction_sha256']:
+                    raise ValueError('Frozen56.761532 control exact replay failed')
+                pred,attempts=predict_hurdle(donors,z0,z1,dict(np.load(RUN/'stabilized_full.npz')),np.load(archive/'features.npy'),trust=z.astype(np.float64))
+                generation['support_trust']={'prediction_sha256':cache.put('support_trust',pred),'guard_attempts':attempts}
+                emit('observed_support_forecast_frozen',**generation['support_trust']);del pred
             x=np.load(data/'expression.npy',mmap_mode='r')
             stages=pd.read_csv(data/'selected_metadata.csv').numeric_stage.to_numpy(float)
             symbols=pd.read_csv(data/'genes.csv').symbol.fillna('').tolist()
@@ -385,7 +430,10 @@ def main():
             peak=peak_memory()
             if peak>16*1024**3:raise MemoryError('Host memory ceiling exceeded')
             report.update(status='completed',summary=summary,generation=generation,passing_candidates=passing,official_score=None,local_72_gate_passed=False,scope=plan['scope'],resource_peak_process_working_set_bytes=peak,training=device_info if HURDLE else {'device':saved['device'],'peak_allocated_bytes':saved['peak_allocated_bytes']})
-            if STABILIZE:
+            if TRUST:
+                base=by['stabilized_full'];candidate=by['support_trust']
+                report['support_trust_gate_passed']=candidate['all_calibrations_valid'] and all(a>b for a,b in zip(candidate['scores'],base['scores'])) and all(candidate['mean_skills'][m]>=base['mean_skills'][m] for m in base['mean_skills'])
+            elif STABILIZE:
                 arms=['stabilized_full','hurdle_half0','hurdle_half1']
                 report['stabilization_gate_passed']=all(n in passing for n in arms) and by['stabilized_full']['mean_score']>=by['fullfit_hurdle']['mean_score']
                 report['old_stability_failure_retained']=True

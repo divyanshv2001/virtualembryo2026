@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-05T04:44:03.404795+00:00",
+  "updated_utc": "2026-10-05T04:53:52.625643+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,11 +30,13 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Officialgap audit/supportpreflight complete: public4metricobjective verified, cached/direct rawparity within tolerance after sampledvariogram pairalignment. Local56.761532 usesdifferenttarget/anchors; screenshot49.80 provisionalartifactattribution. No independent real fullgene horizon/embryo support; retain demonstratedofficial52.16 and allreadiness gates. No further unsupported grid/newupload; scorecanselect knownpredictions but cannot recover hidden-target properties.",
+  "next_experiment": "Execute one hurdle_latent_support_trust pilot: fixedE8.5 99%ellipsoid/.05covridge/starting-radiusallowance, no futurefit; cachedpositive1/detection2 heads, exact56.761532/inc/fullfit/copy controls.15fullpanel scores; require3/3aggregate and all4means>=frozen56.761532. Fourreviews/accounting afterbatch; no oldscorergatechange/hidden-target inversion/upload.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
+  "active_jobs": [
+    "hurdle_latent_support_trust"
+  ],
   "active_run_path": "private/hurdle_head_stability_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
@@ -3985,7 +3987,7 @@
       5,
       6
     ],
-    "policy_sha256": "cb19e02e96b9b21b444465909230c9cc7315416f87b81afc13b02eca29ef0e43",
+    "policy_sha256": "480d50492b6e2a4fd7e0b54eabf1c5db7b5708b3c05837492159da7ffe6c9a0a",
     "rules": [
       "Start with harness resume; inspect only changed policy and active evidence",
       "One necessary experiment; one checkpoint commit/push",
@@ -5227,7 +5229,7 @@
       "jev_scope": "Typed option selection/pinnedreport status only; report has no score summary and numeric auditresults were not transmitted, no evidence certification."
     }
   },
-  "next_action": "Officialgap audit/supportpreflight complete: public4metricobjective verified, cached/direct rawparity within tolerance after sampledvariogram pairalignment. Local56.761532 usesdifferenttarget/anchors; screenshot49.80 provisionalartifactattribution. No independent real fullgene horizon/embryo support; retain demonstratedofficial52.16 and allreadiness gates. No further unsupported grid/newupload; scorecanselect knownpredictions but cannot recover hidden-target properties.",
+  "next_action": "Execute one hurdle_latent_support_trust pilot: fixedE8.5 99%ellipsoid/.05covridge/starting-radiusallowance, no futurefit; cachedpositive1/detection2 heads, exact56.761532/inc/fullfit/copy controls.15fullpanel scores; require3/3aggregate and all4means>=frozen56.761532. Fourreviews/accounting afterbatch; no oldscorergatechange/hidden-target inversion/upload.",
   "potential_real_anchor_transfer_setup_failure": {
     "run": "potential_real_anchor_transfer_01",
     "error": "append_event kind argument collided with keyword at first50-step logging; no checkpoint or forecast completed",
@@ -6219,5 +6221,29 @@
     "headline": 49.8,
     "artifact_attribution": "User supplied screenshot after delivery; presumed latest hurdle export, uploaded filename/hash not visible and not verified.",
     "submission_url": "https://virtualembryo.ai/challenge/account/submissions/65d25d69af964f878e1ca74b7a5ae04f"
+  },
+  "latent_support_trust_protocol": {
+    "status": "running",
+    "primary_contrast": [
+      "stabilized_full",
+      "support_trust"
+    ],
+    "quantile": 0.99,
+    "covariance_ridge_fraction": 0.05,
+    "fit_stage": 8.5,
+    "target": 9.5,
+    "support_rows": 16787,
+    "success": "Execute one hurdle_latent_support_trust pilot: fixedE8.5 99%ellipsoid/.05covridge/starting-radiusallowance, no futurefit; cachedpositive1/detection2 heads, exact56.761532/inc/fullfit/copy controls.15fullpanel scores; require3/3aggregate and all4means>=frozen56.761532. Fourreviews/accounting afterbatch; no oldscorergatechange/hidden-target inversion/upload.",
+    "jev": {
+      "choice": "latent_support_trust",
+      "confidence": 0.01,
+      "usage": {
+        "input_tokens": 1568,
+        "output_tokens": 41
+      }
+    },
+    "source_sha256": "d611b6065d375e20bae1277a52c83cf60b61c41e2e746826c1d56921dde6e730",
+    "pid_at_launch": 20292,
+    "guard_smoke": "Stationary, interior, outward, already-outside checks passed"
   }
 }

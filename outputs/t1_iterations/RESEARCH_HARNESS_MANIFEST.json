@@ -2183,6 +2183,21 @@
         "driver_runtime": "cuda",
         "purpose": "Userauthorized prospective E10.5 file from frozen56.761532recipe; real9.5onlyheads and externalthrough9.5, no scoring/upload/readinesspromotion."
       }
+    },
+    "hurdle_latent_support_trust": {
+      "script": "real_fullgene_decoder_pilot.py",
+      "args": [
+        "--latent-support-trust"
+      ],
+      "run": "private/hurdle_latent_trust_01",
+      "report": "HURDLE_LATENT_TRUST_RESULTS.json",
+      "protocol": {
+        "training_device": "cpu",
+        "driver_runtime": "cpu",
+        "new_training": false,
+        "cached_head_training_device": "RTX3060 CUDA",
+        "purpose": "Userreopensmetricmaximization: one observed-support latentguard, exact frozen56.761532/fullfit/inc/copy controls; cachedheads/no newarchitecture/grid, unchangedfullpanel/gates."
+      }
     }
   }
 }
