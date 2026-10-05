@@ -1,18 +1,20 @@
 {
-  "updated_utc": "2026-10-05T01:34:11.929504+00:00",
+  "updated_utc": "2026-10-05T01:45:32.260231+00:00",
   "fingerprints": {
     "RESEARCH_CONTINUATION_POLICY.md": "9465f61a3832ff5b8f7365ef4c2d66f5a561d45ba094174f766370af86f4b6fa",
-    "LOCAL_OPTIMIZATION_STATE.json": "b6b782f50a2f2acc3319f6fc869ef97b1642e40e97b987b5448b0f283bbbe7dc",
+    "LOCAL_OPTIMIZATION_STATE.json": "b85abaa5b994f6928447a0c6041a3c8107bc2589d82a29fa070b8ffd7784e9d2",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "49776dbe5f466dead22cce5856d56de50e2fb5fea5bef541ae1ebbb4f237cb2d",
+    "METRIC_RESEARCH_QUEUE.json": "91296a0cdeb89cb1ac6ffb318c5a67e78150dcc95ac13f69beb2e2c90afd75d7",
     "METRIC_CRITIQUE_POLICY.json": "3535989f1e3beac0f2d446b44df3c793d4be464dbd87f6e714c2f5afda864a6f",
     "METRIC_CRITIQUES_20261001.md": "eeff883e7d2e78499fa08c59f3f3fe75f844b427aa0ac4e605c38ea89a5391da",
-    "RESEARCH_HARNESS_MANIFEST.json": "6ca8d6ad8d1887e58ba5f707de16c93c473e90107d5697524d83937861d475a5"
+    "RESEARCH_HARNESS_MANIFEST.json": "75ea38830e6777f29dfb40be508544882f8d3387f1a6477949b254e69aaee20d"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [],
-  "next_experiment": "Positive hurdle56.68901 vsinc55.98883 (+.70018);all4meanincumbentgains/3aggregatewins,12validcalibs/fourfreshreviews. Freeze mechanism. Next register one matched fixed-disjoint actual8.5headtraining-stability confirmation, exactfullfit/incumbent controls, forecastsfrozenbeforetargetscoring. Notindependentembryos/thirdhypothesis; no retuning/grids, no16expansionbelow60,64/>72/temporalreadiness unchanged. Official52.16/noautomaticupload. Primaryvsdense reward-18 remainsseparate.",
+  "active_jobs_at_checkpoint": [
+    "hurdle_head_stability_confirmation"
+  ],
+  "next_experiment": "hurdle_head_stability_confirmation running: fixed disjointactual8.5halves8393/8394, samepositive/detectionridge1/support20,CNF/.25map/decoder/guards. Cachedfullfit hurdle and incumbentmustreplayexactly;15fullpanel scoreson3existingreal9.5resamples afterallforecasts frozen. Confirmation notthirdhypothesis/independentembryos/newmethodreward. Fourfreshreviewsafterbatch, no oldgrids/16resampleexpansionbelow60,original64/>72/temporalgates intact. Official52.16/noofficialupload.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",

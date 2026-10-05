@@ -2101,6 +2101,19 @@
         "driver_runtime": "cpu",
         "purpose": "Seconddeadlinehypothesis: realE8.5only fullgene detection/positive heads, CUDAanalyticfit, exactdense-linear/incumbentcontrols, fullpanelCPU scorer."
       }
+    },
+    "hurdle_head_stability_confirmation": {
+      "script": "real_fullgene_decoder_pilot.py",
+      "args": [
+        "--head-stability"
+      ],
+      "run": "private/hurdle_head_stability_01",
+      "report": "HURDLE_HEAD_STABILITY_RESULTS.json",
+      "protocol": {
+        "training_device": "cuda",
+        "driver_runtime": "cpu",
+        "purpose": "Frozen method confirmation on fixed disjointactual8.5 cellhalves, exactfullfit/incumbentcontrols, originalCPU fullpanel scorer; notthirdhypothesis/independentembryos."
+      }
     }
   }
 }

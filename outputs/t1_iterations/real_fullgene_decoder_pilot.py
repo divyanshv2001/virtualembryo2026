@@ -9,9 +9,10 @@ from train_extended_atlas import HERE
 from run_t1 import digest
 from iterate import now, append_event
 
-HURDLE = '--hurdle' in sys.argv
-RUN = HERE / ('private/observed_fullgene_hurdle_01' if HURDLE else 'private/real_fullgene_decoder_pilot_03')
-PUBLIC = HERE / ('OBSERVED_FULLGENE_HURDLE_RESULTS.json' if HURDLE else 'REAL_FULLGENE_DECODER_PILOT_RECOVERY_RESULTS.json')
+STABILITY = '--head-stability' in sys.argv
+HURDLE = '--hurdle' in sys.argv or STABILITY
+RUN = HERE / ('private/hurdle_head_stability_01' if STABILITY else ('private/observed_fullgene_hurdle_01' if HURDLE else 'private/real_fullgene_decoder_pilot_03'))
+PUBLIC = HERE / ('HURDLE_HEAD_STABILITY_RESULTS.json' if STABILITY else ('OBSERVED_FULLGENE_HURDLE_RESULTS.json' if HURDLE else 'REAL_FULLGENE_DECODER_PILOT_RECOVERY_RESULTS.json'))
 
 
 def hurdle_block(h, response):
@@ -38,18 +39,24 @@ def fit_hurdle():
     packet=json.loads((RUN/'training.json').read_text())
     for filename,expected in packet['sha256'].items():
         if digest(Path(filename))!=expected:raise ValueError('Hurdle fit input changed')
-    z=np.load(RUN/'coordinates.npy');center=z.mean(0)
-    h=torch.tensor(z.astype(np.float64)-center,device='cuda')
+    z=np.load(RUN/'coordinates.npy')
     y=np.load(RUN/'observed_expression.npy',mmap_mode='r')
-    outputs=[[],[],[],[],[],[]]
-    for start in range(0,32285,256):
-        response=torch.tensor(np.asarray(y[:,start:start+256],dtype=np.float64),device='cuda')
-        fitted=hurdle_block(h,response)
-        if not all(torch.isfinite(v).all() for v in fitted):raise ValueError('Nonfinite hurdle fit')
-        for destination,value in zip(outputs,fitted):destination.append(value.cpu().numpy())
-        del response,fitted
-    arrays=[np.concatenate(v,axis=1 if i<3 else 0) for i,v in enumerate(outputs)]
-    np.savez_compressed(RUN/'hurdle.npz',coef=arrays[0],detection=arrays[1],centroid=arrays[2],mean=arrays[3],probability=arrays[4],counts=arrays[5],center=center)
+    order=np.random.default_rng(20261005).permutation(len(z))
+    groups=[('half0',order[:len(z)//2]),('half1',order[len(z)//2:])] if STABILITY else [('hurdle',np.arange(len(z)))]
+    for label,rows in groups:
+        center=z[rows].mean(0)
+        h=torch.tensor(z[rows].astype(np.float64)-center,device='cuda')
+        np.save(RUN/(label+'_fit_rows.npy'),rows)
+        outputs=[[],[],[],[],[],[]]
+        for start in range(0,32285,256):
+            response=torch.tensor(np.asarray(y[:,start:start+256][rows],dtype=np.float64),device='cuda')
+            fitted=hurdle_block(h,response)
+            if not all(torch.isfinite(v).all() for v in fitted):raise ValueError('Nonfinite hurdle fit')
+            for destination,value in zip(outputs,fitted):destination.append(value.cpu().numpy())
+            del response,fitted
+        arrays=[np.concatenate(v,axis=1 if i<3 else 0) for i,v in enumerate(outputs)]
+        np.savez_compressed(RUN/(label+'.npz'),coef=arrays[0],detection=arrays[1],centroid=arrays[2],mean=arrays[3],probability=arrays[4],counts=arrays[5],center=center)
+        append_event(RUN/'events.jsonl','cuda_hurdle_heads_fit',label=label,rows=len(rows),fit_stage=8.5)
     (RUN/'hurdle_device.json').write_text(json.dumps({'device':torch.cuda.get_device_name(0),'peak_allocated_bytes':torch.cuda.max_memory_allocated(),'fit_rows':len(z),'fit_stage':8.5,'solver':'CUDA float64 conditionalridge1/detectionridge1'}))
 
 
@@ -172,6 +179,13 @@ def main():
         plan.update(steps=0,candidates=['copy','incumbent','linear_fullgene','hurdle_fullgene'],primary_contrast=['linear_fullgene','hurdle_fullgene'],
                     fit='All16787 real E8.5 cells, all32285genes. CUDA float64 conditionalpositive ridge1 and detectionridge1; support20. No E9.5fit. Fixed frozenCNF/covariance.25 path; bounded systematic detection changes, abundancefactor.5-2, fullmassrestore and existing384gene covariance.4 backoff.',
                     hypothesis='Observed-only full-panel hurdle decoding preserves cell sparsity/co-expression better than the matched dense real-linear decoder; includes5510source-unmapped genes. Established mechanism, distinct observed-fullgene integration; no biologicalbirth claim.')
+    if STABILITY:
+        plan.update(candidates=['copy','incumbent','fullfit_hurdle','hurdle_half0','hurdle_half1'],
+                    primary_contrast=['fullfit_hurdle','hurdle_half0'],
+                    split_seed=20261005,training_half_sizes=[8393,8394],
+                    hypothesis='Fixed-method training-sample stability confirmation; no new scientific mechanism or tuning.',
+                    scope='Two disjoint observed E8.5 cell training halves, historically exposed real E9.5 target. Not independent embryos/targets. Fixed confirmation earns no new-method reward.',
+                    fullfit_heads_sha256=digest(HERE/'private/observed_fullgene_hurdle_01/hurdle.npz'))
     RUN.mkdir()
     (RUN/'plan.json').write_text(json.dumps(plan,indent=2))
     (RUN/'executed_source.py').write_bytes(Path(__file__).read_bytes())
@@ -230,8 +244,9 @@ def main():
             subprocess.run([str(cuda),'-u',str(Path(__file__)),'--train'],check=True)
             saved=torch.load(RUN/'decoder.pt',weights_only=False,map_location='cpu')
         if HURDLE:
-            subprocess.run([str(cuda),'-u',str(Path(__file__)),'--hurdle','--fit-hurdle'],check=True)
-            fitted=dict(np.load(RUN/'hurdle.npz'))
+            flags=['--head-stability'] if STABILITY else ['--hurdle']
+            subprocess.run([str(cuda),'-u',str(Path(__file__))]+flags+['--fit-hurdle'],check=True)
+            fitted=dict(np.load(HERE/'private/observed_fullgene_hurdle_01/hurdle.npz' if STABILITY else RUN/'hurdle.npz'))
             device_info=json.loads((RUN/'hurdle_device.json').read_text())
         decoder=head();decoder.load_state_dict(saved['net']);decoder.eval()
         al=dict(np.load(alignment/'alignment.npz'))
@@ -257,11 +272,22 @@ def main():
                 del pred,abundance
             if HURDLE:
                 pred,attempts=predict_hurdle(donors,z0,z1,fitted,np.load(archive/'features.npy'))
-                generation['hurdle_fullgene']={'prediction_sha256':cache.put('hurdle_fullgene',pred),'guard_attempts':attempts}
+                full_name='fullfit_hurdle' if STABILITY else 'hurdle_fullgene'
+                generation[full_name]={'prediction_sha256':cache.put(full_name,pred),'guard_attempts':attempts}
                 del pred
                 old_decoder=json.loads((HERE/'REAL_FULLGENE_DECODER_PILOT_RECOVERY_RESULTS.json').read_text())
                 if generation['linear_fullgene']['prediction_sha256']!=old_decoder['generation']['linear_fullgene']['prediction_sha256']:
                     raise ValueError('Dense real-linear exact replay failed')
+                if STABILITY:
+                    original=json.loads((HERE/'OBSERVED_FULLGENE_HURDLE_RESULTS.json').read_text())
+                    if generation[full_name]['prediction_sha256']!=original['generation']['hurdle_fullgene']['prediction_sha256']:
+                        raise ValueError('Fullfit hurdle exact replay failed')
+                    for label in ['half0','half1']:
+                        model=dict(np.load(RUN/(label+'.npz')))
+                        pred,attempts=predict_hurdle(donors,z0,z1,model,np.load(archive/'features.npy'))
+                        name='hurdle_'+label
+                        generation[name]={'prediction_sha256':cache.put(name,pred),'guard_attempts':attempts}
+                        del pred
             x=np.load(data/'expression.npy',mmap_mode='r')
             stages=pd.read_csv(data/'selected_metadata.csv').numeric_stage.to_numpy(float)
             symbols=pd.read_csv(data/'genes.csv').symbol.fillna('').tolist()

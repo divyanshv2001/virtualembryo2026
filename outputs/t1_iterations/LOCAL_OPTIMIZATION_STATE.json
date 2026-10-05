@@ -20,7 +20,7 @@
   "plan_sha256": "7d99a83c484f6432eb12a885a1c2a1988772fee8a87e98e58e66b0328046aa48",
   "pilot_completed": true,
   "resume_verified_without_repeating_trials": false,
-  "local_process_running": false,
+  "local_process_running": true,
   "quota_reset_evidence": {
     "limit_observed": true,
     "observed_reset_text": "7:54 PM",
@@ -30,12 +30,14 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Positive hurdle56.68901 vsinc55.98883 (+.70018);all4meanincumbentgains/3aggregatewins,12validcalibs/fourfreshreviews. Freeze mechanism. Next register one matched fixed-disjoint actual8.5headtraining-stability confirmation, exactfullfit/incumbent controls, forecastsfrozenbeforetargetscoring. Notindependentembryos/thirdhypothesis; no retuning/grids, no16expansionbelow60,64/>72/temporalreadiness unchanged. Official52.16/noautomaticupload. Primaryvsdense reward-18 remainsseparate.",
+  "next_experiment": "hurdle_head_stability_confirmation running: fixed disjointactual8.5halves8393/8394, samepositive/detectionridge1/support20,CNF/.25map/decoder/guards. Cachedfullfit hurdle and incumbentmustreplayexactly;15fullpanel scoreson3existingreal9.5resamples afterallforecasts frozen. Confirmation notthirdhypothesis/independentembryos/newmethodreward. Fourfreshreviewsafterbatch, no oldgrids/16resampleexpansionbelow60,original64/>72/temporalgates intact. Official52.16/noofficialupload.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
-  "active_jobs": [],
-  "active_run_path": "private/observed_fullgene_hurdle_01",
+  "active_jobs": [
+    "hurdle_head_stability_confirmation"
+  ],
+  "active_run_path": "private/hurdle_head_stability_01",
   "completed_batches_this_turn": 11,
   "development_evaluations_this_turn": 225,
   "stability_replicates_this_turn": 32,
@@ -5196,7 +5198,7 @@
       "jev_scope": "Typed option selection/pinnedreport status only; report has no score summary and numeric auditresults were not transmitted, no evidence certification."
     }
   },
-  "next_action": "Positive hurdle56.68901 vsinc55.98883 (+.70018);all4meanincumbentgains/3aggregatewins,12validcalibs/fourfreshreviews. Freeze mechanism. Next register one matched fixed-disjoint actual8.5headtraining-stability confirmation, exactfullfit/incumbent controls, forecastsfrozenbeforetargetscoring. Notindependentembryos/thirdhypothesis; no retuning/grids, no16expansionbelow60,64/>72/temporalreadiness unchanged. Official52.16/noautomaticupload. Primaryvsdense reward-18 remainsseparate.",
+  "next_action": "hurdle_head_stability_confirmation running: fixed disjointactual8.5halves8393/8394, samepositive/detectionridge1/support20,CNF/.25map/decoder/guards. Cachedfullfit hurdle and incumbentmustreplayexactly;15fullpanel scoreson3existingreal9.5resamples afterallforecasts frozen. Confirmation notthirdhypothesis/independentembryos/newmethodreward. Fourfreshreviewsafterbatch, no oldgrids/16resampleexpansionbelow60,original64/>72/temporalgates intact. Official52.16/noofficialupload.",
   "potential_real_anchor_transfer_setup_failure": {
     "run": "potential_real_anchor_transfer_01",
     "error": "append_event kind argument collided with keyword at first50-step logging; no checkpoint or forecast completed",
@@ -5704,7 +5706,7 @@
     "independent_embryos": false
   },
   "hurdle_confirmation_protocol": {
-    "status": "declared_requires_implementation",
+    "status": "registered_launched",
     "seed": 20261005,
     "fit_stage": 8.5,
     "target": 9.5,
@@ -5725,6 +5727,7 @@
     ],
     "scope": "Training-sample stability; notindependentembryos/newhypothesis. No source missinggene zeros represented as realmeasurement.",
     "success": "Both half-fit arms improve incumbent aggregate3/3 with no meanfour-skillregression. Fullfit exactreplay required; no retuning iffailed.",
-    "recipe": "Same ridge1/support20, CNF/.25map, detection/abundance/mass/covariance guards; no16resampleexpansion below60;original64/>72/temporalreadiness unchanged."
+    "recipe": "Same ridge1/support20, CNF/.25map, detection/abundance/mass/covariance guards; no16resampleexpansion below60;original64/>72/temporalreadiness unchanged.",
+    "planned_scores": 15
   }
 }
