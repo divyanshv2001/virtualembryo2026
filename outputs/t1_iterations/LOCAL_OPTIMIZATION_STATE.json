@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-05T04:34:31.501042+00:00",
+  "updated_utc": "2026-10-05T04:44:03.404795+00:00",
   "objective_status": "threshold_not_met",
   "threshold": 72,
   "candidate": "unit_k16",
@@ -30,7 +30,7 @@
   },
   "resume_command": "outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/cnf_latent_dispersion_challenge_repair.py --resume",
   "continuation_instruction": "Read LOCAL_OPTIMIZATION_PROMPT.md and this checkpoint, then implement a new falsifiable model mechanism; the existing pilot is complete and rerunning its frozen predictor cannot improve its score.",
-  "next_experiment": "Userrequested E10.5 hurdlefile generated and formatvalidated:1500x32285float32/exactorder/finite/nonnegative,fullmassguard; frozenlocalrecipe56.761532,notofficialscore. Deliveredfinalcopy,training/cacheD-only; preservefailed01/02 genuineevidence. Next deadline_fallback_preservation; official52.16fallback/readinessgates/noofficialupload unchanged. No newscored batch/reviews/reward.",
+  "next_experiment": "Officialgap audit/supportpreflight complete: public4metricobjective verified, cached/direct rawparity within tolerance after sampledvariogram pairalignment. Local56.761532 usesdifferenttarget/anchors; screenshot49.80 provisionalartifactattribution. No independent real fullgene horizon/embryo support; retain demonstratedofficial52.16 and allreadiness gates. No further unsupported grid/newupload; scorecanselect knownpredictions but cannot recover hidden-target properties.",
   "submissions_used_by_this_batch": 0,
   "jev_requests_used": 0,
   "official_72_verified": false,
@@ -5227,7 +5227,7 @@
       "jev_scope": "Typed option selection/pinnedreport status only; report has no score summary and numeric auditresults were not transmitted, no evidence certification."
     }
   },
-  "next_action": "Userrequested E10.5 hurdlefile generated and formatvalidated:1500x32285float32/exactorder/finite/nonnegative,fullmassguard; frozenlocalrecipe56.761532,notofficialscore. Deliveredfinalcopy,training/cacheD-only; preservefailed01/02 genuineevidence. Next deadline_fallback_preservation; official52.16fallback/readinessgates/noofficialupload unchanged. No newscored batch/reviews/reward.",
+  "next_action": "Officialgap audit/supportpreflight complete: public4metricobjective verified, cached/direct rawparity within tolerance after sampledvariogram pairalignment. Local56.761532 usesdifferenttarget/anchors; screenshot49.80 provisionalartifactattribution. No independent real fullgene horizon/embryo support; retain demonstratedofficial52.16 and allreadiness gates. No further unsupported grid/newupload; scorecanselect knownpredictions but cannot recover hidden-target properties.",
   "potential_real_anchor_transfer_setup_failure": {
     "run": "potential_real_anchor_transfer_01",
     "error": "append_event kind argument collided with keyword at first50-step logging; no checkpoint or forecast completed",
@@ -6030,5 +6030,194 @@
     "training_device": "cuda",
     "historical_recipe_bit_exact_compatibility": "not claimed across runtime/stage",
     "source_development_report_sha256": "c0212a2b082c7cea8caed5634338e68708a0e71fd70317d1ef8e8ef538736215"
+  },
+  "official_transfer_audit_20261005": {
+    "completed_utc": "2026-10-05T04:44:03.404795+00:00",
+    "kind": "read_only_metric_and_transfer_audit_no_new_scored_batch",
+    "published_scoring_source": "https://virtualembryo.ai/challenge/evaluation?section=scoring",
+    "published_rules_source": "https://virtualembryo.ai/challenge/rules",
+    "metric_weights": {
+      "de_score": 0.25,
+      "de_direction": 0.25,
+      "mmd_u": 0.3,
+      "variogram": 0.2
+    },
+    "core_source_commit": "46d41e63f42a9aab815db20b742feeccd249cb17",
+    "local_mean": 56.761532131103856,
+    "local_skill_percent": {
+      "de_score": 53.12148169291026,
+      "de_direction": 60.653714090905176,
+      "mmd_u": 57.37327027100453,
+      "variogram": 55.52876051924325
+    },
+    "official_screenshot_headline": 49.8,
+    "official_screenshot_skill_percent": {
+      "de_score": 44.4,
+      "de_direction": 54.8,
+      "mmd_u": 50.8,
+      "variogram": 48.9
+    },
+    "screenshot_submission_url": "https://virtualembryo.ai/challenge/account/submissions/65d25d69af964f878e1ca74b7a5ae04f",
+    "artifact_attribution": "User supplied screenshot after delivery; presumed latest hurdle export, uploaded filename/hash not visible and not verified.",
+    "weighted_from_rounded_display": 49.82,
+    "rounding_bound_for_one_decimal_skills": 0.05,
+    "local_minus_displayed_official_skills": {
+      "de_score": 8.72148169291026,
+      "de_direction": 5.853714090905179,
+      "mmd_u": 6.573270271004532,
+      "variogram": 6.628760519243251
+    },
+    "local_calibration_reproduction": [
+      {
+        "seed": 20260928,
+        "floor": {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.028085237368941307,
+          "variogram": 0.001146468217484653
+        },
+        "ceiling": {
+          "de_score": 0.7868852459016393,
+          "de_direction": 0.6964934686888657,
+          "mmd_u": 0.00414352398365736,
+          "variogram": 0.00017633264360483736
+        },
+        "skills_reproduced_exactly": true
+      },
+      {
+        "seed": 20260929,
+        "floor": {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.03033139742910862,
+          "variogram": 0.0012352676130831242
+        },
+        "ceiling": {
+          "de_score": 0.7941176470588236,
+          "de_direction": 0.693116361715318,
+          "mmd_u": 0.006407752633094788,
+          "variogram": 0.00021435643429867923
+        },
+        "skills_reproduced_exactly": true
+      },
+      {
+        "seed": 20260930,
+        "floor": {
+          "de_score": 0.0,
+          "de_direction": 0.0,
+          "mmd_u": 0.02585575543344021,
+          "variogram": 0.0010369947412982583
+        },
+        "ceiling": {
+          "de_score": 0.8947368421052632,
+          "de_direction": 0.695865717267669,
+          "mmd_u": 0.004576236009597778,
+          "variogram": 0.00018742702377494425
+        },
+        "skills_reproduced_exactly": true
+      }
+    ],
+    "domain_difference": "Local realE8.5->E9.5 versus prospective realE9.5->hiddenE10.5; local floor/ceiling recalculated on exposed E9.5, official T1val anchors fixed. No numerical equality expected.",
+    "old_export_observed_diagnostics": {
+      "genes_mean_abs_shift_ge_0_25": 8,
+      "mean_abs_gene_shift": 0.005752621318487678,
+      "positive_genes_per_cell_mean": 3902.3026666666665,
+      "per_cell_mass_max_relative_error_vs_donor": 3.2467373505437125e-08,
+      "unchanged_gene_columns_vs_donor": 12686
+    },
+    "new_export_observed_diagnostics": {
+      "genes_mean_abs_shift_ge_0_25": 1,
+      "mean_abs_gene_shift": 0.0038466980251269725,
+      "positive_genes_per_cell_mean": 3966.3973333333333,
+      "per_cell_mass_max_relative_error_vs_donor": 2.3774442314320328e-08,
+      "unchanged_gene_columns_vs_donor": 10129
+    },
+    "previously_unchanged_gene_columns_in_old_export": 12686,
+    "previously_unchanged_columns_changed_in_new_export": 2619,
+    "forecast_difference_gene_mean_abs": 0.004229366050468222,
+    "inference": "Changing decoder/fullgene coverage transfers poorly on reported board; observed differences locate interventions, not causal explanation or hidden target properties.",
+    "hidden_targets_read": false,
+    "score_map_inversion": false,
+    "new_model_scores": 0,
+    "reward_delta": 0,
+    "next_step": "Bounded cached decision between exact raw-metric implementation parity and past-only temporal-transfer preflight; no new grid/model until support/controls declared.",
+    "component_parity": {
+      "kind": "component_implementation_parity_diagnostic_no_new_model_batch",
+      "observed_inputs": [
+        "E8.5_RNA.h5ad",
+        "E9.5_RNA.h5ad"
+      ],
+      "shape": [
+        128,
+        32285
+      ],
+      "seed": 20260928,
+      "pred": "Fixed2%perturbation every7thgene only, not a biological forecast",
+      "cached_raw": {
+        "de_score": 0.017241379310344827,
+        "de_direction": -0.005795087248135757,
+        "mmd_u": 0.09667181223630905,
+        "variogram": 0.002586053917184472
+      },
+      "direct_pinned_raw": {
+        "de_score": 0.017241379310344827,
+        "de_direction": -0.005795087248135757,
+        "mmd_u": 0.09667174518108368,
+        "variogram": 0.002587347524240613
+      },
+      "aligned_pair_cached_raw": {
+        "de_score": 0.017241379310344827,
+        "de_direction": -0.005795087248135757,
+        "mmd_u": 0.09667181223630905,
+        "variogram": 0.002587347524240613
+      },
+      "aligned_absolute_difference": {
+        "de_score": 0.0,
+        "de_direction": 0.0,
+        "mmd_u": 6.705522537231445e-08,
+        "variogram": 0.0
+      },
+      "predeclared_tolerance": {
+        "de_score": 1e-10,
+        "de_direction": 1e-10,
+        "mmd_u": 1e-05,
+        "variogram": 1e-08
+      },
+      "parity_passed": true,
+      "finding": "Cached variogram draws pairs before row subsampling; official core consumes RNG row draws first. Same estimator, different sampled pairs. Aligning pair draw order verifies math; production scorer/gates/old scores left unchanged. This diagnostic cannot explain hidden-target gap causally.",
+      "hidden_target_access": false,
+      "official_skill_inversion": false,
+      "new_scores_or_rewards": 0
+    },
+    "next_decision": {
+      "jev_choice": "past_transfer_preflight",
+      "confidence": 0.12,
+      "usage": {
+        "input_tokens": 1580,
+        "output_tokens": 44
+      },
+      "coordinator_choice": "raw_metric_parity_then_transfer_support",
+      "reason": "Inspection found cached/direct variogram pair RNG ordering differs; verify actual code first. No additional real past stage or embryos available; no justified independent confirmation claim."
+    },
+    "transfer_support_preflight": {
+      "status": "completed_no_independent_real_fullgene_horizon",
+      "real_observed_stages": [
+        8.5,
+        9.5
+      ],
+      "embryo_identifiers_available": false,
+      "assessment_target_reused": true,
+      "external_earlier_folds": "Permitted cached earlier stages exist but missing real measured fullgene support; proxies cannot certify challenge readiness. No new acquisition or repeated grids.",
+      "maximization_decision": "Publicmetricobjective verified; choose demonstrated official52.16 fallback over screenshot49.80, assuming latestartifact attribution. New improvement needs a predeclared supported past-only transfer remedy and matched controls; no hidden-target reconstruction or score-informed content."
+    }
+  },
+  "latest_observed_official_screenshot": {
+    "de_score": 44.4,
+    "de_direction": 54.8,
+    "mmd_u": 50.8,
+    "variogram": 48.9,
+    "headline": 49.8,
+    "artifact_attribution": "User supplied screenshot after delivery; presumed latest hurdle export, uploaded filename/hash not visible and not verified.",
+    "submission_url": "https://virtualembryo.ai/challenge/account/submissions/65d25d69af964f878e1ca74b7a5ae04f"
   }
 }

@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-05T04:34:31.656151+00:00
+Updated: 2026-10-05T04:48:21.969612+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -10,7 +10,7 @@ Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction':
 
 Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Userrequested E10.5 hurdlefile generated and formatvalidated:1500x32285float32/exactorder/finite/nonnegative,fullmassguard; frozenlocalrecipe56.761532,notofficialscore. Deliveredfinalcopy,training/cacheD-only; preservefailed01/02 genuineevidence. Next deadline_fallback_preservation; official52.16fallback/readinessgates/noofficialupload unchanged. No newscored batch/reviews/reward.
+Next: Officialgap audit/supportpreflight complete: public4metricobjective verified, cached/direct rawparity within tolerance after sampledvariogram pairalignment. Local56.761532 usesdifferenttarget/anchors; screenshot49.80 provisionalartifactattribution. No independent real fullgene horizon/embryo support; retain demonstratedofficial52.16 and allreadiness gates. No further unsupported grid/newupload; scorecanselect knownpredictions but cannot recover hidden-target properties.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in export report. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 
