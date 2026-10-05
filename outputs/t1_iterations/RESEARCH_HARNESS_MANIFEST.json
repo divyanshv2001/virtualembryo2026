@@ -2127,6 +2127,21 @@
         "driver_runtime": "cpu",
         "purpose": "User-authorized single fixed ridge2 fullfit/both-halves stabilization with immutable oldfull/incumbent/copy, original fullpanel scorer/gates; no grid or independent validation claim."
       }
+    },
+    "hurdle_detection_ridge2": {
+      "script": "real_fullgene_decoder_pilot.py",
+      "args": [
+        "--frozen-detection-ridge2"
+      ],
+      "run": "private/hurdle_detection_ridge2_01",
+      "report": "HURDLE_DETECTION_RIDGE2_RESULTS.json",
+      "protocol": {
+        "training_device": "cpu",
+        "driver_runtime": "cpu",
+        "purpose": "User continuation: one frozen positive1/detection2 channel ablation, fullfit/both fixed halves, exact immutable controls and unchanged scorer/gates.",
+        "new_training": false,
+        "cached_head_training_device": "RTX3060 CUDA"
+      }
     }
   }
 }

@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-05T02:44:05.248766+00:00
+Updated: 2026-10-05T04:10:08.610749+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -8,9 +8,9 @@ Use `research_harness.py queue` for a compact next-step/pending summary; never d
 
 Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction': 56.3, 'mmd_u': 53.2, 'variogram': 51.7}. Covariance .25 reused-development mean55.98883; EB and lineage-standardized historical proxy screens failed. Local>72 mean/lower-tail >=64-replicate AND temporal gate unmet. Full32285-gene scorer/calibration unchanged.
 
-Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
+Checkpoint jobs: ['hurdle_detection_ridge2']. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Ridge2 stabilization complete, failed:full56.49849/halves56.47834,56.45206 vsoriginal56.68901/inc55.98883. Directionhalf0 repaired onexposedpanels but all3newarms MMDregress and fullmeanretentionfails.18validcalibs/4reviews/reward-18/health-1720. CachedJev retain_provisional(.95),1577in44out; no further supported tuning/channeltrial. Next deadline_fallback_preservation: retainoriginal56.689provisional and official52.16fallback, truthful evidence; no grid/promotion/gatechanges/upload. Original independenttemporal/readiness gates unmet.
+Next: User continued stabilization: one frozen positive-ridge1/detection-ridge2 channel ablation, fullfit/both original halves; cached CUDA heads exactstats/coordinates/hashes; no newfit/grid.18scores, original56.689retention and both-halves/all4 criterion unchanged. After completion four fresh reviews/accounting, preserve all prior failures/advisory and official52.16; no promotion/upload.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in export report. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 

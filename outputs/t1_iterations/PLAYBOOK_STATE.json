@@ -1,18 +1,20 @@
 {
-  "updated_utc": "2026-10-05T02:44:05.248766+00:00",
+  "updated_utc": "2026-10-05T04:10:08.610749+00:00",
   "fingerprints": {
-    "RESEARCH_CONTINUATION_POLICY.md": "9deef73a3c048f08d07a59a8c522f6d1242db891c796bfcc2ac09038e6278f9c",
-    "LOCAL_OPTIMIZATION_STATE.json": "286ed6d57ad6175a29c52b0ed3d513cc2dcf15a6f97d95bb358e0f5a71202d18",
+    "RESEARCH_CONTINUATION_POLICY.md": "01318817d5a406a0b5e4522c636876a441d2730424d127e40389d967c2fbc0a6",
+    "LOCAL_OPTIMIZATION_STATE.json": "6d6758e3e824b264f2757076c87345feea47e7614736ba8e40488afa01ac1eab",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "6b4459ec4e0d4ae74b24724a4b6d31483ae382a55d74ae7b49762fd2d3f7c460",
+    "METRIC_RESEARCH_QUEUE.json": "7922665d3d59020e0a521cb1e52a7cb8af14bfb23fe3c170f27cfc0d9e50918f",
     "METRIC_CRITIQUE_POLICY.json": "3535989f1e3beac0f2d446b44df3c793d4be464dbd87f6e714c2f5afda864a6f",
     "METRIC_CRITIQUES_20261001.md": "d47f50a2d27f4339f537da6060445d8d3143115386221ae6ae440ed74c115614",
-    "RESEARCH_HARNESS_MANIFEST.json": "ba08d113088a4ad50a8e8f7f5557a8a3e5a33f0766479b08ea306fd587a89f24"
+    "RESEARCH_HARNESS_MANIFEST.json": "76cafc805b85ecec51391fc0d042b0c97a2bb9fd61cccc2b83cfb41316c566fb"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [],
-  "next_experiment": "Ridge2 stabilization complete, failed:full56.49849/halves56.47834,56.45206 vsoriginal56.68901/inc55.98883. Directionhalf0 repaired onexposedpanels but all3newarms MMDregress and fullmeanretentionfails.18validcalibs/4reviews/reward-18/health-1720. CachedJev retain_provisional(.95),1577in44out; no further supported tuning/channeltrial. Next deadline_fallback_preservation: retainoriginal56.689provisional and official52.16fallback, truthful evidence; no grid/promotion/gatechanges/upload. Original independenttemporal/readiness gates unmet.",
+  "active_jobs_at_checkpoint": [
+    "hurdle_detection_ridge2"
+  ],
+  "next_experiment": "User continued stabilization: one frozen positive-ridge1/detection-ridge2 channel ablation, fullfit/both original halves; cached CUDA heads exactstats/coordinates/hashes; no newfit/grid.18scores, original56.689retention and both-halves/all4 criterion unchanged. After completion four fresh reviews/accounting, preserve all prior failures/advisory and official52.16; no promotion/upload.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",

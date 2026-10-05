@@ -36,3 +36,6 @@ Prioritize T1 improvement through8October2026 IST, then hand off effort toT2/T3.
 
 ## User stabilization continuation — 5 October 2026
 User requests continuing stabilization of local56.689. Authorizes one bounded same-mechanism remedy and its fullfit/both-fixed-halves comparison; prior fallback-only next action superseded for this trial. No broad third architecture/grid, gate relaxation, posthoc half selection or upload. Preserve old failed stability and all original temporal/readiness gates.
+
+## Human continuation after ridge2 failure — 5 October 2026
+User says continue after failedridge2 stabilization. Execute one frozen-channel diagnostic (positive1/detection2) with cached fullfit/both-half heads, exact input checks, matchedcontrols and unchanged gates. Prior Jev retain_provisional recommendation and failures remain evidence. No target-informed grid, new architecture or upload; reviewers cannot authorize gate changes.

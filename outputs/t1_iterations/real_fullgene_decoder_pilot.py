@@ -9,12 +9,51 @@ from train_extended_atlas import HERE
 from run_t1 import digest
 from iterate import now, append_event
 
-STABILIZE = '--stabilize-ridge2' in sys.argv
+CHANNEL = '--frozen-detection-ridge2' in sys.argv
+STABILIZE = '--stabilize-ridge2' in sys.argv or CHANNEL
 STABILITY = '--head-stability' in sys.argv or STABILIZE
 HEAD_RIDGE = 2. if STABILIZE else 1.
 HURDLE = '--hurdle' in sys.argv or STABILITY
 RUN = HERE / ('private/hurdle_ridge2_stabilization_01' if STABILIZE else ('private/hurdle_head_stability_01' if STABILITY else ('private/observed_fullgene_hurdle_01' if HURDLE else 'private/real_fullgene_decoder_pilot_03')))
 PUBLIC = HERE / ('HURDLE_RIDGE2_STABILIZATION_RESULTS.json' if STABILIZE else ('HURDLE_HEAD_STABILITY_RESULTS.json' if STABILITY else ('OBSERVED_FULLGENE_HURDLE_RESULTS.json' if HURDLE else 'REAL_FULLGENE_DECODER_PILOT_RECOVERY_RESULTS.json')))
+if CHANNEL:
+    RUN=HERE/'private/hurdle_detection_ridge2_01'
+    PUBLIC=HERE/'HURDLE_DETECTION_RIDGE2_RESULTS.json'
+
+
+def channel_head_paths():
+    return [(label,
+             HERE/('private/observed_fullgene_hurdle_01/hurdle.npz' if label=='stabilized_full' else 'private/hurdle_head_stability_01/'+label+'.npz'),
+             HERE/('private/hurdle_ridge2_stabilization_01/'+label+'.npz'))
+            for label in ['stabilized_full','half0','half1']]
+
+
+def merge_channel_heads(original, ridge2):
+    for key in ['center','centroid','mean','probability','counts']:
+        np.testing.assert_array_equal(original[key],ridge2[key])
+    merged=dict(original)
+    merged['detection']=ridge2['detection'].copy()
+    if not all(np.isfinite(value).all() for value in merged.values()):
+        raise ValueError('Nonfinite cached channel head')
+    return merged
+
+
+def prepare_channel_heads():
+    plan=json.loads((RUN/'plan.json').read_text())
+    for filename,expected in plan['cached_head_sha256'].items():
+        if digest(Path(filename))!=expected:raise ValueError('Cached channel input changed')
+    old=HERE/'private/hurdle_ridge2_stabilization_01'
+    packet=json.loads((old/'training.json').read_text())
+    if digest(RUN/'coordinates.npy')!=packet['sha256'][str(old/'coordinates.npy')]:
+        raise ValueError('Cached training coordinates changed')
+    for label,past,new in channel_head_paths():
+        model=merge_channel_heads(dict(np.load(past)),dict(np.load(new)))
+        np.savez_compressed(RUN/(label+'.npz'),**model)
+        append_event(RUN/'events.jsonl','frozen_channel_heads_reused',label=label,
+                     positive_sha256=digest(past),detection_sha256=digest(new),fit_stage=8.5)
+    (RUN/'hurdle_device.json').write_text(json.dumps({'device':'cached RTX3060 heads; no new training',
+        'peak_allocated_bytes':0,'fit_rows':16787,'fit_stage':8.5,
+        'solver':'Frozen positive ridge1 + detection ridge2; exact shared fitted sufficient statistics'}))
 
 
 def hurdle_block(h, response):
@@ -198,6 +237,13 @@ def main():
                     stabilization_success='All three new arms beat incumbent aggregate3/3 and have no mean skill regression on any of4metrics; stabilized full mean must also be>=original fullfit mean. Both halves required; no posthoc selection.',
                     scope='Previously exposed E9.5 development stabilization; fixed original disjoint E8.5 halves. Not independent embryos/targets; no readiness promotion.',
                     old_stability_report_sha256=digest(HERE/'HURDLE_HEAD_STABILITY_RESULTS.json'))
+    if CHANNEL:
+        cached=[p for _,a,b in channel_head_paths() for p in (a,b)]
+        plan.update(head_ridge={'positive':1.,'detection':2.},
+                    fit='No new training. Reuse original ridge1 positive heads and ridge2 detection heads with exact matching sufficient statistics/coordinates/fullfit or half rows.',
+                    hypothesis='Frozen channel attribution: test whether ridge2 detection alone retains direction gains without the combined-ridge MMD loss. One prespecified hybrid, no grid or causal claim.',
+                    cached_head_sha256={str(p):digest(p) for p in cached},
+                    prior_advisory='Prior cached Jev recommended retain_provisional(.95); human subsequently requests continuation. Preserve prior advice and failed results; this diagnostic has no assumed benefit.')
     RUN.mkdir()
     (RUN/'plan.json').write_text(json.dumps(plan,indent=2))
     (RUN/'executed_source.py').write_bytes(Path(__file__).read_bytes())
@@ -257,7 +303,8 @@ def main():
             saved=torch.load(RUN/'decoder.pt',weights_only=False,map_location='cpu')
         if HURDLE:
             flags=['--stabilize-ridge2'] if STABILIZE else (['--head-stability'] if STABILITY else ['--hurdle'])
-            subprocess.run([str(cuda),'-u',str(Path(__file__))]+flags+['--fit-hurdle'],check=True)
+            if CHANNEL:prepare_channel_heads()
+            else:subprocess.run([str(cuda),'-u',str(Path(__file__))]+flags+['--fit-hurdle'],check=True)
             fitted=dict(np.load(HERE/'private/observed_fullgene_hurdle_01/hurdle.npz' if STABILITY else RUN/'hurdle.npz'))
             device_info=json.loads((RUN/'hurdle_device.json').read_text())
         decoder=head();decoder.load_state_dict(saved['net']);decoder.eval()

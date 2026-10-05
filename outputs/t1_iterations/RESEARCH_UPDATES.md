@@ -943,3 +943,7 @@ Existinggrossobservation-scale,lineageproxy anddomainmean-alignment audits alrea
 2026-10-05T02:42:43.427754+00:00 Ridge2 stabilization complete:full56.49849/halves56.47834,56.45206 vsoriginal56.68901/inc55.98883. Repairedmean direction butMMDregression/fullretention fail;18validcalibs/4freshreviews,primaryreward-18/health-1720. Oldpilot/official52.16 unchanged; no grid/promotion/upload.
 
 2026-10-05T02:44:05.111044+00:00 Completedridge2 synthesis: cachedJev retain_provisional(.95),1577in44out; coordinatorconcurs. No further supported channel/tuningtrial declared; preserve56.689pilot/52.16fallback, failedstability/failedridge2 and18fullpanel outcomes. Ledger3616records/259reports/noerrors; no officialupload.
+
+2026-10-05T04:08:07.709368+00:00 Human continued afterridge2failure: predeclared one frozen positive1/detection2 channel attribution,18scores/fullfit/bothhalves, exact cached stats/coordinates/hashes. No newtraining/grid/Jevcall; preserve cachedretain_provisional advice, failed gates and alloriginalreadiness.
+
+Channel launch metadata repair: harness accepts only cpu/cuda enum, rejected descriptive cached-head string before launch or scientific files. Corrected driver/device to cpu with new_training=false and cached_head_training_device=RTX3060CUDA. All3 channel alignment/mismatch smoke checks passed; no scientific failed batch or reward.

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-05T02:44:05.111044+00:00",
+  "updated_utc": "2026-10-05T04:08:07.709368+00:00",
   "objective": "Official >71.7; local readiness >72 with temporal and stability gates",
   "coverage_policy": "Exhaust declared viable paths and meaningful bounded ablations; do not claim all scientific possibilities exhausted. Queued or input-blocked paths remain unresolved.",
   "paths": [
@@ -6418,10 +6418,10 @@
   "continuation_policy": "Continue every declared viable path and decisive ablation; preserve complete scores and blocked requirements. Bounded trials do not exhaust whole families.",
   "metric_critique_policy": "METRIC_CRITIQUE_POLICY.json",
   "latest_paper_decision": {
-    "experiment": "hurdle_ridge2_stabilization",
-    "status": "stabilization_completed_gate_failed",
-    "next_experiment": "deadline_fallback_preservation",
-    "next": "Ridge2 stabilization complete, failed:full56.49849/halves56.47834,56.45206 vsoriginal56.68901/inc55.98883. Directionhalf0 repaired onexposedpanels but all3newarms MMDregress and fullmeanretentionfails.18validcalibs/4reviews/reward-18/health-1720. CachedJev retain_provisional(.95),1577in44out; no further supported tuning/channeltrial. Next deadline_fallback_preservation: retainoriginal56.689provisional and official52.16fallback, truthful evidence; no grid/promotion/gatechanges/upload. Original independenttemporal/readiness gates unmet.",
+    "experiment": "hurdle_detection_ridge2",
+    "status": "running",
+    "next_experiment": "hurdle_detection_ridge2",
+    "next": "Continue sole frozen-channel worker; cached positive1/detection2, no newtraining. On completion collect/review4/accounting, unchanged gates; no current result/promotion.",
     "jev_choice": "retain_provisional",
     "jev_confidence": 0.95,
     "scope": "Advisory low confidence; raw-count data availability verified deterministically, no score claim.",
@@ -6437,6 +6437,6 @@
     "coverage": "485cutoff8outcomes/58reports but0potential; cachedlowercutoff4096/PCA8/CNF800 andfixedalignment available.7963strictpastrows,targets3000each; no independentembryos.",
     "coordinator_post_audit": "No further supported tuning after failed same-mechanism stabilization; preserve positive gains/oldpilot, original gates and fallback."
   },
-  "next_experiment": "Ridge2 stabilization complete, failed:full56.49849/halves56.47834,56.45206 vsoriginal56.68901/inc55.98883. Directionhalf0 repaired onexposedpanels but all3newarms MMDregress and fullmeanretentionfails.18validcalibs/4reviews/reward-18/health-1720. CachedJev retain_provisional(.95),1577in44out; no further supported tuning/channeltrial. Next deadline_fallback_preservation: retainoriginal56.689provisional and official52.16fallback, truthful evidence; no grid/promotion/gatechanges/upload. Original independenttemporal/readiness gates unmet.",
-  "next_action": "Ridge2 stabilization complete, failed:full56.49849/halves56.47834,56.45206 vsoriginal56.68901/inc55.98883. Directionhalf0 repaired onexposedpanels but all3newarms MMDregress and fullmeanretentionfails.18validcalibs/4reviews/reward-18/health-1720. CachedJev retain_provisional(.95),1577in44out; no further supported tuning/channeltrial. Next deadline_fallback_preservation: retainoriginal56.689provisional and official52.16fallback, truthful evidence; no grid/promotion/gatechanges/upload. Original independenttemporal/readiness gates unmet."
+  "next_experiment": "User continued stabilization: one frozen positive-ridge1/detection-ridge2 channel ablation, fullfit/both original halves; cached CUDA heads exactstats/coordinates/hashes; no newfit/grid.18scores, original56.689retention and both-halves/all4 criterion unchanged. After completion four fresh reviews/accounting, preserve all prior failures/advisory and official52.16; no promotion/upload.",
+  "next_action": "User continued stabilization: one frozen positive-ridge1/detection-ridge2 channel ablation, fullfit/both original halves; cached CUDA heads exactstats/coordinates/hashes; no newfit/grid.18scores, original56.689retention and both-halves/all4 criterion unchanged. After completion four fresh reviews/accounting, preserve all prior failures/advisory and official52.16; no promotion/upload."
 }
