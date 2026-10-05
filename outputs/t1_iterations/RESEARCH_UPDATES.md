@@ -951,3 +951,7 @@ Channel launch metadata repair: harness accepts only cpu/cuda enum, rejected des
 2026-10-05T04:18:08.318905+00:00 Frozenchannel full56.761532/half0 56.695985/half1 56.714410 vsoriginal56.689013/inc55.988830. All3newarms beatincaggregate3/3 and all4meanmetrics; fullmeanretention passes. SmallMMD/CSSloss vsoriginal preserved, half0individual directionseed3 regresses vsinc.18validcalibs/4freshreviews; primaryreward-18/health-1738. Declareddevelopmentstability passes, independenttemporal/>72readiness remains unmet. Userauthorized prospectivefile, no officialupload.
 
 Prospectiveexport01 failed before headfit: scipy sparseblocklen ambiguous. Fixed rowcount toblock.shape[0], registeredunique02 recovery; originalevents/plan/staging preserved. No scored batch/newcritic/reward or methodchange; userauthorized file stillpending.
+
+Export02 failed before savedheads: memorychecker is localmain import, not moduleattribute. Fixed directimport fromscnode_resource_preflight, compiledunique03. Originalfailed01/02 preserved; no scoring/reward/critic/methodchange. Userrequests actualfiledelivery; finalcopy permitted in userfacingoutputs while training/cache remainD-only.
+
+2026-10-05T04:34:31.501042+00:00 Userrequested hurdleE10.5 export03 completed/validated/delivered,sha7e00169d2c7e1cc89a2dc5a8141f92ed7b799a9c7399191955d8d5a8cf65c7b0;1500x32285float32/allpanelmassguard,localrecipe56.761532notofficial. Originalfailed01/02 preserved; finalcopyuseroutputs only,training/cacheD-only. No newscore/reviews/reward/upload/readinesspromotion; official52.16fallback retained.

@@ -1,0 +1,50 @@
+{
+  "artifact": "T1_val__hurdle_progress_20261005_03.h5ad",
+  "artifact_sha256": "7e00169d2c7e1cc89a2dc5a8141f92ed7b799a9c7399191955d8d5a8cf65c7b0",
+  "plan_sha256": "bbaad4e81df45b787dcc0b5784c0093db71d128d4cd1551d71fd1d12df6bab11",
+  "format_validation": {
+    "passed": true,
+    "shape": [
+      1500,
+      32285
+    ],
+    "dtype": "float32",
+    "panel_exact_order": true,
+    "finite_nonnegative": true,
+    "coordinates_absent": true,
+    "obs_columns": [],
+    "sha256": "7e00169d2c7e1cc89a2dc5a8141f92ed7b799a9c7399191955d8d5a8cf65c7b0",
+    "bytes": 30943011,
+    "scope": "Local format validation only; not official predictive score or competition eligibility"
+  },
+  "forecast_audit": {
+    "method": "realE9.5 fullgene positive1/detection2",
+    "guard_attempts": [
+      {
+        "backoff": 1.0,
+        "covariance_change": 0.21382286823667157
+      }
+    ],
+    "fit_stage": 9.5,
+    "target": 10.5,
+    "genes": 32285,
+    "copied_unsupported_gene_count": 0
+  },
+  "protected_genes_exact": true,
+  "mapped_mass_max_relative_error": 2.3774442132421392e-08,
+  "alignment_sha256": "e8180d3d92ad7958fc13370f5acaafcfd852632bc602a434085ff90336117832",
+  "development_local_mean": 56.761532131103856,
+  "development_scope": "E8.5->E9.5 reused panels",
+  "readiness_gate_passed": false,
+  "official_score": null,
+  "uploaded": false,
+  "external_data_disclosure": "Development2024 dev201867 public atlas, associated_prepared_01 sample (25,963 cells), through E9.5; no GSE76118 expression used.",
+  "evidence_scope": "Trajectory describes this export only, not the complete research workflow.",
+  "status": "completed",
+  "protected_gene_count": 0,
+  "mass_guard_scope": "all32285genes",
+  "prediction_device": "cpu",
+  "training_device": "cuda",
+  "historical_recipe_bit_exact_compatibility": "not claimed across runtime/stage",
+  "source_development_report_sha256": "c0212a2b082c7cea8caed5634338e68708a0e71fd70317d1ef8e8ef538736215"
+}

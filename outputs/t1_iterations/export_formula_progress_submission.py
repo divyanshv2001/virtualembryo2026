@@ -25,6 +25,7 @@ from cnf_covariance_alignment import CovarianceAlignedTrajectory, symmetric_powe
 
 def fit_real_hurdle_export(anchor_path, panel, coordinates, private, events):
     import real_fullgene_decoder_pilot as runner
+    from scnode_resource_preflight import peak_memory
     if not torch.cuda.is_available():raise RuntimeError('Declared CUDA unavailable')
     torch.cuda.set_per_process_memory_fraction(.75)
     a=ad.read_h5ad(anchor_path,backed='r')
@@ -47,7 +48,7 @@ def fit_real_hurdle_export(anchor_path, panel, coordinates, private, events):
         fitted=(one[0],two[1],one[2],one[3],one[4],one[5])
         if not all(torch.isfinite(v).all() for v in fitted):raise ValueError('Nonfinite prospective heads')
         for destination,value in zip(outputs,fitted):destination.append(value.cpu().numpy())
-        if runner.peak_memory()>16*1024**3:raise MemoryError('HostRAM exceeded16GiB')
+        if peak_memory()>16*1024**3:raise MemoryError('HostRAM exceeded16GiB')
     arrays=[np.concatenate(v,axis=1 if i<3 else 0) for i,v in enumerate(outputs)]
     result=dict(zip(['coef','detection','centroid','mean','probability','counts'],arrays));result['center']=center
     np.savez_compressed(private/'real9_5_heads.npz',**result)
@@ -60,7 +61,7 @@ def fit_real_hurdle_export(anchor_path, panel, coordinates, private, events):
 
 def main():
     root = HERE.parents[1]
-    name = ('hurdle_progress_20261005_02' if '--recovery02' in sys.argv else 'hurdle_progress_20261005_01') if HURDLE_EXPORT else 'formula_progress_20260930_01'
+    name = ('hurdle_progress_20261005_03' if '--recovery03' in sys.argv else ('hurdle_progress_20261005_02' if '--recovery02' in sys.argv else 'hurdle_progress_20261005_01')) if HURDLE_EXPORT else 'formula_progress_20260930_01'
     out = root / 'outputs/t1_submissions' / name
     private = HERE / 'private' / name
     if out.exists() or private.exists():
@@ -100,6 +101,8 @@ def main():
         plan.update(authorization='User requests a separate submission file after local56.689 is achieved; stabilized recipe56.761532 passed fixed-halves development gate. Export only, no upload.',candidate='Observed fullgene hurdle positive ridge1/detection ridge2 on frozen aligned CNF path',candidate_selection='Frozen channel fullfit selected, no posthoc half selection;56.761532development, originalreadiness unmet.',method='Reuse external encoder/CNF throughE9.5 and fixedcovariance.25 map; refit realE9.5 fullgene positive1/detection2 heads, predictE10.5, fullmassrestore/covarianceguard. No target data.',head_ridges={'positive':1,'detection':2},training_device='RTX3060 CUDA',source_runner_sha256=digest(HERE/'real_fullgene_decoder_pilot.py'),runtime={'torch':torch.__version__,'cuda':torch.version.cuda})
     if '--recovery02' in sys.argv:
         plan.update(recovery_of='hurdle_progress_20261005_01',recovery_reason='Sparse block len rejected before head fitting; changed row count to shape[0]. Original failed plan/events/staging preserved; no scored batch.')
+    if '--recovery03' in sys.argv:
+        plan.update(recovery_of='hurdle_progress_20261005_02',recovery_reason='Memory check imported from actual resource module; original failed events retained. Recipe unchanged; no scored batch.')
     out.mkdir(parents=True)
     private.mkdir(parents=True)
     (out / 'plan.json').write_text(json.dumps(plan, indent=2))
