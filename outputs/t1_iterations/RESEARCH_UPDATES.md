@@ -949,3 +949,5 @@ Existinggrossobservation-scale,lineageproxy anddomainmean-alignment audits alrea
 Channel launch metadata repair: harness accepts only cpu/cuda enum, rejected descriptive cached-head string before launch or scientific files. Corrected driver/device to cpu with new_training=false and cached_head_training_device=RTX3060CUDA. All3 channel alignment/mismatch smoke checks passed; no scientific failed batch or reward.
 
 2026-10-05T04:18:08.318905+00:00 Frozenchannel full56.761532/half0 56.695985/half1 56.714410 vsoriginal56.689013/inc55.988830. All3newarms beatincaggregate3/3 and all4meanmetrics; fullmeanretention passes. SmallMMD/CSSloss vsoriginal preserved, half0individual directionseed3 regresses vsinc.18validcalibs/4freshreviews; primaryreward-18/health-1738. Declareddevelopmentstability passes, independenttemporal/>72readiness remains unmet. Userauthorized prospectivefile, no officialupload.
+
+Prospectiveexport01 failed before headfit: scipy sparseblocklen ambiguous. Fixed rowcount toblock.shape[0], registeredunique02 recovery; originalevents/plan/staging preserved. No scored batch/newcritic/reward or methodchange; userauthorized file stillpending.

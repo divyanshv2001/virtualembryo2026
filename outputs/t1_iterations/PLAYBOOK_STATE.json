@@ -1,20 +1,20 @@
 {
-  "updated_utc": "2026-10-05T04:19:27.548466+00:00",
+  "updated_utc": "2026-10-05T04:23:18.646441+00:00",
   "fingerprints": {
     "RESEARCH_CONTINUATION_POLICY.md": "cb19e02e96b9b21b444465909230c9cc7315416f87b81afc13b02eca29ef0e43",
-    "LOCAL_OPTIMIZATION_STATE.json": "99d429bd10b9a969562f24f0ca478746dc929ec34e356c88d30989b9a3751524",
+    "LOCAL_OPTIMIZATION_STATE.json": "42b5a9198672c8e4ac89e67b23c0154f520a479aa1a9f1569f487cda4452efaf",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "9860620cd3061a5704fbd89813da81e2c12ba1360f6ddbbea07e3b14ba48d019",
+    "METRIC_RESEARCH_QUEUE.json": "c4be604d3f3eeca249c5c144e1bcd3f67eb6c1352d27e8203f32a0139c59e271",
     "METRIC_CRITIQUE_POLICY.json": "3535989f1e3beac0f2d446b44df3c793d4be464dbd87f6e714c2f5afda864a6f",
     "METRIC_CRITIQUES_20261001.md": "5505c333c47705b2b032b1bfa8d7f808d087bf3cc5bde92548decd2e3c361c25",
-    "RESEARCH_HARNESS_MANIFEST.json": "2b53b2af04b05915b5b608e9004adbc0cc2f70bb690475b7327671bcd12298c3"
+    "RESEARCH_HARNESS_MANIFEST.json": "bd7d6cf36858bb0fe53697751c3a67c1bd4f8750efa858eaa047f4159a435c98"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
   "active_jobs_at_checkpoint": [
-    "hurdle_progress_export"
+    "hurdle_progress_export_recovery02"
   ],
-  "next_experiment": "Userrequested submission file: execute hurdle_progress_export from stabilizedfull56.761532; prospective E10.5 using real9.5/externalthrough9.5 only. Export/schema validation only, no officialupload/readinesspromotion; retain52.16fallback and original56.689pilot.",
+  "next_experiment": "Recover userauthorized prospective E10.5 export with sparseblockshape fix into unique02 folder. Preserve firstfailed events/plan; stabilizedrecipe56.761532 unchanged, no officialupload/readinesspromotion.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",

@@ -34,7 +34,7 @@ def fit_real_hurdle_export(anchor_path, panel, coordinates, private, events):
     try:
         for start in range(0,a.n_obs,256):
             block=a.X[start:start+256]
-            y[start:start+len(block)]=block.toarray() if sparse.issparse(block) else np.asarray(block)
+            y[start:start+block.shape[0]]=block.toarray() if sparse.issparse(block) else np.asarray(block)
         y.flush()
     finally:a.file.close()
     center=coordinates.astype(np.float32).mean(0)
@@ -60,7 +60,7 @@ def fit_real_hurdle_export(anchor_path, panel, coordinates, private, events):
 
 def main():
     root = HERE.parents[1]
-    name = 'hurdle_progress_20261005_01' if HURDLE_EXPORT else 'formula_progress_20260930_01'
+    name = ('hurdle_progress_20261005_02' if '--recovery02' in sys.argv else 'hurdle_progress_20261005_01') if HURDLE_EXPORT else 'formula_progress_20260930_01'
     out = root / 'outputs/t1_submissions' / name
     private = HERE / 'private' / name
     if out.exists() or private.exists():
@@ -98,6 +98,8 @@ def main():
     }
     if HURDLE_EXPORT:
         plan.update(authorization='User requests a separate submission file after local56.689 is achieved; stabilized recipe56.761532 passed fixed-halves development gate. Export only, no upload.',candidate='Observed fullgene hurdle positive ridge1/detection ridge2 on frozen aligned CNF path',candidate_selection='Frozen channel fullfit selected, no posthoc half selection;56.761532development, originalreadiness unmet.',method='Reuse external encoder/CNF throughE9.5 and fixedcovariance.25 map; refit realE9.5 fullgene positive1/detection2 heads, predictE10.5, fullmassrestore/covarianceguard. No target data.',head_ridges={'positive':1,'detection':2},training_device='RTX3060 CUDA',source_runner_sha256=digest(HERE/'real_fullgene_decoder_pilot.py'),runtime={'torch':torch.__version__,'cuda':torch.version.cuda})
+    if '--recovery02' in sys.argv:
+        plan.update(recovery_of='hurdle_progress_20261005_01',recovery_reason='Sparse block len rejected before head fitting; changed row count to shape[0]. Original failed plan/events/staging preserved; no scored batch.')
     out.mkdir(parents=True)
     private.mkdir(parents=True)
     (out / 'plan.json').write_text(json.dumps(plan, indent=2))

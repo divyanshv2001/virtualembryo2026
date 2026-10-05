@@ -2155,6 +2155,20 @@
         "driver_runtime": "cuda",
         "purpose": "Userauthorized prospective E10.5 file from frozen56.761532recipe; real9.5onlyheads and externalthrough9.5, no scoring/upload/readinesspromotion."
       }
+    },
+    "hurdle_progress_export_recovery02": {
+      "script": "export_formula_progress_submission.py",
+      "args": [
+        "--hurdle-export",
+        "--recovery02"
+      ],
+      "run": "private/hurdle_progress_20261005_02",
+      "report": "HURDLE_PROGRESS_EXPORT_RESULTS.json",
+      "protocol": {
+        "training_device": "cuda",
+        "driver_runtime": "cuda",
+        "purpose": "Userauthorized prospective E10.5 file from frozen56.761532recipe; real9.5onlyheads and externalthrough9.5, no scoring/upload/readinesspromotion."
+      }
     }
   }
 }
