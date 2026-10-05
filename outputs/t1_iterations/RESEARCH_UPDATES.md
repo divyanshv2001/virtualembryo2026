@@ -939,3 +939,7 @@ Existinggrossobservation-scale,lineageproxy anddomainmean-alignment audits alrea
 2026-10-05T02:18:57.277622+00:00 Resume consistency repair: nested latest_paper_decision still pointed to completed frozen-run audit; synced to deadline_fallback_preservation and actual latest hurdle confirmation. Marked unchanged previously read policy hash; no experiment/reward/advisory/review.
 
 2026-10-05T02:31:49.945077+00:00 User reopens bounded hurdle stabilization. CachedJev ridge2(.36),1346in35out; fixed fullfit/both-original-halves trial predeclared,18scores, immutablecopy/incumbent/originalfullfit controls. Sole change positive/detectionridge1->2; no old-failure erasure, no grid/promotion/upload.
+
+2026-10-05T02:42:43.427754+00:00 Ridge2 stabilization complete:full56.49849/halves56.47834,56.45206 vsoriginal56.68901/inc55.98883. Repairedmean direction butMMDregression/fullretention fail;18validcalibs/4freshreviews,primaryreward-18/health-1720. Oldpilot/official52.16 unchanged; no grid/promotion/upload.
+
+2026-10-05T02:44:05.111044+00:00 Completedridge2 synthesis: cachedJev retain_provisional(.95),1577in44out; coordinatorconcurs. No further supported channel/tuningtrial declared; preserve56.689pilot/52.16fallback, failedstability/failedridge2 and18fullpanel outcomes. Ledger3616records/259reports/noerrors; no officialupload.

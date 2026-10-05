@@ -70,3 +70,16 @@ Report 1e053dc8a8375ed99f4aaeb80131401c46882cbb06040cc8377a22029f42b0fa; four fr
 - mmd_u: Problem: DespiteMMD/aggregate gains,half0DCS failsboth-halves/allfourcriterion. Proposed solution: Preservepilot,rejectpromotion/posthochalfselection. Validation:15validcalibs/exactreplays notindependentembryo/temporalrobustness.
 
 - variogram: Problem: Half0DCSfailsdeclaredstability. Proposed solution: Preservefullfitprovisionally,seekgenuine temporal/embryo support;no grids. Validation: Exactreplays/3exposedresamples cannotestablishgeneralization.
+
+## Fixed ridge2 hurdle stabilization — 5 October 2026 IST
+Report 738da7c337aabaaf3aaecc3805202de009a9383057d6cfe4f9c36e7d693f9da6; four fresh narrow read-only reviews, factual comparator corrections verified.
+
+- de_score: Problem: Higher de_score improved, but the promotion gate failed and MMD regressed; no independent embryos support generalization. Proposed solution: Preserve gains without promotion or posthoc arm selection. Refit ridge strength using past-only nested validation. Validation: Freeze incumbent controls; require both halves/all four checks and full mean >= original. Reject MMD regression.
+
+- de_direction: Problem: Ridge2 improves direction (.60616 versus .60494) but fails stability gates; exposed-panel repair and no independent embryos prevent promotion. Proposed solution: Freeze ridge2; develop remedies using past-only data with matched gene, split, and MMD controls. Validation: Require both halves/all four and full mean>=original on untouched embryos; otherwise reject promotion. Quantify uncertainty; valid calibrations alone cannot establish stability.
+
+- mmd_u: Problem: Aggregate improves versus incumbent; MMDmean regresses versus incumbent and originalfull, improving versus copy only. The gate fails. Proposed solution: Preserve partial gains without promotion or posthoc selection. Keep calibration pinned; use past-only tuning with frozen incumbent, originalfull, and copy controls. Validation: Require both halves/all four and fullmean>=original. Any failure blocks promotion; embryo independence remains unverified without IDs.
+
+- variogram: Problem: Ridge2 variogram mean improves versus incumbent (.554715 versus .539468), trails original (.555417); aggregate likewise trails (56.498 versus 56.689). MMD mean regresses versus incumbent, improves versus copy only. Proposed solution: Preserve variogram gains; use past-only tuning, matched controls, locked failure criteria; no promotion. Validation: Keep calibration unchanged; require both-halves/all-four and full-mean gates, quantify uncertainty. Independent embryos unavailable.
+
+Coordinator: nested tuning and independent embryo suggestions remain unvalidated/unavailable; no score-informed grid or calibration change. All18 calibrations valid; both halves repair mean direction versus incumbent but allthree newarms regress MMD. Primary fullfit versus originalfullfit +1/+1/-10/-10=-18; half-fit diagnostics earn no separate reward.

@@ -1,20 +1,18 @@
 {
-  "updated_utc": "2026-10-05T02:33:36.014804+00:00",
+  "updated_utc": "2026-10-05T02:44:05.248766+00:00",
   "fingerprints": {
     "RESEARCH_CONTINUATION_POLICY.md": "9deef73a3c048f08d07a59a8c522f6d1242db891c796bfcc2ac09038e6278f9c",
-    "LOCAL_OPTIMIZATION_STATE.json": "eb0855db01d684666a13e1b1e9051d5aa158e3fd3ad6507e2fc82a0dabb6acc8",
+    "LOCAL_OPTIMIZATION_STATE.json": "286ed6d57ad6175a29c52b0ed3d513cc2dcf15a6f97d95bb358e0f5a71202d18",
     "LOCAL_OPTIMIZATION_PROMPT.md": "1dc1c031948a9d8b695846e36581a237e39f20107cdc1b1a53ecf63e49244cd8",
-    "METRIC_RESEARCH_QUEUE.json": "7057176564059accbe7d5343fcabdbae3e911e80d8a3018f13b57246570ae909",
+    "METRIC_RESEARCH_QUEUE.json": "6b4459ec4e0d4ae74b24724a4b6d31483ae382a55d74ae7b49762fd2d3f7c460",
     "METRIC_CRITIQUE_POLICY.json": "3535989f1e3beac0f2d446b44df3c793d4be464dbd87f6e714c2f5afda864a6f",
-    "METRIC_CRITIQUES_20261001.md": "3ed55885e720b5f00e64a0b024a19a132c51191a5462cab421e00db505508e62",
+    "METRIC_CRITIQUES_20261001.md": "d47f50a2d27f4339f537da6060445d8d3143115386221ae6ae440ed74c115614",
     "RESEARCH_HARNESS_MANIFEST.json": "ba08d113088a4ad50a8e8f7f5557a8a3e5a33f0766479b08ea306fd587a89f24"
   },
   "objective_status": "threshold_not_met",
   "process_state_is_snapshot": true,
-  "active_jobs_at_checkpoint": [
-    "hurdle_ridge2_stabilization"
-  ],
-  "next_experiment": "Execute one registered hurdle_ridge2_stabilization trial: fixed ridge2/fullfit/both original halves; frozen copy/incumbent/originalfull controls,18 scores. Allthree new arms all4/3seed criterion and fullfit mean>=56.689013 required; no grid/halfselection/promotion. Four fresh reviews/accounting after completion; original gates unchanged.",
+  "active_jobs_at_checkpoint": [],
+  "next_experiment": "Ridge2 stabilization complete, failed:full56.49849/halves56.47834,56.45206 vsoriginal56.68901/inc55.98883. Directionhalf0 repaired onexposedpanels but all3newarms MMDregress and fullmeanretentionfails.18validcalibs/4reviews/reward-18/health-1720. CachedJev retain_provisional(.95),1577in44out; no further supported tuning/channeltrial. Next deadline_fallback_preservation: retainoriginal56.689provisional and official52.16fallback, truthful evidence; no grid/promotion/gatechanges/upload. Original independenttemporal/readiness gates unmet.",
   "export": {
     "status": "completed_format_validated",
     "artifact": "outputs\\t1_submissions\\formula_progress_20260930_01\\T1_val__formula_progress_20260930_01.h5ad",
@@ -49,7 +47,7 @@
     "policy": "METRIC_CRITIQUE_POLICY.json",
     "ledger": "METRIC_CRITIQUE_REWARD_LEDGER.jsonl",
     "initial_reward": 0,
-    "current_reward": -1702,
+    "current_reward": -1720,
     "maximum": 100,
     "separate_from_benchmark": true,
     "completed_critics": [
@@ -58,10 +56,10 @@
       "mmd_u",
       "variogram"
     ],
-    "uncapped_reward": -1702,
-    "reward_score": -1702,
+    "uncapped_reward": -1720,
+    "reward_score": -1720,
     "benchmark_score": "unchanged; separately reported",
-    "last_batch_reward_delta": 0
+    "last_batch_reward_delta": -18
   },
   "official_best": 52.16,
   "latest_official": {
@@ -83,18 +81,14 @@
     "scope": "User-reported official score; not validation of local55.98883 calibration or AgentTeam evidence eligibility. No hiddentruth read or upload byCodex."
   },
   "latest_jev": {
-    "record": "private/decisions/tigon_log_density_01/route.json",
-    "payload_bytes": 1612,
+    "decision": "ridge2_stabilization_synthesis_20261005",
+    "choice": "retain_provisional",
+    "confidence": 0.95,
     "usage": {
-      "input_tokens": 792,
-      "output_tokens": 45
+      "input_tokens": 1577,
+      "output_tokens": 44
     },
-    "answers": {
-      "next": {
-        "choice": "log_density_past_audit",
-        "confidence": 0.93
-      }
-    }
+    "scope": "Bounded typed summary/reviews; coordinator concurs no further supported remedy. Advice not eligibility/score certification."
   },
   "external_qc_audit": {
     "report": "GSE76118_QC_PROVENANCE_AUDIT.json",

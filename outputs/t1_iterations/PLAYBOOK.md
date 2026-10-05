@@ -1,6 +1,6 @@
 # T1 resume playbook
 
-Updated: 2026-10-05T02:33:36.014804+00:00
+Updated: 2026-10-05T02:44:05.248766+00:00
 
 Start with `outputs/research_workflow/.venv/Scripts/python.exe outputs/t1_iterations/research_harness.py resume`. Its read-only summary replaces routine separate state/status/queue reads. Use research_playbook.py when refreshing a meaningful checkpoint. Its machine-only hashes check policy/state changes without sending whole documents into model context. Read this short playbook and only the changed policy sections or active experiment evidence needed for the next action. Never replay all Markdown/history by default.
 
@@ -8,17 +8,17 @@ Use `research_harness.py queue` for a compact next-step/pending summary; never d
 
 Official best: 52.16. Latest reported skills: {'de_score': 47.2, 'de_direction': 56.3, 'mmd_u': 53.2, 'variogram': 51.7}. Covariance .25 reused-development mean55.98883; EB and lineage-standardized historical proxy screens failed. Local>72 mean/lower-tail >=64-replicate AND temporal gate unmet. Full32285-gene scorer/calibration unchanged.
 
-Checkpoint jobs: ['hurdle_ridge2_stabilization']. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
+Checkpoint jobs: []. This snapshot is not a live process check: inspect actual Python processes and active report/events before launching; never duplicate work.
 
-Next: Execute one registered hurdle_ridge2_stabilization trial: fixed ridge2/fullfit/both original halves; frozen copy/incumbent/originalfull controls,18 scores. Allthree new arms all4/3seed criterion and fullfit mean>=56.689013 required; no grid/halfselection/promotion. Four fresh reviews/accounting after completion; original gates unchanged.
+Next: Ridge2 stabilization complete, failed:full56.49849/halves56.47834,56.45206 vsoriginal56.68901/inc55.98883. Directionhalf0 repaired onexposedpanels but all3newarms MMDregress and fullmeanretentionfails.18validcalibs/4reviews/reward-18/health-1720. CachedJev retain_provisional(.95),1577in44out; no further supported tuning/channeltrial. Next deadline_fallback_preservation: retainoriginal56.689provisional and official52.16fallback, truthful evidence; no grid/promotion/gatechanges/upload. Original independenttemporal/readiness gates unmet.
 
 Completed export: outputs\t1_submissions\formula_progress_20260930_01\T1_val__formula_progress_20260930_01.h5ad. Format passed; SHA256 23240e0e7b6063f8a78fb48336a1604a614e3eff4a57309488901cd431b4283c.1500cells/32285genes,30.55MB. Latest user-reported official result: 52.16; attribution/screenshot evidence in export report. No automatic upload. Source throughE9.5 and observedE9.5; stale generic audit wording annotated.
 
 Four metric critiques completed; consult METRIC_CRITIQUES_20261001.md when designing the next mechanism. Separate reward starts0: +1 positive paired mean skill gain / -10 tie or regression per metric, aggregate maximum100; negative balances visible. Pending/invalid/proxy0. Future unique declared experiments only; promotion gates unchanged.
 
-Current separate reward: -1702. This is not a benchmark score.
+Current separate reward: -1720. This is not a benchmark score.
 
-External acquisition entry point: GSE76118_WT_STAGE_MANIFEST.json. The old stage-only list is historical;127 mutants excluded,162 B6 WT controls separate,143E8.5/999E9.5 primary CD1 candidates. Expression acquired: True; acquired cohort cells: 24; prospective QC passes: 18; original pilot cells: 4; training readiness: False. Latest external status: 24-cell cohort/QC, compatibility, lineage matching, robustness and E8.5 static guidance already completed; static guidance had no passing alpha. Transfer/embryo replication not validated. Do not repeat acquisition or QC; per-cutoff stage restrictions remain.. Latest Jev actual usage: {'input_tokens': 792, 'output_tokens': 45}.
+External acquisition entry point: GSE76118_WT_STAGE_MANIFEST.json. The old stage-only list is historical;127 mutants excluded,162 B6 WT controls separate,143E8.5/999E9.5 primary CD1 candidates. Expression acquired: True; acquired cohort cells: 24; prospective QC passes: 18; original pilot cells: 4; training readiness: False. Latest external status: 24-cell cohort/QC, compatibility, lineage matching, robustness and E8.5 static guidance already completed; static guidance had no passing alpha. Transfer/embryo replication not validated. Do not repeat acquisition or QC; per-cutoff stage restrictions remain.. Latest Jev actual usage: {'input_tokens': 1577, 'output_tokens': 44}.
 
 Use D-only temporary disk cache, two BLAS threads, one full forecast at a time;16GBRAM. Retain source reports/events, seeds/splits/hashes, raw4/skills4 and failed outcomes. Refresh SCORE_LEDGER.jsonl after full-panel batches; proxy/export is not a score batch. Commit small evidence/code, never datasets/secrets/artifact matrices. No automatic official upload. Use harness critics for inline evidence and harness wait for bounded local waiting. Reuse frozen_fullpanel_scoring.py; Jev selects typed configurations, never writes arbitrary code. Run four compact metric critics after each new experiment batch once; max60words each, fresh context, no routine agents. Each metric specialist must state Problem / Proposed solution / Validation, with evidence, uncertainty, concrete past-only remedy, matched controls and failure criteria; proposed solutions are unvalidated until tested.
 
